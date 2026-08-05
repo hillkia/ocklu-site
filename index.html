@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ocklu Tergigantic &mdash; Web Accessibility &amp; AI Visibility</title>
+<meta name="description" content="Independent audits and fixes for web accessibility (WCAG 2.1 AA / ADA) and AI search visibility. Real findings, fixed-price work, results guaranteed.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#9678;</text></svg>">
+<style>
+  :root{
+    --ink:#14161a; --body:#3d434d; --mute:#6b7280; --line:#e5e7eb;
+    --bg:#ffffff; --soft:#f7f8fa; --brand:#c2410c; --brand-soft:#fff7ed;
+    --ok:#15803d;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{--ink:#f3f4f6;--body:#c3c8d0;--mute:#8b93a1;--line:#262a31;
+          --bg:#0e1013;--soft:#16191e;--brand:#fb923c;--brand-soft:#1f1408;--ok:#4ade80}
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--body);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased}
+  .wrap{max-width:720px;margin:0 auto;padding:0 22px}
+  h1,h2,h3{color:var(--ink);line-height:1.2;margin:0}
+  h1{font-size:clamp(30px,5.5vw,44px);letter-spacing:-.02em;font-weight:800}
+  h2{font-size:clamp(20px,3.4vw,26px);letter-spacing:-.01em;margin:0 0 14px;font-weight:700}
+  h3{font-size:17px;margin:0 0 6px;font-weight:650}
+  p{margin:0 0 16px}
+  a{color:var(--brand)}
+  header{padding:56px 0 8px}
+  .eyebrow{font:600 12px/1 ui-monospace,SFMono-Regular,Menlo,monospace;
+    letter-spacing:.18em;text-transform:uppercase;color:var(--brand);margin-bottom:16px}
+  .lede{font-size:19px;color:var(--body);margin:18px 0 0;max-width:60ch}
+  section{padding:44px 0;border-top:1px solid var(--line)}
+  section:first-of-type{border-top:0}
+  .grid{display:grid;gap:18px}
+  @media(min-width:640px){.grid-2{grid-template-columns:1fr 1fr}}
+  .card{background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:20px}
+  .stat{font:800 30px/1 -apple-system,BlinkMacSystemFont,sans-serif;color:var(--ink);
+    letter-spacing:-.02em}
+  .stat small{display:block;font:500 13px/1.4 inherit;color:var(--mute);
+    margin-top:7px;letter-spacing:0}
+  ul{margin:0 0 16px;padding-left:20px}
+  li{margin:0 0 7px}
+  .price{display:flex;justify-content:space-between;align-items:baseline;
+    gap:14px;padding:13px 0;border-bottom:1px solid var(--line)}
+  .price:last-child{border-bottom:0}
+  .price b{color:var(--ink);font-weight:650}
+  .price span{color:var(--brand);font-weight:700;white-space:nowrap}
+  .note{font-size:14px;color:var(--mute)}
+  .guarantee{background:var(--brand-soft);border:1px solid var(--brand);
+    border-radius:12px;padding:18px 20px}
+  .cta{display:inline-block;background:var(--brand);color:#fff;text-decoration:none;
+    font-weight:650;padding:13px 24px;border-radius:9px;margin-top:6px}
+  .cta:hover{filter:brightness(1.08)}
+  footer{padding:36px 0 60px;border-top:1px solid var(--line);
+    color:var(--mute);font-size:14px}
+  code{font:13px ui-monospace,SFMono-Regular,Menlo,monospace;
+    background:var(--soft);padding:2px 6px;border-radius:5px;border:1px solid var(--line)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">Ocklu Tergigantic</div>
+    <h1>Your website has problems you can't see.</h1>
+    <p class="lede">I find them, show you the evidence, and fix them for a fixed
+    price. Two areas: accessibility compliance, and whether AI assistants can
+    actually read and recommend your site.</p>
+  </header>
+
+  <section>
+    <div class="grid grid-2">
+      <div class="card">
+        <div class="stat">95.9%<small>of the top million websites fail basic
+        accessibility checks &mdash; averaging 56 errors on the homepage alone</small></div>
+      </div>
+      <div class="card">
+        <div class="stat">5,100+<small>US web accessibility lawsuits filed in
+        2025, up 37% year over year. Online stores are the most targeted</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>What I do</h2>
+
+    <h3>1 &middot; Accessibility (WCAG 2.1 AA / ADA)</h3>
+    <p>I scan your site for the failures that matter: links a screen reader
+    announces as just "link", images with no alt text, form fields with no
+    label, pinch-to-zoom disabled on mobile. Then I fix them &mdash; in your existing
+    theme, no redesign.</p>
+
+    <h3>2 &middot; AI search visibility</h3>
+    <p>When someone asks ChatGPT, Perplexity, or Google's AI for a
+    recommendation in your category, can they cite you? Often not &mdash; because the
+    site blocks AI crawlers in <code>robots.txt</code>, has no schema.org
+    markup, or has no content structured as the questions buyers ask. All
+    fixable.</p>
+  </section>
+
+  <section>
+    <h2>How it works</h2>
+    <ul>
+      <li><b>Free audit first.</b> I scan your site and send the findings &mdash;
+      specific counts, specific elements, no obligation. You'll know exactly
+      what's wrong whether or not you hire me.</li>
+      <li><b>Fixed price, no hourly billing.</b> You know the cost before I
+      start.</li>
+      <li><b>Live in 72 hours.</b> Done-for-you. Nothing needed on your end
+      beyond access.</li>
+      <li><b>Signed compliance report</b> for your records when the work is done.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Pricing</h2>
+    <div class="price"><b>Audit &amp; findings report</b><span>Free</span></div>
+    <div class="price"><b>Accessibility remediation &mdash; WCAG 2.1 AA</b><span>$545</span></div>
+    <div class="price"><b>AI visibility fix &mdash; schema, structure, crawler access</b><span>$820</span></div>
+    <div class="price"><b>Both, bundled</b><span>$1,350</span></div>
+    <div class="price"><b>Monthly monitoring &amp; new-page fixes</b><span>from $165/mo</span></div>
+    <p class="note" style="margin-top:16px">Paid by invoice &mdash; card or PayPal. 50%
+    to start, 50% on delivery. Monthly plans cancel anytime, no contract.</p>
+  </section>
+
+  <section>
+    <div class="guarantee">
+      <h3 style="margin-bottom:8px">The guarantee</h3>
+      <p style="margin:0">If your accessibility score isn't 90+ within 30 days
+      of delivery, I keep working at no charge until it is &mdash; or you get a full
+      refund. The score is measured with public tools (Lighthouse, axe), so
+      neither of us has to take the other's word for it.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Get your free audit</h2>
+    <p>Send me your URL. You'll get the findings back &mdash; usually same day, always
+    within 48 hours. No pitch attached unless you ask for one.</p>
+    <a class="cta" href="mailto:octavianus@ocklu.com?subject=Free%20audit%20request&amp;body=My%20website%3A%20">Email octavianus@ocklu.com</a>
+  </section>
+
+  <footer>
+    <p style="margin:0 0 6px"><b style="color:var(--ink)">Ocklu Tergigantic</b> &mdash;
+    Web Accessibility &amp; AI Visibility</p>
+    <p style="margin:0">Octavianus Lapian &middot; <a href="mailto:octavianus@ocklu.com">octavianus@ocklu.com</a></p>
+    <p style="margin:14px 0 0;font-size:13px">Independent practitioner. Audits use
+    Lighthouse, axe-core, and WCAG 2.1 AA criteria. Accessibility findings are
+    technical, not legal advice.</p>
+  </footer>
+
+</div>
+</body>
+</html>
