@@ -469,6 +469,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://ocklu.com/ai-readiness/rest.co/</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://ocklu.com/ai-readiness/ridge.com/</loc>
     <lastmod>2026-08-22</lastmod>
     <changefreq>monthly</changefreq>
