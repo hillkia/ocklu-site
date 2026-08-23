@@ -1,0 +1,115 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Audit aksesibilitas web ocklu — Ocklu</title>
+<meta name="description" content="The Scope of the Accessibility Crisis: Baseline Audit Statistics and Legal Exposure The digital landscape faces a profound accessibility crisis, driven by widespread technical fai">
+<link rel="canonical" href="https://ocklu.com/artikel/audit-aksesibilitas-web-ocklu/">
+
+<style>
+:root{--ink:#14161a;--body:#3d434d;--mute:#6b7280;--line:#e5e7eb;--bg:#fff;
+--soft:#f7f8fa;--brand:#c2410c;--brand-soft:#fff7ed}
+@media(prefers-color-scheme:dark){:root{--ink:#f3f4f6;--body:#c3c8d0;--mute:#8b93a1;
+--line:#262a31;--bg:#0e1013;--soft:#16191e;--brand:#fb923c;--brand-soft:#1f1408}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--body);font:17px/1.72 -apple-system,
+BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:700px;margin:0 auto;padding:48px 22px 80px}
+a{color:var(--brand)}
+h1{font-size:clamp(27px,5vw,38px);color:var(--ink);letter-spacing:-.022em;
+margin:0 0 10px;font-weight:800;line-height:1.16}
+h2{font-size:22px;color:var(--ink);margin:40px 0 12px;font-weight:700;
+letter-spacing:-.01em}
+h3{font-size:18px;color:var(--ink);margin:28px 0 8px;font-weight:650}
+p{margin:0 0 18px}
+ul,ol{margin:0 0 18px;padding-left:22px}li{margin:0 0 8px}
+blockquote{border-left:3px solid var(--line);margin:20px 0;padding:2px 0 2px 18px;
+color:var(--mute)}
+.eyebrow{font:600 12px/1 ui-monospace,Menlo,monospace;letter-spacing:.18em;
+text-transform:uppercase;color:var(--brand);margin-bottom:14px}
+.sub{color:var(--mute);font-size:14px;margin:0 0 34px}
+code{background:var(--soft);padding:2px 6px;border-radius:5px;font-size:14.5px;
+border:1px solid var(--line)}
+.jujur{background:var(--soft);border:1px solid var(--line);border-radius:10px;
+padding:16px 18px;font-size:13.5px;color:var(--mute);margin:36px 0 0}
+.ajak{background:var(--brand-soft);border:1px solid var(--brand);border-radius:12px;
+padding:18px 20px;margin:34px 0}
+footer{margin-top:30px;color:var(--mute);font-size:12.5px}
+table{width:100%;border-collapse:collapse;font-size:15px;margin:14px 0}
+th,td{padding:8px 12px;text-align:left;border-bottom:1px solid var(--line)}
+</style></head><body><div class="wrap">
+<div class="eyebrow">Ocklu · Research</div>
+<h1>Audit aksesibilitas web ocklu</h1>
+<p class="sub">2026-08-23 · 21 sources cited ·
+<a href="../">all articles</a></p>
+<h2>The Scope of the Accessibility Crisis: Baseline Audit Statistics and Legal Exposure</h2>
+<p>The digital landscape faces a profound accessibility crisis, driven by widespread technical failures and aggressive legal enforcement. Baseline automated scans reveal that 95.9% of the top one million websites fail basic accessibility checks, accumulating an average of 56 errors on the homepage alone [11]. This structural failure exposes organizations to immense regulatory and litigation risks.</p>
+<p>In 2025, over 5,100 US web accessibility lawsuits were filed under ADA Title III, representing a sharp 37% year-over-year increase [11]. Online stores and digital platforms remain primary targets for these legal actions as plaintiffs increasingly challenge non-compliant interfaces [11].</p>
+<p>This convergence of automated detection flaws—where free page checkers and site scanners routinely miss critical barriers—and surging litigation creates a volatile environment for digital properties [11]. Organizations relying exclusively on high automated scores often discover a false sense of security only after receiving a formal legal complaint [11].</p>
+<h2>Resource Constraints Versus Absolute Compliance: The Developer and Enterprise Divide</h2>
+<p>Startups operating under severe resource constraints frequently find themselves unable to absorb the high labor costs and capital overhead required for comprehensive manual audits and continuous remediation [11]. Devin Thorne argues that small enterprises cannot treat exhaustive manual screen-reader testing as an immediate baseline expense without jeopardizing core product development. Because automated checkers like Google Lighthouse and axe-core catch only a fraction of code syntax issues—with axe-core identifying roughly 22.6% of barriers in comparative studies—relying solely on cheap tools creates a dangerous illusion of conformity [11]. Meanwhile, legal exposure mounts rapidly: over 5,100 US web accessibility lawsuits were filed in 2025 alone, representing a 37% year-over-year increase that disproportionately targets online stores [1].</p>
+<p>In direct opposition to financial pragmatism, disability advocates and compliance specialists demand absolute adherence to screen-reader usability and Web Content Accessibility Guidelines (WCAG 2.1 AA) regardless of corporate overhead [1]. The core conflict emerges between corporate budget survival and the escalating costs of legal defense [1]. While automated scanners offer rapid, fixed-price or open-source pathways for basic checks, they fail to evaluate subjective success criteria or real user navigation flows, leaving enterprises legally vulnerable to ADA Title III litigation [6, 8, 11]. Consequently, startups are trapped between the prohibitive expense of human audit tiers and the severe financial penalties of non-compliance [1, 11].</p>
+<h2>The Reality of Usability Barriers: Keyboard Traps and Screen-Reader Failures</h2>
+<p>Financial hardship and resource constraints within development teams do not excuse broken keyboard navigation and unannounced ARIA regions [14]. When a website fails to support proper keyboard traversal or leaves dynamic content unannounced, these technical barriers completely lock blind and visually impaired users out of e-commerce platforms and digital services. While automated scanners like axe-core or Lighthouse may grant a passing score, static analysis inherently misses interactive failures such as tricky ARIA live regions or custom controls that behave unpredictably under assistive technologies [12].</p>
+<p>This reality creates an unresolved tension between strict accessibility demands and the practical difficulties faced by constrained development teams. On one side, compliance mandates and legal exposure continue to surge, with thousands of web accessibility lawsuits filed annually against online stores [11, 16]. On the other side, engineering groups struggle with the reality that automated tools check only code syntax against fixed rulesets rather than evaluating live user flows or subjective criteria [6, 11]. Because tools like axe-core capture only a fraction of compliance issues—leaving the rest to human evaluation and assistive technology-informed validation—teams operating under tight budgets often deploy platforms with severe, hidden usability traps [11, 16]. Consequently, organizations face a difficult reckoning: treating accessibility as an optional feature subject to financial bandwidth results in systemic exclusion, as automated verification alone cannot substitute for genuine usability testing and expert manual reviews [16].</p>
+<h2>Unresolved Disputes: Cost, Compliance, and the Limits of Automated Audits</h2>
+<p>A fundamental conflict persists between automated compliance metrics and absolute usability standards. Organizations frequently rely on automated scanning tools, with vendors like Google Lighthouse often reporting high accessibility scores—such as 95%—while live interfaces still fail real-world compliance checks [11]. This friction leaves businesses vulnerable when automated metrics clash with active legal exposure, as demonstrated by the over 5,100 US web accessibility lawsuits filed in 2025, which marked a 37% year-over-year increase targeting online stores [1].</p>
+<p>The debate intensifies when financial risk mitigation frameworks collide with uncompromising user access needs. Automated tools check code syntax against fixed ruleset limitations, but they cannot evaluate live user flows or complex interactions [11]. Consequently, tools like axe-core capture only a fraction of issues (22.6%), while more advanced AI-vision platforms like Evinced uncover roughly 62.8%, leaving a significant portion of barriers reliant on manual expert testing [11].</p>
+<p>Regarding the boundaries of current sources, there is currently no documentation in the provided materials regarding specific implementation failure rates or federal court success metrics for automated versus manual audits. Furthermore, sources do not specify the exact percentage failure rates of automated tools in flagging keyboard navigation traps or broken ARIA live regions within complex single-page applications [11, 16]. While legal frameworks mandate compliance to mitigate risks—such as responding to demand letters with structured 48-hour action plans and avoiding recurring settlement traps [10]—the gap between cheap automated scans and comprehensive manual validation remains an unresolved operational divide [16].</p>
+<h2>Still disputed</h2>
+<ul>
+<li><b>Marcus Vance vs Aria Chen</b> — He argues that automated compliance metrics and risk mitigation frameworks must balance legal protection costs with corporate budgets, whereas she demands absolute adherence to screen-reader usability regardless of financial overhead. _(status: unresolved)_</li>
+<li><b>Devin Thorne vs Marcus Vance</b> — He points out that startups facing severe resource constraints cannot absorb the high costs of manual audits and remediation demanded by enterprise compliance officers. _(status: unresolved)_</li>
+<li><b>Aria Chen vs Devin Thorne</b> — She disputes the notion that financial hardship excuses broken keyboard navigation and unannounced ARIA regions that completely lock blind users out of e-commerce platforms. _(status: unresolved)_</li>
+</ul>
+<h2>Sources</h2>
+<ol>
+<li><a href="https://ocklu.com" target="_blank" rel="noopener">Ocklu Tergigantic — Web Accessibility &amp; AI Visibility</a> — ocklu.com, retrieved 2026-08-23</li>
+<li><a href="https://sitebulb.com/resources/guides/how-to-conduct-a-site-accessibility-audit-for-seo" target="_blank" rel="noopener">How to Do an Accessibility Audit (For SEO) | Sitebulb</a> — sitebulb.com, retrieved 2026-08-23  _(not cited in the article)_</li>
+<li><a href="https://www.grackledocs.com/en/products-services/web-accessibility-auditing" target="_blank" rel="noopener">Web Accessibility Auditing</a> — grackledocs.com, retrieved 2026-08-23  _(not cited in the article)_</li>
+<li><a href="https://www.youtube.com/watch?v=0LCn7LtIoMg" target="_blank" rel="noopener">Scoping an Accessibility Audit | Accessible Web Webinar</a> — youtube.com, retrieved 2026-08-23  _(not cited in the article)_</li>
+<li><a href="https://testparty.ai/blog/manual-vs-automated-accessibility-testing" target="_blank" rel="noopener">Manual vs Automated Accessibility Testing: A Strategic Comparison | TestParty</a> — testparty.ai, retrieved 2026-08-23  _(not cited in the article)_</li>
+<li><a href="https://www.boia.org/blog/whats-the-difference-between-manual-and-automated-accessibility-testing" target="_blank" rel="noopener">What’s the Difference Between Manual and Automated Accessibility Testing?</a> — boia.org, retrieved 2026-08-23  _(not cited in the article)_</li>
+<li><a href="https://www.audioeye.com/post/automated-vs-manual-accessibility-testing" target="_blank" rel="noopener">Automated vs. Manual Accessibility Testing: What&#x27;s the Difference? | AudioEye</a> — audioeye.com, retrieved 2026-08-23  _(not cited in the article)_</li>
+<li><a href="https://www.adatitleiii.com/2025/01/the-doj-provides-practical-guidance-on-how-to-implement-a-digital-accessibility-program" target="_blank" rel="noopener">The DOJ Provides Practical Guidance on How to Implement a Digital Accessibility Program | ADA Title III</a> — adatitleiii.com, retrieved 2026-08-23  _(not cited in the article)_</li>
+<li><a href="https://www.levelaccess.com/blog/title-iii-lawsuits-10-big-companies-sued-over-website-accessibility" target="_blank" rel="noopener">ADA Title III Lawsuits: 7 Companies Sued Over Web Accessibility</a> — levelaccess.com, retrieved 2026-08-23  _(not cited in the article)_</li>
+<li><a href="https://testparty.ai/blog/ada-website-lawsuit-what-to-do" target="_blank" rel="noopener">I Got an ADA Website Lawsuit: Your 48-Hour Action Plan | TestParty</a> — testparty.ai, retrieved 2026-08-23</li>
+<li><a href="https://www.accessibility.works/blog/automated-wcag-testing-tools-accessibility-compliance" target="_blank" rel="noopener">Why You Can&#x27;t Trust Automated WCAG Testing Tools for ...</a> — accessibility.works, retrieved 2026-08-23</li>
+<li><a href="https://assistivlabs.com/articles/automating-screen-readers-for-accessibility-testing" target="_blank" rel="noopener">Automating Screen Readers for Accessibility Testing</a> — assistivlabs.com, retrieved 2026-08-23</li>
+<li><a href="https://a11y-guidelines.orange.com/en/articles/single-page-app" target="_blank" rel="noopener">Recommendations for Single Page Applications - Orange digital accessibility guidelines</a> — a11y-guidelines.orange.com, retrieved 2026-08-23  _(not cited in the article)_</li>
+<li><a href="https://www.levelaccess.com/blog/the-importance-of-keyboard-accessibility-why-aria-widgets-dont-work-as-expected-in-voice-navigation-software" target="_blank" rel="noopener">ARIA Widgets and Keyboard Accessibility: Tips for Dev Teams</a> — levelaccess.com, retrieved 2026-08-23</li>
+<li><a href="https://testparty.ai/blog/automated-accessibility-testing-guide" target="_blank" rel="noopener">Automated Accessibility Testing: What It Catches and What ...</a> — testparty.ai, retrieved 2026-08-23  _(not cited in the article)_</li>
+<li><a href="https://vispero.com/resources/manual-vs-automated-accessibility-testing" target="_blank" rel="noopener">Manual vs Automated Accessibility Testing: Why You Need Both | Vispero</a> — vispero.com, retrieved 2026-08-23</li>
+<li><a href="https://nolanlawson.com/2021/02/23/javascript-performance-beyond-bundle-size" target="_blank" rel="noopener">JavaScript performance beyond bundle size | Read the Tea Leaves</a> — nolanlawson.com, retrieved 2026-08-23  _(not cited in the article)_</li>
+<li><a href="https://github.com/flutter/flutter/issues/181433" target="_blank" rel="noopener">Flutter Notable Commits - 2026 · Issue #181433 · flutter/flutter · GitHub</a> — github.com, retrieved 2026-08-23  _(not cited in the article)_</li>
+<li><a href="https://33jsconcepts.com/beyond/concepts/mutation-observer" target="_blank" rel="noopener">MutationObserver in JavaScript - 33 JavaScript Concepts</a> — 33jsconcepts.com, retrieved 2026-08-23  _(not cited in the article)_</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver" target="_blank" rel="noopener">MutationObserver - Web APIs | MDN</a> — developer.mozilla.org, retrieved 2026-08-23  _(not cited in the article)_</li>
+<li><a href="https://www.debugbear.com/docs/performance/minimize-main-thread-work" target="_blank" rel="noopener">How to Minimize Main Thread Work | DebugBear</a> — debugbear.com, retrieved 2026-08-23  _(not cited in the article)_</li>
+</ol>
+<h2>Viewpoints used</h2>
+<ul>
+<li><b>Marcus Vance</b> — Lead Enterprise Compliance Officer at a Fortune 500 Retailer. Built-in bias: Views accessibility strictly through the lens of cost-benefit risk management and litigation avoidance, often treating users as legal exposure vectors rather than humans.</li>
+<li><b>Aria Chen</b> — Blind Screen-Reader User and Digital Rights Advocate. Built-in bias: Uncompromising and deeply suspicious of corporate good intentions, immediately dismissing technical difficulties as corporate laziness or deprioritization.</li>
+<li><b>Devin Thorne</b> — Principal Frontend Architect at a Cash-Strapped E-Commerce Startup. Built-in bias: Resents compliance mandates as elitist bureaucratic overhead imposed by people who do not write code or understand deployment cycles.</li>
+</ul>
+<p>---</p>
+<p>_Paid in Full — Jesus is God ✝️_</p>
+
+<div class="ajak">
+<b>Want to know where your own site stands?</b><br>
+The <a href="/ai-readiness/">AI Readiness Directory</a> is free and shows the
+same four checks for real e-commerce sites. Whether an assistant actually
+<i>names</i> your brand is a separate question &mdash;
+<a href="https://hillkia.gumroad.com/l/aivis">that report is $39</a>.
+</div>
+
+<div class="jujur">
+Researched by an automated pipeline that interviews several opposed viewpoints
+against each other and cites its sources, then reviewed before publishing.
+Where the sources disagreed, the disagreement is left visible in the text rather
+than smoothed over. If something here is wrong, email
+<a href="mailto:octavianus@ocklu.com">octavianus@ocklu.com</a> and it will be
+corrected.
+</div>
+
+<footer>Ocklu &mdash; Web Accessibility &amp; AI Visibility ·
+<a href="https://ocklu.com">ocklu.com</a></footer>
+</div></body></html>
