@@ -1,0 +1,658 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="author" content="Ocklu">
+<style>html{color-scheme:light dark}body{margin:0}img{max-width:100%}</style>
+<title>Two Accounts, One Engine</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+
+<style>
+:root{
+  --ground:#F5F1F2; --surface:#FFFFFF; --surface-2:#EFE8EA;
+  --ink:#241C24; --ink-2:#655867; --ink-3:#93858F;
+  --line:#E2D8DC; --line-2:#CFC2C8;
+  --accent:#C22E52; --accent-soft:#FAE6EB;
+  --win:#1D6F53; --win-soft:#E1F0E9;
+  --warn:#96620F; --warn-soft:#F6EDDA;
+  --quiet:#8C8090; --quiet-soft:#EAE4E9;
+  --f-display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+  --f-body:"Newsreader",Georgia,"Times New Roman",serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,"SF Mono",Menlo,monospace;
+  --wrap:1020px; --r:4px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#171319; --surface:#1F1A22; --surface-2:#2A2430;
+    --ink:#F1EAEE; --ink-2:#B6A8B4; --ink-3:#8A7C88;
+    --line:#362E3C; --line-2:#4A4051;
+    --accent:#FF6B8E; --accent-soft:#3B1F2A;
+    --win:#5FCFA3; --win-soft:#14332A;
+    --warn:#E0A94A; --warn-soft:#332810;
+    --quiet:#9C90A3; --quiet-soft:#282232;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#171319; --surface:#1F1A22; --surface-2:#2A2430;
+  --ink:#F1EAEE; --ink-2:#B6A8B4; --ink-3:#8A7C88;
+  --line:#362E3C; --line-2:#4A4051;
+  --accent:#FF6B8E; --accent-soft:#3B1F2A;
+  --win:#5FCFA3; --win-soft:#14332A;
+  --warn:#E0A94A; --warn-soft:#332810;
+  --quiet:#9C90A3; --quiet-soft:#282232;
+}
+*{box-sizing:border-box}
+body{background:var(--ground);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+
+.topbar{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--ground) 88%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.topbar-in{max-width:var(--wrap);margin:0 auto;padding:10px 24px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.mark{font-family:var(--f-display);font-weight:800;font-size:15px;letter-spacing:-.02em;white-space:nowrap}
+.mark span{color:var(--accent)}
+.nav{display:flex;gap:4px;flex-wrap:wrap;margin-left:auto}
+.nav a{font-family:var(--f-mono);font-size:11px;font-weight:500;color:var(--ink-2);text-decoration:none;padding:4px 7px;border-radius:var(--r);border:1px solid transparent}
+.nav a:hover{color:var(--accent);border-color:var(--line-2);background:var(--surface)}
+.nav a:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+
+h1,h2,h3,h4{font-family:var(--f-display);text-wrap:balance;margin:0;letter-spacing:-.025em}
+h1{font-size:clamp(34px,6.4vw,58px);font-weight:800;line-height:1}
+h2{font-size:clamp(23px,3.4vw,31px);font-weight:700;line-height:1.08}
+h3{font-size:18px;font-weight:700;line-height:1.2}
+h4{font-size:14px;font-weight:700}
+p{margin:0}
+a{color:var(--accent)}
+.eyebrow{font-family:var(--f-mono);font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3)}
+.mono{font-family:var(--f-mono);font-variant-numeric:tabular-nums}
+.note{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.05em;color:var(--ink-3);line-height:1.5}
+
+.hero{padding:52px 0 34px}
+.hero h1{margin:14px 0 0}
+.hero .sub{margin-top:16px;max-width:58ch;font-size:19px;color:var(--ink-2)}
+
+/* account cards */
+.accts{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:30px}
+.acct{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:18px 20px;display:flex;flex-direction:column;gap:14px}
+.acct.stage{border-top:3px solid var(--accent)}
+.acct.room{border-top:3px solid var(--win)}
+.acct-h{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
+.handle{font-family:var(--f-display);font-weight:700;font-size:17px}
+.role{font-family:var(--f-mono);font-size:9.5px;font-weight:600;letter-spacing:.11em;text-transform:uppercase;padding:3px 7px;border-radius:2px}
+.acct.stage .role{background:var(--accent-soft);color:var(--accent)}
+.acct.room .role{background:var(--win-soft);color:var(--win)}
+.nums{display:flex;gap:20px;flex-wrap:wrap}
+.num-b{display:flex;flex-direction:column;gap:3px}
+.num-b b{font-family:var(--f-display);font-weight:800;font-size:26px;line-height:1;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.num-b span{font-family:var(--f-mono);font-size:9.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-3)}
+.job{font-size:15px;color:var(--ink-2);line-height:1.45}
+.job b{color:var(--ink)}
+@media(max-width:720px){.accts{grid-template-columns:1fr}}
+
+section{padding:44px 0;border-top:1px solid var(--line)}
+.sec-head{display:flex;gap:16px;align-items:baseline;margin-bottom:20px}
+.num{font-family:var(--f-mono);font-size:12px;font-weight:600;color:var(--accent);letter-spacing:.06em;padding-top:5px}
+.stack{display:flex;flex-direction:column;gap:16px}
+
+.callout{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:var(--r);padding:17px 19px;display:flex;flex-direction:column;gap:9px}
+.callout.flat{border-left-color:var(--line-2)}
+.callout h4{color:var(--accent)}
+.callout.flat h4{color:var(--ink)}
+
+/* chart */
+.chart{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:20px 18px 16px;position:relative}
+.chart-h{display:flex;justify-content:space-between;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:18px}
+.rows{position:relative;display:flex;flex-direction:column;gap:12px}
+.row-lab{display:flex;justify-content:space-between;align-items:baseline;gap:14px;margin-bottom:4px}
+.row-t{font-size:14.5px;line-height:1.3}
+.row-v{font-family:var(--f-mono);font-size:13px;font-weight:600;font-variant-numeric:tabular-nums;white-space:nowrap}
+.track{height:9px;background:var(--surface-2);border-radius:2px;overflow:hidden}
+.fill{height:100%;border-radius:2px}
+.t-win .fill{background:var(--accent)} .t-win .row-v{color:var(--accent)}
+.t-mid .fill{background:var(--warn)} .t-mid .row-v{color:var(--warn)}
+.t-low .fill{background:var(--quiet)} .t-low .row-v{color:var(--quiet)}
+.fline{position:absolute;top:-4px;bottom:-4px;border-left:1px dashed var(--ink-3);pointer-events:none}
+.fline b{position:absolute;bottom:-4px;left:6px;font-family:var(--f-mono);font-size:10px;font-weight:500;letter-spacing:.05em;color:var(--ink-3);white-space:nowrap;background:var(--surface);padding:1px 4px}
+.legend{display:flex;gap:16px;flex-wrap:wrap;margin-top:20px;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
+.legend i{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:6px}
+
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r);background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:500px}
+th{font-family:var(--f-mono);font-size:10.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);text-align:left;padding:11px 14px;border-bottom:1px solid var(--line);white-space:nowrap;vertical-align:bottom}
+td{padding:12px 14px;border-bottom:1px solid var(--line);font-size:15.5px;line-height:1.42;vertical-align:top}
+tr:last-child td{border-bottom:0}
+td.n,th.n{font-family:var(--f-mono);font-variant-numeric:tabular-nums;font-size:14px;white-space:nowrap}
+.dead{color:var(--quiet)}
+.pill{display:inline-block;font-family:var(--f-mono);font-size:10px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;padding:2px 7px;border-radius:2px;white-space:nowrap}
+.p-bad{background:var(--accent-soft);color:var(--accent)}
+.p-ok{background:var(--win-soft);color:var(--win)}
+.p-warn{background:var(--warn-soft);color:var(--warn)}
+.p-off{background:var(--quiet-soft);color:var(--quiet)}
+
+/* versus */
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.vs-c{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:18px}
+.vs-c.up{border-color:var(--accent)}
+.vs-c h4{margin-bottom:12px;font-size:13px;letter-spacing:.06em;text-transform:uppercase;font-family:var(--f-mono);font-weight:600}
+.vs-c.up h4{color:var(--accent)}
+.vs-c.down h4{color:var(--quiet)}
+.vs-c ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:8px;font-size:15px;line-height:1.42}
+.vs-c.down ul{color:var(--quiet)}
+@media(max-width:640px){.vs{grid-template-columns:1fr}}
+
+/* calendar */
+.cal{display:flex;flex-direction:column;gap:0}
+.day{display:flex;gap:14px;align-items:flex-start;background:var(--surface);border:1px solid var(--line);border-bottom:0;padding:15px 16px;cursor:pointer}
+.day:first-child{border-radius:var(--r) var(--r) 0 0}
+.day:last-child{border-bottom:1px solid var(--line);border-radius:0 0 var(--r) var(--r)}
+.day input{appearance:none;width:17px;height:17px;flex:0 0 auto;margin-top:4px;border:1.5px solid var(--line-2);border-radius:3px;background:var(--ground);cursor:pointer}
+.day input:checked{background:var(--accent);border-color:var(--accent)}
+.day input:checked::after{content:"";display:block;width:5px;height:9px;margin:1px 0 0 5px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+:root[data-theme="dark"] .day input:checked::after,:root[data-theme="dark"] .chk input:checked::after{border-color:#241C24}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .day input:checked::after,:root:not([data-theme="light"]) .chk input:checked::after{border-color:#241C24}}
+@media(prefers-color-scheme:light){:root:not([data-theme="dark"]) .day input:checked::after,:root:not([data-theme="dark"]) .chk input:checked::after{border-color:#fff}}
+.day input:focus-visible,.chk input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.day-b{display:flex;flex-direction:column;gap:8px;flex:1}
+.day-top{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.dow{font-family:var(--f-mono);font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);min-width:32px}
+.day-t{font-family:var(--f-display);font-weight:700;font-size:16px;flex:1 1 220px}
+.fmt{font-family:var(--f-mono);font-size:9.5px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-3);border:1px solid var(--line-2);border-radius:2px;padding:2px 6px;white-space:nowrap}
+.hook{background:var(--surface-2);border-radius:var(--r);padding:11px 13px;font-family:var(--f-display);font-weight:700;font-size:15.5px;line-height:1.3}
+.hook em{font-family:var(--f-mono);font-style:normal;font-size:9.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);display:block;margin-bottom:5px}
+.cta{font-size:14.5px;color:var(--ink-2)}
+.cta b{font-family:var(--f-mono);font-size:12px;font-weight:600;color:var(--ink)}
+.day input:checked ~ .day-b .day-t{text-decoration:line-through;color:var(--ink-3)}
+
+/* tool */
+.tool{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:20px;display:flex;flex-direction:column;gap:16px}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{font-family:var(--f-mono);font-size:11px;font-weight:500;letter-spacing:.05em;padding:6px 10px;border:1px solid var(--line-2);border-radius:2px;background:transparent;color:var(--ink-2);cursor:pointer}
+.chip:hover{border-color:var(--accent);color:var(--accent)}
+.chip:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+:root[data-theme="dark"] .chip[aria-pressed="true"],:root[data-theme="dark"] .btn{color:#241C24}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .chip[aria-pressed="true"],:root:not([data-theme="light"]) .btn{color:#241C24}}
+@media(prefers-color-scheme:light){:root:not([data-theme="dark"]) .chip[aria-pressed="true"],:root:not([data-theme="dark"]) .btn{color:#fff}}
+.slots{display:flex;flex-wrap:wrap;gap:10px}
+.slot{display:flex;flex-direction:column;gap:4px;flex:1 1 150px}
+.slot label{font-family:var(--f-mono);font-size:10px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-3)}
+.slot input,.krow input{font-family:var(--f-body);font-size:15px;color:var(--ink);background:var(--ground);border:1px solid var(--line-2);border-radius:var(--r);padding:8px 10px;width:100%}
+.slot input:focus-visible,.krow input:focus-visible{outline:2px solid var(--accent);border-color:var(--accent)}
+.out{background:var(--surface-2);border-radius:var(--r);padding:18px;font-family:var(--f-display);font-weight:800;font-size:clamp(17px,2.5vw,23px);line-height:1.18;letter-spacing:-.02em;min-height:58px}
+.tool-foot{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.btn{font-family:var(--f-mono);font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:8px 14px;border-radius:var(--r);background:var(--accent);border:1px solid var(--accent);cursor:pointer}
+.btn:hover{filter:brightness(1.08)}
+.btn:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+
+/* funnel */
+.funnel{display:flex;flex-direction:column;gap:5px}
+.fstep{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:13px 16px;display:flex;gap:14px;align-items:baseline;flex-wrap:wrap}
+.fstep .fk{font-family:var(--f-mono);font-size:10px;font-weight:600;letter-spacing:.11em;text-transform:uppercase;color:var(--accent);min-width:78px}
+.fstep .fv{flex:1 1 220px;font-size:15px;line-height:1.4}
+.fstep.missing{border-style:dashed;border-color:var(--accent);background:var(--accent-soft)}
+
+/* kpi */
+.kpi{display:flex;flex-direction:column}
+.krow{display:grid;grid-template-columns:1fr 96px 92px 82px;gap:12px;align-items:center;padding:13px 16px;border:1px solid var(--line);border-bottom:0;background:var(--surface)}
+.krow:first-of-type{border-radius:var(--r) var(--r) 0 0}
+.krow:last-of-type{border-bottom:1px solid var(--line);border-radius:0 0 var(--r) var(--r)}
+.krow.head{background:var(--surface-2)}
+.krow.head span{font-family:var(--f-mono);font-size:10px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-3)}
+.kname{font-size:15px;line-height:1.32}
+.kname small{display:block;color:var(--ink-3);font-family:var(--f-mono);font-size:10.5px;letter-spacing:.04em;margin-top:2px}
+.krow input{font-family:var(--f-mono);font-size:14px;font-variant-numeric:tabular-nums}
+.ktarget{font-family:var(--f-mono);font-size:13px;color:var(--ink-2);font-variant-numeric:tabular-nums}
+
+/* checklist */
+.checks{display:flex;flex-direction:column}
+.chk{display:flex;gap:14px;align-items:flex-start;padding:15px 16px;background:var(--surface);border:1px solid var(--line);border-bottom:0;cursor:pointer}
+.chk:first-child{border-radius:var(--r) var(--r) 0 0}
+.chk:last-child{border-bottom:1px solid var(--line);border-radius:0 0 var(--r) var(--r)}
+.chk input{appearance:none;width:17px;height:17px;flex:0 0 auto;margin-top:4px;border:1.5px solid var(--line-2);border-radius:3px;background:var(--ground);cursor:pointer}
+.chk input:checked{background:var(--accent);border-color:var(--accent)}
+.chk input:checked::after{content:"";display:block;width:5px;height:9px;margin:1px 0 0 5px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+.chk-b{display:flex;flex-direction:column;gap:4px}
+.chk-t{font-family:var(--f-display);font-weight:700;font-size:16px}
+.chk-t span{font-family:var(--f-mono);font-size:11px;font-weight:500;color:var(--ink-3);margin-left:8px;letter-spacing:.05em}
+.chk-d{font-size:14.5px;color:var(--ink-2);line-height:1.42}
+.chk input:checked ~ .chk-b .chk-t{text-decoration:line-through;color:var(--ink-3)}
+
+footer{padding:40px 0 68px;border-top:1px solid var(--line)}
+.gaps{display:flex;flex-direction:column;gap:9px;margin-top:14px}
+.gapr{display:flex;gap:12px;align-items:baseline;font-size:15px;color:var(--ink-2)}
+
+@media(max-width:680px){
+  .krow{grid-template-columns:1fr auto auto;row-gap:11px;column-gap:10px}
+  .krow.head{display:none}
+  .krow .kname{grid-column:1/-1}
+}
+@media(max-width:560px){
+  .wrap{padding:0 16px}
+  .topbar-in{padding:9px 16px}
+  .nav{margin-left:0;width:100%}
+  .hero{padding:34px 0 26px}
+  section{padding:34px 0}
+  .chart{padding:16px 13px 13px}
+  .row-t{font-size:13.5px}
+  .fline b{font-size:9px;left:4px}
+  .tool,.acct{padding:15px}
+  .callout,.day,.chk{padding:14px}
+  table{min-width:420px}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+<div class="topbar">
+  <div class="topbar-in">
+    <div class="mark">Kia <span>/</span> engine</div>
+    <nav class="nav">
+      <a href="#now">Where you are</a>
+      <a href="#rule">The rule</a>
+      <a href="#fix">Fix first</a>
+      <a href="#week">This week</a>
+      <a href="#hooks">Hooks</a>
+      <a href="#path">Path</a>
+      <a href="#track">Track</a>
+    </nav>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <header class="hero">
+    <div class="eyebrow">Content dashboard &nbsp;·&nbsp; built from your last 12 reels &nbsp;·&nbsp; 1 Sep 2026</div>
+    <h1>Two accounts,<br>one engine.</h1>
+    <p class="sub">One of your accounts already reaches 30,000 people. The other has the audience that actually converts. Right now they aren't connected to each other — or to anything you own.</p>
+
+    <div class="accts">
+      <div class="acct stage">
+        <div class="acct-h"><div class="handle">@kiamomjourney</div><div class="role">The stage</div></div>
+        <div class="nums">
+          <div class="num-b"><b>4,634</b><span>followers</span></div>
+          <div class="num-b"><b>30.8K</b><span>best reel</span></div>
+          <div class="num-b"><b>2,989</b><span>median reel</span></div>
+        </div>
+        <p class="job"><b>Its job:</b> reach strangers. It has proven it can do this three times.</p>
+      </div>
+      <div class="acct room">
+        <div class="acct-h"><div class="handle">@regulatewithkia</div><div class="role">The room</div></div>
+        <div class="nums">
+          <div class="num-b"><b>74</b><span>followers</span></div>
+          <div class="num-b"><b>17.6%</b><span>top engagement</span></div>
+          <div class="num-b"><b>32</b><span>posts</span></div>
+        </div>
+        <p class="job"><b>Its job:</b> hold the people who already trust you. Its engagement rate is 6× the platform average.</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== NOW ===== -->
+  <section id="now">
+    <div class="sec-head"><div class="num">01</div><div><h2>Where you are</h2><p class="note" style="margin-top:6px">Real view counts from your last 12 reels on @kiamomjourney.</p></div></div>
+
+    <div class="chart">
+      <div class="chart-h">
+        <h3>Four posts carried everything</h3>
+        <div class="mono" style="font-size:13px;color:var(--ink-3)">125,797 total views</div>
+      </div>
+      <div class="rows" id="rows"><div class="fline" style="left:15.04%"><b>4,634 followers</b></div></div>
+      <div class="legend">
+        <span><i style="background:var(--accent)"></i>Scripts &amp; systems &nbsp;12K–31K</span>
+        <span><i style="background:var(--warn)"></i>Soft listicles &nbsp;3K–7K</span>
+        <span><i style="background:var(--quiet)"></i>Monologues &nbsp;1K–3K</span>
+      </div>
+    </div>
+
+    <div class="stack" style="margin-top:16px">
+      <div class="callout">
+        <h4>82% of your reach came from 4 posts</h4>
+        <p>103,200 of 125,797 views. The other eight posts collected 22,597 <em>between all of them</em>. You don't need to post more — you need to stop making those eight.</p>
+      </div>
+      <div class="callout">
+        <h4>Your median post doesn't even reach your own followers</h4>
+        <p>Median 2,989 views against 4,634 followers — a ratio of <strong>0.64×</strong>. Your best posts hit 6.5×. That gap is 10×, and it isn't the algorithm. It's format.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RULE ===== -->
+  <section id="rule">
+    <div class="sec-head"><div class="num">02</div><div><h2>The one rule</h2><p class="note" style="margin-top:6px">Everything else on this page follows from it.</p></div></div>
+
+    <h3 style="font-size:clamp(22px,3.4vw,30px);margin-bottom:18px">Scripts beat feelings. Every time.</h3>
+
+    <div class="vs">
+      <div class="vs-c up">
+        <h4>12K – 31K views</h4>
+        <ul>
+          <li>Big title card at the top of the frame, visible at second zero</li>
+          <li>Gives words a mom can <strong>copy tonight</strong> — "Walking feet, please"</li>
+          <li>Numbered, each point a concrete action</li>
+          <li>Worth saving &rarr; earns saves and shares</li>
+        </ul>
+      </div>
+      <div class="vs-c down">
+        <h4>1K – 3.2K views</h4>
+        <ul>
+          <li>Small centered text, no title</li>
+          <li>Gives a feeling — "You're doing better than you think"</li>
+          <li>Essay monologue, nothing to take away</li>
+          <li>Nothing to save &rarr; a like, then gone</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top:16px">
+      <h4>Your writing isn't the problem</h4>
+      <p>"I am the table" is the best-written thing on your grid. It got 2,773 views. People don't share compliments about themselves — they share <strong>solutions they can use</strong>. Keep writing those posts; just cap them at one a week and give the other six something to steal.</p>
+    </div>
+
+    <div class="callout" style="margin-top:12px">
+      <h4>Your 30K post wasn't a parenting post</h4>
+      <p><em>"Work: 9–5. Daycare: 8–3. School: 8–3… It's not an organizational problem. It's a structural problem."</em> That's economics, dressed as rage. And on <strong>@regulatewithkia</strong> the exact same structure — <em>"1980 vs 2026: side income didn't need one / almost feels necessary"</em> — is your highest-intent post there.</p>
+      <p>Same template, two accounts, two audiences. It's the only format that should cross between them.</p>
+    </div>
+  </section>
+
+  <!-- ===== FIX ===== -->
+  <section id="fix">
+    <div class="sec-head"><div class="num">03</div><div><h2>Fix these first</h2><p class="note" style="margin-top:6px">Before any new content. Tick them off as you go — this page remembers.</p></div></div>
+
+    <div class="checks" id="checks">
+      <label class="chk"><input type="checkbox" data-k="f1">
+        <span class="chk-b"><span class="chk-t">Put a link in your bio <span>20 min</span></span>
+        <span class="chk-d">Both accounts have no link. 125,797 views went to a dead end this month. One landing page, three buttons: <strong>Free Scripts</strong> · <strong>The Room</strong> · <strong>Pok Pok</strong>.</span></span></label>
+
+      <label class="chk"><input type="checkbox" data-k="f2">
+        <span class="chk-b"><span class="chk-t">Rewrite both bios as a promise <span>15 min</span></span>
+        <span class="chk-d">The name field is searchable on Instagram. "In her mom era" and "Slow down babe" aren't things anyone searches. "Toddler scripts" and "chronic illness" are. Drafts below.</span></span></label>
+
+      <label class="chk"><input type="checkbox" data-k="f3">
+        <span class="chk-b"><span class="chk-t">Add 5 highlights from old posts <span>40 min</span></span>
+        <span class="chk-d">You have zero highlights. People land on your profile and find nothing to hold. <span class="mono" style="font-size:13px">SCRIPTS · NO VILLAGE · THE SYSTEM · POK POK · START HERE</span> — no new content needed.</span></span></label>
+
+      <label class="chk"><input type="checkbox" data-k="f4">
+        <span class="chk-b"><span class="chk-t">Connect 4,634 to 74 <span>ongoing</span></span>
+        <span class="chk-d">One story a day and one post a week from @kiamomjourney pointing to @regulatewithkia. This is the only fix on the page that changes things by an order of magnitude — everything else moves percentages.</span></span></label>
+
+      <label class="chk"><input type="checkbox" data-k="f5">
+        <span class="chk-b"><span class="chk-t">Turn on one DM keyword <span>30 min</span></span>
+        <span class="chk-d">"Comment BEDTIME and I'll send you the full script." Comments lift reach <em>and</em> collect a real contact at the same time. Replying by hand is fine to start.</span></span></label>
+    </div>
+
+    <div class="tw" style="margin-top:18px">
+      <table>
+        <thead><tr><th>Account</th><th>Bio now</th><th>Bio to write</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="n">@kiamomjourney</td>
+            <td class="dead">Kia in her mom era 🌸<br>sahm of 2 boys<br>mamas you're already doing great</td>
+            <td><span class="mono" style="font-size:13.5px">Kia · Toddler Scripts &amp; Calm Parenting</span><br>mom of 2 boys, no village, still here 🌸<br>i give you the exact words to say<br>when yelling feels like the only option ↓<br>free: 30 calm-down scripts</td>
+          </tr>
+          <tr>
+            <td class="n">@regulatewithkia</td>
+            <td class="dead">Regulate With Kia<br>Life's already hard. What's the rush?<br>Slow down babe…</td>
+            <td><span class="mono" style="font-size:13.5px">Kia · Nervous System Resets</span><br>for burnout &amp; chronic illness 🦋<br>energy rationing, soft schedules,<br>and permission to stop ↓<br>the room is open</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ===== WEEK ===== -->
+  <section id="week">
+    <div class="sec-head"><div class="num">04</div><div><h2>This week</h2><p class="note" style="margin-top:6px">Four reels, two carousels, one face-to-camera. Tick each when it's posted.</p></div></div>
+
+    <div class="cal" id="cal">
+      <label class="day"><input type="checkbox" data-k="d1"><span class="day-b">
+        <span class="day-top"><span class="dow">Mon</span><span class="day-t">7 exact words to say when your kid hits you</span><span class="fmt">Reel · Scripts</span></span>
+        <span class="hook"><em>title card, second zero</em>WHEN YOUR KID HITS YOU — SAY THIS, NOT THAT 🖐️</span>
+        <span class="cta"><b>Comment HIT</b> and I'll DM you all seven &nbsp;<span class="pill p-ok">lead</span></span>
+      </span></label>
+
+      <label class="day"><input type="checkbox" data-k="d2"><span class="day-b">
+        <span class="day-top"><span class="dow">Tue</span><span class="day-t">The real cost of being the default parent</span><span class="fmt">Carousel 8 · Systems</span></span>
+        <span class="hook"><em>slide 1</em>I did the math on what my "free" labor is worth.</span>
+        <span class="cta"><b>Save this</b> to show someone who needs to see it &nbsp;<span class="pill p-warn">save</span></span>
+      </span></label>
+
+      <label class="day"><input type="checkbox" data-k="d3"><span class="day-b">
+        <span class="day-top"><span class="dow">Wed</span><span class="day-t">5 phrases that stop a meltdown in 30 seconds</span><span class="fmt">Reel · Scripts</span></span>
+        <span class="hook"><em>title card, second zero</em>5 PHRASES THAT STOP A MELTDOWN IN 30 SECONDS ⏱️</span>
+        <span class="cta"><b>Link in bio</b> → 30 free scripts &nbsp;<span class="pill p-ok">funnel</span></span>
+      </span></label>
+
+      <label class="day"><input type="checkbox" data-k="d4"><span class="day-b">
+        <span class="day-top"><span class="dow">Thu</span><span class="day-t">Nobody tells you daycare costs more than rent</span><span class="fmt">Reel rant · Systems</span></span>
+        <span class="hook"><em>second zero</em>Daycare vs. rent. And they call this a "choice."</span>
+        <span class="cta"><b>Follow</b> if you're tired of being told to be grateful &nbsp;<span class="pill p-warn">follow</span></span>
+      </span></label>
+
+      <label class="day"><input type="checkbox" data-k="d5"><span class="day-b">
+        <span class="day-top"><span class="dow">Fri</span><span class="day-t">6 tiny rituals for the 5pm witching hour</span><span class="fmt">Carousel 7 · Rituals</span></span>
+        <span class="hook"><em>slide 1</em>5PM is the hardest hour of motherhood. Here's how we survive it.</span>
+        <span class="cta"><b>Save + send</b> to a mom friend &nbsp;<span class="pill p-warn">share</span></span>
+      </span></label>
+
+      <label class="day"><input type="checkbox" data-k="d6"><span class="day-b">
+        <span class="day-top"><span class="dow">Sat</span><span class="day-t">I have no village. Here are the 3 things I built instead</span><span class="fmt">Reel · No Village</span></span>
+        <span class="hook"><em>second zero</em>No grandma, no MIL, no one to call. So I built this instead.</span>
+        <span class="cta">There's a room where moms without a village talk → <b>link in bio</b> &nbsp;<span class="pill p-bad">convert</span></span>
+      </span></label>
+
+      <label class="day"><input type="checkbox" data-k="d7"><span class="day-b">
+        <span class="day-top"><span class="dow">Sun</span><span class="day-t">What I'd tell myself at 3 months postpartum</span><span class="fmt">Reel · face &amp; voice</span></span>
+        <span class="hook"><em>your face, no title card</em>Nobody warned me about month three.</span>
+        <span class="cta"><b>Comment</b> the one thing you wish you'd known &nbsp;<span class="pill p-off">brand, not reach</span></span>
+      </span></label>
+    </div>
+
+    <div class="callout flat" style="margin-top:16px">
+      <h4>Why it's ordered this way</h4>
+      <p>Mon &amp; Wed are your proven format on the two busiest days. Tue &amp; Thu test the money-and-systems angle that already works on both accounts. Sunday is the first time your face and voice carry a post — <strong>its reach will be poor, and that's fine.</strong> That isn't its job.</p>
+      <p><strong>Use your own real numbers</strong> in Tuesday and Thursday. Made-up figures cost more than they earn.</p>
+    </div>
+  </section>
+
+  <!-- ===== HOOKS ===== -->
+  <section id="hooks">
+    <div class="sec-head"><div class="num">05</div><div><h2>Hook builder</h2><p class="note" style="margin-top:6px">Five templates, each pulled from a post that already worked on your grid. Fill the blanks, copy the line.</p></div></div>
+
+    <div class="tool">
+      <div class="chips" id="chips" role="group" aria-label="Choose a hook template"></div>
+      <div class="slots" id="slots"></div>
+      <div class="out" id="out" aria-live="polite"></div>
+      <div class="tool-foot">
+        <div class="note" id="src"></div>
+        <button class="btn" id="copy" type="button">Copy hook</button>
+      </div>
+    </div>
+
+    <div class="callout flat" style="margin-top:16px">
+      <h4>Three rules your own data proved</h4>
+      <p>· <strong>A number in the title.</strong> Every 30K post has one — but so did the 1,014 post. The number has to attach to a <em>concrete result</em>, not "forever"<br>
+      · <strong>Caps and high contrast at the top of the frame.</strong> Your 3,205 post lost because the title sat small against a bright sky<br>
+      · <strong>"Without" and "instead"</strong> remove guilt. Both appear in your winners</p>
+    </div>
+  </section>
+
+  <!-- ===== PATH ===== -->
+  <section id="path">
+    <div class="sec-head"><div class="num">06</div><div><h2>Where people go</h2><p class="note" style="margin-top:6px">Right now the path is: post → view → nothing.</p></div></div>
+
+    <div class="funnel">
+      <div class="fstep"><div class="fk">Cold</div><div class="fv">A script reel or a systems rant on @kiamomjourney. 15–30K strangers. Costs them nothing to watch.</div></div>
+      <div class="fstep" style="margin-right:6%"><div class="fk">Warm</div><div class="fv">Follow and save — triggered by a carousel worth keeping and a profile that promises something.</div></div>
+      <div class="fstep missing" style="margin-right:14%"><div class="fk">Captured</div><div class="fv"><strong>DM keyword. This is the missing step.</strong> "Comment HIT → I'll send the scripts." A DM is a real contact, not a view.</div></div>
+      <div class="fstep" style="margin-right:24%"><div class="fk">Yours</div><div class="fv">Newsletter, via the free <em>30 Calm-Down Scripts</em>. An audience you <strong>own</strong> rather than rent from Meta.</div></div>
+      <div class="fstep" style="margin-right:36%"><div class="fk">The room</div><div class="fv"><strong>@regulatewithkia and the Skool community.</strong> 17.6% engagement — this is where warm people belong.</div></div>
+    </div>
+
+    <div class="callout" style="margin-top:16px">
+      <h4>Don't send cold traffic straight to the community</h4>
+      <p>At 4,634 followers, strangers don't join rooms. DM first, email second, community third. If one 30K reel earns 300 keyword comments and 40% convert, that's roughly <strong>120 subscribers from a single post</strong>. That number is currently zero — only because nothing is set up to catch them.</p>
+    </div>
+  </section>
+
+  <!-- ===== TRACK ===== -->
+  <section id="track">
+    <div class="sec-head"><div class="num">07</div><div><h2>Track three things</h2><p class="note" style="margin-top:6px">Only three. More than that and you'll stop checking.</p></div></div>
+
+    <div class="kpi">
+      <div class="krow head"><span>Metric</span><span>This week</span><span>Target</span><span>Status</span></div>
+      <div class="krow">
+        <div class="kname">Non-follower reach<small>Insights → per reel → non-followers</small></div>
+        <div><input type="number" id="k1" inputmode="decimal" placeholder="—" aria-label="Non-follower reach percentage"></div>
+        <div class="ktarget">&ge; 65%</div>
+        <div id="k1s"><span class="pill p-off">enter</span></div>
+      </div>
+      <div class="krow">
+        <div class="kname">Shares + saves per 1,000 views<small>(shares + saves) ÷ views × 1000</small></div>
+        <div><input type="number" id="k2" inputmode="decimal" placeholder="—" aria-label="Shares and saves per thousand views"></div>
+        <div class="ktarget">&ge; 20</div>
+        <div id="k2s"><span class="pill p-off">enter</span></div>
+      </div>
+      <div class="krow">
+        <div class="kname">Contacts captured<small>DM keywords + new emails</small></div>
+        <div><input type="number" id="k3" inputmode="numeric" placeholder="—" aria-label="Contacts captured this week"></div>
+        <div class="ktarget">&ge; 50</div>
+        <div id="k3s"><span class="pill p-off">enter</span></div>
+      </div>
+    </div>
+    <p class="note" style="margin-top:10px">Saved in this browser only. Nothing is sent anywhere.</p>
+
+    <div class="stack" style="margin-top:20px">
+      <div class="callout flat">
+        <h4>Why these and not followers or likes</h4>
+        <p>· <strong>Non-follower reach</strong> explains why you plateau. A 0.64× median means you're talking to yourself<br>
+        · <strong>Shares and saves</strong> are what Instagram distributes on now<br>
+        · <strong>Contacts</strong> is the only one that pays. Followers can't be sold anything</p>
+      </div>
+      <div class="callout">
+        <h4>How to act on it</h4>
+        <p>A post clears <strong>20 shares/1K</strong> → make three variations of it next week. Below <strong>8/1K</strong> → retire that format, don't repeat it.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="eyebrow">What this is built on</div>
+    <div class="gaps">
+      <div class="gapr"><span class="pill p-ok">measured</span><span><strong>@kiamomjourney</strong> — 12 reels with real view counts, bio, and profile structure.</span></div>
+      <div class="gapr"><span class="pill p-warn">partial</span><span><strong>@regulatewithkia</strong> — 9 of 32 posts seen; likes, shares and saves measured on 3.</span></div>
+      <div class="gapr"><span class="pill p-off">not seen</span><span>Stories data and audience demographics — those live in Insights, which only you can open.</span></div>
+      <div class="gapr"><span class="pill p-warn">placeholder</span><span>The cost figures in Tuesday and Thursday. <strong>Replace with your own real numbers</strong> before posting.</span></div>
+    </div>
+    <p class="note" style="margin-top:24px">1 September 2026 · @kiamomjourney 4,634 followers · @regulatewithkia 74 followers</p>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var POSTS=[
+    ["How to spot a jealous mom friend",6161,"mid"],
+    ["How parents may unknowingly raise anxious kids + what to do",12200,"win"],
+    ["5 magic phrases that help kids listen (without yelling)",30800,"win"],
+    ["“Wow, you’re lucky he’s such a hands-on dad”",2518,"low"],
+    ["6 tiny traditions your child will remember forever",30200,"win"],
+    ["People who parent without a village",2766,"low"],
+    ["“Girl, look at you. You work. You raise kids…”",1765,"low"],
+    ["5 things that stick with your children forever",1014,"low"],
+    ["“I am the table.”",2773,"low"],
+    ["PSA: we expect WAY too much from our 2-year-olds",2395,"low"],
+    ["5 signs your child is happy & feels safe with you",3205,"mid"],
+    ["SOMEONE TELL ME WHO CREATED THIS DISASTER",30000,"win"]
+  ];
+  var MAX=30800, rows=document.getElementById("rows");
+  POSTS.forEach(function(p){
+    var d=document.createElement("div");
+    d.className="t-"+p[2];
+    d.innerHTML='<div class="row-lab"><span class="row-t"></span><span class="row-v"></span></div><div class="track"><i class="fill" style="width:'+((p[1]/MAX)*100).toFixed(2)+'%"></i></div>';
+    d.querySelector(".row-t").textContent=p[0];
+    d.querySelector(".row-v").textContent=p[1].toLocaleString("en-US");
+    rows.appendChild(d);
+  });
+
+  var T=[
+    {n:"Script Drop", src:"from your 30.8K reel — “5 magic phrases… without yelling”",
+     s:[["number","5"],["result","help kids listen"],["the guilt","yelling"]],
+     f:function(v){return v[0].toUpperCase()+" EXACT PHRASES THAT "+v[1].toUpperCase()+" (WITHOUT "+v[2].toUpperCase()+")";}},
+    {n:"Structural Rant", src:"from your 30K reel — and your best post on @regulatewithkia",
+     s:[["fact A","Work: 9–5"],["fact B","Daycare: 8–3"],["fact C","School: 8–3"],["what they blame","organizational"]],
+     f:function(v){return "SOMEONE TELL ME WHO CREATED THIS: "+v[0]+" / "+v[1]+" / "+v[2]+" — it’s not "+(/^[aeiou]/i.test(v[3])?"an ":"a ")+v[3]+" problem. It’s a structural problem.";}},
+    {n:"Accidental Harm", src:"from your 12.2K reel — anxious kids",
+     s:[["the unintended harm","teach kids to hide feelings"]],
+     f:function(v){return "HOW PARENTS MAY UNKNOWINGLY "+v[0].toUpperCase()+" + WHAT TO DO INSTEAD";}},
+    {n:"Forever Frame", src:"from your 30.2K reel — tiny traditions",
+     s:[["number","5"],["small thing","sentences"]],
+     f:function(v){return v[0]+" tiny "+v[1]+" your child will remember forever";}},
+    {n:"Reframe", src:"from “I am the table” (2.7K) — add a title card and three actions to lift it",
+     s:[["what people say to you","What do you bring to the table?"],["your answer","I am the table."]],
+     f:function(v){return "“"+v[0]+"” — "+v[1];}}
+  ];
+  var cur=0, chips=document.getElementById("chips"), slots=document.getElementById("slots"),
+      out=document.getElementById("out"), src=document.getElementById("src"), copy=document.getElementById("copy");
+  function render(){
+    slots.innerHTML="";
+    T[cur].s.forEach(function(s,i){
+      var w=document.createElement("div"); w.className="slot";
+      var id="slot-"+cur+"-"+i;
+      var l=document.createElement("label"); l.textContent=s[0]; l.setAttribute("for",id);
+      var inp=document.createElement("input"); inp.type="text"; inp.id=id; inp.value=s[1];
+      inp.addEventListener("input",paint);
+      w.appendChild(l); w.appendChild(inp); slots.appendChild(w);
+    });
+    src.textContent=T[cur].src; paint();
+  }
+  function paint(){
+    var v=[].map.call(slots.querySelectorAll("input"),function(i){return i.value.trim();});
+    out.textContent=T[cur].f(v);
+  }
+  T.forEach(function(t,i){
+    var b=document.createElement("button");
+    b.type="button"; b.className="chip"; b.textContent=t.n;
+    b.setAttribute("aria-pressed", i===0?"true":"false");
+    b.addEventListener("click",function(){
+      cur=i;
+      [].forEach.call(chips.children,function(c,j){c.setAttribute("aria-pressed", j===i?"true":"false");});
+      render();
+    });
+    chips.appendChild(b);
+  });
+  copy.addEventListener("click",function(){
+    var t=out.textContent, done=function(){copy.textContent="Copied ✓";setTimeout(function(){copy.textContent="Copy hook";},1600);};
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,function(){});}
+    else{try{var ta=document.createElement("textarea");ta.value=t;document.body.appendChild(ta);ta.select();document.execCommand("copy");document.body.removeChild(ta);done();}catch(e){}}
+  });
+  render();
+
+  function get(k){try{return localStorage.getItem(k);}catch(e){return null;}}
+  function set(k,v){try{localStorage.setItem(k,v);}catch(e){}}
+
+  [["k1",65],["k2",20],["k3",50]].forEach(function(k){
+    var inp=document.getElementById(k[0]), st=document.getElementById(k[0]+"s");
+    var saved=get("kia2-"+k[0]); if(saved!==null) inp.value=saved;
+    function upd(){
+      var v=inp.value.trim(); set("kia2-"+k[0],v);
+      if(v===""||isNaN(parseFloat(v))){st.innerHTML='<span class="pill p-off">enter</span>';return;}
+      var n=parseFloat(v), t=k[1];
+      if(n>=t) st.innerHTML='<span class="pill p-ok">on target</span>';
+      else if(n>=t*0.6) st.innerHTML='<span class="pill p-warn">close</span>';
+      else st.innerHTML='<span class="pill p-bad">off</span>';
+    }
+    inp.addEventListener("input",upd); upd();
+  });
+
+  [].forEach.call(document.querySelectorAll("#checks input, #cal input"),function(c){
+    var key="kia2-"+c.dataset.k;
+    if(get(key)==="1") c.checked=true;
+    c.addEventListener("change",function(){set(key,c.checked?"1":"0");});
+  });
+})();
+</script>
+</body>
+</html>
