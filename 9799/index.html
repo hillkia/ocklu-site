@@ -1,0 +1,1750 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ocklu-9799 — konsol optimasi akun sosmed</title>
+<meta name="description" content="Konsol satu berkas untuk audit akun sosial media, menulis hook & caption, SEO per platform, menutup celah, tangga uang, rencana 7 hari, dan jurnal hasil. Coba penuh di halaman ini, tanpa daftar.">
+<meta name="author" content="Ocklu">
+<link rel="canonical" href="https://ocklu.com/9799/">
+<meta property="og:title" content="Ocklu-9799 — konsol optimasi akun sosmed">
+<meta property="og:description" content="Coba penuh di halaman ini, tanpa daftar. Semua angka dihitung dari data yang kamu isi sendiri.">
+<meta property="og:url" content="https://ocklu.com/9799/">
+<meta property="og:type" content="product">
+<style>html{color-scheme:light dark}body{margin:0}img{max-width:100%}[hidden]{display:none!important}
+.pita{font:600 13px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:#125B6B;color:#fff;padding:9px 16px;display:flex;gap:14px;align-items:center;justify-content:center;flex-wrap:wrap}
+.pita a{color:#fff;text-underline-offset:3px}
+.pita b{font-weight:700}
+@media (prefers-color-scheme:dark){.pita{background:#173238;color:#8FD3DF}.pita a{color:#8FD3DF}}
+</style>
+</head>
+<body>
+<div class="pita"><span><b>Ini versi coba penuh.</b> Isi akunmu sendiri — semuanya jalan, tidak ada yang dikunci.</span><a href="/jual/#ocklu-9799">Lihat harga &amp; lisensi &rarr;</a></div>
+<title>Ocklu-9799</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+:root{
+  --ground:#EDF0F0; --panel:#FFFFFF; --panel2:#F6F8F8;
+  --ink:#141A1C; --ink2:#3D4A4D; --muted:#697679; --line:#D5DDDD; --line2:#E7EDED;
+  --accent:#125B6B; --accent-soft:#DCEAEC; --accent-ink:#0B4451;
+  --ok:#2A7A52; --ok-soft:#DDEEE5;
+  --warn:#9C6B0E; --warn-soft:#F5E9CE;
+  --crit:#B23B2E; --crit-soft:#F7E0DC;
+  --shadow:0 1px 2px rgba(20,26,28,.06),0 8px 24px -16px rgba(20,26,28,.35);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#0F1416; --panel:#161D1F; --panel2:#1B2426;
+    --ink:#E4EBEB; --ink2:#B6C3C4; --muted:#8A9899; --line:#243033; --line2:#1E282A;
+    --accent:#57B6C7; --accent-soft:#173238; --accent-ink:#8FD3DF;
+    --ok:#5CB98A; --ok-soft:#162C22;
+    --warn:#D6A44A; --warn-soft:#2E2513;
+    --crit:#E4796A; --crit-soft:#331A16;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 28px -18px rgba(0,0,0,.8);
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0F1416; --panel:#161D1F; --panel2:#1B2426;
+  --ink:#E4EBEB; --ink2:#B6C3C4; --muted:#8A9899; --line:#243033; --line2:#1E282A;
+  --accent:#57B6C7; --accent-soft:#173238; --accent-ink:#8FD3DF;
+  --ok:#5CB98A; --ok-soft:#162C22;
+  --warn:#D6A44A; --warn-soft:#2E2513;
+  --crit:#E4796A; --crit-soft:#331A16;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 28px -18px rgba(0,0,0,.8);
+}
+*{box-sizing:border-box}
+body{background:var(--ground);color:var(--ink);font-family:"IBM Plex Sans",system-ui,-apple-system,sans-serif;font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:Archivo,system-ui,sans-serif;margin:0;text-wrap:balance;letter-spacing:-.015em}
+p{margin:0}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:3px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+.shell{max-width:1160px;margin:0 auto;padding:0 20px 90px}
+.num{font-family:"IBM Plex Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums}
+
+/* ---- console bar ---- */
+.console{position:sticky;top:0;z-index:40;background:var(--ground);border-bottom:1px solid var(--line);margin:0 -20px;padding:14px 20px 0}
+.crow{display:flex;align-items:flex-end;gap:18px;flex-wrap:wrap}
+.brand{display:flex;flex-direction:column;gap:1px;margin-right:auto}
+.brand b{font-family:Archivo;font-weight:800;font-size:19px;letter-spacing:-.03em}
+.brand span{font-size:11px;color:var(--muted);letter-spacing:.09em;text-transform:uppercase}
+.gauge{display:flex;gap:16px;flex-wrap:wrap}
+.g{display:flex;flex-direction:column;gap:0}
+.g em{font-style:normal;font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.g b{font-family:"IBM Plex Mono";font-weight:600;font-size:17px;font-variant-numeric:tabular-nums;line-height:1.25}
+.tt{background:none;border:1px solid var(--line);color:var(--muted);border-radius:20px;padding:4px 11px;font-size:12px;cursor:pointer;align-self:center}
+.tt:hover{border-color:var(--accent);color:var(--accent)}
+
+.rail{display:flex;gap:2px;overflow-x:auto;margin-top:12px;scrollbar-width:none}
+.rail::-webkit-scrollbar{display:none}
+.rail button{background:none;border:0;border-bottom:2px solid transparent;padding:9px 13px 10px;color:var(--muted);cursor:pointer;white-space:nowrap;font-weight:500;font-size:14px}
+.rail button:hover{color:var(--ink)}
+.rail button[aria-selected="true"]{color:var(--accent);border-bottom-color:var(--accent);font-weight:600}
+.rail .dot{display:inline-block;width:6px;height:6px;border-radius:50%;margin-left:6px;vertical-align:1px}
+
+/* ---- generic ---- */
+.pane{padding-top:26px}
+.pane[hidden]{display:none!important}
+.lede{color:var(--ink2);max-width:64ch;margin-bottom:20px}
+.sec{margin-top:30px}
+.sech{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.sech h2{font-size:19px;font-weight:700}
+.sech span{font-size:12.5px;color:var(--muted)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px;box-shadow:var(--shadow)}
+.grid{display:grid;gap:12px}
+@media(min-width:720px){.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}}
+label.f{display:flex;flex-direction:column;gap:5px;font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);font-weight:600}
+input,select,textarea{background:var(--panel2);border:1px solid var(--line);border-radius:7px;padding:9px 11px;font-size:14.5px;width:100%;font-weight:500}
+textarea{font-family:inherit;line-height:1.5;resize:vertical}
+input:focus,select,textarea:focus{outline-offset:0}
+.btn{background:var(--accent);color:#fff;border:0;border-radius:7px;padding:10px 16px;font-weight:600;cursor:pointer;font-size:14px}
+:root[data-theme="dark"] .btn,:root:not([data-theme="light"]) .btn{color:#08171B}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]) .btn{color:#fff}}
+.btn:hover{filter:brightness(1.08)}
+.btn.ghost{background:none;border:1px solid var(--line);color:var(--ink)}
+.btn.ghost:hover{border-color:var(--accent);color:var(--accent);filter:none}
+.btn.sm{padding:6px 12px;font-size:13px}
+.btn.danger{background:none;border:1px solid var(--line);color:var(--crit)}
+.row{display:flex;gap:9px;flex-wrap:wrap;align-items:center}
+.chip{display:inline-flex;align-items:center;gap:5px;border-radius:20px;padding:3px 10px;font-size:11.5px;font-weight:600;letter-spacing:.02em;border:1px solid var(--line);color:var(--ink2)}
+.chip.ok{background:var(--ok-soft);color:var(--ok);border-color:transparent}
+.chip.warn{background:var(--warn-soft);color:var(--warn);border-color:transparent}
+.chip.crit{background:var(--crit-soft);color:var(--crit);border-color:transparent}
+.chip.acc{background:var(--accent-soft);color:var(--accent-ink);border-color:transparent}
+.empty{border:1px dashed var(--line);border-radius:10px;padding:26px;text-align:center;color:var(--muted)}
+
+/* ---- channel strips ---- */
+.strip{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--tone,var(--line));border-radius:9px;padding:13px 15px;display:grid;gap:11px;grid-template-columns:1fr;box-shadow:var(--shadow)}
+@media(min-width:800px){.strip{grid-template-columns:minmax(190px,1.1fr) 2fr auto;align-items:center;gap:18px}}
+.sid{display:flex;flex-direction:column;gap:3px;min-width:0}
+.sid b{font-family:Archivo;font-weight:700;font-size:15.5px;overflow-wrap:anywhere}
+.sid .meta{font-size:12px;color:var(--muted)}
+.meters{display:flex;flex-direction:column;gap:7px}
+.m{display:grid;grid-template-columns:74px 1fr 64px;gap:9px;align-items:center;font-size:11px}
+.m i{font-style:normal;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;font-weight:600}
+.bar{position:relative;height:8px;background:var(--line2);border-radius:5px;overflow:visible}
+.bar>span{position:absolute;left:0;top:0;bottom:0;border-radius:5px;background:var(--tone,var(--accent))}
+.bar>u{position:absolute;top:-3px;bottom:-3px;width:2px;background:var(--muted);opacity:.65;text-decoration:none}
+.m b{font-family:"IBM Plex Mono";font-variant-numeric:tabular-nums;font-size:12.5px;text-align:right;font-weight:600}
+.score{display:flex;flex-direction:column;align-items:flex-start;gap:2px}
+@media(min-width:800px){.score{align-items:flex-end}}
+.score b{font-family:"IBM Plex Mono";font-size:27px;font-weight:600;line-height:1;color:var(--tone)}
+.score em{font-style:normal;font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+
+/* ---- findings ---- */
+.find{display:grid;gap:9px;grid-template-columns:auto 1fr;padding:13px 0;border-top:1px solid var(--line2)}
+.find:first-child{border-top:0}
+.find .sev{width:9px;height:9px;border-radius:50%;margin-top:7px;background:var(--tone)}
+.find h4{font-size:14.5px;font-weight:700;margin-bottom:3px}
+.find p{font-size:13.5px;color:var(--ink2)}
+.find .do{margin-top:6px;font-size:13.5px;background:var(--panel2);border-left:2px solid var(--accent);padding:7px 11px;border-radius:0 6px 6px 0}
+
+/* ---- output blocks ---- */
+.out{background:var(--panel2);border:1px solid var(--line);border-radius:9px;padding:13px 15px;position:relative}
+.out h5{font-family:Archivo;font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+.out ol,.out ul{margin:0;padding-left:19px;display:flex;flex-direction:column;gap:7px}
+.out li{font-size:14px}
+.copy{position:absolute;top:10px;right:10px;background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:3px 9px;font-size:11.5px;cursor:pointer;color:var(--muted);font-weight:600}
+.copy:hover{color:var(--accent);border-color:var(--accent)}
+.mono{font-family:"IBM Plex Mono";font-size:13px;white-space:pre-wrap;overflow-wrap:anywhere}
+
+/* ---- checklist ---- */
+.ck{display:flex;gap:10px;align-items:flex-start;padding:9px 0;border-top:1px solid var(--line2);cursor:pointer}
+.ck:first-of-type{border-top:0}
+.ck input{width:17px;height:17px;flex:0 0 auto;margin-top:2px;accent-color:var(--accent)}
+.ck span{font-size:14px}
+.ck .w{margin-left:auto;font-size:11px;color:var(--muted);font-family:"IBM Plex Mono";flex:0 0 auto}
+.ck.done span{color:var(--muted);text-decoration:line-through;text-decoration-color:var(--line)}
+
+table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:520px}
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+th{text-align:left;font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);font-weight:700;padding:0 10px 7px;border-bottom:1px solid var(--line)}
+td{padding:9px 10px;border-bottom:1px solid var(--line2);vertical-align:top}
+tr:last-child td{border-bottom:0}
+
+.ladder{display:flex;flex-direction:column;gap:0}
+.rung{display:grid;grid-template-columns:auto 1fr;gap:14px;padding:15px 0;border-top:1px solid var(--line2)}
+.rung:first-child{border-top:0}
+.rung .k{width:34px;height:34px;border-radius:9px;display:grid;place-items:center;font-family:"IBM Plex Mono";font-weight:600;font-size:14px;background:var(--panel2);color:var(--muted);border:1px solid var(--line)}
+.rung.on .k{background:var(--ok-soft);color:var(--ok);border-color:transparent}
+.rung h4{font-size:15px;font-weight:700}
+.rung .price{font-family:"IBM Plex Mono";font-size:13.5px;color:var(--accent-ink);font-weight:600;margin-top:2px}
+
+.sld{display:grid;grid-template-columns:1fr 62px;gap:11px;align-items:center}
+input[type=range]{padding:0;background:none;border:0;accent-color:var(--accent)}
+.funnel{display:flex;flex-direction:column;gap:5px;margin-top:12px}
+.fs{display:grid;grid-template-columns:120px 1fr auto;gap:10px;align-items:center;font-size:13px}
+.fs .fb{height:22px;border-radius:5px;background:var(--accent);opacity:.9;min-width:2px}
+.fs b{font-family:"IBM Plex Mono";font-variant-numeric:tabular-nums;font-weight:600}
+
+.toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%) translateY(80px);background:var(--ink);color:var(--ground);padding:9px 18px;border-radius:22px;font-size:13.5px;font-weight:600;opacity:0;transition:.22s;z-index:99;pointer-events:none}
+.toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+.note{font-size:12.5px;color:var(--muted);margin-top:9px}
+
+/* ---- lapisan AI (cuma nyala kalau otaknya kejangkau) ---- */
+.aibtn{display:none!important}
+:root[data-ai="on"] .aibtn{display:inline-flex!important}
+.aibtn{align-items:center;gap:6px}
+.aibtn::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor;opacity:.85}
+.aibox{border:1px solid var(--accent);background:var(--accent-soft);border-radius:9px;padding:14px 15px;margin-top:12px}
+.aibox h5{font-family:Archivo;font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--accent-ink);margin:0 0 8px}
+.aibox .mono{color:var(--ink)}
+.aibox ol,.aibox ul{margin:0;padding-left:19px;display:flex;flex-direction:column;gap:8px}
+.aibox li{font-size:14.5px}
+.aibox .why{display:block;font-size:12.5px;color:var(--ink2);margin-top:2px}
+.pulse{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--accent);animation:p 1.1s ease-in-out infinite;margin-right:7px;vertical-align:1px}
+@keyframes p{0%,100%{opacity:.25}50%{opacity:1}}
+.aibadge{font-size:10px;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:20px;background:var(--accent-soft);color:var(--accent-ink);font-weight:700;align-self:center}
+.aibadge.off{background:none;color:var(--muted);border:1px solid var(--line)}
+.hr{height:1px;background:var(--line);margin:26px 0}
+footer{margin-top:44px;padding-top:16px;border-top:1px solid var(--line);font-size:12px;color:var(--muted);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media(max-width:560px){.shell{padding:0 15px 80px}.console{margin:0 -15px;padding:12px 15px 0}.g b{font-size:15px}.gauge{gap:13px}}
+</style>
+
+<div class="console">
+  <div class="shell" style="padding-bottom:0">
+    <div class="crow">
+      <div class="brand"><b>Ocklu-9799</b><span>konsol optimasi akun sosmed</span></div>
+      <div class="gauge" id="gauge"></div>
+      <span class="aibadge off" id="aibadge">mode aturan</span>
+      <button class="tt" id="lang">EN</button>
+      <button class="tt" id="theme">tema</button>
+    </div>
+    <div class="rail" role="tablist" id="rail"></div>
+  </div>
+</div>
+
+<div class="shell">
+  <div class="pane" id="p-akun"></div>
+  <div class="pane" id="p-audit" hidden></div>
+  <div class="pane" id="p-konten" hidden></div>
+  <div class="pane" id="p-seo" hidden></div>
+  <div class="pane" id="p-celah" hidden></div>
+  <div class="pane" id="p-uang" hidden></div>
+  <div class="pane" id="p-rencana" hidden></div>
+  <div class="pane" id="p-hasil" hidden></div>
+  <footer><span><b id="kaki-merek">Ocklu-9799</b> — semua angka dihitung dari data yang lo isi sendiri. Tidak ada data yang dikirim keluar dari peramban ini.</span><span>Lisensi 1 pemakai · <span id="kaki-pemilik">Ocklu</span> · <a href="/9799/lisensi.txt" style="color:inherit">syarat</a></span></footer>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+(function(){
+"use strict";
+/* =======================================================================
+   SETELAN — ganti empat baris ini saja untuk memakai merek sendiri.
+   SETTINGS — change these four lines to run this under your own brand.
+   ======================================================================= */
+var CFG={
+  merek   : "Ocklu-9799",
+  tagline : "konsol optimasi akun sosmed",
+  pemilik : "Ocklu",
+  situs   : "ocklu.com"
+};
+/* ===================================================================== */
+var $=function(s,r){return (r||document).querySelector(s)},
+    $$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+
+/* ================= LAPISAN AI =================
+   Nyala cuma kalau halaman ini dibuka di penampil Claude. Di ocklu.com
+   window.claude gak ada sama sekali → AI tetap null, tombol AI ngumpet,
+   mesin aturan jalan seperti biasa. Gak ada yang rusak. */
+var AI=null,AIOFF=false;
+function aiOn(){return !!AI&&!AIOFF}
+function setAI(){
+  document.documentElement.setAttribute("data-ai",aiOn()?"on":"off");
+  var b=document.getElementById("aibadge");if(!b)return;
+  b.textContent=aiOn()?"otak nyala":"mode aturan";
+  b.className="aibadge"+(aiOn()?"":" off");
+}
+var AIERR={
+  not_granted:"Kamu belum ngizinin halaman ini nanya ke Claude. Mesin aturan tetap jalan.",
+  sampling_disabled:"Fitur nanya-ke-Claude lagi dimatiin. Pakai hasil aturan di atas.",
+  not_declared:"Halaman ini gak punya izin nanya. Pakai hasil aturan di atas.",
+  capability_disabled:"Aksesnya dicabut. Mesin aturan tetap jalan.",
+  capability_removed:"Aksesnya dicabut. Mesin aturan tetap jalan.",
+  rate_limited:"Kebanyakan permintaan barusan. Tunggu sebentar, terus coba lagi.",
+  prompt_too_large:"Datanya kepanjangan. Kurangin isian, terus coba lagi.",
+  invalid_json:"Jawabannya gak kebaca sebagai data. Tekan sekali lagi.",
+  refused:"Permintaannya ditolak. Ganti kata-kata topiknya.",
+  empty_completion:"Jawabannya kosong. Tekan lagi.",
+  cancelled:"Dibatalin.",
+  session_expired:"Sesinya kedaluwarsa. Muat ulang halamannya.",
+  upstream_error:"Sambungannya putus di tengah jalan. Coba lagi."
+};
+var DEAD={not_granted:1,sampling_disabled:1,not_declared:1,capability_disabled:1,capability_removed:1};
+function aiFail(e){
+  var c=(e&&e.code)||"upstream_error";
+  if(DEAD[c]){AIOFF=true;setAI()}
+  return AIERR[c]||"Gagal: "+((e&&e.message)||c);
+}
+/* satu pintu buat semua permintaan AI */
+function ask(box,prompt,opts){
+  opts=opts||{};
+  var ttl=opts.title||"Tulisan AI";
+  box.innerHTML='<h5>'+ttl+'</h5><p style="font-size:14px"><span class="pulse"></span>Lagi mikir…</p>';
+  var run=opts.json?AI.json(prompt,{modelTier:opts.tier||"default"})
+                   :AI(prompt,{modelTier:opts.tier||"default",
+                       onText:function(p){box.innerHTML='<h5>'+ttl+'</h5><div class="mono">'+esc(p.text)+'</div>'}});
+  return run.then(function(r){return r},function(e){
+    box.innerHTML='<h5>'+ttl+'</h5><p style="font-size:14px">'+esc(aiFail(e))+'</p>'+
+     (e&&e.text?'<div class="mono" style="margin-top:8px;opacity:.7">'+esc(e.text)+'</div>':'');
+    throw e;
+  });
+}
+function bahasa(){return S.lang==="en"?"casual American English, second person":"Bahasa Indonesia santai, panggil pembaca 'kamu', jangan kaku"}
+
+/* ================= JURNAL HASIL =================
+   Tiap saran yang dikerjain dicatat di sini beserta apa yang KEJADIAN.
+   Yang gagal sengaja disimpan — dia jadi bahan buat pendapat kedua,
+   biar mesin gak nyuruh hal yang udah kebukti gak jalan.
+   Kalau db kejangkau, jurnalnya kesimpan di luar halaman juga sehingga
+   bisa dibaca dari sesi Claude. Kalau nggak, tetap aman di localStorage. */
+var DB=null;
+function dbSync(e,hapus){
+  if(!DB)return;
+  try{
+    var d=DB.doc("jurnal/"+e.id);
+    (hapus?d.delete():d.set(e)).catch(function(){});
+  }catch(err){}
+}
+function dbSyncAll(){
+  if(!DB)return;
+  try{
+    DB.doc("meta/akun").set({diperbarui:new Date().toISOString(),
+      akun:S.acc.map(function(a){var H=health(a);return{
+        akun:"@"+a.h,platform:PLAT[a.plat].n,pengikut:a.f,tayangan:a.v,
+        rasio:H.rr!=null?+H.rr.toFixed(2):null,keterikatan:H.er!=null?+H.er.toFixed(1):null,
+        konten30:a.p30,tautan:!!a.link,penawaran:a.offer||"",sinyal:H.score}})}).catch(function(){});
+    S.jur.forEach(function(e){dbSync(e)});
+  }catch(err){}
+}
+var STAT={belum:["belum dikerjain","var(--muted)"],jalan:["lagi jalan","var(--warn)"],
+          berhasil:["jalan, hasilnya naik","var(--ok)"],gagal:["udah dicoba, gak jalan","var(--crit)"]};
+function catat(akun,saran,sumber,kunci){
+  var e={id:"j"+Date.now()+Math.floor(Math.random()*99),akun:akun||"",saran:saran||"",
+    sumber:sumber||"aturan",kunci:kunci||saran||"",status:"belum",sebelum:"",sesudah:"",
+    catatan:"",tgl:new Date().toISOString().slice(0,10)};
+  S.jur.unshift(e);save();dbSync(e);toast("Masuk ke tab Hasil ✓");
+  renderRail();return e;
+}
+function gagalnya(){return S.jur.filter(function(e){return e.status==="gagal"})}
+/* saran yang udah kebukti gak jalan buat akun itu */
+function udahGagal(akun,kunci){
+  return gagalnya().filter(function(e){return e.akun===akun&&e.kunci===kunci})[0]||null;
+}
+
+/* ================= PLATFORM BENCHMARKS =================
+   Patokan kasar dari pola akun kecil–menengah. Bukan angka resmi platform —
+   dipakai cuma sebagai garis pembanding, bukan vonis. */
+var PLAT={
+ instagram:{n:"Instagram",mid:0.65,good:1.5,er:3.5,cad:5,jam:"19.00–21.00",fmt:"Reels 7–20 dtk",
+   seo:"Kata kunci di baris pertama caption + alt text. IG sekarang ngindeks teks caption & teks di layar."},
+ tiktok:{n:"TikTok",mid:2.0,good:8,er:5,cad:7,jam:"11.00–13.00 & 19.00–22.00",fmt:"Video 15–34 dtk",
+   seo:"Kata kunci di 3 kata pertama caption DAN sebagai teks di layar detik 0–2. TikTok Search baca keduanya."},
+ youtube:{n:"YouTube",mid:0.35,good:1.2,er:4,cad:3,jam:"16.00–19.00",fmt:"Shorts <60 dtk / long 8–12 mnt",
+   seo:"Judul ≤60 karakter, kata kunci di depan. 2 baris pertama deskripsi = yang kebaca. Tag bantu, thumbnail yang nentuin."},
+ facebook:{n:"Facebook",mid:0.12,good:0.4,er:2,cad:5,jam:"06.00–08.00 & 20.00–22.00",fmt:"Reels + teks panjang",
+   seo:"Kalimat pertama = judul. Link taruh di komentar pertama, jangkauan link di body dipotong."},
+ threads:{n:"Threads",mid:0.8,good:3,er:4,cad:7,jam:"07.00–09.00",fmt:"Teks 1–2 kalimat",
+   seo:"Kata kunci di awal, maksimal 1 topik tag. Balasan lo sendiri = mesin jangkauan utama."},
+ x:{n:"X / Twitter",mid:0.25,good:1.0,er:1.5,cad:10,jam:"08.00–10.00",fmt:"Utas 5–9 baris",
+   seo:"Kata kunci literal (bukan sinonim). Link di reply, bukan di post induk."},
+ telegram:{n:"Telegram",mid:0.6,good:0.9,er:2,cad:5,jam:"bebas, konsisten",fmt:"Post pendek + 1 tautan",
+   seo:"Nama channel + deskripsi = satu-satunya yang diindeks pencarian dalam app. Masukin kata kunci ke NAMA."},
+ whatsapp:{n:"WhatsApp Channel",mid:0.55,good:0.85,er:2,cad:3,jam:"08.00 & 19.00",fmt:"Broadcast 1 pesan",
+   seo:"Nama channel = kata kunci. Nggak ada algoritma penemuan — pertumbuhan cuma dari tautan yang lo sebar."},
+ linkedin:{n:"LinkedIn",mid:0.5,good:2,er:3,cad:3,jam:"07.00–09.00 Sen–Kam",fmt:"Teks 900–1300 karakter",
+   seo:"3 baris pertama sebelum 'lihat selengkapnya' nentuin semuanya. Headline profil = kata kunci."},
+ pinterest:{n:"Pinterest",mid:1.5,good:6,er:1,cad:5,jam:"20.00–23.00",fmt:"Pin vertikal 2:3",
+   seo:"Ini mesin pencari, bukan sosmed. Judul pin + deskripsi + nama board semua diindeks. Umur pin berbulan-bulan."}
+};
+var PKEYS=Object.keys(PLAT);
+
+/* ================= STATE ================= */
+var KEY="ocklu-9799-produk-v1";
+var CK=[
+ [9,"Bio nyebut SIAPA yang dilayani + HASIL apa (bukan cuma 'mom of 2')"],
+ [8,"Cuma 1 tautan, dan tautannya nyambung sama konten terakhir"],
+ [7,"Nama akun / display name ngandung kata kunci niche"],
+ [8,"Punya 1 seri berulang yang ada namanya (orang bisa nunggu)"],
+ [7,"3 konten terbaik dipin / masuk highlight"],
+ [6,"Foto profil masih kebaca di ukuran 40px"],
+ [7,"CTA muncul di 3 detik terakhir, bukan cuma di caption"],
+ [6,"Format visual konsisten (font, warna, posisi teks sama)"],
+ [6,"Balas komentar di 60 menit pertama"],
+ [9,"Ada tempat pindah yang gue punya sendiri (email/WA/komunitas)"],
+ [9,"Ada penawaran berbayar yang jelas, harganya kelihatan"],
+ [5,"Analitik dicek tiap minggu di hari yang sama"]
+];
+var SEED=[
+ {id:"a1",plat:"instagram",h:"akun.besar.contoh",f:4600,v:2980,l:0,c:0,p30:12,niche:"contoh niche",offer:"",link:false,note:""},
+ {id:"a2",plat:"tiktok",h:"akun.kecil.contoh",f:74,v:0,l:13,c:0,p30:6,niche:"contoh niche",offer:"",link:false,note:""}
+];
+var S={acc:[],ck:{},jur:[],kurs:16300,lang:"id",tab:"akun",seed:0,
+  gen:{topik:"topik kamu",aud:"audiens kamu",pain:"masalah yang lagi dia alami",hasil:"hasil yang dia mau",plat:"instagram"},
+  hook:"",
+  proj:{model:"produk",harga:29,visit:1.5,klik:8,beli:2.5}};
+
+try{var raw=localStorage.getItem(KEY);if(raw){var o=JSON.parse(raw);for(var k in o)S[k]=o[k];}}catch(e){}
+if(!S.acc)S.acc=[];
+if(!S.jur)S.jur=[];
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+
+/* ================= MATH ================= */
+function nf(n){if(n==null||isNaN(n))return "—";n=Math.round(n);return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g,".")}
+function pct(n){return (Math.round(n*10)/10)+"%"}
+function reachRatio(a){return (a.f>0&&a.v>0)?a.v/a.f:null}
+function erate(a){var eng=(+a.l||0)+(+a.c||0);if(!eng)return null;var base=(+a.v||0)>0?a.v:a.f;return base>0?eng/base*100:null}
+
+function health(a){
+  var P=PLAT[a.plat],parts=[],miss=0;
+  var rr=reachRatio(a), er=erate(a);
+  if(rr!=null)parts.push([40,Math.min(100,rr/P.good*100)]); else miss+=40;
+  if(er!=null)parts.push([25,Math.min(100,er/P.er*100)]); else miss+=25;
+  var target=P.cad*4.3, cad=(+a.p30||0)/target*100;
+  parts.push([20,Math.min(100,cad)]);
+  var funnel=(a.link?55:0)+((a.offer&&a.offer.trim())?45:0);
+  parts.push([15,funnel]);
+  var w=0,sum=0;parts.forEach(function(p){w+=p[0];sum+=p[0]*p[1]});
+  return {score:w?Math.round(sum/w):0,rr:rr,er:er,cad:cad,funnel:funnel,unknown:miss};
+}
+function tone(s){return s>=70?"var(--ok)":s>=45?"var(--warn)":"var(--crit)"}
+function toneName(s){return s>=70?"ok":s>=45?"warn":"crit"}
+function label(s){return s>=70?"sehat":s>=45?"pincang":"macet"}
+
+function totals(){
+  var reach=0,fol=0,n=S.acc.length,hs=0;
+  S.acc.forEach(function(a){fol+=+a.f||0;reach+=(+a.v||0)*(+a.p30||0);hs+=health(a).score});
+  return {reach:reach,fol:fol,n:n,avg:n?Math.round(hs/n):0};
+}
+
+/* ================= DIAGNOSIS ENGINE ================= */
+function findings(a){
+  var P=PLAT[a.plat],H=health(a),F=[];
+  var rr=H.rr,er=H.er;
+  if(rr==null){F.push(["warn","Angka jangkauannya belum ada","Tanpa rata-rata tayangan, semua sisanya cuma tebakan.","Buka 12 konten terakhir, catat tayangannya, ambil nilai tengahnya (bukan rata-rata — 1 konten viral bikin rata-rata bohong). Isi ke kolom Tayangan."]);}
+  else if(rr<P.mid*0.7){F.push(["crit","Konten lo gak keluar dari kandang","Rasio "+rr.toFixed(2)+"× dari pengikut, patokan "+P.n+" ada di "+P.mid+"×. Artinya "+P.n+" berhenti nawarin konten lo ke orang baru — biasanya karena 3 detik pertama gak nahan orang.","Ganti 3 detik pertama, bukan seluruh kontennya. Mulai dari kalimat yang ada angkanya atau ada penolakan ('Jangan ...'). Uji di tab Konten."]);}
+  else if(rr<P.mid){F.push(["warn","Jangkauan di bawah tengah","Rasio "+rr.toFixed(2)+"× vs patokan "+P.mid+"×. Belum parah, tapi lo lagi ngasih makan pengikut lama doang.","Ambil 1 konten lo yang paling jauh jangkauannya, bikin ulang 3 versi dengan pembuka beda. Format tetap, pembukanya doang yang diuji."]);}
+  else if(rr>=P.good){F.push(["ok","Distribusinya jalan","Rasio "+rr.toFixed(2)+"× — di atas patokan bagus "+P.good+"×. Masalah lo bukan jangkauan.","Berhenti ngoprek jangkauan. Pindah tenaga ke tab Uang: yang bocor sekarang jalur dari tontonan ke duit."]);}
+  if(er==null){F.push(["warn","Keterikatan belum keukur","Belum ada angka suka/komentar.","Isi rata-rata suka & komentar dari 12 konten terakhir. Ini yang mbedain 'ditonton' sama 'dipeduliin'."]);}
+  else if(er<P.er*0.5){F.push(["crit","Ditonton tapi gak nempel","Keterikatan "+pct(er)+", patokan "+P.n+" "+P.er+"%. Orang lewat, gak berhenti.","Tambahin 1 kalimat yang bikin orang harus jawab di akhir konten. Bukan 'komen ya', tapi pilihan: 'Lo tim A apa tim B?'"]);}
+  else if(er>=P.er*1.6){F.push(["ok","Kontennya nempel banget","Keterikatan "+pct(er)+" — "+(er/P.er).toFixed(1)+"× di atas patokan. Yang nonton peduli.","Masalah lo distribusi, bukan konten. Titip konten ini ke akun yang jangkauannya udah gede (punya lo sendiri atau kolaborasi)."]);}
+  var target=Math.round(P.cad*4.3);
+  if((+a.p30||0)<target*0.6){F.push(["warn","Volume kurang","Sebulan "+(+a.p30||0)+" konten, patokan sehat "+P.n+" sekitar "+target+".","Turunin mutu produksi, naikin jumlah. "+P.fmt+". 1 ide dipecah jadi 3 konten: masalahnya, salahnya, caranya."]);}
+  if(!a.link){F.push(["crit","Gak ada jalan keluar","Orang suka konten lo terus... balik ke beranda. Perhatian yang gak dialihin itu hangus.","Pasang 1 tautan (satu, bukan lima) yang isinya nyambung sama konten terakhir. Judulnya kata kerja: 'Ambil skripnya', bukan 'Link'."]);}
+  if(!(a.offer&&a.offer.trim())){F.push(["warn","Gak ada yang dijual","Belum ada penawaran berbayar yang jelas di akun ini.","Isi kolom Penawaran di tab Akun. Belum punya produk pun tulis jasanya — 'sesi 45 menit, Rp350rb'. Tab Uang bakal ngitungin tangganya."]);}
+  if(a.f>2000&&rr!=null&&rr<0.5){F.push(["crit","Pengikutnya banyak tapi dingin",""+nf(a.f)+" pengikut cuma ngasih "+nf(a.v)+" tayangan. Sebagian besar pengikut lo udah gak aktif atau gak pernah niat ngikutin topik ini.","Jangan kejar pengikut baru dulu. Bikin 5 konten yang nyebut masalah spesifik — biar yang salah ikut pergi sendiri dan sisanya beneran audiens lo."]);}
+  if(a.f<300&&er!=null&&er>=P.er*1.5){F.push(["ok","Akun kecil, mutu tinggi","Cuma "+nf(a.f)+" pengikut tapi keterikatan "+pct(er)+". Ini bukan akun gagal, ini akun yang belum dikenalin.","Sebulan ini jangan bikin konten baru sama sekali. Ambil 8 konten terbaik, posting ulang di akun lo yang jangkauannya paling gede + 3 kolaborasi. Distribusi, bukan produksi."]);}
+  var order={crit:0,warn:1,ok:2};
+  F.sort(function(x,y){return order[x[0]]-order[y[0]]});
+  return F;
+}
+
+function priorities(){
+  var out=[];
+  S.acc.forEach(function(a){findings(a).forEach(function(f){if(f[0]!=="ok")out.push({a:a,f:f})})});
+  var ord={crit:0,warn:1};
+  out.sort(function(x,y){return ord[x.f[0]]-ord[y.f[0]]});
+  return out.slice(0,3);
+}
+
+/* ================= COPY ENGINE ================= */
+function fill(t,g){return t.replace(/\{topik\}/g,g.topik).replace(/\{aud\}/g,g.aud).replace(/\{pain\}/g,g.pain).replace(/\{hasil\}/g,g.hasil)}
+/* 5 keluarga pola. Tiap keluarga narik orang lewat pintu yang beda —
+   makanya keluarannya diambil menyebar, bukan 5 dari satu keluarga. */
+var HOOK_ID=[
+ ["Daftar","5 {topik} yang harusnya diajarin ke {aud} dari dulu"],
+ ["Daftar","3 kalimat yang ngubah {pain} jadi {hasil} — nomor 2 paling sering kelewat"],
+ ["Daftar","7 hal soal {topik} yang gak ada di buku manapun"],
+ ["Bantah","Kalau {aud} masih {pain}, ini yang salah — dan bukan salah kamu"],
+ ["Bantah","Jangan nurutin saran 'sabar aja'. Lakuin ini: {topik}"],
+ ["Bantah","Semua orang nyuruh {aud} usaha lebih keras. Itu justru yang bikin {pain}."],
+ ["Bantah","'{pain}' itu bukan tanda kamu kurang. Itu tanda sistemnya kosong."],
+ ["Cerita","Aku {pain} selama 2 tahun. Yang akhirnya ngubah cuma satu: {topik}."],
+ ["Cerita","Jam 7 malam kemarin aku hampir nyerah. Terus aku coba {topik}."],
+ ["Cerita","Ada yang bilang {pain} itu wajar. Iya wajar. Tapi bukan berarti harus dibiarin."],
+ ["Janji","{hasil} tanpa harus jadi orang yang bukan kamu"],
+ ["Janji","{hasil} dalam 7 hari, pakai satu kalimat yang diulang"],
+ ["Janji","Cara {hasil} kalau kamu cuma punya 10 menit sehari"],
+ ["Cermin","POV: kamu baru sadar {pain} itu masalah sistem, bukan masalah kamu"],
+ ["Cermin","Yang gak ada yang bilang soal {topik}:"],
+ ["Cermin","Kalau kamu sampai baca ini jam segini, kamu lagi {pain}. Ini buat kamu."],
+ ["Cermin","Simpan ini buat hari waktu {pain} balik lagi."]
+];
+var HOOK_EN=[
+ ["List","5 {topik} nobody taught {aud}"],
+ ["List","3 sentences that turn {pain} into {hasil} — number 2 gets skipped most"],
+ ["List","7 things about {topik} that aren't in any manual"],
+ ["Counter","If you're still {pain}, here's what's actually broken — and it isn't you"],
+ ["Counter","Stop taking the 'just be patient' advice. Do this instead: {topik}"],
+ ["Counter","Everyone tells {aud} to try harder. That's exactly what keeps {pain} going."],
+ ["Counter","'{pain}' isn't proof you're falling short. It's proof there's no system."],
+ ["Story","I spent 2 years {pain}. One thing changed it: {topik}."],
+ ["Story","7pm last night I almost gave up. Then I tried {topik}."],
+ ["Story","They'll tell you {pain} is normal. It is. That doesn't mean you keep living it."],
+ ["Promise","{hasil} without becoming someone you're not"],
+ ["Promise","{hasil} in 7 days, using one sentence on repeat"],
+ ["Promise","How to get {hasil} when you've got 10 minutes a day"],
+ ["Mirror","POV: you just realized {pain} is a structure problem, not a you problem"],
+ ["Mirror","What no one tells you about {topik}:"],
+ ["Mirror","If you're reading this at this hour, you're {pain}. This one's for you."],
+ ["Mirror","Save this for the day {pain} comes back."]
+];
+function hooks(g){
+  var src=(S.lang==="en"?HOOK_EN:HOOK_ID),n=src.length,seed=(S.seed||0),out=[],seen={};
+  /* ambil menyebar: lompat 3 tiap langkah biar keluarganya gak nempel */
+  for(var i=0;out.length<5&&i<n*2;i++){
+    var k=(seed+i*3)%n;if(seen[k])continue;seen[k]=1;
+    out.push(fill(src[k][1],g));
+  }
+  return out;
+}
+function caption(g){
+  var P=PLAT[g.plat];
+  if(S.lang==="en")return [
+   fill("{hasil} — here's the exact order.",g),"",
+   fill("Most {aud} are told to try harder. That's not the problem. The problem is {pain} has no system behind it.",g),"",
+   "1. Name it out loud before you fix it","2. Change one sentence, not the whole routine","3. Repeat it for 7 days before you judge it","",
+   fill("Save this for the next hard day. Which one are you trying first?",g)].join("\n");
+  return [
+   fill("{hasil} — ini urutannya.",g),"",
+   fill("Kebanyakan {aud} disuruh sabar aja. Bukan itu masalahnya. Masalahnya {pain} gak punya sistem di belakangnya.",g),"",
+   "1. Sebut dulu masalahnya keras-keras sebelum dibenerin","2. Ganti satu kalimat, bukan seluruh rutinitas","3. Ulang 7 hari sebelum dinilai","",
+   fill("Simpan buat hari yang berat nanti. Kamu mau coba yang nomor berapa?",g)].join("\n");
+}
+function ctas(g){
+  return S.lang==="en"
+   ?["Save this — you'll need it Tuesday at 6pm.","Comment “SCRIPT” and I'll send the full one-pager.","Send this to the person who needs to read it, not to yourself."]
+   :["Simpan dulu — nanti kepake pas jam 6 sore.","Komen “SKRIP” nanti aku kirim lembar lengkapnya.","Kirim ke orang yang butuh baca, bukan disimpen sendiri."];
+}
+
+/* hook scorer — aturan, bukan tebakan */
+var BANNED=["hai guys","halo semuanya","di video kali ini","jangan lupa like","assalamualaikum semuanya","hey guys","in this video","welcome back"];
+function scoreHook(t){
+  t=(t||"").trim();var s=50,r=[];
+  if(!t)return {s:0,r:[["crit","Kosong","Isi dulu hook-nya."]]};
+  var w=t.split(/\s+/).length;
+  if(w<=12){s+=10;r.push(["ok","Panjangnya pas ("+w+" kata)","Di bawah 12 kata — kebaca sebelum jempol gerak."])}
+  else if(w<=18){r.push(["warn","Agak panjang ("+w+" kata)","Potong jadi ≤12 kata. Buang keterangan, sisain klaimnya."])}
+  else{s-=15;r.push(["crit","Kepanjangan ("+w+" kata)","Ini paragraf, bukan hook. Ambil 8 kata paling tajam."])}
+  if(/\d/.test(t)){s+=12;r.push(["ok","Ada angka","Angka bikin otak nyangka kontennya beres dan bisa diukur."])}
+  else r.push(["warn","Gak ada angka","Tambahin jumlah: '5 kalimat', '3 hari', '2 menit'. Naikin klik tanpa ubah isi."]);
+  if(/\b(kamu|kamu,|lo|anda|you|your|kalian)\b/i.test(t)){s+=10;r.push(["ok","Ngomong ke satu orang","Kata ganti orang kedua bikin yang nonton ngerasa dipanggil."])}
+  else r.push(["warn","Belum nyapa siapa-siapa","Masukin 'kamu' atau sebutan audiensnya. Hook tanpa alamat = lewat."]);
+  if(/^(jangan|stop|berhenti|jangan pernah|don't|stop)/i.test(t)){s+=8;r.push(["ok","Buka pakai penolakan","Kalimat larangan bikin orang berhenti buat mastiin dia gak salah."])}
+  if(/\?$/.test(t)){s-=5;r.push(["warn","Diakhiri tanda tanya","Pertanyaan gampang dijawab dalam hati terus di-scroll. Ganti jadi pernyataan."])}
+  var low=t.toLowerCase();var bad=BANNED.filter(function(b){return low.indexOf(b)>-1});
+  if(bad.length){s-=25;r.push(["crit","Pembuka basa-basi: “"+bad[0]+"”","Hapus. 3 detik pertama itu jatah paling mahal, jangan dipake nyapa."])}
+  if(/[A-Z]{6,}/.test(t)){s+=4;r.push(["ok","Ada penekanan kapital","Boleh, asal cuma 1–2 kata."])}
+  if(low.split(/\s+/).length>3&&!/(cara|kenapa|yang|tanpa|padahal|ternyata|how|why|without|actually)/i.test(low)){
+    s-=6;r.push(["warn","Belum ada celah penasaran","Sisipin 'tanpa', 'padahal', 'ternyata' — pemicu rasa kurang lengkap."])}
+  if(/(sebenarnya|pada dasarnya|menurut saya|kayaknya|mungkin|agak|basically|honestly|i think|maybe|kind of)/i.test(low)){
+    s-=8;r.push(["warn","Ada kata peredam","'kayaknya', 'mungkin', 'menurut aku' — bikin klaimnya lembek. Buang, langsung nyatakan."])}
+  if(/(rahasia|viral|wajib tau|shocking|must know|life changing|game changer)/i.test(low)){
+    s-=7;r.push(["warn","Kata umpan yang udah aus","'rahasia', 'wajib tau', 'viral' — dipakai semua orang, otak nyaringnya duluan. Ganti pakai hal spesifik."])}
+  if(/\b(jam|menit|hari|minggu|detik|pagi|malam|minutes?|days?|weeks?|seconds?|tonight|tomorrow)\b/i.test(low)){
+    s+=7;r.push(["ok","Ada waktu yang konkret","Waktu spesifik ('malam ini', '7 hari') bikin janjinya kebayang, bukan kabur."])}
+  if(low.split(/\s+/).length>=3&&/^(cara|gimana|how to|how i)/i.test(low)&&!/\d/.test(low)){
+    r.push(["warn","Pembuka 'cara …' tanpa batas","'Cara X' terlalu lebar. Tempel batasnya: 'tanpa teriak', 'dalam 5 menit', 'buat 2 orang'."])}
+  if(t.length>0&&t===t.toUpperCase()&&/[A-Z]{3,}/.test(t)){
+    s-=10;r.push(["crit","Kapital semua","Kebaca kayak teriak dan susah dipindai. Kapital cuma buat 1–2 kata penekanan."])}
+  s=Math.max(0,Math.min(100,s));
+  var ord={crit:0,warn:1,ok:2};r.sort(function(a,b){return ord[a[0]]-ord[b[0]]});
+  return {s:s,r:r};
+}
+
+/* ================= SEO ENGINE ================= */
+function slug(s){return (s||"").toLowerCase().replace(/[^a-z0-9\s]/g,"").trim().split(/\s+/).filter(Boolean)}
+function tagify(g,n){
+  var kw=slug(g.topik),ni=slug(g.niche||g.aud),out=[];
+  if(kw.length)out.push("#"+kw.slice(0,3).join(""));
+  if(ni.length)out.push("#"+ni.slice(0,2).join(""));
+  if(kw.length)out.push("#"+kw.slice(0,2).join("")+"tips");
+  if(ni.length)out.push("#"+ni.slice(0,2).join("")+(S.lang==="en"?"community":"indonesia"));
+  out.push(S.lang==="en"?"#momsofinstagram":"#tipsparenting");
+  out.push("#"+(slug(g.aud).slice(0,2).join("")||"harian"));
+  return out.filter(function(v,i,a){return a.indexOf(v)===i}).slice(0,n);
+}
+function seo(g){
+  var P=PLAT[g.plat],kw=g.topik,aud=g.aud,res=g.hasil,L=S.lang==="en";
+  var judul,desk,tag=tagify(g,5),extra=[];
+  switch(g.plat){
+   case "youtube":
+     judul=(L?"":"")+cap(kw)+" ("+(L?"the exact steps":"urutannya")+")";
+     if(judul.length>60)judul=cap(kw).slice(0,52)+"…";
+     desk=cap(kw)+" — "+(L?"for ":"buat ")+aud+". "+(L?"By the end you'll have ":"Selesai nonton kamu punya ")+res+".\n\n"+(L?"Timestamps:":"Bagian:")+"\n00:00 "+(L?"The problem":"Masalahnya")+"\n00:35 "+(L?"Why the usual advice fails":"Kenapa saran biasa gagal")+"\n01:20 "+(L?"The 3 steps":"3 langkahnya")+"\n03:40 "+(L?"What to do tonight":"Yang dilakuin malam ini");
+     tag=tagify(g,8);
+     extra=["Judul ≤60 karakter, kata kunci di 3 kata pertama.","Thumbnail cuma boleh 3 kata. Kalau butuh 4, kepanjangan.","2 baris pertama deskripsi itu yang kebaca sebelum 'selengkapnya' — taruh kata kunci + janji hasil di situ."];break;
+   case "tiktok":
+     judul=cap(kw)+" →";
+     desk=cap(kw)+" "+(L?"for ":"buat ")+aud+". "+ctas(g)[0];
+     extra=["Teks di layar detik 0–2 HARUS ngandung kata kunci — TikTok Search baca teks di layar, bukan cuma caption.","Caption maksimal 100 karakter, sisanya buang.","4 tagar aja: 1 luas, 2 sempit, 1 milik lo sendiri."];break;
+   case "instagram":
+     judul=cap(kw);
+     desk=cap(kw)+".\n\n"+(L?"If you're ":"Kalau kamu ")+aud+" "+(L?"and you keep ":"dan masih ")+g.pain+", "+(L?"this is the order.":"ini urutannya.");
+     extra=["Baris pertama caption = judul SEO lo. Kata kunci di situ, bukan di tagar.","Isi Alt Text manual di Pengaturan Lanjutan — ini yang dibaca mesin cari IG.","Teks di cover Reels juga keindeks. Tulis kata kuncinya di sampul."];break;
+   case "facebook":
+     judul=cap(kw);desk=cap(kw)+" — "+res+".\n\n"+(L?"Full breakdown below. ":"Rinciannya di bawah. ")+ctas(g)[2];
+     extra=["Kalimat pertama = judul. Facebook motong di ~80 karakter.","Tautan taruh di komentar pertama, bukan di badan post.","Post yang gak ada tautannya dikasih jangkauan 2–3× lebih banyak."];break;
+   case "threads":
+     judul=cap(kw)+":";desk=cap(kw)+":\n\n1. …\n2. …\n3. …\n\n"+(L?"Which one are you doing tonight?":"Kamu mau mulai yang mana malam ini?");
+     tag=tag.slice(0,1);
+     extra=["1 topik tag doang. Lebih dari itu jangkauan turun.","Balas thread lo sendiri 2–3 kali dalam 1 jam pertama — itu mesin jangkauannya.","Kalimat pertama ≤10 kata."];break;
+   case "x":
+     judul=cap(kw);desk=cap(kw)+"\n\n"+(L?"A thread on what actually works 🧵":"Utas: yang beneran jalan 🧵");
+     tag=tag.slice(0,2);
+     extra=["Pakai kata kunci literal yang diketik orang, bukan sinonim keren.","Tautan di balasan, jangan di post induk.","Baris pertama berdiri sendiri sebagai kalimat utuh."];break;
+   case "telegram":
+     judul=cap(kw);desk="**"+cap(kw)+"**\n\n"+(L?"For ":"Buat ")+aud+". "+res+".\n\n→ "+ctas(g)[1];
+     tag=tag.slice(0,3);
+     extra=["Nama channel harus ngandung kata kunci — cuma nama & deskripsi yang diindeks pencarian Telegram.","Pin 1 post 'mulai dari sini'.","Post jam yang sama tiap hari; Telegram gak punya algoritma, cuma kebiasaan."];break;
+   case "whatsapp":
+     judul=cap(kw);desk=cap(kw)+"\n\n"+(L?"1 idea, 1 minute. ":"1 ide, 1 menit. ")+res+".\n\n"+ctas(g)[0];
+     tag=[];
+     extra=["Gak ada penemuan otomatis sama sekali. Pertumbuhan cuma dari tautan yang lo tempel di bio platform lain.","Nama channel = kata kunci + siapa yang dilayani.","Maksimal 1 pesan/hari. Lebih dari itu orang keluar."];break;
+   case "linkedin":
+     judul=cap(kw);desk=cap(kw)+".\n\n"+(L?"Most ":"Kebanyakan ")+aud+" "+(L?"are told to try harder.":"disuruh usaha lebih keras.")+"\n\n"+(L?"Here's the actual system:":"Ini sistem sebenarnya:")+"\n\n1. …";
+     tag=tag.slice(0,3);
+     extra=["3 baris pertama sebelum 'lihat selengkapnya' = 90% keputusan.","Headline profil lo juga mesin cari — masukin kata kunci ke situ.","Tautan di komentar pertama."];break;
+   case "pinterest":
+     judul=cap(kw)+" | "+cap(res);
+     desk=cap(kw)+" "+(L?"for ":"buat ")+aud+". "+res+". "+(L?"Save for later.":"Simpan buat nanti.");
+     tag=tagify(g,6);
+     extra=["Ini mesin pencari. Judul pin, deskripsi, DAN nama board semuanya diindeks.","Pin vertikal 2:3 (1000×1500).","Umur pin berbulan-bulan — ini satu-satunya platform yang kontennya nambah nilai tiap bulan."];break;
+   default:judul=cap(kw);desk=cap(kw);
+  }
+  return {judul:judul,desk:desk,tag:tag,extra:extra,where:P.seo};
+}
+function cap(s){s=(s||"").trim();return s.charAt(0).toUpperCase()+s.slice(1)}
+
+/* ================= CROSS-POST MAP ================= */
+var XPOST={
+ instagram:"Reels 7–20 dtk, teks di layar besar, hook di detik 0.",
+ tiktok:"Sama videonya, tapi buang logo IG. Rekam ulang teks pembuka di dalam TikTok biar gak dianggap repost.",
+ youtube:"Potong jadi Shorts <60 dtk + versi panjang 8 mnt yang bahas 'kenapa'-nya.",
+ facebook:"Upload ulang sebagai Reels, plus versi tulisan 4 paragraf. Tautan di komentar.",
+ threads:"Ambil 1 kalimat paling tajam dari skrip, jadiin post teks. Balas sendiri buat rinciannya.",
+ x:"Pecah skripnya jadi utas 6 baris. 1 ide 1 baris.",
+ telegram:"Post ringkasan 5 baris + tautan ke video. Ini arsipnya.",
+ whatsapp:"1 pesan, 1 ide, 1 tautan. Kirim jam 8 pagi.",
+ linkedin:"Ubah sudutnya jadi pelajaran kerja/sistem. 1000 karakter.",
+ pinterest:"Bikin 3 pin dari 3 kalimat berbeda di skrip yang sama. Judul pin = kata kunci."
+};
+
+/* ================= MONETISASI ================= */
+function ladder(){
+  var T=totals(),acc=S.acc,best=0,er=0,n=0;
+  acc.forEach(function(a){var h=health(a);if(h.rr!=null)best=Math.max(best,h.rr);if(h.er!=null){er+=h.er;n++}});
+  er=n?er/n:0;
+  var fol=T.fol,reach=T.reach;
+  var brand=Math.max(fol*0.01,(reach/Math.max(1,acc.reduce(function(s,a){return s+(+a.p30||0)},0)))/1000*15);
+  return [
+   {k:"01",t:"Jasa 1-lawan-1",syarat:"Butuh: 1 penawaran tertulis + 30 orang yang tau lo ngerjain apa",ok:fol>=30,
+    harga:"Rp250rb–750rb / sesi",why:"Paling cepat cair, paling gak butuh audiens. Ini yang dikerjain sambil nunggu angka naik."},
+   {k:"02",t:"Produk digital kecil",syarat:"Butuh: 500 pengikut ATAU keterikatan ≥4%",ok:(fol>=500||er>=4),
+    harga:"$9–39 (Rp150rb–650rb)",why:"Dibuat sekali, dijual terus. Ambil konten lo yang paling banyak disimpan orang, jadiin lembar kerja."},
+   {k:"03",t:"Titipan merek / UGC",syarat:"Butuh: 1000 pengikut + 3 konten di atas "+"1.5× jangkauan",ok:(fol>=1000&&best>=1.5),
+    harga:"$"+Math.round(brand)+"–"+Math.round(brand*2.5)+" / konten (±Rp"+nf(brand*S.kurs)+"–"+nf(brand*2.5*S.kurs)+")",
+    why:"Dihitung dari yang lebih besar antara 1% jumlah pengikut atau $15 per 1000 tayangan."},
+   {k:"04",t:"Langganan bulanan / komunitas",syarat:"Butuh: 2000 pengikut + tempat pindah yang lo punya sendiri",ok:(fol>=2000&&acc.some(function(a){return a.link})),
+    harga:"$7–19 / bulan / orang",why:"Duit yang bisa diramal. 100 orang × $12 = $1.200/bulan, gak peduli algoritma lagi ngambek apa nggak."},
+   {k:"05",t:"Retainer / kelas kohort",syarat:"Butuh: 5000 pengikut + 1 hasil klien yang bisa ditunjukin",ok:(fol>=5000),
+    harga:"Rp5jt–25jt / bulan",why:"Ini titik di mana lo berhenti jualan konten dan mulai jualan hasil."}
+  ];
+}
+
+/* ================= RENDER: helper ================= */
+function el(h){var d=document.createElement("div");d.innerHTML=h;return d}
+function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+var TT;
+function toast(m){var t=$("#toast");t.textContent=m;tr(t);t.classList.add("on");clearTimeout(TT);TT=setTimeout(function(){t.classList.remove("on")},1600)}
+function copyText(t){
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(function(){toast("Kesalin ✓")},fallback)}else fallback();
+  function fallback(){var a=document.createElement("textarea");a.value=t;a.style.position="fixed";a.style.opacity="0";document.body.appendChild(a);a.select();try{document.execCommand("copy");toast("Kesalin ✓")}catch(e){toast("Gagal nyalin — sorot manual ya")}document.body.removeChild(a)}
+}
+document.addEventListener("click",function(e){
+  var c=e.target.closest("[data-copy]");if(!c)return;
+  var src=document.getElementById(c.getAttribute("data-copy"));
+  if(src)copyText(src.innerText.trim());
+});
+
+/* ================= RENDER: gauge + rail ================= */
+var TABS=[["akun","Akun"],["audit","Audit"],["konten","Konten"],["seo","SEO"],["celah","Celah"],["uang","Uang"],["rencana","Rencana"],["hasil","Hasil"]];
+function renderGauge(){
+  var T=totals();
+  $("#gauge").innerHTML=
+   '<div class="g"><em>Akun</em><b>'+T.n+'</b></div>'+
+   '<div class="g"><em>Total pengikut</em><b>'+nf(T.fol)+'</b></div>'+
+   '<div class="g"><em>Jangkauan / bln</em><b>'+(T.reach?nf(T.reach):"—")+'</b></div>'+
+   '<div class="g"><em>Sinyal rata²</em><b style="color:'+tone(T.avg)+'">'+T.avg+'</b></div>';
+}
+function renderRail(){
+  var pr=priorities().length;
+  $("#rail").innerHTML=TABS.map(function(t){
+    var extra=t[0]==="audit"&&pr?'<span class="dot" style="background:var(--crit)"></span>':"";
+    return '<button role="tab" data-tab="'+t[0]+'" aria-selected="'+(S.tab===t[0])+'">'+t[1]+extra+'</button>';
+  }).join("");
+}
+function go(t){S.tab=t;save();TABS.forEach(function(x){$("#p-"+x[0]).hidden=(x[0]!==t)});renderRail();draw(t);window.scrollTo({top:0,behavior:"smooth"})}
+$("#rail").addEventListener("click",function(e){var b=e.target.closest("[data-tab]");if(b)go(b.getAttribute("data-tab"))});
+
+/* ================= TAB: AKUN ================= */
+function drawAkun(){
+  var h='<div class="sech"><h2>Akun yang lo pegang</h2><span>isi angkanya sekali, semua tab lain ngitung sendiri</span></div>';
+  h+='<p class="lede">Angka yang dipake: <b>jumlah pengikut</b>, <b>nilai tengah tayangan</b> 12 konten terakhir (jangan rata-rata — 1 viral bikin bohong), rata-rata suka & komentar, dan berapa konten sebulan. Kosongin yang belum tau; mesinnya bakal bilang mana yang kurang.</p>';
+  h+='<div class="grid" style="gap:10px" id="strips">';
+  if(!S.acc.length)h+='<div class="empty">Belum ada akun. Isi formulir di bawah \u2014 atau tekan <b>Isi data contoh</b> di bawahnya buat lihat dulu cara kerjanya.</div>';
+  S.acc.forEach(function(a){h+=stripHTML(a)});
+  h+='</div><div id="biobox"></div>';
+  h+='<div class="sec"><div class="sech"><h2>Tambah akun</h2><span>platform apa aja</span></div><div class="card">'+formHTML()+
+    '<div class="hr" style="margin:18px 0 14px"></div>'+
+    '<label class="f">Tempel mentah-mentah dari Insights / catatan<textarea id="paste" rows="3" placeholder="tempel apa aja: 4.634 pengikut, 12 reels bulan ini, rata-rata 2.989 tayangan, 130 suka..."></textarea></label>'+
+    '<div class="row" style="margin-top:10px"><button class="btn aibtn" id="p-ai">Bacain & isiin sendiri</button>'+
+    '<span class="note" style="margin:0">AI baca teks berantakan itu, terus ngisi kolom di atas. Kamu tinggal cek.</span></div>'+
+    '<div id="pasteout"></div></div></div>';
+  h+='<div class="sec"><div class="sech"><h2>Peta silang</h2><span>1 ide → semua platform yang lo punya</span></div><div class="scroll"><table><thead><tr><th>Platform</th><th>Ubah jadi apa</th><th>Jam ramai</th></tr></thead><tbody>'+
+    (S.acc.length?S.acc.map(function(a){return '<tr><td><b>'+PLAT[a.plat].n+'</b><br><span style="color:var(--muted)">@'+esc(a.h)+'</span></td><td>'+XPOST[a.plat]+'</td><td class="num">'+PLAT[a.plat].jam+'</td></tr>'}).join("")
+    :'<tr><td colspan="3" style="color:var(--muted)">Tambah akun dulu.</td></tr>')+'</tbody></table></div><p class="note">Aturannya: bikin sekali di platform paling susah (video), turunin ke yang paling gampang (teks). Jangan kebalik.</p></div>';
+  h+='<div class="sec"><div class="row"><button class="btn ghost sm" id="reset">Isi data contoh</button><button class="btn ghost sm" id="wipe">Kosongin semua</button></div></div>';
+  $("#p-akun").innerHTML=h;
+  bindAkun();
+}
+function stripHTML(a){
+  var H=health(a),P=PLAT[a.plat],t=tone(H.score);
+  function bar(val,good,mid){
+    if(val==null)return '<div class="bar"></div>';
+    var w=Math.min(100,val/good*100),mk=Math.min(100,mid/good*100);
+    return '<div class="bar"><span style="width:'+w+'%"></span><u style="left:'+mk+'%"></u></div>';
+  }
+  return '<div class="strip" style="--tone:'+t+'" data-id="'+a.id+'">'+
+   '<div class="sid"><b>@'+esc(a.h)+'</b><span class="meta">'+P.n+' · '+nf(a.f)+' pengikut'+(a.niche?' · '+esc(a.niche):'')+'</span>'+
+     '<div class="row" style="gap:5px;margin-top:3px"><span class="chip '+toneName(H.score)+'">'+label(H.score)+'</span>'+
+     (a.link?'':'<span class="chip crit">tanpa tautan</span>')+((a.offer&&a.offer.trim())?'':'<span class="chip warn">tanpa penawaran</span>')+'</div></div>'+
+   '<div class="meters">'+
+     '<div class="m"><i>Jangkauan</i>'+bar(H.rr,P.good,P.mid)+'<b>'+(H.rr!=null?H.rr.toFixed(2)+"×":"—")+'</b></div>'+
+     '<div class="m"><i>Keterikatan</i>'+bar(H.er,P.er*2,P.er)+'<b>'+(H.er!=null?pct(H.er):"—")+'</b></div>'+
+     '<div class="m"><i>Volume</i>'+bar(H.cad,100,60)+'<b>'+(a.p30||0)+'/bln</b></div>'+
+     '<div class="m"><i>Corong</i>'+bar(H.funnel,100,55)+'<b>'+H.funnel+'%</b></div>'+
+   '</div>'+
+   '<div class="score"><b>'+H.score+'</b><em>sinyal / 100</em>'+
+     '<div class="row" style="gap:6px;margin-top:7px"><button class="btn ghost sm" data-bio="'+a.id+'">Bio</button><button class="btn ghost sm" data-edit="'+a.id+'">Ubah</button><button class="btn danger sm" data-del="'+a.id+'">Hapus</button></div></div>'+
+   '</div>';
+}
+function formHTML(a){
+  a=a||{plat:"tiktok",h:"",f:"",v:"",l:"",c:"",p30:"",niche:"",offer:"",link:false};
+  return '<div class="grid g3" id="fwrap">'+
+   '<label class="f">Platform<select id="f-plat">'+PKEYS.map(function(k){return '<option value="'+k+'"'+(a.plat===k?" selected":"")+'>'+PLAT[k].n+'</option>'}).join("")+'</select></label>'+
+   '<label class="f">Nama akun (tanpa @)<input id="f-h" value="'+esc(a.h)+'" placeholder="namaakunkamu"></label>'+
+   '<label class="f">Niche / topik<input id="f-niche" value="'+esc(a.niche)+'" placeholder="regulasi emosi ibu"></label>'+
+   '<label class="f">Pengikut<input id="f-f" type="number" inputmode="numeric" value="'+esc(a.f)+'" placeholder="4634"></label>'+
+   '<label class="f">Tayangan (nilai tengah)<input id="f-v" type="number" inputmode="numeric" value="'+esc(a.v)+'" placeholder="2989"></label>'+
+   '<label class="f">Konten / 30 hari<input id="f-p30" type="number" inputmode="numeric" value="'+esc(a.p30)+'" placeholder="12"></label>'+
+   '<label class="f">Rata² suka<input id="f-l" type="number" inputmode="numeric" value="'+esc(a.l)+'" placeholder="130"></label>'+
+   '<label class="f">Rata² komentar<input id="f-c" type="number" inputmode="numeric" value="'+esc(a.c)+'" placeholder="12"></label>'+
+   '<label class="f">Penawaran berbayar<input id="f-offer" value="'+esc(a.offer)+'" placeholder="Sesi 45 mnt Rp350rb"></label>'+
+   '</div>'+
+   '<label class="ck" style="margin-top:12px;border:0"><input type="checkbox" id="f-link"'+(a.link?" checked":"")+'><span>Ada 1 tautan jelas di bio</span></label>'+
+   '<div class="row" style="margin-top:10px"><button class="btn" id="f-save">'+(a.id?"Simpan perubahan":"Tambah akun")+'</button>'+(a.id?'<button class="btn ghost" id="f-cancel">Batal</button>':'')+'</div>';
+}
+function readForm(id){
+  return {id:id||("a"+Date.now()),plat:$("#f-plat").value,h:($("#f-h").value||"akun").replace(/^@/,"").trim(),
+   f:+$("#f-f").value||0,v:+$("#f-v").value||0,l:+$("#f-l").value||0,c:+$("#f-c").value||0,p30:+$("#f-p30").value||0,
+   niche:$("#f-niche").value.trim(),offer:$("#f-offer").value.trim(),link:$("#f-link").checked};
+}
+var akunBound=false;
+/* ---- BIO: mesin aturan + versi AI ---- */
+function bioRules(a){
+  var P=PLAT[a.plat],ni=a.niche||"topik kamu",of=a.offer||"";
+  var seri=cap(ni)+" tiap hari";
+  return [
+   cap(ni)+" buat yang lagi kewalahan.\n"+seri+" — bukan teori, langsung kepake.\n"+(of?"↓ "+of:"↓ Ambil lembar langkahnya"),
+   "Bantu kamu berhenti nebak-nebak soal "+ni+".\n1 ide, 1 menit, tiap hari.\n"+(of?"↓ "+of:"↓ Mulai dari sini"),
+   cap(ni)+" · "+nf(a.f)+" orang udah di sini\nYang aku tulis: yang kepake malam ini juga.\n"+(of?"↓ "+of:"↓ Link di bawah")
+  ];
+}
+function openBio(id){
+  var a=S.acc.filter(function(x){return x.id===id})[0];if(!a)return;
+  var box=$("#biobox");if(!box)return;
+  var o=bioRules(a);
+  box.innerHTML='<div class="card" style="margin-top:12px"><div class="sech" style="margin-bottom:10px"><h2 style="font-size:16px">Bio @'+esc(a.h)+'</h2>'+
+   '<span>3 baris: siapa yang dilayani · apa yang didapat · ke mana perginya</span></div>'+
+   '<div class="out"><button class="copy" data-copy="bio-r">salin</button><h5>Dari pola tetap</h5><ol id="bio-r">'+
+   o.map(function(x){return '<li><span class="mono">'+esc(x)+'</span></li>'}).join("")+'</ol></div>'+
+   '<div class="row" style="margin-top:12px"><button class="btn aibtn" id="bio-ai">Tulis bio pakai AI</button>'+
+   '<button class="btn ghost sm" id="bio-x">Tutup</button></div><div id="bioai"></div></div>';
+  box.scrollIntoView({block:"nearest",behavior:"smooth"});
+  $("#bio-x").onclick=function(){box.innerHTML=""};
+  $("#bio-ai").onclick=function(){aiBio(a)};
+}
+function aiBio(a){
+  if(!aiOn())return;
+  var P=PLAT[a.plat],box=$("#bioai");box.className="aibox";
+  var H=health(a);
+  var p="Kamu penulis bio profil sosmed. Tulis dalam "+bahasa()+".\n\n"+
+   "PLATFORM: "+P.n+"\nAKUN: @"+a.h+"\nNICHE: "+(a.niche||"belum diisi")+"\nPENGIKUT: "+nf(a.f)+
+   "\nPENAWARAN BERBAYAR: "+(a.offer||"belum ada")+"\nTAUTAN DI BIO: "+(a.link?"ada":"belum ada")+
+   "\nRASIO JANGKAUAN: "+(H.rr!=null?H.rr.toFixed(2)+"x":"belum keukur")+"\n\n"+
+   "Aturan keras:\n- Maksimal 150 karakter total per versi, 3 baris.\n"+
+   "- Baris 1 nyebut SIAPA yang dilayani dan HASIL apa. Dilarang cuma nyebut identitas ('ibu 2 anak', 'content creator').\n"+
+   "- Baris 2 nyebut apa yang rutin dikirim, biar orang tau dapet apa kalau follow.\n"+
+   "- Baris 3 satu ajakan pakai kata kerja. Dilarang cuma nulis 'link di bawah'.\n"+
+   "- Dilarang emoji lebih dari 2, dilarang kata 'passionate', 'journey', 'welcome'.\n\n"+
+   'Balas HANYA JSON: {"versi":[{"t":"tiga baris dipisah \\n","sasaran":"siapa yang bakal berhenti scroll gara-gara bio ini"}],"kurang":"satu hal di data akun ini yang bikin bio manapun susah nyambung"} dengan 3 versi.';
+  ask(box,p,{json:true,title:"Bio ditulis AI",tier:"quick"}).then(function(d){
+    var v=(d&&d.versi)||[];
+    box.innerHTML='<h5>Bio ditulis AI</h5><ol id="bio-a">'+v.map(function(x){
+      return '<li><span class="mono">'+esc(x&&x.t||x)+'</span>'+(x&&x.sasaran?'<span class="why">'+esc(x.sasaran)+'</span>':'')+'</li>'}).join("")+'</ol>'+
+      (d&&d.kurang?'<p class="why" style="margin-top:10px"><b>Yang masih kurang:</b> '+esc(d.kurang)+'</p>':'')+
+      '<div class="row" style="margin-top:12px"><button class="btn sm" data-copy="bio-a">Salin</button></div>';
+  },function(){});
+}
+/* ---- AI: baca tempelan berantakan → isi kolom ---- */
+function aiFill(){
+  if(!aiOn())return;
+  var raw=$("#paste").value.trim(),box=$("#pasteout");
+  if(!raw){toast("Tempel dulu teksnya");return}
+  box.className="aibox";
+  var p="Kamu pengurai data. Baca teks berantakan ini dan tarik angkanya.\n\nTEKS:\n"+raw.slice(0,4000)+"\n\n"+
+   "Platform yang boleh dipilih persis salah satu dari: "+PKEYS.join(", ")+".\n"+
+   "Angka Indonesia pakai titik sebagai pemisah ribuan (4.634 = 4634). 'rb'/'k' = ribu, 'jt'/'M' = juta.\n"+
+   "Kalau sebuah angka gak ada di teks, isi 0. JANGAN NGARANG ANGKA.\n\n"+
+   'Balas HANYA JSON: {"plat":"instagram","h":"nama akun tanpa @","f":0,"v":0,"l":0,"c":0,"p30":0,"niche":"","yakin":"sebut angka mana yang kamu tebak, bukan yang tertulis jelas"}';
+  ask(box,p,{json:true,title:"Hasil bacaan",tier:"quick"}).then(function(d){
+    if(!d)return;
+    function n(x){x=parseInt(x,10);return isFinite(x)&&x>0?x:""}
+    if(d.plat&&PLAT[d.plat])$("#f-plat").value=d.plat;
+    if(d.h)$("#f-h").value=String(d.h).replace(/^@/,"");
+    if(d.niche)$("#f-niche").value=String(d.niche);
+    ["f","v","l","c","p30"].forEach(function(k){var v=n(d[k]);if(v!=="")$("#f-"+k).value=v});
+    box.innerHTML='<h5>Kolom udah diisiin</h5><p style="font-size:14px">Cek dulu di atas sebelum ditambah — mesin ini bisa salah baca.</p>'+
+     (d.yakin?'<p class="why" style="margin-top:8px"><b>Yang ditebak:</b> '+esc(d.yakin)+'</p>':'');
+    $("#f-h").scrollIntoView({block:"center",behavior:"smooth"});
+  },function(){});
+}
+function bindAkun(){
+  var pane=$("#p-akun");
+  if(!akunBound){akunBound=true;pane.addEventListener("click",function(e){
+    var d=e.target.closest("[data-del]"),ed=e.target.closest("[data-edit]"),bo=e.target.closest("[data-bio]");
+    if(bo){openBio(bo.getAttribute("data-bio"));return}
+    if(d){S.acc=S.acc.filter(function(x){return x.id!==d.getAttribute("data-del")});save();refresh();toast("Akun dihapus")}
+    if(ed){
+      var a=S.acc.filter(function(x){return x.id===ed.getAttribute("data-edit")})[0];if(!a)return;
+      var host=e.target.closest(".strip");
+      host.outerHTML='<div class="card" id="editbox">'+formHTML(a)+'</div>';
+      $("#f-save").onclick=function(){var n=readForm(a.id);S.acc=S.acc.map(function(x){return x.id===a.id?n:x});save();refresh();toast("Tersimpan ✓")};
+      $("#f-cancel").onclick=function(){refresh()};
+      $("#editbox").scrollIntoView({block:"center",behavior:"smooth"});
+    }
+  });}
+  $("#f-save").onclick=function(){var n=readForm();if(!n.h){toast("Isi nama akunnya dulu");return}S.acc.push(n);save();refresh();toast("Akun ditambah ✓")};
+  $("#p-ai").onclick=aiFill;
+  $("#reset").onclick=function(){S.acc=JSON.parse(JSON.stringify(SEED));save();refresh();toast("Balik ke contoh")};
+  $("#wipe").onclick=function(){S.acc=[];save();refresh();toast("Dikosongin")};
+}
+
+/* ================= TAB: AUDIT ================= */
+function drawAudit(){
+  var pr=priorities();
+  var h='<div class="sech"><h2>Audit sinyal</h2><span>dihitung dari angka yang lo isi di tab Akun</span></div>';
+  h+='<div class="card" style="border-left:3px solid var(--crit)"><h3 style="font-size:15px;margin-bottom:4px">Kalau cuma sempat 3 hal hari ini</h3>'+
+    (pr.length?'<div style="margin-top:8px">'+pr.map(function(p){
+      return '<div class="find" style="--tone:'+(p.f[0]==="crit"?"var(--crit)":"var(--warn)")+'"><div class="sev"></div><div><h4>@'+esc(p.a.h)+' — '+p.f[1]+'</h4><div class="do">'+p.f[3]+'</div></div></div>'
+    }).join("")+'</div>':'<p style="color:var(--muted);margin-top:6px">Gak ada yang mendesak. Lanjut ke tab Uang.</p>')+
+    '<div class="row" style="margin-top:12px"><button class="btn aibtn" id="ai-audit">Suruh AI baca ulang semua angka</button></div></div>'+
+    '<div id="aiaudit"></div>';
+  S.acc.forEach(function(a){
+    var H=health(a),P=PLAT[a.plat],F=findings(a);
+    h+='<div class="sec"><div class="sech"><h2>@'+esc(a.h)+'</h2><span>'+P.n+' · sinyal '+H.score+'/100 · '+label(H.score)+'</span></div>';
+    if(H.unknown>=40)h+='<p class="note" style="margin-bottom:10px">⚠ '+H.unknown+'% dari skor ini gak keitung karena datanya kosong. Skor sementara.</p>';
+    h+='<div class="card">'+F.map(function(f,fi){
+      var t=f[0]==="crit"?"var(--crit)":f[0]==="warn"?"var(--warn)":"var(--ok)";
+      var G=udahGagal("@"+a.h,f[1]);
+      return '<div class="find" style="--tone:'+t+'"><div class="sev"></div><div><h4>'+f[1]+
+       (G?' <span class="chip crit">udah dicoba, gak jalan</span>':'')+'</h4><p>'+f[2]+'</p>'+
+       '<div class="do"><b>Lakuin:</b> '+f[3]+'</div>'+
+       (G?'<p class="note" style="margin-top:7px">Catatan kamu: '+esc(G.catatan||"gak jalan, tanpa keterangan")+' — jangan diulang, pakai <b>pendapat kedua</b> di tab Hasil.</p>':
+          (f[0]!=="ok"?'<div class="row" style="margin-top:8px"><button class="btn ghost sm" data-catat="'+a.id+'|'+fi+'">Catat, gue kerjain</button></div>':''))+
+       '</div></div>'
+    }).join("")+'</div></div>';
+  });
+  if(!S.acc.length)h+='<div class="empty">Tambah akun dulu di tab Akun.</div>';
+  h+='<div class="sec"><div class="sech"><h2>Patokan platform</h2><span>garis pembanding, bukan vonis</span></div><div class="scroll"><table><thead><tr><th>Platform</th><th>Jangkauan tengah</th><th>Jangkauan bagus</th><th>Keterikatan</th><th>Konten/mgg</th><th>Format</th></tr></thead><tbody>'+
+   PKEYS.map(function(k){var P=PLAT[k];return '<tr><td><b>'+P.n+'</b></td><td class="num">'+P.mid+'×</td><td class="num">'+P.good+'×</td><td class="num">'+P.er+'%</td><td class="num">'+P.cad+'</td><td>'+P.fmt+'</td></tr>'}).join("")+
+   '</tbody></table></div><p class="note">"Jangkauan" = tayangan dibagi pengikut. TikTok tinggi karena nyebarnya ke non-pengikut; Facebook rendah karena jangkauan organiknya emang udah dimatiin.</p></div>';
+  $("#p-audit").innerHTML=h;
+  var b=$("#ai-audit");if(b)b.onclick=aiAudit;
+  $$("[data-catat]").forEach(function(btn){btn.onclick=function(){
+    var p=this.getAttribute("data-catat").split("|"),
+        a=S.acc.filter(function(x){return x.id===p[0]})[0];
+    if(!a)return;
+    var f=findings(a)[+p[1]];if(!f)return;
+    catat("@"+a.h,f[1]+" → "+f[3],"aturan",f[1]);
+    var H=health(a);
+    var e=S.jur[0];if(e){e.sebelum=(H.rr!=null?a.v:"")||"";save();dbSync(e)}
+    this.outerHTML='<span class="chip acc">udah dicatat</span>';
+  }});
+}
+
+/* ================= TAB: KONTEN ================= */
+function drawKonten(){
+  var g=S.gen;
+  var h='<div class="sech"><h2>Pabrik kalimat</h2><span>isi 4 kolom, keluar hook + caption + CTA</span></div>';
+  h+='<div class="card"><div class="grid g2">'+
+    '<label class="f">Topik konten<input id="g-topik" value="'+esc(g.topik)+'"></label>'+
+    '<label class="f">Buat siapa<input id="g-aud" value="'+esc(g.aud)+'"></label>'+
+    '<label class="f">Masalah yang lagi dia alami<input id="g-pain" value="'+esc(g.pain)+'"></label>'+
+    '<label class="f">Hasil yang dia mau<input id="g-hasil" value="'+esc(g.hasil)+'"></label>'+
+    '<label class="f">Platform<select id="g-plat">'+PKEYS.map(function(k){return '<option value="'+k+'"'+(g.plat===k?" selected":"")+'>'+PLAT[k].n+'</option>'}).join("")+'</select></label>'+
+    '<label class="f">Bahasa keluaran<select id="g-lang"><option value="id"'+(S.lang==="id"?" selected":"")+'>Indonesia</option><option value="en"'+(S.lang==="en"?" selected":"")+'>English</option></select></label>'+
+    '</div><div class="row" style="margin-top:12px"><button class="btn" id="g-run">Bikin</button>'+
+    '<button class="btn ghost" id="g-more">Ganti 5 lagi</button>'+
+    '<button class="btn aibtn" id="g-ai">Tulis ulang pakai AI</button></div>'+
+    '<p class="note">Tombol putih pakai pola tetap — instan, gratis, keluarannya berulang. Tombol AI nulis dari nol buat topik ini, satu-satu.</p></div>';
+  h+='<div class="sec grid g2" id="genout"></div><div id="aigen"></div>';
+  h+='<div class="sec"><div class="sech"><h2>Uji hook</h2><span>skor dari aturan, bukan feeling</span></div>'+
+    '<div class="card"><label class="f">Tempel hook yang mau diuji<textarea id="hk" rows="2">'+esc(S.hook)+'</textarea></label>'+
+    '<div class="row" style="margin-top:10px"><button class="btn" id="hk-run">Nilai</button>'+
+    '<button class="btn ghost aibtn" id="hk-ai">Minta AI benerin</button></div>'+
+    '<div id="hkout" style="margin-top:14px"></div><div id="hkai"></div></div></div>';
+  $("#p-konten").innerHTML=h;
+  $("#g-run").onclick=runGen;$("#hk-run").onclick=runHook;
+  $("#g-more").onclick=function(){S.seed=(S.seed||0)+1;save();runGen();toast("5 pola lain")};
+  $("#g-ai").onclick=aiGen;$("#hk-ai").onclick=aiHook;
+  $("#g-lang").onchange=function(){readGen();setLang(this.value)};
+  runGen();runHook();
+}
+function readGen(){
+  var g={topik:$("#g-topik").value.trim()||"topik kamu",aud:$("#g-aud").value.trim()||"audiens kamu",
+   pain:$("#g-pain").value.trim()||"masalahnya",hasil:$("#g-hasil").value.trim()||"hasil yang dia mau",plat:$("#g-plat").value};
+  var a=S.acc.filter(function(x){return x.plat===g.plat})[0];g.niche=a?a.niche:g.aud;
+  S.gen=g;save();return g;
+}
+function runGen(){
+  var g=readGen(),P=PLAT[g.plat];
+  var hk=hooks(g);
+  $("#genout").innerHTML=
+   '<div class="out"><button class="copy" data-copy="o-hook">salin</button><h5>5 hook — '+P.n+'</h5><ol id="o-hook">'+hk.map(function(x){return '<li>'+esc(x)+'</li>'}).join("")+'</ol></div>'+
+   '<div class="out"><button class="copy" data-copy="o-cap">salin</button><h5>Caption</h5><div class="mono" id="o-cap">'+esc(caption(g))+'</div></div>'+
+   '<div class="out"><button class="copy" data-copy="o-cta">salin</button><h5>3 CTA</h5><ul id="o-cta">'+ctas(g).map(function(x){return '<li>'+esc(x)+'</li>'}).join("")+'</ul></div>'+
+   '<div class="out"><h5>Aturan format '+P.n+'</h5><ul><li>'+P.fmt+'</li><li>Jam ramai: '+P.jam+'</li><li>Target sehat: '+P.cad+' konten/minggu</li><li>'+P.seo+'</li></ul></div>';
+}
+function runHook(){
+  var t=$("#hk").value;S.hook=t;save();
+  var r=scoreHook(t),tn=tone(r.s);
+  $("#hkout").innerHTML='<div class="row" style="align-items:baseline;gap:12px"><b class="num" style="font-size:34px;color:'+tn+';font-weight:600">'+r.s+'</b><span style="color:var(--muted);font-size:12px;letter-spacing:.08em;text-transform:uppercase">skor hook / 100</span></div>'+
+   '<div style="margin-top:10px">'+r.r.map(function(x){
+     var t2=x[0]==="crit"?"var(--crit)":x[0]==="warn"?"var(--warn)":"var(--ok)";
+     return '<div class="find" style="--tone:'+t2+'"><div class="sev"></div><div><h4>'+esc(x[1])+'</h4><p>'+esc(x[2])+'</p></div></div>'}).join("")+'</div>';
+}
+
+/* ---- AI: tulis hook + caption beneran ---- */
+function aiGen(){
+  if(!aiOn())return;
+  var g=readGen(),P=PLAT[g.plat],box=$("#aigen");
+  box.className="aibox";box.scrollIntoView({block:"nearest",behavior:"smooth"});
+  var p="Kamu penulis konten sosmed yang tajam dan gak basa-basi. Tulis dalam "+bahasa()+".\n\n"+
+   "PLATFORM: "+P.n+" ("+P.fmt+")\nTOPIK: "+g.topik+"\nUNTUK: "+g.aud+"\n"+
+   "MASALAH YANG DIA ALAMI SEKARANG: "+g.pain+"\nHASIL YANG DIA MAU: "+g.hasil+"\n\n"+
+   "Aturan keras:\n"+
+   "- Hook maksimal 12 kata, gak boleh diakhiri tanda tanya.\n"+
+   "- Dilarang: sapaan pembuka, 'rahasia', 'wajib tau', 'viral', 'game changer', kata peredam ('kayaknya','mungkin').\n"+
+   "- Tiap hook harus spesifik ke topik di atas. Kalau bisa dipakai buat topik lain, berarti kurang tajam.\n"+
+   "- Caption: 1 janji, 3 langkah bernomor yang bisa dilakukan malam ini, 1 pertanyaan penutup.\n\n"+
+   'Balas HANYA JSON: {"hooks":[{"t":"hook","why":"kenapa ini nahan orang, 1 kalimat"}],"caption":"...","cta":["...","...","..."]} '+
+   "dengan tepat 5 hook.";
+  ask(box,p,{json:true,title:"Ditulis AI — "+P.n}).then(function(d){
+    var hs=(d&&d.hooks)||[],cap=(d&&d.caption)||"",ct=(d&&d.cta)||[];
+    box.innerHTML='<h5>Ditulis AI — '+P.n+'</h5>'+
+     '<ol id="ai-h">'+hs.map(function(x){return '<li>'+esc(x&&x.t||x)+(x&&x.why?'<span class="why">'+esc(x.why)+'</span>':'')+'</li>'}).join("")+'</ol>'+
+     (cap?'<h5 style="margin-top:14px">Caption</h5><div class="mono" id="ai-c">'+esc(cap)+'</div>':'')+
+     (ct.length?'<h5 style="margin-top:14px">CTA</h5><ul>'+ct.map(function(x){return '<li>'+esc(x)+'</li>'}).join("")+'</ul>':'')+
+     '<div class="row" style="margin-top:12px"><button class="btn sm" data-copy="ai-h">Salin hook</button>'+
+     (cap?'<button class="btn ghost sm" data-copy="ai-c">Salin caption</button>':'')+'</div>';
+  },function(){});
+}
+/* ---- AI: benerin hook yang lagi diuji ---- */
+function aiHook(){
+  if(!aiOn())return;
+  var t=$("#hk").value.trim(),g=S.gen,box=$("#hkai");
+  if(!t){toast("Isi dulu hook-nya");return}
+  box.className="aibox";
+  var r=scoreHook(t);
+  var p="Kamu editor hook sosmed. Jawab dalam "+bahasa()+", padat, tanpa basa-basi.\n\n"+
+   "HOOK YANG DIUJI: \""+t+"\"\nTOPIK: "+g.topik+"\nPEMBACA: "+g.aud+"\n"+
+   "SKOR MESIN ATURAN: "+r.s+"/100. Catatan mesin: "+r.r.map(function(x){return x[1]}).join("; ")+"\n\n"+
+   "Tugas: (1) sebut satu alasan utama hook ini lemah atau kuat — 1 kalimat, jujur, jangan menghibur. "+
+   "(2) tulis 3 versi perbaikan, masing-masing ≤12 kata, tiap versi pakai pendekatan beda (angka / bantahan / cermin diri).\n\n"+
+   'Balas HANYA JSON: {"diagnosa":"...","versi":[{"t":"...","cara":"angka|bantahan|cermin"}]}';
+  ask(box,p,{json:true,title:"Pembacaan AI",tier:"quick"}).then(function(d){
+    var v=(d&&d.versi)||[];
+    box.innerHTML='<h5>Pembacaan AI</h5><p style="font-size:14.5px">'+esc((d&&d.diagnosa)||"")+'</p>'+
+     '<ol id="ai-v" style="margin-top:10px">'+v.map(function(x){return '<li>'+esc(x&&x.t||x)+(x&&x.cara?'<span class="why">pendekatan: '+esc(x.cara)+'</span>':'')+'</li>'}).join("")+'</ol>'+
+     '<div class="row" style="margin-top:12px"><button class="btn sm" data-copy="ai-v">Salin</button></div>';
+  },function(){});
+}
+/* ---- AI: baca ulang seluruh angka akun ---- */
+function aiAudit(){
+  if(!aiOn())return;
+  var box=$("#aiaudit");box.className="aibox";
+  var data=S.acc.map(function(a){
+    var H=health(a),P=PLAT[a.plat];
+    return "@"+a.h+" ("+P.n+"): "+nf(a.f)+" pengikut, tayangan tengah "+(a.v||"?")+
+     ", rasio jangkauan "+(H.rr!=null?H.rr.toFixed(2)+"x (patokan platform "+P.mid+"x)":"belum diisi")+
+     ", keterikatan "+(H.er!=null?pct(H.er)+" (patokan "+P.er+"%)":"belum diisi")+
+     ", "+(a.p30||0)+" konten/30hari, tautan bio: "+(a.link?"ada":"gak ada")+
+     ", penawaran: "+(a.offer?a.offer:"belum ada")+", niche: "+(a.niche||"?")+
+     ". Temuan mesin aturan: "+findings(a).map(function(f){return f[1]}).join("; ");
+  }).join("\n\n");
+  var p="Kamu ahli strategi sosmed yang jujur sama angka dan gak menghibur. Jawab dalam "+bahasa()+".\n\n"+
+   "DATA AKUN:\n"+data+"\n\n"+
+   "Mesin aturan udah nyebut gejalanya. Tugas kamu yang beda: cari POLA ANTAR AKUN dan urutan sebab-akibat yang gak keliatan dari satu akun.\n\n"+
+   "Jawab 3 bagian, masing-masing maksimal 3 kalimat:\n"+
+   "1. HAMBATAN UTAMA — satu hal yang kalau dibenerin, sisanya ikut kebuka. Sebut angkanya.\n"+
+   "2. YANG DILAKUIN MINGGU INI — satu tindakan konkret, ada jumlah dan hari.\n"+
+   "3. YANG JANGAN DIKERJAIN DULU — satu hal yang keliatan mendesak tapi sebenarnya buang tenaga.\n\n"+
+   "Tulis mengalir, tanpa penjelasan pembuka. Jangan ngarang angka yang gak ada di data.";
+  ask(box,p,{title:"Pembacaan AI lintas akun"});
+}
+
+/* ================= TAB: SEO ================= */
+function drawSeo(){
+  var g=S.gen,plat=g.plat;
+  var h='<div class="sech"><h2>SEO per platform</h2><span>pakai isian dari tab Konten</span></div>';
+  h+='<p class="lede">Sosmed sekarang mesin pencari. Yang bikin konten lama lo tetap dapet tontonan bukan algoritma beranda — tapi kata yang lo tulis di judul, caption, dan teks di layar.</p>';
+  h+='<div class="card"><div class="grid g2"><label class="f">Kata kunci / topik<input id="s-kw" value="'+esc(g.topik)+'"></label>'+
+    '<label class="f">Platform<select id="s-plat">'+PKEYS.map(function(k){return '<option value="'+k+'"'+(plat===k?" selected":"")+'>'+PLAT[k].n+'</option>'}).join("")+'</select></label></div>'+
+    '<div class="row" style="margin-top:12px"><button class="btn" id="s-run">Bikin paket SEO</button><button class="btn ghost" id="s-all">Bikin buat semua akun gue</button>'+
+    '<button class="btn aibtn" id="s-ai">Riset kata kunci pakai AI</button></div></div>';
+  h+='<div id="aiseo"></div><div id="seoout" class="sec grid" style="gap:12px"></div>';
+  $("#p-seo").innerHTML=h;
+  $("#s-ai").onclick=aiSeo;
+  $("#s-run").onclick=function(){S.gen.topik=$("#s-kw").value.trim()||S.gen.topik;S.gen.plat=$("#s-plat").value;save();paintSeo([S.gen.plat])};
+  $("#s-all").onclick=function(){S.gen.topik=$("#s-kw").value.trim()||S.gen.topik;save();
+    var ps=S.acc.map(function(a){return a.plat}).filter(function(v,i,a){return a.indexOf(v)===i});
+    paintSeo(ps.length?ps:[S.gen.plat])};
+  paintSeo([plat]);
+}
+function paintSeo(list){
+  $("#seoout").innerHTML=list.map(function(p,i){
+    var g=Object.assign({},S.gen,{plat:p}),r=seo(g),P=PLAT[p],id="seo"+i;
+    return '<div class="card"><div class="sech" style="margin-bottom:10px"><h2 style="font-size:16px">'+P.n+'</h2><span>'+r.where+'</span></div>'+
+     '<div class="out" style="margin-bottom:10px"><button class="copy" data-copy="'+id+'">salin semua</button><div id="'+id+'">'+
+       '<h5 style="margin-top:0">Judul</h5><div class="mono">'+esc(r.judul)+'</div>'+
+       '<h5 style="margin-top:12px">Deskripsi / caption</h5><div class="mono">'+esc(r.desk)+'</div>'+
+       (r.tag.length?'<h5 style="margin-top:12px">Tagar</h5><div class="mono">'+esc(r.tag.join(" "))+'</div>':'')+
+     '</div></div>'+
+     '<ul style="margin:0;padding-left:19px;display:flex;flex-direction:column;gap:6px;font-size:13.5px;color:var(--ink2)">'+r.extra.map(function(x){return '<li>'+esc(x)+'</li>'}).join("")+'</ul></div>';
+  }).join("");
+}
+
+/* ---- AI: riset kata kunci + judul per platform ---- */
+function aiSeo(){
+  if(!aiOn())return;
+  var g=S.gen,plat=$("#s-plat").value,P=PLAT[plat],box=$("#aiseo");
+  g.topik=$("#s-kw").value.trim()||g.topik;S.gen=g;save();
+  box.className="aibox";
+  var p="Kamu ahli SEO sosmed. Jawab dalam "+bahasa()+".\n\n"+
+   "PLATFORM: "+P.n+"\nTOPIK: "+g.topik+"\nPEMBACA: "+g.aud+"\nHASIL YANG DICARI: "+g.hasil+"\n"+
+   "Cara kerja pencarian di "+P.n+": "+P.seo+"\n\n"+
+   "Tugas: tebak kata yang BENERAN diketik orang di kolom cari "+P.n+" waktu lagi punya masalah ini — "+
+   "pakai bahasa sehari-hari, bukan istilah pemasaran. Lalu susun paket yang siap tempel.\n\n"+
+   'Balas HANYA JSON: {"utama":"kata kunci utama","cari":["5 frasa yang diketik orang"],"judul":"judul/baris pertama, kata kunci di depan","deskripsi":"2-4 baris","tagar":["#..."],"layar":"teks yang ditaruh di layar detik 0-2"}';
+  ask(box,p,{json:true,title:"Riset kata kunci — "+P.n}).then(function(d){
+    if(!d)return;
+    box.innerHTML='<h5>Riset kata kunci — '+P.n+'</h5><div id="ai-s">'+
+     '<div class="mono"><b>Kata kunci utama:</b> '+esc(d.utama||"")+'</div>'+
+     (d.cari&&d.cari.length?'<h5 style="margin-top:12px">Yang diketik orang</h5><ul>'+d.cari.map(function(x){return '<li>'+esc(x)+'</li>'}).join("")+'</ul>':'')+
+     (d.judul?'<h5 style="margin-top:12px">Judul</h5><div class="mono">'+esc(d.judul)+'</div>':'')+
+     (d.deskripsi?'<h5 style="margin-top:12px">Deskripsi</h5><div class="mono">'+esc(d.deskripsi)+'</div>':'')+
+     (d.layar?'<h5 style="margin-top:12px">Teks di layar (detik 0–2)</h5><div class="mono">'+esc(d.layar)+'</div>':'')+
+     (d.tagar&&d.tagar.length?'<h5 style="margin-top:12px">Tagar</h5><div class="mono">'+esc(d.tagar.join(" "))+'</div>':'')+
+     '</div><div class="row" style="margin-top:12px"><button class="btn sm" data-copy="ai-s">Salin semua</button></div>';
+  },function(){});
+}
+
+/* ================= TAB: CELAH ================= */
+function drawCelah(){
+  var h='<div class="sech"><h2>Celah</h2><span>centang yang udah ada — sisanya jadi daftar kerjaan</span></div>';
+  if(!S.acc.length)h+='<div class="empty">Tambah akun dulu.</div>';
+  S.acc.forEach(function(a){
+    var st=S.ck[a.id]||{},got=0,tot=0,miss=[];
+    CK.forEach(function(c,i){tot+=c[0];if(st[i])got+=c[0];else miss.push(c)});
+    var pctv=Math.round(got/tot*100);
+    miss.sort(function(x,y){return y[0]-x[0]});
+    h+='<div class="sec"><div class="sech"><h2>@'+esc(a.h)+'</h2><span>'+PLAT[a.plat].n+' · fondasi '+pctv+'%</span></div>'+
+     '<div class="card"><div class="bar" style="height:10px;margin-bottom:14px"><span style="width:'+pctv+'%;background:'+tone(pctv)+'"></span></div>'+
+     CK.map(function(c,i){return '<label class="ck'+(st[i]?" done":"")+'"><input type="checkbox" data-ck="'+a.id+'|'+i+'"'+(st[i]?" checked":"")+'><span>'+c[1]+'</span><span class="w">'+c[0]+'</span></label>'}).join("")+
+     '</div>';
+    if(miss.length)h+='<div class="out" style="margin-top:12px"><h5>Yang paling mahal buat dibiarin</h5><ol>'+miss.slice(0,3).map(function(m){return '<li>'+m[1]+'</li>'}).join("")+'</ol></div>';
+    else h+='<div class="out" style="margin-top:12px"><h5>Fondasi beres</h5><p style="font-size:14px">Semua kepenuhan. Yang tersisa cuma volume dan distribusi — lihat tab Rencana.</p></div>';
+    h+='</div>';
+  });
+  h+='<p class="note">Angka di kanan itu bobot: seberapa mahal kalau dibiarin kosong. Kerjain yang bobotnya 9 dulu, sisanya nyusul.</p>';
+  h+='<div class="row" style="margin-top:14px"><button class="btn aibtn" id="ck-ai">Bikinin kalimat buat nutup celahnya</button></div><div id="aicelah"></div>';
+  $("#p-celah").innerHTML=h;
+  var cb=$("#ck-ai");if(cb)cb.onclick=aiCelah;
+  $$("[data-ck]").forEach(function(inp){inp.onchange=function(){
+    var p=this.getAttribute("data-ck").split("|");
+    S.ck[p[0]]=S.ck[p[0]]||{};S.ck[p[0]][p[1]]=this.checked;save();drawCelah();
+  }});
+}
+
+/* ---- AI: nutup celah pakai kalimat jadi ---- */
+function aiCelah(){
+  if(!aiOn())return;
+  var box=$("#aicelah");box.className="aibox";
+  var lines=S.acc.map(function(a){
+    var st=S.ck[a.id]||{},miss=[];
+    CK.forEach(function(c,i){if(!st[i])miss.push(c[1]+" (bobot "+c[0]+")")});
+    return "@"+a.h+" ("+PLAT[a.plat].n+", "+nf(a.f)+" pengikut, niche: "+(a.niche||"?")+", penawaran: "+(a.offer||"belum ada")+")\nBelum ada: "+(miss.join(" | ")||"semua udah");
+  }).join("\n\n");
+  var p="Kamu pelaksana, bukan penasihat. Jawab dalam "+bahasa()+".\n\n"+
+   "AKUN DAN CELAHNYA:\n"+lines+"\n\n"+
+   "Ambil 3 celah paling mahal dari seluruh akun. Untuk tiap celah, JANGAN kasih saran — kasih BARANG JADI yang tinggal tempel: "+
+   "kalau celahnya bio, tulis bio lengkapnya. Kalau tautan, tulis judul tombolnya. Kalau seri berulang, tulis nama serinya dan 3 judul episode pertamanya. "+
+   "Kalau penawaran, tulis nama + harga + 1 kalimat jualannya.\n\n"+
+   'Balas HANYA JSON: {"kerjaan":[{"celah":"nama celahnya","akun":"@...","tempel":"teks jadi yang tinggal disalin","waktu":"berapa menit ngerjainnya"}]} dengan tepat 3 kerjaan.';
+  ask(box,p,{json:true,title:"Barang jadi buat nutup celah"}).then(function(d){
+    var k=(d&&d.kerjaan)||[];
+    box.innerHTML='<h5>Barang jadi buat nutup celah</h5><div id="ck-a">'+k.map(function(x){
+      return '<div style="padding:12px 0;border-top:1px solid var(--line)"><b style="font-family:Archivo;font-size:14.5px">'+esc(x.celah||"")+'</b>'+
+       ' <span class="chip acc">'+esc(x.akun||"")+'</span>'+(x.waktu?' <span class="chip">'+esc(x.waktu)+'</span>':'')+
+       '<div class="mono" style="margin-top:8px">'+esc(x.tempel||"")+'</div></div>'}).join("")+'</div>'+
+      '<div class="row" style="margin-top:12px"><button class="btn sm" data-copy="ck-a">Salin semua</button></div>';
+  },function(){});
+}
+
+/* ================= TAB: UANG ================= */
+function drawUang(){
+  var L=ladder(),T=totals(),pj=S.proj;
+  var h='<div class="sech"><h2>Tangga uang</h2><span>anak tangga kebuka sendiri kalau angkanya udah cukup</span></div>';
+  h+='<div class="card"><div class="ladder">'+L.map(function(r){
+    return '<div class="rung'+(r.ok?" on":"")+'"><div class="k">'+(r.ok?"✓":r.k)+'</div><div><h4>'+r.t+'</h4><div class="price">'+r.harga+'</div>'+
+     '<p style="font-size:13.5px;color:var(--ink2);margin-top:5px">'+r.why+'</p>'+
+     '<p style="font-size:12.5px;color:'+(r.ok?"var(--ok)":"var(--muted)")+';margin-top:5px">'+(r.ok?"Kebuka sekarang":r.syarat)+'</p></div></div>'
+  }).join("")+'</div><div class="row" style="margin-top:14px"><button class="btn aibtn" id="u-ai">Rancangin penawarannya</button></div><div id="aiuang"></div></div>';
+  h+='<div class="sec"><div class="sech"><h2>Kalkulator corong</h2><span>dari jangkauan ke duit, per bulan</span></div><div class="card">'+
+   '<div class="grid g2"><label class="f">Jangkauan / bulan (dari tab Akun)<input id="u-reach" type="number" value="'+(T.reach||10000)+'"></label>'+
+   '<label class="f">Harga produk (USD)<input id="u-harga" type="number" value="'+pj.harga+'"></label></div>'+
+   '<div class="grid g3" style="margin-top:12px">'+
+    sld("u-visit","Tontonan → mampir profil",pj.visit,0.1,10,0.1,"%")+
+    sld("u-klik","Mampir → klik tautan",pj.klik,1,40,1,"%")+
+    sld("u-beli","Klik → beli",pj.beli,0.1,15,0.1,"%")+
+   '</div><div id="ufun"></div>'+
+   '<label class="f" style="margin-top:14px;max-width:220px">Kurs USD→IDR<input id="u-kurs" type="number" value="'+S.kurs+'"></label></div></div>';
+  h+='<div class="sec"><div class="sech"><h2>Urutan yang bener</h2><span>kesalahan paling mahal: kebalik</span></div><div class="card">'+
+   ['Jual jasa dulu ke 5 orang. Ini yang ngasih tau lo kalimat apa yang beneran laku.','Rekam apa yang lo omongin berulang ke 5 orang itu. Itu produk digital pertamanya.','Baru bikin konten buat naikin jangkauan — sekarang lo udah tau mau ngirim orangnya ke mana.','Kumpulin alamat email/WA sejak hari pertama. Pengikut itu nyewa, daftar itu punya.','Titipan merek terakhir. Dia bayar sekali, dan pas jangkauan lo turun dia hilang.']
+   .map(function(x,i){return '<div class="find" style="--tone:var(--accent)"><div class="sev"></div><div><p style="font-size:14px">'+x+'</p></div></div>'}).join("")+'</div></div>';
+  $("#p-uang").innerHTML=h;
+  ["u-reach","u-harga","u-visit","u-klik","u-beli","u-kurs"].forEach(function(id){var e=$("#"+id);if(e)e.oninput=function(){paintFunnel()}});
+  var ub=$("#u-ai");if(ub)ub.onclick=aiOffer;
+  paintFunnel();
+}
+/* ---- AI: rancang penawaran yang beneran bisa dijual ---- */
+function aiOffer(){
+  if(!aiOn())return;
+  var box=$("#aiuang"),T=totals(),L=ladder(),box2;
+  box.className="aibox";
+  var buka=L.filter(function(r){return r.ok}),tutup=L.filter(function(r){return !r.ok});
+  var akun=S.acc.map(function(a){return "@"+a.h+" ("+PLAT[a.plat].n+", "+nf(a.f)+" pengikut, niche: "+(a.niche||"?")+", penawaran sekarang: "+(a.offer||"belum ada")+")"}).join("\n");
+  var p="Kamu perancang penawaran. Jawab dalam "+bahasa()+".\n\n"+
+   "AKUN:\n"+akun+"\nTOTAL PENGIKUT: "+nf(T.fol)+"\nJANGKAUAN/BULAN: "+nf(T.reach)+"\n"+
+   "ANAK TANGGA YANG UDAH KEBUKA: "+(buka.map(function(r){return r.t}).join(", ")||"belum ada")+"\n"+
+   "YANG BELUM: "+tutup.map(function(r){return r.t+" ("+r.syarat+")"}).join("; ")+"\n\n"+
+   "Rancang SATU penawaran yang paling masuk akal dijual bulan ini — bukan yang paling besar, yang paling cepat laku dengan angka segini.\n"+
+   "Harga dalam Rupiah, angkanya bulat dan masuk akal buat pasar Indonesia. Kalau audiensnya berbahasa Inggris, pakai USD.\n\n"+
+   'Balas HANYA JSON: {"nama":"nama penawaran, bukan kategori","harga":"angka + mata uang","untuk":"siapa persisnya","isi":["3-5 hal yang didapat, konkret"],"kalimat_jual":"satu kalimat yang dipakai di DM atau caption","kenapa_ini":"kenapa ini yang paling cepat laku dengan angka di atas, sebut angkanya","tanda_gagal":"satu tanda kalau ternyata penawaran ini salah, biar cepat ketahuan"}';
+  ask(box,p,{json:true,title:"Rancangan penawaran"}).then(function(d){
+    if(!d)return;
+    box.innerHTML='<h5>Rancangan penawaran</h5><div id="ai-u">'+
+     '<div style="font-family:Archivo;font-weight:700;font-size:18px">'+esc(d.nama||"")+'</div>'+
+     '<div class="price" style="font-family:\'IBM Plex Mono\';color:var(--accent-ink);font-weight:600;margin-top:3px">'+esc(d.harga||"")+'</div>'+
+     (d.untuk?'<p style="font-size:14px;margin-top:8px"><b>Buat:</b> '+esc(d.untuk)+'</p>':'')+
+     (d.isi&&d.isi.length?'<h5 style="margin-top:12px">Isinya</h5><ul>'+d.isi.map(function(x){return '<li>'+esc(x)+'</li>'}).join("")+'</ul>':'')+
+     (d.kalimat_jual?'<h5 style="margin-top:12px">Kalimat jualnya</h5><div class="mono">'+esc(d.kalimat_jual)+'</div>':'')+
+     (d.kenapa_ini?'<p class="why" style="margin-top:12px"><b>Kenapa ini:</b> '+esc(d.kenapa_ini)+'</p>':'')+
+     (d.tanda_gagal?'<p class="why" style="margin-top:6px"><b>Tanda kalau salah:</b> '+esc(d.tanda_gagal)+'</p>':'')+
+     '</div><div class="row" style="margin-top:12px"><button class="btn sm" data-copy="ai-u">Salin</button>'+
+     '<button class="btn ghost sm" id="u-catat">Catat, gue jual ini</button></div>';
+    var c=$("#u-catat");if(c)c.onclick=function(){catat("semua akun","Jual: "+(d.nama||"")+" — "+(d.harga||""),"ai","penawaran baru");this.outerHTML='<span class="chip acc">udah dicatat</span>'};
+  },function(){});
+}
+function sld(id,lab,val,min,max,step,suf){
+  return '<label class="f">'+lab+'<div class="sld"><input type="range" id="'+id+'" min="'+min+'" max="'+max+'" step="'+step+'" value="'+val+'"><span class="num" id="'+id+'-v">'+val+suf+'</span></div></label>';
+}
+function paintFunnel(){
+  var reach=+$("#u-reach").value||0,harga=+$("#u-harga").value||0,
+      v=+$("#u-visit").value,k=+$("#u-klik").value,b=+$("#u-beli").value,kurs=+$("#u-kurs").value||16300;
+  $("#u-visit-v").textContent=v+"%";$("#u-klik-v").textContent=k+"%";$("#u-beli-v").textContent=b+"%";
+  S.proj={model:"produk",harga:harga,visit:v,klik:k,beli:b};S.kurs=kurs;save();
+  var mampir=reach*v/100,klik=mampir*k/100,beli=klik*b/100,usd=beli*harga;
+  var rows=[["Tayangan",reach],["Mampir profil",mampir],["Klik tautan",klik],["Beli",beli]];
+  var mx=reach||1;
+  $("#ufun").innerHTML='<div class="funnel">'+rows.map(function(r){
+    return '<div class="fs"><span style="color:var(--muted)">'+r[0]+'</span><div class="fb" style="width:'+Math.max(0.5,r[1]/mx*100)+'%"></div><b>'+nf(r[1])+'</b></div>'
+  }).join("")+'</div>'+
+  '<div class="out" style="margin-top:14px"><h5>Perkiraan bulanan</h5><div class="row" style="gap:24px"><div class="g"><em>USD</em><b class="num" style="font-size:24px;color:var(--accent-ink)">$'+nf(usd)+'</b></div><div class="g"><em>Rupiah</em><b class="num" style="font-size:24px">Rp'+nf(usd*kurs)+'</b></div></div>'+
+  '<p class="note">Angka '+Math.round(beti(beli))+' pembeli itu yang harus lo percaya, bukan angka rupiahnya. Kalau kerasa gak masuk akal, geser slidernya sampai masuk akal — terus lihat berapa jangkauan yang dibutuhin.</p></div>';
+  function beti(x){return x}
+}
+
+/* ================= TAB: RENCANA ================= */
+var PILLAR=[
+ ["Skrip / langkah","tarik orang baru","Yang paling jauh nyebar. Bentuknya daftar bernomor yang bisa langsung dipakai malam ini."],
+ ["Bongkar salah kaprah","bikin dipercaya","Ambil saran umum yang salah, tunjukin kenapa. Ini yang bikin orang follow, bukan cuma nonton."],
+ ["Cerita / pengakuan","bikin nempel","Momen spesifik, bukan renungan umum. 1 kejadian, 1 jam, 1 kalimat yang diinget."],
+ ["Bukti / hasil","bikin percaya beli","Sebelum–sesudah, tangkapan layar, kata orang lain. Tanpa ini, penawaran lo cuma klaim."],
+ ["Ajakan","bikin pindah","Nyebut penawaran terang-terangan. Minimal 1× seminggu, kalau nggak semua kerja di atas hangus."]
+];
+var MIX=[0,1,0,2,3,0,4];
+function drawRencana(){
+  var accs=S.acc.length?S.acc:[{h:"akunmu",plat:"instagram",niche:"topikmu"}];
+  var hari=["Senin","Selasa","Rabu","Kamis","Jumat","Sabtu","Minggu"];
+  var h='<div class="sech"><h2>Rencana 7 hari</h2><span>disusun dari akun & platform yang lo isi</span></div>';
+  h+='<p class="lede">Bukan 7 ide acak. Urutannya sengaja: tiga hari pertama narik orang baru, tengah minggu bikin dipercaya, akhir minggu baru minta sesuatu. Kalau minta di hari Senin, gak ada yang dengar.</p>';
+  h+='<div class="scroll"><table><thead><tr><th>Hari</th><th>Pilar</th><th>Tujuan</th><th>Akun</th><th>Hook pembuka</th></tr></thead><tbody>';
+  var g=S.gen;
+  hari.forEach(function(d,i){
+    var p=PILLAR[MIX[i]],a=accs[i%accs.length],hk=hooks(g)[i%5];
+    h+='<tr><td><b>'+d+'</b></td><td>'+p[0]+'</td><td><span class="chip acc">'+p[1]+'</span></td><td>@'+esc(a.h)+'<br><span style="color:var(--muted);font-size:12px">'+PLAT[a.plat].n+' · '+PLAT[a.plat].jam+'</span></td><td style="max-width:280px">'+esc(hk)+'</td></tr>';
+  });
+  h+='</tbody></table></div>';
+  h+='<div class="row" style="margin-top:14px"><button class="btn aibtn" id="r-ai">Isiin 7 hari ini beneran</button>'+
+    '<span class="note" style="margin:0">Rangka di atas dari pola tetap. AI ngisi tiap hari jadi brief lengkap.</span></div><div id="airencana"></div>';
+  h+='<div class="sec"><div class="sech"><h2>Kenapa pilarnya cuma 5</h2><span>tiap pilar punya satu tugas</span></div><div class="card">'+
+   PILLAR.map(function(p,i){var n=MIX.filter(function(x){return x===i}).length;
+    return '<div class="find" style="--tone:var(--accent)"><div class="sev"></div><div><h4>'+p[0]+' <span class="chip" style="margin-left:6px">'+n+'×/minggu</span></h4><p>'+p[2]+'</p></div></div>'}).join("")+'</div></div>';
+  h+='<div class="sec"><div class="sech"><h2>3 angka yang dicek tiap Senin</h2><span>sisanya abaikan</span></div><div class="card"><div class="scroll"><table><thead><tr><th>Angka</th><th>Artinya</th><th>Target minggu ini</th></tr></thead><tbody>'+
+   '<tr><td><b>Rasio jangkauan</b></td><td>Tayangan ÷ pengikut. Ngukur apakah platform masih mau nyebar konten lo.</td><td class="num">naik 0,1× dari minggu lalu</td></tr>'+
+   '<tr><td><b>Simpanan + kiriman</b></td><td>Bukan suka. Simpan & kirim itu sinyal paling kuat di semua platform sekarang.</td><td class="num">≥2% dari tayangan</td></tr>'+
+   '<tr><td><b>Klik tautan</b></td><td>Satu-satunya angka yang nyambung ke duit. Sisanya cuma tepuk tangan.</td><td class="num">≥1% dari tayangan</td></tr>'+
+   '</tbody></table></div><p class="note">Catat di hari yang sama tiap minggu. Angka yang dicek tiap hari cuma bikin panik dan gak ngasih pola.</p></div></div>';
+  $("#p-rencana").innerHTML=h;
+  var rb=$("#r-ai");if(rb)rb.onclick=aiWeek;
+}
+/* ---- AI: ubah rangka 7 hari jadi brief beneran ---- */
+function aiWeek(){
+  if(!aiOn())return;
+  var box=$("#airencana");box.className="aibox";
+  var g=S.gen,hari=["Senin","Selasa","Rabu","Kamis","Jumat","Sabtu","Minggu"];
+  var rangka=hari.map(function(d,i){var p=PILLAR[MIX[i]],a=S.acc[i%Math.max(1,S.acc.length)];
+    return d+": pilar "+p[0]+" (tujuan: "+p[1]+")"+(a?" di @"+a.h+" ("+PLAT[a.plat].n+", "+PLAT[a.plat].fmt+")":"")}).join("\n");
+  var gag=gagalnya();
+  var p="Kamu perencana konten. Jawab dalam "+bahasa()+".\n\n"+
+   "TOPIK BESAR: "+g.topik+"\nPEMBACA: "+g.aud+"\nMASALAH DIA: "+g.pain+"\nHASIL YANG DIA MAU: "+g.hasil+"\n\n"+
+   "RANGKA MINGGU INI (pilar & platformnya udah dikunci, jangan diubah):\n"+rangka+"\n\n"+
+   (gag.length?"YANG UDAH DICOBA DAN GAGAL — jangan diulang:\n"+gag.map(function(e){return "- "+e.saran+" ("+(e.catatan||"gak jalan")+")"}).join("\n")+"\n\n":"")+
+   "Isi tiap hari jadi brief yang tinggal dieksekusi. Tujuh hari harus BEDA-BEDA sudutnya — kalau dua hari bisa ditukar tanpa ada yang sadar, berarti gagal.\n"+
+   "Hook maksimal 12 kata. 'isi' = 3 poin yang diomongin berurutan, bukan ringkasan.\n\n"+
+   'Balas HANYA JSON: {"hari":[{"h":"Senin","judul":"...","hook":"...","isi":["...","...","..."],"cta":"...","kenapa":"kenapa ini di hari ini"}]} dengan tepat 7 hari sesuai urutan rangka.';
+  ask(box,p,{json:true,title:"7 hari, versi lengkap"}).then(function(d){
+    var H=(d&&d.hari)||[];
+    box.innerHTML='<h5>7 hari, versi lengkap</h5><div id="ai-r">'+H.map(function(x){
+      return '<div style="padding:13px 0;border-top:1px solid var(--line)">'+
+       '<div class="row" style="gap:8px"><span class="chip acc">'+esc(x.h||"")+'</span><b style="font-family:Archivo;font-size:15px">'+esc(x.judul||"")+'</b></div>'+
+       '<div class="mono" style="margin-top:7px"><b>Hook:</b> '+esc(x.hook||"")+'</div>'+
+       (x.isi&&x.isi.length?'<ol style="margin-top:7px">'+x.isi.map(function(y){return '<li>'+esc(y)+'</li>'}).join("")+'</ol>':'')+
+       (x.cta?'<div class="mono" style="margin-top:7px"><b>CTA:</b> '+esc(x.cta)+'</div>':'')+
+       (x.kenapa?'<span class="why">'+esc(x.kenapa)+'</span>':'')+'</div>'}).join("")+'</div>'+
+      '<div class="row" style="margin-top:12px"><button class="btn sm" data-copy="ai-r">Salin semingguan</button>'+
+      '<button class="btn ghost sm" id="r-catat">Catat, gue jalanin minggu ini</button></div>';
+    var c=$("#r-catat");if(c)c.onclick=function(){catat("semua akun","Jalanin rencana 7 hari: "+g.topik,"ai","rencana 7 hari");this.outerHTML='<span class="chip acc">udah dicatat</span>'};
+  },function(){});
+}
+
+/* ================= TAB: HASIL ================= */
+function drawHasil(){
+  var J=S.jur,ok=J.filter(function(e){return e.status==="berhasil"}).length,
+      no=gagalnya().length,jalan=J.filter(function(e){return e.status==="jalan"}).length;
+  var h='<div class="sech"><h2>Hasil</h2><span>apa yang dikerjain, dan apa yang beneran kejadian</span></div>';
+  h+='<p class="lede">Saran tanpa catatan hasil itu cuma pendapat. Tiap kali kamu ngerjain sesuatu dari tab lain, tekan <b>Catat</b> — nanti isi di sini gimana hasilnya. Yang <b>gagal</b> sengaja disimpan: dia yang bikin saran berikutnya beda, bukan ngulang.</p>';
+  h+='<div class="card"><div class="gauge" style="gap:26px">'+
+   '<div class="g"><em>Dicatat</em><b>'+J.length+'</b></div>'+
+   '<div class="g"><em>Lagi jalan</em><b style="color:var(--warn)">'+jalan+'</b></div>'+
+   '<div class="g"><em>Berhasil</em><b style="color:var(--ok)">'+ok+'</b></div>'+
+   '<div class="g"><em>Gak jalan</em><b style="color:var(--crit)">'+no+'</b></div>'+
+   '</div><div class="row" style="margin-top:14px"><button class="btn" id="j-new">Tambah catatan sendiri</button>'+
+   '<button class="btn ghost aibtn" id="j-ai">Minta pendapat kedua</button>'+
+   '<span class="note" style="margin:0" id="j-db"></span></div></div>';
+  h+='<div id="aihasil"></div>';
+  if(!J.length)h+='<div class="empty" style="margin-top:16px">Belum ada catatan. Buka tab Audit, tekan <b>Catat</b> di temuan yang mau kamu kerjain.</div>';
+  h+='<div class="sec grid" style="gap:12px">'+J.map(function(e,i){
+    var st=STAT[e.status]||STAT.belum,delta="";
+    var a=parseFloat(e.sebelum),b=parseFloat(e.sesudah);
+    if(isFinite(a)&&isFinite(b)&&a>0){var d=(b-a)/a*100;delta='<span class="chip '+(d>=0?"ok":"crit")+'">'+(d>=0?"+":"")+Math.round(d)+'%</span>'}
+    return '<div class="card" style="border-left:3px solid '+st[1]+'" data-j="'+e.id+'">'+
+     '<div class="row" style="justify-content:space-between;align-items:flex-start"><div class="row" style="gap:7px">'+
+       '<span class="chip">'+esc(e.akun||"semua akun")+'</span><span class="chip">'+esc(e.sumber)+'</span>'+
+       '<span class="chip" style="color:'+st[1]+'">'+st[0]+'</span>'+delta+'</div>'+
+       '<button class="btn danger sm" data-jdel="'+e.id+'">Hapus</button></div>'+
+     '<label class="f" style="margin-top:11px">Yang dikerjain<textarea rows="2" data-jf="saran|'+e.id+'">'+esc(e.saran)+'</textarea></label>'+
+     '<div class="grid g3" style="margin-top:11px">'+
+       '<label class="f">Status<select data-jf="status|'+e.id+'">'+
+        Object.keys(STAT).map(function(k){return '<option value="'+k+'"'+(e.status===k?" selected":"")+'>'+STAT[k][0]+'</option>'}).join("")+'</select></label>'+
+       '<label class="f">Angka sebelum<input type="number" value="'+esc(e.sebelum)+'" data-jf="sebelum|'+e.id+'" placeholder="2989"></label>'+
+       '<label class="f">Angka sesudah<input type="number" value="'+esc(e.sesudah)+'" data-jf="sesudah|'+e.id+'" placeholder="4120"></label>'+
+     '</div>'+
+     '<label class="f" style="margin-top:11px">Catatan — kalau gak jalan, tulis kenapa<textarea rows="2" data-jf="catatan|'+e.id+'" placeholder="misalnya: hooknya diganti tapi tayangan tetap di 2rb, jadi masalahnya bukan di hook">'+esc(e.catatan)+'</textarea></label>'+
+     '<div class="row" style="margin-top:9px"><label class="f" style="max-width:170px">Tanggal<input type="date" value="'+esc(e.tgl)+'" data-jf="tgl|'+e.id+'"></label></div>'+
+     '</div>';
+  }).join("")+'</div>';
+  if(no)h+='<div class="sec"><div class="sech"><h2>Yang udah kebukti gak jalan</h2><span>mesin gak boleh nyaranin ini lagi</span></div><div class="card">'+
+   gagalnya().map(function(e){return '<div class="find" style="--tone:var(--crit)"><div class="sev"></div><div><h4>'+esc(e.saran)+'</h4><p>'+esc(e.akun)+(e.catatan?' — '+esc(e.catatan):'')+'</p></div></div>'}).join("")+
+   '</div></div>';
+  $("#p-hasil").innerHTML=h;
+  var dbn=$("#j-db");
+  if(dbn)dbn.textContent=DB?"Kesimpan di luar halaman — bisa dibaca dari sesi Claude.":"Kesimpan di browser ini aja.";
+  $("#j-new").onclick=function(){catat("","","sendiri","");drawHasil()};
+  var ja=$("#j-ai");if(ja)ja.onclick=aiKedua;
+  $$("[data-jf]").forEach(function(el){el.onchange=function(){
+    var p=this.getAttribute("data-jf").split("|"),v=this.value;
+    S.jur.forEach(function(e){if(e.id===p[1]){e[p[0]]=v;dbSync(e)}});
+    save();if(p[0]==="status")drawHasil();renderGauge();
+  }});
+  $$("[data-jdel]").forEach(function(b){b.onclick=function(){
+    var id=this.getAttribute("data-jdel");
+    var e=S.jur.filter(function(x){return x.id===id})[0];
+    S.jur=S.jur.filter(function(x){return x.id!==id});save();if(e)dbSync(e,true);drawHasil();toast("Dihapus")};
+  });
+}
+/* ---- AI: pendapat kedua, wajib beda dari yang udah gagal ---- */
+function aiKedua(){
+  if(!aiOn())return;
+  var box=$("#aihasil");box.className="aibox";
+  var g=gagalnya(),jalan=S.jur.filter(function(e){return e.status!=="gagal"});
+  if(!S.jur.length){box.innerHTML='<h5>Pendapat kedua</h5><p style="font-size:14px">Belum ada catatan buat dibaca. Catat dulu minimal satu hal yang udah kamu kerjain.</p>';return}
+  var data=S.acc.map(function(a){var H=health(a);return "@"+a.h+" ("+PLAT[a.plat].n+"): "+nf(a.f)+" pengikut, rasio jangkauan "+(H.rr!=null?H.rr.toFixed(2)+"x":"?")+", keterikatan "+(H.er!=null?pct(H.er):"?")+", "+(a.p30||0)+" konten/bln"}).join("\n");
+  var gagal=g.length?g.map(function(e){return "- "+e.akun+": \""+e.saran+"\" → GAGAL. "+(e.catatan||"tanpa catatan")+(e.sebelum&&e.sesudah?" (angka "+e.sebelum+" → "+e.sesudah+")":"")}).join("\n"):"(belum ada yang tercatat gagal)";
+  var lain=jalan.length?jalan.map(function(e){return "- "+e.akun+": \""+e.saran+"\" → "+(STAT[e.status]||STAT.belum)[0]+(e.sebelum&&e.sesudah?" ("+e.sebelum+" → "+e.sesudah+")":"")}).join("\n"):"(kosong)";
+  var p="Kamu penasihat kedua. Penasihat pertama udah kasih saran dan sebagiannya GAGAL. Jawab dalam "+bahasa()+".\n\n"+
+   "ANGKA AKUN SEKARANG:\n"+data+"\n\nYANG UDAH DICOBA DAN GAGAL:\n"+gagal+"\n\nCATATAN LAIN:\n"+lain+"\n\n"+
+   "Aturan keras:\n"+
+   "- DILARANG nyaranin ulang apa pun yang ada di daftar gagal, walau dibungkus kata lain.\n"+
+   "- Kalau yang gagal itu soal hook, berarti hambatannya bukan hook. Cari sebab yang lain.\n"+
+   "- Sebut secara terang-terangan dugaan mana dari penasihat pertama yang kelihatannya salah, berdasarkan catatan gagal itu.\n"+
+   "- Kalau datanya belum cukup buat nyimpulin, bilang data apa yang harus dikumpulin dulu — jangan nebak.\n\n"+
+   "Jawab 3 bagian pendek:\n1. DUGAAN YANG SALAH — apa yang tadinya diasumsiin, tapi catatan gagal bilang sebaliknya.\n"+
+   "2. ARAH BARU — satu jalur yang belum dicoba sama sekali, dengan alasannya nyambung ke angka di atas.\n"+
+   "3. UJI PALING MURAH — satu percobaan kecil yang bisa selesai dalam 3 hari buat mastiin arah baru itu bener.";
+  ask(box,p,{title:"Pendapat kedua"});
+}
+
+/* ================= BAHASA / LANGUAGE ================= */
+var TR={
+/* tambahan */
+"Isi data contoh":"Load sample data",
+"Belum ada akun. Isi formulir di bawah \u2014 atau tekan":"No accounts yet. Fill in the form below \u2014 or press",
+"di bawahnya buat lihat dulu cara kerjanya.":"underneath it to see how this works first.",
+"\u2014 semua angka dihitung dari data yang lo isi sendiri. Tidak ada data yang dikirim keluar dari peramban ini.":"\u2014 every number here is computed from data you entered yourself. Nothing leaves this browser.",
+"Lisensi 1 pemakai":"Single-user licence","syarat":"terms",
+"contoh niche":"sample niche",
+"Beli":"Purchases","Klik → beli":"Clicks → purchase","\"Jangkauan\" = tayangan dibagi pengikut. TikTok tinggi karena nyebarnya ke non-pengikut; Facebook rendah karena jangkauan organiknya emang udah dimatiin.":"\"Reach\" = views divided by followers. TikTok runs high because it pushes to non-followers; Facebook runs low because organic reach there was throttled years ago.",
+"Tayangan":"Views","Angka ":"",
+"Keterikatan ":"Engagement ",
+"× di atas patokan. Yang nonton peduli.":"× above the benchmark. The people watching care.",
+". 1 ide dipecah jadi 3 konten: masalahnya, salahnya, caranya.":". One idea split into 3 posts: the problem, the mistake, the method.",
+"% dari skor ini gak keitung karena datanya kosong. Skor sementara.":"% of this score could not be computed because the data is empty. Provisional score.",
+"Konten/mgg":"Posts/wk","tiap pilar punya satu tugas":"each pillar has exactly one job",
+"3\u00d7/minggu":"3\u00d7/week","1\u00d7/minggu":"1\u00d7/week","2\u00d7/minggu":"2\u00d7/week",
+"% dari tayangan":"% of views",
+" pembeli itu yang harus lo percaya, bukan angka rupiahnya. Kalau kerasa gak masuk akal, geser slidernya sampai masuk akal \u2014 terus lihat berapa jangkauan yang dibutuhin.":" buyers is the number you have to believe, not the rupiah figure. If it feels unrealistic, drag the sliders until it does \u2014 then look at how much reach that needs.",
+"Jual jasa dulu ke 5 orang. Ini yang ngasih tau lo kalimat apa yang beneran laku.":"Sell the service to 5 people first. That is what tells you which sentence actually sells.",
+"Rekam apa yang lo omongin berulang ke 5 orang itu. Itu produk digital pertamanya.":"Record what you keep repeating to those 5 people. That is your first digital product.",
+"Baru bikin konten buat naikin jangkauan \u2014 sekarang lo udah tau mau ngirim orangnya ke mana.":"Only now make content to raise reach \u2014 you finally know where you are sending people.",
+"Kumpulin alamat email/WA sejak hari pertama. Pengikut itu nyewa, daftar itu punya.":"Collect email/WhatsApp addresses from day one. Followers are rented; a list is owned.",
+"Titipan merek terakhir. Dia bayar sekali, dan pas jangkauan lo turun dia hilang.":"Brand deals last. They pay once, and the moment your reach dips they are gone.",
+" pengikut":" followers",
+"/bln":"/mo",
+"tanpa tautan":"no link","tanpa penawaran":"no offer",
+"macet":"stalled","pincang":"lopsided","sehat":"healthy",
+" · fondasi ":" · foundation "," · sinyal ":" · signal ",
+"Rasio ":"Ratio ","Artinya ":"Which means "," ada di ":" sits at ",
+"Jasa 1-lawan-1":"1-on-1 service","Rp250rb–750rb / sesi":"Rp250k–750k / session",
+" / konten (±Rp":" / post (±Rp","$7–19 / bulan / orang":"$7–19 / month / person",
+"Rp5jt–25jt / bulan":"Rp5M–25M / month","1.5× jangkauan":"1.5× reach",
+"Skrip / langkah":"Script / steps","Cerita / pengakuan":"Story / confession",
+"Bukti / hasil":"Proof / results","Ajakan":"The ask","Tujuan":"Goal",
+"Kata kunci / topik":"Keyword / topic",
+"Senin":"Monday","Selasa":"Tuesday","Rabu":"Wednesday","Kamis":"Thursday","Jumat":"Friday","Sabtu":"Saturday","Minggu":"Sunday",
+"gagal":"failed",
+" — nanti isi di sini gimana hasilnya. Yang ":" — then record here how it went. What ",
+/* shell */
+"Akun":"Accounts","Audit":"Audit","Konten":"Content","Celah":"Gaps","Uang":"Money","Rencana":"Plan","Hasil":"Results",
+
+"konsol optimasi akun sosmed":"social account optimization console",
+"mode aturan":"rules mode","otak nyala":"brain on","tema":"theme",
+"Ocklu-9799 — semua angka dihitung dari data yang lo isi sendiri.":"Ocklu-9799 — every number here is computed from data you entered yourself.",
+"Disiapkan oleh Ocklu":"Prepared by Ocklu",
+"sinyal / 100":"signal / 100","platform apa aja":"which platforms","jumlah pengikut":"follower count",
+"Total pengikut":"Total followers","Sinyal rata²":"Avg signal",
+/* akun */
+"Akun yang lo pegang":"Accounts you run",
+"isi angkanya sekali, semua tab lain ngitung sendiri":"enter the numbers once — every other tab does its own math",
+"Belum ada akun. Tambah di bawah.":"No accounts yet. Add one below.",
+"Tambah akun":"Add account","Nama akun (tanpa @)":"Handle (without @)","nama akun tanpa @":"handle without @",
+"Niche / topik":"Niche / topic","Pengikut":"Followers","Tayangan (nilai tengah)":"Views (median)",
+"Rata² suka":"Avg likes","Rata² komentar":"Avg comments","Konten / 30 hari":"Posts / 30 days",
+"Penawaran berbayar":"Paid offer","Ada 1 tautan jelas di bio":"One clear link in the bio",
+"Ubah":"Edit","Hapus":"Delete","Simpan perubahan":"Save changes","Batal":"Cancel","Tutup":"Close",
+"Akun ditambah ✓":"Account added ✓","Akun dihapus":"Account removed","Isi nama akunnya dulu":"Enter the handle first",
+"Balikin ke contoh awal":"Reset to the sample data","Balik ke contoh":"Reset to sample",
+"12 konten terakhir (jangan rata-rata — 1 viral bikin bohong), rata-rata suka & komentar, dan berapa konten sebulan. Kosongin yang belum tau; mesinnya bakal bilang mana yang kurang.":"Your last 12 posts (median, not average — one viral post lies), average likes & comments, and how many posts a month. Leave blank what you don't know; the engine will tell you what's missing.",
+"Bacain & isiin sendiri":"Read it and fill it in for me",
+"Tempel mentah-mentah dari Insights / catatan":"Paste raw text from Insights / your notes",
+"AI baca teks berantakan itu, terus ngisi kolom di atas. Kamu tinggal cek.":"AI reads that messy text and fills in the fields above. You just check it.",
+"Kolom udah diisiin":"Fields filled in",
+"Cek dulu di atas sebelum ditambah — mesin ini bisa salah baca.":"Check the fields above before adding — this can misread.",
+"Angka yang dipake:":"Numbers used:","Yang ditebak:":"Guessed:","Tempel dulu teksnya":"Paste the text first",
+"Platform":"Platform","Jangkauan":"Reach","Keterikatan":"Engagement","Angka":"Number","Artinya":"What it means",
+/* audit */
+"Audit sinyal":"Signal audit","Patokan platform":"Platform benchmark",
+"garis pembanding, bukan vonis":"a comparison line, not a verdict",
+"Pembacaan AI lintas akun":"AI read across accounts","Pembacaan AI":"AI read",
+"Suruh AI baca ulang semua angka":"Have AI re-read every number","Peta silang":"Cross-map",
+"Catat, gue kerjain":"Log it — I'll do this","udah dicoba, gak jalan":"tried it, didn't work",
+"Lakuin:":"Do this:","Catatan kamu: ":"Your note: ",
+"mesin gak boleh nyaranin ini lagi":"the engine is not allowed to suggest this again",
+"Rasio jangkauan":"Reach ratio",
+"Tayangan ÷ pengikut. Ngukur apakah platform masih mau nyebar konten lo.":"Views ÷ followers. Measures whether the platform still wants to push your posts out.",
+"Simpanan + kiriman":"Saves + shares",
+"Bukan suka. Simpan & kirim itu sinyal paling kuat di semua platform sekarang.":"Not likes. Saves and shares are the strongest signal on every platform right now.",
+"Klik tautan":"Link clicks",
+"Satu-satunya angka yang nyambung ke duit. Sisanya cuma tepuk tangan.":"The only number wired to money. The rest is applause.",
+"Jangkauan bagus":"Reach is good","Jangkauan tengah":"Reach is middling","Jangkauan di bawah tengah":"Reach below median",
+"Fondasi beres":"Foundation done","centang yang udah ada — sisanya jadi daftar kerjaan":"tick what's already there — the rest becomes your to-do list",
+"Angka di kanan itu bobot: seberapa mahal kalau dibiarin kosong. Kerjain yang bobotnya 9 dulu, sisanya nyusul.":"The number on the right is weight: how expensive it is to leave undone. Do the 9s first, the rest can follow.",
+"Gak ada yang mendesak. Lanjut ke tab Uang.":"Nothing urgent. Move to the Money tab.",
+"Yang paling mahal buat dibiarin":"Costliest thing to leave alone",
+"Kalau cuma sempat 3 hal hari ini":"If you only have time for 3 things today",
+"skor dari aturan, bukan feeling":"scored by rules, not by feel","sisanya abaikan":"ignore the rest",
+"Rinciannya di bawah. ":"Details below. ",
+/* temuan */
+"Konten lo gak keluar dari kandang":"Your posts aren't leaving the pen",
+"Ditonton tapi gak nempel":"Watched but not sticking",
+"Kontennya nempel banget":"Content sticks hard",
+"Pengikutnya banyak tapi dingin":"Plenty of followers, but cold",
+"Akun kecil, mutu tinggi":"Small account, high quality",
+"Volume kurang":"Not enough volume","Gak ada yang dijual":"Nothing is being sold",
+"Gak ada jalan keluar":"No way out","Belum nyapa siapa-siapa":"Nobody has been reached yet",
+"Distribusinya jalan":"Distribution is working","Angka jangkauannya belum ada":"No reach numbers yet",
+"Keterikatan belum keukur":"Engagement not measured yet","Belum ada celah penasaran":"No curiosity gap yet",
+"Belum ada angka suka/komentar.":"No likes/comments numbers yet.",
+"Semua kepenuhan. Yang tersisa cuma volume dan distribusi — lihat tab Rencana.":"Everything is covered. What's left is volume and distribution — see the Plan tab.",
+" berhenti nawarin konten lo ke orang baru — biasanya karena 3 detik pertama gak nahan orang.":" has stopped offering your posts to new people — usually because the first 3 seconds don't hold anyone.",
+" pengikut tapi keterikatan ":" followers but engagement ",
+" konten, patokan sehat ":" posts, healthy benchmark ",
+"×. Belum parah, tapi lo lagi ngasih makan pengikut lama doang.":"×. Not critical yet, but you're only feeding existing followers.",
+"×. Masalah lo bukan jangkauan.":"×. Reach is not your problem.",
+"× dari pengikut, patokan ":"× of followers, benchmark ",
+"× vs patokan ":"× vs benchmark ",
+"× — di atas patokan bagus ":"× — above the good benchmark ",
+". Ini bukan akun gagal, ini akun yang belum dikenalin.":". This isn't a failed account, it's an account nobody's been introduced to yet.",
+"Belum ada penawaran berbayar yang jelas di akun ini.":"There's no clear paid offer on this account yet.",
+"Isi kolom Penawaran di tab Akun. Belum punya produk pun tulis jasanya — 'sesi 45 menit, Rp350rb'. Tab Uang bakal ngitungin tangganya.":"Fill in the Offer field on the Accounts tab. Even with no product, write the service — '45-minute session, $25'. The Money tab will build the ladder from it.",
+"Orang suka konten lo terus... balik ke beranda. Perhatian yang gak dialihin itu hangus.":"People like your post... then go back to the feed. Attention you don't redirect is attention burned.",
+"Pasang 1 tautan (satu, bukan lima) yang isinya nyambung sama konten terakhir. Judulnya kata kerja: 'Ambil skripnya', bukan 'Link'.":"Put up one link (one, not five) that connects to your latest post. Label it with a verb: 'Get the script', not 'Link'.",
+"Ganti 3 detik pertama, bukan seluruh kontennya. Mulai dari kalimat yang ada angkanya atau ada penolakan ('Jangan ...'). Uji di tab Konten.":"Change the first 3 seconds, not the whole post. Start with a line that has a number or a refusal ('Don't ...'). Test it on the Content tab.",
+"Masalah lo distribusi, bukan konten. Titip konten ini ke akun yang jangkauannya udah gede (punya lo sendiri atau kolaborasi).":"Your problem is distribution, not content. Place this post on an account that already has reach (your own or a collab).",
+"Jangan kejar pengikut baru dulu. Bikin 5 konten yang nyebut masalah spesifik — biar yang salah ikut pergi sendiri dan sisanya beneran audiens lo.":"Don't chase new followers yet. Make 5 posts that name a specific problem — the wrong people leave on their own and what's left is actually your audience.",
+"Isi rata-rata suka & komentar dari 12 konten terakhir. Ini yang mbedain 'ditonton' sama 'dipeduliin'.":"Fill in average likes & comments from your last 12 posts. That's what separates 'watched' from 'cared about'.",
+"Buka 12 konten terakhir, catat tayangannya, ambil nilai tengahnya (bukan rata-rata — 1 konten viral bikin rata-rata bohong). Isi ke kolom Tayangan.":"Open your last 12 posts, note the views, take the median (not the average — one viral post makes the average lie). Put it in the Views field.",
+"Tanpa rata-rata tayangan, semua sisanya cuma tebakan.":"Without a view figure, everything else is guesswork.",
+"Tambahin 1 kalimat yang bikin orang harus jawab di akhir konten. Bukan 'komen ya', tapi pilihan: 'Lo tim A apa tim B?'":"Add one line at the end that forces an answer. Not 'comment below', but a choice: 'Are you team A or team B?'",
+"Nyebut penawaran terang-terangan. Minimal 1× seminggu, kalau nggak semua kerja di atas hangus.":"Name the offer out loud. At least once a week, or everything above is wasted.",
+"Berhenti ngoprek jangkauan. Pindah tenaga ke tab Uang: yang bocor sekarang jalur dari tontonan ke duit.":"Stop tuning reach. Move your effort to the Money tab: the leak now is the path from views to money.",
+"Sebulan ini jangan bikin konten baru sama sekali. Ambil 8 konten terbaik, posting ulang di akun lo yang jangkauannya paling gede + 3 kolaborasi. Distribusi, bukan produksi.":"Make no new content for a month. Take your 8 best posts, repost them on your highest-reach account plus 3 collabs. Distribution, not production.",
+"Turunin mutu produksi, naikin jumlah. ":"Lower production quality, raise the count. ",
+"Ambil 1 konten lo yang paling jauh jangkauannya, bikin ulang 3 versi dengan pembuka beda. Format tetap, pembukanya doang yang diuji.":"Take your furthest-reaching post and remake it in 3 versions with different openers. Same format — only the opener is under test.",
+/* checklist */
+"Bio nyebut SIAPA yang dilayani + HASIL apa (bukan cuma 'mom of 2')":"Bio names WHO it serves + WHAT result (not just 'mom of 2')",
+"Cuma 1 tautan, dan tautannya nyambung sama konten terakhir":"Exactly one link, and it connects to the latest post",
+"Nama akun / display name ngandung kata kunci niche":"Handle / display name contains the niche keyword",
+"Punya 1 seri berulang yang ada namanya (orang bisa nunggu)":"One named recurring series (people can wait for it)",
+"3 konten terbaik dipin / masuk highlight":"3 best posts pinned / in highlights",
+"Foto profil masih kebaca di ukuran 40px":"Profile photo still readable at 40px",
+"CTA muncul di 3 detik terakhir, bukan cuma di caption":"CTA appears in the last 3 seconds, not only in the caption",
+"Format visual konsisten (font, warna, posisi teks sama)":"Consistent visual format (same font, colors, text position)",
+"Balas komentar di 60 menit pertama":"Reply to comments in the first 60 minutes",
+"Ada tempat pindah yang gue punya sendiri (email/WA/komunitas)":"There's somewhere I own to move people to (email/WhatsApp/community)",
+"Ada penawaran berbayar yang jelas, harganya kelihatan":"A clear paid offer with a visible price",
+"Analitik dicek tiap minggu di hari yang sama":"Analytics checked weekly on the same day",
+/* konten */
+"Pabrik kalimat":"Copy factory","isi 4 kolom, keluar hook + caption + CTA":"fill 4 fields, get hooks + caption + CTAs",
+"Topik konten":"Content topic","Buat siapa":"Who it's for","Masalah yang lagi dia alami":"The problem they're in",
+"Hasil yang dia mau":"The result they want","Bahasa keluaran":"Output language",
+"Bikin":"Generate","Ganti 5 lagi":"Swap 5 more","Tulis ulang pakai AI":"Rewrite with AI","5 pola lain":"5 other patterns",
+"Tombol putih pakai pola tetap — instan, gratis, keluarannya berulang. Tombol AI nulis dari nol buat topik ini, satu-satu.":"The white button uses fixed patterns — instant, free, and repetitive. The AI button writes from scratch for this exact topic, one at a time.",
+"Uji hook":"Hook test","Tempel hook yang mau diuji":"Paste the hook you want tested","Nilai":"Score",
+"Minta AI benerin":"Ask AI to fix it","skor hook / 100":"hook score / 100",
+"Isi dulu hook-nya":"Type a hook first","Isi dulu hook-nya.":"Type a hook first.",
+"Kenapa ini:":"Why:","Hook pembuka":"Opening hook","Caption":"Caption","3 CTA":"3 CTAs","CTA":"CTA",
+"5 hook — ":"5 hooks — ","Aturan format ":"Format rules — ","Jam ramai: ":"Peak hours: ",
+"Target sehat: ":"Healthy target: "," konten/minggu":" posts/week","Jam ramai":"Peak hours",
+"salin":"copy","Salin":"Copy","salin semua":"copy all","Salin semua":"Copy all",
+"Salin caption":"Copy caption","Salin hook":"Copy hook","Salin semingguan":"Copy the week",
+"Lagi mikir…":"Thinking…","Tulisan AI":"AI copy",
+/* hook scoring */
+"Di bawah 12 kata — kebaca sebelum jempol gerak.":"Under 12 words — read before the thumb moves.",
+"Panjangnya pas (":"Good length (","Agak panjang (":"A bit long (",
+"Potong jadi ≤12 kata. Buang keterangan, sisain klaimnya.":"Cut to 12 words or fewer. Drop the qualifiers, keep the claim.",
+"Ini paragraf, bukan hook. Ambil 8 kata paling tajam.":"This is a paragraph, not a hook. Keep the 8 sharpest words.",
+"Ada angka":"Has a number","Gak ada angka":"No number",
+"Angka bikin otak nyangka kontennya beres dan bisa diukur.":"A number makes the brain assume the post is finite and measurable.",
+"Tambahin jumlah: '5 kalimat', '3 hari', '2 menit'. Naikin klik tanpa ubah isi.":"Add a count: '5 sentences', '3 days', '2 minutes'. Raises clicks without changing the content.",
+"Ngomong ke satu orang":"Speaks to one person",
+"Kata ganti orang kedua bikin yang nonton ngerasa dipanggil.":"Second person makes the viewer feel addressed.",
+"Masukin 'kamu' atau sebutan audiensnya. Hook tanpa alamat = lewat.":"Put in 'you' or name the audience. A hook with no addressee gets scrolled past.",
+"Buka pakai penolakan":"Opens with a refusal",
+"Kalimat larangan bikin orang berhenti buat mastiin dia gak salah.":"A prohibition makes people stop to check they aren't the one doing it.",
+"Sisipin 'tanpa', 'padahal', 'ternyata' — pemicu rasa kurang lengkap.":"Slip in 'without', 'even though', 'turns out' — triggers a sense of something missing.",
+"Diakhiri tanda tanya":"Ends with a question mark",
+"Pertanyaan gampang dijawab dalam hati terus di-scroll. Ganti jadi pernyataan.":"A question gets answered silently and scrolled past. Make it a statement.",
+"Baris pertama berdiri sendiri sebagai kalimat utuh.":"The first line stands on its own as a complete sentence.",
+"Kalimat pertama ≤10 kata.":"First sentence, 10 words or fewer.",
+"Pembuka basa-basi: “":"Filler opener: “",
+"Hapus. 3 detik pertama itu jatah paling mahal, jangan dipake nyapa.":"Delete it. The first 3 seconds are the most expensive real estate you have — don't spend them saying hello.",
+"Ada kata peredam":"Contains hedge words",
+"'kayaknya', 'mungkin', 'menurut aku' — bikin klaimnya lembek. Buang, langsung nyatakan.":"'kind of', 'maybe', 'I think' — they soften the claim. Cut them and state it.",
+"Kata umpan yang udah aus":"Worn-out bait words",
+"'rahasia', 'wajib tau', 'viral' — dipakai semua orang, otak nyaringnya duluan. Ganti pakai hal spesifik.":"'secret', 'you must know', 'viral' — everyone uses them, the brain filters them first. Replace with something specific.",
+"Ada waktu yang konkret":"Has a concrete time",
+"Waktu spesifik ('malam ini', '7 hari') bikin janjinya kebayang, bukan kabur.":"A specific time ('tonight', '7 days') makes the promise picturable instead of vague.",
+"Pembuka 'cara …' tanpa batas":"Unbounded 'how to …' opener",
+"'Cara X' terlalu lebar. Tempel batasnya: 'tanpa teriak', 'dalam 5 menit', 'buat 2 orang'.":"'How to X' is too wide. Bolt on a limit: 'without yelling', 'in 5 minutes', 'for two people'.",
+"Ada penekanan kapital":"Has capitalized emphasis","Boleh, asal cuma 1–2 kata.":"Fine, as long as it's only 1–2 words.",
+"Kapital semua":"ALL CAPS",
+"Kebaca kayak teriak dan susah dipindai. Kapital cuma buat 1–2 kata penekanan.":"Reads like shouting and is hard to scan. Save caps for 1–2 words of emphasis.",
+"Momen spesifik, bukan renungan umum. 1 kejadian, 1 jam, 1 kalimat yang diinget.":"A specific moment, not a general reflection. One event, one hour, one remembered line.",
+/* platform */
+"Reels 7–20 dtk":"Reels 7–20 sec","Video 15–34 dtk":"Video 15–34 sec",
+"Shorts <60 dtk / long 8–12 mnt":"Shorts <60 sec / long 8–12 min","Reels + teks panjang":"Reels + long-form text",
+"Teks 1–2 kalimat":"Text, 1–2 sentences","Utas 5–9 baris":"Thread, 5–9 lines",
+"Post pendek + 1 tautan":"Short post + 1 link","Broadcast 1 pesan":"Broadcast, 1 message",
+"Teks 900–1300 karakter":"Text, 900–1300 characters","Pin vertikal 2:3":"Vertical pin 2:3",
+"bebas, konsisten":"any hour, be consistent","07.00–09.00 Sen–Kam":"07:00–09:00 Mon–Thu",
+"Kata kunci di baris pertama caption + alt text. IG sekarang ngindeks teks caption & teks di layar.":"Keyword in the first line of the caption + alt text. IG now indexes caption text and on-screen text.",
+"Kata kunci di 3 kata pertama caption DAN sebagai teks di layar detik 0–2. TikTok Search baca keduanya.":"Keyword in the first 3 words of the caption AND as on-screen text at 0–2 sec. TikTok Search reads both.",
+"Judul ≤60 karakter, kata kunci di depan. 2 baris pertama deskripsi = yang kebaca. Tag bantu, thumbnail yang nentuin.":"Title 60 characters or fewer, keyword up front. The first 2 lines of the description are what people read. Tags help; the thumbnail decides.",
+"Kalimat pertama = judul. Link taruh di komentar pertama, jangkauan link di body dipotong.":"First sentence = the headline. Put the link in the first comment; links in the body get reach-throttled.",
+"Kata kunci di awal, maksimal 1 topik tag. Balasan lo sendiri = mesin jangkauan utama.":"Keyword up front, one topic tag maximum. Your own replies are the main reach engine.",
+"Kata kunci literal (bukan sinonim). Link di reply, bukan di post induk.":"Literal keywords (not synonyms). Link in a reply, not in the parent post.",
+"Nama channel + deskripsi = satu-satunya yang diindeks pencarian dalam app. Masukin kata kunci ke NAMA.":"Channel name + description are the only things in-app search indexes. Put the keyword in the NAME.",
+"Nama channel = kata kunci. Nggak ada algoritma penemuan — pertumbuhan cuma dari tautan yang lo sebar.":"Channel name = the keyword. There's no discovery algorithm — growth comes only from links you spread.",
+"3 baris pertama sebelum 'lihat selengkapnya' nentuin semuanya. Headline profil = kata kunci.":"The 3 lines before 'see more' decide everything. Your profile headline = the keyword.",
+"Ini mesin pencari, bukan sosmed. Judul pin + deskripsi + nama board semua diindeks. Umur pin berbulan-bulan.":"This is a search engine, not a social network. Pin title + description + board name are all indexed. Pins live for months.",
+/* seo tab */
+"SEO per platform":"SEO by platform","disusun dari akun & platform yang lo isi":"built from the accounts and platforms you entered",
+"Sosmed sekarang mesin pencari. Yang bikin konten lama lo tetap dapet tontonan bukan algoritma beranda — tapi kata yang lo tulis di judul, caption, dan teks di layar.":"Social platforms are search engines now. What keeps your old posts earning views isn't the feed algorithm — it's the words you put in the title, caption, and on-screen text.",
+"Yang diketik orang":"What people actually type","Kata kunci utama:":"Main keyword:",
+"Riset kata kunci pakai AI":"AI keyword research","Bikin paket SEO":"Build the SEO pack",
+"Cara kerja pencarian di ":"How search works on ","Riset kata kunci — ":"Keyword research — ",
+"Judul":"Title","Deskripsi / caption":"Description / caption","Deskripsi":"Description","Tagar":"Hashtags",
+"Teks di layar (detik 0–2)":"On-screen text (0–2 sec)",
+"Tulis bio pakai AI":"Write the bio with AI","Bio ditulis AI":"AI-written bio","Bio":"Bio",
+"3 baris: siapa yang dilayani · apa yang didapat · ke mana perginya":"3 lines: who it serves · what they get · where they go next",
+"Isi Alt Text manual di Pengaturan Lanjutan — ini yang dibaca mesin cari IG.":"Fill Alt Text manually under Advanced Settings — that's what IG search reads.",
+"Teks di cover Reels juga keindeks. Tulis kata kuncinya di sampul.":"Text on the Reels cover is indexed too. Put the keyword on the cover.",
+"Baris pertama caption = judul SEO lo. Kata kunci di situ, bukan di tagar.":"The first line of the caption is your SEO title. Keyword goes there, not in the hashtags.",
+"Teks di layar detik 0–2 HARUS ngandung kata kunci — TikTok Search baca teks di layar, bukan cuma caption.":"On-screen text at 0–2 sec MUST contain the keyword — TikTok Search reads on-screen text, not just captions.",
+"Pakai kata kunci literal yang diketik orang, bukan sinonim keren.":"Use the literal words people type, not clever synonyms.",
+"Judul ≤60 karakter, kata kunci di 3 kata pertama.":"Title 60 characters or fewer, keyword in the first 3 words.",
+"Thumbnail cuma boleh 3 kata. Kalau butuh 4, kepanjangan.":"A thumbnail gets 3 words. If you need 4, it's too long.",
+"Kalimat pertama = judul. Facebook motong di ~80 karakter.":"First sentence = the headline. Facebook cuts at about 80 characters.",
+"Tautan taruh di komentar pertama, bukan di badan post.":"Put the link in the first comment, not in the post body.",
+"Post yang gak ada tautannya dikasih jangkauan 2–3× lebih banyak.":"Posts with no link get 2–3× more reach.",
+"Balas thread lo sendiri 2–3 kali dalam 1 jam pertama — itu mesin jangkauannya.":"Reply to your own thread 2–3 times in the first hour — that's the reach engine.",
+"Tautan di balasan, jangan di post induk.":"Link in a reply, never in the parent post.",
+"Tautan di komentar pertama.":"Link in the first comment.",
+"Nama channel harus ngandung kata kunci — cuma nama & deskripsi yang diindeks pencarian Telegram.":"The channel name must contain the keyword — only name and description are indexed by Telegram search.",
+"Post jam yang sama tiap hari; Telegram gak punya algoritma, cuma kebiasaan.":"Post at the same hour every day; Telegram has no algorithm, only habit.",
+"Maksimal 1 pesan/hari. Lebih dari itu orang keluar.":"One message a day, maximum. More than that and people leave.",
+"Nama channel = kata kunci + siapa yang dilayani.":"Channel name = keyword + who it serves.",
+"Headline profil lo juga mesin cari — masukin kata kunci ke situ.":"Your profile headline is a search field too — put the keyword in it.",
+"Ini mesin pencari. Judul pin, deskripsi, DAN nama board semuanya diindeks.":"This is a search engine. Pin title, description, AND board name are all indexed.",
+"Pin vertikal 2:3 (1000×1500).":"Vertical pin, 2:3 (1000×1500).",
+"Umur pin berbulan-bulan — ini satu-satunya platform yang kontennya nambah nilai tiap bulan.":"Pins live for months — the only platform where your content gains value every month.",
+/* celah */
+"Barang jadi buat nutup celah":"Ready-made assets that close the gaps",
+"Bikinin kalimat buat nutup celahnya":"Write the copy that closes the gap",
+"Corong":"Funnel","Tontonan → mampir profil":"Views → profile visits","Mampir → klik tautan":"Visits → link clicks",
+"Mampir profil":"Profile visits","Selesai nonton kamu punya ":"When the video ends you have ",
+"Nilai":"Score",
+/* uang */
+"Tangga uang":"Money ladder",
+"anak tangga kebuka sendiri kalau angkanya udah cukup":"each rung unlocks itself once the numbers are there",
+"Kebuka sekarang":"Unlocked now","Perkiraan bulanan":"Monthly estimate",
+"Kalkulator corong":"Funnel calculator","Harga produk (USD)":"Product price (USD)","Kurs USD→IDR":"USD→IDR rate",
+"Rupiah":"Rupiah","dari jangkauan ke duit, per bulan":"from reach to money, per month",
+"Jangkauan / bln":"Reach / mo","Jangkauan / bulan (dari tab Akun)":"Reach / month (from the Accounts tab)",
+"Rancangan penawaran":"Offer design","Rancangin penawarannya":"Design the offer",
+"Catat, gue jual ini":"Log it — I'm selling this","Kalimat jualnya":"The sales line",
+"Tanda kalau salah:":"Sign it's wrong:","Buat:":"For:","Isinya":"What's in it",
+"Produk digital kecil":"Small digital product","Langganan bulanan / komunitas":"Monthly membership / community",
+"Retainer / kelas kohort":"Retainer / cohort class","Titipan merek / UGC":"Brand deals / UGC",
+"Dihitung dari yang lebih besar antara 1% jumlah pengikut atau $15 per 1000 tayangan.":"Calculated as the greater of 1% of your follower count or $15 per 1,000 views.",
+"Duit yang bisa diramal. 100 orang × $12 = $1.200/bulan, gak peduli algoritma lagi ngambek apa nggak.":"Predictable money. 100 people × $12 = $1,200/month, whether or not the algorithm is sulking.",
+"Dibuat sekali, dijual terus. Ambil konten lo yang paling banyak disimpan orang, jadiin lembar kerja.":"Built once, sold forever. Take your most-saved post and turn it into a worksheet.",
+"Paling cepat cair, paling gak butuh audiens. Ini yang dikerjain sambil nunggu angka naik.":"Fastest to cash, least dependent on audience size. This is what you do while the numbers climb.",
+"Ini titik di mana lo berhenti jualan konten dan mulai jualan hasil.":"This is where you stop selling content and start selling outcomes.",
+"Sebelum–sesudah, tangkapan layar, kata orang lain. Tanpa ini, penawaran lo cuma klaim.":"Before–after, screenshots, someone else's words. Without these your offer is just a claim.",
+"Butuh: 1 penawaran tertulis + 30 orang yang tau lo ngerjain apa":"Needs: 1 written offer + 30 people who know what you do",
+"Butuh: 1000 pengikut + 3 konten di atas ":"Needs: 1,000 followers + 3 posts above ",
+"Butuh: 2000 pengikut + tempat pindah yang lo punya sendiri":"Needs: 2,000 followers + a destination you own",
+"Butuh: 5000 pengikut + 1 hasil klien yang bisa ditunjukin":"Needs: 5,000 followers + one client result you can show",
+"Yang masih kurang:":"Still missing:",
+/* rencana */
+"Rencana 7 hari":"7-day plan",
+"Bukan 7 ide acak. Urutannya sengaja: tiga hari pertama narik orang baru, tengah minggu bikin dipercaya, akhir minggu baru minta sesuatu. Kalau minta di hari Senin, gak ada yang dengar.":"Not 7 random ideas. The order is deliberate: the first three days pull in new people, midweek builds trust, and only at the end of the week do you ask for something. Ask on Monday and nobody hears you.",
+"Hari":"Day","Pilar":"Pillar","Yang dikerjain":"What to make","Format":"Format",
+"Isiin 7 hari ini beneran":"Fill these 7 days for real",
+"Rangka di atas dari pola tetap. AI ngisi tiap hari jadi brief lengkap.":"The frame above comes from fixed patterns. AI turns each day into a full brief.",
+"Catat, gue jalanin minggu ini":"Log it — I'm running this week",
+"7 hari, versi lengkap":"7 days, full version",
+"3 angka yang dicek tiap Senin":"3 numbers to check every Monday","Target minggu ini":"This week's target",
+"naik 0,1× dari minggu lalu":"up 0.1× from last week","nilai tengah tayangan":"median views",
+"Catat di hari yang sama tiap minggu. Angka yang dicek tiap hari cuma bikin panik dan gak ngasih pola.":"Record it on the same day every week. Numbers checked daily only cause panic and show no pattern.",
+"Kenapa pilarnya cuma 5":"Why only 5 pillars","Urutan yang bener":"The right order",
+"1 ide → semua platform yang lo punya":"1 idea → every platform you have",
+"Aturannya: bikin sekali di platform paling susah (video), turunin ke yang paling gampang (teks). Jangan kebalik.":"The rule: make it once on the hardest platform (video), then step it down to the easiest (text). Never the other way round.",
+"kesalahan paling mahal: kebalik":"the most expensive mistake: doing it backwards",
+"tarik orang baru":"pull in new people","bikin dipercaya":"build trust","bikin nempel":"make it stick",
+"bikin percaya beli":"earn the purchase","bikin pindah":"move them somewhere",
+"Bongkar salah kaprah":"Debunk a myth","Kenapa saran biasa gagal":"Why the usual advice fails",
+"Yang dilakuin malam ini":"What to do tonight","Kamu mau mulai yang mana malam ini?":"Which one are you starting tonight?",
+"Ambil saran umum yang salah, tunjukin kenapa. Ini yang bikin orang follow, bukan cuma nonton.":"Take a common piece of bad advice and show why it's wrong. This is what makes people follow, not just watch.",
+"Ambil 1 kalimat paling tajam dari skrip, jadiin post teks. Balas sendiri buat rinciannya.":"Take the sharpest line from the script and make it a text post. Reply to yourself with the detail.",
+"Pecah skripnya jadi utas 6 baris. 1 ide 1 baris.":"Split the script into a 6-line thread. One idea per line.",
+"Bikin 3 pin dari 3 kalimat berbeda di skrip yang sama. Judul pin = kata kunci.":"Make 3 pins from 3 different lines of the same script. Pin title = the keyword.",
+"Sama videonya, tapi buang logo IG. Rekam ulang teks pembuka di dalam TikTok biar gak dianggap repost.":"Same video, minus the IG watermark. Re-record the opening text inside TikTok so it isn't read as a repost.",
+"Upload ulang sebagai Reels, plus versi tulisan 4 paragraf. Tautan di komentar.":"Re-upload as a Reel, plus a 4-paragraph written version. Link in the comments.",
+"Ubah sudutnya jadi pelajaran kerja/sistem. 1000 karakter.":"Reframe it as a work/systems lesson. 1,000 characters.",
+"Post ringkasan 5 baris + tautan ke video. Ini arsipnya.":"Post a 5-line summary + link to the video. This is the archive.",
+"Yang paling jauh nyebar. Bentuknya daftar bernomor yang bisa langsung dipakai malam ini.":"The one that travels furthest. Shape it as a numbered list someone can use tonight.",
+"Jalanin rencana 7 hari: ":"Run the 7-day plan: ",
+/* hasil */
+"apa yang dikerjain, dan apa yang beneran kejadian":"what you did, and what actually happened",
+"Belum ada catatan. Buka tab Audit, tekan":"No entries yet. Open the Audit tab and press",
+"di temuan yang mau kamu kerjain.":"on the finding you want to work on.",
+"Saran tanpa catatan hasil itu cuma pendapat. Tiap kali kamu ngerjain sesuatu dari tab lain, tekan":"Advice with no recorded outcome is just opinion. Every time you act on something from another tab, press",
+"di tab Hasil.":"in the Results tab.",
+"Tambah catatan sendiri":"Add your own entry","Angka sebelum":"Number before","Angka sesudah":"Number after",
+"Catatan — kalau gak jalan, tulis kenapa":"Note — if it didn't work, say why",
+"Status":"Status","Tanggal":"Date","Dicatat":"Logged","Kosongin semua":"Clear all",
+"Masuk ke tab Hasil ✓":"Added to the Results tab ✓",
+"belum dikerjain":"not started yet","lagi jalan":"in progress","jalan, hasilnya naik":"worked, numbers went up",
+"Berhasil":"Worked","Gak jalan":"Didn't work","Lagi jalan":"In progress","Catat":"Log it",
+"Belum ada catatan buat dibaca. Catat dulu minimal satu hal yang udah kamu kerjain.":"Nothing to read yet. Log at least one thing you've already done.",
+"Minta pendapat kedua":"Ask for a second opinion","Pendapat kedua":"Second opinion","pendapat kedua":"second opinion",
+"Yang udah kebukti gak jalan":"Proven not to work",
+"sengaja disimpan: dia yang bikin saran berikutnya beda, bukan ngulang.":"kept on purpose: this is what makes the next suggestion different instead of a repeat.",
+"(belum ada yang tercatat gagal)":"(nothing recorded as failed yet)",
+"Kesimpan di browser ini aja.":"Stored in this browser only.",
+"Kesimpan di luar halaman — bisa dibaca dari sesi Claude.":"Stored outside the page — readable from a Claude session.",
+"Dari pola tetap":"From fixed patterns","Hasil bacaan":"Read-out",
+"gak jalan, tanpa keterangan":"didn't work, no reason given","tanpa catatan":"no note",
+/* umum */
+"Tambah akun dulu di tab Akun.":"Add an account on the Accounts tab first.","Tambah akun dulu.":"Add an account first.",
+"Bikin buat semua akun gue":"Do this for all my accounts","semua akun":"all accounts",
+"semua udah":"all done","belum ada":"none yet","belum diisi":"not filled in","belum keukur":"not measured",
+"gak ada":"none","dan masih ":"and still ",
+"dihitung dari angka yang lo isi di tab Akun":"computed from the numbers you entered on the Accounts tab",
+"pakai isian dari tab Konten":"uses the fields from the Content tab",
+"Kamu belum ngizinin halaman ini nanya ke Claude. Mesin aturan tetap jalan.":"You haven't allowed this page to ask Claude. The rules engine still works.",
+"Fitur nanya-ke-Claude lagi dimatiin. Pakai hasil aturan di atas.":"The ask-Claude feature is switched off. Use the rules output above.",
+"Halaman ini gak punya izin nanya. Pakai hasil aturan di atas.":"This page has no permission to ask. Use the rules output above.",
+"Aksesnya dicabut. Mesin aturan tetap jalan.":"Access was revoked. The rules engine still works.",
+"Kebanyakan permintaan barusan. Tunggu sebentar, terus coba lagi.":"Too many requests just now. Wait a moment and try again.",
+"Datanya kepanjangan. Kurangin isian, terus coba lagi.":"That's too much data. Trim the inputs and try again.",
+"Jawabannya gak kebaca sebagai data. Tekan sekali lagi.":"The answer didn't parse as data. Press it once more.",
+"Permintaannya ditolak. Ganti kata-kata topiknya.":"The request was declined. Reword the topic.",
+"Jawabannya kosong. Tekan lagi.":"The answer came back empty. Press again.",
+"Sambungannya putus di tengah jalan. Coba lagi.":"The connection dropped midway. Try again.",
+"Sesinya kedaluwarsa. Muat ulang halamannya.":"The session expired. Reload the page."
+};
+var TRX=null,TRF=null;
+function trPrep(){
+  if(TRX)return;
+  TRX={};TRF=[];
+  for(var k in TR){TRX[k]=TR[k];if(k.length>=14||/^\s|\s$|^\//.test(k))TRF.push(k)}
+  TRF.sort(function(a,b){return b.length-a.length});
+}
+function tr(root){
+  if(S.lang!=="en")return;
+  root=root||document.body;if(!root)return;
+  trPrep();
+  var w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,null,false),n,L=[];
+  while((n=w.nextNode()))L.push(n);
+  L.forEach(function(t){
+    var p=t.parentNode;if(!p||p.nodeType!==1)return;
+    var tag=p.nodeName;
+    if(tag==="SCRIPT"||tag==="STYLE"||tag==="TEXTAREA")return;
+    if(p.closest&&p.closest(".mono,[data-raw]"))return;
+    var v=t.nodeValue,k=v.trim();
+    if(!k)return;
+    if(TRX[k]!==undefined){t.nodeValue=v.replace(k,TRX[k]);return}
+    var out=v,hit=false;
+    for(var i=0;i<TRF.length;i++){
+      var f=TRF[i];
+      if(out.indexOf(f)>=0){out=out.split(f).join(TR[f]);hit=true}
+    }
+    if(hit)t.nodeValue=out;
+  });
+  ["placeholder","title"].forEach(function(a){
+    Array.prototype.forEach.call(root.querySelectorAll("["+a+"]"),function(el){
+      var v=el.getAttribute(a),k=v&&v.trim();
+      if(k&&TRX[k]!==undefined)el.setAttribute(a,TRX[k]);
+    });
+  });
+}
+var trBusy=false;
+function trWatch(){
+  if(!window.MutationObserver||!document.body)return;
+  new MutationObserver(function(){
+    if(trBusy||S.lang!=="en")return;
+    trBusy=true;
+    setTimeout(function(){try{tr(document.body)}catch(e){}trBusy=false},0);
+  }).observe(document.body,{childList:true,subtree:true});
+}
+function setLang(v){
+  if(v===S.lang)return;
+  S.lang=v;save();
+  location.reload();
+}
+
+/* ================= BOOT ================= */
+function draw(t){({akun:drawAkun,audit:drawAudit,konten:drawKonten,seo:drawSeo,celah:drawCelah,uang:drawUang,rencana:drawRencana,hasil:drawHasil})[t]();tr(document.getElementById("p-"+t))}
+function refresh(){renderGauge();renderRail();draw(S.tab);tr(document.body)}
+$("#theme").onclick=function(){
+  var cur=document.documentElement.getAttribute("data-theme");
+  var dark=cur?cur==="dark":matchMedia("(prefers-color-scheme:dark)").matches;
+  document.documentElement.setAttribute("data-theme",dark?"light":"dark");
+};
+document.title=CFG.merek;
+$(".brand b").textContent=CFG.merek;
+$(".brand span").textContent=CFG.tagline;
+$("#kaki-merek").textContent=CFG.merek;
+$("#kaki-pemilik").textContent=CFG.pemilik;
+document.documentElement.lang=S.lang;
+$("#lang").textContent=(S.lang==="en"?"ID":"EN");
+$("#lang").title=(S.lang==="en"?"Ganti ke Bahasa Indonesia":"Switch to English");
+$("#lang").onclick=function(){setLang(S.lang==="en"?"id":"en")};
+TABS.forEach(function(x){$("#p-"+x[0]).hidden=(x[0]!==S.tab)});
+refresh();
+trWatch();
+setAI();
+try{
+  if(window.claude&&typeof claude.use==="function"){
+    claude.use("sample").then(function(s){AI=s||null;setAI();if(aiOn())draw(S.tab)},function(){setAI()});
+    claude.use("db").then(function(d){
+      if(!d)return;DB=d;dbSyncAll();
+      if(S.tab==="hasil")draw("hasil");
+    },function(){});
+  }
+}catch(e){setAI()}
+})();
+</script>
+</body>
+</html>

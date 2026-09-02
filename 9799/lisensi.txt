@@ -1,0 +1,85 @@
+OCKLU-9799 — LISENSI PEMAKAIAN / LICENCE
+Terbit 2 September 2026. Pemilik hak: Ocklu (ocklu.com).
+
+Berkas produk ini adalah satu berkas HTML mandiri. Ia berjalan di peramban,
+menyimpan datanya di peramban itu saja, dan tidak mengirim apa pun ke server
+mana pun. Tidak ada pendaftaran, tidak ada akun, tidak ada langganan.
+
+--------------------------------------------------------------------------
+BAHASA INDONESIA
+--------------------------------------------------------------------------
+
+1. LISENSI 1 PEMAKAI
+   Boleh:
+   - dipakai untuk akun sosial media milikmu sendiri, tanpa batas jumlah akun;
+   - disimpan di komputer, di ponsel, atau di alamat web pribadimu;
+   - diubah isinya untuk keperluanmu sendiri (angka patokan, teks, warna).
+   Tidak boleh:
+   - dijual ulang, disewakan, atau dibagikan ke orang di luar usahamu;
+   - dipakai sebagai produk yang kamu jual dengan merek lain.
+
+2. LISENSI MEREK SENDIRI (WHITE-LABEL)
+   Semua yang di atas, ditambah:
+   - boleh mengganti merek lewat blok SETELAN di baris paling atas skrip
+     (merek, tagline, pemilik, situs) dan memakainya untuk klienmu;
+   - boleh memasang satu salinan untuk tiap klien yang kamu tangani;
+   - boleh menagih klienmu untuk pemasangan dan pendampingannya.
+   Tidak boleh:
+   - menjual berkasnya sendiri sebagai produk lepas kepada umum;
+   - mengaku sebagai pembuat asli perangkat ini.
+
+3. YANG TIDAK IKUT
+   Tombol AI di dalam perangkat ini hanya hidup ketika halaman dibuka di
+   dalam penampil artifact claude.ai, dan ketika hidup ia memakai kuota
+   Claude milik ORANG YANG MEMBUKA halaman, bukan kuota pembuatnya.
+   Salinan yang kamu pasang di alamat webmu sendiri TIDAK punya tombol AI —
+   tombolnya disembunyikan otomatis dan sisa perangkatnya tetap jalan penuh
+   memakai mesin aturan. Ini bukan kerusakan; ini memang batas teknisnya.
+   Kalau kamu butuh AI di alamatmu sendiri, itu perlu perantara API berbayar
+   yang tidak termasuk dalam lisensi ini.
+
+4. TANPA JAMINAN HASIL
+   Perangkat ini menghitung dari angka yang kamu masukkan sendiri dan
+   membandingkannya dengan patokan per platform. Ia tidak menjanjikan
+   kenaikan pengikut, jangkauan, atau penjualan. Angka patokan bisa berubah
+   sewaktu-waktu karena platformnya sendiri berubah.
+
+5. PENGEMBALIAN UANG
+   Karena ini berkas digital yang langsung terkirim penuh, uang kembali
+   hanya berlaku bila berkasnya tidak bisa dibuka sama sekali di peramban
+   arus utama (Chrome, Safari, Firefox, Edge versi terbaru) dan tidak bisa
+   diperbaiki dalam 7 hari. Kabari lewat surel yang tertera di ocklu.com.
+
+--------------------------------------------------------------------------
+ENGLISH
+--------------------------------------------------------------------------
+
+1. SINGLE-USER LICENCE
+   You may use it for your own social accounts (any number of accounts),
+   keep it on your machine, phone or private web address, and edit it for
+   your own use. You may not resell it, rent it out, share it outside your
+   own business, or ship it as a product under another brand.
+
+2. WHITE-LABEL LICENCE
+   Everything above, plus: rebrand it through the SETTINGS block at the top
+   of the script, deploy one copy per client you serve, and charge those
+   clients for setup and support. You may not sell the file itself as a
+   standalone product to the public, or claim authorship of the tool.
+
+3. WHAT DOES NOT TRAVEL WITH IT
+   The AI buttons only work when the page is opened inside the claude.ai
+   artifact viewer, and they spend the Claude quota of THE PERSON VIEWING
+   the page, not the author's. A copy hosted on your own domain has no AI
+   buttons — they hide themselves and the rest of the tool runs in full on
+   the rules engine. This is a technical boundary, not a defect. Running AI
+   on your own domain requires a paid API proxy, which is not included.
+
+4. NO GUARANTEE OF RESULTS
+   The tool computes from numbers you enter and compares them against
+   per-platform benchmarks. It promises no growth in followers, reach or
+   sales. Benchmarks can go stale when the platforms change.
+
+5. REFUNDS
+   As this is a digital file delivered in full on purchase, refunds apply
+   only if the file cannot be opened at all in a current mainstream browser
+   and cannot be fixed within 7 days.

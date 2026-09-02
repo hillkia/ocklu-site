@@ -4,6 +4,7 @@
 
 User-agent: *
 Allow: /
+Disallow: /d/
 
 # Named explicitly so there is no ambiguity for AI assistants:
 User-agent: GPTBot
@@ -47,4 +48,3 @@ Allow: /
 
 Sitemap: https://ocklu.com/sitemap.xml
 
-Disallow: /d/
