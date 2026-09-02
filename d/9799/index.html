@@ -188,6 +188,42 @@ input[type=range]{padding:0;background:none;border:0;accent-color:var(--accent)}
 .hr{height:1px;background:var(--line);margin:26px 0}
 footer{margin-top:44px;padding-top:16px;border-top:1px solid var(--line);font-size:12px;color:var(--muted);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 @media(max-width:560px){.shell{padding:0 15px 80px}.console{margin:0 -15px;padding:12px 15px 0}.g b{font-size:15px}.gauge{gap:13px}}
+
+/* ---- laporan ---- */
+.lap{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:26px 28px;box-shadow:var(--shadow)}
+.lap-kop{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap;border-bottom:2px solid var(--ink);padding-bottom:14px;margin-bottom:22px}
+.lap-kop h1{font-size:26px;letter-spacing:-.02em;margin:0 0 4px}
+.lap-kop .kecil{color:var(--muted);font-size:13px;font-family:"IBM Plex Mono",monospace}
+.lap-sec{margin-top:26px;break-inside:avoid}
+.lap-sec>h3{font-family:Archivo,sans-serif;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);border-bottom:1px solid var(--line);padding-bottom:6px;margin:0 0 12px}
+.lap-vonis{font-size:17px;line-height:1.5;margin:0 0 4px}
+.lap-angka{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:12px;margin:14px 0}
+.lap-angka div{border:1px solid var(--line2);border-radius:9px;padding:10px 12px}
+.lap-angka b{display:block;font-family:"IBM Plex Mono",monospace;font-size:19px;color:var(--ink)}
+.lap-angka i{font-style:normal;font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+.lap-item{border-left:3px solid var(--tone,var(--line));padding:2px 0 2px 12px;margin:0 0 14px}
+.lap-item h4{font-size:15px;margin:0 0 3px}
+.lap-item p{margin:0 0 4px;font-size:14px;color:var(--ink2)}
+.lap-item .aksi{font-size:14px;background:var(--panel2);border-radius:7px;padding:7px 10px;margin-top:5px}
+.lap-akun{margin-top:18px;break-inside:avoid}
+.lap-akun>h4{font-size:16px;margin:0 0 2px}
+.lap-akun .sub{color:var(--muted);font-size:12.5px;font-family:"IBM Plex Mono",monospace;margin-bottom:9px}
+.lap-kaki{margin-top:28px;border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:12.5px}
+.lap-alat{display:flex;gap:9px;flex-wrap:wrap;align-items:center;margin-bottom:16px}
+@media print{
+  :root,:root:not([data-theme="light"]),:root[data-theme="dark"]{--ground:#fff;--panel:#fff;--panel2:#f4f4f4;--ink:#000;--ink2:#222;
+    --muted:#555;--line:#999;--line2:#ccc;--accent:#000;--accent-ink:#000;--accent-soft:#eee;
+    --ok:#000;--warn:#000;--crit:#000;--shadow:none}
+  .console,.rail,.tt,.btn,.copy,.toast,.lap-alat,footer,.pita{display:none!important}
+  .pane{display:none!important}
+  #p-laporan{display:block!important}
+  body{background:#fff!important;color:#000!important;font-size:11.5pt}
+  .shell{max-width:none;padding:0}
+  .lap{border:0;border-radius:0;padding:0;box-shadow:none}
+  .lap-ganti{break-before:page}
+  a{color:inherit;text-decoration:none}
+  @page{margin:16mm 14mm}
+}
 </style>
 
 <div class="console">
@@ -212,13 +248,25 @@ footer{margin-top:44px;padding-top:16px;border-top:1px solid var(--line);font-si
   <div class="pane" id="p-uang" hidden></div>
   <div class="pane" id="p-rencana" hidden></div>
   <div class="pane" id="p-hasil" hidden></div>
-  <footer><span>Ocklu-9799 — semua angka dihitung dari data yang lo isi sendiri.</span><span>Disiapkan oleh Ocklu</span></footer>
+  <div class="pane" id="p-laporan" hidden></div>
+  <footer><span><b id="kaki-merek">Ocklu-9799</b> — semua angka dihitung dari data yang lo isi sendiri.</span><span>Disiapkan oleh Ocklu</span></footer>
 </div>
 <div class="toast" id="toast"></div>
 
 <script>
 (function(){
 "use strict";
+/* =======================================================================
+   SETELAN — ganti empat baris ini saja untuk memakai merek sendiri.
+   SETTINGS — change these four lines to run this under your own brand.
+   ======================================================================= */
+var CFG={
+  merek   : "Ocklu-9799",
+  tagline : "konsol optimasi akun sosmed",
+  pemilik : "Ocklu",
+  situs   : "ocklu.com"
+};
+/* ===================================================================== */
 var $=function(s,r){return (r||document).querySelector(s)},
     $$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
 
@@ -340,10 +388,6 @@ var PKEYS=Object.keys(PLAT);
 
 /* ================= STATE ================= */
 var KEY="ocklu-9799-v1";
-/* pindahan sekali jalan dari kunci lama, biar data yang sudah diisi tidak hilang */
-try{var LAMA="ocklu-meja-sinyal-v1",bekas=localStorage.getItem(LAMA);
-  if(bekas&&!localStorage.getItem(KEY)){localStorage.setItem(KEY,bekas);localStorage.removeItem(LAMA)}
-}catch(e){}
 var CK=[
  [9,"Bio nyebut SIAPA yang dilayani + HASIL apa (bukan cuma 'mom of 2')"],
  [8,"Cuma 1 tautan, dan tautannya nyambung sama konten terakhir"],
@@ -362,7 +406,7 @@ var SEED=[
  {id:"a1",plat:"instagram",h:"kiamomjourney",f:4634,v:2989,l:0,c:0,p30:12,niche:"parenting",offer:"",link:false,note:"panggung — jangkauan udah terbukti 30K"},
  {id:"a2",plat:"instagram",h:"regulatewithkia",f:74,v:0,l:13,c:0,p30:6,niche:"regulasi emosi & keuangan keluarga",offer:"",link:false,note:"ruang — konten nempel, distribusinya nol"}
 ];
-var S={acc:[],ck:{},jur:[],kurs:16300,lang:"id",tab:"akun",seed:0,
+var S={acc:[],ck:{},jur:[],kurs:16300,lang:"id",tab:"akun",seed:0,klien:"",oleh:"",
   gen:{topik:"cara ngomong ke anak biar didengar tanpa teriak",aud:"ibu anak balita",pain:"ngulang 5 kali baru didenger",hasil:"anak nurut sekali minta",plat:"instagram"},
   hook:"5 kalimat ajaib yang bikin anak nurut tanpa teriak",
   proj:{model:"produk",harga:29,visit:1.5,klik:8,beli:2.5}};
@@ -651,7 +695,7 @@ document.addEventListener("click",function(e){
 });
 
 /* ================= RENDER: gauge + rail ================= */
-var TABS=[["akun","Akun"],["audit","Audit"],["konten","Konten"],["seo","SEO"],["celah","Celah"],["uang","Uang"],["rencana","Rencana"],["hasil","Hasil"]];
+var TABS=[["akun","Akun"],["audit","Audit"],["konten","Konten"],["seo","SEO"],["celah","Celah"],["uang","Uang"],["rencana","Rencana"],["hasil","Hasil"],["laporan","Laporan"]];
 function renderGauge(){
   var T=totals();
   $("#gauge").innerHTML=
@@ -1311,8 +1355,168 @@ function aiKedua(){
   ask(box,p,{title:"Pendapat kedua"});
 }
 
+/* ================= LAPORAN =================
+   Merangkum seluruh keluaran mesin aturan jadi satu dokumen siap cetak.
+   Tidak butuh AI — semuanya dari angka yang sudah diisi di tab Akun.       */
+function tanggalHariIni(){
+  var b=S.lang==="en"
+   ?["January","February","March","April","May","June","July","August","September","October","November","December"]
+   :["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember"];
+  var d=new Date();return d.getDate()+" "+b[d.getMonth()]+" "+d.getFullYear();
+}
+function vonis(avg,n){
+  if(!n)return "Belum ada akun yang diisi, jadi belum ada yang bisa disimpulkan.";
+  if(avg>=70)return "Fondasinya sudah berdiri. Yang menahan pertumbuhan sekarang bukan mutu konten, tapi volume dan distribusi.";
+  if(avg>=45)return "Mesinnya jalan sebelah. Ada bagian yang sudah kuat dan ada yang bocor — daftar di bawah menyebut bocornya di mana, berurut dari yang paling mahal.";
+  return "Belum ada bagian yang berdiri sendiri. Kerjakan tiga hal pertama di daftar bawah lebih dulu; sisanya jangan disentuh dulu supaya tenaganya tidak habis.";
+}
+function fondasiKurang(a){
+  var st=S.ck[a.id]||{},got=0,tot=0,miss=[];
+  CK.forEach(function(c,i){tot+=c[0];if(st[i])got+=c[0];else miss.push(c)});
+  miss.sort(function(x,y){return y[0]-x[0]});
+  return {pct:Math.round(got/tot*100),miss:miss};
+}
+function laporanHTML(){
+  var T=totals(),P3=priorities(),L=ladder(),G=gagalnya();
+  var klien=(S.klien||"").trim(), oleh=(S.oleh||"").trim()||CFG.pemilik;
+  var h='<div class="lap" id="lapisi">';
+  h+='<div class="lap-kop"><div><h1>Laporan Audit Akun Sosial Media</h1>'+
+     '<div class="kecil">'+(klien?esc(klien)+' &middot; ':'')+tanggalHariIni()+'</div></div>'+
+     '<div class="kecil" style="text-align:right">Disiapkan oleh<br><b style="color:var(--ink);font-size:14px">'+esc(oleh)+'</b><br>'+esc(CFG.situs)+'</div></div>';
+
+  h+='<div class="lap-sec"><h3>Ringkasan</h3><p class="lap-vonis">'+vonis(T.avg,T.n)+'</p>'+
+     '<div class="lap-angka">'+
+     '<div><i>Akun</i><b>'+T.n+'</b></div>'+
+     '<div><i>Total pengikut</i><b>'+nf(T.fol)+'</b></div>'+
+     '<div><i>Jangkauan / bulan</i><b>'+nf(T.reach)+'</b></div>'+
+     '<div><i>Sinyal rata²</i><b>'+T.avg+'/100</b></div></div></div>';
+
+  h+='<div class="lap-sec"><h3>Tiga hal paling mahal kalau dibiarkan</h3>';
+  if(!P3.length)h+='<p class="lap-vonis">Tidak ada temuan mendesak dari angka yang ada sekarang.</p>';
+  P3.forEach(function(x,i){
+    h+='<div class="lap-item" style="--tone:'+(x.f[0]==="crit"?"var(--crit)":"var(--warn)")+'">'+
+       '<h4>'+(i+1)+'. @'+esc(x.a.h)+' — '+x.f[1]+'</h4><p>'+x.f[2]+'</p>'+
+       '<div class="aksi"><b>Lakuin:</b> '+x.f[3]+'</div></div>';
+  });
+  h+='</div>';
+
+  S.acc.forEach(function(a,idx){
+    var H=health(a),PL=PLAT[a.plat],F=findings(a),FK=fondasiKurang(a);
+    h+='<div class="lap-sec lap-akun'+(idx===0?'':' lap-ganti')+'"><h3>Akun @'+esc(a.h)+'</h3>'+
+       '<div class="sub">'+PL.n+(a.niche?' &middot; '+esc(a.niche):'')+' &middot; sinyal '+H.score+'/100 &middot; '+label(H.score)+'</div>'+
+       '<div class="lap-angka">'+
+       '<div><i>Pengikut</i><b>'+nf(a.f)+'</b></div>'+
+       '<div><i>Rasio jangkauan</i><b>'+(H.rr!=null?H.rr.toFixed(2)+"×":"—")+'</b></div>'+
+       '<div><i>Patokan '+PL.n+'</i><b>'+PL.mid+'×</b></div>'+
+       '<div><i>Keterikatan</i><b>'+(H.er!=null?pct(H.er):"—")+'</b></div>'+
+       '<div><i>Konten / 30 hari</i><b>'+(+a.p30||0)+'</b></div>'+
+       '<div><i>Corong</i><b>'+H.funnel+'%</b></div></div>';
+    F.forEach(function(f){
+      var t=f[0]==="crit"?"var(--crit)":f[0]==="warn"?"var(--warn)":"var(--ok)";
+      h+='<div class="lap-item" style="--tone:'+t+'"><h4>'+f[1]+'</h4><p>'+f[2]+'</p>'+
+         (f[0]!=="ok"?'<div class="aksi"><b>Lakuin:</b> '+f[3]+'</div>':'')+'</div>';
+    });
+    h+='<p style="font-size:13.5px;color:var(--ink2);margin:12px 0 4px"><b>Fondasi '+FK.pct+'%.</b> '+
+       (FK.miss.length?'Yang belum ada, urut dari yang paling mahal:':'Semua sudah terpasang.')+'</p>';
+    if(FK.miss.length)h+='<ol style="margin:0;padding-left:20px;font-size:13.5px;color:var(--ink2)">'+
+       FK.miss.slice(0,5).map(function(m){return '<li>'+m[1]+'</li>'}).join("")+'</ol>';
+    h+='</div>';
+  });
+
+  h+='<div class="lap-sec lap-ganti"><h3>Tangga uang</h3>'+
+     '<p style="font-size:14px;color:var(--ink2);margin:0 0 12px">Anak tangga terbuka sendiri begitu angkanya cukup. Yang belum terbuka bukan larangan — itu daftar syarat.</p>'+
+     '<div class="scroll"><table><thead><tr><th>Tahap</th><th>Harga wajar</th><th>Status</th></tr></thead><tbody>';
+  L.forEach(function(x){
+    h+='<tr><td><b>'+x.k+' '+x.t+'</b><br><span style="color:var(--muted);font-size:12.5px">'+(x.ok?x.why:x.syarat)+'</span></td>'+
+       '<td class="num">'+x.harga+'</td><td><span class="chip '+(x.ok?'ok':'')+'">'+(x.ok?'Kebuka sekarang':'Belum')+'</span></td></tr>';
+  });
+  h+='</tbody></table></div></div>';
+
+  var hari=["Senin","Selasa","Rabu","Kamis","Jumat","Sabtu","Minggu"],accs=S.acc.length?S.acc:[{h:"akunmu",plat:"instagram"}];
+  h+='<div class="lap-sec"><h3>Rencana tujuh hari</h3>'+
+     '<p style="font-size:14px;color:var(--ink2);margin:0 0 12px">Urutannya sengaja: tiga hari pertama menarik orang baru, tengah minggu membangun percaya, akhir minggu baru meminta sesuatu.</p>'+
+     '<div class="scroll"><table><thead><tr><th>Hari</th><th>Pilar</th><th>Tujuan</th><th>Akun</th></tr></thead><tbody>';
+  hari.forEach(function(d,i){
+    var p=PILLAR[MIX[i]],a=accs[i%accs.length];
+    h+='<tr><td><b>'+d+'</b></td><td>'+p[0]+'</td><td>'+p[1]+'</td><td>@'+esc(a.h)+'</td></tr>';
+  });
+  h+='</tbody></table></div></div>';
+
+  if(G.length){
+    h+='<div class="lap-sec"><h3>Sudah dicoba dan tidak jalan</h3>'+
+       '<p style="font-size:14px;color:var(--ink2);margin:0 0 10px">Dicatat sengaja. Saran di laporan ini tidak boleh mengulang apa pun di daftar berikut.</p><ul style="font-size:13.5px;margin:0;padding-left:20px">';
+    G.forEach(function(e){h+='<li><b>'+esc(e.saran)+'</b>'+(e.akun?' ('+esc(e.akun)+')':'')+(e.catatan?' — '+esc(e.catatan):'')+'</li>'});
+    h+='</ul></div>';
+  }
+
+  h+='<div class="lap-sec"><h3>Cara membaca laporan ini</h3>'+
+     '<p style="font-size:13.5px;color:var(--ink2);margin:0 0 8px">Semua angka di sini dihitung dari data yang dimasukkan sendiri ke konsol, dibandingkan dengan patokan tiap platform. Tidak ada tebakan dan tidak ada data yang diambil diam-diam dari platform mana pun.</p>'+
+     '<p style="font-size:13.5px;color:var(--ink2);margin:0">Patokan platform bisa berubah sewaktu-waktu karena platformnya sendiri berubah. Laporan ini menyebut apa yang paling mahal kalau dibiarkan — bukan menjanjikan kenaikan pengikut, jangkauan, atau penjualan.</p></div>';
+
+  h+='<div class="lap-kaki">'+esc(CFG.merek)+' &middot; disiapkan '+tanggalHariIni()+' oleh '+esc(oleh)+' &middot; '+esc(CFG.situs)+'</div>';
+  return h+'</div>';
+}
+function laporanTeks(){
+  var d=el(laporanHTML()),out=[];
+  Array.prototype.forEach.call(d.querySelectorAll("h1,h3,h4,p,li,td,.aksi"),function(n){
+    if(n.closest("table")&&n.nodeName!=="TD")return;
+    var t=n.textContent.replace(/\s+/g," ").trim();if(!t)return;
+    if(n.nodeName==="H1")out.push("== "+t.toUpperCase()+" ==");
+    else if(n.nodeName==="H3")out.push("","--- "+t.toUpperCase()+" ---");
+    else if(n.nodeName==="H4")out.push("","* "+t);
+    else if(n.nodeName==="LI")out.push("  - "+t);
+    else out.push(t);
+  });
+  return out.join("\n");
+}
+function drawLaporan(){
+  var h='<div class="sech"><h2>Laporan</h2><span>semua hasil mesin aturan jadi satu dokumen siap kirim</span></div>';
+  h+='<p class="lede">Halaman ini merangkum seluruh isi tab lain jadi satu berkas yang bisa dicetak, disimpan jadi PDF, atau ditempel ke surel. Tidak butuh AI — semuanya dari angka yang sudah kamu isi di tab Akun.</p>';
+  h+='<div class="card lap-alat"><label class="f" style="flex:1 1 200px">Nama klien / akun<input id="lap-klien" value="'+esc(S.klien||"")+'" placeholder="kosongkan kalau untuk diri sendiri"></label>'+
+     '<label class="f" style="flex:1 1 200px">Disiapkan oleh<input id="lap-oleh" value="'+esc(S.oleh||"")+'" placeholder="'+esc(CFG.pemilik)+'"></label></div>';
+  h+='<div class="lap-alat"><button class="btn" id="lap-cetak">Cetak / simpan PDF</button>'+
+     '<button class="btn ghost" id="lap-salin">Salin sebagai teks</button>'+
+     '<span class="note" style="margin:0">Di jendela cetak, pilih <b>Save as PDF</b>.</span></div>';
+  h+='<div id="lap-wadah">'+laporanHTML()+'</div>';
+  $("#p-laporan").innerHTML=h;
+  $("#lap-cetak").onclick=function(){window.print()};
+  $("#lap-salin").onclick=function(){copyText(laporanTeks());toast("Laporan disalin")};
+  ["klien","oleh"].forEach(function(k){
+    $("#lap-"+k).oninput=function(){S[k]=this.value;save();
+      var w=$("#lap-wadah");if(w){w.innerHTML=laporanHTML();tr(w)}};
+  });
+}
+
 /* ================= BAHASA / LANGUAGE ================= */
 var TR={
+/* laporan */
+"Jangkauan / bulan":"Reach / month",
+"Laporan":"Report",
+"semua hasil mesin aturan jadi satu dokumen siap kirim":"every rules-engine result in one document, ready to send",
+"Halaman ini merangkum seluruh isi tab lain jadi satu berkas yang bisa dicetak, disimpan jadi PDF, atau ditempel ke surel. Tidak butuh AI — semuanya dari angka yang sudah kamu isi di tab Akun.":"This page rolls up every other tab into one file you can print, save as PDF, or paste into an email. No AI needed \u2014 all of it comes from the numbers you entered on the Accounts tab.",
+"Nama klien / akun":"Client / account name","Disiapkan oleh":"Prepared by",
+"kosongkan kalau untuk diri sendiri":"leave blank if this is for yourself",
+"Cetak / simpan PDF":"Print / save as PDF","Salin sebagai teks":"Copy as text",
+"Di jendela cetak, pilih":"In the print dialog, choose","Laporan disalin":"Report copied",
+"Laporan Audit Akun Sosial Media":"Social Account Audit Report",
+"Ringkasan":"Summary","Tiga hal paling mahal kalau dibiarkan":"The three most expensive things to leave alone",
+"Tidak ada temuan mendesak dari angka yang ada sekarang.":"Nothing urgent shows up in the numbers as they stand.",
+"Belum ada akun yang diisi, jadi belum ada yang bisa disimpulkan.":"No accounts have been entered, so there is nothing to conclude yet.",
+"Fondasinya sudah berdiri. Yang menahan pertumbuhan sekarang bukan mutu konten, tapi volume dan distribusi.":"The foundation is standing. What holds growth back now is not content quality but volume and distribution.",
+"Mesinnya jalan sebelah. Ada bagian yang sudah kuat dan ada yang bocor — daftar di bawah menyebut bocornya di mana, berurut dari yang paling mahal.":"The machine is running on one side. Some parts are strong and some are leaking \u2014 the list below names where, most expensive first.",
+"Belum ada bagian yang berdiri sendiri. Kerjakan tiga hal pertama di daftar bawah lebih dulu; sisanya jangan disentuh dulu supaya tenaganya tidak habis.":"No part stands on its own yet. Do the first three items below first and leave the rest alone so you do not spread yourself thin.",
+"Akun @":"Account @","Patokan ":"Benchmark ","Corong":"Funnel","Tahap":"Stage","Harga wajar":"Fair price",
+"Yang belum ada, urut dari yang paling mahal:":"What is missing, most expensive first:",
+"Semua sudah terpasang.":"Everything is in place.",
+"Anak tangga terbuka sendiri begitu angkanya cukup. Yang belum terbuka bukan larangan — itu daftar syarat.":"Each rung unlocks itself once the numbers are there. A locked rung is not a ban \u2014 it is a list of requirements.",
+"Belum":"Locked","Rencana tujuh hari":"The seven-day plan",
+"Urutannya sengaja: tiga hari pertama menarik orang baru, tengah minggu membangun percaya, akhir minggu baru meminta sesuatu.":"The order is deliberate: the first three days pull in new people, midweek builds trust, and only at the end of the week do you ask for anything.",
+"Sudah dicoba dan tidak jalan":"Already tried, did not work",
+"Dicatat sengaja. Saran di laporan ini tidak boleh mengulang apa pun di daftar berikut.":"Recorded on purpose. Nothing in this report may repeat anything on the list below.",
+"Cara membaca laporan ini":"How to read this report",
+"Semua angka di sini dihitung dari data yang dimasukkan sendiri ke konsol, dibandingkan dengan patokan tiap platform. Tidak ada tebakan dan tidak ada data yang diambil diam-diam dari platform mana pun.":"Every number here is computed from data entered into the console by hand and compared against each platform\u2019s benchmark. Nothing is guessed and nothing is scraped from any platform.",
+"Patokan platform bisa berubah sewaktu-waktu karena platformnya sendiri berubah. Laporan ini menyebut apa yang paling mahal kalau dibiarkan — bukan menjanjikan kenaikan pengikut, jangkauan, atau penjualan.":"Platform benchmarks go stale when the platforms themselves change. This report names what is most expensive to leave alone \u2014 it does not promise growth in followers, reach, or sales.",
+"disiapkan ":"prepared "," oleh ":" by ",
 /* tambahan */
 "Beli":"Purchases","Klik → beli":"Clicks → purchase","\"Jangkauan\" = tayangan dibagi pengikut. TikTok tinggi karena nyebarnya ke non-pengikut; Facebook rendah karena jangkauan organiknya emang udah dimatiin.":"\"Reach\" = views divided by followers. TikTok runs high because it pushes to non-followers; Facebook runs low because organic reach there was throttled years ago.",
 "Tayangan":"Views","Angka ":"",
@@ -1641,7 +1845,7 @@ var TRX=null,TRF=null;
 function trPrep(){
   if(TRX)return;
   TRX={};TRF=[];
-  for(var k in TR){TRX[k]=TR[k];if(k.length>=14||/^\s|\s$|^\//.test(k))TRF.push(k)}
+  for(var k in TR){TRX[k]=TR[k];if(k.length>=14||/^\s|\s$|^\/|@$/.test(k))TRF.push(k)}
   TRF.sort(function(a,b){return b.length-a.length});
 }
 function tr(root){
@@ -1688,13 +1892,17 @@ function setLang(v){
 }
 
 /* ================= BOOT ================= */
-function draw(t){({akun:drawAkun,audit:drawAudit,konten:drawKonten,seo:drawSeo,celah:drawCelah,uang:drawUang,rencana:drawRencana,hasil:drawHasil})[t]();tr(document.getElementById("p-"+t))}
+function draw(t){({akun:drawAkun,audit:drawAudit,konten:drawKonten,seo:drawSeo,celah:drawCelah,uang:drawUang,rencana:drawRencana,hasil:drawHasil,laporan:drawLaporan})[t]();tr(document.getElementById("p-"+t))}
 function refresh(){renderGauge();renderRail();draw(S.tab);tr(document.body)}
 $("#theme").onclick=function(){
   var cur=document.documentElement.getAttribute("data-theme");
   var dark=cur?cur==="dark":matchMedia("(prefers-color-scheme:dark)").matches;
   document.documentElement.setAttribute("data-theme",dark?"light":"dark");
 };
+document.title=CFG.merek;
+$(".brand b").textContent=CFG.merek;
+$(".brand span").textContent=CFG.tagline;
+$("#kaki-merek").textContent=CFG.merek;
 document.documentElement.lang=S.lang;
 $("#lang").textContent=(S.lang==="en"?"ID":"EN");
 $("#lang").title=(S.lang==="en"?"Ganti ke Bahasa Indonesia":"Switch to English");
