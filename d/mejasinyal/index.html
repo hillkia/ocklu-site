@@ -6,7 +6,7 @@
 <meta name="robots" content="noindex,nofollow,noarchive">
 <meta name="author" content="Ocklu">
 <style>html{color-scheme:light dark}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
-<title>Meja Sinyal Sosmed</title>
+<title>Ocklu-9799</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
@@ -193,9 +193,10 @@ footer{margin-top:44px;padding-top:16px;border-top:1px solid var(--line);font-si
 <div class="console">
   <div class="shell" style="padding-bottom:0">
     <div class="crow">
-      <div class="brand"><b>Meja Sinyal</b><span>konsol optimasi akun sosmed</span></div>
+      <div class="brand"><b>Ocklu-9799</b><span>konsol optimasi akun sosmed</span></div>
       <div class="gauge" id="gauge"></div>
       <span class="aibadge off" id="aibadge">mode aturan</span>
+      <button class="tt" id="lang">EN</button>
       <button class="tt" id="theme">tema</button>
     </div>
     <div class="rail" role="tablist" id="rail"></div>
@@ -211,7 +212,7 @@ footer{margin-top:44px;padding-top:16px;border-top:1px solid var(--line);font-si
   <div class="pane" id="p-uang" hidden></div>
   <div class="pane" id="p-rencana" hidden></div>
   <div class="pane" id="p-hasil" hidden></div>
-  <footer><span>Meja Sinyal — semua angka dihitung dari data yang lo isi sendiri.</span><span>Disiapkan oleh Ocklu</span></footer>
+  <footer><span>Ocklu-9799 — semua angka dihitung dari data yang lo isi sendiri.</span><span>Disiapkan oleh Ocklu</span></footer>
 </div>
 <div class="toast" id="toast"></div>
 
@@ -634,7 +635,7 @@ function ladder(){
 function el(h){var d=document.createElement("div");d.innerHTML=h;return d}
 function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
 var TT;
-function toast(m){var t=$("#toast");t.textContent=m;t.classList.add("on");clearTimeout(TT);TT=setTimeout(function(){t.classList.remove("on")},1600)}
+function toast(m){var t=$("#toast");t.textContent=m;tr(t);t.classList.add("on");clearTimeout(TT);TT=setTimeout(function(){t.classList.remove("on")},1600)}
 function copyText(t){
   if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(function(){toast("Kesalin ✓")},fallback)}else fallback();
   function fallback(){var a=document.createElement("textarea");a.value=t;a.style.position="fixed";a.style.opacity="0";document.body.appendChild(a);a.select();try{document.execCommand("copy");toast("Kesalin ✓")}catch(e){toast("Gagal nyalin — sorot manual ya")}document.body.removeChild(a)}
@@ -887,7 +888,7 @@ function drawKonten(){
   $("#g-run").onclick=runGen;$("#hk-run").onclick=runHook;
   $("#g-more").onclick=function(){S.seed=(S.seed||0)+1;save();runGen();toast("5 pola lain")};
   $("#g-ai").onclick=aiGen;$("#hk-ai").onclick=aiHook;
-  $("#g-lang").onchange=function(){S.lang=this.value;save();runGen()};
+  $("#g-lang").onchange=function(){readGen();setLang(this.value)};
   runGen();runHook();
 }
 function readGen(){
@@ -1306,16 +1307,397 @@ function aiKedua(){
   ask(box,p,{title:"Pendapat kedua"});
 }
 
+/* ================= BAHASA / LANGUAGE ================= */
+var TR={
+/* tambahan */
+"Beli":"Purchases","Klik → beli":"Clicks → purchase","\"Jangkauan\" = tayangan dibagi pengikut. TikTok tinggi karena nyebarnya ke non-pengikut; Facebook rendah karena jangkauan organiknya emang udah dimatiin.":"\"Reach\" = views divided by followers. TikTok runs high because it pushes to non-followers; Facebook runs low because organic reach there was throttled years ago.",
+"Tayangan":"Views","Angka ":"",
+"Keterikatan ":"Engagement ",
+"× di atas patokan. Yang nonton peduli.":"× above the benchmark. The people watching care.",
+". 1 ide dipecah jadi 3 konten: masalahnya, salahnya, caranya.":". One idea split into 3 posts: the problem, the mistake, the method.",
+"% dari skor ini gak keitung karena datanya kosong. Skor sementara.":"% of this score could not be computed because the data is empty. Provisional score.",
+"Konten/mgg":"Posts/wk","tiap pilar punya satu tugas":"each pillar has exactly one job",
+"3\u00d7/minggu":"3\u00d7/week","1\u00d7/minggu":"1\u00d7/week","2\u00d7/minggu":"2\u00d7/week",
+"% dari tayangan":"% of views",
+" pembeli itu yang harus lo percaya, bukan angka rupiahnya. Kalau kerasa gak masuk akal, geser slidernya sampai masuk akal \u2014 terus lihat berapa jangkauan yang dibutuhin.":" buyers is the number you have to believe, not the rupiah figure. If it feels unrealistic, drag the sliders until it does \u2014 then look at how much reach that needs.",
+"Jual jasa dulu ke 5 orang. Ini yang ngasih tau lo kalimat apa yang beneran laku.":"Sell the service to 5 people first. That is what tells you which sentence actually sells.",
+"Rekam apa yang lo omongin berulang ke 5 orang itu. Itu produk digital pertamanya.":"Record what you keep repeating to those 5 people. That is your first digital product.",
+"Baru bikin konten buat naikin jangkauan \u2014 sekarang lo udah tau mau ngirim orangnya ke mana.":"Only now make content to raise reach \u2014 you finally know where you are sending people.",
+"Kumpulin alamat email/WA sejak hari pertama. Pengikut itu nyewa, daftar itu punya.":"Collect email/WhatsApp addresses from day one. Followers are rented; a list is owned.",
+"Titipan merek terakhir. Dia bayar sekali, dan pas jangkauan lo turun dia hilang.":"Brand deals last. They pay once, and the moment your reach dips they are gone.",
+" pengikut":" followers",
+"/bln":"/mo",
+"tanpa tautan":"no link","tanpa penawaran":"no offer",
+"macet":"stalled","pincang":"lopsided","sehat":"healthy",
+" · fondasi ":" · foundation "," · sinyal ":" · signal ",
+"Rasio ":"Ratio ","Artinya ":"Which means "," ada di ":" sits at ",
+"Jasa 1-lawan-1":"1-on-1 service","Rp250rb–750rb / sesi":"Rp250k–750k / session",
+" / konten (±Rp":" / post (±Rp","$7–19 / bulan / orang":"$7–19 / month / person",
+"Rp5jt–25jt / bulan":"Rp5M–25M / month","1.5× jangkauan":"1.5× reach",
+"Skrip / langkah":"Script / steps","Cerita / pengakuan":"Story / confession",
+"Bukti / hasil":"Proof / results","Ajakan":"The ask","Tujuan":"Goal",
+"Kata kunci / topik":"Keyword / topic",
+"Senin":"Monday","Selasa":"Tuesday","Rabu":"Wednesday","Kamis":"Thursday","Jumat":"Friday","Sabtu":"Saturday","Minggu":"Sunday",
+"gagal":"failed",
+" — nanti isi di sini gimana hasilnya. Yang ":" — then record here how it went. What ",
+/* shell */
+"Akun":"Accounts","Audit":"Audit","Konten":"Content","Celah":"Gaps","Uang":"Money","Rencana":"Plan","Hasil":"Results",
+
+"konsol optimasi akun sosmed":"social account optimization console",
+"mode aturan":"rules mode","otak nyala":"brain on","tema":"theme",
+"Ocklu-9799 — semua angka dihitung dari data yang lo isi sendiri.":"Ocklu-9799 — every number here is computed from data you entered yourself.",
+"Disiapkan oleh Ocklu":"Prepared by Ocklu",
+"sinyal / 100":"signal / 100","platform apa aja":"which platforms","jumlah pengikut":"follower count",
+"Total pengikut":"Total followers","Sinyal rata²":"Avg signal",
+/* akun */
+"Akun yang lo pegang":"Accounts you run",
+"isi angkanya sekali, semua tab lain ngitung sendiri":"enter the numbers once — every other tab does its own math",
+"Belum ada akun. Tambah di bawah.":"No accounts yet. Add one below.",
+"Tambah akun":"Add account","Nama akun (tanpa @)":"Handle (without @)","nama akun tanpa @":"handle without @",
+"Niche / topik":"Niche / topic","Pengikut":"Followers","Tayangan (nilai tengah)":"Views (median)",
+"Rata² suka":"Avg likes","Rata² komentar":"Avg comments","Konten / 30 hari":"Posts / 30 days",
+"Penawaran berbayar":"Paid offer","Ada 1 tautan jelas di bio":"One clear link in the bio",
+"Ubah":"Edit","Hapus":"Delete","Simpan perubahan":"Save changes","Batal":"Cancel","Tutup":"Close",
+"Akun ditambah ✓":"Account added ✓","Akun dihapus":"Account removed","Isi nama akunnya dulu":"Enter the handle first",
+"Balikin ke contoh awal":"Reset to the sample data","Balik ke contoh":"Reset to sample",
+"12 konten terakhir (jangan rata-rata — 1 viral bikin bohong), rata-rata suka & komentar, dan berapa konten sebulan. Kosongin yang belum tau; mesinnya bakal bilang mana yang kurang.":"Your last 12 posts (median, not average — one viral post lies), average likes & comments, and how many posts a month. Leave blank what you don't know; the engine will tell you what's missing.",
+"Bacain & isiin sendiri":"Read it and fill it in for me",
+"Tempel mentah-mentah dari Insights / catatan":"Paste raw text from Insights / your notes",
+"AI baca teks berantakan itu, terus ngisi kolom di atas. Kamu tinggal cek.":"AI reads that messy text and fills in the fields above. You just check it.",
+"Kolom udah diisiin":"Fields filled in",
+"Cek dulu di atas sebelum ditambah — mesin ini bisa salah baca.":"Check the fields above before adding — this can misread.",
+"Angka yang dipake:":"Numbers used:","Yang ditebak:":"Guessed:","Tempel dulu teksnya":"Paste the text first",
+"Platform":"Platform","Jangkauan":"Reach","Keterikatan":"Engagement","Angka":"Number","Artinya":"What it means",
+/* audit */
+"Audit sinyal":"Signal audit","Patokan platform":"Platform benchmark",
+"garis pembanding, bukan vonis":"a comparison line, not a verdict",
+"Pembacaan AI lintas akun":"AI read across accounts","Pembacaan AI":"AI read",
+"Suruh AI baca ulang semua angka":"Have AI re-read every number","Peta silang":"Cross-map",
+"Catat, gue kerjain":"Log it — I'll do this","udah dicoba, gak jalan":"tried it, didn't work",
+"Lakuin:":"Do this:","Catatan kamu: ":"Your note: ",
+"mesin gak boleh nyaranin ini lagi":"the engine is not allowed to suggest this again",
+"Rasio jangkauan":"Reach ratio",
+"Tayangan ÷ pengikut. Ngukur apakah platform masih mau nyebar konten lo.":"Views ÷ followers. Measures whether the platform still wants to push your posts out.",
+"Simpanan + kiriman":"Saves + shares",
+"Bukan suka. Simpan & kirim itu sinyal paling kuat di semua platform sekarang.":"Not likes. Saves and shares are the strongest signal on every platform right now.",
+"Klik tautan":"Link clicks",
+"Satu-satunya angka yang nyambung ke duit. Sisanya cuma tepuk tangan.":"The only number wired to money. The rest is applause.",
+"Jangkauan bagus":"Reach is good","Jangkauan tengah":"Reach is middling","Jangkauan di bawah tengah":"Reach below median",
+"Fondasi beres":"Foundation done","centang yang udah ada — sisanya jadi daftar kerjaan":"tick what's already there — the rest becomes your to-do list",
+"Angka di kanan itu bobot: seberapa mahal kalau dibiarin kosong. Kerjain yang bobotnya 9 dulu, sisanya nyusul.":"The number on the right is weight: how expensive it is to leave undone. Do the 9s first, the rest can follow.",
+"Gak ada yang mendesak. Lanjut ke tab Uang.":"Nothing urgent. Move to the Money tab.",
+"Yang paling mahal buat dibiarin":"Costliest thing to leave alone",
+"Kalau cuma sempat 3 hal hari ini":"If you only have time for 3 things today",
+"skor dari aturan, bukan feeling":"scored by rules, not by feel","sisanya abaikan":"ignore the rest",
+"Rinciannya di bawah. ":"Details below. ",
+/* temuan */
+"Konten lo gak keluar dari kandang":"Your posts aren't leaving the pen",
+"Ditonton tapi gak nempel":"Watched but not sticking",
+"Kontennya nempel banget":"Content sticks hard",
+"Pengikutnya banyak tapi dingin":"Plenty of followers, but cold",
+"Akun kecil, mutu tinggi":"Small account, high quality",
+"Volume kurang":"Not enough volume","Gak ada yang dijual":"Nothing is being sold",
+"Gak ada jalan keluar":"No way out","Belum nyapa siapa-siapa":"Nobody has been reached yet",
+"Distribusinya jalan":"Distribution is working","Angka jangkauannya belum ada":"No reach numbers yet",
+"Keterikatan belum keukur":"Engagement not measured yet","Belum ada celah penasaran":"No curiosity gap yet",
+"Belum ada angka suka/komentar.":"No likes/comments numbers yet.",
+"Semua kepenuhan. Yang tersisa cuma volume dan distribusi — lihat tab Rencana.":"Everything is covered. What's left is volume and distribution — see the Plan tab.",
+" berhenti nawarin konten lo ke orang baru — biasanya karena 3 detik pertama gak nahan orang.":" has stopped offering your posts to new people — usually because the first 3 seconds don't hold anyone.",
+" pengikut tapi keterikatan ":" followers but engagement ",
+" konten, patokan sehat ":" posts, healthy benchmark ",
+"×. Belum parah, tapi lo lagi ngasih makan pengikut lama doang.":"×. Not critical yet, but you're only feeding existing followers.",
+"×. Masalah lo bukan jangkauan.":"×. Reach is not your problem.",
+"× dari pengikut, patokan ":"× of followers, benchmark ",
+"× vs patokan ":"× vs benchmark ",
+"× — di atas patokan bagus ":"× — above the good benchmark ",
+". Ini bukan akun gagal, ini akun yang belum dikenalin.":". This isn't a failed account, it's an account nobody's been introduced to yet.",
+"Belum ada penawaran berbayar yang jelas di akun ini.":"There's no clear paid offer on this account yet.",
+"Isi kolom Penawaran di tab Akun. Belum punya produk pun tulis jasanya — 'sesi 45 menit, Rp350rb'. Tab Uang bakal ngitungin tangganya.":"Fill in the Offer field on the Accounts tab. Even with no product, write the service — '45-minute session, $25'. The Money tab will build the ladder from it.",
+"Orang suka konten lo terus... balik ke beranda. Perhatian yang gak dialihin itu hangus.":"People like your post... then go back to the feed. Attention you don't redirect is attention burned.",
+"Pasang 1 tautan (satu, bukan lima) yang isinya nyambung sama konten terakhir. Judulnya kata kerja: 'Ambil skripnya', bukan 'Link'.":"Put up one link (one, not five) that connects to your latest post. Label it with a verb: 'Get the script', not 'Link'.",
+"Ganti 3 detik pertama, bukan seluruh kontennya. Mulai dari kalimat yang ada angkanya atau ada penolakan ('Jangan ...'). Uji di tab Konten.":"Change the first 3 seconds, not the whole post. Start with a line that has a number or a refusal ('Don't ...'). Test it on the Content tab.",
+"Masalah lo distribusi, bukan konten. Titip konten ini ke akun yang jangkauannya udah gede (punya lo sendiri atau kolaborasi).":"Your problem is distribution, not content. Place this post on an account that already has reach (your own or a collab).",
+"Jangan kejar pengikut baru dulu. Bikin 5 konten yang nyebut masalah spesifik — biar yang salah ikut pergi sendiri dan sisanya beneran audiens lo.":"Don't chase new followers yet. Make 5 posts that name a specific problem — the wrong people leave on their own and what's left is actually your audience.",
+"Isi rata-rata suka & komentar dari 12 konten terakhir. Ini yang mbedain 'ditonton' sama 'dipeduliin'.":"Fill in average likes & comments from your last 12 posts. That's what separates 'watched' from 'cared about'.",
+"Buka 12 konten terakhir, catat tayangannya, ambil nilai tengahnya (bukan rata-rata — 1 konten viral bikin rata-rata bohong). Isi ke kolom Tayangan.":"Open your last 12 posts, note the views, take the median (not the average — one viral post makes the average lie). Put it in the Views field.",
+"Tanpa rata-rata tayangan, semua sisanya cuma tebakan.":"Without a view figure, everything else is guesswork.",
+"Tambahin 1 kalimat yang bikin orang harus jawab di akhir konten. Bukan 'komen ya', tapi pilihan: 'Lo tim A apa tim B?'":"Add one line at the end that forces an answer. Not 'comment below', but a choice: 'Are you team A or team B?'",
+"Nyebut penawaran terang-terangan. Minimal 1× seminggu, kalau nggak semua kerja di atas hangus.":"Name the offer out loud. At least once a week, or everything above is wasted.",
+"Berhenti ngoprek jangkauan. Pindah tenaga ke tab Uang: yang bocor sekarang jalur dari tontonan ke duit.":"Stop tuning reach. Move your effort to the Money tab: the leak now is the path from views to money.",
+"Sebulan ini jangan bikin konten baru sama sekali. Ambil 8 konten terbaik, posting ulang di akun lo yang jangkauannya paling gede + 3 kolaborasi. Distribusi, bukan produksi.":"Make no new content for a month. Take your 8 best posts, repost them on your highest-reach account plus 3 collabs. Distribution, not production.",
+"Turunin mutu produksi, naikin jumlah. ":"Lower production quality, raise the count. ",
+"Ambil 1 konten lo yang paling jauh jangkauannya, bikin ulang 3 versi dengan pembuka beda. Format tetap, pembukanya doang yang diuji.":"Take your furthest-reaching post and remake it in 3 versions with different openers. Same format — only the opener is under test.",
+/* checklist */
+"Bio nyebut SIAPA yang dilayani + HASIL apa (bukan cuma 'mom of 2')":"Bio names WHO it serves + WHAT result (not just 'mom of 2')",
+"Cuma 1 tautan, dan tautannya nyambung sama konten terakhir":"Exactly one link, and it connects to the latest post",
+"Nama akun / display name ngandung kata kunci niche":"Handle / display name contains the niche keyword",
+"Punya 1 seri berulang yang ada namanya (orang bisa nunggu)":"One named recurring series (people can wait for it)",
+"3 konten terbaik dipin / masuk highlight":"3 best posts pinned / in highlights",
+"Foto profil masih kebaca di ukuran 40px":"Profile photo still readable at 40px",
+"CTA muncul di 3 detik terakhir, bukan cuma di caption":"CTA appears in the last 3 seconds, not only in the caption",
+"Format visual konsisten (font, warna, posisi teks sama)":"Consistent visual format (same font, colors, text position)",
+"Balas komentar di 60 menit pertama":"Reply to comments in the first 60 minutes",
+"Ada tempat pindah yang gue punya sendiri (email/WA/komunitas)":"There's somewhere I own to move people to (email/WhatsApp/community)",
+"Ada penawaran berbayar yang jelas, harganya kelihatan":"A clear paid offer with a visible price",
+"Analitik dicek tiap minggu di hari yang sama":"Analytics checked weekly on the same day",
+/* konten */
+"Pabrik kalimat":"Copy factory","isi 4 kolom, keluar hook + caption + CTA":"fill 4 fields, get hooks + caption + CTAs",
+"Topik konten":"Content topic","Buat siapa":"Who it's for","Masalah yang lagi dia alami":"The problem they're in",
+"Hasil yang dia mau":"The result they want","Bahasa keluaran":"Output language",
+"Bikin":"Generate","Ganti 5 lagi":"Swap 5 more","Tulis ulang pakai AI":"Rewrite with AI","5 pola lain":"5 other patterns",
+"Tombol putih pakai pola tetap — instan, gratis, keluarannya berulang. Tombol AI nulis dari nol buat topik ini, satu-satu.":"The white button uses fixed patterns — instant, free, and repetitive. The AI button writes from scratch for this exact topic, one at a time.",
+"Uji hook":"Hook test","Tempel hook yang mau diuji":"Paste the hook you want tested","Nilai":"Score",
+"Minta AI benerin":"Ask AI to fix it","skor hook / 100":"hook score / 100",
+"Isi dulu hook-nya":"Type a hook first","Isi dulu hook-nya.":"Type a hook first.",
+"Kenapa ini:":"Why:","Hook pembuka":"Opening hook","Caption":"Caption","3 CTA":"3 CTAs","CTA":"CTA",
+"5 hook — ":"5 hooks — ","Aturan format ":"Format rules — ","Jam ramai: ":"Peak hours: ",
+"Target sehat: ":"Healthy target: "," konten/minggu":" posts/week","Jam ramai":"Peak hours",
+"salin":"copy","Salin":"Copy","salin semua":"copy all","Salin semua":"Copy all",
+"Salin caption":"Copy caption","Salin hook":"Copy hook","Salin semingguan":"Copy the week",
+"Lagi mikir…":"Thinking…","Tulisan AI":"AI copy",
+/* hook scoring */
+"Di bawah 12 kata — kebaca sebelum jempol gerak.":"Under 12 words — read before the thumb moves.",
+"Panjangnya pas (":"Good length (","Agak panjang (":"A bit long (",
+"Potong jadi ≤12 kata. Buang keterangan, sisain klaimnya.":"Cut to 12 words or fewer. Drop the qualifiers, keep the claim.",
+"Ini paragraf, bukan hook. Ambil 8 kata paling tajam.":"This is a paragraph, not a hook. Keep the 8 sharpest words.",
+"Ada angka":"Has a number","Gak ada angka":"No number",
+"Angka bikin otak nyangka kontennya beres dan bisa diukur.":"A number makes the brain assume the post is finite and measurable.",
+"Tambahin jumlah: '5 kalimat', '3 hari', '2 menit'. Naikin klik tanpa ubah isi.":"Add a count: '5 sentences', '3 days', '2 minutes'. Raises clicks without changing the content.",
+"Ngomong ke satu orang":"Speaks to one person",
+"Kata ganti orang kedua bikin yang nonton ngerasa dipanggil.":"Second person makes the viewer feel addressed.",
+"Masukin 'kamu' atau sebutan audiensnya. Hook tanpa alamat = lewat.":"Put in 'you' or name the audience. A hook with no addressee gets scrolled past.",
+"Buka pakai penolakan":"Opens with a refusal",
+"Kalimat larangan bikin orang berhenti buat mastiin dia gak salah.":"A prohibition makes people stop to check they aren't the one doing it.",
+"Sisipin 'tanpa', 'padahal', 'ternyata' — pemicu rasa kurang lengkap.":"Slip in 'without', 'even though', 'turns out' — triggers a sense of something missing.",
+"Diakhiri tanda tanya":"Ends with a question mark",
+"Pertanyaan gampang dijawab dalam hati terus di-scroll. Ganti jadi pernyataan.":"A question gets answered silently and scrolled past. Make it a statement.",
+"Baris pertama berdiri sendiri sebagai kalimat utuh.":"The first line stands on its own as a complete sentence.",
+"Kalimat pertama ≤10 kata.":"First sentence, 10 words or fewer.",
+"Pembuka basa-basi: “":"Filler opener: “",
+"Hapus. 3 detik pertama itu jatah paling mahal, jangan dipake nyapa.":"Delete it. The first 3 seconds are the most expensive real estate you have — don't spend them saying hello.",
+"Ada kata peredam":"Contains hedge words",
+"'kayaknya', 'mungkin', 'menurut aku' — bikin klaimnya lembek. Buang, langsung nyatakan.":"'kind of', 'maybe', 'I think' — they soften the claim. Cut them and state it.",
+"Kata umpan yang udah aus":"Worn-out bait words",
+"'rahasia', 'wajib tau', 'viral' — dipakai semua orang, otak nyaringnya duluan. Ganti pakai hal spesifik.":"'secret', 'you must know', 'viral' — everyone uses them, the brain filters them first. Replace with something specific.",
+"Ada waktu yang konkret":"Has a concrete time",
+"Waktu spesifik ('malam ini', '7 hari') bikin janjinya kebayang, bukan kabur.":"A specific time ('tonight', '7 days') makes the promise picturable instead of vague.",
+"Pembuka 'cara …' tanpa batas":"Unbounded 'how to …' opener",
+"'Cara X' terlalu lebar. Tempel batasnya: 'tanpa teriak', 'dalam 5 menit', 'buat 2 orang'.":"'How to X' is too wide. Bolt on a limit: 'without yelling', 'in 5 minutes', 'for two people'.",
+"Ada penekanan kapital":"Has capitalized emphasis","Boleh, asal cuma 1–2 kata.":"Fine, as long as it's only 1–2 words.",
+"Kapital semua":"ALL CAPS",
+"Kebaca kayak teriak dan susah dipindai. Kapital cuma buat 1–2 kata penekanan.":"Reads like shouting and is hard to scan. Save caps for 1–2 words of emphasis.",
+"Momen spesifik, bukan renungan umum. 1 kejadian, 1 jam, 1 kalimat yang diinget.":"A specific moment, not a general reflection. One event, one hour, one remembered line.",
+/* platform */
+"Reels 7–20 dtk":"Reels 7–20 sec","Video 15–34 dtk":"Video 15–34 sec",
+"Shorts <60 dtk / long 8–12 mnt":"Shorts <60 sec / long 8–12 min","Reels + teks panjang":"Reels + long-form text",
+"Teks 1–2 kalimat":"Text, 1–2 sentences","Utas 5–9 baris":"Thread, 5–9 lines",
+"Post pendek + 1 tautan":"Short post + 1 link","Broadcast 1 pesan":"Broadcast, 1 message",
+"Teks 900–1300 karakter":"Text, 900–1300 characters","Pin vertikal 2:3":"Vertical pin 2:3",
+"bebas, konsisten":"any hour, be consistent","07.00–09.00 Sen–Kam":"07:00–09:00 Mon–Thu",
+"Kata kunci di baris pertama caption + alt text. IG sekarang ngindeks teks caption & teks di layar.":"Keyword in the first line of the caption + alt text. IG now indexes caption text and on-screen text.",
+"Kata kunci di 3 kata pertama caption DAN sebagai teks di layar detik 0–2. TikTok Search baca keduanya.":"Keyword in the first 3 words of the caption AND as on-screen text at 0–2 sec. TikTok Search reads both.",
+"Judul ≤60 karakter, kata kunci di depan. 2 baris pertama deskripsi = yang kebaca. Tag bantu, thumbnail yang nentuin.":"Title 60 characters or fewer, keyword up front. The first 2 lines of the description are what people read. Tags help; the thumbnail decides.",
+"Kalimat pertama = judul. Link taruh di komentar pertama, jangkauan link di body dipotong.":"First sentence = the headline. Put the link in the first comment; links in the body get reach-throttled.",
+"Kata kunci di awal, maksimal 1 topik tag. Balasan lo sendiri = mesin jangkauan utama.":"Keyword up front, one topic tag maximum. Your own replies are the main reach engine.",
+"Kata kunci literal (bukan sinonim). Link di reply, bukan di post induk.":"Literal keywords (not synonyms). Link in a reply, not in the parent post.",
+"Nama channel + deskripsi = satu-satunya yang diindeks pencarian dalam app. Masukin kata kunci ke NAMA.":"Channel name + description are the only things in-app search indexes. Put the keyword in the NAME.",
+"Nama channel = kata kunci. Nggak ada algoritma penemuan — pertumbuhan cuma dari tautan yang lo sebar.":"Channel name = the keyword. There's no discovery algorithm — growth comes only from links you spread.",
+"3 baris pertama sebelum 'lihat selengkapnya' nentuin semuanya. Headline profil = kata kunci.":"The 3 lines before 'see more' decide everything. Your profile headline = the keyword.",
+"Ini mesin pencari, bukan sosmed. Judul pin + deskripsi + nama board semua diindeks. Umur pin berbulan-bulan.":"This is a search engine, not a social network. Pin title + description + board name are all indexed. Pins live for months.",
+/* seo tab */
+"SEO per platform":"SEO by platform","disusun dari akun & platform yang lo isi":"built from the accounts and platforms you entered",
+"Sosmed sekarang mesin pencari. Yang bikin konten lama lo tetap dapet tontonan bukan algoritma beranda — tapi kata yang lo tulis di judul, caption, dan teks di layar.":"Social platforms are search engines now. What keeps your old posts earning views isn't the feed algorithm — it's the words you put in the title, caption, and on-screen text.",
+"Yang diketik orang":"What people actually type","Kata kunci utama:":"Main keyword:",
+"Riset kata kunci pakai AI":"AI keyword research","Bikin paket SEO":"Build the SEO pack",
+"Cara kerja pencarian di ":"How search works on ","Riset kata kunci — ":"Keyword research — ",
+"Judul":"Title","Deskripsi / caption":"Description / caption","Deskripsi":"Description","Tagar":"Hashtags",
+"Teks di layar (detik 0–2)":"On-screen text (0–2 sec)",
+"Tulis bio pakai AI":"Write the bio with AI","Bio ditulis AI":"AI-written bio","Bio":"Bio",
+"3 baris: siapa yang dilayani · apa yang didapat · ke mana perginya":"3 lines: who it serves · what they get · where they go next",
+"Isi Alt Text manual di Pengaturan Lanjutan — ini yang dibaca mesin cari IG.":"Fill Alt Text manually under Advanced Settings — that's what IG search reads.",
+"Teks di cover Reels juga keindeks. Tulis kata kuncinya di sampul.":"Text on the Reels cover is indexed too. Put the keyword on the cover.",
+"Baris pertama caption = judul SEO lo. Kata kunci di situ, bukan di tagar.":"The first line of the caption is your SEO title. Keyword goes there, not in the hashtags.",
+"Teks di layar detik 0–2 HARUS ngandung kata kunci — TikTok Search baca teks di layar, bukan cuma caption.":"On-screen text at 0–2 sec MUST contain the keyword — TikTok Search reads on-screen text, not just captions.",
+"Pakai kata kunci literal yang diketik orang, bukan sinonim keren.":"Use the literal words people type, not clever synonyms.",
+"Judul ≤60 karakter, kata kunci di 3 kata pertama.":"Title 60 characters or fewer, keyword in the first 3 words.",
+"Thumbnail cuma boleh 3 kata. Kalau butuh 4, kepanjangan.":"A thumbnail gets 3 words. If you need 4, it's too long.",
+"Kalimat pertama = judul. Facebook motong di ~80 karakter.":"First sentence = the headline. Facebook cuts at about 80 characters.",
+"Tautan taruh di komentar pertama, bukan di badan post.":"Put the link in the first comment, not in the post body.",
+"Post yang gak ada tautannya dikasih jangkauan 2–3× lebih banyak.":"Posts with no link get 2–3× more reach.",
+"Balas thread lo sendiri 2–3 kali dalam 1 jam pertama — itu mesin jangkauannya.":"Reply to your own thread 2–3 times in the first hour — that's the reach engine.",
+"Tautan di balasan, jangan di post induk.":"Link in a reply, never in the parent post.",
+"Tautan di komentar pertama.":"Link in the first comment.",
+"Nama channel harus ngandung kata kunci — cuma nama & deskripsi yang diindeks pencarian Telegram.":"The channel name must contain the keyword — only name and description are indexed by Telegram search.",
+"Post jam yang sama tiap hari; Telegram gak punya algoritma, cuma kebiasaan.":"Post at the same hour every day; Telegram has no algorithm, only habit.",
+"Maksimal 1 pesan/hari. Lebih dari itu orang keluar.":"One message a day, maximum. More than that and people leave.",
+"Nama channel = kata kunci + siapa yang dilayani.":"Channel name = keyword + who it serves.",
+"Headline profil lo juga mesin cari — masukin kata kunci ke situ.":"Your profile headline is a search field too — put the keyword in it.",
+"Ini mesin pencari. Judul pin, deskripsi, DAN nama board semuanya diindeks.":"This is a search engine. Pin title, description, AND board name are all indexed.",
+"Pin vertikal 2:3 (1000×1500).":"Vertical pin, 2:3 (1000×1500).",
+"Umur pin berbulan-bulan — ini satu-satunya platform yang kontennya nambah nilai tiap bulan.":"Pins live for months — the only platform where your content gains value every month.",
+/* celah */
+"Barang jadi buat nutup celah":"Ready-made assets that close the gaps",
+"Bikinin kalimat buat nutup celahnya":"Write the copy that closes the gap",
+"Corong":"Funnel","Tontonan → mampir profil":"Views → profile visits","Mampir → klik tautan":"Visits → link clicks",
+"Mampir profil":"Profile visits","Selesai nonton kamu punya ":"When the video ends you have ",
+"Nilai":"Score",
+/* uang */
+"Tangga uang":"Money ladder",
+"anak tangga kebuka sendiri kalau angkanya udah cukup":"each rung unlocks itself once the numbers are there",
+"Kebuka sekarang":"Unlocked now","Perkiraan bulanan":"Monthly estimate",
+"Kalkulator corong":"Funnel calculator","Harga produk (USD)":"Product price (USD)","Kurs USD→IDR":"USD→IDR rate",
+"Rupiah":"Rupiah","dari jangkauan ke duit, per bulan":"from reach to money, per month",
+"Jangkauan / bln":"Reach / mo","Jangkauan / bulan (dari tab Akun)":"Reach / month (from the Accounts tab)",
+"Rancangan penawaran":"Offer design","Rancangin penawarannya":"Design the offer",
+"Catat, gue jual ini":"Log it — I'm selling this","Kalimat jualnya":"The sales line",
+"Tanda kalau salah:":"Sign it's wrong:","Buat:":"For:","Isinya":"What's in it",
+"Produk digital kecil":"Small digital product","Langganan bulanan / komunitas":"Monthly membership / community",
+"Retainer / kelas kohort":"Retainer / cohort class","Titipan merek / UGC":"Brand deals / UGC",
+"Dihitung dari yang lebih besar antara 1% jumlah pengikut atau $15 per 1000 tayangan.":"Calculated as the greater of 1% of your follower count or $15 per 1,000 views.",
+"Duit yang bisa diramal. 100 orang × $12 = $1.200/bulan, gak peduli algoritma lagi ngambek apa nggak.":"Predictable money. 100 people × $12 = $1,200/month, whether or not the algorithm is sulking.",
+"Dibuat sekali, dijual terus. Ambil konten lo yang paling banyak disimpan orang, jadiin lembar kerja.":"Built once, sold forever. Take your most-saved post and turn it into a worksheet.",
+"Paling cepat cair, paling gak butuh audiens. Ini yang dikerjain sambil nunggu angka naik.":"Fastest to cash, least dependent on audience size. This is what you do while the numbers climb.",
+"Ini titik di mana lo berhenti jualan konten dan mulai jualan hasil.":"This is where you stop selling content and start selling outcomes.",
+"Sebelum–sesudah, tangkapan layar, kata orang lain. Tanpa ini, penawaran lo cuma klaim.":"Before–after, screenshots, someone else's words. Without these your offer is just a claim.",
+"Butuh: 1 penawaran tertulis + 30 orang yang tau lo ngerjain apa":"Needs: 1 written offer + 30 people who know what you do",
+"Butuh: 1000 pengikut + 3 konten di atas ":"Needs: 1,000 followers + 3 posts above ",
+"Butuh: 2000 pengikut + tempat pindah yang lo punya sendiri":"Needs: 2,000 followers + a destination you own",
+"Butuh: 5000 pengikut + 1 hasil klien yang bisa ditunjukin":"Needs: 5,000 followers + one client result you can show",
+"Yang masih kurang:":"Still missing:",
+/* rencana */
+"Rencana 7 hari":"7-day plan",
+"Bukan 7 ide acak. Urutannya sengaja: tiga hari pertama narik orang baru, tengah minggu bikin dipercaya, akhir minggu baru minta sesuatu. Kalau minta di hari Senin, gak ada yang dengar.":"Not 7 random ideas. The order is deliberate: the first three days pull in new people, midweek builds trust, and only at the end of the week do you ask for something. Ask on Monday and nobody hears you.",
+"Hari":"Day","Pilar":"Pillar","Yang dikerjain":"What to make","Format":"Format",
+"Isiin 7 hari ini beneran":"Fill these 7 days for real",
+"Rangka di atas dari pola tetap. AI ngisi tiap hari jadi brief lengkap.":"The frame above comes from fixed patterns. AI turns each day into a full brief.",
+"Catat, gue jalanin minggu ini":"Log it — I'm running this week",
+"7 hari, versi lengkap":"7 days, full version",
+"3 angka yang dicek tiap Senin":"3 numbers to check every Monday","Target minggu ini":"This week's target",
+"naik 0,1× dari minggu lalu":"up 0.1× from last week","nilai tengah tayangan":"median views",
+"Catat di hari yang sama tiap minggu. Angka yang dicek tiap hari cuma bikin panik dan gak ngasih pola.":"Record it on the same day every week. Numbers checked daily only cause panic and show no pattern.",
+"Kenapa pilarnya cuma 5":"Why only 5 pillars","Urutan yang bener":"The right order",
+"1 ide → semua platform yang lo punya":"1 idea → every platform you have",
+"Aturannya: bikin sekali di platform paling susah (video), turunin ke yang paling gampang (teks). Jangan kebalik.":"The rule: make it once on the hardest platform (video), then step it down to the easiest (text). Never the other way round.",
+"kesalahan paling mahal: kebalik":"the most expensive mistake: doing it backwards",
+"tarik orang baru":"pull in new people","bikin dipercaya":"build trust","bikin nempel":"make it stick",
+"bikin percaya beli":"earn the purchase","bikin pindah":"move them somewhere",
+"Bongkar salah kaprah":"Debunk a myth","Kenapa saran biasa gagal":"Why the usual advice fails",
+"Yang dilakuin malam ini":"What to do tonight","Kamu mau mulai yang mana malam ini?":"Which one are you starting tonight?",
+"Ambil saran umum yang salah, tunjukin kenapa. Ini yang bikin orang follow, bukan cuma nonton.":"Take a common piece of bad advice and show why it's wrong. This is what makes people follow, not just watch.",
+"Ambil 1 kalimat paling tajam dari skrip, jadiin post teks. Balas sendiri buat rinciannya.":"Take the sharpest line from the script and make it a text post. Reply to yourself with the detail.",
+"Pecah skripnya jadi utas 6 baris. 1 ide 1 baris.":"Split the script into a 6-line thread. One idea per line.",
+"Bikin 3 pin dari 3 kalimat berbeda di skrip yang sama. Judul pin = kata kunci.":"Make 3 pins from 3 different lines of the same script. Pin title = the keyword.",
+"Sama videonya, tapi buang logo IG. Rekam ulang teks pembuka di dalam TikTok biar gak dianggap repost.":"Same video, minus the IG watermark. Re-record the opening text inside TikTok so it isn't read as a repost.",
+"Upload ulang sebagai Reels, plus versi tulisan 4 paragraf. Tautan di komentar.":"Re-upload as a Reel, plus a 4-paragraph written version. Link in the comments.",
+"Ubah sudutnya jadi pelajaran kerja/sistem. 1000 karakter.":"Reframe it as a work/systems lesson. 1,000 characters.",
+"Post ringkasan 5 baris + tautan ke video. Ini arsipnya.":"Post a 5-line summary + link to the video. This is the archive.",
+"Yang paling jauh nyebar. Bentuknya daftar bernomor yang bisa langsung dipakai malam ini.":"The one that travels furthest. Shape it as a numbered list someone can use tonight.",
+"Jalanin rencana 7 hari: ":"Run the 7-day plan: ",
+/* hasil */
+"apa yang dikerjain, dan apa yang beneran kejadian":"what you did, and what actually happened",
+"Belum ada catatan. Buka tab Audit, tekan":"No entries yet. Open the Audit tab and press",
+"di temuan yang mau kamu kerjain.":"on the finding you want to work on.",
+"Saran tanpa catatan hasil itu cuma pendapat. Tiap kali kamu ngerjain sesuatu dari tab lain, tekan":"Advice with no recorded outcome is just opinion. Every time you act on something from another tab, press",
+"di tab Hasil.":"in the Results tab.",
+"Tambah catatan sendiri":"Add your own entry","Angka sebelum":"Number before","Angka sesudah":"Number after",
+"Catatan — kalau gak jalan, tulis kenapa":"Note — if it didn't work, say why",
+"Status":"Status","Tanggal":"Date","Dicatat":"Logged","Kosongin semua":"Clear all",
+"Masuk ke tab Hasil ✓":"Added to the Results tab ✓",
+"belum dikerjain":"not started yet","lagi jalan":"in progress","jalan, hasilnya naik":"worked, numbers went up",
+"Berhasil":"Worked","Gak jalan":"Didn't work","Lagi jalan":"In progress","Catat":"Log it",
+"Belum ada catatan buat dibaca. Catat dulu minimal satu hal yang udah kamu kerjain.":"Nothing to read yet. Log at least one thing you've already done.",
+"Minta pendapat kedua":"Ask for a second opinion","Pendapat kedua":"Second opinion","pendapat kedua":"second opinion",
+"Yang udah kebukti gak jalan":"Proven not to work",
+"sengaja disimpan: dia yang bikin saran berikutnya beda, bukan ngulang.":"kept on purpose: this is what makes the next suggestion different instead of a repeat.",
+"(belum ada yang tercatat gagal)":"(nothing recorded as failed yet)",
+"Kesimpan di browser ini aja.":"Stored in this browser only.",
+"Kesimpan di luar halaman — bisa dibaca dari sesi Claude.":"Stored outside the page — readable from a Claude session.",
+"Dari pola tetap":"From fixed patterns","Hasil bacaan":"Read-out",
+"gak jalan, tanpa keterangan":"didn't work, no reason given","tanpa catatan":"no note",
+/* umum */
+"Tambah akun dulu di tab Akun.":"Add an account on the Accounts tab first.","Tambah akun dulu.":"Add an account first.",
+"Bikin buat semua akun gue":"Do this for all my accounts","semua akun":"all accounts",
+"semua udah":"all done","belum ada":"none yet","belum diisi":"not filled in","belum keukur":"not measured",
+"gak ada":"none","dan masih ":"and still ",
+"dihitung dari angka yang lo isi di tab Akun":"computed from the numbers you entered on the Accounts tab",
+"pakai isian dari tab Konten":"uses the fields from the Content tab",
+"Kamu belum ngizinin halaman ini nanya ke Claude. Mesin aturan tetap jalan.":"You haven't allowed this page to ask Claude. The rules engine still works.",
+"Fitur nanya-ke-Claude lagi dimatiin. Pakai hasil aturan di atas.":"The ask-Claude feature is switched off. Use the rules output above.",
+"Halaman ini gak punya izin nanya. Pakai hasil aturan di atas.":"This page has no permission to ask. Use the rules output above.",
+"Aksesnya dicabut. Mesin aturan tetap jalan.":"Access was revoked. The rules engine still works.",
+"Kebanyakan permintaan barusan. Tunggu sebentar, terus coba lagi.":"Too many requests just now. Wait a moment and try again.",
+"Datanya kepanjangan. Kurangin isian, terus coba lagi.":"That's too much data. Trim the inputs and try again.",
+"Jawabannya gak kebaca sebagai data. Tekan sekali lagi.":"The answer didn't parse as data. Press it once more.",
+"Permintaannya ditolak. Ganti kata-kata topiknya.":"The request was declined. Reword the topic.",
+"Jawabannya kosong. Tekan lagi.":"The answer came back empty. Press again.",
+"Sambungannya putus di tengah jalan. Coba lagi.":"The connection dropped midway. Try again.",
+"Sesinya kedaluwarsa. Muat ulang halamannya.":"The session expired. Reload the page."
+};
+var TRX=null,TRF=null;
+function trPrep(){
+  if(TRX)return;
+  TRX={};TRF=[];
+  for(var k in TR){TRX[k]=TR[k];if(k.length>=14||/^\s|\s$|^\//.test(k))TRF.push(k)}
+  TRF.sort(function(a,b){return b.length-a.length});
+}
+function tr(root){
+  if(S.lang!=="en")return;
+  root=root||document.body;if(!root)return;
+  trPrep();
+  var w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,null,false),n,L=[];
+  while((n=w.nextNode()))L.push(n);
+  L.forEach(function(t){
+    var p=t.parentNode;if(!p||p.nodeType!==1)return;
+    var tag=p.nodeName;
+    if(tag==="SCRIPT"||tag==="STYLE"||tag==="TEXTAREA")return;
+    if(p.closest&&p.closest(".mono,[data-raw]"))return;
+    var v=t.nodeValue,k=v.trim();
+    if(!k)return;
+    if(TRX[k]!==undefined){t.nodeValue=v.replace(k,TRX[k]);return}
+    var out=v,hit=false;
+    for(var i=0;i<TRF.length;i++){
+      var f=TRF[i];
+      if(out.indexOf(f)>=0){out=out.split(f).join(TR[f]);hit=true}
+    }
+    if(hit)t.nodeValue=out;
+  });
+  ["placeholder","title"].forEach(function(a){
+    Array.prototype.forEach.call(root.querySelectorAll("["+a+"]"),function(el){
+      var v=el.getAttribute(a),k=v&&v.trim();
+      if(k&&TRX[k]!==undefined)el.setAttribute(a,TRX[k]);
+    });
+  });
+}
+var trBusy=false;
+function trWatch(){
+  if(!window.MutationObserver||!document.body)return;
+  new MutationObserver(function(){
+    if(trBusy||S.lang!=="en")return;
+    trBusy=true;
+    setTimeout(function(){try{tr(document.body)}catch(e){}trBusy=false},0);
+  }).observe(document.body,{childList:true,subtree:true});
+}
+function setLang(v){
+  if(v===S.lang)return;
+  S.lang=v;save();
+  location.reload();
+}
+
 /* ================= BOOT ================= */
-function draw(t){({akun:drawAkun,audit:drawAudit,konten:drawKonten,seo:drawSeo,celah:drawCelah,uang:drawUang,rencana:drawRencana,hasil:drawHasil})[t]()}
-function refresh(){renderGauge();renderRail();draw(S.tab)}
+function draw(t){({akun:drawAkun,audit:drawAudit,konten:drawKonten,seo:drawSeo,celah:drawCelah,uang:drawUang,rencana:drawRencana,hasil:drawHasil})[t]();tr(document.getElementById("p-"+t))}
+function refresh(){renderGauge();renderRail();draw(S.tab);tr(document.body)}
 $("#theme").onclick=function(){
   var cur=document.documentElement.getAttribute("data-theme");
   var dark=cur?cur==="dark":matchMedia("(prefers-color-scheme:dark)").matches;
   document.documentElement.setAttribute("data-theme",dark?"light":"dark");
 };
+document.documentElement.lang=S.lang;
+$("#lang").textContent=(S.lang==="en"?"ID":"EN");
+$("#lang").title=(S.lang==="en"?"Ganti ke Bahasa Indonesia":"Switch to English");
+$("#lang").onclick=function(){setLang(S.lang==="en"?"id":"en")};
 TABS.forEach(function(x){$("#p-"+x[0]).hidden=(x[0]!==S.tab)});
 refresh();
+trWatch();
 setAI();
 try{
   if(window.claude&&typeof claude.use==="function"){
