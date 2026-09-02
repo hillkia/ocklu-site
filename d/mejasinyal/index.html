@@ -1,0 +1,816 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="author" content="Ocklu">
+<style>html{color-scheme:light dark}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Meja Sinyal Sosmed</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+:root{
+  --ground:#EDF0F0; --panel:#FFFFFF; --panel2:#F6F8F8;
+  --ink:#141A1C; --ink2:#3D4A4D; --muted:#697679; --line:#D5DDDD; --line2:#E7EDED;
+  --accent:#125B6B; --accent-soft:#DCEAEC; --accent-ink:#0B4451;
+  --ok:#2A7A52; --ok-soft:#DDEEE5;
+  --warn:#9C6B0E; --warn-soft:#F5E9CE;
+  --crit:#B23B2E; --crit-soft:#F7E0DC;
+  --shadow:0 1px 2px rgba(20,26,28,.06),0 8px 24px -16px rgba(20,26,28,.35);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#0F1416; --panel:#161D1F; --panel2:#1B2426;
+    --ink:#E4EBEB; --ink2:#B6C3C4; --muted:#8A9899; --line:#243033; --line2:#1E282A;
+    --accent:#57B6C7; --accent-soft:#173238; --accent-ink:#8FD3DF;
+    --ok:#5CB98A; --ok-soft:#162C22;
+    --warn:#D6A44A; --warn-soft:#2E2513;
+    --crit:#E4796A; --crit-soft:#331A16;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 28px -18px rgba(0,0,0,.8);
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0F1416; --panel:#161D1F; --panel2:#1B2426;
+  --ink:#E4EBEB; --ink2:#B6C3C4; --muted:#8A9899; --line:#243033; --line2:#1E282A;
+  --accent:#57B6C7; --accent-soft:#173238; --accent-ink:#8FD3DF;
+  --ok:#5CB98A; --ok-soft:#162C22;
+  --warn:#D6A44A; --warn-soft:#2E2513;
+  --crit:#E4796A; --crit-soft:#331A16;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 28px -18px rgba(0,0,0,.8);
+}
+*{box-sizing:border-box}
+body{background:var(--ground);color:var(--ink);font-family:"IBM Plex Sans",system-ui,-apple-system,sans-serif;font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:Archivo,system-ui,sans-serif;margin:0;text-wrap:balance;letter-spacing:-.015em}
+p{margin:0}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:3px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+.shell{max-width:1160px;margin:0 auto;padding:0 20px 90px}
+.num{font-family:"IBM Plex Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums}
+
+/* ---- console bar ---- */
+.console{position:sticky;top:0;z-index:40;background:var(--ground);border-bottom:1px solid var(--line);margin:0 -20px;padding:14px 20px 0}
+.crow{display:flex;align-items:flex-end;gap:18px;flex-wrap:wrap}
+.brand{display:flex;flex-direction:column;gap:1px;margin-right:auto}
+.brand b{font-family:Archivo;font-weight:800;font-size:19px;letter-spacing:-.03em}
+.brand span{font-size:11px;color:var(--muted);letter-spacing:.09em;text-transform:uppercase}
+.gauge{display:flex;gap:16px;flex-wrap:wrap}
+.g{display:flex;flex-direction:column;gap:0}
+.g em{font-style:normal;font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.g b{font-family:"IBM Plex Mono";font-weight:600;font-size:17px;font-variant-numeric:tabular-nums;line-height:1.25}
+.tt{background:none;border:1px solid var(--line);color:var(--muted);border-radius:20px;padding:4px 11px;font-size:12px;cursor:pointer;align-self:center}
+.tt:hover{border-color:var(--accent);color:var(--accent)}
+
+.rail{display:flex;gap:2px;overflow-x:auto;margin-top:12px;scrollbar-width:none}
+.rail::-webkit-scrollbar{display:none}
+.rail button{background:none;border:0;border-bottom:2px solid transparent;padding:9px 13px 10px;color:var(--muted);cursor:pointer;white-space:nowrap;font-weight:500;font-size:14px}
+.rail button:hover{color:var(--ink)}
+.rail button[aria-selected="true"]{color:var(--accent);border-bottom-color:var(--accent);font-weight:600}
+.rail .dot{display:inline-block;width:6px;height:6px;border-radius:50%;margin-left:6px;vertical-align:1px}
+
+/* ---- generic ---- */
+.pane{padding-top:26px}
+.pane[hidden]{display:none!important}
+.lede{color:var(--ink2);max-width:64ch;margin-bottom:20px}
+.sec{margin-top:30px}
+.sech{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.sech h2{font-size:19px;font-weight:700}
+.sech span{font-size:12.5px;color:var(--muted)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px;box-shadow:var(--shadow)}
+.grid{display:grid;gap:12px}
+@media(min-width:720px){.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}}
+label.f{display:flex;flex-direction:column;gap:5px;font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);font-weight:600}
+input,select,textarea{background:var(--panel2);border:1px solid var(--line);border-radius:7px;padding:9px 11px;font-size:14.5px;width:100%;font-weight:500}
+textarea{font-family:inherit;line-height:1.5;resize:vertical}
+input:focus,select,textarea:focus{outline-offset:0}
+.btn{background:var(--accent);color:#fff;border:0;border-radius:7px;padding:10px 16px;font-weight:600;cursor:pointer;font-size:14px}
+:root[data-theme="dark"] .btn,:root:not([data-theme="light"]) .btn{color:#08171B}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]) .btn{color:#fff}}
+.btn:hover{filter:brightness(1.08)}
+.btn.ghost{background:none;border:1px solid var(--line);color:var(--ink)}
+.btn.ghost:hover{border-color:var(--accent);color:var(--accent);filter:none}
+.btn.sm{padding:6px 12px;font-size:13px}
+.btn.danger{background:none;border:1px solid var(--line);color:var(--crit)}
+.row{display:flex;gap:9px;flex-wrap:wrap;align-items:center}
+.chip{display:inline-flex;align-items:center;gap:5px;border-radius:20px;padding:3px 10px;font-size:11.5px;font-weight:600;letter-spacing:.02em;border:1px solid var(--line);color:var(--ink2)}
+.chip.ok{background:var(--ok-soft);color:var(--ok);border-color:transparent}
+.chip.warn{background:var(--warn-soft);color:var(--warn);border-color:transparent}
+.chip.crit{background:var(--crit-soft);color:var(--crit);border-color:transparent}
+.chip.acc{background:var(--accent-soft);color:var(--accent-ink);border-color:transparent}
+.empty{border:1px dashed var(--line);border-radius:10px;padding:26px;text-align:center;color:var(--muted)}
+
+/* ---- channel strips ---- */
+.strip{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--tone,var(--line));border-radius:9px;padding:13px 15px;display:grid;gap:11px;grid-template-columns:1fr;box-shadow:var(--shadow)}
+@media(min-width:800px){.strip{grid-template-columns:minmax(190px,1.1fr) 2fr auto;align-items:center;gap:18px}}
+.sid{display:flex;flex-direction:column;gap:3px;min-width:0}
+.sid b{font-family:Archivo;font-weight:700;font-size:15.5px;overflow-wrap:anywhere}
+.sid .meta{font-size:12px;color:var(--muted)}
+.meters{display:flex;flex-direction:column;gap:7px}
+.m{display:grid;grid-template-columns:74px 1fr 64px;gap:9px;align-items:center;font-size:11px}
+.m i{font-style:normal;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;font-weight:600}
+.bar{position:relative;height:8px;background:var(--line2);border-radius:5px;overflow:visible}
+.bar>span{position:absolute;left:0;top:0;bottom:0;border-radius:5px;background:var(--tone,var(--accent))}
+.bar>u{position:absolute;top:-3px;bottom:-3px;width:2px;background:var(--muted);opacity:.65;text-decoration:none}
+.m b{font-family:"IBM Plex Mono";font-variant-numeric:tabular-nums;font-size:12.5px;text-align:right;font-weight:600}
+.score{display:flex;flex-direction:column;align-items:flex-start;gap:2px}
+@media(min-width:800px){.score{align-items:flex-end}}
+.score b{font-family:"IBM Plex Mono";font-size:27px;font-weight:600;line-height:1;color:var(--tone)}
+.score em{font-style:normal;font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+
+/* ---- findings ---- */
+.find{display:grid;gap:9px;grid-template-columns:auto 1fr;padding:13px 0;border-top:1px solid var(--line2)}
+.find:first-child{border-top:0}
+.find .sev{width:9px;height:9px;border-radius:50%;margin-top:7px;background:var(--tone)}
+.find h4{font-size:14.5px;font-weight:700;margin-bottom:3px}
+.find p{font-size:13.5px;color:var(--ink2)}
+.find .do{margin-top:6px;font-size:13.5px;background:var(--panel2);border-left:2px solid var(--accent);padding:7px 11px;border-radius:0 6px 6px 0}
+
+/* ---- output blocks ---- */
+.out{background:var(--panel2);border:1px solid var(--line);border-radius:9px;padding:13px 15px;position:relative}
+.out h5{font-family:Archivo;font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+.out ol,.out ul{margin:0;padding-left:19px;display:flex;flex-direction:column;gap:7px}
+.out li{font-size:14px}
+.copy{position:absolute;top:10px;right:10px;background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:3px 9px;font-size:11.5px;cursor:pointer;color:var(--muted);font-weight:600}
+.copy:hover{color:var(--accent);border-color:var(--accent)}
+.mono{font-family:"IBM Plex Mono";font-size:13px;white-space:pre-wrap;overflow-wrap:anywhere}
+
+/* ---- checklist ---- */
+.ck{display:flex;gap:10px;align-items:flex-start;padding:9px 0;border-top:1px solid var(--line2);cursor:pointer}
+.ck:first-of-type{border-top:0}
+.ck input{width:17px;height:17px;flex:0 0 auto;margin-top:2px;accent-color:var(--accent)}
+.ck span{font-size:14px}
+.ck .w{margin-left:auto;font-size:11px;color:var(--muted);font-family:"IBM Plex Mono";flex:0 0 auto}
+.ck.done span{color:var(--muted);text-decoration:line-through;text-decoration-color:var(--line)}
+
+table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:520px}
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+th{text-align:left;font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);font-weight:700;padding:0 10px 7px;border-bottom:1px solid var(--line)}
+td{padding:9px 10px;border-bottom:1px solid var(--line2);vertical-align:top}
+tr:last-child td{border-bottom:0}
+
+.ladder{display:flex;flex-direction:column;gap:0}
+.rung{display:grid;grid-template-columns:auto 1fr;gap:14px;padding:15px 0;border-top:1px solid var(--line2)}
+.rung:first-child{border-top:0}
+.rung .k{width:34px;height:34px;border-radius:9px;display:grid;place-items:center;font-family:"IBM Plex Mono";font-weight:600;font-size:14px;background:var(--panel2);color:var(--muted);border:1px solid var(--line)}
+.rung.on .k{background:var(--ok-soft);color:var(--ok);border-color:transparent}
+.rung h4{font-size:15px;font-weight:700}
+.rung .price{font-family:"IBM Plex Mono";font-size:13.5px;color:var(--accent-ink);font-weight:600;margin-top:2px}
+
+.sld{display:grid;grid-template-columns:1fr 62px;gap:11px;align-items:center}
+input[type=range]{padding:0;background:none;border:0;accent-color:var(--accent)}
+.funnel{display:flex;flex-direction:column;gap:5px;margin-top:12px}
+.fs{display:grid;grid-template-columns:120px 1fr auto;gap:10px;align-items:center;font-size:13px}
+.fs .fb{height:22px;border-radius:5px;background:var(--accent);opacity:.9;min-width:2px}
+.fs b{font-family:"IBM Plex Mono";font-variant-numeric:tabular-nums;font-weight:600}
+
+.toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%) translateY(80px);background:var(--ink);color:var(--ground);padding:9px 18px;border-radius:22px;font-size:13.5px;font-weight:600;opacity:0;transition:.22s;z-index:99;pointer-events:none}
+.toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+.note{font-size:12.5px;color:var(--muted);margin-top:9px}
+.hr{height:1px;background:var(--line);margin:26px 0}
+footer{margin-top:44px;padding-top:16px;border-top:1px solid var(--line);font-size:12px;color:var(--muted);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media(max-width:560px){.shell{padding:0 15px 80px}.console{margin:0 -15px;padding:12px 15px 0}.g b{font-size:15px}.gauge{gap:13px}}
+</style>
+
+<div class="console">
+  <div class="shell" style="padding-bottom:0">
+    <div class="crow">
+      <div class="brand"><b>Meja Sinyal</b><span>konsol optimasi akun sosmed</span></div>
+      <div class="gauge" id="gauge"></div>
+      <button class="tt" id="theme">tema</button>
+    </div>
+    <div class="rail" role="tablist" id="rail"></div>
+  </div>
+</div>
+
+<div class="shell">
+  <div class="pane" id="p-akun"></div>
+  <div class="pane" id="p-audit" hidden></div>
+  <div class="pane" id="p-konten" hidden></div>
+  <div class="pane" id="p-seo" hidden></div>
+  <div class="pane" id="p-celah" hidden></div>
+  <div class="pane" id="p-uang" hidden></div>
+  <div class="pane" id="p-rencana" hidden></div>
+  <footer><span>Meja Sinyal — semua angka dihitung dari data yang lo isi sendiri.</span><span>Disiapkan oleh Ocklu</span></footer>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+(function(){
+"use strict";
+var $=function(s,r){return (r||document).querySelector(s)},
+    $$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+
+/* ================= PLATFORM BENCHMARKS =================
+   Patokan kasar dari pola akun kecil–menengah. Bukan angka resmi platform —
+   dipakai cuma sebagai garis pembanding, bukan vonis. */
+var PLAT={
+ instagram:{n:"Instagram",mid:0.65,good:1.5,er:3.5,cad:5,jam:"19.00–21.00",fmt:"Reels 7–20 dtk",
+   seo:"Kata kunci di baris pertama caption + alt text. IG sekarang ngindeks teks caption & teks di layar."},
+ tiktok:{n:"TikTok",mid:2.0,good:8,er:5,cad:7,jam:"11.00–13.00 & 19.00–22.00",fmt:"Video 15–34 dtk",
+   seo:"Kata kunci di 3 kata pertama caption DAN sebagai teks di layar detik 0–2. TikTok Search baca keduanya."},
+ youtube:{n:"YouTube",mid:0.35,good:1.2,er:4,cad:3,jam:"16.00–19.00",fmt:"Shorts <60 dtk / long 8–12 mnt",
+   seo:"Judul ≤60 karakter, kata kunci di depan. 2 baris pertama deskripsi = yang kebaca. Tag bantu, thumbnail yang nentuin."},
+ facebook:{n:"Facebook",mid:0.12,good:0.4,er:2,cad:5,jam:"06.00–08.00 & 20.00–22.00",fmt:"Reels + teks panjang",
+   seo:"Kalimat pertama = judul. Link taruh di komentar pertama, jangkauan link di body dipotong."},
+ threads:{n:"Threads",mid:0.8,good:3,er:4,cad:7,jam:"07.00–09.00",fmt:"Teks 1–2 kalimat",
+   seo:"Kata kunci di awal, maksimal 1 topik tag. Balasan lo sendiri = mesin jangkauan utama."},
+ x:{n:"X / Twitter",mid:0.25,good:1.0,er:1.5,cad:10,jam:"08.00–10.00",fmt:"Utas 5–9 baris",
+   seo:"Kata kunci literal (bukan sinonim). Link di reply, bukan di post induk."},
+ telegram:{n:"Telegram",mid:0.6,good:0.9,er:2,cad:5,jam:"bebas, konsisten",fmt:"Post pendek + 1 tautan",
+   seo:"Nama channel + deskripsi = satu-satunya yang diindeks pencarian dalam app. Masukin kata kunci ke NAMA."},
+ whatsapp:{n:"WhatsApp Channel",mid:0.55,good:0.85,er:2,cad:3,jam:"08.00 & 19.00",fmt:"Broadcast 1 pesan",
+   seo:"Nama channel = kata kunci. Nggak ada algoritma penemuan — pertumbuhan cuma dari tautan yang lo sebar."},
+ linkedin:{n:"LinkedIn",mid:0.5,good:2,er:3,cad:3,jam:"07.00–09.00 Sen–Kam",fmt:"Teks 900–1300 karakter",
+   seo:"3 baris pertama sebelum 'lihat selengkapnya' nentuin semuanya. Headline profil = kata kunci."},
+ pinterest:{n:"Pinterest",mid:1.5,good:6,er:1,cad:5,jam:"20.00–23.00",fmt:"Pin vertikal 2:3",
+   seo:"Ini mesin pencari, bukan sosmed. Judul pin + deskripsi + nama board semua diindeks. Umur pin berbulan-bulan."}
+};
+var PKEYS=Object.keys(PLAT);
+
+/* ================= STATE ================= */
+var KEY="ocklu-meja-sinyal-v1";
+var CK=[
+ [9,"Bio nyebut SIAPA yang dilayani + HASIL apa (bukan cuma 'mom of 2')"],
+ [8,"Cuma 1 tautan, dan tautannya nyambung sama konten terakhir"],
+ [7,"Nama akun / display name ngandung kata kunci niche"],
+ [8,"Punya 1 seri berulang yang ada namanya (orang bisa nunggu)"],
+ [7,"3 konten terbaik dipin / masuk highlight"],
+ [6,"Foto profil masih kebaca di ukuran 40px"],
+ [7,"CTA muncul di 3 detik terakhir, bukan cuma di caption"],
+ [6,"Format visual konsisten (font, warna, posisi teks sama)"],
+ [6,"Balas komentar di 60 menit pertama"],
+ [9,"Ada tempat pindah yang gue punya sendiri (email/WA/komunitas)"],
+ [9,"Ada penawaran berbayar yang jelas, harganya kelihatan"],
+ [5,"Analitik dicek tiap minggu di hari yang sama"]
+];
+var SEED=[
+ {id:"a1",plat:"instagram",h:"kiamomjourney",f:4634,v:2989,l:0,c:0,p30:12,niche:"parenting",offer:"",link:false,note:"panggung — jangkauan udah terbukti 30K"},
+ {id:"a2",plat:"instagram",h:"regulatewithkia",f:74,v:0,l:13,c:0,p30:6,niche:"regulasi emosi & keuangan keluarga",offer:"",link:false,note:"ruang — konten nempel, distribusinya nol"}
+];
+var S={acc:[],ck:{},kurs:16300,lang:"id",tab:"akun",
+  gen:{topik:"cara ngomong ke anak biar didengar tanpa teriak",aud:"ibu anak balita",pain:"ngulang 5 kali baru didenger",hasil:"anak nurut sekali minta",plat:"instagram"},
+  hook:"5 kalimat ajaib yang bikin anak nurut tanpa teriak",
+  proj:{model:"produk",harga:29,visit:1.5,klik:8,beli:2.5}};
+
+try{var raw=localStorage.getItem(KEY);if(raw){var o=JSON.parse(raw);for(var k in o)S[k]=o[k];}}catch(e){}
+if(!S.acc||!S.acc.length)S.acc=JSON.parse(JSON.stringify(SEED));
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+
+/* ================= MATH ================= */
+function nf(n){if(n==null||isNaN(n))return "—";n=Math.round(n);return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g,".")}
+function pct(n){return (Math.round(n*10)/10)+"%"}
+function reachRatio(a){return (a.f>0&&a.v>0)?a.v/a.f:null}
+function erate(a){var eng=(+a.l||0)+(+a.c||0);if(!eng)return null;var base=(+a.v||0)>0?a.v:a.f;return base>0?eng/base*100:null}
+
+function health(a){
+  var P=PLAT[a.plat],parts=[],miss=0;
+  var rr=reachRatio(a), er=erate(a);
+  if(rr!=null)parts.push([40,Math.min(100,rr/P.good*100)]); else miss+=40;
+  if(er!=null)parts.push([25,Math.min(100,er/P.er*100)]); else miss+=25;
+  var target=P.cad*4.3, cad=(+a.p30||0)/target*100;
+  parts.push([20,Math.min(100,cad)]);
+  var funnel=(a.link?55:0)+((a.offer&&a.offer.trim())?45:0);
+  parts.push([15,funnel]);
+  var w=0,sum=0;parts.forEach(function(p){w+=p[0];sum+=p[0]*p[1]});
+  return {score:w?Math.round(sum/w):0,rr:rr,er:er,cad:cad,funnel:funnel,unknown:miss};
+}
+function tone(s){return s>=70?"var(--ok)":s>=45?"var(--warn)":"var(--crit)"}
+function toneName(s){return s>=70?"ok":s>=45?"warn":"crit"}
+function label(s){return s>=70?"sehat":s>=45?"pincang":"macet"}
+
+function totals(){
+  var reach=0,fol=0,n=S.acc.length,hs=0;
+  S.acc.forEach(function(a){fol+=+a.f||0;reach+=(+a.v||0)*(+a.p30||0);hs+=health(a).score});
+  return {reach:reach,fol:fol,n:n,avg:n?Math.round(hs/n):0};
+}
+
+/* ================= DIAGNOSIS ENGINE ================= */
+function findings(a){
+  var P=PLAT[a.plat],H=health(a),F=[];
+  var rr=H.rr,er=H.er;
+  if(rr==null){F.push(["warn","Angka jangkauannya belum ada","Tanpa rata-rata tayangan, semua sisanya cuma tebakan.","Buka 12 konten terakhir, catat tayangannya, ambil nilai tengahnya (bukan rata-rata — 1 konten viral bikin rata-rata bohong). Isi ke kolom Tayangan."]);}
+  else if(rr<P.mid*0.7){F.push(["crit","Konten lo gak keluar dari kandang","Rasio "+rr.toFixed(2)+"× dari pengikut, patokan "+P.n+" ada di "+P.mid+"×. Artinya "+P.n+" berhenti nawarin konten lo ke orang baru — biasanya karena 3 detik pertama gak nahan orang.","Ganti 3 detik pertama, bukan seluruh kontennya. Mulai dari kalimat yang ada angkanya atau ada penolakan ('Jangan ...'). Uji di tab Konten."]);}
+  else if(rr<P.mid){F.push(["warn","Jangkauan di bawah tengah","Rasio "+rr.toFixed(2)+"× vs patokan "+P.mid+"×. Belum parah, tapi lo lagi ngasih makan pengikut lama doang.","Ambil 1 konten lo yang paling jauh jangkauannya, bikin ulang 3 versi dengan pembuka beda. Format tetap, pembukanya doang yang diuji."]);}
+  else if(rr>=P.good){F.push(["ok","Distribusinya jalan","Rasio "+rr.toFixed(2)+"× — di atas patokan bagus "+P.good+"×. Masalah lo bukan jangkauan.","Berhenti ngoprek jangkauan. Pindah tenaga ke tab Uang: yang bocor sekarang jalur dari tontonan ke duit."]);}
+  if(er==null){F.push(["warn","Keterikatan belum keukur","Belum ada angka suka/komentar.","Isi rata-rata suka & komentar dari 12 konten terakhir. Ini yang mbedain 'ditonton' sama 'dipeduliin'."]);}
+  else if(er<P.er*0.5){F.push(["crit","Ditonton tapi gak nempel","Keterikatan "+pct(er)+", patokan "+P.n+" "+P.er+"%. Orang lewat, gak berhenti.","Tambahin 1 kalimat yang bikin orang harus jawab di akhir konten. Bukan 'komen ya', tapi pilihan: 'Lo tim A apa tim B?'"]);}
+  else if(er>=P.er*1.6){F.push(["ok","Kontennya nempel banget","Keterikatan "+pct(er)+" — "+(er/P.er).toFixed(1)+"× di atas patokan. Yang nonton peduli.","Masalah lo distribusi, bukan konten. Titip konten ini ke akun yang jangkauannya udah gede (punya lo sendiri atau kolaborasi)."]);}
+  var target=Math.round(P.cad*4.3);
+  if((+a.p30||0)<target*0.6){F.push(["warn","Volume kurang","Sebulan "+(+a.p30||0)+" konten, patokan sehat "+P.n+" sekitar "+target+".","Turunin mutu produksi, naikin jumlah. "+P.fmt+". 1 ide dipecah jadi 3 konten: masalahnya, salahnya, caranya."]);}
+  if(!a.link){F.push(["crit","Gak ada jalan keluar","Orang suka konten lo terus... balik ke beranda. Perhatian yang gak dialihin itu hangus.","Pasang 1 tautan (satu, bukan lima) yang isinya nyambung sama konten terakhir. Judulnya kata kerja: 'Ambil skripnya', bukan 'Link'."]);}
+  if(!(a.offer&&a.offer.trim())){F.push(["warn","Gak ada yang dijual","Belum ada penawaran berbayar yang jelas di akun ini.","Isi kolom Penawaran di tab Akun. Belum punya produk pun tulis jasanya — 'sesi 45 menit, Rp350rb'. Tab Uang bakal ngitungin tangganya."]);}
+  if(a.f>2000&&rr!=null&&rr<0.5){F.push(["crit","Pengikutnya banyak tapi dingin",""+nf(a.f)+" pengikut cuma ngasih "+nf(a.v)+" tayangan. Sebagian besar pengikut lo udah gak aktif atau gak pernah niat ngikutin topik ini.","Jangan kejar pengikut baru dulu. Bikin 5 konten yang nyebut masalah spesifik — biar yang salah ikut pergi sendiri dan sisanya beneran audiens lo."]);}
+  if(a.f<300&&er!=null&&er>=P.er*1.5){F.push(["ok","Akun kecil, mutu tinggi","Cuma "+nf(a.f)+" pengikut tapi keterikatan "+pct(er)+". Ini bukan akun gagal, ini akun yang belum dikenalin.","Sebulan ini jangan bikin konten baru sama sekali. Ambil 8 konten terbaik, posting ulang di akun lo yang jangkauannya paling gede + 3 kolaborasi. Distribusi, bukan produksi."]);}
+  var order={crit:0,warn:1,ok:2};
+  F.sort(function(x,y){return order[x[0]]-order[y[0]]});
+  return F;
+}
+
+function priorities(){
+  var out=[];
+  S.acc.forEach(function(a){findings(a).forEach(function(f){if(f[0]!=="ok")out.push({a:a,f:f})})});
+  var ord={crit:0,warn:1};
+  out.sort(function(x,y){return ord[x.f[0]]-ord[y.f[0]]});
+  return out.slice(0,3);
+}
+
+/* ================= COPY ENGINE ================= */
+function fill(t,g){return t.replace(/\{topik\}/g,g.topik).replace(/\{aud\}/g,g.aud).replace(/\{pain\}/g,g.pain).replace(/\{hasil\}/g,g.hasil)}
+var HOOK_ID=[
+ "5 {topik} yang harusnya diajarin ke {aud} dari dulu",
+ "Kalau {aud} masih {pain}, ini yang salah — dan bukan salah kamu",
+ "Aku {pain} selama 2 tahun. Yang akhirnya ngubah cuma satu: {topik}.",
+ "Jangan nurutin saran 'sabar aja'. Lakuin ini: {topik}",
+ "{hasil} tanpa harus jadi orang yang bukan kamu",
+ "Ada yang bilang {pain} itu wajar. Iya wajar. Tapi bukan berarti harus dibiarin.",
+ "POV: kamu baru sadar {pain} itu masalah sistem, bukan masalah kamu",
+ "Yang gak ada yang bilang soal {topik}:"
+];
+var HOOK_EN=[
+ "5 {topik} nobody taught {aud}",
+ "If you're still {pain}, here's what's actually broken — and it isn't you",
+ "I spent 2 years {pain}. One thing changed it: {topik}.",
+ "Stop taking the 'just be patient' advice. Do this instead: {topik}",
+ "{hasil} without becoming someone you're not",
+ "They'll tell you {pain} is normal. It is. That doesn't mean you keep living it.",
+ "POV: you just realized {pain} is a structure problem, not a you problem",
+ "What no one tells you about {topik}:"
+];
+function hooks(g){
+  var src=(S.lang==="en"?HOOK_EN:HOOK_ID).slice();
+  var out=[];for(var i=0;i<5;i++)out.push(fill(src[i%src.length],g));
+  return out;
+}
+function caption(g){
+  var P=PLAT[g.plat];
+  if(S.lang==="en")return [
+   fill("{hasil} — here's the exact order.",g),"",
+   fill("Most {aud} are told to try harder. That's not the problem. The problem is {pain} has no system behind it.",g),"",
+   "1. Name it out loud before you fix it","2. Change one sentence, not the whole routine","3. Repeat it for 7 days before you judge it","",
+   fill("Save this for the next hard day. Which one are you trying first?",g)].join("\n");
+  return [
+   fill("{hasil} — ini urutannya.",g),"",
+   fill("Kebanyakan {aud} disuruh sabar aja. Bukan itu masalahnya. Masalahnya {pain} gak punya sistem di belakangnya.",g),"",
+   "1. Sebut dulu masalahnya keras-keras sebelum dibenerin","2. Ganti satu kalimat, bukan seluruh rutinitas","3. Ulang 7 hari sebelum dinilai","",
+   fill("Simpan buat hari yang berat nanti. Kamu mau coba yang nomor berapa?",g)].join("\n");
+}
+function ctas(g){
+  return S.lang==="en"
+   ?["Save this — you'll need it Tuesday at 6pm.","Comment “SCRIPT” and I'll send the full one-pager.","Send this to the person who needs to read it, not to yourself."]
+   :["Simpan dulu — nanti kepake pas jam 6 sore.","Komen “SKRIP” nanti aku kirim lembar lengkapnya.","Kirim ke orang yang butuh baca, bukan disimpen sendiri."];
+}
+
+/* hook scorer — aturan, bukan tebakan */
+var BANNED=["hai guys","halo semuanya","di video kali ini","jangan lupa like","assalamualaikum semuanya","hey guys","in this video","welcome back"];
+function scoreHook(t){
+  t=(t||"").trim();var s=50,r=[];
+  if(!t)return {s:0,r:[["crit","Kosong","Isi dulu hook-nya."]]};
+  var w=t.split(/\s+/).length;
+  if(w<=12){s+=10;r.push(["ok","Panjangnya pas ("+w+" kata)","Di bawah 12 kata — kebaca sebelum jempol gerak."])}
+  else if(w<=18){r.push(["warn","Agak panjang ("+w+" kata)","Potong jadi ≤12 kata. Buang keterangan, sisain klaimnya."])}
+  else{s-=15;r.push(["crit","Kepanjangan ("+w+" kata)","Ini paragraf, bukan hook. Ambil 8 kata paling tajam."])}
+  if(/\d/.test(t)){s+=12;r.push(["ok","Ada angka","Angka bikin otak nyangka kontennya beres dan bisa diukur."])}
+  else r.push(["warn","Gak ada angka","Tambahin jumlah: '5 kalimat', '3 hari', '2 menit'. Naikin klik tanpa ubah isi."]);
+  if(/\b(kamu|kamu,|lo|anda|you|your|kalian)\b/i.test(t)){s+=10;r.push(["ok","Ngomong ke satu orang","Kata ganti orang kedua bikin yang nonton ngerasa dipanggil."])}
+  else r.push(["warn","Belum nyapa siapa-siapa","Masukin 'kamu' atau sebutan audiensnya. Hook tanpa alamat = lewat."]);
+  if(/^(jangan|stop|berhenti|jangan pernah|don't|stop)/i.test(t)){s+=8;r.push(["ok","Buka pakai penolakan","Kalimat larangan bikin orang berhenti buat mastiin dia gak salah."])}
+  if(/\?$/.test(t)){s-=5;r.push(["warn","Diakhiri tanda tanya","Pertanyaan gampang dijawab dalam hati terus di-scroll. Ganti jadi pernyataan."])}
+  var low=t.toLowerCase();var bad=BANNED.filter(function(b){return low.indexOf(b)>-1});
+  if(bad.length){s-=25;r.push(["crit","Pembuka basa-basi: “"+bad[0]+"”","Hapus. 3 detik pertama itu jatah paling mahal, jangan dipake nyapa."])}
+  if(/[A-Z]{6,}/.test(t)){s+=4;r.push(["ok","Ada penekanan kapital","Boleh, asal cuma 1–2 kata."])}
+  if(low.split(/\s+/).length>3&&!/(cara|kenapa|yang|tanpa|padahal|ternyata|how|why|without|actually)/i.test(low)){
+    s-=6;r.push(["warn","Belum ada celah penasaran","Sisipin 'tanpa', 'padahal', 'ternyata' — pemicu rasa kurang lengkap."])}
+  s=Math.max(0,Math.min(100,s));
+  var ord={crit:0,warn:1,ok:2};r.sort(function(a,b){return ord[a[0]]-ord[b[0]]});
+  return {s:s,r:r};
+}
+
+/* ================= SEO ENGINE ================= */
+function slug(s){return (s||"").toLowerCase().replace(/[^a-z0-9\s]/g,"").trim().split(/\s+/).filter(Boolean)}
+function tagify(g,n){
+  var kw=slug(g.topik),ni=slug(g.niche||g.aud),out=[];
+  if(kw.length)out.push("#"+kw.slice(0,3).join(""));
+  if(ni.length)out.push("#"+ni.slice(0,2).join(""));
+  if(kw.length)out.push("#"+kw.slice(0,2).join("")+"tips");
+  if(ni.length)out.push("#"+ni.slice(0,2).join("")+(S.lang==="en"?"community":"indonesia"));
+  out.push(S.lang==="en"?"#momsofinstagram":"#tipsparenting");
+  out.push("#"+(slug(g.aud).slice(0,2).join("")||"harian"));
+  return out.filter(function(v,i,a){return a.indexOf(v)===i}).slice(0,n);
+}
+function seo(g){
+  var P=PLAT[g.plat],kw=g.topik,aud=g.aud,res=g.hasil,L=S.lang==="en";
+  var judul,desk,tag=tagify(g,5),extra=[];
+  switch(g.plat){
+   case "youtube":
+     judul=(L?"":"")+cap(kw)+" ("+(L?"the exact steps":"urutannya")+")";
+     if(judul.length>60)judul=cap(kw).slice(0,52)+"…";
+     desk=cap(kw)+" — "+(L?"for ":"buat ")+aud+". "+(L?"By the end you'll have ":"Selesai nonton kamu punya ")+res+".\n\n"+(L?"Timestamps:":"Bagian:")+"\n00:00 "+(L?"The problem":"Masalahnya")+"\n00:35 "+(L?"Why the usual advice fails":"Kenapa saran biasa gagal")+"\n01:20 "+(L?"The 3 steps":"3 langkahnya")+"\n03:40 "+(L?"What to do tonight":"Yang dilakuin malam ini");
+     tag=tagify(g,8);
+     extra=["Judul ≤60 karakter, kata kunci di 3 kata pertama.","Thumbnail cuma boleh 3 kata. Kalau butuh 4, kepanjangan.","2 baris pertama deskripsi itu yang kebaca sebelum 'selengkapnya' — taruh kata kunci + janji hasil di situ."];break;
+   case "tiktok":
+     judul=cap(kw)+" →";
+     desk=cap(kw)+" "+(L?"for ":"buat ")+aud+". "+ctas(g)[0];
+     extra=["Teks di layar detik 0–2 HARUS ngandung kata kunci — TikTok Search baca teks di layar, bukan cuma caption.","Caption maksimal 100 karakter, sisanya buang.","4 tagar aja: 1 luas, 2 sempit, 1 milik lo sendiri."];break;
+   case "instagram":
+     judul=cap(kw);
+     desk=cap(kw)+".\n\n"+(L?"If you're ":"Kalau kamu ")+aud+" "+(L?"and you keep ":"dan masih ")+g.pain+", "+(L?"this is the order.":"ini urutannya.");
+     extra=["Baris pertama caption = judul SEO lo. Kata kunci di situ, bukan di tagar.","Isi Alt Text manual di Pengaturan Lanjutan — ini yang dibaca mesin cari IG.","Teks di cover Reels juga keindeks. Tulis kata kuncinya di sampul."];break;
+   case "facebook":
+     judul=cap(kw);desk=cap(kw)+" — "+res+".\n\n"+(L?"Full breakdown below. ":"Rinciannya di bawah. ")+ctas(g)[2];
+     extra=["Kalimat pertama = judul. Facebook motong di ~80 karakter.","Tautan taruh di komentar pertama, bukan di badan post.","Post yang gak ada tautannya dikasih jangkauan 2–3× lebih banyak."];break;
+   case "threads":
+     judul=cap(kw)+":";desk=cap(kw)+":\n\n1. …\n2. …\n3. …\n\n"+(L?"Which one are you doing tonight?":"Kamu mau mulai yang mana malam ini?");
+     tag=tag.slice(0,1);
+     extra=["1 topik tag doang. Lebih dari itu jangkauan turun.","Balas thread lo sendiri 2–3 kali dalam 1 jam pertama — itu mesin jangkauannya.","Kalimat pertama ≤10 kata."];break;
+   case "x":
+     judul=cap(kw);desk=cap(kw)+"\n\n"+(L?"A thread on what actually works 🧵":"Utas: yang beneran jalan 🧵");
+     tag=tag.slice(0,2);
+     extra=["Pakai kata kunci literal yang diketik orang, bukan sinonim keren.","Tautan di balasan, jangan di post induk.","Baris pertama berdiri sendiri sebagai kalimat utuh."];break;
+   case "telegram":
+     judul=cap(kw);desk="**"+cap(kw)+"**\n\n"+(L?"For ":"Buat ")+aud+". "+res+".\n\n→ "+ctas(g)[1];
+     tag=tag.slice(0,3);
+     extra=["Nama channel harus ngandung kata kunci — cuma nama & deskripsi yang diindeks pencarian Telegram.","Pin 1 post 'mulai dari sini'.","Post jam yang sama tiap hari; Telegram gak punya algoritma, cuma kebiasaan."];break;
+   case "whatsapp":
+     judul=cap(kw);desk=cap(kw)+"\n\n"+(L?"1 idea, 1 minute. ":"1 ide, 1 menit. ")+res+".\n\n"+ctas(g)[0];
+     tag=[];
+     extra=["Gak ada penemuan otomatis sama sekali. Pertumbuhan cuma dari tautan yang lo tempel di bio platform lain.","Nama channel = kata kunci + siapa yang dilayani.","Maksimal 1 pesan/hari. Lebih dari itu orang keluar."];break;
+   case "linkedin":
+     judul=cap(kw);desk=cap(kw)+".\n\n"+(L?"Most ":"Kebanyakan ")+aud+" "+(L?"are told to try harder.":"disuruh usaha lebih keras.")+"\n\n"+(L?"Here's the actual system:":"Ini sistem sebenarnya:")+"\n\n1. …";
+     tag=tag.slice(0,3);
+     extra=["3 baris pertama sebelum 'lihat selengkapnya' = 90% keputusan.","Headline profil lo juga mesin cari — masukin kata kunci ke situ.","Tautan di komentar pertama."];break;
+   case "pinterest":
+     judul=cap(kw)+" | "+cap(res);
+     desk=cap(kw)+" "+(L?"for ":"buat ")+aud+". "+res+". "+(L?"Save for later.":"Simpan buat nanti.");
+     tag=tagify(g,6);
+     extra=["Ini mesin pencari. Judul pin, deskripsi, DAN nama board semuanya diindeks.","Pin vertikal 2:3 (1000×1500).","Umur pin berbulan-bulan — ini satu-satunya platform yang kontennya nambah nilai tiap bulan."];break;
+   default:judul=cap(kw);desk=cap(kw);
+  }
+  return {judul:judul,desk:desk,tag:tag,extra:extra,where:P.seo};
+}
+function cap(s){s=(s||"").trim();return s.charAt(0).toUpperCase()+s.slice(1)}
+
+/* ================= CROSS-POST MAP ================= */
+var XPOST={
+ instagram:"Reels 7–20 dtk, teks di layar besar, hook di detik 0.",
+ tiktok:"Sama videonya, tapi buang logo IG. Rekam ulang teks pembuka di dalam TikTok biar gak dianggap repost.",
+ youtube:"Potong jadi Shorts <60 dtk + versi panjang 8 mnt yang bahas 'kenapa'-nya.",
+ facebook:"Upload ulang sebagai Reels, plus versi tulisan 4 paragraf. Tautan di komentar.",
+ threads:"Ambil 1 kalimat paling tajam dari skrip, jadiin post teks. Balas sendiri buat rinciannya.",
+ x:"Pecah skripnya jadi utas 6 baris. 1 ide 1 baris.",
+ telegram:"Post ringkasan 5 baris + tautan ke video. Ini arsipnya.",
+ whatsapp:"1 pesan, 1 ide, 1 tautan. Kirim jam 8 pagi.",
+ linkedin:"Ubah sudutnya jadi pelajaran kerja/sistem. 1000 karakter.",
+ pinterest:"Bikin 3 pin dari 3 kalimat berbeda di skrip yang sama. Judul pin = kata kunci."
+};
+
+/* ================= MONETISASI ================= */
+function ladder(){
+  var T=totals(),acc=S.acc,best=0,er=0,n=0;
+  acc.forEach(function(a){var h=health(a);if(h.rr!=null)best=Math.max(best,h.rr);if(h.er!=null){er+=h.er;n++}});
+  er=n?er/n:0;
+  var fol=T.fol,reach=T.reach;
+  var brand=Math.max(fol*0.01,(reach/Math.max(1,acc.reduce(function(s,a){return s+(+a.p30||0)},0)))/1000*15);
+  return [
+   {k:"01",t:"Jasa 1-lawan-1",syarat:"Butuh: 1 penawaran tertulis + 30 orang yang tau lo ngerjain apa",ok:fol>=30,
+    harga:"Rp250rb–750rb / sesi",why:"Paling cepat cair, paling gak butuh audiens. Ini yang dikerjain sambil nunggu angka naik."},
+   {k:"02",t:"Produk digital kecil",syarat:"Butuh: 500 pengikut ATAU keterikatan ≥4%",ok:(fol>=500||er>=4),
+    harga:"$9–39 (Rp150rb–650rb)",why:"Dibuat sekali, dijual terus. Ambil konten lo yang paling banyak disimpan orang, jadiin lembar kerja."},
+   {k:"03",t:"Titipan merek / UGC",syarat:"Butuh: 1000 pengikut + 3 konten di atas "+"1.5× jangkauan",ok:(fol>=1000&&best>=1.5),
+    harga:"$"+Math.round(brand)+"–"+Math.round(brand*2.5)+" / konten (±Rp"+nf(brand*S.kurs)+"–"+nf(brand*2.5*S.kurs)+")",
+    why:"Dihitung dari yang lebih besar antara 1% jumlah pengikut atau $15 per 1000 tayangan."},
+   {k:"04",t:"Langganan bulanan / komunitas",syarat:"Butuh: 2000 pengikut + tempat pindah yang lo punya sendiri",ok:(fol>=2000&&acc.some(function(a){return a.link})),
+    harga:"$7–19 / bulan / orang",why:"Duit yang bisa diramal. 100 orang × $12 = $1.200/bulan, gak peduli algoritma lagi ngambek apa nggak."},
+   {k:"05",t:"Retainer / kelas kohort",syarat:"Butuh: 5000 pengikut + 1 hasil klien yang bisa ditunjukin",ok:(fol>=5000),
+    harga:"Rp5jt–25jt / bulan",why:"Ini titik di mana lo berhenti jualan konten dan mulai jualan hasil."}
+  ];
+}
+
+/* ================= RENDER: helper ================= */
+function el(h){var d=document.createElement("div");d.innerHTML=h;return d}
+function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+var TT;
+function toast(m){var t=$("#toast");t.textContent=m;t.classList.add("on");clearTimeout(TT);TT=setTimeout(function(){t.classList.remove("on")},1600)}
+function copyText(t){
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(function(){toast("Kesalin ✓")},fallback)}else fallback();
+  function fallback(){var a=document.createElement("textarea");a.value=t;a.style.position="fixed";a.style.opacity="0";document.body.appendChild(a);a.select();try{document.execCommand("copy");toast("Kesalin ✓")}catch(e){toast("Gagal nyalin — sorot manual ya")}document.body.removeChild(a)}
+}
+document.addEventListener("click",function(e){
+  var c=e.target.closest("[data-copy]");if(!c)return;
+  var src=document.getElementById(c.getAttribute("data-copy"));
+  if(src)copyText(src.innerText.trim());
+});
+
+/* ================= RENDER: gauge + rail ================= */
+var TABS=[["akun","Akun"],["audit","Audit"],["konten","Konten"],["seo","SEO"],["celah","Celah"],["uang","Uang"],["rencana","Rencana"]];
+function renderGauge(){
+  var T=totals();
+  $("#gauge").innerHTML=
+   '<div class="g"><em>Akun</em><b>'+T.n+'</b></div>'+
+   '<div class="g"><em>Total pengikut</em><b>'+nf(T.fol)+'</b></div>'+
+   '<div class="g"><em>Jangkauan / bln</em><b>'+(T.reach?nf(T.reach):"—")+'</b></div>'+
+   '<div class="g"><em>Sinyal rata²</em><b style="color:'+tone(T.avg)+'">'+T.avg+'</b></div>';
+}
+function renderRail(){
+  var pr=priorities().length;
+  $("#rail").innerHTML=TABS.map(function(t){
+    var extra=t[0]==="audit"&&pr?'<span class="dot" style="background:var(--crit)"></span>':"";
+    return '<button role="tab" data-tab="'+t[0]+'" aria-selected="'+(S.tab===t[0])+'">'+t[1]+extra+'</button>';
+  }).join("");
+}
+function go(t){S.tab=t;save();TABS.forEach(function(x){$("#p-"+x[0]).hidden=(x[0]!==t)});renderRail();draw(t);window.scrollTo({top:0,behavior:"smooth"})}
+$("#rail").addEventListener("click",function(e){var b=e.target.closest("[data-tab]");if(b)go(b.getAttribute("data-tab"))});
+
+/* ================= TAB: AKUN ================= */
+function drawAkun(){
+  var h='<div class="sech"><h2>Akun yang lo pegang</h2><span>isi angkanya sekali, semua tab lain ngitung sendiri</span></div>';
+  h+='<p class="lede">Angka yang dipake: <b>jumlah pengikut</b>, <b>nilai tengah tayangan</b> 12 konten terakhir (jangan rata-rata — 1 viral bikin bohong), rata-rata suka & komentar, dan berapa konten sebulan. Kosongin yang belum tau; mesinnya bakal bilang mana yang kurang.</p>';
+  h+='<div class="grid" style="gap:10px" id="strips">';
+  if(!S.acc.length)h+='<div class="empty">Belum ada akun. Tambah di bawah.</div>';
+  S.acc.forEach(function(a){h+=stripHTML(a)});
+  h+='</div>';
+  h+='<div class="sec"><div class="sech"><h2>Tambah akun</h2><span>platform apa aja</span></div><div class="card">'+formHTML()+'</div></div>';
+  h+='<div class="sec"><div class="sech"><h2>Peta silang</h2><span>1 ide → semua platform yang lo punya</span></div><div class="scroll"><table><thead><tr><th>Platform</th><th>Ubah jadi apa</th><th>Jam ramai</th></tr></thead><tbody>'+
+    (S.acc.length?S.acc.map(function(a){return '<tr><td><b>'+PLAT[a.plat].n+'</b><br><span style="color:var(--muted)">@'+esc(a.h)+'</span></td><td>'+XPOST[a.plat]+'</td><td class="num">'+PLAT[a.plat].jam+'</td></tr>'}).join("")
+    :'<tr><td colspan="3" style="color:var(--muted)">Tambah akun dulu.</td></tr>')+'</tbody></table></div><p class="note">Aturannya: bikin sekali di platform paling susah (video), turunin ke yang paling gampang (teks). Jangan kebalik.</p></div>';
+  h+='<div class="sec"><div class="row"><button class="btn ghost sm" id="reset">Balikin ke contoh awal</button><button class="btn ghost sm" id="wipe">Kosongin semua</button></div></div>';
+  $("#p-akun").innerHTML=h;
+  bindAkun();
+}
+function stripHTML(a){
+  var H=health(a),P=PLAT[a.plat],t=tone(H.score);
+  function bar(val,good,mid){
+    if(val==null)return '<div class="bar"></div>';
+    var w=Math.min(100,val/good*100),mk=Math.min(100,mid/good*100);
+    return '<div class="bar"><span style="width:'+w+'%"></span><u style="left:'+mk+'%"></u></div>';
+  }
+  return '<div class="strip" style="--tone:'+t+'" data-id="'+a.id+'">'+
+   '<div class="sid"><b>@'+esc(a.h)+'</b><span class="meta">'+P.n+' · '+nf(a.f)+' pengikut'+(a.niche?' · '+esc(a.niche):'')+'</span>'+
+     '<div class="row" style="gap:5px;margin-top:3px"><span class="chip '+toneName(H.score)+'">'+label(H.score)+'</span>'+
+     (a.link?'':'<span class="chip crit">tanpa tautan</span>')+((a.offer&&a.offer.trim())?'':'<span class="chip warn">tanpa penawaran</span>')+'</div></div>'+
+   '<div class="meters">'+
+     '<div class="m"><i>Jangkauan</i>'+bar(H.rr,P.good,P.mid)+'<b>'+(H.rr!=null?H.rr.toFixed(2)+"×":"—")+'</b></div>'+
+     '<div class="m"><i>Keterikatan</i>'+bar(H.er,P.er*2,P.er)+'<b>'+(H.er!=null?pct(H.er):"—")+'</b></div>'+
+     '<div class="m"><i>Volume</i>'+bar(H.cad,100,60)+'<b>'+(a.p30||0)+'/bln</b></div>'+
+     '<div class="m"><i>Corong</i>'+bar(H.funnel,100,55)+'<b>'+H.funnel+'%</b></div>'+
+   '</div>'+
+   '<div class="score"><b>'+H.score+'</b><em>sinyal / 100</em>'+
+     '<div class="row" style="gap:6px;margin-top:7px"><button class="btn ghost sm" data-edit="'+a.id+'">Ubah</button><button class="btn danger sm" data-del="'+a.id+'">Hapus</button></div></div>'+
+   '</div>';
+}
+function formHTML(a){
+  a=a||{plat:"tiktok",h:"",f:"",v:"",l:"",c:"",p30:"",niche:"",offer:"",link:false};
+  return '<div class="grid g3" id="fwrap">'+
+   '<label class="f">Platform<select id="f-plat">'+PKEYS.map(function(k){return '<option value="'+k+'"'+(a.plat===k?" selected":"")+'>'+PLAT[k].n+'</option>'}).join("")+'</select></label>'+
+   '<label class="f">Nama akun (tanpa @)<input id="f-h" value="'+esc(a.h)+'" placeholder="regulatewithkia"></label>'+
+   '<label class="f">Niche / topik<input id="f-niche" value="'+esc(a.niche)+'" placeholder="regulasi emosi ibu"></label>'+
+   '<label class="f">Pengikut<input id="f-f" type="number" inputmode="numeric" value="'+esc(a.f)+'" placeholder="4634"></label>'+
+   '<label class="f">Tayangan (nilai tengah)<input id="f-v" type="number" inputmode="numeric" value="'+esc(a.v)+'" placeholder="2989"></label>'+
+   '<label class="f">Konten / 30 hari<input id="f-p30" type="number" inputmode="numeric" value="'+esc(a.p30)+'" placeholder="12"></label>'+
+   '<label class="f">Rata² suka<input id="f-l" type="number" inputmode="numeric" value="'+esc(a.l)+'" placeholder="130"></label>'+
+   '<label class="f">Rata² komentar<input id="f-c" type="number" inputmode="numeric" value="'+esc(a.c)+'" placeholder="12"></label>'+
+   '<label class="f">Penawaran berbayar<input id="f-offer" value="'+esc(a.offer)+'" placeholder="Sesi 45 mnt Rp350rb"></label>'+
+   '</div>'+
+   '<label class="ck" style="margin-top:12px;border:0"><input type="checkbox" id="f-link"'+(a.link?" checked":"")+'><span>Ada 1 tautan jelas di bio</span></label>'+
+   '<div class="row" style="margin-top:10px"><button class="btn" id="f-save">'+(a.id?"Simpan perubahan":"Tambah akun")+'</button>'+(a.id?'<button class="btn ghost" id="f-cancel">Batal</button>':'')+'</div>';
+}
+function readForm(id){
+  return {id:id||("a"+Date.now()),plat:$("#f-plat").value,h:($("#f-h").value||"akun").replace(/^@/,"").trim(),
+   f:+$("#f-f").value||0,v:+$("#f-v").value||0,l:+$("#f-l").value||0,c:+$("#f-c").value||0,p30:+$("#f-p30").value||0,
+   niche:$("#f-niche").value.trim(),offer:$("#f-offer").value.trim(),link:$("#f-link").checked};
+}
+var akunBound=false;
+function bindAkun(){
+  var pane=$("#p-akun");
+  if(!akunBound){akunBound=true;pane.addEventListener("click",function(e){
+    var d=e.target.closest("[data-del]"),ed=e.target.closest("[data-edit]");
+    if(d){S.acc=S.acc.filter(function(x){return x.id!==d.getAttribute("data-del")});save();refresh();toast("Akun dihapus")}
+    if(ed){
+      var a=S.acc.filter(function(x){return x.id===ed.getAttribute("data-edit")})[0];if(!a)return;
+      var host=e.target.closest(".strip");
+      host.outerHTML='<div class="card" id="editbox">'+formHTML(a)+'</div>';
+      $("#f-save").onclick=function(){var n=readForm(a.id);S.acc=S.acc.map(function(x){return x.id===a.id?n:x});save();refresh();toast("Tersimpan ✓")};
+      $("#f-cancel").onclick=function(){refresh()};
+      $("#editbox").scrollIntoView({block:"center",behavior:"smooth"});
+    }
+  });}
+  $("#f-save").onclick=function(){var n=readForm();if(!n.h){toast("Isi nama akunnya dulu");return}S.acc.push(n);save();refresh();toast("Akun ditambah ✓")};
+  $("#reset").onclick=function(){S.acc=JSON.parse(JSON.stringify(SEED));save();refresh();toast("Balik ke contoh")};
+  $("#wipe").onclick=function(){S.acc=[];save();refresh();toast("Dikosongin")};
+}
+
+/* ================= TAB: AUDIT ================= */
+function drawAudit(){
+  var pr=priorities();
+  var h='<div class="sech"><h2>Audit sinyal</h2><span>dihitung dari angka yang lo isi di tab Akun</span></div>';
+  h+='<div class="card" style="border-left:3px solid var(--crit)"><h3 style="font-size:15px;margin-bottom:4px">Kalau cuma sempat 3 hal hari ini</h3>'+
+    (pr.length?'<div style="margin-top:8px">'+pr.map(function(p){
+      return '<div class="find" style="--tone:'+(p.f[0]==="crit"?"var(--crit)":"var(--warn)")+'"><div class="sev"></div><div><h4>@'+esc(p.a.h)+' — '+p.f[1]+'</h4><div class="do">'+p.f[3]+'</div></div></div>'
+    }).join("")+'</div>':'<p style="color:var(--muted);margin-top:6px">Gak ada yang mendesak. Lanjut ke tab Uang.</p>')+'</div>';
+  S.acc.forEach(function(a){
+    var H=health(a),P=PLAT[a.plat],F=findings(a);
+    h+='<div class="sec"><div class="sech"><h2>@'+esc(a.h)+'</h2><span>'+P.n+' · sinyal '+H.score+'/100 · '+label(H.score)+'</span></div>';
+    if(H.unknown>=40)h+='<p class="note" style="margin-bottom:10px">⚠ '+H.unknown+'% dari skor ini gak keitung karena datanya kosong. Skor sementara.</p>';
+    h+='<div class="card">'+F.map(function(f){
+      var t=f[0]==="crit"?"var(--crit)":f[0]==="warn"?"var(--warn)":"var(--ok)";
+      return '<div class="find" style="--tone:'+t+'"><div class="sev"></div><div><h4>'+f[1]+'</h4><p>'+f[2]+'</p><div class="do"><b>Lakuin:</b> '+f[3]+'</div></div></div>'
+    }).join("")+'</div></div>';
+  });
+  if(!S.acc.length)h+='<div class="empty">Tambah akun dulu di tab Akun.</div>';
+  h+='<div class="sec"><div class="sech"><h2>Patokan platform</h2><span>garis pembanding, bukan vonis</span></div><div class="scroll"><table><thead><tr><th>Platform</th><th>Jangkauan tengah</th><th>Jangkauan bagus</th><th>Keterikatan</th><th>Konten/mgg</th><th>Format</th></tr></thead><tbody>'+
+   PKEYS.map(function(k){var P=PLAT[k];return '<tr><td><b>'+P.n+'</b></td><td class="num">'+P.mid+'×</td><td class="num">'+P.good+'×</td><td class="num">'+P.er+'%</td><td class="num">'+P.cad+'</td><td>'+P.fmt+'</td></tr>'}).join("")+
+   '</tbody></table></div><p class="note">"Jangkauan" = tayangan dibagi pengikut. TikTok tinggi karena nyebarnya ke non-pengikut; Facebook rendah karena jangkauan organiknya emang udah dimatiin.</p></div>';
+  $("#p-audit").innerHTML=h;
+}
+
+/* ================= TAB: KONTEN ================= */
+function drawKonten(){
+  var g=S.gen;
+  var h='<div class="sech"><h2>Pabrik kalimat</h2><span>isi 4 kolom, keluar hook + caption + CTA</span></div>';
+  h+='<div class="card"><div class="grid g2">'+
+    '<label class="f">Topik konten<input id="g-topik" value="'+esc(g.topik)+'"></label>'+
+    '<label class="f">Buat siapa<input id="g-aud" value="'+esc(g.aud)+'"></label>'+
+    '<label class="f">Masalah yang lagi dia alami<input id="g-pain" value="'+esc(g.pain)+'"></label>'+
+    '<label class="f">Hasil yang dia mau<input id="g-hasil" value="'+esc(g.hasil)+'"></label>'+
+    '<label class="f">Platform<select id="g-plat">'+PKEYS.map(function(k){return '<option value="'+k+'"'+(g.plat===k?" selected":"")+'>'+PLAT[k].n+'</option>'}).join("")+'</select></label>'+
+    '<label class="f">Bahasa keluaran<select id="g-lang"><option value="id"'+(S.lang==="id"?" selected":"")+'>Indonesia</option><option value="en"'+(S.lang==="en"?" selected":"")+'>English</option></select></label>'+
+    '</div><div class="row" style="margin-top:12px"><button class="btn" id="g-run">Bikin</button></div></div>';
+  h+='<div class="sec grid g2" id="genout"></div>';
+  h+='<div class="sec"><div class="sech"><h2>Uji hook</h2><span>skor dari aturan, bukan feeling</span></div>'+
+    '<div class="card"><label class="f">Tempel hook yang mau diuji<textarea id="hk" rows="2">'+esc(S.hook)+'</textarea></label>'+
+    '<div class="row" style="margin-top:10px"><button class="btn" id="hk-run">Nilai</button></div><div id="hkout" style="margin-top:14px"></div></div></div>';
+  $("#p-konten").innerHTML=h;
+  $("#g-run").onclick=runGen;$("#hk-run").onclick=runHook;
+  $("#g-lang").onchange=function(){S.lang=this.value;save();runGen()};
+  runGen();runHook();
+}
+function readGen(){
+  var g={topik:$("#g-topik").value.trim()||"topik kamu",aud:$("#g-aud").value.trim()||"audiens kamu",
+   pain:$("#g-pain").value.trim()||"masalahnya",hasil:$("#g-hasil").value.trim()||"hasil yang dia mau",plat:$("#g-plat").value};
+  var a=S.acc.filter(function(x){return x.plat===g.plat})[0];g.niche=a?a.niche:g.aud;
+  S.gen=g;save();return g;
+}
+function runGen(){
+  var g=readGen(),P=PLAT[g.plat];
+  var hk=hooks(g);
+  $("#genout").innerHTML=
+   '<div class="out"><button class="copy" data-copy="o-hook">salin</button><h5>5 hook — '+P.n+'</h5><ol id="o-hook">'+hk.map(function(x){return '<li>'+esc(x)+'</li>'}).join("")+'</ol></div>'+
+   '<div class="out"><button class="copy" data-copy="o-cap">salin</button><h5>Caption</h5><div class="mono" id="o-cap">'+esc(caption(g))+'</div></div>'+
+   '<div class="out"><button class="copy" data-copy="o-cta">salin</button><h5>3 CTA</h5><ul id="o-cta">'+ctas(g).map(function(x){return '<li>'+esc(x)+'</li>'}).join("")+'</ul></div>'+
+   '<div class="out"><h5>Aturan format '+P.n+'</h5><ul><li>'+P.fmt+'</li><li>Jam ramai: '+P.jam+'</li><li>Target sehat: '+P.cad+' konten/minggu</li><li>'+P.seo+'</li></ul></div>';
+}
+function runHook(){
+  var t=$("#hk").value;S.hook=t;save();
+  var r=scoreHook(t),tn=tone(r.s);
+  $("#hkout").innerHTML='<div class="row" style="align-items:baseline;gap:12px"><b class="num" style="font-size:34px;color:'+tn+';font-weight:600">'+r.s+'</b><span style="color:var(--muted);font-size:12px;letter-spacing:.08em;text-transform:uppercase">skor hook / 100</span></div>'+
+   '<div style="margin-top:10px">'+r.r.map(function(x){
+     var t2=x[0]==="crit"?"var(--crit)":x[0]==="warn"?"var(--warn)":"var(--ok)";
+     return '<div class="find" style="--tone:'+t2+'"><div class="sev"></div><div><h4>'+esc(x[1])+'</h4><p>'+esc(x[2])+'</p></div></div>'}).join("")+'</div>';
+}
+
+/* ================= TAB: SEO ================= */
+function drawSeo(){
+  var g=S.gen,plat=g.plat;
+  var h='<div class="sech"><h2>SEO per platform</h2><span>pakai isian dari tab Konten</span></div>';
+  h+='<p class="lede">Sosmed sekarang mesin pencari. Yang bikin konten lama lo tetap dapet tontonan bukan algoritma beranda — tapi kata yang lo tulis di judul, caption, dan teks di layar.</p>';
+  h+='<div class="card"><div class="grid g2"><label class="f">Kata kunci / topik<input id="s-kw" value="'+esc(g.topik)+'"></label>'+
+    '<label class="f">Platform<select id="s-plat">'+PKEYS.map(function(k){return '<option value="'+k+'"'+(plat===k?" selected":"")+'>'+PLAT[k].n+'</option>'}).join("")+'</select></label></div>'+
+    '<div class="row" style="margin-top:12px"><button class="btn" id="s-run">Bikin paket SEO</button><button class="btn ghost" id="s-all">Bikin buat semua akun gue</button></div></div>';
+  h+='<div id="seoout" class="sec grid" style="gap:12px"></div>';
+  $("#p-seo").innerHTML=h;
+  $("#s-run").onclick=function(){S.gen.topik=$("#s-kw").value.trim()||S.gen.topik;S.gen.plat=$("#s-plat").value;save();paintSeo([S.gen.plat])};
+  $("#s-all").onclick=function(){S.gen.topik=$("#s-kw").value.trim()||S.gen.topik;save();
+    var ps=S.acc.map(function(a){return a.plat}).filter(function(v,i,a){return a.indexOf(v)===i});
+    paintSeo(ps.length?ps:[S.gen.plat])};
+  paintSeo([plat]);
+}
+function paintSeo(list){
+  $("#seoout").innerHTML=list.map(function(p,i){
+    var g=Object.assign({},S.gen,{plat:p}),r=seo(g),P=PLAT[p],id="seo"+i;
+    return '<div class="card"><div class="sech" style="margin-bottom:10px"><h2 style="font-size:16px">'+P.n+'</h2><span>'+r.where+'</span></div>'+
+     '<div class="out" style="margin-bottom:10px"><button class="copy" data-copy="'+id+'">salin semua</button><div id="'+id+'">'+
+       '<h5 style="margin-top:0">Judul</h5><div class="mono">'+esc(r.judul)+'</div>'+
+       '<h5 style="margin-top:12px">Deskripsi / caption</h5><div class="mono">'+esc(r.desk)+'</div>'+
+       (r.tag.length?'<h5 style="margin-top:12px">Tagar</h5><div class="mono">'+esc(r.tag.join(" "))+'</div>':'')+
+     '</div></div>'+
+     '<ul style="margin:0;padding-left:19px;display:flex;flex-direction:column;gap:6px;font-size:13.5px;color:var(--ink2)">'+r.extra.map(function(x){return '<li>'+esc(x)+'</li>'}).join("")+'</ul></div>';
+  }).join("");
+}
+
+/* ================= TAB: CELAH ================= */
+function drawCelah(){
+  var h='<div class="sech"><h2>Celah</h2><span>centang yang udah ada — sisanya jadi daftar kerjaan</span></div>';
+  if(!S.acc.length)h+='<div class="empty">Tambah akun dulu.</div>';
+  S.acc.forEach(function(a){
+    var st=S.ck[a.id]||{},got=0,tot=0,miss=[];
+    CK.forEach(function(c,i){tot+=c[0];if(st[i])got+=c[0];else miss.push(c)});
+    var pctv=Math.round(got/tot*100);
+    miss.sort(function(x,y){return y[0]-x[0]});
+    h+='<div class="sec"><div class="sech"><h2>@'+esc(a.h)+'</h2><span>'+PLAT[a.plat].n+' · fondasi '+pctv+'%</span></div>'+
+     '<div class="card"><div class="bar" style="height:10px;margin-bottom:14px"><span style="width:'+pctv+'%;background:'+tone(pctv)+'"></span></div>'+
+     CK.map(function(c,i){return '<label class="ck'+(st[i]?" done":"")+'"><input type="checkbox" data-ck="'+a.id+'|'+i+'"'+(st[i]?" checked":"")+'><span>'+c[1]+'</span><span class="w">'+c[0]+'</span></label>'}).join("")+
+     '</div>';
+    if(miss.length)h+='<div class="out" style="margin-top:12px"><h5>Yang paling mahal buat dibiarin</h5><ol>'+miss.slice(0,3).map(function(m){return '<li>'+m[1]+'</li>'}).join("")+'</ol></div>';
+    else h+='<div class="out" style="margin-top:12px"><h5>Fondasi beres</h5><p style="font-size:14px">Semua kepenuhan. Yang tersisa cuma volume dan distribusi — lihat tab Rencana.</p></div>';
+    h+='</div>';
+  });
+  h+='<p class="note">Angka di kanan itu bobot: seberapa mahal kalau dibiarin kosong. Kerjain yang bobotnya 9 dulu, sisanya nyusul.</p>';
+  $("#p-celah").innerHTML=h;
+  $$("[data-ck]").forEach(function(inp){inp.onchange=function(){
+    var p=this.getAttribute("data-ck").split("|");
+    S.ck[p[0]]=S.ck[p[0]]||{};S.ck[p[0]][p[1]]=this.checked;save();drawCelah();
+  }});
+}
+
+/* ================= TAB: UANG ================= */
+function drawUang(){
+  var L=ladder(),T=totals(),pj=S.proj;
+  var h='<div class="sech"><h2>Tangga uang</h2><span>anak tangga kebuka sendiri kalau angkanya udah cukup</span></div>';
+  h+='<div class="card"><div class="ladder">'+L.map(function(r){
+    return '<div class="rung'+(r.ok?" on":"")+'"><div class="k">'+(r.ok?"✓":r.k)+'</div><div><h4>'+r.t+'</h4><div class="price">'+r.harga+'</div>'+
+     '<p style="font-size:13.5px;color:var(--ink2);margin-top:5px">'+r.why+'</p>'+
+     '<p style="font-size:12.5px;color:'+(r.ok?"var(--ok)":"var(--muted)")+';margin-top:5px">'+(r.ok?"Kebuka sekarang":r.syarat)+'</p></div></div>'
+  }).join("")+'</div></div>';
+  h+='<div class="sec"><div class="sech"><h2>Kalkulator corong</h2><span>dari jangkauan ke duit, per bulan</span></div><div class="card">'+
+   '<div class="grid g2"><label class="f">Jangkauan / bulan (dari tab Akun)<input id="u-reach" type="number" value="'+(T.reach||10000)+'"></label>'+
+   '<label class="f">Harga produk (USD)<input id="u-harga" type="number" value="'+pj.harga+'"></label></div>'+
+   '<div class="grid g3" style="margin-top:12px">'+
+    sld("u-visit","Tontonan → mampir profil",pj.visit,0.1,10,0.1,"%")+
+    sld("u-klik","Mampir → klik tautan",pj.klik,1,40,1,"%")+
+    sld("u-beli","Klik → beli",pj.beli,0.1,15,0.1,"%")+
+   '</div><div id="ufun"></div>'+
+   '<label class="f" style="margin-top:14px;max-width:220px">Kurs USD→IDR<input id="u-kurs" type="number" value="'+S.kurs+'"></label></div></div>';
+  h+='<div class="sec"><div class="sech"><h2>Urutan yang bener</h2><span>kesalahan paling mahal: kebalik</span></div><div class="card">'+
+   ['Jual jasa dulu ke 5 orang. Ini yang ngasih tau lo kalimat apa yang beneran laku.','Rekam apa yang lo omongin berulang ke 5 orang itu. Itu produk digital pertamanya.','Baru bikin konten buat naikin jangkauan — sekarang lo udah tau mau ngirim orangnya ke mana.','Kumpulin alamat email/WA sejak hari pertama. Pengikut itu nyewa, daftar itu punya.','Titipan merek terakhir. Dia bayar sekali, dan pas jangkauan lo turun dia hilang.']
+   .map(function(x,i){return '<div class="find" style="--tone:var(--accent)"><div class="sev"></div><div><p style="font-size:14px">'+x+'</p></div></div>'}).join("")+'</div></div>';
+  $("#p-uang").innerHTML=h;
+  ["u-reach","u-harga","u-visit","u-klik","u-beli","u-kurs"].forEach(function(id){var e=$("#"+id);if(e)e.oninput=function(){paintFunnel()}});
+  paintFunnel();
+}
+function sld(id,lab,val,min,max,step,suf){
+  return '<label class="f">'+lab+'<div class="sld"><input type="range" id="'+id+'" min="'+min+'" max="'+max+'" step="'+step+'" value="'+val+'"><span class="num" id="'+id+'-v">'+val+suf+'</span></div></label>';
+}
+function paintFunnel(){
+  var reach=+$("#u-reach").value||0,harga=+$("#u-harga").value||0,
+      v=+$("#u-visit").value,k=+$("#u-klik").value,b=+$("#u-beli").value,kurs=+$("#u-kurs").value||16300;
+  $("#u-visit-v").textContent=v+"%";$("#u-klik-v").textContent=k+"%";$("#u-beli-v").textContent=b+"%";
+  S.proj={model:"produk",harga:harga,visit:v,klik:k,beli:b};S.kurs=kurs;save();
+  var mampir=reach*v/100,klik=mampir*k/100,beli=klik*b/100,usd=beli*harga;
+  var rows=[["Tayangan",reach],["Mampir profil",mampir],["Klik tautan",klik],["Beli",beli]];
+  var mx=reach||1;
+  $("#ufun").innerHTML='<div class="funnel">'+rows.map(function(r){
+    return '<div class="fs"><span style="color:var(--muted)">'+r[0]+'</span><div class="fb" style="width:'+Math.max(0.5,r[1]/mx*100)+'%"></div><b>'+nf(r[1])+'</b></div>'
+  }).join("")+'</div>'+
+  '<div class="out" style="margin-top:14px"><h5>Perkiraan bulanan</h5><div class="row" style="gap:24px"><div class="g"><em>USD</em><b class="num" style="font-size:24px;color:var(--accent-ink)">$'+nf(usd)+'</b></div><div class="g"><em>Rupiah</em><b class="num" style="font-size:24px">Rp'+nf(usd*kurs)+'</b></div></div>'+
+  '<p class="note">Angka '+Math.round(beti(beli))+' pembeli itu yang harus lo percaya, bukan angka rupiahnya. Kalau kerasa gak masuk akal, geser slidernya sampai masuk akal — terus lihat berapa jangkauan yang dibutuhin.</p></div>';
+  function beti(x){return x}
+}
+
+/* ================= TAB: RENCANA ================= */
+var PILLAR=[
+ ["Skrip / langkah","tarik orang baru","Yang paling jauh nyebar. Bentuknya daftar bernomor yang bisa langsung dipakai malam ini."],
+ ["Bongkar salah kaprah","bikin dipercaya","Ambil saran umum yang salah, tunjukin kenapa. Ini yang bikin orang follow, bukan cuma nonton."],
+ ["Cerita / pengakuan","bikin nempel","Momen spesifik, bukan renungan umum. 1 kejadian, 1 jam, 1 kalimat yang diinget."],
+ ["Bukti / hasil","bikin percaya beli","Sebelum–sesudah, tangkapan layar, kata orang lain. Tanpa ini, penawaran lo cuma klaim."],
+ ["Ajakan","bikin pindah","Nyebut penawaran terang-terangan. Minimal 1× seminggu, kalau nggak semua kerja di atas hangus."]
+];
+var MIX=[0,1,0,2,3,0,4];
+function drawRencana(){
+  var accs=S.acc.length?S.acc:[{h:"akunmu",plat:"instagram",niche:"topikmu"}];
+  var hari=["Senin","Selasa","Rabu","Kamis","Jumat","Sabtu","Minggu"];
+  var h='<div class="sech"><h2>Rencana 7 hari</h2><span>disusun dari akun & platform yang lo isi</span></div>';
+  h+='<p class="lede">Bukan 7 ide acak. Urutannya sengaja: tiga hari pertama narik orang baru, tengah minggu bikin dipercaya, akhir minggu baru minta sesuatu. Kalau minta di hari Senin, gak ada yang dengar.</p>';
+  h+='<div class="scroll"><table><thead><tr><th>Hari</th><th>Pilar</th><th>Tujuan</th><th>Akun</th><th>Hook pembuka</th></tr></thead><tbody>';
+  var g=S.gen;
+  hari.forEach(function(d,i){
+    var p=PILLAR[MIX[i]],a=accs[i%accs.length],hk=hooks(g)[i%5];
+    h+='<tr><td><b>'+d+'</b></td><td>'+p[0]+'</td><td><span class="chip acc">'+p[1]+'</span></td><td>@'+esc(a.h)+'<br><span style="color:var(--muted);font-size:12px">'+PLAT[a.plat].n+' · '+PLAT[a.plat].jam+'</span></td><td style="max-width:280px">'+esc(hk)+'</td></tr>';
+  });
+  h+='</tbody></table></div>';
+  h+='<div class="sec"><div class="sech"><h2>Kenapa pilarnya cuma 5</h2><span>tiap pilar punya satu tugas</span></div><div class="card">'+
+   PILLAR.map(function(p,i){var n=MIX.filter(function(x){return x===i}).length;
+    return '<div class="find" style="--tone:var(--accent)"><div class="sev"></div><div><h4>'+p[0]+' <span class="chip" style="margin-left:6px">'+n+'×/minggu</span></h4><p>'+p[2]+'</p></div></div>'}).join("")+'</div></div>';
+  h+='<div class="sec"><div class="sech"><h2>3 angka yang dicek tiap Senin</h2><span>sisanya abaikan</span></div><div class="card"><div class="scroll"><table><thead><tr><th>Angka</th><th>Artinya</th><th>Target minggu ini</th></tr></thead><tbody>'+
+   '<tr><td><b>Rasio jangkauan</b></td><td>Tayangan ÷ pengikut. Ngukur apakah platform masih mau nyebar konten lo.</td><td class="num">naik 0,1× dari minggu lalu</td></tr>'+
+   '<tr><td><b>Simpanan + kiriman</b></td><td>Bukan suka. Simpan & kirim itu sinyal paling kuat di semua platform sekarang.</td><td class="num">≥2% dari tayangan</td></tr>'+
+   '<tr><td><b>Klik tautan</b></td><td>Satu-satunya angka yang nyambung ke duit. Sisanya cuma tepuk tangan.</td><td class="num">≥1% dari tayangan</td></tr>'+
+   '</tbody></table></div><p class="note">Catat di hari yang sama tiap minggu. Angka yang dicek tiap hari cuma bikin panik dan gak ngasih pola.</p></div></div>';
+  $("#p-rencana").innerHTML=h;
+}
+
+/* ================= BOOT ================= */
+function draw(t){({akun:drawAkun,audit:drawAudit,konten:drawKonten,seo:drawSeo,celah:drawCelah,uang:drawUang,rencana:drawRencana})[t]()}
+function refresh(){renderGauge();renderRail();draw(S.tab)}
+$("#theme").onclick=function(){
+  var cur=document.documentElement.getAttribute("data-theme");
+  var dark=cur?cur==="dark":matchMedia("(prefers-color-scheme:dark)").matches;
+  document.documentElement.setAttribute("data-theme",dark?"light":"dark");
+};
+TABS.forEach(function(x){$("#p-"+x[0]).hidden=(x[0]!==S.tab)});
+refresh();
+})();
+</script>
+</body>
+</html>
