@@ -189,6 +189,23 @@ input[type=range]{padding:0;background:none;border:0;accent-color:var(--accent)}
 footer{margin-top:44px;padding-top:16px;border-top:1px solid var(--line);font-size:12px;color:var(--muted);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 @media(max-width:560px){.shell{padding:0 15px 80px}.console{margin:0 -15px;padding:12px 15px 0}.g b{font-size:15px}.gauge{gap:13px}}
 
+/* ---- mesin ---- */
+.mx{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:12px 0}
+.mx div{border:1px solid var(--line2);border-radius:9px;padding:10px 12px;background:var(--panel2)}
+.mx b{display:block;font-family:"IBM Plex Mono",monospace;font-size:18px;color:var(--ink)}
+.mx i{font-style:normal;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.mx s{display:block;text-decoration:none;font-size:12px;color:var(--muted);margin-top:2px}
+.skn{display:flex;gap:7px;flex-wrap:wrap;margin:10px 0 4px}
+.skn button.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+.dlt{font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:13px}
+.dlt.turun{color:var(--crit)} .dlt.naik{color:var(--ok)} .dlt.rata{color:var(--muted)}
+.antre{display:flex;gap:12px;align-items:flex-start;border-top:1px solid var(--line2);padding:13px 0}
+.antre:first-child{border-top:0}
+.antre .no{font-family:"IBM Plex Mono",monospace;font-weight:700;font-size:13px;color:var(--muted);min-width:22px;padding-top:2px}
+.antre .isi{flex:1;min-width:0}
+.antre h4{font-size:15px;margin:0 0 3px}
+.antre p{margin:0 0 7px;font-size:13.5px;color:var(--ink2)}
+.kunci{opacity:.55}
 /* ---- laporan ---- */
 .lap{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:26px 28px;box-shadow:var(--shadow)}
 .lap-kop{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap;border-bottom:2px solid var(--ink);padding-bottom:14px;margin-bottom:22px}
@@ -248,6 +265,7 @@ footer{margin-top:44px;padding-top:16px;border-top:1px solid var(--line);font-si
   <div class="pane" id="p-uang" hidden></div>
   <div class="pane" id="p-rencana" hidden></div>
   <div class="pane" id="p-hasil" hidden></div>
+  <div class="pane" id="p-mesin" hidden></div>
   <div class="pane" id="p-laporan" hidden></div>
   <footer><span><b id="kaki-merek">Ocklu-9799</b> — semua angka dihitung dari data yang lo isi sendiri.</span><span>Disiapkan oleh Ocklu</span></footer>
 </div>
@@ -406,7 +424,7 @@ var SEED=[
  {id:"a1",plat:"instagram",h:"kiamomjourney",f:4634,v:2989,l:0,c:0,p30:12,niche:"parenting",offer:"",link:false,note:"panggung — jangkauan udah terbukti 30K"},
  {id:"a2",plat:"instagram",h:"regulatewithkia",f:74,v:0,l:13,c:0,p30:6,niche:"regulasi emosi & keuangan keluarga",offer:"",link:false,note:"ruang — konten nempel, distribusinya nol"}
 ];
-var S={acc:[],ck:{},jur:[],kurs:16300,lang:"id",tab:"akun",seed:0,klien:"",oleh:"",
+var S={acc:[],ck:{},jur:[],kurs:16300,lang:"id",tab:"akun",seed:0,klien:"",oleh:"",skenario:"normal",mut:0,tunda:{},
   gen:{topik:"cara ngomong ke anak biar didengar tanpa teriak",aud:"ibu anak balita",pain:"ngulang 5 kali baru didenger",hasil:"anak nurut sekali minta",plat:"instagram"},
   hook:"5 kalimat ajaib yang bikin anak nurut tanpa teriak",
   proj:{model:"produk",harga:29,visit:1.5,klik:8,beli:2.5}};
@@ -695,7 +713,7 @@ document.addEventListener("click",function(e){
 });
 
 /* ================= RENDER: gauge + rail ================= */
-var TABS=[["akun","Akun"],["audit","Audit"],["konten","Konten"],["seo","SEO"],["celah","Celah"],["uang","Uang"],["rencana","Rencana"],["hasil","Hasil"],["laporan","Laporan"]];
+var TABS=[["akun","Akun"],["audit","Audit"],["konten","Konten"],["seo","SEO"],["celah","Celah"],["uang","Uang"],["rencana","Rencana"],["hasil","Hasil"],["mesin","Mesin"],["laporan","Laporan"]];
 function renderGauge(){
   var T=totals();
   $("#gauge").innerHTML=
@@ -1355,6 +1373,237 @@ function aiKedua(){
   ask(box,p,{title:"Pendapat kedua"});
 }
 
+/* ================= MESIN =================
+   Empat mesin di atas data yang sama. Semuanya aturan, nol AI.          */
+
+/* --- 1. peta objek + jejak putusan --------------------------------- */
+function sinyalJejak(a){
+  var P=PLAT[a.plat],H=health(a),target=Math.round(P.cad*4.3),R=[];
+  R.push(["Rasio jangkauan", H.rr!=null?H.rr.toFixed(2)+"×":"belum diisi",
+    "sehat ≥ "+P.mid+"× · bagus ≥ "+P.good+"×",
+    H.rr==null?"kosong":H.rr<P.mid*0.7?"kritis":H.rr<P.mid?"waspada":H.rr>=P.good?"aman":"cukup",
+    "tayangan ÷ pengikut"]);
+  R.push(["Keterikatan", H.er!=null?pct(H.er):"belum diisi", "patokan "+P.er+"%",
+    H.er==null?"kosong":H.er<P.er*0.5?"kritis":H.er>=P.er*1.6?"aman":"cukup",
+    "(suka + komentar) ÷ tayangan"]);
+  R.push(["Volume", (+a.p30||0)+" / 30 hari", "sehat ≈ "+target,
+    (+a.p30||0)<target*0.6?"waspada":"cukup", "konten sebulan"]);
+  R.push(["Tautan keluar", a.link?"ada":"tidak ada", "wajib ada 1",
+    a.link?"aman":"kritis", "kolom centang di tab Akun"]);
+  R.push(["Penawaran", (a.offer&&a.offer.trim())?"ada":"kosong", "wajib terisi",
+    (a.offer&&a.offer.trim())?"aman":"waspada", "kolom Penawaran di tab Akun"]);
+  R.push(["Pengikut vs jangkauan", nf(a.f)+" → "+nf(a.v), "dingin kalau >2000 & rasio <0,5×",
+    (a.f>2000&&H.rr!=null&&H.rr<0.5)?"kritis":"cukup", "dua kolom di tab Akun"]);
+  return R;
+}
+function nadaStatus(s){
+  return s==="kritis"?"var(--crit)":s==="waspada"?"var(--warn)":s==="aman"?"var(--ok)":"var(--muted)";
+}
+
+/* --- 2. uji tekan portofolio --------------------------------------- */
+var SKENARIO=[
+  ["normal","Sekarang","angka apa adanya"],
+  ["turun40","Jangkauan −40%","platform ngurangin sebaran"],
+  ["organik","Organik dimatiin −70%","yang kejadian di Facebook dulu"],
+  ["hilang","Akun terbesar hilang","kena banned / hilang akses"],
+  ["dingin","Keterikatan −50%","audiens jenuh"]
+];
+function akunSkenario(k){
+  var A=JSON.parse(JSON.stringify(S.acc));
+  if(k==="turun40")A.forEach(function(a){a.v=Math.round((+a.v||0)*0.6)});
+  else if(k==="organik")A.forEach(function(a){a.v=Math.round((+a.v||0)*0.3)});
+  else if(k==="dingin")A.forEach(function(a){a.l=Math.round((+a.l||0)*0.5);a.c=Math.round((+a.c||0)*0.5)});
+  else if(k==="hilang"){
+    var besar=null,mx=-1;
+    A.forEach(function(a){var r=(+a.v||0)*(+a.p30||0);if(r>mx){mx=r;besar=a.id}});
+    A=A.filter(function(a){return a.id!==besar});
+  }
+  return A;
+}
+function ukurPortofolio(A){
+  var reach=0,fol=0,hs=0,bagi=[];
+  A.forEach(function(a){
+    var r=(+a.v||0)*(+a.p30||0);
+    reach+=r;fol+=+a.f||0;hs+=health(a).score;bagi.push(r);
+  });
+  var pj=S.proj||{visit:1.5,klik:8,beli:2.5,harga:29};
+  var beli=reach*(pj.visit/100)*(pj.klik/100)*(pj.beli/100);
+  var terbesar=bagi.length?Math.max.apply(null,bagi):0;
+  return {reach:reach,fol:fol,n:A.length,avg:A.length?Math.round(hs/A.length):0,
+    usd:beli*(+pj.harga||0), pusat:reach>0?Math.round(terbesar/reach*100):0};
+}
+function delta(a,b,balik){
+  if(a===b)return '<span class="dlt rata">sama</span>';
+  var naik=b>a, baik=balik?!naik:naik;
+  var p=a===0?(b>0?100:0):Math.round((b-a)/Math.abs(a)*100);
+  return '<span class="dlt '+(baik?"naik":"turun")+'">'+(p>0?"+":"")+p+'%</span>';
+}
+
+/* --- 3. mesin mutasi ------------------------------------------------ */
+function keluargaGagal(){
+  var out={};
+  gagalnya().forEach(function(e){
+    var t=(e.kunci||e.saran||"");
+    (S.lang==="en"?HOOK_EN:HOOK_ID).forEach(function(x){
+      if(t&&(t===x[1]||t.indexOf(x[0])===0))out[x[0]]=true;
+    });
+    if(e.sumber==="mutasi"&&e.keluarga)out[e.keluarga]=true;
+  });
+  return out;
+}
+function mutasi(){
+  var src=(S.lang==="en"?HOOK_EN:HOOK_ID),blok=keluargaGagal(),g=S.gen,out=[],pakai={};
+  var boleh=src.filter(function(x){return !blok[x[0]]});
+  if(!boleh.length)boleh=src.slice();
+  var mulai=(S.mut||0)*3;
+  for(var i=0;i<boleh.length&&out.length<3;i++){
+    var x=boleh[(mulai+i*5)%boleh.length];
+    if(pakai[x[0]]&&out.length<Object.keys(blok).length+3)continue;
+    pakai[x[0]]=true;
+    out.push({keluarga:x[0],teks:fill(x[1],g)});
+  }
+  return {varian:out,blok:Object.keys(blok)};
+}
+
+/* --- 4. antrean tugas swasusun -------------------------------------- */
+function antrean(){
+  var Q=[],ditunda=S.tunda||{};
+  S.acc.forEach(function(a){
+    findings(a).forEach(function(f){
+      if(f[0]==="ok")return;
+      if(udahGagal("@"+a.h,f[1]))return;
+      Q.push({id:"t|"+a.id+"|"+f[1],bobot:f[0]==="crit"?100:60,akun:"@"+a.h,
+        judul:f[1],apa:f[3],kenapa:f[2],asal:"temuan"});
+    });
+    var FK=fondasiKurang(a);
+    FK.miss.slice(0,3).forEach(function(m){
+      if(m[0]<7)return;
+      Q.push({id:"c|"+a.id+"|"+m[1],bobot:m[0]*5,akun:"@"+a.h,
+        judul:m[1],apa:"Centang di tab Celah begitu ini beneran ada.",
+        kenapa:"Bobot "+m[0]+" dari 9 — ini yang paling mahal kalau dibiarin kosong.",asal:"fondasi"});
+    });
+  });
+  var L=ladder(),next=null;
+  for(var i=0;i<L.length;i++){if(!L[i].ok){next=L[i];break}}
+  if(next)Q.push({id:"u|"+next.k,bobot:45,akun:"semua akun",judul:"Buka anak tangga "+next.k+" — "+next.t,
+    apa:next.syarat,kenapa:"Ini pintu duit berikutnya yang paling dekat. "+next.why,asal:"uang"});
+  Q.forEach(function(t){if(ditunda[t.id])t.bobot-=70});
+  Q.sort(function(x,y){return y.bobot-x.bobot});
+  return Q;
+}
+
+var QNOW=[],MNOW=[];
+function drawMesin(){
+  var T=totals();
+  var h='<div class="sech"><h2>Mesin</h2><span>empat mesin di atas data yang sama — semuanya aturan, nol AI</span></div>';
+
+  /* ---- 1 ---- */
+  h+='<div class="sec"><div class="sech"><h2>Peta objek &amp; jejak putusan</h2><span>tiap saran bisa dilacak balik ke angka yang bikin dia muncul</span></div>';
+  var nT=0,nC=0;
+  S.acc.forEach(function(a){findings(a).forEach(function(f){if(f[0]!=="ok")nT++});nC+=fondasiKurang(a).miss.length});
+  h+='<div class="mx">'+
+   '<div><i>Akun</i><b>'+T.n+'</b><s>objek utama</s></div>'+
+   '<div><i>Platform</i><b>'+Object.keys(S.acc.reduce(function(o,a){o[a.plat]=1;return o},{})).length+'</b><s>tiap satu punya patokan sendiri</s></div>'+
+   '<div><i>Temuan hidup</i><b>'+nT+'</b><s>dari akun × aturan</s></div>'+
+   '<div><i>Celah belum ditutup</i><b>'+nC+'</b><s>dari 12 item fondasi</s></div>'+
+   '<div><i>Catatan hasil</i><b>'+S.jur.length+'</b><s>'+gagalnya().length+' tercatat gagal</s></div>'+
+   '</div>';
+  if(!S.acc.length)h+='<div class="empty">Tambah akun dulu.</div>';
+  S.acc.forEach(function(a){
+    h+='<div class="sec"><div class="sech"><h2>@'+esc(a.h)+'</h2><span>'+PLAT[a.plat].n+'</span></div>'+
+     '<div class="card"><div class="scroll"><table><thead><tr><th>Sinyal</th><th>Nilai sekarang</th><th>Ambang</th><th>Putusan</th><th>Dari kolom</th></tr></thead><tbody>';
+    sinyalJejak(a).forEach(function(r){
+      h+='<tr><td><b>'+r[0]+'</b></td><td class="num">'+r[1]+'</td><td class="num">'+r[2]+'</td>'+
+         '<td><span class="chip" style="color:'+nadaStatus(r[3])+';border-color:'+nadaStatus(r[3])+'">'+r[3]+'</span></td>'+
+         '<td style="color:var(--muted);font-size:12.5px">'+r[4]+'</td></tr>';
+    });
+    h+='</tbody></table></div><p class="note">Kalau ada putusan yang kelihatan salah, yang keliru hampir selalu angka di tab Akun — bukan aturannya. Betulin di sana, semua tab lain ikut berubah.</p></div></div>';
+  });
+  h+='</div>';
+
+  /* ---- 2 ---- */
+  var kini=ukurPortofolio(S.acc),skn=S.skenario||"normal",uji=ukurPortofolio(akunSkenario(skn));
+  h+='<div class="sec"><div class="sech"><h2>Uji tekan portofolio</h2><span>bukan ramalan — cuma menghitung ulang kalau yang di luar kendali berubah</span></div>';
+  h+='<div class="skn">'+SKENARIO.map(function(s){
+    return '<button class="btn ghost sm'+(skn===s[0]?" on":"")+'" data-skn="'+s[0]+'">'+s[1]+'</button>'}).join("")+'</div>';
+  h+='<p class="note" style="margin-top:0">'+(SKENARIO.filter(function(s){return s[0]===skn})[0]||["","",""])[2]+'</p>';
+  h+='<div class="card"><div class="scroll"><table><thead><tr><th>Ukuran</th><th>Sekarang</th><th>Kalau kejadian</th><th>Beda</th></tr></thead><tbody>'+
+   '<tr><td><b>Jangkauan / bulan</b></td><td class="num">'+nf(kini.reach)+'</td><td class="num">'+nf(uji.reach)+'</td><td class="num">'+delta(kini.reach,uji.reach)+'</td></tr>'+
+   '<tr><td><b>Sinyal rata²</b></td><td class="num">'+kini.avg+'</td><td class="num">'+uji.avg+'</td><td class="num">'+delta(kini.avg,uji.avg)+'</td></tr>'+
+   '<tr><td><b>Perkiraan / bulan</b></td><td class="num">$'+Math.round(kini.usd)+'</td><td class="num">$'+Math.round(uji.usd)+'</td><td class="num">'+delta(Math.round(kini.usd),Math.round(uji.usd))+'</td></tr>'+
+   '<tr><td><b>Akun aktif</b></td><td class="num">'+kini.n+'</td><td class="num">'+uji.n+'</td><td class="num">'+delta(kini.n,uji.n)+'</td></tr>'+
+   '</tbody></table>'+
+   '<p class="note">Sinyal rata² bisa naik justru waktu sebuah akun hilang — itu efek rata-rata, bukan kabar baik. Yang menentukan tetap jangkauan dan perkiraan bulanannya.</p></div>';
+  var bahaya=kini.pusat>=60;
+  h+='<div class="find" style="--tone:'+(bahaya?"var(--crit)":"var(--ok)")+';margin-top:14px"><div class="sev"></div><div>'+
+   '<h4>'+(bahaya?"Satu akun menanggung terlalu banyak":"Sebarannya masih masuk akal")+' <span class="chip">'+kini.pusat+'% di satu akun</span></h4>'+
+   '<p>'+(bahaya
+     ?"Kalau akun itu hilang atau turun, sebagian besar mesinnya ikut mati. Ini risiko struktur, bukan risiko konten."
+     :"Tidak ada satu akun yang menanggung lebih dari 60% jangkauan. Kehilangan satu akun tidak menghabiskan semuanya.")+'</p>'+
+   (bahaya?'<div class="do"><b>Lakuin:</b> Bangun satu akun kedua sampai menanggung minimal 30% jangkauan, atau pindahkan orangnya ke tempat yang kamu punya sendiri (surel/WA) supaya tidak tergantung satu platform.</div>':'')+
+   '</div></div></div></div>';
+
+  /* ---- 3 ---- */
+  var M=mutasi();
+  h+='<div class="sec"><div class="sech"><h2>Mesin mutasi</h2><span>varian baru dipandu catatan gagal, bukan diacak</span></div>';
+  h+='<p class="lede">Tiap keluarga hook yang sudah tercatat gagal dikunci, dan varian berikutnya diambil dari keluarga yang lain. Makin banyak yang kamu catat di tab Hasil, makin sempit dan makin tajam pilihannya.</p>';
+  if(M.blok.length)h+='<p class="note" style="margin-top:0">Dikunci karena tercatat gagal: <b>'+M.blok.map(esc).join(", ")+'</b>. Mesin tidak akan menawarkan keluarga itu lagi.</p>';
+  MNOW=M.varian;
+  h+='<div class="card">'+M.varian.map(function(v,i){
+    return '<div class="find" style="--tone:var(--accent)"><div class="sev"></div><div>'+
+     '<h4>Varian '+(i+1)+' <span class="chip acc">keluarga '+esc(v.keluarga)+'</span></h4>'+
+     '<p class="mono">'+esc(v.teks)+'</p>'+
+     '<div class="row" style="margin-top:8px"><button class="btn ghost sm" data-mut="'+i+'">Catat, gue coba ini</button></div>'+
+     '</div></div>'}).join("")+
+   '<div class="row" style="margin-top:12px"><button class="btn ghost sm" id="mut-lagi">Mutasi lagi</button>'+
+   '<span class="note" style="margin:0">Generasi '+((S.mut||0)+1)+'</span></div></div></div>';
+
+  /* ---- 4 ---- */
+  var Qall=antrean(),Tnd=S.tunda||{};
+  var Qaktif=Qall.filter(function(t){return !Tnd[t.id]}),Qtunda=Qall.filter(function(t){return Tnd[t.id]});
+  var sisa=Math.max(0,Qaktif.length-8);
+  var Q=Qaktif.slice(0,8).concat(Qtunda);QNOW=Q;
+  h+='<div class="sec"><div class="sech"><h2>Antrean tugas</h2><span>menyusun ulang dirinya tiap kali kamu catat hasil</span></div>';
+  h+='<p class="lede">Ini bukan daftar yang kamu tulis sendiri. Urutannya dihitung dari temuan, bobot fondasi, dan anak tangga uang berikutnya. Begitu satu ditandai gagal, tugasnya hilang dan digantikan yang lain — mesin tidak menyuruh dua kali.</p>';
+  h+='<div class="card">';
+  if(!Q.length)h+='<div class="empty">Antreannya kosong. Tambah akun, atau semua yang mendesak sudah beres.</div>';
+  Q.forEach(function(t,i){
+    var tunda=(S.tunda||{})[t.id];
+    h+='<div class="antre'+(tunda?" kunci":"")+'"><div class="no">'+(i+1)+'</div><div class="isi">'+
+     '<h4>'+esc(t.judul)+' <span class="chip acc">'+esc(t.akun)+'</span>'+(tunda?' <span class="chip">ditunda</span>':'')+'</h4>'+
+     '<p>'+t.kenapa+'</p><div class="do"><b>Lakuin:</b> '+t.apa+'</div>'+
+     '<div class="row" style="margin-top:8px">'+
+      '<button class="btn ghost sm" data-q="ok" data-i="'+i+'">Selesai</button>'+
+      '<button class="btn ghost sm" data-q="no" data-i="'+i+'">Gak jalan</button>'+
+      '<button class="btn ghost sm" data-q="wait" data-i="'+i+'">'+(tunda?"Naikin lagi":"Nanti")+'</button>'+
+     '</div></div></div>';
+  });
+  h+='</div>';
+  if(sisa)h+='<p class="note">'+sisa+' tugas lain di bawahnya sengaja tidak ditampilkan. Delapan sudah lebih dari cukup untuk seminggu.</p>';
+  h+='</div>';
+
+  $("#p-mesin").innerHTML=h;
+
+  $$("[data-skn]").forEach(function(b){b.onclick=function(){
+    S.skenario=this.getAttribute("data-skn");save();drawMesin();tr($("#p-mesin"));}});
+  var ml=$("#mut-lagi");if(ml)ml.onclick=function(){
+    S.mut=(S.mut||0)+1;save();drawMesin();tr($("#p-mesin"));toast("Generasi baru")};
+  $$("[data-mut]").forEach(function(b){b.onclick=function(){
+    var v=MNOW[+this.getAttribute("data-mut")];if(!v)return;
+    var e=catat("semua akun",v.teks,"mutasi",v.teks);e.keluarga=v.keluarga;save();dbSync(e);
+  }});
+  $$("[data-q]").forEach(function(b){b.onclick=function(){
+    var aksi=this.getAttribute("data-q"),t=QNOW[+this.getAttribute("data-i")];
+    if(!t)return;
+    var id=t.id,akun=t.akun,judul=t.judul;
+    if(aksi==="wait"){S.tunda=S.tunda||{};var adaTunda=!!S.tunda[id];if(adaTunda)delete S.tunda[id];else S.tunda[id]=1;save();drawMesin();tr($("#p-mesin"));toast(adaTunda?"Dinaikin lagi":"Ditunda — turun ke bawah, gak dihapus");return}
+    var e=catat(akun,judul,"antrean",judul);
+    e.status=(aksi==="ok"?"berhasil":"gagal");save();dbSync(e);
+    drawMesin();tr($("#p-mesin"));
+    toast(aksi==="ok"?"Dicatat berhasil":"Dicatat gagal — gak bakal disuruh lagi");
+  }});
+}
+
 /* ================= LAPORAN =================
    Merangkum seluruh keluaran mesin aturan jadi satu dokumen siap cetak.
    Tidak butuh AI — semuanya dari angka yang sudah diisi di tab Akun.       */
@@ -1489,6 +1738,63 @@ function drawLaporan(){
 
 /* ================= BAHASA / LANGUAGE ================= */
 var TR={
+/* mesin */
+"% di satu akun":"% in one account",
+"Ditunda — turun ke bawah, gak dihapus":"Deferred \u2014 moved to the bottom, not deleted","Dinaikin lagi":"Raised again",
+"Sinyal rata² bisa naik justru waktu sebuah akun hilang — itu efek rata-rata, bukan kabar baik. Yang menentukan tetap jangkauan dan perkiraan bulanannya.":"Average signal can rise precisely when an account disappears \u2014 that is an averaging artefact, not good news. Reach and the monthly estimate are what decide.",
+"Mesin":"Engines",
+"empat mesin di atas data yang sama — semuanya aturan, nol AI":"four engines over the same data \u2014 all rules, zero AI",
+"Peta objek & jejak putusan":"Object map & decision trail",
+"tiap saran bisa dilacak balik ke angka yang bikin dia muncul":"every recommendation traces back to the number that produced it",
+"objek utama":"primary object","tiap satu punya patokan sendiri":"each has its own benchmark",
+"Temuan hidup":"Live findings","dari akun × aturan":"accounts \u00d7 rules",
+"Celah belum ditutup":"Gaps still open","dari 12 item fondasi":"out of 12 foundation items",
+"Catatan hasil":"Outcome entries","tercatat gagal":"recorded as failed",
+"Sinyal":"Signal","Nilai sekarang":"Value now","Ambang":"Threshold","Putusan":"Verdict","Dari kolom":"From field",
+"Rasio jangkauan":"Reach ratio","Keterikatan":"Engagement","Volume":"Volume",
+"Tautan keluar":"Outbound link","Penawaran":"Offer","Pengikut vs jangkauan":"Followers vs reach",
+"tayangan ÷ pengikut":"views \u00f7 followers","(suka + komentar) ÷ tayangan":"(likes + comments) \u00f7 views",
+"konten sebulan":"posts per month","kolom centang di tab Akun":"checkbox on the Accounts tab",
+"kolom Penawaran di tab Akun":"Offer field on the Accounts tab","dua kolom di tab Akun":"two fields on the Accounts tab",
+"belum diisi":"not entered","tidak ada":"none","ada":"present","kosong":"empty",
+"kritis":"critical","waspada":"watch","aman":"safe","cukup":"ok",
+"sehat ≥ ":"healthy \u2265 "," · bagus ≥ ":" \u00b7 good \u2265 ","patokan ":"benchmark ",
+"sehat ≈ ":"healthy \u2248 ","wajib ada 1":"one is required","wajib terisi":"must be filled in",
+"dingin kalau >2000 & rasio <0,5×":"cold if >2000 and ratio <0.5\u00d7",
+"Kalau ada putusan yang kelihatan salah, yang keliru hampir selalu angka di tab Akun — bukan aturannya. Betulin di sana, semua tab lain ikut berubah.":"If a verdict looks wrong, the mistake is almost always a number on the Accounts tab, not the rule. Fix it there and every other tab follows.",
+"Uji tekan portofolio":"Portfolio stress test",
+"bukan ramalan — cuma menghitung ulang kalau yang di luar kendali berubah":"not a forecast \u2014 just the same maths run again if something outside your control moves",
+"Sekarang":"As it stands","angka apa adanya":"the numbers as entered",
+"Jangkauan −40%":"Reach \u221240%","platform ngurangin sebaran":"the platform throttles distribution",
+"Organik dimatiin −70%":"Organic killed \u221270%","yang kejadian di Facebook dulu":"what happened on Facebook years ago",
+"Akun terbesar hilang":"Largest account lost","kena banned / hilang akses":"banned or access lost",
+"Keterikatan −50%":"Engagement \u221250%","audiens jenuh":"the audience goes flat",
+"Ukuran":"Measure","Kalau kejadian":"If it happens","Beda":"Change","sama":"no change",
+"Perkiraan / bulan":"Estimate / month","Akun aktif":"Active accounts",
+"Satu akun menanggung terlalu banyak":"One account carries too much",
+"Sebarannya masih masuk akal":"The spread is still sane",
+"di satu akun":"in one account",
+"Kalau akun itu hilang atau turun, sebagian besar mesinnya ikut mati. Ini risiko struktur, bukan risiko konten.":"If that account goes or dips, most of the machine goes with it. That is structural risk, not content risk.",
+"Tidak ada satu akun yang menanggung lebih dari 60% jangkauan. Kehilangan satu akun tidak menghabiskan semuanya.":"No single account carries more than 60% of reach. Losing one does not take everything with it.",
+"Bangun satu akun kedua sampai menanggung minimal 30% jangkauan, atau pindahkan orangnya ke tempat yang kamu punya sendiri (surel/WA) supaya tidak tergantung satu platform.":"Grow a second account until it carries at least 30% of reach, or move the people somewhere you own (email/WhatsApp) so you do not depend on one platform.",
+"Mesin mutasi":"Mutation engine",
+"varian baru dipandu catatan gagal, bukan diacak":"new variants steered by recorded failures, not randomised",
+"Tiap keluarga hook yang sudah tercatat gagal dikunci, dan varian berikutnya diambil dari keluarga yang lain. Makin banyak yang kamu catat di tab Hasil, makin sempit dan makin tajam pilihannya.":"Every hook family recorded as failed gets locked, and the next variants come from a different family. The more you record on the Results tab, the narrower and sharper the choice becomes.",
+"Dikunci karena tercatat gagal:":"Locked because they were recorded as failed:",
+"Mesin tidak akan menawarkan keluarga itu lagi.":"The engine will not offer those families again.",
+"Varian ":"Variant ","keluarga ":"family ","Catat, gue coba ini":"Log it \u2014 I will try this",
+"Mutasi lagi":"Mutate again","Generasi ":"Generation ","Generasi baru":"New generation",
+"Antrean tugas":"Task queue",
+"menyusun ulang dirinya tiap kali kamu catat hasil":"reorders itself every time you record an outcome",
+"Ini bukan daftar yang kamu tulis sendiri. Urutannya dihitung dari temuan, bobot fondasi, dan anak tangga uang berikutnya. Begitu satu ditandai gagal, tugasnya hilang dan digantikan yang lain — mesin tidak menyuruh dua kali.":"This is not a list you wrote. The order is computed from findings, foundation weights, and the next rung of the money ladder. Mark one as failed and it disappears, replaced by another \u2014 the engine never asks twice.",
+"Antreannya kosong. Tambah akun, atau semua yang mendesak sudah beres.":"The queue is empty. Add an account, or everything urgent is already done.",
+"Selesai":"Done","Gak jalan":"Did not work","Nanti":"Later","Naikin lagi":"Raise it again","ditunda":"deferred",
+"Dicatat berhasil":"Recorded as worked","Dicatat gagal — gak bakal disuruh lagi":"Recorded as failed \u2014 you will not be told again",
+"Centang di tab Celah begitu ini beneran ada.":"Tick it on the Gaps tab once this actually exists.",
+"Buka anak tangga ":"Unlock rung ",
+"Ini pintu duit berikutnya yang paling dekat. ":"This is the nearest next door to money. ",
+"tugas lain di bawahnya sengaja tidak ditampilkan. Delapan sudah lebih dari cukup untuk seminggu.":"more tasks below are deliberately hidden. Eight is already more than enough for one week.",
+"semua akun":"all accounts",
 /* laporan */
 "Jangkauan / bulan":"Reach / month",
 "Laporan":"Report",
@@ -1892,7 +2198,7 @@ function setLang(v){
 }
 
 /* ================= BOOT ================= */
-function draw(t){({akun:drawAkun,audit:drawAudit,konten:drawKonten,seo:drawSeo,celah:drawCelah,uang:drawUang,rencana:drawRencana,hasil:drawHasil,laporan:drawLaporan})[t]();tr(document.getElementById("p-"+t))}
+function draw(t){({akun:drawAkun,audit:drawAudit,konten:drawKonten,seo:drawSeo,celah:drawCelah,uang:drawUang,rencana:drawRencana,hasil:drawHasil,mesin:drawMesin,laporan:drawLaporan})[t]();tr(document.getElementById("p-"+t))}
 function refresh(){renderGauge();renderRail();draw(S.tab);tr(document.body)}
 $("#theme").onclick=function(){
   var cur=document.documentElement.getAttribute("data-theme");
