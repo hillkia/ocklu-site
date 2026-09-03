@@ -9,7 +9,7 @@
 //    dipakai saat jaringan benar-benar gagal.
 // 2. data.json: TIDAK PERNAH disentuh cache. Dasbor yang menampilkan angka
 //    basi tanpa memberi tahu lebih berbahaya daripada dasbor yang kosong.
-const NAMA = 'jarvis-hp-v1';
+const NAMA = 'jarvis-hp-v3';
 const CANGKANG = ['./', './index.html', './manifest.webmanifest',
                   './ikon-192.png', './ikon-512.png'];
 
