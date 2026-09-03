@@ -117,54 +117,6 @@
     color:#fff;background:var(--nyala);border:0;border-radius:11px}
   #pesan{font-size:12.5px;margin-top:12px;min-height:17px;color:var(--kuning)}
   .sembunyi{display:none!important}
-
-  /* panel kiri — disembunyikan di HP, dinyalakan oleh aturan layar lebar */
-  #sisi{position:fixed;left:0;top:0;bottom:0;width:252px;z-index:6;display:none;
-    flex-direction:column;padding:18px 16px;gap:10px;overflow-y:auto;
-    background:linear-gradient(180deg,rgba(6,8,12,.96),rgba(6,8,12,.88));
-    border-right:1px solid var(--garis);backdrop-filter:blur(9px)}
-  #sisi .judul{font-size:13px;font-weight:650;letter-spacing:.09em;color:var(--putih)}
-  #sisi .sub{font-size:10px;color:var(--redup);margin-bottom:4px}
-  #sisi .bab{font-size:8.5px;letter-spacing:.18em;text-transform:uppercase;
-    color:#465061;margin:12px 0 2px;font-weight:600}
-
-  /* ── layar lebar: kendali pindah ke sisi kiri ────────────────────────
-     Di HP, saringan dan kotak cari harus di bawah supaya terjangkau jempol.
-     Di layar lebar itu justru salah: mereka jadi bilah panjang yang jauh
-     dari graf. Jadi keduanya dipindah ke panel kiri, dan cincin reaktor
-     digeser ke kanan supaya tengah layar sepenuhnya milik graf. */
-  @media (min-width: 1000px) {
-    #sisi { display: flex !important; }
-
-    header { left: 268px; padding: 20px 24px 14px; }
-    h1 { font-size: 16px; }
-
-    #cincin { top: 50%; left: auto; right: 26px;
-              transform: translateY(-50%); width: 150px; height: 150px; }
-    #nama { top: 50%; left: auto; right: 26px; width: 150px;
-            transform: translateY(-50%); font-size: 10px; }
-    #pil { top: calc(50% + 96px); left: auto; right: 26px; width: 150px;
-           flex-direction: column; align-items: center; gap: 6px; padding: 0; }
-
-    /* saringan & kotak cari pindah ke panel kiri */
-    #saring { position: static; flex-direction: column; overflow: visible;
-              padding: 0; gap: 5px; }
-    .cip { width: 100%; justify-content: flex-start; padding: 7px 11px; font-size: 12px; }
-    .cip b { margin-left: auto; }
-    #bawah { position: static; background: 0; border: 0; padding: 0 0 14px;
-             backdrop-filter: none; }
-    #tanya { font-size: 13px; padding: 10px 13px; }
-    .bulat { width: 38px; height: 38px; font-size: 16px; }
-
-    #gelembung { left: 292px; right: 220px; bottom: 26px; font-size: 14.5px; }
-
-    /* panel simpul jadi laci kanan, tidak menutupi graf */
-    #panel { left: auto; right: 0; top: 0; bottom: 0; width: 400px;
-             border-radius: 0; border-top: 0; border-left: 1px solid var(--garis);
-             transform: translateX(101%); padding: 26px 26px 34px; max-height: none; }
-    #panel.buka { transform: translateX(0); }
-    .pegangan { display: none; }
-  }
 </style>
 </head>
 <body>
@@ -198,15 +150,6 @@
 
   <div id="gelembung"><div class="siapa">Jarvis</div><div id="gel-isi"></div></div>
 
-  <aside id="sisi">
-    <div class="judul">OCKLU JARVIS</div>
-    <div class="sub" id="sisi-sub"></div>
-    <div class="bab">Cari &amp; tanya</div>
-    <div id="tempat-bawah"></div>
-    <div class="bab">Saringan</div>
-    <div id="tempat-saring"></div>
-  </aside>
-
   <div id="saring"></div>
 
   <div id="bawah">
@@ -227,7 +170,6 @@
 <script>
 'use strict';
 const $ = s => document.querySelector(s);
-const sisiAktif = () => innerWidth >= 1000;
 const SANDI = 'jarvis-hp-pin';
 let G = null, N = [], L = [], MATI = new Set(), FOKUS = null, CARI = '';
 
@@ -332,16 +274,12 @@ function gambarGraf(){
   cx.clearRect(0,0,W,H);
   if(!N.length) return;
   const cy=Math.cos(yaw),sy=Math.sin(yaw),cp=Math.cos(pitch),sp=Math.sin(pitch);
-  // Skala ikut ukuran jendela. Tanpa ini graf tetap sebesar layar HP walau
-  // jendelanya dilebarkan — kelihatan seperti gumpalan kecil di tengah.
-  const auto=Math.min(W,H)/760;
-  const ox=(sisiAktif()? (W+252)/2 : W/2)+geser.x, oy=H*0.52+geser.y, F=680;
-  const Z=zum*Math.max(.75,auto);
+  const ox=W/2+geser.x, oy=H*0.52+geser.y, F=680;
   for(const n of N){
     const x1=n.x*cy-n.z*sy, z1=n.x*sy+n.z*cy;
     const y1=n.y*cp-z1*sp, z2=n.y*sp+z1*cp;
     const p=F/(F+z2+300); n.sp=p>.05?p:.05;
-    n.sx=ox+x1*n.sp*Z; n.sy=oy+y1*n.sp*Z; n.sz=z2;
+    n.sx=ox+x1*n.sp*zum; n.sy=oy+y1*n.sp*zum; n.sz=z2;
     n.tampak=!MATI.has(n.k);
   }
   const urut=N.filter(n=>n.tampak).sort((a,b)=>b.sz-a.sz);
@@ -355,7 +293,7 @@ function gambarGraf(){
   }
   for(const n of urut){
     const tr=terang(n); if(tr<.05) continue;
-    const R=n.r*n.sp*Z; if(R<.4) continue;
+    const R=n.r*n.sp*zum; if(R<.4) continue;
     const w=G.warna[n.k]||'#8892a0';
     if(n.d>8||n.i===FOKUS){
       cx.fillStyle=warnaA(w,.15*tr);
@@ -372,7 +310,7 @@ function gambarGraf(){
     const uk=Math.max(8,Math.min(12,6+n.d*.08))*(.75+n.sp*.4);
     cx.font=`500 ${uk.toFixed(1)}px -apple-system,sans-serif`;
     cx.fillStyle=`rgba(214,224,236,${.35+n.sp*.5})`;
-    cx.fillText(n.l, n.sx, n.sy+n.r*n.sp*Z+uk*.95);
+    cx.fillText(n.l, n.sx, n.sy+n.r*n.sp*zum+uk*.95);
   }
 }
 
@@ -622,24 +560,6 @@ $('#frm').onsubmit=async e=>{
   if(s && await coba(s,true)) return;
   $('#pin').focus();
 })();
-
-// Di layar lebar, saringan & kotak cari dipindah ke panel kiri. Elemennya
-// SAMA, cuma berpindah induk — jadi semua pendengar tetap menempel.
-function tataLetak(){
-  const lebar = innerWidth >= 1000;
-  const saring = $('#saring'), bawah = $('#bawah');
-  if(lebar){
-    $('#tempat-bawah').appendChild(bawah);
-    $('#tempat-saring').appendChild(saring);
-    if(G) $('#sisi-sub').textContent = `${G.tampil_node} dari ${G.penuh_node} simpul`;
-  } else if(bawah.parentElement !== document.body){
-    document.body.appendChild(saring);
-    document.body.appendChild(bawah);
-  }
-}
-addEventListener('resize', tataLetak);
-const _mulai = mulai;
-mulai = d => { _mulai(d); tataLetak(); };
 
 if('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(()=>{});
 </script>
