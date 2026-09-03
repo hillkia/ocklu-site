@@ -18,12 +18,13 @@
     --latar:#05070a; --kartu:#0b0f15; --garis:#1a2029;
     --redup:#5b6673; --sedang:#8b95a3; --terang:#dbe3ec; --putih:#f4f7fb;
     --hijau:#4ade80; --kuning:#fbbf24; --merah:#f87171; --nyala:#7c5cff;
+    --bawah:calc(58px + env(safe-area-inset-bottom));
   }
   *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
   html,body{margin:0;background:var(--latar);color:var(--terang);
     font:400 15px/1.5 -apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Inter,sans-serif;
-    -webkit-font-smoothing:antialiased}
-  body{padding:max(14px,env(safe-area-inset-top)) 14px calc(24px + env(safe-area-inset-bottom))}
+    -webkit-font-smoothing:antialiased;overscroll-behavior-y:none}
+  body{padding:max(14px,env(safe-area-inset-top)) 14px calc(var(--bawah) + 18px)}
   .bung{max-width:640px;margin:0 auto}
 
   header{display:flex;align-items:center;gap:10px;margin:6px 0 16px}
@@ -33,8 +34,14 @@
   h1{margin:0;font-size:17px;font-weight:650;letter-spacing:.02em;color:var(--putih);flex:1}
   .segar{font-size:11px;color:var(--redup);white-space:nowrap}
 
+  /* semua yang bisa diketuk memakai isyarat yang sama */
+  .ketuk{cursor:pointer;position:relative;transition:transform .12s,border-color .12s}
+  .ketuk:active{transform:scale(.985)}
+  .ketuk::after{content:'›';position:absolute;color:var(--redup);font-size:17px;line-height:1}
+
   .uang{background:linear-gradient(160deg,rgba(74,222,128,.13),rgba(74,222,128,.03));
     border:1px solid rgba(74,222,128,.28);border-radius:14px;padding:18px;margin-bottom:12px}
+  .uang::after{top:16px;right:16px;color:#6f9d80}
   .uang .lbl{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#6f9d80}
   .uang .n{font-size:38px;font-weight:680;color:#b6f5cd;line-height:1.1;margin:5px 0 2px;
     font-variant-numeric:tabular-nums}
@@ -42,7 +49,9 @@
 
   .petak{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:12px}
   .sel{background:var(--kartu);border:1px solid var(--garis);border-radius:12px;padding:13px}
-  .sel .lbl{font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--redup)}
+  .sel::after{top:11px;right:11px}
+  .sel .lbl{font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--redup);
+    padding-right:12px}
   .sel .n{font-size:25px;font-weight:640;color:var(--putih);margin-top:3px;
     font-variant-numeric:tabular-nums;line-height:1.15}
   .sel .sub{font-size:11px;color:var(--sedang);margin-top:1px}
@@ -52,9 +61,11 @@
   h2{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--redup);
     margin:20px 0 8px;font-weight:600}
   .daftar{background:var(--kartu);border:1px solid var(--garis);border-radius:12px;overflow:hidden}
-  .brs{display:flex;align-items:center;gap:10px;padding:11px 13px;border-bottom:1px solid var(--garis);
-    font-size:13.5px}
+  .brs{display:flex;align-items:center;gap:10px;padding:12px 30px 12px 13px;
+    border-bottom:1px solid var(--garis);font-size:13.5px}
+  .brs::after{top:50%;right:13px;transform:translateY(-50%)}
   .brs:last-child{border-bottom:0}
+  .brs:active{background:rgba(255,255,255,.04)}
   .brs .nm{flex:1;color:var(--sedang)}
   .brs .v{font-weight:600;color:var(--putih);font-variant-numeric:tabular-nums}
   .brs .v.baik{color:var(--hijau)} .brs .v.awas{color:var(--kuning)} .brs .v.buruk{color:var(--merah)}
@@ -62,8 +73,47 @@
   .catatan{font-size:12px;line-height:1.6;color:var(--redup);margin-top:14px;
     border-left:2px solid var(--garis);padding-left:11px}
 
-  /* gerbang PIN */
-  #gerbang{position:fixed;inset:0;background:var(--latar);z-index:9;display:grid;
+  /* ── tab bawah ── */
+  nav{position:fixed;left:0;right:0;bottom:0;z-index:6;display:flex;
+    background:rgba(8,11,16,.94);backdrop-filter:blur(14px);
+    border-top:1px solid var(--garis);padding-bottom:env(safe-area-inset-bottom)}
+  nav button{flex:1;background:0;border:0;padding:9px 4px 10px;cursor:pointer;
+    display:flex;flex-direction:column;align-items:center;gap:3px;
+    font:inherit;font-size:10px;letter-spacing:.04em;color:var(--redup)}
+  nav button .ikn{font-size:17px;line-height:1;opacity:.75}
+  nav button.aktif{color:var(--nyala)}
+  nav button.aktif .ikn{opacity:1}
+  nav button .tanda{position:absolute;top:5px;margin-left:22px;width:6px;height:6px;
+    border-radius:50%;background:var(--kuning)}
+
+  .lembar{display:none} .lembar.aktif{display:block}
+
+  /* ── panel rincian ── */
+  #tirai{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:8;opacity:0;
+    pointer-events:none;transition:opacity .22s}
+  #tirai.buka{opacity:1;pointer-events:auto}
+  #panel{position:fixed;left:0;right:0;bottom:0;z-index:9;
+    background:var(--kartu);border-top:1px solid var(--garis);
+    border-radius:18px 18px 0 0;padding:8px 18px calc(24px + env(safe-area-inset-bottom));
+    transform:translateY(101%);transition:transform .26s cubic-bezier(.32,.72,0,1);
+    max-height:82vh;overflow-y:auto}
+  #panel.buka{transform:translateY(0)}
+  .pegangan{width:38px;height:4px;border-radius:99px;background:#28313d;margin:6px auto 14px}
+  #p-lbl{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--redup)}
+  #p-n{font-size:34px;font-weight:680;color:var(--putih);line-height:1.1;margin:4px 0 2px;
+    font-variant-numeric:tabular-nums}
+  #p-sub{font-size:13px;color:var(--sedang);margin-bottom:16px}
+  .p-bab{font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--redup);
+    margin:16px 0 6px}
+  .p-isi{font-size:14px;line-height:1.6;color:var(--terang)}
+  .p-isi code{font-family:ui-monospace,Menlo,monospace;font-size:12.5px;
+    background:rgba(255,255,255,.06);padding:1px 5px;border-radius:4px;color:#c9b6ff}
+  .p-aksi{font-size:14px;line-height:1.6;color:#ffe6a8;background:rgba(251,191,36,.08);
+    border:1px solid rgba(251,191,36,.25);border-radius:10px;padding:11px 13px}
+  .p-aksi.baik{color:#b6f5cd;background:rgba(74,222,128,.08);border-color:rgba(74,222,128,.25)}
+
+  /* ── gerbang PIN ── */
+  #gerbang{position:fixed;inset:0;background:var(--latar);z-index:10;display:grid;
     place-items:center;padding:28px}
   #gerbang .kotak{width:100%;max-width:300px;text-align:center}
   #gerbang h2{margin:0 0 6px;font-size:16px;letter-spacing:.02em;color:var(--putih);text-transform:none}
@@ -85,9 +135,11 @@
     <h2>Ocklu-9099</h2>
     <p>Angkanya terkunci. Situs ini publik, jadi datanya disimpan terenkripsi —
        PIN-nya tidak pernah dikirim ke mana pun, dipakai di HP ini saja.</p>
-    <input id="pin" type="password" inputmode="numeric" autocomplete="current-password"
-           placeholder="••••••" enterkeyhint="go">
-    <button id="buka">Buka</button>
+    <form id="frm" autocomplete="on">
+      <input id="pin" type="password" inputmode="numeric" autocomplete="current-password"
+             placeholder="••••••" enterkeyhint="go">
+      <button id="buka" type="submit">Buka</button>
+    </form>
     <div id="pesan"></div>
   </div>
 </div>
@@ -99,143 +151,322 @@
     <span class="segar" id="segar"></span>
   </header>
 
-  <div class="uang">
-    <div class="lbl">Uang masuk · 30 hari</div>
-    <div class="n" id="uang">—</div>
-    <div class="ket" id="uang-ket"></div>
-  </div>
+  <section class="lembar aktif" data-lembar="ringkas">
+    <div class="uang ketuk" data-k="uang_masuk">
+      <div class="lbl">Uang masuk · 30 hari</div>
+      <div class="n" id="uang">—</div>
+      <div class="ket" id="uang-ket"></div>
+    </div>
+    <div class="petak" id="petak"></div>
+    <div class="catatan" id="catatan"></div>
+  </section>
 
-  <div class="petak">
-    <div class="sel"><div class="lbl">Surat terkirim</div>
-      <div class="n" id="terkirim">—</div><div class="sub" id="terkirim-sub"></div></div>
-    <div class="sel"><div class="lbl">Dibalas orang</div>
-      <div class="n" id="dibalas">—</div><div class="sub" id="dibalas-sub"></div></div>
-    <div class="sel"><div class="lbl">Dijawab otomatis</div>
-      <div class="n" id="otomatis">—</div><div class="sub">oleh ghostmode</div></div>
-    <div class="sel" id="sel-meja"><div class="lbl">Alamat meja</div>
-      <div class="n" id="meja">—</div><div class="sub" id="meja-sub"></div></div>
-  </div>
+  <section class="lembar" data-lembar="corong">
+    <h2>Corong · 30 hari</h2>
+    <div class="daftar" id="corong"></div>
+    <div class="catatan">Ketuk angka mana pun untuk melihat dari tabel mana dia dihitung.
+      Tidak ada angka di sini yang diketik tangan.</div>
+  </section>
 
-  <h2>Corong</h2>
-  <div class="daftar" id="corong"></div>
+  <section class="lembar" data-lembar="mesin">
+    <h2>Mesin</h2>
+    <div class="daftar" id="mesin"></div>
+    <h2>Pagar yang menjaga</h2>
+    <div class="daftar" id="pagar"></div>
+  </section>
+</div>
 
-  <h2>Mesin</h2>
-  <div class="daftar" id="mesin"></div>
+<nav class="sembunyi" id="nav">
+  <button data-t="ringkas" class="aktif"><span class="ikn">◉</span>Ringkas</button>
+  <button data-t="corong"><span class="ikn">⌛</span>Corong</button>
+  <button data-t="mesin"><span class="ikn">⚙</span>Mesin</button>
+</nav>
 
-  <div class="catatan" id="catatan"></div>
+<div id="tirai"></div>
+<div id="panel">
+  <div class="pegangan"></div>
+  <div id="p-lbl"></div>
+  <div id="p-n"></div>
+  <div id="p-sub"></div>
+  <div id="p-badan"></div>
 </div>
 
 <script>
+'use strict';
 const $ = s => document.querySelector(s);
 const KUNCI_PIN = 'ocklu9099-pin';
+let D = {};
 
-// ── buka data terenkripsi ──────────────────────────────────────────────
-// Berkasnya publik di ocklu.com; yang menjaganya PIN, bukan alamatnya.
-async function bukaData(sandi) {
-  const r = await fetch('data.json?t=' + Date.now(), { cache: 'no-store' });
-  if (!r.ok) throw new Error('data belum ada di server');
-  const p = await r.json();
-  const enc = new TextEncoder();
-  const bahan = await crypto.subtle.importKey('raw', enc.encode(sandi), 'PBKDF2', false, ['deriveKey']);
+// ── kamus angka ────────────────────────────────────────────────────────
+// Tiap angka menyimpan ARTI, ASAL (tabel mana), dan APA YANG HARUS DILAKUKAN.
+// Asal ditulis eksplisit supaya tidak ada angka yang harus dipercaya begitu saja.
+const KAMUS = {
+  uang_masuk:{lbl:'Uang masuk · 30 hari',
+    arti:'Semua uang yang benar-benar masuk 30 hari terakhir, dari penjualan mana pun.',
+    asal:'Dijumlahkan dari kolom <code>nilai</code> di tabel <code>bayar_masuk</code> — bukan dari invoice yang lunas. Penjualan produk digital sering masuk tanpa invoice sama sekali; memakai invoice sebagai sumber pernah bikin dasbor melaporkan 0 padahal uang sudah masuk.',
+    aksi:d=>d.bayar_tanpa_invoice?{t:`${d.bayar_tanpa_invoice} pembayaran masuk tanpa invoice yang cocok. Uangnya nyata, tapi belum terhubung ke tagihan mana pun — catat manual supaya pembukuan tidak pincang.`}:null},
+  terkirim:{lbl:'Surat terkirim',
+    arti:'Berapa kali mesin benar-benar menekan kirim dalam 30 hari.',
+    asal:'Hitungan baris di tabel <code>terkirim</code>. Dicatat setelah SMTP menerima, jadi ini bukan niat kirim — ini kirim yang sudah terjadi.',
+    aksi:d=>d.terkirim<10?{t:'Kolamnya kering. Mesin balas, tindak lanjut, dan tagih sudah siap tapi tidak ada yang masuk untuk dikerjakan.'}:null},
+  alamat_unik:{lbl:'Alamat unik',
+    arti:'Berapa orang berbeda yang dikirimi, bukan berapa surat.',
+    asal:'<code>COUNT(DISTINCT email)</code> dari tabel <code>terkirim</code>. Selisihnya dengan surat terkirim = tindak lanjut ke orang yang sama.'},
+  dibalas:{lbl:'Dibalas orang',
+    arti:'Berapa alamat berbeda yang membalas surat kita.',
+    asal:'Alamat unik di tabel <code>balasan</code> dengan <code>arah=masuk</code>. Balasan otomatis "out of office" ikut terhitung di sini — angka ini batas atas, bukan minat sungguhan.',
+    aksi:d=>(d.terkirim>20&&d.dibalas===0)?{t:'Puluhan surat, nol balasan. Yang perlu diperbaiki hampir pasti alamat tujuan atau naskahnya — bukan jumlah kirimannya.'}:null},
+  balas_persen:{lbl:'Persen balasan', akhiran:'%',
+    arti:'Dibalas dibagi alamat unik. Untuk cold email B2B, 1–3% itu wajar; 0% berarti ada yang rusak.',
+    asal:'Dihitung saat itu juga dari dua angka di atas. Tidak disimpan, jadi tidak bisa basi.'},
+  dijawab_otomatis:{lbl:'Dijawab otomatis',
+    arti:'Berapa balasan yang dilepas ghostmode tanpa tanganmu.',
+    asal:'Baris di <code>balasan</code> dengan <code>arah=draft</code> dan <code>status=terkirim</code>. Tiap satu sudah lolos empat pagar: niat, sekali-per-giliran, waras, dan jatah.'},
+  draft_menunggu:{lbl:'Draft menunggu',
+    arti:'Jawaban yang sudah ditulis tapi ditahan — pagarnya menolak melepas otomatis.',
+    asal:'Baris <code>arah=draft</code>, <code>status=menunggu</code>. Ditahan bukan dibuang; alasannya ada di laporan Telegram tiap putaran.',
+    aksi:d=>d.draft_menunggu>0?{t:`${d.draft_menunggu} jawaban menunggu keputusanmu. Cek pesan Telegram terakhir — di situ tertulis kenapa masing-masing ditahan.`}:null},
+  prospek:{lbl:'Prospek',
+    arti:'Total kontak di kolam, termasuk yang sudah selesai diproses.',
+    asal:'Hitungan baris tabel <code>prospek</code>.'},
+  tertarik:{lbl:'Tertarik',
+    arti:'Yang balasannya dibaca mesin sebagai berminat.',
+    asal:'<code>prospek.status=tertarik</code>, diisi saat balasannya dibaca. Mesin sengaja pesimis: "thanks but no" dihitung menolak, bukan tertarik.',
+    aksi:d=>d.tertarik>0?{t:`${d.tertarik} orang berminat. Ini antrean paling berharga di seluruh dasbor — kejar sebelum dingin.`,baik:true}:null},
+  menolak:{lbl:'Menolak',
+    arti:'Yang menolak terang-terangan. Urutan tindak lanjutnya dihentikan.',
+    asal:'<code>prospek.status=tidak_tertarik</code>. Begitu ditandai, mesin berhenti menyentuh mereka.'},
+  alamat_mati:{lbl:'Alamat mati',
+    arti:'Alamat yang suratnya dipantulkan permanen — kotaknya memang tidak ada.',
+    asal:'Diblokir oleh <code>pantau.pantul()</code> saat menemukan pemberitahuan gagal-kirim dengan kode permanen (550, user unknown). Gagal sementara seperti "mailbox full" sengaja TIDAK diblokir.',
+    aksi:d=>d.alamat_mati>0?{t:`${d.alamat_mati} alamat sudah diblokir otomatis. Tanpa ini mesin akan menagih terus ke kotak yang suratnya tidak pernah sampai.`,baik:true}:null},
+  alamat_meja:{lbl:'Alamat meja', bawah:d=>`${d.alamat_meja} dari ${d.prospek} prospek`,
+    arti:'Alamat peran seperti info@ atau enquiries@ — yang membacanya staf depan, bukan pengambil keputusan.',
+    asal:'Bagian sebelum @ dicocokkan ke daftar kata meja di <code>a6_coldmail.meja()</code>.',
+    aksi:d=>d.meja_persen>=50?{t:`${d.meja_persen}% kolammu alamat meja. Yang membaca tidak bisa membeli apa pun — dia cuma bisa meneruskan atau menghapus. Mesin sudah memakai naskah khusus untuk alamat begini: suratnya ditulis supaya DITERUSKAN, menyebut jelas untuk siapa, dan hanya meminta satu hal murah.`}:null},
+  meja_persen:{lbl:'Persen alamat meja', akhiran:'%',
+    arti:'Porsi kolam yang berupa alamat peran.',
+    asal:'Alamat meja dibagi total prospek, dihitung saat itu juga.'},
+  minta_berhenti:{lbl:'Minta berhenti',
+    arti:'Yang minta tidak dihubungi lagi. Permanen.',
+    asal:'Hitungan baris tabel <code>blokir</code>. Sekali masuk, <code>kepatuhan.boleh_kirim_ke()</code> menolak semua surat ke sana — termasuk balasan.'},
+  invoice_terbuka:{lbl:'Invoice terbuka',
+    arti:'Tagihan yang sudah terbit tapi belum dibayar.',
+    asal:'<code>invoices</code> dengan <code>lunas=0</code>. Yang jatuh tempo dikejar sendiri tiap putaran.'},
+  invoice_lunas:{lbl:'Invoice lunas', arti:'Tagihan yang sudah dibayar.',
+    asal:'<code>invoices</code> dengan <code>lunas=1</code>.'},
+  penjualan:{lbl:'Penjualan tercatat',
+    arti:'Berapa kali uang masuk 30 hari terakhir.',
+    asal:'Hitungan baris <code>bayar_masuk</code>, dari API Gumroad maupun pembacaan inbox.'},
+  bayar_tanpa_invoice:{lbl:'Bayar tanpa invoice',
+    arti:'Uang masuk yang tidak cocok dengan tagihan mana pun.',
+    asal:'<code>bayar_masuk</code> dengan <code>cocok=0</code>. Bukan galat — produk digital memang dibeli tanpa invoice.'},
+};
+
+const MESIN = {
+  otak:{lbl:'Otak hidup', arti:'Model bahasa yang siap dipakai untuk membaca balasan dan menulis jawaban.',
+    asal:'Diperiksa di awal tiap putaran. Kalau semua mati, mesin BERHENTI — tidak pernah mengarang jawaban.'},
+  smtp:{lbl:'Email keluar', arti:'Jalur kirim surat.',
+    asal:'Ada tidaknya <code>SMTP_HOST</code> + <code>SMTP_PASS</code> di GitHub Secrets. Di laptop tertulis mati karena kuncinya memang tidak disimpan di sana — itu benar, bukan galat.'},
+  imap:{lbl:'Inbox', arti:'Jalur baca surat masuk.',
+    asal:'Ada tidaknya <code>IMAP_HOST</code> + <code>IMAP_PASS</code> di GitHub Secrets.'},
+  kuota:{lbl:'Kuota hari ini', arti:'Batas surat per hari, supaya alamat pengirim tidak dibakar.',
+    asal:'<code>kepatuhan.kuota_hari_ini()</code>, dihitung dari tabel <code>terkirim</code> hari ini.'},
+  putaran:{lbl:'Putaran terakhir', arti:'Putaran mana yang terakhir menulis data ini.',
+    asal:'<code>jaga</code> = putaran tiap 3 jam. <code>pagi</code> = putaran harian 08:00 WIB.'},
+};
+
+const PAGAR = [
+  ['Balasan tidak asal lepas','Empat pagar sebelum satu jawaban boleh terkirim otomatis: niat harus jelas (hanya tertarik/bertanya), belum pernah dibalas sejak pesan masuk terakhir, isinya waras (bukan placeholder atau "as an AI"), dan jatah maksimal 8 per putaran. Yang tidak lolos ditahan jadi draft, tidak dibuang.'],
+  ['Harga tidak boleh dikarang','Tiap jawaban diperiksa: angka uang yang tidak ada di daftar harga resmi langsung ditolak, begitu juga klaim hasil seperti "we have helped" atau persentase ROI.'],
+  ['Minta berhenti dihormati duluan','Permintaan berhenti diproses di awal putaran, sebelum langkah lain sempat menyentuh alamat itu.'],
+  ['Alamat mati diblokir lebih dulu','Pantulan diperiksa paling awal, supaya tidak ada tagihan yang dikirim ke kotak surat yang sudah tidak ada.'],
+  ['Angka tidak diketik tangan','Semua angka di dasbor ini dihitung dari tabel saat data dibuat. Ketuk mana pun untuk melihat tabel asalnya.'],
+  ['Data ini tidak memuat nama','Yang terbit ke ocklu.com hanya angka. Pembuatnya membatalkan diri kalau menemukan tanda @, jadi email prospek tidak pernah ikut naik.'],
+];
+
+// ── enkripsi ───────────────────────────────────────────────────────────
+const b64 = s => Uint8Array.from(atob(s), c => c.charCodeAt(0));
+async function bukaData(sandi){
+  const r = await fetch('data.json?t=' + Date.now(), {cache:'no-store'});
+  if(!r.ok) throw new Error('data belum ada di server');
+  const p = await r.json(), enc = new TextEncoder();
+  const bahan = await crypto.subtle.importKey('raw', enc.encode(sandi),'PBKDF2',false,['deriveKey']);
   const kunci = await crypto.subtle.deriveKey(
-    { name: 'PBKDF2', salt: b64(p.garam), iterations: p.putaran || 200000, hash: 'SHA-256' },
-    bahan, { name: 'AES-GCM', length: 256 }, false, ['decrypt']);
-  const jelas = await crypto.subtle.decrypt({ name: 'AES-GCM', iv: b64(p.iv) }, kunci, b64(p.isi));
+    {name:'PBKDF2',salt:b64(p.garam),iterations:p.putaran||200000,hash:'SHA-256'},
+    bahan,{name:'AES-GCM',length:256},false,['decrypt']);
+  const jelas = await crypto.subtle.decrypt({name:'AES-GCM',iv:b64(p.iv)},kunci,b64(p.isi));
   return JSON.parse(new TextDecoder().decode(jelas));
 }
-const b64 = s => Uint8Array.from(atob(s), c => c.charCodeAt(0));
+
+// ── panel rincian ──────────────────────────────────────────────────────
+function tutup(){ $('#panel').classList.remove('buka'); $('#tirai').classList.remove('buka'); }
+$('#tirai').onclick = tutup;
+document.addEventListener('keydown', e => { if(e.key==='Escape') tutup(); });
+// tarik ke bawah untuk menutup — gerakan yang sudah dikenal di HP
+let y0=null;
+$('#panel').addEventListener('touchstart', e=>{ if($('#panel').scrollTop<=0) y0=e.touches[0].clientY; },{passive:true});
+$('#panel').addEventListener('touchmove', e=>{
+  if(y0===null) return;
+  const d=e.touches[0].clientY-y0;
+  if(d>0) $('#panel').style.transform=`translateY(${d}px)`;
+},{passive:true});
+$('#panel').addEventListener('touchend', e=>{
+  if(y0===null) return;
+  const d=(e.changedTouches[0].clientY)-y0; y0=null;
+  $('#panel').style.transform='';
+  if(d>90) tutup();
+},{passive:true});
+
+function rinci(kunci){
+  const g = D.corong||{}, m = D.mesin||{};
+  const k = KAMUS[kunci] || MESIN[kunci];
+  if(!k) return;
+
+  let nilai, sub='';
+  if(KAMUS[kunci]){
+    nilai = (g[kunci] ?? 0) + (k.akhiran||'');
+    if(kunci==='uang_masuk') nilai = (g.mata_uang||'USD') + ' ' + (g.uang_masuk ?? 0);
+    // Angka besar di panel harus SAMA dengan yang tertulis di kartunya —
+    // kartu alamat meja menampilkan persen, jadi panelnya pun persen.
+    if(kunci==='alamat_meja') nilai = (g.meja_persen ?? 0) + '%';
+    sub = k.bawah ? k.bawah(g) : '';
+  } else {
+    nilai = kunci==='otak' ? (m.otak||'—')
+          : kunci==='kuota' ? `${m.kuota_pakai ?? 0}/${m.kuota_maks ?? 30}`
+          : kunci==='putaran' ? (D.putaran||'—')
+          : (m[kunci] ? 'jalan' : 'mati');
+  }
+
+  $('#p-lbl').textContent = k.lbl;
+  $('#p-n').textContent = nilai;
+  $('#p-sub').textContent = sub;
+  const a = k.aksi ? k.aksi(g) : null;
+  $('#p-badan').innerHTML =
+    `<div class="p-bab">Artinya</div><div class="p-isi">${k.arti}</div>` +
+    `<div class="p-bab">Dihitung dari mana</div><div class="p-isi">${k.asal}</div>` +
+    (a ? `<div class="p-bab">Yang perlu kamu tahu</div>
+          <div class="p-aksi ${a.baik?'baik':''}">${a.t}</div>` : '');
+  $('#panel').classList.add('buka'); $('#tirai').classList.add('buka');
+}
+
+function pagarRinci(i){
+  const [j,t] = PAGAR[i];
+  $('#p-lbl').textContent='Pagar'; $('#p-n').textContent=''; $('#p-sub').textContent=j;
+  $('#p-badan').innerHTML=`<div class="p-isi">${t}</div>`;
+  $('#panel').classList.add('buka'); $('#tirai').classList.add('buka');
+}
 
 // ── gambar ─────────────────────────────────────────────────────────────
-function gambar(d) {
-  const g = d.corong || {}, m = d.mesin || {};
+function gambar(d){
+  D = d;
+  const g = d.corong||{}, m = d.mesin||{};
 
-  $('#uang').textContent = (g.mata_uang || 'USD') + ' ' + (g.uang_masuk ?? 0);
-  $('#uang-ket').textContent =
-    `${g.penjualan ?? 0} penjualan` +
+  $('#uang').textContent = (g.mata_uang||'USD') + ' ' + (g.uang_masuk ?? 0);
+  $('#uang-ket').textContent = `${g.penjualan ?? 0} penjualan` +
     (g.bayar_tanpa_invoice ? ` · ${g.bayar_tanpa_invoice} tanpa invoice — catat manual` : '');
 
-  $('#terkirim').textContent = g.terkirim ?? 0;
-  $('#terkirim-sub').textContent = `${g.alamat_unik ?? 0} alamat unik`;
-  $('#dibalas').textContent = g.dibalas ?? 0;
-  $('#dibalas-sub').textContent = (g.balas_persen ?? 0) + '% dari yang dikirimi';
-  $('#otomatis').textContent = g.dijawab_otomatis ?? 0;
+  const sel = [
+    ['terkirim', g.terkirim ?? 0, `${g.alamat_unik ?? 0} alamat unik`, false],
+    ['dibalas', g.dibalas ?? 0, `${g.balas_persen ?? 0}% dari yang dikirimi`, false],
+    ['dijawab_otomatis', g.dijawab_otomatis ?? 0, 'oleh ghostmode', false],
+    ['alamat_meja', (g.meja_persen ?? 0)+'%', `${g.alamat_meja ?? 0} dari ${g.prospek ?? 0} prospek`,
+      (g.meja_persen ?? 0) >= 50],
+  ];
+  $('#petak').innerHTML = sel.map(([k,n,s,awas]) =>
+    `<div class="sel ketuk ${awas?'awas':''}" data-k="${k}">
+       <div class="lbl">${KAMUS[k].lbl}</div><div class="n">${n}</div><div class="sub">${s}</div>
+     </div>`).join('');
 
-  $('#meja').textContent = (g.meja_persen ?? 0) + '%';
-  $('#meja-sub').textContent = `${g.alamat_meja ?? 0} dari ${g.prospek ?? 0} prospek`;
-  // Alamat meja dibaca staf depan yang tidak bisa membeli apa pun — kalau
-  // porsinya tinggi, itu sebab paling mungkin dari corong yang nol balasan.
-  $('#sel-meja').classList.toggle('awas', (g.meja_persen ?? 0) >= 50);
-
-  const baris = (induk, isi) => {
-    induk.innerHTML = isi.map(([n, v, w]) =>
-      `<div class="brs"><span class="nm">${n}</span><span class="v ${w || ''}">${v}</span></div>`).join('');
-  };
+  const baris = (induk, isi) => induk.innerHTML = isi.map(([k,v,w]) =>
+    `<div class="brs ketuk" data-k="${k}"><span class="nm">${(KAMUS[k]||MESIN[k]).lbl}</span>
+     <span class="v ${w||''}">${v}</span></div>`).join('');
 
   baris($('#corong'), [
-    ['Prospek', g.prospek ?? 0],
-    ['Tertarik', g.tertarik ?? 0, (g.tertarik > 0 ? 'baik' : '')],
-    ['Menolak', g.menolak ?? 0],
-    ['Draft menunggu', g.draft_menunggu ?? 0, (g.draft_menunggu > 0 ? 'awas' : '')],
-    ['Alamat mati', g.alamat_mati ?? 0, (g.alamat_mati > 0 ? 'awas' : '')],
-    ['Minta berhenti', g.minta_berhenti ?? 0],
-    ['Invoice terbuka', g.invoice_terbuka ?? 0],
+    ['prospek', g.prospek ?? 0],
+    ['tertarik', g.tertarik ?? 0, g.tertarik>0?'baik':''],
+    ['menolak', g.menolak ?? 0],
+    ['draft_menunggu', g.draft_menunggu ?? 0, g.draft_menunggu>0?'awas':''],
+    ['alamat_mati', g.alamat_mati ?? 0, g.alamat_mati>0?'awas':''],
+    ['minta_berhenti', g.minta_berhenti ?? 0],
+    ['invoice_terbuka', g.invoice_terbuka ?? 0],
+    ['invoice_lunas', g.invoice_lunas ?? 0],
+    ['penjualan', g.penjualan ?? 0],
+    ['balas_persen', (g.balas_persen ?? 0)+'%'],
   ]);
 
   baris($('#mesin'), [
-    ['Otak hidup', m.otak || '—', (m.otak ? 'baik' : 'buruk')],
-    ['Email keluar', m.smtp ? 'jalan' : 'mati', m.smtp ? 'baik' : 'buruk'],
-    ['Inbox', m.imap ? 'jalan' : 'mati', m.imap ? 'baik' : 'buruk'],
-    ['Kuota hari ini', `${m.kuota_pakai ?? 0}/${m.kuota_maks ?? 30}`],
-    ['Putaran terakhir', d.putaran || '—'],
+    ['otak', m.otak || '—', m.otak?'baik':'buruk'],
+    ['smtp', m.smtp?'jalan':'mati', m.smtp?'baik':'buruk'],
+    ['imap', m.imap?'jalan':'mati', m.imap?'baik':'buruk'],
+    ['kuota', `${m.kuota_pakai ?? 0}/${m.kuota_maks ?? 30}`],
+    ['putaran', d.putaran || '—'],
   ]);
 
-  const segar = d.dibuat ? new Date(d.dibuat * 1000) : null;
-  const umur = segar ? (Date.now() - segar.getTime()) / 3600000 : 999;
+  $('#pagar').innerHTML = PAGAR.map(([j],i) =>
+    `<div class="brs ketuk" data-p="${i}"><span class="nm">${j}</span></div>`).join('');
+
+  // satu pendengar untuk semua — tidak perlu dipasang ulang tiap gambar
+  document.querySelectorAll('[data-k]').forEach(el => el.onclick = () => rinci(el.dataset.k));
+  document.querySelectorAll('[data-p]').forEach(el => el.onclick = () => pagarRinci(+el.dataset.p));
+
+  const segar = d.dibuat ? new Date(d.dibuat*1000) : null;
+  const umur = segar ? (Date.now()-segar.getTime())/3600000 : 999;
   $('#segar').textContent = segar
-    ? segar.toLocaleString('id-ID', { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' })
+    ? segar.toLocaleString('id-ID',{day:'2-digit',month:'short',hour:'2-digit',minute:'2-digit'})
     : 'belum ada data';
-  // Data basi lebih berbahaya daripada data kosong — tandai kalau putarannya berhenti.
-  $('#lampu').className = 'lampu ' + (umur < 6 ? 'ok' : 'no');
-  $('#catatan').textContent = umur < 6
-    ? 'Ghostmode jalan di server GitHub tiap 3 jam. Laptop tidak perlu hidup.'
+  $('#lampu').className = 'lampu ' + (umur<6?'ok':'no');
+  $('#catatan').textContent = umur<6
+    ? 'Ghostmode jalan di server GitHub tiap 3 jam. Laptop tidak perlu hidup. Ketuk angka mana pun untuk melihat asalnya.'
     : `Data terakhir ${Math.round(umur)} jam lalu — putaran mungkin berhenti. Cek tab Actions di GitHub.`;
+
+  // titik peringatan di tab yang punya sesuatu untuk dilihat
+  const perluCorong = (g.draft_menunggu>0) || (g.meja_persen>=50) || (g.tertarik>0);
+  document.querySelector('nav button[data-t="corong"]').innerHTML =
+    `<span class="ikn">⌛</span>Corong${perluCorong?'<span class="tanda"></span>':''}`;
 
   $('#gerbang').classList.add('sembunyi');
   $('#isi').classList.remove('sembunyi');
+  $('#nav').classList.remove('sembunyi');
 }
 
+// ── tab ────────────────────────────────────────────────────────────────
+document.querySelectorAll('nav button').forEach(b => b.onclick = () => {
+  document.querySelectorAll('nav button').forEach(x => x.classList.toggle('aktif', x===b));
+  document.querySelectorAll('.lembar').forEach(s =>
+    s.classList.toggle('aktif', s.dataset.lembar === b.dataset.t));
+  window.scrollTo({top:0});
+  tutup();
+});
+
 // ── gerbang ────────────────────────────────────────────────────────────
-async function coba(sandi, diam) {
-  try {
+async function coba(sandi, diam){
+  try{
     gambar(await bukaData(sandi));
     localStorage.setItem(KUNCI_PIN, sandi);
     return true;
-  } catch (e) {
-    if (!diam) {
-      $('#pesan').textContent = /operation-specific|decrypt/i.test(String(e.message || e))
-        ? 'PIN salah.' : 'Gagal memuat: ' + (e.message || e);
-    }
+  }catch(e){
+    if(!diam) $('#pesan').textContent =
+      /operation-specific|decrypt/i.test(String(e.message||e)) ? 'PIN salah.'
+      : 'Gagal memuat: ' + (e.message||e);
     localStorage.removeItem(KUNCI_PIN);
     return false;
   }
 }
-
-$('#buka').onclick = async () => {
-  const s = $('#pin').value.trim();
-  if (!s) return;
+$('#frm').onsubmit = async e => {
+  e.preventDefault();
+  const s = $('#pin').value.trim(); if(!s) return;
   $('#buka').disabled = true; $('#pesan').textContent = 'membuka…';
-  await coba(s, false);
+  await coba(s,false);
   $('#buka').disabled = false;
 };
-$('#pin').addEventListener('keydown', e => { if (e.key === 'Enter') $('#buka').click(); });
-
 (async () => {
   const simpan = localStorage.getItem(KUNCI_PIN);
-  if (simpan && await coba(simpan, true)) return;
+  if(simpan && await coba(simpan,true)) return;
   $('#pin').focus();
 })();
 
-if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});
+if('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(()=>{});
 </script>
 </body>
 </html>
