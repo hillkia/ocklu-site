@@ -227,6 +227,7 @@
 <script>
 'use strict';
 const $ = s => document.querySelector(s);
+const sisiAktif = () => innerWidth >= 1000;
 const SANDI = 'jarvis-hp-pin';
 let G = null, N = [], L = [], MATI = new Set(), FOKUS = null, CARI = '';
 
@@ -331,12 +332,16 @@ function gambarGraf(){
   cx.clearRect(0,0,W,H);
   if(!N.length) return;
   const cy=Math.cos(yaw),sy=Math.sin(yaw),cp=Math.cos(pitch),sp=Math.sin(pitch);
-  const ox=W/2+geser.x, oy=H*0.52+geser.y, F=680;
+  // Skala ikut ukuran jendela. Tanpa ini graf tetap sebesar layar HP walau
+  // jendelanya dilebarkan — kelihatan seperti gumpalan kecil di tengah.
+  const auto=Math.min(W,H)/760;
+  const ox=(sisiAktif()? (W+252)/2 : W/2)+geser.x, oy=H*0.52+geser.y, F=680;
+  const Z=zum*Math.max(.75,auto);
   for(const n of N){
     const x1=n.x*cy-n.z*sy, z1=n.x*sy+n.z*cy;
     const y1=n.y*cp-z1*sp, z2=n.y*sp+z1*cp;
     const p=F/(F+z2+300); n.sp=p>.05?p:.05;
-    n.sx=ox+x1*n.sp*zum; n.sy=oy+y1*n.sp*zum; n.sz=z2;
+    n.sx=ox+x1*n.sp*Z; n.sy=oy+y1*n.sp*Z; n.sz=z2;
     n.tampak=!MATI.has(n.k);
   }
   const urut=N.filter(n=>n.tampak).sort((a,b)=>b.sz-a.sz);
@@ -350,7 +355,7 @@ function gambarGraf(){
   }
   for(const n of urut){
     const tr=terang(n); if(tr<.05) continue;
-    const R=n.r*n.sp*zum; if(R<.4) continue;
+    const R=n.r*n.sp*Z; if(R<.4) continue;
     const w=G.warna[n.k]||'#8892a0';
     if(n.d>8||n.i===FOKUS){
       cx.fillStyle=warnaA(w,.15*tr);
@@ -367,7 +372,7 @@ function gambarGraf(){
     const uk=Math.max(8,Math.min(12,6+n.d*.08))*(.75+n.sp*.4);
     cx.font=`500 ${uk.toFixed(1)}px -apple-system,sans-serif`;
     cx.fillStyle=`rgba(214,224,236,${.35+n.sp*.5})`;
-    cx.fillText(n.l, n.sx, n.sy+n.r*n.sp*zum+uk*.95);
+    cx.fillText(n.l, n.sx, n.sy+n.r*n.sp*Z+uk*.95);
   }
 }
 
