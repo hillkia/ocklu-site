@@ -126,6 +126,48 @@
   #buka:disabled{opacity:.5}
   #pesan{font-size:12.5px;margin-top:12px;min-height:17px;color:var(--kuning)}
   .sembunyi{display:none!important}
+
+  /* ── layar lebar: bukan HP yang dilebarkan ──────────────────────────
+     Di layar besar, tab justru menyembunyikan hal yang muat ditampilkan
+     bersamaan. Jadi tab bawah dilipat, ketiga lembar dibuka sekaligus
+     dalam kolom, dan panel rincian jadi laci kanan — bukan lembar bawah
+     yang menutupi separuh layar. */
+  @media (min-width: 1000px) {
+    body { padding: 26px 26px 40px; }
+    .bung { max-width: 1180px; }
+
+    header { margin-bottom: 22px; }
+    h1 { font-size: 21px; }
+    .segar { font-size: 12px; }
+
+    nav { display: none; }
+    .lembar { display: block !important; }
+
+    #isi { display: grid; grid-template-columns: 1.15fr 1fr 1fr; gap: 22px;
+           align-items: start; }
+    #isi > header { grid-column: 1 / -1; }
+    .lembar[data-lembar="ringkas"] .petak { grid-template-columns: 1fr 1fr; }
+    .uang .n { font-size: 44px; }
+
+    h2:first-child { margin-top: 0; }
+    .brs { padding: 13px 32px 13px 15px; font-size: 14px; }
+    .sel { padding: 15px; }
+
+    /* laci kanan menggantikan lembar bawah */
+    #panel { left: auto; right: 0; top: 0; bottom: 0; width: 420px;
+             border-radius: 0; border-top: 0; border-left: 1px solid var(--garis);
+             transform: translateX(101%); padding: 26px 26px 34px;
+             max-height: none; }
+    #panel.buka { transform: translateX(0); }
+    .pegangan { display: none; }
+    #p-n { font-size: 40px; }
+  }
+
+  /* layar sedang: dua kolom, tab masih dipakai */
+  @media (min-width: 700px) and (max-width: 999px) {
+    .bung { max-width: 760px; }
+    .petak { grid-template-columns: repeat(4, 1fr); }
+  }
 </style>
 </head>
 <body>
