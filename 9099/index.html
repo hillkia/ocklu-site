@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#05070a">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Ocklu 9099">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="ikon-180.png">
+<title>Ocklu-9099</title>
+<style>
+  :root{
+    --latar:#05070a; --kartu:#0b0f15; --garis:#1a2029;
+    --redup:#5b6673; --sedang:#8b95a3; --terang:#dbe3ec; --putih:#f4f7fb;
+    --hijau:#4ade80; --kuning:#fbbf24; --merah:#f87171; --nyala:#7c5cff;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{margin:0;background:var(--latar);color:var(--terang);
+    font:400 15px/1.5 -apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Inter,sans-serif;
+    -webkit-font-smoothing:antialiased}
+  body{padding:max(14px,env(safe-area-inset-top)) 14px calc(24px + env(safe-area-inset-bottom))}
+  .bung{max-width:640px;margin:0 auto}
+
+  header{display:flex;align-items:center;gap:10px;margin:6px 0 16px}
+  .lampu{width:9px;height:9px;border-radius:50%;background:var(--redup);flex:none}
+  .lampu.ok{background:var(--hijau);box-shadow:0 0 10px rgba(74,222,128,.6)}
+  .lampu.no{background:var(--merah);box-shadow:0 0 10px rgba(248,113,113,.6)}
+  h1{margin:0;font-size:17px;font-weight:650;letter-spacing:.02em;color:var(--putih);flex:1}
+  .segar{font-size:11px;color:var(--redup);white-space:nowrap}
+
+  .uang{background:linear-gradient(160deg,rgba(74,222,128,.13),rgba(74,222,128,.03));
+    border:1px solid rgba(74,222,128,.28);border-radius:14px;padding:18px;margin-bottom:12px}
+  .uang .lbl{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#6f9d80}
+  .uang .n{font-size:38px;font-weight:680;color:#b6f5cd;line-height:1.1;margin:5px 0 2px;
+    font-variant-numeric:tabular-nums}
+  .uang .ket{font-size:12px;color:var(--sedang)}
+
+  .petak{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:12px}
+  .sel{background:var(--kartu);border:1px solid var(--garis);border-radius:12px;padding:13px}
+  .sel .lbl{font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--redup)}
+  .sel .n{font-size:25px;font-weight:640;color:var(--putih);margin-top:3px;
+    font-variant-numeric:tabular-nums;line-height:1.15}
+  .sel .sub{font-size:11px;color:var(--sedang);margin-top:1px}
+  .sel.awas{border-color:rgba(251,191,36,.4);background:rgba(251,191,36,.06)}
+  .sel.awas .n{color:var(--kuning)}
+
+  h2{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--redup);
+    margin:20px 0 8px;font-weight:600}
+  .daftar{background:var(--kartu);border:1px solid var(--garis);border-radius:12px;overflow:hidden}
+  .brs{display:flex;align-items:center;gap:10px;padding:11px 13px;border-bottom:1px solid var(--garis);
+    font-size:13.5px}
+  .brs:last-child{border-bottom:0}
+  .brs .nm{flex:1;color:var(--sedang)}
+  .brs .v{font-weight:600;color:var(--putih);font-variant-numeric:tabular-nums}
+  .brs .v.baik{color:var(--hijau)} .brs .v.awas{color:var(--kuning)} .brs .v.buruk{color:var(--merah)}
+
+  .catatan{font-size:12px;line-height:1.6;color:var(--redup);margin-top:14px;
+    border-left:2px solid var(--garis);padding-left:11px}
+
+  /* gerbang PIN */
+  #gerbang{position:fixed;inset:0;background:var(--latar);z-index:9;display:grid;
+    place-items:center;padding:28px}
+  #gerbang .kotak{width:100%;max-width:300px;text-align:center}
+  #gerbang h2{margin:0 0 6px;font-size:16px;letter-spacing:.02em;color:var(--putih);text-transform:none}
+  #gerbang p{font-size:12.5px;color:var(--redup);margin:0 0 18px;line-height:1.55}
+  #pin{width:100%;padding:14px;font:inherit;font-size:19px;text-align:center;letter-spacing:.4em;
+    color:var(--putih);background:var(--kartu);border:1px solid var(--garis);border-radius:11px;outline:none}
+  #pin:focus{border-color:rgba(124,92,255,.6)}
+  #buka{width:100%;margin-top:10px;padding:14px;font:inherit;font-size:15px;font-weight:600;
+    color:#fff;background:var(--nyala);border:0;border-radius:11px;cursor:pointer}
+  #buka:disabled{opacity:.5}
+  #pesan{font-size:12.5px;margin-top:12px;min-height:17px;color:var(--kuning)}
+  .sembunyi{display:none!important}
+</style>
+</head>
+<body>
+
+<div id="gerbang">
+  <div class="kotak">
+    <h2>Ocklu-9099</h2>
+    <p>Angkanya terkunci. Situs ini publik, jadi datanya disimpan terenkripsi —
+       PIN-nya tidak pernah dikirim ke mana pun, dipakai di HP ini saja.</p>
+    <input id="pin" type="password" inputmode="numeric" autocomplete="current-password"
+           placeholder="••••••" enterkeyhint="go">
+    <button id="buka">Buka</button>
+    <div id="pesan"></div>
+  </div>
+</div>
+
+<div class="bung sembunyi" id="isi">
+  <header>
+    <span class="lampu" id="lampu"></span>
+    <h1>Ocklu-9099</h1>
+    <span class="segar" id="segar"></span>
+  </header>
+
+  <div class="uang">
+    <div class="lbl">Uang masuk · 30 hari</div>
+    <div class="n" id="uang">—</div>
+    <div class="ket" id="uang-ket"></div>
+  </div>
+
+  <div class="petak">
+    <div class="sel"><div class="lbl">Surat terkirim</div>
+      <div class="n" id="terkirim">—</div><div class="sub" id="terkirim-sub"></div></div>
+    <div class="sel"><div class="lbl">Dibalas orang</div>
+      <div class="n" id="dibalas">—</div><div class="sub" id="dibalas-sub"></div></div>
+    <div class="sel"><div class="lbl">Dijawab otomatis</div>
+      <div class="n" id="otomatis">—</div><div class="sub">oleh ghostmode</div></div>
+    <div class="sel" id="sel-meja"><div class="lbl">Alamat meja</div>
+      <div class="n" id="meja">—</div><div class="sub" id="meja-sub"></div></div>
+  </div>
+
+  <h2>Corong</h2>
+  <div class="daftar" id="corong"></div>
+
+  <h2>Mesin</h2>
+  <div class="daftar" id="mesin"></div>
+
+  <div class="catatan" id="catatan"></div>
+</div>
+
+<script>
+const $ = s => document.querySelector(s);
+const KUNCI_PIN = 'ocklu9099-pin';
+
+// ── buka data terenkripsi ──────────────────────────────────────────────
+// Berkasnya publik di ocklu.com; yang menjaganya PIN, bukan alamatnya.
+async function bukaData(sandi) {
+  const r = await fetch('data.json?t=' + Date.now(), { cache: 'no-store' });
+  if (!r.ok) throw new Error('data belum ada di server');
+  const p = await r.json();
+  const enc = new TextEncoder();
+  const bahan = await crypto.subtle.importKey('raw', enc.encode(sandi), 'PBKDF2', false, ['deriveKey']);
+  const kunci = await crypto.subtle.deriveKey(
+    { name: 'PBKDF2', salt: b64(p.garam), iterations: p.putaran || 200000, hash: 'SHA-256' },
+    bahan, { name: 'AES-GCM', length: 256 }, false, ['decrypt']);
+  const jelas = await crypto.subtle.decrypt({ name: 'AES-GCM', iv: b64(p.iv) }, kunci, b64(p.isi));
+  return JSON.parse(new TextDecoder().decode(jelas));
+}
+const b64 = s => Uint8Array.from(atob(s), c => c.charCodeAt(0));
+
+// ── gambar ─────────────────────────────────────────────────────────────
+function gambar(d) {
+  const g = d.corong || {}, m = d.mesin || {};
+
+  $('#uang').textContent = (g.mata_uang || 'USD') + ' ' + (g.uang_masuk ?? 0);
+  $('#uang-ket').textContent =
+    `${g.penjualan ?? 0} penjualan` +
+    (g.bayar_tanpa_invoice ? ` · ${g.bayar_tanpa_invoice} tanpa invoice — catat manual` : '');
+
+  $('#terkirim').textContent = g.terkirim ?? 0;
+  $('#terkirim-sub').textContent = `${g.alamat_unik ?? 0} alamat unik`;
+  $('#dibalas').textContent = g.dibalas ?? 0;
+  $('#dibalas-sub').textContent = (g.balas_persen ?? 0) + '% dari yang dikirimi';
+  $('#otomatis').textContent = g.dijawab_otomatis ?? 0;
+
+  $('#meja').textContent = (g.meja_persen ?? 0) + '%';
+  $('#meja-sub').textContent = `${g.alamat_meja ?? 0} dari ${g.prospek ?? 0} prospek`;
+  // Alamat meja dibaca staf depan yang tidak bisa membeli apa pun — kalau
+  // porsinya tinggi, itu sebab paling mungkin dari corong yang nol balasan.
+  $('#sel-meja').classList.toggle('awas', (g.meja_persen ?? 0) >= 50);
+
+  const baris = (induk, isi) => {
+    induk.innerHTML = isi.map(([n, v, w]) =>
+      `<div class="brs"><span class="nm">${n}</span><span class="v ${w || ''}">${v}</span></div>`).join('');
+  };
+
+  baris($('#corong'), [
+    ['Prospek', g.prospek ?? 0],
+    ['Tertarik', g.tertarik ?? 0, (g.tertarik > 0 ? 'baik' : '')],
+    ['Menolak', g.menolak ?? 0],
+    ['Draft menunggu', g.draft_menunggu ?? 0, (g.draft_menunggu > 0 ? 'awas' : '')],
+    ['Alamat mati', g.alamat_mati ?? 0, (g.alamat_mati > 0 ? 'awas' : '')],
+    ['Minta berhenti', g.minta_berhenti ?? 0],
+    ['Invoice terbuka', g.invoice_terbuka ?? 0],
+  ]);
+
+  baris($('#mesin'), [
+    ['Otak hidup', m.otak || '—', (m.otak ? 'baik' : 'buruk')],
+    ['Email keluar', m.smtp ? 'jalan' : 'mati', m.smtp ? 'baik' : 'buruk'],
+    ['Inbox', m.imap ? 'jalan' : 'mati', m.imap ? 'baik' : 'buruk'],
+    ['Kuota hari ini', `${m.kuota_pakai ?? 0}/${m.kuota_maks ?? 30}`],
+    ['Putaran terakhir', d.putaran || '—'],
+  ]);
+
+  const segar = d.dibuat ? new Date(d.dibuat * 1000) : null;
+  const umur = segar ? (Date.now() - segar.getTime()) / 3600000 : 999;
+  $('#segar').textContent = segar
+    ? segar.toLocaleString('id-ID', { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' })
+    : 'belum ada data';
+  // Data basi lebih berbahaya daripada data kosong — tandai kalau putarannya berhenti.
+  $('#lampu').className = 'lampu ' + (umur < 6 ? 'ok' : 'no');
+  $('#catatan').textContent = umur < 6
+    ? 'Ghostmode jalan di server GitHub tiap 3 jam. Laptop tidak perlu hidup.'
+    : `Data terakhir ${Math.round(umur)} jam lalu — putaran mungkin berhenti. Cek tab Actions di GitHub.`;
+
+  $('#gerbang').classList.add('sembunyi');
+  $('#isi').classList.remove('sembunyi');
+}
+
+// ── gerbang ────────────────────────────────────────────────────────────
+async function coba(sandi, diam) {
+  try {
+    gambar(await bukaData(sandi));
+    localStorage.setItem(KUNCI_PIN, sandi);
+    return true;
+  } catch (e) {
+    if (!diam) {
+      $('#pesan').textContent = /operation-specific|decrypt/i.test(String(e.message || e))
+        ? 'PIN salah.' : 'Gagal memuat: ' + (e.message || e);
+    }
+    localStorage.removeItem(KUNCI_PIN);
+    return false;
+  }
+}
+
+$('#buka').onclick = async () => {
+  const s = $('#pin').value.trim();
+  if (!s) return;
+  $('#buka').disabled = true; $('#pesan').textContent = 'membuka…';
+  await coba(s, false);
+  $('#buka').disabled = false;
+};
+$('#pin').addEventListener('keydown', e => { if (e.key === 'Enter') $('#buka').click(); });
+
+(async () => {
+  const simpan = localStorage.getItem(KUNCI_PIN);
+  if (simpan && await coba(simpan, true)) return;
+  $('#pin').focus();
+})();
+
+if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});
+</script>
+</body>
+</html>
