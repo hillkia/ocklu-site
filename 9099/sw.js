@@ -9,7 +9,7 @@
 //    dipakai saat jaringan benar-benar gagal.
 // 2. data.json: TIDAK PERNAH disentuh cache. Dasbor yang menampilkan angka
 //    basi tanpa memberi tahu lebih berbahaya daripada dasbor yang kosong.
-const NAMA = 'ocklu9099-v3';
+const NAMA = 'ocklu9099-v2';
 const CANGKANG = ['./', './index.html', './manifest.webmanifest',
                   './ikon-192.png', './ikon-512.png'];
 
