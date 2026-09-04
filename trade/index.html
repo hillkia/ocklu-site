@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>OCKLU-TRADE</title>
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#0b0e14">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="OckluTrade">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<style>
+  :root{
+    --bg:#0b0e14; --panel:#131824; --panel2:#1a2130; --line:#26304a;
+    --tx:#e8edf7; --mut:#8b97ac; --acc:#4ade80; --acc2:#38bdf8;
+    --long:#4ade80; --short:#f87171; --flat:#fbbf24; --warn:#f59e0b;
+  }
+  @media (prefers-color-scheme:light){:root{
+    --bg:#f4f6fb; --panel:#ffffff; --panel2:#eef2f9; --line:#d8e0ee;
+    --tx:#111826; --mut:#5a6678;
+  }}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--tx);
+    font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+  header{padding:20px 24px;border-bottom:1px solid var(--line);
+    display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+  h1{margin:0;font-size:20px;letter-spacing:.5px}
+  .sub{color:var(--mut);font-size:12px}
+  .wrap{max-width:1180px;margin:0 auto;padding:20px 24px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;
+    padding:16px 18px}
+  .sym{font-size:16px;font-weight:700;display:flex;justify-content:space-between;align-items:center}
+  .price{color:var(--mut);font-weight:500;font-size:13px}
+  .pill{display:inline-block;padding:3px 10px;border-radius:999px;font-size:12px;
+    font-weight:700;margin:8px 0}
+  .LONG{background:rgba(74,222,128,.16);color:var(--long)}
+  .SHORT{background:rgba(248,113,113,.16);color:var(--short)}
+  .NEUTRAL,.FLAT{background:rgba(251,191,36,.16);color:var(--flat)}
+  .bar{height:8px;background:var(--panel2);border-radius:6px;overflow:hidden;margin:6px 0}
+  .bar>i{display:block;height:100%;background:linear-gradient(90deg,var(--acc2),var(--acc))}
+  .kv{display:flex;justify-content:space-between;color:var(--mut);font-size:12px;
+    padding:2px 0;border-top:1px dashed var(--line)}
+  .kv b{color:var(--tx);font-weight:600}
+  .flags{margin-top:8px;font-size:11.5px;color:var(--warn)}
+  .flags div{margin:2px 0}
+  h2{font-size:14px;text-transform:uppercase;letter-spacing:1px;color:var(--mut);
+    margin:26px 0 12px}
+  table{width:100%;border-collapse:collapse;font-size:12.5px}
+  td,th{padding:6px 8px;text-align:left;border-bottom:1px solid var(--line)}
+  .ok{color:var(--long)} .bad{color:var(--short)}
+  .note{background:var(--panel2);border-left:3px solid var(--warn);padding:10px 14px;
+    border-radius:8px;color:var(--mut);font-size:12.5px;margin:8px 0}
+  select,button{background:var(--panel2);color:var(--tx);border:1px solid var(--line);
+    border-radius:8px;padding:6px 10px;font:inherit}
+  .tv{height:420px;border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:10px}
+  .tblwrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin-top:8px}
+  .disc{color:var(--mut);font-size:11px;margin-top:26px;border-top:1px solid var(--line);padding-top:14px}
+  a{color:var(--acc2)}
+  /* ---- HP / layar sempit ---- */
+  @media (max-width:640px){
+    header{padding:14px 16px;gap:6px}
+    h1{font-size:18px}
+    .wrap{padding:14px 14px}
+    .grid{grid-template-columns:1fr;gap:12px}
+    .card{padding:14px 15px;border-radius:12px}
+    .tv{height:62vh;min-height:300px}
+    select{width:100%;font-size:16px;padding:10px}   /* 16px cegah zoom iOS */
+    h2{margin:22px 0 10px}
+    .kv{font-size:12.5px;padding:4px 0}
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>⚡ OCKLU-TRADE</h1>
+  <span class="sub" id="meta">memuat…</span>
+  <button id="install" hidden style="margin-left:auto">➕ Pasang ke HP</button>
+</header>
+<div id="ioshint" class="note" hidden>📲 Di iPhone: tekan <b>Bagikan</b> ⬆️ lalu <b>Add to Home Screen</b> untuk memasang OCKLU-TRADE seperti app.</div>
+<div class="wrap">
+  <div class="note" id="banner"></div>
+
+  <h2>Verdict per aset — Binance / Crypto.com</h2>
+  <div class="grid" id="cards"></div>
+
+  <h2>Chart TradingView</h2>
+  <div><select id="tvsel"></select></div>
+  <div class="tv" id="tv"></div>
+
+  <h2>Graf portofolio (NX) — korelasi & lead-lag</h2>
+  <div class="card" id="graph"></div>
+
+  <h2>Polymarket</h2>
+  <div class="card" id="poly"></div>
+
+  <h2>Ledger — buku besar keputusan (hash chain)</h2>
+  <div class="card" id="ledger"></div>
+
+  <div class="disc" id="disc"></div>
+</div>
+
+<script src="data/latest.js"></script>
+<script src="https://s3.tradingview.com/tv.js"></script>
+<script>
+/* ---- PWA: service worker + tombol pasang ---- */
+(function(){
+  const httpish = location.protocol === 'http:' || location.protocol === 'https:';
+  if ('serviceWorker' in navigator && httpish) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('sw.js').catch(()=>{});
+    });
+  }
+  let deferred = null;
+  const btn = document.getElementById('install');
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault(); deferred = e;
+    if (btn) { btn.hidden = false;
+      btn.onclick = async () => { btn.hidden = true; deferred.prompt();
+        await deferred.userChoice; deferred = null; }; }
+  });
+  window.addEventListener('appinstalled', () => { if (btn) btn.hidden = true; });
+  // iOS tak punya beforeinstallprompt → tampilkan petunjuk Add to Home Screen
+  const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
+  const standalone = window.navigator.standalone || window.matchMedia('(display-mode: standalone)').matches;
+  if (isIOS && !standalone && httpish) { const h=document.getElementById('ioshint'); if(h) h.hidden=false; }
+})();
+</script>
+<script>
+const D = window.OCKLU_DATA;
+const TVMAP = {BTC_USDT:"BINANCE:BTCUSDT", ETH_USDT:"BINANCE:ETHUSDT", SOL_USDT:"BINANCE:SOLUSDT"};
+
+function el(t,c,h){const e=document.createElement(t);if(c)e.className=c;if(h!=null)e.innerHTML=h;return e;}
+
+if(!D){document.getElementById('meta').textContent="data belum di-generate — jalankan: python3 run.py";}
+else{
+  document.getElementById('meta').textContent =
+    `as_of ${D.as_of} · tf ${D.timeframe} · ${D.assets.length} aset · dibuat ${new Date(D.generated).toLocaleString()}`;
+  document.getElementById('banner').textContent =
+    "DECISION SUPPORT — bukan auto-order, bukan jaminan profit. Semua angka dari candle NYATA exchange (" + (D.source||'') + "). Manusia yang menekan tombol.";
+
+  // cards
+  const cards=document.getElementById('cards');
+  D.assets.forEach(a=>{
+    if(!a.available){cards.append(el('div','card',`<b>${a.symbol}</b><br><span class="price">${a.reason}</span>`));return;}
+    const dir=a.direction||'NEUTRAL';
+    const conv=Math.round((a.conviction||0)*100);
+    const c=el('div','card');
+    c.append(el('div','sym',`<span>${a.symbol}</span><span class="price">$${(a.last_from_feed||a.last||0).toLocaleString()}</span>`));
+    c.append(el('span','pill '+dir, `${a.action} · ${a.label}`));
+    c.append(el('div','bar',`<i style="width:${conv}%"></i>`));
+    c.append(el('div','kv',`conviction <b>${(a.conviction||0).toFixed(3)}</b>`));
+    c.append(el('div','kv',`saran size <b>${a.suggested_size_pct}%</b>`));
+    c.append(el('div','kv',`stop <b>${a.suggested_stop_pct}%</b>`));
+    c.append(el('div','kv',`regime <b>${a.regime}</b>`));
+    c.append(el('div','kv',`risk <b>${a.risk_level}</b> · vol ${(a.volatility_annual*100||0).toFixed(0)}%`));
+    c.append(el('div','kv',`sharpe <b>${a.sharpe}</b> · maxDD ${(a.max_drawdown*100||0).toFixed(0)}%`));
+    if(a.flags&&a.flags.length){const fl=el('div','flags');a.flags.forEach(f=>fl.append(el('div',null,'⚠ '+f)));c.append(fl);}
+    cards.append(c);
+  });
+
+  // tradingview
+  const sel=document.getElementById('tvsel');
+  D.assets.forEach(a=>{const o=el('option');o.value=a.symbol;o.textContent=a.symbol;sel.append(o);});
+  function drawTV(sym){
+    document.getElementById('tv').innerHTML='<div id="tvc" style="height:100%"></div>';
+    const dark=!window.matchMedia||window.matchMedia("(prefers-color-scheme:dark)").matches;
+    if(window.TradingView){new TradingView.widget({container_id:"tvc",autosize:true,
+      symbol:TVMAP[sym]||("BINANCE:"+sym.replace('_','')),interval:"240",theme:dark?"dark":"light",
+      style:"1",locale:"id",hide_side_toolbar:true,allow_symbol_change:true});}
+    else{document.getElementById('tv').innerHTML='<div style="padding:20px;color:var(--mut)">TradingView butuh internet — buka <a href="https://www.tradingview.com/chart/?symbol='+(TVMAP[sym]||'')+'" target="_blank">chart di TradingView</a></div>';}
+  }
+  sel.onchange=e=>drawTV(e.target.value);
+  if(D.assets[0])drawTV(D.assets[0].symbol);
+
+  // graph
+  const g=D.portfolio_graph;const gd=document.getElementById('graph');
+  if(g&&g.available){
+    gd.append(el('div','kv',`korelasi rata-rata pasangan <b>${g.avg_pairwise_correlation}</b> · systemic risk <b class="${g.systemic_risk==='HIGH'?'bad':'ok'}">${g.systemic_risk}</b>`));
+    gd.append(el('div','kv',`diversification ratio <b>${g.diversification_ratio}</b>`));
+    if(g.note)gd.append(el('div','flags','⚠ '+g.note));
+    if(g.lead_lag&&g.lead_lag.length)g.lead_lag.forEach(l=>gd.append(el('div','kv',`lead-lag <b>${l.leader} → ${l.follower}</b> (+${l.lag}, r=${l.corr})`)));
+    // matrix (bungkus agar bisa geser di HP)
+    const t=el('table');const sy=g.symbols;let h='<tr><th></th>'+sy.map(s=>`<th>${s.split('_')[0]}</th>`).join('')+'</tr>';
+    g.correlation_matrix.forEach((row,i)=>{h+=`<tr><th>${sy[i].split('_')[0]}</th>`+row.map(v=>`<td style="color:${v>0.7?'var(--short)':v<0.3?'var(--long)':'var(--mut)'}">${v}</td>`).join('')+'</tr>';});
+    t.innerHTML=h;const tw=el('div','tblwrap');tw.append(t);gd.append(tw);
+  }else gd.textContent=g?g.reason:'—';
+
+  // poly
+  const pd=document.getElementById('poly');
+  if(D.polymarket_status)pd.append(el('div','flags','ℹ '+D.polymarket_status));
+  (D.polymarket||[]).forEach(p=>pd.append(el('div','kv',`${p.question} <b>${p.action}</b>`)));
+
+  // ledger
+  const L=D.ledger||{};const ld=document.getElementById('ledger');
+  ld.append(el('div','kv',`entri <b>${L.entries}</b> · integritas <b class="${L.ok?'ok':'bad'}">${L.ok?'UTUH ✅':'RUSAK ❌'}</b>`));
+  ld.append(el('div','flags',L.note||L.reason||''));
+
+  document.getElementById('disc').innerHTML =
+    "Engine: INTEL · JWMQ (Markov+Warren+Quant) · PALANTIR (fusi) · ALADIN (risiko) · MYTHOS (konfluensi, cap 0.777) · NX (graf). "+
+    "Tidak ada order dikirim. Angka bisa diaudit ulang lewat ledger (hash chain). "+
+    "Tak ada tool yang bisa memastikan pasar — ini alat bantu berpikir, bukan mesin cetak uang.";
+}
+</script>
+</body>
+</html>
