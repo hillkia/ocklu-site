@@ -1,0 +1,114 @@
+<!doctype html><html lang=en><head><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=robots content="noindex,nofollow">
+<title>Accessibility &amp; AI-Visibility Audit — ecomxagency.com</title><style>
+:root{color-scheme:light}*{box-sizing:border-box}
+body{margin:0;background:#F9FAFB;color:#101828;font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
+.k{max-width:840px;margin:0 auto;background:#fff;padding:52px 58px}
+header{border-bottom:3px solid #101828;padding-bottom:18px;margin-bottom:30px}
+.m{font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:13px}
+.s{color:#667085;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+h1{font-size:27px;line-height:1.25;margin:26px 0 6px}
+h2{font-size:19px;margin:44px 0 4px;padding-top:22px;border-top:1px solid #EAECF0}
+.lead{color:#475467}
+.kartu{display:flex;gap:12px;flex-wrap:wrap;margin:26px 0}
+.kartu div{flex:1;min-width:120px;background:#F9FAFB;border:1px solid #EAECF0;border-radius:10px;padding:14px 16px}
+.kartu .a{display:block;font-size:26px;font-weight:700;line-height:1.1}
+.kartu .b{font-size:11px;color:#667085;text-transform:uppercase;letter-spacing:.06em}
+.isu{border:1px solid #EAECF0;border-radius:10px;padding:18px 20px;margin:16px 0;background:#fff}
+.kep{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:9px}
+.kep h3{margin:0;font-size:16px;flex:1;min-width:230px}
+.no{background:#101828;color:#fff;width:23px;height:23px;border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:700}
+.lvl,.sc{font-size:11px;font-weight:600;padding:2px 8px;border-radius:99px}
+.sc{background:#F2F4F7;color:#475467;font-weight:500}
+.isu p{margin:8px 0;font-size:14.5px}
+.cat{color:#475467;font-size:13.5px;border-left:3px solid #EAECF0;padding-left:12px}
+code{background:#F2F4F7;padding:1px 5px;border-radius:4px;font-size:12.5px;word-break:break-word}
+table{width:100%;border-collapse:collapse;font-size:14px;margin:12px 0}
+td{border-top:1px solid #EAECF0;padding:9px 10px;vertical-align:top}
+.sc2{color:#667085;font-size:12.5px;white-space:normal}
+.box{overflow-x:auto}
+footer{margin-top:44px;padding-top:20px;border-top:1px solid #EAECF0;color:#667085;font-size:13px}
+@media(max-width:640px){.k{padding:30px 20px}}
+</style></head><body><div class=k>
+<header><div class=m>Accessibility &amp; AI-Visibility Audit</div>
+<div class=s>Prepared for EcomX Shopify Plus Agency &middot; 04 September 2026</div></header>
+
+<h1>ecomxagency.com</h1>
+<p class=lead>WCAG 2.2 audit plus AI-assistant visibility. Every finding below names the
+exact selector or attribute, the success criterion it maps to, and the change that resolves
+it. Nothing here is inferred from a score — each item was read out of your live HTML and
+your seven stylesheets (267,438 characters of CSS parsed).</p>
+
+<div class=kartu>
+<div><span class=a>1</span><span class=b>Level A issue</span></div>
+<div><span class=a>3</span><span class=b>Level AA issues</span></div>
+<div><span class=a>2</span><span class=b>Level AAA issues</span></div>
+<div><span class=a>11</span><span class=b>Checks passed</span></div>
+</div>
+
+<p class=lead><b>Summary.</b> This site is built well above the norm for its category. Heading
+structure is clean across 80 headings with zero level skips, all 23 buttons carry accessible
+names, all 182 links use descriptive text, and <code>:focus-visible</code> is used correctly in
+30 places — that last one puts you ahead of most agency sites we scan. The findings below are
+consequently narrow and specific rather than a list of basics. The single Level A failure is a
+missing attribute on your FAQ accordion, and it is roughly one line of JavaScript.</p>
+
+<h2>Findings</h2>
+<article class="isu"><div class="kep"><span class="no">1</span>
+<h3>Accordion and drawer toggles never announce open/closed</h3><span class="lvl" style="color:#B42318;background:#FEF3F2">Level A</span><span class="sc">4.1.2 Name, Role, Value</span></div>
+<p><strong>What we found.</strong> 46 toggle elements (FAQ accordion, mobile menu drawer, collapsible blocks) — <code>aria-expanded</code> appears <b>0 times</b> in the whole document. <code>.accordion__plus-btn</code> and <code>.accordion__minus-btn</code> are real <code>&lt;button&gt;</code> elements, so they receive keyboard focus, but a screen-reader user hears "Plus Icon, button" whether the panel is open or shut. Sighted keyboard users get the same ambiguity — the icon swaps visually, nothing is announced.</p>
+<p><strong>How to fix it.</strong> Add <code>aria-expanded="false"</code> to each toggle and flip it to <code>"true"</code> in the same JS that swaps the plus/minus icon. Add <code>aria-controls="&lt;panel-id&gt;"</code> pointing at the panel. Roughly one line per handler; no markup restructure. Alternatively replace the pair with native <code>&lt;details&gt;/&lt;summary&gt;</code>, which gets this for free.</p>
+<p class="cat"><strong>Context.</strong> This is the only Level A failure found. It is also the cheapest to fix.</p></article><article class="isu"><div class="kep"><span class="no">2</span>
+<h3>Carousel pagination dots have no focus indicator</h3><span class="lvl" style="color:#B54708;background:#FFFAEB">Level AA</span><span class="sc">2.4.7 Focus Visible</span></div>
+<p><strong>What we found.</strong> <code>.slick-dots li button:focus, .slick-dots li button:hover { outline: none }</code> — and unlike the site's other 17 <code>outline:none</code> rules, this one supplies <b>no</b> replacement (no <code>box-shadow</code>, no <code>border</code>, no <code>background</code> change). A keyboard user tabbing through the carousel sees the focus ring vanish entirely.</p>
+<p><strong>How to fix it.</strong> Give the focused state a visible indicator: <code>.slick-dots li button:focus-visible{outline:2px solid currentColor;outline-offset:3px}</code>. Keep <code>:hover</code> unstyled if the flat look matters — only <code>:focus</code> is the compliance issue.</p>
+<p class="cat"><strong>Context.</strong> Note: the site handles this correctly in 17 of 19 places. This is an isolated slip, not a pattern.</p></article><article class="isu"><div class="kep"><span class="no">3</span>
+<h3>Skip-link destination is focused invisibly</h3><span class="lvl" style="color:#B54708;background:#FFFAEB">Level AA</span><span class="sc">2.4.7 Focus Visible</span></div>
+<p><strong>What we found.</strong> <code>.header *[tabindex="-1"]:focus { outline: none }</code> with no replacement. Elements with <code>tabindex="-1"</code> inside the header are not tab-reachable, but they <i>are</i> the landing targets for the skip link and for JS focus management. The skip link itself is implemented correctly — the place it sends you to gives no confirmation you arrived.</p>
+<p><strong>How to fix it.</strong> Scope the rule so it does not swallow programmatic focus: <code>.header *[tabindex="-1"]:focus-visible{outline:2px solid currentColor;outline-offset:2px}</code>, or add a transient highlight on the target.</p>
+<p class="cat"><strong>Context.</strong> Low user-facing frequency, but it undercuts an accessibility feature the site already paid to build.</p></article><article class="isu"><div class="kep"><span class="no">4</span>
+<h3>Contact form result is never announced</h3><span class="lvl" style="color:#B54708;background:#FFFAEB">Level AA</span><span class="sc">4.1.3 Status Messages</span></div>
+<p><strong>What we found.</strong> One <code>&lt;form id="contact_form"&gt;</code>, and <code>aria-live</code> appears <b>0 times</b> site-wide. When the form succeeds or errors, the message is rendered visually only. A screen-reader user submits and hears nothing — no confirmation, no error.</p>
+<p><strong>How to fix it.</strong> Wrap the success/error container in <code>&lt;div role="status" aria-live="polite"&gt;</code> for confirmations and <code>aria-live="assertive"</code> for validation errors. The element must exist in the DOM <i>before</i> the message is injected, or the announcement does not fire.</p>
+</article><article class="isu"><div class="kep"><span class="no">5</span>
+<h3>Reduced-motion support is opt-in, so most animation escapes it</h3><span class="lvl" style="color:#175CD3;background:#EFF8FF">Level AAA</span><span class="sc">2.3.3 Animation from Interactions</span></div>
+<p><strong>What we found.</strong> The <code>@media (prefers-reduced-motion: reduce)</code> block contains a single rule: <code>.motion-reduce{transition:none!important;animation:none!important}</code>. It only affects elements that already carry the <code>.motion-reduce</code> class. Meanwhile the stylesheet defines <b>7 keyframe animations</b> — <code>animateMenuOpen</code>, <code>star-animation-scale-one</code>, <code>star-animation-scale-two</code>, <code>star-animation-color</code>, <code>flickerAnimation</code>, <code>wave-animation</code>, <code>bounce</code> — several running <code>infinite</code>: the guarantee-badge stars at 5s infinite, the loader dots at 1.5s infinite, and a tooltip at <code>flickerAnimation 2s infinite</code>.</p>
+<p><strong>How to fix it.</strong> Make the media query a blanket rule rather than a class opt-in: <code>@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}</code>. Keep <code>.motion-reduce</code> for anything needing finer control.</p>
+<p class="cat"><strong>Context.</strong> Checked for seizure risk (2.3.1) and it is clear: <code>flickerAnimation</code> cycles opacity 1&rarr;0&rarr;1 over 2s = <b>0.5 Hz</b>, well under the 3 Hz threshold. The concern here is vestibular comfort, not photosensitivity.</p></article><article class="isu"><div class="kep"><span class="no">6</span>
+<h3>Six external links open new tabs without warning</h3><span class="lvl" style="color:#175CD3;background:#EFF8FF">Level AAA</span><span class="sc">3.2.5 Change on Request</span></div>
+<p><strong>What we found.</strong> 62 links carry <code>target="_blank"</code>. 56 of them announce it via <code>aria-label</code> or <code>title</code>; <b>6 do not</b>. Screen-reader and screen-magnifier users lose context when the tab changes with no notice.</p>
+<p><strong>How to fix it.</strong> Append the same pattern already used on the other 56 — e.g. <code>aria-label="Instagram (opens in a new tab)"</code>. Also confirm <code>rel="noopener"</code> on all 62 (security, not accessibility).</p>
+</article>
+
+<h2>What passed</h2>
+<p class=lead>Recorded so you can see the audit's coverage, not only its complaints.</p>
+<div class=box><table><tr><td><b>Document language</b></td><td><code>lang="en"</code> present</td><td class=sc2>1.3.1 / 3.1.1</td></tr><tr><td><b>Page title</b></td><td>Unique and descriptive</td><td class=sc2>2.4.2</td></tr><tr><td><b>Heading structure</b></td><td>80 headings, <b>0 level skips</b>, exactly one <code>&lt;h1&gt;</code>, no empty headings</td><td class=sc2>1.3.1 / 2.4.6</td></tr><tr><td><b>Landmarks</b></td><td><code>&lt;main&gt;</code> present, skip link present</td><td class=sc2>1.3.1 / 2.4.1</td></tr><tr><td><b>Images</b></td><td>No <code>&lt;img&gt;</code> missing <code>alt</code></td><td class=sc2>1.1.1</td></tr><tr><td><b>Button names</b></td><td>All 23 buttons have text, <code>aria-label</code>, or <code>title</code></td><td class=sc2>4.1.2</td></tr><tr><td><b>Link text</b></td><td>182 links, <b>0</b> generic "click here" / "read more"</td><td class=sc2>2.4.4</td></tr><tr><td><b>Zoom</b></td><td>Viewport does not disable pinch-zoom</td><td class=sc2>1.4.4</td></tr><tr><td><b>Focus styling</b></td><td><code>:focus-visible</code> used 30&times; — correct modern pattern</td><td class=sc2>2.4.7</td></tr><tr><td><b>Tab order</b></td><td>No positive <code>tabindex</code> values</td><td class=sc2>2.4.3</td></tr><tr><td><b>Form labels</b></td><td>All visible inputs labelled (3 unlabelled inputs are <code>type="hidden"</code>, correctly exempt)</td><td class=sc2>3.3.2</td></tr></table></div>
+
+<h2>AI visibility</h2>
+<p class=lead>Whether an AI assistant can read, understand, and quote your site when a buyer
+asks it for a Shopify Plus agency. Separate from WCAG, and scored separately.</p>
+<div class=box><table><tr><td><b>Structured data</b></td><td>13 schema types: Organization, Service, Offer, FAQPage, Question, Answer, Person, ContactPoint, PostalAddress, Country, ImageObject, SearchAction, WebSite</td><td class=sc2>Exceptional. Most agency sites declare 2&ndash;3.</td></tr><tr><td><b>llms.txt</b></td><td>Present</td><td class=sc2>Rare &mdash; under 1% of sites we scan have one.</td></tr><tr><td><b>AI crawler access</b></td><td>0 blocked</td><td class=sc2>GPTBot, ClaudeBot, PerplexityBot, CCBot all permitted.</td></tr><tr><td><b>Question-shaped headings</b></td><td>14</td><td class=sc2>Headings phrased the way a buyer actually asks.</td></tr><tr><td><b>Extractable statistics</b></td><td>71</td><td class=sc2>Concrete numbers an assistant can quote back.</td></tr><tr><td><b>robots.txt</b></td><td>Readable, no AI blocks</td><td class=sc2></td></tr></table></div>
+<p class=lead>No action required here. Your structured-data coverage is the strongest we have
+recorded on an agency site, and the <code>llms.txt</code> file puts you in a very small minority.
+If anything, this is an asset worth marketing to your own clients.</p>
+
+<h2>Method</h2>
+<p class=lead>Live fetch of the rendered homepage (362,920 characters of HTML) and all seven
+linked stylesheets. Static analysis against WCAG 2.2 Level A, AA and AAA success criteria,
+plus AI-crawler and structured-data checks. Findings were then individually verified against
+source before inclusion — three candidate issues were discarded during that pass, including
+three inputs flagged as unlabelled that turned out to be <code>type="hidden"</code> and
+correctly exempt.</p>
+<p class=lead><b>Limits, stated plainly.</b> This is static analysis of one page. It cannot
+measure colour contrast ratios (requires computed rendering), keyboard traps inside JS-driven
+drawers (requires a live browser session), or screen-reader behaviour on dynamic content. A
+full engagement adds axe-core in a headless browser, manual keyboard traversal, and NVDA/VoiceOver
+spot checks across template types — cart, product, collection, checkout. The findings above are
+what static analysis can prove; they are not the complete picture, and no honest audit would
+claim otherwise.</p>
+
+<footer>Delivered white-label. This report carries no third-party branding and is yours to
+forward, rebrand, or fold into a client retainer.<br>
+Prepared by Octavianus &middot; hillkiacakep@gmail.com</footer>
+</div></body></html>
