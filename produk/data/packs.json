@@ -1,0 +1,864 @@
+{
+ "diperbarui": "2026-09-05 22:10 UTC",
+ "jml": 13,
+ "packs": [
+  {
+   "pack": "Capstone Planner Pack",
+   "produk": "digital planner",
+   "niche": "mahasiswa tahun akhir yang menyiapkan skripsi dan ujian akhir",
+   "tema": "Palette: soft teal (#A2D5AB) and coral (#FF6B6B); Mood: calm, organized study vibe; Font vibe: handwritten script for headings, clean sans-serif for body",
+   "reels": [
+    {
+     "judul": "Morning Routine Prep",
+     "prompt": "Hands open a stack of pastel blue index cards, place a coffee mug with a graduation cap sticker beside a laptop screen showing the planner PDF; close-up of hands scrolling through the thesis milestone page; handheld drift, natural daylight, UGC look, vertical 9:16, 10 sec, no face visible. 10-second clip."
+    },
+    {
+     "judul": "Reference Tracker in Action",
+     "prompt": "Hands flip through a spiral-bound notebook, then tap a tablet showing the reference tracker template; overlay a sticky note with \"Research Notes\"; handheld drift, soft diffused lighting, UGC look, vertical 9:16, 10 sec, no face visible. 10-second clip."
+    },
+    {
+     "judul": "Daily Habit Tracker Setup",
+     "prompt": "Hands arrange a set of colored sticky dots on a printed habit tracker sheet, placing them on \"Study\", \"Break\", \"Exercise\" columns; a fountain pen rests beside; handheld drift, warm indoor light, UGC look, vertical 9:16, 10 sec, no face visible. 10-second clip."
+    },
+    {
+     "judul": "GoodNotes Import Demo",
+     "prompt": "Hands open GoodNotes on a tablet, drag and drop the PDF planner file, then tap the import button; screen shows the planner pages inside GoodNotes; handheld drift, studio lighting, UGC look, vertical 9:16, 10 sec, no face visible. 10-second clip."
+    },
+    {
+     "judul": "Print & Organize",
+     "prompt": "Hands lay out printed planner pages on a desk, align them with a ruler, and clip them into a binder; a highlighter pen is placed beside; handheld drift, natural window light, UGC look, vertical 9:16, 10 sec, no face visible. 10-second clip."
+    },
+    {
+     "judul": "End-of-Day Review",
+     "prompt": "Hands close a laptop, tap the planner app to mark a completed task, then place a sticky note with \"Done\" on the desk; a small plant adds texture; handheld drift, soft evening light, UGC look, vertical 9:16, 10 sec, no face visible. 10-second clip."
+    }
+   ],
+   "bundle": {
+    "carousel_post": 5,
+    "static_post": 3,
+    "story_post": 4,
+    "typography_post": 2,
+    "catatan_canva": "Create a branded template with a teal header, coral accent boxes, and a handwritten title font; use Canva’s grid to align text and images; export all assets as PNG for Etsy listings"
+   },
+   "etsy": {
+    "judul": "Capstone Digital Planner Pack - PDF Templates for Thesis Milestones, Reference Tracker, Daily Study Habit Tracker - Print or GoodNotes",
+    "tags": [
+     "digital planner",
+     "thesis planner",
+     "student planner",
+     "study tracker",
+     "habit tracker",
+     "GoodNotes template",
+     "PDF planner",
+     "graduation planner",
+     "final year student",
+     "study schedule",
+     "academic planner",
+     "student organization",
+     "study routine"
+    ],
+    "deskripsi": "Struggling to keep your thesis on track? Our Capstone Planner Pack offers structured PDF templates with milestone pages, a reference tracker, and daily study habit sheets. Print or import into GoodNotes for a seamless study experience. Ideal for final‑year students preparing for exams and thesis submission. Get organized, reduce stress, and finish strong.",
+    "brief_mockup": "Use a bold, contrasting title in teal, a student photo in the background, and highlight the planner pages with a coral overlay. Keep the layout clean, with clear call‑to‑action buttons. Show the planner in both print and tablet views to attract diverse buyers.",
+    "harga_usd": 29
+   },
+   "outreach": {
+    "target": "micro‑influencers in student lifestyle niche with 5k‑20k followers",
+    "subject": "Quick boost for your student followers: Free sample of our Capstone Planner Pack!",
+    "email": "Hi [Name],\nI love how you help students stay organized. I’m the creative director behind the Capstone Planner Pack—PDF templates designed to keep final‑year students on track for thesis and exams. I’d love to send you a watermarked sample for your audience. If it resonates, let’s talk about a collaboration or a monthly subscription.\nThanks for your time!\n—[Your Name]",
+    "threads_hook": "Just finished my thesis? Check out this planner that helped me stay on track!"
+   },
+   "otak": "groq:openai/gpt-oss-20b",
+   "dibuat": "2026-09-05 21:56:44"
+  },
+  {
+   "pack": "OKR Flow Notion Planner Pack for Remote Tech Startups",
+   "produk": "digital planner",
+   "niche": "pemilik startup teknologi remote yang mengelola OKR tim",
+   "tema": "Palette: #1E3A8A (deep indigo), #3B82F6 (bright blue), #F3F4F6 (light gray); Mood: sleek, futuristic, productive; Font vibe: Montserrat Bold for headings, Inter Regular for body",
+   "reels": [
+    {
+     "judul": "Swipe OKR Dashboard on iPhone",
+     "prompt": "Hand scrolls through the Notion OKR dashboard on an iPhone 14 Pro, a blue coffee mug labeled 'Tech Brew' sits beside the phone, natural window light floods the desk, camera handheld drift left as the hand swipes, UGC look and feel, vertical 9:16, 10-second, no face visible"
+    },
+    {
+     "judul": "Sticky Note & Slack Reminder",
+     "prompt": "Hand places a sticky note titled 'Daily Sprint' onto a MacBook Air keyboard, then taps a Slack reminder on an iPad Air using a silver Apple Pencil, soft desk lamp lighting, handheld drift upward, UGC look and feel, vertical 9:16, 10-second, no face visible"
+    },
+    {
+     "judul": "Printed Planner Flip",
+     "prompt": "Hand opens a printed PDF of the digital planner on matte A4 paper, flips a page with a black metal paperclip, while a Samsung Galaxy S23 shows a Notion progress chart, warm ambient light, handheld drift right, UGC look and feel, vertical 9:16, 10-second, no face visible"
+    },
+    {
+     "judul": "Kanban Widget on Surface",
+     "prompt": "Hand taps a Kanban board widget in Notion on a Surface Pro 9, a ceramic mug reading 'Remote Hero' rests beside, natural daylight from a nearby window, camera handheld drift downwards, UGC look and feel, vertical 9:16, 10-second, no face visible"
+    },
+    {
+     "judul": "Habit Tracker with Mouse",
+     "prompt": "Hand uses a Logitech MX Master 3 mouse to click on a weekly habit tracker in Notion on a 27\" Dell UltraSharp monitor, a small potted succulent 'Aloe Vera' on the desk, soft LED backlight, handheld drift left, UGC look and feel, vertical 9:16, 10-second, no face visible"
+    },
+    {
+     "judul": "Daily Tasks on iPad",
+     "prompt": "Hand scrolls through a daily task list on an iPad Mini, noise‑cancelling Sony WH‑1000XM5 headphones rest on the desk, cool blue LED strip lighting, camera handheld drift forward, UGC look and feel, vertical 9:16, 10-second, no face visible"
+    }
+   ],
+   "bundle": {
+    "carousel_post": 5,
+    "static_post": 8,
+    "story_post": 10,
+    "typography_post": 4,
+    "catatan_canva": "Gunakan template 1080×1920 di Canva, terapkan palet warna di background, pasang font Montserrat untuk judul dan Inter untuk teks, sisipkan mockup device (iPhone, laptop) pada tiap slide, beri ikon OKR & Slack, simpan semua elemen sebagai satu folder \"OKR Flow Pack\""
+   },
+   "etsy": {
+    "judul": "OKR Notion Planner Pack for Remote Tech Startups – Digital Dashboard, Slack Integration, Daily Tracker",
+    "tags": [
+     "digital planner",
+     "Notion template",
+     "OKR tracker",
+     "remote work",
+     "startup tools",
+     "productivity",
+     "Slack reminder",
+     "daily habit tracker",
+     "team management",
+     "goal setting",
+     "tech startup",
+     "quarterly planning",
+     "PDF download"
+    ],
+    "deskripsi": "Remote tech founders struggle with scattered OKR tracking and daily workload visibility. This OKR Flow Notion Planner Pack gives you a structured, instantly accessible system: a ready‑to‑use Notion dashboard with quarterly OKR sections, Slack reminder integration, daily habit and task trackers, plus printable PDF templates. Simply duplicate the Notion pages, connect your Slack, and start aligning your team’s goals today.",
+    "brief_mockup": "Create a thumbnail 1500×2100px, split screen: left side shows a sleek Notion dashboard on a MacBook, right side displays a phone with a Slack reminder pop‑up, overlay bold text \"OKR Notion Planner\" in Montserrat, use deep indigo background with bright blue accent line, add a small \"Free Sample\" badge in the corner.",
+    "harga_usd": 49
+   },
+   "outreach": {
+    "target": "micro‑influencers (2k‑10k followers) in remote work, startup & productivity niche",
+    "subject": "Boost your team's OKR workflow – free Notion sample inside",
+    "email": "Hi [Name],\n\nI love how you help remote tech teams stay productive. I’ve built an OKR‑focused Notion planner pack that syncs with Slack and fits perfectly into quarterly planning cycles. I’d love to send you a watermarked sample so you can test it with your audience. Let me know if you’re interested – happy to discuss a partnership or a monthly bundle deal.\n\nBest,\n[Your Name]",
+    "threads_hook": "Ready to turn chaotic OKRs into a sleek, automated workflow?"
+   },
+   "otak": "groq:openai/gpt-oss-120b",
+   "dibuat": "2026-09-05 21:56:41"
+  },
+  {
+   "pack": "DesignFlow Planner Pack",
+   "produk": "digital planner",
+   "niche": "freelance graphic designer yang menangani banyak deadline klien",
+   "tema": "Palette:#2C3E50,#ECF0F1,#E74C3C; Mood: modern minimalist; Font vibe: Montserrat Bold for headings + Open Sans for body",
+   "reels": [
+    {
+     "judul": "Unbox the Mood‑Board Template",
+     "prompt": "Handheld phone filming a clean white desk. Right hand lifts a sealed matte black box labeled \"DesignFlow Mood‑Board\" and opens it to reveal a printed A4 mood‑board template (brand‑printed on 80 gsm paper). Soft natural light from a nearby window, slight camera drift following the hand as the paper is spread. UGC look and feel, vertical 9:16, 10 seconds, no face visible."
+    },
+    {
+     "judul": "Sync with Notion on the MacBook",
+     "prompt": "Handheld phone captures a close‑up of a right hand tapping a Wacom Intuos Pro stylus onto an Apple MacBook Air (2022) keyboard. The screen shows the DesignFlow Notion dashboard loading. Warm LED desk lamp lighting, gentle camera drift tracking the stylus movement across the trackpad. UGC look and feel, vertical 9:16, 10 seconds, no face visible."
+    },
+    {
+     "judul": "Track Invoices with the Printable Sheet",
+     "prompt": "Handheld phone records a right hand sliding a slim silver Moleskine Classic Hardcover Notebook aside to reveal a printed \"Invoice Tracker\" sheet (A5, pastel teal). Hand places a black Pilot G2 gel pen on the sheet, then writes a sample amount. Soft daylight from a nearby window, subtle camera drift following the pen stroke. UGC look and feel, vertical 9:16, 10 seconds, no face visible."
+    },
+    {
+     "judul": "Set Daily Goals with Sticky Notes",
+     "prompt": "Handheld phone films a right hand picking up a pack of Post‑it® Super Sticky Notes (yellow, 3 × 3 in). Hand sticks three notes onto a printed weekly overview page from the planner. Ambient natural light, slight camera drift as the hand arranges the notes. UGC look and feel, vertical 9:16, 10 seconds, no face visible."
+    },
+    {
+     "judul": "Create a Timeline on the iPad",
+     "prompt": "Handheld phone captures a right hand holding an Apple Pencil (2nd generation) and drawing a project timeline on an iPad Pro (12.9‑inch, 2023) using the DesignFlow Notion template. Cool white LED panel lighting, gentle camera drift following the pencil across the screen. UGC look and feel, vertical 9:16, 10 seconds, no face visible."
+    },
+    {
+     "judul": "Coffee Break Planning Session",
+     "prompt": "Handheld phone shows a right hand reaching for a ceramic coffee mug (white, 350 ml, labeled \"DesignFuel\"). Hand places the mug beside a printed daily planner page and flips to the next page using a thumb. Warm morning light from a window, subtle camera drift as the hand turns the page. UGC look and feel, vertical 9:16, 10 seconds, no face visible."
+    }
+   ],
+   "bundle": {
+    "carousel_post": 5,
+    "static_post": 3,
+    "story_post": 4,
+    "typography_post": 2,
+    "catatan_canva": "Gunakan template master di Canva, impor semua elemen visual (palette, font, icon), susun tiap item (mood‑board, timeline, invoice) dalam satu folder, beri nama file sesuai urutan, export sebagai PDF & PNG untuk bundling."
+   },
+   "etsy": {
+    "judul": "DesignFlow Planner Pack – Notion Templates for Graphic Designers",
+    "tags": [
+     "digital planner",
+     "notion template",
+     "graphic designer",
+     "freelance workflow",
+     "project timeline",
+     "invoice tracker",
+     "mood board template",
+     "creative planner",
+     "deadline manager",
+     "digital download",
+     "design productivity",
+     "creative hustle",
+     "quarterly planner"
+    ],
+    "deskripsi": "Struggling to keep client deadlines, mood‑boards, and invoices organized? The DesignFlow Planner Pack solves the chaos with a complete Notion workspace: daily goal tracker, habit log, project timeline, mood‑board template, and invoice tracking sheet—all ready to sync across devices. Perfect for freelance graphic designers handling multiple briefs each quarter.",
+    "brief_mockup": "Create a thumbnail in Canva: split background 50/50 teal (#ECF0F1) and charcoal (#2C3E50); place a mock iPad screen showing the Notion dashboard on the teal side, and a printed mood‑board on the charcoal side; overlay bold Montserrat text \"DesignFlow Planner Pack\" and a small badge \"Instant Notion Sync\" in white.",
+    "harga_usd": 45
+   },
+   "outreach": {
+    "target": "Micro‑influencer accounts (2‑10k followers) that share graphic‑design tips & freelance workflows",
+    "subject": "Boost Your Clients’ Projects with a Free DesignFlow Sample",
+    "email": "Hi [Name],\n\nI love how you help designers stay organized. I’ve created the DesignFlow Planner Pack – a Notion‑based system with mood‑board, timeline, and invoice templates tailored for freelancers. I’d love to send you a watermarked sample so you can try it out and share with your audience. Let me know if you’re interested!\n\nBest,\n[Your Name]",
+    "threads_hook": "Ready to turn chaotic briefs into smooth timelines? 🎨✨"
+   },
+   "otak": "groq:openai/gpt-oss-120b",
+   "dibuat": "2026-09-05 21:56:36"
+  },
+  {
+   "pack": "GlamSalon Story Pack",
+   "produk": "canva instagram story template",
+   "niche": "Salon rambut & kecantikan lokal",
+   "tema": "Palette: deep plum, rose gold, ivory; Mood: luxe & welcoming; Fonts: Playfair Display for headings, Montserrat for body – cohesive, elegant, easy‑read in Canva",
+   "reels": [
+    {
+     "judul": "Template Unboxing",
+     "prompt": "Hand lifts a matte black tablet stand, slides a printed Canva guide (A4, glossy) onto it, places an iPhone 13 on the stand, soft natural light from a window, handheld drift left‑to‑right showing the phone screen with the Instagram story template, UGC look and feel, vertical 9:16, 10‑second, no face visible"
+    },
+    {
+     "judul": "Swap Client Photo",
+     "prompt": "Hand holds a small white wooden photo clip, removes a placeholder picture from the Canva template on the iPhone screen, drops in a printed 4x6 photo of a client haircut (held by hand), ambient ring light at 45°, handheld drift slowly forward to focus on the updated screen, UGC look and feel, vertical 9:16, 10‑second, no face visible"
+    },
+    {
+     "judul": "Add Brand Color",
+     "prompt": "Hand picks up a rose‑gold metallic marker, taps the color picker icon on the Canva toolbar on the phone, drags the marker across the screen to apply the salon’s brand pink, warm LED desk lamp lighting, handheld drift right‑to‑left following the marker motion, UGC look and feel, vertical 9:16, 10‑second, no face visible"
+    },
+    {
+     "judul": "Glitter Animation Demo",
+     "prompt": "Hand slides a tiny glass jar of silver glitter onto the desk, shakes it lightly, then taps the animation panel on the iPhone to enable the glitter overlay, soft overhead softbox light, handheld drift upward revealing the animated sparkle on the story, UGC look and feel, vertical 9:16, 10‑second, no face visible"
+    },
+    {
+     "judul": "Quick Text Edit",
+     "prompt": "Hand grabs a pastel pink Post‑it note, writes \"New Look\" with a black fine‑tip pen, sticks it beside the phone, then uses a finger to tap the text box on the Canva story and replace placeholder text, daylight from a nearby window, handheld drift circular around the phone, UGC look and feel, vertical 9:16, 10‑second, no face visible"
+    },
+    {
+     "judul": "Save & Share",
+     "prompt": "Hand presses the download button on the iPhone, slides a silver USB‑C flash drive from a leather keychain onto the desk, plugs it in, hands the phone toward a small tripod with a “Salon” sign, ambient warm lamp lighting, handheld drift back‑away to reveal the saved file icon, UGC look and feel, vertical 9:16, 10‑second, no face visible"
+    }
+   ],
+   "bundle": {
+    "carousel_post": 5,
+    "static_post": 8,
+    "story_post": 12,
+    "typography_post": 4,
+    "catatan_canva": "Upload all Canva files to a shared folder, rename each with the salon name, add a master brand guide page, link the guide in the pack description, lock background layers, leave text layers unlocked for easy editing"
+   },
+   "etsy": {
+    "judul": "GlamSalon Instagram Story Pack – Editable Canva Templates for Hair & Beauty Salons",
+    "tags": [
+     "instagram story template",
+     "canva salon template",
+     "hair salon marketing",
+     "beauty salon social media",
+     "editable story pack",
+     "digital download",
+     "salon branding",
+     "glitter animation",
+     "quick edit template",
+     "beauty business tools",
+     "social media kit",
+     "hairdresser promo",
+     "canva design"
+    ],
+    "deskripsi": "Struggling to create eye‑catching Instagram Stories fast? Our GlamSalon Story Pack solves the problem with ready‑to‑edit Canva templates designed for local hair & beauty salons. Each pack includes 12 story slides with photo slots, brand‑color palettes, and a simple glitter animation that anyone can swap in seconds. No design skill needed – just drag, drop, and post. Boost bookings, showcase new looks, and keep your feed consistent all year round.",
+    "brief_mockup": "Use a bright salon backdrop, place a phone on a marble slab showing the most colorful story slide, surround with a pair of scissors, a rose‑gold hairbrush, and a cup of latte; add bold text overlay \"Instant Instagram Wow!\" in Playfair Display, keep the thumbnail under 1080×1920 for clear visibility.",
+    "harga_usd": 29
+   },
+   "outreach": {
+    "target": "Micro‑salon owners on Instagram with 1‑5K followers (haircut studios, boutique beauty lounges)",
+    "subject": "[FirstName], give your Instagram Stories a glam upgrade in 5 minutes",
+    "email": "Hey [FirstName],\nI love how you showcase your clients’ transformations. I’ve created a tiny free sample of our GlamSalon Story Pack – just a single slide with a watermarked glitter animation that fits your brand colors. Would you like me to send it over? It’s a quick way to see how easy it is to keep your Stories fresh without any design work. Let me know and I’ll drop the file right away!\nCheers,\n[Your Name] – Creator of GlamSalon Packs",
+    "threads_hook": "Turn your salon’s Instagram Stories from bland to glam in under 10 seconds – here’s how!"
+   },
+   "otak": "groq:openai/gpt-oss-120b",
+   "dibuat": "2026-09-05 05:29:20"
+  },
+  {
+   "pack": "EstateStory Pro Bundle",
+   "produk": "canva instagram story template",
+   "niche": "Agen properti yang memasarkan listing rumah",
+   "tema": {
+    "palet_warna": [
+     "#2C3E50",
+     "#2980B9",
+     "#ECF0F1",
+     "#E74C3C"
+    ],
+    "mood": "Modern professional with a warm inviting vibe",
+    "font_vibe": "Montserrat Bold for headings, Open Sans Regular for body"
+   },
+   "reels": [
+    {
+     "judul": "Map Overlay Reveal",
+     "prompt": "Handheld drift filming an iPhone 13 on a walnut desk, hands place an A4 printed \"Neighborhood Map\" (exact prop name) onto the surface, then swipe to open a Canva story template on the phone. Natural window light from the left, camera drifts slowly left‑to‑right, UGC look and feel, vertical 9:16, 10‑second, no face visible."
+    },
+    {
+     "judul": "Price Tag Pop",
+     "prompt": "Handheld drift video of a silver stylus tapping a blue binder labeled \"Listing Data\" on a light‑gray tabletop. The binder opens to a blank Canva story slide, then the stylus draws a price tag graphic. Soft ceiling light, camera drifts forward a few inches, UGC look and feel, vertical 9:16, 10‑second, no face visible."
+    },
+    {
+     "judul": "Coffee Break Edit",
+     "prompt": "Handheld drift shot of a white ceramic mug with the printed logo \"Canva Brew\" beside a MacBook Air. Hands lift the mug, set it down, and quickly drag a property photo into a Canva story frame. Warm ambient lighting, camera drifts right‑to‑left, UGC look and feel, vertical 9:16, 10‑second, no face visible."
+    },
+    {
+     "judul": "Sticker Quick Note",
+     "prompt": "Handheld drift filming a stack of pastel yellow sticky notes (exact prop: \"Post‑it® Yellow 3x3\") on a marble countertop. Fingers peel one, write \"Open House\" with a black marker, and stick it onto a printed Canva storyboard. Overhead LED light, camera drifts upward slightly, UGC look and feel, vertical 9:16, 10‑second, no face visible."
+    },
+    {
+     "judul": "Swipe Through Gallery",
+     "prompt": "Handheld drift recording an iPad Pro placed on a pine wood slab. Hands swipe left‑right through a carousel of 5 property images pre‑loaded in Canva. Sunlight from a nearby window creates gentle shadows, camera drifts side‑to‑side, UGC look and feel, vertical 9:16, 10‑second, no face visible."
+    },
+    {
+     "judul": "Template Flip Demo",
+     "prompt": "Handheld drift video of a black acrylic phone stand holding a Samsung Galaxy S22. Hands flip a physical flip‑book titled \"Story Templates\" (exact prop) while simultaneously tapping the matching Canva template on the phone screen. Soft box lighting, camera drifts in a small circular motion, UGC look and feel, vertical 9:16, 10‑second, no face visible."
+    }
+   ],
+   "bundle": {
+    "carousel_post": 10,
+    "static_post": 15,
+    "story_post": 30,
+    "typography_post": 5,
+    "catatan_canva": "Download the zip, unzip to find the .cnb files. Open each in Canva, click 'Use template', replace placeholder images with your property photos, edit map overlay layer, adjust price text, then duplicate for each listing. Save all as a single folder named 'EstateStory Pro Pack' for client delivery."
+   },
+   "etsy": {
+    "judul": "Real Estate Instagram Story Templates – 30 Editable Canva Designs for Agents",
+    "tags": [
+     "real estate templates",
+     "instagram story",
+     "canva editable",
+     "property marketing",
+     "realtor branding",
+     "open house promo",
+     "listing graphics",
+     "real estate social media",
+     "canva bundle",
+     "digital download",
+     "real estate marketing",
+     "story templates",
+     "realtor tools"
+    ],
+    "deskripsi": "Real estate agents struggle to create eye‑catching Instagram Stories fast. This bundle solves that pain with 30 fully editable Canva story templates, each featuring a map overlay, price‑slot, and open‑house call‑to‑action. Includes a step‑by‑step Canva tutorial tailored for agents, so you can launch polished stories in minutes—no design skills required.",
+    "brief_mockup": "Create a thumbnail using a bold blue background (#2980B9), place a high‑resolution photo of a modern home in the center, overlay the text \"30 Instagram Story Templates for Realtors\" in Montserrat Bold, add a small Canva logo badge bottom‑right. Use a subtle drop shadow to make the home image pop against competitors' flat mockups.",
+    "harga_usd": 29
+   },
+   "outreach": {
+    "target": "Small real‑estate Instagram accounts (1‑5k followers) managed by individual agents",
+    "subject": "Boost Your Open‑House Reach with Ready‑Made Instagram Stories 📈",
+    "email": "Hi {{FirstName}},\n\nI noticed you’re showcasing beautiful listings on Instagram. I’ve created a free watermarked sample of my \"EstateStory Pro\" Canva templates that add a map overlay and instant price tag—perfect for quick open‑house promos. Would you like a link to try it out? If you love it, the full bundle is only $29 and saves you hours each week.\n\nBest,\n[Your Name] – Digital Design for Realtors",
+    "threads_hook": "Turn your property photos into scroll‑stopping Instagram Stories in seconds."
+   },
+   "otak": "groq:openai/gpt-oss-120b",
+   "dibuat": "2026-09-05 05:29:17"
+  },
+  {
+   "pack": "Summer Glow Boutique Reel Pack",
+   "produk": "instagram reel template pack",
+   "niche": "beauty‑brand boutique (pemilik usaha kosmetik rumahan yang dipimpin perempuan)",
+   "tema": "Palette pastel gold, soft pink, ivory; airy and elegant mood; headings in Playfair Display, body in Montserrat; cohesive Canva style",
+   "reels": [
+    {
+     "judul": "Unboxing Summer Glow Palette",
+     "prompt": "Hand holds a white marble tray, places the \"Summer Glow Palette\" (brand‑specific compact) onto it, natural window light from left, camera drifts handheld from left to right over the tray, focus on hands only, vertical 9:16, 10‑second clip, UGC look and feel, no face visible"
+    },
+    {
+     "judul": "Mixing Glow Serum",
+     "prompt": "Hand squeezes a clear glass dropper bottle of \"Radiance Serum\" onto a pink silicone spatula, bright ring light overhead, camera drifts handheld in a slow circular motion around the hands, vertical 9:16, 10 seconds, UGC look and feel, no face visible"
+    },
+    {
+     "judul": "Applying Pastel Gold Highlighter",
+     "prompt": "Hand uses a rose‑gold makeup brush to sweep \"Sunlit Highlighter\" onto a glossy ivory makeup board, soft diffused daylight from a nearby window, camera drifts handheld from top to bottom following the brush, vertical 9:16, 10 seconds, UGC look and feel, no face visible"
+    },
+    {
+     "judul": "Before‑After Lip Swipe",
+     "prompt": "Hand holds a clear acrylic lip gloss container labeled \"Velvet Lip\" and a small gold‑foil sticker, applies gloss on a pastel pink lip swatch on a white ceramic plate, side‑window lighting, camera drifts handheld left‑to‑right revealing the swipe, vertical 9:16, 10 seconds, UGC look and feel, no face visible"
+    },
+    {
+     "judul": "Packing Orders in Vintage Box",
+     "prompt": "Hand places a finished product into a vintage wooden box, adds a gold‑stamped thank‑you card and a pink cotton towel, warm amber lamp lighting, camera drifts handheld over the box closing, vertical 9:16, 10 seconds, UGC look and feel, no face visible"
+    },
+    {
+     "judul": "Quick Reel Edit Demo",
+     "prompt": "Hand clicks a laptop trackpad showing Canva interface, screen displays the Summer Glow Reel template, desk lamp with cool white light, camera drifts handheld from screen to hand, vertical 9:16, 10 seconds, UGC look and feel, no face visible"
+    }
+   ],
+   "bundle": {
+    "carousel_post": 5,
+    "static_post": 8,
+    "story_post": 10,
+    "typography_post": 3,
+    "catatan_canva": "Upload all 6 Reel templates, 5 carousel slides, 8 static images, 10 story frames and 3 typography posts into one Canva folder. Rename each file with a clear prefix (e.g., REEL_01, CAROUSEL_02). Set brand colors (pastel gold, soft pink, ivory) as default palette. Add a master “Brand Kit” with Playfair Display and Montserrat fonts for instant editing."
+   },
+   "etsy": {
+    "judul": "Summer Glow Reel Template Pack for Beauty Brands – 6 UGC Reels",
+    "tags": [
+     "reel template",
+     "beauty brand",
+     "instagram reels",
+     "canva template",
+     "summer glow",
+     "beauty boutique",
+     "cosmetics marketing",
+     "UGC video",
+     "vertical video",
+     "reel pack",
+     "beauty influencer",
+     "DIY reels",
+     "ecommerce branding"
+    ],
+    "deskripsi": "Struggling to create eye‑catching Instagram Reels for your boutique cosmetics line? This Summer Glow Reel Template Pack solves the problem with 6 ready‑to‑use, hand‑held UGC style video scripts and fully editable Canva templates. Each 10‑second clip includes specific props, lighting cues, and camera moves so you can film in seconds, swap colors to match your product, and publish professional‑looking reels without a designer. The bundle also includes carousel, static, story, and typography assets for a complete brand feed.",
+    "brief_mockup": "Use a bright pastel‑gold background, place the \"Summer Glow\" logo in the top‑left corner, overlay a mockup phone frame showing the first Reel template, add a bold “6 UGC Reels – Edit in Canva” badge in Playfair Display, and highlight the price with a gold ribbon. Keep the composition clean to stand out among generic template listings.",
+    "harga_usd": 29
+   },
+   "outreach": {
+    "target": "micro‑beauty accounts (1‑5k followers) running home‑based cosmetics businesses",
+    "subject": "Boost Your Summer Glow Launch with Ready‑Made Reel Templates",
+    "email": "Hi [Name],\nI love how you showcase your handmade cosmetics – especially the new summer shades! I’ve created a free, watermarked sample of my Summer Glow Reel Pack that matches your brand vibe. It’s a quick‑filming, edit‑in‑Canva solution that saves you hours each week. Would you like to try it? Let me know and I’ll send the link.\nBest,\n[Your Name]",
+    "threads_hook": "Turn your summer product launch into 6 scroll‑stopping reels in minutes ✨"
+   },
+   "otak": "groq:openai/gpt-oss-120b",
+   "dibuat": "2026-09-04 15:56:40"
+  },
+  {
+   "pack": "SpringBloom Wedding Planner Templates",
+   "produk": "canva instagram template",
+   "niche": "Perencana pernikahan boutique (wanita pemilik usaha kecil)",
+   "tema": "Pastel palette of blush pink, mint green, lavender, soft gold; mood: romantic & airy; font vibe: handwritten script (Dancing Script) for headings, clean sans-serif (Montserrat) for body",
+   "reels": [
+    {
+     "judul": "Pastel Notebook Reveal",
+     "prompt": "Handheld camera drifting over a blush pink Moleskine notebook, a small bouquet of daisies and lavender, natural daylight from a window, no face visible, vertical 9:16, 10 seconds, UGC look and feel"
+    },
+    {
+     "judul": "Floral Ring Box Showcase",
+     "prompt": "Handheld camera drifting across a golden vintage ring box, a sprig of fresh rosemary, soft morning light, no face visible, vertical 9:16, 10 seconds, UGC look and feel"
+    },
+    {
+     "judul": "Pastel Palette Swipe",
+     "prompt": "Handheld camera drifting while swiping through a pastel color palette card, a pastel-colored pen, bright studio light, no face visible, vertical 9:16, 10 seconds, UGC look and feel"
+    },
+    {
+     "judul": "Canva Template Demo",
+     "prompt": "Handheld camera drifting over a laptop screen showing a Canva template, a pastel-colored sticky note, natural window light, no face visible, vertical 9:16, 10 seconds, UGC look and feel"
+    },
+    {
+     "judul": "Story Highlight Preview",
+     "prompt": "Handheld camera drifting over a phone displaying a story highlight cover with a floral icon, a pastel-colored phone case, soft diffused light, no face visible, vertical 9:16, 10 seconds, UGC look and feel"
+    }
+   ],
+   "bundle": {},
+   "etsy": {},
+   "outreach": {},
+   "otak": "groq:openai/gpt-oss-20b",
+   "dibuat": "2026-09-04 13:25:02"
+  },
+  {
+   "pack": "FitFlex Canva Pack for Online Fitness Coaches",
+   "produk": "canva instagram template",
+   "niche": "Pelatih kebugaran online",
+   "tema": "Cool teal & coral palette, energetic & clean mood, fonts Montserrat Bold for headings + Open Sans for body, giving a modern sporty vibe",
+   "reels": [
+    {
+     "judul": "Unbox the Template",
+     "prompt": "Hand holds a black iPhone 13 Pro, taps the Canva app icon, scrolls to the FitFlex Reel template while a matte white A5 notebook sits beside, natural window light from the left, camera drifts handheld following the thumb swipe, UGC look and feel, vertical 9:16, 10‑second, no face visible"
+    },
+    {
+     "judul": "Swipe the 30‑Day Calendar",
+     "prompt": "Hand flips a pastel‑blue spiral notebook open to page 1, then slides a silver stainless‑steel water bottle across the desk, revealing the 30‑day challenge calendar on the iPad Air, soft daylight from a nearby window, handheld drift follows the hand motion, UGC look and feel, vertical 9:16, 10‑second, no face visible"
+    },
+    {
+     "judul": "Insert a Before‑After Photo",
+     "prompt": "Hand places a glossy white photo frame on a wooden desk, lifts a printed before‑after client photo (front side shows \"Before\"), then swaps it with the Canva mockup on a Samsung Galaxy S23, warm amber lighting from a desk lamp, camera drifts handheld tracking the hand swap, UGC look and feel, vertical 9:16, 10‑second, no face visible"
+    },
+    {
+     "judul": "Add a Reel Video Slot",
+     "prompt": "Hand grabs a neon‑green yoga mat, rolls it slightly, then taps the video placeholder on a Surface Pro 8 displaying the Reel slot, bright natural light from a balcony, handheld drift follows the rolling mat and tap, UGC look and feel, vertical 9:16, 10‑second, no face visible"
+    },
+    {
+     "judul": "Customize Font Colors",
+     "prompt": "Hand uses a silver stylus to tap the color palette on a Lenovo Tab P12 Pro, changes heading font to coral, body font to teal, a small potted succulent sits beside the tablet for a pop of green, diffused ceiling light, handheld drift follows stylus movement, UGC look and feel, vertical 9:16, 10‑second, no face visible"
+    },
+    {
+     "judul": "Export & Share",
+     "prompt": "Hand clicks the \"Download\" button on a MacBook Air, a sleek black USB‑C flash drive (SanDisk Ultra) is placed next to the laptop, daylight from a nearby window creates soft shadows, handheld drift tracks the click and the flash drive placement, UGC look and feel, vertical 9:16, 10‑second, no face visible"
+    }
+   ],
+   "bundle": {
+    "carousel_post": 10,
+    "static_post": 8,
+    "story_post": 12,
+    "typography_post": 5,
+    "catatan_canva": "All files are pre‑linked in a master Canva folder. Duplicate the folder, rename it to your brand, then replace placeholder images/video slots. Use the provided brand‑color guide to keep everything cohesive."
+   },
+   "etsy": {
+    "judul": "FitFlex Instagram Template Pack for Online Fitness Coaches – New Year & Summer Ready",
+    "tags": [
+     "fitness template",
+     "instagram template",
+     "canva fitness",
+     "online coach",
+     "summer body",
+     "new year goals",
+     "social media kit",
+     "editable template",
+     "fit coach",
+     "reel template",
+     "30 day challenge",
+     "before after template",
+     "digital download"
+    ],
+    "deskripsi": "Struggling to keep your Instagram feed fresh while coaching clients? This FitFlex Canva Pack gives you ready‑to‑post carousel, static, story and typography templates that are fully editable in Canva. No design skills needed – just swap in your videos, before‑after photos, and challenge calendar. Post professional‑looking content in minutes and focus on training, not design.",
+    "brief_mockup": "Create a thumbnail with a bright teal background, overlay a bold Montserrat headline \"FitFlex Instagram Pack\", place a high‑contrast photo of a dumbbell and a phone screen showing a carousel mockup, add a small summer sun icon. Use a drop shadow and a gold‑foil badge that reads \"30‑Day Challenge Included\" to stand out.",
+    "harga_usd": 45
+   },
+   "outreach": {
+    "target": "Micro fitness coaches with 1k‑5k Instagram followers",
+    "subject": "Boost Your Summer Coaching Posts with Ready‑Made Canva Templates",
+    "email": "Hey [First Name],\n\nI love how you’re helping clients crush their summer goals! I’ve created a FitFlex Canva Pack that lets you drop in your client transformations, 30‑day challenge calendar, and Reel videos in seconds – no design hassle. I’d be happy to send you a watermarked sample so you can see the fit for your brand. Let’s make your feed as strong as your coaching.\n\nBest,\n[Your Name]",
+    "threads_hook": "Ready to turn your client transformations into scroll‑stopping posts?"
+   },
+   "otak": "groq:openai/gpt-oss-120b",
+   "dibuat": "2026-09-04 13:24:59"
+  },
+  {
+   "pack": "LuxEstate Canva Pack for Realtors",
+   "produk": "canva instagram template",
+   "niche": "Agen properti mewah (luxury realtor)",
+   "tema": "Palette: Deep navy #001F3F, Gold #D4AF37, White #FFFFFF; Mood: Elegant, high‑end luxury; Fonts: Playfair Display for headings, Montserrat for body text",
+   "reels": [
+    {
+     "judul": "Unboxing the Luxury Pack",
+     "prompt": "Handheld drift shot, vertical 9:16, 10‑second UGC look and feel. A pair of hands opens a matte black box (brand logo embossed) on a wooden desk bathed in natural window light. The hands pull out a printed PDF cover, a gold‑foil pen, and an iPhone 14 Pro. The phone screen shows the Canva dashboard as the hand taps the first carousel template. No face is visible."
+    },
+    {
+     "judul": "Swipe Through Carousel",
+     "prompt": "Handheld drift, vertical 9:16, 10‑second UGC style. On a light‑gray marble countertop, a hand holds an iPad Pro (12.9\") and scrolls through a 30‑slide carousel in Canva. The hand uses a sleek silver stylus to swipe, while a soft ring light creates even illumination. The camera drifts slightly as the hand pauses on a premium property photo with gold overlay. No face appears."
+    },
+    {
+     "judul": "Edit a Highlight Cover",
+     "prompt": "Handheld drift, vertical 9:16, 10‑second UGC vibe. A hand places a glossy coffee mug (gold rim) beside a MacBook Air. The laptop screen shows a highlight cover template; the hand drags a property photo into the frame, then adjusts the gold accent using a thin white brush tool. Warm natural light from a nearby window highlights the mug. No face is shown."
+    },
+    {
+     "judul": "Copywriting Quick Fix",
+     "prompt": "Handheld drift, vertical 9:16, 10‑second UGC feel. On a pastel pink notebook, a hand writes a headline with a black gel pen, then switches to a phone (Samsung Galaxy S23) to copy‑paste the pre‑written copy into a Canva text box. The scene is lit by a soft LED panel, creating a clean look. Camera drifts gently as the hand scrolls. No face visible."
+    },
+    {
+     "judul": "Preview on Phone",
+     "prompt": "Handheld drift, vertical 9:16, 10‑second UGC aesthetic. A hand holds a sleek black iPhone 14 Pro at arm’s length, showing a finished Instagram carousel on the screen. The background is a minimal white wall with a gold‑framed mirror. The hand tilts the phone slightly, causing a subtle drift, while natural daylight streams in. No face appears."
+    },
+    {
+     "judul": "Print & Post Setup",
+     "prompt": "Handheld drift, vertical 9:16, 10‑second UGC style. A hand spreads out a printed static post (luxury property image with gold border) on a walnut table. Next to it lies a gold‑colored clipboard, a set of three enamel pins (house, key, crown), and a DSLR camera (Canon EOS M50) turned off. The hand lifts the static post, aligns it with the clipboard, and the camera drifts as the hand gestures toward the viewer. No face visible."
+    }
+   ],
+   "bundle": {
+    "carousel_post": 30,
+    "static_post": 15,
+    "story_post": 20,
+    "typography_post": 10,
+    "catatan_canva": "Download the PDF, open each link in Canva, click “Use template”, replace photos with your listings, edit copy in the provided text boxes, then export as PNG or MP4. All elements are grouped for easy branding."
+   },
+   "etsy": {
+    "judul": "Luxury Realtor Canva Instagram Pack – 30+ Carousel Templates + Highlights",
+    "tags": [
+     "real estate instagram",
+     "luxury realtor",
+     "canva template",
+     "instagram carousel",
+     "real estate marketing",
+     "property highlight cover",
+     "realtor branding",
+     "canva bundle",
+     "instagram story template",
+     "high end realty",
+     "real estate social media",
+     "luxury property marketing",
+     "realtor instagram kit"
+    ],
+    "deskripsi": "Struggling to keep your Instagram feed polished while juggling open houses? This Luxury Realtor Canva Pack solves the problem. Get 30+ ready‑to‑post carousel templates, 15 static posts, 20 story designs, and 10 typography‑focused graphics—all crafted for high‑end property listings. Each template is fully editable in Canva, includes premium property photos, gold accents, and copywriting tailored to affluent buyers. Simply open, swap your photos, adjust the copy, and publish—no design skills required.",
+    "brief_mockup": "Create a thumbnail featuring a sleek navy background, a gold‑bordered mockup of a carousel slide, and a real‑estate key icon. Place the pack title in Playfair Display, add a subtle drop shadow, and overlay a small “30+ Templates” badge in the lower right. Use a high‑resolution property photo as the focal point to stand out among competitors.",
+    "harga_usd": 79
+   },
+   "outreach": {
+    "target": "Small‑scale luxury real‑estate Instagram accounts (1‑5k followers) with recent open‑house posts",
+    "subject": "Boost Your Luxury Listings on Instagram – Free Watermarked Sample Inside",
+    "email": "Hi [First Name],\n\nI noticed your stunning Q3 listings and thought you’d love a sneak peek of our Luxury Realtor Canva Pack. It’s a ready‑to‑post bundle of carousel, story, and highlight templates designed for high‑end properties—no design experience needed. I’ve attached a watermarked sample of a carousel that matches your aesthetic. If it resonates, I’d be happy to share the full pack or discuss a monthly subscription for fresh templates.\n\nBest,\n[Your Name]\nLuxEstate Designs",
+    "threads_hook": "Turn your luxury listings into scroll‑stopping Instagram carousels in seconds."
+   },
+   "otak": "groq:openai/gpt-oss-120b",
+   "dibuat": "2026-09-04 13:24:55"
+  },
+  {
+   "pack": "FitPulse Reel Pack",
+   "produk": "instagram reel template pack",
+   "niche": "pelatih kebugaran & wellness coach yang mempromosikan program online",
+   "tema": "Palette: electric teal, sunrise orange, crisp white; Mood: energetic and uplifting; Fonts: Montserrat Bold for headings, Raleway Regular for body text – all ready in Canva.",
+   "reels": [
+    {
+     "judul": "Band Stretch Intro",
+     "prompt": "Hand holds a matte black resistance band, stretches it overhead while the phone is handheld, slight vertical drift, natural window light, UGC look and feel, vertical 9:16, 10‑second clip, no face visible."
+    },
+    {
+     "judul": "Water Bottle Hydration",
+     "prompt": "Hand grabs a neon green BPA‑free water bottle, twists the cap, then sets it on a wooden desk, camera drifts slightly left, soft morning light from a window, UGC look and feel, vertical 9:16, 10‑second, no face visible."
+    },
+    {
+     "judul": "Dumbbell Flip",
+     "prompt": "Two 2 kg matte silver dumbbells are lifted and flipped in a quick motion, hand only visible, handheld camera with gentle horizontal drift, diffused ceiling light, UGC look and feel, vertical 9:16, 10‑second, no face visible."
+    },
+    {
+     "judul": "Yoga Mat Unroll",
+     "prompt": "A hand unrolls a purple textured yoga mat on a hardwood floor, phone handheld with subtle forward drift, warm ambient light from a floor lamp, UGC look and feel, vertical 9:16, 10‑second, no face visible."
+    },
+    {
+     "judul": "Timer Countdown",
+     "prompt": "Hand taps a wooden kitchen timer, winds it down, then flips it to start, handheld camera drifts downwards, natural daylight through a window, UGC look and feel, vertical 9:16, 10‑second, no face visible."
+    },
+    {
+     "judul": "Kettlebell Swing Demo",
+     "prompt": "A pastel pink kettlebell is lifted and swung gently, only the hands and kettlebell in frame, handheld camera with slight side drift, soft overhead LED light, UGC look and feel, vertical 9:16, 10‑second, no face visible."
+    }
+   ],
+   "bundle": {
+    "carousel_post": 5,
+    "static_post": 8,
+    "story_post": 10,
+    "typography_post": 4,
+    "catatan_canva": "Upload all templates to a shared Canva folder, rename each with the reel title, apply the preset color palette and fonts, then lock background layers so users only edit placeholders."
+   },
+   "etsy": {
+    "judul": "Instagram Reel Template Pack for Fitness Coaches – Ready‑to‑Edit in Canva",
+    "tags": [
+     "instagram reels",
+     "fitness coach",
+     "wellness template",
+     "canva reels",
+     "social media kit",
+     "fitness branding",
+     "online program",
+     "reel templates",
+     "health coach",
+     "summer body",
+     "new year resolution",
+     "digital download",
+     "branding kit"
+    ],
+    "deskripsi": "Struggling to create eye‑catching reels that match your brand? This FitPulse Reel Pack solves the problem with 6 fully‑editable Canva templates, a cohesive color palette, and motivational text animations. Includes carousel, static, story, and typography posts so you can post consistently in minutes.",
+    "brief_mockup": "Use a high‑contrast mockup: place a phone screen showing the first reel over a sleek gym backdrop, add bold headline \"Turn Your Workouts into Scroll‑Stopping Reels\" and a call‑to‑action button. Highlight the electric teal accents to stand out among competitors.",
+    "harga_usd": 29
+   },
+   "outreach": {
+    "target": "micro fitness influencers (1k‑5k followers) who regularly share workout tips",
+    "subject": "Boost your client engagement with ready‑made reels",
+    "email": "Hey [Name],\nI love how you inspire your community with daily moves. I thought you’d enjoy a free, watermarked sample of my FitPulse Reel Pack – a set of Canva reels made for fitness coaches just like you. It’ll save you hours on content creation. Let me know if you’d like the link and we can chat about a full pack or a monthly subscription.\nBest,\n[Your Name]",
+    "threads_hook": "Turn your workout tips into scroll‑stopping reels in seconds!"
+   },
+   "otak": "groq:openai/gpt-oss-120b",
+   "dibuat": "2026-09-04 13:03:01"
+  },
+  {
+   "pack": "EtsyCraft Reel Mastery Pack",
+   "produk": "instagram reel template pack",
+   "niche": "Pemilik toko Etsy yang menjual barang handmade (mis. perhiasan, kerajinan)",
+   "tema": "Palette: warm terracotta, muted sage, ivory; Mood: cozy handmade workshop vibe; Font vibe: hand‑lettered script paired with clean sans‑serif like Montserrat for captions",
+   "reels": [
+    {
+     "judul": "Unbox Your Best‑Seller",
+     "prompt": "Hand holds a vintage wooden jewelry box (exactly “vintage wooden jewelry box”) on a sunlit windowsill; natural window light streams in; camera drifts slowly left‑to‑right handheld; UGC look and feel; vertical 9:16; 10‑second clip; no face visible. 10-second clip."
+    },
+    {
+     "judul": "Showcase Sparkling Earrings",
+     "prompt": "Close‑up hand arranges a pair of silver hoop earrings (exactly “silver hoop earrings”) on a white marble slab; softbox light from the side; camera drifts gently upward handheld; UGC look and feel; vertical 9:16; 10‑second clip; no face visible. 10-second clip."
+    },
+    {
+     "judul": "Crafting the Perfect Tag",
+     "prompt": "Hand uses a gold foil stamp (exactly “gold foil stamp”) to press a brand tag onto kraft cardstock; ring light creates a subtle glow; camera drifts right‑to‑left handheld; UGC look and feel; vertical 9:16; 10‑second clip; no face visible. 10-second clip."
+    },
+    {
+     "judul": "Swipe Through Canva Template",
+     "prompt": "Hand scrolls an iPhone 13 Pro (exactly “iPhone 13 Pro”) showing a pre‑made Instagram Reel template; ambient desk lamp lighting; camera drifts slightly forward handheld; UGC look and feel; vertical 9:16; 10‑second clip; no face visible. 10-second clip."
+    },
+    {
+     "judul": "Add a Touch of Glitter",
+     "prompt": "Hand pours fine holographic glitter (exactly “holographic glitter”) from a clear glass jar into a small crystal bowl; warm LED ring light; camera drifts left‑to‑right handheld; UGC look and feel; vertical 9:16; 10‑second clip; no face visible. 10-second clip."
+    },
+    {
+     "judul": "Pack & Ship Ready",
+     "prompt": "Hand places a branded kraft envelope (exactly “branded kraft envelope”) into a brown corrugated mailer box; natural daylight from a nearby window; camera drifts upward handheld; UGC look and feel; vertical 9:16; 10‑second clip; no face visible. 10-second clip."
+    }
+   ],
+   "bundle": {
+    "carousel_post": 5,
+    "static_post": 4,
+    "story_post": 6,
+    "typography_post": 3,
+    "catatan_canva": "Import all Reel templates into Canva, apply the provided color palette and fonts, replace placeholder text with your own promo copy, then export as vertical 1080x1920 MP4. Group all assets in one folder named ‘EtsyCraft Reel Mastery Pack’ for easy sharing."
+   },
+   "etsy": {
+    "judul": "EtsyCraft Reel Mastery Pack – Ready‑to‑Use Instagram Reel Templates for Handmade Sellers",
+    "tags": [
+     "instagram reels",
+     "handmade business",
+     "etsy seller",
+     "reel templates",
+     "social media kit",
+     "craft business",
+     "holiday promotion",
+     "black friday sale",
+     "digital download",
+     "canva templates",
+     "DIY marketing",
+     "small business tools",
+     "ecommerce graphics"
+    ],
+    "deskripsi": "Struggling to find time and design skills for eye‑catching Instagram Reels? This EtsyCraft Reel Mastery Pack solves that problem. It includes 6 fully editable vertical Reel templates, plus a matching carousel, static, story, and typography posts. Each template follows a cohesive warm terracotta‑sage palette and hand‑lettered font vibe, perfect for jewelry and craft sellers. Simply replace the placeholder text, add your product shots, and publish – no design experience needed.",
+    "brief_mockup": "Create a thumbnail by placing the ‘EtsyCraft Reel Mastery Pack’ logo on a textured kraft background, overlay a bright mockup of a phone screen showing the first Reel, and add a bold “Instant Instagram Reels” badge in terracotta. Use the same font combo as the pack for consistency.",
+    "harga_usd": 49
+   },
+   "outreach": {
+    "target": "micro‑influencer Etsy shop owners (1K‑5K followers) in jewelry or craft niches",
+    "subject": "Boost Your Holiday Sales with Ready‑Made Reels – Free Sample Inside!",
+    "email": "Hi [First Name],\n\nI love the handmade charm of your [Shop Name] collection! I’ve created a free watermarked sample Reel from our EtsyCraft Reel Mastery Pack that matches your style perfectly. Would you like to see how it looks on your feed? It’s a quick way to showcase new pieces for Black Friday without spending hours on design.\n\nLet me know if you’d like the preview – I’d be happy to send it over.\n\nBest,\n[Your Name] – Creator of EtsyCraft Reel Mastery Pack",
+    "threads_hook": "Turn your handmade creations into scroll‑stopping Reels in seconds!"
+   },
+   "otak": "groq:openai/gpt-oss-120b",
+   "dibuat": "2026-09-04 12:59:20"
+  },
+  {
+   "pack": "PinPro Blueprint for Etsy Sellers",
+   "produk": "pinterest pin template pack",
+   "niche": "penjual produk digital di Etsy",
+   "tema": "Soft teal & warm gold palette, modern minimalist mood, fonts: Montserrat Bold for headings, Raleway Regular for body – cohesive, clean, and approachable in Canva",
+   "reels": [
+    {
+     "judul": "Unbox the Pack",
+     "prompt": "Hand lifts a white cardboard box labeled \"PinPro Blueprint\" on a wooden desk, opens it to reveal printed A5 notebook and a silver pen; natural window light from the left; camera drifts slowly right while focusing on the hand flipping pages; UGC look and feel, vertical 9:16, 10‑second, no face visible"
+    },
+    {
+     "judul": "Swipe Through Templates",
+     "prompt": "Hand holds an iPhone 13, opens Canva app, swipes through five Pinterest pin templates; a pastel teal phone case and a gold‑rimmed glasses rest beside it; soft LED ring light illuminates screen; handheld drift left‑to‑right following the swipe; UGC look and feel, vertical 9:16, 10‑second, no face visible"
+    },
+    {
+     "judul": "Add a Product Mockup",
+     "prompt": "Hand places a printed mockup of a digital product onto a white ceramic coffee mug; uses a wooden bamboo desk mat as background; daylight from a nearby window casts gentle shadows; camera drifts upward revealing the finished mockup; UGC look and feel, vertical 9:16, 10‑second, no face visible"
+    },
+    {
+     "judul": "Link Pin to Etsy Guide",
+     "prompt": "Hand flips open a PDF guide titled \"How to Link Pin to Etsy\" on a MacBook Air; a teal sticky note with \"Step 1\" sits on the corner; ambient desk lamp provides warm light; handheld drift slowly forward to show the guide’s first page; UGC look and feel, vertical 9:16, 10‑second, no face visible"
+    },
+    {
+     "judul": "Customize Colors Fast",
+     "prompt": "Hand uses a silver stylus on an iPad Pro to change the teal accent to coral in a pin template; a small potted succulent sits nearby for a pop of green; natural side light highlights the screen; camera drifts right‑to‑left following the stylus movement; UGC look and feel, vertical 9:16, 10‑second, no face visible"
+    },
+    {
+     "judul": "Ready to Export",
+     "prompt": "Hand taps the \"Download\" button on Canva, then places the saved PNG onto a sleek black phone case; a gold‑tone paperclip holds the case to a teal notebook; soft overhead light creates a subtle shine; handheld drift circles the phone case; UGC look and feel, vertical 9:16, 10‑second, no face visible"
+    }
+   ],
+   "bundle": {
+    "carousel_post": 5,
+    "static_post": 3,
+    "story_post": 4,
+    "typography_post": 2,
+    "catatan_canva": "Combine all 5 pin templates, mockup images, and the PDF guide into one Canva folder; rename each page with clear labels; set brand colors and fonts in the folder settings for instant brand consistency"
+   },
+   "etsy": {
+    "judul": "PinPro Blueprint: Ready‑Made Pinterest Pin Templates + Etsy Link Guide for Digital Sellers",
+    "tags": [
+     "pinterest templates",
+     "etsy seller tools",
+     "digital product pins",
+     "canva pin pack",
+     "black friday marketing",
+     "holiday pins",
+     "ecommerce graphics",
+     "pin mockup",
+     "ready made pins",
+     "etsy shop branding",
+     "digital download",
+     "pin design bundle",
+     "pin template guide"
+    ],
+    "deskripsi": "Struggling to create eye‑catching Pinterest pins? PinPro Blueprint solves the problem with 5 fully editable Canva pin templates, 5 product mockup scenes, and a step‑by‑step PDF \"How to Link Pin to Etsy\". Save hours, avoid costly designers, and boost your holiday traffic instantly.",
+    "brief_mockup": "Use a high‑contrast teal background, place the main pin thumbnail at center, overlay a gold‑bordered badge saying \"5 Ready‑Made Templates\", and add a small mockup of a laptop screen showing a pin in action – this stands out among generic listings.",
+    "harga_usd": 27
+   },
+   "outreach": {
+    "target": "Micro‑influencer Etsy shop owners (1K‑5K followers) in digital product niche",
+    "subject": "Boost Your Holiday Sales with Free PinPro Sample 🎁",
+    "email": "Hi [Name],\nI love how you showcase your digital prints on Etsy! I thought you might enjoy a watermarked sample of my PinPro Blueprint – a set of ready‑made Pinterest pins that drive traffic fast. Let me know if you’d like a sneak peek, and we can chat about a special monthly bundle for creators like you.\nBest,\n[Your Name]",
+    "threads_hook": "Ready to turn Pinterest into your next sales engine this Black Friday?"
+   },
+   "otak": "groq:openai/gpt-oss-120b",
+   "dibuat": "2026-09-04 12:35:42"
+  },
+  {
+   "pack": "FitPin Neon Boost Pack",
+   "produk": "pinterest pin template pack",
+   "niche": "pelatih kebugaran online (online fitness coaches)",
+   "tema": "Neon pink & electric blue palette with charcoal accents, energetic & modern mood, headings in Montserrat Bold, body text in Open Sans",
+   "reels": [
+    {
+     "judul": "Unbox & Flip",
+     "prompt": "Hand opens a matte black cardboard box labeled \"FitPin Neon Boost\", pulls out an A4 printed sample, places it on a wooden desk lit by soft natural window light, then flips the phone (iPhone 13) screen to reveal a neon pink Pinterest pin; handheld drift motion, UGC look and feel, vertical 9:16, 10 seconds, no face visible."
+    },
+    {
+     "judul": "Template Swap",
+     "prompt": "Hand holds an iPhone 13, taps the Canva app, drags a glossy printed client \"before\" photo onto a neon blue template, replaces it with a \"after\" photo, all under a warm desk lamp; handheld drift, UGC look and feel, vertical 9:16, 10 seconds, no face visible."
+    },
+    {
+     "judul": "Pin Pinning",
+     "prompt": "Hand uses an Apple Pencil to tap the \"Pin\" button on Canva, then pins the finished pin onto a corkboard covered with neon stickers; ambient softbox lighting, handheld drift, UGC look and feel, vertical 9:16, 10 seconds, no face visible."
+    },
+    {
+     "judul": "Summer Ready",
+     "prompt": "Hand places a mini USB fan beside an iPhone 13 displaying a summer‑body‑ready pin with beach background, a bright beach towel draped nearby, lit by bright natural sunlight from a window; handheld drift, UGC look and feel, vertical 9:16, 10 seconds, no face visible."
+    },
+    {
+     "judul": "Before‑After Reveal",
+     "prompt": "Hand flips a small white flip board on a desk, revealing side‑by‑side before and after client photos inside a neon pink template; a neon pink marker rests on the board, illuminated by a soft LED ring light; handheld drift, UGC look and feel, vertical 9:16, 10 seconds, no face visible."
+    },
+    {
+     "judul": "Quick Export",
+     "prompt": "Hand taps the \"Export\" button in Canva on an iPhone 13, watches the download arrow animate, then scrolls to the phone gallery where the new Pinterest pin is saved; captured with a handheld drift, soft natural light, UGC look and feel, vertical 9:16, 10 seconds, no face visible."
+    }
+   ],
+   "bundle": {
+    "carousel_post": 5,
+    "static_post": 8,
+    "story_post": 10,
+    "typography_post": 4,
+    "catatan_canva": "Open the provided .zip, import all .png files into a new Canva folder, rename each layer with clear titles (e.g., \"Header_NeonPink\"), group related elements, and save as a single \"FitPin Neon Boost\" brand kit for easy drag‑and‑drop editing."
+   },
+   "etsy": {
+    "judul": "Fitness Pinterest Pin Templates – Neon Workout Pack for Coaches",
+    "tags": [
+     "Pinterest template",
+     "fitness pins",
+     "online coach",
+     "Canva template",
+     "neon design",
+     "workout marketing",
+     "social media graphics",
+     "fitness branding",
+     "pin pack",
+     "coach resources",
+     "digital download",
+     "body transformation",
+     "2024 fitness"
+    ],
+    "deskripsi": "Struggling to create eye‑catching Pinterest pins for your fitness coaching business? This FitPin Neon Boost Pack solves the problem with ready‑to‑use, fully editable Canva templates featuring neon pink & electric blue designs, before‑after layouts, and high‑impact fitness photography. The pack includes 30 pin templates, 5 carousel layouts, 8 static posts, 10 story templates, and 4 typography graphics—everything you need to launch a cohesive, conversion‑focused Pinterest strategy in minutes.",
+    "brief_mockup": "Use a bold neon pink background, place the pack’s logo in the top left, overlay a mock pin screenshot in the center, add a bright “FREE SAMPLE” badge, and finish with a call‑to‑action button in electric blue; keep the composition clean and the colors saturated to stand out in Etsy search results.",
+    "harga_usd": 29
+   },
+   "outreach": {
+    "target": "Micro‑fitness‑coach Instagram accounts (1‑5k followers) with active engagement",
+    "subject": "Boost Your Client Sign‑Ups with Free Neon Pinterest Pin Sample",
+    "email": "Hey [Name],\n\nI love how you share workout tips for your followers! I’ve created a free, watermarked sample of a neon‑style Pinterest pin that matches your brand vibe. Would you like a quick look? It’s a tiny taste of the full FitPin Neon Boost Pack that can save you hours on design and attract more client sign‑ups.\n\nLet me know if you’d like the sample, and we can chat about a special coach‑only discount.\n\nBest,\n[Your Name]\nFitPin Designs",
+    "threads_hook": "Turn your fitness tips into scroll‑stopping Pinterest pins with neon vibes—ready in seconds!"
+   },
+   "otak": "groq:openai/gpt-oss-120b",
+   "dibuat": "2026-09-04 12:35:39"
+  }
+ ]
+}
