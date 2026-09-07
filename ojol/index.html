@@ -1,0 +1,525 @@
+<meta charset="utf-8">
+<title>Ojol Untung</title>
+<meta name="theme-color" content="#0b7a4b">
+<style>
+:root{
+  --bg:#f4f5f4; --card:#fff; --ink:#101512; --dim:#5d6b63; --line:#dfe4e1;
+  --ok:#0b7a4b; --okbg:#e3f5ec; --bad:#c02626; --badbg:#fde8e8; --warn:#a86a00; --warnbg:#fdf1dc;
+  --acc:#0b7a4b;
+}
+:root:not([data-theme="light"]){@media (prefers-color-scheme:dark){
+  --bg:#0e1211; --card:#171c1a; --ink:#eef2f0; --dim:#93a29a; --line:#2a3330;
+  --ok:#3ddc90; --okbg:#0f2b1f; --bad:#ff7b7b; --badbg:#2e1414; --warn:#f0b429; --warnbg:#2c2110;
+  --acc:#3ddc90;
+}}
+:root[data-theme="dark"]{
+  --bg:#0e1211; --card:#171c1a; --ink:#eef2f0; --dim:#93a29a; --line:#2a3330;
+  --ok:#3ddc90; --okbg:#0f2b1f; --bad:#ff7b7b; --badbg:#2e1414; --warn:#f0b429; --warnbg:#2c2110;
+  --acc:#3ddc90;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:16px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  -webkit-text-size-adjust:100%;padding-bottom:78px;max-width:520px;margin:0 auto}
+h1{font-size:17px;margin:0;letter-spacing:-.2px}
+.top{display:flex;align-items:center;gap:8px;padding:12px 14px;background:var(--card);border-bottom:1px solid var(--line);
+  position:sticky;top:0;z-index:9}
+.top small{color:var(--dim);font-size:11px;margin-left:auto;text-align:right;line-height:1.25}
+.wrap{padding:12px 14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:12px}
+label{display:block;font-size:12px;color:var(--dim);margin-bottom:5px;font-weight:600;letter-spacing:.2px}
+input[type=number],input[type=text]{width:100%;font-size:26px;font-weight:700;padding:12px 12px;border:2px solid var(--line);
+  border-radius:11px;background:var(--bg);color:var(--ink);font-variant-numeric:tabular-nums}
+input:focus{outline:none;border-color:var(--acc)}
+.row{display:flex;gap:10px}.row>div{flex:1}
+.verdict{border-radius:14px;padding:16px;text-align:center;margin-bottom:12px;border:2px solid transparent}
+.verdict .big{font-size:38px;font-weight:800;letter-spacing:-1px;line-height:1}
+.verdict .sub{font-size:15px;margin-top:7px;font-weight:600}
+.v-ok{background:var(--okbg);color:var(--ok);border-color:var(--ok)}
+.v-bad{background:var(--badbg);color:var(--bad);border-color:var(--bad)}
+.v-warn{background:var(--warnbg);color:var(--warn);border-color:var(--warn)}
+.brk{font-size:13px;color:var(--dim)}
+.brk div{display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid var(--line)}
+.brk div:last-child{border:0;color:var(--ink);font-weight:700;font-size:15px;padding-top:9px}
+.brk b{font-variant-numeric:tabular-nums}
+.acts{display:flex;gap:10px;margin-top:10px}
+button{font:inherit;font-weight:700;border:0;border-radius:12px;padding:15px;cursor:pointer;flex:1;font-size:16px}
+.b-ok{background:var(--ok);color:#fff}.b-bad{background:var(--bad);color:#fff}
+:root[data-theme="dark"] .b-ok,:root[data-theme="dark"] .b-bad{color:#0e1211}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .b-ok,:root:not([data-theme="light"]) .b-bad{color:#0e1211}}
+.b-gh{background:transparent;color:var(--dim);border:1px solid var(--line);padding:10px;font-size:14px}
+nav{position:fixed;bottom:0;left:0;right:0;display:flex;background:var(--card);border-top:1px solid var(--line);
+  max-width:520px;margin:0 auto;padding-bottom:env(safe-area-inset-bottom)}
+nav button{background:none;color:var(--dim);border-radius:0;padding:13px 4px;font-size:12px;font-weight:700}
+nav button.on{color:var(--acc);box-shadow:inset 0 2px 0 var(--acc)}
+nav span{display:block;font-size:19px;margin-bottom:1px}
+.hero{background:var(--okbg);border:1px solid var(--ok);border-radius:14px;padding:18px 14px;text-align:center;margin-bottom:12px}
+.hero .n{font-size:34px;font-weight:800;color:var(--ok);letter-spacing:-1px;font-variant-numeric:tabular-nums}
+.hero .l{font-size:12px;color:var(--dim);font-weight:600;margin-top:4px}
+.log{font-size:13px}
+.log .it{display:flex;gap:10px;align-items:center;padding:9px 0;border-bottom:1px solid var(--line)}
+.log .it:last-child{border:0}
+.tag{font-size:10px;font-weight:800;padding:3px 7px;border-radius:6px;letter-spacing:.4px;flex:none}
+.t-bad{background:var(--badbg);color:var(--bad)}.t-ok{background:var(--okbg);color:var(--ok)}
+.log .d{flex:1;color:var(--dim);font-size:12px}
+.log .v{font-weight:700;font-variant-numeric:tabular-nums;flex:none}
+.set label{margin-top:14px}.set label:first-child{margin-top:0}
+.set input{font-size:19px;padding:10px}
+.note{font-size:12px;color:var(--dim);line-height:1.55;margin-top:4px}
+.safe{background:var(--okbg);border:1px solid var(--ok);border-radius:11px;padding:11px 12px;font-size:12px;
+  color:var(--ok);font-weight:600;line-height:1.5}
+.hidden{display:none}
+.bstrip{border-radius:13px;padding:13px 14px;margin-bottom:12px;border:1px solid var(--line);background:var(--card)}
+.bstrip .r1{display:flex;align-items:center;gap:8px}
+.bstrip .lbl{font-size:10.5px;font-weight:800;letter-spacing:.4px;color:var(--dim);text-transform:uppercase}
+.bstrip .ctr{margin-left:auto;display:flex;align-items:center;gap:9px}
+.bstrip .pt{font-size:25px;font-weight:800;letter-spacing:-.7px;font-variant-numeric:tabular-nums;min-width:34px;text-align:center}
+.bstrip .msg{font-size:13px;margin-top:8px;line-height:1.55}
+.bstrip.hot{background:var(--okbg);border-color:var(--ok)}
+.bstrip.hot .pt{color:var(--ok)}
+.bstrip.cold{background:var(--warnbg);border-color:var(--warn)}
+.bstrip.cold .pt{color:var(--warn)}
+.bstrip .pb{height:7px;background:var(--bg);border-radius:99px;overflow:hidden;margin-top:9px}
+.bstrip .pb i{display:block;height:100%;background:var(--ok);border-radius:99px;transition:width .2s}
+.pbtn{width:36px;height:36px;border-radius:10px;border:1px solid var(--line);background:transparent;
+  color:var(--ink);font-size:19px;font-weight:800;padding:0;flex:none;line-height:1}
+.pr{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:13px 14px;margin-bottom:10px}
+.pr .n1{font-weight:800;font-size:15.5px;letter-spacing:-.2px}
+.pr .j1{font-size:10px;font-weight:800;letter-spacing:.4px;text-transform:uppercase;color:var(--acc);margin-top:2px}
+.pr .w1{font-size:12px;color:var(--dim);margin-top:2px}
+.pr .p1{font-size:14px;margin-top:9px;line-height:1.5;background:var(--okbg);color:var(--ok);
+  border-radius:9px;padding:10px 11px;font-weight:600}
+.pr .b1{display:flex;gap:8px;align-items:center;margin-top:10px}
+.pr .b1 button{flex:none;padding:9px 14px;font-size:13px;border-radius:9px;width:auto}
+.wa{background:#25d366;color:#062d16}
+.pr .d1{font-size:11px;color:var(--dim);margin-left:auto;text-align:right;line-height:1.35}
+.b-pakai{background:var(--acc);color:#fff;padding:9px 15px;font-size:13px;border-radius:9px;width:auto;flex:none}
+:root[data-theme="dark"] .b-pakai{color:#0e1211}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .b-pakai{color:#0e1211}}
+.bukti{margin-top:11px;background:var(--ok);border-radius:12px;padding:16px 15px;text-align:center;color:#fff}
+:root[data-theme="dark"] .bukti{color:#0b1a12}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .bukti{color:#0b1a12}}
+.bukti .b-atas{font-size:10.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;opacity:.8}
+.bukti .b-nama{font-size:19px;font-weight:800;letter-spacing:-.3px;margin:6px 0 3px;line-height:1.2}
+.bukti .b-wkt{font-size:14px;font-weight:700;font-variant-numeric:tabular-nums}
+.bukti .b-ket{font-size:11.5px;opacity:.85;margin-top:9px;line-height:1.45}
+.kep{display:flex;gap:9px;align-items:baseline;margin-bottom:11px}
+.kep .a{font-size:20px;font-weight:800;letter-spacing:-.5px}
+.kep .b{font-size:11.5px;color:var(--dim);margin-left:auto;text-align:right}
+.tampil{font-size:12px;color:var(--dim);text-align:center;padding:11px 0;border:1px dashed var(--line);
+  border-radius:11px;margin-bottom:12px;line-height:1.55}
+.calcbox{background:var(--bg);border:1px dashed var(--acc);border-radius:12px;padding:13px;margin:14px 0 4px}
+.calcbox .ttl{font-size:12px;font-weight:800;color:var(--acc);letter-spacing:.3px;margin-bottom:10px}
+.calcbox input{font-size:17px;padding:9px}
+.calcbox .hasil{margin-top:12px;font-size:13px;line-height:1.6;color:var(--ink);background:var(--card);
+  border:1px solid var(--line);border-radius:9px;padding:10px}
+.calcbox .hasil b{font-size:19px;color:var(--acc);font-variant-numeric:tabular-nums}
+.mini{font-size:11px;color:var(--dim);text-align:center;padding:8px 0 2px}
+</style>
+
+<div class="top">
+  <h1>Ojol Untung</h1>
+  <small id="tglkini"></small>
+</div>
+
+<!-- ============ HITUNG ============ -->
+<div class="wrap" id="p-hitung">
+  <div id="b-strip"></div>
+  <div class="card">
+    <label>Tarif yang tampil di layar (Rp)</label>
+    <input type="number" id="i-tarif" inputmode="numeric" placeholder="0">
+    <div class="row" style="margin-top:12px">
+      <div><label>Jarak jemput (km)</label><input type="number" id="i-jemput" inputmode="decimal" step="0.1" placeholder="0"></div>
+      <div><label>Jarak antar (km)</label><input type="number" id="i-antar" inputmode="decimal" step="0.1" placeholder="0"></div>
+    </div>
+  </div>
+
+  <div class="verdict" id="v-box"><div class="big" id="v-txt">—</div><div class="sub" id="v-sub">Isi angkanya</div></div>
+
+  <div class="card">
+    <div class="brk" id="brk"></div>
+    <div class="acts">
+      <button class="b-bad" id="b-tolak">Saya TOLAK</button>
+      <button class="b-ok" id="b-ambil">Saya AMBIL</button>
+    </div>
+    <button class="b-gh" style="margin-top:8px;width:100%" id="b-reset">Kosongkan</button>
+  </div>
+
+  <div class="safe">Aplikasi ini tidak tersambung ke Gojek / Grab / Maxim sama sekali. Kamu ketik sendiri angkanya. Akun kamu aman.</div>
+</div>
+
+<!-- ============ CATATAN ============ -->
+<div class="wrap hidden" id="p-catatan">
+  <div class="hero">
+    <div class="n" id="c-total">Rp 0</div>
+    <div class="l">SELISIH YANG KAMU SELAMATKAN BULAN INI</div>
+  </div>
+  <div class="card">
+    <div class="brk" id="c-brk"></div>
+  </div>
+  <div class="card">
+    <label>Riwayat</label>
+    <div class="log" id="c-log"></div>
+    <button class="b-gh" style="margin-top:12px;width:100%" id="b-hapus">Hapus riwayat bulan ini</button>
+  </div>
+</div>
+
+<!-- ============ SETELAN ============ -->
+<div class="wrap hidden" id="p-lapak">
+  <div class="kep"><span class="a" id="l-jml">—</span><span class="b" id="l-kapan"></span></div>
+  <input type="search" id="l-cari" placeholder="Cari warung, bengkel, cuci motor..." style="font-size:16px;padding:12px;margin-bottom:12px">
+  <div id="l-list"></div>
+</div>
+
+<div class="wrap hidden" id="p-setelan">
+  <div class="card set">
+    <label>Target bersih per jam SAAT JALAN (Rp)</label>
+    <input type="number" id="s-target" inputmode="numeric">
+    <div class="note">Ini bukan penghasilan per jam shift. Ini per jam saat kamu benar-benar sedang mengantar. Nunggu order tidak dihitung, jadi angkanya harus jauh lebih tinggi. Jangan tebak &mdash; pakai kotak di bawah.</div>
+
+    <div class="calcbox">
+      <div class="ttl">Biar tidak menebak, isi 3 ini:</div>
+      <label>Mau bawa pulang berapa per hari? (Rp, sudah potong bensin)</label>
+      <input type="number" id="t-pulang" inputmode="numeric" placeholder="150000">
+      <label>Narik berapa jam sehari?</label>
+      <input type="number" id="t-jam" inputmode="decimal" step="0.5" placeholder="12">
+      <label>Dapat berapa order sehari? (rata-rata)</label>
+      <input type="number" id="t-order" inputmode="numeric" placeholder="9">
+      <div class="hasil" id="t-hasil">Isi ketiganya</div>
+      <button class="b-ok" id="b-pakai" style="width:100%;margin-top:10px">Pakai angka ini</button>
+    </div>
+
+    <label>Harga bensin per liter (Rp)</label>
+    <input type="number" id="s-bbm" inputmode="numeric">
+
+    <label>Motor kamu: berapa km per liter?</label>
+    <input type="number" id="s-kmpl" inputmode="decimal" step="0.5">
+    <div class="note">Cara ukur: catat km di spidometer saat isi penuh, isi penuh lagi nanti. Selisih km ÷ liter yang masuk.</div>
+
+    <label>Biaya aus motor per km (Rp)</label>
+    <input type="number" id="s-aus" inputmode="numeric">
+    <div class="note">Oli, ban, rantai, kampas, servis. Ini biaya yang paling sering dilupakan. Isi 0 kalau mau abaikan.</div>
+
+    <label>Kecepatan rata-rata di jalan (km/jam)</label>
+    <input type="number" id="s-speed" inputmode="decimal" step="1">
+
+    <label>Menit hangus per order (nunggu, cari alamat, serah terima)</label>
+    <input type="number" id="s-menit" inputmode="numeric">
+
+    <div class="calcbox">
+      <div class="ttl">Bonus harian dari aplikasi ojolmu</div>
+      <div class="note" style="margin:0 0 4px">Buka Gojek/Grab, lihat target bonus hari ini, salin apa adanya ke sini. Jangan ditebak &mdash; tiap kota beda dan sering berubah. Kosongkan baris yang tidak dipakai.</div>
+      <div class="row" style="margin-top:10px">
+        <div><label>Poin</label><input type="number" id="tp1" inputmode="numeric" placeholder="12"></div>
+        <div><label>Hadiah (Rp)</label><input type="number" id="tr1" inputmode="numeric" placeholder="20000"></div>
+      </div>
+      <div class="row" style="margin-top:8px">
+        <div><label>Poin</label><input type="number" id="tp2" inputmode="numeric" placeholder="16"></div>
+        <div><label>Hadiah (Rp)</label><input type="number" id="tr2" inputmode="numeric" placeholder="35000"></div>
+      </div>
+      <div class="row" style="margin-top:8px">
+        <div><label>Poin</label><input type="number" id="tp3" inputmode="numeric" placeholder="20"></div>
+        <div><label>Hadiah (Rp)</label><input type="number" id="tr3" inputmode="numeric" placeholder="55000"></div>
+      </div>
+      <label style="margin-top:12px">Jam pulang</label>
+      <input type="time" id="s-pulang">
+      <div class="note">Dipakai untuk mengecek tier masih terkejar atau tidak. Tanpa ini, app tidak berani bilang bonusnya masih bisa dikejar.</div>
+    </div>
+
+    <label>Potongan aplikasi dari tarif tampil (%)</label>
+    <input type="number" id="s-potong" inputmode="decimal" step="0.5">
+    <div class="note">Isi 0 kalau angka di layar sudah bersih (biasanya sudah).</div>
+
+    <button class="b-gh" style="margin-top:16px;width:100%" id="b-default">Kembalikan ke setelan awal</button>
+  </div>
+  <div class="mini">Ocklu · data tersimpan di HP kamu sendiri</div>
+</div>
+
+<nav>
+  <button class="on" data-p="hitung"><span>🧮</span>Hitung</button>
+  <button data-p="catatan"><span>🧾</span>Catatan</button>
+  <button data-p="lapak"><span>🏪</span>Lapak</button>
+  <button data-p="setelan"><span>⚙️</span>Setelan</button>
+</nav>
+
+<script>
+const AWAL={target:38000,bbm:10000,kmpl:40,aus:150,speed:20,menit:5,potong:0,pulang:'',orderHari:0,jamHari:0,tier:[]};
+const K='ojol.v1';
+function baca(){try{return {...AWAL,...(JSON.parse(localStorage.getItem(K+'.set'))||{})}}catch(e){return {...AWAL}}}
+function simpan(o){try{localStorage.setItem(K+'.set',JSON.stringify(o))}catch(e){}}
+function bacaLog(){try{return JSON.parse(localStorage.getItem(K+'.log'))||[]}catch(e){return []}}
+function simpanLog(a){try{localStorage.setItem(K+'.log',JSON.stringify(a.slice(-400)))}catch(e){}}
+let S=baca();
+function hariIni(){return new Date().toISOString().slice(0,10)}
+function bacaPoin(){try{const d=JSON.parse(localStorage.getItem(K+'.poin'))||{};
+  return d.t===hariIni()?(+d.p||0):0}catch(e){return 0}}
+function simpanPoin(p){try{localStorage.setItem(K+'.poin',JSON.stringify({t:hariIni(),p:Math.max(0,p)}))}catch(e){}}
+
+const rp=n=>'Rp '+Math.round(n).toLocaleString('id-ID');
+const el=id=>document.getElementById(id);
+const num=id=>{const v=parseFloat(el(id).value);return isFinite(v)?v:0};
+
+/* Mesin pengejar bonus.
+   Aturan keras: yang bertambah cuma SELISIH antar tier, bukan hadiah penuh.
+   Kalau tier tidak mungkin terkejar sebelum jam pulang, nilai kejar = 0 —
+   supaya app tidak pernah mendorong ambil order rugi demi bonus yang mustahil. */
+function bonus(){
+  const p=bacaPoin();
+  const tier=(S.tier||[]).filter(x=>x.p>0&&x.r>0).sort((a,b)=>a.p-b.p);
+  if(!tier.length)return{ada:false,p};
+  const berikut=tier.find(x=>x.p>p);
+  const sekarang=[...tier].reverse().find(x=>x.p<=p);
+  if(!berikut)return{ada:true,aman:true,p,tier,sekarang,nilai:0};
+  const kurang=berikut.p-p;
+  const tambahan=berikut.r-(sekarang?sekarang.r:0);
+  // sisa waktu sampai jam pulang
+  let sisaJam=null;
+  if(S.pulang&&/^\d{2}:\d{2}$/.test(S.pulang)){
+    const now=new Date(), [jh,jm]=S.pulang.split(':').map(Number);
+    const pul=new Date(now); pul.setHours(jh,jm,0,0);
+    if(pul<now){ pul.setDate(pul.getDate()+1);
+      if((pul-now)/3600000>12) sisaJam=0; }        // jam pulang sudah lewat hari ini
+    if(sisaJam===null) sisaJam=Math.max(0,(pul-now)/3600000);
+  }
+  const tpj=(S.orderHari>0&&S.jamHari>0)?S.orderHari/S.jamHari:null;
+  const bisa=(sisaJam!==null&&tpj)?sisaJam*tpj:null;
+  const terkejar=bisa===null?null:bisa>=kurang;
+  return{ada:true,p,tier,sekarang,berikut,kurang,tambahan,sisaJam,tpj,bisa,terkejar,
+         nilai: terkejar===false?0:tambahan/kurang};
+}
+
+function gambarBonus(){
+  const B=bonus(), box=el('b-strip');
+  if(!B.ada){box.innerHTML=`<div class="tampil">Bonus harian belum diatur. Isi di <b>Setelan</b> supaya app tahu kapan kamu tinggal sedikit lagi dapat bonus &mdash; di saat itu order yang biasanya rugi justru layak diambil.</div>`;return}
+  const puncak=B.tier[B.tier.length-1].p;
+  const bar=Math.min(100,B.p/puncak*100);
+  const ctr=`<div class="ctr"><button class="pbtn" id="p-min">&minus;</button>
+    <span class="pt">${B.p}</span><button class="pbtn" id="p-plus">+</button></div>`;
+  let kelas='',msg='';
+  if(B.aman){kelas='hot';
+    msg=`Bonus tertinggi <b>${rp(B.sekarang.r)}</b> sudah aman. Order berikutnya dinilai apa adanya.`;}
+  else if(B.terkejar===false){kelas='cold';
+    msg=`Kurang <b>${B.kurang} poin</b>, sisa ${B.sisaJam.toFixed(1)} jam &mdash; realistis cuma ${B.bisa.toFixed(1)} order lagi.
+      <b>Tier ini tidak terkejar hari ini.</b> Jangan paksakan ambil order rugi demi bonus yang sudah lewat.`;}
+  else{kelas='hot';
+    msg=`Kurang <b>${B.kurang} poin</b> ke bonus ${rp(B.berikut.r)}`
+      +(B.sekarang?` (tambah ${rp(B.tambahan)} dari yang sudah aman)`:'')
+      +`. Tiap order sekarang bernilai tambahan <b>+${rp(B.nilai)}</b>.`
+      +(B.terkejar===null?`<br><span style="color:var(--warn)">Jam pulang belum diisi, jadi app belum bisa memastikan ini masih terkejar.</span>`:'');}
+  box.innerHTML=`<div class="bstrip ${kelas}"><div class="r1"><span class="lbl">Bonus hari ini</span>${ctr}</div>
+    <div class="pb"><i style="width:${bar}%"></i></div><div class="msg">${msg}</div></div>`;
+  el('p-min').onclick=()=>{simpanPoin(bacaPoin()-1);gambar()};
+  el('p-plus').onclick=()=>{simpanPoin(bacaPoin()+1);gambar()};
+}
+
+function hitung(){
+  const tarif=num('i-tarif'), jm=num('i-jemput'), an=num('i-antar');
+  const km=jm+an;
+  const terima=tarif*(1-S.potong/100);
+  const bensin=S.kmpl>0?km/S.kmpl*S.bbm:0;
+  const aus=km*S.aus;
+  const menit=(S.speed>0?km/S.speed*60:0)+S.menit;
+  const bersih=terima-bensin-aus;
+  const perjam=menit>0?bersih/(menit/60):0;
+  const layak=S.target*(menit/60);          // yang SEHARUSNYA dia dapat dalam waktu segitu
+  return {tarif,jm,an,km,terima,bensin,aus,menit,bersih,perjam,layak,selisih:bersih-layak};
+}
+
+function gambar(){
+  gambarBonus();
+  const h=hitung(), ada=h.tarif>0&&h.km>0;
+  const kejar=bonus().nilai||0;
+  const bersih=h.bersih+kejar, perjam=h.menit>0?bersih/(h.menit/60):0, selisih=bersih-h.layak;
+  el('brk').innerHTML=!ada?'<div style="color:var(--dim);border:0;justify-content:center;padding:14px 0">Isi tarif dan jarak dulu</div>':`
+    <div><span>Kamu terima</span><b>${rp(h.terima)}</b></div>
+    <div><span>Bensin ${h.km.toFixed(1)} km</span><b>−${rp(h.bensin)}</b></div>
+    <div><span>Aus motor ${h.km.toFixed(1)} km</span><b>−${rp(h.aus)}</b></div>
+    ${kejar>0?`<div><span>Nilai kejar bonus</span><b style="color:var(--ok)">+${rp(kejar)}</b></div>`:''}
+    <div><span>Makan waktu</span><b>${Math.round(h.menit)} menit</b></div>
+    <div><span>Bersih di kantong</span><b>${rp(bersih)}</b></div>`;
+
+  const b=el('v-box'), t=el('v-txt'), s=el('v-sub');
+  if(!ada){b.className='verdict';t.textContent='—';s.textContent='Isi angkanya';return}
+  const r=S.target>0?perjam/S.target:1, rPolos=S.target>0?h.perjam/S.target:1;
+  // kalau bonus membalik putusan, katakan terang-terangan
+  const balik = kejar>0 && ((rPolos<0.8&&r>=0.8)||(rPolos<1&&r>=1));
+  const tail = balik?` · <b>naik karena bonus</b>`:'';
+  if(r>=1){b.className='verdict v-ok';t.textContent='AMBIL';
+    s.innerHTML=`${rp(perjam)}/jam · lebih ${rp(selisih)} dari target${tail}`}
+  else if(r>=0.8){b.className='verdict v-warn';t.textContent='MEPET';
+    s.innerHTML=`${rp(perjam)}/jam · kurang ${rp(-selisih)} dari target${tail}`}
+  else{b.className='verdict v-bad';t.textContent='TOLAK';
+    s.innerHTML=`${rp(perjam)}/jam · rugi ${rp(-selisih)} dibanding target`}
+}
+
+function catat(jenis){
+  const h=hitung();
+  if(!(h.tarif>0&&h.km>0)){el('i-tarif').focus();return}
+  // Nilai yang tercatat = selisih nyata terhadap target, sudah termasuk nilai kejar bonus.
+  const selisih=(h.bersih+(bonus().nilai||0))-h.layak;
+  const nilai = jenis==='tolak' ? Math.max(0,-selisih) : Math.max(0,selisih);
+  if(jenis==='ambil')simpanPoin(bacaPoin()+1);
+  const L=bacaLog(); L.push({w:Date.now(),j:jenis,n:nilai,km:+h.km.toFixed(1),t:Math.round(h.terima),b:Math.round(h.bersih)});
+  simpanLog(L);
+  ['i-tarif','i-jemput','i-antar'].forEach(i=>el(i).value='');
+  gambar(); gambarCatatan();
+  const b=el('v-box');b.className='verdict v-ok';el('v-txt').textContent=nilai>0?'+'+rp(nilai):'Tercatat';
+  el('v-sub').textContent=jenis==='tolak'?'Kerugian yang kamu hindari':'Kelebihan dari target';
+}
+
+function gambarCatatan(){
+  const L=bacaLog(), now=new Date(), bl=now.getMonth(), th=now.getFullYear();
+  const B=L.filter(x=>{const d=new Date(x.w);return d.getMonth()===bl&&d.getFullYear()===th});
+  const tolak=B.filter(x=>x.j==='tolak'), ambil=B.filter(x=>x.j==='ambil');
+  const jt=tolak.reduce((a,b)=>a+b.n,0), ja=ambil.reduce((a,b)=>a+b.n,0);
+  el('c-total').textContent=rp(jt+ja);
+  el('c-brk').innerHTML=`
+    <div><span>Order ditolak</span><b>${tolak.length}×</b></div>
+    <div><span>Rugi yang dihindari</span><b>${rp(jt)}</b></div>
+    <div><span>Order diambil</span><b>${ambil.length}×</b></div>
+    <div><span>Kelebihan dari target</span><b>${rp(ja)}</b></div>
+    <div><span>Total bulan ini</span><b>${rp(jt+ja)}</b></div>`;
+  el('c-log').innerHTML = B.length? B.slice().reverse().slice(0,60).map(x=>{
+    const d=new Date(x.w);
+    return `<div class="it"><span class="tag ${x.j==='tolak'?'t-bad':'t-ok'}">${x.j==='tolak'?'TOLAK':'AMBIL'}</span>
+      <span class="d">${String(d.getDate()).padStart(2,'0')}/${String(d.getMonth()+1).padStart(2,'0')} ${String(d.getHours()).padStart(2,'0')}:${String(d.getMinutes()).padStart(2,'0')} · ${x.km} km · ${rp(x.t)}</span>
+      <span class="v">${x.n>0?'+'+rp(x.n):'—'}</span></div>`}).join('')
+    : '<div style="color:var(--dim);padding:12px 0;text-align:center">Belum ada. Hitung satu order dulu.</div>';
+}
+
+function isiTier(){
+  const t=S.tier||[];
+  [1,2,3].forEach(i=>{el('tp'+i).value=t[i-1]?t[i-1].p:'';el('tr'+i).value=t[i-1]?t[i-1].r:''});
+  el('s-pulang').value=S.pulang||'';
+}
+function simpanTier(){
+  S.tier=[1,2,3].map(i=>({p:parseFloat(el('tp'+i).value)||0,r:parseFloat(el('tr'+i).value)||0}))
+    .filter(x=>x.p>0&&x.r>0);
+  simpan(S); gambar();
+}
+['tp1','tr1','tp2','tr2','tp3','tr3'].forEach(id=>el(id).addEventListener('input',simpanTier));
+el('s-pulang').addEventListener('input',()=>{S.pulang=el('s-pulang').value;simpan(S);gambar()});
+
+/* ---- LAPAK: promo usaha lokal yang jualan ke sesama driver ----
+   Diambil dari lapak.json di server, lalu DISIMPAN di HP. Sekali sudah pernah kebuka,
+   tetap bisa dilihat walau sinyal mati — driver sering di daerah tanpa sinyal. */
+function bacaPakai(){try{return JSON.parse(localStorage.getItem(K+'.pakai'))||[]}catch(e){return []}}
+function simpanPakai(a){try{localStorage.setItem(K+'.pakai',JSON.stringify(a.slice(-300)))}catch(e){}}
+let buktiAktif=null;
+function bacaLapak(){try{return JSON.parse(localStorage.getItem(K+'.lapak'))||null}catch(e){return null}}
+function simpanLapak(d){try{localStorage.setItem(K+'.lapak',JSON.stringify(d))}catch(e){}}
+async function ambilLapak(){
+  try{
+    const r=await fetch('lapak.json',{cache:'no-store'});
+    if(!r.ok)return;
+    const d=await r.json();
+    if(!d||!Array.isArray(d.promo))return;
+    simpanLapak({w:d.w||Date.now(),ambil:Date.now(),promo:d.promo});
+    gambarLapak();
+  }catch(e){/* offline: pakai yang tersimpan */}
+}
+const waNo=h=>{const d=String(h||'').replace(/\D/g,'');
+  return d?(d.startsWith('0')?'62'+d.slice(1):d.startsWith('62')?d:'62'+d):''};
+function gambarLapak(){
+  const L=bacaLapak(), esc=t=>String(t==null?'':t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  if(!L||!L.promo.length){
+    el('l-jml').textContent='Lapak masih kosong';
+    el('l-kapan').textContent='';
+    el('l-list').innerHTML=`<div class="tampil" style="text-align:left;padding:15px">
+      Belum ada warung atau bengkel yang pasang promo di sini.<br><br>
+      Kalau kamu kenal warung, bengkel, cuci motor, atau tambal ban yang mau promo ke sesama driver
+      &mdash; <b>bilang ke agenmu</b>. Kalau mereka jadi pasang, <b>langgananmu bulan itu gratis</b>.</div>`;
+    return}
+  const hari=Math.floor((Date.now()-(L.w||L.ambil))/86400000);
+  const q=el('l-cari').value.trim().toLowerCase();
+  let list=L.promo;
+  if(q)list=list.filter(x=>[x.nama,x.jenis,x.wil,x.promo].join(' ').toLowerCase().includes(q));
+  const bl2=new Date().toISOString().slice(0,7);
+  const dipakai=bacaPakai().filter(x=>new Date(x.w).toISOString().slice(0,7)===bl2);
+  el('l-jml').innerHTML=`${L.promo.length} promo khusus driver`
+    +(dipakai.length?` <span style="font-size:13px;color:var(--ok);font-weight:600">&middot; kamu pakai ${dipakai.length} bulan ini</span>`:'');
+  el('l-kapan').innerHTML=hari<=1?'diperbarui hari ini':`diperbarui ${hari} hari lalu`
+    +(hari>40?'<br><span style="color:var(--warn)">mungkin sudah kedaluwarsa</span>':'');
+  el('l-list').innerHTML=list.length? list.map(x=>{
+    const w=waNo(x.hp);
+    const pesan=encodeURIComponent(`Halo, saya driver ojol. Lihat promo "${x.promo||x.nama}" di aplikasi Ojol Untung. Masih berlaku?`);
+    return `<div class="pr">
+      <div class="n1">${esc(x.nama)}</div>
+      <div class="j1">${esc(x.jenis||'')}</div>
+      ${x.wil?`<div class="w1">${esc(x.wil)}</div>`:''}
+      ${x.promo?`<div class="p1">${esc(x.promo)}</div>`:''}
+      <div class="b1">
+        <button class="b-pakai" data-pakai="${esc(x.id)}">Saya pakai</button>
+        ${w?`<button class="wa" onclick="window.open('https://wa.me/${w}?text=${pesan}','_blank')">WhatsApp</button>`:''}
+        <div class="d1">${x.sampai?`sampai ${esc(x.sampai)}`:''}${x.dibawa?`<br>dibawa ${esc(x.dibawa)}`:''}</div>
+      </div>
+      ${buktiAktif&&buktiAktif.id===x.id?`<div class="bukti">
+        <div class="b-atas">Promo dipakai</div>
+        <div class="b-nama">${esc(x.nama)}</div>
+        <div class="b-wkt">${buktiAktif.teks}</div>
+        <div class="b-ket">Tunjukkan layar ini ke kasir.<br>Tercatat juga di HP kamu sebagai bukti.</div>
+      </div>`:''}
+      </div>`}).join('')
+    : '<div class="tampil">Tidak ada yang cocok.</div>';
+}
+el('l-cari').oninput=gambarLapak;
+document.addEventListener('click',e=>{
+  const t=e.target.closest('[data-pakai]'); if(!t)return;
+  const id=t.dataset.pakai, L=bacaLapak(); if(!L)return;
+  const pr=L.promo.find(x=>String(x.id)===id); if(!pr)return;
+  const now=new Date();
+  const P=bacaPakai(); P.push({id:pr.id,nama:pr.nama,w:now.getTime()}); simpanPakai(P);
+  buktiAktif={id:pr.id,teks:now.toLocaleString('id-ID',{weekday:'short',day:'2-digit',month:'short',
+    hour:'2-digit',minute:'2-digit'})};
+  gambarLapak();
+});
+
+function isiSetelan(){
+  el('s-target').value=S.target; el('s-bbm').value=S.bbm; el('s-kmpl').value=S.kmpl;
+  el('s-aus').value=S.aus; el('s-speed').value=S.speed; el('s-menit').value=S.menit; el('s-potong').value=S.potong;
+  isiTier();
+}
+function hitungTarget(){
+  const pulang=num('t-pulang'), jam=num('t-jam'), order=num('t-order');
+  if(jam>0&&order>0&&(S.jamHari!==jam||S.orderHari!==order)){S.jamHari=jam;S.orderHari=order;simpan(S)}
+  const box=el('t-hasil');
+  if(!(pulang>0&&jam>0&&order>0)){box.textContent='Isi ketiganya';box.dataset.v='';return}
+  // Lama satu order dihitung dari setelanmu sendiri (jarak rata-rata 7 km kota + menit hangus)
+  const menitOrder=(S.speed>0?7/S.speed*60:21)+S.menit;
+  const jamJalan=order*menitOrder/60;
+  const util=jam>0?jamJalan/jam:0;
+  const target=jamJalan>0?pulang/jamJalan:0;
+  box.dataset.v=Math.round(target);
+  box.innerHTML=`Dari ${order} order &times; ${Math.round(menitOrder)} menit, kamu sebenarnya cuma <b style="font-size:13px">${jamJalan.toFixed(1)} jam</b> di jalan dari ${jam} jam nongkrong (${Math.round(util*100)}%).<br>
+    Supaya bawa pulang ${rp(pulang)}, tiap jam jalan harus hasilkan <b>${rp(target)}</b>.`;
+}
+['t-pulang','t-jam','t-order'].forEach(id=>el(id).addEventListener('input',hitungTarget));
+
+const MAP={'s-target':'target','s-bbm':'bbm','s-kmpl':'kmpl','s-aus':'aus','s-speed':'speed','s-menit':'menit','s-potong':'potong'};
+Object.keys(MAP).forEach(id=>el(id).addEventListener('input',()=>{
+  const v=parseFloat(el(id).value); S[MAP[id]]=isFinite(v)?v:0; simpan(S); gambar();
+}));
+['i-tarif','i-jemput','i-antar'].forEach(id=>el(id).addEventListener('input',gambar));
+el('b-tolak').onclick=()=>catat('tolak');
+el('b-ambil').onclick=()=>catat('ambil');
+el('b-reset').onclick=()=>{['i-tarif','i-jemput','i-antar'].forEach(i=>el(i).value='');gambar();el('i-tarif').focus()};
+el('b-pakai').onclick=()=>{
+  const v=parseFloat(el('t-hasil').dataset.v||'');
+  if(!isFinite(v)||v<=0){el('t-pulang').focus();return}
+  S.target=Math.round(v); simpan(S); el('s-target').value=S.target; gambar();
+  el('t-hasil').insertAdjacentHTML('beforeend','<div style="color:var(--ok);font-weight:700;margin-top:6px">Terpasang.</div>');
+};
+el('b-default').onclick=()=>{S={...AWAL};simpan(S);isiSetelan();gambar()};
+el('b-hapus').onclick=()=>{
+  const now=new Date(); const sisa=bacaLog().filter(x=>{const d=new Date(x.w);
+    return !(d.getMonth()===now.getMonth()&&d.getFullYear()===now.getFullYear())});
+  simpanLog(sisa); gambarCatatan();
+};
+document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('nav button').forEach(x=>x.classList.remove('on')); b.classList.add('on');
+  ['hitung','catatan','lapak','setelan'].forEach(p=>el('p-'+p).classList.toggle('hidden',p!==b.dataset.p));
+  if(b.dataset.p==='catatan')gambarCatatan();
+  if(b.dataset.p==='lapak')gambarLapak();
+});
+el('tglkini').textContent=new Date().toLocaleDateString('id-ID',{weekday:'short',day:'numeric',month:'short'});
+isiSetelan(); hitungTarget(); gambar(); gambarCatatan(); gambarLapak(); ambilLapak();
+</script>

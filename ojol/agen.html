@@ -1,0 +1,361 @@
+<meta charset="utf-8">
+<title>Ojol Untung · Agen</title>
+<meta name="theme-color" content="#0b7a4b">
+<style>
+:root{--bg:#f4f5f4;--card:#fff;--ink:#101512;--dim:#5d6b63;--line:#dfe4e1;--ok:#0b7a4b;--okbg:#e3f5ec;
+ --bad:#c02626;--badbg:#fde8e8;--warn:#a86a00;--warnbg:#fdf1dc;--acc:#0b7a4b;--soft:#eef1ef}
+:root:not([data-theme="light"]){@media(prefers-color-scheme:dark){--bg:#0e1211;--card:#171c1a;--ink:#eef2f0;
+ --dim:#93a29a;--line:#2a3330;--ok:#3ddc90;--okbg:#0f2b1f;--bad:#ff7b7b;--badbg:#2e1414;--warn:#f0b429;
+ --warnbg:#2c2110;--acc:#3ddc90;--soft:#111614}}
+:root[data-theme="dark"]{--bg:#0e1211;--card:#171c1a;--ink:#eef2f0;--dim:#93a29a;--line:#2a3330;--ok:#3ddc90;
+ --okbg:#0f2b1f;--bad:#ff7b7b;--badbg:#2e1414;--warn:#f0b429;--warnbg:#2c2110;--acc:#3ddc90;--soft:#111614}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:16px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+ margin:0 auto;max-width:520px;padding-bottom:80px;-webkit-text-size-adjust:100%}
+.top{display:flex;align-items:center;gap:9px;padding:12px 15px;background:var(--card);
+ border-bottom:1px solid var(--line);position:sticky;top:0;z-index:9}
+h1{font-size:16px;margin:0;letter-spacing:-.2px}
+h1 small{display:block;font-size:11px;color:var(--dim);font-weight:500;margin-top:1px}
+.top .bln{margin-left:auto;font-size:11px;font-weight:800;color:var(--acc);text-align:right;letter-spacing:.3px}
+.wrap{padding:13px 15px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:15px;margin-bottom:12px}
+.card>h2{font-size:12px;margin:0 0 12px;color:var(--dim);letter-spacing:.4px;text-transform:uppercase}
+.hero{background:var(--okbg);border:1px solid var(--ok);border-radius:14px;padding:19px 15px;text-align:center;margin-bottom:12px}
+.hero .n{font-size:35px;font-weight:800;color:var(--ok);letter-spacing:-1.2px;font-variant-numeric:tabular-nums;line-height:1}
+.hero .l{font-size:11.5px;color:var(--dim);font-weight:700;margin-top:6px;letter-spacing:.3px;text-transform:uppercase}
+.hero .s{font-size:12.5px;color:var(--dim);margin-top:8px;line-height:1.5}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:13px}
+.stat .n{font-size:21px;font-weight:800;letter-spacing:-.6px;font-variant-numeric:tabular-nums}
+.stat .l{font-size:10.5px;color:var(--dim);font-weight:700;margin-top:4px;letter-spacing:.3px;text-transform:uppercase}
+.bar{height:8px;background:var(--soft);border-radius:99px;overflow:hidden;margin-top:9px}
+.bar i{display:block;height:100%;background:var(--ok);border-radius:99px;transition:width .2s}
+label{display:block;font-size:11px;color:var(--dim);margin:12px 0 5px;font-weight:700;letter-spacing:.3px;text-transform:uppercase}
+label:first-child{margin-top:0}
+input[type=text],input[type=search],select,textarea{width:100%;font:inherit;padding:12px;border:1px solid var(--line);
+ border-radius:10px;background:var(--bg);color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--acc)}
+textarea{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;line-height:1.5;min-height:100px;resize:vertical}
+button{font:inherit;font-weight:700;border:0;border-radius:11px;padding:14px;cursor:pointer;background:var(--acc);color:#fff;width:100%}
+:root[data-theme="dark"] button{color:#0e1211}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) button{color:#0e1211}}
+button.gh{background:transparent;color:var(--dim);border:1px solid var(--line)}
+button.wa{background:#25d366;color:#062d16;padding:9px 13px;font-size:13px;border-radius:9px;width:auto;flex:none}
+button.sm{padding:7px 12px;font-size:12.5px;border-radius:8px;width:auto;flex:none}
+.it{display:flex;align-items:center;gap:11px;padding:12px 3px;border-bottom:1px solid var(--line)}
+.it:last-child{border-bottom:0}
+.it .nm{flex:1;font-weight:700;min-width:0}
+.it .hp{font-size:11.5px;color:var(--dim);font-weight:400;margin-top:2px}
+.nom{font-weight:800;color:var(--acc);font-variant-numeric:tabular-nums}
+.pill{display:inline-block;font-size:10px;font-weight:800;padding:3px 8px;border-radius:6px;letter-spacing:.4px}
+.p-ok{background:var(--okbg);color:var(--ok)}.p-y{background:var(--warnbg);color:var(--warn)}
+.p-n{background:var(--soft);color:var(--dim)}.p-bad{background:var(--badbg);color:var(--bad)}
+nav{position:fixed;bottom:0;left:0;right:0;display:flex;background:var(--card);border-top:1px solid var(--line);
+ max-width:520px;margin:0 auto;padding-bottom:env(safe-area-inset-bottom)}
+nav button{background:none;color:var(--dim);border-radius:0;padding:12px 4px;font-size:11.5px;flex:1;width:auto}
+nav button.on{color:var(--acc);box-shadow:inset 0 2px 0 var(--acc)}
+nav span{display:block;font-size:19px;margin-bottom:1px}
+.note{font-size:12px;color:var(--dim);line-height:1.6;margin-top:9px}
+.pagar{background:var(--okbg);border:1px solid var(--ok);border-radius:11px;padding:12px;font-size:12px;
+ color:var(--ok);line-height:1.6;font-weight:600}
+.basi{background:var(--warnbg);border:1px solid var(--warn);border-radius:11px;padding:11px 12px;font-size:12px;
+ color:var(--warn);line-height:1.55;font-weight:600;margin-bottom:12px}
+.hidden{display:none}
+.empty{color:var(--dim);text-align:center;padding:24px 0;font-size:13px;line-height:1.6}
+.gate{max-width:400px;margin:50px auto;padding:0 20px}
+.gate h1{font-size:21px;margin-bottom:6px}
+.brk div{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
+.brk div:last-child{border:0;font-weight:800;font-size:16px;padding-top:11px}
+.brk b{font-variant-numeric:tabular-nums}
+</style>
+
+<div id="gate" class="gate">
+  <h1>Halaman Agen</h1>
+  <div class="note" style="margin-top:0">Tempel kode undangan yang dikirim koordinator lewat WhatsApp.</div>
+  <textarea id="g-kode" placeholder="OJOL-AGEN-..." style="margin-top:14px"></textarea>
+  <button style="margin-top:11px" id="g-ok">Masuk</button>
+  <div class="note" id="g-err" style="color:var(--bad)"></div>
+</div>
+
+<div id="app" class="hidden">
+<div class="top"><h1 id="h-nama">—<small id="h-camp"></small></h1><div class="bln" id="h-bln"></div></div>
+
+<!-- KEJAR -->
+<div class="wrap" id="p-kejar">
+  <div id="k-basi"></div>
+  <div class="grid">
+    <div class="stat"><div class="n" id="k-lunas">0/0</div><div class="l">Sudah bayar</div>
+      <div class="bar"><i id="k-bar" style="width:0%"></i></div></div>
+    <div class="stat"><div class="n" id="k-sisa">0</div><div class="l">Belum bayar</div></div>
+  </div>
+  <div class="card">
+    <h2>Yang perlu diingatkan</h2>
+    <input type="search" id="k-cari" placeholder="Cari nama...">
+    <div id="k-list" style="margin-top:6px"></div>
+  </div>
+  <div class="card">
+    <h2>Perbarui dari koordinator</h2>
+    <div class="note" style="margin:0 0 10px">Tempel pesan <b>OJOL-BAL-</b> dari koordinator. Hanya dia yang tahu siapa sudah bayar, karena uangnya masuk ke rekeningnya langsung.</div>
+    <textarea id="k-bal" placeholder="OJOL-BAL-..."></textarea>
+    <button style="margin-top:10px" id="k-terima">Perbarui</button>
+    <div class="note" id="k-pesan"></div>
+  </div>
+</div>
+
+<!-- UANG -->
+<div class="wrap hidden" id="p-uang">
+  <div class="hero">
+    <div class="n" id="u-komisi">Rp 0</div>
+    <div class="l">Komisi kamu bulan ini</div>
+    <div class="s" id="u-sub"></div>
+  </div>
+  <div class="card"><h2>Hitungan</h2><div class="brk" id="u-brk"></div>
+    <div class="note">Kamu tidak pernah memegang uang pelanggan. Mereka bayar langsung ke koordinator, lalu komisimu ditransfer. Jadi tidak ada uang yang bisa hilang atau disalahpahami.</div>
+  </div>
+  <div class="card"><h2>Nilai buku kamu</h2><div id="u-buku"></div></div>
+  <div class="pagar">Komisi hanya keluar dari orang yang benar-benar bayar. Tidak ada bonus dari mengajak agen lain &mdash; di aplikasi ini memang tidak ada tempatnya. Kalau ada yang menawari skema begitu, itu bukan dari sini.</div>
+</div>
+
+<!-- USAHA -->
+<div class="wrap hidden" id="p-usaha">
+  <div class="card">
+    <h2>Tawarkan promo ke pelanggan kamu</h2>
+    <div class="note" style="margin:0 0 12px">Pelanggan yang punya warung, bengkel, cuci motor, atau toko &mdash; tawari promo di komunitas driver. Kamu dapat <b id="v-bagi">bagian terbesar</b> dari yang dia bayar, tiap bulan, selama dia lanjut.</div>
+    <label>Nama usaha</label><input type="text" id="v-nama">
+    <label>Jenis</label><select id="v-jenis"></select>
+    <label>HP / WhatsApp usaha</label><input type="text" id="v-hp" inputmode="tel" placeholder="08...">
+    <label>Wilayah / patokan</label><input type="text" id="v-wil" placeholder="dekat basecamp">
+    <label>Promonya apa</label><input type="text" id="v-promo" placeholder="Nasi ayam + es teh Rp 12.000 khusus driver">
+    <button style="margin-top:14px" id="v-tambah">Daftarkan</button>
+    <div class="note" id="v-pesan"></div>
+  </div>
+  <div class="card"><h2>Usaha yang kamu bawa <span id="v-jml" class="pill p-n"></span></h2><div id="v-list"></div></div>
+  <div class="pagar">Yang boleh cuma usaha yang benar-benar ada. Pinjol, judi, investasi, MLM, dan obat kuat otomatis ditolak &mdash; itu yang paling sering memangsa driver ojol. Koordinator mengecek sendiri sebelum terbit, dan dia juga yang menagih. Kamu tidak pernah pegang uangnya.</div>
+</div>
+
+<!-- ORANG -->
+<div class="wrap hidden" id="p-orang">
+  <div class="card">
+    <h2>Tambah pelanggan</h2>
+    <label>Nama driver</label><input type="text" id="o-nama">
+    <label>Nomor HP</label><input type="text" id="o-hp" inputmode="tel" placeholder="08...">
+    <button style="margin-top:13px" id="o-tambah">Tambah</button>
+    <div class="note" id="o-pesan"></div>
+  </div>
+  <div class="card">
+    <h2>Kirim ke koordinator</h2>
+    <div class="note" style="margin:0 0 10px">Berisi orang baru yang kamu ajak dan siapa yang berhenti. Kirim tiap ada perubahan &mdash; nomor bayar orang baru keluar setelah koordinator membalas.</div>
+    <textarea id="o-lap" readonly></textarea>
+    <button style="margin-top:10px" id="o-salin">Salin laporan</button>
+    <div class="note" id="o-salpesan"></div>
+  </div>
+  <div class="card"><h2>Pelanggan kamu <span id="o-jml" class="pill p-n"></span></h2><div id="o-list"></div></div>
+  <div><button class="gh" id="o-keluar">Keluar &amp; hapus data di HP ini</button></div>
+</div>
+
+<nav>
+  <button class="on" data-p="kejar"><span>📣</span>Kejar</button>
+  <button data-p="uang"><span>💵</span>Uang</button>
+  <button data-p="orang"><span>👤</span>Orang</button>
+  <button data-p="usaha"><span>🏪</span>Usaha</button>
+</nav>
+</div>
+
+<script>
+const K='ojolagen.v2';
+function L(k,d){try{const v=localStorage.getItem(K+'.'+k);return v?JSON.parse(v):d}catch(e){return d}}
+function W(k,v){try{localStorage.setItem(K+'.'+k,JSON.stringify(v));return true}catch(e){return false}}
+function b64(o){const u=new TextEncoder().encode(JSON.stringify(o));let s='';
+  for(let i=0;i<u.length;i+=8192)s+=String.fromCharCode.apply(null,u.subarray(i,i+8192));return btoa(s)}
+function unb64(s){return JSON.parse(new TextDecoder().decode(Uint8Array.from(atob(s),c=>c.charCodeAt(0))))}
+
+let ME=L('me',null), PEL=L('pel',[]), BAL=L('bal',null), USAHA=L('usaha',[]);
+const simpan=()=>{W('me',ME);W('pel',PEL);W('bal',BAL);W('usaha',USAHA)};
+const JENIS=['Warung / rumah makan','Bengkel & servis motor','Cuci motor','Ban & oli',
+  'Sparepart & aksesori','Pulsa & kuota','Laundry','Kos & kontrakan','Toko sembako',
+  'Jas hujan & perlengkapan','Tambal ban','Lainnya'];
+const HARAM=['pinjol','pinjaman online','pinjaman','dana cepat','cair cepat','tanpa jaminan',
+  'tanpa agunan','gadai','rentenir','slot','gacor','maxwin','togel','judi','taruhan','investasi',
+  'trading','kripto','crypto','profit harian','member get member','downline','upline','obat kuat',
+  'pembesar','pelangsing'];
+const el=i=>document.getElementById(i);
+const rp=n=>'Rp '+Math.round(n||0).toLocaleString('id-ID');
+const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const bln=()=>new Date().toISOString().slice(0,7);
+const namaBln=b=>{const[y,m]=String(b).split('-');return ['','Januari','Februari','Maret','April','Mei','Juni',
+  'Juli','Agustus','September','Oktober','November','Desember'][+m]+' '+y};
+const uid=()=>ME.id+'_'+Date.now().toString(36)+Math.random().toString(36).slice(2,6);
+const aktif=()=>PEL.filter(p=>!p.berhenti);
+const wa=h=>{const d=String(h||'').replace(/\D/g,'');return d?(d.startsWith('0')?'62'+d.slice(1):d.startsWith('62')?d:'62'+d):''};
+
+/* status bayar & kode HANYA dari balasan koordinator — agen tidak bisa mengarangnya */
+const sudahBayar=()=>new Set((BAL&&BAL.b===bln()&&BAL.y)||[]);
+const kodePel=()=>new Map((BAL&&BAL.k)||[]);
+function umurBal(){if(!BAL||!BAL.w)return null;return Math.floor((Date.now()-BAL.w)/86400000)}
+
+function gKejar(){
+  const lu=sudahBayar(), kd=kodePel(), a=aktif();
+  const bayar=a.filter(p=>lu.has(p.id)).length, belum=a.length-bayar;
+  el('k-lunas').textContent=bayar+'/'+a.length;
+  el('k-bar').style.width=(a.length?bayar/a.length*100:0)+'%';
+  el('k-sisa').textContent=belum;
+  const u=umurBal();
+  el('k-basi').innerHTML = BAL===null
+    ? `<div class="basi">Belum pernah diperbarui. Semua orang tampak "belum bayar" padahal mungkin sudah. Minta koordinator kirim pesan OJOL-BAL, tempel di kotak paling bawah.</div>`
+    : BAL.b!==bln()
+    ? `<div class="basi">Data terakhir untuk bulan ${namaBln(BAL.b)}, sekarang sudah ${namaBln(bln())}. Minta update dulu sebelum menagih siapa pun.</div>`
+    : u>=5 ? `<div class="basi">Data dari koordinator sudah ${u} hari. Sebagian orang di daftar ini mungkin sudah bayar. Minta update dulu supaya tidak menagih orang yang salah.</div>` : '';
+
+  const q=el('k-cari').value.trim().toLowerCase();
+  let list=a.filter(p=>!lu.has(p.id));
+  if(q)list=list.filter(p=>p.nama.toLowerCase().includes(q)||(p.hp||'').includes(q));
+  const harga=ME.harga, tujuan=(BAL&&BAL.r)||ME.bayar||'';
+  el('k-list').innerHTML=list.length? list.map(p=>{
+    const k=kd.get(p.id), nom=k?harga+parseInt(k,10):null, w=wa(p.hp);
+    const pesan=encodeURIComponent(`Halo ${p.nama}, langganan Ojol Untung bulan ${namaBln(bln())}.\n`
+      +(nom?`Nominalnya Rp ${nom.toLocaleString('id-ID')} — harus persis sampai angka terakhir ya, itu kode kamu supaya langsung tercatat.\n`:`Nominal kamu belum keluar, saya kabari lagi.\n`)
+      +(tujuan?`Bayar ke: ${tujuan}\n`:'')+`Makasih!`);
+    return `<div class="it"><div class="nm">${esc(p.nama)}
+      <div class="hp">${esc(p.hp||'tanpa nomor')} · ${nom?`<span class="nom">${rp(nom)}</span>`:'<span class="pill p-bad">nomor bayar belum ada</span>'}</div></div>
+      ${w?`<button class="wa" onclick="window.open('https://wa.me/${w}?text=${pesan}','_blank')">Ingatkan</button>`
+         :`<span class="pill p-n">tanpa HP</span>`}</div>`}).join('')
+    : `<div class="empty">${a.length?'Semua sudah bayar bulan ini. 👏':'Belum ada pelanggan.<br>Tambah di tab Orang.'}</div>`;
+}
+el('k-cari').oninput=gKejar;
+el('k-terima').onclick=()=>{
+  const m=el('k-bal').value.match(/OJOL-BAL-([A-Za-z0-9+/=]+)/);
+  if(!m){el('k-pesan').textContent='Kode OJOL-BAL tidak ditemukan. Salin seluruh pesan koordinator.';return}
+  let d; try{d=unb64(m[1])}catch(e){el('k-pesan').textContent='Pesan rusak. Minta kirim ulang.';return}
+  if(d.a!==ME.id){el('k-pesan').textContent='Pesan ini untuk agen lain. Tidak dipakai.';return}
+  BAL=d; if(d.h)ME.harga=d.h; if(d.m)ME.komisi=d.m; if(d.r)ME.bayar=d.r;
+  // pelanggan yang sudah tidak ada di daftar koordinator = dihapus dari sini juga
+  // balasan membawa nama & HP -> HP baru/kosong bisa dibangun ulang dari satu pesan ini
+  let pulih=0;
+  (d.k||[]).forEach(([id,kode,nama,hp])=>{
+    if(!nama||PEL.find(p=>p.id===id))return;
+    PEL.push({id,nama,hp:hp||'',mulai:d.b+'-01',berhenti:null}); pulih++;
+  });
+  const dikenal=new Set((d.k||[]).map(x=>x[0]));
+  PEL.forEach(p=>{if(!dikenal.has(p.id)&&!p.baru)p.berhenti=p.berhenti||d.b+'-01'});
+  simpan(); el('k-bal').value=''; render();
+  el('k-pesan').innerHTML=`Diperbarui untuk ${namaBln(d.b)}: <b>${(d.y||[]).length} orang sudah bayar</b>.`
+    +(pulih?` <span style="color:var(--ok)">${pulih} pelanggan dipulihkan ke HP ini.</span>`:'');
+};
+
+function gUang(){
+  const lu=sudahBayar(), a=aktif();
+  const bayar=a.filter(p=>lu.has(p.id)).length;
+  const resmi=(BAL&&BAL.b===bln()&&typeof BAL.kom==='number')?BAL.kom:null;
+  const tertagih=bayar*ME.harga; let komisi=tertagih*ME.komisi/100;
+  if(resmi!==null)komisi=resmi;   // angka koordinator yang berlaku, sudah termasuk komisi usaha
+  const ditransfer=(BAL&&BAL.b===bln()&&BAL.d)||0;
+  el('u-komisi').textContent=rp(komisi);
+  el('u-sub').textContent=BAL?`dari ${bayar} orang yang sudah bayar · angka dari koordinator`:'belum ada data dari koordinator';
+  el('u-brk').innerHTML=`
+    <div><span>Sudah bayar (${bayar} x ${rp(ME.harga)})</span><b>${rp(tertagih)}</b></div>
+    ${(BAL&&BAL.uk)?`<div><span>Dari usaha lapak yang kamu bawa</span><b>${rp(BAL.uk)}</b></div>`:''}
+    <div><span>Komisi kamu (${ME.komisi}%)</span><b style="color:var(--ok)">${rp(komisi)}</b></div>
+    <div><span>Sudah ditransfer ke kamu</span><b>${rp(ditransfer)}</b></div>
+    <div><span>Sisa yang belum diterima</span><b style="color:${komisi-ditransfer>0?'var(--warn)':'var(--dim)'}">${rp(Math.max(0,komisi-ditransfer))}</b></div>`;
+  const penuh=a.length*ME.harga*ME.komisi/100, belum=a.length-bayar;
+  el('u-buku').innerHTML=`
+    <div style="font-size:27px;font-weight:800;color:var(--acc);letter-spacing:-.8px">${rp(penuh)}<span style="font-size:14px;color:var(--dim);font-weight:600"> / bulan</span></div>
+    <div class="note" style="margin-top:5px">${a.length} pelanggan aktif. Kalau semuanya bayar, segini masuk tiap bulan tanpa kamu cari orang baru lagi &mdash; selama mereka bertahan.
+    ${belum>0?`<br><b style="color:var(--warn)">${belum} orang belum bayar bulan ini = ${rp(belum*ME.harga*ME.komisi/100)} komisi yang belum jadi.</b>`:'<br>Semua sudah bayar bulan ini.'}</div>`;
+}
+
+function gUsaha(){
+  if(!el('v-jenis').options.length)el('v-jenis').innerHTML=JENIS.map(j=>`<option>${j}</option>`).join('');
+  if(BAL&&BAL.bagi)el('v-bagi').textContent=BAL.bagi+'%';
+  const dari=new Map(((BAL&&BAL.u)||[]).map(x=>[x[0],x]));
+  el('v-jml').textContent=USAHA.length+' usaha';
+  el('v-list').innerHTML=USAHA.length? USAHA.map(u=>{
+    const k=dari.get(u.id);
+    const st=!k?'<span class="pill p-n">belum sampai ke koordinator</span>'
+      :k[3]&&k[4]?'<span class="pill p-ok">terbit &amp; lunas</span>'
+      :k[3]?'<span class="pill p-y">disetujui, belum bayar</span>'
+      :'<span class="pill p-y">menunggu disetujui</span>';
+    const bagian=(k&&k[3]&&k[4]&&BAL.bagi)?` &middot; <b style="color:var(--ok)">+${rp(k[2]*BAL.bagi/100)}</b>`:'';
+    return `<div class="it"><div class="nm">${esc(u.nama)}
+      <div class="hp">${esc(u.jenis)} &middot; ${esc(u.hp||'tanpa nomor')}</div>
+      <div style="margin-top:4px">${st}${bagian}</div></div>
+      <button class="gh sm" data-uhapus="${u.id}">Hapus</button></div>`}).join('')
+    : '<div class="empty">Belum ada.<br>Warung langgananmu sendiri biasanya paling gampang diajak.</div>';
+  el('v-list').querySelectorAll('[data-uhapus]').forEach(x=>x.onclick=()=>{
+    USAHA=USAHA.filter(y=>y.id!==x.dataset.uhapus);simpan();render()});
+}
+el('v-tambah').onclick=()=>{
+  const nama=el('v-nama').value.trim(), promo=el('v-promo').value.trim(), jenis=el('v-jenis').value;
+  if(!nama){el('v-nama').focus();return}
+  const kena=HARAM.filter(k=>(nama+' '+promo+' '+jenis).toLowerCase().includes(k));
+  if(kena.length){el('v-pesan').innerHTML=`<span style="color:var(--bad);font-weight:700">DITOLAK.</span> Ada kata terlarang: <b>${esc(kena.join(', '))}</b>. Pinjol, judi, investasi, MLM, dan obat kuat tidak boleh masuk lapak driver. Ini tidak bisa dilewati.`;return}
+  USAHA.push({id:ME.id+'_u'+Date.now().toString(36)+Math.random().toString(36).slice(2,5),
+    nama,jenis,hp:el('v-hp').value.trim(),wil:el('v-wil').value.trim(),promo,
+    mulai:new Date().toISOString().slice(0,10)});
+  ['v-nama','v-hp','v-wil','v-promo'].forEach(i=>el(i).value='');
+  el('v-pesan').textContent='Terdaftar. Kirim laporan di tab Orang supaya koordinator bisa cek dan menagihnya.';
+  simpan();render();
+};
+
+function gOrang(){
+  const a=aktif(), kd=kodePel(), berhenti=PEL.filter(p=>p.berhenti);
+  el('o-jml').textContent=a.length+' aktif';
+  el('o-list').innerHTML=(a.length||berhenti.length)?
+    a.map(p=>{const k=kd.get(p.id);
+      return `<div class="it"><div class="nm">${esc(p.nama)}<div class="hp">${esc(p.hp||'tanpa nomor')} · ${k?`bayar <span class="nom">${rp(ME.harga+parseInt(k,10))}</span>`:'<span class="pill p-y">menunggu nomor bayar</span>'}</div></div>
+      <button class="gh sm" data-stop="${p.id}">Berhenti</button></div>`}).join('')
+    + berhenti.slice(-8).map(p=>`<div class="it" style="opacity:.5"><div class="nm">${esc(p.nama)}
+      <div class="hp">berhenti ${p.berhenti}</div></div><button class="gh sm" data-lanjut="${p.id}">Aktifkan</button></div>`).join('')
+    : '<div class="empty">Belum ada. Tambah orang pertama di atas.</div>';
+  el('o-list').querySelectorAll('[data-stop]').forEach(x=>x.onclick=()=>{
+    const p=PEL.find(y=>y.id===x.dataset.stop);if(p){p.berhenti=new Date().toISOString().slice(0,10);simpan();render()}});
+  el('o-list').querySelectorAll('[data-lanjut]').forEach(x=>x.onclick=()=>{
+    const p=PEL.find(y=>y.id===x.dataset.lanjut);if(p){p.berhenti=null;simpan();render()}});
+  const baru=PEL.filter(p=>p.baru).length, stop=PEL.filter(p=>p.berhenti).length;
+  el('o-lap').value=`LAPORAN AGEN — ${ME.nama}\n${a.length} pelanggan aktif`
+    +(baru?`, ${baru} orang baru`:'')+(stop?`, ${stop} berhenti`:'')+(USAHA.length?`, ${USAHA.length} usaha lapak`:'')
+    +`\n\n--- jangan diubah ---\nOJOL-LAP-`
+    +b64({v:1,a:ME.id,n:ME.nama,p:PEL.map(p=>[p.id,p.nama,p.hp||'',p.mulai,p.berhenti||'']),
+          u:USAHA.map(u=>[u.id,u.nama,u.jenis,u.hp||'',u.wil||'',u.promo||'',u.mulai])});
+}
+el('o-tambah').onclick=()=>{
+  const nama=el('o-nama').value.trim(); if(!nama){el('o-nama').focus();return}
+  PEL.push({id:uid(),nama,hp:el('o-hp').value.trim(),mulai:new Date().toISOString().slice(0,10),berhenti:null,baru:1});
+  el('o-nama').value='';el('o-hp').value='';
+  el('o-pesan').textContent='Ditambah. Kirim laporan ke koordinator supaya nomor bayarnya keluar.';
+  simpan();render();
+};
+el('o-salin').onclick=async()=>{
+  const t=el('o-lap');
+  try{await navigator.clipboard.writeText(t.value);el('o-salpesan').textContent='Tersalin. Buka WhatsApp, tempel di chat koordinator.'}
+  catch(e){t.focus();t.select();el('o-salpesan').textContent='Tekan lama tulisannya lalu pilih Salin.'}
+};
+el('o-keluar').onclick=()=>{
+  const t=el('o-keluar');
+  if(t.dataset.siap!=='1'){t.dataset.siap='1';t.textContent='Yakin? Laporan yang belum dikirim akan hilang. Tekan lagi.';
+    setTimeout(()=>{t.dataset.siap='';t.textContent='Keluar & hapus data di HP ini'},6000);return}
+  try{['me','pel','bal','usaha'].forEach(k=>localStorage.removeItem(K+'.'+k))}catch(e){}
+  location.reload();
+};
+
+function render(){
+  el('h-nama').firstChild.textContent=ME.nama;
+  el('h-camp').textContent=ME.camp||'Agen Ojol Untung';
+  el('h-bln').textContent=namaBln(bln());
+  gKejar();gUang();gOrang();gUsaha();
+}
+document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('nav button').forEach(x=>x.classList.remove('on'));b.classList.add('on');
+  ['kejar','uang','orang','usaha'].forEach(p=>el('p-'+p).classList.toggle('hidden',p!==b.dataset.p));
+});
+el('g-ok').onclick=()=>{
+  const m=el('g-kode').value.trim().match(/OJOL-AGEN-([A-Za-z0-9+/=]+)/);
+  if(!m){el('g-err').textContent='Kode tidak ditemukan. Salin seluruh pesan dari koordinator.';return}
+  try{
+    const d=unb64(m[1]); if(!d.id||!d.nama)throw 0;
+    ME={id:d.id,nama:d.nama,camp:d.camp||'',harga:d.harga||15000,komisi:d.komisi||30,bayar:d.bayar||''};
+    simpan();el('gate').classList.add('hidden');el('app').classList.remove('hidden');render();
+  }catch(e){el('g-err').textContent='Kode rusak atau tidak lengkap. Minta koordinator kirim ulang.'}
+};
+if(ME){el('gate').classList.add('hidden');el('app').classList.remove('hidden');render()}
+</script>
