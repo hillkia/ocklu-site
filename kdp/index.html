@@ -1,0 +1,139 @@
+<!doctype html><html lang="id"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0d1117">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Ocklu KDP</title>
+<style>
+:root{--bg:#0d1117;--kartu:#161b22;--garis:#232a33;--teks:#e6edf3;--redup:#8b949e;
+--hijau:#3fb950;--merah:#f85149;--kuning:#d29922;--biru:#58a6ff}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;background:var(--bg);color:var(--teks);
+font:15px/1.55 -apple-system,system-ui,"SF Pro Text",Roboto,sans-serif;padding-bottom:40px}
+header{padding:14px 16px;border-bottom:1px solid var(--garis);position:sticky;top:0;
+background:rgba(13,17,23,.95);backdrop-filter:blur(10px);z-index:9;display:flex;gap:10px;align-items:center}
+h1{font-size:15px;margin:0;letter-spacing:.3px}
+.sub{color:var(--redup);font-size:11.5px}
+main{padding:14px;display:grid;gap:14px;max-width:720px;margin:0 auto}
+.kartu{background:var(--kartu);border:1px solid var(--garis);border-radius:14px;padding:14px}
+.kartu h2{margin:0 0 10px;font-size:11.5px;text-transform:uppercase;letter-spacing:1px;color:var(--redup)}
+.pill{padding:3px 9px;border-radius:999px;font-size:11px;border:1px solid var(--garis)}
+.ok{color:var(--hijau);border-color:#1c4028}.bad{color:var(--merah);border-color:#4a1f1f}
+.warn{color:var(--kuning);border-color:#4a3a12}
+.baris{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.skor{font-size:34px;font-weight:700;line-height:1}
+a.tombol,button{display:inline-block;background:#1f6feb;color:#fff;border:0;padding:11px 15px;
+border-radius:10px;font-size:14px;text-decoration:none;cursor:pointer;text-align:center}
+a.sepi{background:#21262d;border:1px solid var(--garis);color:var(--teks)}
+input{background:#0b0f14;color:var(--teks);border:1px solid var(--garis);border-radius:10px;
+padding:12px;font-size:16px;width:100%}
+table{width:100%;border-collapse:collapse;font-size:12px}
+th,td{text-align:left;padding:5px 4px;border-bottom:1px solid var(--garis)}
+th{color:var(--redup);font-size:10px;text-transform:uppercase;letter-spacing:.5px}
+td.n{text-align:right;font-variant-numeric:tabular-nums}
+.est{color:var(--kuning)}
+.gulir{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.aturan{display:flex;gap:8px;padding:7px 0;border-bottom:1px solid var(--garis)}
+.aturan b{font-size:13px}.aturan small{color:var(--redup);display:block;font-size:11.5px}
+.log{font-family:ui-monospace,Menlo,monospace;font-size:11px;max-height:230px;overflow:auto}
+.log div{padding:3px 0;border-bottom:1px solid #1a2029;color:var(--redup)}
+.sampul{width:120px;border-radius:6px;border:1px solid var(--garis)}
+.pusat{max-width:340px;margin:14vh auto;padding:0 18px;text-align:center}
+</style></head><body>
+<header><h1>OCKLU KDP</h1><span class="sub" id="cap"></span></header>
+<div id="kunci" class="pusat">
+  <p style="color:var(--redup);font-size:13px">Dasbor terkunci. Isinya terenkripsi di server;
+  kata sandi tidak pernah dikirim ke mana pun.</p>
+  <input id="pin" type="password" inputmode="text" placeholder="kata sandi" autocomplete="current-password">
+  <button style="margin-top:10px;width:100%" onclick="buka()">Buka</button>
+  <p id="salah" style="color:var(--merah);font-size:12.5px;display:none">Sandi salah.</p>
+</div>
+<main id="isi" hidden></main>
+<script>
+const SIMPAN="ocklu-kdp-pin";
+async function turunkan(sandi,garam){
+  const k=await crypto.subtle.importKey("raw",new TextEncoder().encode(sandi),"PBKDF2",false,["deriveBits"]);
+  const b=await crypto.subtle.deriveBits({name:"PBKDF2",salt:garam,iterations:100000,hash:"SHA-256"},k,384);
+  return {kunci:new Uint8Array(b,0,32),iv:new Uint8Array(b,32,16)};
+}
+async function bongkar(b64,sandi){
+  const mentah=Uint8Array.from(atob(b64.replace(/\s+/g,"")),c=>c.charCodeAt(0));
+  if(new TextDecoder().decode(mentah.slice(0,8))!=="Salted__")throw new Error("format");
+  const {kunci,iv}=await turunkan(sandi,mentah.slice(8,16));
+  const ck=await crypto.subtle.importKey("raw",kunci,"AES-CBC",false,["decrypt"]);
+  const hasil=await crypto.subtle.decrypt({name:"AES-CBC",iv},ck,mentah.slice(16));
+  return JSON.parse(new TextDecoder().decode(hasil));
+}
+async function buka(sandi){
+  sandi=sandi||document.getElementById("pin").value.trim();
+  if(!sandi)return;
+  try{
+    const b64=await (await fetch("keadaan.enc?t="+Date.now())).text();
+    const d=await bongkar(b64,sandi);
+    localStorage.setItem(SIMPAN,sandi);
+    gambar(d);
+  }catch(e){
+    localStorage.removeItem(SIMPAN);
+    document.getElementById("salah").style.display="block";
+  }
+}
+const AKSI="https://github.com/hillkia/ocklu-kdp/actions/workflows/perintah.yml";
+function gambar(d){
+  document.getElementById("kunci").hidden=true;
+  document.getElementById("cap").textContent="diperbarui "+d.diperbarui;
+  const m=document.getElementById("isi");m.hidden=false;
+  m.innerHTML=d.pekerjaan.map(p=>{
+    const ab=p.antibubble||{},v=(p.pasar||{}).vonis||{};
+    const kurang=(ab.rincian||[]).filter(x=>!x.lulus);
+    const nunggu=kurang.length===1&&kurang[0].aturan==="disetujui_pemilik";
+    return `<section class="kartu">
+      <div class="baris"><b>${p.id}</b> <span style="color:var(--redup)">${p.topik}</span>
+        <span style="flex:1"></span>
+        <span class="pill ${ab.boleh_terbit?'ok':(p.tahap==='berhenti'?'bad':'warn')}">${p.tahap}</span></div>
+      ${p.judul?`<div style="margin:8px 0 4px;font-size:16px;font-weight:600">${p.judul.utama}</div>
+        <div style="color:var(--redup);font-size:12.5px">${p.judul.sub}</div>`:""}
+      <div class="baris" style="margin-top:10px">
+        ${p.sampul_gambar?`<img class="sampul" src="${p.sampul_gambar}">`:""}
+        <div>
+          <div class="skor" style="color:${ab.boleh_terbit?'var(--hijau)':'var(--kuning)'}">${ab.skor??"—"}<span style="font-size:13px;color:var(--redup)">/100</span></div>
+          <div style="color:var(--redup);font-size:12px">${p.kata?p.kata.toLocaleString()+" kata":""}
+            ${p.sampul?" · sampul "+p.sampul.toUpperCase():""}</div>
+          <div style="color:var(--redup);font-size:12px">pasar ${v.status||"—"}
+            ${v.bsr_median?" · median BSR "+v.bsr_median.toLocaleString():""}</div>
+        </div></div>
+      ${p.sebab?`<p style="color:var(--kuning);font-size:12.5px;margin:10px 0 0">${p.sebab}</p>`:""}
+      ${nunggu?`<a class="tombol" style="display:block;margin-top:12px" target="_blank"
+          href="${AKSI}">Setujui ${p.id} — buka tombolnya</a>
+        <p style="color:var(--redup);font-size:11.5px;margin:6px 0 0">Run workflow → perintah
+          <b>setuju</b> → nilai <b>${p.id}</b></p>`:""}
+      ${p.slug?`<div class="baris" style="margin-top:10px">
+        <a class="tombol sepi" target="_blank" href="https://github.com/hillkia/ocklu-kdp/blob/main/buku/${p.slug}/naskah.md">Baca naskah</a>
+        <a class="tombol sepi" target="_blank" href="https://github.com/hillkia/ocklu-kdp/blob/main/buku/${p.slug}/ceklis.md">Ceklis</a></div>`:""}
+    </section>
+    <section class="kartu"><h2>Gerbang anti-gelembung</h2>
+      ${(ab.rincian||[]).map(x=>`<div class="aturan">
+        <span style="color:${x.lulus?'var(--hijau)':'var(--merah)'};font-weight:700">${x.lulus?'✓':'✗'}</span>
+        <div><b>${x.aturan}</b> <span class="pill">${x.bobot}${x.keras?" keras":""}</span>
+        <small>${x.arti}</small><small style="color:var(--biru)">${x.bukti}</small></div></div>`).join("")}
+    </section>
+    ${(p.pasar&&p.pasar.buku&&p.pasar.buku.length)?`<section class="kartu"><h2>Bukti permintaan — Amazon</h2>
+      <p style="color:var(--redup);font-size:11.5px;margin:0 0 8px">Putih = dibaca dari Amazon.
+        <span class="est">Kuning = estimasi</span>, bukan data Amazon.</p>
+      <div class="gulir"><table><tr><th>judul</th><th>BSR</th><th>$</th><th>ulasan</th><th class="est">est/bln</th></tr>
+      ${p.pasar.buku.map(b=>`<tr><td>${(b.judul||"").slice(0,42)}</td>
+        <td class="n">${b.bsr?b.bsr.toLocaleString():"—"}</td>
+        <td class="n">${b.harga!=null?b.harga:"—"}</td>
+        <td class="n">${b.ulasan!=null?b.ulasan:"—"}</td>
+        <td class="n est">${b.est_royalti_bulanan!=null?"$"+b.est_royalti_bulanan:"—"}</td></tr>`).join("")}
+      </table></div></section>`:""}`}).join("")+
+    `<section class="kartu"><h2>Perintah</h2>
+      <div class="baris"><a class="tombol sepi" target="_blank" href="${AKSI}">Jalankan langkah / tambah topik</a>
+      <a class="tombol sepi" target="_blank" href="https://github.com/hillkia/ocklu-kdp/blob/main/LAPORAN.md">Laporan lengkap</a></div>
+      <p style="color:var(--redup);font-size:11.5px;margin:10px 0 0">Mesin jalan sendiri 08:00 / 14:00 / 20:00 WIB
+      di server GitHub — laptop & HP boleh mati.</p></section>
+    <section class="kartu"><h2>Catatan mesin</h2><div class="log">
+      ${d.log.map(l=>`<div>${l.waktu.slice(5,16)} ${l.pesan}</div>`).join("")}</div></section>`;
+}
+const tersimpan=localStorage.getItem(SIMPAN);
+if(tersimpan)buka(tersimpan);
+document.getElementById("pin").addEventListener("keydown",e=>{if(e.key==="Enter")buka()});
+</script></body></html>
