@@ -1,0 +1,190 @@
+<!doctype html><html lang="id"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b0d10">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="MYTHOS">
+<title>MYTHOS</title>
+<style>
+:root{--bg:#0b0d10;--kartu:#14181f;--garis:#222933;--teks:#e6edf3;--redup:#8b949e;
+--hijau:#3fb950;--merah:#f85149;--kuning:#d29922;--biru:#58a6ff}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;background:var(--bg);color:var(--teks);padding-bottom:40px;
+font:15px/1.6 -apple-system,system-ui,"SF Pro Text",Roboto,sans-serif}
+header{padding:11px 14px;border-bottom:1px solid var(--garis);position:sticky;top:0;
+background:rgba(11,13,16,.96);backdrop-filter:blur(10px);z-index:9}
+.atas{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+h1{font-size:14px;margin:0;letter-spacing:.4px}
+.pill{padding:3px 9px;border-radius:999px;font-size:11px;border:1px solid var(--garis);
+color:var(--redup);white-space:nowrap}
+.ok{color:var(--hijau);border-color:#1c4028}.bad{color:var(--merah);border-color:#4a1f1f}
+.warn{color:var(--kuning);border-color:#4a3a12}
+.tab{display:flex;gap:6px;overflow-x:auto;margin-top:9px;padding-bottom:2px;-webkit-overflow-scrolling:touch}
+.tab button{background:#0e1218;border:1px solid var(--garis);color:var(--redup);
+padding:6px 12px;border-radius:999px;font-size:13px;white-space:nowrap}
+.tab button.on{background:var(--biru);border-color:var(--biru);color:#04070d;font-weight:600}
+button{font:inherit;background:var(--biru);color:#04070d;border:0;padding:9px 14px;
+border-radius:9px;font-weight:600}
+button.sepi{background:#0e1218;border:1px solid var(--garis);color:var(--teks);font-weight:400}
+main{padding:12px 14px}
+.kartu{background:var(--kartu);border:1px solid var(--garis);border-radius:12px;
+padding:12px 13px;margin-bottom:11px}
+.kartu h2{font-size:12px;margin:0 0 9px;color:var(--redup);letter-spacing:.6px;text-transform:uppercase}
+.angka{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}
+.angka div{background:#0e1218;border:1px solid var(--garis);border-radius:10px;padding:9px 10px}
+.angka b{display:block;font-size:21px;line-height:1.25}
+.angka span{font-size:11.5px;color:var(--redup)}
+.baris{display:flex;justify-content:space-between;gap:10px;padding:7px 0;
+border-bottom:1px solid var(--garis);font-size:13.5px}
+.baris:last-child{border-bottom:0}
+.baris .kanan{color:var(--redup);text-align:right;flex-shrink:0;font-size:12px}
+.item{padding:9px 0;border-bottom:1px solid var(--garis)}
+.item:last-child{border-bottom:0}
+.item .atas2{display:flex;gap:8px;justify-content:space-between;font-size:11.5px;color:var(--redup)}
+.item p{margin:3px 0 0;font-size:13.5px;word-break:break-word}
+.tag{display:inline-block;padding:2px 8px;border-radius:999px;font-size:11px;
+border:1px solid var(--garis);color:var(--redup);margin:3px 4px 0 0}
+.pusat{padding:60px 22px;text-align:center;max-width:340px;margin:0 auto}
+input{width:100%;padding:12px;border-radius:10px;border:1px solid var(--garis);
+background:#0e1218;color:var(--teks);font:inherit;text-align:center}
+#pesan{position:fixed;left:12px;right:12px;bottom:12px;background:var(--kartu);
+border:1px solid var(--garis);border-radius:11px;padding:10px 13px;font-size:13px;display:none}
+pre{white-space:pre-wrap;word-break:break-word;font:12.5px/1.55 ui-monospace,Menlo,monospace;
+color:var(--redup);margin:0}
+</style></head><body>
+<header>
+  <div class="atas">
+    <h1>MYTHOS · WORKER</h1>
+    <span class="pill" id="pDenyut">—</span>
+    <span class="pill" id="pMacet">—</span>
+    <span class="pill" id="pWaktu">—</span>
+    <button class="sepi" style="padding:6px 11px;font-size:13px" id="bSegar" onclick="segarkan()">Segarkan</button>
+  </div>
+  <div class="tab" id="tab" hidden></div>
+</header>
+<div id="kunci" class="pusat">
+  <p style="color:var(--redup);font-size:13px">Dasbor terkunci. Isinya terenkripsi di server;
+  kata sandi tidak pernah dikirim ke mana pun.</p>
+  <input id="pin" type="password" placeholder="kata sandi" autocomplete="current-password">
+  <button style="margin-top:10px;width:100%" onclick="buka()">Buka</button>
+  <p id="salah" style="color:var(--merah);font-size:12.5px;display:none">Sandi salah.</p>
+</div>
+<main id="isi" hidden></main>
+<div id="pesan"></div>
+<script>
+const SIMPAN="mythos-hp-pin";
+const TABS=[["ringkas","Ringkas"],["macet","Macet"],["perintah","Perintah"],["hasil","Hasil"],
+            ["proyek","Proyek"],["radar","Radar"],["pelajaran","Pelajaran"]];
+let D=null,TAB="ringkas";
+
+const esc=s=>String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;");
+const jam=s=>esc(String(s||"").replace("T"," ").slice(0,16));
+function pesan(s,w){const e=document.getElementById("pesan");e.textContent=s;
+  e.style.borderColor=w||"var(--garis)";e.style.display="block";
+  clearTimeout(pesan._t);pesan._t=setTimeout(()=>e.style.display="none",5000)}
+
+async function turunkan(sandi,garam){
+  const k=await crypto.subtle.importKey("raw",new TextEncoder().encode(sandi),"PBKDF2",false,["deriveBits"]);
+  const b=await crypto.subtle.deriveBits({name:"PBKDF2",salt:garam,iterations:100000,hash:"SHA-256"},k,384);
+  return {kunci:new Uint8Array(b,0,32),iv:new Uint8Array(b,32,16)}}
+async function bongkar(b64,sandi){
+  const m=Uint8Array.from(atob(b64.replace(/\s+/g,"")),c=>c.charCodeAt(0));
+  if(new TextDecoder().decode(m.slice(0,8))!=="Salted__")throw new Error("format");
+  const {kunci,iv}=await turunkan(sandi,m.slice(8,16));
+  const ck=await crypto.subtle.importKey("raw",kunci,"AES-CBC",false,["decrypt"]);
+  return JSON.parse(new TextDecoder().decode(await crypto.subtle.decrypt({name:"AES-CBC",iv},ck,m.slice(16))))}
+
+async function buka(sandi){
+  sandi=sandi||document.getElementById("pin").value.trim();if(!sandi)return;
+  try{
+    D=await bongkar(await (await fetch("keadaan.enc?t="+Date.now())).text(),sandi);
+    localStorage.setItem(SIMPAN,sandi);
+    document.getElementById("kunci").hidden=true;
+    document.getElementById("tab").hidden=false;
+    document.getElementById("isi").hidden=false;
+    gambar();
+  }catch(e){localStorage.removeItem(SIMPAN);document.getElementById("salah").style.display="block"}}
+
+async function segarkan(){
+  const b=document.getElementById("bSegar"),s=localStorage.getItem(SIMPAN);
+  if(!s)return;
+  b.disabled=true;b.textContent="…";
+  try{D=await bongkar(await (await fetch("keadaan.enc?t="+Date.now())).text(),s);
+      gambar();pesan("Diperbarui — potret "+D.diperbarui,"var(--hijau)");}
+  catch(e){pesan("Gagal menarik data: "+e.message,"var(--merah)")}
+  b.disabled=false;b.textContent="Segarkan"}
+
+function kartu(j,isi){return `<div class="kartu"><h2>${esc(j)}</h2>${isi||"—"}</div>`}
+function baris(k,n){return `<div class="baris"><span>${k}</span><span class="kanan">${n}</span></div>`}
+function daftar(arr,f){return (arr&&arr.length)?arr.slice().reverse().map(f).join("")
+  :'<span style="color:var(--redup);font-size:13px">kosong</span>'}
+
+function gambar(){
+  const r=D.ringkas||{};
+  const pd=document.getElementById("pDenyut"),j=r.jam_sejak_hasil;
+  // Denyut = jarak ke hasil terakhir. Lewat 6 jam berarti swarm diam, bukan sekadar sepi.
+  pd.textContent=(j==null)?"belum ada hasil":("hasil terakhir "+j+" jam lalu");
+  pd.className="pill "+(j==null?"bad":j<=2?"ok":j<=6?"warn":"bad");
+  const pm=document.getElementById("pMacet");
+  pm.textContent="macet: "+(r.macet??0);
+  pm.className="pill "+((r.macet||0)===0?"ok":"warn");
+  document.getElementById("pWaktu").textContent=D.diperbarui||"—";
+  document.getElementById("tab").innerHTML=TABS.map(([k,l])=>
+    `<button class="${k===TAB?"on":""}" onclick="pilih('${k}')">${l}</button>`).join("");
+  document.getElementById("isi").innerHTML=({ringkas:vRingkas,macet:vMacet,perintah:vPerintah,
+    hasil:vHasil,proyek:vProyek,radar:vRadar,pelajaran:vPelajaran}[TAB]||vRingkas)();
+}
+function pilih(k){TAB=k;gambar();window.scrollTo(0,0)}
+
+function vRingkas(){
+  const r=D.ringkas||{},st=r.status||{};
+  return kartu("Angka pokok",`<div class="angka">
+      <div><b>${r.perintah_total??0}</b><span>perintah seumur hidup</span></div>
+      <div><b>${r.hasil_total??0}</b><span>hasil tercatat</span></div>
+      <div><b>${r.hasil_24j??0}</b><span>hasil 24 jam terakhir</span></div>
+      <div><b>${r.macet??0}</b><span>perintah menggantung &gt;6 jam</span></div>
+    </div>`)
+    +kartu("Status perintah",Object.entries(st).sort((a,b)=>b[1]-a[1])
+      .map(([k,v])=>baris(esc(k),v)).join(""))
+    +kartu("Worker yang bekerja (24 jam)",(r.worker_24j||[]).length
+      ?(r.worker_24j||[]).map(([n,c])=>baris(esc(n),c+" hasil")).join("")
+      :'<span style="color:var(--redup);font-size:13px">tidak ada worker yang menghasilkan apa pun dalam 24 jam</span>')
+    +kartu("Hasil terakhir",baris("Waktu",jam(r.hasil_terakhir)));
+}
+
+function vMacet(){
+  return kartu("Menggantung lebih dari 6 jam ("+(D.macet||[]).length+")",
+    daftar(D.macet,p=>`<div class="item"><div class="atas2"><span>${jam(p.waktu)}</span>
+      <span>${esc(p.untuk||"")} · ${esc(p.status||"")}</span></div>
+      <p>${esc(p.isi||"")}</p></div>`));
+}
+
+function vPerintah(){
+  return kartu("60 perintah terakhir",daftar(D.perintah,p=>{
+    const w=p.status==="beres"?"var(--hijau)":p.status==="gagal"?"var(--merah)":"var(--kuning)";
+    return `<div class="item"><div class="atas2"><span>${jam(p.waktu)}</span>
+      <span style="color:${w}">${esc(p.untuk||"")} · ${esc(p.status||"?")}</span></div>
+      <p>${esc(p.isi||"")}</p></div>`}));
+}
+
+function vHasil(){
+  return kartu("60 hasil terakhir",daftar(D.hasil,h=>`<div class="item">
+    <div class="atas2"><span>${jam(h.waktu)}</span><span>${esc(h.oleh||"?")} · ${esc(h.jenis||"")}</span></div>
+    <p>${esc(h.ringkas||h.isi||"")}</p></div>`));
+}
+
+function vProyek(){
+  const p=D.proyek||[];
+  return p.length?p.map(x=>kartu(x.nama||"proyek",
+      baris("Tahap",esc(x.tahap||"—"))+baris("Nilai",x.nilai!=null?("$"+x.nilai):"—")
+      +baris("Klien",esc(x.klien||"—"))
+      +(x.worker?`<div style="margin-top:7px">${(x.worker||[]).map(w=>`<span class="tag">${esc(w)}</span>`).join("")}</div>`:"")
+      +(x.catatan?`<p style="font-size:13px;color:var(--redup);margin:8px 0 0">${esc(x.catatan)}</p>`:"")
+    )).join(""):kartu("Proyek","kosong");
+}
+
+function vRadar(){return kartu("radar.md",`<pre>${esc(D.radar||"kosong")}</pre>`)}
+function vPelajaran(){return kartu("pelajaran.md",`<pre>${esc(D.pelajaran||"kosong")}</pre>`)}
+
+const s0=localStorage.getItem(SIMPAN);if(s0)buka(s0);
+document.getElementById("pin").addEventListener("keydown",e=>{if(e.key==="Enter")buka()});
+</script></body></html>
