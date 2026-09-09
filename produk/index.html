@@ -86,7 +86,7 @@ function render(){
     const tags=(et.tags||[]).map(t=>`<span>${esc(t)}</span>`).join('');
     return `<div class="card" id="c${i}">
       <div class="head" onclick="document.getElementById('c${i}').classList.toggle('open')">
-        <span class="nm">📦 ${esc(p.pack)}</span><span class="pr">$${esc(String(et.harga_usd||''))}</span>
+        <span class="nm">📦 ${esc(p.pack)}</span>
         <span class="ni">${esc(p.niche)} · dari "${esc(p.produk)}" · ${esc(p.dibuat)}</span>
       </div>
       <div class="body">
