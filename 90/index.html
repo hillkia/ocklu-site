@@ -63,6 +63,12 @@ async function bukaData(sandi){
   return JSON.parse(new TextDecoder().decode(jelas));
 }
 
+function ratus(t){
+  const j = Math.round((Date.now()/1000 - t)/3600);
+  if(j < 1) return 'baru saja';
+  if(j < 48) return j + ' jam lalu';
+  return Math.round(j/24) + ' hari lalu';
+}
 function gambar(d){
   const u=d.uang, s=d.surat, l=d.langganan, g=d.graft;
   const jam = new Date(d.dibuat*1000);
@@ -107,8 +113,12 @@ function gambar(d){
     <div class="brs"><span>Isi dompet</span><b>${usd(d.dompet.total_usd)}</b></div>
   </div>
 
-  <p class="kecil" style="margin-top:20px">Angka dibaca ${jam.toLocaleString('id-ID')}
-  ${umur>30?'<br><span class="merah">Sudah '+umur+' jam tidak diperbarui — laptop mungkin mati.</span>':''}</p>`;
+  <p class="kecil" style="margin-top:20px">
+  Uang &amp; surat disegarkan ${jam.toLocaleString('id-ID')}
+  ${d.sumber==='awan'?'<span class="hijau">· dari awan, laptop tidak perlu hidup</span>':'<span class="biru">· dari laptop</span>'}
+  ${umur>6?'<br><span class="kuning">Sudah '+umur+' jam belum disegarkan.</span>':''}
+  ${d.laptop_dibuat?('<br>Angka langganan, Graft, rantai &amp; dompet dari laptop, '+ratus(d.laptop_dibuat)):''}
+  </p>`;
   document.getElementById('gerbang').classList.add('sembunyi');
   document.getElementById('isi').classList.remove('sembunyi');
 }
