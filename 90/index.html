@@ -25,11 +25,11 @@ h2{font-size:11px;text-transform:uppercase;letter-spacing:.9px;color:var(--redup
 .hijau{color:var(--hijau)}.merah{color:var(--merah)}.kuning{color:var(--kuning)}.biru{color:var(--biru)}
 .bar{height:6px;background:#1e242b;border-radius:4px;overflow:hidden;margin-top:8px}
 .bar i{display:block;height:100%;background:var(--hijau)}
-#gerbang{display:grid;place-items:center;min-height:88vh}
-#gerbang form{display:grid;gap:12px;width:250px}
 input,button{padding:14px;border-radius:11px;border:1px solid var(--garis);background:#0e1216;color:var(--teks);font-size:16px}
 button{background:var(--hijau);color:#07110b;font-weight:700;border:none}
-.sembunyi{display:none}
+/* Wajib !important: dulu aturan #gerbang (pemilih ID) mengalahkan ini,
+   jadi layar 'Membuka…' tetap menempel di atas isi papan. */
+.sembunyi{display:none !important}
 .brs{display:flex;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px solid var(--garis);font-size:14px}
 .brs:last-child{border-bottom:none}
 </style></head><body>

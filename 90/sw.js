@@ -1,7 +1,7 @@
 // Versi WAJIB dinaikkan tiap halaman berubah. 12/9/2026 halaman baru sudah
 // terbit tapi HP tetap membuka yang lama (masih minta PIN) karena nama simpanan
 // tidak berubah, jadi pekerja lama menyajikan halaman lama selamanya.
-const NAMA = 'ocklu90-v3';
+const NAMA = 'ocklu90-v4';
 
 // Halaman diambil dari jaringan DULU, simpanan cuma dipakai kalau sinyal mati.
 // Dengan begini halaman basi tidak bisa mengunci diri lagi seperti kejadian di
