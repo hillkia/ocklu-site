@@ -1,0 +1,138 @@
+<!doctype html><html lang="id"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b0d10">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="ikon-180.png">
+<title>Ocklu 90</title>
+<style>
+:root{--bg:#0b0d10;--kartu:#14181d;--garis:#232a32;--teks:#e7edf3;--redup:#8b98a6;
+--hijau:#3ddc84;--merah:#ff5c5c;--kuning:#ffc857;--biru:#5aa9ff}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--teks);padding:0 14px calc(34px + env(safe-area-inset-bottom));
+font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+.bung{max-width:620px;margin:0 auto}
+header{padding-top:calc(18px + env(safe-area-inset-top));padding-bottom:14px;border-bottom:1px solid var(--garis);margin-bottom:16px}
+h1{margin:0;font-size:20px;letter-spacing:-.3px}
+h1 span{display:block;font-size:12px;color:var(--redup);font-weight:400;margin-top:3px}
+h2{font-size:11px;text-transform:uppercase;letter-spacing:.9px;color:var(--redup);margin:22px 0 9px}
+.kartu{background:var(--kartu);border:1px solid var(--garis);border-radius:13px;padding:14px;margin-bottom:10px}
+.grid{display:grid;gap:10px;grid-template-columns:1fr 1fr}
+.angka{font-size:26px;font-weight:650;letter-spacing:-1px;margin:2px 0}
+.lbl{font-size:10.5px;color:var(--redup);text-transform:uppercase;letter-spacing:.6px}
+.kecil{font-size:11.5px;color:var(--redup)}
+.hijau{color:var(--hijau)}.merah{color:var(--merah)}.kuning{color:var(--kuning)}.biru{color:var(--biru)}
+.bar{height:6px;background:#1e242b;border-radius:4px;overflow:hidden;margin-top:8px}
+.bar i{display:block;height:100%;background:var(--hijau)}
+#gerbang{display:grid;place-items:center;min-height:88vh}
+#gerbang form{display:grid;gap:12px;width:250px}
+input,button{padding:14px;border-radius:11px;border:1px solid var(--garis);background:#0e1216;color:var(--teks);font-size:16px}
+button{background:var(--hijau);color:#07110b;font-weight:700;border:none}
+.sembunyi{display:none}
+.brs{display:flex;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px solid var(--garis);font-size:14px}
+.brs:last-child{border-bottom:none}
+</style></head><body>
+
+<div id="gerbang"><form onsubmit="masuk(event)">
+  <b style="font-size:18px">Ocklu 90</b>
+  <div class="kecil">Papan 90 hari ganti gaji</div>
+  <input id="pin" type="password" inputmode="numeric" placeholder="PIN" autofocus>
+  <button>Buka</button>
+  <div id="pesan" class="kecil"></div>
+</form></div>
+
+<div class="bung sembunyi" id="isi"></div>
+
+<script>
+const b64 = s => Uint8Array.from(atob(s), c => c.charCodeAt(0));
+const usd = n => "$" + (+n).toLocaleString("en-US",{minimumFractionDigits:2,maximumFractionDigits:2});
+const rp  = n => "Rp " + Math.round(n*16300).toLocaleString("id-ID");
+
+async function ambil(){
+  const r = await fetch('data.json?t=' + Date.now(), {cache:'no-store'});
+  if(!r.ok) throw new Error('data.json tidak terbaca');
+  return r.json();
+}
+async function bukaData(sandi){
+  const p = await ambil();
+  if(!p.isi) return p;                      // terbit tanpa kunci
+  const enc = new TextEncoder();
+  const bahan = await crypto.subtle.importKey('raw', enc.encode(sandi),'PBKDF2',false,['deriveKey']);
+  const kunci = await crypto.subtle.deriveKey(
+    {name:'PBKDF2',salt:b64(p.garam),iterations:p.putaran,hash:'SHA-256'},
+    bahan,{name:'AES-GCM',length:256},false,['decrypt']);
+  const jelas = await crypto.subtle.decrypt({name:'AES-GCM',iv:b64(p.iv)},kunci,b64(p.isi));
+  return JSON.parse(new TextDecoder().decode(jelas));
+}
+
+function gambar(d){
+  const u=d.uang, s=d.surat, l=d.langganan, g=d.graft;
+  const jam = new Date(d.dibuat*1000);
+  const umur = Math.round((Date.now()/1000 - d.dibuat)/3600);
+  document.getElementById('isi').innerHTML = `
+  <header><h1>Ocklu 90<span>hari ke-${u.hari} dari 90 · sisa ${u.sisa_hari} hari</span></h1></header>
+
+  <h2>Uang</h2>
+  <div class="kartu"><div class="lbl">Sudah masuk</div>
+    <div class="angka ${u.masuk_usd>0?'hijau':'merah'}">${usd(u.masuk_usd)}</div>
+    <div class="kecil">${rp(u.masuk_usd)} · ${u.bayar_n} pembayaran nyata</div>
+    <div class="kecil" style="margin-top:6px">target ${usd(u.target_usd)}/bulan · kurang ${usd(u.kurang_usd)}</div>
+    <div class="bar"><i style="width:${Math.min(100,u.masuk_usd/u.target_usd*100)}%"></i></div>
+  </div>
+  <div class="kartu"><div class="lbl">Kemajuan waktu</div>
+    <div class="angka">${u.hari}<span class="kecil"> / 90</span></div>
+    <div class="bar"><i style="width:${Math.min(100,u.hari/90*100)}%;background:var(--kuning)"></i></div>
+  </div>
+
+  <h2>Surat</h2>
+  <div class="grid">
+    <div class="kartu"><div class="lbl">Hari ini</div><div class="angka ${s.hari_ini>0?'hijau':'merah'}">${s.hari_ini}</div><div class="kecil">total ${s.total}</div></div>
+    <div class="kartu"><div class="lbl">Jadi bayar</div><div class="angka">${u.konversi}%</div><div class="kecil">${u.bayar_n} dari ${s.total}</div></div>
+    <div class="kartu"><div class="lbl">Siap kirim</div><div class="angka kuning">${s.siap}</div><div class="kecil">orang, bukan meja</div></div>
+    <div class="kartu"><div class="lbl">Alamat mati</div><div class="angka">${s.mati}</div><div class="kecil">diblokir permanen</div></div>
+  </div>
+
+  <h2>Hemat</h2>
+  <div class="kartu">
+    <div class="brs"><span>Langganan sudah dibunuh</span><b class="hijau">${usd(l.hemat_tahun)}/th</b></div>
+    <div class="brs"><span>Tinggal pasang di laptop</span><b class="kuning">${usd(l.sisa_laptop)}/th</b></div>
+    <div class="brs"><span>Tinggal daftar di web</span><b class="biru">${usd(l.sisa_awan)}/th</b></div>
+    <div class="brs"><span>Alat terpakai</span><b>${l.terpasang} / ${l.total}</b></div>
+  </div>
+
+  <h2>Mesin</h2>
+  <div class="kartu">
+    <div class="brs"><span>Rantai uang hidup</span><b class="${d.rantai.hidup===d.rantai.total?'hijau':'merah'}">${d.rantai.hidup} / ${d.rantai.total}</b></div>
+    <div class="brs"><span>Graft</span><b class="${g.terpasang?'hijau':'merah'}">${g.terpasang?'terpasang':'belum'}</b></div>
+    <div class="brs"><span>Proyek dipetakan</span><b>${g.proyek} · ${g.simpul} simpul</b></div>
+    <div class="brs"><span>Antre dipetakan</span><b class="kuning">${g.antre}</b></div>
+    <div class="brs"><span>Isi dompet</span><b>${usd(d.dompet.total_usd)}</b></div>
+  </div>
+
+  <p class="kecil" style="margin-top:20px">Angka dibaca ${jam.toLocaleString('id-ID')}
+  ${umur>30?'<br><span class="merah">Sudah '+umur+' jam tidak diperbarui — laptop mungkin mati.</span>':''}</p>`;
+  document.getElementById('gerbang').classList.add('sembunyi');
+  document.getElementById('isi').classList.remove('sembunyi');
+}
+
+async function masuk(e){
+  e.preventDefault();
+  const p = document.getElementById('pin').value.trim();
+  const m = document.getElementById('pesan');
+  m.textContent = 'membuka…';
+  try{
+    const d = await bukaData(p);
+    try{ localStorage.setItem('ocklu90pin', p); }catch(_){}
+    m.textContent=''; gambar(d);
+  }catch(err){ m.innerHTML = '<span class="merah">PIN salah atau data belum terbit.</span>'; }
+}
+
+(async ()=>{
+  let p=''; try{ p = localStorage.getItem('ocklu90pin') || ''; }catch(_){}
+  if(!p) return;
+  try{ gambar(await bukaData(p)); }catch(_){}
+})();
+
+if('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(()=>{});
+</script></body></html>
