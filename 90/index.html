@@ -133,5 +133,13 @@ function gambar(d){
   catch(err){ m.innerHTML = '<span class="merah">Data belum terbit atau tautannya salah.</span>'; }
 })();
 
-if('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(()=>{});
+if('serviceWorker' in navigator){
+  navigator.serviceWorker.register('sw.js').then(r => r.update()).catch(()=>{});
+  // Kalau pekerja baru mengambil alih, muat ulang sekali supaya halaman lama
+  // tidak tertinggal di layar.
+  let ganti = false;
+  navigator.serviceWorker.addEventListener('controllerchange', () => {
+    if(!ganti){ ganti = true; location.reload(); }
+  });
+}
 </script></body></html>
