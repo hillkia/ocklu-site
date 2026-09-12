@@ -34,13 +34,10 @@ button{background:var(--hijau);color:#07110b;font-weight:700;border:none}
 .brs:last-child{border-bottom:none}
 </style></head><body>
 
-<div id="gerbang"><form onsubmit="masuk(event)">
-  <b style="font-size:18px">Ocklu 90</b>
-  <div class="kecil">Papan 90 hari ganti gaji</div>
-  <input id="pin" type="password" inputmode="numeric" placeholder="PIN" autofocus>
-  <button>Buka</button>
-  <div id="pesan" class="kecil"></div>
-</form></div>
+<div id="gerbang"><div style="display:grid;place-items:center;min-height:80vh;text-align:center;padding:20px">
+  <div><b style="font-size:18px">Ocklu 90</b>
+  <p class="kecil" id="pesan" style="max-width:270px;margin-top:10px">Membuka…</p></div>
+</div></div>
 
 <div class="bung sembunyi" id="isi"></div>
 
@@ -116,22 +113,24 @@ function gambar(d){
   document.getElementById('isi').classList.remove('sembunyi');
 }
 
-async function masuk(e){
-  e.preventDefault();
-  const p = document.getElementById('pin').value.trim();
-  const m = document.getElementById('pesan');
-  m.textContent = 'membuka…';
-  try{
-    const d = await bukaData(p);
-    try{ localStorage.setItem('ocklu90pin', p); }catch(_){}
-    m.textContent=''; gambar(d);
-  }catch(err){ m.innerHTML = '<span class="merah">PIN salah atau data belum terbit.</span>'; }
-}
-
+// Kunci diambil dari belakang tanda '#' pada tautan, lalu disimpan di HP ini
+// saja. Tidak ada yang perlu diketik — sekali klik tautannya, seterusnya ingat.
 (async ()=>{
-  let p=''; try{ p = localStorage.getItem('ocklu90pin') || ''; }catch(_){}
-  if(!p) return;
-  try{ gambar(await bukaData(p)); }catch(_){}
+  const m = document.getElementById('pesan');
+  let k = (location.hash || '').replace(/^#/, '').trim();
+  if(k){
+    try{ localStorage.setItem('ocklu90k', k); }catch(_){}
+    history.replaceState(null, '', location.pathname);   // bersihkan dari layar
+  }else{
+    try{ k = localStorage.getItem('ocklu90k') || ''; }catch(_){}
+  }
+  if(!k){
+    m.innerHTML = '<span class="merah">Buka lewat tautan lengkapnya.</span>' +
+      '<br><span class="kecil">Tautan itu sudah membawa kuncinya sendiri.</span>';
+    return;
+  }
+  try{ gambar(await bukaData(k)); }
+  catch(err){ m.innerHTML = '<span class="merah">Data belum terbit atau tautannya salah.</span>'; }
 })();
 
 if('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(()=>{});
