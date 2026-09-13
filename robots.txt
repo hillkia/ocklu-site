@@ -46,4 +46,3 @@ User-agent: meta-externalagent
 Allow: /
 
 Sitemap: https://ocklu.com/sitemap.xml
-Disallow: /audit/p/
