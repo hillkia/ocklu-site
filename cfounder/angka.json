@@ -1,16 +1,16 @@
 {
- "waktu": "2026-09-13 22:17:13",
- "prospek": 2853,
- "punya_email": 310,
- "siap_disurati": 66,
- "surat_total": 12,
- "surat_hari_ini": 10,
+ "waktu": "2026-09-13 22:36:05",
+ "prospek": 2859,
+ "punya_email": 313,
+ "siap_disurati": 186,
+ "surat_total": 30,
+ "surat_hari_ini": 30,
  "tahap": {
-  "izin": 12
+  "izin": 30
  },
  "balas_manusia": 0,
  "pantul": 12,
  "uang_masuk": 0.0,
  "klien": 1,
- "putaran_terakhir": "2026-09-13 11:42:11"
+ "putaran_terakhir": "2026-09-13 22:06:25"
 }
