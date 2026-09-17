@@ -1,0 +1,44 @@
+{
+ "dibuat": "2026-09-18T05:09:16",
+ "peluang": {
+  "total": 900,
+  "hidup": 740,
+  "mati": 160,
+  "duplikat": 13,
+  "risiko_tinggi": 6,
+  "layak_terbit": 249,
+  "masuk_24j": 900,
+  "per_kategori": {
+   "alat": 99,
+   "freelance": 92,
+   "hibah": 150,
+   "kerja": 404,
+   "promo": 29,
+   "reseller": 28,
+   "tender": 98
+  },
+  "per_sumber": {
+   "Arbeitnow": 250,
+   "Grants.gov": 150,
+   "RemoteOK": 99,
+   "TED Uni Eropa": 98,
+   "WeWorkRemotely": 86,
+   "Product Hunt": 53,
+   "GitHub": 46,
+   "Himalayas": 40,
+   "Remotive": 15,
+   "Hacker News": 6,
+   "Shopify": 4,
+   "shattered.io": 2
+  }
+ },
+ "edisi": [
+  {
+   "tanggal": "2026-09-18",
+   "jumlah": 25
+  }
+ ],
+ "pekerja_terdaftar": 20,
+ "pekerja_sehat": 19,
+ "janji": "Setiap peluang menyimpan tautan sumbernya dan tautan itu dibuka mesin sebelum diterbitkan. Angka di berkas ini dihitung dari gudang data, tidak diketik tangan."
+}
