@@ -1,5 +1,5 @@
 {
- "dibuat": "2026-09-17T22:40:01",
+ "dibuat": "2026-09-17T22:55:54",
  "peluang": {
   "total": 1025,
   "hidup": 787,
@@ -42,7 +42,7 @@
    "jumlah": 25
   }
  ],
- "pekerja_terdaftar": 20,
+ "pekerja_terdaftar": 21,
  "pekerja_sehat": 19,
  "janji": "Setiap peluang menyimpan tautan sumbernya dan tautan itu dibuka mesin sebelum diterbitkan. Angka di berkas ini dihitung dari gudang data, tidak diketik tangan."
 }
