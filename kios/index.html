@@ -357,7 +357,10 @@
 
   // ---------------- Utils ----------------
   const rupiah = n => "Rp " + Math.round(n||0).toLocaleString('id-ID');
-  const todayStr = () => new Date().toISOString().slice(0,10);
+  const todayStr = () => {
+    const d = new Date();
+    return new Date(d.getTime() - d.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
+  };
   const fmtDate = d => new Date(d+'T00:00:00').toLocaleDateString('id-ID',{weekday:'long',day:'numeric',month:'long'});
   const uid = () => Math.random().toString(36).slice(2,10);
 
@@ -368,6 +371,13 @@
   }
 
   document.getElementById('todayLabel').textContent = fmtDate(todayStr());
+  setInterval(() => {
+    const kini = todayStr();
+    if (document.getElementById('todayLabel').dataset.tgl === kini) return;
+    document.getElementById('todayLabel').dataset.tgl = kini;
+    document.getElementById('todayLabel').textContent = fmtDate(kini);
+    renderAll();
+  }, 60000);
   document.getElementById('fotoDate').value = todayStr();
 
   // ---------------- Tabs ----------------
