@@ -1,154 +1,61 @@
-<!DOCTYPE html><html lang="id"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Ocklu Radar — peluang harian yang sudah disaring</title><meta name="description" content="Lowongan remote, freelance, hibah, tender dan promo yang sudah disaring mesin dan diperiksa tautannya, tiap pagi.">
-<meta name="color-scheme" content="light dark">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Ocklu Radar — peluang harian yang sudah disaring">
-<meta property="og:description" content="Lowongan remote, freelance, hibah, tender dan promo yang sudah disaring mesin dan diperiksa tautannya, tiap pagi.">
-<meta property="og:locale" content="id_ID">
-<meta name="twitter:card" content="summary">
+<!doctype html>
+<html lang=en><head><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>Collectibles Price Radar — what actually moved today</title>
+<meta name=description content="Twice-daily price tracking across Pokemon TCG, MTG, One Piece, CS2 skins and art toys. 606 items, 19 days of history.">
 <style>
-:root{
- --merek:#12a06a; --merek-redup:#0d7a51; --aksen:#c2730a;
- --bg:#f4f8f6; --kartu:#ffffff; --garis:#dde8e3; --garis-tipis:#eaf1ee;
- --teks:#0b1512; --teks-2:#3d524a; --redup:#6b8078;
- --sp:4px; --r:10px;
- --bayang:0 1px 2px rgba(11,21,18,.06), 0 8px 24px -12px rgba(11,21,18,.18);
- --ui:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
- --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,monospace;
-}
-@media(prefers-color-scheme:dark){:root{
- --merek:#2bc98a; --merek-redup:#1b8f60; --aksen:#e0a341;
- --bg:#080f0d; --kartu:#0f1a16; --garis:#1d2f28; --garis-tipis:#16241f;
- --teks:#e4efe9; --teks-2:#b3c5bc; --redup:#7e948b;
- --bayang:0 1px 2px rgba(0,0,0,.5), 0 8px 28px -14px rgba(0,0,0,.7);
-}}
+:root{color-scheme:light}
 *{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--teks);font:16px/1.65 var(--ui);
- font-feature-settings:"tnum" 0}
-.bungkus{max-width:720px;margin:0 auto;padding:40px 16px 72px}
-.lebar{max-width:1000px}
-h1{font-size:31px;line-height:1.18;letter-spacing:-.022em;margin:0 0 12px;font-weight:700}
-h2{font-size:20px;line-height:1.3;letter-spacing:-.012em;margin:56px 0 12px;font-weight:650}
-h3{font-size:16px;line-height:1.4;margin:0 0 4px;font-weight:650}
-p{margin:0 0 12px;max-width:64ch}
-a{color:var(--merek-redup)}@media(prefers-color-scheme:dark){a{color:var(--merek)}}
-.lede{font-size:20px;line-height:1.5;color:var(--teks-2);max-width:60ch;margin:0 0 32px}
-.mikro{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--redup);font-weight:600}
-.redup{color:var(--redup);font-size:13px;line-height:1.6}
+body{margin:0;background:#fff;color:#14171a;font:16px/1.6 -apple-system,Segoe UI,Roboto,sans-serif}
+.w{max-width:900px;margin:0 auto;padding:28px 20px 60px}
+h1{font-size:30px;line-height:1.2;margin:0 0 6px}
+.sub{color:#5b6570;margin:0 0 26px}
+.tile{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 26px;padding:0;list-style:none}
+.tile li{background:#f5f7f9;border:1px solid #e3e8ec;border-radius:8px;padding:8px 12px;font-size:14px}
+.box{overflow-x:auto;border:1px solid #e3e8ec;border-radius:10px}
+table{width:100%;border-collapse:collapse;font-size:14px;min-width:640px}
+th{background:#f5f7f9;text-align:left;font-weight:600;padding:10px 12px;white-space:nowrap}
+td{padding:10px 12px;border-top:1px solid #eef1f4}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+td.p{font-size:11px;letter-spacing:.05em;color:#5b6570;white-space:nowrap}
+.u{color:#0a7d43;font-weight:600} .d{color:#c02626;font-weight:600}
+.cta{margin:32px 0 0;padding:22px;border:2px solid #14171a;border-radius:12px}
+.cta h2{margin:0 0 8px;font-size:20px}
+.btn{display:inline-block;margin-top:12px;background:#14171a;color:#fff;
+     text-decoration:none;padding:12px 22px;border-radius:8px;font-weight:600}
+.note{color:#5b6570;font-size:13px;margin-top:26px;border-top:1px solid #eef1f4;padding-top:16px}
+</style></head><body><div class=w>
 
-/* daftar peluang: padat, berbasis teks, bukan grid kartu */
-.umpan{border-top:1px solid var(--garis);margin-top:8px}
-.item{border-bottom:1px solid var(--garis-tipis);padding:20px 0;display:block}
-.item:last-child{border-bottom:1px solid var(--garis)}
-.item a.jdl{color:var(--teks);text-decoration:none;font-weight:600;font-size:16px;line-height:1.4;
- display:inline-block;letter-spacing:-.008em}
-.item a.jdl:hover{color:var(--merek-redup);text-decoration:underline;text-underline-offset:3px}
-@media(prefers-color-scheme:dark){.item a.jdl:hover{color:var(--merek)}}
-.item .rgks{color:var(--teks-2);font-size:16px;line-height:1.55;margin-top:6px;max-width:62ch}
-.tali{display:flex;flex-wrap:wrap;gap:0 12px;margin-top:8px;font-size:13px;color:var(--redup);
- font-family:var(--mono);font-variant-numeric:tabular-nums}
-.tali span:not(:last-child)::after{content:"·";margin-left:12px;opacity:.5}
-.ok{color:var(--merek-redup);font-weight:600}
-@media(prefers-color-scheme:dark){.ok{color:var(--merek)}}
-.hati{color:var(--aksen);font-weight:600}
-.langkah{margin-top:12px;padding:12px 0 4px 16px;border-left:2px solid var(--merek);
- color:var(--teks-2);font-size:13px;line-height:1.6}
+<h1>What actually moved today</h1>
+<p class=sub>Collectible prices, tracked twice a day. Snapshot #69 ·
+03 Sep 2026</p>
 
-/* kotak angka ala dasbor: angka besar mono + label kapital kecil */
-.angka-baris{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;
- background:var(--garis);border:1px solid var(--garis);border-radius:var(--r);overflow:hidden;margin:24px 0}
-.angka{background:var(--kartu);padding:16px}
-.angka b{display:block;font:650 25px/1.15 var(--mono);font-variant-numeric:tabular-nums;
- letter-spacing:-.02em;margin-bottom:3px}
-.angka span{font-size:12px;letter-spacing:.07em;text-transform:uppercase;color:var(--redup);font-weight:600}
+<ul class=tile>
+  <li><b>606</b> items tracked</li>
+  <li><b>14,484</b> price points</li>
+  <li><b>19</b> days of history</li>
+  <li><b>5</b> markets live</li>
+</ul>
 
-.kotak{background:var(--kartu);border:1px solid var(--garis);border-radius:var(--r);padding:20px;margin:16px 0}
-.kotak.utama{box-shadow:var(--bayang);border-color:var(--merek)}
-form{margin:0}
-label.pilih{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--teks-2);
- padding:8px 12px;border:1px solid var(--garis);border-radius:999px;margin:0 8px 8px 0;cursor:pointer;
- min-height:36px}
-label.pilih:has(input:checked){border-color:var(--merek);color:var(--merek-redup);background:color-mix(in srgb,var(--merek) 7%,transparent)}
-@media(prefers-color-scheme:dark){label.pilih:has(input:checked){color:var(--merek)}}
-input[type=email]{width:100%;padding:12px 16px;border-radius:var(--r);border:1px solid var(--garis);
- background:var(--bg);color:var(--teks);font:16px var(--ui);min-height:48px}
-input[type=email]:focus-visible{outline:2px solid var(--merek);outline-offset:1px;border-color:var(--merek)}
-.tombol{display:inline-block;background:var(--merek);color:#04140d;font:650 16px var(--ui);
- padding:12px 24px;border-radius:var(--r);text-decoration:none;border:0;cursor:pointer;min-height:48px;
- min-width:44px}
-.tombol:hover{background:var(--merek-redup);color:#fff}
-.tombol:focus-visible{outline:2px solid var(--teks);outline-offset:2px}
-.tombol.sekunder{background:transparent;color:var(--teks);border:1px solid var(--garis)}
-.gembok{border:1px dashed var(--garis);border-radius:var(--r);padding:24px 20px;margin:20px 0;text-align:left}
-.samar{opacity:.3;filter:blur(3.5px);user-select:none;pointer-events:none}
-table{width:100%;border-collapse:collapse;font-size:13px}
-th{text-align:left;font-size:12px;letter-spacing:.07em;text-transform:uppercase;color:var(--redup);
- font-weight:600;padding:0 12px 8px 0;border-bottom:1px solid var(--garis)}
-td{padding:12px 12px 12px 0;border-bottom:1px solid var(--garis-tipis);vertical-align:top}
-td.n{font-family:var(--mono);font-variant-numeric:tabular-nums}
-ul.janji{margin:0;padding:0;list-style:none}
-ul.janji li{padding:12px 0 12px 28px;position:relative;border-bottom:1px solid var(--garis-tipis);
- font-size:16px;color:var(--teks-2);line-height:1.55}
-ul.janji li:last-child{border-bottom:0}
-ul.janji li::before{content:"";position:absolute;left:4px;top:20px;width:9px;height:9px;border-radius:2px;
- background:var(--merek)}
-footer{margin-top:64px;padding-top:20px;border-top:1px solid var(--garis);font-size:13px;color:var(--redup);
- line-height:1.65}
-code{font-family:var(--mono);font-size:13px;background:var(--kartu);border:1px solid var(--garis);
- padding:2px 4px;border-radius:4px}
-@media(prefers-reduced-motion:no-preference){a,.tombol,label.pilih{transition:color .12s,background .12s,border-color .12s}}
-@media(max-width:480px){h1{font-size:25px}.lede{font-size:16px}.bungkus{padding:32px 16px 56px}h2{margin-top:48px}}
-</style></head><body><main class="bungkus"><div class="mikro">Radar peluang harian</div>
-<h1>Peluang yang sudah disaring, sampai ke email kamu tiap pagi.</h1>
-<p class="lede">Lowongan remote, proyek freelance, hibah, tender, program reseller, promo bisnis
-dan alat baru — ditarik dari papan publik dunia, dibersihkan dari duplikat dan penipuan, lalu
-tautannya dibuka satu per satu untuk memastikan masih hidup. Kamu tinggal baca.</p>
+<div class=box><table>
+<tr><th>Market</th><th>Item</th><th class=n>Prev</th><th class=n>Now</th>
+    <th class=n>Change</th><th class=n>%</th></tr>
+<tr><td class=p>CS2</td><td>★ Karambit | Fade (Factory New)</td><td class=n>$2,256.68</td><td class=n>$2,344.59</td><td class='n u'>+$87.91</td><td class='n u'>+3.9%</td></tr><tr><td class=p>CS2</td><td>★ Butterfly Knife | Gamma Doppler (Factory New)</td><td class=n>$2,026.65</td><td class=n>$2,110.73</td><td class='n u'>+$84.08</td><td class='n u'>+4.1%</td></tr><tr><td class=p>CS2</td><td>M4A4 | Poseidon (Factory New)</td><td class=n>$2,324.24</td><td class=n>$2,392.45</td><td class='n u'>+$68.21</td><td class='n u'>+2.9%</td></tr><tr><td class=p>CS2</td><td>★ M9 Bayonet | Gamma Doppler (Factory New)</td><td class=n>$2,703.89</td><td class=n>$2,642.45</td><td class='n d'>$-61.44</td><td class='n d'>-2.3%</td></tr><tr><td class=p>CS2</td><td>Souvenir AWP | Desert Hydra (Minimal Wear)</td><td class=n>$1,641.22</td><td class=n>$1,699.25</td><td class='n u'>+$58.03</td><td class='n u'>+3.5%</td></tr><tr><td class=p>CS2</td><td>★ Sport Gloves | Pandora&#x27;s Box (Well-Worn)</td><td class=n>$3,437.16</td><td class=n>$3,380.86</td><td class='n d'>$-56.30</td><td class='n d'>-1.6%</td></tr><tr><td class=p>CS2</td><td>M4A1-S | Knight (Factory New)</td><td class=n>$3,387.64</td><td class=n>$3,336.44</td><td class='n d'>$-51.20</td><td class='n d'>-1.5%</td></tr><tr><td class=p>CS2</td><td>★ Sport Gloves | Ultra Violent (Minimal Wear)</td><td class=n>$2,372.28</td><td class=n>$2,337.65</td><td class='n d'>$-34.63</td><td class='n d'>-1.5%</td></tr><tr><td class=p>CS2</td><td>★ Karambit | Gamma Doppler (Factory New)</td><td class=n>$2,127.63</td><td class=n>$2,096.30</td><td class='n d'>$-31.33</td><td class='n d'>-1.5%</td></tr><tr><td class=p>CS2</td><td>★ Sport Gloves | Vice (Minimal Wear)</td><td class=n>$2,027.68</td><td class=n>$2,007.32</td><td class='n d'>$-20.36</td><td class='n d'>-1.0%</td></tr><tr><td class=p>CS2</td><td>AK-47 | Hydroponic (Minimal Wear)</td><td class=n>$2,202.75</td><td class=n>$2,215.06</td><td class='n u'>+$12.31</td><td class='n u'>+0.6%</td></tr><tr><td class=p>CS2</td><td>★ Karambit | Doppler (Factory New)</td><td class=n>$2,016.88</td><td class=n>$2,026.95</td><td class='n u'>+$10.07</td><td class='n u'>+0.5%</td></tr>
+</table></div>
 
-<div class="kotak utama">
-<div class="mikro">Daftar gratis</div>
-<h3 style="margin:8px 0 4px">3 peluang teratas, tiap pagi, Rp0.</h3>
-<p class="redup" style="margin:0 0 16px">Tekan tombol di bawah — aplikasi surat kamu terbuka
-dengan isi yang sudah siap. Kirim apa adanya, konfirmasi datang otomatis.</p>
-<a class="tombol" href="mailto:hillkiacakep@gmail.com?subject=DAFTAR%20RADAR&body=Halo Radar, daftarkan email ini untuk edisi harian.%0D%0A%0D%0AMinat: kerja,freelance%0D%0A%0D%0A(Kirim saja surat ini apa adanya. Balasan konfirmasi datang otomatis.)">Kirimi saya radar harian</a>
-<p class="redup" style="margin:16px 0 0">Atau kirim surat sendiri ke <code>hillkiacakep@gmail.com</code>
-dengan subjek <code>DAFTAR RADAR</code>. Berhenti kapan saja: balas dengan subjek
-<code>BERHENTI RADAR</code>.</p></div>
+<div class=cta>
+<h2>Get this before you have to come looking</h2>
+<p>The table above is yesterday against today. Traders who need it need it
+<b>first</b> — not after they remember to check a webpage. Same data, delivered
+twice a day, plus the items that moved in dollars but not in percent (the ones
+percentage-only alerts miss entirely).</p>
+<a class=btn href="https://hillkia.gumroad.com/l/aiscan">See pricing</a>
+</div>
 
-<div class="angka-baris"><div class="angka"><b>1025</b><span>peluang ditarik</span></div><div class="angka"><b>787</b><span>tautan terbukti hidup</span></div><div class="angka"><b>12</b><span>papan sumber</span></div><div class="angka"><b>1025</b><span>masuk 24 jam</span></div></div>
+<ul class=tile style="margin-top:26px"><li><b>onepiece</b> — 253 barang</li><li><b>arttoy</b> — 167 barang</li><li><b>cs2</b> — 72 barang</li><li><b>mtg</b> — 63 barang</li><li><b>pokemon</b> — 51 barang</li></ul>
 
-<h2>Contoh edisi terakhir</h2><div class='umpan'><div class="item"><a class="jdl" href="https://himalayas.app/companies/micro1/jobs/phd-academic-expert" target="_blank" rel="noopener">PhD &amp; Academic Expert</a><div class="rgks">Peluang sebagai Ahli Doktor atau Ahli Akademis memerlukan keterampilan mendalam dalam bidang spesifik, relevan bagi pekerja remote dari Indonesia yang memiliki pengetahuan dan pengalaman di bidang tertentu.</div><div class="tali"><span>Lowongan</span><span>micro1</span><span>Remote</span><span class="ok">cocok 81</span><span class="">risiko rendah</span><span>Himalayas</span></div></div><div class="item"><a class="jdl" href="https://weworkremotely.com/remote-jobs/telus-digital-personalized-internet-ads-assessor-english-us-2" target="_blank" rel="noopener">TELUS Digital: Penilai Penyajian Iklan Internet Personalisasi</a><div class="rgks">Freelance posisi untuk menilai iklan online, dengan fokus pada relevansi dan kualitas konten iklan. Gaji tidak disebutkan.</div><div class="tali"><span>Freelance</span><span>TELUS Digital</span><span>Anywhere in the World</span><span class="ok">cocok 82</span><span class="">risiko rendah</span><span>WeWorkRemotely</span></div></div><div class="item"><a class="jdl" href="https://himalayas.app/companies/micro1/jobs/data-scientist-7470374102" target="_blank" rel="noopener">Data Scientist</a><div class="rgks">Peluang sebagai Data Scientist membutuhkan kemampuan analisis data, cocok untuk pekerja remote dari Indonesia yang memiliki pengetahuan dalam statistik dan pemrograman.</div><div class="tali"><span>Lowongan</span><span>micro1</span><span>Remote</span><span class="ok">cocok 81</span><span class="">risiko rendah</span><span>Himalayas</span></div></div></div>
+<p class=note>Prices are as recorded on each source marketplace at snapshot time.
+This is price tracking, not valuation and not buy/sell advice. History begins
+15 Aug 2026.</p>
 
-<h2>Buka seluruh daftar</h2>
-<div class="kotak utama">
-<div class="mikro">Pro</div>
-<div style="font:650 25px/1.2 var(--mono);margin:4px 0 2px">Rp49.000<span style="font-size:16px;color:var(--redup)">/bulan</span></div>
-<p class="redup" style="margin:8px 0 16px">Seluruh peluang harian, bukan cuma 3. Lengkap dengan skor
-kecocokan untuk pekerja remote dari Indonesia dan label risiko tiap sumber.</p>
-<a class="tombol" href="https://hillkia.gumroad.com/l/radarpro">Ambil Pro</a></div>
-<div class="kotak">
-<div class="mikro">Premium</div>
-<div style="font:650 25px/1.2 var(--mono);margin:4px 0 2px">Rp149.000<span style="font-size:16px;color:var(--redup)">/bulan</span></div>
-<p class="redup" style="margin:8px 0 16px">Semua isi Pro, ditambah langkah melamar siap pakai untuk
-tiap peluang berskor tinggi: apa yang disiapkan, cara mengambilnya, dan kalimat pembuka yang bisa
-langsung disalin.</p>
-<a class="tombol sekunder" href="https://hillkia.gumroad.com/l/radarpremium">Ambil Premium</a></div>
-
-<h2>Yang kami janjikan</h2>
-<div class="kotak"><ul class="janji">
-<li>Tiap peluang membawa tautan sumber aslinya — kamu bisa cek sendiri.</li>
-<li>Tautan dibuka mesin sebelum masuk edisi; yang sudah mati tidak diterbitkan.</li>
-<li>Lowongan tanpa identitas pemberi kerja diberi label risiko, tidak disembunyikan.</li>
-<li>Satu surat utama per hari, tidak lebih.</li>
-<li>Kalau sumber sedang sepi, edisi memang lebih tipis. Kami tidak mengarang peluang.</li>
-</ul></div>
-
-<p class="redup">Edisi lengkap hari ini: <a href="edisi.html">buka</a> ·
-<a href="arsip.html">arsip semua edisi</a> ·
-data mentah: <a href="api/edisi-terbaru.json">JSON</a> ·
-kesehatan mesin: <a href="api/status.json">status</a></p>
-<footer>Ocklu Radar menyaring peluang dari papan publik, lalu membuka setiap tautan untuk memastikan
-masih hidup sebelum diterbitkan. Sumber asli selalu dicantumkan. Kami tidak pernah mengarang peluang —
-kalau sumber sedang sepi, edisi hari itu memang lebih tipis.<br><br>
-<a href="/">ocklu.com</a> · ocklubrave</footer></main></body></html>
+</div></body></html>
