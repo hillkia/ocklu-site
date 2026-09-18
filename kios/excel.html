@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Excel — Buku Kios</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FBF6EC; --ink:#0F0C07; --ink-soft:#332C22;
+    --teal:#1F4B43; --amber:#E8A33D; --brick:#B4483A;
+    --paper:#FFFFFF; --line:#DED2B4;
+    --font-display:'Fraunces',Georgia,serif; --font-body:'Inter',-apple-system,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#1A1712; --ink:#FFFFFF; --ink-soft:#E6DCC5;
+      --teal:#5EB09D; --amber:#F5BD6A; --brick:#E88C7D;
+      --paper:#241F18; --line:#4A4131;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#1A1712; --ink:#FFFFFF; --ink-soft:#E6DCC5;
+    --teal:#5EB09D; --amber:#F5BD6A; --brick:#E88C7D;
+    --paper:#241F18; --line:#4A4131;
+  }
+  *{box-sizing:border-box}
+  body{margin:0; background:var(--bg); color:var(--ink); font-family:var(--font-body); font-size:15px; line-height:1.55;}
+  main{max-width:640px; margin:0 auto; padding:18px 16px 60px;}
+  h1{font-family:var(--font-display); font-size:26px; margin:0 0 2px;}
+  h2{font-family:var(--font-display); font-size:18px; margin:26px 0 10px;}
+  .sub{color:var(--ink-soft); font-size:13px; margin:0 0 18px;}
+  a.balik{color:var(--teal); text-decoration:none; font-size:14px;}
+  .kartu{background:var(--paper); border:1px solid var(--line); border-radius:14px; padding:16px; margin-bottom:14px;}
+  .jatuh{border:1.5px dashed var(--line); border-radius:14px; padding:26px 16px; text-align:center; color:var(--ink-soft); cursor:pointer;}
+  .jatuh:hover, .jatuh.aktif{border-color:var(--teal); color:var(--ink);}
+  input[type=file]{display:none}
+  label.k{display:block; font-size:12px; color:var(--ink-soft); margin:12px 0 4px; text-transform:uppercase; letter-spacing:.04em;}
+  select, input[type=date]{width:100%; padding:10px; font-size:15px; font-family:inherit; color:var(--ink);
+    background:var(--bg); border:1px solid var(--line); border-radius:9px;}
+  .btn{width:100%; padding:13px; font-size:15px; font-weight:600; font-family:inherit; border:0; border-radius:11px;
+    background:var(--teal); color:var(--bg); cursor:pointer; margin-top:14px;}
+  .btn.sepi{background:transparent; color:var(--teal); border:1px solid var(--line);}
+  .btn[disabled]{opacity:.45; cursor:not-allowed;}
+  table{width:100%; border-collapse:collapse; font-size:13px; margin-top:8px;}
+  th,td{text-align:left; padding:7px 6px; border-bottom:1px solid var(--line); white-space:nowrap;}
+  th{color:var(--ink-soft); font-weight:500; font-size:11px; text-transform:uppercase; letter-spacing:.04em;}
+  .gulung{overflow-x:auto;}
+  .tolak{color:var(--brick);}
+  .angka{font-variant-numeric:tabular-nums; text-align:right;}
+  .catatan{font-size:13px; color:var(--ink-soft); margin-top:10px;}
+  .pesan{padding:11px 13px; border-radius:10px; font-size:14px; margin-top:12px;}
+  .pesan.buruk{background:rgba(180,72,58,.14); color:var(--brick);}
+  .pesan.baik{background:rgba(31,75,67,.14); color:var(--teal);}
+  .maju{height:6px; background:var(--line); border-radius:99px; overflow:hidden; margin-top:12px; display:none;}
+  .maju > i{display:block; height:100%; width:0; background:var(--teal); transition:width .2s;}
+</style>
+</head>
+<body>
+<main>
+  <a class="balik" href="./">&larr; Kembali ke Buku Kios</a>
+  <h1>Tarik dari Excel</h1>
+  <p class="sub">Ambil catatan penjualan dari file Excel atau CSV, masukkan ke jurnal kios. Bisa juga unduh isi buku jadi Excel.</p>
+
+  <div class="kartu">
+    <div class="jatuh" id="jatuh">
+      <div style="font-size:26px">📄</div>
+      <div><b>Pilih file Excel / CSV</b></div>
+      <div style="font-size:13px">.xlsx · .xls · .csv — atau seret ke sini</div>
+    </div>
+    <input type="file" id="berkas" accept=".xlsx,.xls,.csv,text/csv,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">
+    <div id="kabar"></div>
+  </div>
+
+  <div id="pengaturan" style="display:none">
+    <div class="kartu">
+      <h2 style="margin-top:0">Cocokkan kolom</h2>
+      <p class="catatan" id="tebakan"></p>
+      <label class="k">Kolom nama barang</label><select id="kolProduk"></select>
+      <label class="k">Kolom jumlah terjual</label><select id="kolJumlah"></select>
+      <label class="k">Kolom tanggal</label><select id="kolTanggal"></select>
+      <label class="k" id="lblTglTetap" style="display:none">Tanggal untuk semua baris</label>
+      <input type="date" id="tglTetap" style="display:none">
+      <label class="k">Kolom harga jual satuan (kosongkan = pakai harga produk)</label><select id="kolHarga"></select>
+      <button class="btn sepi" id="periksa">Periksa dulu</button>
+    </div>
+  </div>
+
+  <div id="hasil" style="display:none">
+    <div class="kartu">
+      <h2 style="margin-top:0">Yang akan masuk</h2>
+      <div id="ringkas"></div>
+      <div class="gulung"><table id="pratinjau"></table></div>
+      <div class="maju" id="maju"><i></i></div>
+      <button class="btn" id="masukkan">Masukkan ke jurnal</button>
+      <p class="catatan">Baris yang ditolak tidak dimasukkan. Angka tidak pernah ditebak — kalau harga tidak ada di file
+        dan produknya belum punya harga, barisnya ditolak.</p>
+    </div>
+  </div>
+
+  <div class="kartu">
+    <h2 style="margin-top:0">Unduh isi buku</h2>
+    <p class="catatan" style="margin-top:0">Semua transaksi jadi satu file CSV — bisa dibuka di Excel, sekalian jadi cadangan.</p>
+    <button class="btn sepi" id="unduh">Unduh transaksi (CSV)</button>
+  </div>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script>
+(function(){
+  'use strict';
+  var PINTU = 'https://njghzieuuopukuagrswu.supabase.co/functions/v1/kios-api';
+  var KIOS = 'kokukusan';
+
+  function el(id){ return document.getElementById(id); }
+  function kabar(teks, jenis){
+    el('kabar').innerHTML = teks ? '<div class="pesan ' + (jenis||'buruk') + '">' + teks + '</div>' : '';
+  }
+  // dibulatkan: modal per potong sering pecahan (kg dibagi jumlah potong), dan "Rp38.444,444" tidak terbaca
+  function rupiah(n){ return 'Rp' + Math.round(Number(n)||0).toLocaleString('id-ID'); }
+
+  async function panggil(aksi, isi){
+    var r = await fetch(PINTU, {
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify(Object.assign({ kios:KIOS, aksi:aksi }, isi||{}))
+    });
+    if(!r.ok) throw new Error('server menolak (' + r.status + ')');
+    return r.json();
+  }
+
+  var produk = [], baris = [], kolom = [], siap = [], ditolak = [];
+
+  // ---------- baca berkas ----------
+  el('jatuh').onclick = function(){ el('berkas').click(); };
+  ['dragover','dragenter'].forEach(function(e){
+    el('jatuh').addEventListener(e, function(ev){ ev.preventDefault(); el('jatuh').classList.add('aktif'); });
+  });
+  ['dragleave','drop'].forEach(function(e){
+    el('jatuh').addEventListener(e, function(ev){ ev.preventDefault(); el('jatuh').classList.remove('aktif'); });
+  });
+  el('jatuh').addEventListener('drop', function(ev){
+    if(ev.dataTransfer.files[0]) muat(ev.dataTransfer.files[0]);
+  });
+  el('berkas').onchange = function(e){ if(e.target.files[0]) muat(e.target.files[0]); };
+
+  function muat(file){
+    kabar('');
+    var fr = new FileReader();
+    fr.onload = function(){
+      var wb;
+      try{
+        wb = XLSX.read(new Uint8Array(fr.result), { type:'array', cellDates:true });
+      }catch(err){
+        kabar('File ini tidak terbaca sebagai Excel/CSV. Coba simpan ulang lewat Excel sebagai .xlsx'); return;
+      }
+      var lembar = wb.Sheets[wb.SheetNames[0]];
+      var isi = XLSX.utils.sheet_to_json(lembar, { header:1, blankrows:false, raw:true });
+      if(isi.length < 2){ kabar('Isinya kosong atau cuma judul. Butuh minimal 1 baris data.'); return; }
+
+      // baris judul = baris pertama yang punya minimal 2 sel terisi
+      var iJudul = 0;
+      for(var i=0;i<Math.min(isi.length,10);i++){
+        if(isi[i].filter(function(s){ return String(s||'').trim(); }).length >= 2){ iJudul = i; break; }
+      }
+      kolom = isi[iJudul].map(function(s, i){ return String(s||'').trim() || ('Kolom ' + (i+1)); });
+      baris = isi.slice(iJudul+1).filter(function(r){ return r.some(function(s){ return String(s||'').trim(); }); });
+
+      el('jatuh').innerHTML = '<div style="font-size:26px">✓</div><div><b>' + file.name + '</b></div>' +
+        '<div style="font-size:13px">' + baris.length + ' baris data, ' + kolom.length + ' kolom</div>';
+      siapkanPilihan();
+    };
+    fr.readAsArrayBuffer(file);
+  }
+
+  var TEBAK = {
+    kolProduk: ['produk','barang','nama','item','menu','jenis'],
+    kolJumlah: ['jual','terjual','laku','jumlah','qty','banyak','pcs','potong'],
+    kolTanggal:['tanggal','tgl','date','hari'],
+    kolHarga:  ['harga','price','satuan','jual/pcs','harga jual']
+  };
+
+  function siapkanPilihan(){
+    ['kolProduk','kolJumlah','kolTanggal','kolHarga'].forEach(function(id){
+      var s = el(id);
+      s.innerHTML = '<option value="-1">— tidak ada —</option>' + kolom.map(function(k,i){
+        return '<option value="' + i + '">' + k + '</option>';
+      }).join('');
+      var tebak = -1;
+      kolom.forEach(function(k,i){
+        var n = k.toLowerCase();
+        if(tebak === -1 && TEBAK[id].some(function(t){ return n.indexOf(t) >= 0; })) tebak = i;
+      });
+      // "jumlah" jangan sampai menyambar kolom harga
+      if(id === 'kolJumlah' && tebak >= 0 && /harga|rp|price/.test(kolom[tebak].toLowerCase())) tebak = -1;
+      s.value = String(tebak);
+    });
+    el('tebakan').textContent = 'Kolomnya ditebak dari judul. Kalau ada yang meleset, betulkan di bawah — jangan diterusin kalau ragu.';
+    el('kolTanggal').onchange = aturTanggal;
+    aturTanggal();
+    el('pengaturan').style.display = 'block';
+    el('hasil').style.display = 'none';
+  }
+
+  function aturTanggal(){
+    var kosong = el('kolTanggal').value === '-1';
+    el('lblTglTetap').style.display = kosong ? 'block' : 'none';
+    el('tglTetap').style.display = kosong ? 'block' : 'none';
+    if(kosong && !el('tglTetap').value) el('tglTetap').value = new Date().toISOString().slice(0,10);
+  }
+
+  // ---------- tanggal ----------
+  function keTanggal(nilai){
+    if(nilai instanceof Date && !isNaN(nilai)) return iso(nilai);
+    if(typeof nilai === 'number' && nilai > 20000 && nilai < 80000){
+      // angka hari ala Excel (1 = 1 Jan 1900), dikurangi bug tahun kabisat 1900
+      return iso(new Date(Date.UTC(1899, 11, 30 + Math.floor(nilai))));
+    }
+    var t = String(nilai||'').trim();
+    if(!t) return null;
+    var m = t.match(/^(\d{1,2})[\/\-.](\d{1,2})[\/\-.](\d{2,4})$/);   // 18/9/2026 (hari dulu, gaya Indonesia)
+    if(m){
+      var th = +m[3]; if(th < 100) th += 2000;
+      return iso(new Date(Date.UTC(th, +m[2]-1, +m[1])));
+    }
+    m = t.match(/^(\d{4})-(\d{1,2})-(\d{1,2})$/);
+    if(m) return iso(new Date(Date.UTC(+m[1], +m[2]-1, +m[3])));
+    return null;
+  }
+  function iso(d){ return isNaN(d) ? null : d.toISOString().slice(0,10); }
+
+  // ---------- periksa ----------
+  el('periksa').onclick = async function(){
+    var iP = +el('kolProduk').value, iJ = +el('kolJumlah').value,
+        iT = +el('kolTanggal').value, iH = +el('kolHarga').value;
+    if(iP < 0 || iJ < 0){ kabar('Kolom nama barang dan jumlah terjual wajib dipilih.'); return; }
+    kabar('');
+    try{
+      var r = await panggil('lihat', { daftar:[{ koleksi:'products', urut:'createdAt', arah:'asc' }] });
+      produk = r.hasil[0].map(function(d){ return Object.assign({ id:d.id }, d.data); });
+    }catch(e){ kabar('Tidak bisa ambil daftar produk: ' + e.message); return; }
+
+    siap = []; ditolak = [];
+    var tglTetap = el('tglTetap').value;
+    baris.forEach(function(b, n){
+      var nama = String(b[iP]||'').trim();
+      var jml  = Number(String(b[iJ]||'').toString().replace(/[^\d.-]/g,''));
+      var tgl  = iT >= 0 ? keTanggal(b[iT]) : tglTetap;
+      var alasan = null;
+
+      var p = produk.find(function(x){ return x.name.toLowerCase() === nama.toLowerCase(); });
+      var harga = iH >= 0 ? Number(String(b[iH]||'').replace(/[^\d.-]/g,'')) : (p ? p.sellPrice : 0);
+
+      if(!nama) alasan = 'nama barang kosong';
+      else if(!p) alasan = 'produk "' + nama + '" belum ada di kios';
+      else if(!(jml > 0)) alasan = 'jumlah tidak terbaca sebagai angka';
+      else if(!tgl) alasan = 'tanggal tidak terbaca';
+      else if(!(harga > 0)) alasan = 'harga jual tidak ada di file & produknya masih Rp0';
+
+      if(alasan) ditolak.push({ nomor:n+2, nama:nama||'(kosong)', alasan:alasan });
+      else siap.push({ produk:p, nama:p.name, qty:Math.round(jml), tgl:tgl, harga:harga });
+    });
+    tampilkan();
+  };
+
+  function tampilkan(){
+    var omzet = siap.reduce(function(a,b){ return a + b.qty*b.harga; }, 0);
+    var modal = siap.reduce(function(a,b){ return a + b.qty*(b.produk.buyPrice||0); }, 0);
+    el('ringkas').innerHTML =
+      '<div class="pesan ' + (siap.length ? 'baik' : 'buruk') + '">' +
+      '<b>' + siap.length + ' baris siap masuk</b>' +
+      (ditolak.length ? ' · <span class="tolak">' + ditolak.length + ' ditolak</span>' : '') +
+      '<br>Omzet ' + rupiah(omzet) + ' · Modal ' + rupiah(modal) + ' · Untung ' + rupiah(omzet-modal) +
+      (modal === 0 ? '<br><small>Modal masih Rp0 — isi dulu lewat ⚙ Update Modal kalau mau untungnya benar.</small>' : '') +
+      '</div>';
+
+    var baris10 = siap.slice(0,10).map(function(s){
+      return '<tr><td>' + s.tgl + '</td><td>' + s.nama + '</td><td class="angka">' + s.qty +
+             '</td><td class="angka">' + rupiah(s.harga) + '</td><td class="angka">' + rupiah(s.qty*s.harga) + '</td></tr>';
+    }).join('');
+    var barisTolak = ditolak.slice(0,10).map(function(d){
+      return '<tr class="tolak"><td>baris ' + d.nomor + '</td><td colspan="4">' + d.nama + ' — ' + d.alasan + '</td></tr>';
+    }).join('');
+    el('pratinjau').innerHTML =
+      '<tr><th>Tanggal</th><th>Barang</th><th class="angka">Jml</th><th class="angka">Harga</th><th class="angka">Omzet</th></tr>' +
+      baris10 + barisTolak +
+      (siap.length > 10 ? '<tr><td colspan="5" style="color:var(--ink-soft)">…dan ' + (siap.length-10) + ' baris lagi</td></tr>' : '');
+
+    el('masukkan').disabled = siap.length === 0;
+    el('masukkan').textContent = siap.length ? ('Masukkan ' + siap.length + ' baris ke jurnal') : 'Tidak ada yang bisa dimasukkan';
+    el('hasil').style.display = 'block';
+    el('hasil').scrollIntoView({ behavior:'smooth', block:'start' });
+  }
+
+  // ---------- masukkan ----------
+  el('masukkan').onclick = async function(){
+    if(!siap.length) return;
+    if(!confirm('Masukkan ' + siap.length + ' transaksi ke jurnal kios? Ini menambah catatan, bukan menimpa.')) return;
+    var tombol = el('masukkan'); tombol.disabled = true;
+    el('maju').style.display = 'block';
+    var selesai = 0, gagal = 0;
+    var antre = siap.slice();
+
+    async function pekerja(){
+      while(antre.length){
+        var s = antre.shift();
+        try{
+          await panggil('add', { koleksi:'transactions', data:{
+            type:'jual', date:s.tgl, productId:s.produk.id, productName:s.nama, qty:s.qty,
+            buyPrice:s.produk.buyPrice||0, sellPrice:s.harga,
+            revenue:s.qty*s.harga, cost:s.qty*(s.produk.buyPrice||0),
+            note:'dari Excel', source:'excel', closed:false, createdAt:Date.now()
+          }});
+        }catch(e){ gagal++; }
+        selesai++;
+        el('maju').firstElementChild.style.width = Math.round(selesai/siap.length*100) + '%';
+        tombol.textContent = 'Memasukkan… ' + selesai + '/' + siap.length;
+      }
+    }
+    await Promise.all([pekerja(), pekerja(), pekerja(), pekerja()]);
+
+    tombol.textContent = gagal ? ('Selesai, ' + gagal + ' baris gagal') : 'Selesai ✓';
+    kabar(gagal
+      ? (selesai-gagal) + ' baris masuk, <b>' + gagal + ' gagal</b> — coba ulang khusus yang gagal.'
+      : selesai + ' baris masuk ke jurnal. Buka Buku Kios buat lihat.', gagal ? 'buruk' : 'baik');
+    siap = [];
+  };
+
+  // ---------- unduh ----------
+  el('unduh').onclick = async function(){
+    var b = el('unduh'); b.disabled = true; b.textContent = 'Menyiapkan…';
+    try{
+      var r = await panggil('lihat', { daftar:[{ koleksi:'transactions', urut:'createdAt', arah:'desc' }] });
+      var tx = r.hasil[0].map(function(d){ return d.data; });
+      if(!tx.length){ kabar('Belum ada transaksi buat diunduh.'); return; }
+      var judul = ['tanggal','jenis','barang','jumlah','harga_jual','modal_satuan','omzet','modal','untung','catatan'];
+      var isi = tx.map(function(t){
+        // modal per potong sering pecahan panjang (kg dibagi jumlah potong) — dibulatkan 2 angka
+        // biar kebaca di Excel; totalnya dibulatkan ke rupiah utuh karena rupiah tidak punya sen
+        var bulat2 = function(n){ return Math.round((Number(n)||0)*100)/100; };
+        return [t.date||'', t.type||'', t.productName||'', t.qty||'', bulat2(t.sellPrice), bulat2(t.buyPrice),
+                Math.round(t.revenue||0), Math.round(t.cost||0), Math.round((t.revenue||0)-(t.cost||0)),
+                (t.note||'').replace(/"/g,'""')];
+      });
+      var csv = '﻿' + [judul].concat(isi).map(function(r){
+        return r.map(function(s){ return '"' + String(s) + '"'; }).join(',');
+      }).join('\n');
+      var a = document.createElement('a');
+      a.href = URL.createObjectURL(new Blob([csv], { type:'text/csv;charset=utf-8' }));
+      a.download = 'buku-kios-' + new Date().toISOString().slice(0,10) + '.csv';
+      a.click();
+      kabar(tx.length + ' transaksi terunduh.', 'baik');
+    }catch(e){ kabar('Gagal mengunduh: ' + e.message); }
+    finally{ b.disabled = false; b.textContent = 'Unduh transaksi (CSV)'; }
+  };
+})();
+</script>
+</body>
+</html>

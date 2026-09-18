@@ -296,7 +296,7 @@
       <button class="btn outline" id="btnAddJual">+ Penjualan</button>
       <button class="btn outline" id="btnAddModal">+ Modal / Beli Stok</button>
     </div>
-    <button class="btn subtle" id="btnImportCatatan" style="margin-bottom:16px;">📓 Import dari Foto Catatan Lama</button>
+    <button class="btn subtle" id="btnImportCatatan" style="margin-bottom:16px;">📓 Import dari Foto Catatan Lama</button><a class="btn subtle" href="excel.html" style="margin-bottom:16px;display:block;text-align:center;text-decoration:none;">📊 Tarik dari Excel / unduh CSV</a>
     <div id="jurnalList"><div class="empty">Belum ada transaksi</div></div>
   </section>
 
@@ -555,7 +555,7 @@
       <label class="photo-slot" id="icSlot" style="margin-top:14px;">
         <div class="icon">📓</div>
         <div class="txt">Ambil / pilih foto catatan</div>
-        <input type="file" accept="${accept}" capture="environment" id="icInput">
+        <input type="file" accept="${accept}" id="icInput">
       </label>
       <div id="icArea"></div>
     `);
@@ -804,7 +804,7 @@ Jangan sertakan baris total/rekap uang. Jangan tambahkan teks lain di luar JSON.
       <label class="photo-slot" id="slot-${kind}">
         <div class="icon">📷</div>
         <div class="txt">Ambil foto ${kind==='awal'?'stok awal':'sisa stok'}</div>
-        <input type="file" accept="${accept}" capture="environment" id="input-${kind}">
+        <input type="file" accept="${accept}" id="input-${kind}">
       </label>`;
   }
   function wireSlot(kind){
