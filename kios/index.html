@@ -552,17 +552,28 @@
       <p class="note">Foto halaman buku catatan penjualan lama lo. AI bakal baca nama barang &amp; jumlah yang laku, nanti dicocokin ke produk yang ada.</p>
       <label>Tanggal catatan ini</label>
       <input type="date" id="icDate" value="${todayStr()}">
-      <label class="photo-slot" id="icSlot" style="margin-top:14px;">
+      <div class="photo-slot" id="icSlot" style="margin-top:14px;">
         <div class="icon">📓</div>
-        <div class="txt">Ambil / pilih foto catatan</div>
-        <input type="file" accept="${accept}" id="icInput">
-      </label>
+        <div class="txt">Foto catatan lama</div>
+        <div style="display:flex; gap:10px; margin-top:12px;">
+          <label class="btn subtle" style="flex:1; text-align:center; cursor:pointer;">📷 Jepret
+            <input type="file" accept="${accept}" capture="environment" id="icInput" style="display:none">
+          </label>
+          <label class="btn subtle" style="flex:1; text-align:center; cursor:pointer;">🖼 Galeri
+            <input type="file" accept="${accept}" id="icInputGaleri" style="display:none">
+          </label>
+        </div>
+      </div>
       <div id="icArea"></div>
     `);
-    document.getElementById('icInput').addEventListener('change', async e=>{
-      const file = e.target.files[0];
-      if(!file) return;
-      await runImportOCR(file);
+    ['icInput','icInputGaleri'].forEach(id=>{
+      const inp = document.getElementById(id);
+      if(!inp) return;
+      inp.addEventListener('change', async e=>{
+        const file = e.target.files[0];
+        if(!file) return;
+        await runImportOCR(file);
+      });
     });
   }
 
@@ -801,18 +812,28 @@ Jangan sertakan baris total/rekap uang. Jangan tambahkan teks lain di luar JSON.
   function photoSlotHtml(kind){
     const accept = (imageLimits && imageLimits.images) ? imageLimits.images.mediaTypes.join(',') : 'image/*';
     return `
-      <label class="photo-slot" id="slot-${kind}">
+      <div class="photo-slot" id="slot-${kind}">
         <div class="icon">📷</div>
-        <div class="txt">Ambil foto ${kind==='awal'?'stok awal':'sisa stok'}</div>
-        <input type="file" accept="${accept}" id="input-${kind}">
-      </label>`;
+        <div class="txt">Foto ${kind==='awal'?'stok awal':'sisa stok'}</div>
+        <div style="display:flex; gap:10px; margin-top:12px;">
+          <label class="btn subtle" style="flex:1; text-align:center; cursor:pointer;">📷 Jepret
+            <input type="file" accept="${accept}" capture="environment" id="input-${kind}" style="display:none">
+          </label>
+          <label class="btn subtle" style="flex:1; text-align:center; cursor:pointer;">🖼 Galeri
+            <input type="file" accept="${accept}" id="input-${kind}-galeri" style="display:none">
+          </label>
+        </div>
+      </div>`;
   }
   function wireSlot(kind){
-    const input = document.getElementById('input-'+kind);
-    input.addEventListener('change', async e=>{
-      const file = e.target.files[0];
-      if(!file) return;
-      await handlePhoto(kind, file);
+    ['input-'+kind, 'input-'+kind+'-galeri'].forEach(id=>{
+      const input = document.getElementById(id);
+      if(!input) return;
+      input.addEventListener('change', async e=>{
+        const file = e.target.files[0];
+        if(!file) return;
+        await handlePhoto(kind, file);
+      });
     });
   }
 
