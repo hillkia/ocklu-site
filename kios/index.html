@@ -351,7 +351,7 @@
 </div>
 
 <meta name="robots" content="noindex,nofollow">
-<script src="kios.js?v=62ff4957"></script>
+<script src="kios.js?v=4dbb7336"></script>
 <script>
 (function(){
 
@@ -589,7 +589,8 @@ Baca SETIAP baris barang dan ambil: nama barang (tulis apa adanya sesuai tulisan
 Kalau kolom "jual" tidak ada tapi ada "stok" dan "sisa", hitung jual = stok - sisa.
 Balas HANYA JSON dengan bentuk persis:
 {"rows":[{"product":"<nama barang>","qty":<angka terjual>}]}
-Jangan sertakan baris total/rekap uang. Jangan tambahkan teks lain di luar JSON.`;
+Jangan sertakan baris total/rekap uang. Jangan tambahkan teks lain di luar JSON.
+PENTING: kalau tulisannya tidak terbaca jelas, LEWATI barisnya. Jangan pernah menebak nama barang atau angka yang tidak benar-benar terlihat di foto. Lebih baik sedikit baris tapi benar, daripada banyak tapi karangan. Kalau seluruh foto tidak terbaca, balas {"rows":[]}.`;
 
     try{
       const result = await sample.json(prompt, { images:[file], modelTier:'default' });
@@ -856,7 +857,8 @@ Jangan sertakan baris total/rekap uang. Jangan tambahkan teks lain di luar JSON.
 Hitung berapa banyak (jumlah biji/satuan) dari MASING-MASING produk di daftar itu yang terlihat pada foto. Kalau ada barang lain yang tidak cocok dengan daftar, masukkan ke "unknown" dengan deskripsi singkat.
 Balas HANYA JSON dengan bentuk persis:
 {"counts":[{"product":"<nama persis dari daftar>","qty":<angka>}],"unknown":[{"desc":"<deskripsi singkat>","qty":<angka>}]}
-Sertakan SEMUA produk dari daftar walau qty-nya 0. Jangan tambahkan teks lain di luar JSON.`;
+Sertakan SEMUA produk dari daftar walau qty-nya 0. Jangan tambahkan teks lain di luar JSON.
+PENTING: hitung hanya yang benar-benar terlihat. Kalau fotonya kabur atau tidak jelas, isi qty 0 dan jangan menebak jumlah.`;
 
     try{
       const result = await sample.json(prompt, { images:[file], modelTier:'default' });

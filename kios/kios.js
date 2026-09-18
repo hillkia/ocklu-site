@@ -152,6 +152,34 @@
   }
 
   // ---------- baca foto (AI) ----------
+  // Foto HP itu 4-12 MB dan sering HEIC (iPhone). Dikirim mentah, badannya membengkak 33% jadi
+  // base64 dan gampang ditolak server atau otak AI-nya. Dikecilkan dulu di HP: sisi terpanjang
+  // 2000px sudah lebih dari cukup buat membaca tulisan tangan, hasilnya ratusan KB, dan lewat
+  // canvas formatnya otomatis jadi JPEG — HEIC ikut beres.
+  function kecilkan(file, sisiMax, mutu){
+    return new Promise(function(res, rej){
+      var url = URL.createObjectURL(file);
+      var img = new Image();
+      img.onload = function(){
+        var skala = Math.min(1, sisiMax / Math.max(img.width, img.height));
+        var l = Math.max(1, Math.round(img.width * skala));
+        var t = Math.max(1, Math.round(img.height * skala));
+        var c = document.createElement('canvas');
+        c.width = l; c.height = t;
+        c.getContext('2d').drawImage(img, 0, 0, l, t);
+        URL.revokeObjectURL(url);
+        c.toBlob(function(b){
+          if(b) res(b); else rej(new Error('foto gagal dimampatkan'));
+        }, 'image/jpeg', mutu);
+      };
+      img.onerror = function(){
+        URL.revokeObjectURL(url);
+        rej(new Error('foto tidak bisa dibuka di HP ini'));
+      };
+      img.src = url;
+    });
+  }
+
   function keBase64(file){
     return new Promise(function(res, rej){
       var fr = new FileReader();
@@ -177,13 +205,26 @@
     json: async function(prompt, opsi){
       var file = (opsi && opsi.images && opsi.images[0]) || null;
       if(!file) throw new Error('tidak ada foto');
-      if(file.size > 8*1024*1024){ var e1 = new Error('foto kebesaran'); e1.code='image_rejected'; throw e1; }
-      var b64 = await keBase64(file);
+
+      var kecil, mime = 'image/jpeg';
+      try{
+        kecil = await kecilkan(file, 2000, 0.9);
+      }catch(e){
+        // HP tidak sanggup membuka formatnya (mis. HEIC di browser lama). Kirim apa adanya
+        // kalau masih kecil; kalau besar, berhenti di sini dengan sebab yang jelas.
+        if(file.size > 4*1024*1024){
+          kabar('Foto ini kegedean & formatnya tidak kebaca di HP ini. Coba foto ulang pakai kamera app ini.', 'buruk', true);
+          var e0 = new Error('foto tidak terbaca di HP'); e0.code = 'image_rejected'; throw e0;
+        }
+        kecil = file; mime = file.type || 'image/jpeg';
+      }
+
+      var b64 = await keBase64(kecil);
       var r;
       try{
-        r = await panggil('baca-foto', { prompt: prompt, gambar: b64, mime: file.type || 'image/jpeg' });
+        r = await panggil('baca-foto', { prompt: prompt, gambar: b64, mime: mime });
       }catch(err){
-        kabar('Baca-foto lagi mati (kuota AI habis). Catat manual dulu — angkanya jangan ditebak.', 'buruk', true);
+        kabar('Baca-foto gagal: ' + err.message + '. Catat manual dulu — angkanya jangan ditebak.', 'buruk', true);
         throw err;
       }
       if(r.error){
