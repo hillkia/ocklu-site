@@ -1,0 +1,204 @@
+/* Buku Kios — pengganti claude.use() biar app-nya jalan di luar Claude.
+   Semua data & baca-foto lewat satu pintu (Edge Function). Kunci tidak pernah ada di HP. */
+(function(){
+  'use strict';
+
+  var PINTU = 'https://njghzieuuopukuagrswu.supabase.co/functions/v1/kios-api';
+  var JEDA = 5000;
+
+  function simpanKode(k){ try{ localStorage.setItem('kios_kode', k); }catch(e){} }
+  function ambilKode(){
+    var m = (location.hash||'').match(/[#&]k=([A-Za-z0-9_-]{8,})/);
+    if(m){ simpanKode(m[1]); return m[1]; }
+    try{ return localStorage.getItem('kios_kode') || ''; }catch(e){ return ''; }
+  }
+  var KODE = ambilKode();
+
+  // ---------- pita kabar (jujur kalau ada yang mati) ----------
+  var pita;
+  function kabar(teks, jenis){
+    if(!pita){
+      pita = document.createElement('div');
+      pita.style.cssText = 'position:fixed;left:0;right:0;top:0;z-index:9999;padding:9px 14px;font:13px/1.4 system-ui,sans-serif;text-align:center;display:none';
+      document.body.appendChild(pita);
+    }
+    if(!teks){ pita.style.display='none'; return; }
+    pita.textContent = teks;
+    pita.style.background = jenis==='buruk' ? '#c62828' : '#8d6e00';
+    pita.style.color = '#fff';
+    pita.style.display = 'block';
+  }
+
+  // ---------- pintu masuk ----------
+  function mintaKode(){
+    document.body.innerHTML =
+      '<div style="max-width:420px;margin:60px auto;padding:24px;font:15px/1.6 system-ui,sans-serif">' +
+      '<h2 style="margin:0 0 8px">Buku Kios</h2>' +
+      '<p style="color:#666;margin:0 0 16px">Tempel kode kios buat masuk. Kodenya ada di link yang dikasih pemilik kios.</p>' +
+      '<input id="kKode" placeholder="kode kios" autocapitalize="off" autocorrect="off" ' +
+      'style="width:100%;padding:12px;font-size:16px;border:1px solid #ccc;border-radius:10px;box-sizing:border-box">' +
+      '<button id="kMasuk" style="width:100%;margin-top:10px;padding:12px;font-size:16px;border:0;border-radius:10px;background:#111;color:#fff">Masuk</button>' +
+      '<p id="kSalah" style="color:#c62828;min-height:20px;margin:10px 0 0"></p></div>';
+    document.getElementById('kMasuk').onclick = function(){
+      var k = document.getElementById('kKode').value.trim();
+      if(!k) return;
+      simpanKode(k);
+      location.hash = 'k=' + k;
+      location.reload();
+    };
+  }
+
+  // ---------- panggil pintu ----------
+  var sedangBangun = false;
+  async function panggil(aksi, isi){
+    var jawab;
+    try{
+      jawab = await fetch(PINTU, {
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body: JSON.stringify(Object.assign({ kode: KODE, aksi: aksi }, isi||{}))
+      });
+    }catch(e){
+      kabar('Tidak bisa nyambung ke server — cek sinyal. Catatan belum tersimpan.', 'buruk');
+      throw e;
+    }
+    if(jawab.status === 401){
+      try{ localStorage.removeItem('kios_kode'); }catch(e){}
+      mintaKode();
+      throw new Error('kode salah');
+    }
+    if(jawab.status === 503 || jawab.status === 504){
+      if(!sedangBangun){ sedangBangun = true; kabar('Server lagi bangun, tunggu ±30 detik...'); }
+      throw new Error('server tidur');
+    }
+    if(!jawab.ok){
+      var pesan = await jawab.text();
+      kabar('Server menolak: ' + pesan.slice(0,120), 'buruk');
+      throw new Error(pesan);
+    }
+    sedangBangun = false;
+    return jawab.json();
+  }
+
+  // ---------- db ----------
+  var pendengar = [];   // {koleksi, urut, arah, batas, cb, errCb, sidik}
+  var poller = null;
+
+  function kumpul(nama){
+    return {
+      add: async function(data){
+        var r = await panggil('add', { koleksi: nama, data: data });
+        segarkan();
+        return { id: r.id };
+      },
+      doc: function(id){
+        return {
+          update: async function(data){ await panggil('update', { koleksi:nama, id:id, data:data }); segarkan(); },
+          delete: async function(){ await panggil('hapus', { koleksi:nama, id:id }); segarkan(); }
+        };
+      },
+      orderBy: function(medan, arah){ return tanya(nama, medan, arah||'asc', 0); }
+    };
+  }
+
+  function tanya(nama, medan, arah, batas){
+    return {
+      limit: function(n){ return tanya(nama, medan, arah, n); },
+      onSnapshot: function(cb, errCb){
+        pendengar.push({ koleksi:nama, urut:medan, arah:arah, batas:batas, cb:cb, errCb:errCb, sidik:null });
+        mulaiPoll();
+        return function(){ pendengar = pendengar.filter(function(p){ return p.cb !== cb; }); };
+      }
+    };
+  }
+
+  function mulaiPoll(){
+    if(poller) return;
+    // tunggu satu putaran supaya KETIGA pendengar (produk, transaksi, tutup buku) sempat daftar
+    // dulu — kalau ditembak sekarang, cuma koleksi pertama yang keambil.
+    setTimeout(segarkan, 0);
+    poller = setInterval(function(){
+      if(document.hidden) return;          // HP di saku = nol panggilan
+      segarkan();
+    }, JEDA);
+    document.addEventListener('visibilitychange', function(){ if(!document.hidden) segarkan(); });
+  }
+
+  var lagiAmbil = false;
+  async function segarkan(){
+    if(!pendengar.length || lagiAmbil) return;
+    lagiAmbil = true;
+    try{
+      // dikunci ke daftar saat permintaan dikirim — kalau pendengar berubah di tengah jalan,
+      // hasilnya tidak nyasar ke koleksi yang salah
+      var aktif = pendengar.slice();
+      var minta = aktif.map(function(p){
+        return { koleksi:p.koleksi, urut:p.urut, arah:p.arah, batas:p.batas };
+      });
+      var hasil = await panggil('lihat', { daftar: minta });
+      hasil.hasil.forEach(function(isi, i){
+        var p = aktif[i];
+        if(!p) return;
+        var sidik = JSON.stringify(isi);
+        if(sidik === p.sidik) return;       // tidak berubah, jangan gambar ulang
+        p.sidik = sidik;
+        p.cb({ docs: isi.map(function(d){ return { id:d.id, data:function(){ return d.data; } }; }) });
+      });
+      kabar('');
+    }catch(e){
+      pendengar.forEach(function(p){ if(p.errCb) p.errCb(e); });
+      if(pita && !pita.textContent) kabar('Data belum kebaca — coba tarik ulang halaman.', 'buruk');
+    }finally{
+      lagiAmbil = false;
+    }
+  }
+
+  // ---------- baca foto (AI) ----------
+  function keBase64(file){
+    return new Promise(function(res, rej){
+      var fr = new FileReader();
+      fr.onload = function(){ res(String(fr.result).split(',')[1]); };
+      fr.onerror = rej;
+      fr.readAsDataURL(file);
+    });
+  }
+
+  var SAMPLE = {
+    limits: async function(){
+      return { images: { maxFileSize: 8*1024*1024, maxCount: 1 }, maxTokens: 4096 };
+    },
+    json: async function(prompt, opsi){
+      var file = (opsi && opsi.images && opsi.images[0]) || null;
+      if(!file) throw new Error('tidak ada foto');
+      if(file.size > 8*1024*1024){ var e1 = new Error('foto kebesaran'); e1.code='image_rejected'; throw e1; }
+      var b64 = await keBase64(file);
+      var r;
+      try{
+        r = await panggil('baca-foto', { prompt: prompt, gambar: b64, mime: file.type || 'image/jpeg' });
+      }catch(err){
+        kabar('Baca-foto lagi mati (kuota AI habis / server). Catat manual dulu — angkanya jangan ditebak.', 'buruk');
+        throw err;
+      }
+      if(r.error){
+        kabar('Baca-foto lagi mati: ' + r.error + '. Catat manual dulu.', 'buruk');
+        var e2 = new Error(r.error); e2.code = 'otak_mati'; throw e2;
+      }
+      kabar('');
+      return r.hasil;
+    }
+  };
+
+  // ---------- pasang ----------
+  window.claude = {
+    use: async function(apa){
+      if(apa === 'db') return { collection: kumpul };
+      if(apa === 'sample') return SAMPLE;
+      return null;
+    }
+  };
+
+  if(!KODE){
+    document.addEventListener('DOMContentLoaded', mintaKode);
+    window.claude.use = async function(){ return null; };
+  }
+})();

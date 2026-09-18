@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Buku Kios</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FBF6EC; --ink:#0F0C07; --ink-soft:#332C22;
+    --teal:#1F4B43; --teal-ink:#0f2a25;
+    --amber:#E8A33D; --amber-ink:#7a5215;
+    --brick:#B4483A;
+    --paper:#FFFFFF; --line:#DED2B4;
+    --shadow: 0 1px 0 rgba(36,31,24,.06);
+    --font-display: 'Fraunces', Georgia, serif;
+    --font-body: 'Inter', -apple-system, system-ui, sans-serif;
+  }
+  :root:not([data-theme="light"]) {
+    @media (prefers-color-scheme: dark){
+      --bg:#1A1712; --ink:#FFFFFF; --ink-soft:#E6DCC5;
+      --teal:#5EB09D; --teal-ink:#CFF2E6;
+      --amber:#F5BD6A; --amber-ink:#3a2a0c;
+      --paper:#241F18; --line:#4A4131;
+      --shadow: 0 1px 0 rgba(0,0,0,.3);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#1A1712; --ink:#FFFFFF; --ink-soft:#E6DCC5;
+    --teal:#5EB09D; --teal-ink:#CFF2E6;
+    --amber:#F5BD6A; --amber-ink:#3a2a0c;
+    --paper:#241F18; --line:#4A4131;
+    --shadow: 0 1px 0 rgba(0,0,0,.3);
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);}
+  body{
+    -webkit-font-smoothing:antialiased;
+    padding-bottom:calc(72px + env(safe-area-inset-bottom));
+    min-height:100vh;
+    font-size:18.5px;
+    line-height:1.55;
+  }
+  ::selection{background:var(--amber);color:var(--amber-ink);}
+  .num{font-variant-numeric:tabular-nums;}
+  a{color:inherit;}
+  button{font-family:inherit;}
+
+  /* ---------- Header ---------- */
+  header.top{
+    padding:22px 20px 18px;
+    border-bottom:1px solid var(--line);
+    background:var(--bg);
+    position:sticky; top:0; z-index:5;
+  }
+  .brand{
+    display:flex; align-items:baseline; justify-content:space-between;
+  }
+  .brand h1{
+    font-family:var(--font-display); font-weight:700; font-size:25px; margin:0;
+    letter-spacing:-.01em;
+  }
+  .brand .date{font-size:15.5px; color:var(--ink-soft);}
+
+  /* ---------- Layout ---------- */
+  main{max-width:560px; margin:0 auto; padding:18px 16px 40px;}
+  section.view{display:none;}
+  section.view.active{display:block; animation:fade .25s ease;}
+  @keyframes fade{from{opacity:0; transform:translateY(4px);} to{opacity:1; transform:none;}}
+
+  h2.section-title{
+    font-family:var(--font-display); font-weight:600; font-size:19px; margin:26px 0 12px;
+  }
+  h2.section-title:first-child{margin-top:4px;}
+
+  /* ---------- Hero profit ---------- */
+  .hero{
+    border:1px solid var(--line); border-radius:4px; background:var(--paper);
+    padding:22px 20px; box-shadow:var(--shadow); position:relative; overflow:hidden;
+  }
+  .hero::before{
+    content:""; position:absolute; left:0; top:0; bottom:0; width:5px; background:var(--teal);
+  }
+  .hero .label{font-size:14.5px; color:var(--ink-soft);}
+  .hero .amount{
+    font-family:var(--font-display); font-weight:700; font-size:46px; line-height:1.05;
+    margin:4px 0 2px; color:var(--teal-ink, var(--teal));
+  }
+  .hero .amount.neg{color:var(--brick);}
+  .hero .sub{font-size:14.5px; color:var(--ink-soft); display:flex; gap:14px; margin-top:10px; flex-wrap:wrap;}
+  .hero .sub span b{color:var(--ink); font-weight:600;}
+
+  .stat-row{display:flex; gap:10px; margin-top:12px;}
+  .stat{
+    flex:1; border:1px solid var(--line); border-radius:4px; padding:12px 12px; background:var(--paper);
+  }
+  .stat .label{font-size:13.5px; color:var(--ink-soft);}
+  .stat .val{font-family:var(--font-display); font-size:21px; font-weight:600; margin-top:2px;}
+
+  /* ---------- Ranking bars ---------- */
+  .rank-item{padding:10px 0; border-bottom:1px dashed var(--line);}
+  .rank-item:last-child{border-bottom:none;}
+  .rank-top{display:flex; justify-content:space-between; font-size:14px; margin-bottom:6px;}
+  .rank-top .name{font-weight:600;}
+  .rank-top .profit{color:var(--teal-ink,var(--teal)); font-weight:600;}
+  .bar-track{height:6px; background:var(--line); border-radius:3px; overflow:hidden;}
+  .bar-fill{height:100%; background:var(--amber); border-radius:3px;}
+
+  .empty{
+    text-align:center; padding:34px 18px; color:var(--ink-soft); font-size:14px;
+    border:1px dashed var(--line); border-radius:4px;
+  }
+
+  /* ---------- Buttons ---------- */
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:8px;
+    border:1px solid var(--teal); background:var(--teal); color:#fff;
+    padding:13px 18px; border-radius:4px; font-size:15px; font-weight:600;
+    cursor:pointer; width:100%; font-family:var(--font-body);
+  }
+  .btn:active{opacity:.85;}
+  .btn.outline{background:transparent; color:var(--teal); }
+  .btn.subtle{background:transparent; color:var(--ink); border-color:var(--line);}
+  .btn.danger{background:transparent; color:var(--brick); border-color:var(--brick);}
+  .btn:disabled{opacity:.45; cursor:not-allowed;}
+  .btn-row{display:flex; gap:10px;}
+  .btn-row .btn{width:auto; flex:1;}
+
+  /* ---------- Cards / forms ---------- */
+  .card{border:1px solid var(--line); border-radius:4px; background:var(--paper); padding:16px; margin-bottom:12px;}
+  label{display:block; font-size:12.5px; color:var(--ink-soft); margin:12px 0 5px;}
+  label:first-child{margin-top:0;}
+  input[type=text], input[type=number], input[type=date], select, textarea{
+    width:100%; padding:11px 12px; border:1px solid var(--line); border-radius:4px;
+    background:var(--bg); color:var(--ink); font-size:15px; font-family:var(--font-body);
+  }
+  input:focus, select:focus, textarea:focus{outline:2px solid var(--teal); outline-offset:1px;}
+
+  /* ---------- Photo capture ---------- */
+  .photo-slot{
+    border:1.5px dashed var(--line); border-radius:6px; padding:22px 16px; text-align:center;
+    cursor:pointer; background:var(--paper);
+  }
+  .photo-slot.done{border-style:solid; border-color:var(--teal);}
+  .photo-slot input{display:none;}
+  .photo-slot .icon{font-size:26px;}
+  .photo-slot .txt{font-size:14px; margin-top:6px; color:var(--ink-soft);}
+  .photo-slot img{width:100%; border-radius:4px; margin-bottom:10px; max-height:180px; object-fit:cover;}
+
+  .thinking{
+    display:flex; align-items:center; gap:10px; padding:14px; font-size:14px; color:var(--ink-soft);
+  }
+  .dot{width:6px; height:6px; border-radius:50%; background:var(--amber); animation:pulse 1s infinite ease-in-out;}
+  .dot:nth-child(2){animation-delay:.15s;} .dot:nth-child(3){animation-delay:.3s;}
+  @keyframes pulse{0%,80%,100%{opacity:.25;} 40%{opacity:1;}}
+
+  .review-row{display:flex; align-items:center; gap:10px; padding:9px 0; border-bottom:1px dashed var(--line);}
+  .review-row:last-child{border-bottom:none;}
+  .review-row .rname{flex:1; font-size:14px;}
+  .review-row input{width:70px; text-align:center; padding:8px 4px;}
+
+  /* ---------- Jurnal ---------- */
+  .tx-day{margin-bottom:18px;}
+  .tx-day .dlabel{font-size:12.5px; color:var(--ink-soft); margin-bottom:6px; font-weight:600;}
+  .tx-row{
+    display:flex; justify-content:space-between; align-items:center;
+    padding:10px 0; border-bottom:1px dashed var(--line); font-size:14px; gap:10px;
+  }
+  .tx-row:last-child{border-bottom:none;}
+  .tx-main{flex:1; min-width:0;}
+  .tx-main .t1{font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+  .tx-main .t2{font-size:12px; color:var(--ink-soft);}
+  .tx-amt{text-align:right; white-space:nowrap;}
+  .tx-amt .profit{font-weight:600;}
+  .tx-amt .profit.pos{color:var(--teal-ink,var(--teal));}
+  .tx-amt .profit.neg{color:var(--brick);}
+
+  /* ---------- Tabbar ---------- */
+  nav.tabbar{
+    position:fixed; bottom:0; left:0; right:0; z-index:10;
+    background:var(--paper); border-top:1px solid var(--line);
+    display:flex; padding-bottom:env(safe-area-inset-bottom);
+  }
+  nav.tabbar button{
+    flex:1; background:none; border:none; padding:10px 4px 8px; color:var(--ink-soft);
+    display:flex; flex-direction:column; align-items:center; gap:3px; font-size:11px; cursor:pointer;
+  }
+  nav.tabbar button.active{color:var(--teal-ink,var(--teal));}
+  nav.tabbar svg{width:21px; height:21px;}
+
+  .toast{
+    position:fixed; bottom:calc(84px + env(safe-area-inset-bottom)); left:50%; transform:translateX(-50%);
+    background:var(--ink); color:var(--bg); padding:10px 16px; border-radius:6px; font-size:13.5px;
+    z-index:30; opacity:0; pointer-events:none; transition:opacity .2s, transform .2s; max-width:88%; text-align:center;
+  }
+  .toast.show{opacity:1; transform:translateX(-50%) translateY(-4px);}
+
+  .modal-back{
+    position:fixed; inset:0; background:rgba(20,17,10,.45); z-index:40; display:none;
+    align-items:flex-end; justify-content:center;
+  }
+  .modal-back.show{display:flex;}
+  .modal{
+    background:var(--bg); width:100%; max-width:560px; border-radius:14px 14px 0 0;
+    padding:20px 18px calc(24px + env(safe-area-inset-bottom)); max-height:85vh; overflow-y:auto;
+  }
+  .modal h3{font-family:var(--font-display); font-size:19px; margin:0 0 14px;}
+  .close-x{position:absolute; top:16px; right:16px; background:none; border:none; font-size:20px; color:var(--ink-soft); cursor:pointer;}
+
+  .prod-list-row{display:flex; justify-content:space-between; align-items:center; padding:10px 0; border-bottom:1px dashed var(--line); font-size:14px;}
+  .prod-list-row:last-child{border-bottom:none;}
+  .prod-list-row .p1{font-weight:600;}
+  .prod-list-row .p2{font-size:12px; color:var(--ink-soft);}
+  .prod-list-row .del{color:var(--brick); background:none; border:none; font-size:13px; cursor:pointer; padding:4px 8px;}
+
+  .segmented{display:flex; border:1px solid var(--line); border-radius:4px; overflow:hidden; margin-bottom:14px;}
+  .segmented button{flex:1; padding:9px; background:var(--paper); border:none; font-size:13px; color:var(--ink-soft); cursor:pointer; font-family:inherit;}
+  .segmented button.on{background:var(--teal); color:#fff; font-weight:600;}
+
+  .closing-hist{padding:10px 0; border-bottom:1px dashed var(--line); font-size:13.5px;}
+  .closing-hist:last-child{border-bottom:none;}
+  .closing-hist .ch1{display:flex; justify-content:space-between; font-weight:600;}
+  .closing-hist .ch2{color:var(--ink-soft); margin-top:2px;}
+
+  .note{font-size:14px; color:var(--ink-soft); line-height:1.55; margin-top:8px;}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="brand">
+    <h1>Buku Kios</h1>
+    <button id="gearBtn" aria-label="Kelola produk" style="background:none;border:none;color:var(--ink);font-size:34px;line-height:1;cursor:pointer;padding:6px;margin:-6px;">⚙︎</button>
+  </div>
+  <div class="date" id="todayLabel"></div>
+</header>
+
+<main>
+
+  <!-- RINGKASAN -->
+  <section class="view active" id="view-ringkasan">
+    <div class="hero">
+      <div class="label">Untung bersih hari ini</div>
+      <div class="amount num" id="heroProfit">Rp 0</div>
+      <div class="sub">
+        <span>Omzet <b class="num" id="heroRevenue">Rp 0</b></span>
+        <span>Modal <b class="num" id="heroCost">Rp 0</b></span>
+      </div>
+    </div>
+
+    <div class="stat-row">
+      <div class="stat">
+        <div class="label">Transaksi hari ini</div>
+        <div class="val num" id="statTxCount">0</div>
+      </div>
+      <div class="stat">
+        <div class="label">Belum ditutup</div>
+        <div class="val num" id="statUnclosed">Rp 0</div>
+      </div>
+    </div>
+
+    <h2 class="section-title">Produk paling untung</h2>
+    <div class="card" id="rankBox"><div class="empty">Belum ada data penjualan</div></div>
+
+    <h2 class="section-title">Aktivitas terbaru</h2>
+    <div class="card" id="recentBox"><div class="empty">Belum ada transaksi</div></div>
+  </section>
+
+  <!-- FOTO STOK -->
+  <section class="view" id="view-foto">
+    <h2 class="section-title" style="margin-top:4px;">Cek stok pakai foto</h2>
+    <p class="note" style="margin-bottom:14px;">Foto stok pas buka (stok awal), lalu foto lagi pas tutup (sisa). Selisihnya otomatis dicatat sebagai laku.</p>
+
+    <div class="card">
+      <label>Tanggal</label>
+      <input type="date" id="fotoDate">
+    </div>
+
+    <h2 class="section-title">1. Stok awal</h2>
+    <div class="card" id="slotAwalCard"></div>
+
+    <h2 class="section-title">2. Sisa stok (tutup)</h2>
+    <div class="card" id="slotAkhirCard"></div>
+
+    <div id="fotoResultArea"></div>
+
+    <div id="noSampleNote" style="display:none" class="empty">Fitur foto-AI belum tersedia di tampilan ini. Catat penjualan manual lewat menu Jurnal.</div>
+  </section>
+
+  <!-- JURNAL -->
+  <section class="view" id="view-jurnal">
+    <h2 class="section-title" style="margin-top:4px;">Jurnal</h2>
+    <div class="btn-row" style="margin-bottom:12px;">
+      <button class="btn outline" id="btnAddJual">+ Penjualan</button>
+      <button class="btn outline" id="btnAddModal">+ Modal / Beli Stok</button>
+    </div>
+    <button class="btn subtle" id="btnImportCatatan" style="margin-bottom:16px;">📓 Import dari Foto Catatan Lama</button>
+    <div id="jurnalList"><div class="empty">Belum ada transaksi</div></div>
+  </section>
+
+  <!-- TUTUP BUKU -->
+  <section class="view" id="view-tutup">
+    <h2 class="section-title" style="margin-top:4px;">Tutup buku</h2>
+    <p class="note" style="margin-bottom:14px;">Tutup buku merangkum semua transaksi sejak penutupan terakhir, lalu menguncinya sebagai catatan periode.</p>
+    <div class="card">
+      <div class="stat-row" style="margin-top:0;">
+        <div class="stat"><div class="label">Omzet</div><div class="val num" id="closeRevenue">Rp 0</div></div>
+        <div class="stat"><div class="label">Modal</div><div class="val num" id="closeCost">Rp 0</div></div>
+      </div>
+      <div style="margin-top:12px;">
+        <div class="label" style="margin-top:0;">Untung bersih periode ini</div>
+        <div class="amount num" id="closeProfit" style="font-size:30px;">Rp 0</div>
+      </div>
+      <div class="note" id="closeMeta"></div>
+      <div style="margin-top:16px;">
+        <button class="btn" id="btnCloseBook">Tutup Buku Sekarang</button>
+      </div>
+    </div>
+
+    <h2 class="section-title">Riwayat tutup buku</h2>
+    <div class="card" id="closeHistBox"><div class="empty">Belum ada riwayat</div></div>
+  </section>
+
+</main>
+
+<nav class="tabbar">
+  <button data-view="ringkasan" class="active">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 12l9-9 9 9M5 10v10h14V10"/></svg>
+    Ringkasan
+  </button>
+  <button data-view="foto">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 011 1v9a1 1 0 01-1 1H4a1 1 0 01-1-1V9a1 1 0 011-1z"/><circle cx="12" cy="13" r="3.3"/></svg>
+    Foto Stok
+  </button>
+  <button data-view="jurnal">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6 3h9l4 4v14H6z"/><path d="M9 10h6M9 14h6M9 18h3"/></svg>
+    Jurnal
+  </button>
+  <button data-view="tutup">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="4" y="4" width="16" height="16" rx="1.5"/><path d="M8 12l2.5 2.5L16 9"/></svg>
+    Tutup Buku
+  </button>
+</nav>
+
+<div class="toast" id="toast"></div>
+
+<div class="modal-back" id="modalBack">
+  <div class="modal" id="modalBody" style="position:relative;"></div>
+</div>
+
+<script src="kios.js"></script>
+<script>
+(function(){
+
+  // ---------------- Utils ----------------
+  const rupiah = n => "Rp " + Math.round(n||0).toLocaleString('id-ID');
+  const todayStr = () => new Date().toISOString().slice(0,10);
+  const fmtDate = d => new Date(d+'T00:00:00').toLocaleDateString('id-ID',{weekday:'long',day:'numeric',month:'long'});
+  const uid = () => Math.random().toString(36).slice(2,10);
+
+  function toast(msg){
+    const t = document.getElementById('toast');
+    t.textContent = msg; t.classList.add('show');
+    clearTimeout(t._h); t._h = setTimeout(()=>t.classList.remove('show'), 2600);
+  }
+
+  document.getElementById('todayLabel').textContent = fmtDate(todayStr());
+  document.getElementById('fotoDate').value = todayStr();
+
+  // ---------------- Tabs ----------------
+  const views = ['ringkasan','foto','jurnal','tutup'];
+  function showView(name){
+    views.forEach(v=>{
+      document.getElementById('view-'+v).classList.toggle('active', v===name);
+    });
+    document.querySelectorAll('nav.tabbar button').forEach(b=>{
+      b.classList.toggle('active', b.dataset.view===name);
+    });
+  }
+  document.querySelectorAll('nav.tabbar button').forEach(b=>{
+    b.addEventListener('click', ()=>showView(b.dataset.view));
+  });
+
+  // ---------------- Modal helper ----------------
+  const modalBack = document.getElementById('modalBack');
+  const modalBody = document.getElementById('modalBody');
+  function openModal(html){
+    modalBody.innerHTML = '<button class="close-x" id="modalCloseX">✕</button>' + html;
+    modalBack.classList.add('show');
+    document.getElementById('modalCloseX').onclick = closeModal;
+  }
+  function closeModal(){ modalBack.classList.remove('show'); modalBody.innerHTML=''; }
+  modalBack.addEventListener('click', e=>{ if(e.target===modalBack) closeModal(); });
+
+  // ---------------- State ----------------
+  let db = null, sample = null, imageLimits = null;
+  let products = [];      // {id, name, buyPrice, sellPrice}
+  let transactions = [];  // {id, type:'jual'|'modal', date, productId, productName, qty, buyPrice, sellPrice, revenue, cost, profit, note, closed, closingId, createdAt}
+  let closings = [];      // {id, periodLabel, fromDate, toDate, revenue, cost, profit, txCount, closedAt}
+  let pendingAwal = null, pendingAkhir = null; // {date, counts:{productId:qty}}
+
+  async function init(){
+    try{
+      db = await claude.use('db');
+    }catch(e){ db = null; }
+    try{
+      sample = await claude.use('sample');
+      if(sample) imageLimits = await sample.limits().catch(()=>null);
+    }catch(e){ sample = null; }
+
+    if(!sample || !imageLimits || !imageLimits.images){
+      document.getElementById('noSampleNote').style.display = 'block';
+    }
+
+    if(!db){
+      toast('Penyimpanan tidak tersedia di tampilan ini');
+      renderAll();
+      return;
+    }
+
+    db.collection('products').orderBy('createdAt','asc').onSnapshot(snap=>{
+      products = snap.docs.map(d=>({id:d.id, ...d.data()}));
+      renderAll();
+    }, err=>console.warn(err));
+
+    db.collection('transactions').orderBy('createdAt','desc').limit(500).onSnapshot(snap=>{
+      transactions = snap.docs.map(d=>({id:d.id, ...d.data()}));
+      renderAll();
+    }, err=>console.warn(err));
+
+    db.collection('closings').orderBy('closedAt','desc').limit(100).onSnapshot(snap=>{
+      closings = snap.docs.map(d=>({id:d.id, ...d.data()}));
+      renderAll();
+    }, err=>console.warn(err));
+
+    renderFotoSlots();
+  }
+
+  // ---------------- Derived helpers ----------------
+  function isToday(t){ return t.date === todayStr(); }
+  function txProfit(t){ return (t.revenue||0) - (t.cost||0); }
+
+  function renderAll(){
+    renderRingkasan();
+    renderJurnal();
+    renderTutup();
+  }
+
+  // ---------------- Ringkasan ----------------
+  function renderRingkasan(){
+    const todays = transactions.filter(isToday);
+    const rev = todays.reduce((s,t)=>s+(t.revenue||0),0);
+    const cost = todays.reduce((s,t)=>s+(t.cost||0),0);
+    const profit = rev - cost;
+    document.getElementById('heroProfit').textContent = rupiah(profit);
+    document.getElementById('heroProfit').classList.toggle('neg', profit<0);
+    document.getElementById('heroRevenue').textContent = rupiah(rev);
+    document.getElementById('heroCost').textContent = rupiah(cost);
+    document.getElementById('statTxCount').textContent = todays.length;
+
+    const unclosed = transactions.filter(t=>!t.closed);
+    const unclosedProfit = unclosed.reduce((s,t)=>s+txProfit(t),0);
+    document.getElementById('statUnclosed').textContent = rupiah(unclosedProfit);
+
+    // ranking by total profit per product (all time)
+    const byProd = {};
+    transactions.forEach(t=>{
+      if(t.type!=='jual') return;
+      byProd[t.productName] = (byProd[t.productName]||0) + txProfit(t);
+    });
+    const ranked = Object.entries(byProd).sort((a,b)=>b[1]-a[1]).slice(0,5);
+    const rankBox = document.getElementById('rankBox');
+    if(ranked.length===0){
+      rankBox.innerHTML = '<div class="empty">Belum ada data penjualan</div>';
+    } else {
+      const max = Math.max(...ranked.map(r=>r[1]), 1);
+      rankBox.innerHTML = ranked.map(([name,p])=>`
+        <div class="rank-item">
+          <div class="rank-top"><span class="name">${esc(name)}</span><span class="profit num">${rupiah(p)}</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width:${Math.max(4,(p/max)*100)}%"></div></div>
+        </div>`).join('');
+    }
+
+    const recentBox = document.getElementById('recentBox');
+    const recent = transactions.slice(0,6);
+    if(recent.length===0){
+      recentBox.innerHTML = '<div class="empty">Belum ada transaksi</div>';
+    } else {
+      recentBox.innerHTML = recent.map(txRowHtml).join('');
+    }
+  }
+
+  function txRowHtml(t){
+    const p = txProfit(t);
+    const title = t.type==='modal' ? (t.note || 'Modal / beli stok') : t.productName;
+    const sub = t.type==='modal' ? t.date : `${t.qty} × ${rupiah(t.sellPrice)} · ${t.date}`;
+    return `<div class="tx-row">
+      <div class="tx-main"><div class="t1">${esc(title)}</div><div class="t2">${esc(sub)}</div></div>
+      <div class="tx-amt"><div class="profit num ${p>=0?'pos':'neg'}">${p>=0?'+':''}${rupiah(p)}</div></div>
+    </div>`;
+  }
+
+  function esc(s){ return String(s==null?'':s).replace(/[&<>]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c])); }
+
+  // ---------------- Jurnal ----------------
+  function renderJurnal(){
+    const box = document.getElementById('jurnalList');
+    if(transactions.length===0){ box.innerHTML = '<div class="empty">Belum ada transaksi</div>'; return; }
+    const groups = {};
+    transactions.forEach(t=>{ (groups[t.date]=groups[t.date]||[]).push(t); });
+    const dates = Object.keys(groups).sort((a,b)=>b.localeCompare(a));
+    box.innerHTML = dates.map(d=>`
+      <div class="tx-day">
+        <div class="dlabel">${esc(fmtDate(d))}</div>
+        <div class="card" style="padding:4px 14px;">
+          ${groups[d].map(txRowHtml).join('')}
+        </div>
+      </div>`).join('');
+  }
+
+  document.getElementById('btnAddJual').addEventListener('click', ()=>openManualForm('jual'));
+  document.getElementById('btnAddModal').addEventListener('click', ()=>openManualForm('modal'));
+  document.getElementById('btnImportCatatan').addEventListener('click', openImportCatatan);
+
+  // ---------------- Import dari foto catatan tulisan tangan ----------------
+  function normName(s){
+    return String(s||'').toLowerCase().replace(/[^a-z0-9]/g,'');
+  }
+  function matchProduct(rawName){
+    const n = normName(rawName);
+    if(!n) return null;
+    let hit = products.find(p=>normName(p.name)===n);
+    if(hit) return hit;
+    hit = products.find(p=>{
+      const pn = normName(p.name);
+      return pn.length>2 && (n.includes(pn) || pn.includes(n));
+    });
+    return hit || null;
+  }
+
+  function openImportCatatan(){
+    if(!sample || !imageLimits || !imageLimits.images){
+      openModal(`<h3>Belum bisa</h3><p class="note">Fitur baca foto belum tersedia di tampilan ini.</p>`);
+      return;
+    }
+    const accept = imageLimits.images.mediaTypes.join(',');
+    openModal(`
+      <h3>Import dari foto catatan</h3>
+      <p class="note">Foto halaman buku catatan penjualan lama lo. AI bakal baca nama barang &amp; jumlah yang laku, nanti dicocokin ke produk yang ada.</p>
+      <label>Tanggal catatan ini</label>
+      <input type="date" id="icDate" value="${todayStr()}">
+      <label class="photo-slot" id="icSlot" style="margin-top:14px;">
+        <div class="icon">📓</div>
+        <div class="txt">Ambil / pilih foto catatan</div>
+        <input type="file" accept="${accept}" capture="environment" id="icInput">
+      </label>
+      <div id="icArea"></div>
+    `);
+    document.getElementById('icInput').addEventListener('change', async e=>{
+      const file = e.target.files[0];
+      if(!file) return;
+      await runImportOCR(file);
+    });
+  }
+
+  async function runImportOCR(file){
+    const slot = document.getElementById('icSlot');
+    const area = document.getElementById('icArea');
+    const url = URL.createObjectURL(file);
+    slot.classList.add('done');
+    slot.innerHTML = `<img src="${url}"><div class="txt">Membaca catatan…</div>`;
+
+    const prompt = `Ini foto halaman buku catatan penjualan tulisan tangan warung/kios kecil. Biasanya ada kolom nama barang, stok, jumlah terjual/laku, dan kadang harga/sisa.
+Baca SETIAP baris barang dan ambil: nama barang (tulis apa adanya sesuai tulisan tangan, boleh dikoreksi ejaan kalau jelas typo), dan jumlah yang TERJUAL/LAKU (bukan stok awal, bukan sisa).
+Kalau kolom "jual" tidak ada tapi ada "stok" dan "sisa", hitung jual = stok - sisa.
+Balas HANYA JSON dengan bentuk persis:
+{"rows":[{"product":"<nama barang>","qty":<angka terjual>}]}
+Jangan sertakan baris total/rekap uang. Jangan tambahkan teks lain di luar JSON.`;
+
+    try{
+      const result = await sample.json(prompt, { images:[file], modelTier:'default' });
+      const rows = (result.rows||[]).filter(r=>r.product && Number(r.qty)>0).map(r=>({
+        raw: String(r.product), qty: Math.max(1, Math.round(Number(r.qty)||0))
+      }));
+      if(rows.length===0){
+        area.innerHTML = '<div class="empty">Gak ketemu baris barang di foto ini, coba foto lebih jelas</div>';
+        return;
+      }
+      slot.innerHTML = `<img src="${url}"><div class="txt">Terbaca ${rows.length} baris ✓ — cek &amp; cocokin di bawah</div>`;
+      renderImportReview(rows);
+    }catch(err){
+      let msg = 'Gagal membaca foto, coba lagi';
+      if(err && err.code==='not_granted') msg = 'Izin AI ditolak';
+      if(err && err.code==='image_rejected') msg = 'Foto tidak bisa diproses, coba foto lain';
+      slot.innerHTML = `<img src="${url}"><div class="txt">${msg}</div>`;
+    }
+  }
+
+  function renderImportReview(rows){
+    const area = document.getElementById('icArea');
+    area.innerHTML = `<h3 style="font-size:16px; margin-top:18px;">Cocokkan produk</h3>` +
+      rows.map((r,i)=>{
+        const match = matchProduct(r.raw);
+        const options = products.map(p=>`<option value="${p.id}" ${match&&match.id===p.id?'selected':''}>${esc(p.name)}</option>`).join('');
+        return `
+        <div class="card" style="padding:12px 14px; margin-bottom:8px;">
+          <div style="font-size:13px; color:var(--ink-soft); margin-bottom:6px;">Tulisan: "${esc(r.raw)}"</div>
+          <div style="display:flex; gap:8px; align-items:center;">
+            <select data-row="${i}" class="icProduct" style="flex:1;">
+              <option value="__new__" ${!match?'selected':''}>+ Produk baru: ${esc(r.raw)}</option>
+              ${options}
+            </select>
+            <input type="number" min="1" value="${r.qty}" data-row="${i}" class="icQty" style="width:64px;">
+          </div>
+        </div>`;
+      }).join('') +
+      `<div style="margin-top:10px;"><button class="btn" id="icSaveAll">Simpan Semua ke Jurnal</button></div>`;
+
+    document.getElementById('icSaveAll').addEventListener('click', async ()=>{
+      const date = document.getElementById('icDate').value || todayStr();
+      const btn = document.getElementById('icSaveAll');
+      btn.disabled = true; btn.textContent = 'Menyimpan…';
+      const selects = area.querySelectorAll('.icProduct');
+      for(const sel of selects){
+        const i = sel.dataset.row;
+        const qtyInput = area.querySelector(`.icQty[data-row="${i}"]`);
+        const qty = Math.max(1, parseInt(qtyInput.value)||1);
+        let prod;
+        if(sel.value==='__new__'){
+          const rawName = rows[i].raw;
+          const ref = await db.collection('products').add({ name: rawName, buyPrice:0, sellPrice:2000, createdAt:Date.now() });
+          prod = { id: ref.id, name: rawName, buyPrice:0, sellPrice:2000 };
+        } else {
+          prod = products.find(p=>p.id===sel.value);
+        }
+        if(!prod) continue;
+        await saveTransaction({
+          type:'jual', date, productId:prod.id, productName:prod.name, qty,
+          buyPrice:prod.buyPrice, sellPrice:prod.sellPrice,
+          revenue: qty*prod.sellPrice, cost: qty*prod.buyPrice,
+          note:'Import dari catatan lama', source:'catatan'
+        });
+      }
+      closeModal();
+      toast('Data catatan lama berhasil diimport ke jurnal');
+    });
+  }
+
+  function openManualForm(kind){
+    if(kind==='jual' && products.length===0){
+      openModal(`<h3>Belum ada produk</h3><p class="note">Tambah produk dulu lewat ikon ⚙ di pojok atas.</p>`);
+      return;
+    }
+    const prodOptions = products.map(p=>`<option value="${p.id}">${esc(p.name)}</option>`).join('');
+    const html = kind==='jual' ? `
+      <h3>Catat penjualan</h3>
+      <label>Tanggal</label><input type="date" id="mDate" value="${todayStr()}">
+      <label>Produk</label><select id="mProduct">${prodOptions}</select>
+      <label>Jumlah terjual</label><input type="number" id="mQty" value="1" min="1">
+      <label>Catatan (opsional)</label><input type="text" id="mNote" placeholder="mis. laku di warung sebelah">
+      <div style="margin-top:18px;"><button class="btn" id="mSave">Simpan</button></div>
+    ` : `
+      <h3>Modal / beli stok</h3>
+      <label>Tanggal</label><input type="date" id="mDate" value="${todayStr()}">
+      <label>Untuk apa</label><input type="text" id="mNote" placeholder="mis. beli bahan baku, sewa lapak">
+      <label>Jumlah (Rp)</label><input type="number" id="mAmount" placeholder="0" min="0">
+      <div style="margin-top:18px;"><button class="btn" id="mSave">Simpan</button></div>
+    `;
+    openModal(html);
+    document.getElementById('mSave').addEventListener('click', async ()=>{
+      const date = document.getElementById('mDate').value || todayStr();
+      if(kind==='jual'){
+        const pid = document.getElementById('mProduct').value;
+        const prod = products.find(p=>p.id===pid);
+        const qty = Math.max(1, parseInt(document.getElementById('mQty').value)||1);
+        const note = document.getElementById('mNote').value.trim();
+        await saveTransaction({
+          type:'jual', date, productId:pid, productName:prod.name, qty,
+          buyPrice:prod.buyPrice, sellPrice:prod.sellPrice,
+          revenue: qty*prod.sellPrice, cost: qty*prod.buyPrice, note, source:'manual'
+        });
+      } else {
+        const amount = Math.max(0, parseFloat(document.getElementById('mAmount').value)||0);
+        const note = document.getElementById('mNote').value.trim() || 'Modal / beli stok';
+        await saveTransaction({ type:'modal', date, note, revenue:0, cost:amount });
+      }
+      closeModal();
+      toast('Tersimpan di jurnal');
+    });
+  }
+
+  async function saveTransaction(data){
+    if(!db) return;
+    await db.collection('transactions').add({ ...data, closed:false, createdAt: Date.now() });
+  }
+
+  // ---------------- Produk (gear icon) ----------------
+  document.getElementById('gearBtn').addEventListener('click', openProdukModal);
+  function openProdukModal(){
+    renderProdukModalBody();
+  }
+  function renderProdukModalBody(){
+    const rows = products.map(p=>`
+      <div class="prod-list-row">
+        <div><div class="p1">${esc(p.name)}</div><div class="p2">Modal ${rupiah(p.buyPrice)} → Jual ${rupiah(p.sellPrice)}</div></div>
+        <div style="display:flex; gap:2px;">
+          <button class="del" data-upd="${p.id}" style="color:var(--teal-ink,var(--teal));">Update Modal</button>
+          <button class="del" data-id="${p.id}">Hapus</button>
+        </div>
+      </div>`).join('') || '<div class="empty">Belum ada produk</div>';
+    openModal(`
+      <h3>Produk</h3>
+      <div id="prodRows">${rows}</div>
+      <div style="margin-top:16px; padding-top:14px; border-top:1px solid var(--line);">
+        <label>Nama produk</label><input type="text" id="pName" placeholder="mis. Ubi merah kukus">
+        <label>Harga modal per potong</label><input type="number" id="pBuy" placeholder="0" min="0">
+        <label>Harga jual per potong</label><input type="number" id="pSell" placeholder="0" min="0">
+        <p class="note">Kalau modalnya belanja per kg dan hasil potongannya beda-beda tiap belanja, langsung isi modal Rp0 dulu, tambah produknya, lalu pakai "Update Modal" di daftar atas.</p>
+        <div style="margin-top:6px;"><button class="btn" id="pSave">Tambah Produk</button></div>
+      </div>
+    `);
+    modalBody.querySelectorAll('[data-id]').forEach(btn=>{
+      btn.addEventListener('click', async ()=>{
+        await db.collection('products').doc(btn.dataset.id).delete();
+        toast('Produk dihapus');
+      });
+    });
+    modalBody.querySelectorAll('[data-upd]').forEach(btn=>{
+      btn.addEventListener('click', ()=>openUpdateModalCalc(btn.dataset.upd));
+    });
+    document.getElementById('pSave').addEventListener('click', async ()=>{
+      const name = document.getElementById('pName').value.trim();
+      const buy = parseFloat(document.getElementById('pBuy').value)||0;
+      const sell = parseFloat(document.getElementById('pSell').value)||0;
+      if(!name){ toast('Nama produk wajib diisi'); return; }
+      await db.collection('products').add({ name, buyPrice:buy, sellPrice:sell, createdAt:Date.now() });
+      renderProdukModalBody();
+      toast('Produk ditambahkan');
+    });
+  }
+
+  function openUpdateModalCalc(pid){
+    const p = products.find(x=>x.id===pid);
+    if(!p) return;
+    openModal(`
+      <h3>Update modal — ${esc(p.name)}</h3>
+      <p class="note">Isi belanja terakhir buat bahan ini. Modal per potong dihitung otomatis: (kg × harga/kg) ÷ jumlah potong jadi.</p>
+      <label>Berapa kg dibeli</label><input type="number" id="ucKg" placeholder="2" min="0" step="0.1">
+      <label>Harga per kg</label><input type="number" id="ucHarga" placeholder="8000" min="0">
+      <label>Jadi berapa potong</label><input type="number" id="ucPotong" placeholder="20" min="1">
+      <div class="card" id="ucResult" style="margin-top:14px; display:none;">
+        <div class="label">Modal per potong</div>
+        <div class="val" id="ucModalPotong" style="font-family:var(--font-display); font-size:24px; font-weight:600;">Rp 0</div>
+        <div class="note" id="ucUntungInfo"></div>
+      </div>
+      <label>Harga jual per potong</label><input type="number" id="ucSell" value="${p.sellPrice}" min="0">
+      <div style="margin-top:16px;"><button class="btn" id="ucSave">Simpan Modal Baru</button></div>
+    `);
+    const recalc = ()=>{
+      const kg = parseFloat(document.getElementById('ucKg').value)||0;
+      const harga = parseFloat(document.getElementById('ucHarga').value)||0;
+      const potong = parseFloat(document.getElementById('ucPotong').value)||0;
+      const sell = parseFloat(document.getElementById('ucSell').value)||0;
+      const box = document.getElementById('ucResult');
+      if(kg>0 && harga>0 && potong>0){
+        const modalPotong = (kg*harga)/potong;
+        box.style.display='block';
+        document.getElementById('ucModalPotong').textContent = rupiah(modalPotong);
+        const untung = sell - modalPotong;
+        document.getElementById('ucUntungInfo').textContent = `Untung per potong ${rupiah(untung)} (jual ${rupiah(sell)})`;
+      } else {
+        box.style.display='none';
+      }
+    };
+    ['ucKg','ucHarga','ucPotong','ucSell'].forEach(id=>{
+      document.getElementById(id).addEventListener('input', recalc);
+    });
+    document.getElementById('ucSave').addEventListener('click', async ()=>{
+      const kg = parseFloat(document.getElementById('ucKg').value)||0;
+      const harga = parseFloat(document.getElementById('ucHarga').value)||0;
+      const potong = parseFloat(document.getElementById('ucPotong').value)||0;
+      const sell = parseFloat(document.getElementById('ucSell').value)||p.sellPrice;
+      if(kg<=0 || harga<=0 || potong<=0){ toast('Isi kg, harga, dan jumlah potong dulu'); return; }
+      const modalPotong = (kg*harga)/potong;
+      await db.collection('products').doc(pid).update({ buyPrice: modalPotong, sellPrice: sell });
+      renderProdukModalBody();
+      toast('Modal terbaru tersimpan');
+    });
+  }
+
+  // ---------------- Foto Stok ----------------
+  function renderFotoSlots(){
+    document.getElementById('slotAwalCard').innerHTML = photoSlotHtml('awal');
+    document.getElementById('slotAkhirCard').innerHTML = photoSlotHtml('akhir');
+    wireSlot('awal');
+    wireSlot('akhir');
+  }
+  function photoSlotHtml(kind){
+    const accept = (imageLimits && imageLimits.images) ? imageLimits.images.mediaTypes.join(',') : 'image/*';
+    return `
+      <label class="photo-slot" id="slot-${kind}">
+        <div class="icon">📷</div>
+        <div class="txt">Ambil foto ${kind==='awal'?'stok awal':'sisa stok'}</div>
+        <input type="file" accept="${accept}" capture="environment" id="input-${kind}">
+      </label>`;
+  }
+  function wireSlot(kind){
+    const input = document.getElementById('input-'+kind);
+    input.addEventListener('change', async e=>{
+      const file = e.target.files[0];
+      if(!file) return;
+      await handlePhoto(kind, file);
+    });
+  }
+
+  async function handlePhoto(kind, file){
+    if(!sample || !imageLimits || !imageLimits.images){
+      toast('Fitur foto-AI tidak tersedia'); return;
+    }
+    const slot = document.getElementById('slot-'+kind);
+    const url = URL.createObjectURL(file);
+    slot.classList.add('done');
+    slot.innerHTML = `<img src="${url}"><div class="txt">Menghitung dari foto…</div>`;
+
+    if(products.length===0){
+      slot.innerHTML = `<img src="${url}"><div class="txt">Tambah produk dulu (ikon ⚙) sebelum cek stok</div>`;
+      return;
+    }
+
+    const prodList = products.map(p=>p.name).join(', ');
+    const prompt = `Ini foto tumpukan/etalase dagangan kios kecil. Daftar nama produk yang dijual: ${prodList}.
+Hitung berapa banyak (jumlah biji/satuan) dari MASING-MASING produk di daftar itu yang terlihat pada foto. Kalau ada barang lain yang tidak cocok dengan daftar, masukkan ke "unknown" dengan deskripsi singkat.
+Balas HANYA JSON dengan bentuk persis:
+{"counts":[{"product":"<nama persis dari daftar>","qty":<angka>}],"unknown":[{"desc":"<deskripsi singkat>","qty":<angka>}]}
+Sertakan SEMUA produk dari daftar walau qty-nya 0. Jangan tambahkan teks lain di luar JSON.`;
+
+    try{
+      const result = await sample.json(prompt, { images:[file], modelTier:'default' });
+      const counts = {};
+      (result.counts||[]).forEach(c=>{
+        const match = products.find(p=>p.name.toLowerCase()===String(c.product||'').toLowerCase());
+        if(match) counts[match.id] = Math.max(0, Math.round(Number(c.qty)||0));
+      });
+      products.forEach(p=>{ if(!(p.id in counts)) counts[p.id] = 0; });
+
+      const date = document.getElementById('fotoDate').value || todayStr();
+      if(kind==='awal') pendingAwal = { date, counts };
+      else pendingAkhir = { date, counts };
+
+      slot.innerHTML = `<img src="${url}"><div class="txt">Terhitung ✓ — bisa dikoreksi di bawah</div>`;
+      renderFotoReview();
+    }catch(err){
+      let msg = 'Gagal membaca foto, coba lagi';
+      if(err && err.code==='not_granted') msg = 'Izin AI ditolak';
+      if(err && err.code==='image_rejected') msg = 'Foto tidak bisa diproses, coba foto lain';
+      slot.innerHTML = `<img src="${url}"><div class="txt">${msg}</div>`;
+      toast(msg);
+    }
+  }
+
+  function renderFotoReview(){
+    const area = document.getElementById('fotoResultArea');
+    let html = '';
+
+    if(pendingAwal){
+      html += `<h2 class="section-title">Koreksi stok awal (${esc(pendingAwal.date)})</h2><div class="card" id="reviewAwal">`
+        + products.map(p=>`
+          <div class="review-row">
+            <div class="rname">${esc(p.name)}</div>
+            <input type="number" min="0" data-pid="${p.id}" value="${pendingAwal.counts[p.id]||0}">
+          </div>`).join('')
+        + `<div style="margin-top:14px;"><button class="btn subtle" id="saveAwalBtn">Simpan Stok Awal</button></div></div>`;
+    }
+    if(pendingAkhir){
+      html += `<h2 class="section-title">Koreksi sisa stok (${esc(pendingAkhir.date)})</h2><div class="card" id="reviewAkhir">`
+        + products.map(p=>`
+          <div class="review-row">
+            <div class="rname">${esc(p.name)}</div>
+            <input type="number" min="0" data-pid="${p.id}" value="${pendingAkhir.counts[p.id]||0}">
+          </div>`).join('')
+        + `<div style="margin-top:14px;"><button class="btn" id="finishBtn">Hitung Penjualan &amp; Simpan</button></div></div>`;
+    }
+    area.innerHTML = html;
+
+    const awalBtn = document.getElementById('saveAwalBtn');
+    if(awalBtn) awalBtn.addEventListener('click', ()=>{
+      readReviewInto('reviewAwal', pendingAwal);
+      toast('Stok awal dicatat. Foto lagi nanti pas tutup.');
+    });
+    const finishBtn = document.getElementById('finishBtn');
+    if(finishBtn) finishBtn.addEventListener('click', finishStockCheck);
+  }
+
+  function readReviewInto(boxId, target){
+    document.querySelectorAll('#'+boxId+' input[data-pid]').forEach(inp=>{
+      target.counts[inp.dataset.pid] = Math.max(0, parseInt(inp.value)||0);
+    });
+  }
+
+  async function finishStockCheck(){
+    readReviewInto('reviewAkhir', pendingAkhir);
+    if(!pendingAwal){
+      toast('Belum ada data stok awal untuk tanggal ini'); return;
+    }
+    readReviewInto('reviewAwal', pendingAwal);
+
+    const date = pendingAkhir.date;
+    const rows = [];
+    for(const p of products){
+      const awal = pendingAwal.counts[p.id]||0;
+      const akhir = pendingAkhir.counts[p.id]||0;
+      const terjual = Math.max(0, awal - akhir);
+      if(terjual>0){
+        rows.push({
+          type:'jual', date, productId:p.id, productName:p.name, qty:terjual,
+          buyPrice:p.buyPrice, sellPrice:p.sellPrice,
+          revenue: terjual*p.sellPrice, cost: terjual*p.buyPrice,
+          note:'Dari cek stok foto', source:'foto'
+        });
+      }
+    }
+    if(rows.length===0){
+      toast('Tidak ada selisih stok yang terjual'); 
+      pendingAwal = null; pendingAkhir = null;
+      document.getElementById('fotoResultArea').innerHTML='';
+      return;
+    }
+    for(const r of rows) await saveTransaction(r);
+    toast(`${rows.length} produk terjual tercatat di jurnal`);
+    pendingAwal = null; pendingAkhir = null;
+    document.getElementById('fotoResultArea').innerHTML = '';
+    renderFotoSlots();
+    showView('jurnal');
+  }
+
+  // ---------------- Tutup Buku ----------------
+  function renderTutup(){
+    const open = transactions.filter(t=>!t.closed);
+    const rev = open.reduce((s,t)=>s+(t.revenue||0),0);
+    const cost = open.reduce((s,t)=>s+(t.cost||0),0);
+    document.getElementById('closeRevenue').textContent = rupiah(rev);
+    document.getElementById('closeCost').textContent = rupiah(cost);
+    document.getElementById('closeProfit').textContent = rupiah(rev-cost);
+    document.getElementById('closeProfit').classList.toggle('neg', rev-cost<0);
+    document.getElementById('closeMeta').textContent = open.length
+      ? `${open.length} transaksi sejak penutupan terakhir`
+      : 'Tidak ada transaksi baru untuk ditutup';
+    document.getElementById('btnCloseBook').disabled = open.length===0;
+
+    const histBox = document.getElementById('closeHistBox');
+    if(closings.length===0){
+      histBox.innerHTML = '<div class="empty">Belum ada riwayat</div>';
+    } else {
+      histBox.innerHTML = closings.map(c=>`
+        <div class="closing-hist">
+          <div class="ch1"><span>${esc(c.periodLabel||'')}</span><span class="num">${rupiah(c.profit)}</span></div>
+          <div class="ch2">Omzet ${rupiah(c.revenue)} · Modal ${rupiah(c.cost)} · ${c.txCount} transaksi</div>
+        </div>`).join('');
+    }
+  }
+
+  document.getElementById('btnCloseBook').addEventListener('click', async ()=>{
+    const open = transactions.filter(t=>!t.closed);
+    if(open.length===0) return;
+    const btn = document.getElementById('btnCloseBook');
+    btn.disabled = true; btn.textContent = 'Menutup…';
+    const rev = open.reduce((s,t)=>s+(t.revenue||0),0);
+    const cost = open.reduce((s,t)=>s+(t.cost||0),0);
+    const dates = open.map(t=>t.date).sort();
+    const label = dates[0]===dates[dates.length-1] ? fmtDate(dates[0]) : `${fmtDate(dates[0])} – ${fmtDate(dates[dates.length-1])}`;
+
+    const closingRef = await db.collection('closings').add({
+      periodLabel: label, fromDate: dates[0], toDate: dates[dates.length-1],
+      revenue: rev, cost: cost, profit: rev-cost, txCount: open.length, closedAt: Date.now()
+    });
+    for(const t of open){
+      try{ await db.collection('transactions').doc(t.id).update({ closed:true, closingId: closingRef.id }); }
+      catch(e){ /* keep going */ }
+    }
+    btn.textContent = 'Tutup Buku Sekarang';
+    btn.disabled = false;
+    toast('Buku ditutup untuk periode ini');
+  });
+
+  init();
+})();
+</script>
+</body>
+</html>
