@@ -15,13 +15,22 @@
 
   // ---------- pita kabar (jujur kalau ada yang mati) ----------
   var pita;
-  function kabar(teks, jenis){
+  // `tetap` = kabar yang tidak boleh terhapus sendiri oleh penyegaran data 5 detikan.
+  // Tanpa ini, pesan "baca-foto lagi mati" hilang sebelum sempat dibaca orang di depan kios.
+  function kabar(teks, jenis, tetap){
     if(!pita){
       pita = document.createElement('div');
-      pita.style.cssText = 'position:fixed;left:0;right:0;top:0;z-index:9999;padding:9px 14px;font:13px/1.4 system-ui,sans-serif;text-align:center;display:none';
+      pita.style.cssText = 'position:fixed;left:0;right:0;top:0;z-index:9999;padding:9px 30px 9px 14px;font:13px/1.4 system-ui,sans-serif;text-align:center;display:none;cursor:pointer';
+      pita.title = 'Ketuk buat menutup';
+      pita.onclick = function(){ pita.dataset.tetap=''; pita.style.display='none'; };
       document.body.appendChild(pita);
     }
-    if(!teks){ pita.style.display='none'; return; }
+    if(!teks){
+      if(pita.dataset.tetap) return;        // jangan hapus kabar penting
+      pita.style.display='none';
+      return;
+    }
+    pita.dataset.tetap = tetap ? '1' : '';
     pita.textContent = teks;
     pita.style.background = jenis==='buruk' ? '#c62828' : '#8d6e00';
     pita.style.color = '#fff';
@@ -154,7 +163,17 @@
 
   var SAMPLE = {
     limits: async function(){
-      return { images: { maxFileSize: 8*1024*1024, maxCount: 1 }, maxTokens: 4096 };
+      // Bentuknya harus PERSIS seperti yang app harapkan: `mediaTypes` dipanggil langsung dengan
+      // .join() di dua tempat. Tanpa itu penggambar slot foto melempar TypeError dan tab Foto Stok
+      // diam-diam kosong — tidak ada pesan galat, cuma tidak jalan.
+      return {
+        images: {
+          mediaTypes: ['image/jpeg','image/png','image/webp','image/heic','image/heif'],
+          maxFileSize: 8*1024*1024,
+          maxCount: 1
+        },
+        maxTokens: 4096
+      };
     },
     json: async function(prompt, opsi){
       var file = (opsi && opsi.images && opsi.images[0]) || null;
@@ -165,11 +184,11 @@
       try{
         r = await panggil('baca-foto', { prompt: prompt, gambar: b64, mime: file.type || 'image/jpeg' });
       }catch(err){
-        kabar('Baca-foto lagi mati (kuota AI habis / server). Catat manual dulu — angkanya jangan ditebak.', 'buruk');
+        kabar('Baca-foto lagi mati (kuota AI habis). Catat manual dulu — angkanya jangan ditebak.', 'buruk', true);
         throw err;
       }
       if(r.error){
-        kabar('Baca-foto lagi mati: ' + r.error + '. Catat manual dulu.', 'buruk');
+        kabar('Baca-foto lagi mati: ' + r.error + '. Catat manual dulu, jangan nebak angka.', 'buruk', true);
         var e2 = new Error(r.error); e2.code = 'otak_mati'; throw e2;
       }
       kabar('');

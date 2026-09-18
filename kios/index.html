@@ -592,7 +592,7 @@ Jangan sertakan baris total/rekap uang. Jangan tambahkan teks lain di luar JSON.
       slot.innerHTML = `<img src="${url}"><div class="txt">Terbaca ${rows.length} baris ✓ — cek &amp; cocokin di bawah</div>`;
       renderImportReview(rows);
     }catch(err){
-      let msg = 'Gagal membaca foto, coba lagi';
+      let msg = 'Foto gak kebaca — catat manual dulu';
       if(err && err.code==='not_granted') msg = 'Izin AI ditolak';
       if(err && err.code==='image_rejected') msg = 'Foto tidak bisa diproses, coba foto lain';
       slot.innerHTML = `<img src="${url}"><div class="txt">${msg}</div>`;
@@ -853,7 +853,7 @@ Sertakan SEMUA produk dari daftar walau qty-nya 0. Jangan tambahkan teks lain di
       slot.innerHTML = `<img src="${url}"><div class="txt">Terhitung ✓ — bisa dikoreksi di bawah</div>`;
       renderFotoReview();
     }catch(err){
-      let msg = 'Gagal membaca foto, coba lagi';
+      let msg = 'Foto gak kebaca — catat manual dulu';
       if(err && err.code==='not_granted') msg = 'Izin AI ditolak';
       if(err && err.code==='image_rejected') msg = 'Foto tidak bisa diproses, coba foto lain';
       slot.innerHTML = `<img src="${url}"><div class="txt">${msg}</div>`;
