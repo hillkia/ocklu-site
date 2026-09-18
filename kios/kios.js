@@ -163,15 +163,14 @@
 
   var SAMPLE = {
     limits: async function(){
-      // Bentuknya harus PERSIS seperti yang app harapkan: `mediaTypes` dipanggil langsung dengan
-      // .join() di dua tempat. Tanpa itu penggambar slot foto melempar TypeError dan tab Foto Stok
-      // diam-diam kosong — tidak ada pesan galat, cuma tidak jalan.
+      // Dua hal yang dua-duanya pernah bikin rusak:
+      // 1. `mediaTypes` WAJIB ada — app memanggil .join() langsung; kalau tidak ada, slot foto
+      //    gagal digambar tanpa pesan galat apa pun.
+      // 2. Isinya harus 'image/*', BUKAN daftar tipe satu-satu. Nilai ini masuk ke atribut
+      //    accept, dan HP cuma menawarkan "jepret sekarang" kalau acceptnya image/* —
+      //    daftar spesifik bikin yang muncul cuma galeri/berkas.
       return {
-        images: {
-          mediaTypes: ['image/jpeg','image/png','image/webp','image/heic','image/heif'],
-          maxFileSize: 8*1024*1024,
-          maxCount: 1
-        },
+        images: { mediaTypes: ['image/*'], maxFileSize: 8*1024*1024, maxCount: 1 },
         maxTokens: 4096
       };
     },
