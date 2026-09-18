@@ -1,0 +1,22 @@
+# Supabase gratis menjeda database kalau ±7 hari tidak ada yang menyentuhnya.
+# Kios libur seminggu (lebaran, sakit) = app mati diam-diam pas dibuka lagi.
+# Ketukan harian ini yang menahannya. Tidak menyentuh data siapa pun.
+name: jaga-kios
+
+on:
+  schedule:
+    - cron: "0 23 * * *"      # 06:00 WIB
+  workflow_dispatch:
+
+jobs:
+  ketuk:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ketuk kios-api
+        run: |
+          jawab=$(curl -sS -X POST \
+            "https://njghzieuuopukuagrswu.supabase.co/functions/v1/kios-api" \
+            -H "Content-Type: application/json" \
+            -d '{"aksi":"ping"}')
+          echo "$jawab"
+          echo "$jawab" | grep -q '"ok":true' || { echo "KIOS TIDAK MENJAWAB"; exit 1; }
