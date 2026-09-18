@@ -6,13 +6,12 @@
   var PINTU = 'https://njghzieuuopukuagrswu.supabase.co/functions/v1/kios-api';
   var JEDA = 5000;
 
-  function simpanKode(k){ try{ localStorage.setItem('kios_kode', k); }catch(e){} }
-  function ambilKode(){
-    var m = (location.hash||'').match(/[#&]k=([A-Za-z0-9_-]{8,})/);
-    if(m){ simpanKode(m[1]); return m[1]; }
-    try{ return localStorage.getItem('kios_kode') || ''; }catch(e){ return ''; }
-  }
-  var KODE = ambilKode();
+  // NAMA kios, bukan kata sandi. Halaman ini terbit di repo publik, jadi apa pun yang ditulis di sini
+  // bisa dibaca siapa saja — menaruh "rahasia" di sini cuma keamanan bohong-bohongan.
+  // Penjagaannya ada di server: permintaan cuma dilayani kalau datang dari halaman ocklu.com,
+  // dan perintah pemilik (ganti kode, ekspor, impor borongan) tetap butuh kunci yang tidak ada di sini.
+  // Artinya: siapa pun yang tahu alamat halaman ini bisa ikut mencatat. Itu memang yang dipilih.
+  var KIOS = 'kokukusan';
 
   // ---------- pita kabar (jujur kalau ada yang mati) ----------
   var pita;
@@ -29,23 +28,14 @@
     pita.style.display = 'block';
   }
 
-  // ---------- pintu masuk ----------
-  function mintaKode(){
+  // ---------- kalau link ini sudah dicabut ----------
+  // Tidak menawarkan ketik kode: pemakainya penjaga kios, bukan teknisi. Yang berguna buat dia
+  // cuma satu kalimat: link ini mati, minta yang baru.
+  function linkMati(){
     document.body.innerHTML =
-      '<div style="max-width:420px;margin:60px auto;padding:24px;font:15px/1.6 system-ui,sans-serif">' +
-      '<h2 style="margin:0 0 8px">Buku Kios</h2>' +
-      '<p style="color:#666;margin:0 0 16px">Tempel kode kios buat masuk. Kodenya ada di link yang dikasih pemilik kios.</p>' +
-      '<input id="kKode" placeholder="kode kios" autocapitalize="off" autocorrect="off" ' +
-      'style="width:100%;padding:12px;font-size:16px;border:1px solid #ccc;border-radius:10px;box-sizing:border-box">' +
-      '<button id="kMasuk" style="width:100%;margin-top:10px;padding:12px;font-size:16px;border:0;border-radius:10px;background:#111;color:#fff">Masuk</button>' +
-      '<p id="kSalah" style="color:#c62828;min-height:20px;margin:10px 0 0"></p></div>';
-    document.getElementById('kMasuk').onclick = function(){
-      var k = document.getElementById('kKode').value.trim();
-      if(!k) return;
-      simpanKode(k);
-      location.hash = 'k=' + k;
-      location.reload();
-    };
+      '<div style="max-width:420px;margin:60px auto;padding:24px;font:16px/1.6 system-ui,sans-serif;text-align:center">' +
+      '<h2 style="margin:0 0 10px">Buku Kios</h2>' +
+      '<p style="color:#666">Link ini sudah tidak berlaku.<br>Minta link baru ke pemilik kios.</p></div>';
   }
 
   // ---------- panggil pintu ----------
@@ -56,16 +46,15 @@
       jawab = await fetch(PINTU, {
         method:'POST',
         headers:{'Content-Type':'application/json'},
-        body: JSON.stringify(Object.assign({ kode: KODE, aksi: aksi }, isi||{}))
+        body: JSON.stringify(Object.assign({ kios: KIOS, aksi: aksi }, isi||{}))
       });
     }catch(e){
       kabar('Tidak bisa nyambung ke server — cek sinyal. Catatan belum tersimpan.', 'buruk');
       throw e;
     }
-    if(jawab.status === 401){
-      try{ localStorage.removeItem('kios_kode'); }catch(e){}
-      mintaKode();
-      throw new Error('kode salah');
+    if(jawab.status === 401 || jawab.status === 429){
+      linkMati();
+      throw new Error('link tidak berlaku');
     }
     if(jawab.status === 503 || jawab.status === 504){
       if(!sedangBangun){ sedangBangun = true; kabar('Server lagi bangun, tunggu ±30 detik...'); }
@@ -197,8 +186,4 @@
     }
   };
 
-  if(!KODE){
-    document.addEventListener('DOMContentLoaded', mintaKode);
-    window.claude.use = async function(){ return null; };
-  }
 })();
