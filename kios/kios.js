@@ -47,6 +47,21 @@
       '<p style="color:#666">Link ini sudah tidak berlaku.<br>Minta link baru ke pemilik kios.</p></div>';
   }
 
+  // ---------- deteksi mode "Situs desktop" ----------
+  // Di mode itu browser HP MENGABAIKAN <meta viewport> dan memaksa halaman selebar ~980px,
+  // jadi semuanya mengecil dan tombol baru bisa dipencet setelah di-zoom. Tidak bisa dimatikan
+  // dari kode — yang bisa dilakukan cuma memberitahu, daripada pemakainya menyangka app-nya rusak.
+  function cekModeDesktop(){
+    try{
+      var layar = (window.screen && screen.width) || 0;
+      if(layar && layar < 500 && window.innerWidth > layar * 1.6){
+        kabar('HP lagi pakai mode "Situs desktop" — itu yang bikin tampilan kekecilan. '
+            + 'Matikan lewat menu ⋮ browser (hilangkan centang "Situs desktop"), lalu muat ulang.',
+            'buruk', true);
+      }
+    }catch(e){}
+  }
+
   // ---------- panggil pintu ----------
   var sedangBangun = false;
   async function panggil(aksi, isi){
@@ -237,6 +252,11 @@
   };
 
   // ---------- pasang ----------
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', cekModeDesktop);
+  }else{
+    cekModeDesktop();
+  }
   window.claude = {
     use: async function(apa){
       if(apa === 'db') return { collection: kumpul };
