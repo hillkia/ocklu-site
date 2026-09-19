@@ -171,7 +171,28 @@
   // base64 dan gampang ditolak server atau otak AI-nya. Dikecilkan dulu di HP: sisi terpanjang
   // 2000px sudah lebih dari cukup buat membaca tulisan tangan, hasilnya ratusan KB, dan lewat
   // canvas formatnya otomatis jadi JPEG — HEIC ikut beres.
-  function kecilkan(file, sisiMax, mutu){
+  // Jalur hemat memori buat HP kelas bawah. `new Image()` membuka foto 12 MP utuh di memori
+  // (±48 MB) sebelum dikecilkan — itu yang bikin HP murah tersendat atau menutup sendiri.
+  // createImageBitmap bisa membongkar foto LANGSUNG di ukuran kecil, jadi puncak memorinya
+  // jauh lebih rendah dan kerjanya di luar utas tampilan (layar tidak membeku).
+  async function kecilkanHemat(file, sisiMax, mutu){
+    if(!window.createImageBitmap) throw new Error('tidak didukung');
+    var bm = await createImageBitmap(file, { resizeWidth: sisiMax, resizeQuality: 'high' });
+    // kalau fotonya tegak, sisi panjangnya masih bisa lebih dari batas — dirapikan di kanvas,
+    // dan ini murah karena yang digambar sudah bitmap kecil
+    var skala = Math.min(1, sisiMax / Math.max(bm.width, bm.height));
+    var l = Math.max(1, Math.round(bm.width * skala));
+    var t = Math.max(1, Math.round(bm.height * skala));
+    var c = document.createElement('canvas');
+    c.width = l; c.height = t;
+    c.getContext('2d').drawImage(bm, 0, 0, l, t);
+    bm.close();                                   // lepaskan memorinya, jangan tunggu pemulung
+    return await new Promise(function(res, rej){
+      c.toBlob(function(b){ b ? res(b) : rej(new Error('foto gagal dimampatkan')); }, 'image/jpeg', mutu);
+    });
+  }
+
+  function kecilkanBiasa(file, sisiMax, mutu){
     return new Promise(function(res, rej){
       var url = URL.createObjectURL(file);
       var img = new Image();
@@ -193,6 +214,14 @@
       };
       img.src = url;
     });
+  }
+
+  async function kecilkan(file, sisiMax, mutu){
+    try{
+      return await kecilkanHemat(file, sisiMax, mutu);
+    }catch(e){
+      return await kecilkanBiasa(file, sisiMax, mutu);   // HP/browser lama
+    }
   }
 
   function keBase64(file){
