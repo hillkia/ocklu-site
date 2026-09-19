@@ -270,9 +270,18 @@
       <button class="btn subtle laku-tab" data-periode="7hari" style="flex:1; padding:8px; font-size:13px;">7 hari</button>
       <button class="btn subtle laku-tab" data-periode="semua" style="flex:1; padding:8px; font-size:13px;">Semua</button>
     </div>
+    <div style="display:flex; gap:8px; align-items:center; margin-bottom:8px;">
+      <span style="font-size:12px; color:var(--ink-soft); white-space:nowrap;">atau satu tanggal</span>
+      <input type="date" id="lakuTgl" style="flex:1; padding:8px; font-size:14px;">
+    </div>
+    <p class="note" id="lakuKet" style="margin:0 0 10px;"></p>
     <div class="card" id="lakuBox"><div class="empty">Belum ada data penjualan</div></div>
 
     <h2 class="section-title">Aktivitas terbaru</h2>
+    <div style="display:flex; gap:8px; margin-bottom:10px;">
+      <button class="btn subtle" id="btnCepatJual" style="flex:1; padding:10px; font-size:14px;">+ Catat penjualan</button>
+      <button class="btn subtle" id="btnCepatModal" style="flex:1; padding:10px; font-size:14px;">+ Modal / beli stok</button>
+    </div>
     <div class="card" id="recentBox"><div class="empty">Belum ada transaksi</div></div>
   </section>
 
@@ -359,7 +368,7 @@
 </div>
 
 <meta name="robots" content="noindex,nofollow">
-<script src="kios.js?v=316113e7"></script>
+<script src="kios.js?v=587f2dca"></script>
 <script>
 (function(){
 
@@ -487,6 +496,8 @@
       b.style.fontWeight = aktif ? '700' : '500';
     });
 
+    const satuTanggal = lakuPeriode.startsWith('tgl:') ? lakuPeriode.slice(4) : null;
+
     let batas = null;
     if(lakuPeriode === 'hari') batas = todayStr();
     if(lakuPeriode === '7hari'){
@@ -496,10 +507,13 @@
     }
 
     const per = {};
+    const tanggalTerpakai = [];
     transactions.forEach(t=>{
       if(t.type !== 'jual') return;
+      if(satuTanggal && t.date !== satuTanggal) return;
       if(lakuPeriode === 'hari' && t.date !== batas) return;
       if(lakuPeriode === '7hari' && t.date < batas) return;
+      if(t.date && tanggalTerpakai.indexOf(t.date) < 0) tanggalTerpakai.push(t.date);
       const k = t.productName || '(tanpa nama)';
       per[k] = per[k] || { qty:0, omzet:0, untung:0 };
       per[k].qty += Number(t.qty) || 0;
@@ -507,9 +521,22 @@
       per[k].untung += txProfit(t);
     });
 
+    // keterangan tanggal: biar jelas angka ini punya hari yang mana, bukan tebak-tebakan
+    const ket = document.getElementById('lakuKet');
+    if(ket){
+      tanggalTerpakai.sort();
+      const a = tanggalTerpakai[0], z = tanggalTerpakai[tanggalTerpakai.length-1];
+      if(!tanggalTerpakai.length) ket.textContent = '';
+      else if(a === z) ket.textContent = fmtDate(a);
+      else ket.textContent = fmtDate(a) + ' — ' + fmtDate(z) + ' (' + tanggalTerpakai.length + ' hari jualan)';
+    }
+
     const baris = Object.entries(per).sort((a,b)=> b[1].qty - a[1].qty);
     if(baris.length === 0){
-      kotak.innerHTML = '<div class="empty">Belum ada penjualan di rentang ini</div>';
+      const t = document.getElementById('lakuTgl');
+      kotak.innerHTML = '<div class="empty">' +
+        (satuTanggal ? 'Tidak ada penjualan pada ' + fmtDate(satuTanggal) : 'Belum ada penjualan di rentang ini') +
+        '</div>';
       return;
     }
     const totalQty = baris.reduce((s,b)=> s + b[1].qty, 0);
@@ -534,11 +561,21 @@
       '</table>';
   }
 
+  document.addEventListener('change', e=>{
+    if(e.target && e.target.id === 'lakuTgl'){
+      lakuPeriode = e.target.value ? ('tgl:' + e.target.value) : 'hari';
+      lakuDipilihSendiri = !!e.target.value;
+      renderLaku();
+    }
+  });
+
   document.addEventListener('click', e=>{
     const t = e.target.closest('.laku-tab');
     if(!t) return;
     lakuPeriode = t.dataset.periode;
     lakuDipilihSendiri = true;
+    const kolomTgl = document.getElementById('lakuTgl');
+    if(kolomTgl) kolomTgl.value = '';        // pilih rentang cepat = lepas pilihan tanggal
     renderLaku();
   });
 
@@ -701,6 +738,8 @@
       </div>`).join('');
   }
 
+  document.getElementById('btnCepatJual').addEventListener('click', ()=>openManualForm('jual'));
+  document.getElementById('btnCepatModal').addEventListener('click', ()=>openManualForm('modal'));
   document.getElementById('btnAddJual').addEventListener('click', ()=>openManualForm('jual'));
   document.getElementById('btnAddModal').addEventListener('click', ()=>openManualForm('modal'));
   document.getElementById('btnImportCatatan').addEventListener('click', openImportCatatan);
