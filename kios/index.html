@@ -264,6 +264,14 @@
     <h2 class="section-title">Produk paling untung</h2>
     <div class="card" id="rankBox"><div class="empty">Belum ada data penjualan</div></div>
 
+    <h2 class="section-title">Laku per barang</h2>
+    <div style="display:flex; gap:8px; margin-bottom:10px;">
+      <button class="btn subtle laku-tab" data-periode="hari" style="flex:1; padding:8px; font-size:13px;">Hari ini</button>
+      <button class="btn subtle laku-tab" data-periode="7hari" style="flex:1; padding:8px; font-size:13px;">7 hari</button>
+      <button class="btn subtle laku-tab" data-periode="semua" style="flex:1; padding:8px; font-size:13px;">Semua</button>
+    </div>
+    <div class="card" id="lakuBox"><div class="empty">Belum ada data penjualan</div></div>
+
     <h2 class="section-title">Aktivitas terbaru</h2>
     <div class="card" id="recentBox"><div class="empty">Belum ada transaksi</div></div>
   </section>
@@ -453,8 +461,74 @@
   function isToday(t){ return t.date === todayStr(); }
   function txProfit(t){ return (t.revenue||0) - (t.cost||0); }
 
+  let lakuPeriode = 'hari';
+
+  function renderLaku(){
+    const kotak = document.getElementById('lakuBox');
+    if(!kotak) return;
+    document.querySelectorAll('.laku-tab').forEach(b=>{
+      const aktif = b.dataset.periode === lakuPeriode;
+      b.style.opacity = aktif ? '1' : '.55';
+      b.style.fontWeight = aktif ? '700' : '500';
+    });
+
+    let batas = null;
+    if(lakuPeriode === 'hari') batas = todayStr();
+    if(lakuPeriode === '7hari'){
+      const d = new Date();
+      d.setDate(d.getDate() - 6);
+      batas = new Date(d.getTime() - d.getTimezoneOffset()*60000).toISOString().slice(0,10);
+    }
+
+    const per = {};
+    transactions.forEach(t=>{
+      if(t.type !== 'jual') return;
+      if(lakuPeriode === 'hari' && t.date !== batas) return;
+      if(lakuPeriode === '7hari' && t.date < batas) return;
+      const k = t.productName || '(tanpa nama)';
+      per[k] = per[k] || { qty:0, omzet:0, untung:0 };
+      per[k].qty += Number(t.qty) || 0;
+      per[k].omzet += t.revenue || 0;
+      per[k].untung += txProfit(t);
+    });
+
+    const baris = Object.entries(per).sort((a,b)=> b[1].qty - a[1].qty);
+    if(baris.length === 0){
+      kotak.innerHTML = '<div class="empty">Belum ada penjualan di rentang ini</div>';
+      return;
+    }
+    const totalQty = baris.reduce((s,b)=> s + b[1].qty, 0);
+    kotak.innerHTML =
+      '<table style="width:100%; border-collapse:collapse; font-size:14px;">' +
+      '<tr style="font-size:11px; text-transform:uppercase; letter-spacing:.04em; color:var(--ink-soft);">' +
+      '<th style="text-align:left; padding:6px 4px;">Barang</th>' +
+      '<th style="text-align:right; padding:6px 4px;">Laku</th>' +
+      '<th style="text-align:right; padding:6px 4px;">Omzet</th>' +
+      '<th style="text-align:right; padding:6px 4px;">Untung</th></tr>' +
+      baris.map(([nama,v])=>
+        '<tr style="border-top:1px solid var(--line);">' +
+        '<td style="padding:8px 4px;">' + esc(nama) + '</td>' +
+        '<td class="num" style="text-align:right; padding:8px 4px; font-weight:600;">' + v.qty + '</td>' +
+        '<td class="num" style="text-align:right; padding:8px 4px;">' + rupiah(v.omzet) + '</td>' +
+        '<td class="num" style="text-align:right; padding:8px 4px;">' + rupiah(v.untung) + '</td></tr>').join('') +
+      '<tr style="border-top:1.5px solid var(--line);">' +
+      '<td style="padding:8px 4px; font-weight:600;">Total</td>' +
+      '<td class="num" style="text-align:right; padding:8px 4px; font-weight:700;">' + totalQty + '</td>' +
+      '<td class="num" style="text-align:right; padding:8px 4px;">' + rupiah(baris.reduce((s,b)=>s+b[1].omzet,0)) + '</td>' +
+      '<td class="num" style="text-align:right; padding:8px 4px;">' + rupiah(baris.reduce((s,b)=>s+b[1].untung,0)) + '</td></tr>' +
+      '</table>';
+  }
+
+  document.addEventListener('click', e=>{
+    const t = e.target.closest('.laku-tab');
+    if(!t) return;
+    lakuPeriode = t.dataset.periode;
+    renderLaku();
+  });
+
   function renderAll(){
     renderRingkasan();
+    renderLaku();
     renderJurnal();
     renderTutup();
   }
