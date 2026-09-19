@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Audit Kalibrasi — seberapa jujur keyakinan tim lo</title>
+<meta name="description" content="Kasih CSV berisi prediksi yang udah ditulis + hasil aslinya. Dapet laporan kalibrasi: Brier, BSS vs base rate dan harga pasar, kurva reliabilitas, flag overconfident. Dihitung di browser — datanya gak ke mana-mana." />
+<style>
+  :root{
+    --bg:#070B14; --panel:#0D1424; --text:#E7EDF7; --muted:#9FB0C8; --dim:#5B6B85;
+    --gold:#E8C87A; --green:#4ADE80; --red:#FF5A5A; --amber:#F5A524; --violet:#C4B5FD;
+    --line:rgba(120,150,200,.14);
+    --mono:ui-monospace,'JetBrains Mono',Menlo,Consolas,monospace;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+       font:15px/1.7 ui-sans-serif,system-ui,-apple-system,sans-serif}
+  .wrap{max-width:860px;margin:0 auto;padding:44px 16px 72px}
+  .tag{font:10px var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--dim)}
+  h1{font:700 30px/1.2 var(--mono);letter-spacing:.06em;color:var(--gold);margin:8px 0 10px}
+  .lede{font-size:17px;color:var(--muted);max-width:62ch;margin:0 0 6px}
+  h2{font:700 11px/1 var(--mono);letter-spacing:.18em;text-transform:uppercase;
+     color:var(--text);margin:48px 0 14px}
+
+  /* drop zone */
+  #zona{margin:28px 0 10px;border:1.5px dashed rgba(232,200,122,.38);border-radius:14px;
+        background:rgba(232,200,122,.04);padding:34px 20px;text-align:center;cursor:pointer;
+        transition:background .18s,border-color .18s}
+  #zona:hover,#zona.aktif{background:rgba(232,200,122,.09);border-color:var(--gold)}
+  #zona .besar{font:700 14px var(--mono);letter-spacing:.06em;color:var(--gold)}
+  #zona .kecil{font-size:12.5px;color:var(--dim);margin-top:7px;line-height:1.6}
+  #berkas{display:none}
+  .baris{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:10px}
+  input[type=text]{background:rgba(0,0,0,.35);border:1px solid var(--line);border-radius:8px;
+    padding:8px 11px;color:var(--text);font:12px var(--mono);flex:1;min-width:180px}
+  input[type=text]::placeholder{color:var(--dim)}
+  button,a.tombol{background:transparent;border:1px solid rgba(232,200,122,.45);color:var(--gold);
+    border-radius:8px;padding:8px 15px;font:11px var(--mono);letter-spacing:.08em;
+    text-transform:uppercase;cursor:pointer;text-decoration:none;display:inline-block;
+    transition:background .16s}
+  button:hover,a.tombol:hover{background:rgba(232,200,122,.12)}
+  a.tombol.utama{background:var(--gold);color:#070B14;border-color:var(--gold);font-weight:700}
+  a.tombol.utama:hover{background:#f0d693}
+  #galat{margin-top:12px;border:1px solid rgba(255,90,90,.45);background:rgba(255,90,90,.08);
+    border-radius:10px;padding:12px 14px;color:var(--muted);font-size:13px;white-space:pre-wrap}
+
+  #hasil{margin-top:24px}
+  #ringkas{font:12px var(--mono);color:var(--muted);margin-bottom:10px}
+  #bingkai{width:100%;height:78vh;min-height:520px;border:1px solid var(--line);
+    border-radius:12px;background:var(--bg)}
+
+  .kolom{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+  .kartu{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+  .kartu h3{font:700 11px var(--mono);letter-spacing:.12em;text-transform:uppercase;
+    color:var(--gold);margin:0 0 7px}
+  .kartu p{margin:0;font-size:13.5px;color:var(--muted);line-height:1.65}
+  .catatan{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--violet);
+    border-radius:10px;padding:16px 18px;color:var(--muted);font-size:14px;line-height:1.75}
+  code{font-family:var(--mono);color:var(--gold);font-size:.92em}
+  table{width:100%;border-collapse:collapse;font:12.5px var(--mono);margin-top:4px}
+  th,td{text-align:left;padding:8px 9px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{color:var(--dim);font-weight:400;font-size:10px;letter-spacing:.1em;text-transform:uppercase}
+  ul{margin:0;padding-left:18px;color:var(--muted);font-size:14px}
+  li{margin-bottom:7px}
+  footer{margin-top:56px;padding-top:16px;border-top:1px solid var(--line);
+    font:10.5px var(--mono);color:var(--dim);display:flex;gap:14px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="tag">OCKLU · alat</div>
+  <h1>AUDIT KALIBRASI</h1>
+  <p class="lede">
+    Tim lo nulis angka keyakinan — <i>confidence score</i>, “kemungkinan besar”, 70%.
+    Pernah dicek gak, seberapa sering yang 70% itu beneran kejadian 7 dari 10 kali?
+  </p>
+  <p class="lede" style="color:var(--dim);font-size:15px">
+    Taruh CSV-nya di bawah. Laporannya jadi di layar ini juga.
+  </p>
+
+  <div id="zona">
+    <div class="besar">TARUH CSV DI SINI</div>
+    <div class="kecil">
+      atau klik buat milih file · butuh kolom probabilitas + kolom hasil (0/1)<br>
+      belum punya datanya? <a href="#" id="contoh" style="color:var(--gold)">coba pakai data contoh</a>
+    </div>
+  </div>
+  <input type="file" id="berkas" accept=".csv,.txt,text/csv,text/plain" />
+
+  <div class="baris">
+    <input type="text" id="nama" placeholder="nama di laporan — misal: Tim Risk XYZ" />
+    <button id="unduh">unduh laporan</button>
+    <button id="cetak">cetak / PDF</button>
+  </div>
+
+  <div id="galat" hidden></div>
+
+  <div id="hasil" hidden>
+    <div id="ringkas"></div>
+    <iframe id="bingkai" title="laporan audit kalibrasi"></iframe>
+  </div>
+
+  <div class="catatan" style="margin-top:26px;border-left-color:var(--green)">
+    <b style="color:var(--green)">Data lo gak ke mana-mana.</b>
+    Semua hitungan jalan di browser ini. Gak ada upload, gak ada server yang nerima
+    file-nya, gak ada analytics. Matiin wifi setelah halaman ini kebuka — dia tetap jalan.
+    Itu bukan janji di halaman <i>privacy policy</i>; itu cara halamannya dibikin.
+  </div>
+
+  <h2>Format CSV-nya</h2>
+  <table>
+    <tr><th>kolom</th><th>isi</th><th>nama yang dikenali</th></tr>
+    <tr>
+      <td style="color:var(--gold)">wajib</td>
+      <td>probabilitas 0..1 atau 0..100, ditulis <b>sebelum</b> tau hasilnya</td>
+      <td><code>prediksi</code> <code>probabilitas</code> <code>probability</code> <code>p</code> <code>forecast</code> <code>confidence</code></td>
+    </tr>
+    <tr>
+      <td style="color:var(--gold)">wajib</td>
+      <td>hasil aslinya, 0 atau 1</td>
+      <td><code>hasil</code> <code>outcome</code> <code>actual</code> <code>y</code> <code>resolved</code></td>
+    </tr>
+    <tr>
+      <td>opsional</td>
+      <td>harga pasar / konsensus — ini yang bikin laporannya jauh lebih tajam</td>
+      <td><code>pasar</code> <code>market_price</code> <code>konsensus</code> <code>consensus</code></td>
+    </tr>
+    <tr>
+      <td>opsional</td>
+      <td>nama keputusannya, buat tabel “sepuluh meleset terparah”</td>
+      <td><code>label</code> <code>nama</code> <code>pertanyaan</code> <code>question</code></td>
+    </tr>
+  </table>
+
+  <h2>Kenapa baseline 0.25 itu jebakan</h2>
+  <div class="catatan">
+    Hampir semua alat kalibrasi bandingin Brier ke <b>0.25</b> — skor “nebak 50/50 terus”.
+    Kedengerannya masuk akal, sampai kejadiannya jarang.<br><br>
+    Base rate 10%? Model yang <b>asal jawab “tidak” terus</b> udah dapet Brier 0.09.
+    Jauh di bawah 0.25, tanpa skill apa pun. Laporan yang bilang “bagus, di bawah 0.25”
+    di kasus itu lagi muji sesuatu yang gak ada.<br><br>
+    Di sini lawannya dua, dan dua-duanya lebih berat:
+    <b>base rate</b> (<code>br × (1−br)</code> — Brier-nya “tebak angka rata-rata terus”)
+    dan <b>harga pasar</b> kalau kolomnya ada. Yang terberat yang mutusin vonis.
+    Kalau kalah sama pasar, vonisnya “KALAH DARI HARGA PASAR” — bukan “lebih baik dari
+    base rate” yang kebetulan juga benar.
+  </div>
+
+  <h2>Tiga hal yang laporannya gak mau lakuin</h2>
+  <div class="kolom">
+    <div class="kartu">
+      <h3>Gak ngeratain sampel tipis</h3>
+      <p>Bucket yang cuma berisi 8 prediksi bisa kelihatan dramatis padahal itu noise.
+         Bucket di bawah 30 dikasih lingkaran putus-putus dan dikeluarin dari hitungan bias.</p>
+    </div>
+    <div class="kartu">
+      <h3>Gak bikin vonis lebih manis dari temuan</h3>
+      <p>Termasuk warnanya. Kartu Brier baru hijau kalau menang lawan terberat yang
+         datanya ada — bukan kalau kebetulan lolos dari koin.</p>
+    </div>
+    <div class="kartu">
+      <h3>Gak nyimpulin dari data kecil</h3>
+      <p>Di bawah 30 baris, laporannya bilang sendiri bahwa dia cuma nunjukin arah,
+         bukan kesimpulan.</p>
+    </div>
+  </div>
+
+  <h2>Buat siapa</h2>
+  <ul>
+    <li>tim ML yang nulis <i>confidence score</i> tapi gak pernah ngecek kalibrasinya</li>
+    <li>tim risk, underwriting, credit scoring</li>
+    <li>tim forecasting demand, churn, fraud</li>
+    <li>PM yang nulis “kemungkinan besar rilis Q3” dan pengen tau track record-nya</li>
+    <li>siapa pun yang punya kolom <code>confidence</code> di database dan belum pernah mengujinya</li>
+  </ul>
+
+  <h2>Batasnya, dibilang di depan</h2>
+  <ul>
+    <li><b>Ini cermin, bukan nasihat investasi.</b> Gak ada rekomendasi beli/jual, gak nyentuh
+        duit siapa pun.</li>
+    <li><b>Kalibrasi ≠ akurasi ≠ untung.</b> Model yang kalibrasinya sempurna masih bisa rugi
+        kalau <i>sizing</i>-nya salah. Itu masalah lain.</li>
+    <li><b>Butuh prediksi yang ditulis sebelum hasilnya tau.</b> Kalau angkanya diisi belakangan,
+        yang diukur bukan kalibrasi — itu ingatan.</li>
+  </ul>
+
+  <h2>Bawa pulang</h2>
+    <div class="catatan" style="border-left-color:var(--gold)">
+    Versi unduhan jalan di laptop sendiri, buat data yang gak boleh keluar dari jaringan
+    kantor. Isinya: mesin auditnya, rumusnya, dua SKILL.md buat Claude&nbsp;Code, data
+    contoh, dan laporan contoh. Cuma butuh Node — gak butuh database, gak manggil internet.
+    <div class="baris" style="margin-top:14px">
+      <a class="tombol utama" href="mailto:octavianus@ocklu.com?subject=Paket%20Audit%20Kalibrasi">minta paketnya</a>
+      <a class="tombol" href="contoh.csv" download>unduh data contoh</a>
+    </div>
+  </div>
+
+  <h2>Kalau mau dikerjain</h2>
+  <div class="catatan">
+    Alat di atas ngasih angkanya. Yang sering lebih berguna itu bacaannya: kenapa
+    miringnya numpuk di rentang tertentu, bucket mana yang beneran bisa disimpulin,
+    dan apa yang berubah dibanding bulan lalu.<br><br>
+    Kirim CSV-nya, balik laporan + interpretasinya.
+    <a href="mailto:octavianus@ocklu.com?subject=Audit%20Kalibrasi" style="color:var(--gold)">octavianus@ocklu.com</a><br><br>
+    <span style="color:var(--dim);font-size:13px">Kalau datanya gak boleh keluar kantor,
+    pakai versi unduhan — hasilnya sama persis, mesinnya sama.</span>
+  </div>
+
+  <footer>
+    <span>Audit Kalibrasi — OCKLU</span>
+    <span>Dihitung di browser lo. Gak ada file yang dikirim ke mana pun.</span>
+    <span style="margin-left:auto">Paid in Full — Jesus is God ✝️</span>
+  </footer>
+</div>
+<script type="module" src="app.bundle.js"></script>
+</body>
+</html>
