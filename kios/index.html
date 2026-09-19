@@ -461,11 +461,26 @@
   function isToday(t){ return t.date === todayStr(); }
   function txProfit(t){ return (t.revenue||0) - (t.cost||0); }
 
-  let lakuPeriode = 'hari';
+  let lakuPeriode = 'hari', lakuDipilihSendiri = false;
+
+  // Bawaan "Hari ini" bikin tabel kelihatan kosong tiap pagi sebelum ada jualan — dan yang
+  // kosong itu terbaca seperti fiturnya tidak jalan. Jadi selama pemiliknya belum memilih
+  // sendiri, rentangnya ikut ke mana datanya ada.
+  function periodeOtomatis(){
+    const jual = transactions.filter(t=>t.type === 'jual');
+    if(jual.length === 0) return 'hari';
+    if(jual.some(t=>t.date === todayStr())) return 'hari';
+    const d = new Date();
+    d.setDate(d.getDate() - 6);
+    const b = new Date(d.getTime() - d.getTimezoneOffset()*60000).toISOString().slice(0,10);
+    if(jual.some(t=>t.date >= b)) return '7hari';
+    return 'semua';
+  }
 
   function renderLaku(){
     const kotak = document.getElementById('lakuBox');
     if(!kotak) return;
+    if(!lakuDipilihSendiri) lakuPeriode = periodeOtomatis();
     document.querySelectorAll('.laku-tab').forEach(b=>{
       const aktif = b.dataset.periode === lakuPeriode;
       b.style.opacity = aktif ? '1' : '.55';
@@ -523,6 +538,7 @@
     const t = e.target.closest('.laku-tab');
     if(!t) return;
     lakuPeriode = t.dataset.periode;
+    lakuDipilihSendiri = true;
     renderLaku();
   });
 
@@ -581,13 +597,93 @@
     const p = txProfit(t);
     const title = t.type==='modal' ? (t.note || 'Modal / beli stok') : t.productName;
     const sub = t.type==='modal' ? t.date : `${t.qty} × ${rupiah(t.sellPrice)} · ${t.date}`;
-    return `<div class="tx-row">
+    return `<div class="tx-row" data-tx="${t.id}" style="cursor:pointer;">
       <div class="tx-main"><div class="t1">${esc(title)}</div><div class="t2">${esc(sub)}</div></div>
       <div class="tx-amt"><div class="profit num ${p>=0?'pos':'neg'}">${p>=0?'+':''}${rupiah(p)}</div></div>
     </div>`;
   }
 
   function esc(s){ return String(s==null?'':s).replace(/[&<>]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c])); }
+
+  // ---------------- Ubah / hapus catatan ----------------
+  document.addEventListener('click', e=>{
+    const baris = e.target.closest('.tx-row[data-tx]');
+    if(!baris) return;
+    openEditTx(baris.dataset.tx);
+  });
+
+  function openEditTx(id){
+    const t = transactions.find(x=>x.id===id);
+    if(!t) return;
+
+    if(t.type === 'modal'){
+      openModal(`
+        <h3>Ubah modal / beli stok</h3>
+        <label>Tanggal</label><input type="date" id="etDate" value="${t.date||todayStr()}">
+        <label>Untuk apa</label><input type="text" id="etNote" value="${esc(t.note||'')}">
+        <label>Jumlah (Rp)</label><input type="number" id="etAmount" value="${Math.round(t.cost||0)}" min="0">
+        <div style="margin-top:16px;"><button class="btn" id="etSave">Simpan perubahan</button></div>
+        <div style="margin-top:10px;"><button class="btn subtle" id="etDel">Hapus catatan ini</button></div>
+      `);
+      document.getElementById('etSave').addEventListener('click', async ()=>{
+        const jumlah = Math.max(0, parseFloat(document.getElementById('etAmount').value)||0);
+        await db.collection('transactions').doc(id).update({
+          date: document.getElementById('etDate').value || t.date,
+          note: document.getElementById('etNote').value.trim() || 'Modal / beli stok',
+          revenue: 0, cost: jumlah
+        });
+        closeModal(); toast('Catatan diperbarui');
+      });
+      pasangHapus(id);
+      return;
+    }
+
+    openModal(`
+      <h3>Ubah catatan — ${esc(t.productName||'')}</h3>
+      <p class="note">Betulkan angka yang salah tulis. Yang berubah cuma catatan ini — harga produknya tidak ikut berubah.</p>
+      <label>Tanggal</label><input type="date" id="etDate" value="${t.date||todayStr()}">
+      <label>Jumlah laku</label><input type="number" id="etQty" value="${t.qty||0}" min="0" step="1">
+      <label>Harga jual satuan</label><input type="number" id="etSell" value="${Math.round(t.sellPrice||0)}" min="0">
+      <label>Modal per potong</label><input type="number" id="etBuy" value="${Math.round(t.buyPrice||0)}" min="0">
+      <div class="card" id="etHasil" style="margin-top:14px;">
+        <div class="label">Hasil catatan ini</div>
+        <div class="val" id="etRingkas" style="font-family:var(--font-display); font-size:20px; font-weight:600;">-</div>
+      </div>
+      <div style="margin-top:16px;"><button class="btn" id="etSave">Simpan perubahan</button></div>
+      <div style="margin-top:10px;"><button class="btn subtle" id="etDel">Hapus catatan ini</button></div>
+    `);
+
+    const hitung = ()=>{
+      const qty = Math.max(0, parseFloat(document.getElementById('etQty').value)||0);
+      const jual = Math.max(0, parseFloat(document.getElementById('etSell').value)||0);
+      const modal = Math.max(0, parseFloat(document.getElementById('etBuy').value)||0);
+      document.getElementById('etRingkas').textContent =
+        `${rupiah(qty*jual)} omzet · untung ${rupiah(qty*jual - qty*modal)}`;
+      return { qty, jual, modal };
+    };
+    ['etQty','etSell','etBuy'].forEach(i=>document.getElementById(i).addEventListener('input', hitung));
+    hitung();
+
+    document.getElementById('etSave').addEventListener('click', async ()=>{
+      const { qty, jual, modal } = hitung();
+      if(qty <= 0){ toast('Jumlah laku tidak boleh kosong'); return; }
+      await db.collection('transactions').doc(id).update({
+        date: document.getElementById('etDate').value || t.date,
+        qty, sellPrice: jual, buyPrice: modal,
+        revenue: qty*jual, cost: qty*modal
+      });
+      closeModal(); toast('Catatan diperbarui');
+    });
+    pasangHapus(id);
+  }
+
+  function pasangHapus(id){
+    document.getElementById('etDel').addEventListener('click', async ()=>{
+      if(!confirm('Hapus catatan ini? Tidak bisa dibatalkan.')) return;
+      await db.collection('transactions').doc(id).delete();
+      closeModal(); toast('Catatan dihapus');
+    });
+  }
 
   // ---------------- Jurnal ----------------
   function renderJurnal(){
@@ -596,7 +692,7 @@
     const groups = {};
     transactions.forEach(t=>{ (groups[t.date]=groups[t.date]||[]).push(t); });
     const dates = Object.keys(groups).sort((a,b)=>b.localeCompare(a));
-    box.innerHTML = dates.map(d=>`
+    box.innerHTML = '<p class="note" style="margin:0 0 10px;">Ketuk salah satu catatan buat mengubah jumlah, harga, atau menghapusnya.</p>' + dates.map(d=>`
       <div class="tx-day">
         <div class="dlabel">${esc(fmtDate(d))}</div>
         <div class="card" style="padding:4px 14px;">
