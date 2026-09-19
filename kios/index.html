@@ -359,7 +359,7 @@
 </div>
 
 <meta name="robots" content="noindex,nofollow">
-<script src="kios.js?v=974c5846"></script>
+<script src="kios.js?v=bfc73595"></script>
 <script>
 (function(){
 
@@ -838,15 +838,21 @@ PENTING: kalau tulisannya tidak terbaca jelas, LEWATI barisnya. Jangan pernah me
     });
   }
 
+  let ucMode = 'kilo';
+
   function openUpdateModalCalc(pid){
     const p = products.find(x=>x.id===pid);
     if(!p) return;
     openModal(`
       <h3>Update modal — ${esc(p.name)}</h3>
-      <p class="note">Isi belanja terakhir buat bahan ini. Modal per potong dihitung otomatis: (kg × harga/kg) ÷ jumlah potong jadi.</p>
-      <label>Berapa kg dibeli</label><input type="number" id="ucKg" placeholder="2" min="0" step="0.1">
-      <label>Harga per kg</label><input type="number" id="ucHarga" placeholder="8000" min="0">
-      <label>Jadi berapa potong</label><input type="number" id="ucPotong" placeholder="20" min="1">
+      <p class="note">Isi belanja terakhir buat bahan ini. Modal per potong dihitung otomatis.</p>
+      <div style="display:flex; gap:8px; margin-bottom:6px;">
+        <button class="btn subtle uc-mode" data-mode="kilo" style="flex:1; padding:9px; font-size:13px;">Beli per kilo</button>
+        <button class="btn subtle uc-mode" data-mode="biji" style="flex:1; padding:9px; font-size:13px;">Beli per biji</button>
+      </div>
+      <label id="ucLabel1">Berapa kg dibeli</label><input type="number" id="ucKg" placeholder="2" min="0" step="0.1">
+      <label id="ucLabel2">Harga per kg</label><input type="number" id="ucHarga" placeholder="8000" min="0">
+      <label id="ucLabel3">Jadi berapa potong</label><input type="number" id="ucPotong" placeholder="20" min="1">
       <div class="card" id="ucResult" style="margin-top:14px; display:none;">
         <div class="label">Modal per potong</div>
         <div class="val" id="ucModalPotong" style="font-family:var(--font-display); font-size:24px; font-weight:600;">Rp 0</div>
@@ -861,8 +867,9 @@ PENTING: kalau tulisannya tidak terbaca jelas, LEWATI barisnya. Jangan pernah me
       const potong = parseFloat(document.getElementById('ucPotong').value)||0;
       const sell = parseFloat(document.getElementById('ucSell').value)||0;
       const box = document.getElementById('ucResult');
-      if(kg>0 && harga>0 && potong>0){
-        const modalPotong = (kg*harga)/potong;
+      const cukup = ucMode === 'biji' ? (harga>0 && potong>0) : (kg>0 && harga>0 && potong>0);
+      if(cukup){
+        const modalPotong = ucMode === 'biji' ? (harga/potong) : ((kg*harga)/potong);
         box.style.display='block';
         document.getElementById('ucModalPotong').textContent = rupiah(modalPotong);
         const untung = sell - modalPotong;
@@ -874,13 +881,50 @@ PENTING: kalau tulisannya tidak terbaca jelas, LEWATI barisnya. Jangan pernah me
     ['ucKg','ucHarga','ucPotong','ucSell'].forEach(id=>{
       document.getElementById(id).addEventListener('input', recalc);
     });
+    // beli per biji: yang diingat pemilik kios biasanya "beli 20 tahu, bayar 12.000",
+    // bukan harga satuannya — jadi yang diminta total bayar, bukan harga per biji.
+    const setMode = m=>{
+      ucMode = m;
+      document.querySelectorAll('.uc-mode').forEach(b=>{
+        const aktif = b.dataset.mode === m;
+        b.style.opacity = aktif ? '1' : '.55';
+        b.style.fontWeight = aktif ? '700' : '500';
+      });
+      const l1 = document.getElementById('ucLabel1'), l2 = document.getElementById('ucLabel2'), l3 = document.getElementById('ucLabel3');
+      const i1 = document.getElementById('ucKg'), i2 = document.getElementById('ucHarga'), i3 = document.getElementById('ucPotong');
+      if(m === 'biji'){
+        l1.textContent = 'Beli berapa biji'; i1.placeholder = '20'; i1.step = '1';
+        l2.textContent = 'Total bayar (Rp)'; i2.placeholder = '12000';
+        l3.textContent = 'Jadi berapa potong jual'; i3.placeholder = '20';
+      } else {
+        l1.textContent = 'Berapa kg dibeli'; i1.placeholder = '2'; i1.step = '0.1';
+        l2.textContent = 'Harga per kg'; i2.placeholder = '8000';
+        l3.textContent = 'Jadi berapa potong'; i3.placeholder = '20';
+      }
+      recalc();
+    };
+    document.querySelectorAll('.uc-mode').forEach(b=>{
+      b.addEventListener('click', ()=>setMode(b.dataset.mode));
+    });
+    // kalau beli per biji, jumlah potong biasanya sama dengan jumlah biji — diisikan dulu,
+    // tetap boleh diubah kalau satu biji dipotong jadi dua
+    document.getElementById('ucKg').addEventListener('input', ()=>{
+      const i3 = document.getElementById('ucPotong');
+      if(ucMode === 'biji' && !i3.dataset.disentuh) i3.value = document.getElementById('ucKg').value;
+    });
+    document.getElementById('ucPotong').addEventListener('input', e=>{ e.target.dataset.disentuh = '1'; });
+    setMode('kilo');
     document.getElementById('ucSave').addEventListener('click', async ()=>{
       const kg = parseFloat(document.getElementById('ucKg').value)||0;
       const harga = parseFloat(document.getElementById('ucHarga').value)||0;
       const potong = parseFloat(document.getElementById('ucPotong').value)||0;
       const sell = parseFloat(document.getElementById('ucSell').value)||p.sellPrice;
-      if(kg<=0 || harga<=0 || potong<=0){ toast('Isi kg, harga, dan jumlah potong dulu'); return; }
-      const modalPotong = (kg*harga)/potong;
+      const kurang = ucMode === 'biji' ? (harga<=0 || potong<=0) : (kg<=0 || harga<=0 || potong<=0);
+      if(kurang){
+        toast(ucMode === 'biji' ? 'Isi total bayar dan jumlah potong dulu' : 'Isi kg, harga, dan jumlah potong dulu');
+        return;
+      }
+      const modalPotong = ucMode === 'biji' ? (harga/potong) : ((kg*harga)/potong);
       await db.collection('products').doc(pid).update({ buyPrice: modalPotong, sellPrice: sell });
       renderProdukModalBody();
       toast('Modal terbaru tersimpan');

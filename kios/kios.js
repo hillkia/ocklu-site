@@ -17,14 +17,18 @@
   var pita;
   // `tetap` = kabar yang tidak boleh terhapus sendiri oleh penyegaran data 5 detikan.
   // Tanpa ini, pesan "baca-foto lagi mati" hilang sebelum sempat dibaca orang di depan kios.
-  function kabar(teks, jenis, tetap){
+  function kabar(teks, jenis, tetap, aksi){
     if(!pita){
       pita = document.createElement('div');
       pita.style.cssText = 'position:fixed;left:0;right:0;top:0;z-index:9999;padding:9px 30px 9px 14px;font:13px/1.4 system-ui,sans-serif;text-align:center;display:none;cursor:pointer';
       pita.title = 'Ketuk buat menutup';
-      pita.onclick = function(){ pita.dataset.tetap=''; pita.style.display='none'; };
+      pita.onclick = function(){
+        if(pita.__aksi){ pita.__aksi(); return; }
+        pita.dataset.tetap=''; pita.style.display='none';
+      };
       document.body.appendChild(pita);
     }
+    pita.__aksi = aksi || null;
     if(!teks){
       if(pita.dataset.tetap) return;        // jangan hapus kabar penting
       pita.style.display='none';
@@ -45,6 +49,35 @@
       '<div style="max-width:420px;margin:60px auto;padding:24px;font:16px/1.6 system-ui,sans-serif;text-align:center">' +
       '<h2 style="margin:0 0 10px">Buku Kios</h2>' +
       '<p style="color:#666">Link ini sudah tidak berlaku.<br>Minta link baru ke pemilik kios.</p></div>';
+  }
+
+  // ---------- penjaga versi ----------
+  // Halaman ini disajikan GitHub Pages dengan cache 10 menit, dan HP kios jarang ditutup —
+  // jadi perbaikan yang sudah terbit bisa lama tidak terasa, dan pemiliknya menyangka tidak
+  // ada yang berubah. Versinya diambil dari alamat berkas ini sendiri (kios.js?v=...),
+  // lalu dibandingkan dengan versi.json yang selalu diambil segar.
+  var VERSI = (function(){
+    try{
+      var s = (document.currentScript && document.currentScript.src) || '';
+      var m = s.match(/[?&]v=([a-z0-9]+)/i);
+      return m ? m[1] : '';
+    }catch(e){ return ''; }
+  })();
+
+  var sudahLapor = false;
+  async function cekVersi(){
+    if(!VERSI || sudahLapor) return;
+    try{
+      var r = await fetch('versi.json?cb=' + Date.now(), { cache: 'no-store' });
+      if(!r.ok) return;
+      var j = await r.json();
+      if(j && j.v && j.v !== VERSI){
+        sudahLapor = true;
+        kabar('Ada versi baru — ketuk di sini buat memperbarui.', 'kabar', true, function(){
+          location.replace(location.pathname + '?v=' + j.v);
+        });
+      }
+    }catch(e){}
   }
 
   // ---------- deteksi mode "Situs desktop" ----------
@@ -286,6 +319,9 @@
   }else{
     cekModeDesktop();
   }
+  setTimeout(cekVersi, 4000);
+  setInterval(cekVersi, 10 * 60 * 1000);
+  document.addEventListener('visibilitychange', function(){ if(!document.hidden) cekVersi(); });
   window.claude = {
     use: async function(apa){
       if(apa === 'db') return { collection: kumpul };
