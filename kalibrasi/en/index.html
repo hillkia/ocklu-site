@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Calibration Audit — how honest are your team's confidence numbers?</title>
+<meta name="description" content="Drop a CSV of past forecasts plus what actually happened. Get Brier score, BSS against base rate and market price, a reliability curve and an overconfidence read. Runs entirely in your browser — nothing is uploaded." />
+<link rel="stylesheet" href="../gaya.css" />
+</head>
+<body data-contoh="../contoh.csv">
+<div class="wrap">
+
+  <div class="tag">OCKLU · tool <a href="../" style="color:var(--gold);letter-spacing:0;text-transform:none">· Bahasa Indonesia</a></div>
+  <h1>CALIBRATION AUDIT</h1>
+  <p class="lede">
+    Your team writes confidence numbers — model scores, “likely by Q3”, 70%.
+    Has anyone ever checked whether the 70% ones actually happen 7 times out of 10?
+  </p>
+  <p class="lede" style="color:var(--dim);font-size:15px">
+    Drop the CSV below. The report renders on this same screen.
+  </p>
+
+  <div id="zona">
+    <div class="besar">DROP A CSV HERE</div>
+    <div class="kecil">
+      or click to pick a file · needs a probability column + an outcome column (0/1)<br>
+      no data handy? <a href="#" id="contoh" style="color:var(--gold)">try the sample data</a>
+    </div>
+  </div>
+  <input type="file" id="berkas" accept=".csv,.txt,text/csv,text/plain" />
+
+  <div class="baris">
+    <input type="text" id="nama" placeholder="name on the report — e.g. Risk Team" />
+    <button id="unduh">download report</button>
+    <button id="cetak">print / PDF</button>
+  </div>
+
+  <div id="galat" hidden></div>
+
+  <div id="hasil" hidden>
+    <div id="ringkas"></div>
+    <iframe id="bingkai" title="calibration audit report"></iframe>
+  </div>
+
+  <div class="catatan" style="margin-top:26px;border-left-color:var(--green)">
+    <b style="color:var(--green)">Your data never leaves this machine.</b>
+    Every calculation runs in this browser. No upload, no server receiving the file,
+    no analytics. Turn off your wifi once this page has loaded — it still works.
+    That is not a promise buried in a privacy policy; it is how the page is built.
+  </div>
+
+  <h2>CSV format</h2>
+  <table>
+    <tr><th>column</th><th>contents</th><th>header names recognised</th></tr>
+    <tr>
+      <td style="color:var(--gold)">required</td>
+      <td>probability, 0..1 or 0..100, written <b>before</b> the outcome was known</td>
+      <td><code>probability</code> <code>forecast</code> <code>confidence</code> <code>p</code> <code>prediksi</code></td>
+    </tr>
+    <tr>
+      <td style="color:var(--gold)">required</td>
+      <td>what actually happened, 0 or 1</td>
+      <td><code>outcome</code> <code>actual</code> <code>resolved</code> <code>y</code> <code>hasil</code></td>
+    </tr>
+    <tr>
+      <td>optional</td>
+      <td>market price or consensus — this sharpens the report considerably</td>
+      <td><code>market_price</code> <code>consensus</code> <code>market</code> <code>pasar</code></td>
+    </tr>
+    <tr>
+      <td>optional</td>
+      <td>name of the decision, used for the “ten worst misses” table</td>
+      <td><code>label</code> <code>question</code> <code>name</code> <code>id</code></td>
+    </tr>
+  </table>
+
+  <h2>Why the 0.25 baseline is a trap</h2>
+  <div class="catatan">
+    Almost every calibration tool scores your Brier against <b>0.25</b> — the score you get
+    by saying 50/50 every single time. That sounds reasonable, right up until the event is rare.<br><br>
+    Base rate 10%? A model that <b>always answers “no”</b> already scores 0.09. Far below 0.25,
+    with no skill whatsoever. A report that says “good, under 0.25” in that situation is
+    praising something that isn't there.<br><br>
+    Here you face two harder opponents:
+    <b>the base rate</b> (<code>br × (1−br)</code> — the Brier of “always guess the average”)
+    and <b>the market price</b> when that column exists. The hardest available one decides the
+    verdict. Lose to the market and the verdict reads “LOSES TO THE MARKET PRICE” — not
+    “beats the base rate”, which would also happen to be true.
+  </div>
+
+  <h2>Three things this report refuses to do</h2>
+  <div class="kolom">
+    <div class="kartu">
+      <h3>It won't average away thin buckets</h3>
+      <p>A bucket holding 8 forecasts can look dramatic while being pure noise. Buckets under
+         30 get a dashed circle and are excluded from the bias figure.</p>
+    </div>
+    <div class="kartu">
+      <h3>It won't make the verdict kinder than the findings</h3>
+      <p>Including the colours. The Brier card only turns green when you beat the hardest
+         opponent your data supports — not when you happen to clear a coin flip.</p>
+    </div>
+    <div class="kartu">
+      <h3>It won't conclude from small data</h3>
+      <p>Below 30 rows the report says so itself: this indicates direction, not conclusions.</p>
+    </div>
+  </div>
+
+  <h2>Who this is for</h2>
+  <ul>
+    <li>ML teams that emit confidence scores and have never checked their calibration</li>
+    <li>risk, underwriting and credit scoring teams</li>
+    <li>demand, churn and fraud forecasting</li>
+    <li>PMs who write “likely to ship in Q3” and want to see their track record</li>
+    <li>anyone with a <code>confidence</code> column in a database that has never been tested</li>
+  </ul>
+
+  <h2>Limits, stated up front</h2>
+  <ul>
+    <li><b>This is a mirror, not investment advice.</b> No buy/sell recommendations, no one's
+        money is touched.</li>
+    <li><b>Calibration ≠ accuracy ≠ profit.</b> A perfectly calibrated model can still lose money
+        with bad sizing. That is a different problem.</li>
+    <li><b>It needs forecasts written before the outcome was known.</b> Numbers filled in afterwards
+        measure memory, not calibration.</li>
+  </ul>
+
+  <h2>Take it with you</h2>
+    <div class="catatan" style="border-left-color:var(--gold)">
+    The downloadable version runs on your own laptop, for data that must not leave the
+    corporate network. It contains the audit engine, the formulas, two SKILL.md files for
+    Claude&nbsp;Code, sample data and a sample report. Node is the only requirement —
+    no database, no network calls.
+    <div class="baris" style="margin-top:14px">
+      <a class="tombol utama" href="mailto:octavianus@ocklu.com?subject=Calibration%20Audit%20package">request the package</a>
+      <a class="tombol" href="../contoh.csv" download>download sample data</a>
+    </div>
+  </div>
+
+  <h2>Want it done for you</h2>
+  <div class="catatan">
+    The tool gives you the numbers. What usually helps more is the reading: why the skew
+    concentrates in certain ranges, which buckets can actually support a conclusion, and
+    what changed since last month.<br><br>
+    Send the CSV, get the report plus the interpretation.
+    <a href="mailto:octavianus@ocklu.com?subject=Calibration%20Audit" style="color:var(--gold)">octavianus@ocklu.com</a><br><br>
+    <span style="color:var(--dim);font-size:13px">If the data cannot leave your network,
+    use the downloadable version — same engine, identical results.</span>
+  </div>
+
+  <footer>
+    <span>Calibration Audit — OCKLU</span>
+    <span>Computed in your browser. No file is sent anywhere.</span>
+    <span style="margin-left:auto">Paid in Full — Jesus is God ✝️</span>
+  </footer>
+</div>
+<script type="module" src="../app.bundle.js"></script>
+</body>
+</html>

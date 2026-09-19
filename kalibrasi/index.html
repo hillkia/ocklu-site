@@ -5,71 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Audit Kalibrasi — seberapa jujur keyakinan tim lo</title>
 <meta name="description" content="Kasih CSV berisi prediksi yang udah ditulis + hasil aslinya. Dapet laporan kalibrasi: Brier, BSS vs base rate dan harga pasar, kurva reliabilitas, flag overconfident. Dihitung di browser — datanya gak ke mana-mana." />
-<style>
-  :root{
-    --bg:#070B14; --panel:#0D1424; --text:#E7EDF7; --muted:#9FB0C8; --dim:#5B6B85;
-    --gold:#E8C87A; --green:#4ADE80; --red:#FF5A5A; --amber:#F5A524; --violet:#C4B5FD;
-    --line:rgba(120,150,200,.14);
-    --mono:ui-monospace,'JetBrains Mono',Menlo,Consolas,monospace;
-  }
-  *{box-sizing:border-box}
-  body{margin:0;background:var(--bg);color:var(--text);
-       font:15px/1.7 ui-sans-serif,system-ui,-apple-system,sans-serif}
-  .wrap{max-width:860px;margin:0 auto;padding:44px 16px 72px}
-  .tag{font:10px var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--dim)}
-  h1{font:700 30px/1.2 var(--mono);letter-spacing:.06em;color:var(--gold);margin:8px 0 10px}
-  .lede{font-size:17px;color:var(--muted);max-width:62ch;margin:0 0 6px}
-  h2{font:700 11px/1 var(--mono);letter-spacing:.18em;text-transform:uppercase;
-     color:var(--text);margin:48px 0 14px}
-
-  /* drop zone */
-  #zona{margin:28px 0 10px;border:1.5px dashed rgba(232,200,122,.38);border-radius:14px;
-        background:rgba(232,200,122,.04);padding:34px 20px;text-align:center;cursor:pointer;
-        transition:background .18s,border-color .18s}
-  #zona:hover,#zona.aktif{background:rgba(232,200,122,.09);border-color:var(--gold)}
-  #zona .besar{font:700 14px var(--mono);letter-spacing:.06em;color:var(--gold)}
-  #zona .kecil{font-size:12.5px;color:var(--dim);margin-top:7px;line-height:1.6}
-  #berkas{display:none}
-  .baris{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:10px}
-  input[type=text]{background:rgba(0,0,0,.35);border:1px solid var(--line);border-radius:8px;
-    padding:8px 11px;color:var(--text);font:12px var(--mono);flex:1;min-width:180px}
-  input[type=text]::placeholder{color:var(--dim)}
-  button,a.tombol{background:transparent;border:1px solid rgba(232,200,122,.45);color:var(--gold);
-    border-radius:8px;padding:8px 15px;font:11px var(--mono);letter-spacing:.08em;
-    text-transform:uppercase;cursor:pointer;text-decoration:none;display:inline-block;
-    transition:background .16s}
-  button:hover,a.tombol:hover{background:rgba(232,200,122,.12)}
-  a.tombol.utama{background:var(--gold);color:#070B14;border-color:var(--gold);font-weight:700}
-  a.tombol.utama:hover{background:#f0d693}
-  #galat{margin-top:12px;border:1px solid rgba(255,90,90,.45);background:rgba(255,90,90,.08);
-    border-radius:10px;padding:12px 14px;color:var(--muted);font-size:13px;white-space:pre-wrap}
-
-  #hasil{margin-top:24px}
-  #ringkas{font:12px var(--mono);color:var(--muted);margin-bottom:10px}
-  #bingkai{width:100%;height:78vh;min-height:520px;border:1px solid var(--line);
-    border-radius:12px;background:var(--bg)}
-
-  .kolom{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
-  .kartu{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
-  .kartu h3{font:700 11px var(--mono);letter-spacing:.12em;text-transform:uppercase;
-    color:var(--gold);margin:0 0 7px}
-  .kartu p{margin:0;font-size:13.5px;color:var(--muted);line-height:1.65}
-  .catatan{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--violet);
-    border-radius:10px;padding:16px 18px;color:var(--muted);font-size:14px;line-height:1.75}
-  code{font-family:var(--mono);color:var(--gold);font-size:.92em}
-  table{width:100%;border-collapse:collapse;font:12.5px var(--mono);margin-top:4px}
-  th,td{text-align:left;padding:8px 9px;border-bottom:1px solid var(--line);vertical-align:top}
-  th{color:var(--dim);font-weight:400;font-size:10px;letter-spacing:.1em;text-transform:uppercase}
-  ul{margin:0;padding-left:18px;color:var(--muted);font-size:14px}
-  li{margin-bottom:7px}
-  footer{margin-top:56px;padding-top:16px;border-top:1px solid var(--line);
-    font:10.5px var(--mono);color:var(--dim);display:flex;gap:14px;flex-wrap:wrap}
-</style>
+<link rel="stylesheet" href="gaya.css" />
 </head>
-<body>
+<body data-contoh="contoh.csv">
 <div class="wrap">
 
-  <div class="tag">OCKLU · alat</div>
+  <div class="tag">OCKLU · alat <a href="en/" style="color:var(--gold);letter-spacing:0;text-transform:none">· English</a></div>
   <h1>AUDIT KALIBRASI</h1>
   <p class="lede">
     Tim lo nulis angka keyakinan — <i>confidence score</i>, “kemungkinan besar”, 70%.
