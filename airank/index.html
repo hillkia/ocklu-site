@@ -30,6 +30,18 @@ th{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--redu
 .pagar{border-left:3px solid var(--aksen);background:var(--kartu);padding:14px 16px;border-radius:0 12px 12px 0;font-size:14px;margin:30px 0}
 a.cta{display:inline-block;margin-top:8px;background:var(--aksen);color:#fff;text-decoration:none;font-weight:700;padding:14px 24px;border-radius:12px}
 footer{margin-top:60px;border-top:1px solid var(--garis);padding-top:18px;font-size:12.5px;color:var(--redup)}
+/* Di HP tombol beli hilang di bawah layar setelah gulir panjang.
+   Bilah lengket ini yang membuat halaman tetap bisa dibeli dari genggaman. */
+.hp{display:none}
+@media(max-width:700px){
+ .hp{display:flex;position:fixed;left:0;right:0;bottom:0;gap:10px;padding:10px 12px;
+     background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);
+     border-top:1px solid var(--garis);z-index:9}
+ .hp a{flex:1;text-align:center;padding:13px;border-radius:11px;text-decoration:none;font-weight:700;font-size:15px}
+ .hp .beli{background:var(--aksen);color:#fff}
+ .hp .gratis{border:1px solid var(--garis);color:var(--tinta)}
+ .w{padding-bottom:104px}
+}
 </style><div class=w>
 <div class=cap>OCKLU AIRANK</div>
 <h1>Buyers stopped googling.<br>They ask AI — and it <em>doesn't name you</em>.</h1>
@@ -59,6 +71,8 @@ footer{margin-top:60px;border-top:1px solid var(--garis);padding-top:18px;font-s
 <tr><td>Profound</td><td colspan=2>price hidden, sales call required</td></tr></table>
 <p class=kecil>Competitor prices from their public pricing pages, Sept 2026. If one changes, tell us and we change this table.</p>
 <div class=pagar><b>What this cannot tell you.</b> A scan is one photograph: one set of questions, one moment, the engines listed on the report. Not being mentioned is not proof you are never mentioned. Every report says which engine answered and whether web search was actually on.</div>
-<a class=cta href="harga.html">See plans →</a>
+<a class=cta href="https://hillkia.gumroad.com/l/aivis">Buy the full report — $39</a>
+<p class=kecil>One-time, card checkout. Or <a href="harga.html">see monthly monitoring from $19</a>.</p>
 <footer>OCKLU AIRANK · built by ocklubrave · <a href="harga.html">pricing</a> · raw model answers stored with every report.</footer></div>
+<div class=hp><a class=gratis href="#f">Free scan</a><a class=beli href="https://hillkia.gumroad.com/l/aivis">Buy report $39</a></div>
 </html>
