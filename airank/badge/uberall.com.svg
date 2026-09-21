@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="228" height="40" role="img"
+ aria-label="AI visibility 20.0% for uberall.com">
+<rect width="228" height="40" rx="8" fill="#16150f"/>
+<rect x="1" y="1" width="226" height="38" rx="7" fill="#16150f" stroke="#2a2c22"/>
+<text x="12" y="17" font-family="ui-sans-serif,-apple-system,Segoe UI,Roboto,sans-serif"
+ font-size="10" letter-spacing="1.4" fill="#9a9784">AI VISIBILITY</text>
+<text x="12" y="32" font-family="ui-sans-serif,-apple-system,Segoe UI,Roboto,sans-serif"
+ font-size="14" font-weight="700" fill="#f2f0e6">uberall.com</text>
+<rect x="168" y="8" width="48" height="24" rx="6" fill="#e5484d"/>
+<text x="192" y="25" text-anchor="middle" font-family="ui-sans-serif,-apple-system,sans-serif"
+ font-size="13" font-weight="700" fill="#0e0f0c">20.0%</text>
+</svg>

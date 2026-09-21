@@ -1,0 +1,69 @@
+<!doctype html><html lang=en><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>Method — AI Visibility Index</title>
+<meta name=description content="How the AI Visibility Index is measured: question sets, engines, scoring, and the limits of the data.">
+<link rel=canonical href="https://ocklu.com/airank/method.html">
+<style>
+:root{--bg:#fbfaf8;--kartu:#fff;--tinta:#16150f;--redup:#6b6858;--garis:#e6e2d6;--aksen:#0f5c4a}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0e0f0c;--kartu:#16180f;--tinta:#f2f0e6;--redup:#9a9784;--garis:#2a2c22;--aksen:#5fd0a8}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tinta);font:16px/1.7 ui-sans-serif,-apple-system,"Segoe UI",Roboto,sans-serif}
+.w{max-width:760px;margin:0 auto;padding:40px 16px 80px}
+h1{font-size:clamp(26px,5vw,40px);letter-spacing:-.025em;line-height:1.12;margin:10px 0 14px}
+h2{font-size:19px;margin:34px 0 8px;letter-spacing:-.01em}
+.cap{font:600 12px/1 ui-monospace,monospace;letter-spacing:.16em;color:var(--redup);text-transform:uppercase}
+code{font:13px ui-monospace,monospace;background:var(--kartu);border:1px solid var(--garis);border-radius:6px;padding:1px 5px}
+.pagar{border-left:3px solid var(--aksen);background:var(--kartu);padding:14px 16px;border-radius:0 12px 12px 0;margin:22px 0}
+table{width:100%;border-collapse:collapse;background:var(--kartu);border:1px solid var(--garis);border-radius:12px;overflow:hidden;font-size:14.5px;margin:14px 0}
+td,th{padding:9px 11px;border-top:1px solid var(--garis);text-align:left}
+th{font-size:11.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--redup);border-top:0}
+a{color:var(--aksen)}
+footer{margin-top:46px;border-top:1px solid var(--garis);padding-top:16px;font-size:12.5px;color:var(--redup)}
+</style><div class=w>
+<div class=cap>AI VISIBILITY INDEX</div>
+<h1>Method, in full</h1>
+<p>Anyone should be able to repeat this and get the same shape of answer. If you
+cannot reproduce a number here, it is our mistake and we want to hear about it.</p>
+
+<h2>1. The questions</h2>
+<p>Each board starts from questions a buyer actually types, generated per category and
+never containing a brand name. Brand-name questions only test recall, not recommendation,
+so they are excluded from the score (a single control question is used on brand reports
+and marked as such).</p>
+
+<h2>2. The engines</h2>
+<table><tr><th>label</th><th>what it stands for</th><th>web search</th></tr>
+<tr><td><code>ai-cari</code></td><td>grounded answer engines (AI Overviews / AI Mode / search-backed chat)</td><td>on</td></tr>
+<tr><td><code>ai-terbuka</code></td><td>open models used inside third-party assistants</td><td>off</td></tr>
+<tr><td><code>ai-ingatan</code></td><td>frontier model answering from memory, no browsing</td><td>off</td></tr></table>
+<p>When the primary engine is unavailable the call falls to a backup and the row is
+flagged <code>turun_kelas</code> (downgraded). A downgraded answer is still real data,
+but it is not the same measurement, so it is labelled rather than blended.</p>
+
+<h2>3. What is extracted</h2>
+<p>From each raw answer: whether the brand is named, its ordinal position in the list,
+whether its domain is cited, which competitor domains appear, and the tone of the
+sentence around the mention. Extraction is deterministic string work on the stored text —
+no model is asked to judge another model's output.</p>
+
+<h2>4. The score</h2>
+<p><code>visibility%</code> = named in N of M unbranded questions.
+<code>share of voice</code> = your mentions over all brand mentions in the same answers.
+<code>AIRANK score</code> = 0.6 × visibility + 0.25 × share of voice + a position bonus
+(up to 15 for ranking first) + 5 if the brand is recognised when asked directly.</p>
+
+<h2>5. What this cannot tell you</h2>
+<div class=pagar><p><b>Absence is not proof.</b> Not being named in these calls does not mean
+a brand is never named. Answer engines vary by user, location, session and day.</p>
+<p><b>Failed calls are failures, not zeros.</b> When every engine is down, the row is
+recorded as an error and excluded. It is never counted as "not mentioned" — that would
+manufacture bad news out of our own outage.</p>
+<p><b>Sample sizes are small and printed.</b> Every board states how many live calls it
+is built from. A board with fewer than three successful calls is not published at all.</p></div>
+
+<h2>6. Raw data</h2>
+<p>Every board publishes its underlying evidence as JSON at
+<code>/airank/data/&lt;board&gt;.json</code> — the prompt, the engine, the timestamp and the
+full answer text. Cite it, check it, or argue with it.</p>
+
+<footer>OCKLU AIRANK · <a href="hub.html">index</a> · <a href="./">free scan</a> ·
+corrections: hillkiacakep@gmail.com</footer></div></html>
