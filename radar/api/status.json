@@ -1,38 +1,42 @@
 {
- "dibuat": "2026-09-20T07:13:44+07:00",
+ "dibuat": "2026-09-21T07:23:57+07:00",
  "peluang": {
-  "total": 3086,
-  "hidup": 1803,
-  "mati": 374,
-  "duplikat": 133,
-  "risiko_tinggi": 7,
-  "layak_terbit": 501,
-  "masuk_24j": 818,
+  "total": 3955,
+  "hidup": 2258,
+  "mati": 287,
+  "duplikat": 186,
+  "risiko_tinggi": 10,
+  "layak_terbit": 550,
+  "masuk_24j": 869,
   "per_kategori": {
-   "alat": 236,
-   "freelance": 112,
+   "alat": 256,
+   "freelance": 119,
    "hibah": 151,
-   "kerja": 2268,
-   "promo": 53,
-   "reseller": 52,
-   "tender": 214
+   "kerja": 3029,
+   "promo": 60,
+   "reseller": 55,
+   "tender": 285
   },
   "per_sumber": {
-   "Arbeitnow": 1870,
-   "Himalayas": 280,
-   "TED Uni Eropa": 214,
-   "Product Hunt": 167,
+   "Arbeitnow": 2523,
+   "Himalayas": 380,
+   "TED Uni Eropa": 285,
+   "Product Hunt": 181,
    "Grants.gov": 151,
-   "WeWorkRemotely": 106,
-   "RemoteOK": 101,
-   "GitHub": 69,
-   "Remotive": 17,
-   "Shopify": 9,
-   "Hacker News": 6,
-   "Mashable": 4
+   "WeWorkRemotely": 112,
+   "RemoteOK": 105,
+   "GitHub": 75,
+   "Remotive": 21,
+   "Shopify": 10,
+   "Hacker News": 7,
+   "Mashable": 6
   }
  },
  "edisi": [
+  {
+   "tanggal": "2026-09-21",
+   "jumlah": 25
+  },
   {
    "tanggal": "2026-09-20",
    "jumlah": 25
