@@ -1,0 +1,17 @@
+# OCKLU AIRANK — AI Visibility Index
+
+> Live measurement of which brands AI answer engines name when buyers ask.
+> Every figure is backed by the stored raw model answer, the engine used and the timestamp.
+> Absence from a board means the brand was not named in those calls — not that it is never named.
+
+## Boards
+- [AI visibility tool](https://ocklu.com/airank/index/ai-visibility-tool.html): which brands AI engines named for AI visibility tool buyer questions, 5 live calls, updated 2026-09-21
+- [SEO agency](https://ocklu.com/airank/index/seo-agency.html): which brands AI engines named for SEO agency buyer questions, 5 live calls, updated 2026-09-21
+
+## Method
+Unbranded buyer questions are fired at AI answer engines (web-search grounded and
+memory-only). Mentions, position and cited domains are extracted from the raw answer.
+Failed calls are recorded as failures and never counted as "not mentioned".
+
+## Contact
+https://ocklu.com/airank/ · hillkiacakep@gmail.com
