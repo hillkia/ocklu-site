@@ -1,5 +1,5 @@
 /* OCKLU-TRADE service worker — app shell offline + data network-first */
-const CACHE = "ocklu-trade-v1";
+const CACHE = "ocklu-trade-v2";
 const SHELL = [
   "./","./index.html",
   "./manifest.webmanifest",
@@ -23,13 +23,16 @@ self.addEventListener("activate", (e) => {
 self.addEventListener("fetch", (e) => {
   const url = new URL(e.request.url);
   // data verdict → network-first (selalu coba yang terbaru, jatuh ke cache bila offline)
-  if (url.pathname.endsWith("/data/latest.js") || url.pathname.endsWith("latest.json")) {
+  // + data PEGASUS & halamannya: disimpan tanpa ?t= supaya cache tak menumpuk
+  const segar = /\/data\/(latest|pegasus)\.js$|latest\.json$|pegasus\.html$/.test(url.pathname);
+  if (segar) {
+    const kunci = url.origin + url.pathname;
     e.respondWith(
       fetch(e.request).then((r) => {
         const copy = r.clone();
-        caches.open(CACHE).then((c) => c.put(e.request, copy));
+        caches.open(CACHE).then((c) => c.put(kunci, copy));
         return r;
-      }).catch(() => caches.match(e.request))
+      }).catch(() => caches.match(kunci))
     );
     return;
   }

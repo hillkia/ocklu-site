@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>PEGASUS Eksekusi</title>
+<meta name="description" content="PEGASUS — lapis eksekusi ocklu-trade: posisi, keputusan, riwayat order, ledger.">
+<meta name="theme-color" content="#0b0e14">
+<link rel="manifest" href="pegasus.webmanifest">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<style>
+:root{
+  --bg:#0b0e14;--panel:#131824;--panel2:#1a2130;--line:#26304a;--tx:#e8edf7;--mut:#8b97ac;
+  --up:#4ade80;--down:#f87171;--warn:#fbbf24;--acc:#38bdf8;--chip:#1f2940;
+}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){
+  --bg:#f5f7fb;--panel:#fff;--panel2:#eef2f8;--line:#dbe2ee;--tx:#111827;--mut:#5b667a;
+  --up:#15803d;--down:#dc2626;--warn:#b45309;--acc:#0369a1;--chip:#e8eef8;}}
+:root[data-theme="light"]{--bg:#f5f7fb;--panel:#fff;--panel2:#eef2f8;--line:#dbe2ee;--tx:#111827;--mut:#5b667a;
+  --up:#15803d;--down:#dc2626;--warn:#b45309;--acc:#0369a1;--chip:#e8eef8;}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);color:var(--tx)}
+body{font:15px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  padding:0 16px calc(84px + env(safe-area-inset-bottom));max-width:720px;margin:0 auto;
+  -webkit-font-smoothing:antialiased}
+.num{font-variant-numeric:tabular-nums}
+header{padding:calc(14px + env(safe-area-inset-top)) 0 10px;display:flex;align-items:center;gap:10px}
+header h1{font-size:20px;letter-spacing:.5px}
+header .sub{color:var(--mut);font-size:12px}
+.grow{flex:1}
+button{font:inherit;color:inherit;background:var(--chip);border:1px solid var(--line);border-radius:10px;
+  padding:8px 12px;min-height:40px;cursor:pointer}
+button:focus-visible,a:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+.chip{display:inline-flex;align-items:center;gap:4px;font-size:12px;padding:3px 8px;border-radius:999px;
+  background:var(--chip);color:var(--mut);white-space:nowrap}
+.chip.paper{color:var(--warn)}.chip.live{color:var(--down)}.chip.testnet{color:var(--acc)}
+.chip.ok{color:var(--up)}.chip.bad{color:var(--down)}
+.banner{border:1px solid var(--down);color:var(--down);background:color-mix(in srgb,var(--down) 10%,transparent);
+  border-radius:12px;padding:10px 12px;margin:6px 0 12px;font-weight:600}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:12px}
+.card h2{font-size:13px;font-weight:600;color:var(--mut);text-transform:uppercase;letter-spacing:.6px;margin-bottom:10px}
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.stat .k{font-size:12px;color:var(--mut)}
+.stat .v{font-size:22px;font-weight:700}
+.up{color:var(--up)}.down{color:var(--down)}.mut{color:var(--mut)}
+.row{display:flex;align-items:center;gap:8px}
+.list>*+*{border-top:1px solid var(--line)}
+.item{padding:10px 0}
+.item .t{font-weight:600}
+.small{font-size:12px;color:var(--mut)}
+.reasons{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px}
+.reasons .chip{white-space:normal}
+.pos-top{display:flex;align-items:baseline;gap:8px}
+.pos-top .pnl{margin-left:auto;font-size:20px;font-weight:700}
+.rail{position:relative;height:8px;border-radius:99px;margin:14px 0 6px;
+  background:linear-gradient(90deg,color-mix(in srgb,var(--down) 55%,transparent),var(--panel2) 40%,color-mix(in srgb,var(--up) 55%,transparent))}
+.rail .entry{position:absolute;top:-4px;width:2px;height:16px;background:var(--mut)}
+.rail .now{position:absolute;top:-5px;width:18px;height:18px;margin-left:-9px;border-radius:50%;
+  background:var(--tx);border:3px solid var(--bg)}
+.rail-lbl{display:flex;justify-content:space-between;font-size:11px;color:var(--mut)}
+.bar{height:6px;background:var(--panel2);border-radius:99px;overflow:hidden;margin-top:6px}
+.bar i{display:block;height:100%;background:var(--acc)}
+.bursa-off{display:flex;justify-content:space-between;gap:8px;padding:8px 0}
+nav{position:fixed;left:0;right:0;bottom:0;background:color-mix(in srgb,var(--panel) 92%,transparent);
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--line);
+  display:flex;justify-content:center;padding:6px 8px calc(6px + env(safe-area-inset-bottom))}
+nav .in{display:flex;gap:4px;max-width:720px;width:100%}
+nav button{flex:1;background:none;border:0;border-radius:10px;font-size:12px;color:var(--mut);padding:6px 2px;min-height:48px;
+  display:flex;flex-direction:column;align-items:center;gap:2px}
+nav button[aria-selected="true"]{color:var(--tx);background:var(--chip)}
+nav .ic{font-size:18px;line-height:1}
+section[hidden]{display:none}
+details summary{cursor:pointer;color:var(--mut);font-size:13px;padding:4px 0;min-height:32px}
+details ol{padding-left:18px;margin-top:6px}
+details li{margin:4px 0;font-size:13px}
+.empty{color:var(--mut);font-size:14px;padding:6px 0}
+.foot{color:var(--mut);font-size:11px;text-align:center;margin:18px 0 6px}
+@media (prefers-reduced-motion:no-preference){.card{animation:in .25s ease-out both}}
+@keyframes in{from{opacity:0;transform:translateY(4px)}}
+</style>
+</head>
+<body>
+<header>
+  <div class="grow">
+    <h1>🪽 PEGASUS</h1>
+    <div class="sub" id="sub">memuat…</div>
+  </div>
+  <button id="muat" aria-label="Muat ulang data">↻</button>
+</header>
+<div id="banner"></div>
+
+<main>
+  <section id="t-ringkas" role="tabpanel"></section>
+  <section id="t-posisi" role="tabpanel" hidden></section>
+  <section id="t-sinyal" role="tabpanel" hidden></section>
+  <section id="t-riwayat" role="tabpanel" hidden></section>
+</main>
+<p class="foot">Alat bantu berpikir — tak ada alat yang bisa memastikan pasar.<br>
+  Pagar membatasi rugi, bukan menjamin untung. · <a href="./" style="color:var(--acc)">dasbor verdict</a></p>
+
+<nav><div class="in" role="tablist">
+  <button role="tab" data-t="ringkas" aria-selected="true"><span class="ic">◎</span>Ringkas</button>
+  <button role="tab" data-t="posisi" aria-selected="false"><span class="ic">▤</span>Posisi</button>
+  <button role="tab" data-t="sinyal" aria-selected="false"><span class="ic">⚡</span>Sinyal</button>
+  <button role="tab" data-t="riwayat" aria-selected="false"><span class="ic">⛓</span>Riwayat</button>
+</div></nav>
+
+<script>
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const pct = (v, d = 2) => v == null ? "—" : `${v > 0 ? "+" : ""}${Number(v).toFixed(d)}%`;
+const cls = v => v == null ? "mut" : v > 0 ? "up" : v < 0 ? "down" : "mut";
+const angka = (v, q) => {
+  if (v == null) return "—";
+  const d = q === "idr" ? 0 : v < 1 ? 6 : v < 100 ? 4 : 2;
+  return (q === "idr" ? "Rp " : "") + Number(v).toLocaleString("id-ID", {maximumFractionDigits: d}) + (q && q !== "idr" ? " " + q : "");
+};
+const lalu = iso => {
+  if (!iso) return "—";
+  const m = Math.round((Date.now() - new Date(iso)) / 60000);
+  return m < 1 ? "barusan" : m < 60 ? `${m} mnt lalu` : m < 1440 ? `${Math.round(m / 60)} jam lalu` : `${Math.round(m / 1440)} hari lalu`;
+};
+const chipMode = m => `<span class="chip ${esc((m||"").toLowerCase())}">${esc(m)}</span>`;
+
+function ringkas(D) {
+  const aktif = D.bursa.filter(b => b.status === "aktif");
+  const lain = D.bursa.filter(b => b.status !== "aktif");
+  let h = "";
+  for (const b of aktif) {
+    const nPos = b.posisi.length, rem = b.rem || [];
+    h += `<div class="card"><div class="row" style="margin-bottom:10px"><h2 style="margin:0" class="grow">${esc(b.nama)}</h2>${chipMode(b.mode)}</div>
+      <div class="hero">
+        <div class="stat"><div class="k">Modal</div><div class="v num">${D.publik ? '<span class="mut" style="font-size:14px">disembunyikan (publik)</span>' : angka(b.modal, b.quote)}</div></div>
+        <div class="stat"><div class="k">Hari ini</div><div class="v num ${cls(b.pnl_hari_pct)}">${pct(b.pnl_hari_pct)}</div></div>
+        <div class="stat"><div class="k">Posisi terbuka</div><div class="v num">${nPos}<span class="mut" style="font-size:14px"> / 5</span></div></div>
+        <div class="stat"><div class="k">Kalah beruntun</div><div class="v num ${b.beruntun_kalah >= 2 ? "down" : ""}">${b.beruntun_kalah}<span class="mut" style="font-size:14px"> / 3</span></div></div>
+      </div>
+      <div class="reasons" style="margin-top:12px">${rem.length ? rem.map(r => `<span class="chip bad">⛔ ${esc(r)}</span>`).join("") : '<span class="chip ok">✓ rem tidak aktif — boleh masuk</span>'}</div>
+    </div>`;
+  }
+  const st = Object.entries(D.statistik || {});
+  h += `<div class="card"><h2>Hasil posisi tertutup</h2>${st.length ? `<div class="list">${st.map(([k, s]) => `
+    <div class="item row"><div class="grow"><div class="t">${esc(k)}</div><div class="small">${s.tutup} ditutup · ${s.menang} menang</div></div>
+      <div style="text-align:right"><div class="num ${cls(s.rata_pct)}" style="font-weight:700">${pct(s.rata_pct)}</div><div class="small">rata · win ${s.winrate}%</div></div></div>`).join("")}</div>`
+    : '<p class="empty">Belum ada posisi yang ditutup. Angka ini baru bermakna setelah puluhan transaksi.</p>'}</div>`;
+  h += `<div class="card"><h2>Bursa</h2><div class="list">${lain.map(b => `
+    <div class="bursa-off"><div><div class="t">${esc(b.nama)}</div><div class="small">${esc(b.catatan)}</div></div>
+    <span class="chip ${b.status === "terhalang" ? "bad" : ""}">${esc(b.status)}</span></div>`).join("") || '<p class="empty">Semua bursa aktif.</p>'}</div></div>`;
+  h += `<div class="card"><h2>Ledger</h2><div class="row"><span class="chip ${D.ledger.ok ? "ok" : "bad"}">${D.ledger.ok ? "✓ rantai utuh" : "✗ RANTAI PUTUS"}</span>
+    <span class="small num">${D.ledger.entries} baris · kepala ${esc(D.ledger.head)}…</span></div>
+    <details style="margin-top:10px"><summary>Pagar yang dipegang mesin</summary><ol>${D.pagar.map(p => `<li>${esc(p)}</li>`).join("")}</ol></details></div>`;
+  return h;
+}
+
+function posisi(D) {
+  let h = "", ada = false;
+  for (const b of D.bursa.filter(b => b.status === "aktif")) {
+    for (const p of b.posisi) {
+      ada = true;
+      const e = Math.max(0, Math.min(1, p.entry_rentang)) * 100, n = p.posisi_rentang * 100;
+      h += `<div class="card"><div class="pos-top"><span class="t" style="font-weight:700;font-size:17px">${esc(p.pair)}</span>
+        ${chipMode(b.mode)}<span class="pnl num ${cls(p.pnl_pct)}">${pct(p.pnl_pct)}</span></div>
+        <div class="small">${esc(b.nama)} · ${p.jam} jam dari 72 · conviction ${p.conviction ?? "—"}${!D.publik && p.modal ? " · " + angka(p.modal, b.quote) : ""}</div>
+        <div class="rail" role="img" aria-label="Harga kini di ${Math.round(n)}% antara stop dan target">
+          <span class="entry" style="left:${e}%"></span><span class="now" style="left:${n}%"></span></div>
+        <div class="rail-lbl num"><span>stop ${angka(p.stop, b.quote)}</span><span>masuk ${angka(p.entry, b.quote)}</span><span>target ${angka(p.target, b.quote)}</span></div>
+        <div class="small num" style="margin-top:6px">kini ${angka(p.kini, b.quote)}</div></div>`;
+    }
+  }
+  if (!ada) h = '<div class="card"><p class="empty">Tak ada posisi terbuka. Mesin masuk hanya kalau semua pagar lolos.</p></div>';
+  const kep = D.bursa.filter(b => b.status === "aktif").flatMap(b => (b.keputusan || []).map(k => ({...k, bursa: b.nama})));
+  h += `<div class="card"><h2>Keputusan siklus terakhir</h2>${kep.length ? `<div class="list">${kep.map(k => `
+    <div class="item"><div class="row"><span class="t grow">${esc(k.symbol)}</span><span class="small">${esc(k.bursa)}</span>
+      <span class="chip ${k.hasil === "BELI" ? "ok" : ""}">${esc(k.hasil)}</span></div>
+      <div class="reasons">${k.alasan.map(a => `<span class="chip">${esc(a)}</span>`).join("")}</div></div>`).join("")}</div>`
+    : '<p class="empty">Tak ada kandidat STRONG di siklus terakhir.</p>'}</div>`;
+  return h;
+}
+
+function sinyal(D) {
+  if (!D.sinyal.length) return '<div class="card"><p class="empty">Belum ada verdict.</p></div>';
+  return `<div class="card"><h2>Verdict teratas · ${esc(D.verdict_as_of || "")}</h2><div class="list">${D.sinyal.map(s => `
+    <div class="item"><div class="row"><span class="t grow">${esc((s.symbol || "").replace("_USDT", ""))} <span class="small">${esc(s.nama || "")}</span></span>
+      ${s.gorengan ? '<span class="chip bad">gorengan</span>' : ""}<span class="chip ${s.direction === "LONG" ? "ok" : s.direction === "SHORT" ? "bad" : ""}">${esc(s.direction)}</span></div>
+      <div class="row small num" style="margin-top:4px"><span class="grow">${esc(s.label)} · conv ${s.conviction} · regime ${esc(s.regime || "—")}</span><span>size ${s.size_pct ?? 0}% · stop ${s.stop_pct ?? "—"}%</span></div>
+      <div class="bar"><i style="width:${Math.min(100, (s.conviction || 0) / 0.777 * 100)}%"></i></div></div>`).join("")}</div>
+    <p class="small" style="margin-top:10px">Batang = conviction terhadap batas MYTHOS 0.777. Masuk hanya ≥ 0.70 + STRONG + LONG.</p></div>`;
+}
+
+function riwayat(D) {
+  if (!D.riwayat.length) return '<div class="card"><p class="empty">Belum ada order.</p></div>';
+  return `<div class="card"><h2>Order (terbaru dulu)</h2><div class="list">${D.riwayat.map(r => `
+    <div class="item"><div class="row"><span class="chip ${r.side === "BUY" ? "ok" : "bad"}">${esc(r.side)}</span>
+      <span class="t grow">${esc(r.pair)}</span>${chipMode(r.mode)}</div>
+      <div class="row small num" style="margin-top:4px"><span class="grow">${esc(r.bursa)} · ${new Date(r.ts).toLocaleString("id-ID", {dateStyle: "short", timeStyle: "short"})}</span>
+        <span>@ ${esc(Number(r.price).toLocaleString("id-ID"))}</span></div>
+      ${r.pnl_pct != null ? `<div class="small">${esc(r.reason)} · <b class="${cls(r.pnl_pct)}">${pct(r.pnl_pct)}</b></div>` : ""}
+      <div class="small num" style="opacity:.7">⛓ ${esc((r.hash || "").slice(0, 16))}…</div></div>`).join("")}</div></div>`;
+}
+
+function render(D) {
+  $("#sub").textContent = `diperbarui ${lalu(D.dibuat)} · ledger ${D.ledger.ok ? "utuh" : "PUTUS"}`;
+  $("#banner").innerHTML = D.saklar_stop ? '<div class="banner" role="alert">⛔ Saklar STOP aktif — tak ada order baru.</div>' : "";
+  $("#t-ringkas").innerHTML = ringkas(D);
+  $("#t-posisi").innerHTML = posisi(D);
+  $("#t-sinyal").innerHTML = sinyal(D);
+  $("#t-riwayat").innerHTML = riwayat(D);
+}
+
+function muat() {
+  const s = document.createElement("script");
+  s.src = "data/pegasus.js?t=" + Date.now();
+  s.onload = () => { if (window.PEGASUS) render(window.PEGASUS); s.remove(); };
+  s.onerror = () => { $("#sub").textContent = "data belum ada — jalankan pegasus.py"; s.remove(); };
+  document.head.appendChild(s);
+}
+
+document.querySelectorAll("nav button").forEach(b => b.addEventListener("click", () => {
+  document.querySelectorAll("nav button").forEach(x => x.setAttribute("aria-selected", x === b));
+  document.querySelectorAll("main section").forEach(s => s.hidden = s.id !== "t-" + b.dataset.t);
+  try { localStorage.setItem("pegasus-tab", b.dataset.t); } catch (e) {}
+  window.scrollTo({top: 0});
+}));
+try { const t = localStorage.getItem("pegasus-tab"); if (t) document.querySelector(`nav button[data-t="${t}"]`)?.click(); } catch (e) {}
+$("#muat").addEventListener("click", muat);
+muat();
+setInterval(muat, 60000);
+if ("serviceWorker" in navigator && location.protocol.startsWith("http")) navigator.serviceWorker.register("sw.js").catch(() => {});
+</script>
+</body>
+</html>
