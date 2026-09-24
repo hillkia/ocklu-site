@@ -62,7 +62,8 @@ button:focus-visible,a:focus-visible{outline:2px solid var(--acc);outline-offset
 .rail-lbl{display:flex;justify-content:space-between;font-size:11px;color:var(--mut)}
 .bar{height:6px;background:var(--panel2);border-radius:99px;overflow:hidden;margin-top:6px}
 .bar i{display:block;height:100%;background:var(--acc)}
-.bursa-off{display:flex;justify-content:space-between;gap:8px;padding:8px 0}
+.bursa-off{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;padding:8px 0}
+.bursa-off .chip{flex-shrink:0}
 nav{position:fixed;left:0;right:0;bottom:0;background:color-mix(in srgb,var(--panel) 92%,transparent);
   backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--line);
   display:flex;justify-content:center;padding:6px 8px calc(6px + env(safe-area-inset-bottom))}
@@ -132,7 +133,7 @@ function ringkas(D) {
     const nPos = b.posisi.length, rem = b.rem || [];
     h += `<div class="card"><div class="row" style="margin-bottom:10px"><h2 style="margin:0" class="grow">${esc(b.nama)}</h2>${chipMode(b.mode)}</div>
       <div class="hero">
-        <div class="stat"><div class="k">Modal</div><div class="v num">${D.publik ? '<span class="mut" style="font-size:14px">disembunyikan (publik)</span>' : angka(b.modal, b.quote)}</div></div>
+        <div class="stat"><div class="k">Modal</div><div class="v num">${D.publik ? '<span class="mut" style="font-size:14px;font-weight:500">🔒 disembunyikan</span>' : angka(b.modal, b.quote)}</div></div>
         <div class="stat"><div class="k">Hari ini</div><div class="v num ${cls(b.pnl_hari_pct)}">${pct(b.pnl_hari_pct)}</div></div>
         <div class="stat"><div class="k">Posisi terbuka</div><div class="v num">${nPos}<span class="mut" style="font-size:14px"> / 5</span></div></div>
         <div class="stat"><div class="k">Kalah beruntun</div><div class="v num ${b.beruntun_kalah >= 2 ? "down" : ""}">${b.beruntun_kalah}<span class="mut" style="font-size:14px"> / 3</span></div></div>
