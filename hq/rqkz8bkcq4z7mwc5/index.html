@@ -17,7 +17,15 @@
          backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); }
   .mono { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; }
 
-  #lokasi { top:12px; left:12px; padding:10px 14px; min-width:200px; }
+  #lokasi { top:12px; left:58px; padding:10px 14px; min-width:200px; }
+  #tombolTampil { position:fixed; top:12px; left:12px; width:38px; height:38px; border-radius:50%; cursor:pointer; font-size:17px; color:var(--txt); z-index:6; padding:0; }
+  #menuTampil { top:56px; left:12px; padding:10px 12px; z-index:7; display:none; font-size:13px; min-width:210px; }
+  #menuTampil.buka { display:block; } #menuTampil label { display:flex; gap:8px; align-items:center; padding:6px 2px; cursor:pointer; }
+  #menuTampil b { display:block; font-size:10px; letter-spacing:.15em; color:var(--dim); margin-bottom:4px; }
+  #menuTampil small { display:block; color:var(--dim); font-size:10.5px; margin-top:6px; }
+  body.umpet-lokasi #lokasi, body.umpet-peta #peta, body.umpet-angka #angka, body.umpet-laptop #awanInfo,
+  body.umpet-tombol #atasTengah, body.umpet-booth #info, body.umpet-bantu #bantu { display:none !important; }
+  .pindahBooth { background:#060a14; border:1px solid var(--line); border-radius:8px; color:var(--txt); padding:6px 8px; font:inherit; font-size:12px; }
   #lokasi .l1 { font-size:10px; letter-spacing:.2em; color:var(--dim); text-transform:uppercase; }
   #lokasi .l2 { font-size:17px; font-weight:700; margin-top:1px; }
   #lokasi .l3 { font-size:11px; color:var(--dim); margin-top:2px; }
@@ -76,7 +84,7 @@
     #angka .zona, #angka .jujur { display:none; }
     #peta canvas { width:110px; height:110px; }
     #info { bottom:12px; right:12px; left:150px; width:auto; }
-    #lokasi { min-width:0; max-width:calc(100vw - 150px); }
+    #lokasi { min-width:0; max-width:calc(100vw - 196px); }
     body.ada-info #angka { display:none; }
   }
 
@@ -139,7 +147,9 @@
   .saran-cepat { display:flex; gap:6px; flex-wrap:wrap; padding:0 12px 10px; }
   .saran-cepat button { font:inherit; font-size:11px; padding:5px 10px; border-radius:999px; border:1px solid var(--line); background:transparent; color:var(--dim); cursor:pointer; }
   #awanInfo { display:none; top:64px; left:50%; transform:translateX(-50%); padding:8px 14px; font-size:12px; line-height:1.5; max-width:min(520px,calc(100vw - 24px)); text-align:center; z-index:4; }
-  @media (max-width:700px) { #awanInfo { top:96px; bottom:auto; left:12px; right:12px; transform:none; max-width:none; font-size:11px; padding:6px 10px; } }
+  #awanInfo .pendek { display:none; }
+  @media (max-width:700px) { #awanInfo { top:84px; bottom:auto; left:12px; right:auto; transform:none; max-width:calc(100vw - 150px); font-size:11px; padding:5px 10px; text-align:left; }
+    #awanInfo .panjang { display:none; } #awanInfo .pendek { display:inline; } #awanInfo.buka .panjang { display:block; } }
   .dnaKanan { display:flex; flex-direction:column; min-height:0; overflow:hidden; }
   .dnaKanan .atas { padding:12px 14px; border-bottom:1px solid var(--line); font-size:12px; }
   .dnaKanan .atas b { font-size:15px; } .dnaKanan .atas .dim { color:var(--dim); margin-top:4px; }
@@ -189,6 +199,8 @@
 <div id="bantu" class="pnl"><kbd>KLIK</kbd> lantai/booth = jalan ke situ · <kbd>WASD</kbd> jalan · <kbd>Shift</kbd> lari · <kbd>seret</kbd> putar · <kbd>E</kbd> buka · <kbd>L</kbd> daftar</div>
 <div id="atasTengah"><button id="tombolDaftar" class="pnl">📋 Semua proyek (L)</button><button id="tombolDna" class="pnl">🧬 DNA &amp; Script (G)</button><button id="tombolBangun" class="pnl">🏗 Bangun (B)</button><button id="tombolDuit" class="pnl">💰 Pintu Duit</button></div>
 <div id="awanInfo" class="pnl"></div>
+<button id="tombolTampil" class="pnl" title="atur tampilan">👁</button>
+<div id="menuTampil" class="pnl"></div>
 <div id="lDuit" class="layar"><div class="kartu" style="width:min(620px,100%)">
   <div class="kepala"><h3>💰 Pintu Duit</h3><button class="tutup" data-tutup>tutup ✕</button></div>
   <div class="prk" id="duitIsi"></div>
@@ -707,6 +719,7 @@ function tombolAksi(p) {
     else if (p.status !== 'hilang') b.push(`<button class="utama" data-prk="${k}">▶ Jalankan…</button>`);   // pilihan dari isi folder
     b.push(`<button data-obrol="${k}">💬 ${p.status === 'hidup' ? 'Ngobrol sama staf' : 'Tanya satpam'}</button>`);
     if (p.status !== 'hidup' || basi(p)) b.push(`<button data-prk="${k}">🩺 Periksa & benerin</button>`);
+    b.push(pilihGedung(p));
     b.push(`<button data-lap="${k}">📄 Laporan</button><button data-aksi="folder" data-k="${k}">📁 Folder</button><button data-aksi="vscode" data-k="${k}">✎ VS Code</button>`);
   }
   return `<div class="aksi">${b.join('')}</div><div class="hasil" data-hasil="${k}"></div>`
@@ -1013,9 +1026,12 @@ function loop() {
   }
   for (const b of booth.values()) if (b.staf.visible) animasiDiam(b.staf, dt, t + b.pusat.x);
 
-  camTarget.set(pemain.position.x + Math.sin(yaw) * 11, 6.5, pemain.position.z + Math.cos(yaw) * 11);
+  // HP tegak: kamera lebih tinggi & mundur, dan NGELIAT KE DEPAN pemain (bukan ke punggungnya),
+  // biar badan pemain gak nutup jalan di layar sempit.
+  const tegak = innerWidth < innerHeight, mundur = tegak ? 12 : 11, depan = tegak ? 7 : 3;
+  camTarget.set(pemain.position.x + Math.sin(yaw) * mundur, tegak ? 9.5 : 6.5, pemain.position.z + Math.cos(yaw) * mundur);
   cam.position.lerp(camTarget, 1 - Math.pow(0.002, dt));
-  cam.lookAt(pemain.position.x, 2.2, pemain.position.z);
+  cam.lookAt(pemain.position.x - Math.sin(yaw) * depan, tegak ? 0.8 : 2, pemain.position.z - Math.cos(yaw) * depan);
   if (penanda.visible) penanda.rotation.z += dt * 2;
 
   let best = null, bd = 4.2;
@@ -1025,7 +1041,8 @@ function loop() {
   renderer.render(scene, cam);
   requestAnimationFrame(loop);
 }
-addEventListener('resize', () => { cam.aspect = innerWidth / innerHeight; cam.updateProjectionMatrix(); renderer.setSize(innerWidth, innerHeight); });
+const aturFov = () => { cam.fov = innerWidth < innerHeight ? 72 : 58; }; aturFov();
+addEventListener('resize', () => { aturFov(); cam.aspect = innerWidth / innerHeight; cam.updateProjectionMatrix(); renderer.setSize(innerWidth, innerHeight); });
 
 // ─── data ─────────────────────────────────────────────────────────────
 async function ambil(paksa = false) {
@@ -1261,9 +1278,11 @@ function olahAwan(j) {
   if (mati) for (const p of j.projects) if (p.status === 'hidup') { p.status = 'mati'; p.ket = '(hidup waktu laptop terakhir lapor) ' + (p.ket || ''); }
   const jam = new Date(j.waktu).toLocaleString('id-ID', { weekday: 'short', hour: '2-digit', minute: '2-digit' }), mnt = Math.round(umur / 60000);
   const el = $('awanInfo'); el.style.display = 'block';
-  el.innerHTML = mati
+  const pendek = `<span class="pendek"><b style="color:var(--${mati ? 'mati' : 'hidup'})">●</b> laptop ${mati ? 'mati' : 'nyala'} · ${mnt > 120 ? Math.round(mnt / 60) + ' jam' : mnt + ' mnt'} lalu ⓘ</span>`;
+  el.onclick = () => el.classList.toggle('buka');
+  el.innerHTML = pendek + '<span class="panjang">' + (mati
     ? `<b style="color:var(--mati)">● Laptop mati / tidur</b><br>laporan terakhir ${jam} (${mnt > 120 ? Math.round(mnt / 60) + ' jam' : mnt + ' menit'} lalu). Mesin lokal ikut mati. Halaman publik tetap dicek langsung dari HP.`
-    : `<b style="color:var(--hidup)">● Laptop nyala</b><br>laporan terakhir ${jam} (${mnt} menit lalu). Tombol nyalain/matiin cuma dari laptop.`;
+    : `<b style="color:var(--hidup)">● Laptop nyala</b><br>laporan terakhir ${jam} (${mnt} menit lalu). Tombol nyalain/matiin cuma dari laptop.`) + '</span>';
   return j;
 }
 // Cek halaman publik dari HP sendiri. mode no-cors: isinya gak kebaca, tapi kalau servernya
@@ -1302,6 +1321,47 @@ document.addEventListener('click', async (e) => {
 });
 $('tombolDuit').onclick = bukaDuit;
 if (AWAN) { $('tombolDna').style.display = 'none'; $('tombolBangun').style.display = 'none'; }
+
+// ─── pindah booth ke gedung lain, langsung dari panel booth ───
+function pilihGedung(p) {
+  const semua = URUT.filter((k) => GEDUNG[k]);
+  return `<select class="pindahBooth" data-pindah-booth="${esc(p.kunci)}"><option value="">🏗 Pindah ke gedung…</option>
+    ${semua.filter((k) => k !== p.kategori).map((k) => `<option value="${k}">${esc(NAMA[k])}${GEDUNG[k].milik ? ' (buatan lo)' : ''}</option>`).join('')}
+    ${p.asal && p.asal !== p.kategori ? `<option value="-">↩ balik ke ${esc(NAMA[p.asal] || p.asal)}</option>` : ''}
+    <option value="+">➕ gedung baru…</option></select>`;
+}
+document.addEventListener('change', async (e) => {
+  const s = e.target.closest('[data-pindah-booth]'); if (!s || !s.value) return;
+  if (s.value === '+') { s.value = ''; return bukaBangun(); }
+  const k = s.value === '-' ? '' : s.value, p = cariP(s.dataset.pindahBooth);
+  s.disabled = true;
+  const r = await api('/api/gedung', { method: 'POST', body: JSON.stringify({ aksi: 'pindah-proyek', kunci: s.dataset.pindahBooth, k }) });
+  if (!r.ok) { s.disabled = false; alert(r.pesan); return; }
+  pindahKe(k || (p && p.asal) || 'plan');
+});
+
+// ─── 👁 atur tampilan: panel mana yang keliatan. Joystick sengaja gak ada di sini. ───
+const PANEL = [['laptop', 'Status laptop', () => AWAN], ['lokasi', 'Nama lokasi', () => true], ['peta', 'Peta mini', () => true],
+  ['angka', 'Angka hidup/mati', () => true], ['tombol', 'Tombol atas (proyek, DNA, duit)', () => true],
+  ['booth', 'Panel booth (pas deket booth)', () => true], ['bantu', 'Bantuan tombol', () => innerWidth > 700]];
+const HP = matchMedia('(max-width:700px), (pointer:coarse)').matches;
+let umpet; try { umpet = JSON.parse(localStorage.getItem('hq-umpet') || 'null'); } catch { umpet = null; }
+if (!Array.isArray(umpet)) umpet = HP ? ['angka'] : [];            // HP: layar buat ngeliat jalan
+function terapkanUmpet() { for (const [k] of PANEL) document.body.classList.toggle('umpet-' + k, umpet.includes(k)); }
+function gambarMenuTampil() {
+  $('menuTampil').innerHTML = '<b>TAMPILKAN</b>' + PANEL.filter(([, , ada]) => ada()).map(([k, n]) =>
+    `<label><input type="checkbox" data-umpet="${k}" ${umpet.includes(k) ? '' : 'checked'}> ${n}</label>`).join('')
+    + '<small>Joystick selalu ada. Pilihan diinget di perangkat ini.</small>';
+}
+$('tombolTampil').onclick = (e) => { e.stopPropagation(); gambarMenuTampil(); $('menuTampil').classList.toggle('buka'); };
+$('menuTampil').addEventListener('change', (e) => {
+  const k = e.target.dataset.umpet; if (!k) return;
+  umpet = e.target.checked ? umpet.filter((x) => x !== k) : [...umpet, k];
+  try { localStorage.setItem('hq-umpet', JSON.stringify(umpet)); } catch {}
+  terapkanUmpet();
+});
+addEventListener('pointerdown', (e) => { if (!e.target.closest('#menuTampil,#tombolTampil')) $('menuTampil').classList.remove('buka'); });
+terapkanUmpet();
 
 try {
   data = await ambil();
