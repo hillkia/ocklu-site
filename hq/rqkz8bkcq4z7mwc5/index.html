@@ -614,10 +614,22 @@ function bangunPengunjung() {
   for (let i = 0; i < 18; i++) {
     const o = orang({ baju: bajuL[i % bajuL.length], kulit: kulitL[i % kulitL.length], rambut: i % 4 ? 0x15110d : 0x6b4a2b });
     const t = titikAcak(); o.position.set(t.x, 0, t.z); scene.add(o);
-    pengunjung.push({ o, tuju: null, jeda: Math.random() * 3, cepat: 2.2 + Math.random() * 1.2, fase: Math.random() * 6 });
+    pengunjung.push({ o, tuju: null, jeda: Math.random() * 3, cepat: 2.2 + Math.random() * 1.2, fase: Math.random() * 6, lalu: 1e9, macet: 0 });
   }
 }
-function titikAcak() { const a = Math.random() * 6.28, r = 6 + Math.random() * 40; return { x: Math.cos(a) * r, z: Math.sin(a) * r + 14 }; }
+// Tujuan pengunjung WAJIB di lantai kosong: bukan di dalam gedung, bukan di tiang/booth/papan.
+// Dulu titiknya asal acak → ada yang dapet tujuan di balik dinding dan nempel di situ selamanya.
+function kosong(x, z, m = 1.2) {
+  if (gedungDi(x, z)) return false;
+  return !tabrak.some((a) => x > a.x1 - m && x < a.x2 + m && z > a.z1 - m && z < a.z2 + m);
+}
+function titikAcak() {
+  for (let i = 0; i < 30; i++) {
+    const a = Math.random() * 6.28, r = 6 + Math.random() * 40, x = Math.cos(a) * r, z = Math.sin(a) * r + 14;
+    if (kosong(x, z)) return { x, z };
+  }
+  return { x: (Math.random() - 0.5) * 20, z: 20 + Math.random() * 12 };   // cadangan: tengah plaza depan, pasti kosong
+}
 
 // ─── pemain ───────────────────────────────────────────────────────────
 const pemain = orang({ baju: 0x0b0f19, badge: 0xf5b700 });
@@ -1081,10 +1093,16 @@ function loop() {
   for (const n of pengunjung) {
     if (!n.tuju) { n.jeda -= dt; if (n.jeda <= 0) n.tuju = titikAcak(); animasiDiam(n.o, dt, t + n.fase); continue; }
     const dx = n.tuju.x - n.o.position.x, dz = n.tuju.z - n.o.position.z, d = Math.hypot(dx, dz);
-    if (d < 0.6) { n.tuju = null; n.jeda = 1 + Math.random() * 4; continue; }
+    if (d < 0.6) { n.tuju = null; n.jeda = 1 + Math.random() * 4; n.lalu = 1e9; continue; }
+    // ketahan (jarak gak berkurang 1,5 detik) → cari tujuan baru, jangan nempel di dinding
+    if (n.lalu - d < n.cepat * dt * 0.3) { n.macet += dt; if (n.macet > 1.5) { n.tuju = titikAcak(); n.macet = 0; n.lalu = 1e9; continue; } }
+    else n.macet = 0;
+    n.lalu = d;
     n.o.position.x += dx / d * n.cepat * dt; n.o.position.z += dz / d * n.cepat * dt;
     n.o.rotation.y = Math.atan2(dx, dz) + Math.PI;
     dorongKeluar(n.o.position, 0.4);
+    // kalau kedorong masuk gedung (lewat pintu nyasar), langsung dipindah ke lantai kosong
+    if (gedungDi(n.o.position.x, n.o.position.z)) { const k = titikAcak(); n.o.position.set(k.x, 0, k.z); n.tuju = null; }
     animasiJalan(n.o, t + n.fase, 8, 0.45);
   }
   for (const b of booth.values()) if (b.staf.visible) animasiDiam(b.staf, dt, t + b.pusat.x);
@@ -1493,7 +1511,7 @@ try {
     pemain.position.set(p.x, 0, p.z); yaw = Math.atan2(p.x - G.x, p.z - G.z); history.replaceState(null, '', location.pathname + location.search);
   }
   // pegangan buat ngecek dari konsol/tes, gak dipakai UI
-  window.__hq = { pemain, tabrak, get yaw() { return yaw; }, get tujuan() { return tujuan; } };
+  window.__hq = { pemain, tabrak, pengunjung, get yaw() { return yaw; }, get tujuan() { return tujuan; } };
   loop();
   setInterval(segarkan, 20000);
 } catch (e) {
