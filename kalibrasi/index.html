@@ -5,7 +5,71 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Audit Kalibrasi — seberapa jujur keyakinan tim lo</title>
 <meta name="description" content="Kasih CSV berisi prediksi yang udah ditulis + hasil aslinya. Dapet laporan kalibrasi: Brier, BSS vs base rate dan harga pasar, kurva reliabilitas, flag overconfident. Dihitung di browser — datanya gak ke mana-mana." />
+<!-- OG site_name diprioritaskan mesin ekstraksi skema (skema.py::_nama_situs)
+     di atas tebak-tebakan dari <title> — tanpa ini, judul "Produk — Tagline"
+     kebaca kebalik dan Organization/WebSite ke-isi tagline, bukan nama. -->
+<meta property="og:site_name" content="OCKLU" />
+<meta property="og:title" content="Audit Kalibrasi" />
+<meta property="og:description" content="Kasih CSV berisi prediksi yang udah ditulis + hasil aslinya. Dapet laporan kalibrasi: Brier, BSS vs base rate dan harga pasar, kurva reliabilitas, flag overconfident. Dihitung di browser — datanya gak ke mana-mana." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://ocklu.com/kalibrasi/" />
+<meta property="og:locale" content="id_ID" />
 <link rel="stylesheet" href="gaya.css?v=142d739a" />
+<!-- JSON-LD dibangkitin dari isi halaman ini sendiri (~/ocklu-seo/skema.py buat()),
+     bukan diketik tangan -- setiap field bisa ditelusur balik ke teks di atas.
+     Kalau halamannya berubah, generate ulang, jangan disunting manual di sini. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "name": "OCKLU",
+      "url": "https://ocklu.com/",
+      "description": "Kasih CSV berisi prediksi yang udah ditulis + hasil aslinya. Dapet laporan kalibrasi: Brier, BSS vs base rate dan harga pasar, kurva reliabilitas, flag overconfident. Dihitung di browser — datanya gak ke mana-mana."
+    },
+    {
+      "@type": "WebSite",
+      "name": "OCKLU",
+      "url": "https://ocklu.com/",
+      "inLanguage": "id"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "OCKLU",
+          "item": "https://ocklu.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "AUDIT KALIBRASI",
+          "item": "https://ocklu.com/kalibrasi/"
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "headline": "AUDIT KALIBRASI",
+      "url": "https://ocklu.com/kalibrasi/",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://ocklu.com/kalibrasi/"
+      },
+      "description": "Kasih CSV berisi prediksi yang udah ditulis + hasil aslinya. Dapet laporan kalibrasi: Brier, BSS vs base rate dan harga pasar, kurva reliabilitas, flag overconfident. Dihitung di browser — datanya gak ke mana-mana.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "OCKLU",
+        "url": "https://ocklu.com/"
+      },
+      "inLanguage": "id"
+    }
+  ]
+}
+</script>
 </head>
 <body data-contoh="contoh.csv">
 <div class="wrap">
