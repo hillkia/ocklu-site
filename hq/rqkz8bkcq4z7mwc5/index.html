@@ -47,7 +47,14 @@
   #peta { top:12px; right:12px; padding:6px; border-radius:50%; }
   #peta canvas { display:block; width:160px; height:160px; border-radius:50%; }
 
-  #info { right:12px; bottom:12px; width:min(360px,calc(100vw - 24px)); padding:14px 16px; display:none; }
+  #info { right:12px; bottom:64px; width:min(360px,calc(100vw - 24px)); padding:0 16px 14px; display:none; z-index:10;
+          max-height:calc(100vh - 90px); overflow:auto; box-shadow:0 12px 40px rgba(0,0,0,.5); }
+  #info .pegangan { position:sticky; top:0; display:flex; align-items:center; gap:6px; margin:0 -16px 8px; padding:6px 8px 6px 12px;
+          background:rgba(15,23,42,.96); border-bottom:1px solid var(--line); cursor:grab; touch-action:none; user-select:none; z-index:1; }
+  #info .pegangan:active { cursor:grabbing; }
+  #info .pegangan span { flex:1; font-size:11px; color:var(--dim); letter-spacing:.08em; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; }
+  #info .pegangan button { background:transparent; border:1px solid var(--line); color:var(--txt); border-radius:7px; width:30px; height:26px; cursor:pointer; font:inherit; padding:0; }
+  #info.kecil .infoIsi { display:none; } #info.kecil { padding-bottom:0; } #info.kecil .pegangan { margin-bottom:0; border-bottom:0; }
   #info .kat { font-size:10px; letter-spacing:.2em; text-transform:uppercase; }
   #info h2 { margin:4px 0 2px; font-size:18px; }
   #info .tipe { color:var(--dim); margin-bottom:6px; }
@@ -88,7 +95,8 @@
     #angka { top:auto; bottom:160px; left:12px; width:180px; }
     #angka .zona, #angka .jujur { display:none; }
     #peta canvas { width:110px; height:110px; }
-    #info { bottom:12px; right:12px; left:150px; width:auto; }
+    #info { bottom:156px; right:12px; left:12px; width:auto; max-height:calc(100vh - 260px); }   /* di atas joystick, gak ketiban lencana SEO */
+    body.ada-info #atasTengah, body.ada-info #zoomPanel { display:none; }   /* HP: panel booth lagi kebuka → tombol lain minggir */
     #lokasi { min-width:0; max-width:calc(100vw - 196px); }
     body.ada-info #angka { display:none; }
   }
@@ -672,6 +680,7 @@ function klikJalan(cx, cy) {
   if (!kena) return;
   const b = [...booth.values()].find((x) => x.hit.includes(kena.object));
   tujuanBooth = b || null;
+  if (b) { infoDitutup = null; if (dekat === b) isiInfo(b); }        // klik booth yang panelnya ditutup = buka lagi
   const akhir = b ? { ...b.depan } : { x: kena.point.x, z: kena.point.z };
   // Beda gedung → lewat pintu dulu. Garis lurus nembus dinding kaca bikin pemain nyangkut di kusen.
   const asal = gedungDi(pemain.position.x, pemain.position.z), tuju = gedungDi(akhir.x, akhir.z);
@@ -736,11 +745,55 @@ function tombolAksi(p) {
     + (bisa ? '' : `<div style="margin-top:8px;color:var(--dim);font-size:11px">Tombol nyalain/laporan cuma aktif dari laptop ini, atau buka HQ pakai link bertoken dari terminal.</div>`);
 }
 
+// ─── panel booth: bisa diseret (pegangan ⠿), dikecilin, ditutup. Posisi diinget per perangkat. ───
+let infoDitutup = null, infoKecil = false, infoPos = null;
+try { const s = JSON.parse(localStorage.getItem('hq-info') || 'null'); if (s) { infoKecil = !!s.kecil; infoPos = s.pos || null; } } catch {}
+const simpanInfo = () => { try { localStorage.setItem('hq-info', JSON.stringify({ kecil: infoKecil, pos: infoPos })); } catch {} };
+function taruhInfo(el) {
+  if (!infoPos) { el.style.left = el.style.top = ''; el.style.right = el.style.bottom = ''; return; }
+  const w = el.offsetWidth || 360, h = el.offsetHeight || 60;
+  const x = Math.min(Math.max(0, infoPos.x), innerWidth - Math.min(w, innerWidth)), y = Math.min(Math.max(0, infoPos.y), innerHeight - 40);
+  Object.assign(el.style, { left: x + 'px', top: y + 'px', right: 'auto', bottom: 'auto' });
+  if (innerWidth <= 700) el.style.width = Math.min(w, innerWidth - 24) + 'px';
+}
+function bungkusInfo(el, b) {
+  const nama = b.p.nama || '';
+  el.innerHTML = `<div class="pegangan" title="seret buat mindahin"><span>⠿ ${esc(nama)}</span>
+    <button data-info="kecil" title="kecilin / gedein">${infoKecil ? '▢' : '—'}</button><button data-info="asal" title="balik ke posisi awal">⟲</button><button data-info="tutup" title="tutup">✕</button></div>
+    <div class="infoIsi">${el.innerHTML}</div>`;
+  el.classList.toggle('kecil', infoKecil);
+  el.style.display = 'block'; taruhInfo(el);
+}
+$('info').addEventListener('click', (e) => {
+  const t = e.target.closest('[data-info]'); if (!t) return;
+  const el = $('info');
+  if (t.dataset.info === 'kecil') { infoKecil = !infoKecil; el.classList.toggle('kecil', infoKecil); t.textContent = infoKecil ? '▢' : '—'; }
+  if (t.dataset.info === 'asal') { infoPos = null; taruhInfo(el); }
+  if (t.dataset.info === 'tutup') { infoDitutup = dekat; el.style.display = 'none'; document.body.classList.remove('ada-info'); }
+  simpanInfo();
+});
+{
+  let geser = null;
+  $('info').addEventListener('pointerdown', (e) => {
+    const h = e.target.closest('.pegangan'); if (!h || e.target.closest('button')) return;
+    const el = $('info'), r = el.getBoundingClientRect();
+    geser = { id: e.pointerId, dx: e.clientX - r.left, dy: e.clientY - r.top }; h.setPointerCapture(e.pointerId); e.preventDefault();
+  });
+  $('info').addEventListener('pointermove', (e) => {
+    if (!geser || e.pointerId !== geser.id) return;
+    infoPos = { x: e.clientX - geser.dx, y: e.clientY - geser.dy }; taruhInfo($('info'));
+  });
+  const lepas = (e) => { if (geser && e.pointerId === geser.id) { geser = null; simpanInfo(); } };
+  $('info').addEventListener('pointerup', lepas); $('info').addEventListener('pointercancel', lepas);
+  addEventListener('resize', () => { if ($('info').style.display === 'block') taruhInfo($('info')); });
+}
+
 function isiInfo(b) {
   const el = $('info');
   document.body.classList.toggle('ada-info', !!b);
-  if (!b) { el.style.display = 'none'; return; }
-  if (b.p.status === 'rak' || b.p.status === 'dna') { el.innerHTML = infoDna(b); el.style.display = 'block'; return; }
+  if (b !== infoDitutup) infoDitutup = null;
+  if (!b || b === infoDitutup) { el.style.display = 'none'; document.body.classList.remove('ada-info'); return; }
+  if (b.p.status === 'rak' || b.p.status === 'dna') { el.innerHTML = infoDna(b); bungkusInfo(el, b); return; }
   const p = cariP(b.p.kunci) || b.p, h = hariLalu(p.disentuh);
   const st = {
     hidup: `<span style="color:var(--hidup)">● LIVE</span> — port ${p.port} nyahut barusan. Ada staf di booth.`,
@@ -758,7 +811,7 @@ function isiInfo(b) {
     ${p.ket ? `<div>${esc(p.ket)}</div>` : ''}
     <div style="margin-top:6px">folder: <code>${esc(p.path.replace(/#.*$/, ''))}</code>${p.induk ? ` <span style="color:var(--biru)">· sub-mesin, numpang di ${esc(p.induk)}</span>` : ''}${p.sumber === 'temuan' ? ' <span style="color:#fbbf24">· ketemu otomatis</span>' : ''}</div>
     ${tombolAksi(p)}`;
-  el.style.display = 'block';
+  bungkusInfo(el, b);
 }
 
 // satu penangan klik buat semua tombol aksi (panel booth & daftar)
