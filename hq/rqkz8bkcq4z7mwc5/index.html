@@ -25,6 +25,11 @@
   #menuTampil small { display:block; color:var(--dim); font-size:10.5px; margin-top:6px; }
   body.umpet-lokasi #lokasi, body.umpet-peta #peta, body.umpet-angka #angka, body.umpet-laptop #awanInfo,
   body.umpet-tombol #atasTengah, body.umpet-booth #info, body.umpet-bantu #bantu { display:none !important; }
+  #zoomPanel { position:fixed; right:12px; top:190px; display:flex; flex-direction:column; gap:6px; z-index:5; }
+  #zoomPanel button { width:42px; height:42px; border-radius:12px; font-size:19px; font-weight:800; cursor:pointer; color:var(--txt); position:static; padding:0; }
+  #zoomPanel button.on { background:rgba(56,189,248,.35); border-color:var(--biru); }
+  @media (max-width:700px), (pointer:coarse) { #zoomPanel { top:140px; } }
+  body.umpet-zoom #zoomPanel { display:none !important; }
   .pindahBooth { background:#060a14; border:1px solid var(--line); border-radius:8px; color:var(--txt); padding:6px 8px; font:inherit; font-size:12px; }
   #lokasi .l1 { font-size:10px; letter-spacing:.2em; color:var(--dim); text-transform:uppercase; }
   #lokasi .l2 { font-size:17px; font-weight:700; margin-top:1px; }
@@ -100,7 +105,7 @@
   .hasil pre { max-height:140px; overflow:auto; margin:6px 0 0; font-size:10.5px; color:#b6c0d2; white-space:pre-wrap; }
   .hasil .diag { margin-top:6px; } .hasil .diag div { margin:4px 0; }
 
-  #atasTengah { position:fixed; top:12px; left:50%; transform:translateX(-50%); display:flex; gap:6px; z-index:4; }
+  #atasTengah { position:fixed; bottom:48px; left:50%; transform:translateX(-50%); display:flex; gap:6px; z-index:4; }
   #atasTengah .pnl { position:static; padding:8px 14px; cursor:pointer; font-weight:700; font-size:12px; border-radius:999px; color:var(--txt); white-space:nowrap; }
   .layar { position:fixed; inset:0; z-index:15; background:rgba(3,6,12,.72); display:none; align-items:center; justify-content:center; padding:16px; }
   .layar.buka { display:flex; }
@@ -146,10 +151,10 @@
   .ketik button { border:0; border-radius:999px; padding:0 16px; font:inherit; font-weight:700; background:var(--biru); color:#03101c; cursor:pointer; }
   .saran-cepat { display:flex; gap:6px; flex-wrap:wrap; padding:0 12px 10px; }
   .saran-cepat button { font:inherit; font-size:11px; padding:5px 10px; border-radius:999px; border:1px solid var(--line); background:transparent; color:var(--dim); cursor:pointer; }
-  #awanInfo { display:none; top:64px; left:50%; transform:translateX(-50%); padding:8px 14px; font-size:12px; line-height:1.5; max-width:min(520px,calc(100vw - 24px)); text-align:center; z-index:4; }
-  #awanInfo .pendek { display:none; }
+  #awanInfo { display:none; top:12px; left:50%; transform:translateX(-50%); padding:8px 14px; font-size:12px; line-height:1.5; max-width:min(520px,calc(100vw - 24px)); text-align:center; z-index:4; }
+  #awanInfo { cursor:pointer; } #awanInfo .panjang { display:none; } #awanInfo.buka .panjang { display:block; margin-top:4px; } #awanInfo.buka .pendek { display:none; }
   @media (max-width:700px) { #awanInfo { top:84px; bottom:auto; left:12px; right:auto; transform:none; max-width:calc(100vw - 150px); font-size:11px; padding:5px 10px; text-align:left; }
-    #awanInfo .panjang { display:none; } #awanInfo .pendek { display:inline; } #awanInfo.buka .panjang { display:block; } }
+ }
   .dnaKanan { display:flex; flex-direction:column; min-height:0; overflow:hidden; }
   .dnaKanan .atas { padding:12px 14px; border-bottom:1px solid var(--line); font-size:12px; }
   .dnaKanan .atas b { font-size:15px; } .dnaKanan .atas .dim { color:var(--dim); margin-top:4px; }
@@ -182,7 +187,7 @@
   <div class="stat mono" id="g-stat">ngecek port semua proyek…</div>
   <button id="masuk" disabled>MASUK OCKLU HQ</button>
   <div class="kontrol"><span><kbd>KLIK</kbd> jalan ke situ</span><span><kbd>WASD</kbd> jalan</span>
-    <span><kbd>Shift</kbd> lari</span><span><kbd>seret</kbd> putar</span><span><kbd>E</kbd> buka booth</span></div>
+    <span><kbd>Shift</kbd> lari</span><span><kbd>seret</kbd> putar &amp; dongak</span><span><kbd>roda/cubit</kbd> zoom</span><span><kbd>Z</kbd> drone</span><span><kbd>E</kbd> buka booth</span></div>
   <div class="kaki">Paid in Full — Jesus is God ✝️</div>
 </div>
 
@@ -196,10 +201,11 @@
 </div>
 <div id="peta" class="pnl"><canvas id="pc" width="320" height="320"></canvas></div>
 <div id="info" class="pnl"></div>
-<div id="bantu" class="pnl"><kbd>KLIK</kbd> lantai/booth = jalan ke situ · <kbd>WASD</kbd> jalan · <kbd>Shift</kbd> lari · <kbd>seret</kbd> putar · <kbd>E</kbd> buka · <kbd>L</kbd> daftar</div>
+<div id="bantu" class="pnl"><kbd>KLIK</kbd> lantai/booth = jalan ke situ · <kbd>WASD</kbd> jalan · <kbd>Shift</kbd> lari · <kbd>seret</kbd> putar/dongak · <kbd>roda</kbd> zoom · <kbd>Z</kbd> drone · <kbd>R/F</kbd> atas/bawah · <kbd>E</kbd> buka · <kbd>L</kbd> daftar</div>
 <div id="atasTengah"><button id="tombolDaftar" class="pnl">📋 Semua proyek (L)</button><button id="tombolDna" class="pnl">🧬 DNA &amp; Script (G)</button><button id="tombolBangun" class="pnl">🏗 Bangun (B)</button><button id="tombolDuit" class="pnl">💰 Pintu Duit</button></div>
 <div id="awanInfo" class="pnl"></div>
 <button id="tombolTampil" class="pnl" title="atur tampilan">👁</button>
+<div id="zoomPanel"><button class="pnl" id="zDekat" title="zoom in (+)">＋</button><button class="pnl" id="zJauh" title="zoom out (−)">－</button><button class="pnl" id="zDrone" title="mode drone (Z)">🚁</button><button class="pnl" id="zAtas" title="dongak (R)">⬆</button><button class="pnl" id="zBawah" title="nunduk (F)">⬇</button></div>
 <div id="menuTampil" class="pnl"></div>
 <div id="lDuit" class="layar"><div class="kartu" style="width:min(620px,100%)">
   <div class="kepala"><h3>💰 Pintu Duit</h3><button class="tutup" data-tutup>tutup ✕</button></div>
@@ -550,18 +556,22 @@ function bangunPlaza(data) {
     x.fillStyle = '#ffffff'; x.fillText('OCKLU', w * 0.4, 390);
     x.fillStyle = '#38bdf8'; x.fillText('HQ', w * 0.84, 390);
   });
-  const tanda = new THREE.Mesh(new THREE.PlaneGeometry(34, 8.5), new THREE.MeshBasicMaterial({ map: huruf, transparent: true, side: THREE.DoubleSide }));
-  tanda.position.set(0, 5.2, -16); scene.add(tanda);
-  kotak(36, 0.8, 3, new THREE.MeshStandardMaterial({ color: 0x0f172a, emissive: 0x38bdf8, emissiveIntensity: 0.25 }), 0, 0.4, -16, true, true);
-  const dasar = new THREE.Mesh(new THREE.PlaneGeometry(36, 0.8), new THREE.MeshBasicMaterial({ map: tekstur(1024, 48, (x, w, h) => {
+  // Monumen RENDAH (puncak ±5 m, di bawah mata kamera): dulu tingginya 9.5 m + layar sambutan
+  // 17 m berdiri pas di sumbu pintu Lantai Cuan — gedung paling penting malah ketutup.
+  const tanda = new THREE.Mesh(new THREE.PlaneGeometry(20, 5), new THREE.MeshBasicMaterial({ map: huruf, transparent: true, side: THREE.DoubleSide }));
+  tanda.position.set(0, 2.9, -10); scene.add(tanda);
+  kotak(22, 0.8, 3, new THREE.MeshStandardMaterial({ color: 0x0f172a, emissive: 0x38bdf8, emissiveIntensity: 0.25 }), 0, 0.4, -10, true, true);
+  const dasar = new THREE.Mesh(new THREE.PlaneGeometry(22, 0.8), new THREE.MeshBasicMaterial({ map: tekstur(1024, 48, (x, w, h) => {
     x.fillStyle = '#0f172a'; x.fillRect(0, 0, w, h); x.fillStyle = '#7dd3fc'; x.font = '600 30px ui-monospace,Menlo,monospace';
     x.textAlign = 'center'; x.fillText('PROYEK NYATA  ·  ANGKA JUJUR', w / 2, 34); }) }));
-  dasar.position.set(0, 0.4, -14.48); scene.add(dasar);
+  dasar.position.set(0, 0.4, -8.48); scene.add(dasar);
 
   layarSambut = new THREE.MeshBasicMaterial({ map: teksSambut(data) });
-  const ls = new THREE.Mesh(new THREE.PlaneGeometry(16, 6), layarSambut); ls.position.set(0, 14, -18.8); scene.add(ls);
-  kotak(16.6, 6.6, 0.4, gelapBeton, 0, 14, -19.1, false);
-  kotak(0.6, 14, 0.6, beton, -7.5, 7, -19.1, true, true); kotak(0.6, 14, 0.6, beton, 7.5, 7, -19.1, true, true);
+  const sambut = new THREE.Group(); sambut.position.set(-30, 0, 4); sambut.rotation.y = Math.PI * 0.32; scene.add(sambut);
+  const ls = new THREE.Mesh(new THREE.PlaneGeometry(12, 4.5), layarSambut); ls.position.set(0, 5.2, 0.22); sambut.add(ls);
+  const bingkai = new THREE.Mesh(new THREE.BoxGeometry(12.6, 5.1, 0.4), gelapBeton); bingkai.position.set(0, 5.2, 0); sambut.add(bingkai);
+  for (const x of [-5.6, 5.6]) { const t = new THREE.Mesh(new THREE.BoxGeometry(0.5, 3, 0.5), beton); t.position.set(x, 1.5, 0); t.castShadow = true; sambut.add(t); }
+  tabrak.push({ x1: -37, x2: -23, z1: 1, z2: 7 });
 
   const daun = new THREE.MeshStandardMaterial({ color: 0x2f7a45, roughness: 0.9 });
   const batang = new THREE.MeshStandardMaterial({ color: 0x5b3b22, roughness: 1 });
@@ -958,7 +968,7 @@ function petaGambar() {
     px.restore();
   }
   for (const b of booth.values()) { px.fillStyle = hex(STW[b.p.status]); px.fillRect(b.pusat.x * s - 3, b.pusat.z * s - 3, 6, 6); }
-  px.fillStyle = '#38bdf8'; px.fillRect(-17 * s, -17.5 * s, 34 * s, 3 * s);
+  px.fillStyle = '#38bdf8'; px.fillRect(-11 * s, -11.5 * s, 22 * s, 3 * s);
   px.restore();
   px.fillStyle = '#fff'; px.beginPath(); px.moveTo(W / 2, W / 2 - 11); px.lineTo(W / 2 + 7, W / 2 + 7); px.lineTo(W / 2 - 7, W / 2 + 7); px.closePath(); px.fill();
 }
@@ -1028,10 +1038,19 @@ function loop() {
 
   // HP tegak: kamera lebih tinggi & mundur, dan NGELIAT KE DEPAN pemain (bukan ke punggungnya),
   // biar badan pemain gak nutup jalan di layar sempit.
-  const tegak = innerWidth < innerHeight, mundur = tegak ? 12 : 11, depan = tegak ? 7 : 3;
-  camTarget.set(pemain.position.x + Math.sin(yaw) * mundur, tegak ? 9.5 : 6.5, pemain.position.z + Math.cos(yaw) * mundur);
+  // Zoom 0 = nempel di belakang pemain · 0.25 = biasa · 1 = drone (ngeliat kawasan dari atas).
+  zoomNow += (zoom - zoomNow) * (1 - Math.pow(0.004, dt));
+  const tegak = innerWidth < innerHeight, zb = ZOOM_BIASA, zn = zoomNow;
+  const m0 = tegak ? 12 : 11, h0 = tegak ? 9.5 : 6.5, naik = Math.max(0, (zn - zb) / (1 - zb));
+  const mundur = zn < zb ? 6 + (m0 - 6) * zn / zb : m0 + naik * 50;
+  const tinggi = zn < zb ? 3.2 + (h0 - 3.2) * zn / zb : h0 + naik * naik * 130 + naik * 10;
+  const depan = (tegak ? 7 : 3) * Math.max(0, 1 - naik * 3);
+  // miring: + = nunduk (kamera naik), − = dongak (kamera turun, ngeliat ke atas gedung)
+  const tinggiM = Math.max(1.2, tinggi * (1 + miring * 0.9)), lihatY = (tegak ? 0.8 : 2) + Math.max(0, -miring) * (10 + naik * 30);
+  camTarget.set(pemain.position.x + Math.sin(yaw) * mundur, tinggiM, pemain.position.z + Math.cos(yaw) * mundur);
   cam.position.lerp(camTarget, 1 - Math.pow(0.002, dt));
-  cam.lookAt(pemain.position.x - Math.sin(yaw) * depan, tegak ? 0.8 : 2, pemain.position.z - Math.cos(yaw) * depan);
+  cam.lookAt(pemain.position.x - Math.sin(yaw) * depan, lihatY, pemain.position.z - Math.cos(yaw) * depan);
+  scene.fog.near = 120 + naik * 220; scene.fog.far = 330 + naik * 320;      // dari atas kabutnya mundur
   if (penanda.visible) penanda.rotation.z += dt * 2;
 
   let best = null, bd = 4.2;
@@ -1322,6 +1341,41 @@ document.addEventListener('click', async (e) => {
 $('tombolDuit').onclick = bukaDuit;
 if (AWAN) { $('tombolDna').style.display = 'none'; $('tombolBangun').style.display = 'none'; }
 
+// ─── zoom: roda mouse, cubit 2 jari, tombol ＋/－, 🚁 drone, tombol keyboard + − Z ───
+const ZOOM_BIASA = 0.25;
+let zoom = ZOOM_BIASA, zoomNow = ZOOM_BIASA, miring = 0;
+const aturMiring = (m) => { miring = Math.min(1, Math.max(-0.9, m)); };
+$('zAtas').onclick = () => aturMiring(miring - 0.2);
+$('zBawah').onclick = () => aturMiring(miring + 0.2);
+function aturZoom(z) { zoom = Math.min(1, Math.max(0, z)); $('zDrone').classList.toggle('on', zoom > 0.8); }
+$('zDekat').onclick = () => aturZoom(zoom - 0.12);
+$('zJauh').onclick = () => aturZoom(zoom + 0.12);
+$('zDrone').onclick = () => aturZoom(zoom > 0.8 ? ZOOM_BIASA : 1);
+cv.addEventListener('wheel', (e) => { e.preventDefault(); aturZoom(zoom + e.deltaY * 0.0012); }, { passive: false });
+addEventListener('keydown', (e) => {
+  if (/^(input|textarea|select)$/i.test(e.target.tagName) || layarBuka()) return;
+  if (e.key === '+' || e.key === '=') aturZoom(zoom - 0.12);
+  else if (e.key === '-' || e.key === '_') aturZoom(zoom + 0.12);
+  else if (e.key.toLowerCase() === 'z') aturZoom(zoom > 0.8 ? ZOOM_BIASA : 1);
+  else if (e.key.toLowerCase() === 'r') aturMiring(miring - 0.15);
+  else if (e.key.toLowerCase() === 'f') aturMiring(miring + 0.15);
+});
+// cubit: 2 jari di kanvas. Jari kedua turun → batalin klik/putar jari pertama.
+const jari = new Map(); let cubitAwal = 0, zoomAwal = 0;
+cv.addEventListener('pointerdown', (e) => {
+  jari.set(e.pointerId, { x: e.clientX, y: e.clientY });
+  if (jari.size === 2) { const [a, b] = [...jari.values()]; cubitAwal = Math.hypot(a.x - b.x, a.y - b.y); zoomAwal = zoom; tekan = null; }
+});
+cv.addEventListener('pointermove', (e) => {
+  if (!jari.has(e.pointerId)) return;
+  const dy = e.clientY - jari.get(e.pointerId).y;          // movementY gak selalu ada di sentuhan HP
+  jari.set(e.pointerId, { x: e.clientX, y: e.clientY });
+  if (jari.size === 1 && tekan && tekan.geser && dy) aturMiring(miring + dy * 0.004);
+  if (jari.size === 2 && cubitAwal > 0) { const [a, b] = [...jari.values()]; aturZoom(zoomAwal * cubitAwal / Math.max(20, Math.hypot(a.x - b.x, a.y - b.y))); tekan = null; }
+});
+const lepasJari = (e) => { jari.delete(e.pointerId); if (jari.size < 2) cubitAwal = 0; };
+cv.addEventListener('pointerup', lepasJari); cv.addEventListener('pointercancel', lepasJari);
+
 // ─── pindah booth ke gedung lain, langsung dari panel booth ───
 function pilihGedung(p) {
   const semua = URUT.filter((k) => GEDUNG[k]);
@@ -1343,7 +1397,7 @@ document.addEventListener('change', async (e) => {
 // ─── 👁 atur tampilan: panel mana yang keliatan. Joystick sengaja gak ada di sini. ───
 const PANEL = [['laptop', 'Status laptop', () => AWAN], ['lokasi', 'Nama lokasi', () => true], ['peta', 'Peta mini', () => true],
   ['angka', 'Angka hidup/mati', () => true], ['tombol', 'Tombol atas (proyek, DNA, duit)', () => true],
-  ['booth', 'Panel booth (pas deket booth)', () => true], ['bantu', 'Bantuan tombol', () => innerWidth > 700]];
+  ['booth', 'Panel booth (pas deket booth)', () => true], ['bantu', 'Bantuan tombol', () => innerWidth > 700], ['zoom', 'Tombol zoom & drone', () => true]];
 const HP = matchMedia('(max-width:700px), (pointer:coarse)').matches;
 let umpet; try { umpet = JSON.parse(localStorage.getItem('hq-umpet') || 'null'); } catch { umpet = null; }
 if (!Array.isArray(umpet)) umpet = HP ? ['angka'] : [];            // HP: layar buat ngeliat jalan
