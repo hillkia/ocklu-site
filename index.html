@@ -3,225 +3,112 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ocklu Tergigantic &mdash; Web Accessibility &amp; AI Visibility</title>
-<meta name="description" content="Independent audits and fixes for web accessibility (WCAG 2.1 AA / ADA) and AI search visibility. Real findings, fixed-price work, results guaranteed.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Ctext%20y='.9em'%20font-size='90'%3E%E2%97%8E%3C/text%3E%3C/svg%3E">
+<title>OCKLU</title>
+<meta name="description" content="Independent tools and audits: web accessibility & AI-visibility audits, a free calibration checker for teams that write confidence numbers, a collectibles price tracker, and local tools for Indonesian small business.">
+<meta property="og:site_name" content="OCKLU">
+<meta property="og:title" content="OCKLU">
+<meta property="og:description" content="Independent tools and audits, built and run by one person.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ocklu.com/">
 <style>
-  :root{
-    --ink:#14161a; --body:#3d434d; --mute:#6b7280; --line:#e5e7eb;
-    --bg:#ffffff; --soft:#f7f8fa; --brand:#c2410c; --brand-soft:#fff7ed;
-    --ok:#15803d;
-  }
-  @media (prefers-color-scheme: dark){
-    :root{--ink:#f3f4f6;--body:#c3c8d0;--mute:#8b93a1;--line:#262a31;
-          --bg:#0e1013;--soft:#16191e;--brand:#fb923c;--brand-soft:#1f1408;--ok:#4ade80}
-  }
-  *{box-sizing:border-box}
-  body{margin:0;background:var(--bg);color:var(--body);
-    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    -webkit-font-smoothing:antialiased}
-  .wrap{max-width:720px;margin:0 auto;padding:0 22px}
-  h1,h2,h3{color:var(--ink);line-height:1.2;margin:0}
-  h1{font-size:clamp(30px,5.5vw,44px);letter-spacing:-.02em;font-weight:800}
-  h2{font-size:clamp(20px,3.4vw,26px);letter-spacing:-.01em;margin:0 0 14px;font-weight:700}
-  h3{font-size:17px;margin:0 0 6px;font-weight:650}
-  p{margin:0 0 16px}
-  a{color:var(--brand)}
-  header{padding:56px 0 8px}
-  .eyebrow{font:600 12px/1 ui-monospace,SFMono-Regular,Menlo,monospace;
-    letter-spacing:.18em;text-transform:uppercase;color:var(--brand);margin-bottom:16px}
-  .lede{font-size:19px;color:var(--body);margin:18px 0 0;max-width:60ch}
-  section{padding:44px 0;border-top:1px solid var(--line)}
-  section:first-of-type{border-top:0}
-  .grid{display:grid;gap:18px}
-  @media(min-width:640px){.grid-2{grid-template-columns:1fr 1fr}}
-  .card{background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:20px}
-  .stat{font:800 30px/1 -apple-system,BlinkMacSystemFont,sans-serif;color:var(--ink);
-    letter-spacing:-.02em}
-  .stat small{display:block;font:500 13px/1.4 inherit;color:var(--mute);
-    margin-top:7px;letter-spacing:0}
-  ul{margin:0 0 16px;padding-left:20px}
-  li{margin:0 0 7px}
-  .price{display:flex;justify-content:space-between;align-items:baseline;
-    gap:14px;padding:13px 0;border-bottom:1px solid var(--line)}
-  .price:last-child{border-bottom:0}
-  .price b{color:var(--ink);font-weight:650}
-  .price span{color:var(--brand);font-weight:700;white-space:nowrap}
-  .note{font-size:14px;color:var(--mute)}
-  .guarantee{background:var(--brand-soft);border:1px solid var(--brand);
-    border-radius:12px;padding:18px 20px}
-  .cta{display:inline-block;background:var(--brand);color:#fff;text-decoration:none;
-    font-weight:650;padding:13px 24px;border-radius:9px;margin-top:6px}
-  .cta:hover{filter:brightness(1.08)}
-  footer{padding:36px 0 60px;border-top:1px solid var(--line);
-    color:var(--mute);font-size:14px}
-  code{font:13px ui-monospace,SFMono-Regular,Menlo,monospace;
-    background:var(--soft);padding:2px 6px;border-radius:5px;border:1px solid var(--line)}
+:root{ --ink:#14161a; --body:#3d434d; --mute:#6b7280; --line:#e5e7eb; --bg:#ffffff; --soft:#f7f8fa; --brand:#c2410c; --brand-soft:#fff7ed; }
+@media (prefers-color-scheme: dark){ :root{--ink:#f3f4f6;--body:#c3c8d0;--mute:#8b93a1;--line:#262a31; --bg:#0e1013;--soft:#16191e;--brand:#fb923c;--brand-soft:#1f1408} }
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--body); font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; -webkit-font-smoothing:antialiased}
+.wrap{max-width:780px;margin:0 auto;padding:0 22px}
+h1,h2{color:var(--ink);line-height:1.2;margin:0}
+h1{font-size:clamp(30px,5.5vw,42px);letter-spacing:-.02em;font-weight:800}
+h2{font-size:15px;letter-spacing:.04em;text-transform:uppercase;color:var(--mute);font-weight:650;margin:0 0 16px}
+p{margin:0 0 16px}
+a{color:var(--brand);text-decoration:none}
+a:hover{text-decoration:underline}
+header{padding:64px 0 12px}
+.lede{font-size:19px;color:var(--body);margin:16px 0 0;max-width:56ch}
+section{padding:36px 0;border-top:1px solid var(--line)}
+.grid{display:grid;gap:14px}
+@media(min-width:640px){.grid-2{grid-template-columns:1fr 1fr}}
+.card{background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:20px;display:block}
+.card:hover{border-color:var(--brand)}
+.card h3{margin:0 0 6px;font-size:17px;font-weight:650;color:var(--ink)}
+.card p{margin:0;font-size:14px;color:var(--mute);line-height:1.55}
+.tag{display:inline-block;font:600 11px/1 ui-monospace,SFMono-Regular,Menlo,monospace; letter-spacing:.1em;text-transform:uppercase;color:var(--brand);background:var(--brand-soft); padding:4px 8px;border-radius:5px;margin-bottom:10px}
+footer{padding:36px 0 60px;border-top:1px solid var(--line); color:var(--mute);font-size:14px}
+footer a{color:var(--mute)}
 </style>
 </head>
 <body>
 <div class="wrap">
 
   <header>
-    <div class="eyebrow">Ocklu Tergigantic</div>
-    <h1>Your website has problems you can't see.</h1>
-    <p class="lede">I find them, show you the evidence, and fix them for a fixed
-    price. Two areas: accessibility compliance, and whether AI assistants can
-    actually read and recommend your site.</p>
+    <h1>OCKLU</h1>
+    <p class="lede">Independent tools and audits, built and run by one person. No account required
+      for anything free; paid work is fixed-price with a written guarantee. Bahasa Indonesia untuk alat lokal.</p>
   </header>
 
   <section>
+    <h2>Audits for businesses</h2>
     <div class="grid grid-2">
-      <div class="card">
-        <div class="stat">95.9%<small>of the top million websites fail basic
-        accessibility checks &mdash; averaging 56 errors on the homepage alone</small></div>
-      </div>
-      <div class="card">
-        <div class="stat">5,100+<small>US web accessibility lawsuits filed in
-        2025, up 37% year over year. Online stores are the most targeted</small></div>
-      </div>
+      <a class="card" href="/tergigantic/">
+        <div class="tag">Paid · from $39</div>
+        <h3>Web Accessibility & AI Visibility</h3>
+        <p>WCAG 2.1 AA audits and AI-crawler readiness checks, fixed price, results guaranteed within 30 days.</p>
+      </a>
+      <a class="card" href="/ai-readiness/">
+        <div class="tag">Free</div>
+        <h3>AI Readiness Directory</h3>
+        <p>147 e-commerce sites checked for whether AI assistants can actually read and recommend them — see yours or a competitor's.</p>
+      </a>
     </div>
   </section>
 
   <section>
-    <h2>What I do</h2>
-
-    <h3>1 &middot; Accessibility (WCAG 2.1 AA / ADA)</h3>
-    <p>I scan your site for the failures that matter: links a screen reader
-    announces as just "link", images with no alt text, form fields with no
-    label, pinch-to-zoom disabled on mobile. Then I fix them &mdash; in your existing
-    theme, no redesign.</p>
-
-    <h3>2 &middot; AI search visibility</h3>
-    <p>When someone asks ChatGPT, Perplexity, or Google's AI for a
-    recommendation in your category, can they cite you? Often not &mdash; because the
-    site blocks AI crawlers in <code>robots.txt</code>, has no schema.org
-    markup, or has no content structured as the questions buyers ask. All
-    fixable.</p>
-  </section>
-
-  <section>
-    <h2>How it works</h2>
-    <ul>
-      <li><b>Free audit first.</b> I scan your site and send the findings &mdash;
-      specific counts, specific elements, no obligation. You'll know exactly
-      what's wrong whether or not you hire me.</li>
-      <li><b>Fixed price, no hourly billing.</b> You know the cost before I
-      start.</li>
-      <li><b>Live in 72 hours.</b> Done-for-you. Nothing needed on your end
-      beyond access.</li>
-      <li><b>Signed compliance report</b> for your records when the work is done.</li>
-    </ul>
-  </section>
-
-  <!-- Antara "Free" dan "$545" sebelumnya tidak ada apa pun. Pengunjung yang
-       tertarik tapi belum siap berkomitmen $545 hanya punya dua pilihan: minta
-       audit gratis (tidak ada uang berpindah) atau pergi. Bagian ini mengisi
-       celah itu dengan barang yang SUDAH terbit dan bisa dibeli detik ini,
-       bukan janji yang menunggu dibuat. -->
-  <section>
-    <h2>Something smaller, right now</h2>
-    <p>Not ready for a full engagement? There's a $19 report you can buy without
-    talking to anyone: an <b>AI Opportunity Scan</b> &mdash; seven ranked openings in
-    your industry, each with the signal behind it and a specific way in.
-    Delivered in about a minute.</p>
-    <p>It's a different thing from the audit above. The audit looks at
-    <i>your site</i>; this one looks at <i>your market</i>. Buy it, read it, and
-    decide about the rest afterwards &mdash; or never.</p>
-    <p><a href="https://hillkia.gumroad.com/l/aiscan" rel="noopener"><b>Get the
-    AI Opportunity Scan &mdash; $19</b></a></p>
-  </section>
-
-  <!-- Halaman gratis yang berguna, bukan halaman jualan. Dia yang membawa orang
-       masuk; sisanya baru masuk akal setelah ada yang datang. -->
-  <section>
-    <h2>Free: can AI assistants read your competitors?</h2>
-    <p>I checked 147 e-commerce sites for the things an AI assistant needs before
-    it can quote a brand &mdash; what <code>robots.txt</code> allows, which
-    structured data the homepage declares, and whether any heading is phrased the
-    way a buyer actually asks. Every number is a public fact you can re-check in
-    about ten seconds, and each site has its own page.</p>
-    <p><a href="/ai-readiness/"><b>Open the AI Readiness Directory</b></a>
-    &mdash; free, no signup, no email required. There's also
-    <a href="/artikel/">research</a> on how this actually works, with sources
-    cited and the disagreements left visible.</p>
-    <p class="note">That directory answers whether an assistant <i>can</i> read a
-    site. Whether it actually <b>names</b> your brand when a buyer asks is a
-    different question, and it has to be measured rather than inspected &mdash;
-    <a href="https://hillkia.gumroad.com/l/aivis" rel="noopener">that report is
-    $39</a>.</p>
-
-    <h2>Free: collectible prices, twice a day</h2>
-    <!-- RADAR:MULAI — angka di blok ini ditulis ulang oleh
-         ~/cowork genz/tcg-radar/halaman.py dari harga.db. Jangan diketik tangan:
-         "26 e-commerce sites" di bagian atas halaman ini pernah benar, lalu
-         diam-diam salah selama berminggu-minggu karena angkanya beku sementara
-         datanya terus tumbuh. -->
-    <p id="radar-isi">Price tracking across Pok&eacute;mon TCG, Magic, One Piece, CS2 skins and art toys &mdash; <b>606</b> items, <b>14,484</b> recorded prices across <b>5</b> markets, <b>19</b> days deep and growing twice a day. The history is the part nobody can copy overnight: yesterday cannot be scraped.</p>
-    <!-- RADAR:SELESAI -->
-    <p><a href="/radar/"><b>Open the Price Radar</b></a> &mdash; free, no signup.
-    It shows what moved since the last snapshot, filtered by dollars <i>and</i>
-    percent, because a $0.18 card gaining a cent reads as &ldquo;+5.6%&rdquo;
-    while an $82,000 sticker moving $172 reads as 0.2% &mdash; and the second one
-    is the one a trader needs.</p>
-  </section>
-
-  <section>
-    <h2>Calibration Audit &mdash; free tool</h2>
-    <p>Your team writes confidence numbers &mdash; model scores, &ldquo;likely by Q3&rdquo;,
-    70%. Has anyone checked whether the 70% ones actually happen 7 times out of 10?</p>
-    <p>Drop a CSV of past forecasts plus what actually happened, and get a reliability
-    curve, Brier score, and an overconfidence read. <b>Nothing is uploaded</b> &mdash;
-    the whole thing runs in your browser, so the file never leaves your machine.</p>
-    <p>Most calibration tools score you against a coin flip (Brier 0.25). For anything
-    that rarely happens, that is an empty compliment: always answering &ldquo;no&rdquo;
-    already scores 0.09 at a 10% base rate. This one scores you against the base rate
-    and against market price, and the verdict is never kinder than the findings.</p>
-    <p><a href="/kalibrasi/en/"><b>Open the Calibration Audit</b></a> &mdash; free, no signup,
-    no upload. <span class="note">Also available in
-    <a href="/kalibrasi/">Bahasa Indonesia</a>.</span></p>
-  </section>
-
-  <section>
-    <h2>Pricing</h2>
-    <div class="price"><b>Audit &amp; findings report</b><span>Free</span></div>
-    <div class="price"><b>AI Opportunity Scan &mdash; instant download</b><span>$19</span></div>
-    <div class="price"><b>AI Share of Voice Report &mdash; your brand, measured</b><span>$39</span></div>
-    <div class="price"><b>Accessibility remediation &mdash; WCAG 2.1 AA</b><span>$545</span></div>
-    <div class="price"><b>AI visibility fix &mdash; schema, structure, crawler access</b><span>$820</span></div>
-    <div class="price"><b>Both, bundled</b><span>$1,350</span></div>
-    <div class="price"><b>Monthly monitoring &amp; new-page fixes</b><span>from $165/mo</span></div>
-    <p class="note" style="margin-top:16px">Paid by invoice &mdash; card or PayPal. 50%
-    to start, 50% on delivery. Monthly plans cancel anytime, no contract.</p>
-  </section>
-
-  <section>
-    <div class="guarantee">
-      <h3 style="margin-bottom:8px">The guarantee</h3>
-      <p style="margin:0">If your accessibility score isn't 90+ within 30 days
-      of delivery, I keep working at no charge until it is &mdash; or you get a full
-      refund. The score is measured with public tools (Lighthouse, axe), so
-      neither of us has to take the other's word for it.</p>
+    <h2>For teams that write confidence numbers</h2>
+    <div class="grid">
+      <a class="card" href="/kalibrasi/en/">
+        <div class="tag">Free tool</div>
+        <h3>Calibration Audit</h3>
+        <p>Drop a CSV of past forecasts and outcomes. Get Brier score, skill score against base rate <em>and</em> market price,
+          a reliability curve — computed in your browser, nothing uploaded. <a href="/kalibrasi/">Bahasa Indonesia</a>.</p>
+      </a>
     </div>
   </section>
 
   <section>
-    <h2>Get your free audit</h2>
-    <p>Send me your URL. You'll get the findings back &mdash; usually same day, always
-    within 48 hours. No pitch attached unless you ask for one.</p>
-    <a class="cta" href="mailto:octavianus@ocklu.com?subject=Free%20audit%20request&amp;body=My%20website%3A%20">Email octavianus@ocklu.com</a>
+    <h2>Markets</h2>
+    <div class="grid grid-2">
+      <a class="card" href="/radar/">
+        <div class="tag">Free</div>
+        <h3>Collectibles Price Radar</h3>
+        <p>What actually moved today across trading-card and collectibles markets.</p>
+      </a>
+      <a class="card" href="/trade/">
+        <div class="tag">Dashboard</div>
+        <h3>OCKLU-TRADE</h3>
+        <p>Multi-market trading decision support — signals, not auto-execution.</p>
+      </a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Alat lokal Indonesia</h2>
+    <div class="grid grid-2">
+      <a class="card" href="/kios/">
+        <div class="tag">Gratis</div>
+        <h3>Buku Kios</h3>
+        <p>Catat penjualan UKM lewat chat/foto/Excel, tanpa login.</p>
+      </a>
+      <a class="card" href="/ojol/">
+        <div class="tag">Rp 15rb/bln</div>
+        <h3>Ojol Untung</h3>
+        <p>Kalkulator untung-rugi order, plus info kebutuhan lokal buat driver.</p>
+      </a>
+    </div>
   </section>
 
   <footer>
-    <p style="margin:0 0 6px"><b style="color:var(--ink)">Ocklu Tergigantic</b> &mdash;
-    Web Accessibility &amp; AI Visibility</p>
-    <p style="margin:0"><a href="mailto:octavianus@ocklu.com">octavianus@ocklu.com</a></p>
-    <p style="margin:14px 0 0;font-size:13px">Independent practitioner. Audits use
-    Lighthouse, axe-core, and WCAG 2.1 AA criteria. Accessibility findings are
-    technical, not legal advice.</p>
+    <p>OCKLU — <a href="mailto:octavianus@ocklu.com">octavianus@ocklu.com</a></p>
   </footer>
 
 </div>
-<img src="https://hits.sh/ocklu.com.svg" alt="" width="1" height="1" style="position:absolute;left:-9999px" aria-hidden="true">
 </body>
 </html>
