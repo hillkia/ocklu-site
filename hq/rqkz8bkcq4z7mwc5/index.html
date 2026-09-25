@@ -124,7 +124,6 @@
   @media (max-width:700px) {
     .baris { grid-template-columns: 12px 1fr; } .baris .st { grid-column: 2; } .baris .aksi { grid-column: 1 / -1; justify-content:flex-start; }
     .lap { grid-template-columns: 1fr; grid-template-rows: 170px 1fr; } .lap .dft { border-right:0; border-bottom:1px solid var(--line); }
-    #awanInfo { top:auto; bottom:12px; left:12px; right:12px; transform:none; max-width:none; }
     #atasTengah { top:auto; bottom:180px; left:auto; right:12px; transform:none; flex-direction:column; align-items:flex-end; }
   }
 
@@ -140,6 +139,7 @@
   .saran-cepat { display:flex; gap:6px; flex-wrap:wrap; padding:0 12px 10px; }
   .saran-cepat button { font:inherit; font-size:11px; padding:5px 10px; border-radius:999px; border:1px solid var(--line); background:transparent; color:var(--dim); cursor:pointer; }
   #awanInfo { display:none; top:64px; left:50%; transform:translateX(-50%); padding:8px 14px; font-size:12px; line-height:1.5; max-width:min(520px,calc(100vw - 24px)); text-align:center; z-index:4; }
+  @media (max-width:700px) { #awanInfo { top:96px; bottom:auto; left:12px; right:12px; transform:none; max-width:none; font-size:11px; padding:6px 10px; } }
   .dnaKanan { display:flex; flex-direction:column; min-height:0; overflow:hidden; }
   .dnaKanan .atas { padding:12px 14px; border-bottom:1px solid var(--line); font-size:12px; }
   .dnaKanan .atas b { font-size:15px; } .dnaKanan .atas .dim { color:var(--dim); margin-top:4px; }
