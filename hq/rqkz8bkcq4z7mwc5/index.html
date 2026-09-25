@@ -1,0 +1,1335 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta name="robots" content="noindex,nofollow"><script>window.HQ_AWAN = 1;</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>OCKLU HQ</title>
+<style>
+  :root { --bg:#070a12; --panel:rgba(10,14,24,.82); --line:rgba(255,255,255,.12); --txt:#eef2f8; --dim:#8a93a6;
+          --hidup:#34d399; --mati:#f87171; --tanpa:#94a3b8; --gold:#f5b700; --biru:#38bdf8; }
+  * { box-sizing:border-box; }
+  html,body { margin:0; height:100%; background:var(--bg); color:var(--txt); overflow:hidden; touch-action:none;
+              overscroll-behavior:none; font:13px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+              -webkit-user-select:none; user-select:none; }
+  canvas#c { display:block; width:100vw; height:100vh; touch-action:none; outline:none; }
+  .pnl { position:fixed; background:var(--panel); border:1px solid var(--line); border-radius:12px;
+         backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); }
+  .mono { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; }
+
+  #lokasi { top:12px; left:12px; padding:10px 14px; min-width:200px; }
+  #lokasi .l1 { font-size:10px; letter-spacing:.2em; color:var(--dim); text-transform:uppercase; }
+  #lokasi .l2 { font-size:17px; font-weight:700; margin-top:1px; }
+  #lokasi .l3 { font-size:11px; color:var(--dim); margin-top:2px; }
+
+  #angka { top:92px; left:12px; padding:10px 14px; width:230px; font-size:12px; }
+  .row { display:flex; justify-content:space-between; gap:8px; padding:1px 0; }
+  .dot { display:inline-block; width:8px; height:8px; border-radius:50%; margin-right:6px; vertical-align:1px; }
+  #angka .jujur { margin-top:6px; padding-top:6px; border-top:1px dashed var(--line); color:var(--dim); font-size:11px; }
+  #angka .jujur b { color:var(--mati); }
+  .zona { display:flex; flex-wrap:wrap; gap:4px; margin-top:8px; }
+  .zona button { background:transparent; color:var(--txt); border:1px solid var(--line); border-radius:6px;
+                 padding:3px 7px; font:inherit; font-size:11px; cursor:pointer; }
+
+  #peta { top:12px; right:12px; padding:6px; border-radius:50%; }
+  #peta canvas { display:block; width:160px; height:160px; border-radius:50%; }
+
+  #info { right:12px; bottom:12px; width:min(360px,calc(100vw - 24px)); padding:14px 16px; display:none; }
+  #info .kat { font-size:10px; letter-spacing:.2em; text-transform:uppercase; }
+  #info h2 { margin:4px 0 2px; font-size:18px; }
+  #info .tipe { color:var(--dim); margin-bottom:6px; }
+  #info .st { padding:7px 9px; border-radius:8px; background:rgba(255,255,255,.05); margin:8px 0; font-size:12px; }
+  #info code { color:var(--gold); word-break:break-all; font-size:12px; }
+  #info .btn { display:inline-block; margin-top:8px; padding:9px 16px; border-radius:999px; font:inherit; font-weight:700;
+               color:#04120c; background:var(--hidup); text-decoration:none; }
+
+  #bantu { left:50%; bottom:12px; transform:translateX(-50%); padding:6px 14px; color:var(--dim); font-size:11px;
+           white-space:nowrap; border-radius:999px; }
+  #bantu kbd { background:rgba(255,255,255,.1); border-radius:4px; padding:1px 5px; color:var(--txt); font:inherit; font-size:10px; }
+
+  #stik { position:fixed; left:24px; bottom:24px; width:120px; height:120px; border-radius:50%; border:1px solid var(--line);
+          background:rgba(255,255,255,.05); display:none; touch-action:none; z-index:5; }
+  #stik i { position:absolute; left:38px; top:38px; width:44px; height:44px; border-radius:50%; background:rgba(255,255,255,.25); }
+
+  #gerbang { position:fixed; inset:0; z-index:20; display:flex; flex-direction:column; align-items:center; justify-content:center;
+             gap:10px; background:radial-gradient(ellipse at center,#0f1830 0%,#05070d 70%); text-align:center; padding:20px; }
+  #gerbang .logo { font-size:clamp(44px,10vw,84px); font-weight:900; letter-spacing:.04em; line-height:1; }
+  #gerbang .logo span { color:var(--biru); text-shadow:0 0 30px rgba(56,189,248,.6); }
+  #gerbang .logo i { display:inline-block; width:.18em; height:.18em; border-radius:50%; background:var(--mati);
+                     vertical-align:super; margin-left:.08em; }
+  #gerbang .tag { font-size:clamp(16px,3vw,22px); font-weight:700; font-style:italic; }
+  #gerbang .garis { width:min(320px,70vw); height:1px; background:linear-gradient(90deg,transparent,var(--biru),transparent); margin:4px 0; }
+  #gerbang .stat { color:var(--dim); font-size:13px; }
+  #gerbang button { margin-top:10px; padding:13px 30px; border-radius:999px; border:0; font:inherit; font-size:15px;
+                    font-weight:800; letter-spacing:.06em; color:#03101c; background:var(--biru); cursor:pointer;
+                    box-shadow:0 0 30px rgba(56,189,248,.45); }
+  #gerbang button:disabled { opacity:.4; cursor:wait; }
+  #gerbang .kontrol { margin-top:12px; display:flex; flex-wrap:wrap; gap:8px; justify-content:center; color:var(--dim); font-size:11px; }
+  #gerbang .kontrol kbd { background:rgba(255,255,255,.1); border-radius:4px; padding:2px 6px; color:var(--txt); font:inherit; }
+  #gerbang .kaki { position:absolute; bottom:14px; color:#4b5568; font-size:11px; }
+
+  @media (max-width:700px), (pointer:coarse) {
+    #stik { display:block; } #bantu { display:none; }
+    #angka { top:auto; bottom:160px; left:12px; width:180px; }
+    #angka .zona, #angka .jujur { display:none; }
+    #peta canvas { width:110px; height:110px; }
+    #info { bottom:12px; right:12px; left:150px; width:auto; }
+    #lokasi { min-width:0; max-width:calc(100vw - 150px); }
+    body.ada-info #angka { display:none; }
+  }
+
+  .aksi { display:flex; flex-wrap:wrap; gap:6px; margin-top:10px; }
+  .aksi button, .aksi a { font:inherit; font-size:12px; font-weight:600; padding:7px 11px; border-radius:8px; cursor:pointer;
+            border:1px solid var(--line); background:rgba(255,255,255,.06); color:var(--txt); text-decoration:none; }
+  .aksi .utama { background:var(--hidup); color:#04120c; border-color:transparent; }
+  .aksi .nyala { background:var(--biru); color:#03101c; border-color:transparent; }
+  .aksi .bahaya { color:var(--mati); border-color:rgba(248,113,113,.4); }
+  .aksi button:disabled { opacity:.45; cursor:wait; }
+  .hasil { margin-top:10px; padding:8px 10px; border-radius:8px; background:rgba(0,0,0,.3); font-size:12px; display:none; }
+  .hasil.ok { border-left:3px solid var(--hidup); } .hasil.gagal { border-left:3px solid var(--mati); }
+  .hasil pre { max-height:140px; overflow:auto; margin:6px 0 0; font-size:10.5px; color:#b6c0d2; white-space:pre-wrap; }
+  .hasil .diag { margin-top:6px; } .hasil .diag div { margin:4px 0; }
+
+  #atasTengah { position:fixed; top:12px; left:50%; transform:translateX(-50%); display:flex; gap:6px; z-index:4; }
+  #atasTengah .pnl { position:static; padding:8px 14px; cursor:pointer; font-weight:700; font-size:12px; border-radius:999px; color:var(--txt); white-space:nowrap; }
+  .layar { position:fixed; inset:0; z-index:15; background:rgba(3,6,12,.72); display:none; align-items:center; justify-content:center; padding:16px; }
+  .layar.buka { display:flex; }
+  .kartu { background:#0c1220; border:1px solid var(--line); border-radius:14px; width:min(1000px,100%); max-height:calc(100vh - 32px);
+           display:flex; flex-direction:column; overflow:hidden; }
+  .kartu .kepala { display:flex; gap:10px; align-items:center; padding:12px 14px; border-bottom:1px solid var(--line); }
+  .kartu .kepala h3 { margin:0; font-size:15px; flex:1; }
+  .kartu .kepala input { flex:1; max-width:320px; background:#060a14; border:1px solid var(--line); border-radius:8px; color:var(--txt);
+                         padding:7px 10px; font:inherit; }
+  .kartu .tutup { background:transparent; border:1px solid var(--line); color:var(--txt); border-radius:8px; padding:6px 10px; cursor:pointer; font:inherit; }
+  .kartu .isi { overflow:auto; }
+  .saring { display:flex; gap:6px; padding:8px 14px; border-bottom:1px solid var(--line); flex-wrap:wrap; }
+  .saring button { font:inherit; font-size:11px; padding:4px 9px; border-radius:999px; border:1px solid var(--line); background:transparent; color:var(--dim); cursor:pointer; }
+  .saring button.on { color:var(--txt); border-color:var(--biru); background:rgba(56,189,248,.12); }
+  .baris { display:grid; grid-template-columns: 14px 1.4fr 1fr auto; gap:10px; align-items:center; padding:9px 14px; border-bottom:1px solid rgba(255,255,255,.05); }
+  .baris:hover { background:rgba(255,255,255,.03); }
+  .baris .nm b { display:block; } .baris .nm small { color:var(--dim); }
+  .baris .st { font-size:11px; color:var(--dim); font-family:ui-monospace,Menlo,monospace; }
+  .baris .aksi { margin:0; justify-content:flex-end; }
+  .baris .aksi button, .baris .aksi a { padding:5px 9px; font-size:11px; }
+  .baris .hasil { grid-column: 1 / -1; }
+  .lap { display:grid; grid-template-columns: 260px 1fr; min-height:0; flex:1; }
+  .lap .dft { border-right:1px solid var(--line); overflow:auto; }
+  .lap .dft button { display:block; width:100%; text-align:left; background:transparent; border:0; border-bottom:1px solid rgba(255,255,255,.05);
+                     color:var(--txt); padding:9px 12px; font:inherit; font-size:12px; cursor:pointer; }
+  .lap .dft button.on { background:rgba(56,189,248,.12); }
+  .lap .dft small { color:var(--dim); display:block; font-size:10.5px; }
+  .lap pre { margin:0; padding:14px; overflow:auto; font:12px/1.5 ui-monospace,Menlo,monospace; white-space:pre-wrap; color:#d6deea; }
+  @media (max-width:700px) {
+    .baris { grid-template-columns: 12px 1fr; } .baris .st { grid-column: 2; } .baris .aksi { grid-column: 1 / -1; justify-content:flex-start; }
+    .lap { grid-template-columns: 1fr; grid-template-rows: 170px 1fr; } .lap .dft { border-right:0; border-bottom:1px solid var(--line); }
+    #awanInfo { top:auto; bottom:12px; left:12px; right:12px; transform:none; max-width:none; }
+    #atasTengah { top:auto; bottom:180px; left:auto; right:12px; transform:none; flex-direction:column; align-items:flex-end; }
+  }
+
+  .obrol { flex:1; overflow:auto; padding:14px; display:flex; flex-direction:column; gap:10px; }
+  .gel { max-width:85%; padding:9px 12px; border-radius:14px; white-space:pre-wrap; line-height:1.5; font-size:13px; }
+  .gel.aku { align-self:flex-end; background:var(--biru); color:#03101c; border-bottom-right-radius:4px; }
+  .gel.dia { align-self:flex-start; background:#18213a; border-bottom-left-radius:4px; }
+  .gel .ot { display:block; margin-top:6px; font-size:10px; color:var(--dim); }
+  .gel.gagal { background:#3a1111; }
+  .ketik { display:flex; gap:8px; padding:10px 12px; border-top:1px solid var(--line); }
+  .ketik input { flex:1; background:#060a14; border:1px solid var(--line); border-radius:999px; color:var(--txt); padding:10px 14px; font:inherit; }
+  .ketik button { border:0; border-radius:999px; padding:0 16px; font:inherit; font-weight:700; background:var(--biru); color:#03101c; cursor:pointer; }
+  .saran-cepat { display:flex; gap:6px; flex-wrap:wrap; padding:0 12px 10px; }
+  .saran-cepat button { font:inherit; font-size:11px; padding:5px 10px; border-radius:999px; border:1px solid var(--line); background:transparent; color:var(--dim); cursor:pointer; }
+  #awanInfo { display:none; top:64px; left:50%; transform:translateX(-50%); padding:8px 14px; font-size:12px; line-height:1.5; max-width:min(520px,calc(100vw - 24px)); text-align:center; z-index:4; }
+  .dnaKanan { display:flex; flex-direction:column; min-height:0; overflow:hidden; }
+  .dnaKanan .atas { padding:12px 14px; border-bottom:1px solid var(--line); font-size:12px; }
+  .dnaKanan .atas b { font-size:15px; } .dnaKanan .atas .dim { color:var(--dim); margin-top:4px; }
+  .dnaKanan pre { flex:1; }
+  .dnaKanan select, .form input, .form textarea, .form select { background:#060a14; border:1px solid var(--line); border-radius:8px; color:var(--txt); padding:7px 9px; font:inherit; font-size:12px; }
+  .form { padding:12px 14px; overflow:auto; } .form label { display:block; margin:10px 0 4px; font-size:11px; color:var(--dim); }
+  .form input, .form textarea, .form select { width:100%; box-sizing:border-box; }
+  .form textarea { min-height:280px; font:12px/1.5 ui-monospace,Menlo,monospace; resize:vertical; }
+  .form .dua { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+  .warna { display:flex; gap:8px; } .warna button { width:26px; height:26px; border-radius:50%; border:2px solid transparent; cursor:pointer; padding:0; }
+  .warna button.on { border-color:#fff; box-shadow:0 0 0 2px rgba(255,255,255,.3); }
+  .gdg { display:grid; grid-template-columns:14px 1fr auto; gap:10px; align-items:center; padding:10px 12px; border:1px solid var(--line); border-radius:10px; margin:6px 0; }
+  .gdg .aksi { margin:0; } .gdg small { color:var(--dim); display:block; }
+  .gdg .pindah { grid-column:1 / -1; display:flex; gap:6px; } .gdg .pindah select { flex:1; }
+  .prk { padding:14px; overflow:auto; }
+  .prk h4 { margin:14px 0 6px; font-size:11px; letter-spacing:.15em; text-transform:uppercase; color:var(--dim); }
+  .prk .rks { padding:10px 12px; border-radius:10px; background:rgba(56,189,248,.08); border-left:3px solid var(--biru); }
+  .prk .ck { display:flex; gap:8px; padding:4px 0; font-size:12.5px; } .prk .ck b { min-width:18px; }
+  .prk .sr { padding:8px 10px; margin:6px 0; border-radius:8px; background:rgba(255,255,255,.04); font-size:12.5px; }
+  .prk code { color:var(--gold); word-break:break-all; }
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+
+<div id="gerbang">
+  <div class="logo">OCKLU <span>HQ</span><i></i></div>
+  <div class="tag">Proyek Nyata, Angka Jujur</div>
+  <div class="garis"></div>
+  <div class="stat mono" id="g-stat">ngecek port semua proyek…</div>
+  <button id="masuk" disabled>MASUK OCKLU HQ</button>
+  <div class="kontrol"><span><kbd>KLIK</kbd> jalan ke situ</span><span><kbd>WASD</kbd> jalan</span>
+    <span><kbd>Shift</kbd> lari</span><span><kbd>seret</kbd> putar</span><span><kbd>E</kbd> buka booth</span></div>
+  <div class="kaki">Paid in Full — Jesus is God ✝️</div>
+</div>
+
+<div id="lokasi" class="pnl"><div class="l1">OCKLU HQ</div><div class="l2" id="lok-nama">Convention Plaza</div><div class="l3" id="lok-sub"></div></div>
+<div id="angka" class="pnl mono">
+  <div class="row"><span><i class="dot" style="background:var(--hidup)"></i>hidup</span><b id="n-hidup">0</b></div>
+  <div class="row"><span><i class="dot" style="background:var(--mati)"></i>mati</span><b id="n-mati">0</b></div>
+  <div class="row"><span><i class="dot" style="background:var(--tanpa)"></i>tanpa server</span><b id="n-tanpa">0</b></div>
+  <div class="zona" id="zona"></div>
+  <div class="jujur" id="jujur"></div>
+</div>
+<div id="peta" class="pnl"><canvas id="pc" width="320" height="320"></canvas></div>
+<div id="info" class="pnl"></div>
+<div id="bantu" class="pnl"><kbd>KLIK</kbd> lantai/booth = jalan ke situ · <kbd>WASD</kbd> jalan · <kbd>Shift</kbd> lari · <kbd>seret</kbd> putar · <kbd>E</kbd> buka · <kbd>L</kbd> daftar</div>
+<div id="atasTengah"><button id="tombolDaftar" class="pnl">📋 Semua proyek (L)</button><button id="tombolDna" class="pnl">🧬 DNA &amp; Script (G)</button><button id="tombolBangun" class="pnl">🏗 Bangun (B)</button><button id="tombolDuit" class="pnl">💰 Pintu Duit</button></div>
+<div id="awanInfo" class="pnl"></div>
+<div id="lDuit" class="layar"><div class="kartu" style="width:min(620px,100%)">
+  <div class="kepala"><h3>💰 Pintu Duit</h3><button class="tutup" data-tutup>tutup ✕</button></div>
+  <div class="prk" id="duitIsi"></div>
+</div></div>
+<div id="lDna" class="layar"><div class="kartu" style="height:calc(100vh - 32px)">
+  <div class="kepala"><h3>🧬 Perpustakaan DNA &amp; Script</h3><input id="dnaCari" placeholder="cari persona, worker, prompt…"><button class="tutup" data-dna="baru">➕ DNA baru</button><button class="tutup" data-tutup>tutup ✕</button></div>
+  <div class="saring" id="dnaRak"></div>
+  <div class="lap"><div class="dft" id="dnaDaftar"></div><div class="dnaKanan" id="dnaKanan"></div></div>
+</div></div>
+<div id="lBangun" class="layar"><div class="kartu" style="width:min(720px,100%)">
+  <div class="kepala"><h3>🏗 Bangun gedung &amp; mesin sendiri</h3><button class="tutup" data-tutup>tutup ✕</button></div>
+  <div class="prk" id="bangunIsi"></div>
+</div></div>
+<div id="lDaftar" class="layar"><div class="kartu">
+  <div class="kepala"><h3>Semua proyek</h3><input id="cari" placeholder="cari nama, folder, tipe…"><button class="tutup" data-tutup>tutup ✕</button></div>
+  <div class="saring" id="saring"></div>
+  <div class="isi" id="daftarIsi"></div>
+</div></div>
+<div id="lLaporan" class="layar"><div class="kartu" style="height:calc(100vh - 32px)">
+  <div class="kepala"><h3 id="lapJudul">Laporan</h3><button class="tutup" data-tutup>tutup ✕</button></div>
+  <div class="lap"><div class="dft" id="lapDaftar"></div><pre id="lapIsi">pilih berkas di kiri</pre></div>
+</div></div>
+<div id="lObrol" class="layar"><div class="kartu" style="height:min(640px,calc(100vh - 32px));width:min(560px,100%)">
+  <div class="kepala"><h3 id="obrolJudul">Ngobrol</h3><button class="tutup" data-tutup>tutup ✕</button></div>
+  <div class="obrol" id="obrolIsi"></div>
+  <div class="saran-cepat" id="obrolCepat"></div>
+  <form class="ketik" id="obrolForm"><input id="obrolIn" placeholder="tanya apa aja soal proyek ini…" autocomplete="off"><button>Kirim</button></form>
+</div></div>
+<div id="lPeriksa" class="layar"><div class="kartu" style="width:min(640px,100%)">
+  <div class="kepala"><h3 id="prkJudul">Periksa</h3><button class="tutup" data-tutup>tutup ✕</button></div>
+  <div class="prk" id="prkIsi"></div>
+</div></div>
+<div id="stik"><i></i></div>
+
+<script type="importmap">
+{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" } }
+</script>
+<script type="module">
+import * as THREE from 'three';
+
+// ══════════════════════════════════════════════════════════════════════
+// Aturan satu-satunya: status booth DICEK server (port + git), bukan dikarang.
+// Booth hidup = layar nyala + ada staf berdiri. Booth mati = layar merah, kosong.
+// Pengunjung di plaza itu hiasan; staf di booth BUKAN — dia cuma muncul kalau
+// port-nya beneran nyahut.
+// ══════════════════════════════════════════════════════════════════════
+
+const WARNA = { cuan:0xf5b700, inti:0x22d3ee, layan:0x34d399, belajar:0xa78bfa, plan:0x94a3b8 };
+const NAMA  = { cuan:'Lantai Cuan', inti:'Ruang Mesin', layan:'Ruang Klien', belajar:'Lab', plan:'Lahan Kosong' };
+const URUT  = ['cuan','inti','layan','belajar','plan'];
+const STW   = { hidup:0x34d399, mati:0xf87171, 'tanpa-port':0x94a3b8, hilang:0x52525b, rak:0xc084fc, dna:0xf0abfc };
+const BASI_HARI = 21;
+const hex = (n) => '#' + n.toString(16).padStart(6, '0');
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;' }[c]));
+const hariLalu = (ms) => ms ? Math.floor((Date.now() - ms) / 86400000) : null;
+// BASI = gak hidup DAN gak ada aktivitas (commit/log/jadwal launchd) > 21 hari.
+// Dulu cuma dari commit — pekerja terjadwal yang jalan tiap hari ikut dicap BASI. Salah.
+const basi = (p) => { if (p.status === 'rak' || p.status === 'dna') return false; const h = hariLalu(p.aktif ?? p.disentuh); return p.status !== 'hidup' && (h === null || h > BASI_HARI); };
+
+// ─── renderer & langit ────────────────────────────────────────────────
+const cv = $('c');
+const renderer = new THREE.WebGLRenderer({ canvas: cv, antialias: true });
+renderer.setPixelRatio(Math.min(2, devicePixelRatio));
+renderer.setSize(innerWidth, innerHeight);
+renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFShadowMap;
+renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 1.05;
+const scene = new THREE.Scene();
+const cam = new THREE.PerspectiveCamera(58, innerWidth / innerHeight, 0.1, 600);
+
+function tekstur(w, h, gambar) {
+  const c = document.createElement('canvas'); c.width = w; c.height = h;
+  gambar(c.getContext('2d'), w, h);
+  const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 4; return t;
+}
+// langit senja kota, kayak plaza AIS
+scene.background = tekstur(16, 512, (x) => {
+  const g = x.createLinearGradient(0, 0, 0, 512);
+  g.addColorStop(0, '#0b1230'); g.addColorStop(0.55, '#243a78'); g.addColorStop(0.8, '#6b5aa8'); g.addColorStop(1, '#e79a7a');
+  x.fillStyle = g; x.fillRect(0, 0, 16, 512);
+});
+scene.fog = new THREE.Fog(0x2a3564, 120, 330);
+scene.add(new THREE.HemisphereLight(0xcfe0ff, 0x2a2f3d, 1.1));
+const matahari = new THREE.DirectionalLight(0xffe6cc, 1.6);
+matahari.position.set(-60, 90, 70); matahari.castShadow = true;
+matahari.shadow.mapSize.set(1024, 1024);
+Object.assign(matahari.shadow.camera, { left:-140, right:140, top:140, bottom:-140, far:320 });
+matahari.shadow.bias = -0.0005;
+scene.add(matahari);
+
+// ─── helper ───────────────────────────────────────────────────────────
+const tabrak = [];      // AABB dunia {x1,x2,z1,z2}
+const lantaiKlik = [];  // permukaan yang bisa diklik buat jalan
+function kotak(w, h, d, mat, x, y, z, bayangan = true, padat = false) {
+  const o = new THREE.Mesh(new THREE.BoxGeometry(w, h, d), mat);
+  o.position.set(x, y, z); o.castShadow = bayangan; o.receiveShadow = true; scene.add(o);
+  if (padat) tabrak.push({ x1: x - w / 2, x2: x + w / 2, z1: z - d / 2, z2: z + d / 2 });
+  return o;
+}
+function papanTeks(teks, sub, warna, lebar) {
+  const t = tekstur(1024, 256, (x, w, h) => {
+    x.fillStyle = 'rgba(6,10,20,.9)'; x.beginPath(); x.roundRect(6, 6, w - 12, h - 12, 28); x.fill();
+    x.strokeStyle = hex(warna); x.lineWidth = 8; x.stroke();
+    x.fillStyle = '#fff'; x.textAlign = 'center'; x.font = '800 100px -apple-system,Segoe UI,sans-serif';
+    x.fillText(teks, w / 2, 128);
+    x.fillStyle = hex(warna); x.font = '600 50px -apple-system,Segoe UI,sans-serif'; x.fillText(sub, w / 2, 206);
+  });
+  return new THREE.Mesh(new THREE.PlaneGeometry(lebar, lebar / 4),
+    new THREE.MeshBasicMaterial({ map: t, transparent: true, side: THREE.DoubleSide }));
+}
+
+// ─── lantai plaza: paving ─────────────────────────────────────────────
+const lantai = (() => {
+  const t = tekstur(512, 512, (x, w, h) => {
+    x.fillStyle = '#5b6170'; x.fillRect(0, 0, w, h);
+    for (let i = 0; i < 8; i++) for (let j = 0; j < 8; j++) {
+      const v = 82 + Math.floor(Math.random() * 22);
+      x.fillStyle = `rgb(${v},${v + 4},${v + 12})`; x.fillRect(i * 64 + 2, j * 64 + 2, 60, 60);
+    }
+  });
+  t.wrapS = t.wrapT = THREE.RepeatWrapping; t.repeat.set(40, 40);
+  const g = new THREE.Mesh(new THREE.PlaneGeometry(320, 320), new THREE.MeshStandardMaterial({ map: t, roughness: 0.92 }));
+  g.rotation.x = -Math.PI / 2; g.receiveShadow = true; scene.add(g);
+  const r = new THREE.Mesh(new THREE.RingGeometry(150, 420, 64), new THREE.MeshStandardMaterial({ color: 0x2f5d3a, roughness: 1 }));
+  r.rotation.x = -Math.PI / 2; r.position.y = 0.01; scene.add(r);
+  return g;
+})();
+lantaiKlik.push(lantai);
+
+// ─── gedung pameran per golongan ─────────────────────────────────────
+// Kampus konvensi: tiap gedung pintunya ngadep plaza. Ukuran ikut jumlah booth.
+const GEDUNG = {
+  cuan:    { x:   0, z: -72, w: 56, d: 76 },
+  inti:    { x: -74, z: -18, w: 40, d: 46, rot:  Math.PI / 2 },
+  layan:   { x:  72, z: -18, w: 36, d: 32, rot: -Math.PI / 2 },
+  belajar: { x: -62, z:  54, w: 34, d: 28, rot:  Math.PI * 0.75 },
+  plan:    { x:  62, z:  54, w: 28, d: 22, rot: -Math.PI * 0.75 },
+};
+const kaca = new THREE.MeshStandardMaterial({ color: 0x9fd6ff, transparent: true, opacity: 0.18, roughness: 0.05, metalness: 0.2, depthWrite: false });
+const beton = new THREE.MeshStandardMaterial({ color: 0xd9dde6, roughness: 0.6 });
+const gelapBeton = new THREE.MeshStandardMaterial({ color: 0x1a2030, roughness: 0.7 });
+
+const booth = new Map();     // key → data booth
+const areaGedung = [];       // nama lokasi & minimap
+function lokalKeDunia(G, lx, lz) {
+  const c = Math.cos(G.rot || 0), s = Math.sin(G.rot || 0);
+  return { x: G.x + lx * c + lz * s, z: G.z - lx * s + lz * c };
+}
+
+function bangunGedung(k, proyek) {
+  const G = GEDUNG[k], w = G.w, d = G.d, warna = WARNA[k];
+  const grup = new THREE.Group(); grup.position.set(G.x, 0, G.z); grup.rotation.y = G.rot || 0; scene.add(grup);
+  const bx = (W, H, D, mat, x, y, z) => { const o = new THREE.Mesh(new THREE.BoxGeometry(W, H, D), mat);
+    o.position.set(x, y, z); o.castShadow = true; o.receiveShadow = true; grup.add(o); return o; };
+
+  // karpet terang + jalur warna golongan di tengah
+  const karpet = new THREE.Mesh(new THREE.PlaneGeometry(w, d), new THREE.MeshStandardMaterial({ color: 0xeef1f6, roughness: 0.85 }));
+  karpet.rotation.x = -Math.PI / 2; karpet.position.y = 0.03; karpet.receiveShadow = true; grup.add(karpet); lantaiKlik.push(karpet);
+  const jalur = new THREE.Mesh(new THREE.PlaneGeometry(4, d), new THREE.MeshStandardMaterial({ color: warna, roughness: 0.8 }));
+  jalur.rotation.x = -Math.PI / 2; jalur.position.y = 0.04; grup.add(jalur); lantaiKlik.push(jalur);
+
+  // dinding kaca (tembus pandang, biar kamera gak kehalang), pintu di depan
+  const T = 7, pintu = 10, sisi = (w - pintu) / 2;
+  bx(w, T, 0.3, kaca, 0, T / 2, -d / 2);
+  bx(0.3, T, d, kaca, -w / 2, T / 2, 0); bx(0.3, T, d, kaca, w / 2, T / 2, 0);
+  bx(sisi, T, 0.3, kaca, -(pintu / 2 + sisi / 2), T / 2, d / 2);
+  bx(sisi, T, 0.3, kaca,  (pintu / 2 + sisi / 2), T / 2, d / 2);
+  // rangka beton
+  const nx = Math.max(2, Math.round(w / 8)), nz = Math.max(2, Math.round(d / 8));
+  for (let i = 0; i <= nx; i++) { const x = -w / 2 + i * w / nx; bx(0.5, T, 0.5, beton, x, T / 2, -d / 2);
+    if (Math.abs(x) > pintu / 2 + 0.3) bx(0.5, T, 0.5, beton, x, T / 2, d / 2); }   // tiang gak boleh berdiri di lubang pintu
+  for (let i = 0; i <= nz; i++) { const z = -d / 2 + i * d / nz; bx(0.5, T, 0.5, beton, -w / 2, T / 2, z); bx(0.5, T, 0.5, beton, w / 2, T / 2, z); }
+  bx(w + 0.6, 0.6, 0.6, beton, 0, T, -d / 2); bx(w + 0.6, 0.6, 0.6, beton, 0, T, d / 2);
+  bx(0.6, 0.6, d, beton, -w / 2, T, 0); bx(0.6, 0.6, d, beton, w / 2, T, 0);
+  // strip lampu plafon (kayak lobby AIS), melayang — gak nutup kamera
+  const lampuMat = new THREE.MeshBasicMaterial({ color: 0xffffff });
+  for (let z = -d / 2 + 5; z < d / 2 - 2; z += 7) bx(w * 0.8, 0.08, 0.35, lampuMat, 0, T + 1.4, z);
+
+  // papan nama raksasa di atas pintu
+  const judul = papanTeks(NAMA[k].toUpperCase(), subJudul(k, proyek), warna, Math.min(w * 0.7, 30));
+  judul.position.set(0, T + 3.8, d / 2 + 0.3); grup.add(judul);
+
+  // tabrakan dinding: titik-titik sepanjang dinding (gedung bisa miring)
+  for (const [ax, az, bxx, bz] of [[-w/2,-d/2,w/2,-d/2],[-w/2,-d/2,-w/2,d/2],[w/2,-d/2,w/2,d/2],[-w/2,d/2,-pintu/2,d/2],[pintu/2,d/2,w/2,d/2]]) {
+    const n = Math.ceil(Math.hypot(bxx - ax, bz - az) / 1.2);
+    for (let i = 0; i <= n; i++) {
+      const p = lokalKeDunia(G, ax + (bxx - ax) * i / n, az + (bz - az) * i / n);
+      tabrak.push({ x1: p.x - 0.5, x2: p.x + 0.5, z1: p.z - 0.5, z2: p.z + 0.5 });
+    }
+  }
+
+  // booth: dua baris ngadep jalur tengah
+  const perBaris = Math.max(1, Math.ceil(proyek.length / 2)), lebarB = Math.min(7, (d - 8) / perBaris);
+  proyek.forEach((p, i) => {
+    const kiri = i % 2 === 0, idx = Math.floor(i / 2);
+    const lz = -d / 2 + 4 + idx * lebarB + lebarB / 2;
+    buatBooth(p, k, G, grup, kiri ? -(w / 4 + 1) : (w / 4 + 1), lz, kiri, Math.min(lebarB - 0.5, 6));
+  });
+  areaGedung.push({ k, G, w, d });
+}
+
+// ─── booth ────────────────────────────────────────────────────────────
+function layarTeks(p, k) {
+  const st = p.status;
+  if (st === 'rak' || st === 'dna') return tekstur(768, 432, (x, w, h) => {
+    const g = x.createLinearGradient(0, 0, 0, h); g.addColorStop(0, '#1d0b2e'); g.addColorStop(1, '#2e1147');
+    x.fillStyle = g; x.fillRect(0, 0, w, h); x.fillStyle = hex(WARNA[k]); x.fillRect(0, 0, w, 14);
+    x.textAlign = 'left'; x.fillStyle = '#fff'; x.font = '800 58px -apple-system,Segoe UI,sans-serif';
+    x.fillText(p.nama.length > 20 ? p.nama.slice(0, 19) + '…' : p.nama, 40, 110);
+    x.fillStyle = '#c4b5d8'; x.font = '500 28px -apple-system,Segoe UI,sans-serif';
+    const tp = p.tipe || ''; x.fillText(tp.length > 44 ? tp.slice(0, 43) + '…' : tp, 40, 160);
+    x.fillStyle = hex(STW[st]); x.font = '800 50px ui-monospace,Menlo,monospace';
+    x.fillText(st === 'rak' ? `🧬 RAK · ${p.jumlah} isi` : '🧬 DNA · persona', 40, 290);
+    x.fillStyle = '#a78bfa'; x.font = '500 28px ui-monospace,Menlo,monospace';
+    x.fillText(st === 'rak' ? 'dekati & buka rak' : 'dekati: baca / ngobrol', 40, 350);
+  });
+  return tekstur(768, 432, (x, w, h) => {
+    const bg = st === 'hidup' ? ['#07251c', '#0b3a2c'] : st === 'mati' ? ['#2a0c0c', '#3a1111'] : ['#141821', '#1c2230'];
+    const g = x.createLinearGradient(0, 0, 0, h); g.addColorStop(0, bg[0]); g.addColorStop(1, bg[1]);
+    x.fillStyle = g; x.fillRect(0, 0, w, h);
+    x.fillStyle = hex(WARNA[k]); x.fillRect(0, 0, w, 14);
+    x.textAlign = 'left'; x.fillStyle = '#fff'; x.font = '800 62px -apple-system,Segoe UI,sans-serif';
+    x.fillText(p.nama.length > 18 ? p.nama.slice(0, 17) + '…' : p.nama, 40, 110);
+    x.fillStyle = '#a9b3c6'; x.font = '500 30px -apple-system,Segoe UI,sans-serif';
+    const tipe = p.tipe || ''; x.fillText(tipe.length > 40 ? tipe.slice(0, 39) + '…' : tipe, 40, 160);
+    const lbl = st === 'hidup' ? `● LIVE · :${p.port}` : st === 'mati' ? `● OFFLINE · :${p.port}` :
+                st === 'hilang' ? '● FOLDER HILANG' : '● TANPA SERVER';
+    x.fillStyle = hex(STW[st]); x.font = '800 54px ui-monospace,Menlo,monospace'; x.fillText(lbl, 40, 290);
+    const h2 = hariLalu(p.aktif ?? p.disentuh);
+    x.fillStyle = '#8a93a6'; x.font = '500 28px ui-monospace,Menlo,monospace';
+    x.fillText(h2 === null ? 'gak ada jejak aktivitas' : h2 === 0 ? 'aktif hari ini' : `aktif ${h2} hari lalu`, 40, 350);
+    if (st !== 'hidup' && p.jadwal) { x.fillStyle = '#7dd3fc'; x.fillText(`${p.jadwal} jadwal launchd`, 440, 350); }
+    if (basi(p)) {
+      x.fillStyle = '#f87171'; x.beginPath(); x.roundRect(w - 200, 32, 164, 58, 12); x.fill();
+      x.fillStyle = '#fff'; x.font = '800 34px -apple-system,sans-serif'; x.textAlign = 'center'; x.fillText('BASI', w - 118, 73);
+    }
+  });
+}
+
+function buatBooth(p, k, G, grup, lx, lz, kiri, lebar) {
+  const bag = new THREE.Group(); bag.position.set(lx, 0, lz);
+  bag.rotation.y = kiri ? Math.PI / 2 : -Math.PI / 2;   // layar ngadep jalur tengah
+  grup.add(bag);
+  const warna = WARNA[k], lebarMeja = Math.max(1.4, Math.min(2.6, lebar - 1));
+  const alas = new THREE.Mesh(new THREE.BoxGeometry(lebar, 0.12, 5),
+    new THREE.MeshStandardMaterial({ color: warna, roughness: 0.6, emissive: warna, emissiveIntensity: 0.05 }));
+  alas.position.y = 0.06; alas.receiveShadow = true; bag.add(alas);
+  const dinding = new THREE.Mesh(new THREE.BoxGeometry(lebar, 3.6, 0.25), new THREE.MeshStandardMaterial({ color: 0x20283a, roughness: 0.5 }));
+  dinding.position.set(0, 1.8, -2.3); dinding.castShadow = true; bag.add(dinding);
+  const layarMat = new THREE.MeshBasicMaterial({ map: layarTeks(p, k) });
+  const layar = new THREE.Mesh(new THREE.PlaneGeometry(lebar - 0.5, (lebar - 0.5) * 432 / 768), layarMat);
+  layar.position.set(0, 2.1, -2.15); bag.add(layar);
+  const meja = new THREE.Mesh(new THREE.BoxGeometry(lebarMeja, 1.05, 0.8), new THREE.MeshStandardMaterial({ color: 0xf1f3f7, roughness: 0.4 }));
+  meja.position.set(0, 0.55, 0.6); meja.castShadow = true; bag.add(meja);
+  const lis = new THREE.Mesh(new THREE.BoxGeometry(lebarMeja + 0.02, 0.12, 0.82),
+    new THREE.MeshStandardMaterial({ color: warna, emissive: warna, emissiveIntensity: 0.6 }));
+  lis.position.set(0, 1.02, 0.6); bag.add(lis);
+  // BUKAN PointLight. Tiap PointLight dihitung ulang di shader SEMUA benda — 55 booth
+  // = 55 lampu = 4 FPS, pemain keliatan "gak bisa digerakin". Panel nyala ini gratis.
+  const lampu = new THREE.Mesh(new THREE.BoxGeometry(lebar, 0.18, 0.5),
+    new THREE.MeshBasicMaterial({ color: STW[p.status] }));
+  lampu.position.set(0, 3.7, -2.1); bag.add(lampu);
+  const nyala = ['hidup', 'rak', 'dna'].includes(p.status);
+  lampu.material.color.multiplyScalar(nyala ? 1 : 0.45);
+  const staf = orang({ baju: 0x0f172a, badge: warna }); staf.position.set(0, 0, -0.7); staf.rotation.y = Math.PI;
+  bag.add(staf); staf.visible = nyala;   // booth DNA: stafnya = persona itu sendiri
+
+  const pusat = lokalKeDunia(G, lx, lz);
+  const depan = lokalKeDunia(G, lx + (kiri ? 3.4 : -3.4), lz);
+  tabrak.push({ x1: pusat.x - 1.9, x2: pusat.x + 1.9, z1: pusat.z - 1.9, z2: pusat.z + 1.9 });
+  booth.set(p.id + '|' + p.path, { p, k, layarMat, lampu, staf, pusat, depan, hit: [dinding, layar, meja, alas] });
+}
+
+function perbaruiBooth(b, p) {
+  const lama = b.p.status + '|' + b.p.aktif;
+  b.p = p;
+  if (lama === p.status + '|' + p.aktif) return;
+  b.layarMat.map.dispose(); b.layarMat.map = layarTeks(p, b.k); b.layarMat.needsUpdate = true;
+  b.lampu.material.color.setHex(STW[p.status]).multiplyScalar(p.status === 'hidup' ? 1 : 0.45);
+  b.staf.visible = p.status === 'hidup';
+}
+
+// ─── orang (pemain, staf booth, pengunjung plaza) ────────────────────
+function orang(o = {}) {
+  const g = new THREE.Group(), bag = {};
+  const kulit = new THREE.MeshStandardMaterial({ color: o.kulit ?? 0xc68a5b, roughness: 0.7 });
+  const baju = new THREE.MeshStandardMaterial({ color: o.baju ?? 0x1b2230, roughness: 0.6 });
+  const celana = new THREE.MeshStandardMaterial({ color: o.celana ?? 0x111826, roughness: 0.8 });
+  const sepatu = new THREE.MeshStandardMaterial({ color: 0xf1f3f7, roughness: 0.5 });
+  const rambut = new THREE.MeshStandardMaterial({ color: o.rambut ?? 0x15110d, roughness: 0.9 });
+  const m = (geo, mat, x, y, z, induk) => { const q = new THREE.Mesh(geo, mat); q.position.set(x, y, z);
+    q.castShadow = true; (induk || g).add(q); return q; };
+  const badan = new THREE.Group(); g.add(badan); bag.badan = badan;
+  m(new THREE.BoxGeometry(0.62, 0.72, 0.34), baju, 0, 1.36, 0, badan);
+  m(new THREE.CylinderGeometry(0.1, 0.11, 0.12, 8), kulit, 0, 1.78, 0, badan);
+  const kep = m(new THREE.SphereGeometry(0.22, 16, 12), kulit, 0, 1.99, 0, badan); kep.scale.set(1, 1.1, 1);
+  m(new THREE.SphereGeometry(0.228, 16, 8, 0, Math.PI * 2, 0, Math.PI / 2), rambut, 0, 2.04, 0.015, badan);
+  // lanyard + badge, kayak semua peserta AIS
+  m(new THREE.BoxGeometry(0.02, 0.32, 0.02), new THREE.MeshBasicMaterial({ color: o.badge ?? 0x38bdf8 }), 0, 1.6, -0.18, badan);
+  m(new THREE.BoxGeometry(0.16, 0.2, 0.02), new THREE.MeshStandardMaterial({ color: 0xffffff, emissive: o.badge ?? 0x38bdf8, emissiveIntensity: 0.25 }), 0, 1.4, -0.18, badan);
+  const sendi = (x, y) => { const s = new THREE.Group(); s.position.set(x, y, 0); g.add(s); return s; };
+  for (const [n, x] of [['tKi', -0.4], ['tKa', 0.4]]) {
+    const s = sendi(x, 1.66); bag[n] = s;
+    m(new THREE.BoxGeometry(0.16, 0.44, 0.18), baju, 0, -0.2, 0, s);
+    m(new THREE.BoxGeometry(0.13, 0.3, 0.14), kulit, 0, -0.56, 0, s);
+  }
+  for (const [n, x] of [['kKi', -0.15], ['kKa', 0.15]]) {
+    const s = sendi(x, 1.0); bag[n] = s;
+    m(new THREE.BoxGeometry(0.22, 0.8, 0.24), celana, 0, -0.42, 0, s);
+    m(new THREE.BoxGeometry(0.24, 0.14, 0.36), sepatu, 0, -0.88, -0.05, s);
+  }
+  g.userData.bag = bag;
+  return g;
+}
+function animasiJalan(g, t, cepat, besar) {
+  const b = g.userData.bag, a = Math.sin(t * cepat) * besar;
+  b.kKi.rotation.x = a; b.kKa.rotation.x = -a; b.tKi.rotation.x = -a * 0.8; b.tKa.rotation.x = a * 0.8;
+  b.badan.position.y = Math.abs(Math.cos(t * cepat)) * 0.05;
+}
+function animasiDiam(g, dt, t) {
+  const b = g.userData.bag, k = 1 - Math.pow(0.0005, dt);
+  for (const n of ['kKi', 'kKa', 'tKi', 'tKa']) b[n].rotation.x *= (1 - k);
+  b.badan.position.y = Math.sin(t * 2) * 0.012;
+}
+
+// ─── plaza: tanda OCKLU raksasa, layar sambutan, pohon, lampu, bendera ─
+let layarSambut;
+function teksSambut(data) {
+  const ps = data.projects, n = (s) => ps.filter((p) => p.status === s).length;
+  return tekstur(1024, 384, (x, w, h) => {
+    x.fillStyle = '#0b1224'; x.fillRect(0, 0, w, h);
+    x.fillStyle = '#7dd3fc'; x.font = '600 34px -apple-system,sans-serif'; x.textAlign = 'center';
+    x.fillText('WELCOME TO OCKLU HQ', w / 2, 70);
+    x.fillStyle = '#fff'; x.font = '800 78px -apple-system,sans-serif'; x.fillText('Welcome in, Hillkia', w / 2, 170);
+    x.font = '700 44px ui-monospace,Menlo,monospace';
+    x.fillStyle = '#34d399'; x.fillText(`${n('hidup')} hidup`, w * 0.2, 280);
+    x.fillStyle = '#f87171'; x.fillText(`${n('mati')} mati`, w * 0.5, 280);
+    x.fillStyle = '#94a3b8'; x.fillText(`${n('tanpa-port') + n('hilang')} tanpa server`, w * 0.8, 280);
+    x.fillStyle = '#6b7690'; x.font = '500 26px ui-monospace,Menlo,monospace';
+    x.fillText(`dicek ${new Date(data.waktu).toLocaleTimeString('id-ID')} · ${ps.length} proyek`, w / 2, 344);
+  });
+}
+function bangunPlaza(data) {
+  const huruf = tekstur(2048, 512, (x, w) => {
+    x.textAlign = 'center'; x.font = '900 400px -apple-system,Segoe UI,sans-serif';
+    x.shadowColor = '#38bdf8'; x.shadowBlur = 60;
+    x.fillStyle = '#ffffff'; x.fillText('OCKLU', w * 0.4, 390);
+    x.fillStyle = '#38bdf8'; x.fillText('HQ', w * 0.84, 390);
+  });
+  const tanda = new THREE.Mesh(new THREE.PlaneGeometry(34, 8.5), new THREE.MeshBasicMaterial({ map: huruf, transparent: true, side: THREE.DoubleSide }));
+  tanda.position.set(0, 5.2, -16); scene.add(tanda);
+  kotak(36, 0.8, 3, new THREE.MeshStandardMaterial({ color: 0x0f172a, emissive: 0x38bdf8, emissiveIntensity: 0.25 }), 0, 0.4, -16, true, true);
+  const dasar = new THREE.Mesh(new THREE.PlaneGeometry(36, 0.8), new THREE.MeshBasicMaterial({ map: tekstur(1024, 48, (x, w, h) => {
+    x.fillStyle = '#0f172a'; x.fillRect(0, 0, w, h); x.fillStyle = '#7dd3fc'; x.font = '600 30px ui-monospace,Menlo,monospace';
+    x.textAlign = 'center'; x.fillText('PROYEK NYATA  ·  ANGKA JUJUR', w / 2, 34); }) }));
+  dasar.position.set(0, 0.4, -14.48); scene.add(dasar);
+
+  layarSambut = new THREE.MeshBasicMaterial({ map: teksSambut(data) });
+  const ls = new THREE.Mesh(new THREE.PlaneGeometry(16, 6), layarSambut); ls.position.set(0, 14, -18.8); scene.add(ls);
+  kotak(16.6, 6.6, 0.4, gelapBeton, 0, 14, -19.1, false);
+  kotak(0.6, 14, 0.6, beton, -7.5, 7, -19.1, true, true); kotak(0.6, 14, 0.6, beton, 7.5, 7, -19.1, true, true);
+
+  const daun = new THREE.MeshStandardMaterial({ color: 0x2f7a45, roughness: 0.9 });
+  const batang = new THREE.MeshStandardMaterial({ color: 0x5b3b22, roughness: 1 });
+  const tiang = new THREE.MeshStandardMaterial({ color: 0x1f2533, roughness: 0.4, metalness: 0.6 });
+  for (let i = 0; i < 28; i++) {
+    const a = (i / 28) * Math.PI * 2 + 0.12, r = 122 + (i % 3) * 6, x = Math.cos(a) * r, z = Math.sin(a) * r;
+    if (areaGedung.some((g) => Math.hypot(g.G.x - x, g.G.z - z) < Math.max(g.w, g.d) / 2 + 4)) continue;
+    kotak(0.6, 3, 0.6, batang, x, 1.5, z);
+    const d = new THREE.Mesh(new THREE.IcosahedronGeometry(2.6, 0), daun); d.position.set(x, 4.8, z); d.castShadow = true; scene.add(d);
+  }
+  for (const [x, z] of [[-20, 8], [20, 8], [-20, 32], [20, 32], [-36, -28], [36, -28], [-42, 22], [42, 22]]) {
+    kotak(0.25, 6, 0.25, tiang, x, 3, z, true, true);
+    const kp = new THREE.Mesh(new THREE.BoxGeometry(1.4, 0.2, 0.4), new THREE.MeshBasicMaterial({ color: 0xfff1c4 }));
+    kp.position.set(x, 6, z); scene.add(kp);
+  }
+  for (const k of [...URUT, ...(GEDUNG.dna ? ['dna'] : [])]) {
+    const G = GEDUNG[k], p = lokalKeDunia(G, -G.w / 2 - 3, G.d / 2 + 4);
+    kotak(0.2, 9, 0.2, tiang, p.x, 4.5, p.z);
+    const bn = new THREE.Mesh(new THREE.PlaneGeometry(2, 5), new THREE.MeshBasicMaterial({ side: THREE.DoubleSide, map: tekstur(128, 320, (x, w, h) => {
+      x.fillStyle = hex(WARNA[k]); x.fillRect(0, 0, w, h); x.fillStyle = '#0b0f19'; x.font = '900 34px sans-serif';
+      x.textAlign = 'center'; x.save(); x.translate(w / 2, h / 2); x.rotate(-Math.PI / 2); x.fillText((G.label || k).toUpperCase(), 0, 12); x.restore();
+    }) }));
+    bn.position.set(p.x, 6.2, p.z); bn.rotation.y = G.rot || 0; scene.add(bn);
+  }
+}
+
+// ─── pengunjung plaza (HIASAN — ditulis terang biar gak dikira data) ─
+const pengunjung = [];
+function bangunPengunjung() {
+  const bajuL = [0x1f2937, 0x7f1d1d, 0x1e3a8a, 0x065f46, 0x3f3f46, 0xb45309, 0x581c87, 0xe5e7eb];
+  const kulitL = [0xc68a5b, 0x8d5a3b, 0xe0b48f, 0x6b4430, 0xd9a37a];
+  for (let i = 0; i < 18; i++) {
+    const o = orang({ baju: bajuL[i % bajuL.length], kulit: kulitL[i % kulitL.length], rambut: i % 4 ? 0x15110d : 0x6b4a2b });
+    const t = titikAcak(); o.position.set(t.x, 0, t.z); scene.add(o);
+    pengunjung.push({ o, tuju: null, jeda: Math.random() * 3, cepat: 2.2 + Math.random() * 1.2, fase: Math.random() * 6 });
+  }
+}
+function titikAcak() { const a = Math.random() * 6.28, r = 6 + Math.random() * 40; return { x: Math.cos(a) * r, z: Math.sin(a) * r + 14 }; }
+
+// ─── pemain ───────────────────────────────────────────────────────────
+const pemain = orang({ baju: 0x0b0f19, badge: 0xf5b700 });
+pemain.scale.setScalar(1.15);
+pemain.position.set(0, 0, 28); scene.add(pemain);
+{ const l = new THREE.PointLight(0xfff2d0, 0.9, 14); l.position.y = 3.5; pemain.add(l); }
+cam.position.set(0, 6.5, 39);
+
+// ─── kontrol ──────────────────────────────────────────────────────────
+const tombol = {};
+let yaw = 0, stik = { x: 0, y: 0, id: null }, tujuan = null, tujuanBooth = null, dekat = null, data = null;
+const penanda = new THREE.Mesh(new THREE.RingGeometry(0.5, 0.8, 32),
+  new THREE.MeshBasicMaterial({ color: 0x38bdf8, transparent: true, opacity: 0.9, side: THREE.DoubleSide }));
+penanda.rotation.x = -Math.PI / 2; penanda.visible = false; scene.add(penanda);
+
+cv.tabIndex = 0;
+const layarBuka = () => !!document.querySelector('.layar.buka');
+addEventListener('keydown', (e) => {
+  const k = e.key.toLowerCase();
+  if (k === 'escape') { tutupLayar(); return; }
+  if (/^(input|textarea)$/i.test(e.target.tagName)) return;          // lagi ngetik di kotak cari
+  if (k === 'l') { bukaDaftar(); return; }
+  if ((k === 'g' || k === 'b') && AWAN) return;
+  if (k === 'g' && !layarBuka()) { bukaDna(); return; }
+  if (k === 'b' && !layarBuka()) { bukaBangun(); return; }
+  if (layarBuka()) return;
+  tombol[k] = true;
+  if (['arrowup','arrowdown','arrowleft','arrowright',' '].includes(k)) e.preventDefault();
+  if (k === 'e' && dekat && dekat.p.status === 'rak') return bukaDna(dekat.p.rak);
+  if (k === 'e' && dekat && dekat.p.status === 'dna') return bukaDna(null, dekat.p.dnaId);
+  if (k === 'e' && dekat && dekat.p.status === 'hidup' && !AWAN) window.open(`http://${location.hostname}:${dekat.p.port}`, '_blank', 'noopener');
+});
+addEventListener('keyup', (e) => { tombol[e.key.toLowerCase()] = false; });
+addEventListener('blur', () => { for (const k in tombol) tombol[k] = false; });
+
+// Klik vs seret: geser < 8 px = klik → jalan ke situ. Lebih jauh = putar kamera.
+const ray = new THREE.Raycaster(), ndc = new THREE.Vector2();
+let tekan = null, semuaHit = [];
+cv.addEventListener('pointerdown', (e) => {
+  cv.focus({ preventScroll: true }); cv.setPointerCapture(e.pointerId);
+  tekan = { id: e.pointerId, x0: e.clientX, y0: e.clientY, x: e.clientX, geser: false };
+});
+cv.addEventListener('pointermove', (e) => {
+  if (!tekan || e.pointerId !== tekan.id) return;
+  if (Math.hypot(e.clientX - tekan.x0, e.clientY - tekan.y0) > 8) tekan.geser = true;
+  if (tekan.geser) yaw -= (e.clientX - tekan.x) * 0.006;
+  tekan.x = e.clientX;
+});
+const lepas = (e) => {
+  if (!tekan || e.pointerId !== tekan.id) return;
+  if (!tekan.geser && e.type === 'pointerup') klikJalan(e.clientX, e.clientY);
+  tekan = null;
+};
+cv.addEventListener('pointerup', lepas); cv.addEventListener('pointercancel', lepas);
+
+function klikJalan(cx, cy) {
+  ndc.set((cx / innerWidth) * 2 - 1, -(cy / innerHeight) * 2 + 1);
+  ray.setFromCamera(ndc, cam);
+  const kena = ray.intersectObjects(semuaHit, false)[0];
+  if (!kena) return;
+  const b = [...booth.values()].find((x) => x.hit.includes(kena.object));
+  tujuanBooth = b || null;
+  const akhir = b ? { ...b.depan } : { x: kena.point.x, z: kena.point.z };
+  // Beda gedung → lewat pintu dulu. Garis lurus nembus dinding kaca bikin pemain nyangkut di kusen.
+  const asal = gedungDi(pemain.position.x, pemain.position.z), tuju = gedungDi(akhir.x, akhir.z);
+  const pintu = (a, dz) => lokalKeDunia(a.G, 0, a.d / 2 + dz);
+  jalur = [];
+  if (asal && asal !== tuju) jalur.push(pintu(asal, -3), pintu(asal, 3));
+  if (tuju && tuju !== asal) jalur.push(pintu(tuju, 3), pintu(tuju, -3));
+  jalur.push(akhir);
+  tujuan = jalur.shift();
+  jarakLalu = 1e9; cekMaju = 0; belok = 0;
+  penanda.position.set(akhir.x, 0.1, akhir.z); penanda.visible = true;
+}
+
+const stEl = $('stik'), knob = stEl.querySelector('i');
+stEl.addEventListener('pointerdown', (e) => { e.preventDefault(); stik.id = e.pointerId; stEl.setPointerCapture(e.pointerId); gerakStik(e); });
+stEl.addEventListener('pointermove', (e) => { if (e.pointerId === stik.id) gerakStik(e); });
+const lepasStik = () => { stik = { x: 0, y: 0, id: null }; knob.style.transform = ''; };
+stEl.addEventListener('pointerup', lepasStik); stEl.addEventListener('pointercancel', lepasStik);
+function gerakStik(e) {
+  const r = stEl.getBoundingClientRect(); let dx = e.clientX - r.left - 60, dy = e.clientY - r.top - 60;
+  const d = Math.hypot(dx, dy); if (d > 42) { dx *= 42 / d; dy *= 42 / d; }
+  stik.x = dx / 42; stik.y = dy / 42; knob.style.transform = `translate(${dx}px,${dy}px)`;
+}
+
+// ─── HUD ──────────────────────────────────────────────────────────────
+function isiHUD() {
+  const ps = data.projects, n = (s) => ps.filter((p) => p.status === s).length;
+  $('n-hidup').textContent = n('hidup'); $('n-mati').textContent = n('mati');
+  $('n-tanpa').textContent = n('tanpa-port') + n('hilang');
+  $('jujur').innerHTML = `<b>${ps.filter(basi).length} kandidat pajangan</b> — gak hidup &amp; gak disentuh &gt;${BASI_HARI} hari. Tanda <b>BASI</b> di layar booth.`;
+  $('zona').innerHTML = [...URUT, ...(GEDUNG.dna ? ['dna'] : [])].map((k) => `<button style="color:${hex(WARNA[k])}" data-z="${k}">${esc(NAMA[k])}</button>`).join('');
+  $('zona').querySelectorAll('button').forEach((b) => b.onclick = () => {
+    const G = GEDUNG[b.dataset.z], p = lokalKeDunia(G, 0, G.d / 2 + 6);
+    pemain.position.set(p.x, 0, p.z); tujuan = null; penanda.visible = false;
+    yaw = Math.atan2(p.x - G.x, p.z - G.z); cv.focus();
+  });
+}
+// ─── aksi: satu pintu buat buka / nyalain / matiin / benerin / laporan ─
+const TOKEN = new URLSearchParams(location.search).get('k') || '';
+const AWAN = !!window.HQ_AWAN;
+async function api(url, opsi = {}) {
+  const r = await fetch(url, { ...opsi, headers: { 'content-type': 'application/json', ...(TOKEN ? { 'x-hq-token': TOKEN } : {}), ...(opsi.headers || {}) } });
+  return r.json();
+}
+const cariP = (k) => data.projects.find((p) => p.kunci === k);
+
+function tombolAksi(p) {
+  const lokal = `http://${location.hostname}:${p.port}${p.jalur || ''}`, k = esc(p.kunci), bisa = data.bolehAksi;
+  const b = [];
+  if (p.status === 'hidup' && !AWAN) b.push(`<a class="utama" href="${lokal}" target="_blank" rel="noopener">Buka dasbor ↗</a>`);
+  if (p.publik) b.push(`<a class="nyala" href="${esc(p.publik)}" target="_blank" rel="noopener">Buka publik ↗</a>`);
+  if (bisa) {
+    if (p.status === 'hidup') b.push(`<button data-aksi="ulang" data-k="${k}">↻ Restart</button><button class="bahaya" data-aksi="matikan" data-k="${k}">■ Matikan</button>`);
+    else if (p.mulai && p.status !== 'hilang') b.push(`<button class="utama" data-aksi="jalankan" data-k="${k}">▶ Jalankan</button>`);
+    else if (p.status !== 'hilang') b.push(`<button class="utama" data-prk="${k}">▶ Jalankan…</button>`);   // pilihan dari isi folder
+    b.push(`<button data-obrol="${k}">💬 ${p.status === 'hidup' ? 'Ngobrol sama staf' : 'Tanya satpam'}</button>`);
+    if (p.status !== 'hidup' || basi(p)) b.push(`<button data-prk="${k}">🩺 Periksa & benerin</button>`);
+    b.push(`<button data-lap="${k}">📄 Laporan</button><button data-aksi="folder" data-k="${k}">📁 Folder</button><button data-aksi="vscode" data-k="${k}">✎ VS Code</button>`);
+  }
+  return `<div class="aksi">${b.join('')}</div><div class="hasil" data-hasil="${k}"></div>`
+    + (bisa ? '' : `<div style="margin-top:8px;color:var(--dim);font-size:11px">Tombol nyalain/laporan cuma aktif dari laptop ini, atau buka HQ pakai link bertoken dari terminal.</div>`);
+}
+
+function isiInfo(b) {
+  const el = $('info');
+  document.body.classList.toggle('ada-info', !!b);
+  if (!b) { el.style.display = 'none'; return; }
+  if (b.p.status === 'rak' || b.p.status === 'dna') { el.innerHTML = infoDna(b); el.style.display = 'block'; return; }
+  const p = cariP(b.p.kunci) || b.p, h = hariLalu(p.disentuh);
+  const st = {
+    hidup: `<span style="color:var(--hidup)">● LIVE</span> — port ${p.port} nyahut barusan. Ada staf di booth.`,
+    mati: `<span style="color:var(--mati)">● OFFLINE</span> — punya port ${p.port}, tapi gak ada yang jawab. Booth kosong.`,
+    'tanpa-port': `<span style="color:var(--tanpa)">● TANPA SERVER</span> — gak ada port buat dicek. Bukan berarti mati, tapi juga gak kebukti hidup.`,
+    hilang: `<span style="color:var(--mati)">● FOLDER HILANG</span> — ${esc(p.path)} gak ada di disk.`,
+  }[p.status];
+  el.innerHTML = `<div class="kat" style="color:${hex(WARNA[b.k])}">${NAMA[b.k]}</div>
+    <h2>${esc(p.nama)}</h2><div class="tipe">${esc(p.tipe)}</div>
+    <div class="st">${st}<br>commit terakhir: ${h === null ? '<i>gak ada git</i>' : h === 0 ? 'hari ini' : h + ' hari lalu'}
+      · aktif terakhir: ${hariLalu(p.aktif) === null ? '<i>gak ada jejak</i>' : hariLalu(p.aktif) === 0 ? 'hari ini' : hariLalu(p.aktif) + ' hari lalu'}
+      ${p.jadwal ? `<br><span style="color:var(--biru)">${p.jadwal} jadwal launchd</span> — gak punya port bukan berarti mati` : ''}
+      ${basi(p) ? '<br><b style="color:var(--mati)">BASI — kandidat pajangan</b>' : ''}
+      ${p.mulai ? `<br>nyalain pakai: <code>${esc(p.mulai)}</code> <span style="color:var(--dim)">(${esc(p.mulaiDari)})</span>` : ''}</div>
+    ${p.ket ? `<div>${esc(p.ket)}</div>` : ''}
+    <div style="margin-top:6px">folder: <code>${esc(p.path.replace(/#.*$/, ''))}</code>${p.induk ? ` <span style="color:var(--biru)">· sub-mesin, numpang di ${esc(p.induk)}</span>` : ''}${p.sumber === 'temuan' ? ' <span style="color:#fbbf24">· ketemu otomatis</span>' : ''}</div>
+    ${tombolAksi(p)}`;
+  el.style.display = 'block';
+}
+
+// satu penangan klik buat semua tombol aksi (panel booth & daftar)
+document.addEventListener('click', async (e) => {
+  const t = e.target.closest('[data-aksi],[data-lap],[data-perbaiki],[data-tutup],[data-sar],[data-obrol],[data-prk],[data-pilih],[data-tanda]');
+  if (!t) return;
+  if (t.dataset.tutup !== undefined) return tutupLayar();
+  if (t.dataset.lap) return bukaLaporan(t.dataset.lap);
+  if (t.dataset.obrol) return bukaObrol(t.dataset.obrol);
+  if (t.dataset.prk) return bukaPeriksa(t.dataset.prk);
+  if (t.dataset.tanda) return jalankanTanda(t.dataset.tanda, t.dataset.k);
+  if (t.dataset.pilih) return jalankanAksi(t.dataset.k, 'pilihan', { id: t.dataset.pilih }, t);
+  if (t.dataset.sar) { saringan = t.dataset.sar; return gambarDaftar(); }
+  const k = t.dataset.k, aksi = t.dataset.aksi || t.dataset.perbaiki;
+  const ekstra = t.dataset.berkas ? { berkas: t.dataset.berkas, baris: Number(t.dataset.baris) } : {};
+  if (t.dataset.yakin) ekstra.yakin = true;
+  await jalankanAksi(k, aksi, ekstra, t);
+});
+
+async function jalankanAksi(k, aksi, ekstra, tombolEl) {
+  const kotakHasil = [...document.querySelectorAll('[data-hasil]')].filter((x) => x.dataset.hasil === k);
+  const semuaTombol = [...document.querySelectorAll(`[data-k]`)].filter((x) => x.dataset.k === k);
+  const label = { jalankan: 'nyalain… (bisa sampai 30 detik)', matikan: 'matiin…', ulang: 'restart…', pasang: 'npm install… (bisa 1-3 menit)',
+                  'bebaskan-port': 'ngecek port…', folder: 'buka folder…', vscode: 'buka VS Code…', 'vscode-baris': 'buka VS Code…' }[aksi] || '…';
+  semuaTombol.forEach((x) => x.disabled = true);
+  kotakHasil.forEach((x) => { x.className = 'hasil'; x.style.display = 'block'; x.textContent = label; });
+  let r;
+  try { r = await api('/api/aksi', { method: 'POST', body: JSON.stringify({ k, aksi, ...ekstra }) }); }
+  catch (err) { r = { ok: false, pesan: 'HQ gak nyahut: ' + err.message }; }
+  semuaTombol.forEach((x) => x.disabled = false);
+  const diag = (r.diagnosa || []).map((d) => `<div>⚠ ${esc(d.sebab)}
+      ${d.perbaiki ? `<div class="aksi" style="margin-top:4px"><button class="utama" data-perbaiki="${esc(d.perbaiki)}" data-k="${esc(k)}"
+        ${d.berkas ? `data-berkas="${esc(d.berkas)}" data-baris="${d.baris}"` : ''}>${esc(d.tombol)}</button></div>` : ''}
+      ${d.salin ? `<div style="margin-top:4px">jalanin di terminal: <code>${esc(d.salin)}</code></div>` : ''}</div>`).join('');
+  const yakin = r.perluYakin ? `<div class="aksi"><button class="bahaya" data-perbaiki="bebaskan-port" data-yakin="1" data-k="${esc(k)}">Ya, matiin</button></div>` : '';
+  kotakHasil.forEach((x) => {
+    x.className = 'hasil ' + (r.ok ? 'ok' : 'gagal');
+    x.innerHTML = `<b>${r.ok ? '✓' : '✗'}</b> ${esc(r.pesan || '')}${yakin}${diag ? `<div class="diag">${diag}</div>` : ''}${r.log ? `<pre>${esc(r.log)}</pre>` : ''}`;
+  });
+  if (['jalankan', 'matikan', 'ulang', 'bebaskan-port'].includes(aksi)) segarkan(true);
+  if (r.menunggu) { setTimeout(() => segarkan(true), 10000); setTimeout(() => segarkan(true), 30000); }
+}
+
+// ─── ngobrol sama staf / satpam ──────────────────────────────────────
+let obrolK = null; const riwayatObrol = {};
+function bukaObrol(k) {
+  const p = cariP(k); obrolK = k; tutupLayar(); $('lObrol').classList.add('buka');
+  const staf = p.status === 'hidup';
+  $('obrolJudul').textContent = (staf ? '💬 Staf booth — ' : '💬 Satpam gedung — ') + p.nama;
+  if (!riwayatObrol[k]) {
+    riwayatObrol[k] = [];
+    gelembung('dia', staf ? `Halo Hillkia! Aku jaga booth ${p.nama}. Lagi hidup di port ${p.port}. Mau tanya apa?`
+      : `Booth ${p.nama} lagi kosong, proyeknya gak jalan. Aku satpam, cuma bisa jelasin dari catatan di foldernya. Tanya aja.`, null, true);
+  } else { $('obrolIsi').innerHTML = ''; for (const m of riwayatObrol[k]) gelembung(m.role === 'user' ? 'aku' : 'dia', m.content, m.otak, true); }
+  $('obrolCepat').innerHTML = (staf ? ['Kamu ngapain aja?', 'Udah ngehasilin duit belum?', 'Apa yang harus aku kerjain sekarang?']
+    : ['Kenapa mati?', 'Gimana cara benerinnya?', 'Proyek ini sebenernya buat apa?'])
+    .map((q) => `<button data-q="${esc(q)}">${esc(q)}</button>`).join('');
+  $('obrolCepat').querySelectorAll('button').forEach((b) => b.onclick = () => kirimObrol(b.dataset.q));
+  setTimeout(() => $('obrolIn').focus(), 30);
+}
+function gelembung(siapa, teks, otak, diam = false, gagal = false) {
+  const el = document.createElement('div'); el.className = 'gel ' + siapa + (gagal ? ' gagal' : '');
+  const aksi = [...teks.matchAll(/\[\[AKSI:(\w+)\]\]/g)].map((m) => m[1]);
+  // buang penanda + sisa barisnya (otak suka ikut nyalin keterangan penandanya)
+  el.innerHTML = esc(teks.replace(/\[\[AKSI:\w+\]\][^\n]*/g, '').replace(/\n{3,}/g, '\n\n').trim())
+    + (aksi.length ? `<div class="aksi">${aksi.map((a) => `<button class="utama" data-tanda="${a}" data-k="${esc(obrolK)}">${
+      { jalankan: '▶ Jalankan', periksa: '🩺 Periksa & benerin', laporan: '📄 Laporan', buka: 'Buka dasbor ↗' }[a] || a}</button>`).join('')}</div>` : '')
+    + (otak ? `<span class="ot">otak: ${esc(otak)}</span>` : '');
+  $('obrolIsi').appendChild(el); $('obrolIsi').scrollTop = $('obrolIsi').scrollHeight;
+  return el;
+}
+async function kirimObrol(q) {
+  q = (q ?? $('obrolIn').value).trim(); if (!q || !obrolK) return;
+  const k = obrolK; $('obrolIn').value = '';
+  gelembung('aku', q);
+  const tunggu = gelembung('dia', '…mikir');
+  const riw = riwayatObrol[k];
+  const keDna = k.startsWith('dna|');
+  let r; try { r = await api(keDna ? '/api/dna/ngobrol' : '/api/ngobrol', { method: 'POST', body: JSON.stringify(keDna ? { id: k.slice(4), pesan: q, riwayat: riw } : { k, pesan: q, riwayat: riw }) }); }
+  catch (e) { r = { ok: false, jawab: 'HQ gak nyahut: ' + e.message }; }
+  tunggu.remove();
+  riw.push({ role: 'user', content: q });
+  if (r.ok) riw.push({ role: 'assistant', content: r.jawab, otak: r.otak });
+  const cadangan = r.dilewati && r.dilewati.length ? ` (cadangan — ${r.dilewati.length} otak lewat)` : '';
+  gelembung('dia', r.jawab + (r.ok ? '' : '\n\n' + (r.rincian || []).join('\n')), r.ok ? r.otak + cadangan : null, false, !r.ok);
+}
+$('obrolForm').addEventListener('submit', (e) => { e.preventDefault(); kirimObrol(); });
+function jalankanTanda(a, k) {
+  const p = cariP(k);
+  if (a === 'jalankan') { tutupLayar(); if (p.mulai) { const d = [...booth.values()].find((b) => b.p.kunci === k); if (d) { dekat = d; isiInfo(d); }
+    return jalankanAksi(k, 'jalankan', {}); } return bukaPeriksa(k); }
+  if (a === 'periksa') return bukaPeriksa(k);
+  if (a === 'laporan') return bukaLaporan(k);
+  if (a === 'buka' && p.status === 'hidup') window.open(`http://${location.hostname}:${p.port}`, '_blank', 'noopener');
+}
+
+// ─── periksa & benerin ───────────────────────────────────────────────
+async function bukaPeriksa(k) {
+  const p = cariP(k); tutupLayar(); $('lPeriksa').classList.add('buka');
+  $('prkJudul').textContent = '🩺 Periksa — ' + p.nama; $('prkIsi').innerHTML = '<div style="color:var(--dim)">meriksa folder, port, git, jadwal…</div>';
+  const r = await api('/api/periksa?k=' + encodeURIComponent(k));
+  if (!r.ok) { $('prkIsi').textContent = 'gagal meriksa'; return; }
+  const ke = esc(k);
+  $('prkIsi').innerHTML = `<div class="rks">${esc(r.ringkas)}</div>
+    <h4>Hasil cek</h4>${r.cek.map((c) => `<div class="ck"><b style="color:${c.baik ? 'var(--hidup)' : 'var(--mati)'}">${c.baik ? '✓' : '✗'}</b><span>${esc(c.label)} — ${esc(c.nilai)}</span></div>`).join('')}
+    <h4>Cara ngejalanin (dari isi foldernya)</h4>
+    ${r.pilihan.length ? `<div class="aksi">${r.pilihan.map((x) => `<button class="${x.jenis === 'server' ? 'utama' : ''}" data-pilih="${esc(x.id)}" data-k="${ke}" title="${esc(x.dari)}">▶ ${esc(x.label)}</button>`).join('')}</div>
+      <div class="hasil" data-hasil="${ke}"></div>` : '<div class="sr">Gak ada yang bisa dijalanin di folder ini.</div>'}
+    <h4>Cara benerin</h4>
+    ${r.saran.length ? r.saran.map((x) => `<div class="sr">${esc(x.teks)}
+        ${x.salin ? `<div style="margin-top:4px"><code>${esc(x.salin)}</code></div>` : ''}
+        ${x.link ? `<div style="margin-top:4px"><a href="${esc(x.link)}" target="_blank" rel="noopener" style="color:var(--biru)">${esc(x.link)} ↗</a></div>` : ''}
+        ${x.tombol ? `<div class="aksi">${x.tombol.lap ? `<button data-lap="${ke}">${esc(x.tombol.label)}</button>` : `<button class="utama" data-aksi="${esc(x.tombol.aksi)}" data-k="${ke}">${esc(x.tombol.label)}</button>`}</div>` : ''}
+      </div>`).join('') : '<div class="sr">Gak nemu masalah yang jelas. Kalau tetap aneh, tanya satpam atau buka laporannya.</div>'}
+    <div class="aksi" style="margin-top:12px"><button data-obrol="${ke}">💬 Tanya soal ini</button><button data-lap="${ke}">📄 Laporan</button><button data-aksi="vscode" data-k="${ke}">✎ VS Code</button></div>`;
+}
+$('lObrol').addEventListener('click', (e) => { if (e.target.id === 'lObrol') tutupLayar(); });
+$('lPeriksa').addEventListener('click', (e) => { if (e.target.id === 'lPeriksa') tutupLayar(); });
+
+// ─── daftar semua proyek ─────────────────────────────────────────────
+let saringan = 'semua';
+function bukaDaftar() { $('lDaftar').classList.add('buka'); gambarDaftar(); setTimeout(() => $('cari').focus(), 30); }
+function tutupLayar() { document.querySelectorAll('.layar.buka').forEach((x) => x.classList.remove('buka')); cv.focus(); }
+$('tombolDaftar').onclick = bukaDaftar;
+$('cari').addEventListener('input', () => gambarDaftar());
+function gambarDaftar() {
+  if (!$('lDaftar').classList.contains('buka')) return;
+  const ps = data.projects, n = (f) => ps.filter(f).length;
+  const opsi = [['semua', 'Semua', () => true], ['hidup', 'Hidup', (p) => p.status === 'hidup'], ['mati', 'Mati', (p) => p.status === 'mati'],
+                ['tanpa', 'Tanpa server', (p) => p.status === 'tanpa-port' || p.status === 'hilang'], ['basi', 'BASI', basi],
+                ...URUT.map((k) => [k, NAMA[k], (p) => (URUT.includes(p.kategori) ? p.kategori : 'plan') === k])];
+  $('saring').innerHTML = opsi.map(([id, lbl, f]) => `<button data-sar="${id}" class="${saringan === id ? 'on' : ''}">${lbl} ${n(f)}</button>`).join('');
+  const f = opsi.find((o) => o[0] === saringan)[2], q = $('cari').value.trim().toLowerCase();
+  const urut = { hidup: 0, mati: 1, 'tanpa-port': 2, hilang: 3 };
+  const list = ps.filter(f).filter((p) => !q || (p.nama + ' ' + p.path + ' ' + p.tipe).toLowerCase().includes(q))
+    .sort((a, b) => urut[a.status] - urut[b.status] || a.nama.localeCompare(b.nama));
+  $('daftarIsi').innerHTML = list.map((p) => {
+    const h = hariLalu(p.disentuh);
+    return `<div class="baris"><i class="dot" style="background:${hex(STW[p.status])}"></i>
+      <div class="nm"><b>${esc(p.nama)}${basi(p) ? ' <span style="color:var(--mati);font-size:10px">BASI</span>' : ''}</b><small>${esc(p.tipe)}</small></div>
+      <div class="st">${p.port ? ':' + p.port + ' · ' : ''}${p.status}<br>${h === null ? 'tanpa git' : h + ' hari lalu'} · ${esc(p.path)}</div>
+      ${tombolAksi(p).replace('<div class="aksi">', '<div class="aksi">')}</div>`;
+  }).join('') || '<div style="padding:20px;color:var(--dim)">gak ada yang cocok</div>';
+}
+
+// ─── laporan: berkas asli di folder proyek ───────────────────────────
+async function bukaLaporan(k) {
+  const p = cariP(k); $('lLaporan').classList.add('buka');
+  $('lapJudul').textContent = 'Laporan — ' + (p ? p.nama : k);
+  $('lapDaftar').innerHTML = '<div style="padding:12px;color:var(--dim)">nyari berkas…</div>'; $('lapIsi').textContent = '';
+  const r = await api('/api/laporan?k=' + encodeURIComponent(k));
+  if (!r.ok || !r.berkas.length) { $('lapDaftar').innerHTML = '<div style="padding:12px;color:var(--dim)">Gak ada LAPORAN/PETUNJUK/README/log di folder ini. Itu sendiri temuan: proyek ini gak ninggalin jejak kerja.</div>'; return; }
+  $('lapDaftar').innerHTML = r.berkas.map((b, i) => `<button data-i="${i}">${esc(b.rel)}<small>${(b.ukuran / 1024).toFixed(1)} KB · ${new Date(b.diubah).toLocaleString('id-ID')}</small></button>`).join('');
+  const pilih = async (i) => {
+    $('lapDaftar').querySelectorAll('button').forEach((x) => x.classList.toggle('on', Number(x.dataset.i) === i));
+    const b = r.berkas[i]; $('lapIsi').textContent = 'membaca…';
+    const isi = await api(`/api/berkas?k=${encodeURIComponent(k)}&f=${encodeURIComponent(b.rel)}`);
+    $('lapIsi').textContent = isi.ok ? (isi.dipotong ? '… (dipotong, ini 300 KB terakhir)\n\n' : '') + isi.isi : 'gak bisa dibaca';
+    if (/\.log$/i.test(b.rel)) $('lapIsi').scrollTop = $('lapIsi').scrollHeight;
+  };
+  $('lapDaftar').querySelectorAll('button').forEach((x) => x.onclick = () => pilih(Number(x.dataset.i)));
+  pilih(0);
+}
+$('lLaporan').addEventListener('click', (e) => { if (e.target.id === 'lLaporan') tutupLayar(); });
+$('lDaftar').addEventListener('click', (e) => { if (e.target.id === 'lDaftar') tutupLayar(); });
+
+let jalur = [];
+function gedungDi(x, z) {
+  for (const a of areaGedung) {
+    const c = Math.cos(a.G.rot || 0), s = Math.sin(a.G.rot || 0), dx = x - a.G.x, dz = z - a.G.z;
+    if (Math.abs(dx * c - dz * s) < a.w / 2 && Math.abs(dx * s + dz * c) < a.d / 2) return a;
+  }
+  return null;
+}
+function gedungSekarang() {
+  for (const a of areaGedung) {
+    const c = Math.cos(a.G.rot || 0), s = Math.sin(a.G.rot || 0);
+    const dx = pemain.position.x - a.G.x, dz = pemain.position.z - a.G.z;
+    const lx = dx * c - dz * s, lz = dx * s + dz * c;
+    if (Math.abs(lx) < a.w / 2 && Math.abs(lz) < a.d / 2) return a.k;
+  }
+  return null;
+}
+let lokTerakhir = '';
+function isiLokasi() {
+  const k = gedungSekarang(), key = k || 'plaza';
+  if (key === lokTerakhir) return; lokTerakhir = key;
+  if (!k) { $('lok-nama').textContent = 'Convention Plaza'; $('lok-sub').textContent = `pintu ke ${areaGedung.length} gedung`; return; }
+  if (k === 'dna') { $('lok-nama').textContent = 'Gedung DNA'; $('lok-sub').textContent = `${(data.rak || []).length} rak DNA & script`; return; }
+  const ps = data.projects.filter((p) => (URUT.includes(p.kategori) ? p.kategori : 'plan') === k);
+  $('lok-nama').textContent = NAMA[k];
+  $('lok-sub').textContent = subJudul(k, [...ps, ...(data.dnaBooth || []).filter((d) => d.k === k).map(boothDna)]);
+}
+
+// ─── minimap bulat, arah hadap selalu ke atas ────────────────────────
+const pc = $('pc'), px = pc.getContext('2d');
+function petaGambar() {
+  const W = pc.width, s = W / 2 / 110;
+  px.clearRect(0, 0, W, W);
+  px.save(); px.beginPath(); px.arc(W / 2, W / 2, W / 2, 0, 7); px.clip();
+  px.fillStyle = 'rgba(8,12,22,.92)'; px.fillRect(0, 0, W, W);
+  px.translate(W / 2, W / 2); px.rotate(yaw); px.translate(-pemain.position.x * s, -pemain.position.z * s);
+  for (const a of areaGedung) {
+    px.save(); px.translate(a.G.x * s, a.G.z * s); px.rotate(-(a.G.rot || 0));
+    px.fillStyle = hex(WARNA[a.k]) + '30'; px.strokeStyle = hex(WARNA[a.k]); px.lineWidth = 2;
+    px.fillRect(-a.w / 2 * s, -a.d / 2 * s, a.w * s, a.d * s); px.strokeRect(-a.w / 2 * s, -a.d / 2 * s, a.w * s, a.d * s);
+    px.restore();
+  }
+  for (const b of booth.values()) { px.fillStyle = hex(STW[b.p.status]); px.fillRect(b.pusat.x * s - 3, b.pusat.z * s - 3, 6, 6); }
+  px.fillStyle = '#38bdf8'; px.fillRect(-17 * s, -17.5 * s, 34 * s, 3 * s);
+  px.restore();
+  px.fillStyle = '#fff'; px.beginPath(); px.moveTo(W / 2, W / 2 - 11); px.lineTo(W / 2 + 7, W / 2 + 7); px.lineTo(W / 2 - 7, W / 2 + 7); px.closePath(); px.fill();
+}
+
+// ─── loop ─────────────────────────────────────────────────────────────
+const jam = new THREE.Clock(), camTarget = new THREE.Vector3();
+let cekMaju = 0, jarakLalu = 1e9, belok = 0, sisiBelok = 1;
+function dorongKeluar(pos, r = 0.45) {
+  for (const a of tabrak) {
+    if (pos.x > a.x1 - r && pos.x < a.x2 + r && pos.z > a.z1 - r && pos.z < a.z2 + r) {
+      const ki = pos.x - (a.x1 - r), ka = (a.x2 + r) - pos.x, at = pos.z - (a.z1 - r), bw = (a.z2 + r) - pos.z;
+      const m = Math.min(ki, ka, at, bw);
+      if (m === ki) pos.x = a.x1 - r; else if (m === ka) pos.x = a.x2 + r; else if (m === at) pos.z = a.z1 - r; else pos.z = a.z2 + r;
+    }
+  }
+  const d = Math.hypot(pos.x, pos.z); if (d > 192) { pos.x *= 192 / d; pos.z *= 192 / d; }   // 192: kavling gedung buatan ada di radius 158
+}
+
+function loop() {
+  const dt = Math.min(0.1, jam.getDelta()), t = jam.elapsedTime;
+  if (tombol['q']) yaw += 1.8 * dt;
+  let maju = (tombol['w'] || tombol['arrowup'] ? 1 : 0) - (tombol['s'] || tombol['arrowdown'] ? 1 : 0) - stik.y;
+  let samping = (tombol['d'] || tombol['arrowright'] ? 1 : 0) - (tombol['a'] || tombol['arrowleft'] ? 1 : 0) + stik.x;
+  const len = Math.hypot(maju, samping), manual = len > 0.08;
+  if (manual) { jalur = []; tujuan = null; tujuanBooth = null; penanda.visible = false; }
+  let mx = 0, mz = 0;
+  if (manual) {
+    maju /= Math.max(1, len); samping /= Math.max(1, len);
+    const fx = -Math.sin(yaw), fz = -Math.cos(yaw), rx = Math.cos(yaw), rz = -Math.sin(yaw);
+    mx = fx * maju + rx * samping; mz = fz * maju + rz * samping;
+  } else if (tujuan) {
+    const dx = tujuan.x - pemain.position.x, dz = tujuan.z - pemain.position.z, d = Math.hypot(dx, dz);
+    if (d < 0.5 && jalur.length) { tujuan = jalur.shift(); jarakLalu = 1e9; cekMaju = 0; belok = 0; }
+    else if (d < 0.5) {
+      tujuan = null; penanda.visible = false; belok = 0;
+      if (tujuanBooth) { pemain.rotation.y = Math.atan2(tujuanBooth.pusat.x - pemain.position.x, tujuanBooth.pusat.z - pemain.position.z) + Math.PI; tujuanBooth = null; }
+    } else {
+      mx = dx / d; mz = dz / d;
+      // Ketahan tiang/dinding: jarak gak berkurang → belok 90° sebentar, lalu coba lurus lagi.
+      // Tanpa ini pemain diem nempel di halangan dan keliatan "gak bisa digerakin".
+      cekMaju += dt;
+      if (cekMaju > 0.4) { if (jarakLalu - d < 0.25 && !belok) { belok = 0.7; sisiBelok = -sisiBelok; } jarakLalu = d; cekMaju = 0; }
+      if (belok > 0) { belok -= dt; const bx = -mz * sisiBelok, bz = mx * sisiBelok; mx = bx * 0.85 + mx * 0.15; mz = bz * 0.85 + mz * 0.15; }
+    }
+  }
+  const lari = tombol['shift'];
+  if (mx || mz) {
+    const v = (lari ? 15 : 7.5) * dt;
+    pemain.position.x += mx * v; pemain.position.z += mz * v;
+    pemain.rotation.y = Math.atan2(mx, mz) + Math.PI;
+    animasiJalan(pemain, t, lari ? 14 : 9, lari ? 0.8 : 0.55);
+    // pas klik-jalan, kamera pelan-pelan muter ke belakang pemain
+    if (!manual) { let dd = Math.atan2(-mx, -mz) - yaw; dd = Math.atan2(Math.sin(dd), Math.cos(dd)); yaw += dd * Math.min(1, dt * 1.5); }
+  } else animasiDiam(pemain, dt, t);
+  dorongKeluar(pemain.position);
+
+  for (const n of pengunjung) {
+    if (!n.tuju) { n.jeda -= dt; if (n.jeda <= 0) n.tuju = titikAcak(); animasiDiam(n.o, dt, t + n.fase); continue; }
+    const dx = n.tuju.x - n.o.position.x, dz = n.tuju.z - n.o.position.z, d = Math.hypot(dx, dz);
+    if (d < 0.6) { n.tuju = null; n.jeda = 1 + Math.random() * 4; continue; }
+    n.o.position.x += dx / d * n.cepat * dt; n.o.position.z += dz / d * n.cepat * dt;
+    n.o.rotation.y = Math.atan2(dx, dz) + Math.PI;
+    dorongKeluar(n.o.position, 0.4);
+    animasiJalan(n.o, t + n.fase, 8, 0.45);
+  }
+  for (const b of booth.values()) if (b.staf.visible) animasiDiam(b.staf, dt, t + b.pusat.x);
+
+  camTarget.set(pemain.position.x + Math.sin(yaw) * 11, 6.5, pemain.position.z + Math.cos(yaw) * 11);
+  cam.position.lerp(camTarget, 1 - Math.pow(0.002, dt));
+  cam.lookAt(pemain.position.x, 2.2, pemain.position.z);
+  if (penanda.visible) penanda.rotation.z += dt * 2;
+
+  let best = null, bd = 4.2;
+  for (const b of booth.values()) { const d = Math.hypot(pemain.position.x - b.depan.x, pemain.position.z - b.depan.z); if (d < bd) { bd = d; best = b; } }
+  if (best !== dekat) { dekat = best; isiInfo(dekat); }
+  isiLokasi(); petaGambar();
+  renderer.render(scene, cam);
+  requestAnimationFrame(loop);
+}
+addEventListener('resize', () => { cam.aspect = innerWidth / innerHeight; cam.updateProjectionMatrix(); renderer.setSize(innerWidth, innerHeight); });
+
+// ─── data ─────────────────────────────────────────────────────────────
+async function ambil(paksa = false) {
+  if (AWAN) { const r = await fetch('./data.json?t=' + Date.now(), { cache: 'no-store' }); if (!r.ok) throw new Error('HTTP ' + r.status); return olahAwan(await r.json()); }
+  const r = await fetch('/api/proyek' + (paksa ? '?segar=1' : ''), { cache: 'no-store', headers: TOKEN ? { 'x-hq-token': TOKEN } : {} });
+  if (!r.ok) throw new Error('HTTP ' + r.status);
+  return r.json();
+}
+async function segarkan(paksa = false) {
+  try {
+    const baru = await ambil(paksa);
+    for (const p of baru.projects) { const b = booth.get(p.id + '|' + p.path); if (b) perbaruiBooth(b, p); }
+    data = baru; isiHUD(); lokTerakhir = '';
+    layarSambut.map.dispose(); layarSambut.map = teksSambut(data); layarSambut.needsUpdate = true;
+    if (dekat) { const simpan = [...$('info').querySelectorAll('.hasil')].map((x) => [x.className, x.innerHTML, x.style.display]);
+      isiInfo(dekat); $('info').querySelectorAll('.hasil').forEach((x, i) => { if (simpan[i]) [x.className, x.innerHTML, x.style.display] = simpan[i]; }); }
+    gambarDaftar();
+  } catch (e) { $('lok-sub').textContent = 'gagal ngecek: ' + e.message + ' — layar booth BASI'; }
+}
+
+// ═══ Gedung DNA + gedung buatan Hillkia ═══════════════════════════════
+// Gedung bawaan (5) ditentuin kategori di projects.json. Gedung buatan lo disimpan
+// server di bangunan.json, dan berdiri di KAVLING di luar ring pohon. Tiap gedung
+// berubah → HQ dimuat ulang langsung ke depan pintu gedung itu (#g=kode).
+const SUDUT = [0.25, 0.75, 1.25, 1.75, 0.5, 0, 1, 1.5].map((x) => x * Math.PI);
+function siapkanGedungMilik() {
+  const ps = data.projects, db = data.dnaBooth || [];
+  (data.gedung || []).forEach((g, i) => {
+    const a = SUDUT[i % SUDUT.length], n = ps.filter((p) => p.kategori === g.k).length + db.filter((d) => d.k === g.k).length;
+    WARNA[g.k] = parseInt(g.warna.slice(1), 16); NAMA[g.k] = g.nama; URUT.push(g.k);
+    GEDUNG[g.k] = { x: 158 * Math.cos(a), z: 158 * Math.sin(a), w: 30, d: Math.max(24, 8 + Math.ceil(n / 2) * 7),
+                    rot: Math.atan2(-Math.cos(a), -Math.sin(a)), label: g.nama.slice(0, 9), milik: true };
+  });
+  if ((data.rak || []).length) {
+    GEDUNG.dna = { x: 0, z: 96, w: 34, d: 30, rot: Math.PI, label: 'DNA' };
+    WARNA.dna = 0xc084fc; NAMA.dna = 'Gedung DNA';
+  }
+}
+const boothDna = (d) => ({ id: 'dna', kunci: 'dna|' + d.id, path: 'dna|' + d.id, nama: d.nama, tipe: d.jenis, status: 'dna', dnaId: d.id, grup: d.grup });
+const boothRak = (r) => ({ id: 'rak', kunci: 'rak|' + r.k, path: 'rak|' + r.k, nama: r.nama, tipe: r.ket, status: 'rak', rak: r.k, jumlah: r.jumlah });
+function subJudul(k, ps) {
+  if (k === 'dna') return `${ps.length} rak · ${ps.reduce((a, p) => a + (p.jumlah || 0), 0)} DNA & script`;
+  const pr = ps.filter((p) => p.status !== 'dna'), nd = ps.length - pr.length;
+  if (!ps.length) return 'masih kosong — isi lewat 🏗 Bangun';
+  return `${pr.filter((p) => p.status === 'hidup').length} dari ${pr.length} booth hidup` + (nd ? ` · ${nd} DNA` : '');
+}
+function infoDna(b) {
+  const p = b.p, warna = hex(WARNA[b.k]);
+  if (p.status === 'rak') return `<div class="kat" style="color:${warna}">Gedung DNA</div><h2>${esc(p.nama)}</h2>
+    <div class="tipe">${esc(p.tipe)}</div><div class="st"><b>${p.jumlah}</b> isi di rak ini — dibaca DI TEMPAT aslinya, gak dipindah.</div>
+    <div class="aksi"><button class="utama" data-dna="rak" data-id="${esc(p.rak)}">📖 Buka rak</button>
+    ${p.rak === 'milik' ? '<button data-dna="baru">➕ Tulis DNA baru</button>' : ''}<button data-dna="bangun">🏗 Bangun gedung sendiri</button></div>`;
+  return `<div class="kat" style="color:${warna}">${esc(NAMA[b.k])}</div><h2>${esc(p.nama)}</h2>
+    <div class="tipe">${esc(p.tipe)} · booth DNA</div><div class="st">Staf booth ini meranin persona di DNA-nya. Dia cuma tahu teks DNA, bukan data kerja nyata.</div>
+    <div class="aksi"><button class="utama" data-dna="pilih" data-id="${esc(p.dnaId)}">📖 Baca</button>
+    <button data-dna="obrol" data-id="${esc(p.dnaId)}" data-nama="${esc(p.nama)}">💬 Ngobrol sama dia</button>
+    <button data-dna="turun" data-id="${esc(p.dnaId)}">↓ Turunin dari gedung</button></div><div class="hasil" data-hasil="dna"></div>`;
+}
+
+// ─── perpustakaan ───
+let dnaKat = null, dnaRakPilih = 'semua', dnaSkrg = null;
+async function bukaDna(rak, id) {
+  tutupLayar(); $('lDna').classList.add('buka');
+  if (rak) dnaRakPilih = rak;
+  if (!dnaKat) { $('dnaDaftar').innerHTML = '<div style="padding:12px;color:var(--dim)">ngumpulin DNA & script dari 60 folder…</div>'; dnaKat = await api('/api/dna'); }
+  if (!dnaKat.ok) { $('dnaDaftar').innerHTML = `<div style="padding:12px;color:var(--mati)">${esc(dnaKat.pesan || 'gagal')}</div>`; return; }
+  gambarDna();
+  if (id) pilihDna(id); else if (!dnaSkrg) $('dnaKanan').innerHTML = `<div class="form"><b>Semua DNA, persona & script lo, di satu tempat.</b>
+    <p style="color:var(--dim);font-size:12px;line-height:1.6">Kiri: pilih rak & isinya. Semua dibaca di lokasi aslinya — dna.json yang dipakai kode proyek GAK dipindah (kalau dipindah proyeknya patah diam-diam).<br>
+    Yang bisa lo tulis & ubah langsung dari sini: rak <b>Milik Hillkia</b> (~/ocklu-dna/milik). Sisanya: baca, salin ke Milik, atau buka di VS Code.<br>
+    Mau dipajang? Pilih DNA → <b>Pajang di gedung</b> → jadi booth dengan staf yang bisa diajak ngobrol.</p>
+    <div class="aksi"><button class="utama" data-dna="baru">➕ Tulis DNA baru</button><button data-dna="bangun">🏗 Bangun gedung sendiri</button></div></div>`;
+}
+function gambarDna() {
+  const it = dnaKat.item, q = $('dnaCari').value.trim().toLowerCase();
+  $('dnaRak').innerHTML = [['semua', 'Semua', it.length], ...dnaKat.grup.map((g) => [g.k, g.nama, g.jumlah])]
+    .map(([k, n, j]) => `<button data-dna="rak" data-id="${k}" class="${dnaRakPilih === k ? 'on' : ''}">${esc(n)} ${j}</button>`).join('');
+  const list = it.filter((x) => (dnaRakPilih === 'semua' || x.grup === dnaRakPilih) && (!q || (x.nama + ' ' + x.jenis + ' ' + x.ket).toLowerCase().includes(q)));
+  $('dnaDaftar').innerHTML = list.map((x) => `<button data-dna="pilih" data-id="${esc(x.id)}" class="${dnaSkrg === x.id ? 'on' : ''}">${esc(x.nama)}<small>${esc(x.jenis)} · ${esc(x.ket)}</small></button>`).join('')
+    || `<div style="padding:12px;color:var(--dim)">${dnaRakPilih === 'milik' ? 'Rak lo masih kosong. Pencet ➕ DNA baru, atau salin DNA dari rak lain.' : 'gak ada yang cocok'}</div>`;
+}
+$('dnaCari').addEventListener('input', () => dnaKat && gambarDna());
+async function pilihDna(id) {
+  dnaSkrg = id; if (dnaKat) gambarDna();
+  $('dnaKanan').innerHTML = '<pre>membaca…</pre>';
+  const x = await api('/api/dna/isi?id=' + encodeURIComponent(id));
+  if (!x.ok) { $('dnaKanan').innerHTML = `<pre>${esc(x.pesan || 'gak bisa dibaca')}</pre>`; return; }
+  const g = data.gedung || [], dipajang = (data.dnaBooth || []).find((d) => d.id === id);
+  $('dnaKanan').innerHTML = `<div class="atas"><b>${esc(x.nama)}</b> <span style="color:var(--dim)">${esc(x.jenis)}</span>
+      <div class="dim">📍 ${esc(x.sumber.replace(/^\/Users\/[^/]+/, '~'))}</div>
+      ${x.bisaUbah ? '<div class="dim" style="color:var(--hidup)">rak Milik — bisa lo ubah langsung</div>' : `<div class="dim">🔒 ${esc(x.alasanKunci || '')}</div>`}
+      <div class="aksi">
+        ${x.bisaNgobrol ? `<button class="utama" data-dna="obrol" data-id="${esc(id)}" data-nama="${esc(x.nama)}">💬 Ngobrol sama persona ini</button>` : '<button disabled>💬 dikunci (persona anak)</button>'}
+        ${x.bisaUbah ? `<button data-dna="ubah" data-id="${esc(id)}">✎ Ubah</button><button class="bahaya" data-dna="hapus" data-id="${esc(id)}">🗑 Buang</button>`
+                     : `<button data-dna="salin" data-id="${esc(id)}">⧉ Salin ke Milik</button>`}
+        <button data-dna="vscode" data-id="${esc(id)}">✎ VS Code</button>
+        ${g.length ? `<select data-dna-pajang="${esc(id)}"><option value="">${dipajang ? '🏗 dipajang di ' + esc(NAMA[dipajang.k] || '?') : '🏗 Pajang di gedung…'}</option>
+            ${g.map((x) => `<option value="${esc(x.k)}">${esc(x.nama)}</option>`).join('')}${dipajang ? '<option value="-">↓ turunin</option>' : ''}</select>`
+          : '<button data-dna="bangun">🏗 Bangun gedung dulu buat majang</button>'}
+      </div><div class="hasil" data-hasil="dna"></div></div><pre id="dnaIsi"></pre>`;
+  $('dnaIsi').textContent = x.isi;
+  dnaSkrg_isi = x;
+}
+let dnaSkrg_isi = null;
+function formDna(x) {
+  const jenis = ['persona', 'worker DNA', 'prompt', 'script', 'aturan', 'catatan'];
+  $('dnaKanan').innerHTML = `<form class="form" id="formDna">
+    <b>${x ? '✎ Ubah ' + esc(x.nama) : '➕ DNA baru di rak Milik'}</b>
+    <div class="dua"><div><label>Nama</label><input name="nama" required maxlength="60" value="${esc(x ? x.nama : '')}" placeholder="mis. Sales Ojol Jujur"></div>
+    <div><label>Jenis</label><select name="jenis">${jenis.map((j) => `<option ${x && x.jenis === j ? 'selected' : ''}>${j}</option>`).join('')}</select></div></div>
+    <label>Tag (bebas, pisah koma)</label><input name="tag" maxlength="60" value="${esc(x && x.meta ? x.meta.tag || '' : '')}" placeholder="jualan, ojol, riset">
+    <label>Isi — tulis watak, peran, aturan, gaya bicara. Ini yang jadi "otak" staf booth-nya.</label>
+    <textarea name="isi" required placeholder="PERAN: …&#10;WATAK: …&#10;ATURAN YANG GAK BOLEH DILANGGAR: …&#10;GAYA BICARA: …">${esc(x ? x.isi.replace(/^---\n[\s\S]*?\n---\n?/, '') : '')}</textarea>
+    <div class="aksi"><button class="utama">💾 Simpan</button><button type="button" data-dna="batal">Batal</button></div>
+    <div class="hasil" data-hasil="dna"></div></form>`;
+  $('formDna').onsubmit = async (e) => {
+    e.preventDefault(); const f = new FormData(e.target);
+    const r = await api('/api/dna/simpan', { method: 'POST', body: JSON.stringify({ id: x ? x.id : '', nama: f.get('nama'), jenis: f.get('jenis'), tag: f.get('tag'), isi: f.get('isi') }) });
+    if (!r.ok) return hasilDna(r);
+    dnaKat = await api('/api/dna'); dnaRakPilih = 'milik'; gambarDna(); await pilihDna(r.id); hasilDna(r);
+  };
+}
+function hasilDna(r) {
+  document.querySelectorAll('[data-hasil="dna"]').forEach((el) => { el.className = 'hasil ' + (r.ok ? 'ok' : 'gagal'); el.style.display = 'block'; el.textContent = (r.ok ? '✓ ' : '✗ ') + (r.pesan || ''); });
+}
+const pindahKe = (k) => { location.hash = 'g=' + k; location.reload(); };
+async function pajang(id, k) {
+  const r = await api('/api/gedung', { method: 'POST', body: JSON.stringify({ aksi: 'pajang-dna', id, k }) });
+  hasilDna(r.ok ? { ok: true, pesan: r.pesan + ' Mindahin lo ke gedungnya…' } : r);
+  if (r.ok) setTimeout(() => (k ? pindahKe(k) : location.reload()), 900);
+}
+document.addEventListener('change', (e) => {
+  const s = e.target.closest('[data-dna-pajang]'); if (!s || !s.value) return;
+  pajang(s.dataset.dnaPajang, s.value === '-' ? '' : s.value);
+});
+
+// ─── ngobrol sama persona DNA (pakai jendela obrol yang sama) ───
+function bukaObrolDna(id, nama) {
+  const k = 'dna|' + id; obrolK = k; tutupLayar(); $('lObrol').classList.add('buka');
+  $('obrolJudul').textContent = '🧬 Persona — ' + nama;
+  if (!riwayatObrol[k]) { riwayatObrol[k] = []; $('obrolIsi').innerHTML = '';
+    gelembung('dia', `Aku ${nama}. Aku cuma tahu isi DNA-ku, bukan data kerja nyata. Uji watakku.`, null, true); }
+  else { $('obrolIsi').innerHTML = ''; for (const m of riwayatObrol[k]) gelembung(m.role === 'user' ? 'aku' : 'dia', m.content, m.otak, true); }
+  $('obrolCepat').innerHTML = ['Kenalin dirimu', 'Aturan apa yang gak boleh kamu langgar?', 'Kalau aku suruh ngarang angka, kamu ngapain?']
+    .map((q) => `<button data-q="${esc(q)}">${esc(q)}</button>`).join('');
+  $('obrolCepat').querySelectorAll('button').forEach((b) => b.onclick = () => kirimObrol(b.dataset.q));
+  setTimeout(() => $('obrolIn').focus(), 30);
+}
+
+// ─── bangun gedung / mesin ───
+let warnaPilih = null, yakinRoboh = null;
+function bukaBangun(pesan) { tutupLayar(); $('lBangun').classList.add('buka'); gambarBangun(pesan); }
+function gambarBangun(pesan) {
+  if (!data.bolehAksi) { $('bangunIsi').innerHTML = '<div class="rks">Bangun gedung cuma dari laptop ini, atau pakai link bertoken dari terminal HQ.</div>'; return; }
+  const G = data.gedung || [], W = data.warnaGedung || [], maks = data.maksGedung || 8, ps = data.projects, db = data.dnaBooth || [];
+  warnaPilih = warnaPilih || W[G.length % W.length];
+  const opsiProyek = ps.slice().sort((a, b) => a.nama.localeCompare(b.nama)).map((p) => `<option value="${esc(p.kunci)}">${esc(p.nama)} — ${esc(NAMA[p.kategori] || p.kategori)}</option>`).join('');
+  const semuaG = [...URUT.filter((k) => !GEDUNG[k].milik), ...G.map((g) => g.k)];
+  $('bangunIsi').innerHTML = `${pesan ? `<div class="hasil ${pesan.ok ? 'ok' : 'gagal'}" style="display:block">${pesan.ok ? '✓' : '✗'} ${esc(pesan.pesan)}</div>` : ''}
+    <h4>1 · Bangun gedung baru (${G.length}/${maks} kavling)</h4>
+    ${G.length < maks ? `<form class="form" id="fGedung" style="padding:0"><div class="dua"><div><label>Nama gedung</label><input name="nama" required maxlength="40" placeholder="mis. Pabrik Ojol"></div>
+      <div><label>Buat apa (opsional)</label><input name="ket" maxlength="140" placeholder="mis. semua mesin cari order"></div></div>
+      <label>Warna</label><div class="warna">${W.map((w) => `<button type="button" data-warna="${w}" class="${w === warnaPilih ? 'on' : ''}" style="background:${w}"></button>`).join('')}</div>
+      <div class="aksi"><button class="utama">🏗 Bangun sekarang</button></div></form>` : '<div class="rks">Kavling penuh. Robohin satu dulu.</div>'}
+    <h4>2 · Gedung lo</h4>
+    ${G.length ? G.map((g) => { const np = ps.filter((p) => p.kategori === g.k).length, nd = db.filter((d) => d.k === g.k).length;
+      return `<div class="gdg"><i class="dot" style="background:${g.warna}"></i><div><b>${esc(g.nama)}</b><small>${np} proyek · ${nd} DNA${g.ket ? ' · ' + esc(g.ket) : ''}</small></div>
+        <div class="aksi"><button data-dna="datang" data-id="${g.k}">🚶 Datengin</button><button class="bahaya" data-dna="roboh" data-id="${g.k}">${yakinRoboh === g.k ? 'Yakin robohin?' : '🧨 Robohin'}</button></div>
+        <div class="pindah"><select data-pindah="${g.k}"><option value="">➕ pindahin booth proyek ke sini…</option>${opsiProyek}</select></div></div>`; }).join('')
+      : '<div style="color:var(--dim);font-size:12px">Belum ada. Bangun di atas — berdiri di luar ring pohon, pintunya ngadep plaza.</div>'}
+    <h4>3 · Daftarin mesin sendiri</h4>
+    <form class="form" id="fMesin" style="padding:0"><div class="dua"><div><label>Nama mesin</label><input name="nama" required maxlength="40" placeholder="mis. Radar Ojol"></div>
+      <div><label>Folder (harus udah ada)</label><input name="folder" required placeholder="~/ocklu-baru"></div>
+      <div><label>Port kalau punya server (opsional)</label><input name="port" inputmode="numeric" placeholder="mis. 4600"></div>
+      <div><label>Masuk gedung</label><select name="k">${semuaG.map((k) => `<option value="${k}" ${GEDUNG[k].milik ? 'selected' : ''}>${esc(NAMA[k])}</option>`).join('')}</select></div></div>
+      <label>Jenis / keterangan (opsional)</label><input name="tipe" maxlength="60" placeholder="mis. worker pencari order">
+      <div class="aksi"><button class="utama">➕ Daftarin mesin</button></div></form>
+    <h4>4 · Isi gedung pakai DNA / script</h4>
+    <div style="font-size:12px;color:var(--dim)">Buka perpustakaan → pilih DNA → <b>Pajang di gedung</b>. Jadi booth, stafnya meranin persona itu dan bisa diajak ngobrol.</div>
+    <div class="aksi"><button class="utama" data-dna="rak" data-id="semua">🧬 Buka perpustakaan</button><button data-dna="baru">➕ Tulis DNA baru</button></div>`;
+  const fg = $('fGedung');
+  if (fg) fg.onsubmit = async (e) => { e.preventDefault(); const f = new FormData(fg);
+    const r = await api('/api/gedung', { method: 'POST', body: JSON.stringify({ aksi: 'baru', nama: f.get('nama'), ket: f.get('ket'), warna: warnaPilih }) });
+    if (r.ok) { gambarBangun({ ok: true, pesan: r.pesan + ' Nganter lo ke sana…' }); setTimeout(() => pindahKe(r.k), 1100); } else gambarBangun(r); };
+  $('bangunIsi').querySelectorAll('[data-warna]').forEach((b) => b.onclick = () => { warnaPilih = b.dataset.warna; $('bangunIsi').querySelectorAll('[data-warna]').forEach((x) => x.classList.toggle('on', x === b)); });
+  $('bangunIsi').querySelectorAll('[data-pindah]').forEach((s) => s.onchange = async () => { if (!s.value) return;
+    const r = await api('/api/gedung', { method: 'POST', body: JSON.stringify({ aksi: 'pindah-proyek', kunci: s.value, k: s.dataset.pindah }) });
+    if (r.ok) { gambarBangun({ ok: true, pesan: r.pesan + ' Nganter lo ke sana…' }); setTimeout(() => pindahKe(s.dataset.pindah), 900); } else gambarBangun(r); });
+  $('fMesin').onsubmit = async (e) => { e.preventDefault(); const f = new FormData(e.target);
+    const r = await api('/api/gedung', { method: 'POST', body: JSON.stringify({ aksi: 'mesin-baru', nama: f.get('nama'), folder: f.get('folder'), port: f.get('port'), tipe: f.get('tipe'), k: f.get('k') }) });
+    if (!r.ok) return gambarBangun(r);
+    // gedung bawaan ditentuin kategori, jadi mesin yang masuk gedung bawaan dipindah juga
+    if (f.get('k') && !GEDUNG[f.get('k')].milik) await api('/api/gedung', { method: 'POST', body: JSON.stringify({ aksi: 'pindah-proyek', kunci: r.kunci, k: f.get('k') }) });
+    gambarBangun({ ok: true, pesan: r.pesan + ' Nganter lo ke sana…' }); setTimeout(() => pindahKe(f.get('k')), 1100); };
+}
+
+document.addEventListener('click', async (e) => {
+  const t = e.target.closest('[data-dna]'); if (!t) return;
+  const a = t.dataset.dna, id = t.dataset.id;
+  if (a === 'rak') { dnaRakPilih = id; if ($('lDna').classList.contains('buka')) return gambarDna(); return bukaDna(id); }
+  if (a === 'pilih') { if (!$('lDna').classList.contains('buka')) return bukaDna(null, id); return pilihDna(id); }
+  if (a === 'baru') { if (!$('lDna').classList.contains('buka')) await bukaDna('milik'); return formDna(null); }
+  if (a === 'batal') return dnaSkrg ? pilihDna(dnaSkrg) : bukaDna();
+  if (a === 'ubah') return formDna(dnaSkrg_isi);
+  if (a === 'obrol') return bukaObrolDna(id, t.dataset.nama || 'persona');
+  if (a === 'bangun') return bukaBangun();
+  if (a === 'datang') return pindahKe(id);
+  if (a === 'turun') return pajang(id, '');
+  if (a === 'roboh') { if (yakinRoboh !== id) { yakinRoboh = id; return gambarBangun(); }
+    const r = await api('/api/gedung', { method: 'POST', body: JSON.stringify({ aksi: 'robohkan', k: id }) });
+    yakinRoboh = null; if (r.ok) { gambarBangun(r); setTimeout(() => { location.hash = ''; location.reload(); }, 1200); } else gambarBangun(r); return; }
+  if (a === 'salin' || a === 'hapus' || a === 'vscode') {
+    t.disabled = true; const r = await api('/api/dna/' + a, { method: 'POST', body: JSON.stringify({ id }) }); t.disabled = false;
+    if (a === 'vscode') return hasilDna(r);
+    if (!r.ok) return hasilDna(r);
+    dnaKat = await api('/api/dna');
+    if (a === 'salin') { dnaRakPilih = 'milik'; gambarDna(); await pilihDna(r.id); return hasilDna({ ok: true, pesan: 'Disalin ke rak Milik — sekarang bisa lo ubah.' }); }
+    dnaSkrg = null; gambarDna(); $('dnaKanan').innerHTML = ''; return hasilDna(r);
+  }
+});
+$('tombolDna').onclick = () => bukaDna();
+$('tombolBangun').onclick = () => bukaBangun();
+
+// ═══ HQ di HP (versi awan) + Pintu Duit ══════════════════════════════
+// AWAN = halaman yang diterbitin ke ocklu.com/hq/<kode>/. Datanya potret yang dikirim
+// laptop tiap ≤60 menit. Laptop mati → potret berhenti datang, dan halaman ini NGAKU:
+// booth lokal yang tadinya hidup ditandai mati, bukan dipajang seolah masih jalan.
+const BATAS_LAPTOP = 90 * 60000;
+function olahAwan(j) {
+  j.bolehAksi = false;
+  const umur = Date.now() - j.waktu, mati = umur > BATAS_LAPTOP;
+  j.laptopMati = mati;
+  if (mati) for (const p of j.projects) if (p.status === 'hidup') { p.status = 'mati'; p.ket = '(hidup waktu laptop terakhir lapor) ' + (p.ket || ''); }
+  const jam = new Date(j.waktu).toLocaleString('id-ID', { weekday: 'short', hour: '2-digit', minute: '2-digit' }), mnt = Math.round(umur / 60000);
+  const el = $('awanInfo'); el.style.display = 'block';
+  el.innerHTML = mati
+    ? `<b style="color:var(--mati)">● Laptop mati / tidur</b><br>laporan terakhir ${jam} (${mnt > 120 ? Math.round(mnt / 60) + ' jam' : mnt + ' menit'} lalu). Mesin lokal ikut mati. Halaman publik tetap dicek langsung dari HP.`
+    : `<b style="color:var(--hidup)">● Laptop nyala</b><br>laporan terakhir ${jam} (${mnt} menit lalu). Tombol nyalain/matiin cuma dari laptop.`;
+  return j;
+}
+// Cek halaman publik dari HP sendiri. mode no-cors: isinya gak kebaca, tapi kalau servernya
+// gak nyahut fetch-nya GAGAL — cukup buat bedain hidup vs mati, gak lebih dari itu.
+const hasilCek = new Map();
+async function cekLink(url) {
+  if (hasilCek.has(url) && Date.now() - hasilCek.get(url).t < 120000) return hasilCek.get(url).ok;
+  const c = new AbortController(), t = setTimeout(() => c.abort(), 9000);
+  let ok = false; try { await fetch(url, { mode: 'no-cors', cache: 'no-store', signal: c.signal }); ok = true; } catch {}
+  clearTimeout(t); hasilCek.set(url, { ok, t: Date.now() }); return ok;
+}
+
+let pintu = null;
+async function bukaDuit() {
+  tutupLayar(); $('lDuit').classList.add('buka');
+  if (!pintu) { try { pintu = (await (await fetch('./pintu-duit.json?t=' + Date.now(), { cache: 'no-store' })).json()).pintu; } catch { pintu = []; } }
+  $('duitIsi').innerHTML = `<div style="font-size:12px;color:var(--dim);margin-bottom:8px">Halaman jualan yang hidup di ocklu.com — jalan terus walau laptop mati.
+    Ketemu orang yang cocok? Pencet <b>Bagikan</b>, pilih WA/Telegram, kirim. Status dicek dari HP ini barusan.</div>`
+    + pintu.map((x, i) => `<div class="gdg"><i class="dot" data-cek="${i}" style="background:#64748b"></i>
+      <div><b>${esc(x.nama)}</b><small>${esc(x.buat)}</small><small class="st-cek" data-st="${i}">ngecek…</small></div>
+      <div class="aksi"><a class="utama" href="${esc(x.url)}" target="_blank" rel="noopener">Buka ↗</a><button data-bagi="${i}">📤 Bagikan</button></div></div>`).join('')
+    || '<div class="rks">Daftar pintu duit gak kebaca.</div>';
+  pintu.forEach(async (x, i) => {
+    const ok = await cekLink(x.url);
+    const d = document.querySelector(`[data-cek="${i}"]`), s = document.querySelector(`[data-st="${i}"]`);
+    if (d) d.style.background = ok ? 'var(--hidup)' : 'var(--mati)';
+    if (s) { s.textContent = ok ? '● hidup — siap dibagikan' : '● gak nyahut dari HP ini — jangan dibagiin dulu'; s.style.color = ok ? 'var(--hidup)' : 'var(--mati)'; }
+  });
+}
+document.addEventListener('click', async (e) => {
+  const t = e.target.closest('[data-bagi]'); if (!t) return;
+  const x = pintu[Number(t.dataset.bagi)], teks = `${x.pesan} ${x.url}`;
+  if (navigator.share) { try { await navigator.share({ title: x.nama, text: x.pesan, url: x.url }); return; } catch (err) { if (err.name === 'AbortError') return; } }
+  try { await navigator.clipboard.writeText(teks); t.textContent = '✓ link disalin'; }
+  catch { location.href = 'https://wa.me/?text=' + encodeURIComponent(teks); }   // WA kebuka, lo yang milih kirim ke siapa
+});
+$('tombolDuit').onclick = bukaDuit;
+if (AWAN) { $('tombolDna').style.display = 'none'; $('tombolBangun').style.display = 'none'; }
+
+try {
+  data = await ambil();
+  const ps = data.projects, n = (s) => ps.filter((p) => p.status === s).length;
+  $('g-stat').textContent = `${ps.length} proyek · ${n('hidup')} hidup · ${n('mati')} mati · ${n('tanpa-port') + n('hilang')} tanpa server`;
+  siapkanGedungMilik();
+  const perZona = {};
+  for (const p of ps) (perZona[URUT.includes(p.kategori) ? p.kategori : 'plan'] ||= []).push(p);
+  for (const d of data.dnaBooth || []) if (GEDUNG[d.k]) (perZona[d.k] ||= []).push(boothDna(d));
+  // yang hidup dipajang paling depan (deket pintu), sisanya urut nama
+  for (const k of URUT) bangunGedung(k, (perZona[k] || []).sort((a, b) =>
+    (a.status === 'hidup' ? 1 : 0) - (b.status === 'hidup' ? 1 : 0) || a.nama.localeCompare(b.nama)));
+  if (GEDUNG.dna) bangunGedung('dna', data.rak.map(boothRak));
+  bangunPlaza(data); bangunPengunjung(); isiHUD();
+  semuaHit = [...lantaiKlik, ...[...booth.values()].flatMap((b) => b.hit)];
+  $('masuk').disabled = false;
+  $('masuk').onclick = () => { $('gerbang').remove(); cv.focus(); };
+  // habis bangun/mindahin: langsung berdiri di depan pintu gedungnya
+  const lompat = location.hash.match(/g=(\w+)/);
+  if (lompat && GEDUNG[lompat[1]]) {
+    $('gerbang').remove(); const G = GEDUNG[lompat[1]], p = lokalKeDunia(G, 0, G.d / 2 + 8);
+    pemain.position.set(p.x, 0, p.z); yaw = Math.atan2(p.x - G.x, p.z - G.z); history.replaceState(null, '', location.pathname + location.search);
+  }
+  // pegangan buat ngecek dari konsol/tes, gak dipakai UI
+  window.__hq = { pemain, tabrak, get yaw() { return yaw; }, get tujuan() { return tujuan; } };
+  loop();
+  setInterval(segarkan, 20000);
+} catch (e) {
+  $('g-stat').innerHTML = `<span style="color:var(--mati)">server gak kejangkau: ${esc(e.message)}</span><br>jalankan: cd ~/ocklu-hq &amp;&amp; node server.js`;
+}
+</script>
+</body>
+</html>

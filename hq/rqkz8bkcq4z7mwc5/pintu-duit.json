@@ -1,0 +1,14 @@
+{
+ "_catatan": "Halaman jualan yang hidup di ocklu.com (dicek 200 tanggal 25/9/2026). HP ngecek ulang tiap dibuka. 'pesan' = teks default waktu dibagikan, boleh diubah.",
+ "pintu": [
+  { "nama": "Etalase OCKLU", "url": "https://ocklu.com/jual/", "buat": "Semua yang bisa dibeli hari ini, satu halaman", "pesan": "Ini yang bisa langsung dibeli dari OCKLU hari ini:" },
+  { "nama": "Tergigantic — audit web", "url": "https://ocklu.com/tergigantic/", "buat": "Pemilik website/toko online: aksesibilitas + kebaca AI", "pesan": "Website kamu kebaca AI & aman aksesibilitas gak? Cek di sini:" },
+  { "nama": "AIRANK", "url": "https://ocklu.com/airank/", "buat": "Brand/UMKM: mereknya muncul gak di jawaban ChatGPT", "pesan": "Merek kamu muncul gak kalau orang nanya ke AI? Cek:" },
+  { "nama": "Ocklu-9799 konsol sosmed", "url": "https://ocklu.com/9799/", "buat": "Agensi & pengelola akun sosmed", "pesan": "Konsol optimasi akun sosmed — coba liat:" },
+  { "nama": "Audit Kalibrasi", "url": "https://ocklu.com/kalibrasi/", "buat": "Tim yang suka bikin prediksi/forecast (10 gratis, lalu $149)", "pesan": "Seberapa jujur keyakinan tim kamu? Audit kalibrasi:" },
+  { "nama": "Buku Kios", "url": "https://ocklu.com/kios/", "buat": "Warung/kios: catat jualan tanpa login", "pesan": "Catat jualan warung tanpa ribet, gratis dicoba:" },
+  { "nama": "Ojol Untung", "url": "https://ocklu.com/ojol/", "buat": "Driver ojol: order ini untung atau rugi (Rp 15rb)", "pesan": "Buat bro driver: hitung order untung/rugi sebelum ambil:" },
+  { "nama": "OMA — pembacaan pasar", "url": "https://ocklu.com/papan/", "buat": "Trader: pembacaan pasar + catatan jujur", "pesan": "Pembacaan pasar OMA hari ini:" },
+  { "nama": "Ocklu KDP", "url": "https://ocklu.com/kdp/", "buat": "Penulis/penerbit Amazon KDP", "pesan": "Buat yang mau terbit di Amazon KDP:" }
+ ]
+}
