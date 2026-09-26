@@ -180,12 +180,32 @@ function posisi(D) {
   return h;
 }
 
+const KUADRAN = {SODORKAN: ["ok", "SODORKAN", "niat beli nyata + teknikal siap → boleh dieksekusi"],
+  PANTAU: ["", "PANTAU", "niat sudah ada, teknikal belum — permintaan muncul duluan"],
+  TANPA_PEMBELI: ["", "TANPA PEMBELI", "grafik bagus, tak ada yang mau beli — ditolak"],
+  HINDARI: ["bad", "HINDARI", "niat jual, berita bahaya, atau ramai buatan bandar"]};
+const chipK = k => k && KUADRAN[k] ? `<span class="chip ${KUADRAN[k][0]}">${KUADRAN[k][1]}</span>` : "";
+
+function ocklu(D) {
+  const O = D.ocklu;
+  if (!O) return '<div class="card"><h2>Rumus OCKLU</h2><p class="empty">Belum dihitung di verdict ini — tunggu siklus berikutnya.</p></div>';
+  return `<div class="card"><h2>Rumus OCKLU · niat dulu, baru barang</h2>
+    <div class="hero" style="margin-bottom:6px">${Object.keys(KUADRAN).map(k => `
+      <div class="stat"><div class="k">${KUADRAN[k][1]}</div><div class="v num ${k === "SODORKAN" ? "up" : k === "HINDARI" ? "down" : ""}">${(O[k] || []).length}</div></div>`).join("")}</div>
+    <p class="small">Hanya <b>SODORKAN</b> yang boleh dikirim PEGASUS. Semua koin yang dipindai ikut dihitung, bukan cuma 40 teratas.</p>
+    ${["SODORKAN", "PANTAU"].map(k => (O[k] || []).length ? `<div class="list" style="margin-top:10px">${O[k].slice(0, 6).map(x => `
+      <div class="item"><div class="row"><span class="t grow">${esc(x.symbol.replace("_USDT", ""))}</span>${chipK(k)}
+        <span class="small num">niat ${Number(x.skor_niat).toFixed(2)} · conv ${x.conviction ?? "—"}</span></div>
+        <div class="reasons">${(x.alasan || []).map(r => `<span class="chip">${esc(r)}</span>`).join("")}</div></div>`).join("")}</div>` : "").join("")}
+  </div>`;
+}
+
 function sinyal(D) {
-  if (!D.sinyal.length) return '<div class="card"><p class="empty">Belum ada verdict.</p></div>';
-  return `<div class="card"><h2>Verdict teratas · ${esc(D.verdict_as_of || "")}</h2><div class="list">${D.sinyal.map(s => `
+  if (!D.sinyal.length) return ocklu(D) + '<div class="card"><p class="empty">Belum ada verdict.</p></div>';
+  return ocklu(D) + `<div class="card"><h2>Verdict teratas · ${esc(D.verdict_as_of || "")}</h2><div class="list">${D.sinyal.map(s => `
     <div class="item"><div class="row"><span class="t grow">${esc((s.symbol || "").replace("_USDT", ""))} <span class="small">${esc(s.nama || "")}</span></span>
-      ${s.gorengan ? '<span class="chip bad">gorengan</span>' : ""}<span class="chip ${s.direction === "LONG" ? "ok" : s.direction === "SHORT" ? "bad" : ""}">${esc(s.direction)}</span></div>
-      <div class="row small num" style="margin-top:4px"><span class="grow">${esc(s.label)} · conv ${s.conviction} · regime ${esc(s.regime || "—")}</span><span>size ${s.size_pct ?? 0}% · stop ${s.stop_pct ?? "—"}%</span></div>
+      ${chipK(s.kuadran)}${s.gorengan ? '<span class="chip bad">gorengan</span>' : ""}<span class="chip ${s.direction === "LONG" ? "ok" : s.direction === "SHORT" ? "bad" : ""}">${esc(s.direction)}</span></div>
+      <div class="row small num" style="margin-top:4px"><span class="grow">${esc(s.label)} · conv ${s.conviction} · regime ${esc(s.regime || "—")}</span><span>niat ${s.skor_niat != null ? Number(s.skor_niat).toFixed(2) : "—"} · stop ${s.stop_pct ?? "—"}%</span></div>
       <div class="bar"><i style="width:${Math.min(100, (s.conviction || 0) / 0.777 * 100)}%"></i></div></div>`).join("")}</div>
     <p class="small" style="margin-top:10px">Batang = conviction terhadap batas MYTHOS 0.777. Masuk hanya ≥ 0.70 + STRONG + LONG.</p></div>`;
 }
