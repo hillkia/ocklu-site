@@ -29,7 +29,7 @@
   #zoomPanel button { width:42px; height:42px; border-radius:12px; font-size:19px; font-weight:800; cursor:pointer; color:var(--txt); position:static; padding:0; }
   #zoomPanel button.on { background:rgba(56,189,248,.35); border-color:var(--biru); }
   @media (max-width:700px), (pointer:coarse) { #zoomPanel { top:140px; } }
-  body.umpet-zoom #zoomPanel { display:none !important; }
+  body.umpet-zoom #zoomPanel, body.umpet-quantum #oq { display:none !important; }
   .pindahBooth { background:#060a14; border:1px solid var(--line); border-radius:8px; color:var(--txt); padding:6px 8px; font:inherit; font-size:12px; }
   #lokasi .l1 { font-size:10px; letter-spacing:.2em; color:var(--dim); text-transform:uppercase; }
   #lokasi .l2 { font-size:17px; font-weight:700; margin-top:1px; }
@@ -1812,7 +1812,7 @@ document.addEventListener('change', async (e) => {
 // ─── 👁 atur tampilan: panel mana yang keliatan. Joystick sengaja gak ada di sini. ───
 const PANEL = [['laptop', 'Status laptop', () => AWAN], ['lokasi', 'Nama lokasi', () => true], ['peta', 'Peta mini', () => true],
   ['angka', 'Angka hidup/mati', () => true], ['tombol', 'Tombol atas (proyek, DNA, duit)', () => true],
-  ['booth', 'Panel booth (pas deket booth)', () => true], ['bantu', 'Bantuan tombol', () => innerWidth > 700], ['zoom', 'Tombol zoom & drone', () => true]];
+  ['booth', 'Panel booth (pas deket booth)', () => true], ['bantu', 'Bantuan tombol', () => innerWidth > 700], ['zoom', 'Tombol zoom & drone', () => true], ['quantum', 'Widget ◈ Quantum', () => !!document.getElementById('oq')]];
 const HP = matchMedia('(max-width:700px), (pointer:coarse)').matches;
 let umpet; try { umpet = JSON.parse(localStorage.getItem('hq-umpet') || 'null'); } catch { umpet = null; }
 if (!Array.isArray(umpet)) umpet = HP ? ['angka'] : [];            // HP: layar buat ngeliat jalan
