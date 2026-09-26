@@ -1468,6 +1468,7 @@ function gambarLayarTT(fase) {
   x.font = '700 30px -apple-system,sans-serif'; x.textAlign = 'left';
   const jt = TT.jualTerakhir;
   if (Date.now() < sorakSampai && jt) { x.fillStyle = '#facc15'; x.fillText(`🎉 TERJUAL! ${jt.proyek} · ${jt.judul}`, 50, H - 25); }
+  else if (TT.gagal && TT.gagal.length) { x.fillStyle = '#f87171'; x.fillText(`⚠ sumber gagal kebaca (angka bisa kurang): ${TT.gagal.join(' · ')}`.slice(0, 110), 50, H - 25); }
   else { x.fillStyle = '#94a3b8'; x.fillText(jt ? `Jualan terakhir tercatat: ${new Date(jt.t).toLocaleDateString('id-ID')} · ${jt.proyek} · ${jt.judul}` : 'Belum ada jualan tercatat.', 50, H - 25); }
   x.textAlign = 'right'; x.fillStyle = '#64748b'; x.font = '500 24px ui-monospace,monospace';
   x.fillText(`hal ${Math.floor(mulai / per) + 1} · diperbarui ${new Date(TT.waktu).toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit' })}`, W - 40, H - 25);
@@ -1528,6 +1529,15 @@ function bangunTeater() {
     const n = ps.length, lx = (i - (n - 1) / 2) * Math.min(2.6, 30 / Math.max(1, n)), lz = -G.d / 2 + 4.2;
     const o = orang({ baju: bajuL[i % bajuL.length], badge: 0xfacc15, kulit: [0xc68a5b, 0x8d5a3b, 0xe0b48f, 0x6b4430][i % 4] });
     o.position.set(lx, 0, lz); o.rotation.y = Math.PI; grup.add(o);
+    const teksBaju = tekstur(256, 128, (x, w, h) => { x.fillStyle = '#' + bajuL[i % bajuL.length].toString(16).padStart(6, '0'); x.fillRect(0, 0, w, h);
+      x.fillStyle = '#fff'; x.textAlign = 'center'; x.font = `800 ${p.nama.length > 10 ? 30 : 40}px -apple-system,sans-serif`; x.fillText(p.nama.slice(0, 16), w / 2, h / 2 + 12); });
+    for (const [z, ry] of [[-0.176, Math.PI], [0.176, 0]]) {   // nama di dada & punggung
+      const pl = new THREE.Mesh(new THREE.PlaneGeometry(0.58, 0.29), new THREE.MeshBasicMaterial({ map: teksBaju })); pl.position.set(0, 1.42, z); pl.rotation.y = ry; o.userData.bag.badan.add(pl);
+    }
+    const meja = new THREE.Mesh(new THREE.BoxGeometry(1.3, 0.08, 0.6), new THREE.MeshStandardMaterial({ color: 0xe5e7eb })); meja.position.set(0, 0.95, -0.72); o.add(meja);
+    const kaki = new THREE.Mesh(new THREE.BoxGeometry(0.1, 0.95, 0.1), new THREE.MeshStandardMaterial({ color: 0x334155 })); kaki.position.set(0, 0.47, -0.72); o.add(kaki);
+    const lap = new THREE.Mesh(new THREE.PlaneGeometry(0.62, 0.4), new THREE.MeshBasicMaterial({ color: Date.now() - p.terakhir < 864e5 ? 0x38bdf8 : 0x1e293b }));
+    lap.position.set(0, 1.2, -0.88); lap.rotation.x = -0.25; o.add(lap);
     const nm = new THREE.Sprite(new THREE.SpriteMaterial({ map: tekstur(256, 64, (x, w, h) => { x.fillStyle = 'rgba(15,23,42,.85)'; x.beginPath(); x.roundRect(0, 0, w, h, 14); x.fill();
       x.fillStyle = '#facc15'; x.font = '700 30px sans-serif'; x.textAlign = 'center'; x.fillText(p.nama.slice(0, 14), w / 2, 42); }), transparent: true }));
     nm.scale.set(2.2, 0.55, 1); nm.position.y = 2.55; o.add(nm);
@@ -1535,13 +1545,13 @@ function bangunTeater() {
     const proyek = data.projects.find((q) => q.nama === p.nama);
     booth.set('pekerja|' + p.nama, { p: { id: 'pekerja', kunci: 'pekerja|' + p.nama, path: '', nama: p.nama, tipe: 'pekerja AI', status: 'pekerja', statistik: p, proyekKunci: proyek && proyek.kunci }, k: 'teater',
       staf: { visible: false }, orang: o, pusat: w, depan: dp, hit: [] });
-    pekerjaTT.push({ o, p, balon: null, sampai: 0, dasarY: 0 });
+    pekerjaTT.push({ o, p, balon: null, sampai: 0, dasarY: 0, kerja: Date.now() - p.terakhir < 864e5 });
   });
   setInterval(() => {                                      // tiap 3,5 dtk satu pekerja nyapa temennya
     if (!pekerjaTT.length) return;
     const a = pekerjaTT[Math.floor(Math.random() * pekerjaTT.length)], b = pekerjaTT.length > 1 ? pekerjaTT.find((x) => x !== a && Math.random() < 0.5) || pekerjaTT.find((x) => x !== a) : null;
     if (a.balon) a.o.remove(a.balon);
-    a.balon = balon(ucapan(a.p, b && b.p)); a.o.add(a.balon); a.sampai = performance.now() + 3200;
+    a.balon = balon(ucapan(a.p, b && b.p)); a.o.add(a.balon); a.sampai = performance.now() + 3200; sapaBenang(a, b);
   }, 3500);
   setInterval(() => { halTT++; }, 8000);
 }
@@ -1581,13 +1591,13 @@ function infoTeater(b) {
       <div class="st">${TT ? TT.hari : 7} hari terakhir: <b>${s.keluar}</b> surat keluar · <b>${s.masuk}</b> masuk · <b>${s.kerja}</b> commit · <b>${s.jual}</b> jualan${s.gagal ? ` · <span style="color:var(--mati)">${s.gagal} gagal</span>` : ''}<br>
       kerja terakhir: ${new Date(s.terakhir).toLocaleString('id-ID')}</div>
       <div class="aksi">${p.proyekKunci && data.bolehAksi ? `<button class="utama" data-obrol="${esc(p.proyekKunci)}">💬 Ngobrol sama ${esc(p.nama)}</button>` : ''}
-      <button data-tt="obrol">💬 Ngobrol sama semua</button><button data-tt="daftar">📜 Alur lengkap</button></div>`;
+      <button data-tt="obrol">💬 Ngobrol sama semua</button><button data-tt="otak">${modeOtak ? '📺 Mode alur surat' : '🧠 Mode otak Neuralink'}</button><button data-tt="daftar">📜 Alur lengkap</button></div>`;
   }
   const jt = TT && TT.jualTerakhir;
   return `<div class="kat" style="color:#facc15">Gedung Teater</div><h2>🎬 Kursi VIP Hillkia</h2>
     <div class="st">${TT ? `${TT.hari} hari: ${TT.ringkas.keluar} surat keluar · ${TT.ringkas.masuk} masuk · ${TT.ringkas.kerja} kerja · <b>${TT.ringkas.jual} jualan</b>` : 'data belum kebaca'}<br>
     ${jt ? `jualan terakhir tercatat: ${new Date(jt.t).toLocaleDateString('id-ID')} · ${esc(jt.proyek)}` : 'belum ada jualan tercatat'}</div>
-    <div class="aksi"><button class="utama" data-tt="duduk">${dudukTT ? '🧍 Berdiri' : '🪑 Duduk nonton'}</button><button data-tt="obrol">💬 Ngobrol sama semua pekerja</button>
+    <div class="aksi"><button data-tt="otak">${modeOtak ? '📺 Mode alur surat' : '🧠 Mode otak Neuralink'}</button><button class="utama" data-tt="duduk">${dudukTT ? '🧍 Berdiri' : '🪑 Duduk nonton'}</button><button data-tt="obrol">💬 Ngobrol sama semua pekerja</button>
     <button data-tt="daftar">📜 Alur lengkap + sumber</button>${jt ? `<button data-tt="ulang">🎉 Putar ulang sorak (${new Date(jt.t).toLocaleDateString('id-ID', { day: 'numeric', month: 'short' })})</button>` : ''}</div>`;
 }
 function sorak(detik = 6) {
@@ -1606,10 +1616,12 @@ function sorak(detik = 6) {
 }
 function jalanTeater(dt, t) {                              // dipanggil tiap frame dari loop
   if (!layarTT) return;
-  if (Math.floor(t * 2) !== jalanTeater.k) { jalanTeater.k = Math.floor(t * 2); gambarLayarTT((t * 0.25) % 1); }
+  if (Math.floor(t * 2) !== jalanTeater.k) { jalanTeater.k = Math.floor(t * 2); (modeOtak ? gambarLayarOtak : gambarLayarTT)((t * 0.25) % 1); }
+  jalanOtak(dt, t);
   const now = performance.now(), rame = Date.now() < sorakSampai;
   for (const w of pekerjaTT) {
     animasiDiam(w.o, dt, t + w.o.position.x);
+    if (!rame && w.kerja) { const bg = w.o.userData.bag, k = Math.sin(t * 14 + w.o.position.x); bg.tKi.rotation.x = 1.05 + k * 0.1; bg.tKa.rotation.x = 1.05 - k * 0.1; }   // lagi ngetik (kerja 24 jam terakhir)
     if (rame) { w.o.position.y = Math.abs(Math.sin(t * 9 + w.o.position.x)) * 0.8; const bg = w.o.userData.bag; bg.tKi.rotation.x = bg.tKa.rotation.x = Math.PI * 0.9; }
     else w.o.position.y = 0;
     if (w.balon && now > w.sampai) { w.o.remove(w.balon); w.balon = null; }
@@ -1656,6 +1668,7 @@ document.addEventListener('click', (e) => {
     else { pemain.position.y = 0; aturZoom(ZOOM_BIASA); aturMiring(0); }
     if (dekat) isiInfo(dekat);
   }
+  if (a === 'otak') { modeOtak = !modeOtak; try { localStorage.setItem('hq-otak', modeOtak ? '1' : ''); } catch {} jalanTeater.k = -1; if (dekat) isiInfo(dekat); return; }
   if (a === 'obrol') return bukaObrolTT();
   if (a === 'daftar') return bukaDaftarTT();
   if (a === 'ulang') sorak(6);
@@ -1671,6 +1684,76 @@ function bukaObrolTT() {
   $('obrolCepat').innerHTML = ['Siapa paling rajin minggu ini?', 'Ada balasan yang harus gw bales?', 'Udah ada yang laku belum?']
     .map((q) => `<button data-q="${esc(q)}">${esc(q)}</button>`).join('');
   $('obrolCepat').querySelectorAll('button').forEach((b) => b.onclick = () => kirimObrol(b.dataset.q));
+}
+
+// ─── 🧠 mode Otak Neuralink: otak melayang + benang nyala ke tiap pekerja ───
+// JUJUR: tebal/terang benang = jumlah acara ASLI 7 hari si pekerja; percikan jalan cuma kalau dia
+// kerja 24 jam terakhir. Benang antar-pekerja cuma nyala pas mereka nyapa (hiasan, ditulis di layar).
+let modeOtak = false, otakTT = null;
+const aktif24 = (p) => Date.now() - p.terakhir < 864e5;
+const jumlahEv = (p) => p.keluar + p.masuk + p.kerja + p.jual + p.gagal;
+function benang(a, b, warna, tebal) {
+  const d = new THREE.Vector3().subVectors(b, a), m = new THREE.Mesh(new THREE.CylinderGeometry(tebal, tebal, d.length(), 6, 1, true),
+    new THREE.MeshBasicMaterial({ color: warna, transparent: true, opacity: 0.8, blending: THREE.AdditiveBlending, depthWrite: false }));
+  m.position.copy(a).addScaledVector(d, 0.5); m.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), d.clone().normalize()); return m;
+}
+function bangunOtak() {
+  scene.updateMatrixWorld(true);                              // posisi dunia pekerja baru kebaca setelah ini
+  const G = GEDUNG.teater, g = new THREE.Group(); scene.add(g); g.visible = false;
+  const pusatL = lokalKeDunia(G, 0, -G.d / 2 + 7.5), pusat = new THREE.Vector3(pusatL.x, 6.4, pusatL.z);
+  const bola = new THREE.Mesh(new THREE.IcosahedronGeometry(1.7, 2), new THREE.MeshBasicMaterial({ color: 0x22d3ee, wireframe: true, transparent: true, opacity: 0.75 }));
+  const inti = new THREE.Mesh(new THREE.IcosahedronGeometry(0.9, 1), new THREE.MeshBasicMaterial({ color: 0xf0abfc, transparent: true, opacity: 0.55, blending: THREE.AdditiveBlending }));
+  bola.position.copy(pusat); inti.position.copy(pusat); g.add(bola, inti);
+  const maks = Math.max(1, ...pekerjaTT.map((w) => jumlahEv(w.p)));
+  const tali = pekerjaTT.map((w) => {
+    const kepala = new THREE.Vector3(); w.o.getWorldPosition(kepala); kepala.y = 2.2;
+    const n = jumlahEv(w.p), t = 0.03 + 0.09 * Math.log1p(n) / Math.log1p(maks);
+    const m = benang(kepala, pusat, aktif24(w.p) ? 0x22d3ee : 0x475569, t); g.add(m);
+    const ps = new THREE.Mesh(new THREE.SphereGeometry(0.13, 8, 6), new THREE.MeshBasicMaterial({ color: 0xfef08a })); ps.visible = aktif24(w.p) && n > 0; g.add(ps);
+    return { w, m, ps, dari: kepala, n, fase: Math.random() };
+  });
+  otakTT = { g, bola, inti, pusat, tali, sapa: [] };
+}
+function sapaBenang(a, b) {                                   // dipanggil pas pekerja a nyapa b
+  if (!otakTT || !modeOtak || !a || !b) return;
+  const pa = new THREE.Vector3(), pb = new THREE.Vector3(); a.o.getWorldPosition(pa); b.o.getWorldPosition(pb); pa.y = pb.y = 2.4;
+  const m = benang(pa, pb, 0xf472b6, 0.05); otakTT.g.add(m); otakTT.sapa.push({ m, sampai: performance.now() + 3000 });
+}
+function jalanOtak(dt, t) {
+  if (!otakTT) return; otakTT.g.visible = modeOtak; if (!modeOtak) return;
+  otakTT.bola.rotation.y += dt * 0.4; otakTT.bola.rotation.x += dt * 0.15; otakTT.inti.rotation.y -= dt * 0.6;
+  const s = 1 + Math.sin(t * 2.4) * 0.06; otakTT.inti.scale.setScalar(s);
+  for (const x of otakTT.tali) {
+    x.m.material.opacity = 0.35 + 0.45 * (0.5 + 0.5 * Math.sin(t * 3 + x.fase * 6));
+    if (x.ps.visible) { const k = (t * 0.45 + x.fase) % 1; x.ps.position.lerpVectors(x.dari, otakTT.pusat, k); }
+  }
+  const now = performance.now();
+  otakTT.sapa = otakTT.sapa.filter((x) => { if (now > x.sampai) { otakTT.g.remove(x.m); x.m.geometry.dispose(); return false; } x.m.material.opacity = (x.sampai - now) / 3000; return true; });
+}
+function gambarLayarOtak(fase) {
+  const cv2 = layarTT.map.image, x = cv2.getContext('2d'), W = cv2.width, H = cv2.height;
+  x.fillStyle = '#03040a'; x.fillRect(0, 0, W, H);
+  x.fillStyle = '#fff'; x.font = '900 54px -apple-system,Segoe UI,sans-serif'; x.textAlign = 'left'; x.fillText('🧠 OTAK NEURALINK · OCKLU', 50, 80);
+  const cx = W * 0.4, cy = H * 0.53, rx = 560, ry = 300;
+  x.strokeStyle = 'rgba(34,211,238,.35)'; x.lineWidth = 3;
+  for (const s of [-1, 1]) { x.beginPath(); x.ellipse(cx + s * rx * 0.48, cy, rx * 0.52, ry, 0, 0, 7); x.stroke(); }
+  const ps = (TT && TT.pekerja) || [], maks = Math.max(1, ...ps.map(jumlahEv));
+  const pos = ps.map((p, i) => { const a = (i / Math.max(1, ps.length)) * Math.PI * 2 - Math.PI / 2; return [cx + Math.cos(a) * rx * 0.82, cy + Math.sin(a) * ry * 0.78]; });
+  ps.forEach((p, i) => {
+    const [px, py] = pos[i], n = jumlahEv(p), hid = aktif24(p);
+    x.strokeStyle = hid ? '#22d3ee' : '#475569'; x.globalAlpha = 0.4 + 0.5 * Math.log1p(n) / Math.log1p(maks); x.lineWidth = 2 + 10 * Math.log1p(n) / Math.log1p(maks);
+    x.beginPath(); x.moveTo(px, py); x.lineTo(cx, cy); x.stroke(); x.globalAlpha = 1;
+    if (hid && n) { const k = (fase * 2 + i * 0.17) % 1; x.fillStyle = '#fef08a'; x.beginPath(); x.arc(px + (cx - px) * k, py + (cy - py) * k, 9, 0, 7); x.fill(); }
+    x.fillStyle = hid ? '#0e7490' : '#1e293b'; x.beginPath(); x.arc(px, py, 26, 0, 7); x.fill();
+    x.fillStyle = '#fff'; x.font = '700 26px -apple-system,sans-serif'; x.textAlign = 'center'; x.fillText(p.nama.slice(0, 16), px, py - 38);
+    x.fillStyle = '#94a3b8'; x.font = '500 21px ui-monospace,monospace'; x.fillText(`${n} acara${hid ? ' · aktif' : ''}`, px, py + 52);
+  });
+  x.fillStyle = '#f0abfc'; x.beginPath(); x.arc(cx, cy, 44 + Math.sin(fase * 6.28) * 5, 0, 7); x.fill();
+  x.fillStyle = '#1e1b4b'; x.font = '900 30px sans-serif'; x.textAlign = 'center'; x.fillText('OCKLU', cx, cy + 10);
+  x.textAlign = 'left'; x.fillStyle = '#cbd5e1'; x.font = '500 26px -apple-system,sans-serif';
+  ['CARA BACA', `tebal garis = jumlah acara asli ${TT ? TT.hari : 7} hari`, 'biru + titik jalan = kerja 24 jam terakhir', 'abu = diam > 24 jam', 'benang pink di 3D = lagi nyapa (hiasan)']
+    .forEach((t2, i) => { x.fillStyle = i ? '#cbd5e1' : '#22d3ee'; x.fillText(t2, W * 0.73, 200 + i * 44); });
+  layarTT.map.needsUpdate = true;
 }
 
 // ─── zoom: roda mouse, cubit 2 jari, tombol ＋/－, 🚁 drone, tombol keyboard + − Z ───
@@ -1761,7 +1844,8 @@ try {
   for (const k of URUT) bangunGedung(k, (perZona[k] || []).sort((a, b) =>
     (a.status === 'hidup' ? 1 : 0) - (b.status === 'hidup' ? 1 : 0) || a.nama.localeCompare(b.nama)));
   if (GEDUNG.dna) bangunGedung('dna', data.rak.map(boothRak));
-  await ambilTeater(); bangunGedung('teater', []); bangunTeater(); bangunKafe();
+  await ambilTeater(); bangunGedung('teater', []); bangunTeater(); bangunKafe(); bangunOtak();
+  try { modeOtak = localStorage.getItem('hq-otak') === '1'; } catch {}
   segarTeater(); setInterval(segarTeater, 60000);
   bangunPlaza(data); bangunPengunjung(); isiHUD();
   semuaHit = [...lantaiKlik, ...[...booth.values()].flatMap((b) => b.hit)];
@@ -1781,5 +1865,5 @@ try {
   $('g-stat').innerHTML = `<span style="color:var(--mati)">server gak kejangkau: ${esc(e.message)}</span><br>jalankan: cd ~/ocklu-hq &amp;&amp; node server.js`;
 }
 </script>
-</body>
+<!-- ocklu-quantum:mulai --><script src="./papan-quantum.js"></script><script src="./quantum-widget.js" defer></script><!-- ocklu-quantum:selesai --></body>
 </html>
