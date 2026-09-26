@@ -395,7 +395,7 @@ function bangunGedung(k, proyek) {
   bx(0.6, 0.6, d, beton, -w / 2, T, 0); bx(0.6, 0.6, d, beton, w / 2, T, 0);
   // strip lampu plafon (kayak lobby AIS), melayang — gak nutup kamera
   const lampuMat = new THREE.MeshBasicMaterial({ color: 0xffffff });
-  for (let z = -d / 2 + 5; z < d / 2 - 2; z += 7) bx(w * 0.8, 0.08, 0.35, lampuMat, 0, T + 1.4, z);
+  if (k !== 'teater') for (let z = -d / 2 + 5; z < d / 2 - 2; z += 7) bx(w * 0.8, 0.08, 0.35, lampuMat, 0, T + 1.4, z);   // teater: plafon gelap, lampu gak nyoret layar
 
   // papan nama raksasa di atas pintu
   const judul = papanTeks(NAMA[k].toUpperCase(), subJudul(k, proyek), warna, Math.min(w * 0.7, 30));
@@ -1652,7 +1652,7 @@ document.addEventListener('click', (e) => {
   const a = t.dataset.tt;
   if (a === 'duduk') {
     dudukTT = !dudukTT;
-    if (dudukTT && TT_VIP) { pemain.position.set(TT_VIP.x, -0.42, TT_VIP.z); pemain.rotation.y = 0; yaw = 0; aturZoom(0.12); aturMiring(-0.25); tujuan = null; jalur = []; }
+    if (dudukTT && TT_VIP) { pemain.position.set(TT_VIP.x, -0.42, TT_VIP.z); pemain.rotation.y = 0; yaw = 0; aturZoom(0.1); aturMiring(-0.5); tujuan = null; jalur = []; }
     else { pemain.position.y = 0; aturZoom(ZOOM_BIASA); aturMiring(0); }
     if (dekat) isiInfo(dekat);
   }
