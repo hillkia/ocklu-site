@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Ruang Rapat OCKLU</title>
+<style>
+:root{--bg:#070b14;--kartu:#0e1526;--garis:#1e2a44;--teks:#e5ecf7;--redup:#8a9bb8;--biru:#38bdf8;--hijau:#34d399;--merah:#f87171;--emas:#facc15;--ungu:#c084fc}
+*{box-sizing:border-box}html,body{margin:0;height:100%}
+body{background:var(--bg);color:var(--teks);font:15px/1.45 -apple-system,Segoe UI,Roboto,sans-serif;display:flex;flex-direction:column}
+button,input,textarea{font:inherit;color:inherit}
+button{background:#16223a;border:1px solid var(--garis);border-radius:10px;padding:9px 13px;cursor:pointer}
+button:hover{border-color:var(--biru)}button.utama{background:#0369a1;border-color:#0ea5e9}button.bahaya{border-color:#7f1d1d;color:#fecaca}
+button:disabled{opacity:.45;cursor:default}
+input,textarea{background:#060a14;border:1px solid var(--garis);border-radius:10px;padding:10px 12px;width:100%}
+header{display:flex;align-items:center;gap:10px;padding:10px 16px;border-bottom:1px solid var(--garis);flex-wrap:wrap}
+header b{color:var(--biru);letter-spacing:.5px}header .judul{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:600}
+header .kecil{color:var(--redup);font-size:13px}
+main{flex:1;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(320px,.9fr);min-height:0}
+#meja{position:relative;min-height:300px;overflow:hidden}
+#mejaBulat{position:absolute;left:50%;top:50%;width:46%;height:34%;transform:translate(-50%,-50%);border-radius:50%;
+  background:radial-gradient(ellipse at 40% 35%,#5b3a1e,#2a1a0c);box-shadow:0 18px 50px #000a,inset 0 2px 0 #8a5a2e;display:flex;align-items:center;justify-content:center;text-align:center;color:#f5d9a8;font-size:13px;padding:10px}
+.kursi{position:absolute;transform:translate(-50%,-50%);width:92px;text-align:center;transition:left .4s,top .4s}
+.ava{width:58px;height:58px;margin:0 auto;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:20px;border:3px solid transparent;position:relative;background:#1e293b}
+.kursi.ai .ava{border-radius:16px}.kursi.ngomong .ava{border-color:var(--hijau);box-shadow:0 0 0 6px #34d39933,0 0 24px #34d39988}
+.kursi.mikir .ava::after{content:'…';position:absolute;top:-14px;right:-6px;background:var(--emas);color:#111;border-radius:9px;padding:0 6px;font-size:14px;animation:kedip 1s infinite}
+@keyframes kedip{50%{opacity:.3}}
+.kursi .nm{font-size:12px;margin-top:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.kursi .tg{font-size:10px;color:var(--redup)}
+.kursi .balon{position:absolute;bottom:100%;left:50%;transform:translateX(-50%);width:190px;background:#f8fafc;color:#0f172a;border-radius:12px;padding:6px 9px;font-size:12px;margin-bottom:6px;display:none;z-index:2}
+.kursi.ada-balon .balon{display:block}
+#samping{display:flex;flex-direction:column;border-left:1px solid var(--garis);min-height:0}
+#notulen{flex:1;overflow:auto;padding:12px 14px;display:flex;flex-direction:column;gap:8px}
+.ps{max-width:92%}.ps .siapa{font-size:12px;color:var(--redup)}.ps .isi{background:var(--kartu);border:1px solid var(--garis);border-radius:12px;padding:7px 10px;white-space:pre-wrap;word-wrap:break-word}
+.ps.ai .isi{border-color:#3b2f6b;background:#151230}.ps.ai .siapa{color:var(--ungu)}.ps.aku{align-self:flex-end}.ps.aku .isi{background:#0c2a40;border-color:#0e4d73}
+.ps.sistem{align-self:center;text-align:center;max-width:100%}.ps.sistem .isi{background:none;border:none;color:var(--redup);font-size:12px;padding:0}
+.ps.ringkas .isi{border-color:var(--emas);background:#1d1a0b}
+.ps .otak{font-size:10px;color:#5b6b88}
+#cepat{display:flex;gap:6px;overflow-x:auto;padding:6px 12px}#cepat button{white-space:nowrap;font-size:12px;padding:6px 10px;border-radius:999px}
+#ketik{display:flex;gap:6px;padding:8px 12px;border-top:1px solid var(--garis)}
+footer{display:flex;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));border-top:1px solid var(--garis);justify-content:center;flex-wrap:wrap;background:#0a1020}
+footer button{min-width:52px}#tahan{background:#3b0764;border-color:#a855f7;user-select:none;-webkit-user-select:none;touch-action:none}
+#tahan.rekam{background:#be123c;border-color:#fb7185}
+.mati{border-color:var(--merah)!important;color:#fecaca}
+.layar{position:fixed;inset:0;background:#030712e6;display:flex;align-items:center;justify-content:center;padding:16px;z-index:20;overflow:auto}
+.kotak{background:var(--kartu);border:1px solid var(--garis);border-radius:16px;padding:20px;width:min(520px,100%)}
+.kotak h1{font-size:20px;margin:0 0 4px}.kotak p{color:var(--redup);margin:6px 0 12px}.kotak .baris{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.chip{display:inline-flex;align-items:center;gap:6px;background:#111b30;border:1px solid var(--garis);border-radius:999px;padding:5px 10px;margin:3px;font-size:13px;cursor:pointer}
+.chip input{width:auto}.daftarR{display:flex;flex-direction:column;gap:8px;margin-top:10px}
+.daftarR .r{border:1px solid var(--garis);border-radius:12px;padding:10px}.daftarR .r small{color:var(--redup)}
+.tersembunyi{display:none!important}
+#pesanTop{position:fixed;top:60px;left:50%;transform:translateX(-50%);background:#1e293b;border:1px solid var(--garis);border-radius:10px;padding:8px 14px;z-index:30;display:none;max-width:90%}
+@media (max-width:760px){main{grid-template-columns:1fr;grid-template-rows:minmax(230px,38vh) 1fr}#samping{border-left:none;border-top:1px solid var(--garis)}
+  .kursi{width:70px}.ava{width:44px;height:44px;font-size:16px}.kursi .balon{width:150px}#mejaBulat{width:50%;height:30%;font-size:11px}footer button{padding:9px 10px}}
+</style>
+</head>
+<body>
+<header><b>OCKLU · RUANG RAPAT</b><span class="judul" id="judul">—</span><span class="kecil" id="durasi"></span><span class="kecil" id="jumlah"></span></header>
+<main>
+  <section id="meja"><div id="mejaBulat">meja rapat</div></section>
+  <section id="samping">
+    <div id="notulen"></div>
+    <div id="cepat"></div>
+    <form id="ketik"><input id="masukan" placeholder="ketik… panggil nama pekerja biar dia jawab" autocomplete="off"><button title="kirim">➤</button><button type="button" id="kirimAI" title="kirim & minta pekerja AI jawab">🤖</button></form>
+  </section>
+</main>
+<footer>
+  <button id="mic" title="mic">🎙 Mic</button>
+  <button id="tahan">✋ Tahan: ngomong ke AI</button>
+  <button id="suaraAI" title="suara pekerja AI">🔊 AI</button>
+  <button id="undang">🔗 Undang</button>
+  <button id="rangkum">📝 Notulen</button>
+  <button id="unduh" title="unduh transkrip">⬇</button>
+  <button id="akhiri" class="bahaya tersembunyi">⏹ Akhiri</button>
+  <button id="keluar" class="bahaya">🚪 Keluar</button>
+</footer>
+<div id="pesanTop"></div>
+
+<div id="lMasuk" class="layar tersembunyi"><div class="kotak">
+  <h1 id="mJudul">Ruang Rapat OCKLU</h1><p id="mAgenda"></p>
+  <div id="mPekerja"></div>
+  <p style="margin-top:14px">Nama kamu</p><input id="mNama" maxlength="40" placeholder="mis. Budi">
+  <div class="baris"><button class="utama" id="mGabung">🎙 Gabung pakai mic</button><button id="mDengar">👂 Gabung tanpa mic</button></div>
+  <p id="mInfo" style="font-size:12px">Suara kamu langsung kedengeran peserta lain. Pekerja AI jawab kalau namanya dipanggil atau tombol ✋/🤖 dipakai.</p>
+</div></div>
+
+<div id="lDepan" class="layar tersembunyi"><div class="kotak" id="depanIsi"></div></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.2/dist/umd/supabase.min.js"></script>
+<script>
+'use strict';
+// Ruang Rapat OCKLU — manusia + pekerja AI. Suara manusia: WebRTC langsung antar peserta.
+// Suara AI: dibacain di tiap HP pakai suara bawaan perangkat. Otak + catatan: Edge Function rapat-api.
+// JUJUR: pekerja AI cuma ngomong dari potret HQ waktu rapat dibikin; otak mati = bilang mati.
+const API = 'https://njghzieuuopukuagrswu.supabase.co/functions/v1/rapat-api';
+const SB = supabase.createClient('https://njghzieuuopukuagrswu.supabase.co', 'sb_publishable_Flgot78lOen26q5dQDV8JA_4MV_0FSn');
+const ICE = [{ urls: ['stun:stun.l.google.com:19302', 'stun:stun1.l.google.com:19302'] }, { urls: 'stun:stun.cloudflare.com:3478' }];
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const simpan = (k, v) => { try { v == null ? localStorage.removeItem(k) : localStorage.setItem(k, v); } catch {} };
+const baca = (k) => { try { return localStorage.getItem(k); } catch { return null; } };
+const HP = matchMedia('(pointer:coarse)').matches || /Android|iPhone|iPad/i.test(navigator.userAgent);
+const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+const SR_JALAN = !!SR && !HP;          // Android/iOS: dikte bawaan rebutan mic sama WebRTC → pakai rekam-klip
+const idKu = Math.random().toString(36).slice(2, 10) + Date.now().toString(36).slice(-4);
+const WARNA = ['#0ea5e9', '#10b981', '#f59e0b', '#8b5cf6', '#ef4444', '#14b8a6', '#84cc16', '#ec4899', '#6366f1', '#f97316'];
+const warnaDari = (s) => WARNA[[...String(s)].reduce((a, c) => a + c.charCodeAt(0), 0) % WARNA.length];
+const inisial = (s) => String(s).replace(/^ocklu\s+/i, '').split(/[\s-]+/).map((w) => w[0]).join('').slice(0, 2).toUpperCase();
+
+async function api(aksi, isi = {}) {
+  const r = await fetch(API, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ aksi, ...isi }) });
+  const j = await r.json().catch(() => ({ error: 'jawaban server rusak (' + r.status + ')' }));
+  if (!r.ok || j.error) throw new Error(j.error || 'HTTP ' + r.status);
+  return j;
+}
+function kabar(t, ms = 3500) { const e = $('pesanTop'); e.textContent = t; e.style.display = 'block'; clearTimeout(kabar.t); kabar.t = setTimeout(() => e.style.display = 'none', ms); }
+
+// ─── alamat: #<kode> · #pasang=<kode pemilik>&hq=<kode HQ> · #buat=<nama,nama>&hq=… ───
+const H = new URLSearchParams(location.hash.slice(1).includes('=') ? location.hash.slice(1) : '');
+if (H.get('pasang')) { simpan('rapat-pemilik', H.get('pasang')); if (H.get('hq')) simpan('rapat-hq', H.get('hq')); history.replaceState(null, '', location.pathname + '#dipasang'); }
+if (H.get('hq')) simpan('rapat-hq', H.get('hq'));
+const PEMILIK = baca('rapat-pemilik') || '';
+const KODE = (location.hash.match(/^#([a-z0-9]{16})\b/) || [])[1] || H.get('k') || '';
+
+let RAPAT = null, chan = null, namaKu = baca('rapat-nama') || (PEMILIK ? 'Hillkia' : ''), streamKu = null, micNyala = false;
+let suaraAI = baca('rapat-suara-ai') !== '0', mulai = Date.now(), selesai = false;
+const peers = new Map();       // id → { pc, audio, nama, tingkat, relay }
+const hadir = new Map();       // id → presence
+const pesanAda = new Set(), klienAda = new Set();
+let idTerakhir = 0, mikir = [];
+
+// ════════ HALAMAN DEPAN (tanpa kode rapat) ════════
+async function depan() {
+  $('lDepan').classList.remove('tersembunyi');
+  const isi = $('depanIsi');
+  if (!PEMILIK) {
+    isi.innerHTML = `<h1>Ruang Rapat OCKLU</h1><p>Buka link undangan rapat yang dikirim ke kamu (bentuknya <code>ocklu.com/rapat/#…</code>).</p>`;
+    return;
+  }
+  const buatNama = (H.get('buat') || '').split(',').map((s) => s.trim()).filter(Boolean);
+  isi.innerHTML = `<h1>🗣 Ruang Rapat — pemilik</h1>${location.hash === '#dipasang' ? '<p style="color:var(--hijau)">✓ Perangkat ini udah jadi perangkat pemilik.</p>' : ''}
+    <p>Bikin rapat, kirim linknya, orang yang dapet link bisa langsung ngomong bareng pekerja AI.</p>
+    <input id="bJudul" maxlength="120" value="Rapat OCKLU ${new Date().toLocaleDateString('id-ID', { day: 'numeric', month: 'short' })}">
+    <textarea id="bAgenda" rows="2" style="margin-top:8px" placeholder="agenda (boleh kosong)"></textarea>
+    <p style="margin:10px 0 4px">Pekerja AI yang ikut <span id="bSumber" style="font-size:12px"></span></p><div id="bPekerja">memuat data HQ…</div>
+    <div class="baris"><button class="utama" id="bBuat">➕ Bikin rapat & dapet link</button></div><div id="bHasil"></div>
+    <h3 style="margin:18px 0 0;font-size:15px">Rapat kamu</h3><div class="daftarR" id="bDaftar">memuat…</div>
+    <div class="baris"><button id="bPasang">📱 Pasang HP lain jadi perangkat pemilik</button><button id="bOtak">🧠 Cek otak</button></div><div id="bQR"></div>`;
+  const pk = await pekerjaHQ().catch((e) => ({ salah: e.message, daftar: [] }));
+  $('bSumber').textContent = pk.sumber ? '· ' + pk.sumber : '';
+  $('bPekerja').innerHTML = pk.daftar.length ? pk.daftar.map((p, i) => `<label class="chip"><input type="checkbox" data-i="${i}" ${(buatNama.length ? buatNama.includes(p.nama) : p.aktif) ? 'checked' : ''}> ${esc(p.nama)}</label>`).join('')
+    : `<p style="color:var(--merah)">Data HQ gak kebaca${pk.salah ? ' (' + esc(pk.salah) + ')' : ''}. Rapat tetap bisa dibikin tanpa pekerja AI.</p>`;
+  $('bBuat').onclick = async () => {
+    const dipilih = [...document.querySelectorAll('#bPekerja input:checked')].map((x) => pk.daftar[x.dataset.i]);
+    $('bBuat').disabled = true;
+    try {
+      const r = await api('buat', { pemilik: PEMILIK, judul: $('bJudul').value, agenda: $('bAgenda').value, pekerja: dipilih, fakta: pk.fakta || '', sumber: pk.sumber || '' });
+      $('bHasil').innerHTML = kartuLink(r.kode, $('bJudul').value); daftarRapat();
+    } catch (e) { $('bHasil').innerHTML = `<p style="color:var(--merah)">${esc(e.message)}</p>`; }
+    $('bBuat').disabled = false;
+  };
+  $('bPasang').onclick = () => {
+    const url = `${location.origin}/rapat/#pasang=${encodeURIComponent(PEMILIK)}${baca('rapat-hq') ? '&hq=' + baca('rapat-hq') : ''}`;
+    $('bQR').innerHTML = `<p>Scan pakai kamera HP (sekali aja). Jangan kirim ke orang lain — ini kunci pemilik.</p><div id="qr" style="background:#fff;padding:10px;display:inline-block;border-radius:10px"></div>`;
+    const s = document.createElement('script'); s.src = 'https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js';
+    s.onload = () => new QRCode($('qr'), { text: url, width: 220, height: 220 }); document.head.appendChild(s);
+  };
+  $('bOtak').onclick = async () => { $('bQR').innerHTML = '<p>ngecek…</p>'; try { const r = await api('cek-otak', { pemilik: PEMILIK }); $('bQR').innerHTML = Object.entries(r.otak).map(([k, v]) => `<div><b>${k}</b>: ${esc(v)}</div>`).join(''); } catch (e) { $('bQR').innerHTML = esc(e.message); } };
+  daftarRapat();
+}
+function kartuLink(kode, judul) {
+  const link = `${location.origin}/rapat/#${kode}`, wa = `https://wa.me/?text=${encodeURIComponent(`Yuk gabung rapat "${judul}" bareng tim OCKLU (ada pekerja AI-nya juga): ${link}`)}`;
+  return `<div class="r" style="border:1px solid var(--hijau);border-radius:12px;padding:10px;margin-top:10px"><b>Link undangan:</b><br><code style="word-break:break-all">${esc(link)}</code>
+    <div class="baris"><button data-salin="${esc(link)}">📋 Salin</button><a href="${wa}" target="_blank" rel="noopener"><button>💬 Kirim WA</button></a><a href="#${kode}"><button class="utama">🚪 Masuk rapat</button></a></div></div>`;
+}
+document.addEventListener('click', async (e) => {
+  const s = e.target.closest('[data-salin]'); if (s) { try { await navigator.clipboard.writeText(s.dataset.salin); kabar('Link disalin ✓'); } catch { prompt('Salin link ini:', s.dataset.salin); } }
+  const a = e.target.closest('[data-akhiri]'); if (a && confirm('Akhiri rapat ini buat semua peserta?')) { try { await api('akhiri', { pemilik: PEMILIK, kode: a.dataset.akhiri }); daftarRapat(); } catch (x) { kabar(x.message); } }
+  const h = e.target.closest('[data-hapus]'); if (h && confirm('Hapus rapat + seluruh catatannya?')) { try { await api('hapus', { pemilik: PEMILIK, kode: h.dataset.hapus }); daftarRapat(); } catch (x) { kabar(x.message); } }
+});
+async function daftarRapat() {
+  try {
+    const r = await api('daftar', { pemilik: PEMILIK });
+    $('bDaftar').innerHTML = r.rapat.length ? r.rapat.map((x) => `<div class="r"><b>${esc(x.judul)}</b> ${x.aktif ? '<span style="color:var(--hijau)">● aktif</span>' : '<span style="color:var(--redup)">selesai</span>'}<br>
+      <small>${new Date(x.dibuat).toLocaleString('id-ID')} · pekerja: ${esc(x.pekerja.join(', ') || '-')} · otak dipakai ${x.ai_dipakai}×</small>
+      <div class="baris"><a href="#${x.kode}"><button>${x.aktif ? '🚪 Masuk' : '📜 Notulen'}</button></a>${x.aktif ? `<button data-salin="${location.origin}/rapat/#${x.kode}">📋 Link</button><button class="bahaya" data-akhiri="${x.kode}">⏹ Akhiri</button>` : ''}<button class="bahaya" data-hapus="${x.kode}">🗑</button></div></div>`).join('')
+      : '<small>belum ada rapat</small>';
+  } catch (e) { $('bDaftar').innerHTML = `<p style="color:var(--merah)">${esc(e.message)}</p>`; }
+}
+// Pekerja + fakta dari potret OCKLU HQ (ocklu.com/hq/<kode>/data.json) — data yang sama yang tampil di Gedung Teater.
+async function pekerjaHQ() {
+  const hq = baca('rapat-hq'); if (!hq) throw new Error('kode HQ belum kepasang');
+  const d = await (await fetch(`/hq/${hq}/data.json?t=${Date.now()}`)).json();
+  const tt = d.teater || {}, hari = tt.hari || 7, umur = Math.round((Date.now() - d.waktu) / 60000);
+  const sumber = `potret OCKLU HQ ${new Date(d.waktu).toLocaleString('id-ID', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' })} (${umur < 90 ? umur + ' mnt lalu' : 'BASI ' + Math.round(umur / 60) + ' jam'})`;
+  const projek = new Map((d.projects || []).map((p) => [p.nama, p]));
+  const daftar = (tt.pekerja || []).map((p) => {
+    const pr = projek.get(p.nama) || {};
+    return { nama: p.nama, aktif: Date.now() - p.terakhir < 3 * 864e5, peran: [pr.tipe, pr.ket].filter(Boolean).join(' — ').slice(0, 200) || 'pekerja OCKLU',
+      fakta: `${hari} hari terakhir: ${p.keluar} surat keluar, ${p.masuk} masuk, ${p.kerja} commit, ${p.jual} jualan${p.gagal ? ', ' + p.gagal + ' gagal' : ''}; kerja terakhir ${new Date(p.terakhir).toLocaleString('id-ID')}; status server: ${pr.status || 'gak tercatat'}` };
+  });
+  const r = tt.ringkas || {}, jt = tt.jualTerakhir;
+  const n = (s) => (d.projects || []).filter((p) => p.status === s).length;
+  const fakta = `Total ${hari} hari: ${r.keluar ?? '?'} surat keluar, ${r.masuk ?? '?'} masuk, ${r.kerja ?? '?'} commit, ${r.jual ?? '?'} jualan. Jualan terakhir tercatat: ${jt ? new Date(jt.t).toLocaleDateString('id-ID') + ' · ' + jt.proyek + ' · ' + jt.judul : 'belum ada'}.
+Proyek OCKLU: ${(d.projects || []).length} total, ${n('hidup')} hidup, ${n('mati')} mati.`;
+  if (!daftar.some((p) => p.aktif)) daftar.slice(0, 4).forEach((p) => p.aktif = true);
+  return { daftar, fakta, sumber };
+}
+
+// ════════ MASUK RAPAT ════════
+async function bukaRapat() {
+  try { RAPAT = await api('info', { kode: KODE }); }
+  catch (e) { $('lDepan').classList.remove('tersembunyi'); $('depanIsi').innerHTML = `<h1>Rapat gak ketemu</h1><p>${esc(e.message)}</p>`; return; }
+  document.title = RAPAT.judul + ' · Rapat OCKLU'; $('judul').textContent = RAPAT.judul;
+  simpan('rapat-aktif', JSON.stringify({ kode: KODE, judul: RAPAT.judul, t: Date.now() }));
+  try { window.opener && window.opener.postMessage({ jenis: 'rapat-aktif', kode: KODE, judul: RAPAT.judul }, '*'); } catch {}
+  gambarMeja();
+  await muatRiwayat();
+  if (!RAPAT.aktif) { selesai = true; tandaSelesai(); return; }
+  $('mJudul').textContent = RAPAT.judul;
+  $('mAgenda').textContent = RAPAT.agenda || (RAPAT.sumber ? 'Data pekerja: ' + RAPAT.sumber : '');
+  $('mPekerja').innerHTML = RAPAT.pekerja.map((p) => `<span class="chip">🤖 ${esc(p.nama)}</span>`).join('');
+  $('mNama').value = namaKu;
+  $('lMasuk').classList.remove('tersembunyi');
+  $('mGabung').onclick = () => gabung(true); $('mDengar').onclick = () => gabung(false);
+}
+async function gabung(pakaiMic) {
+  namaKu = $('mNama').value.trim().slice(0, 40); if (!namaKu) { $('mNama').focus(); return; }
+  simpan('rapat-nama', namaKu);
+  bukaKunciSuara();
+  $('lMasuk').classList.add('tersembunyi');
+  if (PEMILIK) $('akhiri').classList.remove('tersembunyi');
+  mulai = Date.now(); clearInterval(gabung.j); gabung.j = setInterval(jamRapat, 1000);
+  sambung();
+  if (pakaiMic) nyalakanMic();          // gak ditunggu: izin mic yang lama gak boleh nahan orang di pintu
+}
+function jamRapat() { const s = Math.floor((Date.now() - mulai) / 1000); $('durasi').textContent = `⏱ ${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`; }
+let actx = null;
+function bukaKunciSuara() {           // iOS: suara & audio cuma boleh nyala dari sentuhan
+  try { actx = actx || new (window.AudioContext || window.webkitAudioContext)(); actx.resume(); } catch {}
+  try { speechSynthesis.cancel(); const u = new SpeechSynthesisUtterance(' '); u.volume = 0; speechSynthesis.speak(u); } catch {}
+}
+async function nyalakanMic() {
+  try {
+    streamKu = await Promise.race([navigator.mediaDevices.getUserMedia({ audio: { echoCancellation: true, noiseSuppression: true, autoGainControl: true } }),
+      new Promise((_, j) => setTimeout(() => j(Object.assign(new Error('kelamaan'), { name: 'izin mic gak dijawab' })), 15000))]);
+    micNyala = true; pantauLevel('aku', streamKu);
+    for (const p of peers.values()) pasangTrack(p);
+    if (SR_JALAN) mulaiDikte();
+  } catch (e) { micNyala = false; kabar('Mic gak bisa dibuka (' + e.name + ') — kamu tetap bisa dengar & ngetik.', 6000); }
+  tombolMic(); kabarHadir();
+}
+function tombolMic() { $('mic').textContent = micNyala ? '🎙 Mic' : '🔇 Mic'; $('mic').classList.toggle('mati', !micNyala); }
+$('mic').onclick = async () => {
+  if (!streamKu) return nyalakanMic();
+  micNyala = !micNyala; streamKu.getAudioTracks().forEach((t) => t.enabled = micNyala);
+  if (SR_JALAN) micNyala ? mulaiDikte() : hentiDikte();
+  tombolMic(); kabarHadir();
+};
+
+// ─── realtime: kehadiran + pesan + sinyal WebRTC lewat satu channel ───
+function sambung() {
+  chan = SB.channel('rapat:' + KODE, { config: { presence: { key: idKu }, broadcast: { self: false } } });
+  chan.on('presence', { event: 'sync' }, () => {
+    hadir.clear(); const st = chan.presenceState();
+    for (const [id, l] of Object.entries(st)) if (l[0]) hadir.set(id, l[0]);
+    for (const id of hadir.keys()) if (id !== idKu && !peers.has(id)) peerBaru(id);
+    for (const id of [...peers.keys()]) if (!hadir.has(id)) tutupPeer(id);
+    gambarMeja();
+  });
+  chan.on('broadcast', { event: 'pesan' }, ({ payload }) => tampilPesan(payload, true));
+  chan.on('broadcast', { event: 'mikir' }, ({ payload }) => { mikir = payload.siapa || []; gambarMeja(); });
+  chan.on('broadcast', { event: 'selesai' }, () => { selesai = true; tandaSelesai(); });
+  chan.on('broadcast', { event: 'sinyal' }, ({ payload }) => { if (payload.ke === idKu) terimaSinyal(payload); });
+  chan.on('broadcast', { event: 'klip' }, ({ payload }) => { if ((payload.untuk || []).includes(idKu)) putarKlip(payload); });
+  chan.subscribe(async (s) => {
+    if (s === 'SUBSCRIBED') { kabarHadir(); muatRiwayat(); }
+    if (s === 'CHANNEL_ERROR' || s === 'TIMED_OUT') kabar('Sambungan putus, nyambung ulang…');
+  });
+}
+function kabarHadir() { if (chan) chan.track({ nama: namaKu, mic: micNyala, pemilik: !!PEMILIK, hp: HP, t: mulai }); }
+const sinyal = (ke, isi) => chan.send({ type: 'broadcast', event: 'sinyal', payload: { dari: idKu, ke, ...isi } });
+
+// ─── WebRTC: yang id-nya lebih besar yang nawarin, biar gak tabrakan ───
+function peerBaru(id) {
+  const pc = new RTCPeerConnection({ iceServers: ICE });
+  const p = { pc, audio: null, gagal: 0, relay: false, antri: [] }; peers.set(id, p);
+  pc.onicecandidate = (e) => { if (e.candidate) sinyal(id, { ice: e.candidate.toJSON() }); };
+  pc.ontrack = (e) => {
+    if (!p.audio) { p.audio = new Audio(); p.audio.autoplay = true; p.audio.setAttribute('playsinline', ''); document.body.appendChild(p.audio); }
+    p.audio.srcObject = e.streams[0] || new MediaStream([e.track]); p.audio.play().catch(() => kabar('Ketuk layar sekali biar suara peserta kedengeran'));
+    pantauLevel(id, p.audio.srcObject);
+  };
+  pc.onconnectionstatechange = () => {
+    const st = pc.connectionState;
+    if (st === 'connected') { p.relay = false; p.gagal = 0; gambarMeja(); }
+    if (st === 'failed') {
+      p.gagal++;
+      if (idKu > id && p.gagal <= 2) { pc.restartIce(); tawar(id, p, true); }
+      else { p.relay = true; gambarMeja(); }
+    }
+  };
+  if (idKu > id) {
+    pc.addTransceiver('audio', { direction: 'sendrecv' }); pasangTrack(p); tawar(id, p);
+  }
+}
+async function tawar(id, p, ulang) {
+  try { const o = await p.pc.createOffer(ulang ? { iceRestart: true } : {}); await p.pc.setLocalDescription(o); sinyal(id, { sdp: p.pc.localDescription.toJSON() }); }
+  catch (e) { console.warn('tawar', e); }
+}
+function pasangTrack(p) {
+  const tr = streamKu && streamKu.getAudioTracks()[0];
+  const t = p.pc.getTransceivers()[0]; if (!t) return;
+  t.direction = 'sendrecv'; t.sender.replaceTrack(tr || null).catch(() => {});
+}
+async function terimaSinyal(m) {
+  if (!hadir.has(m.dari) && !peers.has(m.dari)) peerBaru(m.dari);
+  const p = peers.get(m.dari) || (peerBaru(m.dari), peers.get(m.dari)); if (!p) return;
+  try {
+    if (m.sdp) {
+      await p.pc.setRemoteDescription(m.sdp);
+      if (m.sdp.type === 'offer') { pasangTrack(p); await p.pc.setLocalDescription(await p.pc.createAnswer()); sinyal(m.dari, { sdp: p.pc.localDescription.toJSON() }); }
+      for (const c of p.antri.splice(0)) await p.pc.addIceCandidate(c).catch(() => {});
+    } else if (m.ice) {
+      if (p.pc.remoteDescription) await p.pc.addIceCandidate(m.ice).catch(() => {}); else p.antri.push(m.ice);
+    }
+  } catch (e) { console.warn('sinyal', e); }
+}
+function tutupPeer(id) { const p = peers.get(id); if (!p) return; try { p.pc.close(); } catch {} if (p.audio) p.audio.remove(); peers.delete(id); level.delete(id); }
+
+// ─── siapa lagi ngomong: level suara tiap aliran ───
+const level = new Map(), ngomongAI = new Set();
+function pantauLevel(id, stream) {
+  try {
+    if (!actx) actx = new (window.AudioContext || window.webkitAudioContext)();
+    const an = actx.createAnalyser(); an.fftSize = 512; actx.createMediaStreamSource(stream).connect(an);
+    level.set(id, { an, buf: new Uint8Array(an.fftSize), on: false });
+  } catch {}
+}
+setInterval(() => {
+  let ubah = false;
+  for (const [id, l] of level) {
+    l.an.getByteTimeDomainData(l.buf); let s = 0; for (const v of l.buf) s += (v - 128) ** 2;
+    const on = Math.sqrt(s / l.buf.length) > (id === 'aku' ? 6 : 4) && (id !== 'aku' || micNyala);
+    if (on !== l.on) { l.on = on; ubah = true; }
+  }
+  if (ubah) tandaiNgomong();
+}, 150);
+function tandaiNgomong() {
+  document.querySelectorAll('.kursi').forEach((k) => {
+    const id = k.dataset.id, l = level.get(id === idKu ? 'aku' : id);
+    k.classList.toggle('ngomong', !!(l && l.on) || ngomongAI.has(k.dataset.nama));
+  });
+}
+
+// ─── meja: manusia + pekerja AI duduk muter ───
+function gambarMeja() {
+  const meja = $('meja'); meja.querySelectorAll('.kursi').forEach((k) => k.remove());
+  const orang = [...hadir.entries()].map(([id, p]) => ({ id, nama: p.nama, mic: p.mic, pemilik: p.pemilik, ai: false }));
+  if (!hadir.has(idKu) && namaKu && chan) orang.unshift({ id: idKu, nama: namaKu, mic: micNyala, pemilik: !!PEMILIK, ai: false });
+  const ai = (RAPAT ? RAPAT.pekerja : []).map((p) => ({ id: 'ai:' + p.nama, nama: p.nama, peran: p.peran, ai: true }));
+  const semua = [...orang, ...ai], n = Math.max(semua.length, 1), W = meja.clientWidth, Hh = meja.clientHeight;
+  semua.forEach((s, i) => {
+    const a = -Math.PI / 2 + (i / n) * Math.PI * 2, x = W / 2 + Math.cos(a) * W * 0.36, y = Hh / 2 + Math.sin(a) * Hh * 0.36;
+    const k = document.createElement('div'); k.className = 'kursi' + (s.ai ? ' ai' : '') + (s.ai && mikir.includes(s.nama) ? ' mikir' : '');
+    k.dataset.id = s.id; k.dataset.nama = s.nama; k.style.left = x + 'px'; k.style.top = y + 'px';
+    const pr = peers.get(s.id);
+    k.innerHTML = `<div class="balon"></div><div class="ava" style="background:${s.ai ? '#2e1065' : warnaDari(s.nama)}">${s.ai ? '🤖' : esc(inisial(s.nama))}</div>
+      <div class="nm">${esc(s.nama)}${s.id === idKu ? ' (kamu)' : ''}</div><div class="tg">${s.ai ? 'pekerja AI' : (s.pemilik ? '👑 ' : '') + (s.mic ? '🎙' : '🔇') + (pr && pr.relay ? ' ⚠ suara gak nyambung' : '')}</div>`;
+    meja.appendChild(k);
+  });
+  $('mejaBulat').textContent = RAPAT ? RAPAT.judul : 'meja rapat';
+  $('jumlah').textContent = `👥 ${orang.length} · 🤖 ${ai.length}`;
+  tandaiNgomong();
+}
+addEventListener('resize', () => gambarMeja());
+function balonDi(nama, teks) {
+  const k = [...document.querySelectorAll('.kursi')].find((x) => x.dataset.nama === nama); if (!k) return;
+  k.querySelector('.balon').textContent = teks.length > 120 ? teks.slice(0, 118) + '…' : teks; k.classList.add('ada-balon');
+  clearTimeout(k._t); k._t = setTimeout(() => k.classList.remove('ada-balon'), Math.min(12000, 2500 + teks.length * 60));
+}
+
+// ─── catatan rapat ───
+async function muatRiwayat() {
+  try { const r = await api('riwayat', { kode: KODE, sejak: idTerakhir }); for (const m of r.pesan) tampilPesan(m, false); } catch (e) { kabar(e.message); }
+}
+function tampilPesan(m, langsung) {
+  if (m.id && pesanAda.has(m.id)) return;
+  if (m.id) { pesanAda.add(m.id); idTerakhir = Math.max(idTerakhir, m.id); }
+  if (m.klien_id && klienAda.has(m.klien_id)) { const el = document.querySelector(`[data-klien="${m.klien_id}"]`); if (el) el.dataset.id = m.id; return; }
+  if (m.klien_id) klienAda.add(m.klien_id);
+  const ringkas = (m.lewat || '').startsWith('ringkasan'), aku = m.jenis === 'manusia' && m.dari === namaKu && (m.klien_id || '').startsWith(idKu);
+  const el = document.createElement('div');
+  el.className = `ps ${m.jenis}${aku ? ' aku' : ''}${ringkas ? ' ringkas' : ''}`; if (m.klien_id) el.dataset.klien = m.klien_id;
+  const jam = new Date(m.waktu || Date.now()).toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit' });
+  el.innerHTML = m.jenis === 'sistem' ? `<div class="isi">${esc(m.teks)}</div>`
+    : `<div class="siapa">${m.jenis === 'ai' ? '🤖 ' : ''}${esc(m.dari)}${m.pemilik ? ' 👑' : ''} · ${jam}${m.lewat === 'suara' ? ' · 🎙' : ''}</div><div class="isi">${esc(m.teks)}</div>${m.jenis === 'ai' && m.lewat ? `<div class="otak">otak: ${esc(m.lewat.replace('ringkasan:', ''))}</div>` : ''}`;
+  const n = $('notulen'), bawah = n.scrollHeight - n.scrollTop - n.clientHeight < 80;
+  n.appendChild(el); if (bawah || aku) n.scrollTop = n.scrollHeight;
+  if (langsung && m.jenis !== 'sistem') balonDi(m.dari, m.teks);
+  if (langsung && m.jenis === 'ai' && !ringkas) ucap(m.dari, m.teks);
+}
+async function kirimTeks(teks, opsi = {}) {
+  teks = String(teks || '').trim(); if (!teks || selesai) return;
+  const klien_id = idKu + '-' + Date.now().toString(36);
+  tampilPesan({ dari: namaKu, jenis: 'manusia', lewat: opsi.lewat || 'ketik', teks, pemilik: !!PEMILIK, klien_id }, true);
+  try { await api('kirim', { kode: KODE, nama: namaKu, teks, lewat: opsi.lewat, klien_id, tanya_ai: !!opsi.ai, pemilik: PEMILIK || undefined }); }
+  catch (e) { kabar('Gagal kirim: ' + e.message, 5000); }
+}
+$('ketik').onsubmit = (e) => { e.preventDefault(); kirimTeks($('masukan').value); $('masukan').value = ''; };
+$('kirimAI').onclick = () => { kirimTeks($('masukan').value || 'Gimana pendapat kalian?', { ai: true }); $('masukan').value = ''; };
+$('cepat').innerHTML = ['Laporan singkat dari tiap pekerja dong', 'Apa prioritas minggu ini?', 'Ada masalah yang harus dibahas?']
+  .map((q) => `<button data-q="${esc(q)}">🤖 ${esc(q)}</button>`).join('');
+$('cepat').onclick = (e) => { const b = e.target.closest('[data-q]'); if (b) kirimTeks(b.dataset.q, { ai: true }); };
+
+// ─── suara pekerja AI: dibacain di perangkat sendiri; mic ditahan selama AI ngomong biar gak gema ───
+const antri = []; let lagiUcap = false;
+function suaraID() { const v = speechSynthesis.getVoices(); return v.find((x) => /^id/i.test(x.lang) && /google/i.test(x.name)) || v.find((x) => /^id/i.test(x.lang)) || null; }
+function ucap(nama, teks) { if (!suaraAI || !('speechSynthesis' in window)) return; antri.push({ nama, teks }); if (!lagiUcap) lanjutUcap(); }
+function lanjutUcap() {
+  const x = antri.shift();
+  if (!x) { lagiUcap = false; setTimeout(() => { if (!lagiUcap) { tahanMic(false); if (SR_JALAN && micNyala) mulaiDikte(); } }, 400); return; }
+  lagiUcap = true; tahanMic(true); hentiDikte();
+  const u = new SpeechSynthesisUtterance(x.teks), v = suaraID(), h = [...x.nama].reduce((a, c) => a + c.charCodeAt(0), 0);
+  if (v) u.voice = v; u.lang = v ? v.lang : 'id-ID'; u.pitch = 0.75 + (h % 7) * 0.1; u.rate = 1.05;
+  ngomongAI.add(x.nama); tandaiNgomong();
+  const beres = () => { ngomongAI.delete(x.nama); tandaiNgomong(); setTimeout(lanjutUcap, 150); };
+  u.onend = beres; u.onerror = beres; speechSynthesis.speak(u);
+}
+function tahanMic(tahan) { if (streamKu) streamKu.getAudioTracks().forEach((t) => t.enabled = !tahan && micNyala); }
+$('suaraAI').onclick = () => { suaraAI = !suaraAI; simpan('rapat-suara-ai', suaraAI ? '1' : '0'); if (!suaraAI) { antri.length = 0; speechSynthesis.cancel(); } $('suaraAI').classList.toggle('mati', !suaraAI); $('suaraAI').textContent = suaraAI ? '🔊 AI' : '🔈 AI'; };
+$('suaraAI').classList.toggle('mati', !suaraAI); if (!suaraAI) $('suaraAI').textContent = '🔈 AI';
+
+// ─── AI dengerin manusia ───
+// Laptop: dikte bawaan browser jalan terus → tiap kalimat masuk catatan. Pekerja jawab kalau namanya disebut / tombol ✋ ditahan.
+// HP: tahan ✋ → suara direkam dari mic yang sama (peserta tetap denger langsung) → ditulis server (Whisper).
+let dikte = null, dikteMau = false, tahanAI = false, lepasAI = 0;
+function mulaiDikte() {
+  if (!SR_JALAN || lagiUcap || selesai) return; dikteMau = true;
+  if (dikte) return;
+  dikte = new SR(); dikte.lang = /^id/i.test(navigator.language) ? 'id-ID' : navigator.language; dikte.continuous = true; dikte.interimResults = false;
+  dikte.onresult = (e) => { for (let i = e.resultIndex; i < e.results.length; i++) if (e.results[i].isFinal) kirimTeks(e.results[i][0].transcript, { lewat: 'suara', ai: tahanAI || Date.now() - lepasAI < 2500 }); };
+  dikte.onend = () => { dikte = null; if (dikteMau && micNyala && !lagiUcap && !selesai) setTimeout(mulaiDikte, 300); };
+  dikte.onerror = (e) => { if (e.error === 'not-allowed') { dikteMau = false; kabar('Dikte ditolak browser — pakai ketik / ✋'); } };
+  try { dikte.start(); } catch {}
+}
+function hentiDikte() { dikteMau = false; if (dikte) { try { dikte.stop(); } catch {} } }
+let perekam = null, potong = [], mulaiRekam = 0;
+async function mulaiTahan(e) {
+  e.preventDefault(); if (selesai || !chan) return;
+  $('tahan').classList.add('rekam'); $('tahan').textContent = '🔴 Lepas kalau udah';
+  if (SR_JALAN && micNyala) { tahanAI = true; return; }
+  if (!streamKu) await nyalakanMic();
+  if (!streamKu) return;
+  if (!micNyala) { micNyala = true; streamKu.getAudioTracks().forEach((t) => t.enabled = true); tombolMic(); }
+  const tipe = ['audio/webm;codecs=opus', 'audio/mp4', 'audio/webm', 'audio/ogg;codecs=opus'].find((t) => window.MediaRecorder && MediaRecorder.isTypeSupported(t));
+  if (!tipe) { kabar('Perangkat ini gak bisa rekam — ketik aja ya'); return lepasTahan(); }
+  potong = []; perekam = new MediaRecorder(streamKu, { mimeType: tipe, audioBitsPerSecond: 32000 }); mulaiRekam = Date.now();
+  perekam.ondataavailable = (x) => x.data.size && potong.push(x.data);
+  perekam.onstop = kirimKlip; perekam.start();
+  setTimeout(() => { if (perekam && perekam.state === 'recording') lepasTahan(); }, 40000);
+}
+function lepasTahan() {
+  $('tahan').classList.remove('rekam'); $('tahan').textContent = '✋ Tahan: ngomong ke AI';
+  if (tahanAI) { tahanAI = false; lepasAI = Date.now(); return; }
+  if (perekam && perekam.state === 'recording') perekam.stop();
+}
+async function kirimKlip() {
+  const detik = (Date.now() - mulaiRekam) / 1000, tipe = perekam.mimeType; perekam = null;
+  if (detik < 0.7) return kabar('Kependekan — tahan tombolnya sambil ngomong');
+  const blob = new Blob(potong, { type: tipe });
+  const b64 = await new Promise((ok) => { const f = new FileReader(); f.onload = () => ok(String(f.result).split(',')[1]); f.readAsDataURL(blob); });
+  // peserta yang suaranya gak nyambung langsung tetap dapet rekamannya
+  const relay = [...peers.entries()].filter(([, p]) => p.relay).map(([id]) => id);
+  if (relay.length && b64.length < 240000) chan.send({ type: 'broadcast', event: 'klip', payload: { dari: idKu, nama: namaKu, untuk: relay, mime: tipe, audio: b64 } });
+  kabar('✍ nulis omongan kamu…', 8000);
+  try {
+    const r = await api('dengar', { kode: KODE, nama: namaKu, audio: b64, mime: tipe, detik: Math.ceil(detik), klien_id: idKu + '-' + Date.now().toString(36), tanya_ai: true, pemilik: PEMILIK || undefined });
+    if (r.kosong) kabar('Gak kedengeran jelas — coba lebih deket ke mic'); else $('pesanTop').style.display = 'none';
+  } catch (e) { kabar('Gagal: ' + e.message, 6000); }
+}
+function putarKlip(m) { const a = new Audio('data:' + m.mime + ';base64,' + m.audio); a.play().catch(() => {}); balonDi(m.nama, '🎙 (rekaman suara)'); }
+$('tahan').addEventListener('pointerdown', mulaiTahan);
+['pointerup', 'pointercancel', 'pointerleave'].forEach((ev) => $('tahan').addEventListener(ev, () => { if ($('tahan').classList.contains('rekam')) lepasTahan(); }));
+if (SR_JALAN) $('tahan').title = 'Mic & dikte otomatis nyala; tahan tombol ini sambil ngomong biar pekerja AI pasti jawab';
+
+// ─── tombol lain ───
+$('undang').onclick = async () => {
+  const link = `${location.origin}/rapat/#${KODE}`, teks = `Yuk gabung rapat "${RAPAT ? RAPAT.judul : 'OCKLU'}": ${link}`;
+  if (navigator.share) { try { await navigator.share({ title: 'Rapat OCKLU', text: teks, url: link }); return; } catch {} }
+  window.open(`https://wa.me/?text=${encodeURIComponent(teks)}`, '_blank', 'noopener');
+};
+$('rangkum').onclick = async () => { try { await api('rangkum', { kode: KODE, nama: namaKu || 'peserta', pemilik: PEMILIK || undefined }); kabar('📝 NOTULIS lagi nulis notulen…'); } catch (e) { kabar(e.message); } };
+$('unduh').onclick = () => {
+  const t = [...document.querySelectorAll('#notulen .ps')].map((e) => e.innerText.replace(/\n+/g, ' ')).join('\n');
+  const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([`${RAPAT ? RAPAT.judul : 'Rapat'}\n\n${t}\n`], { type: 'text/plain' }));
+  a.download = `notulen-${(RAPAT ? RAPAT.judul : 'rapat').replace(/\W+/g, '-')}.txt`; a.click();
+};
+$('akhiri').onclick = async () => { if (!confirm('Akhiri rapat buat semua peserta?')) return; try { await api('akhiri', { pemilik: PEMILIK, kode: KODE }); } catch (e) { kabar(e.message); } };
+$('keluar').onclick = () => { keluarRapat(); $('lMasuk').classList.remove('tersembunyi'); $('mInfo').textContent = 'Kamu udah keluar. Gabung lagi kapan aja pakai link yang sama.'; };
+function keluarRapat() {
+  hentiDikte(); for (const id of [...peers.keys()]) tutupPeer(id);
+  if (streamKu) streamKu.getTracks().forEach((t) => t.stop()); streamKu = null; micNyala = false; tombolMic();
+  if (chan) { chan.untrack(); SB.removeChannel(chan); chan = null; } hadir.clear(); gambarMeja();
+}
+function tandaSelesai() {
+  keluarRapat(); $('lMasuk').classList.add('tersembunyi');
+  ['mic', 'tahan', 'kirimAI', 'keluar', 'akhiri'].forEach((i) => $(i).disabled = true); $('masukan').disabled = true;
+  $('masukan').placeholder = 'Rapat sudah selesai — ini notulennya'; $('durasi').textContent = 'selesai';
+  try { const a = JSON.parse(baca('rapat-aktif') || 'null'); if (a && a.kode === KODE) simpan('rapat-aktif', null); } catch {}
+}
+addEventListener('beforeunload', () => { if (chan) chan.untrack(); });
+addEventListener('hashchange', () => location.reload());
+speechSynthesis && speechSynthesis.getVoices();
+
+if (KODE) bukaRapat(); else depan();
+</script>
+</body>
+</html>

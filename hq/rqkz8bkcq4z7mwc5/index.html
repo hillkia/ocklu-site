@@ -210,7 +210,7 @@
 <div id="peta" class="pnl"><canvas id="pc" width="320" height="320"></canvas></div>
 <div id="info" class="pnl"></div>
 <div id="bantu" class="pnl"><kbd>KLIK</kbd> lantai/booth = jalan ke situ · <kbd>WASD</kbd> jalan · <kbd>Shift</kbd> lari · <kbd>seret</kbd> putar/dongak · <kbd>roda</kbd> zoom · <kbd>Z</kbd> drone · <kbd>R/F</kbd> atas/bawah · <kbd>E</kbd> buka · <kbd>L</kbd> daftar</div>
-<div id="atasTengah"><button id="tombolDaftar" class="pnl">📋 Semua proyek (L)</button><button id="tombolDna" class="pnl">🧬 DNA &amp; Script (G)</button><button id="tombolBangun" class="pnl">🏗 Bangun (B)</button><button id="tombolDuit" class="pnl">💰 Pintu Duit</button></div>
+<div id="atasTengah"><button id="tombolDaftar" class="pnl">📋 Semua proyek (L)</button><button id="tombolDna" class="pnl">🧬 DNA &amp; Script (G)</button><button id="tombolBangun" class="pnl">🏗 Bangun (B)</button><button id="tombolDuit" class="pnl">💰 Pintu Duit</button><button id="tombolRapat" class="pnl">🗣 Rapat</button></div>
 <div id="awanInfo" class="pnl"></div>
 <button id="tombolTampil" class="pnl" title="atur tampilan">👁</button>
 <div id="zoomPanel"><button class="pnl" id="zDekat" title="zoom in (+)">＋</button><button class="pnl" id="zJauh" title="zoom out (−)">－</button><button class="pnl" id="zDrone" title="mode drone (Z)">🚁</button><button class="pnl" id="zAtas" title="dongak (R)">⬆</button><button class="pnl" id="zBawah" title="nunduk (F)">⬇</button></div>
@@ -269,7 +269,7 @@ import * as THREE from 'three';
 const WARNA = { cuan:0xf5b700, inti:0x22d3ee, layan:0x34d399, belajar:0xa78bfa, plan:0x94a3b8 };
 const NAMA  = { cuan:'Lantai Cuan', inti:'Ruang Mesin', layan:'Ruang Klien', belajar:'Lab', plan:'Lahan Kosong' };
 const URUT  = ['cuan','inti','layan','belajar','plan'];
-const STW   = { hidup:0x34d399, mati:0xf87171, 'tanpa-port':0x94a3b8, hilang:0x52525b, rak:0xc084fc, dna:0xf0abfc, teater:0xfacc15, pekerja:0xfde047, kafe:0xf59e0b };
+const STW   = { hidup:0x34d399, mati:0xf87171, 'tanpa-port':0x94a3b8, hilang:0x52525b, rak:0xc084fc, dna:0xf0abfc, teater:0xfacc15, pekerja:0xfde047, kafe:0xf59e0b, rapat:0xfacc15, rapatai:0xc084fc };
 const BASI_HARI = 21;
 const hex = (n) => '#' + n.toString(16).padStart(6, '0');
 const $ = (id) => document.getElementById(id);
@@ -600,7 +600,7 @@ function bangunPlaza(data) {
     const kp = new THREE.Mesh(new THREE.BoxGeometry(1.4, 0.2, 0.4), new THREE.MeshBasicMaterial({ color: 0xfff1c4 }));
     kp.position.set(x, 6, z); scene.add(kp);
   }
-  for (const k of [...URUT, ...(GEDUNG.dna ? ['dna'] : []), ...(GEDUNG.teater ? ['teater'] : [])]) {
+  for (const k of [...URUT, ...(GEDUNG.dna ? ['dna'] : []), ...(GEDUNG.teater ? ['teater'] : []), ...(GEDUNG.rapat ? ['rapat'] : [])]) {
     const G = GEDUNG[k], p = lokalKeDunia(G, -G.w / 2 - 3, G.d / 2 + 4);
     kotak(0.2, 9, 0.2, tiang, p.x, 4.5, p.z);
     const bn = new THREE.Mesh(new THREE.PlaneGeometry(2, 5), new THREE.MeshBasicMaterial({ side: THREE.DoubleSide, map: tekstur(128, 320, (x, w, h) => {
@@ -728,7 +728,7 @@ function isiHUD() {
   $('n-hidup').textContent = n('hidup'); $('n-mati').textContent = n('mati');
   $('n-tanpa').textContent = n('tanpa-port') + n('hilang');
   $('jujur').innerHTML = `<b>${ps.filter(basi).length} kandidat pajangan</b> — gak hidup &amp; gak disentuh &gt;${BASI_HARI} hari. Tanda <b>BASI</b> di layar booth.`;
-  $('zona').innerHTML = [...URUT, ...(GEDUNG.dna ? ['dna'] : []), ...(GEDUNG.teater ? ['teater'] : [])].map((k) => `<button style="color:${hex(WARNA[k])}" data-z="${k}">${esc(NAMA[k])}</button>`).join('');
+  $('zona').innerHTML = [...URUT, ...(GEDUNG.dna ? ['dna'] : []), ...(GEDUNG.teater ? ['teater'] : []), ...(GEDUNG.rapat ? ['rapat'] : [])].map((k) => `<button style="color:${hex(WARNA[k])}" data-z="${k}">${esc(NAMA[k])}</button>`).join('');
   $('zona').querySelectorAll('button').forEach((b) => b.onclick = () => {
     const G = GEDUNG[b.dataset.z], p = lokalKeDunia(G, 0, G.d / 2 + 6);
     pemain.position.set(p.x, 0, p.z); tujuan = null; penanda.visible = false;
@@ -811,6 +811,7 @@ function isiInfo(b) {
   if (b !== infoDitutup) infoDitutup = null;
   if (!b || b === infoDitutup) { el.style.display = 'none'; document.body.classList.remove('ada-info'); return; }
   if (b.p.status === 'rak' || b.p.status === 'dna') { el.innerHTML = infoDna(b); bungkusInfo(el, b); return; }
+  if (b.p.status === 'rapat' || b.p.status === 'rapatai') { el.innerHTML = infoRapat(b); bungkusInfo(el, b); return; }
   if (['teater', 'pekerja', 'kafe'].includes(b.p.status)) { el.innerHTML = infoTeater(b); bungkusInfo(el, b); return; }
   const p = cariP(b.p.kunci) || b.p, h = hariLalu(p.disentuh);
   const st = {
@@ -1019,6 +1020,7 @@ function isiLokasi() {
   const k = gedungSekarang(), key = k || 'plaza';
   if (key === lokTerakhir) return; lokTerakhir = key;
   if (!k) { $('lok-nama').textContent = 'Convention Plaza'; $('lok-sub').textContent = `pintu ke ${areaGedung.length} gedung`; return; }
+  if (k === 'rapat') { $('lok-nama').textContent = 'Ruang Rapat'; $('lok-sub').textContent = subJudul('rapat', []); return; }
   if (k === 'teater') { $('lok-nama').textContent = 'Gedung Teater'; $('lok-sub').textContent = subJudul('teater', []); return; }
   if (k === 'dna') { $('lok-nama').textContent = 'Gedung DNA'; $('lok-sub').textContent = `${(data.rak || []).length} rak DNA & script`; return; }
   const ps = data.projects.filter((p) => (URUT.includes(p.kategori) ? p.kategori : 'plan') === k);
@@ -1115,7 +1117,7 @@ function loop() {
     animasiJalan(n.o, t + n.fase, 8, 0.45);
   }
   for (const b of booth.values()) if (b.staf.visible) animasiDiam(b.staf, dt, t + b.pusat.x);
-  jalanTeater(dt, t);
+  jalanTeater(dt, t); jalanRapat(dt, t);
 
   // HP tegak: kamera lebih tinggi & mundur, dan NGELIAT KE DEPAN pemain (bukan ke punggungnya),
   // biar badan pemain gak nutup jalan di layar sempit.
@@ -1177,6 +1179,7 @@ function siapkanGedungMilik() {
                     rot: Math.atan2(-Math.cos(a), -Math.sin(a)), label: g.nama.slice(0, 9), milik: true };
   });
   GEDUNG.teater = { x: 0, z: -152, w: 46, d: 36, rot: 0, label: 'TEATER' }; WARNA.teater = 0xfacc15; NAMA.teater = 'Gedung Teater';
+  { const a = 1.375 * Math.PI; GEDUNG.rapat = { x: 158 * Math.cos(a), z: 158 * Math.sin(a), w: 30, d: 26, rot: Math.atan2(-Math.cos(a), -Math.sin(a)), label: 'RAPAT' }; WARNA.rapat = 0xa855f7; NAMA.rapat = 'Ruang Rapat'; }
   if ((data.rak || []).length) {
     GEDUNG.dna = { x: 0, z: 96, w: 34, d: 30, rot: Math.PI, label: 'DNA' };
     WARNA.dna = 0xc084fc; NAMA.dna = 'Gedung DNA';
@@ -1185,6 +1188,7 @@ function siapkanGedungMilik() {
 const boothDna = (d) => ({ id: 'dna', kunci: 'dna|' + d.id, path: 'dna|' + d.id, nama: d.nama, tipe: d.jenis, status: 'dna', dnaId: d.id, grup: d.grup });
 const boothRak = (r) => ({ id: 'rak', kunci: 'rak|' + r.k, path: 'rak|' + r.k, nama: r.nama, tipe: r.ket, status: 'rak', rak: r.k, jumlah: r.jumlah });
 function subJudul(k, ps) {
+  if (k === 'rapat') return rapatAktifLokal() ? '● ada rapat jalan — masuk lewat Kursi Pimpinan' : 'rapat bareng pekerja AI + tamu lewat link';
   if (k === 'teater') return TT ? `${TT.ringkas.keluar} surat keluar · ${TT.ringkas.masuk} masuk · ${TT.ringkas.jual} jualan · ${TT.hari} hari` : 'alur kerja semua mesin';
   if (k === 'dna') return `${ps.length} rak · ${ps.reduce((a, p) => a + (p.jumlah || 0), 0)} DNA & script`;
   const pr = ps.filter((p) => p.status !== 'dna'), nd = ps.length - pr.length;
@@ -1791,6 +1795,168 @@ cv.addEventListener('pointermove', (e) => {
 const lepasJari = (e) => { jari.delete(e.pointerId); if (jari.size < 2) cubitAwal = 0; };
 cv.addEventListener('pointerup', lepasJari); cv.addEventListener('pointercancel', lepasJari);
 
+// ═══ RUANG RAPAT ══════════════════════════════════════════════════════
+// Rapatnya sendiri jalan di ocklu.com/rapat/ (link undangan, suara, pekerja AI ngomong).
+// Gedung ini = meja rapatnya di HQ: pekerja AI duduk, tamu yang lagi gabung ikut muncul di kursi,
+// omongan mereka keluar jadi balon, dan layar nampilin rapat yang LAGI jalan (dibaca langsung, gak dikarang).
+const RAPAT_WEB = AWAN ? '/rapat/' : 'https://ocklu.com/rapat/';
+const RAPAT_API = 'https://njghzieuuopukuagrswu.supabase.co/functions/v1/rapat-api';
+let RPT = null, layarRP = null, kursiRP = [], pekerjaRP = new Map(), tamuRP = new Map(), chanRP = null, sbRP = null;
+const RP = { hadir: [], pesan: [], mikir: [] };
+const rpPilih = () => { try { return JSON.parse(localStorage.getItem('hq-rapat-pilih') || 'null'); } catch { return null; } };
+const kodeHQ = () => AWAN ? (location.pathname.match(/\/hq\/([a-z0-9]{16})/) || [])[1] : data.awanKode;
+function rapatAktifLokal() {
+  for (const k of ['hq-rapat-aktif', 'rapat-aktif']) { try { const x = JSON.parse(localStorage.getItem(k) || 'null'); if (x && x.kode) return x; } catch {} }
+  return null;
+}
+function bangunRapat() {
+  const G = GEDUNG.rapat, grup = new THREE.Group(); grup.position.set(G.x, 0, G.z); grup.rotation.y = G.rot; scene.add(grup);
+  const dunia = (lx, lz) => lokalKeDunia(G, lx, lz), mz = -2, rx = 9.5, rz = 5;
+  const kayu = new THREE.MeshStandardMaterial({ color: 0x5b3a1e, roughness: 0.55 });
+  const meja = new THREE.Mesh(new THREE.CylinderGeometry(1, 1, 0.18, 48), kayu); meja.scale.set(rx - 2.2, 1, rz - 1.6); meja.position.set(0, 1.0, mz); meja.castShadow = true; grup.add(meja);
+  const kaki = new THREE.Mesh(new THREE.BoxGeometry(6, 0.95, 1.2), new THREE.MeshStandardMaterial({ color: 0x1f2533 })); kaki.position.set(0, 0.47, mz); grup.add(kaki);
+  // layar rapat di dinding belakang
+  const c = document.createElement('canvas'); c.width = 1600; c.height = 800;
+  layarRP = new THREE.MeshBasicMaterial({ map: new THREE.CanvasTexture(c) }); layarRP.map.colorSpace = THREE.SRGBColorSpace;
+  const lyr = new THREE.Mesh(new THREE.PlaneGeometry(20, 10), layarRP); lyr.position.set(0, 5.6, -G.d / 2 + 0.7); grup.add(lyr);
+  // kursi muter meja; kursi paling deket pintu = Kursi Pimpinan
+  const jok = new THREE.MeshStandardMaterial({ color: 0x312e81, roughness: 0.7 }), n = 14;
+  for (let i = 0; i < n; i++) {
+    const a = Math.PI / 2 + (i / n) * Math.PI * 2, lx = Math.cos(a) * rx, lz = mz + Math.sin(a) * rz, hadap = Math.atan2(-Math.cos(a), -Math.sin(a));
+    const k = new THREE.Group(); k.position.set(lx, 0, lz); k.rotation.y = hadap; grup.add(k);
+    const s = new THREE.Mesh(new THREE.BoxGeometry(1.1, 0.5, 1.1), i === 0 ? new THREE.MeshStandardMaterial({ color: 0xa16207 }) : jok); s.position.y = 0.5; k.add(s);
+    const sd = new THREE.Mesh(new THREE.BoxGeometry(1.1, 1.3, 0.2), i === 0 ? new THREE.MeshStandardMaterial({ color: 0xca8a04 }) : jok); sd.position.set(0, 1.25, -0.5); k.add(sd);
+    kursiRP.push({ lx, lz, hadap, isi: null, pimpinan: i === 0 });
+  }
+  const pim = kursiRP[0], pw = dunia(pim.lx, pim.lz), pd = dunia(pim.lx, pim.lz + 2.4);
+  booth.set('rapat|pimpinan', { p: { id: 'rapat', kunci: 'rapat|pimpinan', path: '', nama: 'Kursi Pimpinan Rapat', tipe: 'bikin rapat & undang orang', status: 'rapat' }, k: 'rapat',
+    staf: { visible: false }, pusat: pw, depan: pd, hit: [] });
+  // pekerja AI = pekerja yang ada jejak kerja (sama kayak di teater), duduk di kursi selang-seling
+  const pilih = rpPilih(), ps = ((TT && TT.pekerja) || []).slice(0, 10);
+  const bajuL = [0x1d4ed8, 0x047857, 0xb45309, 0x7c3aed, 0xbe123c, 0x0e7490, 0x4d7c0f, 0xa16207, 0x334155, 0x9d174d];
+  ps.forEach((p, i) => {
+    const ks = kursiRP[1 + ((i * 2) % 13)] && !kursiRP[1 + ((i * 2) % 13)].isi ? kursiRP[1 + ((i * 2) % 13)] : kursiRP.find((x) => !x.isi && !x.pimpinan); if (!ks) return;
+    const o = orang({ baju: bajuL[i % bajuL.length], badge: 0xa855f7 }); duduk(o, ks); grup.add(o); ks.isi = 'ai:' + p.nama;
+    o.add(namaSprite(p.nama, '#c084fc'));
+    const w = dunia(ks.lx, ks.lz), dp = dunia(ks.lx * 1.25, mz + (ks.lz - mz) * 1.45);
+    booth.set('rapatai|' + p.nama, { p: { id: 'rapatai', kunci: 'rapatai|' + p.nama, path: '', nama: p.nama, tipe: 'pekerja AI · peserta rapat', status: 'rapatai', statistik: p }, k: 'rapat',
+      staf: { visible: false }, orang: o, pusat: w, depan: dp, hit: [] });
+    pekerjaRP.set(p.nama, { o, balon: null, sampai: 0, ikut: !pilih || pilih.includes(p.nama) });
+  });
+  RPT = { grup, G };
+  gambarLayarRP(); setInterval(cekRapat, 30000); cekRapat();
+}
+function duduk(o, ks) {
+  o.position.set(ks.lx, -0.42, ks.lz); o.rotation.y = ks.hadap + Math.PI;
+  const b = o.userData.bag; if (b) { b.kKi.rotation.x = b.kKa.rotation.x = 1.45; b.tKi.rotation.x = b.tKa.rotation.x = 0.9; }
+}
+function namaSprite(nama, warna) {
+  const s = new THREE.Sprite(new THREE.SpriteMaterial({ map: tekstur(256, 64, (x, w, h) => { x.fillStyle = 'rgba(15,23,42,.85)'; x.beginPath(); x.roundRect(0, 0, w, h, 14); x.fill();
+    x.fillStyle = warna; x.font = '700 30px sans-serif'; x.textAlign = 'center'; x.fillText(String(nama).slice(0, 14), w / 2, 42); }), transparent: true }));
+  s.scale.set(2.2, 0.55, 1); s.position.y = 2.4; return s;
+}
+function gambarLayarRP() {
+  if (!layarRP) return;
+  const cv2 = layarRP.map.image, x = cv2.getContext('2d'), W = cv2.width, Hh = cv2.height, a = rapatAktifLokal();
+  x.fillStyle = '#070b14'; x.fillRect(0, 0, W, Hh);
+  x.fillStyle = '#a855f7'; x.font = '900 52px -apple-system,sans-serif'; x.textAlign = 'left'; x.fillText('🗣 RUANG RAPAT OCKLU', 50, 80);
+  if (!a || !chanRP) {
+    x.fillStyle = '#cbd5e1'; x.font = '600 38px sans-serif';
+    x.fillText(a ? 'nyambung ke rapat "' + a.judul.slice(0, 30) + '"…' : 'Belum ada rapat yang jalan.', 50, 170);
+    x.fillStyle = '#94a3b8'; x.font = '500 30px sans-serif';
+    ['Duduk di Kursi Pimpinan (kursi emas) → ➕ Bikin rapat & undang', 'Kirim linknya lewat WA — tamu buka di HP, langsung bisa ngomong', 'Panggil nama pekerja AI (mis. "AIRANK, gimana?") → dia jawab pakai suara']
+      .forEach((t, i) => x.fillText('• ' + t, 50, 250 + i * 56));
+  } else {
+    x.fillStyle = '#fff'; x.font = '800 44px sans-serif'; x.fillText(a.judul.slice(0, 44), 50, 150);
+    const org = RP.hadir.map((h) => h.nama);
+    x.fillStyle = '#34d399'; x.font = '700 32px sans-serif'; x.fillText(`● LIVE · ${org.length} orang: ${org.join(', ').slice(0, 70) || 'belum ada yang gabung'}`, 50, 205);
+    if (RP.mikir.length) { x.fillStyle = '#facc15'; x.fillText(`🤖 ${RP.mikir.join(', ')} lagi mikir…`, 50, 250); }
+    RP.pesan.slice(-7).forEach((m, i) => {
+      const y = 320 + i * 64; x.fillStyle = m.jenis === 'ai' ? '#c084fc' : m.jenis === 'sistem' ? '#64748b' : '#38bdf8'; x.font = '700 28px sans-serif';
+      const siapa = (m.jenis === 'ai' ? '🤖 ' : '') + m.dari; x.fillText(siapa.slice(0, 16), 50, y);
+      x.fillStyle = '#e2e8f0'; x.font = '500 28px sans-serif'; const t = m.teks.replace(/\s+/g, ' '); x.fillText(t.length > 78 ? t.slice(0, 77) + '…' : t, 330, y);
+    });
+  }
+  layarRP.map.needsUpdate = true;
+}
+async function cekRapat() {
+  const a = rapatAktifLokal();
+  if (!a) { if (chanRP) lepasRapat(); gambarLayarRP(); return; }
+  if (chanRP && chanRP.kode === a.kode) return;
+  try {
+    const r = await fetch(RAPAT_API, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ aksi: 'info', kode: a.kode }) }).then((x) => x.json());
+    if (!r.ok || !r.aktif) { for (const k of ['hq-rapat-aktif', 'rapat-aktif']) try { localStorage.removeItem(k); } catch {} gambarLayarRP(); return; }
+    const h = await fetch(RAPAT_API, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ aksi: 'riwayat', kode: a.kode }) }).then((x) => x.json());
+    RP.pesan = (h.pesan || []).slice(-12);
+    if (!sbRP) { const { createClient } = await import('https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.2/+esm'); sbRP = createClient('https://njghzieuuopukuagrswu.supabase.co', 'sb_publishable_Flgot78lOen26q5dQDV8JA_4MV_0FSn'); }
+    if (chanRP) lepasRapat();
+    const ch = sbRP.channel('rapat:' + a.kode); ch.kode = a.kode; chanRP = ch;      // cuma nonton: gak di-track, jadi HQ gak kehitung peserta
+    ch.on('presence', { event: 'sync' }, () => { RP.hadir = Object.values(ch.presenceState()).map((l) => l[0]).filter(Boolean); aturTamu(); gambarLayarRP(); });
+    ch.on('broadcast', { event: 'pesan' }, ({ payload: m }) => { RP.pesan.push(m); RP.pesan = RP.pesan.slice(-12); omongRP(m); gambarLayarRP(); });
+    ch.on('broadcast', { event: 'mikir' }, ({ payload }) => { RP.mikir = payload.siapa || []; gambarLayarRP(); });
+    ch.on('broadcast', { event: 'selesai' }, () => { for (const k of ['hq-rapat-aktif', 'rapat-aktif']) try { localStorage.removeItem(k); } catch {} lepasRapat(); gambarLayarRP(); });
+    ch.subscribe(() => gambarLayarRP());
+  } catch (e) { console.warn('rapat', e); }
+}
+function lepasRapat() { if (chanRP && sbRP) sbRP.removeChannel(chanRP); chanRP = null; RP.hadir = []; RP.mikir = []; aturTamu(); }
+function aturTamu() {                                     // manusia yang lagi gabung = orang di kursi kosong
+  const nama = new Set(RP.hadir.map((h) => h.nama));
+  for (const [n, t] of tamuRP) if (!nama.has(n)) { RPT.grup.remove(t.o); t.ks.isi = null; tamuRP.delete(n); }
+  for (const h of RP.hadir) {
+    if (tamuRP.has(h.nama)) continue;
+    const ks = kursiRP.find((x) => !x.isi && (h.pemilik || !x.pimpinan)) || kursiRP.find((x) => !x.isi); if (!ks) break;
+    const o = orang({ baju: h.pemilik ? 0xca8a04 : 0x0ea5e9, badge: 0xffffff }); duduk(o, ks); o.add(namaSprite(h.nama, h.pemilik ? '#facc15' : '#38bdf8'));
+    RPT.grup.add(o); ks.isi = 'tamu:' + h.nama; tamuRP.set(h.nama, { o, ks, balon: null, sampai: 0 });
+  }
+}
+function omongRP(m) {
+  const w = m.jenis === 'ai' ? pekerjaRP.get(m.dari) : tamuRP.get(m.dari); if (!w) return;
+  if (w.balon) w.o.remove(w.balon); w.balon = balon(m.teks); w.balon.position.y = 3.0; w.o.add(w.balon); w.sampai = performance.now() + Math.min(9000, 2500 + m.teks.length * 50);
+}
+function jalanRapat(dt, t) {
+  if (!RPT) return;
+  const now = performance.now();
+  for (const w of [...pekerjaRP.values(), ...tamuRP.values()]) if (w.balon && now > w.sampai) { w.o.remove(w.balon); w.balon = null; }
+  for (const [n, w] of pekerjaRP) w.o.position.y = -0.42 + (RP.mikir.includes(n) ? Math.abs(Math.sin(t * 6)) * 0.08 : 0);
+}
+function bukaRapatWeb(hash) { const w = window.open(RAPAT_WEB + (hash ? '#' + hash : ''), 'rapat-ocklu'); if (!w) location.href = RAPAT_WEB + (hash ? '#' + hash : ''); }
+addEventListener('message', (e) => {                       // tab rapat (ocklu.com) ngabarin rapat yang lagi dibuka
+  if (!/^https:\/\/(www\.)?ocklu\.com$/.test(e.origin) || !e.data || e.data.jenis !== 'rapat-aktif' || !/^[a-z0-9]{16}$/.test(e.data.kode)) return;
+  try { localStorage.setItem('hq-rapat-aktif', JSON.stringify({ kode: e.data.kode, judul: String(e.data.judul || '').slice(0, 120), t: Date.now() })); } catch {}
+  cekRapat();
+});
+addEventListener('storage', (e) => { if (/rapat-aktif/.test(e.key || '')) cekRapat(); });
+function infoRapat(b) {
+  const p = b.p, a = rapatAktifLokal(), link = a && `https://ocklu.com/rapat/#${a.kode}`;
+  if (p.status === 'rapatai') {
+    const w = pekerjaRP.get(p.nama), s = p.statistik;
+    return `<div class="kat" style="color:#c084fc">Ruang Rapat · pekerja AI</div><h2>🤖 ${esc(p.nama)}</h2>
+      <div class="st">${TT ? TT.hari : 7} hari: <b>${s.keluar}</b> surat keluar · <b>${s.masuk}</b> masuk · <b>${s.kerja}</b> commit · <b>${s.jual}</b> jualan.<br>
+      Di rapat dia cuma ngomong dari angka ini (potret HQ), gak ngarang.</div>
+      <div class="aksi"><button class="utama" data-rp="ikut" data-n="${esc(p.nama)}">${w && w.ikut ? '✓ Ikut rapat berikutnya' : '✗ Gak diajak — klik buat ngajak'}</button><button data-rp="buat">➕ Bikin rapat</button></div>`;
+  }
+  const ikut = [...pekerjaRP].filter(([, w]) => w.ikut).map(([n]) => n);
+  return `<div class="kat" style="color:#a855f7">Ruang Rapat</div><h2>👑 Kursi Pimpinan</h2>
+    <div class="st">${a && chanRP ? `<span style="color:var(--hidup)">● LIVE</span> "${esc(a.judul)}" · ${RP.hadir.length} orang gabung` : 'Belum ada rapat yang jalan.'}<br>
+    Pekerja AI yang diajak: ${ikut.length ? esc(ikut.join(', ')) : '<i>belum ada</i>'}</div>
+    <div class="aksi">${a ? `<button class="utama" data-rp="masuk">🚪 Masuk rapat</button><button data-rp="salin">📋 Salin link</button><a class="nyala" href="https://wa.me/?text=${encodeURIComponent('Yuk gabung rapat "' + a.judul + '" bareng tim OCKLU: ' + link)}" target="_blank" rel="noopener">💬 Kirim WA</a>` : ''}
+    <button class="${a ? '' : 'utama'}" data-rp="buat">➕ Bikin rapat & undang</button><button data-rp="semua">📋 Semua rapat</button></div>
+    <div style="font-size:12px;color:var(--dim);margin-top:6px">Rapat jalan di ocklu.com/rapat — tamu cukup buka link, isi nama, ngomong. Perangkat lo harus udah dipasang jadi perangkat pemilik (sekali klik link pemilik).</div>`;
+}
+document.addEventListener('click', async (e) => {
+  const t = e.target.closest('[data-rp]'); if (!t) return;
+  const a = rapatAktifLokal(), r = t.dataset.rp;
+  if (r === 'ikut') {
+    const w = pekerjaRP.get(t.dataset.n); if (w) w.ikut = !w.ikut;
+    try { localStorage.setItem('hq-rapat-pilih', JSON.stringify([...pekerjaRP].filter(([, x]) => x.ikut).map(([n]) => n))); } catch {}
+    if (dekat) isiInfo(dekat); return;
+  }
+  if (r === 'buat') return bukaRapatWeb(`buat=${encodeURIComponent([...pekerjaRP].filter(([, x]) => x.ikut).map(([n]) => n).join(','))}${kodeHQ() ? '&hq=' + kodeHQ() : ''}`);
+  if (r === 'semua') return bukaRapatWeb(kodeHQ() ? 'hq=' + kodeHQ() : '');
+  if (r === 'masuk' && a) return bukaRapatWeb(a.kode);
+  if (r === 'salin' && a) { try { await navigator.clipboard.writeText('https://ocklu.com/rapat/#' + a.kode); t.textContent = '✓ disalin'; } catch { prompt('Salin link:', 'https://ocklu.com/rapat/#' + a.kode); } }
+});
+
 // ─── pindah booth ke gedung lain, langsung dari panel booth ───
 function pilihGedung(p) {
   const semua = URUT.filter((k) => GEDUNG[k]);
@@ -1845,11 +2011,13 @@ try {
     (a.status === 'hidup' ? 1 : 0) - (b.status === 'hidup' ? 1 : 0) || a.nama.localeCompare(b.nama)));
   if (GEDUNG.dna) bangunGedung('dna', data.rak.map(boothRak));
   await ambilTeater(); bangunGedung('teater', []); bangunTeater(); bangunKafe(); bangunOtak();
+  bangunGedung('rapat', []); bangunRapat();
   try { modeOtak = localStorage.getItem('hq-otak') === '1'; } catch {}
   segarTeater(); setInterval(segarTeater, 60000);
   bangunPlaza(data); bangunPengunjung(); isiHUD();
   semuaHit = [...lantaiKlik, ...[...booth.values()].flatMap((b) => b.hit)];
   $('masuk').disabled = false;
+  $('tombolRapat').onclick = () => pindahKe('rapat');
   $('masuk').onclick = () => { $('gerbang').remove(); cv.focus(); };
   // habis bangun/mindahin: langsung berdiri di depan pintu gedungnya
   const lompat = location.hash.match(/g=(\w+)/);
