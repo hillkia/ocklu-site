@@ -1,0 +1,495 @@
+<title>Gravia Ocklu</title>
+<meta name="description" content="Dasbor swarm neon ocklu-trade — semua angka dari data asli, bukan simulasi.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+/* Satu dunia visual (terminal neon) — sengaja satu tema, warna dipatok eksplisit. */
+:root{
+  color-scheme:dark;
+  --ground:#0b0710; --panel:#110b17; --panel2:#160e1e; --line:#2a1d35; --line2:#3a2849;
+  --ink:#ece2f3; --dim:#8d7d9b; --faint:#5a4b68;
+  --mag:#ff2e88; --mag2:#ff6fb0; --grn:#2ee6a0; --amb:#ffb547; --wht:#d9cfe2;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  --disp:"Chakra Petch","IBM Plex Mono",ui-monospace,monospace;
+}
+*{box-sizing:border-box}
+html,body{background:var(--ground)}
+body{color:var(--ink);font:12px/1.45 var(--mono);padding:0 16px 24px;font-variant-numeric:tabular-nums;min-height:100%}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:50;
+  background:repeating-linear-gradient(0deg,rgba(255,255,255,.018) 0 1px,transparent 1px 3px)}
+.mono{font-family:var(--mono)}
+.lbl{font:600 10px/1 var(--disp);letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
+.lbl b{color:var(--ink);font-weight:600}
+.pos{color:var(--grn)} .neg{color:var(--mag)} .amb{color:var(--amb)} .dim{color:var(--dim)}
+
+/* bar atas */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:linear-gradient(var(--ground) 80%,transparent);
+  display:flex;flex-wrap:wrap;align-items:center;gap:10px 22px;padding-block:12px 10px;border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:10px}
+.logo{width:22px;height:22px;border-radius:4px;background:var(--amb);color:#1a1006;font:700 13px/22px var(--disp);text-align:center}
+.brand h1{margin:0;font:700 15px/1 var(--disp);letter-spacing:.06em}
+.brand .sub{font:600 10px/1 var(--disp);letter-spacing:.14em;color:var(--dim);text-transform:uppercase}
+.live{display:inline-flex;align-items:center;gap:6px;font:600 10px/1 var(--disp);letter-spacing:.14em;color:var(--grn)}
+.live i{width:7px;height:7px;border-radius:50%;background:var(--grn);box-shadow:0 0 8px var(--grn);animation:blink 1.6s infinite}
+.live.basi{color:var(--amb)} .live.basi i{background:var(--amb);box-shadow:0 0 8px var(--amb)}
+@keyframes blink{50%{opacity:.25}}
+.kpis{display:flex;flex-wrap:wrap;gap:6px 22px;margin-left:auto}
+.kpi{display:flex;flex-direction:column;gap:4px;min-width:72px}
+.kpi .v{font:600 15px/1 var(--mono)}
+.clock{font:600 18px/1 var(--mono);color:var(--ink)}
+
+/* kisi */
+.grid{display:grid;gap:10px;margin-top:12px;grid-template-columns:1fr}
+.p{background:var(--panel);border:1px solid var(--line);border-radius:3px;padding:12px;min-width:0;position:relative}
+.p.hot{border-color:var(--mag);box-shadow:0 0 0 1px rgba(255,46,136,.25),0 0 28px -8px rgba(255,46,136,.45)}
+.ph{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px}
+.chip{font:600 9px/1 var(--disp);letter-spacing:.14em;text-transform:uppercase;padding:4px 6px;border-radius:2px;border:1px solid currentColor}
+.chip.mag{color:var(--mag)} .chip.grn{color:var(--grn)} .chip.amb{color:var(--amb)} .chip.dim{color:var(--dim)}
+.chip.fill{background:var(--mag);color:#fff;border-color:var(--mag)}
+canvas{display:block;width:100%}
+
+/* kartu bot */
+.bot h2{margin:0 0 2px;font:700 15px/1.1 var(--disp);letter-spacing:.04em}
+.big{font:600 30px/1.05 var(--mono);letter-spacing:-.01em;margin:10px 0 4px}
+.rows{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px;border-top:1px solid var(--line);padding-top:10px}
+.rows div{display:flex;flex-direction:column;gap:4px} .rows b{font:600 14px/1 var(--mono)}
+.rem{margin-top:10px;font-size:11px;color:var(--mag2)}
+
+/* polymarket */
+.pm{display:flex;flex-direction:column;gap:7px}
+.pm .r{display:grid;grid-template-columns:1fr 46px;gap:8px;align-items:center}
+.pm .q{font-size:11px;color:var(--wht);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pm .bar{grid-column:1/-1;height:3px;background:var(--line);position:relative}
+.pm .bar i{position:absolute;left:0;top:0;bottom:0;background:var(--grn)}
+.pm .y{font-weight:600;text-align:right}
+.note{font-size:10.5px;color:var(--faint);margin-top:8px}
+
+/* streak */
+.streak{display:flex;align-items:baseline;gap:10px}
+.streak .x{font:700 34px/1 var(--disp);color:var(--ink)}
+.streak .n{font:700 44px/1 var(--disp);color:var(--mag);text-shadow:0 0 16px rgba(255,46,136,.6)}
+
+/* swarm */
+.sw{padding:0;overflow:hidden}
+.sw .ph{position:absolute;left:12px;right:12px;top:10px;z-index:2;pointer-events:none}
+.legend{position:absolute;left:12px;top:36px;z-index:2;display:flex;flex-direction:column;gap:5px;pointer-events:none}
+.legend span{display:flex;align-items:center;gap:7px;font:600 10px/1 var(--disp);letter-spacing:.12em;color:var(--dim);text-transform:uppercase}
+.legend i{width:8px;height:8px;border-radius:50%}
+.swstat{position:absolute;right:12px;top:36px;z-index:2;text-align:right;display:flex;flex-direction:column;gap:5px;pointer-events:none}
+.swstat div{font-size:11px;color:var(--dim)} .swstat b{color:var(--ink);font-weight:600}
+.axis{position:absolute;bottom:8px;left:12px;right:12px;display:flex;justify-content:space-between;z-index:2;pointer-events:none;font:600 9px/1 var(--disp);letter-spacing:.14em;color:var(--faint);text-transform:uppercase}
+#swarm{height:420px;cursor:crosshair}
+.tip{position:absolute;z-index:5;pointer-events:none;background:rgba(17,11,23,.96);border:1px solid var(--line2);padding:9px 10px;min-width:180px;max-width:240px;font-size:11px;border-radius:2px}
+.tip h4{margin:0 0 5px;font:700 13px/1 var(--disp);letter-spacing:.05em}
+.tip .kv{display:flex;justify-content:space-between;gap:10px}
+
+/* tabel */
+.tbl{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:11px}
+th{font:600 9px/1 var(--disp);letter-spacing:.14em;text-transform:uppercase;color:var(--faint);text-align:left;padding:0 6px 7px;border-bottom:1px solid var(--line)}
+td{padding:6px;border-bottom:1px solid rgba(42,29,53,.6);white-space:nowrap}
+td.n,th.n{text-align:right}
+.side{font:600 9px/1 var(--disp);letter-spacing:.1em;padding:3px 5px;border-radius:2px}
+.side.BUY{background:rgba(46,230,160,.14);color:var(--grn)} .side.SELL{background:rgba(255,46,136,.14);color:var(--mag)}
+
+/* analitik */
+.an{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.an div{display:flex;flex-direction:column;gap:5px}
+.an canvas{height:64px}
+
+/* log */
+.log{height:210px;overflow:hidden;font-size:11px;position:relative}
+.log .l{display:grid;grid-template-columns:62px 54px 1fr auto;gap:10px;padding:2px 0;white-space:nowrap}
+.log .l > *{overflow:hidden;text-overflow:ellipsis}
+.log .l.new{animation:in .5s ease-out}
+@keyframes in{from{background:rgba(255,46,136,.18)}to{background:transparent}}
+.log::after{content:"";position:absolute;left:0;right:0;bottom:0;height:40px;background:linear-gradient(transparent,var(--panel))}
+.foot{margin-top:14px;font-size:10.5px;color:var(--faint);display:flex;flex-wrap:wrap;gap:6px 18px}
+
+@media (min-width:1000px){
+  .grid{grid-template-columns:1fr 1.5fr 1.15fr 1fr}
+  .g-sw,.g-log{grid-column:1/-1}
+  .g-pnl{grid-column:1/2} .g-tbl{grid-column:2/4} .g-an{grid-column:4/5}
+  #swarm{height:440px}
+}
+@media (min-width:640px) and (max-width:999px){
+  .grid{grid-template-columns:1fr 1fr}
+  .g-sw,.g-log,.g-tbl{grid-column:1/-1}
+}
+@media (max-width:639px){
+  .kpis{margin-left:0;gap:10px 18px}
+  #swarm{height:360px}
+  .log .l{grid-template-columns:48px 46px 1fr}
+  .log .l > :last-child{display:none}
+}
+@media (prefers-reduced-motion:reduce){.live i{animation:none}.log .l.new{animation:none}}
+:focus-visible{outline:2px solid var(--amb);outline-offset:2px}
+</style>
+
+<header class="top">
+  <div class="brand">
+    <div class="logo" aria-hidden="true">G</div>
+    <div><h1>GRAVIA · OCKLU</h1><div class="sub">BTC · Polymarket · 6 engine</div></div>
+    <span class="live" id="live"><i></i><span id="liveTxt">DATA ASLI</span></span>
+  </div>
+  <div class="kpis">
+    <div class="kpi"><span class="lbl">BTC</span><span class="v" id="kBtc">—</span></div>
+    <div class="kpi"><span class="lbl">24 jam</span><span class="v" id="kCh">—</span></div>
+    <div class="kpi"><span class="lbl">Dipindai</span><span class="v" id="kScan">—</span></div>
+    <div class="kpi"><span class="lbl">Buku besar</span><span class="v" id="kLed">—</span></div>
+    <div class="kpi"><span class="lbl">Menang</span><span class="v" id="kWin">—</span></div>
+    <div class="kpi"><span class="lbl">WIB</span><span class="clock" id="clock">--:--:--</span></div>
+  </div>
+</header>
+
+<main class="grid">
+  <section class="p hot bot" aria-label="Bot PEGASUS">
+    <div class="ph"><span class="lbl">Bot · <b id="botBursa">Indodax</b></span><span class="chip fill" id="botMode">KERTAS</span></div>
+    <h2>PEGASUS_01</h2>
+    <div class="lbl">modal sekarang</div>
+    <div class="big" id="botModal">—</div>
+    <div id="botSub" class="dim"></div>
+    <div class="rows">
+      <div><span class="lbl">Trade</span><b id="botTrade">—</b></div>
+      <div><span class="lbl">Menang</span><b id="botWin">—</b></div>
+      <div><span class="lbl">Rata</span><b id="botAvg">—</b></div>
+    </div>
+    <div class="rem" id="botRem"></div>
+  </section>
+
+  <section class="p" aria-label="Grafik BTC">
+    <div class="ph"><span class="lbl">BTC · 4 jam · <b id="cLast">—</b></span><span class="chip mag" id="cTag">—</span></div>
+    <canvas id="candle" height="170"></canvas>
+    <div class="note">Candle dibentuk dari harga tutup 4 jam CoinGecko (buka = tutup sebelumnya). Tanpa sumbu bayangan karena high/low tidak ada di feed.</div>
+  </section>
+
+  <section class="p" aria-label="Polymarket">
+    <div class="ph"><span class="lbl">Polymarket · harga YES</span><span class="chip dim">tanpa edge</span></div>
+    <div class="pm" id="pm"></div>
+    <div class="note">Sistem menolak mengarang peluang wajar. Edge baru dihitung setelah feed model luar tersambung.</div>
+  </section>
+
+  <section class="p hot" aria-label="Rentetan">
+    <div class="ph"><span class="lbl">#1 Rentetan · kertas</span><span class="chip mag" id="stTag">—</span></div>
+    <div class="streak"><span class="x">×</span><span class="n" id="stN">0</span><span class="dim" id="stTxt"></span></div>
+    <canvas id="stBars" height="54" style="margin-top:10px"></canvas>
+    <div class="note" id="stNote"></div>
+  </section>
+
+  <section class="p sw g-sw" aria-label="Swarm sinyal">
+    <div class="ph"><span class="lbl">Swarm · <b id="swN">—</b> aset · <b id="swS">—</b> sinyal</span><span class="chip grn" id="swConv">—</span></div>
+    <div class="legend">
+      <span><i style="background:var(--mag)"></i>Bear · short</span>
+      <span><i style="background:var(--grn)"></i>Bull · long</span>
+      <span><i style="background:var(--wht)"></i>Sinyal engine</span>
+      <span><i style="background:var(--amb)"></i>Katalis · gorengan</span>
+      <span><i style="border:1px solid var(--mag2)"></i>Korelasi &gt; 0,45</span>
+    </div>
+    <div class="swstat">
+      <div>Konvergensi <b id="swAg">—</b></div>
+      <div>Long <b id="swL">—</b> · Short <b id="swSh">—</b></div>
+      <div>Uang masuk <b id="swIn">—</b></div>
+      <div>Uang keluar <b id="swOut">—</b></div>
+    </div>
+    <canvas id="swarm" aria-label="Peta swarm: kiri bear, kanan bull, makin atas makin volatil" role="img"></canvas>
+    <div class="axis"><span>← bear makin yakin</span><span>volatilitas ↑ atas</span><span>bull makin yakin →</span></div>
+    <div class="tip" id="tip" hidden></div>
+  </section>
+
+  <section class="p g-pnl" aria-label="Kurva PnL">
+    <div class="ph"><span class="lbl">PnL kumulatif · <b id="pnlTot">—</b></span><span class="chip dim">per trade</span></div>
+    <canvas id="pnl" height="150"></canvas>
+  </section>
+
+  <section class="p g-tbl" aria-label="Riwayat trade">
+    <div class="ph"><span class="lbl">Riwayat trade PEGASUS</span><span class="chip dim" id="tblMode">—</span></div>
+    <div class="tbl"><table>
+      <thead><tr><th>Waktu</th><th>Pasar</th><th>Sisi</th><th class="n">Harga</th><th class="n">PnL</th><th>Alasan</th></tr></thead>
+      <tbody id="tb"></tbody>
+    </table></div>
+  </section>
+
+  <section class="p g-an" aria-label="Analitik">
+    <div class="ph"><span class="lbl">Analitik · 40 aset</span></div>
+    <div class="an">
+      <div><span class="lbl">Keyakinan</span><canvas id="h1"></canvas></div>
+      <div><span class="lbl">Ubah 24j</span><canvas id="h2"></canvas></div>
+      <div><span class="lbl">Volatilitas</span><canvas id="h3"></canvas></div>
+      <div><span class="lbl">Rezim</span><canvas id="h4"></canvas></div>
+    </div>
+  </section>
+
+  <section class="p g-log" aria-label="Log eksekusi">
+    <div class="ph"><span class="lbl">Log buku besar · putar ulang <b id="logN">—</b> baris terakhir</span><span class="chip grn" id="logChain">—</span></div>
+    <div class="log" id="log" aria-live="off"></div>
+  </section>
+</main>
+
+<div class="foot">
+  <span id="fSrc"></span><span id="fAsof"></span><span>Bukan saran investasi. Mode KERTAS = uang mainan.</span>
+</div>
+
+<script>
+const D = {"as_of":"2026-10-02T00:51:25.024484+00:00","generated":"2026-10-02T00:51:30.192491+00:00","source":"CoinGecko — 250 koin teratas (disaring likuiditas), candle 4 jam dari riwayat 7 hari (REAL)","dipindai":136,"btc":{"last":84768.0,"ch":1.55173,"closes":[84377.96508359577,84202.4042247504,84036.36439812316,84579.7615938023,83752.35366553183,84012.80401133405,84075.71659039952,83927.11074794037,84100.6609733225,84158.88947441378,84134.63783090159,83999.25403202536,84416.7149816521,84381.61261169771,84747.07819125343,84876.05683833323,84442.994331211,84719.64624644413,84448.75015162026,83324.41301580759,82932.7161124573,83056.21283951147,83359.7059294417,83379.6392483203,83479.2543356063,83037.96226191537,83978.38608736593,84331.39533966823,83079.88387385973,83565.70306453116,83640.10160067653,83272.45878053062,83282.75039159824,83857.98344246454,84104.43667144101,83562.10698056826,83576.13460018387,83710.30980712955,83424.3803778115,83896.48560926288,84123.5798753524,84629.99634982114]},"aset":[{"s":"MON","nama":"Monad","dir":"LONG","label":"STRONG","conv":0.756,"regime":"Bull","risk":"MEDIUM","vol":0.5269,"ch":4.55435,"last":0.0349,"sharpe":4.152,"agree":0.9292,"n":5,"al":5,"kuadran":"SODORKAN","gor":false,"tembus":"TEMBUS_ATAS","sig":{"momentum":0.968,"trend":0.811,"rsi":1.0,"macd":0.869}},{"s":"ZRO","nama":"LayerZero","dir":"LONG","label":"STRONG","conv":0.7392,"regime":"Bull","risk":"MEDIUM","vol":0.6332,"ch":6.90357,"last":1.8731,"sharpe":2.879,"agree":0.8948,"n":5,"al":5,"kuadran":"TANPA_PEMBELI","gor":false,"tembus":"TEMBUS_ATAS","sig":{"momentum":0.602,"trend":0.511,"rsi":0.734,"macd":0.393}},{"s":"STX","nama":"Stacks","dir":"LONG","label":"STRONG","conv":0.7376,"regime":"Bull","risk":"MEDIUM","vol":0.4268,"ch":-1.12422,"last":0.3778,"sharpe":2.874,"agree":0.8671,"n":5,"al":5,"kuadran":"TANPA_PEMBELI","gor":false,"tembus":null,"sig":{"momentum":0.668,"trend":0.726,"rsi":0.683,"macd":0.865}},{"s":"2Z","nama":"DoubleZero","dir":"SHORT","label":"STRONG","conv":0.7295,"regime":"Bear","risk":"HIGH","vol":0.6522,"ch":-4.84764,"last":0.0561,"sharpe":0.33,"agree":0.8401,"n":5,"al":5,"kuadran":"DIAM","gor":false,"tembus":"JEBOL_BAWAH","sig":{"momentum":-0.745,"trend":-0.541,"rsi":-0.849,"macd":-0.775}},{"s":"JASMY","nama":"JasmyCoin","dir":"LONG","label":"STRONG","conv":0.7265,"regime":"Bull","risk":"MEDIUM","vol":0.4794,"ch":11.99583,"last":0.0056,"sharpe":3.317,"agree":0.8298,"n":5,"al":5,"kuadran":"TANPA_PEMBELI","gor":false,"tembus":null,"sig":{"momentum":0.623,"trend":0.628,"rsi":0.48,"macd":0.532}},{"s":"MET","nama":"Meteora","dir":"SHORT","label":"STRONG","conv":0.7249,"regime":"Bear","risk":"MEDIUM","vol":0.4538,"ch":-4.72343,"last":0.2991,"sharpe":-1.032,"agree":0.8246,"n":5,"al":5,"kuadran":"HINDARI","gor":true,"tembus":null,"sig":{"momentum":-0.591,"trend":-0.534,"rsi":-0.668,"macd":-0.472}},{"s":"KITE","nama":"Kite","dir":"LONG","label":"STRONG","conv":0.7247,"regime":"Bull","risk":"MEDIUM","vol":0.4059,"ch":5.0551,"last":0.1509,"sharpe":2.323,"agree":0.8426,"n":5,"al":5,"kuadran":"TANPA_PEMBELI","gor":false,"tembus":"DEKAT_PUNCAK","sig":{"momentum":0.47,"trend":0.341,"rsi":0.791,"macd":0.708}},{"s":"BP","nama":"Backpack","dir":"LONG","label":"STRONG","conv":0.7193,"regime":"Bull","risk":"EXTREME","vol":1.4577,"ch":-0.44871,"last":1.4503,"sharpe":2.041,"agree":0.8056,"n":5,"al":5,"kuadran":"HINDARI","gor":false,"tembus":null,"sig":{"momentum":0.985,"trend":0.682,"rsi":0.338,"macd":0.79}},{"s":"SUPER","nama":"SuperVerse","dir":"LONG","label":"STRONG","conv":0.7185,"regime":"Bull","risk":"MEDIUM","vol":0.4139,"ch":15.18039,"last":0.218,"sharpe":3.527,"agree":0.803,"n":5,"al":5,"kuadran":"TANPA_PEMBELI","gor":false,"tembus":"TEMBUS_ATAS","sig":{"momentum":0.695,"trend":0.368,"rsi":1.0,"macd":0.573}},{"s":"BTW","nama":"Bitway","dir":"LONG","label":"STRONG","conv":0.7164,"regime":"Bull","risk":"EXTREME","vol":1.4792,"ch":8.55623,"last":1.4297,"sharpe":2.52,"agree":0.7958,"n":5,"al":5,"kuadran":"TANPA_PEMBELI","gor":false,"tembus":"DEKAT_PUNCAK","sig":{"momentum":0.775,"trend":0.829,"rsi":0.493,"macd":0.336}},{"s":"AAVE","nama":"Aave","dir":"LONG","label":"STRONG","conv":0.7125,"regime":"Bull","risk":"MEDIUM","vol":0.3825,"ch":9.62938,"last":169.318,"sharpe":2.469,"agree":0.7826,"n":5,"al":5,"kuadran":"TANPA_PEMBELI","gor":false,"tembus":null,"sig":{"momentum":0.44,"trend":0.42,"rsi":0.751,"macd":0.355}},{"s":"AI","nama":"Artificial Inu","dir":"SHORT","label":"STRONG","conv":0.711,"regime":"Bear","risk":"EXTREME","vol":0.8591,"ch":-7.36521,"last":0.1516,"sharpe":-2.43,"agree":0.7777,"n":5,"al":5,"kuadran":"HINDARI","gor":true,"tembus":null,"sig":{"momentum":-0.819,"trend":-0.965,"rsi":-0.66,"macd":-0.386}},{"s":"POL","nama":"POL (ex-MATIC)","dir":"SHORT","label":"STRONG","conv":0.7097,"regime":"Bear","risk":"MEDIUM","vol":0.2724,"ch":-4.56021,"last":0.1074,"sharpe":-0.137,"agree":0.7731,"n":5,"al":5,"kuadran":"DIAM","gor":false,"tembus":"JEBOL_BAWAH","sig":{"momentum":-0.399,"trend":-0.285,"rsi":-0.729,"macd":-0.83}},{"s":"TRAC","nama":"OriginTrail","dir":"LONG","label":"STRONG","conv":0.7096,"regime":"Bull","risk":"MEDIUM","vol":0.5207,"ch":3.27179,"last":0.4366,"sharpe":2.243,"agree":0.773,"n":5,"al":5,"kuadran":"HINDARI","gor":true,"tembus":null,"sig":{"momentum":0.41,"trend":0.787,"rsi":0.477,"macd":0.57}},{"s":"KAIA","nama":"Kaia","dir":"LONG","label":"STRONG","conv":0.7084,"regime":"Bull","risk":"MEDIUM","vol":0.3777,"ch":7.19724,"last":0.0374,"sharpe":1.89,"agree":0.7687,"n":5,"al":5,"kuadran":"HINDARI","gor":true,"tembus":null,"sig":{"momentum":0.556,"trend":0.405,"rsi":0.672,"macd":0.913}},{"s":"ZEC","nama":"Zcash","dir":"SHORT","label":"STRONG","conv":0.6985,"regime":"Bear","risk":"MEDIUM","vol":0.3797,"ch":-5.74879,"last":1324.9227,"sharpe":-2.307,"agree":0.7354,"n":5,"al":5,"kuadran":"DIAM","gor":false,"tembus":"JEBOL_BAWAH","sig":{"momentum":-0.569,"trend":-0.504,"rsi":-0.89,"macd":-0.213}},{"s":"KMNO","nama":"Kamino","dir":"SHORT","label":"STRONG","conv":0.6933,"regime":"Bear","risk":"MEDIUM","vol":0.546,"ch":-5.37575,"last":0.0411,"sharpe":1.174,"agree":0.7344,"n":5,"al":5,"kuadran":"DIAM","gor":false,"tembus":"JEBOL_BAWAH","sig":{"momentum":-0.638,"trend":-0.191,"rsi":-0.319,"macd":-0.538}},{"s":"NIGHT","nama":"Midnight","dir":"LONG","label":"STRONG","conv":0.6932,"regime":"Bull","risk":"MEDIUM","vol":0.5813,"ch":-3.05682,"last":0.0383,"sharpe":5.06,"agree":0.7178,"n":5,"al":5,"kuadran":"TANPA_PEMBELI","gor":false,"tembus":null,"sig":{"momentum":0.375,"trend":0.971,"rsi":0.675,"macd":0.363}},{"s":"DASH","nama":"Dash","dir":"SHORT","label":"STRONG","conv":0.6926,"regime":"Bear","risk":"MEDIUM","vol":0.4102,"ch":-2.96009,"last":58.7346,"sharpe":-0.977,"agree":0.7407,"n":5,"al":5,"kuadran":"DIAM","gor":false,"tembus":"JEBOL_BAWAH","sig":{"momentum":-0.356,"trend":-0.456,"rsi":-0.614,"macd":-0.205}},{"s":"DGAI","nama":"DGrid AI","dir":"SHORT","label":"STRONG","conv":0.6878,"regime":"Bear","risk":"LOW","vol":0.132,"ch":-1.34124,"last":0.9037,"sharpe":-6.15,"agree":0.6995,"n":5,"al":5,"kuadran":"DIAM","gor":false,"tembus":"JEBOL_BAWAH","sig":{"momentum":-0.225,"trend":-0.505,"rsi":-1.0,"macd":-0.36}},{"s":"CC","nama":"Canton","dir":"SHORT","label":"STRONG","conv":0.6844,"regime":"Bear","risk":"MEDIUM","vol":0.3534,"ch":-5.29297,"last":0.1202,"sharpe":1.137,"agree":0.7058,"n":5,"al":5,"kuadran":"DIAM","gor":false,"tembus":"JEBOL_BAWAH","sig":{"momentum":-0.238,"trend":-0.288,"rsi":-0.474,"macd":-0.589}},{"s":"KAS","nama":"Kaspa","dir":"SHORT","label":"STRONG","conv":0.6634,"regime":"Bear","risk":"MEDIUM","vol":0.3789,"ch":-6.04344,"last":0.0421,"sharpe":1.049,"agree":0.689,"n":5,"al":5,"kuadran":"DIAM","gor":false,"tembus":"JEBOL_BAWAH","sig":{"momentum":-0.196,"trend":-0.252,"rsi":-0.405,"macd":-0.536}},{"s":"PYTH","nama":"Pyth Network","dir":"SHORT","label":"STRONG","conv":0.662,"regime":"Bear","risk":"MEDIUM","vol":0.3724,"ch":-3.05857,"last":0.0746,"sharpe":1.652,"agree":0.6767,"n":5,"al":5,"kuadran":"DIAM","gor":false,"tembus":"JEBOL_BAWAH","sig":{"momentum":-0.266,"trend":-0.141,"rsi":-0.43,"macd":-0.597}},{"s":"PEPE","nama":"Pepe","dir":"LONG","label":"STRONG","conv":0.661,"regime":"Bull","risk":"LOW","vol":0.2349,"ch":3.31689,"last":0.0,"sharpe":0.274,"agree":0.6323,"n":5,"al":5,"kuadran":"TANPA_PEMBELI","gor":false,"tembus":"TEMBUS_ATAS","sig":{"momentum":0.204,"trend":0.09,"rsi":0.491,"macd":0.832}},{"s":"APT","nama":"Aptos","dir":"SHORT","label":"STRONG","conv":0.661,"regime":"Bear","risk":"MEDIUM","vol":0.335,"ch":-0.41112,"last":0.773,"sharpe":-0.674,"agree":0.7673,"n":5,"al":5,"kuadran":"HINDARI","gor":true,"tembus":null,"sig":{"momentum":-0.199,"trend":-0.37,"rsi":-0.39,"macd":-0.332}},{"s":"MINA","nama":"Mina Protocol","dir":"LONG","label":"STRONG","conv":0.6479,"regime":"Bull","risk":"MEDIUM","vol":0.3819,"ch":5.53156,"last":0.152,"sharpe":0.955,"agree":0.8423,"n":5,"al":5,"kuadran":"TANPA_PEMBELI","gor":false,"tembus":null,"sig":{"momentum":0.276,"trend":0.137,"rsi":0.439,"macd":0.561}},{"s":"MARSCOIN","nama":"MarsCoin","dir":"SHORT","label":"STRONG","conv":0.6462,"regime":"Bear","risk":"HIGH","vol":0.9134,"ch":-4.34975,"last":0.1292,"sharpe":1.198,"agree":0.6327,"n":5,"al":4,"kuadran":"HINDARI","gor":true,"tembus":"JEBOL_BAWAH","sig":{"momentum":-0.392,"trend":0.018,"rsi":-0.335,"macd":-0.696}},{"s":"LIT","nama":"Lighter","dir":"SHORT","label":"STRONG","conv":0.6446,"regime":"Bear","risk":"MEDIUM","vol":0.468,"ch":-2.22136,"last":3.9061,"sharpe":-3.172,"agree":0.5939,"n":5,"al":4,"kuadran":"DIAM","gor":false,"tembus":null,"sig":{"momentum":-0.214,"trend":-0.723,"rsi":-0.625,"macd":0.141}},{"s":"LDO","nama":"Lido DAO","dir":"SHORT","label":"STRONG","conv":0.6444,"regime":"Sideways","risk":"MEDIUM","vol":0.4283,"ch":-4.84639,"last":0.444,"sharpe":0.414,"agree":0.8799,"n":5,"al":5,"kuadran":"DIAM","gor":false,"tembus":null,"sig":{"momentum":-0.309,"trend":-0.228,"rsi":-0.269,"macd":-0.584}},{"s":"RAY","nama":"Raydium","dir":"SHORT","label":"STRONG","conv":0.6433,"regime":"Bear","risk":"MEDIUM","vol":0.4381,"ch":-1.9867,"last":1.8778,"sharpe":-1.391,"agree":0.6573,"n":5,"al":4,"kuadran":"DIAM","gor":false,"tembus":null,"sig":{"momentum":-0.609,"trend":-0.33,"rsi":-0.402,"macd":0.074}},{"s":"ENA","nama":"Ethena","dir":"SHORT","label":"STRONG","conv":0.6372,"regime":"Bear","risk":"MEDIUM","vol":0.4297,"ch":-9.59101,"last":0.2464,"sharpe":1.541,"agree":0.7216,"n":5,"al":5,"kuadran":"HINDARI","gor":true,"tembus":null,"sig":{"momentum":-0.589,"trend":-0.013,"rsi":-0.277,"macd":-0.374}},{"s":"ZBCN","nama":"Zebec Network","dir":"LONG","label":"STRONG","conv":0.6361,"regime":"Bull","risk":"MEDIUM","vol":0.606,"ch":-4.69093,"last":0.0026,"sharpe":2.662,"agree":0.5942,"n":5,"al":4,"kuadran":"TANPA_PEMBELI","gor":false,"tembus":null,"sig":{"momentum":-0.013,"trend":0.816,"rsi":0.346,"macd":0.131}},{"s":"TIA","nama":"Celestia","dir":"SHORT","label":"STRONG","conv":0.6299,"regime":"Bear","risk":"MEDIUM","vol":0.3649,"ch":-2.16246,"last":0.4316,"sharpe":-1.897,"agree":0.6803,"n":5,"al":4,"kuadran":"DIAM","gor":false,"tembus":null,"sig":{"momentum":-0.196,"trend":-0.43,"rsi":-0.505,"macd":0.019}},{"s":"GRT","nama":"The Graph","dir":"SHORT","label":"STRONG","conv":0.6278,"regime":"Bear","risk":"HIGH","vol":0.6457,"ch":-3.33441,"last":0.0284,"sharpe":1.06,"agree":0.6511,"n":5,"al":5,"kuadran":"DIAM","gor":false,"tembus":"JEBOL_BAWAH","sig":{"momentum":-0.315,"trend":-0.048,"rsi":-0.253,"macd":-0.465}},{"s":"SYRUP","nama":"Maple Finance","dir":"LONG","label":"STRONG","conv":0.6248,"regime":"Bull","risk":"MEDIUM","vol":0.3622,"ch":5.50555,"last":0.2398,"sharpe":1.824,"agree":0.7784,"n":5,"al":4,"kuadran":"TANPA_PEMBELI","gor":false,"tembus":null,"sig":{"momentum":0.403,"trend":0.214,"rsi":0.559,"macd":-0.003}},{"s":"OP","nama":"Optimism","dir":"SHORT","label":"STRONG","conv":0.6235,"regime":"Bear","risk":"MEDIUM","vol":0.3313,"ch":-1.43288,"last":0.1283,"sharpe":-0.279,"agree":0.6561,"n":5,"al":5,"kuadran":"DIAM","gor":false,"tembus":null,"sig":{"momentum":-0.198,"trend":-0.34,"rsi":-0.352,"macd":-0.075}},{"s":"GOMINING","nama":"GoMining Token","dir":"LONG","label":"MODERATE","conv":0.6194,"regime":"Sideways","risk":"LOW","vol":0.1773,"ch":-0.55225,"last":0.3878,"sharpe":1.296,"agree":0.6582,"n":5,"al":4,"kuadran":"DIAM","gor":false,"tembus":"DEKAT_PUNCAK","sig":{"momentum":0.459,"trend":0.231,"rsi":0.807,"macd":0.898}},{"s":"STONK","nama":"STONK","dir":"SHORT","label":"MODERATE","conv":0.6173,"regime":"Sideways","risk":"HIGH","vol":0.8392,"ch":5.07249,"last":0.2434,"sharpe":-2.22,"agree":0.7622,"n":5,"al":5,"kuadran":"HINDARI","gor":true,"tembus":null,"sig":{"momentum":-0.553,"trend":-0.678,"rsi":-0.358,"macd":-0.086}},{"s":"NEAR","nama":"NEAR Protocol","dir":"SHORT","label":"MODERATE","conv":0.6119,"regime":"Bear","risk":"MEDIUM","vol":0.5047,"ch":-8.51569,"last":4.8628,"sharpe":0.946,"agree":0.6935,"n":5,"al":4,"kuadran":"HINDARI","gor":false,"tembus":null,"sig":{"momentum":-0.58,"trend":0.153,"rsi":-0.296,"macd":-0.505}},{"s":"IOTA","nama":"IOTA","dir":"LONG","label":"MODERATE","conv":0.6078,"regime":"Sideways","risk":"MEDIUM","vol":0.3224,"ch":2.04608,"last":0.0547,"sharpe":2.662,"agree":0.8583,"n":5,"al":5,"kuadran":"DIAM","gor":false,"tembus":null,"sig":{"momentum":0.188,"trend":0.324,"rsi":0.397,"macd":0.039}}],"corr":{"s":["MON","ZRO","STX","2Z","JASMY","MET","KITE","BP"],"m":[[1.0,0.254,0.31,0.188,0.12,0.358,0.233,0.395],[0.254,1.0,0.024,0.197,0.087,0.323,0.018,0.044],[0.31,0.024,1.0,0.311,0.127,0.332,0.049,0.285],[0.188,0.197,0.311,1.0,0.315,0.295,-0.004,-0.042],[0.12,0.087,0.127,0.315,1.0,0.233,0.225,0.15],[0.358,0.323,0.332,0.295,0.233,1.0,0.287,0.414],[0.233,0.018,0.049,-0.004,0.225,0.287,1.0,0.183],[0.395,0.044,0.285,-0.042,0.15,0.414,0.183,1.0]]},"poly":[],"ledger":{"ok":true,"entries":1358,"head":"ab72ceb463bc37c5b7dd990a8f4742f7efed321064f03a54858a276011516f3e","note":"rantai utuh — tak ada baris diubah/dihapus"},"log":[{"ts":"2026-09-30T09:23:58.940457+00:00","s":"AI","act":"SHORT (bias)","label":"STRONG","conv":0.7464,"last":0.18096,"q":"HINDARI","h":"13ea496d46"},{"ts":"2026-09-30T09:23:58.940810+00:00","s":"ETHFI","act":"LONG (bias)","label":"STRONG","conv":0.7397,"last":0.765344,"q":"TANPA_PEMBELI","h":"3d44c2122e"},{"ts":"2026-09-30T09:23:58.941467+00:00","s":"ICP","act":"LONG (bias)","label":"STRONG","conv":0.7393,"last":3.47,"q":"TANPA_PEMBELI","h":"b8270c63de"},{"ts":"2026-09-30T09:23:58.941824+00:00","s":"DASH","act":"SHORT (bias)","label":"STRONG","conv":0.7311,"last":61.05,"q":"DIAM","h":"d079e864af"},{"ts":"2026-09-30T09:23:58.942170+00:00","s":"COMP","act":"LONG (bias)","label":"STRONG","conv":0.7281,"last":25.6,"q":"TANPA_PEMBELI","h":"fd691d969c"},{"ts":"2026-09-30T09:23:58.942515+00:00","s":"LIT","act":"SHORT (bias)","label":"STRONG","conv":0.7253,"last":3.79,"q":"HINDARI","h":"91814b013c"},{"ts":"2026-09-30T09:23:58.942865+00:00","s":"PUMP","act":"LONG (bias)","label":"STRONG","conv":0.7228,"last":0.00581354,"q":"TANPA_PEMBELI","h":"08b99c09e1"},{"ts":"2026-09-30T09:23:58.943209+00:00","s":"BTW","act":"LONG (bias)","label":"STRONG","conv":0.7223,"last":1.038,"q":"TANPA_PEMBELI","h":"dc1a6daea7"},{"ts":"2026-09-30T14:48:15.558811+00:00","s":"SOL","act":"NEUTRAL (bias)","label":"MODERATE","conv":0.498,"last":119.44,"q":"DIAM","h":"e0224b7f13"},{"ts":"2026-09-30T14:48:15.559973+00:00","s":"ETH","act":"NEUTRAL (bias)","label":"WEAK","conv":0.3508,"last":2696.02,"q":"DIAM","h":"4f1cc0595c"},{"ts":"2026-09-30T18:16:23.225872+00:00","s":"NIGHT","act":"LONG (bias)","label":"STRONG","conv":0.7537,"last":0.03838422,"q":"HINDARI","h":"e72acd874c"},{"ts":"2026-09-30T18:16:23.226352+00:00","s":"ZBCN","act":"LONG (bias)","label":"STRONG","conv":0.7527,"last":0.00260569,"q":"TANPA_PEMBELI","h":"c24361361f"},{"ts":"2026-09-30T18:16:23.226731+00:00","s":"TRAC","act":"LONG (bias)","label":"STRONG","conv":0.736,"last":0.413852,"q":"TANPA_PEMBELI","h":"15688ad0f2"},{"ts":"2026-09-30T18:16:23.227082+00:00","s":"ZRO","act":"LONG (bias)","label":"STRONG","conv":0.7354,"last":1.68,"q":"HINDARI","h":"a32a263da5"},{"ts":"2026-09-30T18:16:23.227444+00:00","s":"SOON","act":"LONG (bias)","label":"STRONG","conv":0.7299,"last":0.495218,"q":"HINDARI","h":"049102f3de"},{"ts":"2026-09-30T18:16:23.227804+00:00","s":"ETHFI","act":"LONG (bias)","label":"STRONG","conv":0.7276,"last":0.785566,"q":"TANPA_PEMBELI","h":"3266e2227b"},{"ts":"2026-09-30T18:16:23.228173+00:00","s":"AI","act":"SHORT (bias)","label":"STRONG","conv":0.7221,"last":0.166419,"q":"HINDARI","h":"478b14f541"},{"ts":"2026-09-30T18:16:23.228528+00:00","s":"ICP","act":"LONG (bias)","label":"STRONG","conv":0.7187,"last":3.43,"q":"TANPA_PEMBELI","h":"8008d80ed7"},{"ts":"2026-09-30T18:16:23.228874+00:00","s":"LIT","act":"SHORT (bias)","label":"STRONG","conv":0.7158,"last":3.94,"q":"HINDARI","h":"f3d1c94928"},{"ts":"2026-09-30T18:16:23.229225+00:00","s":"DGAI","act":"SHORT (bias)","label":"STRONG","conv":0.7036,"last":0.909199,"q":"DIAM","h":"241a7f3399"},{"ts":"2026-10-01T02:57:45.834468+00:00","s":"NIGHT","act":"LONG (bias)","label":"STRONG","conv":0.7537,"last":0.03838422,"q":"HINDARI","h":"02f9f7fec5"},{"ts":"2026-10-01T02:57:45.834922+00:00","s":"ZBCN","act":"LONG (bias)","label":"STRONG","conv":0.7527,"last":0.00260569,"q":"TANPA_PEMBELI","h":"0341cfced1"},{"ts":"2026-10-01T02:57:45.835287+00:00","s":"TRAC","act":"LONG (bias)","label":"STRONG","conv":0.736,"last":0.413852,"q":"TANPA_PEMBELI","h":"56eda948dd"},{"ts":"2026-10-01T02:57:45.835635+00:00","s":"ZRO","act":"LONG (bias)","label":"STRONG","conv":0.7354,"last":1.68,"q":"TANPA_PEMBELI","h":"62be64a432"},{"ts":"2026-10-01T02:57:45.835979+00:00","s":"SOON","act":"LONG (bias)","label":"STRONG","conv":0.7299,"last":0.495218,"q":"HINDARI","h":"35e56ad5be"},{"ts":"2026-10-01T02:57:45.836324+00:00","s":"ETHFI","act":"LONG (bias)","label":"STRONG","conv":0.7276,"last":0.785566,"q":"TANPA_PEMBELI","h":"0530cc75b7"},{"ts":"2026-10-01T02:57:45.836667+00:00","s":"AI","act":"SHORT (bias)","label":"STRONG","conv":0.7221,"last":0.166419,"q":"HINDARI","h":"742364dfe7"},{"ts":"2026-10-01T02:57:45.837006+00:00","s":"ICP","act":"LONG (bias)","label":"STRONG","conv":0.7187,"last":3.43,"q":"TANPA_PEMBELI","h":"afc3b5bdc3"},{"ts":"2026-10-01T02:57:45.837345+00:00","s":"LIT","act":"SHORT (bias)","label":"STRONG","conv":0.7158,"last":3.94,"q":"HINDARI","h":"5a1b70b906"},{"ts":"2026-10-01T02:57:45.837682+00:00","s":"DGAI","act":"SHORT (bias)","label":"STRONG","conv":0.7036,"last":0.909199,"q":"DIAM","h":"13f0d094eb"},{"ts":"2026-10-01T06:28:29.775465+00:00","s":"NIGHT","act":"LONG (bias)","label":"STRONG","conv":0.7537,"last":0.03838422,"q":"HINDARI","h":"a4c3beaac1"},{"ts":"2026-10-01T06:28:29.776310+00:00","s":"ZBCN","act":"LONG (bias)","label":"STRONG","conv":0.7527,"last":0.00260569,"q":"TANPA_PEMBELI","h":"b41f1b04aa"},{"ts":"2026-10-01T06:28:29.776706+00:00","s":"TRAC","act":"LONG (bias)","label":"STRONG","conv":0.736,"last":0.413852,"q":"TANPA_PEMBELI","h":"476aa1c763"},{"ts":"2026-10-01T06:28:29.777063+00:00","s":"ZRO","act":"LONG (bias)","label":"STRONG","conv":0.7354,"last":1.68,"q":"TANPA_PEMBELI","h":"393d05303c"},{"ts":"2026-10-01T06:28:29.777413+00:00","s":"SOON","act":"LONG (bias)","label":"STRONG","conv":0.7299,"last":0.495218,"q":"HINDARI","h":"b8244a4023"},{"ts":"2026-10-01T06:28:29.777759+00:00","s":"ETHFI","act":"LONG (bias)","label":"STRONG","conv":0.7276,"last":0.785566,"q":"TANPA_PEMBELI","h":"1a2ab99f74"},{"ts":"2026-10-01T06:28:29.778321+00:00","s":"AI","act":"SHORT (bias)","label":"STRONG","conv":0.7221,"last":0.166419,"q":"HINDARI","h":"91cfcf9e5f"},{"ts":"2026-10-01T06:28:29.778857+00:00","s":"ICP","act":"LONG (bias)","label":"STRONG","conv":0.7187,"last":3.43,"q":"TANPA_PEMBELI","h":"266e3e995b"},{"ts":"2026-10-01T06:28:29.780110+00:00","s":"LIT","act":"SHORT (bias)","label":"STRONG","conv":0.7158,"last":3.94,"q":"HINDARI","h":"057285cb0b"},{"ts":"2026-10-01T06:28:29.781326+00:00","s":"DGAI","act":"SHORT (bias)","label":"STRONG","conv":0.7036,"last":0.909199,"q":"DIAM","h":"327eab4f93"},{"ts":"2026-10-01T10:48:05.988737+00:00","s":"NIGHT","act":"LONG (bias)","label":"STRONG","conv":0.7537,"last":0.03838422,"q":"HINDARI","h":"ebbf4b91e6"},{"ts":"2026-10-01T10:48:05.989163+00:00","s":"ZBCN","act":"LONG (bias)","label":"STRONG","conv":0.7527,"last":0.00260569,"q":"TANPA_PEMBELI","h":"90666b7562"},{"ts":"2026-10-01T10:48:05.989510+00:00","s":"TRAC","act":"LONG (bias)","label":"STRONG","conv":0.736,"last":0.413852,"q":"TANPA_PEMBELI","h":"9b96defb4a"},{"ts":"2026-10-01T10:48:05.989846+00:00","s":"ZRO","act":"LONG (bias)","label":"STRONG","conv":0.7354,"last":1.68,"q":"TANPA_PEMBELI","h":"8de4b6fc21"},{"ts":"2026-10-01T10:48:05.990174+00:00","s":"SOON","act":"LONG (bias)","label":"STRONG","conv":0.7299,"last":0.495218,"q":"HINDARI","h":"6c37fad263"},{"ts":"2026-10-01T10:48:05.990501+00:00","s":"ETHFI","act":"LONG (bias)","label":"STRONG","conv":0.7276,"last":0.785566,"q":"TANPA_PEMBELI","h":"0c210a938f"},{"ts":"2026-10-01T10:48:05.990826+00:00","s":"AI","act":"SHORT (bias)","label":"STRONG","conv":0.7221,"last":0.166419,"q":"HINDARI","h":"2b0974f6be"},{"ts":"2026-10-01T10:48:05.991149+00:00","s":"ICP","act":"LONG (bias)","label":"STRONG","conv":0.7187,"last":3.43,"q":"TANPA_PEMBELI","h":"9349119b48"},{"ts":"2026-10-01T10:48:05.991471+00:00","s":"LIT","act":"SHORT (bias)","label":"STRONG","conv":0.7158,"last":3.94,"q":"HINDARI","h":"a01a952805"},{"ts":"2026-10-01T10:48:05.991791+00:00","s":"DGAI","act":"SHORT (bias)","label":"STRONG","conv":0.7036,"last":0.909199,"q":"DIAM","h":"83f7f715fa"},{"ts":"2026-10-01T14:36:20.870461+00:00","s":"NIGHT","act":"LONG (bias)","label":"STRONG","conv":0.7537,"last":0.03838422,"q":"HINDARI","h":"3c1eeb3c2b"},{"ts":"2026-10-01T14:36:20.870923+00:00","s":"ZBCN","act":"LONG (bias)","label":"STRONG","conv":0.7527,"last":0.00260569,"q":"TANPA_PEMBELI","h":"0801a0b2b5"},{"ts":"2026-10-01T14:36:20.871290+00:00","s":"TRAC","act":"LONG (bias)","label":"STRONG","conv":0.736,"last":0.413852,"q":"TANPA_PEMBELI","h":"915bef654b"},{"ts":"2026-10-01T14:36:20.871641+00:00","s":"ZRO","act":"LONG (bias)","label":"STRONG","conv":0.7354,"last":1.68,"q":"TANPA_PEMBELI","h":"512624b37e"},{"ts":"2026-10-01T14:36:20.871984+00:00","s":"SOON","act":"LONG (bias)","label":"STRONG","conv":0.7299,"last":0.495218,"q":"HINDARI","h":"d4a73554e2"},{"ts":"2026-10-01T14:36:20.872325+00:00","s":"ETHFI","act":"LONG (bias)","label":"STRONG","conv":0.7276,"last":0.785566,"q":"TANPA_PEMBELI","h":"e21ad0f730"},{"ts":"2026-10-01T14:36:20.872664+00:00","s":"AI","act":"SHORT (bias)","label":"STRONG","conv":0.7221,"last":0.166419,"q":"HINDARI","h":"baedd6b59f"},{"ts":"2026-10-01T14:36:20.873003+00:00","s":"ICP","act":"LONG (bias)","label":"STRONG","conv":0.7187,"last":3.43,"q":"TANPA_PEMBELI","h":"8780aade92"},{"ts":"2026-10-01T14:36:20.873341+00:00","s":"LIT","act":"SHORT (bias)","label":"STRONG","conv":0.7158,"last":3.94,"q":"HINDARI","h":"f8a70c9a0d"},{"ts":"2026-10-01T14:36:20.873678+00:00","s":"DGAI","act":"SHORT (bias)","label":"STRONG","conv":0.7036,"last":0.909199,"q":"DIAM","h":"1b5ec7f3c7"},{"ts":"2026-10-01T18:40:13.396189+00:00","s":"NIGHT","act":"LONG (bias)","label":"STRONG","conv":0.7537,"last":0.03838422,"q":"HINDARI","h":"8106a0234f"},{"ts":"2026-10-01T18:40:13.396647+00:00","s":"ZBCN","act":"LONG (bias)","label":"STRONG","conv":0.7527,"last":0.00260569,"q":"TANPA_PEMBELI","h":"41dabb4a7f"},{"ts":"2026-10-01T18:40:13.397003+00:00","s":"TRAC","act":"LONG (bias)","label":"STRONG","conv":0.736,"last":0.413852,"q":"TANPA_PEMBELI","h":"44ac327471"},{"ts":"2026-10-01T18:40:13.397347+00:00","s":"ZRO","act":"LONG (bias)","label":"STRONG","conv":0.7354,"last":1.68,"q":"TANPA_PEMBELI","h":"81688b5ffb"},{"ts":"2026-10-01T18:40:13.397684+00:00","s":"SOON","act":"LONG (bias)","label":"STRONG","conv":0.7299,"last":0.495218,"q":"HINDARI","h":"251e410428"},{"ts":"2026-10-01T18:40:13.398023+00:00","s":"ETHFI","act":"LONG (bias)","label":"STRONG","conv":0.7276,"last":0.785566,"q":"TANPA_PEMBELI","h":"97b90c1c80"},{"ts":"2026-10-01T18:40:13.398354+00:00","s":"AI","act":"SHORT (bias)","label":"STRONG","conv":0.7221,"last":0.166419,"q":"HINDARI","h":"a3e94a8099"},{"ts":"2026-10-01T18:40:13.398686+00:00","s":"ICP","act":"LONG (bias)","label":"STRONG","conv":0.7187,"last":3.43,"q":"TANPA_PEMBELI","h":"693895de54"},{"ts":"2026-10-01T18:40:13.399024+00:00","s":"LIT","act":"SHORT (bias)","label":"STRONG","conv":0.7158,"last":3.94,"q":"HINDARI","h":"a8b8a6bd09"},{"ts":"2026-10-01T18:40:13.399351+00:00","s":"DGAI","act":"SHORT (bias)","label":"STRONG","conv":0.7036,"last":0.909199,"q":"DIAM","h":"c0d4ed9cc1"},{"ts":"2026-10-01T22:20:18.290400+00:00","s":"NIGHT","act":"LONG (bias)","label":"STRONG","conv":0.7537,"last":0.03838422,"q":"HINDARI","h":"d9494c5b7c"},{"ts":"2026-10-01T22:20:18.290873+00:00","s":"ZBCN","act":"LONG (bias)","label":"STRONG","conv":0.7527,"last":0.00260569,"q":"TANPA_PEMBELI","h":"0b1872ce88"},{"ts":"2026-10-01T22:20:18.291244+00:00","s":"TRAC","act":"LONG (bias)","label":"STRONG","conv":0.736,"last":0.413852,"q":"TANPA_PEMBELI","h":"36d012238c"},{"ts":"2026-10-01T22:20:18.291603+00:00","s":"ZRO","act":"LONG (bias)","label":"STRONG","conv":0.7354,"last":1.68,"q":"TANPA_PEMBELI","h":"4145e11a70"},{"ts":"2026-10-01T22:20:18.291963+00:00","s":"SOON","act":"LONG (bias)","label":"STRONG","conv":0.7299,"last":0.495218,"q":"HINDARI","h":"f5c1034c24"},{"ts":"2026-10-01T22:20:18.292318+00:00","s":"ETHFI","act":"LONG (bias)","label":"STRONG","conv":0.7276,"last":0.785566,"q":"TANPA_PEMBELI","h":"d2cb580641"},{"ts":"2026-10-01T22:20:18.292668+00:00","s":"AI","act":"SHORT (bias)","label":"STRONG","conv":0.7221,"last":0.166419,"q":"HINDARI","h":"b79b1cfe63"},{"ts":"2026-10-01T22:20:18.293018+00:00","s":"ICP","act":"LONG (bias)","label":"STRONG","conv":0.7187,"last":3.43,"q":"TANPA_PEMBELI","h":"260ff3966f"},{"ts":"2026-10-01T22:20:18.293361+00:00","s":"LIT","act":"SHORT (bias)","label":"STRONG","conv":0.7158,"last":3.94,"q":"HINDARI","h":"16face3852"},{"ts":"2026-10-01T22:20:18.293706+00:00","s":"DGAI","act":"SHORT (bias)","label":"STRONG","conv":0.7036,"last":0.909199,"q":"DIAM","h":"f625300af3"},{"ts":"2026-10-02T00:51:30.253404+00:00","s":"MON","act":"LONG (bias)","label":"STRONG","conv":0.756,"last":0.03383749,"q":"SODORKAN","h":"32cdcab834"},{"ts":"2026-10-02T00:51:30.253881+00:00","s":"ZRO","act":"LONG (bias)","label":"STRONG","conv":0.7392,"last":1.83,"q":"TANPA_PEMBELI","h":"bc44457127"},{"ts":"2026-10-02T00:51:30.254239+00:00","s":"STX","act":"LONG (bias)","label":"STRONG","conv":0.7376,"last":0.372342,"q":"TANPA_PEMBELI","h":"182675c77c"},{"ts":"2026-10-02T00:51:30.254591+00:00","s":"2Z","act":"SHORT (bias)","label":"STRONG","conv":0.7295,"last":0.056384,"q":"DIAM","h":"1e824aa5d4"},{"ts":"2026-10-02T00:51:30.254939+00:00","s":"JASMY","act":"LONG (bias)","label":"STRONG","conv":0.7265,"last":0.00572652,"q":"TANPA_PEMBELI","h":"dd92f0dac3"},{"ts":"2026-10-02T00:51:30.255284+00:00","s":"MET","act":"SHORT (bias)","label":"STRONG","conv":0.7249,"last":0.303102,"q":"HINDARI","h":"1435e3db94"},{"ts":"2026-10-02T00:51:30.255628+00:00","s":"KITE","act":"LONG (bias)","label":"STRONG","conv":0.7247,"last":0.150942,"q":"TANPA_PEMBELI","h":"55d8f35672"},{"ts":"2026-10-02T00:51:30.255969+00:00","s":"BP","act":"LONG (bias)","label":"STRONG","conv":0.7193,"last":1.29,"q":"HINDARI","h":"c84c026017"},{"ts":"2026-10-02T00:51:30.256317+00:00","s":"SUPER","act":"LONG (bias)","label":"STRONG","conv":0.7185,"last":0.229231,"q":"TANPA_PEMBELI","h":"2049af8d6c"},{"ts":"2026-10-02T00:51:30.256847+00:00","s":"BTW","act":"LONG (bias)","label":"STRONG","conv":0.7164,"last":1.43,"q":"TANPA_PEMBELI","h":"ab72ceb463"}],"peg":{"mode":"PAPER","modal":998106.01,"bebas":998106.01,"beruntun":5,"rem":["kalah 5× beruntun"],"posisi":[],"stat":{"tutup":5,"menang":0,"jumlah_pct":-13.22,"winrate":0.0,"rata_pct":-2.64},"saklar":false,"pagar":["RUMUS OCKLU: niat dulu, baru barang — hanya kuadran SODORKAN (niat beli nyata + teknikal STRONG LONG)","Masuk hanya STRONG · conviction ≥ 0.7 · LONG (spot) · bukan gorengan","Koin dicocokkan via coingecko_id (Indodax) atau simbol + harga ≤ 3% dari CoinGecko","Spread ≤ 1% · likuiditas cukup (Indodax vol ≥ Rp 1 M, gaya Binance antrean ≥ 5× order)","Maks 5%/order · 30% total · 5 posisi/bursa","Keluar: stop ALADIN · target 2R · stop geser ke modal di +1R · 72 jam · sinyal berbalik","Rem: rugi 5%/hari atau kalah 3× beruntun · saklar data/STOP"],"riwayat":[{"ts":"2026-09-28T08:56:23.002150+00:00","side":"SELL","pair":"link_idr","price":245006.0,"pnl_pct":-0.62,"reason":"STOP","mode":"PAPER"},{"ts":"2026-09-28T08:56:22.205926+00:00","side":"SELL","pair":"ondo_idr","price":9278.0,"pnl_pct":-5.34,"reason":"STOP","mode":"PAPER"},{"ts":"2026-09-26T05:09:57.476579+00:00","side":"SELL","pair":"xlm_idr","price":3759.0,"pnl_pct":-3.37,"reason":"STOP","mode":"PAPER"},{"ts":"2026-09-25T21:19:39.511326+00:00","side":"BUY","pair":"link_idr","price":246532.0,"pnl_pct":null,"reason":null,"mode":"PAPER"},{"ts":"2026-09-25T17:16:05.199785+00:00","side":"BUY","pair":"xlm_idr","price":3890.0,"pnl_pct":null,"reason":null,"mode":"PAPER"},{"ts":"2026-09-25T13:47:36.174852+00:00","side":"SELL","pair":"ltc_idr","price":1232000.0,"pnl_pct":-3.67,"reason":"STOP","mode":"PAPER"},{"ts":"2026-09-25T13:18:43.447413+00:00","side":"BUY","pair":"ondo_idr","price":9801.0,"pnl_pct":null,"reason":null,"mode":"PAPER"},{"ts":"2026-09-25T11:57:12.685127+00:00","side":"SELL","pair":"ondo_idr","price":9600.0,"pnl_pct":-0.22,"reason":"STOP","mode":"PAPER"},{"ts":"2026-09-25T05:05:16.510030+00:00","side":"BUY","pair":"ondo_idr","price":9621.0,"pnl_pct":null,"reason":null,"mode":"PAPER"},{"ts":"2026-09-24T22:34:30.206396+00:00","side":"BUY","pair":"ltc_idr","price":1279000.0,"pnl_pct":null,"reason":null,"mode":"PAPER"}],"dibuat":"2026-10-02T00:51:31.711767+00:00"},"uang_masuk":["MON","ZRO","JASMY"],"uang_keluar":["BP"]};
+const $ = id => document.getElementById(id);
+const CSS = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const C = {mag:CSS('--mag'),grn:CSS('--grn'),amb:CSS('--amb'),wht:CSS('--wht'),dim:CSS('--dim'),faint:CSS('--faint'),line:CSS('--line'),ink:CSS('--ink'),mag2:CSS('--mag2')};
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const usd = v => v==null ? '—' : '$' + Number(v).toLocaleString('en-US',{maximumFractionDigits: v<10?4:2});
+const idr = v => v==null ? '—' : 'Rp ' + Math.round(v).toLocaleString('id-ID');
+const pct = (v,d=2) => v==null ? '—' : (v>0?'+':'') + Number(v).toFixed(d) + '%';
+const cls = v => v>0 ? 'pos' : v<0 ? 'neg' : 'dim';
+const wib = ts => { try { return new Date(ts).toLocaleString('id-ID',{timeZone:'Asia/Jakarta',day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'}); } catch(e){ return ts; } };
+const jamWib = ts => { try { return new Date(ts).toLocaleTimeString('id-ID',{timeZone:'Asia/Jakarta',hour:'2-digit',minute:'2-digit',second:'2-digit'}); } catch(e){ return ''; } };
+
+function fitCanvas(cv){
+  const r = cv.getBoundingClientRect(), dpr = Math.min(devicePixelRatio||1, 2);
+  const h = cv.getAttribute('height') && !cv.style.height ? +cv.getAttribute('height') : r.height || 100;
+  cv.style.height = h + 'px';
+  cv.width = Math.max(1, r.width*dpr); cv.height = h*dpr;
+  const x = cv.getContext('2d'); x.setTransform(dpr,0,0,dpr,0,0);
+  return {x, w:r.width, h};
+}
+
+/* ---------- bar atas ---------- */
+function topbar(){
+  $('kBtc').textContent = usd(D.btc.last);
+  $('kCh').innerHTML = `<span class="${cls(D.btc.ch)}">${pct(D.btc.ch)}</span>`;
+  $('kScan').textContent = D.dipindai ?? '—';
+  const L = D.ledger||{};
+  $('kLed').innerHTML = `${(L.entries||0).toLocaleString('id-ID')} <span class="${L.ok?'pos':'neg'}">${L.ok?'✓':'✗'}</span>`;
+  const st = D.peg.stat||{};
+  $('kWin').innerHTML = `<span class="${st.menang? 'pos':'neg'}">${st.menang??0}/${st.tutup??0}</span>`;
+  const umurJam = D.as_of ? (Date.now()-new Date(D.as_of))/36e5 : 99;
+  if (umurJam > 12){ $('live').classList.add('basi'); $('liveTxt').textContent = 'DATA ' + Math.round(umurJam) + ' JAM LALU'; }
+  const tick = () => $('clock').textContent = new Date().toLocaleTimeString('id-ID',{timeZone:'Asia/Jakarta',hour12:false});
+  tick(); setInterval(tick, 1000);
+  $('fSrc').textContent = 'Sumber: ' + (D.source||'');
+  $('fAsof').textContent = 'Verdict per ' + wib(D.as_of) + ' WIB · dirakit ' + wib(D.generated) + ' WIB';
+}
+
+/* ---------- bot ---------- */
+function bot(){
+  const P = D.peg, st = P.stat||{};
+  $('botMode').textContent = P.mode === 'PAPER' ? 'KERTAS' : (P.mode||'—');
+  $('botModal').textContent = idr(P.modal);
+  const awal = 1000000, beda = P.modal!=null ? (P.modal-awal)/awal*100 : null;
+  $('botSub').innerHTML = `vs modal awal ${idr(awal)} · <span class="${cls(beda)}">${pct(beda)}</span>`;
+  $('botTrade').textContent = st.tutup ?? 0;
+  $('botWin').innerHTML = `<span class="${st.winrate>0?'pos':'neg'}">${Math.round((st.winrate||0)*100)}%</span>`;
+  $('botAvg').innerHTML = `<span class="${cls(st.rata_pct)}">${pct(st.rata_pct)}</span>`;
+  const rem = (P.rem||[]).concat(P.saklar ? ['saklar STOP menyala'] : []);
+  $('botRem').textContent = rem.length ? '⛔ Rem aktif: ' + rem.join(' · ') + ' — bot tidak membuka posisi baru.' : (P.posisi.length ? P.posisi.length + ' posisi terbuka' : 'Tidak ada posisi terbuka · menunggu sinyal SODORKAN.');
+}
+
+/* ---------- candle ---------- */
+function candle(){
+  const cl = D.btc.closes||[]; const cv = $('candle'); const {x,w,h} = fitCanvas(cv);
+  if (cl.length < 3){ x.fillStyle = C.dim; x.fillText('feed BTC kosong', 10, 20); return; }
+  const lo = Math.min(...cl), hi = Math.max(...cl), pad = (hi-lo)*.12 || 1;
+  const y = v => h-14 - (v-(lo-pad))/((hi+pad)-(lo-pad))*(h-24);
+  x.strokeStyle = C.line; x.lineWidth = 1; x.fillStyle = C.faint; x.font = '10px IBM Plex Mono, monospace';
+  for (let i=0;i<4;i++){ const v = lo + (hi-lo)*i/3, yy = Math.round(y(v))+.5; x.beginPath(); x.moveTo(0,yy); x.lineTo(w-58,yy); x.stroke(); x.fillText(Math.round(v).toLocaleString('en-US'), w-54, yy+3); }
+  const n = cl.length-1, bw = (w-64)/n;
+  for (let i=1;i<=n;i++){
+    const o = cl[i-1], c = cl[i], up = c>=o, xx = (i-1)*bw + bw*.18;
+    x.fillStyle = up ? C.grn : C.mag;
+    const y1 = y(Math.max(o,c)), y2 = y(Math.min(o,c));
+    x.fillRect(xx, y1, Math.max(1.5,bw*.64), Math.max(1.5, y2-y1));
+  }
+  const last = cl[cl.length-1], ly = y(last);
+  x.fillStyle = C.mag; x.fillRect(w-60, ly-9, 60, 18);
+  x.fillStyle = '#fff'; x.font = '600 10px IBM Plex Mono, monospace'; x.fillText(Math.round(last).toLocaleString('en-US'), w-56, ly+4);
+  const ch = (last-cl[0])/cl[0]*100;
+  $('cLast').textContent = usd(last); $('cTag').textContent = pct(ch,2) + ' · ' + Math.round(n*4/24) + ' hari';
+  $('cTag').className = 'chip ' + (ch>=0?'grn':'mag');
+}
+
+/* ---------- polymarket ---------- */
+function poly(){
+  const el = $('pm'); const rows = (D.poly||[]).slice(0,7);
+  el.innerHTML = rows.length ? rows.map(p => `<div class="r"><span class="q" title="${p.q.replace(/"/g,'&quot;')}">${p.q}</span><span class="y">${Math.round(p.yes*100)}¢</span><span class="bar"><i style="width:${(p.yes*100).toFixed(1)}%"></i></span></div>`).join('')
+    : '<div class="dim">Polymarket tidak terjangkau dari jaringan ini (diblokir ISP).</div>';
+}
+
+/* ---------- rentetan ---------- */
+function streak(){
+  const P = D.peg, n = P.beruntun||0;
+  $('stN').textContent = n; $('stTxt').textContent = n ? 'kalah beruntun' : 'tanpa kalah beruntun';
+  $('stTag').textContent = n>=3 ? 'REM' : 'AMAN'; $('stTag').className = 'chip ' + (n>=3?'mag':'grn');
+  const t = (P.riwayat||[]).filter(r => r.pnl_pct!=null).reverse();
+  const cv = $('stBars'), {x,w,h} = fitCanvas(cv);
+  if (!t.length){ x.fillStyle=C.dim; x.fillText('belum ada trade tertutup',4,20); return; }
+  const m = Math.max(...t.map(r=>Math.abs(r.pnl_pct)),1), bw = w/Math.max(t.length,8);
+  t.forEach((r,i) => { const bh = Math.abs(r.pnl_pct)/m*(h/2-4); x.fillStyle = r.pnl_pct>=0?C.grn:C.mag; x.fillRect(i*bw+2, r.pnl_pct>=0? h/2-bh : h/2, bw-4, bh); });
+  x.fillStyle = C.line; x.fillRect(0,h/2,w,1);
+  $('stNote').textContent = 'Batang = hasil tiap trade tertutup (kertas). Rem otomatis: rugi 5%/hari atau kalah 3× beruntun.';
+}
+
+/* ---------- swarm ---------- */
+function swarm(){
+  const A = D.aset||[]; const cv = $('swarm'); let ctx, W, H;
+  const nodes = [], sats = [], links = [];
+  const sigCount = A.reduce((s,a)=>s+Object.keys(a.sig||{}).length,0);
+  const vols = A.map(a=>a.vol||0), vmin = Math.min(...vols), vmax = Math.max(...vols);
+  const scores = A.map(a => (a.dir==='SHORT'?-1:1)*(a.conv||0));
+  const smax = Math.max(...scores.map(Math.abs), .01);
+  A.forEach((a,i) => {
+    const sc = scores[i]/smax;                  // -1..1
+    const vy = vmax>vmin ? (a.vol-vmin)/(vmax-vmin) : .5;
+    const col = a.gor ? C.amb : (a.dir==='SHORT' ? C.mag : C.grn);
+    const nd = {a, hx: .5 + sc*.42, hy: .86 - vy*.70, r: 3 + (a.conv||.5)*7, col, ph: i*1.7, sp: .25 + (i%7)*.04, x:0, y:0};
+    nodes.push(nd);
+    Object.entries(a.sig||{}).forEach(([k,v],j) => sats.push({p:nd, k, v, ang: j*1.26 + i, rad: nd.r + 9 + j*3.5, sp: (.15+.05*j)*(j%2?1:-1)}));
+  });
+  const idx = {}; nodes.forEach((n,i)=> idx[n.a.s]=i);
+  const cs = D.corr.s||[], cm = D.corr.m||[];
+  for (let i=0;i<cs.length;i++) for (let j=i+1;j<cs.length;j++){ const v = (cm[i]||[])[j]; if (Math.abs(v)>.45 && idx[cs[i]]!=null && idx[cs[j]]!=null) links.push([idx[cs[i]], idx[cs[j]], v]); }
+  // bintang latar (dekorasi, bukan data) — dibuat sekali, deterministik
+  const stars = Array.from({length:110}, (_,i) => ({x: (Math.sin(i*12.9898)*43758.5453)%1, y: (Math.sin(i*78.233)*12345.678)%1, a: .15 + (i%5)*.07}));
+  const ag = A.filter(a=>a.agree!=null), conv = ag.length ? ag.reduce((s,a)=>s+a.agree,0)/ag.length : null;
+  $('swN').textContent = A.length; $('swS').textContent = sigCount;
+  $('swAg').textContent = conv==null ? '—' : (conv*100).toFixed(1)+'%';
+  $('swConv').textContent = 'konsensus ' + (conv==null?'—':(conv*100).toFixed(1)+'%');
+  $('swL').textContent = A.filter(a=>a.dir==='LONG').length; $('swSh').textContent = A.filter(a=>a.dir==='SHORT').length;
+  $('swIn').textContent = (D.uang_masuk||[]).join(', ') || '—'; $('swOut').textContent = (D.uang_keluar||[]).join(', ') || '—';
+
+  function size(){ const f = fitCanvas(cv); ctx = f.x; W = f.w; H = f.h; }
+  size(); addEventListener('resize', size);
+  let hover = null;
+  function frame(t){
+    t = reduce ? 0 : t/1000;
+    ctx.clearRect(0,0,W,H);
+    const g = ctx.createRadialGradient(W*.5,H*.5,10,W*.5,H*.5,Math.max(W,H)*.7);
+    g.addColorStop(0,'rgba(60,20,70,.35)'); g.addColorStop(1,'rgba(11,7,16,0)'); ctx.fillStyle = g; ctx.fillRect(0,0,W,H);
+    stars.forEach(s => { ctx.fillStyle = `rgba(217,207,226,${s.a})`; ctx.fillRect(Math.abs(s.x)*W, Math.abs(s.y)*H, 1, 1); });
+    ctx.strokeStyle = 'rgba(90,75,104,.35)'; ctx.setLineDash([2,4]); ctx.beginPath(); ctx.moveTo(W/2,30); ctx.lineTo(W/2,H-22); ctx.stroke(); ctx.setLineDash([]);
+    nodes.forEach(n => { n.x = n.hx*W + Math.sin(t*n.sp+n.ph)*10; n.y = n.hy*H + Math.cos(t*n.sp*.8+n.ph)*8; });
+    links.forEach(([i,j,v]) => { const a=nodes[i], b=nodes[j]; ctx.strokeStyle = v>0 ? 'rgba(255,111,176,.28)' : 'rgba(46,230,160,.22)'; ctx.lineWidth = Math.abs(v)*1.6; ctx.beginPath(); ctx.moveTo(a.x,a.y); ctx.lineTo(b.x,b.y); ctx.stroke(); });
+    sats.forEach(s => {
+      const an = s.ang + t*s.sp, x = s.p.x + Math.cos(an)*s.rad, y = s.p.y + Math.sin(an)*s.rad*.8;
+      ctx.strokeStyle = 'rgba(141,125,155,.12)'; ctx.lineWidth = .6; ctx.beginPath(); ctx.moveTo(s.p.x,s.p.y); ctx.lineTo(x,y); ctx.stroke();
+      ctx.fillStyle = s.v>.15 ? C.grn : s.v<-.15 ? C.mag : C.wht; ctx.globalAlpha = .55 + Math.min(.45,Math.abs(s.v)*.45);
+      ctx.beginPath(); ctx.arc(x,y,1.6,0,7); ctx.fill(); ctx.globalAlpha = 1;
+    });
+    nodes.forEach(n => {
+      const pulse = reduce ? 0 : (Math.sin(t*2+n.ph)+1)*.5;
+      ctx.shadowColor = n.col; ctx.shadowBlur = 10 + pulse*10; ctx.fillStyle = n.col;
+      ctx.beginPath(); ctx.arc(n.x,n.y,n.r*(hover===n?1.35:1),0,7); ctx.fill(); ctx.shadowBlur = 0;
+      ctx.fillStyle = hover===n ? C.ink : 'rgba(217,207,226,.62)'; ctx.font = '600 9.5px IBM Plex Mono, monospace';
+      ctx.fillText(n.a.s, n.x + n.r + 4, n.y + 3);
+    });
+    if (!reduce) requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+  const tip = $('tip');
+  function pick(e){
+    const r = cv.getBoundingClientRect(), mx = e.clientX - r.left, my = e.clientY - r.top;
+    let best = null, bd = 24*24;
+    nodes.forEach(n => { const d = (n.x-mx)**2 + (n.y-my)**2; if (d < bd){ bd = d; best = n; } });
+    hover = best;
+    if (!best){ tip.hidden = true; return; }
+    const a = best.a, sig = Object.entries(a.sig||{}).map(([k,v]) => `<div class="kv"><span class="dim">${k}</span><span class="${cls(v)}">${v>0?'+':''}${v.toFixed(2)}</span></div>`).join('');
+    tip.innerHTML = `<h4 style="color:${best.col}">${a.s} <span class="dim" style="font:500 10px var(--mono)">${a.nama}</span></h4>
+      <div class="kv"><span class="dim">arah</span><b>${a.dir} · ${a.label}</b></div>
+      <div class="kv"><span class="dim">keyakinan</span><b>${(a.conv*100).toFixed(1)}%</b></div>
+      <div class="kv"><span class="dim">sepakat</span><b>${a.al??'—'}/${a.n??'—'} sinyal</b></div>
+      <div class="kv"><span class="dim">rezim</span><b>${a.regime||'—'}</b></div>
+      <div class="kv"><span class="dim">24 jam</span><b class="${cls(a.ch)}">${pct(a.ch)}</b></div>
+      <div class="kv"><span class="dim">kuadran</span><b>${a.kuadran||'—'}</b></div>${a.gor?'<div class="amb" style="margin-top:4px">⚠ pola gorengan terdeteksi</div>':''}
+      <div style="margin-top:6px;border-top:1px solid var(--line);padding-top:5px">${sig}</div>`;
+    tip.hidden = false;
+    const tw = tip.offsetWidth, th = tip.offsetHeight, pr = cv.parentElement.getBoundingClientRect();
+    let lx = best.x + 16, ly = best.y + 10 + (r.top - pr.top);
+    if (lx + tw > pr.width - 8) lx = best.x - tw - 16;
+    if (ly + th > pr.height - 8) ly = pr.height - th - 8;
+    tip.style.left = Math.max(8,lx) + 'px'; tip.style.top = Math.max(8,ly) + 'px';
+  }
+  cv.addEventListener('pointermove', pick); cv.addEventListener('pointerdown', pick);
+  cv.addEventListener('pointerleave', () => { hover = null; tip.hidden = true; });
+}
+
+/* ---------- pnl ---------- */
+function pnl(){
+  const t = (D.peg.riwayat||[]).filter(r=>r.pnl_pct!=null).reverse();
+  let s = 0; const pts = [0].concat(t.map(r => s += r.pnl_pct));
+  $('pnlTot').innerHTML = `<span class="${cls(s)}">${pct(s)}</span>`;
+  const cv = $('pnl'), {x,w,h} = fitCanvas(cv);
+  const lo = Math.min(...pts,0), hi = Math.max(...pts,0), rng = (hi-lo)||1;
+  const X = i => 8 + i/(Math.max(pts.length-1,1))*(w-46), Y = v => 10 + (hi-v)/rng*(h-28);
+  x.strokeStyle = C.line; x.fillStyle = C.faint; x.font = '10px IBM Plex Mono, monospace';
+  [hi, 0, lo].forEach(v => { const yy = Math.round(Y(v))+.5; x.beginPath(); x.moveTo(0,yy); x.lineTo(w-40,yy); x.stroke(); x.fillText(pct(v,1), w-38, yy+3); });
+  const col = s >= 0 ? C.grn : C.mag;
+  x.beginPath(); pts.forEach((v,i) => i ? x.lineTo(X(i),Y(v)) : x.moveTo(X(i),Y(v)));
+  x.lineTo(X(pts.length-1),Y(0)); x.lineTo(X(0),Y(0)); x.closePath();
+  const gr = x.createLinearGradient(0,0,0,h); gr.addColorStop(0, s>=0?'rgba(46,230,160,.25)':'rgba(255,46,136,.05)'); gr.addColorStop(1, s>=0?'rgba(46,230,160,0)':'rgba(255,46,136,.28)');
+  x.fillStyle = gr; x.fill();
+  x.strokeStyle = col; x.lineWidth = 2; x.beginPath(); pts.forEach((v,i) => i ? x.lineTo(X(i),Y(v)) : x.moveTo(X(i),Y(v))); x.stroke();
+  pts.forEach((v,i) => { x.fillStyle = col; x.beginPath(); x.arc(X(i),Y(v), i===pts.length-1?4:2.2, 0, 7); x.fill(); });
+  x.fillStyle = C.dim; x.fillText(t.length + ' trade tertutup', 8, h-4);
+}
+
+/* ---------- tabel ---------- */
+function tabel(){
+  const R = D.peg.riwayat||[];
+  $('tblMode').textContent = (D.peg.mode==='PAPER'?'KERTAS':D.peg.mode||'—') + ' · ' + R.length + ' baris';
+  $('tb').innerHTML = R.length ? R.slice(0,10).map(r => `<tr><td class="dim">${wib(r.ts)}</td><td>${(r.pair||'').replace('_idr','').toUpperCase()}/IDR</td><td><span class="side ${r.side}">${r.side}</span></td><td class="n">${idr(r.price).replace('Rp ','')}</td><td class="n ${cls(r.pnl_pct)}">${r.pnl_pct==null?'—':pct(r.pnl_pct)}</td><td class="dim">${r.reason||'buka'}</td></tr>`).join('')
+    : '<tr><td colspan="6" class="dim">Belum ada trade.</td></tr>';
+}
+
+/* ---------- analitik ---------- */
+function hist(id, vals, bins, colFn, labels){
+  const cv = $(id), {x,w,h} = fitCanvas(cv);
+  let counts, edges;
+  if (labels){ counts = labels.map(l => vals.filter(v=>v===l).length); }
+  else {
+    const lo = Math.min(...vals), hi = Math.max(...vals), st = (hi-lo)/bins || 1;
+    counts = Array(bins).fill(0); edges = Array.from({length:bins},(_,i)=>lo+st*(i+.5));
+    vals.forEach(v => counts[Math.min(bins-1, Math.floor((v-lo)/st))]++);
+  }
+  const m = Math.max(...counts,1), bw = w/counts.length;
+  counts.forEach((c,i) => { const bh = c/m*(h-14); x.fillStyle = colFn(labels?labels[i]:edges[i]); x.fillRect(i*bw+1, h-12-bh, bw-2, bh); });
+  x.fillStyle = C.faint; x.font = '9px IBM Plex Mono, monospace';
+  if (labels) labels.forEach((l,i) => x.fillText(l.slice(0,4)+' '+counts[i], i*bw+2, h-1));
+  else { x.fillText(edges[0].toFixed(edges[0]<2?2:0), 0, h-1); const t = edges[edges.length-1].toFixed(edges[0]<2?2:0); x.fillText(t, w-x.measureText(t).width, h-1); }
+}
+function analitik(){
+  const A = D.aset||[];
+  hist('h1', A.map(a=>a.conv||0), 12, () => C.mag2);
+  hist('h2', A.map(a=>a.ch||0), 12, v => v>=0 ? C.grn : C.mag);
+  hist('h3', A.map(a=>a.vol||0), 12, () => C.amb);
+  hist('h4', A.map(a=>a.regime||'—'), 0, l => l==='Bull'?C.grn: l==='Bear'?C.mag : C.wht, ['Bull','Sideways','Bear']);
+}
+
+/* ---------- log ---------- */
+function logReplay(){
+  const L = D.log||[], el = $('log');
+  $('logN').textContent = L.length; $('logChain').textContent = (D.ledger||{}).ok ? 'rantai hash utuh' : 'rantai rusak'; $('logChain').className = 'chip ' + ((D.ledger||{}).ok ? 'grn' : 'mag');
+  const row = (e, baru) => `<div class="l${baru?' new':''}"><span class="dim">${jamWib(e.ts)}</span><span class="${e.act&&e.act.startsWith('SHORT')?'neg':'pos'}">${e.s}</span><span>${e.act||''} · ${e.label||''} · keyakinan ${e.conv!=null?(e.conv*100).toFixed(1)+'%':'—'} · ${e.q||''} @ ${usd(e.last)}</span><span class="dim">#${e.h}</span></div>`;
+  if (!L.length){ el.innerHTML = '<div class="dim">Buku besar kosong.</div>'; return; }
+  let i = Math.max(0, L.length-12);
+  el.innerHTML = L.slice(i).reverse().map(e=>row(e)).join('');
+  if (reduce) return;
+  i = 0;
+  setInterval(() => { el.insertAdjacentHTML('afterbegin', row(L[i % L.length], true)); i++; while (el.children.length > 16) el.lastElementChild.remove(); }, 1400);
+}
+
+/* ---------- harga BTC langsung (jalan di ocklu.com; di viewer artifact diblokir & diam) ---------- */
+async function btcLive(){
+  try{
+    const r = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd&include_24hr_change=true', {cache:'no-store'});
+    const j = await r.json(); const b = j.bitcoin; if (!b) return;
+    $('kBtc').textContent = usd(b.usd); $('kCh').innerHTML = `<span class="${cls(b.usd_24h_change)}">${pct(b.usd_24h_change)}</span>`;
+    $('kBtc').title = 'harga langsung CoinGecko';
+  }catch(e){ /* tetap pakai harga dari feed terakhir */ }
+}
+
+if (D){
+  topbar(); bot(); candle(); poly(); streak(); swarm(); pnl(); tabel(); analitik(); logReplay();
+  btcLive(); setInterval(btcLive, 60000);
+  let rt; addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(() => { candle(); streak(); pnl(); analitik(); }, 150); });
+} else {
+  document.querySelector('main').innerHTML = '<p class="dim">Data belum dirakit — jalankan python3 gravia.py.</p>';
+}
+</script>
