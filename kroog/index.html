@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#b3261e">
+<meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Kroog">
+<title>Kroog · Kantor Berita</title>
+<meta name="description" content="Kantor berita 1000 wartawan AI. Setiap berita bertautan ke media aslinya, dua bahasa: Indonesia & English.">
+<style>
+:root{--merah:#b3261e;--kertas:#f7f3ee;--kartu:#fffdf9;--tinta:#1f1a17;--abu:#6b5f57;--garis:#e4dad0;--hijau:#2f6b3a;--kuning:#8a5a00;--r:4px;
+--serif:Georgia,"Source Serif 4","Times New Roman",serif;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif}
+@media (prefers-color-scheme:dark){:root{--merah:#ff8a7f;--kertas:#16120f;--kartu:#201a16;--tinta:#f1e9e2;--abu:#b8aaa0;--garis:#3a302a;--hijau:#8fd19e;--kuning:#f0c46a}}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--kertas);color:var(--tinta);font:16px/1.55 var(--sans)}
+a{color:inherit;text-decoration-color:var(--garis);text-underline-offset:3px}a:hover{color:var(--merah)}
+:focus-visible{outline:3px solid var(--merah);outline-offset:2px}
+.bungkus{max-width:1120px;margin:0 auto;padding:0 16px}
+header{border-bottom:3px solid var(--tinta);padding:16px 0 0;position:sticky;top:0;background:var(--kertas);z-index:5}
+.atas{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.logo{font:700 36px/1 var(--serif);letter-spacing:-1px;text-decoration:none}.logo b{color:var(--merah)}
+.tag{color:var(--abu);font-size:13px}
+nav{display:flex;gap:4px;overflow-x:auto;margin-top:8px;scrollbar-width:none}nav::-webkit-scrollbar{display:none}
+nav a{padding:12px 10px;min-height:44px;font:600 14px var(--sans);text-decoration:none;white-space:nowrap;border-bottom:3px solid transparent;margin-bottom:-3px}
+nav a.on{border-color:var(--merah);color:var(--merah)}
+main{padding:32px 0 40px;min-height:60vh}
+.rubrik{font:700 12px var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--merah)}
+h1,h2,h3{font-family:var(--serif);line-height:1.2;margin:0}h1{font-size:30px}h2{font-size:24px}h3{font-size:20px}
+.bagian{border-top:2px solid var(--tinta);padding-top:8px;margin-bottom:40px}
+.kepala{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin-bottom:16px;flex-wrap:wrap}
+.grid{display:grid;grid-template-columns:2fr 1fr;gap:40px}
+@media (max-width:820px){.grid{grid-template-columns:1fr}h1{font-size:25px}.logo{font-size:30px}}
+.utama h1 a,.cerita h3 a{text-decoration:none}.utama p{font-size:18px;max-width:65ch}
+.cerita{padding:16px 0;border-bottom:1px solid var(--garis)}.cerita p{margin:8px 0 0;max-width:68ch}
+.redaksi{border-left:4px solid var(--merah);padding-left:16px}
+.meta{font-size:13px;color:var(--abu);margin-top:8px;display:flex;gap:6px 14px;flex-wrap:wrap;align-items:center}
+.lencana{display:inline-block;font:700 11px var(--sans);letter-spacing:.04em;text-transform:uppercase;padding:2px 6px;border-radius:var(--r);border:1px solid currentColor}
+.l-3{color:var(--hijau)}.l-2{color:var(--kuning)}.l-1{color:var(--abu)}
+.media{font-size:14px;color:var(--abu);margin-top:6px}.media a{color:var(--abu)}
+.hype ol{padding-left:22px;margin:0}.hype li{padding:8px 0;border-bottom:1px solid var(--garis)}
+.angka{font:700 26px var(--serif)}.kecil{font-size:13px;color:var(--abu)}
+.statistik{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:16px;margin-bottom:32px}
+.statistik div{border-left:3px solid var(--merah);padding-left:8px}
+.wgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1px;background:var(--garis);border:1px solid var(--garis)}
+.wgrid div{background:var(--kartu);padding:8px 12px;font-size:13px}.wgrid b{font-family:var(--serif)}
+.titik{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:4px}.ok{background:var(--hijau)}.gagal{background:var(--merah)}.belum{background:var(--garis)}
+form{display:grid;gap:8px;max-width:640px}
+input,textarea,select{font:16px var(--sans);padding:10px 12px;border:1px solid var(--garis);border-radius:var(--r);background:var(--kartu);color:var(--tinta);min-height:44px;width:100%}
+textarea{min-height:140px}
+button,.tombol{font:700 15px var(--sans);background:var(--merah);color:#fff;border:0;border-radius:var(--r);padding:0 18px;min-height:44px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;justify-content:center}
+@media (prefers-color-scheme:dark){button,.tombol{color:#1a0f0d}}
+.alt{background:transparent!important;color:var(--merah)!important;border:1px solid var(--merah)}
+.bagi{font-size:13px;color:var(--hijau);font-weight:600;text-decoration:none;min-height:32px;display:inline-flex;align-items:center}
+.kotak{background:var(--kartu);border:1px solid var(--garis);border-radius:var(--r);padding:16px;margin-bottom:16px}
+.peringatan{border-left:3px solid var(--kuning);background:var(--kartu);padding:8px 16px;font-size:14px;margin:16px 0}
+.saring{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}.saring a{font-size:13px;padding:10px;min-height:44px;display:inline-flex;align-items:center;border:1px solid var(--garis);border-radius:var(--r);text-decoration:none}
+.saring a.on{border-color:var(--merah);color:var(--merah)}
+.muat{color:var(--abu);padding:40px 0}
+footer{border-top:1px solid var(--garis);padding:24px 0;color:var(--abu);font-size:13px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<header><div class="bungkus"><div class="atas"><a class="logo" href="#/">kroog<b>.</b></a><span class="tag" id="tag"></span></div><nav id="nav"></nav></div></header>
+<main class="bungkus" id="isi"><div class="muat">Memuat…</div></main>
+<footer class="bungkus" id="kaki"></footer>
+<script>
+const API='https://njghzieuuopukuagrswu.supabase.co/functions/v1/kroog-api';
+const S={get(k){try{return localStorage.getItem('kroog.'+k)}catch(e){return null}},set(k,v){try{localStorage.setItem('kroog.'+k,v)}catch(e){}},del(k){try{localStorage.removeItem('kroog.'+k)}catch(e){}}};
+let L=S.get('bahasa')||((navigator.language||'id').toLowerCase().startsWith('id')?'id':'en');
+// PIN owner: dibawa sekali lewat ?pin=..., disimpan di HP ini, lalu dihapus dari alamat
+(()=>{const p=new URLSearchParams(location.search).get('pin');if(p){S.set('pin',p);history.replaceState(null,'',location.pathname+(location.hash||'#/tulis'))}})();
+const K={id:{},en:{"Utama":"Top","Hype":"Trending","Teknologi":"Tech","Misi Keadilan":"Justice Mission","Per Negara":"By Country","Komunitas":"Community","1000 Wartawan":"1000 Reporters",
+"Paling ramai":"Most talked about","semua":"all","Sumber":"Sources","negara":"countries","artikel":"articles","Satu sumber":"Single source","2 media":"2 outlets","Dikonfirmasi":"Confirmed by","media":"outlets",
+"Dari Redaksi Kroog":"From the Kroog newsroom","Bagikan ID + EN":"Share ID + EN","Teknologi terkini":"Latest technology","Semua liputan":"All coverage","Meja Owner":"Owner desk",
+"Kantor berita · 1000 wartawan AI · setiap berita bertautan ke media aslinya":"News agency · 1000 AI reporters · every story links to its original outlet",
+"baru saja":"just now","mnt lalu":"min ago","jam lalu":"h ago","hari lalu":"d ago","wartawan meliput (24 jam)":"reporters filing (24h)","artikel masuk (24 jam)":"articles in (24h)","peristiwa dikonfirmasi 3+ media":"events confirmed by 3+ outlets",
+"Belum ada berita di meja ini.":"No stories on this desk yet.","Memuat…":"Loading…"}};
+const T=s=>(K[L]&&K[L][s])||s;
+const E=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const U=u=>/^https?:\/\//.test(u||'')?u:'#';
+const MEJA={dunia:'Dunia',nasional:'Nasional',ekonomi:'Ekonomi',teknologi:'Teknologi',sains:'Sains',kesehatan:'Kesehatan',olahraga:'Olahraga',hiburan:'Hiburan',ai:'Kecerdasan Buatan',startup:'Startup',siber:'Keamanan Siber',kripto:'Kripto',iklim:'Iklim',energi:'Energi',pangan:'Pangan',pendidikan:'Pendidikan',bencana:'Bencana',budaya:'Budaya',hukum:'Hukum',ham:'Hak Asasi',korupsi:'Korupsi',kriminal:'Kriminal',konflik:'Konflik',migrasi:'Migrasi',tren:'Tren & Hype',keadilan:'Keadilan',ojol:'Ojol'};
+const MEJA_EN={dunia:'World',nasional:'National',ekonomi:'Economy',teknologi:'Technology',sains:'Science',kesehatan:'Health',olahraga:'Sports',hiburan:'Entertainment',ai:'AI',startup:'Startups',siber:'Cybersecurity',kripto:'Crypto',iklim:'Climate',energi:'Energy',pangan:'Food',pendidikan:'Education',bencana:'Disasters',budaya:'Culture',hukum:'Law',ham:'Human Rights',korupsi:'Corruption',kriminal:'Crime',konflik:'Conflict',migrasi:'Migration',tren:'Trends',keadilan:'Justice',ojol:'Ride-hailing'};
+const mj=k=>(L==='en'?MEJA_EN:MEJA)[k]||k||'';
+const NEG=[["ID","Indonesia"],["US","Amerika Serikat"],["GB","Inggris"],["IN","India"],["AU","Australia"],["CA","Kanada"],["SG","Singapura"],["MY","Malaysia"],["PH","Filipina"],["JP","Jepang"],["KR","Korea Selatan"],["DE","Jerman"],["FR","Prancis"],["ES","Spanyol"],["IT","Italia"],["NL","Belanda"],["BR","Brasil"],["MX","Meksiko"],["AR","Argentina"],["NG","Nigeria"],["ZA","Afrika Selatan"],["KE","Kenya"],["EG","Mesir"],["SA","Arab Saudi"],["AE","Uni Emirat Arab"],["TR","Turki"],["RU","Rusia"],["UA","Ukraina"],["PK","Pakistan"],["BD","Bangladesh"],["TH","Thailand"],["VN","Vietnam"],["TW","Taiwan"],["HK","Hong Kong"],["IL","Israel"],["PL","Polandia"],["SE","Swedia"],["NZ","Selandia Baru"],["IE","Irlandia"]];
+function lalu(t){const m=Math.floor((Date.now()-Date.parse(t))/60000);if(isNaN(m))return'';return m<2?T('baru saja'):m<60?`${m} ${T('mnt lalu')}`:m<1440?`${Math.floor(m/60)} ${T('jam lalu')}`:`${Math.floor(m/1440)} ${T('hari lalu')}`}
+const judul=c=>(L==='en'?c.judul_en:c.judul_id)||c.judul;
+const ringkas=c=>(L==='en'?c.ringkas_en:c.ringkas_id)||'';
+function lencana(n){return n>=3?`<span class="lencana l-3">${T('Dikonfirmasi')} ${n} ${T('media')}</span>`:n==2?`<span class="lencana l-2">${T('2 media')}</span>`:`<span class="lencana l-1">${T('Satu sumber')}</span>`}
+function bagi(ji,je,ri,re,url){const t=`🇮🇩 ${ji}\n${ri||''}\n\n🇬🇧 ${je}\n${re||''}\n\n${url||location.href}`.replace(/\n{3,}/g,'\n\n');
+  return `<a class="bagi" href="https://wa.me/?text=${encodeURIComponent(t)}" target="_blank" rel="noopener">${T('Bagikan ID + EN')} ↗</a>`}
+function kartu(c,besar){const tg=besar?'h1':'h3',r=ringkas(c),s=c.sumber||[];
+  return `<article class="${besar?'utama':'cerita'}"><div class="rubrik">${E(mj(c.meja))}</div><${tg}><a href="#/cerita/${c.id}">${E(judul(c))}</a></${tg}>${r?`<p>${E(r)}</p>`:''}
+  <div class="meta">${lencana(c.n_media)}<span>${c.n_negara||'global'} ${T('negara')}</span><span>${c.n_artikel} ${T('artikel')}</span><span>${lalu(c.terakhir)}</span>${c.dukungan?`<span>▲ ${c.dukungan}</span>`:''}
+  ${bagi(c.judul_id||c.judul,c.judul_en||c.judul,c.ringkas_id,c.ringkas_en,s[0]?.url)}</div>
+  ${s.length?`<div class="media">${T('Sumber')}: ${s.map(x=>`<a href="${E(U(x.url))}" target="_blank" rel="noopener nofollow">${E(x.media)}</a>`).join(' · ')}</div>`:''}</article>`}
+function kartuK(k,besar){const en=L==='en',j=(en?k.judul_en:k.judul_id)||k.judul,i=(en?k.isi_en:k.isi_id)||k.isi,tg=besar?'h1':'h3';
+  return `<article class="${besar?'utama':'cerita'} redaksi"><div class="rubrik">${T('Dari Redaksi Kroog')}${k.ojol?' · Ojol':''}</div><${tg}><a href="#/kiriman/${k.id}">${E(j)}</a></${tg}>
+  <p style="white-space:pre-wrap">${E(besar?i:(i.length>400?i.slice(0,400)+'…':i))}</p>
+  <div class="meta"><span>${lalu(k.dibuat)}</span>${k.judul_en&&k.judul_id?'':`<span>${en?'translation pending':'terjemahan menyusul'}</span>`}${bagi(k.judul_id||k.judul,k.judul_en||k.judul,k.isi_id,k.isi_en,k.sumber_url)}</div>
+  ${k.sumber_url?`<div class="media">${T('Sumber')}: <a href="${E(U(k.sumber_url))}" target="_blank" rel="noopener nofollow">${E(k.sumber_nama||k.sumber_url)}</a></div>`:''}</article>`}
+function stat(s){if(!s)return'';return `<div class="statistik">${[[s.wartawan_aktif,'wartawan meliput (24 jam)'],[s.artikel_24j,'artikel masuk (24 jam)'],[s.dikonfirmasi_3,'peristiwa dikonfirmasi 3+ media']].map(([a,b])=>`<div><div class="angka">${(a||0).toLocaleString('id-ID')}</div><div class="kecil">${T(b)}</div></div>`).join('')}</div>`}
+async function api(v,q=''){const r=await fetch(`${API}?v=${v}${q}`);return r.json()}
+async function kirim(v,b){const r=await fetch(`${API}?v=${v}`,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(b)});return r.json()}
+const NAV=[['#/','Utama'],['#/hype','Hype'],['#/teknologi','Teknologi'],['#/keadilan','Misi Keadilan'],['#/negara/ID','Per Negara'],['#/komunitas','Komunitas'],['#/wartawan','1000 Wartawan']];
+function kerangka(){const h=location.hash||'#/';
+  document.getElementById('nav').innerHTML=NAV.map(([u,t])=>`<a href="${u}" class="${(h===u||(u!=='#/'&&h.startsWith(u.split('/').slice(0,2).join('/'))))?'on':''}">${T(t)}</a>`).join('')+(S.get('pin')?`<a href="#/tulis" class="${h==='#/tulis'?'on':''}">✎ ${T('Meja Owner')}</a>`:'')+`<a href="#" id="ganti" style="margin-left:auto">${L==='id'?'English':'Indonesia'}</a>`;
+  document.getElementById('tag').textContent=T('Kantor berita · 1000 wartawan AI · setiap berita bertautan ke media aslinya');
+  document.getElementById('kaki').innerHTML=L==='en'?'Kroog does not invent news. Headlines and links come from the original outlets; AI summaries are written only from those headlines and are discarded automatically if they contain numbers not in the source. Citizen reports are unverified until confirmed by other outlets or approved by the editors.':'Kroog tidak mengarang berita. Judul & tautan berasal dari media aslinya; ringkasan AI hanya ditulis dari judul-judul itu dan dibuang otomatis bila memuat angka yang tidak bersumber. Laporan warga belum diverifikasi sampai ada pembanding media atau diangkat redaksi.';
+  document.documentElement.lang=L;
+  document.getElementById('ganti').onclick=e=>{e.preventDefault();L=L==='id'?'en':'id';S.set('bahasa',L);jalan()}}
+const isi=h=>{document.getElementById('isi').innerHTML=h};
+async function jalan(){kerangka();const p=(location.hash||'#/').slice(2).split('/');isi(`<div class="muat">${T('Memuat…')}</div>`);
+  try{
+  if(!p[0]){const d=await api('utama');const ks=d.sematan||[],cs=d.cerita||[];
+    const kiri=ks.map((k,i)=>kartuK(k,i===0)).join('')+cs.map((c,i)=>kartu(c,!ks.length&&i===0)).join('');
+    isi(`<div class="grid"><div>${kiri||`<div class="peringatan">${L==='en'?'Reporters just started. Stories appear within minutes.':'Wartawan baru mulai meliput. Berita muncul dalam beberapa menit.'}</div>`}</div><aside><div class="bagian hype"><div class="kepala"><h2>${T('Paling ramai')}</h2><a class="kecil" href="#/hype">${T('semua')}</a></div><ol>${(d.hype||[]).map(x=>`<li><a href="#/cerita/${x.id}">${E(judul(x))}</a><div class="kecil">${x.n_artikel} ${T('artikel')} · ${lalu(x.terakhir)}</div></li>`).join('')}</ol></div>${stat(d.stat)}</aside></div>`);return}
+  if(p[0]==='hype'||p[0]==='teknologi'){const d=await api(p[0]);const jd=p[0]==='hype'?T('Paling ramai'):T('Teknologi terkini');
+    isi(`<div class="bagian"><div class="kepala"><h2>${jd}</h2><span class="kecil">${p[0]==='hype'?'12 jam · Google Trends · Hacker News':'AI · startup · siber · kripto · sains · GitHub · arXiv'}</span></div>${(d.sematan||[]).map(k=>kartuK(k)).join('')}${(d.cerita||[]).map(c=>kartu(c)).join('')||`<p>${T('Belum ada berita di meja ini.')}</p>`}</div>`);return}
+  if(p[0]==='keadilan'){const d=await api('keadilan');const pin=S.get('tok');
+    isi(`<div class="bagian"><div class="kepala"><h2>${T('Misi Keadilan')}</h2><span class="kecil">hukum · HAM · korupsi · migran · 72 jam</span></div><p style="max-width:65ch">${L==='en'?'Injustice news from around the world. The community can <b>support</b> a story to lift it higher. Support increases reach; it does not change the facts.':'Berita ketidakadilan dari seluruh dunia. Komunitas bisa <b>mendukung</b> sebuah berita supaya naik ke atas. Dukungan menambah jangkauan, bukan mengubah fakta.'}</p></div>
+    <div class="grid"><div>${(d.cerita||[]).map(c=>kartu(c)+(pin?`<button class="alt" style="margin:4px 0 8px" onclick="dukung('cerita',${c.id},this)">▲ ${L==='en'?'Support':'Dukung angkat'}</button>`:'')).join('')}</div>
+    <aside><div class="bagian"><div class="kepala"><h2>${L==='en'?'Citizen voices':'Suara warga'}</h2><a class="kecil" href="#/komunitas">${T('semua')}</a></div>${(d.laporan||[]).map(barisLap).join('')||`<p class="kecil"><a href="#/komunitas">${L==='en'?'Send a report':'Kirim laporan'}</a></p>`}</div></aside></div>`);return}
+  if(p[0]==='negara'){const n=(p[1]||'ID').toUpperCase();const d=await api('negara','&n='+n);
+    isi(`<div class="saring">${NEG.map(([k,nm])=>`<a href="#/negara/${k}" class="${k===n?'on':''}">${E(nm)}</a>`).join('')}</div><div class="bagian"><div class="kepala"><h2>${E((NEG.find(x=>x[0]===n)||[n,n])[1])}</h2><span class="kecil">25 ${L==='en'?'reporters':'wartawan'}</span></div>${(d.cerita||[]).map(c=>kartu(c)).join('')||`<p>${T('Belum ada berita di meja ini.')}</p>`}</div>`);return}
+  if(p[0]==='cerita'){const d=await api('cerita','&id='+(+p[1]));const c=d.cerita;if(!c){isi('<h2>404</h2>');return}
+    isi(`${kartu({...c,sumber:[]},true)}${c.otak&&ringkas(c)?`<p class="kecil">${L==='en'?'Summary written by AI':'Ringkasan ditulis AI'} (${E(c.otak)}) ${L==='en'?'only from the headlines below.':'hanya dari judul di bawah.'}</p>`:''}
+    <div class="bagian" style="margin-top:40px"><div class="kepala"><h2>${T('Semua liputan')} (${(d.artikel||[]).length})</h2></div>${(d.artikel||[]).map(a=>`<div class="cerita"><a href="${E(U(a.url))}" target="_blank" rel="noopener nofollow"><b>${E(a.judul)}</b></a><div class="meta"><span>${E(a.media)}</span><span>${E(a.negara)}</span><span>${lalu(a.terbit)}</span><span>K-${String(a.wartawan_id).padStart(4,'0')}</span>${a.cuplikan?`<span>${E(a.cuplikan)}</span>`:''}</div></div>`).join('')}</div>`);return}
+  if(p[0]==='kiriman'){const d=await api('kiriman','&id='+(+p[1]));isi(d.kiriman?kartuK(d.kiriman,true):'<h2>404</h2>');return}
+  if(p[0]==='komunitas')return komunitas();
+  if(p[0]==='laporan')return laporan(+p[1]);
+  if(p[0]==='wartawan')return wartawan(p[1]||'');
+  if(p[0]==='tulis')return tulis();
+  isi('<h2>404</h2>')}catch(e){isi(`<div class="peringatan">${L==='en'?'Could not reach the newsroom. Check your connection and reload.':'Tidak bisa menghubungi redaksi. Periksa sinyal lalu muat ulang.'}</div>`)}}
+function barisLap(x){const st={'diangkat':`<span class="lencana l-3">${L==='en'?'Approved by editors':'Diangkat redaksi'}</span>`,'ada-pembanding':`<span class="lencana l-2">${x.pembanding} ${L==='en'?'outlets report similar':'media memberitakan hal serupa'}</span>`,'butuh-bukti':`<span class="lencana l-1">${L==='en'?'Unverified · needs evidence':'Belum diverifikasi · butuh bukti'}</span>`,'baru':`<span class="lencana l-1">${L==='en'?'Being checked':'Sedang diperiksa'}</span>`}[x.status]||'';
+  return `<div class="cerita"><h3><a href="#/laporan/${x.id}">${E(x.judul)}</a></h3><div class="meta">${st}<span>${E(x.negara)}</span><span>${lalu(x.dibuat)}</span></div></div>`}
+async function dukung(j,id,b){const r=await kirim('dukung',{token:S.get('tok'),jenis:j,id});b.textContent=r.ok?'✓':(r.galat||'×');b.disabled=true}
+async function komunitas(pesan){const d=await api('komunitas');const tok=S.get('tok'),en=L==='en';
+  const gab=tok?`<p>${en?'Signed in as':'Masuk sebagai'} <b>${E(S.get('nama'))}</b>.</p>`:`<form id="fg"><input name="nama" required maxlength="40" placeholder="${en?'Nickname (can be a pseudonym)':'Nama panggilan (boleh samaran)'}"><button>${en?'Join the community':'Gabung komunitas'}</button></form><p class="kecil">${en?'No email, no phone number.':'Tanpa email, tanpa nomor HP.'}</p>`;
+  const form=tok?`<div class="bagian" id="lapor"><div class="kepala"><h2>${en?'Report an injustice':'Kirim laporan ketidakadilan'}</h2></div><div class="peringatan"><b>${en?'Protect victims & witnesses.':'Lindungi korban & saksi.'}</b> ${en?'Do not write phone numbers, emails, ID numbers or home addresses — such reports are rejected automatically. Add a link to evidence.':'Jangan tulis nomor HP, email, NIK, atau alamat rumah — laporan seperti itu otomatis ditolak. Sertakan tautan bukti. Laporan yang menuduh orang tanpa bukti tidak akan diangkat.'}</div>
+    <form id="fl"><input name="judul" required maxlength="160" placeholder="${en?'Short title':'Judul singkat: apa yang terjadi'}"><textarea name="isi" required maxlength="4000" placeholder="${en?'What happened, where, when':'Ceritakan kejadiannya: apa, di mana, kapan'}"></textarea><select name="negara">${NEG.map(([k,n])=>`<option value="${k}">${E(n)}</option>`).join('')}</select><input name="bukti" type="url" placeholder="${en?'Evidence link (https://...)':'Tautan bukti (https://...)'}"><button>${en?'Send report':'Kirim laporan'}</button></form></div>`:'';
+  isi(`${pesan?`<div class="peringatan">${E(pesan)}</div>`:''}<div class="grid"><div><div class="bagian"><div class="kepala"><h2>${en?'Kroog Community':'Komunitas Kroog'}</h2><span class="kecil">${d.anggota||0} ${en?'members':'anggota'}</span></div><p style="max-width:65ch">${en?'Readers who support and report. Reports are checked automatically (evidence link, other outlets) and a human editor decides whether to publish.':'Warga yang membaca, mendukung, dan melaporkan. Laporanmu diperiksa mesin (tautan bukti, media lain dicari) lalu redaksi manusia memutuskan apakah diangkat.'}</p>${gab}</div>${form}</div>
+  <aside><div class="bagian"><div class="kepala"><h2>${en?'Citizen reports':'Laporan warga'}</h2></div>${(d.laporan||[]).map(barisLap).join('')||`<p class="kecil">${en?'No reports yet.':'Belum ada laporan.'}</p>`}</div></aside></div>`);
+  const fg=document.getElementById('fg');if(fg)fg.onsubmit=async e=>{e.preventDefault();const r=await kirim('gabung',{nama:fg.nama.value});if(r.token){S.set('tok',r.token);S.set('nama',r.nama);komunitas(`${en?'Welcome':'Selamat bergabung'}, ${r.nama}.`)}else komunitas(r.galat)};
+  const fl=document.getElementById('fl');if(fl)fl.onsubmit=async e=>{e.preventDefault();const b=Object.fromEntries(new FormData(fl));b.token=tok;const r=await kirim('lapor',b);if(r.ok)location.hash='#/laporan/'+r.id;else komunitas(r.galat)}}
+async function laporan(id){const d=await api('laporan','&id='+id);const x=d.laporan,en=L==='en';if(!x){isi('<h2>404</h2>');return}
+  isi(`<article class="utama">${barisLap(x).replace('<h3>','<h1>').replace('</h3>','</h1>')}<div class="peringatan">${x.status==='diangkat'?(en?'Checked and approved by the editors.':'Sudah diperiksa & diangkat redaksi.'):(en?'Citizen report — not yet verified by editors. Read critically.':'Laporan warga — belum diverifikasi redaksi. Baca dengan kritis.')}</div>
+  <p style="white-space:pre-wrap;max-width:65ch">${E(x.isi)}</p>${x.bukti_url?`<p>${en?'Evidence':'Bukti'}: <a href="${E(U(x.bukti_url))}" target="_blank" rel="noopener nofollow">${E(x.bukti_url)}</a></p>`:''}<p class="kecil">${en?'By':'Oleh'} ${E(x.nama)}</p>${S.get('tok')?`<button class="alt" onclick="dukung('laporan',${x.id},this)">▲ ${en?'Support':'Dukung'}</button>`:''}</article>
+  <div class="bagian" style="margin-top:40px"><div class="kepala"><h2>${en?'Outlets reporting something similar':'Media yang memberitakan hal serupa'}</h2></div><ul>${(x.pembanding_json||[]).map(p=>`<li><a href="${E(U(p.url))}" target="_blank" rel="noopener nofollow">${E(p.judul)}</a> — ${E(p.media)}</li>`).join('')||`<li class="kecil">${en?'None found yet.':'Belum ditemukan.'}</li>`}</ul></div>`)}
+async function wartawan(m){const d=await api('wartawan');const ws=(d.wartawan||[]).filter(w=>!m||w.meja===m),en=L==='en';
+  const pu=d.stat&&d.stat.putaran;
+  isi(`<div class="bagian"><div class="kepala"><h2>${T('1000 Wartawan')}</h2><span class="kecil">39 ${en?'countries':'negara'} × 25 ${en?'desks':'meja'} + 25 ${en?'special desks':'meja khusus'}</span></div><p style="max-width:65ch">${en?'Each reporter holds one real beat (Bing News per country & language, Google Trends, Hacker News, GitHub, arXiv, Product Hunt). 15 go out every minute, in the cloud — it keeps running when the owner’s laptop is off.':'Tiap wartawan memegang satu pos liputan nyata (Bing News per negara & bahasa, Google Trends, Hacker News, GitHub, arXiv, Product Hunt). 15 orang berangkat tiap menit di awan — tetap jalan walau laptop owner mati.'} ${pu?`${en?'Last round':'Putaran terakhir'} ${lalu(pu.waktu)}: ${pu.artikel_baru} ${en?'new articles':'artikel baru'}, ${pu.galat} ${en?'failed':'gagal'}.`:''}</p></div>${stat(d.stat)}
+  <div class="saring"><a href="#/wartawan" class="${m?'':'on'}">${en?'All':'Semua'}</a>${Object.keys(MEJA).filter(k=>k!=='budaya'||true).map(k=>`<a href="#/wartawan/${k}" class="${k===m?'on':''}">${E(mj(k))}</a>`).join('')}</div>
+  <div class="wgrid">${ws.map(w=>`<div><span class="titik ${!w.terakhir?'belum':w.galat?'gagal':'ok'}"></span><b>${w.kode}</b> · ${E(mj(w.meja))}<br><span class="kecil">${E(w.nama_negara)} · ${w.total} ${T('artikel')} · ${w.terakhir?lalu(w.terakhir):(en?'not yet out':'belum berangkat')}</span></div>`).join('')}</div>`)}
+async function tulis(pesan){const pin=S.get('pin');if(!pin){isi('<h2>404</h2>');return}
+  const d=await kirim('redaksi',{pin,aksi:'daftar'});if(d.galat){S.del('pin');isi(`<div class="peringatan">${E(d.galat)}</div>`);return}
+  isi(`${pesan?`<div class="peringatan">${E(pesan)}</div>`:''}<div class="grid"><div><div class="bagian"><div class="kepala"><h2>Meja Owner — tulis berita</h2></div>
+  <p style="max-width:65ch">Tulis dalam Bahasa Indonesia atau Inggris. Kroog langsung menerjemahkan ke dua bahasa, menyematkan di paling atas Utama & Hype, dan (kalau dicentang) mengirim ke aplikasi driver ocklu.com/ojol. Label: <b>“Dari Redaksi Kroog”</b>.</p>
+  <form id="ft"><input name="judul" required maxlength="200" placeholder="Judul berita"><textarea name="isi" required maxlength="6000" placeholder="Isi berita"></textarea>
+  <input name="sumber_url" type="url" placeholder="Tautan sumber (boleh kosong)"><input name="sumber_nama" maxlength="80" placeholder="Nama sumber (boleh kosong)">
+  <select name="jam"><option value="24">Sematkan 24 jam</option><option value="48">Sematkan 48 jam</option><option value="72">Sematkan 72 jam</option><option value="168">Sematkan 7 hari</option><option value="0">Jangan sematkan</option></select>
+  <label style="display:flex;gap:8px;align-items:center;min-height:44px"><input type="checkbox" name="ojol" checked style="width:auto;min-height:auto"> Kirim juga ke aplikasi driver ojol</label><button id="bt">Terbitkan sekarang</button></form></div>
+  <div class="bagian"><div class="kepala"><h2>Laporan warga menunggu</h2></div>${(d.laporan||[]).map(x=>`<div class="kotak">${barisLap(x)}<p style="white-space:pre-wrap">${E((x.isi||'').slice(0,600))}</p><div style="display:flex;gap:8px"><button onclick="putus(${x.id},'diangkat')">Angkat</button><button class="alt" onclick="putus(${x.id},'ditolak')">Tolak</button></div></div>`).join('')||'<p class="kecil">Kosong.</p>'}</div></div>
+  <aside><div class="bagian"><div class="kepala"><h2>Kiriman saya</h2></div>${(d.kiriman||[]).map(k=>`<div class="kotak"><b>${E(k.judul)}</b><div class="meta"><span>${lalu(k.dibuat)}</span><span>${k.sematkan_sampai&&Date.parse(k.sematkan_sampai)>Date.now()?'disematkan':'tidak disematkan'}</span><span>${k.judul_en&&k.judul_id?'ID+EN siap':'terjemahan menyusul'}</span>${k.ojol?'<span>→ ojol</span>':''}</div><div style="display:flex;gap:8px;margin-top:8px"><button class="alt" onclick="aksiK(${k.id},'lepas')">Lepas sematan</button><button class="alt" onclick="aksiK(${k.id},'hapus')">Hapus</button></div></div>`).join('')||'<p class="kecil">Belum ada.</p>'}</div></aside></div>`);
+  const f=document.getElementById('ft');f.onsubmit=async e=>{e.preventDefault();document.getElementById('bt').disabled=true;const b=Object.fromEntries(new FormData(f));b.ojol=!!f.ojol.checked;b.pin=pin;const r=await kirim('tulis',b);
+    tulis(r.ok?'Terbit & disematkan. Terjemahan ID+EN sedang dibuat (biasanya < 30 detik — muat ulang untuk melihat).'+(b.ojol?' Sudah masuk ke aplikasi ojol.':''):(r.galat||'Gagal'))}}
+async function aksiK(id,aksi){await kirim('kiriman-aksi',{pin:S.get('pin'),id,aksi});tulis()}
+async function putus(id,aksi){await kirim('redaksi',{pin:S.get('pin'),id,aksi});tulis()}
+addEventListener('hashchange',jalan);jalan();
+</script>
+</body>
+</html>

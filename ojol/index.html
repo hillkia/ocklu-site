@@ -497,8 +497,12 @@ function bacaBerita(){try{return JSON.parse(localStorage.getItem(K+'.berita'))||
 let BL=(()=>{try{return localStorage.getItem(K+'.bl')}catch(e){return null}})()||((navigator.language||'id').toLowerCase().startsWith('id')?'id':'en');
 async function ambilBerita(){
   try{
-    const r=await fetch('berita.json',{cache:'no-store'}); if(!r.ok)return;
-    const d=await r.json(); if(!d||!Array.isArray(d.berita))return;
+    // utama: langsung dari Kroog di awan (jalan walau laptop owner mati); cadangan: berita.json di situs
+    let d=null;
+    for(const u of ['https://njghzieuuopukuagrswu.supabase.co/functions/v1/kroog-api?v=ojol','berita.json']){
+      try{const r=await fetch(u,{cache:'no-store'});if(r.ok){d=await r.json();if(d&&Array.isArray(d.berita)&&d.berita.length)break}}catch(e){}
+    }
+    if(!d||!Array.isArray(d.berita))return;
     try{localStorage.setItem(K+'.berita',JSON.stringify(d))}catch(e){}
     gambarBerita();
   }catch(e){/* offline: pakai yang tersimpan */}
