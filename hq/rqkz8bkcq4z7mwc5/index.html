@@ -1188,7 +1188,7 @@ function siapkanGedungMilik() {
 const boothDna = (d) => ({ id: 'dna', kunci: 'dna|' + d.id, path: 'dna|' + d.id, nama: d.nama, tipe: d.jenis, status: 'dna', dnaId: d.id, grup: d.grup });
 const boothRak = (r) => ({ id: 'rak', kunci: 'rak|' + r.k, path: 'rak|' + r.k, nama: r.nama, tipe: r.ket, status: 'rak', rak: r.k, jumlah: r.jumlah });
 function subJudul(k, ps) {
-  if (k === 'rapat') return rapatAktifLokal() ? '● ada rapat jalan — masuk lewat Kursi Pimpinan' : 'rapat bareng pekerja AI + tamu lewat link';
+  if (k === 'rapat') return rapatAktifLokal() ? '● ada rapat jalan' : 'rapat + pekerja AI';
   if (k === 'teater') return TT ? `${TT.ringkas.keluar} surat keluar · ${TT.ringkas.masuk} masuk · ${TT.ringkas.jual} jualan · ${TT.hari} hari` : 'alur kerja semua mesin';
   if (k === 'dna') return `${ps.length} rak · ${ps.reduce((a, p) => a + (p.jumlah || 0), 0)} DNA & script`;
   const pr = ps.filter((p) => p.status !== 'dna'), nd = ps.length - pr.length;
