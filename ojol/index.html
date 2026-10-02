@@ -173,6 +173,19 @@ nav span{display:block;font-size:19px;margin-bottom:1px}
   <div id="l-list"></div>
 </div>
 
+<!-- JOB: Rumus OCKLU Cabang B. Kebutuhan orang lokal, GRATIS, kamu hubungin
+     & nego SENDIRI langsung ke orangnya -- Ocklu cuma nyampein info,
+     gak ikut nentuin, gak pegang uang, gak tanggung jawab perjalanannya. -->
+<div class="wrap hidden" id="p-job">
+  <div class="kep"><span class="a" id="j-jml">—</span><span class="b" id="j-kapan"></span></div>
+  <div class="tampil" style="text-align:left;padding:12px;margin-bottom:12px;font-size:13px">
+    Ini info yang ditemukan tim Ocklu dari grup FB/WA lokal, BUKAN order lewat aplikasi.
+    Kamu yang hubungin & nego harga langsung ke orangnya. Ocklu gak ikut campur dan gak nanggung apa-apa
+    soal perjalanannya &mdash; hati-hati kayak biasa ketemu orang baru.
+  </div>
+  <div id="j-list"></div>
+</div>
+
 <div class="wrap hidden" id="p-setelan">
   <div class="card set">
     <label>Target bersih per jam SAAT JALAN (Rp)</label>
@@ -237,10 +250,23 @@ nav span{display:block;font-size:19px;margin-bottom:1px}
   <div class="mini">Ocklu · data tersimpan di HP kamu sendiri</div>
 </div>
 
+<!-- BERITA: dari Kroog (kantor berita), dua bahasa. Hanya judul+ringkasan+tautan media asli. -->
+<style>#p-berita .b-gh.on{background:#16a34a;color:#fff;border-color:#16a34a}</style>
+<div class="wrap hidden" id="p-berita">
+  <div class="kep"><span class="a" id="br-jml">—</span><span class="b" id="br-kapan"></span></div>
+  <div style="display:flex;gap:8px;margin-bottom:12px">
+    <button class="b-gh" id="br-id" style="flex:1">Indonesia</button><button class="b-gh" id="br-en" style="flex:1">English</button>
+  </div>
+  <div id="br-list"></div>
+  <div class="mini">Berita dari Kroog · tiap berita bertautan ke media aslinya</div>
+</div>
+
 <nav>
   <button class="on" data-p="hitung"><span>🧮</span>Hitung</button>
   <button data-p="catatan"><span>🧾</span>Catatan</button>
   <button data-p="lapak"><span>🏪</span>Lapak</button>
+  <button data-p="job"><span>📢</span>Job</button>
+  <button data-p="berita"><span>📰</span>Berita</button>
   <button data-p="setelan"><span>⚙️</span>Setelan</button>
 </nav>
 
@@ -465,6 +491,85 @@ function gambarLapak(){
     : '<div class="tampil">Tidak ada yang cocok.</div>';
 }
 el('l-cari').oninput=gambarLapak;
+
+/* ---- BERITA dari Kroog: dua bahasa, tersimpan di HP supaya tetap kebaca offline ---- */
+function bacaBerita(){try{return JSON.parse(localStorage.getItem(K+'.berita'))||null}catch(e){return null}}
+let BL=(()=>{try{return localStorage.getItem(K+'.bl')}catch(e){return null}})()||((navigator.language||'id').toLowerCase().startsWith('id')?'id':'en');
+async function ambilBerita(){
+  try{
+    const r=await fetch('berita.json',{cache:'no-store'}); if(!r.ok)return;
+    const d=await r.json(); if(!d||!Array.isArray(d.berita))return;
+    try{localStorage.setItem(K+'.berita',JSON.stringify(d))}catch(e){}
+    gambarBerita();
+  }catch(e){/* offline: pakai yang tersimpan */}
+}
+function gambarBerita(){
+  const D=bacaBerita(), esc=t=>String(t==null?'':t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const en=BL==='en';
+  el('br-id').classList.toggle('on',!en); el('br-en').classList.toggle('on',en);
+  if(!D||!D.berita.length){
+    el('br-jml').textContent=en?'No news yet':'Belum ada berita'; el('br-kapan').textContent='';
+    el('br-list').innerHTML=`<div class="tampil" style="text-align:left;padding:15px">${en?'Check again later.':'Cek lagi nanti.'}</div>`;return}
+  const jam=Math.floor((Date.now()-Date.parse(D.w))/3600000);
+  el('br-jml').textContent=en?`${D.berita.length} stories`:`${D.berita.length} berita`;
+  el('br-kapan').textContent=jam<1?(en?'updated just now':'baru diperbarui'):(en?`updated ${jam}h ago`:`diperbarui ${jam} jam lalu`);
+  el('br-list').innerHTML=D.berita.map(b=>{
+    const j=b.judul[BL]||b.judul.id, i=b.isi[BL]||b.isi.id||'';
+    const wa=encodeURIComponent(`🇮🇩 ${b.judul.id}\n${b.isi.id||''}\n\n🇬🇧 ${b.judul.en}\n${b.isi.en||''}\n\n${b.sumber.url||'https://ocklu.com/ojol/'}`);
+    const lab=b.jenis==='redaksi'?(en?'From the Kroog newsroom':'Dari Redaksi Kroog'):(b.media>=3?(en?`Confirmed by ${b.media} outlets`:`Dikonfirmasi ${b.media} media`):'');
+    const u=/^https?:\/\//.test(b.sumber.url||'')?b.sumber.url:'';
+    return `<div class="pr" ${b.jenis==='redaksi'?'style="border-left:4px solid #b3261e"':''}>
+      ${lab?`<div class="j1">${esc(lab)}</div>`:''}
+      <div class="n1">${esc(j)}</div>${i?`<div class="w1">${esc(i)}</div>`:''}
+      <div class="j1">${esc(b.sumber.nama||'')}</div>
+      <div class="b1">${u?`<button class="b-gh" onclick="window.open('${esc(u)}','_blank')">${en?'Read':'Baca'}</button>`:''}
+        <button class="wa" onclick="window.open('https://wa.me/?text=${wa}','_blank')">${en?'Share ID + EN':'Bagikan ID + EN'}</button></div>
+    </div>`}).join('');
+}
+el('br-id').onclick=()=>{BL='id';try{localStorage.setItem(K+'.bl','id')}catch(e){};gambarBerita()};
+el('br-en').onclick=()=>{BL='en';try{localStorage.setItem(K+'.bl','en')}catch(e){};gambarBerita()};
+gambarBerita(); ambilBerita();
+
+/* ---- JOB: kebutuhan lokal gratis, Cabang B Rumus OCKLU ---- */
+function bacaJob(){try{return JSON.parse(localStorage.getItem(K+'.job'))||null}catch(e){return null}}
+function simpanJob(d){try{localStorage.setItem(K+'.job',JSON.stringify(d))}catch(e){}}
+async function ambilJob(){
+  try{
+    const r=await fetch('job.json',{cache:'no-store'});
+    if(!r.ok)return;
+    const d=await r.json();
+    if(!d||!Array.isArray(d.job))return;
+    simpanJob({w:d.w||Date.now(),ambil:Date.now(),job:d.job});
+    gambarJob();
+  }catch(e){/* offline: pakai yang tersimpan */}
+}
+function gambarJob(){
+  const J=bacaJob(), esc=t=>String(t==null?'':t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const hariIni=new Date().toISOString().slice(0,10);
+  if(!J||!J.job.length){
+    el('j-jml').textContent='Belum ada kebutuhan';
+    el('j-kapan').textContent='';
+    el('j-list').innerHTML=`<div class="tampil" style="text-align:left;padding:15px">
+      Belum ada yang ketemu di sekitarmu. Cek lagi nanti.</div>`;
+    return}
+  const hidup=J.job.filter(x=>!x.sampai||x.sampai>=hariIni);
+  const hari=Math.floor((Date.now()-(J.w||J.ambil))/86400000);
+  el('j-jml').textContent=`${hidup.length} kebutuhan aktif`;
+  el('j-kapan').textContent=hari<=1?'diperbarui hari ini':`diperbarui ${hari} hari lalu`;
+  el('j-list').innerHTML=hidup.length? hidup.map(x=>{
+    const w=waNo(x.hp);
+    const pesan=encodeURIComponent(`Halo, saya driver ojol, lihat kebutuhan "${x.teks}" di aplikasi Ojol Untung. Masih perlu bantuan?`);
+    return `<div class="pr">
+      <div class="n1">${esc(x.teks)}</div>
+      ${x.wil?`<div class="w1">${esc(x.wil)}</div>`:''}
+      <div class="j1">via ${esc(x.sumber||'—')}${x.sampai?` &middot; berlaku sampai ${esc(x.sampai)}`:''}</div>
+      <div class="b1">
+        ${w?`<button class="wa" onclick="window.open('https://wa.me/${w}?text=${pesan}','_blank')">Hubungi via WhatsApp</button>`
+           :'<span class="d1">Kontak tidak tersedia</span>'}
+      </div>
+      </div>`}).join('')
+    : '<div class="tampil">Belum ada yang aktif sekarang.</div>';
+}
 document.addEventListener('click',e=>{
   const t=e.target.closest('[data-pakai]'); if(!t)return;
   const id=t.dataset.pakai, L=bacaLapak(); if(!L)return;
@@ -519,10 +624,11 @@ el('b-hapus').onclick=()=>{
 };
 document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>{
   document.querySelectorAll('nav button').forEach(x=>x.classList.remove('on')); b.classList.add('on');
-  ['hitung','catatan','lapak','setelan'].forEach(p=>el('p-'+p).classList.toggle('hidden',p!==b.dataset.p));
+  ['hitung','catatan','lapak','job','berita','setelan'].forEach(p=>el('p-'+p).classList.toggle('hidden',p!==b.dataset.p));
+  if(b.dataset.p==='job')gambarJob();
   if(b.dataset.p==='catatan')gambarCatatan();
   if(b.dataset.p==='lapak')gambarLapak();
 });
 el('tglkini').textContent=new Date().toLocaleDateString('id-ID',{weekday:'short',day:'numeric',month:'short'});
-isiSetelan(); hitungTarget(); gambar(); gambarCatatan(); gambarLapak(); ambilLapak();
+isiSetelan(); hitungTarget(); gambar(); gambarCatatan(); gambarLapak(); ambilLapak(); gambarJob(); ambilJob();
 </script>
