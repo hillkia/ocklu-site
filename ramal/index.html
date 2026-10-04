@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ramal Harga God Eye</title>
+<meta name="description" content="Ramal rentang harga kripto & emas dengan membandingkan pola sekarang ke seluruh sejarah. Arah hanya tampil kalau lolos uji mundur.">
+<link rel="canonical" href="https://ocklu.com/ramal/">
+<script src="./ramal.js"></script>
+<style>
+:root{--bg:#0b0f14;--kartu:#121923;--garis:#223042;--teks:#e6edf3;--redup:#8b98a8;--aksen:#4cc2ff;--naik:#3fb950;--turun:#f85149;--kuning:#d29922}
+body{margin:0;background:var(--bg);color:var(--teks);font:15px/1.5 system-ui,-apple-system,sans-serif}
+main{max-width:860px;margin:0 auto;padding:16px}
+h1{font-size:20px;margin:4px 0}.redup{color:var(--redup);font-size:13px}
+.baris{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+select,button{background:var(--kartu);color:var(--teks);border:1px solid var(--garis);border-radius:8px;padding:8px 10px;font:inherit}
+button{background:var(--aksen);color:#001;border:0;font-weight:600;cursor:pointer}
+.kartu{background:var(--kartu);border:1px solid var(--garis);border-radius:12px;padding:14px;margin:10px 0}
+.angka{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.angka b{display:block;font-size:20px;font-variant-numeric:tabular-nums}
+svg{width:100%;height:auto;display:block}
+table{width:100%;border-collapse:collapse;font-size:13px;font-variant-numeric:tabular-nums}
+td,th{padding:6px;border-bottom:1px solid var(--garis);text-align:right}td:first-child,th:first-child{text-align:left}
+.lencana{display:inline-block;padding:2px 8px;border-radius:99px;font-size:12px;font-weight:600}
+</style></head><body><main>
+<h1>👁 Ramal Harga, cara mata Tuhan</h1>
+<div class="redup">Bentuk pergerakan 30 hari terakhir dibandingkan dengan semua masa lalu yang tercatat. Yang ditampilkan kerucut jalur seperti ramalan badai, bukan satu garis. Arah hanya muncul kalau di uji mundur mengalahkan tebakan buta.</div>
+<div class="baris">
+ <select id="aset"><option>BTCUSDT</option><option>ETHUSDT</option><option>SOLUSDT</option><option>BNBUSDT</option><option>XRPUSDT</option><option>DOGEUSDT</option><option>PAXGUSDT</option></select>
+ <select id="h"><option value="7">7 hari</option><option value="14" selected>14 hari</option><option value="30">30 hari</option></select>
+ <button onclick="muat()">Ramal</button>
+</div>
+<div id="isi" class="redup">Memuat…</div>
+</main><script>
+const f=(x)=>x>=10?x.toLocaleString('id-ID',{maximumFractionDigits:0}):x.toLocaleString('id-ID',{maximumFractionDigits:4});
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+async function muat(){
+ const isi=document.getElementById('isi');isi.textContent='Membandingkan dengan seluruh sejarah…';
+ try{localStorage.setItem('ocRamal',aset.value+'|'+h.value)}catch(e){}
+ let r;try{r=await OcRamal.ramal(aset.value,h.value)}catch(e){isi.textContent='Gagal ambil data: '+e;return}
+ if(!r.berhasil){isi.textContent=r.galat||'gagal';return}
+ const k=r.kerucut,u=r.uji_mundur||{},a=k[k.length-1];
+ const W=800,H=300,P=40,lo=Math.min(r.harga_sekarang,...k.map(x=>x.p10)),hi=Math.max(r.harga_sekarang,...k.map(x=>x.p90));
+ const X=i=>P+(W-2*P)*i/k.length,Y=v=>H-P-(H-2*P)*(v-lo)/(hi-lo||1);
+ const pita=(a,b)=>{let d=`M${X(0)},${Y(r.harga_sekarang)}`;k.forEach((x,i)=>d+=` L${X(i+1)},${Y(x[a])}`);for(let i=k.length-1;i>=0;i--)d+=` L${X(i+1)},${Y(k[i][b])}`;return d+'Z'};
+ let med=`M${X(0)},${Y(r.harga_sekarang)}`;k.forEach((x,i)=>med+=` L${X(i+1)},${Y(x.p50)}`);
+ const warna=r.arah==='NAIK'?'var(--naik)':r.arah==='TURUN'?'var(--turun)':'var(--kuning)';
+ isi.className='';
+ isi.innerHTML=`
+ <div class="kartu angka">
+  <div><span class="redup">Harga ${esc(r.per_tanggal)}</span><b>${f(r.harga_sekarang)}</b></div>
+  <div><span class="redup">Arah ${r.horizon_hari} hari</span><b style="color:${warna}">${esc(r.arah)}${r.peluang_naik!=null?' · '+Math.round(r.peluang_naik*100)+'% naik':''}</b></div>
+  <div><span class="redup">Rentang 80% hari ke-${r.horizon_hari}</span><b>${f(a.p10)} – ${f(a.p90)}</b></div>
+  <div><span class="redup">Tengah (p50)</span><b>${f(a.p50)}</b></div>
+ </div>
+ <div class="kartu"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Kerucut ramalan harga">
+  <path d="${pita('p90','p10')}" fill="var(--aksen)" opacity=".15"/><path d="${pita('p75','p25')}" fill="var(--aksen)" opacity=".25"/>
+  <path d="${med}" fill="none" stroke="var(--aksen)" stroke-width="2"/>
+  <text x="${P}" y="${Y(hi)-8}" fill="var(--redup)" font-size="12">${f(hi)}</text><text x="${P}" y="${Y(lo)+16}" fill="var(--redup)" font-size="12">${f(lo)}</text>
+  <text x="${W-P}" y="${H-10}" fill="var(--redup)" font-size="12" text-anchor="end">hari ke-${r.horizon_hari}</text>
+ </svg><div class="redup">Pita tipis: 80% kemungkinan. Pita tebal: 50%. Garis: jalur tengah dari ${r.jumlah_analog} analog di ${r.riwayat_hari} hari sejarah.</div></div>
+ <div class="kartu"><b>🛡 Pagar kejujuran (uji mundur ${u.titik_uji} titik)</b>
+  <table><tr><th>Ukuran</th><th>Nilai</th></tr>
+  <tr><td>Tebakan arah kena</td><td>${Math.round(u.arah_kena*100)}%</td></tr>
+  <tr><td>Tebakan buta terbaik</td><td>${Math.round(u.tebak_buta*100)}%</td></tr>
+  <tr><td>Harga nyata jatuh di dalam kerucut 80%</td><td>${Math.round(u.kerucut_p10_p90_kena*100)}%</td></tr></table>
+  <p class="redup">${esc(r.pagar.catatan)}</p></div>
+ <div class="kartu"><b>🌀 Masa lalu yang paling mirip</b>
+  <table><tr><th>Tanggal</th><th>Harga saat itu</th><th>${r.horizon_hari} hari kemudian</th></tr>
+  ${r.badai_mirip.map(b=>{const v=b.hasil_pct;return `<tr><td>${esc(b.tanggal)}</td><td>${f(b.harga_saat_itu)}</td><td style="color:${v>=0?'var(--naik)':'var(--turun)'}">${v>0?'+':''}${v}%</td></tr>`}).join('')}</table></div>
+ <p class="redup">Sumber: ${esc(r.sumber)}. ${esc(r.bukan_nasihat)}</p>`;
+}
+const q=new URLSearchParams(location.search);let ing=null;try{ing=(localStorage.getItem('ocRamal')||'').split('|')}catch(e){}
+if(q.get('aset')||ing&&ing[0]){const v=(q.get('aset')||ing[0]).toUpperCase();if(![...aset.options].some(o=>o.value===v))aset.add(new Option(v));aset.value=v}
+if(q.get('h')||ing&&ing[1])h.value=q.get('h')||ing[1];
+muat();
+</script></body></html>
