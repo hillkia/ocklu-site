@@ -13,6 +13,7 @@
   function tulis(d) { try { localStorage.setItem(SIMPAN, JSON.stringify({ t: Date.now(), d: d })); } catch (e) {} }
 
   var b = document.createElement("div");
+  b.id = "oramal";   // dipakai dasbor (mis. OCKLU HQ) untuk menyembunyikan/menampilkan widget
   b.setAttribute("style", "position:fixed;right:12px;bottom:12px;z-index:2147483000;font:13px/1.4 system-ui,-apple-system,sans-serif;color:#e6edf3");
   var pil = document.createElement("button");
   pil.type = "button"; pil.setAttribute("aria-expanded", "false");
