@@ -81,6 +81,13 @@ const INFO={
  uji_kerucut:['Harga nyata di dalam kerucut',r=>{const k=r.uji_mundur.kerucut_p10_p90_kena;return `<p>Kerucut 80% seharusnya menangkap harga nyata sekitar 80% dari waktu. Hasil uji mundur: <b>${Math.round(k*100)}%</b>.</p>
   <p>${k<.75?'<b>Kerucut agak kesempitan.</b> Anggap rentang yang sebenarnya sedikit lebih lebar, misalnya mundurkan batas rugi.':k>.88?'Kerucut agak kelebaran, terlalu hati-hati.':'Pas. Rentangnya bisa dipercaya sebagai ukuran risiko.'}</p>`}],
  mirip:['Masa lalu yang paling mirip',r=>`<p>Tanggal-tanggal ketika bentuk pergerakan 30 hari sebelumnya paling mirip dengan sekarang, beserta hasilnya ${r.horizon_hari} hari kemudian.</p><p>Kalau hasilnya campur aduk (ada yang naik, ada yang turun), itu tanda arahnya memang tidak jelas. Ketuk satu baris untuk detailnya.</p>`],
+ kerumunan:['Kerumunan futures',r=>`<p>Seberapa ramai trader berutang (leverage) di pasar futures. Ada dua angka:</p>
+  <p><b>Funding rate</b>: biaya yang dibayar posisi naik ke posisi turun, atau sebaliknya. Kalau tinggi, banyak yang bertaruh harga naik.</p>
+  <p><b>Open interest (OI)</b>: jumlah kontrak yang masih terbuka. Kalau melonjak, banyak uang pinjaman baru yang masuk.</p>
+  <p><b>Hasil uji jujur:</b> aturan "kerumunan berbalik" sudah diuji dengan 54 cara (6 koin × 3 aturan × 7/14/30 hari, 2021–2026, dengan koreksi uji-banyak). <b>Tidak ada satu pun yang lolos.</b> Jadi kartu ini <b>bukan sinyal arah</b>.</p>
+  <p><b>Gunanya:</b> kalau label RAMAI muncul, banyak posisi berutang bisa dipaksa tutup bersamaan, sehingga gerakan bisa lebih tajam dari biasanya. Pertimbangkan posisi lebih kecil atau batas rugi lebih longgar.</p>`],
+ fz:['Funding z-skor',r=>`<p>Jumlah funding 7 hari terakhir dibandingkan dengan 180 hari sebelumnya. 0 = biasa. Di atas +1 = jauh lebih ramai posisi naik dari biasanya. Di bawah −1 = ramai posisi turun.</p><p>Dalam setahun, funding ini setara dengan bunga yang dibayar posisi naik ke posisi turun (kalau negatif, sebaliknya).</p>`],
+ oiz:['Open interest z-skor',r=>`<p>Perubahan jumlah kontrak terbuka dalam 7 hari, dibandingkan dengan 180 hari sebelumnya. Di atas +1 = uang berutang baru masuk jauh lebih cepat dari biasanya.</p><p>OI naik dan harga naik = posisi naik bertambah. OI naik dan harga turun = posisi turun bertambah.</p>`],
  acuan:['Pakai sebagai acuan',r=>`<p>Rentang diubah jadi 4 angka kerja. Rumusnya sederhana dan terbuka:</p>
   <p><b>Batas rugi</b> = batas bawah 80% (p10). Kalau harga turun sampai sini, itu sudah di luar kejadian wajar.</p>
   <p><b>Target wajar</b> = p75. <b>Target optimis</b> = p90.</p>
@@ -138,6 +145,7 @@ async function muat(){
   ${I('tengah',`<span class="redup">Tengah (p50)<span class="i">i</span></span><b>${f(a.p50)}</b>`)}
  </div>
  ${acuan()}
+ <div class="kartu" id="krm">${I('kerumunan','<h2>🧲 Kerumunan futures<span class="i">i</span></h2>')}<div class="redup">Memuat data futures…</div></div>
  <div class="kartu">${I('kerucut','<h2>📈 Kerucut jalur<span class="i">i</span></h2>')}
  <svg id="graf" viewBox="0 0 ${W} ${H}" role="img" aria-label="Kerucut ramalan harga, geser untuk detail per hari">
   <path d="${pita('p90','p10')}" fill="var(--aksen)" opacity=".15"/><path d="${pita('p75','p25')}" fill="var(--aksen)" opacity=".25"/>
@@ -159,6 +167,16 @@ async function muat(){
   ${r.badai_mirip.map((b,i)=>I('row:'+i,`<td>${esc(b.tanggal)}<span class="i">i</span></td><td>${f(b.harga_saat_itu)}</td><td style="color:${b.hasil_pct>=0?'var(--naik)':'var(--turun)'}">${p1(b.hasil_pct)}</td>`,'tr')).join('')}</table></div>
  <p class="redup">Sumber: ${esc(r.sumber)}. ${esc(r.bukan_nasihat)}</p>`;
  modal.oninput=risk.oninput=hitungPos;hitungPos();
+ OcRamal.kerumunan(r.aset).then(k=>{const el=document.getElementById('krm');if(!el||R!==r)return;
+  const kepala=I('kerumunan','<h2>🧲 Kerumunan futures<span class="i">i</span></h2>');
+  if(!k.ada){el.innerHTML=kepala+`<div class="redup">${esc(k.alasan)}</div>`;return}
+  const w=k.label==='NORMAL'?'var(--naik)':k.label.startsWith('RAMAI')?'var(--turun)':'var(--kuning)';
+  el.innerHTML=kepala+`<div class="angka">
+   ${I('kerumunan',`<span class="redup">Keadaan ${esc(k.tanggal)}<span class="i">i</span></span><b style="color:${w}">${esc(k.label)}</b>`)}
+   ${I('fz',`<span class="redup">Funding (setahun)<span class="i">i</span></span><b>${k.funding_tahunan_pct.toFixed(1).replace('.',',')}%</b><span class="redup">z ${k.funding_z>0?'+':''}${k.funding_z.toFixed(2).replace('.',',')}</span>`)}
+   ${I('oiz',`<span class="redup">Open interest 7 hari<span class="i">i</span></span><b>${p1(k.oi_7h_pct)}</b><span class="redup">z ${k.oi_z>0?'+':''}${k.oi_z.toFixed(2).replace('.',',')} · harga ${p1(k.harga_7h_pct)}</span>`)}
+  </div><p class="redup" style="margin-bottom:0">${esc(k.uji)} Sumber: ${esc(k.sumber)}.</p>`;
+ }).catch(e=>{const el=document.getElementById('krm');if(el)el.querySelector('.redup').textContent='Data futures tidak terjangkau: '+e});
  const g=document.getElementById('graf');
  const geser=e=>{const b=g.getBoundingClientRect(),x=((e.touches?e.touches[0].clientX:e.clientX)-b.left)/b.width*W;
   const i=Math.max(1,Math.min(k.length,Math.round((x-P)/(W-2*P)*k.length)));const d=k[i-1];

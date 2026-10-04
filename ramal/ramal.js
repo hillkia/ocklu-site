@@ -100,4 +100,31 @@
     };
   }
   g.OcRamal = { ramal: ramal };
+
+  // ===== Kerumunan futures (funding rate + open interest) =====
+  // Data dari server awan (fapi/bybit diblokir ISP di Indonesia). Diuji 54 cara sejak 2021:
+  // TIDAK ada yang meramal arah. Jadi ini KONTEKS, bukan sinyal.
+  var FUT = "https://njghzieuuopukuagrswu.supabase.co/functions/v1/ramal-fut?simbol=";
+  var FUT_ADA = ["BTCUSDT", "ETHUSDT", "SOLUSDT", "BNBUSDT", "XRPUSDT", "DOGEUSDT"];
+  function zskor(v, h) { var m = 0, i, s = 0; for (i = 0; i < h.length; i++) m += h[i]; m /= h.length;
+    for (i = 0; i < h.length; i++) s += (h[i] - m) * (h[i] - m); s = Math.sqrt(s / h.length) || 1e-12; return (v - m) / s; }
+  async function kerumunan(simbol) {
+    simbol = String(simbol || "").toUpperCase();
+    if (FUT_ADA.indexOf(simbol) < 0) return { ada: false, alasan: "data futures belum dikumpulkan untuk " + simbol };
+    var b = (await (await fetch(FUT + simbol)).json()).baris.filter(function (x) { return x.close && x.funding != null && x.oi; });
+    if (b.length < 190) return { ada: false, alasan: "sejarah futures terlalu pendek" };
+    var n = b.length, f7 = [], oi7 = [], i;
+    for (i = 0; i < n; i++) { var s = 0; for (var k = Math.max(0, i - 6); k <= i; k++) s += b[k].funding; f7.push(s);
+      oi7.push(i >= 7 ? b[i].oi / b[i - 7].oi - 1 : 0); }
+    var t = n - 1, fz = zskor(f7[t], f7.slice(t - 180, t)), oiz = zskor(oi7[t], oi7.slice(t - 180, t)), r7 = b[t].close / b[t - 7].close - 1;
+    var label = fz > 1 && oiz > 1 ? "RAMAI POSISI NAIK" : fz < -1 && oiz > 1 ? "RAMAI POSISI TURUN" :
+                fz > 1 ? "funding tinggi" : fz < -1 ? "funding negatif" : oiz > 1 ? "OI melonjak" : "NORMAL";
+    var r2 = function (v) { return Math.round(v * 100) / 100; };
+    return { ada: true, tanggal: b[t].tgl, funding_harian_pct: r2(b[t].funding * 100 * 1000) / 1000,
+             funding_tahunan_pct: r2(f7[t] / 7 * 365 * 100), funding_z: r2(fz),
+             oi_7h_pct: r2(oi7[t] * 100), oi_z: r2(oiz), harga_7h_pct: r2(r7 * 100), label: label,
+             uji: "Diuji 54 cara (6 koin x 3 aturan x 7/14/30 hari, 2021-2026, koreksi uji-banyak): 0 lolos. Konteks, bukan sinyal arah.",
+             sumber: "funding Binance USDT-M, OI Bybit linear" };
+  }
+  g.OcRamal.kerumunan = kerumunan;
 })(typeof window !== "undefined" ? window : globalThis);
