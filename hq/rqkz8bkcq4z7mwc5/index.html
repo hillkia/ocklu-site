@@ -210,7 +210,7 @@
 <div id="peta" class="pnl"><canvas id="pc" width="320" height="320"></canvas></div>
 <div id="info" class="pnl"></div>
 <div id="bantu" class="pnl"><kbd>KLIK</kbd> lantai/booth = jalan ke situ · <kbd>WASD</kbd> jalan · <kbd>Shift</kbd> lari · <kbd>seret</kbd> putar/dongak · <kbd>roda</kbd> zoom · <kbd>Z</kbd> drone · <kbd>R/F</kbd> atas/bawah · <kbd>E</kbd> buka · <kbd>L</kbd> daftar</div>
-<div id="atasTengah"><button id="tombolDaftar" class="pnl">📋 Semua proyek (L)</button><button id="tombolDna" class="pnl">🧬 DNA &amp; Script (G)</button><button id="tombolBangun" class="pnl">🏗 Bangun (B)</button><button id="tombolDuit" class="pnl">💰 Pintu Duit</button><button id="tombolRapat" class="pnl">🗣 Rapat</button></div>
+<div id="atasTengah"><button id="tombolDaftar" class="pnl">📋 Semua proyek (L)</button><button id="tombolDna" class="pnl">🧬 DNA &amp; Script (G)</button><button id="tombolBangun" class="pnl">🏗 Bangun (B)</button><button id="tombolDuit" class="pnl">💰 Pintu Duit</button><button id="tombolRapat" class="pnl">🗣 Rapat</button><button id="tombolPrediksi" class="pnl">🔮 Prediksi</button></div>
 <div id="awanInfo" class="pnl"></div>
 <button id="tombolTampil" class="pnl" title="atur tampilan">👁</button>
 <div id="zoomPanel"><button class="pnl" id="zDekat" title="zoom in (+)">＋</button><button class="pnl" id="zJauh" title="zoom out (−)">－</button><button class="pnl" id="zDrone" title="mode drone (Z)">🚁</button><button class="pnl" id="zAtas" title="dongak (R)">⬆</button><button class="pnl" id="zBawah" title="nunduk (F)">⬇</button></div>
@@ -269,7 +269,7 @@ import * as THREE from 'three';
 const WARNA = { cuan:0xf5b700, inti:0x22d3ee, layan:0x34d399, belajar:0xa78bfa, plan:0x94a3b8 };
 const NAMA  = { cuan:'Lantai Cuan', inti:'Ruang Mesin', layan:'Ruang Klien', belajar:'Lab', plan:'Lahan Kosong' };
 const URUT  = ['cuan','inti','layan','belajar','plan'];
-const STW   = { hidup:0x34d399, mati:0xf87171, 'tanpa-port':0x94a3b8, hilang:0x52525b, rak:0xc084fc, dna:0xf0abfc, teater:0xfacc15, pekerja:0xfde047, kafe:0xf59e0b, rapat:0xfacc15, rapatai:0xc084fc };
+const STW   = { hidup:0x34d399, mati:0xf87171, 'tanpa-port':0x94a3b8, hilang:0x52525b, rak:0xc084fc, dna:0xf0abfc, teater:0xfacc15, pekerja:0xfde047, kafe:0xf59e0b, rapat:0xfacc15, rapatai:0xc084fc, prediksi:0x22d3ee };
 const BASI_HARI = 21;
 const hex = (n) => '#' + n.toString(16).padStart(6, '0');
 const $ = (id) => document.getElementById(id);
@@ -600,7 +600,7 @@ function bangunPlaza(data) {
     const kp = new THREE.Mesh(new THREE.BoxGeometry(1.4, 0.2, 0.4), new THREE.MeshBasicMaterial({ color: 0xfff1c4 }));
     kp.position.set(x, 6, z); scene.add(kp);
   }
-  for (const k of [...URUT, ...(GEDUNG.dna ? ['dna'] : []), ...(GEDUNG.teater ? ['teater'] : []), ...(GEDUNG.rapat ? ['rapat'] : [])]) {
+  for (const k of [...URUT, ...(GEDUNG.dna ? ['dna'] : []), ...(GEDUNG.teater ? ['teater'] : []), ...(GEDUNG.rapat ? ['rapat'] : []), ...(GEDUNG.prediksi ? ['prediksi'] : [])]) {
     const G = GEDUNG[k], p = lokalKeDunia(G, -G.w / 2 - 3, G.d / 2 + 4);
     kotak(0.2, 9, 0.2, tiang, p.x, 4.5, p.z);
     const bn = new THREE.Mesh(new THREE.PlaneGeometry(2, 5), new THREE.MeshBasicMaterial({ side: THREE.DoubleSide, map: tekstur(128, 320, (x, w, h) => {
@@ -728,7 +728,7 @@ function isiHUD() {
   $('n-hidup').textContent = n('hidup'); $('n-mati').textContent = n('mati');
   $('n-tanpa').textContent = n('tanpa-port') + n('hilang');
   $('jujur').innerHTML = `<b>${ps.filter(basi).length} kandidat pajangan</b> — gak hidup &amp; gak disentuh &gt;${BASI_HARI} hari. Tanda <b>BASI</b> di layar booth.`;
-  $('zona').innerHTML = [...URUT, ...(GEDUNG.dna ? ['dna'] : []), ...(GEDUNG.teater ? ['teater'] : []), ...(GEDUNG.rapat ? ['rapat'] : [])].map((k) => `<button style="color:${hex(WARNA[k])}" data-z="${k}">${esc(NAMA[k])}</button>`).join('');
+  $('zona').innerHTML = [...URUT, ...(GEDUNG.dna ? ['dna'] : []), ...(GEDUNG.teater ? ['teater'] : []), ...(GEDUNG.rapat ? ['rapat'] : []), ...(GEDUNG.prediksi ? ['prediksi'] : [])].map((k) => `<button style="color:${hex(WARNA[k])}" data-z="${k}">${esc(NAMA[k])}</button>`).join('');
   $('zona').querySelectorAll('button').forEach((b) => b.onclick = () => {
     const G = GEDUNG[b.dataset.z], p = lokalKeDunia(G, 0, G.d / 2 + 6);
     pemain.position.set(p.x, 0, p.z); tujuan = null; penanda.visible = false;
@@ -811,6 +811,7 @@ function isiInfo(b) {
   if (b !== infoDitutup) infoDitutup = null;
   if (!b || b === infoDitutup) { el.style.display = 'none'; document.body.classList.remove('ada-info'); return; }
   if (b.p.status === 'rak' || b.p.status === 'dna') { el.innerHTML = infoDna(b); bungkusInfo(el, b); return; }
+  if (b.p.status === 'prediksi') { el.innerHTML = infoPrediksi(b); bungkusInfo(el, b); return; }
   if (b.p.status === 'rapat' || b.p.status === 'rapatai') { el.innerHTML = infoRapat(b); bungkusInfo(el, b); return; }
   if (['teater', 'pekerja', 'kafe'].includes(b.p.status)) { el.innerHTML = infoTeater(b); bungkusInfo(el, b); return; }
   const p = cariP(b.p.kunci) || b.p, h = hariLalu(p.disentuh);
@@ -1020,6 +1021,7 @@ function isiLokasi() {
   const k = gedungSekarang(), key = k || 'plaza';
   if (key === lokTerakhir) return; lokTerakhir = key;
   if (!k) { $('lok-nama').textContent = 'Convention Plaza'; $('lok-sub').textContent = `pintu ke ${areaGedung.length} gedung`; return; }
+  if (k === 'prediksi') { $('lok-nama').textContent = 'Gedung Prediksi'; $('lok-sub').textContent = PRD.ringkas || subJudul('prediksi', []); return; }
   if (k === 'rapat') { $('lok-nama').textContent = 'Ruang Rapat'; $('lok-sub').textContent = subJudul('rapat', []); return; }
   if (k === 'teater') { $('lok-nama').textContent = 'Gedung Teater'; $('lok-sub').textContent = subJudul('teater', []); return; }
   if (k === 'dna') { $('lok-nama').textContent = 'Gedung DNA'; $('lok-sub').textContent = `${(data.rak || []).length} rak DNA & script`; return; }
@@ -1180,6 +1182,7 @@ function siapkanGedungMilik() {
   });
   GEDUNG.teater = { x: 0, z: -152, w: 46, d: 36, rot: 0, label: 'TEATER' }; WARNA.teater = 0xfacc15; NAMA.teater = 'Gedung Teater';
   { const a = 1.375 * Math.PI; GEDUNG.rapat = { x: 158 * Math.cos(a), z: 158 * Math.sin(a), w: 30, d: 26, rot: Math.atan2(-Math.cos(a), -Math.sin(a)), label: 'RAPAT' }; WARNA.rapat = 0xa855f7; NAMA.rapat = 'Ruang Rapat'; }
+  { const a = 1.625 * Math.PI; GEDUNG.prediksi = { x: 158 * Math.cos(a), z: 158 * Math.sin(a), w: 34, d: 30, rot: Math.atan2(-Math.cos(a), -Math.sin(a)), label: 'PREDIKSI' }; WARNA.prediksi = 0x22d3ee; NAMA.prediksi = 'Gedung Prediksi'; }
   if ((data.rak || []).length) {
     GEDUNG.dna = { x: 0, z: 96, w: 34, d: 30, rot: Math.PI, label: 'DNA' };
     WARNA.dna = 0xc084fc; NAMA.dna = 'Gedung DNA';
@@ -1189,6 +1192,7 @@ const boothDna = (d) => ({ id: 'dna', kunci: 'dna|' + d.id, path: 'dna|' + d.id,
 const boothRak = (r) => ({ id: 'rak', kunci: 'rak|' + r.k, path: 'rak|' + r.k, nama: r.nama, tipe: r.ket, status: 'rak', rak: r.k, jumlah: r.jumlah });
 function subJudul(k, ps) {
   if (k === 'rapat') return rapatAktifLokal() ? '● ada rapat jalan' : 'rapat + pekerja AI';
+  if (k === 'prediksi') return 'ramal harga · uji jujur';
   if (k === 'teater') return TT ? `${TT.ringkas.keluar} surat keluar · ${TT.ringkas.masuk} masuk · ${TT.ringkas.jual} jualan · ${TT.hari} hari` : 'alur kerja semua mesin';
   if (k === 'dna') return `${ps.length} rak · ${ps.reduce((a, p) => a + (p.jumlah || 0), 0)} DNA & script`;
   const pr = ps.filter((p) => p.status !== 'dna'), nd = ps.length - pr.length;
@@ -1926,6 +1930,143 @@ addEventListener('message', (e) => {                       // tab rapat (ocklu.c
   cekRapat();
 });
 addEventListener('storage', (e) => { if (/rapat-aktif/.test(e.key || '')) cekRapat(); });
+
+// ═══ Gedung Prediksi ═════════════════════════════════════════════════
+// Isinya mesin ramal yang SAMA dengan ocklu.com/ramal (ramal.js dimuat dari sana, jadi
+// laptop & HP selalu sama). Bola kristal: kuning = arah TIDAK DIRAMAL (gak lolos uji),
+// hijau/merah = lolos uji. Angka dihitung langsung dari Binance tiap 30 menit, gak dikarang.
+const PRD_ASET = [['BTCUSDT', 'BTC'], ['ETHUSDT', 'ETH'], ['SOLUSDT', 'SOL'], ['PAXGUSDT', 'Emas']];
+const PRD_WEB = 'https://ocklu.com/ramal/';
+const PRD = { data: {}, skor: null, ringkas: '', bola: {}, label: {}, layar: null, G: null, grup: null };
+const prdWarna = (arah) => arah === 'NAIK' ? 0x34d399 : arah === 'TURUN' ? 0xf87171 : 0xfacc15;
+const prdF = (x) => x >= 10 ? Math.round(x).toLocaleString('id-ID') : (+x).toFixed(4);
+function bangunPrediksi() {
+  const G = GEDUNG.prediksi, grup = new THREE.Group(); grup.position.set(G.x, 0, G.z); grup.rotation.y = G.rot; scene.add(grup);
+  PRD.G = G; PRD.grup = grup;
+  const dunia = (lx, lz) => lokalKeDunia(G, lx, lz);
+  // layar raksasa di dinding belakang
+  const c = document.createElement('canvas'); c.width = 1600; c.height = 760;
+  PRD.layar = new THREE.MeshBasicMaterial({ map: new THREE.CanvasTexture(c) }); PRD.layar.map.colorSpace = THREE.SRGBColorSpace;
+  const lyr = new THREE.Mesh(new THREE.PlaneGeometry(25, 11.9), PRD.layar); lyr.position.set(0, 6.2, -G.d / 2 + 0.7); grup.add(lyr);
+  // 4 kios bola kristal
+  const alas = new THREE.MeshStandardMaterial({ color: 0x1e293b, roughness: 0.4, metalness: 0.3 });
+  PRD_ASET.forEach(([sim, nama], i) => {
+    const lx = -12 + i * 8, lz = -1;
+    const kaki = new THREE.Mesh(new THREE.CylinderGeometry(0.9, 1.2, 1.4, 24), alas); kaki.position.set(lx, 0.7, lz); kaki.castShadow = true; grup.add(kaki);
+    const bola = new THREE.Mesh(new THREE.SphereGeometry(0.85, 32, 24), new THREE.MeshStandardMaterial({ color: 0x94a3b8, emissive: 0x334155, emissiveIntensity: 0.9, roughness: 0.15, transparent: true, opacity: 0.92 }));
+    bola.position.set(lx, 2.3, lz); grup.add(bola); PRD.bola[sim] = bola;
+    const lb = namaSprite(nama, '#67e8f9'); lb.position.set(lx, 3.7, lz); grup.add(lb); PRD.label[sim] = lb;
+    booth.set('prediksi|' + sim, { p: { id: 'prediksi', kunci: 'prediksi|' + sim, path: '', nama: 'Bola ' + nama, tipe: 'ramal rentang harga 14 hari', status: 'prediksi', aset: sim, label: nama },
+      k: 'prediksi', staf: { visible: false }, pusat: dunia(lx, lz), depan: dunia(lx, lz + 2.6), hit: [] });
+  });
+  // dua meja dekat pintu: papan skor & lab uji
+  [['skor', '📊 Papan Skor', -10, 'Polymarket vs kerucut, dinilai Brier'], ['lab', '🔬 Lab Uji Jujur', 10, '114 cara diuji untuk meramal arah']].forEach(([id, nama, lx, tipe]) => {
+    const lz = 8;
+    const meja = new THREE.Mesh(new THREE.BoxGeometry(5, 1.1, 1.8), new THREE.MeshStandardMaterial({ color: 0x0f172a, roughness: 0.5 })); meja.position.set(lx, 0.55, lz); meja.castShadow = true; grup.add(meja);
+    const lay = new THREE.Mesh(new THREE.PlaneGeometry(4, 2.2), new THREE.MeshBasicMaterial({ map: tekstur(512, 280, (x, w, h) => {
+      x.fillStyle = '#0b1220'; x.fillRect(0, 0, w, h); x.fillStyle = id === 'skor' ? '#22d3ee' : '#c084fc'; x.font = '800 44px sans-serif'; x.textAlign = 'center';
+      x.fillText(nama.replace(/^\S+ /, ''), w / 2, 120); x.fillStyle = '#94a3b8'; x.font = '500 26px sans-serif'; x.fillText(tipe, w / 2, 180); }) }));
+    lay.position.set(lx, 2.3, lz - 0.6); grup.add(lay);
+    booth.set('prediksi|' + id, { p: { id: 'prediksi', kunci: 'prediksi|' + id, path: '', nama, tipe, status: 'prediksi', meja: id },
+      k: 'prediksi', staf: { visible: false }, pusat: dunia(lx, lz), depan: dunia(lx, lz + 2.4), hit: [] });
+  });
+  gambarLayarPRD();
+  const s = document.createElement('script'); s.src = PRD_WEB + 'ramal.js'; s.onload = () => { segarPrediksi(); setInterval(segarPrediksi, 30 * 60000); };
+  s.onerror = () => { PRD.galat = 'mesin ramal (ocklu.com/ramal/ramal.js) gak kebuka — offline?'; gambarLayarPRD(); };
+  document.head.appendChild(s);
+}
+async function segarPrediksi() {
+  for (const [sim] of PRD_ASET) {                       // satu-satu biar HQ gak tersendat
+    try {
+      const r = await OcRamal.ramal(sim, 14);
+      if (!r.berhasil) { PRD.data[sim] = { galat: r.galat }; continue; }
+      const d = { r };
+      try { d.k = await OcRamal.kerumunan(sim); } catch {}
+      try { d.o = await OcRamal.onchain(sim); } catch {}
+      try { d.poly = await OcRamal.polymarket(sim); } catch {}
+      PRD.data[sim] = d;
+      const b = PRD.bola[sim]; if (b) { b.material.color.setHex(prdWarna(r.arah)); b.material.emissive.setHex(prdWarna(r.arah)); b.material.emissiveIntensity = 0.35; }
+      const nama = PRD_ASET.find((a) => a[0] === sim)[1], lama = PRD.label[sim];
+      if (lama) { PRD.grup.remove(lama); const lb = namaSprite(nama + ' ' + prdF(r.harga_sekarang), '#67e8f9'); lb.position.copy(lama.position); lb.scale.set(3, 0.55, 1); PRD.grup.add(lb); PRD.label[sim] = lb; }
+    } catch (e) { PRD.data[sim] = { galat: String(e).slice(0, 80) }; }
+    gambarLayarPRD(); await new Promise((ok) => setTimeout(ok, 50));
+  }
+  try { PRD.skor = await OcRamal.skor(); } catch {}
+  const lolos = Object.values(PRD.data).filter((d) => d.r && d.r.arah !== 'TIDAK DIRAMAL').length;
+  PRD.ringkas = `${lolos} dari ${PRD_ASET.length} aset lolos uji arah · rentang 14 hari`;
+  lokTerakhir = ''; gambarLayarPRD(); if (dekat && dekat.p.status === 'prediksi') isiInfo(dekat);
+}
+function gambarLayarPRD() {
+  if (!PRD.layar) return;
+  const cv2 = PRD.layar.map.image, x = cv2.getContext('2d'), W = cv2.width, H = cv2.height;
+  x.fillStyle = '#060b16'; x.fillRect(0, 0, W, H);
+  x.fillStyle = '#22d3ee'; x.font = '900 52px -apple-system,sans-serif'; x.textAlign = 'left'; x.fillText('🔮 GEDUNG PREDIKSI', 50, 78);
+  x.fillStyle = '#94a3b8'; x.font = '500 26px sans-serif'; x.fillText('pola 30 hari vs seluruh sejarah → kerucut 14 hari · arah cuma muncul kalau lolos uji mundur', 50, 120);
+  const btc = PRD.data.BTCUSDT && PRD.data.BTCUSDT.r;
+  if (PRD.galat) { x.fillStyle = '#f87171'; x.font = '600 32px sans-serif'; x.fillText(PRD.galat, 50, 220); }
+  else if (!btc) { x.fillStyle = '#cbd5e1'; x.font = '600 34px sans-serif'; x.fillText('Lagi ngitung dari 1000 hari harga Binance…', 50, 220); }
+  else {                                                 // kerucut BTC di kiri
+    const k = btc.kerucut, X0 = 60, Y0 = 170, CW = 700, CH = 470, lo = Math.min(btc.harga_sekarang, ...k.map((v) => v.p10)), hi = Math.max(btc.harga_sekarang, ...k.map((v) => v.p90));
+    const X = (i) => X0 + CW * i / k.length, Y = (v) => Y0 + CH - CH * (v - lo) / (hi - lo || 1);
+    const pita = (a, b, warna) => { x.beginPath(); x.moveTo(X(0), Y(btc.harga_sekarang)); k.forEach((v, i) => x.lineTo(X(i + 1), Y(v[a]))); for (let i = k.length - 1; i >= 0; i--) x.lineTo(X(i + 1), Y(k[i][b])); x.closePath(); x.fillStyle = warna; x.fill(); };
+    pita('p90', 'p10', 'rgba(34,211,238,.18)'); pita('p75', 'p25', 'rgba(34,211,238,.32)');
+    x.beginPath(); x.moveTo(X(0), Y(btc.harga_sekarang)); k.forEach((v, i) => x.lineTo(X(i + 1), Y(v.p50))); x.strokeStyle = '#22d3ee'; x.lineWidth = 4; x.stroke();
+    x.fillStyle = '#e2e8f0'; x.font = '700 30px sans-serif'; x.fillText('BTC · kerucut 14 hari', X0, Y0 - 12);
+    x.fillStyle = '#94a3b8'; x.font = '500 24px sans-serif'; x.fillText(prdF(hi), X0 + 6, Y(hi) + 26); x.fillText(prdF(lo), X0 + 6, Y(lo) - 8);
+  }
+  // tabel 4 aset di kanan
+  x.font = '700 28px sans-serif'; x.fillStyle = '#64748b'; ['Aset', 'Harga', 'Rentang 80%', 'Arah'].forEach((t, i) => x.fillText(t, [830, 960, 1150, 1420][i], 200));
+  PRD_ASET.forEach(([sim, nama], i) => {
+    const d = PRD.data[sim], y = 270 + i * 82; x.font = '700 32px sans-serif';
+    x.fillStyle = '#e2e8f0'; x.fillText(nama, 830, y);
+    if (!d || !d.r) { x.fillStyle = '#64748b'; x.font = '500 26px sans-serif'; x.fillText(d && d.galat ? d.galat.slice(0, 40) : 'ngitung…', 960, y); return; }
+    const a = d.r.kerucut[d.r.kerucut.length - 1];
+    x.fillText(prdF(d.r.harga_sekarang), 960, y); x.font = '600 28px sans-serif'; x.fillText(prdF(a.p10) + ' – ' + prdF(a.p90), 1150, y);
+    x.fillStyle = '#' + prdWarna(d.r.arah).toString(16).padStart(6, '0'); x.font = '800 24px sans-serif'; x.fillText(d.r.arah === 'TIDAK DIRAMAL' ? 'TAK DIRAMAL' : d.r.arah, 1420, y);
+    if (d.k && d.k.ada && d.k.label !== 'NORMAL') { x.fillStyle = '#f59e0b'; x.font = '600 20px sans-serif'; x.fillText('🧲 ' + d.k.label, 830, y + 28); }
+  });
+  x.fillStyle = '#94a3b8'; x.font = '500 24px sans-serif';
+  x.fillText('Diuji 114 cara (grafik 60 · futures 54 · on-chain 18 → 0 lolos arah). Polymarket vs kerucut dinilai tiap hari.', 50, H - 60);
+  if (PRD.skor && PRD.skor.n_dinilai) x.fillText(`Skor Brier: Polymarket ${PRD.skor.brier_polymarket} vs kita ${PRD.skor.brier_kita} (${PRD.skor.n_dinilai} tebakan)`, 50, H - 24);
+  PRD.layar.map.needsUpdate = true;
+}
+function infoPrediksi(b) {
+  const p = b.p, wc = '#22d3ee';
+  if (p.meja === 'skor') {
+    const s = PRD.skor;
+    return `<div class="kat" style="color:${wc}">Gedung Prediksi</div><h2>📊 Papan Skor</h2>
+      <div class="st">Tiap hari peluang Polymarket (pasar uang beneran) dan peluang kerucut kita buat harga "di atas X pada tanggal Y" dicatat. Setelah tanggalnya lewat, dinilai pakai <b>Brier</b>: makin kecil makin jago, nebak 50% terus = 0,25.<br><br>
+      ${s ? (s.n_dinilai ? `<b>${s.n_dinilai}</b> tebakan dinilai · Polymarket <b>${s.brier_polymarket}</b> vs kita <b>${s.brier_kita}</b>` : 'Belum ada tebakan yang lewat tanggal.') + (s.catatan ? `<br><i>${esc(s.catatan)}</i>` : '') : 'lagi ngambil skor…'}</div>
+      <div class="aksi"><a class="nyala" href="${PRD_WEB}" target="_blank" rel="noopener">🔮 Buka ocklu.com/ramal</a></div>`;
+  }
+  if (p.meja === 'lab') {
+    return `<div class="kat" style="color:#c084fc">Gedung Prediksi</div><h2>🔬 Lab Uji Jujur</h2>
+      <div class="st">Aturan dikunci <b>sebelum</b> hasil dilihat, sinyal gak boleh dempet, dikoreksi uji-banyak, wajib menang di paruh lama &amp; baru.<br><br>
+      • Pola grafik harga: 20 koin × 3 horizon = <b>60 → 0 lolos</b><br>
+      • Funding rate &amp; open interest: <b>54 → 0 lolos</b><br>
+      • On-chain (MVRV, aliran bursa, alamat aktif): <b>18 → 0 lolos</b><br>
+      • Berita Kroog: <b>belum bisa diuji</b> (sejarah &lt; 6 bulan)<br><br>
+      🔬 <b>Kandidat dipantau:</b> aliran bursa ETH 30 hari (64% vs buta 53%, konsisten di dua paruh) — dicatat tiap hari, <b>belum boleh dipakai</b>.</div>
+      <div class="aksi"><a class="nyala" href="${PRD_WEB}" target="_blank" rel="noopener">🔮 Buka ocklu.com/ramal</a></div>`;
+  }
+  const d = PRD.data[p.aset], link = PRD_WEB + '?aset=' + p.aset;
+  if (!d || !d.r) return `<div class="kat" style="color:${wc}">Gedung Prediksi</div><h2>🔮 ${esc(p.label)}</h2><div class="st">${d && d.galat ? esc(d.galat) : 'Lagi ngitung dari 1000 hari harga…'}</div>
+    <div class="aksi"><a class="nyala" href="${link}" target="_blank" rel="noopener">🔮 Buka lengkap</a></div>`;
+  const r = d.r, a = r.kerucut[r.kerucut.length - 1], u = r.uji_mundur, p0 = r.harga_sekarang, jarak = (p0 - a.p10) / p0, rasio = (a.p75 - p0) / Math.max(p0 - a.p10, 1e-9);
+  const warna = '#' + prdWarna(r.arah).toString(16).padStart(6, '0');
+  let poly = '';
+  if (d.poly && d.poly.ada) { const t = d.poly.tanggal[Math.min(1, d.poly.tanggal.length - 1)], k = t.strike.reduce((m, v) => Math.abs(v.p_poly - 0.5) < Math.abs(m.p_poly - 0.5) ? v : m);
+    poly = `<br>🎲 Di atas ${prdF(k.K)} dlm ±${t.hari} hr: pasar <b>${Math.round(k.p_poly * 100)}%</b> · kerucut <b>${Math.round(k.p_kita * 100)}%</b>${Math.abs(k.p_poly - k.p_kita) >= 0.15 ? ' ⚠' : ''}`; }
+  return `<div class="kat" style="color:${wc}">Gedung Prediksi · ${esc(r.per_tanggal)}</div><h2>🔮 ${esc(p.label)} ${prdF(p0)}</h2>
+    <div class="st">Arah 14 hari: <b style="color:${warna}">${esc(r.arah)}</b> <span style="color:var(--dim)">(uji ${Math.round(u.arah_kena * 100)}% vs buta ${Math.round(u.tebak_buta * 100)}%)</span><br>
+    Rentang 80%: <b>${prdF(a.p10)} – ${prdF(a.p90)}</b> · tengah ${prdF(a.p50)}<br>
+    🎯 Batas rugi <b>${prdF(a.p10)}</b> (−${(jarak * 100).toFixed(1).replace('.', ',')}%) · target ${prdF(a.p75)} · untung:rugi <b>${rasio.toFixed(2).replace('.', ',')}x</b><br>
+    Posisi maks <b>${Math.round(Math.min(1, 0.01 / jarak) * 100)}%</b> modal kalau rela rugi 1%
+    ${d.k && d.k.ada ? `<br>🧲 Kerumunan: <b>${esc(d.k.label)}</b> · funding z ${String(d.k.funding_z).replace('.', ',')} · OI 7hr ${String(d.k.oi_7h_pct).replace('.', ',')}%` : ''}
+    ${d.o && d.o.ada ? `<br>⛓ On-chain: <b>${esc(d.o.label)}</b> · MVRV ${String(d.o.mvrv).replace('.', ',')}` : ''}${poly}<br>
+    <span style="color:var(--dim)">${r.arah === 'TIDAK DIRAMAL' ? 'Arah gak lolos uji → pakai buat atur risiko, bukan buat nebak.' : 'Lolos uji, tapi tetap satu pertimbangan, bukan satu-satunya.'} Bukan nasihat keuangan.</span></div>
+    <div class="aksi"><a class="nyala" href="${link}" target="_blank" rel="noopener">🔮 Buka kerucut lengkap</a></div>`;
+}
 function infoRapat(b) {
   const p = b.p, a = rapatAktifLokal(), link = a && `https://ocklu.com/rapat/#${a.kode}`;
   if (p.status === 'rapatai') {
@@ -2012,12 +2153,14 @@ try {
   if (GEDUNG.dna) bangunGedung('dna', data.rak.map(boothRak));
   await ambilTeater(); bangunGedung('teater', []); bangunTeater(); bangunKafe(); bangunOtak();
   bangunGedung('rapat', []); bangunRapat();
+  bangunGedung('prediksi', []); bangunPrediksi();
   try { modeOtak = localStorage.getItem('hq-otak') === '1'; } catch {}
   segarTeater(); setInterval(segarTeater, 60000);
   bangunPlaza(data); bangunPengunjung(); isiHUD();
   semuaHit = [...lantaiKlik, ...[...booth.values()].flatMap((b) => b.hit)];
   $('masuk').disabled = false;
   $('tombolRapat').onclick = () => pindahKe('rapat');
+  $('tombolPrediksi').onclick = () => pindahKe('prediksi');
   $('masuk').onclick = () => { $('gerbang').remove(); cv.focus(); };
   // habis bangun/mindahin: langsung berdiri di depan pintu gedungnya
   const lompat = location.hash.match(/g=(\w+)/);
