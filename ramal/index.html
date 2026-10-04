@@ -6,37 +6,124 @@
 <script src="./ramal.js"></script>
 <style>
 :root{--bg:#0b0f14;--kartu:#121923;--garis:#223042;--teks:#e6edf3;--redup:#8b98a8;--aksen:#4cc2ff;--naik:#3fb950;--turun:#f85149;--kuning:#d29922}
+*{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--teks);font:15px/1.5 system-ui,-apple-system,sans-serif}
-main{max-width:860px;margin:0 auto;padding:16px}
-h1{font-size:20px;margin:4px 0}.redup{color:var(--redup);font-size:13px}
-.baris{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
-select,button{background:var(--kartu);color:var(--teks);border:1px solid var(--garis);border-radius:8px;padding:8px 10px;font:inherit}
-button{background:var(--aksen);color:#001;border:0;font-weight:600;cursor:pointer}
+main{max-width:860px;margin:0 auto;padding:16px 16px 80px}
+h1{font-size:20px;margin:4px 0}h2{font-size:15px;margin:0 0 8px}.redup{color:var(--redup);font-size:13px}
+.baris{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0;align-items:center}
+select,button,input{background:var(--kartu);color:var(--teks);border:1px solid var(--garis);border-radius:8px;padding:8px 10px;font:inherit}
+button.utama{background:var(--aksen);color:#001;border:0;font-weight:600;cursor:pointer}
 .kartu{background:var(--kartu);border:1px solid var(--garis);border-radius:12px;padding:14px;margin:10px 0}
 .angka{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
 .angka b{display:block;font-size:20px;font-variant-numeric:tabular-nums}
-svg{width:100%;height:auto;display:block}
+[data-info]{cursor:pointer;border-radius:8px;transition:background .15s}
+[data-info]:hover,[data-info]:focus-visible{background:#1a2431;outline:none}
+.i{display:inline-grid;place-items:center;width:16px;height:16px;border-radius:50%;border:1px solid var(--redup);color:var(--redup);font-size:10px;font-weight:700;margin-left:4px;vertical-align:1px}
+.angka>div{padding:6px}
+svg{width:100%;height:auto;display:block;touch-action:pan-y}
 table{width:100%;border-collapse:collapse;font-size:13px;font-variant-numeric:tabular-nums}
-td,th{padding:6px;border-bottom:1px solid var(--garis);text-align:right}td:first-child,th:first-child{text-align:left}
-.lencana{display:inline-block;padding:2px 8px;border-radius:99px;font-size:12px;font-weight:600}
+td,th{padding:8px 6px;border-bottom:1px solid var(--garis);text-align:right}td:first-child,th:first-child{text-align:left}
+tr[data-info]:hover td{background:#1a2431}
+.tip{font-size:13px;min-height:20px;margin-top:6px;font-variant-numeric:tabular-nums}
+.acuan{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}
+.acuan>div{border:1px solid var(--garis);border-radius:10px;padding:10px}
+.acuan b{font-size:18px;font-variant-numeric:tabular-nums;display:block}
+.peringatan{border-left:3px solid var(--kuning);padding:8px 10px;background:#1d1a10;border-radius:6px;font-size:13px;margin:8px 0}
+#lembar{position:fixed;inset:auto 0 0 0;max-height:75vh;overflow:auto;background:#151e2a;border-top:1px solid var(--garis);border-radius:16px 16px 0 0;padding:16px 16px 24px;transform:translateY(100%);transition:transform .2s;z-index:10;box-shadow:0 -8px 30px rgba(0,0,0,.5)}
+#lembar.buka{transform:none}#lembar .isi{max-width:820px;margin:0 auto}
+#lembar h3{margin:0 0 8px;font-size:17px}#lembar p{margin:6px 0}
+#tutup{float:right;cursor:pointer}
+#tirai{position:fixed;inset:0;background:rgba(0,0,0,.4);display:none;z-index:9}#tirai.buka{display:block}
+@media (prefers-reduced-motion:reduce){#lembar{transition:none}}
 </style></head><body><main>
 <h1>👁 Ramal Harga, cara mata Tuhan</h1>
-<div class="redup">Bentuk pergerakan 30 hari terakhir dibandingkan dengan semua masa lalu yang tercatat. Yang ditampilkan kerucut jalur seperti ramalan badai, bukan satu garis. Arah hanya muncul kalau di uji mundur mengalahkan tebakan buta.</div>
+<div class="redup">Ketuk angka, tabel, atau grafik mana pun untuk melihat artinya. Tanda <span class="i">i</span> berarti bisa diketuk.</div>
 <div class="baris">
- <select id="aset"><option>BTCUSDT</option><option>ETHUSDT</option><option>SOLUSDT</option><option>BNBUSDT</option><option>XRPUSDT</option><option>DOGEUSDT</option><option>PAXGUSDT</option></select>
- <select id="h"><option value="7">7 hari</option><option value="14" selected>14 hari</option><option value="30">30 hari</option></select>
- <button onclick="muat()">Ramal</button>
+ <select id="aset" aria-label="Aset"><option>BTCUSDT</option><option>ETHUSDT</option><option>SOLUSDT</option><option>BNBUSDT</option><option>XRPUSDT</option><option>DOGEUSDT</option><option>PAXGUSDT</option></select>
+ <select id="h" aria-label="Horizon"><option value="7">7 hari</option><option value="14" selected>14 hari</option><option value="30">30 hari</option></select>
+ <button class="utama" onclick="muat()">Ramal</button>
+ <span data-info="cara" role="button" tabindex="0" class="redup">Cara baca<span class="i">i</span></span>
 </div>
 <div id="isi" class="redup">Memuat…</div>
-</main><script>
-const f=(x)=>x>=10?x.toLocaleString('id-ID',{maximumFractionDigits:0}):x.toLocaleString('id-ID',{maximumFractionDigits:4});
+</main>
+<div id="tirai" onclick="tutup()"></div>
+<div id="lembar" role="dialog" aria-modal="true" aria-labelledby="lj"><div class="isi"><button id="tutup" onclick="tutup()" aria-label="Tutup">✕</button><h3 id="lj"></h3><div id="lt"></div></div></div>
+<script>
+const f=x=>x>=10?x.toLocaleString('id-ID',{maximumFractionDigits:0}):x.toLocaleString('id-ID',{maximumFractionDigits:4});
+const p1=x=>(x>0?'+':'')+x.toFixed(1).replace('.',',')+'%';
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let R=null;
+
+// ===== kamus penjelasan: tiap kunci = [judul, isi(r)] =====
+const INFO={
+ cara:['Cara baca halaman ini',r=>`
+  <p><b>Idenya:</b> gerakan harga 30 hari terakhir dicocokkan dengan seluruh ${r?r.riwayat_hari:1000} hari sejarah. Diambil ${r?r.jumlah_analog:25} masa lalu yang paling mirip, lalu dilihat apa yang terjadi setelahnya. Hasilnya berupa kerucut kemungkinan, seperti ramalan jalur badai.</p>
+  <p><b>Urutan baca:</b></p>
+  <p>1. <b>Arah</b>: kalau tulisannya TIDAK DIRAMAL, jangan pakai halaman ini untuk menebak naik atau turun.</p>
+  <p>2. <b>Rentang 80%</b>: batas wajar harga di hari terakhir. Ini bagian yang paling bisa dipegang.</p>
+  <p>3. <b>Pagar kejujuran</b>: seberapa sering mesin ini benar di masa lalu.</p>
+  <p>4. <b>Pakai sebagai acuan</b>: rentang tadi diubah jadi batas rugi, target, dan ukuran posisi.</p>
+  <p class="redup">Ini peta risiko dari sejarah, bukan janji, dan bukan nasihat keuangan.</p>`],
+ harga:['Harga sekarang',r=>`<p>Harga penutupan candle harian terakhir di Binance (${esc(r.per_tanggal)}). Candle harian ditutup pukul 07:00 WIB, jadi angka ini bisa sedikit beda dari harga detik ini.</p><p>Semua rentang di halaman ini dihitung dari harga ini.</p>`],
+ arah:['Arah',r=>{const u=r.uji_mundur;return `<p>Arah hanya muncul kalau, saat diuji ke masa lalu, tebakan naik/turun mesin ini <b>lebih sering benar daripada tebakan buta</b>, dan selisihnya cukup besar sehingga bukan kebetulan.</p>
+  <p>Sekarang: tebakan mesin kena <b>${Math.round(u.arah_kena*100)}%</b>, tebakan buta <b>${Math.round(u.tebak_buta*100)}%</b>. ${r.arah==='TIDAK DIRAMAL'?'Mesin tidak lebih pintar dari tebak koin, jadi arah <b>sengaja disembunyikan</b>.':'Mesin lolos, jadi arah ditampilkan.'}</p>
+  <p><b>Artinya:</b> ${r.arah==='TIDAK DIRAMAL'?'jangan beli atau jual hanya karena halaman ini. Pakai rentangnya untuk menentukan batas rugi dan ukuran posisi.':r.arah==='SEIMBANG'?'peluang naik dan turun hampir sama.':'arah ini boleh jadi salah satu pertimbangan, bukan satu-satunya.'}</p>`}],
+ rentang:['Rentang 80%',r=>{const a=r.kerucut.at(-1);return `<p>Dari pola-pola mirip di masa lalu, <b>8 dari 10</b> kejadian berakhir di antara <b>${f(a.p10)}</b> dan <b>${f(a.p90)}</b> setelah ${r.horizon_hari} hari.</p>
+  <p>Dari harga sekarang: bawah <b>${p1((a.p10/r.harga_sekarang-1)*100)}</b>, atas <b>${p1((a.p90/r.harga_sekarang-1)*100)}</b>.</p>
+  <p>1 dari 10 kemungkinan harga jatuh di bawah batas bawah, dan 1 dari 10 tembus di atas batas atas. Jadi rentang ini batas <i>wajar</i>, bukan batas mustahil.</p>`}],
+ tengah:['Tengah (p50)',r=>`<p>Separuh pola mirip berakhir di atas angka ini dan separuhnya di bawah. Ini <b>bukan target harga</b>, cuma titik tengah sebaran.</p><p>Kalau angkanya dekat dengan harga sekarang, berarti sejarah tidak condong ke mana-mana.</p>`],
+ kerucut:['Grafik kerucut',r=>`<p><b>Pita tipis</b>: 80% kemungkinan. <b>Pita tebal</b>: 50% kemungkinan. <b>Garis</b>: jalur tengah.</p>
+  <p>Kerucut makin melebar ke kanan karena makin jauh ke depan, makin besar ketidakpastiannya.</p>
+  <p><b>Geser atau ketuk grafiknya</b> untuk melihat rentang harga per hari.</p>
+  <p><b>Tanda bahaya:</b> kalau harga nyata keluar dari pita tipis sebelum hari ke-${r.horizon_hari}, berarti sedang terjadi sesuatu yang tidak ada di sejarah (berita besar, krisis). Saat itu ramalan ini tidak berlaku. Periksa ulang.</p>`],
+ uji_arah:['Tebakan arah kena',r=>`<p>Mesin dijalankan mundur ke ${r.uji_mundur.titik_uji} titik di masa lalu. Di tiap titik, mesin <b>hanya boleh melihat data sebelum tanggal itu</b>, persis seperti meramal sungguhan.</p><p>Arah tebakannya benar <b>${Math.round(r.uji_mundur.arah_kena*100)}%</b> dari semua titik itu.</p>`],
+ uji_buta:['Tebakan buta terbaik',r=>`<p>Hasil kalau kita asal menebak "selalu naik" (atau "selalu turun", mana yang lebih sering benar) di periode yang sama: <b>${Math.round(r.uji_mundur.tebak_buta*100)}%</b>.</p><p>Mesin baru dianggap berguna kalau mengalahkan angka ini dengan selisih yang cukup jauh dari kebetulan, yaitu lebih dari ${Math.round(2*Math.sqrt(.25/r.uji_mundur.titik_uji)*100)} poin untuk ${r.uji_mundur.titik_uji} titik uji.</p>`],
+ uji_kerucut:['Harga nyata di dalam kerucut',r=>{const k=r.uji_mundur.kerucut_p10_p90_kena;return `<p>Kerucut 80% seharusnya menangkap harga nyata sekitar 80% dari waktu. Hasil uji mundur: <b>${Math.round(k*100)}%</b>.</p>
+  <p>${k<.75?'<b>Kerucut agak kesempitan.</b> Anggap rentang yang sebenarnya sedikit lebih lebar, misalnya mundurkan batas rugi.':k>.88?'Kerucut agak kelebaran, terlalu hati-hati.':'Pas. Rentangnya bisa dipercaya sebagai ukuran risiko.'}</p>`}],
+ mirip:['Masa lalu yang paling mirip',r=>`<p>Tanggal-tanggal ketika bentuk pergerakan 30 hari sebelumnya paling mirip dengan sekarang, beserta hasilnya ${r.horizon_hari} hari kemudian.</p><p>Kalau hasilnya campur aduk (ada yang naik, ada yang turun), itu tanda arahnya memang tidak jelas. Ketuk satu baris untuk detailnya.</p>`],
+ acuan:['Pakai sebagai acuan',r=>`<p>Rentang diubah jadi 4 angka kerja. Rumusnya sederhana dan terbuka:</p>
+  <p><b>Batas rugi</b> = batas bawah 80% (p10). Kalau harga turun sampai sini, itu sudah di luar kejadian wajar.</p>
+  <p><b>Target wajar</b> = p75. <b>Target optimis</b> = p90.</p>
+  <p><b>Untung : rugi</b> = (target wajar − harga) ÷ (harga − batas rugi). Di bawah 1 artinya risikonya lebih besar dari hadiahnya.</p>
+  <p><b>Ukuran posisi</b> = risiko yang rela hilang ÷ jarak batas rugi. Ini cara paling berguna memakai halaman ini, bahkan saat arahnya TIDAK DIRAMAL.</p>`],
+ stop:['Batas rugi acuan',r=>{const a=r.kerucut.at(-1);return `<p>p10 hari ke-${r.horizon_hari}: <b>${f(a.p10)}</b> (${p1((a.p10/r.harga_sekarang-1)*100)}). Pada pola-pola mirip, hanya 1 dari 10 yang turun lebih dalam dari ini.</p><p>Kalau harga tembus ke sini, keadaannya sudah tidak biasa, jadi itu titik wajar untuk keluar atau evaluasi ulang.</p>`}],
+ target:['Target',r=>{const a=r.kerucut.at(-1);return `<p><b>Wajar (p75)</b> ${f(a.p75)}: 1 dari 4 pola mirip naik sampai atau melewati ini.</p><p><b>Optimis (p90)</b> ${f(a.p90)}: hanya 1 dari 10.</p><p>Mengincar p90 itu mungkin, tapi jarang tercapai.</p>`}],
+ rasio:['Untung : rugi',r=>`<p>Berapa rupiah yang bisa didapat (sampai target wajar) untuk tiap rupiah yang dipertaruhkan (sampai batas rugi).</p><p>Di atas 1,5: menarik. Sekitar 1: impas. Di bawah 1: risikonya lebih besar dari hadiahnya. Ingat juga apakah arahnya lolos uji atau tidak.</p>`],
+ posisi:['Ukuran posisi',r=>`<p>Isi modal dan berapa persen modal yang rela hilang kalau batas rugi kena (umumnya 1–2%).</p><p>Rumus: posisi = (modal × risiko%) ÷ jarak batas rugi%. Jadi kalau batas rugi kena, kerugiannya tepat sebesar yang kamu tetapkan, tidak lebih.</p><p>Makin lebar kerucut (aset makin liar), makin kecil posisi yang aman.</p>`],
+};
+function bukaInfo(k,ex){const x=INFO[k];if(!x&&!ex)return;lj.textContent=ex?ex[0]:x[0];lt.innerHTML=ex?ex[1]:x[1](R);lembar.classList.add('buka');tirai.classList.add('buka');tutup.focus()}
+function tutup(){lembar.classList.remove('buka');tirai.classList.remove('buka')}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')tutup();if((e.key==='Enter'||e.key===' ')&&e.target.dataset&&e.target.dataset.info){e.preventDefault();e.target.click()}});
+document.addEventListener('click',e=>{const t=e.target.closest('[data-info]');if(!t)return;const k=t.dataset.info;
+ if(k.startsWith('row:')){const b=R.badai_mirip[+k.slice(4)];return bukaInfo(null,[`Pola mirip ${b.tanggal}`,`<p>Pada ${esc(b.tanggal)} harganya ${f(b.harga_saat_itu)}, dan 30 hari sebelumnya bentuk gerakannya mirip dengan sekarang (skor kemiripan ${b.kemiripan}).</p><p>${R.horizon_hari} hari kemudian hasilnya <b>${p1(b.hasil_pct)}</b>.</p><p>Ini cuma satu dari ${R.jumlah_analog} pola mirip yang dipakai, jadi jangan disimpulkan dari satu baris. Lihat sebaran semuanya di kerucut.</p>`]);}
+ if(R||k==='cara')bukaInfo(k)});
+const I=(k,html,tag='div')=>`<${tag} data-info="${k}" role="button" tabindex="0">${html}</${tag}>`;
+
+function acuan(){const r=R,a=r.kerucut.at(-1),p0=r.harga_sekarang;
+ const jarak=(p0-a.p10)/p0, rasio=(a.p75-p0)/Math.max(p0-a.p10,1e-9);
+ let modal=10000000,risk=1;try{modal=+localStorage.getItem('ocModal')||modal;risk=+localStorage.getItem('ocRisk')||risk}catch(e){}
+ return `<div class="kartu">${I('acuan','<h2>🎯 Pakai sebagai acuan<span class="i">i</span></h2>')}
+ ${r.arah==='TIDAK DIRAMAL'?'<div class="peringatan">Arah tidak lolos uji. Angka di bawah dipakai untuk <b>mengatur risiko</b>, bukan untuk memutuskan beli atau jual.</div>':''}
+ <div class="acuan">
+  ${I('stop',`<span class="redup">Batas rugi (p10)<span class="i">i</span></span><b style="color:var(--turun)">${f(a.p10)}</b><span class="redup">${p1(-jarak*100)}</span>`)}
+  ${I('target',`<span class="redup">Target wajar / optimis<span class="i">i</span></span><b style="color:var(--naik)">${f(a.p75)}</b><span class="redup">${p1((a.p75/p0-1)*100)} · optimis ${f(a.p90)}</span>`)}
+  ${I('rasio',`<span class="redup">Untung : rugi<span class="i">i</span></span><b style="color:${rasio>=1.5?'var(--naik)':rasio>=1?'var(--kuning)':'var(--turun)'}">1 : ${(1/Math.max(rasio,1e-9)).toFixed(2).replace('.',',')} → ${rasio.toFixed(2).replace('.',',')}x</b><span class="redup">${rasio>=1.5?'menarik':rasio>=1?'impas':'risiko > hadiah'}</span>`)}
+  <div>${I('posisi','<span class="redup">Ukuran posisi<span class="i">i</span></span>','span')}
+   <div class="baris" style="margin:6px 0"><input id="modal" type="number" inputmode="numeric" value="${modal}" aria-label="Modal (Rp)" style="width:120px"><input id="risk" type="number" step=".5" value="${risk}" aria-label="Risiko persen" style="width:64px"><span class="redup">%</span></div>
+   <b id="hasilPos"></b><span class="redup" id="ketPos"></span></div>
+ </div>
+ <p class="redup" style="margin-bottom:0">⚠️ Kalau harga keluar dari pita tipis sebelum hari ke-${r.horizon_hari}, ramalan ini batal. Periksa ulang.</p></div>`}
+function hitungPos(){const a=R.kerucut.at(-1),p0=R.harga_sekarang,j=(p0-a.p10)/p0;
+ const m=+modal.value||0,k=+risk.value||0;try{localStorage.setItem('ocModal',m);localStorage.setItem('ocRisk',k)}catch(e){}
+ const pos=Math.min(m*k/100/j,m);hasilPos.textContent='Rp '+Math.round(pos).toLocaleString('id-ID');
+ ketPos.textContent=` = ${Math.round(pos/m*100)||0}% modal · rugi maks Rp ${Math.round(m*k/100).toLocaleString('id-ID')}`}
+
 async function muat(){
- const isi=document.getElementById('isi');isi.textContent='Membandingkan dengan seluruh sejarah…';
+ const isi=document.getElementById('isi');isi.className='redup';isi.textContent='Membandingkan dengan seluruh sejarah…';
  try{localStorage.setItem('ocRamal',aset.value+'|'+h.value)}catch(e){}
  let r;try{r=await OcRamal.ramal(aset.value,h.value)}catch(e){isi.textContent='Gagal ambil data: '+e;return}
  if(!r.berhasil){isi.textContent=r.galat||'gagal';return}
- const k=r.kerucut,u=r.uji_mundur||{},a=k[k.length-1];
+ R=r;const k=r.kerucut,u=r.uji_mundur||{},a=k.at(-1);
  const W=800,H=300,P=40,lo=Math.min(r.harga_sekarang,...k.map(x=>x.p10)),hi=Math.max(r.harga_sekarang,...k.map(x=>x.p90));
  const X=i=>P+(W-2*P)*i/k.length,Y=v=>H-P-(H-2*P)*(v-lo)/(hi-lo||1);
  const pita=(a,b)=>{let d=`M${X(0)},${Y(r.harga_sekarang)}`;k.forEach((x,i)=>d+=` L${X(i+1)},${Y(x[a])}`);for(let i=k.length-1;i>=0;i--)d+=` L${X(i+1)},${Y(k[i][b])}`;return d+'Z'};
@@ -45,27 +132,39 @@ async function muat(){
  isi.className='';
  isi.innerHTML=`
  <div class="kartu angka">
-  <div><span class="redup">Harga ${esc(r.per_tanggal)}</span><b>${f(r.harga_sekarang)}</b></div>
-  <div><span class="redup">Arah ${r.horizon_hari} hari</span><b style="color:${warna}">${esc(r.arah)}${r.peluang_naik!=null?' · '+Math.round(r.peluang_naik*100)+'% naik':''}</b></div>
-  <div><span class="redup">Rentang 80% hari ke-${r.horizon_hari}</span><b>${f(a.p10)} – ${f(a.p90)}</b></div>
-  <div><span class="redup">Tengah (p50)</span><b>${f(a.p50)}</b></div>
+  ${I('harga',`<span class="redup">Harga ${esc(r.per_tanggal)}<span class="i">i</span></span><b>${f(r.harga_sekarang)}</b>`)}
+  ${I('arah',`<span class="redup">Arah ${r.horizon_hari} hari<span class="i">i</span></span><b style="color:${warna}">${esc(r.arah)}${r.peluang_naik!=null?' · '+Math.round(r.peluang_naik*100)+'% naik':''}</b>`)}
+  ${I('rentang',`<span class="redup">Rentang 80% hari ke-${r.horizon_hari}<span class="i">i</span></span><b>${f(a.p10)} – ${f(a.p90)}</b>`)}
+  ${I('tengah',`<span class="redup">Tengah (p50)<span class="i">i</span></span><b>${f(a.p50)}</b>`)}
  </div>
- <div class="kartu"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Kerucut ramalan harga">
+ ${acuan()}
+ <div class="kartu">${I('kerucut','<h2>📈 Kerucut jalur<span class="i">i</span></h2>')}
+ <svg id="graf" viewBox="0 0 ${W} ${H}" role="img" aria-label="Kerucut ramalan harga, geser untuk detail per hari">
   <path d="${pita('p90','p10')}" fill="var(--aksen)" opacity=".15"/><path d="${pita('p75','p25')}" fill="var(--aksen)" opacity=".25"/>
   <path d="${med}" fill="none" stroke="var(--aksen)" stroke-width="2"/>
+  <line id="gl" y1="${P/2}" y2="${H-P}" stroke="var(--teks)" stroke-dasharray="4 4" opacity="0"/>
   <text x="${P}" y="${Y(hi)-8}" fill="var(--redup)" font-size="12">${f(hi)}</text><text x="${P}" y="${Y(lo)+16}" fill="var(--redup)" font-size="12">${f(lo)}</text>
+  <text x="${X(0)}" y="${H-10}" fill="var(--redup)" font-size="12">hari ini</text>
   <text x="${W-P}" y="${H-10}" fill="var(--redup)" font-size="12" text-anchor="end">hari ke-${r.horizon_hari}</text>
- </svg><div class="redup">Pita tipis: 80% kemungkinan. Pita tebal: 50%. Garis: jalur tengah dari ${r.jumlah_analog} analog di ${r.riwayat_hari} hari sejarah.</div></div>
- <div class="kartu"><b>🛡 Pagar kejujuran (uji mundur ${u.titik_uji} titik)</b>
+ </svg><div class="tip" id="tip"><span class="redup">Geser atau ketuk grafik untuk melihat rentang per hari.</span></div></div>
+ <div class="kartu"><h2>🛡 Pagar kejujuran (uji mundur ${u.titik_uji} titik)</h2>
   <table><tr><th>Ukuran</th><th>Nilai</th></tr>
-  <tr><td>Tebakan arah kena</td><td>${Math.round(u.arah_kena*100)}%</td></tr>
-  <tr><td>Tebakan buta terbaik</td><td>${Math.round(u.tebak_buta*100)}%</td></tr>
-  <tr><td>Harga nyata jatuh di dalam kerucut 80%</td><td>${Math.round(u.kerucut_p10_p90_kena*100)}%</td></tr></table>
+  ${I('uji_arah',`<td>Tebakan arah kena<span class="i">i</span></td><td>${Math.round(u.arah_kena*100)}%</td>`,'tr')}
+  ${I('uji_buta',`<td>Tebakan buta terbaik<span class="i">i</span></td><td>${Math.round(u.tebak_buta*100)}%</td>`,'tr')}
+  ${I('uji_kerucut',`<td>Harga nyata di dalam kerucut 80%<span class="i">i</span></td><td>${Math.round(u.kerucut_p10_p90_kena*100)}% <span class="redup">(target 80%)</span></td>`,'tr')}
+  </table>
   <p class="redup">${esc(r.pagar.catatan)}</p></div>
- <div class="kartu"><b>🌀 Masa lalu yang paling mirip</b>
+ <div class="kartu">${I('mirip','<h2>🌀 Masa lalu yang paling mirip<span class="i">i</span></h2>')}
   <table><tr><th>Tanggal</th><th>Harga saat itu</th><th>${r.horizon_hari} hari kemudian</th></tr>
-  ${r.badai_mirip.map(b=>{const v=b.hasil_pct;return `<tr><td>${esc(b.tanggal)}</td><td>${f(b.harga_saat_itu)}</td><td style="color:${v>=0?'var(--naik)':'var(--turun)'}">${v>0?'+':''}${v}%</td></tr>`}).join('')}</table></div>
+  ${r.badai_mirip.map((b,i)=>I('row:'+i,`<td>${esc(b.tanggal)}<span class="i">i</span></td><td>${f(b.harga_saat_itu)}</td><td style="color:${b.hasil_pct>=0?'var(--naik)':'var(--turun)'}">${p1(b.hasil_pct)}</td>`,'tr')).join('')}</table></div>
  <p class="redup">Sumber: ${esc(r.sumber)}. ${esc(r.bukan_nasihat)}</p>`;
+ modal.oninput=risk.oninput=hitungPos;hitungPos();
+ const g=document.getElementById('graf');
+ const geser=e=>{const b=g.getBoundingClientRect(),x=((e.touches?e.touches[0].clientX:e.clientX)-b.left)/b.width*W;
+  const i=Math.max(1,Math.min(k.length,Math.round((x-P)/(W-2*P)*k.length)));const d=k[i-1];
+  gl.setAttribute('x1',X(i));gl.setAttribute('x2',X(i));gl.setAttribute('opacity',.6);
+  tip.innerHTML=`<b>Hari ke-${i}</b> · 80%: ${f(d.p10)} – ${f(d.p90)} · 50%: ${f(d.p25)} – ${f(d.p75)} · tengah ${f(d.p50)}`};
+ g.addEventListener('pointermove',geser);g.addEventListener('pointerdown',geser);g.addEventListener('touchmove',geser,{passive:true});
 }
 const q=new URLSearchParams(location.search);let ing=null;try{ing=(localStorage.getItem('ocRamal')||'').split('|')}catch(e){}
 if(q.get('aset')||ing&&ing[0]){const v=(q.get('aset')||ing[0]).toUpperCase();if(![...aset.options].some(o=>o.value===v))aset.add(new Option(v));aset.value=v}
