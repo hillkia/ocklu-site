@@ -88,6 +88,21 @@ const INFO={
   <p><b>Gunanya:</b> kalau label RAMAI muncul, banyak posisi berutang bisa dipaksa tutup bersamaan, sehingga gerakan bisa lebih tajam dari biasanya. Pertimbangkan posisi lebih kecil atau batas rugi lebih longgar.</p>`],
  fz:['Funding z-skor',r=>`<p>Jumlah funding 7 hari terakhir dibandingkan dengan 180 hari sebelumnya. 0 = biasa. Di atas +1 = jauh lebih ramai posisi naik dari biasanya. Di bawah −1 = ramai posisi turun.</p><p>Dalam setahun, funding ini setara dengan bunga yang dibayar posisi naik ke posisi turun (kalau negatif, sebaliknya).</p>`],
  oiz:['Open interest z-skor',r=>`<p>Perubahan jumlah kontrak terbuka dalam 7 hari, dibandingkan dengan 180 hari sebelumnya. Di atas +1 = uang berutang baru masuk jauh lebih cepat dari biasanya.</p><p>OI naik dan harga naik = posisi naik bertambah. OI naik dan harga turun = posisi turun bertambah.</p>`],
+ onchain:['On-chain',r=>`<p>Data langsung dari blockchain, dari CoinMetrics (gratis):</p>
+  <p><b>MVRV</b> = harga pasar dibanding rata-rata harga beli semua koin. Di atas rata-ratanya berarti banyak pemegang sudah untung besar (rawan dijual). Di bawahnya berarti banyak yang rugi.</p>
+  <p><b>Aliran bursa</b> = koin yang masuk ke bursa dikurangi yang keluar dalam 7 hari. Banyak yang masuk bisa berarti siap dijual. Banyak yang keluar bisa berarti disimpan.</p>
+  <p><b>Alamat aktif</b> = berapa banyak alamat yang bertransaksi, ukuran seberapa ramai dipakai.</p>
+  <p><b>Hasil uji jujur:</b> 18 cara diuji (BTC dan ETH × 3 ukuran × 7/14/30 hari, 2017–2026). <b>Tidak ada yang lolos.</b> Jadi kartu ini cuma konteks.</p>`],
+ kandidat:['Kandidat dipantau',r=>`<p><b>ETH aliran bursa, 30 hari</b>: di uji mundur kena 64% vs tebak buta 53%, dan konsisten di 2017–2021 (63%) maupun 2022–2026 (64%).</p>
+  <p>Tapi setelah dikoreksi karena 18 hal diuji sekaligus, angkanya belum cukup kuat (z 2,01, butuh 2,77). Bisa jadi cuma kebetulan.</p>
+  <p>Karena itu sinyalnya <b>dicatat tiap hari mulai 4/10/2026</b> dan dinilai di data masa depan yang belum pernah dilihat. Sampai lolos, <b>jangan dipakai untuk keputusan</b>.</p>`],
+ poly:['Polymarket vs kerucut kita',r=>`<p><b>Polymarket</b> adalah pasar taruhan uang sungguhan. Harga "Yes" 0,77 artinya orang-orang di sana menilai peluangnya 77%.</p>
+  <p><b>Kerucut kita</b> = dari ${r?r.jumlah_analog:25} jalur masa lalu yang mirip, berapa yang berakhir di atas harga itu.</p>
+  <p><b>Kalau keduanya mirip</b>, gambarannya lebih meyakinkan. <b>Kalau beda jauh</b>, biasanya pasar uang sungguhan lebih tepat, karena ada orang yang mempertaruhkan uangnya. Perlakukan perbedaan itu sebagai tanda untuk hati-hati, bukan peluang gratis.</p>
+  <p>Setiap hari kedua tebakan dicatat, lalu dinilai siapa yang lebih tepat setelah tanggalnya lewat (lihat papan skor).</p>`],
+ skor:['Papan skor Brier',r=>`<p>Untuk setiap tebakan yang tanggalnya sudah lewat: (peluang − kenyataan)², lalu dirata-rata. Kenyataan = 1 kalau harga benar di atas, 0 kalau tidak.</p><p><b>Makin kecil makin jago.</b> Asal menebak 50% terus nilainya 0,25. Butuh minimal 50 tebakan sebelum boleh disimpulkan siapa yang lebih baik.</p>`],
+ berita:['Berita Kroog',r=>`<p>Jumlah berita yang menyebut koin ini, dikumpulkan 1.000 wartawan AI Kroog dari puluhan negara, lalu dibandingkan dengan 24 jam sebelumnya.</p>
+  <p>Lonjakan berita sering datang bersama gerakan harga yang besar, tapi arahnya belum tentu. Kroog baru menyimpan potret harian mulai 4/10/2026, jadi <b>belum bisa diuji</b>. Butuh sekitar 6 bulan.</p><p>Ketuk judul untuk membaca beritanya di sumber aslinya.</p>`],
  acuan:['Pakai sebagai acuan',r=>`<p>Rentang diubah jadi 4 angka kerja. Rumusnya sederhana dan terbuka:</p>
   <p><b>Batas rugi</b> = batas bawah 80% (p10). Kalau harga turun sampai sini, itu sudah di luar kejadian wajar.</p>
   <p><b>Target wajar</b> = p75. <b>Target optimis</b> = p90.</p>
@@ -145,6 +160,9 @@ async function muat(){
   ${I('tengah',`<span class="redup">Tengah (p50)<span class="i">i</span></span><b>${f(a.p50)}</b>`)}
  </div>
  ${acuan()}
+ <div class="kartu" id="poly">${I('poly','<h2>🎲 Polymarket vs kerucut<span class="i">i</span></h2>')}<div class="redup">Memuat pasar taruhan…</div></div>
+ <div class="kartu" id="onc">${I('onchain','<h2>⛓ On-chain<span class="i">i</span></h2>')}<div class="redup">Memuat data blockchain…</div></div>
+ <div class="kartu" id="brt">${I('berita','<h2>📰 Berita Kroog<span class="i">i</span></h2>')}<div class="redup">Memuat berita…</div></div>
  <div class="kartu" id="krm">${I('kerumunan','<h2>🧲 Kerumunan futures<span class="i">i</span></h2>')}<div class="redup">Memuat data futures…</div></div>
  <div class="kartu">${I('kerucut','<h2>📈 Kerucut jalur<span class="i">i</span></h2>')}
  <svg id="graf" viewBox="0 0 ${W} ${H}" role="img" aria-label="Kerucut ramalan harga, geser untuk detail per hari">
@@ -167,6 +185,35 @@ async function muat(){
   ${r.badai_mirip.map((b,i)=>I('row:'+i,`<td>${esc(b.tanggal)}<span class="i">i</span></td><td>${f(b.harga_saat_itu)}</td><td style="color:${b.hasil_pct>=0?'var(--naik)':'var(--turun)'}">${p1(b.hasil_pct)}</td>`,'tr')).join('')}</table></div>
  <p class="redup">Sumber: ${esc(r.sumber)}. ${esc(r.bukan_nasihat)}</p>`;
  modal.oninput=risk.oninput=hitungPos;hitungPos();
+ const isiKartu=(id,kunci,judul,html)=>{const el=document.getElementById(id);if(el&&R===r)el.innerHTML=I(kunci,`<h2>${judul}<span class="i">i</span></h2>`)+html};
+ const galat=(id,kunci,judul)=>e=>isiKartu(id,kunci,judul,`<div class="redup">Tidak terjangkau: ${esc(e)}</div>`);
+ const pp=v=>Math.round(v*100)+'%';
+ OcRamal.polymarket(r.aset).then(async p=>{
+  if(!p.ada)return isiKartu('poly','poly','🎲 Polymarket vs kerucut',`<div class="redup">${esc(p.alasan||'tidak ada pasar')}</div>`);
+  const t=p.tanggal.slice(0,3);let s='';
+  try{s=await OcRamal.skor()}catch(e){}
+  isiKartu('poly','poly','🎲 Polymarket vs kerucut',t.map(x=>`<p class="redup" style="margin:10px 0 4px">${esc(x.judul)} · ±${String(x.hari).replace('.',',')} hari lagi</p>
+   <table><tr><th>Harga di atas</th><th>Polymarket</th><th>Kerucut kita</th></tr>${x.strike.map(k=>{const b=Math.abs(k.p_poly-k.p_kita);
+   return `<tr data-info="poly" role="button" tabindex="0"><td>${f(k.K)}</td><td>${pp(k.p_poly)}</td><td style="color:${b>=.15?'var(--kuning)':'inherit'}">${pp(k.p_kita)}${b>=.15?' ⚠':''}</td></tr>`}).join('')}</table>`).join('')+
+   (s?I('skor',`<p style="margin:12px 0 0"><b>Papan skor</b><span class="i">i</span> · ${s.n_dinilai} tebakan dinilai${s.n_dinilai?` · Brier Polymarket ${String(s.brier_polymarket).replace('.',',')} vs kita ${String(s.brier_kita).replace('.',',')}`:''}${s.catatan?`<br><span class="redup">${esc(s.catatan)}</span>`:''}</p>`):'')+
+   `<p class="redup" style="margin-bottom:0">⚠ = beda ≥ 15 poin. Sumber: Polymarket.</p>`)}).catch(galat('poly','poly','🎲 Polymarket vs kerucut'));
+ OcRamal.onchain(r.aset).then(o=>{
+  if(!o.ada)return isiKartu('onc','onchain','⛓ On-chain',`<div class="redup">${esc(o.alasan)}</div>`);
+  const zz=v=>(v>0?'+':'')+v.toFixed(2).replace('.',',');
+  isiKartu('onc','onchain','⛓ On-chain',`<div class="angka">
+   ${I('onchain',`<span class="redup">Keadaan ${esc(o.tanggal)}<span class="i">i</span></span><b style="color:${o.label==='NORMAL'?'var(--naik)':'var(--kuning)'}">${esc(o.label)}</b>`)}
+   ${I('onchain',`<span class="redup">MVRV<span class="i">i</span></span><b>${String(o.mvrv).replace('.',',')}</b><span class="redup">z ${zz(o.mvrv_z)}</span>`)}
+   ${I('onchain',`<span class="redup">Bersih ke bursa 7 hari<span class="i">i</span></span><b>${o.net_bursa_7h.toLocaleString('id-ID')} ${o.aset}</b><span class="redup">z ${zz(o.net_z)}</span>`)}
+   ${I('onchain',`<span class="redup">Alamat aktif<span class="i">i</span></span><b>${o.alamat_aktif.toLocaleString('id-ID')}</b><span class="redup">z ${zz(o.alamat_z)}</span>`)}
+  </div>${o.kandidat?I('kandidat',`<div class="peringatan">🔬 Kandidat dipantau, <b>${esc(o.kandidat.nama)}</b>: hari ini <b>${esc(o.kandidat.sinyal)}</b>. Belum lolos uji, belum boleh dipakai.<span class="i">i</span></div>`):''}
+  <p class="redup" style="margin-bottom:0">${esc(o.uji)} Sumber: ${esc(o.sumber)}.</p>`)}).catch(galat('onc','onchain','⛓ On-chain'));
+ OcRamal.berita(r.aset).then(b=>{
+  if(!b.ada)return isiKartu('brt','berita','📰 Berita Kroog',`<div class="redup">${esc(b.alasan)}</div>`);
+  const ub=b.n_24j_sebelumnya?Math.round((b.n_24j/b.n_24j_sebelumnya-1)*100):null;
+  isiKartu('brt','berita','📰 Berita Kroog',`<div class="angka">
+   ${I('berita',`<span class="redup">24 jam terakhir<span class="i">i</span></span><b>${b.n_24j} berita</b><span class="redup">${b.media_24j} media${ub!==null?` · ${ub>0?'+':''}${ub}% vs 24 jam sebelumnya`:''}</span>`)}
+  </div><table>${b.judul.map(x=>`<tr><td style="text-align:left"><a href="${esc(x.url)}" target="_blank" rel="noopener nofollow" style="color:var(--teks)">${esc(x.judul)}</a><div class="redup">${esc(x.media)} · ${esc(new Date(x.terbit).toLocaleString('id-ID',{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'}))}</div></td></tr>`).join('')}</table>
+  <p class="redup" style="margin-bottom:0">${esc(b.uji)}</p>`)}).catch(galat('brt','berita','📰 Berita Kroog'));
  OcRamal.kerumunan(r.aset).then(k=>{const el=document.getElementById('krm');if(!el||R!==r)return;
   const kepala=I('kerumunan','<h2>🧲 Kerumunan futures<span class="i">i</span></h2>');
   if(!k.ada){el.innerHTML=kepala+`<div class="redup">${esc(k.alasan)}</div>`;return}

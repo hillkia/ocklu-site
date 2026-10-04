@@ -95,6 +95,7 @@
                catatan: unggul ? "Arah ditampilkan karena di uji mundur mengalahkan tebakan buta melewati derau."
                                : "Arah disembunyikan: di uji mundur tidak mengalahkan tebakan buta melewati derau. Pakai kerucut sebagai rentang risiko saja." },
       badai_mirip: mirip,
+      jalur: k.jalur.map(function (j) { return j.map(function (v) { return Math.round(v * 1e5) / 1e5; }); }),
       sumber: "Binance (cermin data-api.binance.vision), candle harian penutupan",
       bukan_nasihat: "Rentang peluang dari sejarah, bukan janji. Bukan nasihat keuangan."
     };
@@ -127,4 +128,47 @@
              sumber: "funding Binance USDT-M, OI Bybit linear" };
   }
   g.OcRamal.kerumunan = kerumunan;
+
+  // Peluang harga di atas K pada hari ke-d, menurut kerucut analog (dipakai untuk dibandingkan dengan Polymarket)
+  function peluangDiAtas(r, hari, K) {
+    var d = Math.max(1, Math.min(r.horizon_hari, Math.round(hari))), n = 0;
+    r.jalur.forEach(function (j) { if (r.harga_sekarang * Math.exp(j[d - 1]) > K) n++; });
+    return n / r.jalur.length;
+  }
+  g.OcRamal.peluangDiAtas = peluangDiAtas;
+
+  // ===== On-chain (CoinMetrics Community, gratis, CORS terbuka) =====
+  // Diuji 18 cara 2017-2026: 0 lolos. Kandidat dipantau: ETH aliran bursa 30 hari.
+  var CM = "https://community-api.coinmetrics.io/v4/timeseries/asset-metrics";
+  async function onchain(simbol) {
+    var a = { BTCUSDT: "btc", ETHUSDT: "eth" }[String(simbol || "").toUpperCase()];
+    if (!a) return { ada: false, alasan: "data on-chain gratis cuma ada untuk BTC dan ETH" };
+    var mulai = new Date(Date.now() - 420 * 864e5).toISOString().slice(0, 10);
+    var d = await (await fetch(CM + "?assets=" + a + "&metrics=CapMVRVCur,FlowInExNtv,FlowOutExNtv,AdrActCnt&frequency=1d&start_time=" + mulai + "&page_size=1000")).json();
+    var b = (d.data || []).filter(function (x) { return x.CapMVRVCur && x.FlowInExNtv && x.FlowOutExNtv && x.AdrActCnt; })
+      .map(function (x) { return { tgl: x.time.slice(0, 10), mvrv: +x.CapMVRVCur, net: x.FlowInExNtv - x.FlowOutExNtv, adr: +x.AdrActCnt }; });
+    if (b.length < 370) return { ada: false, alasan: "sejarah on-chain kurang" };
+    var t = b.length - 1, i, net7 = [], adr7 = [];
+    var mz = zskor(b[t].mvrv, b.slice(t - 365, t).map(function (x) { return x.mvrv; }));
+    for (i = t - 180; i <= t; i++) { var s = 0; for (var k = i - 6; k <= i; k++) s += b[k].net; net7.push(s); }
+    for (i = t - 90; i <= t; i++) { var q = 0; for (var m = i - 6; m <= i; m++) q += b[m].adr; adr7.push(q / 7); }
+    var nz = zskor(net7[net7.length - 1], net7.slice(0, -1)), az = zskor(adr7[adr7.length - 1], adr7.slice(0, -1));
+    var r2 = function (v) { return Math.round(v * 100) / 100; };
+    var pantau = a === "eth" ? (nz > 1 ? "TURUN" : nz < -1 ? "NAIK" : "diam") : null;
+    return { ada: true, tanggal: b[t].tgl, aset: a.toUpperCase(),
+             mvrv: r2(b[t].mvrv), mvrv_z: r2(mz), net_bursa_7h: Math.round(net7[net7.length - 1]), net_z: r2(nz),
+             alamat_aktif: Math.round(b[t].adr), alamat_z: r2(az),
+             label: mz > 1.5 ? "KEMAHALAN (MVRV tinggi)" : mz < -1.5 ? "KEMURAHAN (MVRV rendah)" : nz > 1 ? "BANYAK MASUK BURSA" : nz < -1 ? "BANYAK KELUAR BURSA" : "NORMAL",
+             kandidat: pantau === null ? null : { nama: "ETH aliran bursa 30 hari", sinyal: pantau,
+               catatan: "Belum lolos (z 2,01 < ambang 2,77) tapi konsisten 63-64% di dua paruh. Dicatat & dinilai ke depan; BELUM boleh dipakai." },
+             uji: "Diuji 18 cara (BTC+ETH x MVRV/aliran bursa/alamat aktif x 7/14/30 hari, 2017-2026, koreksi uji-banyak): 0 lolos. Konteks, bukan sinyal arah.",
+             sumber: "CoinMetrics Community" };
+  }
+  g.OcRamal.onchain = onchain;
+
+  // ===== Polymarket & berita Kroog (lewat awan: polymarket diblokir ISP) =====
+  var SUMBER = "https://njghzieuuopukuagrswu.supabase.co/functions/v1/ramal-sumber";
+  g.OcRamal.polymarket = async function (simbol) { return (await fetch(SUMBER + "?jenis=polymarket&simbol=" + simbol)).json(); };
+  g.OcRamal.berita = async function (simbol) { return (await fetch(SUMBER + "?jenis=berita&simbol=" + simbol)).json(); };
+  g.OcRamal.skor = async function () { return (await fetch(SUMBER + "?jenis=skor")).json(); };
 })(typeof window !== "undefined" ? window : globalThis);
