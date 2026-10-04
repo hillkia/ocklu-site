@@ -27,10 +27,10 @@
     d.forEach(function (r) {
       if (!r.berhasil) { h += '<tr><td colspan="2" style="color:#8b98a8">' + esc(r.galat) + "</td></tr>"; return; }
       var a = r.kerucut[r.kerucut.length - 1], w = r.arah === "NAIK" ? "#3fb950" : r.arah === "TURUN" ? "#f85149" : "#8b98a8";
-      h += '<tr><td style="padding:4px 0">' + NAMA[r.aset] + '<div style="font-size:11px;color:' + w + '">' + esc(r.arah) + '</div></td>' +
+      h += '<tr style="cursor:pointer" onclick="window.open(\'' + ASAL + '?aset=' + r.aset + '\',\'_blank\')" title="Ketuk untuk detail & arti angkanya"><td style="padding:4px 0">' + NAMA[r.aset] + '<div style="font-size:11px;color:' + w + '">' + esc(r.arah) + '</div></td>' +
            '<td style="text-align:right">' + f(r.harga_sekarang) + '<div style="font-size:11px;color:#8b98a8">' + f(a.p10) + " - " + f(a.p90) + "</div></td></tr>";
     });
-    h += '</table><div style="font-size:11px;color:#8b98a8;margin-top:6px">Arah hanya tampil kalau lolos uji mundur. Bukan nasihat keuangan.</div>' +
+    h += '</table><div style="font-size:11px;color:#8b98a8;margin-top:6px">Ketuk baris untuk detail &amp; artinya. Arah hanya tampil kalau lolos uji mundur. Bukan nasihat keuangan.</div>' +
          '<a href="' + ASAL + '" target="_blank" rel="noopener" style="color:#4cc2ff;font-size:12px">Buka kerucut lengkap &rarr;</a>';
     panel.innerHTML = h;
   }

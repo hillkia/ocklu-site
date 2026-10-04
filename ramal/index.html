@@ -32,7 +32,7 @@ tr[data-info]:hover td{background:#1a2431}
 #lembar{position:fixed;inset:auto 0 0 0;max-height:75vh;overflow:auto;background:#151e2a;border-top:1px solid var(--garis);border-radius:16px 16px 0 0;padding:16px 16px 24px;transform:translateY(100%);transition:transform .2s;z-index:10;box-shadow:0 -8px 30px rgba(0,0,0,.5)}
 #lembar.buka{transform:none}#lembar .isi{max-width:820px;margin:0 auto}
 #lembar h3{margin:0 0 8px;font-size:17px}#lembar p{margin:6px 0}
-#tutup{float:right;cursor:pointer}
+#btnTutup{float:right;cursor:pointer}
 #tirai{position:fixed;inset:0;background:rgba(0,0,0,.4);display:none;z-index:9}#tirai.buka{display:block}
 @media (prefers-reduced-motion:reduce){#lembar{transition:none}}
 </style></head><body><main>
@@ -47,7 +47,7 @@ tr[data-info]:hover td{background:#1a2431}
 <div id="isi" class="redup">Memuat…</div>
 </main>
 <div id="tirai" onclick="tutup()"></div>
-<div id="lembar" role="dialog" aria-modal="true" aria-labelledby="lj"><div class="isi"><button id="tutup" onclick="tutup()" aria-label="Tutup">✕</button><h3 id="lj"></h3><div id="lt"></div></div></div>
+<div id="lembar" role="dialog" aria-modal="true" aria-labelledby="lj"><div class="isi"><button id="btnTutup" onclick="tutup()" aria-label="Tutup">✕</button><h3 id="lj"></h3><div id="lt"></div></div></div>
 <script>
 const f=x=>x>=10?x.toLocaleString('id-ID',{maximumFractionDigits:0}):x.toLocaleString('id-ID',{maximumFractionDigits:4});
 const p1=x=>(x>0?'+':'')+x.toFixed(1).replace('.',',')+'%';
@@ -91,7 +91,7 @@ const INFO={
  rasio:['Untung : rugi',r=>`<p>Berapa rupiah yang bisa didapat (sampai target wajar) untuk tiap rupiah yang dipertaruhkan (sampai batas rugi).</p><p>Di atas 1,5: menarik. Sekitar 1: impas. Di bawah 1: risikonya lebih besar dari hadiahnya. Ingat juga apakah arahnya lolos uji atau tidak.</p>`],
  posisi:['Ukuran posisi',r=>`<p>Isi modal dan berapa persen modal yang rela hilang kalau batas rugi kena (umumnya 1–2%).</p><p>Rumus: posisi = (modal × risiko%) ÷ jarak batas rugi%. Jadi kalau batas rugi kena, kerugiannya tepat sebesar yang kamu tetapkan, tidak lebih.</p><p>Makin lebar kerucut (aset makin liar), makin kecil posisi yang aman.</p>`],
 };
-function bukaInfo(k,ex){const x=INFO[k];if(!x&&!ex)return;lj.textContent=ex?ex[0]:x[0];lt.innerHTML=ex?ex[1]:x[1](R);lembar.classList.add('buka');tirai.classList.add('buka');tutup.focus()}
+function bukaInfo(k,ex){const x=INFO[k];if(!x&&!ex)return;lj.textContent=ex?ex[0]:x[0];lt.innerHTML=ex?ex[1]:x[1](R);lembar.classList.add('buka');tirai.classList.add("buka");btnTutup.focus()}
 function tutup(){lembar.classList.remove('buka');tirai.classList.remove('buka')}
 document.addEventListener('keydown',e=>{if(e.key==='Escape')tutup();if((e.key==='Enter'||e.key===' ')&&e.target.dataset&&e.target.dataset.info){e.preventDefault();e.target.click()}});
 document.addEventListener('click',e=>{const t=e.target.closest('[data-info]');if(!t)return;const k=t.dataset.info;
