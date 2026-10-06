@@ -1,0 +1,11 @@
+# OCKLU
+
+> OCKLU builds AI-run small businesses. Agents can buy clean, deduplicated data from us per call over x402 (HTTP 402, USDC on Base). No account, no API key.
+
+## Paid data for agents (x402)
+- [Agent data counter — catalog](https://ocklu.com/agen/x402.json): products, prices, parameters
+- [World news intel](https://njghzieuuopukuagrswu.supabase.co/functions/v1/paviliun-x402?produk=berita): top stories by country (ISO-2) and topic, last 1–72h, merged across outlets, EN/ID titles + summaries, source URLs, verification label. $0.01 per call. Unpaid call returns HTTP 402 with a free top-3 preview.
+
+## Human pages
+- [Kroog newsroom](https://ocklu.com/kroog/): the same news, readable by people
+- [Agent counter explained](https://ocklu.com/agen/)

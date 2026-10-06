@@ -1,0 +1,12 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OCKLU Agent Counter — x402 data</title><meta name="description" content="Clean world-news data for AI agents, paid per call with x402 (USDC on Base). $0.01 per call, no account.">
+<link rel="alternate" type="application/json" href="/agen/x402.json">
+<style>:root{--t:#2a1d17;--b:#fffaf3;--g:#e6d8c8;--r:#b0281c}@media(prefers-color-scheme:dark){:root{--t:#f5e9dc;--b:#1f1512;--g:#3a2a24;--r:#e0523f}}
+body{margin:0;background:var(--b);color:var(--t);font:16px/1.6 system-ui,sans-serif}main{max-width:68ch;margin:0 auto;padding:40px 16px}
+h1{font:700 32px/1.15 Georgia,serif;margin:0 0 8px}h2{font-size:13px;letter-spacing:.08em;text-transform:uppercase;margin:40px 0 8px;opacity:.75}
+pre{white-space:pre-wrap;word-break:break-all;background:rgba(127,127,127,.08);border:1px solid var(--g);border-radius:6px;padding:12px;font-size:13px}a{color:var(--r)}</style></head>
+<body><main><h1>OCKLU Agent Counter</h1><p>Data that AI agents can buy one call at a time. Payment is part of the request (HTTP 402 / x402, USDC on Base). No sign-up, no key, no sales call.</p>
+<h2>Product: world news intel</h2><p>Top stories from 1,000 automated reporters across 39 countries, merged when several outlets report the same thing. Each story: English + Indonesian title and summary, how many outlets carried it, source links, and a plain verification label. Filter by country and topic. <b>$0.01 per call.</b></p>
+<h2>Try it</h2><pre>GET https://njghzieuuopukuagrswu.supabase.co/functions/v1/paviliun-x402?produk=berita&amp;negara=ID&amp;topik=ekonomi&amp;n=10</pre>
+<p>Without payment you get <code>402 Payment Required</code>, the price, and a free top-3 preview. Any x402 client (Coinbase x402, PayAI) pays and retries automatically. Data is released only after the payment is confirmed on Base.</p>
+<h2>Catalog</h2><p><a href="/agen/x402.json">/agen/x402.json</a> · <a href="/llms.txt">/llms.txt</a> · human version: <a href="/kroog/">Kroog</a></p></main></body></html>

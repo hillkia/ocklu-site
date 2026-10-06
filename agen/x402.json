@@ -1,0 +1,27 @@
+{
+ "name": "OCKLU Paviliun — agent data counter",
+ "protocol": "x402 (HTTP 402, USDC on Base, exact/eip-3009)",
+ "price_per_call_usd": 0.01,
+ "facilitators": [
+  "https://facilitator.payai.network",
+  "https://x402.org/facilitator"
+ ],
+ "products": [
+  {
+   "id": "berita",
+   "url": "https://njghzieuuopukuagrswu.supabase.co/functions/v1/paviliun-x402?produk=berita",
+   "method": "GET",
+   "params": {
+    "negara": "ISO-3166 alpha-2 country, optional (40 countries tracked)",
+    "topik": "tren|sains|kripto|migrasi|teknologi|korupsi|energi|startup|ham|pendidikan|budaya|konflik|iklim|bencana|ai|ekonomi|siber|hukum|keadilan|ojol",
+    "jam": "lookback hours 1-72 (default 24)",
+    "n": "stories 1-50 (default 20)"
+   },
+   "returns": "top news stories ranked by cross-outlet score; each with EN/ID title & summary, outlet count, source URLs, verification label",
+   "source": "Kroog newsroom: 1000 automated reporters across 39 countries, deduplicated stories",
+   "note": "negara = stories covered by outlets of that country"
+  }
+ ],
+ "free_preview": "call without payment → HTTP 402 with top-3 matching titles",
+ "human_page": "https://ocklu.com/kroog/"
+}
