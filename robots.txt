@@ -46,6 +46,3 @@ User-agent: meta-externalagent
 Allow: /
 
 Sitemap: https://ocklu.com/sitemap.xml
-
-# Papan SEO pribadi — bukan halaman jualan, jangan diindeks
-Disallow: /hp/
