@@ -185,10 +185,107 @@
       if (!hit) return;
       if (hit.object.userData.agen && opsi.onAgen) opsi.onAgen(hit.object.userData.agen);
       else if (hit.object.userData.pasien && opsi.onPasien) opsi.onPasien(hit.object.userData.pasien);
+      else if (hit.object.userData.owner && opsi.onOwner) opsi.onOwner();
     });
     ren.domElement.style.cursor = "grab";
 
     const v = new THREE.Vector3(); let t0 = performance.now();
+    // ───────── PEKERJA: pasukan hitam yang berjalan, bekerja, berdiskusi, menghampiri owner ─────────
+    const PK = {}, lantai = 0.02;
+    function badanOrang(visor, jas = 0x151210) {
+      const g = new THREE.Group(), mJas = mat(jas, { roughness: 0.6 }), mKulit = mat(0x2a2522);
+      const kaki = (x) => { const p = new THREE.Group(); p.position.set(x, 0.78, 0); const k = kotak(0.22, 0.78, 0.24, mJas); k.position.y = -0.39; p.add(k); const s = kotak(0.24, 0.12, 0.34, mat(0x0a0908)); s.position.set(0, -0.76, 0.05); p.add(s); g.add(p); return p; };
+      const tangan = (x) => { const p = new THREE.Group(); p.position.set(x, 1.5, 0); const k = kotak(0.16, 0.62, 0.18, mJas); k.position.y = -0.31; p.add(k); const t = kotak(0.14, 0.14, 0.14, mKulit); t.position.y = -0.66; p.add(t); g.add(p); return p; };
+      const kk = kaki(-0.14), kn = kaki(0.14);
+      const tubuh = kotak(0.62, 0.78, 0.36, mJas); tubuh.position.y = 1.17; g.add(tubuh);
+      const kemeja = kotak(0.2, 0.5, 0.02, mat(0xf3efe8)); kemeja.position.set(0, 1.28, 0.19); g.add(kemeja);
+      const dasi = kotak(0.07, 0.38, 0.03, mat(0x0a0908)); dasi.position.set(0, 1.25, 0.205); g.add(dasi);
+      const tk = tangan(-0.39), tn = tangan(0.39);
+      const helm = new THREE.Mesh(new THREE.SphereGeometry(0.31, 20, 16), mat(0x121010, { roughness: 0.25, metalness: 0.4 })); helm.position.y = 1.86; helm.castShadow = true; g.add(helm);
+      const mv = new THREE.MeshStandardMaterial({ color: visor, emissive: visor, emissiveIntensity: 0.55, roughness: 0.15, metalness: 0.3 });
+      const kaca = new THREE.Mesh(new THREE.SphereGeometry(0.315, 20, 10, -1.1, 2.2, 1.15, 0.7), mv); kaca.position.y = 1.86; g.add(kaca);
+      const bawa = kotak(0.42, 0.34, 0.34, mat(0xc98a4a)); bawa.position.set(0, 1.08, 0.42); bawa.visible = false; g.add(bawa);
+      const percik = new THREE.Mesh(new THREE.SphereGeometry(0.09, 8, 6), new THREE.MeshBasicMaterial({ color: BIRU })); percik.visible = false; g.add(percik);
+      g.userData = { kk, kn, tk, tn, mv, bawa, percik, tubuh };
+      return g;
+    }
+    function titikDepan(pos, jarak = 2.2) { const arah = pos.clone().setY(0); const d = arah.length() || 1; return arah.multiplyScalar((d - jarak) / d).setY(lantai); }
+    const OWNER = (() => {
+      const g = badanOrang(0xff8a3d, 0xf3efe8); g.scale.setScalar(1.15); g.position.set(0, lantai, 14.2); g.rotation.y = Math.PI;
+      g.traverse((o) => { if (o.isMesh) { o.userData.owner = true; klikBisa.push(o); } }); scene.add(g);
+      const l = label("👤 Anda"); l.style.background = "#ff5a1fee"; return { g, l };
+    })();
+    function gelembung(p, teks, detik = 4.5) {
+      if (!teks) return; p.bubble.textContent = teks.length > 90 ? teks.slice(0, 88) + "…" : teks;
+      p.bubble.style.display = "block"; p.bubbleSampai = performance.now() + detik * 1000;
+    }
+    function buatPekerja(k, nama) {
+      const g = badanOrang(0xff7a3d); g.scale.setScalar(1.1);
+      const rumah = titikDepan(AGEN[k].g.position, -3.2);
+      g.position.copy(rumah); scene.add(g);
+      g.traverse((o) => { if (o.isMesh) { o.userData.agen = k; klikBisa.push(o); } });
+      const l = label(nama); l.style.fontSize = "10px";
+      const bubble = document.createElement("div");
+      bubble.style.cssText = "position:absolute;transform:translate(-50%,-100%);max-width:190px;background:#fff;color:#17130f;padding:6px 9px;border-radius:12px 12px 12px 3px;font:500 11px/1.35 Inter,system-ui,sans-serif;box-shadow:0 6px 18px #0002;display:none;white-space:normal";
+      lapisLabel.appendChild(bubble);
+      PK[k] = { k, g, l, bubble, rumah, tujuan: null, laju: 2.6 + Math.random() * 0.8, fase: Math.random() * 6, mode: "diam", sampai: performance.now() + 1500 + Math.random() * 4000, bubbleSampai: 0 };
+    }
+    function jalanKe(p, titik, mode, sesudah) { p.tujuan = titik.clone().setY(lantai); p.mode = "jalan"; p.lanjut = mode; p.sesudah = sesudah; }
+    function pasienAcak(syarat) { const xs = Object.entries(PASIEN).filter(([n, q]) => !syarat || syarat(q)); return xs.length ? xs[Math.floor(Math.random() * xs.length)] : null; }
+    function pilihKegiatan(p, now) {
+      const r = Math.random(), ucap = opsi.ucapan || (() => "");
+      const idle = Object.values(PK).filter((x) => x !== p && x.mode === "diam" && !x.kerjaNyata);
+      if (r < 0.32) { const x = pasienAcak(); if (x) { const [n, q] = x; jalanKe(p, titikDepan(q.g.position, -1.6), "periksa", () => gelembung(p, ucap(p.k, "periksa", n))); return; } }
+      if (r < 0.52) { const x = pasienAcak((q) => q.sakit || q.keadaan === "bolong") || pasienAcak(); if (x) { const [n, q] = x; p.g.userData.bawa.visible = true; jalanKe(p, titikDepan(q.g.position, -1.6), "taruh", () => { p.g.userData.bawa.visible = false; gelembung(p, ucap(p.k, "antar", n)); }); return; } }
+      if (r < 0.78 && idle.length) { const teman = idle[Math.floor(Math.random() * idle.length)];
+        const tengah = p.g.position.clone().lerp(teman.g.position, 0.5); const geser = new THREE.Vector3(0.9, 0, 0);
+        jalanKe(p, tengah.clone().add(geser), "diskusi", () => gelembung(p, ucap(p.k, "diskusi", teman.k)));
+        jalanKe(teman, tengah.clone().sub(geser), "diskusi", () => setTimeout(() => gelembung(teman, ucap(teman.k, "balas", p.k)), 2200));
+        p.teman = teman; teman.teman = p; return; }
+      if (r < 0.86) { jalanKe(p, OWNER.g.position.clone().add(new THREE.Vector3((Math.random() - 0.5) * 2.4, 0, -1.6)), "lapor", () => gelembung(p, ucap(p.k, "lapor"), 6)); return; }
+      jalanKe(p, p.rumah, "diam");
+    }
+    function langkah(p, dt, now, t) {
+      const u = p.g.userData;
+      // kerja nyata dari data menang atas segalanya
+      if (p.kerjaNyata && p.mode !== "jalan" && p.mode !== "kerja" && p.mode !== "panggil") {
+        const q = PASIEN[p.kerjaNyata]; const ke = q ? titikDepan(q.g.position, -1.6) : titikDepan(AGEN[p.k].g.position, -3.2);
+        jalanKe(p, ke, "kerja", () => gelembung(p, (opsi.ucapan || (() => ""))(p.k, "kerja", p.kerjaNyata), 6));
+      }
+      if (!p.kerjaNyata && p.mode === "kerja") { p.mode = "diam"; p.sampai = now + 800; }
+      if (p.mode === "jalan" || p.mode === "panggil-jalan") {
+        const d = p.tujuan.clone().sub(p.g.position); d.y = 0; const jarak = d.length();
+        if (jarak < 0.15) { p.mode = p.lanjut === "panggil" ? "panggil" : p.lanjut; p.sampai = now + (p.lanjut === "diskusi" ? 7000 : p.lanjut === "kerja" ? 1e12 : p.lanjut === "panggil" ? 1e12 : 3000 + Math.random() * 3000); if (p.sesudah) { const f = p.sesudah; p.sesudah = null; f(); } }
+        else { const v = d.normalize().multiplyScalar(Math.min(jarak, p.laju * dt)); p.g.position.add(v); p.g.rotation.y = Math.atan2(d.x, d.z); }
+        p.fase += dt * p.laju * 3.2;
+        u.kk.rotation.x = Math.sin(p.fase) * 0.6; u.kn.rotation.x = -Math.sin(p.fase) * 0.6;
+        u.tk.rotation.x = u.bawa.visible ? -1.2 : -Math.sin(p.fase) * 0.55; u.tn.rotation.x = u.bawa.visible ? -1.2 : Math.sin(p.fase) * 0.55;
+        p.g.position.y = lantai + Math.abs(Math.sin(p.fase)) * 0.06;
+      } else {
+        u.kk.rotation.x *= 0.85; u.kn.rotation.x *= 0.85; p.g.position.y = lantai;
+        if (p.mode === "kerja") { // mengetuk & percikan biru
+          const q = PASIEN[p.kerjaNyata]; if (q) p.g.rotation.y = Math.atan2(q.g.position.x - p.g.position.x, q.g.position.z - p.g.position.z);
+          u.tn.rotation.x = -1.4 + Math.abs(Math.sin(t * 9)) * 0.9; u.tk.rotation.x = -0.9;
+          u.percik.visible = Math.sin(t * 18) > 0.2; u.percik.position.set((Math.random() - 0.5) * 0.4, 1.2 + Math.random() * 0.3, 0.75);
+        } else if (p.mode === "diskusi" && p.teman) {
+          p.g.rotation.y = Math.atan2(p.teman.g.position.x - p.g.position.x, p.teman.g.position.z - p.g.position.z);
+          u.tn.rotation.x = -0.4 - Math.sin(t * 2.4 + p.fase) * 0.35; u.tk.rotation.x *= 0.9; u.percik.visible = false;
+        } else if (p.mode === "lapor" || p.mode === "panggil") {
+          p.g.rotation.y = Math.atan2(OWNER.g.position.x - p.g.position.x, OWNER.g.position.z - p.g.position.z);
+          u.tn.rotation.x = p.mode === "panggil" ? -0.3 - Math.sin(t * 3) * 0.2 : -0.6 * Math.max(0, Math.sin(t * 2)); u.percik.visible = false;
+        } else if (p.mode === "periksa" || p.mode === "taruh") {
+          u.tk.rotation.x = -0.3; u.tn.rotation.x = -0.8 + Math.sin(t * 3) * 0.1; u.percik.visible = false;
+        } else { u.tk.rotation.x *= 0.85; u.tn.rotation.x *= 0.85; u.percik.visible = false; }
+        u.tubuh.position.y = 1.17 + Math.sin(t * 1.6 + p.fase) * 0.012;
+        if (now > p.sampai && p.mode !== "kerja" && p.mode !== "panggil") { if (p.teman && p.teman.teman === p) { p.teman.teman = null; } p.teman = null; p.mode = "diam"; pilihKegiatan(p, now); }
+      }
+      u.mv.color.setHex(p.kerjaNyata ? BIRU : 0xff7a3d); u.mv.emissive.setHex(p.kerjaNyata ? BIRU : 0xff7a3d);
+    }
+    function proyeksi(el2, pos, tinggi, tampil = true) {
+      v.copy(pos); v.y = tinggi; v.project(cam); const vis = tampil && v.z < 1;
+      el2.style.display = vis ? "block" : "none"; el2.style.left = ((v.x + 1) / 2) * W() + "px"; el2.style.top = ((1 - v.y) / 2) * H() + "px";
+    }
+
     function putar(now) {
       const dt = Math.min(0.05, (now - t0) / 1000); t0 = now; const t = now / 1000;
       kontrol.update();
@@ -206,6 +303,10 @@
         a.l.style.background = a.aktif ? "#1f6fd1ee" : "#0e0c0bdd";
       });
       Object.values(PASIEN).forEach((q) => { if (q.sakit) q.badan.material.emissive.setHex(0xe0384a), (q.badan.material.emissiveIntensity = 0.25 + 0.25 * Math.sin(t * 4)); else q.badan.material.emissiveIntensity = 0; });
+      Object.values(PK).forEach((p) => { langkah(p, dt, now, t); proyeksi(p.l, p.g.position, 2.75);
+        const ada = now < p.bubbleSampai; if (ada) proyeksi(p.bubble, p.g.position, 3.4); else p.bubble.style.display = "none"; p.l.style.display = ada ? "none" : p.l.style.display;
+        p.l.style.background = p.kerjaNyata ? "#1f6fd1ee" : p.mode === "panggil" ? "#ff5a1fee" : "#0e0c0bdd"; });
+      proyeksi(OWNER.l, OWNER.g.position, 2.9);
       for (let i = bola.length - 1; i >= 0; i--) {
         const b = bola[i], d = b.userData; d.t += dt / 2.2;
         const p = d.a.clone().lerp(d.z, d.t); p.y = 2 + Math.sin(d.t * Math.PI) * 6; b.position.copy(p);
@@ -224,11 +325,20 @@
           if (a.aktif && !x.aktif && a.kunci !== "lukas") pesan("lukas", a.kunci); // Lukas menugaskan
           if (!a.aktif && x.aktif && a.kunci !== "lukas") pesan(a.kunci, "lukas"); // hasil kembali
           x.aktif = !!a.aktif;
-          x.l.innerHTML = `${a.aktif ? "🔵" : "🟠"} ${a.nama}`; x.l.title = a.peran;
+          x.l.innerHTML = `🏢 ${a.peran}`; x.l.style.opacity = ".8";
+          if (!PK[a.kunci]) buatPekerja(a.kunci, a.nama);
+          const pk = PK[a.kunci]; pk.kerjaNyata = a.aktif ? (a.sasaran || "") || null : null; if (a.aktif && !a.sasaran) pk.kerjaNyata = "__menara";
+          pk.l.innerHTML = `${a.aktif ? "🔵" : "🟠"} ${a.nama}`;
         });
         pasangPasien(pasien);
       },
       pesan,
+      // owner memanggil: pekerja berjalan menghampiri, lalu onTiba dipanggil
+      panggil(k, onTiba) { const p = PK[k]; if (!p) return; p.teman = null;
+        const ke = OWNER.g.position.clone().add(new THREE.Vector3(0, 0, -1.7));
+        p.tujuan = ke; p.mode = "jalan"; p.lanjut = "panggil"; p.sesudah = () => { gelembung(p, "Ya, saya di sini. Ada yang bisa saya bantu?", 5); onTiba && onTiba(); }; },
+      lepas(k) { const p = PK[k]; if (p && p.mode === "panggil") { p.mode = "diam"; p.sampai = performance.now() + 500; } },
+      ucap(k, teks) { const p = PK[k]; if (p) gelembung(p, teks, 7); },
     };
   }
   window.Kota = Kota;

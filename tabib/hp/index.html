@@ -65,7 +65,7 @@ pre{background:var(--hitam);color:#e9e1d6;border-radius:12px;padding:10px;overfl
       <button onclick="buka('misi')"><b id="nMisi">–</b><span class="sub">misi</span></button>
     </div>
     <div id="kota"></div>
-    <p class="sub">Geser = putar · cubit = dekat/jauh · ketuk menara atau gedung mana pun.</p>
+    <p class="sub">Geser = putar · cubit = dekat/jauh · ketuk pekerja, menara, gedung, atau sosok 👤 Anda untuk memanggil pasukan.</p>
     <div class="kartu"><h3>Pasukan · ketuk untuk lihat kerjanya</h3><div class="agen" id="agen"></div></div>
     <div class="kartu"><h3>Butuh perhatian · ketuk untuk merawat</h3><div id="darurat"></div></div>
     <button class="tombol ghost" onclick="ronda(this)">Ronda awan sekarang</button>
@@ -113,8 +113,8 @@ function tampilKunci(g){$("kunci").style.display="block";$("app").style.display=
 const lenc=k=>`<span class="l l-${esc(k)}">${esc(k)}</span>`;
 function sebab(p){const b=p.bukti||{};return b.galat||b.log||b.pesan||(b.statis&&b.statis[0])||(b.api_rusak&&b.api_rusak.map(a=>a.path+"→"+(a.status||"macet")).join(", "))||b.catatan||""}
 function laptopHidup(){const l=D&&D.laptop,t=(l&&l.detak&&l.detak.pada)||(l&&l.ringkas&&l.ringkas.pada);return t&&Date.now()-new Date(t)<5*60000}
-function daftarAgen(){const ra=D&&D.laptop.ringkas&&D.laptop.ringkas.agen,hidup=laptopHidup();
-  return Object.entries(AGEN).map(([k,[n,p]])=>{const x=(ra||[]).find(a=>a.kunci===k);return{kunci:k,nama:n,peran:p,aktif:!!(x&&x.aktif&&hidup),kerja7h:x?x.kerja7h:0}})}
+function daftarAgen(){const la=D&&D.laptop.agen&&D.laptop.agen.agen,ra=la||(D&&D.laptop.ringkas&&D.laptop.ringkas.agen),hidup=laptopHidup();
+  return Object.entries(AGEN).map(([k,[n,p]])=>{const x=(ra||[]).find(a=>a.kunci===k);return{kunci:k,nama:n,peran:p,aktif:!!(x&&x.aktif&&hidup),sasaran:x&&x.sasaran?"💻 "+x.sasaran:"",kerja7h:x?x.kerja7h:0}})}
 
 async function muat(){if(!PIN){tampilKunci();return}
   try{D=await api("status")}catch(e){return}
@@ -129,7 +129,7 @@ async function muat(){if(!PIN){tampilKunci();return}
   const ag=daftarAgen();
   $("agen").innerHTML=ag.map(a=>`<button class="${a.aktif?"aktif":""}" onclick="lihatAgen('${a.kunci}')"><b>${a.aktif?"🔵":"🟠"} ${esc(a.nama)}</b><span>${esc(a.peran)}</span></button>`).join("");
   $("darurat").innerHTML=sakit.length?sakit.slice(0,12).map(barisPasien).join(""):`<div class="kosong">Tidak ada yang sakit 🎉</div>`;
-  if(!kota&&window.Kota&&window.THREE){try{kota=Kota($("kota"),{onAgen:lihatAgen,onPasien:lihatPasien})}catch(e){$("kota").innerHTML='<div class="kosong">3D tidak didukung peramban ini.</div>'}}
+  if(!kota&&window.Kota&&window.THREE){try{kota=Kota($("kota"),{onAgen:lihatAgen,onPasien:lihatPasien,onOwner:pilihPanggil,ucapan})}catch(e){$("kota").innerHTML='<div class="kosong">3D tidak didukung peramban ini.</div>'}}
   if(kota)kota.isi({agen:ag,pasien:ps.map(p=>({nama:p.nama,keadaan:p.keadaan,jenis:p.jenis}))});
   gambarPasien();
   $("perintah").innerHTML=(D.perintah||[]).length?D.perintah.map(p=>`<div class="ps" onclick="lihatPerintah(${p.id})">${lenc(p.tahap)}<div><b>${esc(p.aksi)} · ${esc(p.nama)}</b><div class="sub">${jam(p.pada)} ${p.hasil?"· "+esc(p.hasil).slice(0,120):""}</div></div></div>`).join(""):`<div class="kosong">Belum ada perintah.</div>`;
@@ -143,14 +143,39 @@ function gambarPasien(){if(!D)return;const q=$("cari").value.toLowerCase();
   $("pasien").innerHTML=ps.map(barisPasien).join("")||`<div class="kosong">Tidak ada.</div>`}
 function buka(h,keadaan){if(keadaan!==undefined){saringKeadaan=keadaan;gambarPasien()}document.querySelector(`.tab button[data-h="${h}"]`).click()}
 
+
+/* ucapan pekerja — selalu dari data nyata */
+const acak=a=>a[Math.floor(Math.random()*a.length)];
+function ucapan(k,jenis,ctx){if(!D)return"";const ps=D.pasien,sakit=ps.filter(p=>SAKIT.includes(p.keadaan)),akt=D.aktivitas.filter(a=>a.agen===k);const p=ps.find(x=>x.nama===ctx);
+  const nm=x=>x.nama.replace(/^💻 /,"");
+  if(jenis==="periksa"&&p)return p.keadaan==="sehat"?`${nm(p)} sehat.`:`${nm(p)}: ${p.keadaan}${p.kelas?" · "+p.kelas:""}. ${String(sebab(p)).split("\n").pop().slice(0,70)}`;
+  if(jenis==="antar"&&p)return `Bawa catatan ke ${nm(p)} — ${p.keadaan}.`;
+  if(jenis==="kerja")return p?`Lagi menangani ${nm(p)}: ${String(sebab(p)).split("\n").pop().slice(0,70)||p.keadaan}`:"Lagi kerja di menara.";
+  if(jenis==="diskusi"||jenis==="balas"){const x=akt[0];if(x&&Math.random()<.6)return `Tadi aku ${x.aksi} ${x.sasaran}: ${x.hasil}.`;const s=sakit.length?acak(sakit):null;return s?`Menurutmu ${nm(s)} gimana? ${s.kelas||s.keadaan}.`:"Semua yang bangun sehat."}
+  if(jenis==="lapor"){if(!sakit.length)return "Lapor: semua sehat 👍";const s=acak(sakit);return `Lapor: ${sakit.length} butuh rawat. Contoh ${nm(s)} — ${s.kelas||s.keadaan}.`}return ""}
+function pilihPanggil(){lembar(`<h2>Panggil <i style="color:var(--oranye)">siapa?</i></h2><div class="agen">${daftarAgen().map(a=>`<button onclick="panggil('${a.kunci}')"><b>${a.aktif?"🔵":"🟠"} ${esc(a.nama)}</b><span>${esc(a.peran)}</span></button>`).join("")}</div><button class="tombol ghost" onclick="tutup()">Tutup</button>`)}
+function panggil(k){tutup();buka("kota");if(kota)kota.panggil(k,()=>lihatAgen(k,true));else lihatAgen(k,true)}
+const OBROL={};
+function bicara(t){try{const u=new SpeechSynthesisUtterance(t);u.lang="id-ID";speechSynthesis.cancel();speechSynthesis.speak(u)}catch(e){}}
+function gambarObrol(k,tunggu){const el=$("obrol");if(!el)return;el.innerHTML=(OBROL[k]||[]).map(m=>`<div style="margin:6px 0;padding:8px 10px;border-radius:12px;background:${m.dari==="owner"?"#ffe6db":"var(--bg)"}"><b style="font-size:11px">${m.dari==="owner"?"Anda":esc(AGEN[k][0])}</b><div>${esc(m.isi)}</div>${m.otak?`<div class="sub">${esc(m.otak)}</div>`:""}</div>`).join("")+(tunggu?'<div class="sub">sedang berpikir…</div>':"");el.scrollTop=1e9}
+async function kirimObrol(k){const i=$("obrolIn"),t=i.value.trim();if(!t)return;i.value="";(OBROL[k]=OBROL[k]||[]).push({dari:"owner",isi:t});gambarObrol(k,true);if(kota)kota.ucap(k,"…");
+  let r;try{r=await api("obrol",{agen:k,pesan:t,riwayat:OBROL[k]})}catch(e){r={galat:"tidak tersambung"}}
+  const j=(r.jawab||r.galat||"?").replace(/\*\*|`|#+ /g,"");OBROL[k].push({dari:k,isi:j,otak:r.otak?"otak awan "+r.otak:""});gambarObrol(k);if(kota)kota.ucap(k,j);if($("suaraOn")&&$("suaraOn").checked)bicara(j)}
+function dengar(k){const SR=window.SpeechRecognition||window.webkitSpeechRecognition;if(!SR){alert("HP ini belum mendukung pengenal suara — ketik saja, atau pakai tombol mic di keyboard.");return}
+  const r=new SR();r.lang="id-ID";r.onresult=e=>{$("obrolIn").value=e.results[0][0].transcript;kirimObrol(k)};r.onerror=e=>alert("Mikrofon: "+e.error);r.start()}
 function lembar(html){$("lembarIsi").innerHTML=html;$("lembar").classList.add("on")}
 function tutup(){$("lembar").classList.remove("on")}
-function lihatAgen(k){const [n,p]=AGEN[k]||[k,""];const a=daftarAgen().find(x=>x.kunci===k)||{};
+function lihatAgen(k,dariPanggil){const [n,p]=AGEN[k]||[k,""];const a=daftarAgen().find(x=>x.kunci===k)||{};
   const akt=(D.aktivitas||[]).filter(x=>x.agen===k).slice(0,20);
   lembar(`<h2>${esc(n)} <i style="color:var(--oranye)">${esc(p)}</i></h2><p class="sub">${a.aktif?"🔵 sedang bekerja":"🟠 siap"} · ${a.kerja7h||0} kerja dalam 7 hari</p>
+  <div class="kartu"><h3>Ngobrol dengan ${esc(n)}</h3><div id="obrol" style="max-height:34vh;overflow:auto"></div>
+  <div style="display:flex;gap:6px;margin-top:6px"><input id="obrolIn" placeholder="Tanya apa saja…" onkeydown="if(event.key==='Enter')kirimObrol('${k}')"><button class="tombol" style="width:auto;margin:4px 0" onclick="kirimObrol('${k}')">Kirim</button><button class="tombol ghost" style="width:auto;margin:4px 0" onclick="dengar('${k}')">🎙</button></div>
+  <label class="sub" style="display:flex;gap:6px;align-items:center"><input type="checkbox" id="suaraOn" checked style="width:auto;margin:0"> jawab dengan suara</label>
+  <p class="sub">${laptopHidup()?"Dijawab otak awan (Groq) dari data terbaru. Claude yang bekerja di laptop.":"Laptop tidur — dijawab otak awan (Groq) dari data terakhir."}</p></div>
+  ${dariPanggil?"":`<button class="tombol ghost" onclick="panggil('${k}')">🚶 Panggil ke dekat saya</button>`}
   <button class="tombol" onclick="tutup();buka('misi');$('mJudul').focus()">Beri misi</button>
   <div class="kartu"><h3>Kerja terakhir</h3>${akt.map(x=>`<div class="ps"><span class="sub" style="width:84px;flex:none">${jam(x.pada)}</span><div>${esc(x.aksi)} <b>${esc(x.sasaran)}</b><div class="sub">${esc(x.hasil)} ${esc((x.rinci||"").slice(0,160))}</div></div></div>`).join("")||'<div class="kosong">Belum ada catatan di awan.</div>'}</div>
-  <button class="tombol ghost" onclick="tutup()">Tutup</button>`)}
+  <button class="tombol ghost" onclick="tutup()">Tutup</button>`);gambarObrol(k)}
 function lihatPasien(n){const p=D.pasien.find(x=>x.nama===n);if(!p)return;const laptop=p.sumber==="laptop",web=p.sumber==="awan"&&p.jenis==="web";
   const tb=[];
   if(p.url)tb.push(`<a class="tombol ghost" href="${esc(p.url)}" target="_blank" rel="noopener">Buka halaman</a>`);
