@@ -4,98 +4,177 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="robots" content="noindex">
-<title>Tabib HP</title>
-<meta name="theme-color" content="#0e0c0b">
+<title>Ocklu Healer</title>
+<meta name="theme-color" content="#f1ece4">
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0e0c0b;--panel:#171311;--garis:#2a231f;--teks:#f3ece3;--redup:#a69a8c;--oranye:#ff5a1f;--oranye2:#ff8a3d;--biru:#5fb6ff;--hijau:#38c98a;--merah:#ff5c6c;--kuning:#f2c94c}
-:root[data-theme="light"]{--bg:#f3eee6;--panel:#fbf8f3;--garis:#e2d9cb;--teks:#17130f;--redup:#7d7468}
-*{box-sizing:border-box;min-width:0}html,body{overflow-x:hidden}body{margin:0;background:var(--bg);color:var(--teks);font:14px/1.45 Inter,-apple-system,system-ui,sans-serif;padding:0 16px calc(90px + env(safe-area-inset-bottom))}
-h1{font:400 40px/1 "Instrument Serif",Georgia,serif;margin:18px 0 8px}h1 i{color:var(--oranye2)}
+:root{--bg:#f1ece4;--panel:#fbf8f3;--garis:#e2d9cb;--teks:#17130f;--redup:#756b5f;--hitam:#0e0c0b;--oranye:#ff5a1f;--oranye2:#ff8a3d;--biru:#2f8ff0;--hijau:#1f9d6b;--merah:#d6304a;--kuning:#b98a0c}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e0c0b;--panel:#171311;--garis:#2a231f;--teks:#f3ece3;--redup:#a69a8c}}
+:root[data-theme="dark"]{--bg:#0e0c0b;--panel:#171311;--garis:#2a231f;--teks:#f3ece3;--redup:#a69a8c}
+*{box-sizing:border-box;min-width:0}html,body{overflow-x:hidden}
+body{margin:0;background:var(--bg);color:var(--teks);font:14px/1.45 Inter,-apple-system,system-ui,sans-serif;padding:0 16px calc(84px + env(safe-area-inset-bottom))}
+h1{font:400 38px/1 "Instrument Serif",Georgia,serif;margin:14px 0 6px}h1 i{color:var(--oranye)}
 .atas{display:flex;align-items:center;gap:8px;padding:14px 0 0;font-size:11px;letter-spacing:1.6px;text-transform:uppercase;color:var(--redup)}
-.atas b{color:var(--oranye)}.titik{width:8px;height:8px;border-radius:50%;background:var(--hijau);box-shadow:0 0 10px var(--hijau)}
+.atas b{color:var(--oranye)}.titik{width:8px;height:8px;border-radius:50%;background:var(--hijau);box-shadow:0 0 10px var(--hijau);flex:none}
 .kartu{background:var(--panel);border:1px solid var(--garis);border-radius:18px;padding:14px;margin:12px 0}
 .kartu h3{margin:0 0 10px;font-size:11px;letter-spacing:1.4px;text-transform:uppercase;color:var(--redup);font-weight:600}
-.angka{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.angka div{background:var(--panel);border:1px solid var(--garis);border-radius:14px;padding:10px}.angka b{font-size:24px;display:block}
+.angka{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:10px}
+.angka button{background:var(--panel);border:1px solid var(--garis);border-radius:14px;padding:10px;text-align:left;color:var(--teks);font:inherit}
+.angka b{font-size:24px;display:block}
 .sub{color:var(--redup);font-size:12px}
-.pasukan{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.op{text-align:center;padding:8px 4px;border:1px solid var(--garis);border-radius:14px;background:linear-gradient(180deg,#1e1a18,#0a0908)}
-.op.aktif{border-color:var(--biru);box-shadow:0 0 18px #5fb6ff66}.op b{display:block;font-size:12px;color:#f3ece3}.op span{font-size:10px;color:#a69a8c}
-.ps>div{flex:1;overflow-wrap:anywhere;word-break:break-word}.ps{display:flex;gap:10px;align-items:flex-start;padding:9px 0;border-bottom:1px solid var(--garis)}.ps:last-child{border:0}
-.l{font-size:10px;font-weight:800;padding:2px 8px;border-radius:99px;white-space:nowrap}.l-sehat{background:#123a2b;color:var(--hijau)}.l-tidur{background:#25201c;color:var(--redup)}
-.l-bolong,.l-diamati{background:#3a3112;color:var(--kuning)}.l-sakit,.l-rusak,.l-mati{background:#3a1419;color:var(--merah)}.l-tak-dimuat{background:#2a2140;color:#b9a3ff}
+#kota{height:62vh;min-height:360px;border-radius:20px;overflow:hidden;border:1px solid var(--garis);background:#f1ece4;margin-top:10px}
+.agen{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.agen button{border:1px solid var(--garis);background:var(--panel);border-radius:14px;padding:10px 6px;color:var(--teks);font:inherit;text-align:center}
+.agen button.aktif{border-color:var(--biru);box-shadow:0 0 0 2px #2f8ff033}
+.agen b{display:block;font-size:13px}.agen span{font-size:10px;color:var(--redup)}
+.ps{display:flex;gap:10px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--garis);cursor:pointer}.ps:last-child{border:0}
+.ps>div{flex:1;overflow-wrap:anywhere}
+.l{font-size:10px;font-weight:800;padding:2px 8px;border-radius:99px;white-space:nowrap}
+.l-sehat,.l-selesai{background:#dff3e9;color:var(--hijau)}.l-tidur{background:#ebe5dc;color:var(--redup)}
+.l-bolong,.l-diamati,.l-antre,.l-dikerjakan,.l-diambil-laptop{background:#fbf0c9;color:var(--kuning)}
+.l-sakit,.l-rusak,.l-mati,.l-gagal{background:#fbdcdf;color:var(--merah)}.l-tak-dimuat{background:#e9e2fb;color:#6a4fc7}.l-selesai-awan{background:#dfeafb;color:var(--biru)}
 input,textarea{width:100%;background:var(--bg);border:1px solid var(--garis);color:var(--teks);border-radius:12px;padding:11px;font:inherit;margin:4px 0}
 textarea{min-height:80px}
-.tombol{background:var(--oranye);color:#fff;border:0;border-radius:99px;padding:11px 18px;font:inherit;font-weight:700;width:100%;margin-top:6px}
+.tombol{display:block;text-align:center;text-decoration:none;background:var(--oranye);color:#fff;border:0;border-radius:99px;padding:12px 18px;font:inherit;font-weight:700;width:100%;margin-top:8px;cursor:pointer}
 .tombol.ghost{background:transparent;border:1px solid var(--garis);color:var(--teks)}
-.tab{position:fixed;left:0;right:0;bottom:0;display:flex;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(12px);border-top:1px solid var(--garis);padding:6px 6px calc(6px + env(safe-area-inset-bottom))}
-.tab button{flex:1;background:none;border:0;color:var(--redup);font:600 11px Inter,sans-serif;padding:8px 0;border-radius:10px}.tab button.on{color:#fff;background:var(--oranye)}
+.tab{position:fixed;left:0;right:0;bottom:0;display:flex;gap:4px;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(12px);border-top:1px solid var(--garis);padding:6px 6px calc(6px + env(safe-area-inset-bottom));z-index:5}
+.tab button{flex:1;background:none;border:0;color:var(--redup);font:600 11px Inter,sans-serif;padding:9px 0;border-radius:10px}.tab button.on{color:#fff;background:var(--oranye)}
 .hal{display:none}.hal.on{display:block}
 .misi{white-space:pre-wrap;font-size:13px}
 .kosong{color:var(--redup);text-align:center;padding:20px}
-.pin{max-width:360px;margin:30vh auto 0;text-align:center}
+.pin{max-width:360px;margin:26vh auto 0;text-align:center}
+.lembar{position:fixed;inset:0;background:#0007;display:none;align-items:flex-end;z-index:9}
+.lembar.on{display:flex}
+.lembar .isi{background:var(--panel);width:100%;max-height:86vh;overflow:auto;border-radius:22px 22px 0 0;padding:18px 16px calc(18px + env(safe-area-inset-bottom))}
+.lembar h2{font:400 30px/1.05 "Instrument Serif",Georgia,serif;margin:0 0 6px}
+pre{background:var(--hitam);color:#e9e1d6;border-radius:12px;padding:10px;overflow:auto;white-space:pre-wrap;font:11px/1.45 ui-monospace,Menlo,monospace;max-height:40vh}
+.dua{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 </style>
 </head>
 <body>
-<div id="kunci" class="pin" style="display:none"><h1>Ocklu <i>Tabib</i></h1><p class="sub">Masukkan PIN dari laptop (data/awan.json).</p><input id="pinIn" type="password" autocomplete="off"><button class="tombol" onclick="simpanPin()">Masuk</button><p class="sub" id="pinGalat"></p></div>
+<div id="kunci" class="pin" style="display:none"><h1>Ocklu <i>Healer</i></h1><p class="sub">Masukkan PIN dari laptop (~/ocklu-tabib/data/awan.json).</p><input id="pinIn" type="password" autocomplete="off"><button class="tombol" onclick="simpanPin()">Masuk</button><p class="sub" id="pinGalat"></p></div>
 <div id="app" style="display:none">
-  <div class="atas"><span class="titik" id="titik"></span><span>Ocklu <b>Tabib</b> · <span id="waktu">…</span></span></div>
-  <section class="hal on" id="h-ringkas">
+  <div class="atas"><span class="titik" id="titik"></span><span>⚕ Ocklu <b>Healer</b> · <span id="waktu">…</span></span></div>
+
+  <section class="hal on" id="h-kota">
     <h1 id="judul">Pasukan <i>berjaga.</i></h1>
     <div class="sub" id="laptop"></div>
-    <div class="angka" style="margin-top:12px"><div><b id="nSehat">–</b><span class="sub">sehat</span></div><div><b id="nSakit">–</b><span class="sub">sakit</span></div><div><b id="nMisi">–</b><span class="sub">misi</span></div></div>
-    <div class="kartu"><h3>Pasukan</h3><div class="pasukan" id="pasukan"></div></div>
-    <div class="kartu"><h3>Butuh perhatian</h3><div id="darurat"></div></div>
+    <div class="angka">
+      <button onclick="buka('pasien','sehat')"><b id="nSehat">–</b><span class="sub">sehat</span></button>
+      <button onclick="buka('pasien','sakit')"><b id="nSakit">–</b><span class="sub">butuh rawat</span></button>
+      <button onclick="buka('misi')"><b id="nMisi">–</b><span class="sub">misi</span></button>
+    </div>
+    <div id="kota"></div>
+    <p class="sub">Geser = putar · cubit = dekat/jauh · ketuk menara atau gedung mana pun.</p>
+    <div class="kartu"><h3>Pasukan · ketuk untuk lihat kerjanya</h3><div class="agen" id="agen"></div></div>
+    <div class="kartu"><h3>Butuh perhatian · ketuk untuk merawat</h3><div id="darurat"></div></div>
     <button class="tombol ghost" onclick="ronda(this)">Ronda awan sekarang</button>
   </section>
-  <section class="hal" id="h-pasien"><div class="kartu"><h3>Semua pasien</h3><div id="pasien"></div></div></section>
+
+  <section class="hal" id="h-pasien">
+    <h1>Semua <i>pasien.</i></h1>
+    <input id="cari" placeholder="Cari nama…" oninput="gambarPasien()">
+    <div class="dua" id="saring"></div>
+    <div class="kartu"><div id="pasien"></div></div>
+  </section>
+
   <section class="hal" id="h-misi">
-    <div class="kartu"><h3>Misi baru</h3>
+    <h1>Kirim <i>misi.</i></h1>
+    <div class="kartu">
       <input id="mJudul" placeholder="Judul, mis. Perbaiki ocklu-godeye yang lambat">
       <textarea id="mTujuan" placeholder="Apa yang harus dicapai?"></textarea>
       <button class="tombol" onclick="kirimMisi(this)">Kirim ke Lukas</button>
-      <p class="sub">Laptop hidup → Claude yang mengerjakan (bisa memperbaiki kode). Laptop tidur &gt; 20 menit → otak awan (Groq/Gemini) menjawab dari data, tanpa menyentuh kode.</p></div>
+      <p class="sub">Laptop hidup → Claude yang mengerjakan (boleh memperbaiki kode). Laptop tidur &gt; 20 menit → otak awan (Groq/Gemini) menjawab dari data, tanpa menyentuh kode.</p></div>
+    <div class="kartu"><h3>Perintah dari HP</h3><div id="perintah"></div></div>
     <div id="misi"></div>
   </section>
-  <section class="hal" id="h-log"><div class="kartu"><h3>Log aktivitas</h3><div id="log"></div></div></section>
+
+  <section class="hal" id="h-log"><h1>Log <i>pasukan.</i></h1><div class="kartu"><div id="log"></div></div></section>
 </div>
-<nav class="tab" id="tab" style="display:none"><button class="on" data-h="ringkas">Ringkas</button><button data-h="pasien">Pasien</button><button data-h="misi">Misi</button><button data-h="log">Log</button></nav>
+<nav class="tab" id="tab" style="display:none"><button class="on" data-h="kota">Kota</button><button data-h="pasien">Pasien</button><button data-h="misi">Misi</button><button data-h="log">Log</button></nav>
+<div class="lembar" id="lembar" onclick="if(event.target===this)tutup()"><div class="isi" id="lembarIsi"></div></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script src="kota.js"></script>
 <script>
 const API="https://njghzieuuopukuagrswu.supabase.co/functions/v1/tabib-api";
-const AGEN={lukas:"Tabib Kepala",rafael:"Dokter",tabita:"Perawat",tomas:"Juru Uji",nehemia:"Penjaga Jadwal",barukh:"Juru Catat",natanael:"Peneliti",lidia:"Penjual",silas:"Penulis"};
-const $=i=>document.getElementById(i),esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const AGEN={lukas:["Lukas","Tabib Kepala"],rafael:["Rafael","Dokter"],tabita:["Tabita","Perawat"],tomas:["Tomas","Juru Uji"],nehemia:["Nehemia","Penjaga Jadwal"],barukh:["Barukh","Juru Catat"],natanael:["Natanael","Peneliti"],lidia:["Lidia","Penjual"],silas:["Silas","Penulis"]};
+const SAKIT=["sakit","rusak","mati","bolong","diamati","tak-dimuat"];
+const $=i=>document.getElementById(i),esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const jam=t=>t?new Date(t).toLocaleString("id-ID",{day:"2-digit",month:"short",hour:"2-digit",minute:"2-digit"}):"–";
-let PIN="";
+let PIN="",D=null,kota=null,saringKeadaan="";
 function ambilPin(){const m=location.hash.match(/pin=([^&]+)/);if(m){PIN=decodeURIComponent(m[1]);try{localStorage.setItem("tabib-pin",PIN)}catch(e){}history.replaceState(null,"",location.pathname)}
   if(!PIN){try{PIN=localStorage.getItem("tabib-pin")||""}catch(e){}}}
 function simpanPin(){PIN=$("pinIn").value.trim();try{localStorage.setItem("tabib-pin",PIN)}catch(e){}muat()}
 async function api(v,badan){const r=await fetch(API+"?v="+v,{method:badan?"POST":"GET",headers:{"x-pin":PIN,"Content-Type":"application/json"},body:badan?JSON.stringify(badan):undefined});
   if(r.status===401){tampilKunci("PIN salah.");throw new Error("pin")}return r.json()}
 function tampilKunci(g){$("kunci").style.display="block";$("app").style.display="none";$("tab").style.display="none";$("pinGalat").textContent=g||""}
-function helm(aktif){const v=aktif?"#5fb6ff":"#ff7a3d";return `<svg width="44" height="55" viewBox="0 0 80 100"><path d="M8 100 C10 76 22 68 40 68 C58 68 70 76 72 100Z" fill="#0b0a09" stroke="#2c2622"/><path d="M33 70 L40 92 L47 70Z" fill="#e9e3da"/><ellipse cx="40" cy="36" rx="22" ry="26" fill="#141110" stroke="#3a322d"/><path d="M21 34 Q40 24 59 34 L57 46 Q40 54 23 46Z" fill="${v}"/><path d="M24 36 Q34 31 44 33" stroke="#fff" stroke-opacity=".6" stroke-width="1.5" fill="none"/></svg>`}
-function lenc(k){return `<span class="l l-${esc(k)}">${esc(k)}</span>`}
-function sebab(p){const b=p.bukti||{};return b.galat||b.log||b.pesan||(b.statis&&b.statis[0])||(b.api_rusak&&b.api_rusak.map(a=>a.path+"→"+(a.status||"macet")).join(", "))||""}
+const lenc=k=>`<span class="l l-${esc(k)}">${esc(k)}</span>`;
+function sebab(p){const b=p.bukti||{};return b.galat||b.log||b.pesan||(b.statis&&b.statis[0])||(b.api_rusak&&b.api_rusak.map(a=>a.path+"→"+(a.status||"macet")).join(", "))||b.catatan||""}
+function laptopHidup(){const l=D&&D.laptop,t=(l&&l.detak&&l.detak.pada)||(l&&l.ringkas&&l.ringkas.pada);return t&&Date.now()-new Date(t)<5*60000}
+function daftarAgen(){const ra=D&&D.laptop.ringkas&&D.laptop.ringkas.agen,hidup=laptopHidup();
+  return Object.entries(AGEN).map(([k,[n,p]])=>{const x=(ra||[]).find(a=>a.kunci===k);return{kunci:k,nama:n,peran:p,aktif:!!(x&&x.aktif&&hidup),kerja7h:x?x.kerja7h:0}})}
+
 async function muat(){if(!PIN){tampilKunci();return}
-  let d;try{d=await api("status")}catch(e){return}
+  try{D=await api("status")}catch(e){return}
   $("kunci").style.display="none";$("app").style.display="block";$("tab").style.display="flex";
-  const ps=d.pasien,bangun=ps.filter(p=>p.keadaan!=="tidur"),sakit=ps.filter(p=>["sakit","rusak","mati","bolong","diamati","tak-dimuat"].includes(p.keadaan));
-  $("nSehat").textContent=ps.filter(p=>p.keadaan==="sehat").length;$("nSakit").textContent=sakit.length;$("nMisi").textContent=d.misi.length;
+  const ps=D.pasien,sakit=ps.filter(p=>SAKIT.includes(p.keadaan));
+  $("nSehat").textContent=ps.filter(p=>p.keadaan==="sehat").length;$("nSakit").textContent=sakit.length;$("nMisi").textContent=D.misi.length;
   $("judul").innerHTML=sakit.length?`${sakit.length} pasien <i>dirawat.</i>`:`Semua <i>sehat.</i>`;
-  $("waktu").textContent=jam(d.sekarang);
-  const lp=d.laptop.ringkas;const hidup=lp&&Date.now()-new Date(lp.pada)<45*60000;
+  $("waktu").textContent=jam(D.sekarang);
+  const hidup=laptopHidup(),lp=D.laptop.ringkas;
   $("titik").style.background=hidup?"var(--hijau)":"var(--kuning)";
-  $("laptop").textContent=hidup?`💻 Laptop hidup · setor terakhir ${jam(lp.pada)} · Claude siap turun`:`💻 Laptop tidur${lp?" sejak "+jam(lp.pada):""} · penjaga awan tetap ronda tiap 15 menit`;
-  const ag=(lp&&lp.agen)||Object.keys(AGEN).map(k=>({kunci:k,nama:k[0].toUpperCase()+k.slice(1),peran:AGEN[k],aktif:false}));
-  $("pasukan").innerHTML=ag.map(a=>`<div class="op ${a.aktif&&hidup?"aktif":""}">${helm(a.aktif&&hidup)}<b>${esc(a.nama)}</b><span>${esc(a.peran)}</span></div>`).join("");
-  $("darurat").innerHTML=sakit.length?sakit.slice(0,12).map(p=>`<div class="ps">${lenc(p.keadaan)}<div><b>${esc(p.nama)}</b><div class="sub">${esc(p.kelas||"")} ${esc(sebab(p)).slice(0,160)}</div></div></div>`).join(""):`<div class="kosong">Tidak ada yang sakit 🎉</div>`;
-  $("pasien").innerHTML=ps.map(p=>`<div class="ps">${lenc(p.keadaan)}<div style="flex:1"><b>${esc(p.nama)}</b><div class="sub">${esc(p.jenis||"")} · skor ${p.skor??"–"} · ${jam(p.diperiksa)}</div><div class="sub">${esc(sebab(p)).slice(0,200)}</div></div>${p.sumber==="awan"&&p.jenis==="web"?`<button class="tombol ghost" style="width:auto;padding:6px 10px;margin:0" onclick="uji('${esc(p.nama)}',this)">Uji</button>`:""}</div>`).join("");
-  $("misi").innerHTML=d.misi.length?d.misi.map(m=>`<div class="kartu"><h3>#${m.id} · ${esc(m.tahap)} ${m.otak?"· "+esc(m.otak):""}</h3><b>${esc(m.judul)}</b><div class="sub">${jam(m.pada)}</div>${m.hasil?`<div class="misi" style="margin-top:8px">${esc(m.hasil)}</div>`:""}</div>`).join(""):`<div class="kosong">Belum ada misi.</div>`;
-  $("log").innerHTML=d.aktivitas.map(a=>`<div class="ps"><span class="sub" style="width:84px;flex:none">${jam(a.pada)}</span><div><b>${esc(a.agen)}</b> ${esc(a.aksi)} <span class="sub">${esc(a.sasaran)}</span><div class="sub">${esc(a.hasil)} ${esc((a.rinci||"").slice(0,140))}</div></div></div>`).join("")}
-async function ronda(b){b.disabled=true;b.textContent="Tomas sedang ronda…";try{await api("ronda",{})}catch(e){}b.disabled=false;b.textContent="Ronda awan sekarang";muat()}
-async function uji(n,b){b.textContent="…";const r=await api("uji",{nama:n});b.textContent=r.ok?"✅":"❌";setTimeout(muat,800)}
-async function kirimMisi(b){const j=$("mJudul").value.trim();if(!j)return;b.disabled=true;const r=await api("misi",{judul:j,tujuan:$("mTujuan").value});b.disabled=false;
-  if(r.ok){$("mJudul").value="";$("mTujuan").value="";b.textContent="Terkirim #"+r.id+" ✓";setTimeout(()=>b.textContent="Kirim ke Lukas",2500);muat()}}
+  $("laptop").textContent=hidup?"💻 Laptop hidup · Claude siap turun · perintah dijalankan ≤ 1 menit":`💻 Laptop tidur${lp?" sejak "+jam(lp.pada):""} · penjaga awan tetap ronda tiap 15 menit · perintah menunggu laptop`;
+  const ag=daftarAgen();
+  $("agen").innerHTML=ag.map(a=>`<button class="${a.aktif?"aktif":""}" onclick="lihatAgen('${a.kunci}')"><b>${a.aktif?"🔵":"🟠"} ${esc(a.nama)}</b><span>${esc(a.peran)}</span></button>`).join("");
+  $("darurat").innerHTML=sakit.length?sakit.slice(0,12).map(barisPasien).join(""):`<div class="kosong">Tidak ada yang sakit 🎉</div>`;
+  if(!kota&&window.Kota&&window.THREE){try{kota=Kota($("kota"),{onAgen:lihatAgen,onPasien:lihatPasien})}catch(e){$("kota").innerHTML='<div class="kosong">3D tidak didukung peramban ini.</div>'}}
+  if(kota)kota.isi({agen:ag,pasien:ps.map(p=>({nama:p.nama,keadaan:p.keadaan,jenis:p.jenis}))});
+  gambarPasien();
+  $("perintah").innerHTML=(D.perintah||[]).length?D.perintah.map(p=>`<div class="ps" onclick="lihatPerintah(${p.id})">${lenc(p.tahap)}<div><b>${esc(p.aksi)} · ${esc(p.nama)}</b><div class="sub">${jam(p.pada)} ${p.hasil?"· "+esc(p.hasil).slice(0,120):""}</div></div></div>`).join(""):`<div class="kosong">Belum ada perintah.</div>`;
+  $("misi").innerHTML=D.misi.length?D.misi.map(m=>`<div class="kartu" style="cursor:pointer" onclick="lihatMisi(${m.id})"><h3>#${m.id} · ${esc(m.tahap)} ${m.otak?"· "+esc(m.otak):""}</h3><b>${esc(m.judul)}</b><div class="sub">${jam(m.pada)} · ketuk untuk baca</div></div>`).join(""):`<div class="kosong">Belum ada misi.</div>`;
+  $("log").innerHTML=D.aktivitas.map((a,i)=>`<div class="ps" onclick="lihatLog(${i})"><span class="sub" style="width:84px;flex:none">${jam(a.pada)}</span><div><b>${esc(a.agen)}</b> ${esc(a.aksi)} <span class="sub">${esc(a.sasaran)}</span><div class="sub">${esc(a.hasil)} ${esc((a.rinci||"").slice(0,120))}</div></div></div>`).join("")}
+const barisPasien=p=>`<div class="ps" onclick="lihatPasien(this.dataset.n)" data-n="${esc(p.nama)}">${lenc(p.keadaan)}<div><b>${esc(p.nama)}</b><div class="sub">${esc(p.kelas||p.jenis||"")} ${esc(sebab(p)).slice(0,150)}</div></div></div>`;
+function gambarPasien(){if(!D)return;const q=$("cari").value.toLowerCase();
+  const kel=[["","Semua"],["sakit","Butuh rawat"],["sehat","Sehat"],["tidur","Tidur"]];
+  $("saring").innerHTML=kel.map(([k,n])=>`<button class="tombol ${saringKeadaan===k?"":"ghost"}" style="margin:4px 0" onclick="saringKeadaan='${k}';gambarPasien()">${n}</button>`).join("");
+  const ps=D.pasien.filter(p=>(!q||p.nama.toLowerCase().includes(q))&&(!saringKeadaan||(saringKeadaan==="sakit"?SAKIT.includes(p.keadaan):p.keadaan===saringKeadaan)));
+  $("pasien").innerHTML=ps.map(barisPasien).join("")||`<div class="kosong">Tidak ada.</div>`}
+function buka(h,keadaan){if(keadaan!==undefined){saringKeadaan=keadaan;gambarPasien()}document.querySelector(`.tab button[data-h="${h}"]`).click()}
+
+function lembar(html){$("lembarIsi").innerHTML=html;$("lembar").classList.add("on")}
+function tutup(){$("lembar").classList.remove("on")}
+function lihatAgen(k){const [n,p]=AGEN[k]||[k,""];const a=daftarAgen().find(x=>x.kunci===k)||{};
+  const akt=(D.aktivitas||[]).filter(x=>x.agen===k).slice(0,20);
+  lembar(`<h2>${esc(n)} <i style="color:var(--oranye)">${esc(p)}</i></h2><p class="sub">${a.aktif?"🔵 sedang bekerja":"🟠 siap"} · ${a.kerja7h||0} kerja dalam 7 hari</p>
+  <button class="tombol" onclick="tutup();buka('misi');$('mJudul').focus()">Beri misi</button>
+  <div class="kartu"><h3>Kerja terakhir</h3>${akt.map(x=>`<div class="ps"><span class="sub" style="width:84px;flex:none">${jam(x.pada)}</span><div>${esc(x.aksi)} <b>${esc(x.sasaran)}</b><div class="sub">${esc(x.hasil)} ${esc((x.rinci||"").slice(0,160))}</div></div></div>`).join("")||'<div class="kosong">Belum ada catatan di awan.</div>'}</div>
+  <button class="tombol ghost" onclick="tutup()">Tutup</button>`)}
+function lihatPasien(n){const p=D.pasien.find(x=>x.nama===n);if(!p)return;const laptop=p.sumber==="laptop",web=p.sumber==="awan"&&p.jenis==="web";
+  const tb=[];
+  if(p.url)tb.push(`<a class="tombol ghost" href="${esc(p.url)}" target="_blank" rel="noopener">Buka halaman</a>`);
+  if(web)tb.push(`<button class="tombol ghost" onclick="ujiAwan('${esc(p.nama)}',this)">Uji sekarang</button>`);
+  if(laptop){tb.push(`<button class="tombol ghost" onclick="perintah('${esc(p.nama)}','uji',this)">Uji di laptop</button>`);
+    tb.push(`<button class="tombol ghost" onclick="perintah('${esc(p.nama)}','${p.jenis==="jadwal"?"jalankan":"nyalakan"}',this)">${p.jenis==="jadwal"?"Jalankan job":"Nyalakan"}</button>`);
+    if(p.jenis!=="takdikenal")tb.push(`<textarea id="keluhan" placeholder="Keluhan untuk Dokter (boleh kosong)"></textarea><button class="tombol" onclick="perintah('${esc(p.nama)}','dokter',this)">Panggil Dokter Claude</button>`)}
+  if(!laptop&&!web)tb.push(`<button class="tombol" onclick="tutup();buka('misi');$('mJudul').value='Perbaiki ${esc(p.nama)}';$('mTujuan').value=${esc(JSON.stringify(sebab(p)))}">Kirim misi perbaikan</button>`);
+  lembar(`<h2>${esc(p.nama)}</h2><p>${lenc(p.keadaan)} <span class="sub">${esc(p.jenis||"")} · skor ${p.skor??"–"} · diperiksa ${jam(p.diperiksa)}</span></p>
+  <p>${esc(sebab(p))||'<span class="sub">Tidak ada keluhan.</span>'}</p>${tb.join("")}
+  <h3 class="sub" style="margin-top:14px">Bukti lengkap</h3><pre>${esc(JSON.stringify(p.bukti||{},null,2))}</pre><button class="tombol ghost" onclick="tutup()">Tutup</button>`)}
+function lihatMisi(id){const m=D.misi.find(x=>x.id===id);lembar(`<h2>#${m.id} ${esc(m.judul)}</h2><p>${lenc(m.tahap)} <span class="sub">${esc(m.otak||"")} · ${jam(m.pada)}</span></p><p class="sub">${esc(m.tujuan||"")}</p><div class="misi">${esc(m.hasil||"Belum ada hasil — Lukas sedang/akan mengerjakan.")}</div><button class="tombol ghost" onclick="tutup()">Tutup</button>`)}
+function lihatPerintah(id){const p=D.perintah.find(x=>x.id===id);lembar(`<h2>${esc(p.aksi)} · ${esc(p.nama)}</h2><p>${lenc(p.tahap)} <span class="sub">dikirim ${jam(p.pada)}${p.selesai?" · selesai "+jam(p.selesai):""}</span></p><pre>${esc(p.hasil||"Menunggu laptop mengambil perintah ini…")}</pre><button class="tombol ghost" onclick="tutup()">Tutup</button>`)}
+function lihatLog(i){const a=D.aktivitas[i];lembar(`<h2>${esc(a.agen)} · ${esc(a.aksi)}</h2><p class="sub">${jam(a.pada)} · ${esc(a.sasaran)} · ${esc(a.hasil)}</p><pre>${esc(a.rinci||"")}</pre><button class="tombol ghost" onclick="tutup()">Tutup</button>`)}
+
+async function perintah(n,aksi,b){b.textContent="Mengirim…";const k=$("keluhan");
+  const r=await api("perintah",{nama:n,aksi,keluhan:k?k.value:""});
+  b.textContent=r.ok?(laptopHidup()?"✓ terkirim — laptop mengerjakan ≤ 1 menit":"✓ antre — dikerjakan saat laptop hidup"):"Gagal: "+(r.galat||"");setTimeout(muat,1500)}
+async function ujiAwan(n,b){b.textContent="Menguji…";const r=await api("uji",{nama:n});b.textContent=r.ok?`✅ sehat · ${r.status} · ${r.ms} ms`:`❌ ${r.galat||r.status}`;setTimeout(muat,800)}
+async function ronda(b){b.textContent="Tomas sedang ronda…";try{await api("ronda",{})}catch(e){}b.textContent="Ronda awan sekarang";muat()}
+async function kirimMisi(b){const j=$("mJudul").value.trim();if(!j){$("mJudul").focus();return}b.textContent="Mengirim…";const r=await api("misi",{judul:j,tujuan:$("mTujuan").value});
+  if(r.ok){$("mJudul").value="";$("mTujuan").value="";b.textContent="Terkirim #"+r.id+" ✓";setTimeout(()=>b.textContent="Kirim ke Lukas",2500);muat()}else b.textContent="Gagal: "+(r.galat||"")}
 document.querySelectorAll(".tab button").forEach(b=>b.onclick=()=>{document.querySelectorAll(".tab button").forEach(x=>x.classList.toggle("on",x===b));document.querySelectorAll(".hal").forEach(h=>h.classList.toggle("on",h.id==="h-"+b.dataset.h));scrollTo(0,0)});
-ambilPin();muat();setInterval(muat,60000);
+ambilPin();muat();setInterval(muat,30000);
 </script>
 </body>
 </html>
