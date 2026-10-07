@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ocklu Tabib</title>
+<meta name="description" content="Self-healing guard for your dashboards, APIs and cron jobs. Restarts what dies, lets a Claude doctor agent fix broken code with automatic backup and rollback.">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3eee6;--panel:#fbf8f3;--garis:#e2d9cb;--teks:#17130f;--redup:#6f665b;--hitam:#0e0c0b;--oranye:#ff5a1f;--oranye2:#ff8a3d}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e0c0b;--panel:#171311;--garis:#2a231f;--teks:#f3ece3;--redup:#a69a8c}}
+:root[data-theme="dark"]{--bg:#0e0c0b;--panel:#171311;--garis:#2a231f;--teks:#f3ece3;--redup:#a69a8c}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--teks);font:16px/1.6 Inter,-apple-system,system-ui,sans-serif}
+.w{max-width:1040px;margin:0 auto;padding:0 16px}
+.hero{background:radial-gradient(120% 140% at 85% 0%,#3a1608 0%,var(--hitam) 58%);color:#f3ece3;padding:72px 0 64px}
+.kecil{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#a69a8c}.kecil b{color:var(--oranye)}
+h1{font:400 clamp(42px,7vw,84px)/.98 "Instrument Serif",Georgia,serif;margin:16px 0 18px}h1 i,h2 i{color:var(--oranye2)}
+h2{font:400 clamp(30px,4vw,46px)/1.05 "Instrument Serif",Georgia,serif;margin:0 0 14px}
+.lead{max-width:640px;color:#d6cabd;font-size:18px}
+.tombol{display:inline-block;background:var(--oranye);color:#fff;text-decoration:none;font-weight:700;padding:13px 22px;border-radius:99px;margin:22px 10px 0 0}
+.tombol.ghost{background:transparent;border:1px solid #4a3c33;color:#f3ece3}
+section{padding:56px 0}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr))}
+.kartu{background:var(--panel);border:1px solid var(--garis);border-radius:18px;padding:20px}
+.kartu b{display:block;font-size:17px;margin-bottom:6px}.kartu p{margin:0;color:var(--redup)}
+.angka{font:400 52px/1 "Instrument Serif",Georgia,serif;color:var(--oranye)}
+.harga{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr))}
+.harga .kartu{padding:26px}.harga .p{font:400 54px/1 "Instrument Serif",Georgia,serif}.harga ul{padding-left:18px;color:var(--redup)}
+.gelap{background:var(--hitam);color:#f3ece3;border:0}.gelap ul{color:#c9bcae}
+footer{padding:30px 0 50px;color:var(--redup);font-size:13px}
+</style>
+</head>
+<body>
+<div class="hero"><div class="w">
+  <div class="kecil">⚕ Ocklu <b>Tabib</b> · self-healing guard</div>
+  <h1>Your dashboards break at night.<br><i>Tabib fixes them before you wake up.</i></h1>
+  <p class="lead">A squad of nine agents watches every dashboard, API and scheduled job you run. Dead services are restarted. Network and quota hiccups are waited out, not "fixed". Real code bugs go to a Claude doctor agent — with a full backup first, a test after, and an automatic rollback if the score doesn't go up.</p>
+  <a class="tombol" href="#harga">Get Tabib installed</a><a class="tombol ghost" href="#cara">How it works</a>
+</div></div>
+
+<section><div class="w">
+  <h2>Measured on our own stack, <i>not a mockup.</i></h2>
+  <div class="grid">
+    <div class="kartu"><div class="angka">77</div><b>services under watch</b><p>36 dashboards, 34 scheduled jobs and 7 unknown open ports found automatically on the first scan.</p></div>
+    <div class="kartu"><div class="angka">288→0</div><b>failures a day, gone</b><p>A cloud trading bot failed every single run for a day on one ambiguous SQL column. One-line fix, next run clean.</p></div>
+    <div class="kartu"><div class="angka">20/20</div><b>safety tests pass</b><p>A doctor that breaks things is rolled back byte-for-byte. A doctor that changes a price is rolled back. Secrets are never copied.</p></div>
+  </div>
+</div></section>
+
+<section id="cara"><div class="w">
+  <h2>How the squad <i>heals.</i></h2>
+  <div class="grid">
+    <div class="kartu"><b>1 · Scan</b><p>Finds every server, port and cron/launchd job. Uses the port that is actually open, not the one written in a config.</p></div>
+    <div class="kartu"><b>2 · Diagnose</b><p>Calls only the APIs your own page calls when it loads — nothing a browser wouldn't do. Sorts failures: network, quota, key, port clash, or real code.</p></div>
+    <div class="kartu"><b>3 · Nurse</b><p>Restarts what died, reruns jobs once the network is back, and never touches anything that needs your credentials.</p></div>
+    <div class="kartu"><b>4 · Doctor (Claude)</b><p>Backup → smallest possible fix (no shell, no web, no .env) → retest. Score up = keep and learn a rule. Otherwise = exact rollback.</p></div>
+    <div class="kartu"><b>5 · Learn</b><p>Every keep or rollback becomes a written rule the doctor reads next night. Your own notes are read first.</p></div>
+    <div class="kartu"><b>6 · Phone</b><p>A cloud guard keeps checking your public pages and cron jobs even when your laptop is off, and pings you on Telegram.</p></div>
+  </div>
+</div></section>
+
+<section id="harga"><div class="w">
+  <h2>Simple pricing.</h2>
+  <div class="harga">
+    <div class="kartu gelap"><div class="kecil">Setup + 30 days</div><div class="p">$149</div><ul><li>Installed on your Mac or Linux server within 48h</li><li>Up to 15 services watched</li><li>Claude doctor with backup & rollback</li><li>Phone dashboard + Telegram alerts</li></ul><a class="tombol" id="bayar" href="mailto:hillkiacakep@gmail.com?subject=Ocklu%20Tabib%20setup">Order setup</a></div>
+    <div class="kartu"><div class="kecil">Monthly guard</div><div class="p">$49<span style="font-size:20px">/mo</span></div><ul><li>Nightly doctor round</li><li>Monthly health report with numbers</li><li>Cancel any time</li></ul><a class="tombol" id="bayar2" href="mailto:hillkiacakep@gmail.com?subject=Ocklu%20Tabib%20monthly">Start monthly</a></div>
+  </div>
+  <p style="color:var(--redup);font-size:14px;margin-top:16px">Honest note: Tabib uses AI (Claude) to edit code. Every change is backed up, shown as a diff, and can be undone in one click. It will not touch payment logic, prices or secrets.</p>
+</div></section>
+<footer><div class="w">© Ocklu · <a href="https://ocklu.com/" style="color:inherit">ocklu.com</a></div></footer>
+</body>
+</html>
