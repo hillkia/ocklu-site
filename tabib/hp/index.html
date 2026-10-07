@@ -111,7 +111,7 @@ async function api(v,badan){const r=await fetch(API+"?v="+v,{method:badan?"POST"
   if(r.status===401){tampilKunci("PIN salah.");throw new Error("pin")}return r.json()}
 function tampilKunci(g){$("kunci").style.display="block";$("app").style.display="none";$("tab").style.display="none";$("pinGalat").textContent=g||""}
 const lenc=k=>`<span class="l l-${esc(k)}">${esc(k)}</span>`;
-function sebab(p){const b=p.bukti||{};return b.galat||b.log||b.pesan||(b.statis&&b.statis[0])||(b.api_rusak&&b.api_rusak.map(a=>a.path+"→"+(a.status||"macet")).join(", "))||b.catatan||""}
+function sebab(p){const b=p.bukti||{};return b.galat||b.log||b.pesan||(b.statis&&b.statis[0])||(b.api_rusak&&b.api_rusak.map(a=>a.path+" → "+(a.hasil||a.status||"macet")).join(", "))||b.catatan||""}
 function laptopHidup(){const l=D&&D.laptop,t=(l&&l.detak&&l.detak.pada)||(l&&l.ringkas&&l.ringkas.pada);return t&&Date.now()-new Date(t)<5*60000}
 function daftarAgen(){const la=D&&D.laptop.agen&&D.laptop.agen.agen,ra=la||(D&&D.laptop.ringkas&&D.laptop.ringkas.agen),hidup=laptopHidup();
   return Object.entries(AGEN).map(([k,[n,p]])=>{const x=(ra||[]).find(a=>a.kunci===k);return{kunci:k,nama:n,peran:p,aktif:!!(x&&x.aktif&&hidup),sasaran:x&&x.sasaran?"💻 "+x.sasaran:"",kerja7h:x?x.kerja7h:0}})}
