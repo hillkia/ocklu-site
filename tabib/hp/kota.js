@@ -121,9 +121,10 @@
     const lapisLabel = document.createElement("div");
     lapisLabel.style.cssText = "position:absolute;inset:0;pointer-events:none;overflow:hidden;font:600 11px Inter,system-ui,sans-serif";
     el.style.position = "relative"; el.appendChild(lapisLabel);
-    function label(teks) {
+    function label(teks, klik) {
       const d = document.createElement("div");
-      d.style.cssText = "position:absolute;transform:translate(-50%,-100%);white-space:nowrap;background:#0e0c0bdd;color:#fff;padding:3px 8px;border-radius:99px;font-size:11px;box-shadow:0 4px 14px #0003;transition:background .3s";
+      if (klik) { d.style.pointerEvents = "auto"; d.style.cursor = "pointer"; d.addEventListener("click", (e) => { e.stopPropagation(); klik(); }); }
+      d.style.cssText += ";position:absolute;transform:translate(-50%,-100%);white-space:nowrap;background:#0e0c0bdd;color:#fff;padding:3px 8px;border-radius:99px;font-size:11px;box-shadow:0 4px 14px #0003;transition:background .3s";
       d.innerHTML = teks; lapisLabel.appendChild(d); return d;
     }
 
@@ -139,7 +140,7 @@
         scene.add(g);
         const tiang = g.userData.tiang; g.remove(tiang);
         const tinggi = new THREE.Box3().setFromObject(g).max.y + 1.2; g.add(tiang);
-        AGEN[a.kunci] = { g, l: label(""), tinggi, aktif: false };
+        AGEN[a.kunci] = { g, l: label("", () => opsi.onAgen && opsi.onAgen(a.kunci)), tinggi, aktif: false };
       });
     }
     function pasangPasien(daftar) {
@@ -161,6 +162,16 @@
         const w = WARNA_PASIEN[p.keadaan] ?? 0xdedad3;
         q.badan.material.color.setHex(w); q.atap.material.color.setHex(ATAP_PASIEN[p.keadaan] ?? w);
         q.sakit = ["sakit", "rusak", "mati"].includes(p.keadaan); q.keadaan = p.keadaan;
+        const perlu = q.sakit || ["bolong", "diamati", "tak-dimuat"].includes(p.keadaan);
+        if (q.dulu && !perlu && p.keadaan === "sehat") q.keluarSampai = performance.now() + 120000; // baru sembuh → papan hijau 2 menit
+        q.dulu = perlu;
+        const keluar = !perlu && q.keluarSampai && performance.now() < q.keluarSampai;
+        if (keluar && !q.papan) q.papan = label("", () => opsi.onPasien && opsi.onPasien(p.nama));
+        if (keluar) { q.papan.style.display = "block"; q.papan.dataset.tampil = "1"; q.papan.style.background = "#1f9d6bee"; q.papan.innerHTML = `✅ ${p.nama.replace(/^💻 /, "")} · sembuh, keluar`; }
+        if (perlu && !q.papan) { q.papan = label("", () => opsi.onPasien && opsi.onPasien(p.nama)); }
+        if (q.papan && !keluar) { q.papan.style.display = perlu ? "block" : "none"; q.papan.dataset.tampil = perlu ? "1" : "";
+          q.papan.style.background = q.sakit ? "#d6304aee" : "#b98a0cee";
+          q.papan.innerHTML = `❗ ${p.nama.replace(/^💻 /, "")}`; }
       });
     }
 
@@ -177,15 +188,28 @@
     const ray = new THREE.Raycaster(), ptr = new THREE.Vector2(); let turun = null;
     ren.domElement.addEventListener("pointerdown", (e) => { turun = [e.clientX, e.clientY]; });
     ren.domElement.addEventListener("pointerup", (e) => {
-      if (!turun || Math.hypot(e.clientX - turun[0], e.clientY - turun[1]) > 6) return;
+      const batas = e.pointerType === "touch" ? 12 : 6;
+      if (!turun || Math.hypot(e.clientX - turun[0], e.clientY - turun[1]) > batas) return;
       const r = ren.domElement.getBoundingClientRect();
       ptr.set(((e.clientX - r.left) / r.width) * 2 - 1, -((e.clientY - r.top) / r.height) * 2 + 1);
       ray.setFromCamera(ptr, cam);
-      const hit = ray.intersectObjects(klikBisa, false)[0];
-      if (!hit) return;
-      if (hit.object.userData.agen && opsi.onAgen) opsi.onAgen(hit.object.userData.agen);
-      else if (hit.object.userData.pasien && opsi.onPasien) opsi.onPasien(hit.object.userData.pasien);
-      else if (hit.object.userData.owner && opsi.onOwner) opsi.onOwner();
+      let ud = (ray.intersectObjects(klikBisa, false)[0] || {}).object?.userData;
+      if (!ud || (!ud.agen && !ud.pasien && !ud.owner)) {
+        // meleset (umum di HP): ambil benda terdekat di layar dalam 36px
+        let best = null, jarak = 36;
+        const cek = (pos, tinggi, data) => { v.copy(pos); v.y = tinggi; v.project(cam); if (v.z > 1) return;
+          const x = ((v.x + 1) / 2) * r.width, y = ((1 - v.y) / 2) * r.height, d = Math.hypot(x - (e.clientX - r.left), y - (e.clientY - r.top));
+          if (d < jarak) { jarak = d; best = data; } };
+        Object.entries(PASIEN).forEach(([n, q]) => cek(q.g.position, q.tinggi / 2, { pasien: n }));
+        Object.entries(PK).forEach(([k, p]) => cek(p.g.position, 1.2, { agen: k }));
+        Object.entries(AGEN).forEach(([k, a]) => cek(a.g.position, 3, { agen: k }));
+        cek(OWNER.g.position, 1.2, { owner: true });
+        ud = best;
+      }
+      if (!ud) return;
+      if (ud.agen && opsi.onAgen) opsi.onAgen(ud.agen);
+      else if (ud.pasien && opsi.onPasien) opsi.onPasien(ud.pasien);
+      else if (ud.owner && opsi.onOwner) opsi.onOwner();
     });
     ren.domElement.style.cursor = "grab";
 
@@ -213,7 +237,7 @@
     const OWNER = (() => {
       const g = badanOrang(0xff8a3d, 0xf3efe8); g.scale.setScalar(1.15); g.position.set(0, lantai, 14.2); g.rotation.y = Math.PI;
       g.traverse((o) => { if (o.isMesh) { o.userData.owner = true; klikBisa.push(o); } }); scene.add(g);
-      const l = label("👤 Anda"); l.style.background = "#ff5a1fee"; return { g, l };
+      const l = label("👤 Anda", () => opsi.onOwner && opsi.onOwner()); l.style.background = "#ff5a1fee"; return { g, l };
     })();
     function gelembung(p, teks, detik = 4.5) {
       if (!teks) return; p.bubble.textContent = teks.length > 90 ? teks.slice(0, 88) + "…" : teks;
@@ -224,7 +248,7 @@
       const rumah = titikDepan(AGEN[k].g.position, -3.2);
       g.position.copy(rumah); scene.add(g);
       g.traverse((o) => { if (o.isMesh) { o.userData.agen = k; klikBisa.push(o); } });
-      const l = label(nama); l.style.fontSize = "10px";
+      const l = label(nama, () => opsi.onAgen && opsi.onAgen(k)); l.style.fontSize = "10px";
       const bubble = document.createElement("div");
       bubble.style.cssText = "position:absolute;transform:translate(-50%,-100%);max-width:190px;background:#fff;color:#17130f;padding:6px 9px;border-radius:12px 12px 12px 3px;font:500 11px/1.35 Inter,system-ui,sans-serif;box-shadow:0 6px 18px #0002;display:none;white-space:normal";
       lapisLabel.appendChild(bubble);
@@ -307,6 +331,7 @@
         const ada = now < p.bubbleSampai; if (ada) proyeksi(p.bubble, p.g.position, 3.4); else p.bubble.style.display = "none"; p.l.style.display = ada ? "none" : p.l.style.display;
         p.l.style.background = p.kerjaNyata ? "#1f6fd1ee" : p.mode === "panggil" ? "#ff5a1fee" : "#0e0c0bdd"; });
       proyeksi(OWNER.l, OWNER.g.position, 2.9);
+      Object.values(PASIEN).forEach((q) => { if (q.papan && q.papan.dataset.tampil) proyeksi(q.papan, q.g.position, q.tinggi + 1.1); });
       for (let i = bola.length - 1; i >= 0; i--) {
         const b = bola[i], d = b.userData; d.t += dt / 2.2;
         const p = d.a.clone().lerp(d.z, d.t); p.y = 2 + Math.sin(d.t * Math.PI) * 6; b.position.copy(p);
@@ -338,6 +363,7 @@
         const ke = OWNER.g.position.clone().add(new THREE.Vector3(0, 0, -1.7));
         p.tujuan = ke; p.mode = "jalan"; p.lanjut = "panggil"; p.sesudah = () => { gelembung(p, "Ya, saya di sini. Ada yang bisa saya bantu?", 5); onTiba && onTiba(); }; },
       lepas(k) { const p = PK[k]; if (p && p.mode === "panggil") { p.mode = "diam"; p.sampai = performance.now() + 500; } },
+      layar(nama) { const q = PASIEN[nama]; if (!q) return null; const r = ren.domElement.getBoundingClientRect(); v.copy(q.g.position); v.y = q.tinggi / 2; v.project(cam); return { x: r.left + ((v.x + 1) / 2) * r.width, y: r.top + ((1 - v.y) / 2) * r.height }; },
       ucap(k, teks) { const p = PK[k]; if (p) gelembung(p, teks, 7); },
     };
   }

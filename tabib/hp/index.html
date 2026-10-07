@@ -71,6 +71,12 @@ pre{background:var(--hitam);color:#e9e1d6;border-radius:12px;padding:10px;overfl
     <button class="tombol ghost" onclick="ronda(this)">Ronda awan sekarang</button>
   </section>
 
+  <section class="hal" id="h-rawat">
+    <h1>Ruang <i>rawat.</i></h1>
+    <div class="sub" id="rawatRingkas"></div>
+    <div class="kartu"><h3>🛏 Sedang dirawat · ketuk untuk tindakan</h3><div id="dirawat"></div></div>
+    <div class="kartu"><h3>✅ Sudah sembuh & keluar</h3><div id="keluar"></div></div>
+  </section>
   <section class="hal" id="h-pasien">
     <h1>Semua <i>pasien.</i></h1>
     <input id="cari" placeholder="Cari nama…" oninput="gambarPasien()">
@@ -91,7 +97,7 @@ pre{background:var(--hitam);color:#e9e1d6;border-radius:12px;padding:10px;overfl
 
   <section class="hal" id="h-log"><h1>Log <i>pasukan.</i></h1><div class="kartu"><div id="log"></div></div></section>
 </div>
-<nav class="tab" id="tab" style="display:none"><button class="on" data-h="kota">Kota</button><button data-h="pasien">Pasien</button><button data-h="misi">Misi</button><button data-h="log">Log</button></nav>
+<nav class="tab" id="tab" style="display:none"><button class="on" data-h="kota">Kota</button><button data-h="rawat">Rawat</button><button data-h="pasien">Pasien</button><button data-h="misi">Misi</button><button data-h="log">Log</button></nav>
 <div class="lembar" id="lembar" onclick="if(event.target===this)tutup()"><div class="isi" id="lembarIsi"></div></div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
@@ -131,7 +137,7 @@ async function muat(){if(!PIN){tampilKunci();return}
   $("darurat").innerHTML=sakit.length?sakit.slice(0,12).map(barisPasien).join(""):`<div class="kosong">Tidak ada yang sakit 🎉</div>`;
   if(!kota&&window.Kota&&window.THREE){try{kota=Kota($("kota"),{onAgen:lihatAgen,onPasien:lihatPasien,onOwner:pilihPanggil,ucapan})}catch(e){$("kota").innerHTML='<div class="kosong">3D tidak didukung peramban ini.</div>'}}
   if(kota)kota.isi({agen:ag,pasien:ps.map(p=>({nama:p.nama,keadaan:p.keadaan,jenis:p.jenis}))});
-  gambarPasien();
+  gambarPasien();gambarRawat();
   $("perintah").innerHTML=(D.perintah||[]).length?D.perintah.map(p=>`<div class="ps" onclick="lihatPerintah(${p.id})">${lenc(p.tahap)}<div><b>${esc(p.aksi)} · ${esc(p.nama)}</b><div class="sub">${jam(p.pada)} ${p.hasil?"· "+esc(p.hasil).slice(0,120):""}</div></div></div>`).join(""):`<div class="kosong">Belum ada perintah.</div>`;
   $("misi").innerHTML=D.misi.length?D.misi.map(m=>`<div class="kartu" style="cursor:pointer" onclick="lihatMisi(${m.id})"><h3>#${m.id} · ${esc(m.tahap)} ${m.otak?"· "+esc(m.otak):""}</h3><b>${esc(m.judul)}</b><div class="sub">${jam(m.pada)} · ketuk untuk baca</div></div>`).join(""):`<div class="kosong">Belum ada misi.</div>`;
   $("log").innerHTML=D.aktivitas.map((a,i)=>`<div class="ps" onclick="lihatLog(${i})"><span class="sub" style="width:84px;flex:none">${jam(a.pada)}</span><div><b>${esc(a.agen)}</b> ${esc(a.aksi)} <span class="sub">${esc(a.sasaran)}</span><div class="sub">${esc(a.hasil)} ${esc((a.rinci||"").slice(0,120))}</div></div></div>`).join("")}
@@ -163,6 +169,22 @@ async function kirimObrol(k){const i=$("obrolIn"),t=i.value.trim();if(!t)return;
   const j=(r.jawab||r.galat||"?").replace(/\*\*|`|#+ /g,"");OBROL[k].push({dari:k,isi:j,otak:r.otak?"otak awan "+r.otak:""});gambarObrol(k);if(kota)kota.ucap(k,j);if($("suaraOn")&&$("suaraOn").checked)bicara(j)}
 function dengar(k){const SR=window.SpeechRecognition||window.webkitSpeechRecognition;if(!SR){alert("HP ini belum mendukung pengenal suara — ketik saja, atau pakai tombol mic di keyboard.");return}
   const r=new SR();r.lang="id-ID";r.onresult=e=>{$("obrolIn").value=e.results[0][0].transcript;kirimObrol(k)};r.onerror=e=>alert("Mikrofon: "+e.error);r.start()}
+
+const tgl=t=>t?new Date(t).getTime():null;
+function lamaTeks(a,b){const d=Math.max(0,((b?tgl(b):Date.now())-tgl(a))/1000);return d<3600?Math.round(d/60)+" mnt":d<86400?(d/3600).toFixed(1)+" jam":(d/86400).toFixed(1)+" hari"}
+function rataDokter(){const r=D&&D.laptop.ringkas&&D.laptop.ringkas.dokter_rata_detik;return r||240}
+function garisPerintah(p){if(!p)return"";const NAMA={dokter:"🩺 Dokter Claude dipanggil",jalankan:"▶️ Job dijalankan",nyalakan:"⚡ Dinyalakan",uji:"🔎 Diuji"};
+  let t=`<b>${NAMA[p.aksi]||p.aksi}</b> · dikirim ${jam(p.pada)}`;
+  if(p.tahap==="antre")t+=`<br>⏳ menunggu laptop mengambil${laptopHidup()?" (≤ 1 menit)":" — laptop tidur, dikerjakan saat menyala"}`;
+  else if(p.tahap==="dikerjakan"){const est=p.aksi==="dokter"?rataDokter():20;const sel=new Date(tgl(p.diambil)+est*1000);
+    t+=`<br>🛠 mulai dirawat ${jam(p.diambil)} · perkiraan selesai ±${sel.toLocaleTimeString("id-ID",{hour:"2-digit",minute:"2-digit"})}${p.aksi==="dokter"?" (rata-rata kerja Dokter sebelumnya)":""}`}
+  else t+=`<br>🛠 mulai ${jam(p.diambil)} · selesai ${jam(p.selesai)} (${lamaTeks(p.diambil||p.pada,p.selesai)})<br>${/KELUAR/.test(p.hasil||"")?"✅ <b>sembuh — keluar dari ruang rawat</b>":/masih dirawat/.test(p.hasil||"")?"🛏 masih dirawat — dicoba lagi otomatis tiap ronda":""}`;
+  return `<div class="sub" style="margin:6px 0;line-height:1.6">${t}</div>`}
+function perintahTerakhir(nama){const n=nama.replace(/^💻 /,"");return (D.perintah||[]).find(p=>p.nama===n)}
+function gambarRawat(){if(!D)return;const rw=D.riwayat||[],buka=rw.filter(r=>!r.keluar),tutup_=rw.filter(r=>r.keluar);
+  $("rawatRingkas").textContent=`${buka.length} sedang dirawat · ${tutup_.length} sudah keluar`;
+  $("dirawat").innerHTML=buka.map(r=>`<div class="ps" onclick="lihatPasien(this.dataset.n)" data-n="${esc(r.pasien)}"><span class="l l-${esc(r.keadaan)}">${esc(r.keadaan)}</span><div><b>${esc(r.pasien)}</b><div class="sub">masuk ${r.perkiraan?"≤ ":""}${jam(r.masuk)} · sudah ${lamaTeks(r.masuk)}</div><div class="sub">${esc(r.kelas||"")} ${esc(r.sebab||"").slice(0,140)}</div>${garisPerintah(perintahTerakhir(r.pasien))}</div></div>`).join("")||'<div class="kosong">Ruang rawat kosong 🎉</div>';
+  $("keluar").innerHTML=tutup_.map(r=>`<div class="ps" onclick="lihatPasien(this.dataset.n)" data-n="${esc(r.pasien)}"><span class="l l-sehat">keluar</span><div><b>${esc(r.pasien)}</b><div class="sub">masuk ${r.perkiraan?"≤ ":""}${jam(r.masuk)} → keluar ${jam(r.keluar)} · dirawat ${lamaTeks(r.masuk,r.keluar)}</div><div class="sub" style="color:var(--hijau)">✓ ${esc(r.sembuh_oleh||"")}</div></div></div>`).join("")||'<div class="kosong">Belum ada yang keluar.</div>'}
 function lembar(html){$("lembarIsi").innerHTML=html;$("lembar").classList.add("on")}
 function tutup(){$("lembar").classList.remove("on")}
 function lihatAgen(k,dariPanggil){const [n,p]=AGEN[k]||[k,""];const a=daftarAgen().find(x=>x.kunci===k)||{};
@@ -186,6 +208,8 @@ function lihatPasien(n){const p=D.pasien.find(x=>x.nama===n);if(!p)return;const 
   if(!laptop&&!web)tb.push(`<button class="tombol" onclick="tutup();buka('misi');$('mJudul').value='Perbaiki ${esc(p.nama)}';$('mTujuan').value=${esc(JSON.stringify(sebab(p)))}">Kirim misi perbaikan</button>`);
   lembar(`<h2>${esc(p.nama)}</h2><p>${lenc(p.keadaan)} <span class="sub">${esc(p.jenis||"")} · skor ${p.skor??"–"} · diperiksa ${jam(p.diperiksa)}</span></p>
   <p>${esc(sebab(p))||'<span class="sub">Tidak ada keluhan.</span>'}</p>${tb.join("")}
+  ${garisPerintah(perintahTerakhir(p.nama))}
+  <h3 class="sub" style="margin-top:14px">Riwayat rawat</h3>${(D.riwayat||[]).filter(r=>r.pasien===p.nama).map(r=>`<div class="sub" style="padding:6px 0;border-bottom:1px solid var(--garis)">masuk ${r.perkiraan?"≤ ":""}${jam(r.masuk)} → ${r.keluar?"keluar "+jam(r.keluar)+" ("+lamaTeks(r.masuk,r.keluar)+")<br><span style='color:var(--hijau)'>✓ "+esc(r.sembuh_oleh||"")+"</span>":"<b>masih dirawat</b> ("+lamaTeks(r.masuk)+")"}<br>${esc(r.sebab||"").slice(0,160)}</div>`).join("")||'<div class="sub">Belum pernah sakit sejak dipantau.</div>'}
   <h3 class="sub" style="margin-top:14px">Bukti lengkap</h3><pre>${esc(JSON.stringify(p.bukti||{},null,2))}</pre><button class="tombol ghost" onclick="tutup()">Tutup</button>`)}
 function lihatMisi(id){const m=D.misi.find(x=>x.id===id);lembar(`<h2>#${m.id} ${esc(m.judul)}</h2><p>${lenc(m.tahap)} <span class="sub">${esc(m.otak||"")} · ${jam(m.pada)}</span></p><p class="sub">${esc(m.tujuan||"")}</p><div class="misi">${esc(m.hasil||"Belum ada hasil — Lukas sedang/akan mengerjakan.")}</div><button class="tombol ghost" onclick="tutup()">Tutup</button>`)}
 function lihatPerintah(id){const p=D.perintah.find(x=>x.id===id);lembar(`<h2>${esc(p.aksi)} · ${esc(p.nama)}</h2><p>${lenc(p.tahap)} <span class="sub">dikirim ${jam(p.pada)}${p.selesai?" · selesai "+jam(p.selesai):""}</span></p><pre>${esc(p.hasil||"Menunggu laptop mengambil perintah ini…")}</pre><button class="tombol ghost" onclick="tutup()">Tutup</button>`)}
@@ -193,7 +217,11 @@ function lihatLog(i){const a=D.aktivitas[i];lembar(`<h2>${esc(a.agen)} · ${esc(
 
 async function perintah(n,aksi,b){b.textContent="Mengirim…";const k=$("keluhan");
   const r=await api("perintah",{nama:n,aksi,keluhan:k?k.value:""});
-  b.textContent=r.ok?(laptopHidup()?"✓ terkirim — laptop mengerjakan ≤ 1 menit":"✓ antre — dikerjakan saat laptop hidup"):"Gagal: "+(r.galat||"");setTimeout(muat,1500)}
+  if(!r.ok){b.textContent="Gagal: "+(r.galat||"");return}
+  b.textContent=laptopHidup()?"✓ terkirim — laptop mengambil ≤ 1 menit":"✓ antre — dikerjakan saat laptop menyala";
+  const kotak=document.createElement("div");b.after(kotak);
+  const pantau=async()=>{await muat();const p=(D.perintah||[]).find(x=>x.id===r.id);if(p)kotak.innerHTML=garisPerintah(p)+(p.hasil?`<pre>${esc(p.hasil)}</pre>`:"");
+    if(!p||!["selesai","gagal"].includes(p.tahap))setTimeout(pantau,6000)};pantau()}
 async function ujiAwan(n,b){b.textContent="Menguji…";const r=await api("uji",{nama:n});b.textContent=r.ok?`✅ sehat · ${r.status} · ${r.ms} ms`:`❌ ${r.galat||r.status}`;setTimeout(muat,800)}
 async function ronda(b){b.textContent="Tomas sedang ronda…";try{await api("ronda",{})}catch(e){}b.textContent="Ronda awan sekarang";muat()}
 async function kirimMisi(b){const j=$("mJudul").value.trim();if(!j){$("mJudul").focus();return}b.textContent="Mengirim…";const r=await api("misi",{judul:j,tujuan:$("mTujuan").value});
