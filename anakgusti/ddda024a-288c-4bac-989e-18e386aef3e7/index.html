@@ -677,7 +677,7 @@ for (let i = 0; i < 12; i++) {
 function titikAcak() { const a = Math.random() * Math.PI * 2, r = 6 + Math.random() * 18; return new THREE.Vector3(Math.cos(a) * r, 0, Math.sin(a) * r); }
 
 /* ============ GERAK & KAMERA (seperti OCKLU HQ) ============ */
-const kam = { yaw: 0, pitch: .5, jarak: 13 };
+const kam = { yaw: 0, pitch: .62, jarak: innerWidth / innerHeight < .8 ? 18 : 14 };   // HP: lebih jauh & tinggi supaya papan pos terlihat
 const kamPos = new THREE.Vector3(0, 30, 50), kamLihat = new THREE.Vector3();
 let mulai = false, waktuIntro = 0, tujuanJalan = null, tujuanAksi = null, transisi = false;
 let diDalam = null;                     // gedung yang sedang dimasuki (null = di kota)
@@ -943,7 +943,8 @@ function putar() {
   // yang terdekat → tombol besar "Masuk / Buka"
   dekat = null;
   if (mulai && !transisi && !panelBuka) {
-    let best = 2.6; pos.forEach(p => { const d = Math.hypot(aku.position.x - p.x, aku.position.z - p.z); if (d < best) { best = d; dekat = { teks: `${p.e} Buka: ${p.judul}`, jalankan: () => bukaPos(p), p }; } });
+    // di dalam gedung: tombol Buka SELALU muncul untuk pos terdekat di gedung itu; di luar: hanya kalau dekat
+    let best = diDalam ? Infinity : 2.6; pos.forEach(p => { if (diDalam && p.g !== diDalam) return; const d = Math.hypot(aku.position.x - p.x, aku.position.z - p.z); if (d < best) { best = d; dekat = { teks: `${p.e} Buka: ${p.judul}`, jalankan: () => bukaPos(p), p }; } });
   }
   tombolMasuk.style.display = dekat ? 'block' : 'none';
   if (dekat) tombolMasuk.textContent = dekat.teks;
