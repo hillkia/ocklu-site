@@ -778,13 +778,13 @@ const SAPA_GURU = {
 let pantauObrolan = null;
 const PERAN = {
   guru: { e: '🧑‍🏫', judul: () => 'Kakak Guru', gelar: n => 'Kak ' + n, boleh: m => true },
-  gembala: { e: '⛪', judul: () => judulGembala, gelar: n => n, boleh: m => /^gembala/.test(m.role) },
+  gembala: { e: '⛪', judul: () => judulGembala, gelar: n => n, boleh: m => m.role === 'gembala-bapak' },
 };
-let judulGembala = 'Bapak & Ibu Gembala';
+let judulGembala = 'Bapak Gembala';   // permintaan owner: hanya Bapak Gembala, tidak digabung
 async function muatGembala() {
   const st = await store.get('staff', {}), g = ((st && st.members) || []).filter(m => /^gembala/.test(m.role));
   const b = g.some(m => m.role === 'gembala-bapak'), i = g.some(m => m.role === 'gembala-ibu');
-  judulGembala = b && !i ? 'Bapak Gembala' : i && !b ? 'Ibu Gembala' : 'Bapak & Ibu Gembala';
+  judulGembala = 'Bapak Gembala';
 }
 const jamPesan = t => { const d = new Date(t); return d.toDateString() === new Date().toDateString() ? d.toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit' }) : d.toLocaleDateString('id-ID', { day: 'numeric', month: 'short' }); };
 function gelembung(m) {
@@ -817,7 +817,7 @@ async function bicaraGuru(g, daftar, ke = 'guru') {
       ${ADA_SERVER ? '' : `<p class="kecil" style="margin-top:10px;color:#c95a17">📶 Mengirim pesan ke ${esc(judul)} hanya bisa lewat Anak Gusti di WiFi gereja / sekolah minggu. Di link ini pesanmu belum bisa sampai.</p>`}
       <textarea ${ADA_SERVER ? '' : 'disabled'} id="tulis-guru" rows="2" maxlength="240" placeholder="${ke === 'gembala' ? 'Shalom, aku mau cerita…' : 'Kak, aku mau tanya…'}" style="margin-top:10px"></textarea>
       <div class="baris" style="justify-content:flex-end;margin-top:8px"><button class="tombol hijau" id="b-kirim-guru">Kirim 💌</button></div></div>
-    <details class="kotak"><summary style="font-weight:900;cursor:pointer">🔑 Khusus ${ke === 'gembala' ? 'bapak/ibu gembala' : 'kakak guru'}: balas pesan anak-anak</summary><div id="guru-balas" style="margin-top:10px"></div></details>`);
+    <details class="kotak"><summary style="font-weight:900;cursor:pointer">🔑 Khusus ${ke === 'gembala' ? 'Bapak Gembala' : 'kakak guru'}: balas pesan anak-anak</summary><div id="guru-balas" style="margin-top:10px"></div></details>`);
   panel.querySelector('#b-mulai-pos').onclick = () => daftar[0].aksi();
   const wadah = panel.querySelector('#obrol');
   async function gambarAnak() {
@@ -845,7 +845,7 @@ async function bicaraGuru(g, daftar, ke = 'guru') {
   const area = panel.querySelector('#guru-balas');
   async function gambarGuru() {
     if (!sesiGuru) return formMasukGuru(area, gambarGuru);
-    if (!P.boleh(sesiGuru)) { area.innerHTML = `<p class="kecil">Pesan di sini hanya bisa dibalas oleh akun Bapak/Ibu Gembala. Admin bisa menambahkan peran gembala di Ruang Guru AntiokhiaKids.</p>`; return; }
+    if (!P.boleh(sesiGuru)) { area.innerHTML = `<p class="kecil">Pesan di sini hanya bisa dibalas oleh akun Bapak Gembala. Admin bisa menambahkan peran gembala di Ruang Guru AntiokhiaKids.</p>`; return; }
     const semua = await store.get('tanya-guru', []), daftarU = (Array.isArray(semua) ? semua : []).filter(x => (x.ke || 'guru') === ke).sort((a, b) => (b.belumDibacaGuru - a.belumDibacaGuru) || b.t - a.t);
     area.innerHTML = `<p class="kecil">Masuk sebagai Kak ${esc(sesiGuru.name)}. ${daftarU.filter(x => x.belumDibacaGuru).length} pesan menunggu balasan.</p>` + (daftarU.length ? '' : '<p class="kecil">Belum ada pesan.</p>');
     daftarU.slice(0, 40).forEach(u => {
@@ -856,7 +856,7 @@ async function bicaraGuru(g, daftar, ke = 'guru') {
       d.querySelector('button').onclick = async () => {
         const teks = d.querySelector('textarea').value.trim(); if (!teks) return;
         const t2 = await store.get('tanya-guru', []), x = (Array.isArray(t2) ? t2 : []).find(y => y.id === u.id); if (!x) return;
-        x.pesan.push({ dari: 'guru', nama: sesiGuru.name, gelar: (ke === 'gembala' ? '⛪ ' + (sesiGuru.role === 'gembala-ibu' ? 'Ibu Gembala ' : 'Bapak Gembala ') : '🧑‍🏫 Kak ') + sesiGuru.name, teks: teks.slice(0, 400), t: Date.now() }); x.belumDibacaGuru = false; x.belumDibacaAnak = true; x.t = Date.now();
+        x.pesan.push({ dari: 'guru', nama: sesiGuru.name, gelar: (ke === 'gembala' ? '⛪ ' + 'Bapak Gembala ' : '🧑‍🏫 Kak ') + sesiGuru.name, teks: teks.slice(0, 400), t: Date.now() }); x.belumDibacaGuru = false; x.belumDibacaAnak = true; x.t = Date.now();
         await store.set('tanya-guru', t2); toast('Balasan terkirim 💛'); gambarGuru();
       };
       area.appendChild(d);
