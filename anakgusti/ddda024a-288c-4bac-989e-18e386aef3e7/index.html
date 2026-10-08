@@ -469,8 +469,8 @@ function aulaGedung(g) {
     x.strokeStyle = 'rgba(120,80,50,.22)'; x.lineWidth = 3; for (let i = 0; i <= 256; i += 64) { x.beginPath(); x.moveTo(i, 0); x.lineTo(i, h); x.stroke(); x.beginPath(); x.moveTo(0, i); x.lineTo(w, i); x.stroke(); }
   }, 256, 256);
   ubinR.wrapS = ubinR.wrapT = THREE.RepeatWrapping; ubinR.repeat.set(W / 4, D / 4);
-  aula.add(kotak(W + .6, .3, D + .6, KILAP(0xffffff, { map: ubinR, clearcoat: .6 }), 0, .05, 0, false));
-  aula.add(kotak(3, .04, D - .6, M(tema.getHex(), { roughness: .95 }), 0, .22, .3, false));
+  aula.add(kotak(W + .6, .3, D + .6, KILAP(0xffffff, { map: ubinR, clearcoat: .6 }), 0, .05, 0, false)).children.at(-1).userData.tetap = true;
+  aula.add(kotak(3, .04, D - .6, M(tema.getHex(), { roughness: .95 }), 0, .22, .3, false)).children.at(-1).userData.tetap = true;
   // dinding: belakang wallpaper solid, samping & depan kaca dengan pintu terbuka
   const wall = teksTekstur((x, w, h) => {
     x.fillStyle = hex(muda); x.fillRect(0, 0, w, h); x.fillStyle = 'rgba(255,255,255,.35)'; for (let i = 0; i < w; i += 32) x.fillRect(i, 0, 12, h * .62);
@@ -584,7 +584,7 @@ function isiAula(g) {
 
 GEDUNG.forEach(aulaGedung);
 // tiap gedung punya salinan material sendiri supaya bisa dibuat tembus pandang saat menghalangi kamera
-GEDUNG.forEach(g => { g.mats = []; g.tembus = 1; g.aula.traverse(o => { if (!o.isMesh) return;
+GEDUNG.forEach(g => { g.mats = []; g.tembus = 1; g.aula.traverse(o => { if (!o.isMesh || o.userData.tetap) return;
   o.material = Array.isArray(o.material) ? o.material.map(m => m.clone()) : o.material.clone();
   (Array.isArray(o.material) ? o.material : [o.material]).forEach(m => { m.userData.op = m.opacity; m.userData.tr = m.transparent; g.mats.push(m); }); }); });
 const sinarHalang = new THREE.Raycaster();
@@ -592,7 +592,8 @@ function bukaPandangan(dt) {      // seperti game: yang menghalangi kamera → t
   const kepala = new THREE.Vector3(aku.position.x, 1.5, aku.position.z), arah = kepala.clone().sub(camera.position), jarak = arah.length();
   sinarHalang.set(camera.position, arah.normalize()); sinarHalang.far = jarak; sinarHalang.camera = camera;
   const halang = new Set();
-  for (const h of sinarHalang.intersectObjects(kenaKlik, true)) { let o = h.object; while (o && !o.userData.g) o = o.parent; if (o) halang.add(o.userData.g); }
+  for (const h of sinarHalang.intersectObjects(kenaKlik, true)) { if (h.object.userData.tetap || h.object.isSprite) continue; let o = h.object; while (o && !o.userData.g) o = o.parent; if (o) halang.add(o.userData.g); }
+  if (diDalam) halang.add(diDalam);
   GEDUNG.forEach(g => {
     const tuju = halang.has(g) ? .18 : 1; if (Math.abs(g.tembus - tuju) < .01) return;
     g.tembus += (tuju - g.tembus) * Math.min(1, dt * 10);
@@ -710,7 +711,7 @@ function geserJoy(e) {
   if (n < .15) dx = dy = 0;                          // zona mati supaya tidak goyang
   joy.x = dx; joy.y = dy; joyBola.style.transform = `translate(${dx * 38}px,${dy * 38}px)`; tujuanJalan = null; tujuanAksi = null;
 }
-document.getElementById('z-plus').onclick = () => kam.jarak = Math.max(7, kam.jarak - 3);
+document.getElementById('z-plus').onclick = () => kam.jarak = Math.max(4, kam.jarak - 3);
 document.getElementById('z-min').onclick = () => kam.jarak = Math.min(32, kam.jarak + 3);
 document.getElementById('z-putar').onclick = () => kam.yaw += Math.PI / 4;
 const petunjukEl = document.getElementById('petunjuk');
@@ -723,14 +724,14 @@ kanvas.addEventListener('pointerdown', e => { titik.set(e.pointerId, e); seret =
 kanvas.addEventListener('pointermove', e => {
   if (!titik.has(e.pointerId)) { const h = sasaranDi(e); kanvas.style.cursor = h ? 'pointer' : 'grab'; disorot = h && h.g; return; }
   titik.set(e.pointerId, e);
-  if (titik.size === 2) { const [a, b] = [...titik.values()], d = Math.hypot(a.clientX - b.clientX, a.clientY - b.clientY); if (jarakCubit) kam.jarak = Math.min(32, Math.max(7, kam.jarak * jarakCubit / d)); jarakCubit = d; pindah = 99; return; }
+  if (titik.size === 2) { const [a, b] = [...titik.values()], d = Math.hypot(a.clientX - b.clientX, a.clientY - b.clientY); if (jarakCubit) kam.jarak = Math.min(32, Math.max(4, kam.jarak * jarakCubit / d)); jarakCubit = d; pindah = 99; return; }
   if (!seret) return;
   const dx = e.clientX - seret.x, dy = e.clientY - seret.y; pindah = Math.max(pindah, Math.hypot(dx, dy));
   if (pindah > 8) { kam.yaw = seret.yaw - dx * .005; kam.pitch = Math.min(1.25, Math.max(.2, seret.pitch + dy * .004)); }
 });
 const lepas = e => { titik.delete(e.pointerId); if (titik.size < 2) jarakCubit = 0; if (!titik.size) { if (pindah < 8 && seret) ketuk(e); seret = null; } };
 kanvas.addEventListener('pointerup', lepas); kanvas.addEventListener('pointercancel', lepas);
-kanvas.addEventListener('wheel', e => { e.preventDefault(); kam.jarak = Math.min(32, Math.max(7, kam.jarak + e.deltaY * .02)); }, { passive: false });
+kanvas.addEventListener('wheel', e => { e.preventDefault(); kam.jarak = Math.min(32, Math.max(4, kam.jarak + e.deltaY * .02)); }, { passive: false });
 
 const ray = new THREE.Raycaster(), ndc = new THREE.Vector2(), bidang = new THREE.Plane(new THREE.Vector3(0, 1, 0), 0);
 let disorot = null;
