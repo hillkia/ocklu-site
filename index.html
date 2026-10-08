@@ -2,113 +2,510 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>OCKLU</title>
-<meta name="description" content="Independent tools and audits: web accessibility & AI-visibility audits, a free calibration checker for teams that write confidence numbers, a collectibles price tracker, and local tools for Indonesian small business.">
-<meta property="og:site_name" content="OCKLU">
-<meta property="og:title" content="OCKLU">
-<meta property="og:description" content="Independent tools and audits, built and run by one person.">
-<meta property="og:type" content="website">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>OCKLU — Business Automation in Five Acts</title>
+<meta name="description" content="OCKLU Business Automation: Ojol Untung, Review Engine, AIRANK, Ocklu Herbal and KROOG. Five small machines, built and run by one person. Automate · Optimize · Evolve.">
+<meta property="og:title" content="OCKLU — Business Automation in Five Acts">
+<meta property="og:description" content="Automate · Optimize · Evolve. Ojol Untung, Review Engine, AIRANK, Ocklu Herbal, KROOG.">
+<meta property="og:image" content="https://ocklu.com/sinema/img/kroog.jpg">
 <meta property="og:url" content="https://ocklu.com/">
+<link rel="canonical" href="https://ocklu.com/">
+<meta name="theme-color" content="#0e1214">
+<link rel="icon" href="/sinema/img/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{ --ink:#14161a; --body:#3d434d; --mute:#6b7280; --line:#e5e7eb; --bg:#ffffff; --soft:#f7f8fa; --brand:#c2410c; --brand-soft:#fff7ed; }
-@media (prefers-color-scheme: dark){ :root{--ink:#f3f4f6;--body:#c3c8d0;--mute:#8b93a1;--line:#262a31; --bg:#0e1013;--soft:#16191e;--brand:#fb923c;--brand-soft:#1f1408} }
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--body); font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; -webkit-font-smoothing:antialiased}
-.wrap{max-width:780px;margin:0 auto;padding:0 22px}
-h1,h2{color:var(--ink);line-height:1.2;margin:0}
-h1{font-size:clamp(30px,5.5vw,42px);letter-spacing:-.02em;font-weight:800}
-h2{font-size:15px;letter-spacing:.04em;text-transform:uppercase;color:var(--mute);font-weight:650;margin:0 0 16px}
-p{margin:0 0 16px}
-a{color:var(--brand);text-decoration:none}
-a:hover{text-decoration:underline}
-header{padding:64px 0 12px}
-.lede{font-size:19px;color:var(--body);margin:16px 0 0;max-width:56ch}
-section{padding:36px 0;border-top:1px solid var(--line)}
-.grid{display:grid;gap:14px}
-@media(min-width:640px){.grid-2{grid-template-columns:1fr 1fr}}
-.card{background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:20px;display:block}
-.card:hover{border-color:var(--brand)}
-.card h3{margin:0 0 6px;font-size:17px;font-weight:650;color:var(--ink)}
-.card p{margin:0;font-size:14px;color:var(--mute);line-height:1.55}
-.tag{display:inline-block;font:600 11px/1 ui-monospace,SFMono-Regular,Menlo,monospace; letter-spacing:.1em;text-transform:uppercase;color:var(--brand);background:var(--brand-soft); padding:4px 8px;border-radius:5px;margin-bottom:10px}
-footer{padding:36px 0 60px;border-top:1px solid var(--line); color:var(--mute);font-size:14px}
-footer a{color:var(--mute)}
+:root{
+  --ink:#0e1214;--ink2:#161c1f;--cream:#f1e4c8;--muted:#b9ad94;
+  --teal:#3f8a99;--orange:#e0612a;--mustard:#c99a2e;--line:rgba(241,228,200,.14);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--cream);font:16px/1.6 Inter,system-ui,sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.disp{font-family:"Josefin Sans",sans-serif;letter-spacing:.04em}
+
+/* film grain + vignette */
+body:after{content:"";position:fixed;inset:-50%;pointer-events:none;z-index:50;opacity:.07;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation:grain 1s steps(6) infinite}
+@keyframes grain{0%{transform:translate(0,0)}25%{transform:translate(-3%,2%)}50%{transform:translate(2%,-3%)}75%{transform:translate(-2%,-1%)}100%{transform:translate(1%,3%)}}
+
+/* top bar */
+.bar{position:fixed;top:0;left:0;right:0;z-index:40;display:flex;align-items:center;justify-content:space-between;padding:14px 20px;
+  background:linear-gradient(var(--ink),transparent)}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:700}
+.brand img{width:34px;height:34px;border-radius:50%;object-fit:cover}
+.brand span b:nth-child(1){color:var(--teal)}.brand span b:nth-child(2){color:var(--orange)}.brand span b:nth-child(3){color:var(--cream)}.brand span b:nth-child(4){color:var(--mustard)}.brand span b:nth-child(5){color:var(--teal)}
+.lang{display:flex;border:1px solid var(--line);border-radius:99px;overflow:hidden}
+.lang button{background:none;border:0;color:var(--muted);font:600 12px Inter;padding:7px 12px;cursor:pointer}
+.lang button[aria-pressed=true]{background:var(--cream);color:var(--ink)}
+.prog{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--teal),var(--orange),var(--mustard));z-index:45;width:0}
+
+/* intro */
+.intro{height:220vh;position:relative}
+.intro .stick{position:sticky;top:0;height:100vh;display:grid;place-items:center;overflow:hidden;text-align:center;padding:0 16px}
+.atom{width:min(62vw,340px);aspect-ratio:1;position:relative}
+.atom svg{width:100%;height:100%;overflow:visible}
+.orb{transform-origin:170px 170px}
+.o1{animation:spin 14s linear infinite}.o2{animation:spin 20s linear infinite reverse}.o3{animation:spin 26s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.wm{font-size:clamp(46px,12vw,128px);font-weight:700;line-height:1;margin-top:10px}
+.wm b{font-weight:700}
+.wm b:nth-child(1){color:var(--teal)}.wm b:nth-child(2){color:var(--orange)}.wm b:nth-child(3){color:var(--cream)}.wm b:nth-child(4){color:var(--mustard)}.wm b:nth-child(5){color:var(--teal)}
+.tag{margin-top:14px;font-size:clamp(11px,2.6vw,15px);letter-spacing:.38em;color:var(--muted)}
+.tag i{color:var(--orange);font-style:normal}
+.hint{position:absolute;bottom:28px;left:0;right:0;font-size:12px;letter-spacing:.3em;color:var(--muted);animation:bob 2.2s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(6px);opacity:.5}}
+.lead{position:absolute;inset:auto 0 18vh;max-width:640px;margin:0 auto;padding:0 20px;font-size:clamp(20px,4vw,32px);line-height:1.3;opacity:0}
+
+/* acts */
+.act{position:relative;height:300vh}
+.scene{position:sticky;top:0;height:100vh;overflow:hidden}
+.scene .bg{position:absolute;inset:-6%;background-size:cover;background-position:center;will-change:transform;filter:saturate(1.05) contrast(1.05)}
+.scene .shade{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 40%,transparent 30%,rgba(8,10,12,.75) 100%),linear-gradient(transparent 40%,rgba(8,10,12,.92))}
+.lb{position:absolute;left:0;right:0;height:9vh;background:#000;z-index:3;transition:height .9s cubic-bezier(.7,0,.2,1)}
+.lb.t{top:0}.lb.b{bottom:0}
+.act.on .lb{height:5vh}
+.chap{position:absolute;z-index:4;left:0;right:0;top:14vh;text-align:center;padding:0 16px}
+.chap small{display:block;font-size:12px;letter-spacing:.5em;color:var(--mustard)}
+.chap h2{font-size:clamp(38px,9vw,96px);line-height:1;margin-top:8px;font-weight:700}
+.chap p{max-width:560px;margin:14px auto 0;color:var(--muted);font-size:clamp(15px,2.4vw,18px)}
+.beats{position:absolute;z-index:4;left:0;right:0;bottom:12vh;padding:0 20px;max-width:900px;margin:0 auto}
+.beat{position:absolute;left:20px;right:20px;bottom:0;font-size:clamp(22px,4.6vw,44px);line-height:1.2;font-weight:600;opacity:0;transform:translateY(-14px);transition:opacity .25s,transform .25s;text-shadow:0 2px 24px rgba(0,0,0,.8)}
+.beat.on{opacity:1;transform:none;transition:opacity .7s .25s,transform .7s .25s}
+.beat em{font-style:normal;color:var(--orange)}
+.act[data-c=teal] .beat em{color:var(--teal)}
+.act[data-c=mustard] .beat em{color:var(--mustard)}
+
+/* UGC */
+.ugc{position:relative;background:var(--ink);padding:14vh 20px 16vh}
+.ugc .wrap{max-width:1040px;margin:0 auto;display:grid;grid-template-columns:minmax(0,340px) 1fr;gap:56px;align-items:center}
+.phone{position:relative;aspect-ratio:9/19;border-radius:38px;background:#000;padding:10px;box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 0 1px var(--line);transform:rotate(-2deg)}
+.screen{position:relative;width:100%;height:100%;border-radius:30px;overflow:hidden}
+.screen img{width:100%;height:100%;object-fit:cover;animation:handheld 6s ease-in-out infinite}
+@keyframes handheld{0%,100%{transform:scale(1.08) translate(0,0) rotate(0)}30%{transform:scale(1.1) translate(-1.2%,.8%) rotate(.4deg)}60%{transform:scale(1.09) translate(1%,-.6%) rotate(-.3deg)}}
+.rec{position:absolute;top:16px;left:14px;display:flex;gap:6px;align-items:center;font:600 11px Inter;background:rgba(0,0,0,.45);padding:4px 9px;border-radius:99px}
+.rec:before{content:"";width:7px;height:7px;border-radius:50%;background:#ff3b30;animation:blink 1s infinite}
+@keyframes blink{50%{opacity:.2}}
+.ilu{position:absolute;top:16px;right:14px;font:600 10px Inter;letter-spacing:.08em;background:rgba(0,0,0,.45);padding:4px 8px;border-radius:6px;color:#ddd}
+.sub{position:absolute;left:12px;right:12px;bottom:70px;text-align:center}
+.sub span{display:inline;background:rgba(0,0,0,.72);color:#fff;font:600 15px/1.55 Inter;padding:3px 8px;-webkit-box-decoration-break:clone;box-decoration-break:clone;border-radius:4px}
+.side{position:absolute;right:10px;bottom:150px;display:flex;flex-direction:column;gap:14px;align-items:center;font:600 11px Inter}
+.side i{width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.18);display:grid;place-items:center;font-style:normal;font-size:16px}
+.handle{position:absolute;left:14px;bottom:28px;font:600 13px Inter}
+.copy small{font-size:12px;letter-spacing:.4em;color:var(--mustard)}
+.copy h3{font-size:clamp(28px,5vw,48px);line-height:1.1;margin:10px 0 18px}
+.copy p{color:var(--muted);margin-bottom:12px;max-width:520px}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin:24px 0}
+.facts div{background:var(--ink2);padding:16px}
+.facts b{display:block;font:700 clamp(20px,3.4vw,28px) "Josefin Sans";color:var(--cream)}
+.facts span{font-size:12px;color:var(--muted)}
+.cta{display:inline-flex;align-items:center;gap:10px;background:var(--orange);color:#fff;text-decoration:none;font-weight:600;padding:15px 24px;border-radius:99px;transition:transform .2s,box-shadow .2s}
+.cta:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(224,97,42,.35)}
+.cta.t{background:var(--teal)}.cta.m{background:var(--mustard);color:var(--ink)}
+.price{margin-left:14px;color:var(--muted);font-size:14px}
+.note{font-size:12px;color:#8b8371;margin-top:16px}
+.rv{opacity:0;transform:translateY(30px);transition:opacity .9s,transform .9s}
+.rv.on{opacity:1;transform:none}
+
+/* finale */
+.fin{min-height:100vh;display:grid;place-items:center;text-align:center;padding:16vh 20px;background:radial-gradient(ellipse at 50% 30%,#1b2428,var(--ink) 70%)}
+.fin img{width:min(70vw,300px);border-radius:18px;box-shadow:0 30px 80px rgba(0,0,0,.6)}
+.fin h2{font-size:clamp(30px,6vw,60px);margin:34px 0 12px;line-height:1.1}
+.fin p{color:var(--muted);max-width:540px;margin:0 auto 28px}
+.row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.foot{padding:30px 20px;text-align:center;font-size:12px;color:#7c7564;border-top:1px solid var(--line)}
+
+@media (max-width:760px){
+  .ugc .wrap{grid-template-columns:1fr;gap:36px}
+  .phone{max-width:300px;margin:0 auto}
+  .facts{grid-template-columns:1fr}
+  .price{display:block;margin:12px 0 0}
+  .act{height:260vh}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*:before,*:after{animation:none!important;transition:none!important}
+  .beat,.rv,.lead{opacity:1!important;transform:none!important}
+  .beat{position:relative;margin-top:8px}
+}
+
+.only{display:inline-block;margin-top:12px;font:600 12px Inter;letter-spacing:.06em;background:rgba(0,0,0,.5);border:1px solid var(--line);padding:5px 12px;border-radius:99px;color:var(--cream)}
+.only.sm{margin:0 0 0 8px;vertical-align:middle;font-size:11px;padding:3px 9px}
+h1.wm{font-weight:700}
+.dir{padding:12vh 20px 10vh;border-top:1px solid var(--line);background:var(--ink)}
+.dirwrap{max-width:1040px;margin:0 auto}
+.dir h2{font-size:clamp(28px,5vw,44px);line-height:1.1}
+.lede2{color:var(--muted);max-width:640px;margin:12px 0 8px}
+.dir h3{font:600 12px Inter;letter-spacing:.3em;text-transform:uppercase;color:var(--mustard);margin:44px 0 14px}
+.grid2{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
+.card{display:block;text-decoration:none;background:var(--ink2);border:1px solid var(--line);border-radius:16px;padding:20px;transition:border-color .2s,transform .2s}
+.card:hover{border-color:var(--teal);transform:translateY(-2px)}
+.card h4{font:700 19px "Josefin Sans",sans-serif;letter-spacing:.02em;margin:8px 0 6px}
+.card p{color:var(--muted);font-size:14.5px}
+.tg{display:inline-block;font:600 11px Inter;color:var(--ink);background:var(--cream);padding:3px 9px;border-radius:99px}
+.row .cta{padding:13px 20px}
 </style>
 </head>
 <body>
-<div class="wrap">
+<div class="prog" id="prog"></div>
+<header class="bar">
+  <a class="brand disp" href="/"><img src="/sinema/img/logo.jpg" alt=""><span><b>O</b><b>C</b><b>K</b><b>L</b><b>U</b></span></a>
+  <div class="lang" role="group" aria-label="Language / Bahasa">
+    <button data-l="en" aria-pressed="true">EN</button><button data-l="id" aria-pressed="false">ID</button>
+  </div>
+</header>
 
-  <header>
-    <h1>OCKLU</h1>
-    <p class="lede">Independent tools and audits, built and run by one person. No account required
-      for anything free; paid work is fixed-price with a written guarantee. Bahasa Indonesia untuk alat lokal.</p>
-  </header>
-
-  <section>
-    <h2>Audits for businesses</h2>
-    <div class="grid grid-2">
-      <a class="card" href="/tergigantic/">
-        <div class="tag">Paid · from $39</div>
-        <h3>Web Accessibility & AI Visibility</h3>
-        <p>WCAG 2.1 AA audits and AI-crawler readiness checks, fixed price, results guaranteed within 30 days.</p>
-      </a>
-      <a class="card" href="/ai-readiness/">
-        <div class="tag">Free</div>
-        <h3>AI Readiness Directory</h3>
-        <p>147 e-commerce sites checked for whether AI assistants can actually read and recommend them — see yours or a competitor's.</p>
-      </a>
+<!-- INTRO -->
+<section class="intro" id="intro">
+  <div class="stick">
+    <div>
+      <div class="atom" aria-hidden="true">
+        <svg viewBox="0 0 340 340">
+          <circle cx="170" cy="170" r="92" fill="none" stroke="#3f8a99" stroke-width="36" stroke-dasharray="330 248" transform="rotate(100 170 170)"/>
+          <circle cx="182" cy="176" r="92" fill="none" stroke="#e0612a" stroke-width="30" stroke-dasharray="270 308" transform="rotate(-70 182 176)"/>
+          <circle cx="172" cy="168" r="26" fill="#f1e4c8"/>
+          <g class="orb o1"><ellipse cx="170" cy="170" rx="160" ry="58" fill="none" stroke="#f1e4c8" stroke-width="2.5" transform="rotate(-25 170 170)"/><circle cx="24" cy="226" r="13" fill="#e0612a"/></g>
+          <g class="orb o2"><ellipse cx="170" cy="170" rx="58" ry="160" fill="none" stroke="#f1e4c8" stroke-width="2.5" transform="rotate(-30 170 170)"/><circle cx="218" cy="22" r="15" fill="#3f8a99"/></g>
+          <g class="orb o3"><ellipse cx="170" cy="170" rx="150" ry="44" fill="none" stroke="#f1e4c8" stroke-width="2" transform="rotate(30 170 170)"/><circle cx="208" cy="300" r="11" fill="#c99a2e"/></g>
+        </svg>
+      </div>
+      <h1 class="wm disp" aria-label="OCKLU"><b>O</b><b>C</b><b>K</b><b>L</b><b>U</b></h1>
+      <div class="tag disp">AUTOMATE <i>•</i> OPTIMIZE <i>•</i> EVOLVE</div>
     </div>
-  </section>
+    <p class="lead disp" id="lead" data-i18n="lead">Five small machines.<br>Working while you sleep.</p>
+    <div class="hint" data-i18n="scroll">SCROLL TO BEGIN ↓</div>
+  </div>
+</section>
 
-  <section>
-    <h2>For teams that write confidence numbers</h2>
-    <div class="grid">
-      <a class="card" href="/kalibrasi/en/">
-        <div class="tag">Free tool</div>
-        <h3>Calibration Audit</h3>
-        <p>Drop a CSV of past forecasts and outcomes. Get Brier score, skill score against base rate <em>and</em> market price,
-          a reliability curve — computed in your browser, nothing uploaded. <a href="/kalibrasi/">Bahasa Indonesia</a>.</p>
-      </a>
+<!-- ACT I : OJOL -->
+<section class="act" data-c="orange" id="ojol">
+  <div class="scene">
+    <div class="bg" style="background-image:url(/sinema/img/ojol.jpg)"></div><div class="shade"></div>
+    <div class="lb t"></div><div class="lb b"></div>
+    <div class="chap disp"><small data-i18n="b1">ACT I</small><h2>Ojol Untung</h2><span class="only" data-i18n="only">🇮🇩 Indonesia only</span></div>
+    <div class="beats disp">
+      <div class="beat" data-i18n="o1">9 PM. An order comes in. <em>Rp18,000.</em></div>
+      <div class="beat" data-i18n="o2">Looks decent. But pickup is 4 km away, drop-off is 7 km.</div>
+      <div class="beat" data-i18n="o3">Counted per driving hour, that order <em>loses money.</em></div>
+      <div class="beat" data-i18n="o4">Now he knows before he taps "Accept".</div>
     </div>
-  </section>
-
-  <section>
-    <h2>Markets</h2>
-    <div class="grid grid-2">
-      <a class="card" href="/radar/">
-        <div class="tag">Free</div>
-        <h3>Collectibles Price Radar</h3>
-        <p>What actually moved today across trading-card and collectibles markets.</p>
-      </a>
-      <a class="card" href="/trade/">
-        <div class="tag">Dashboard</div>
-        <h3>OCKLU-TRADE</h3>
-        <p>Multi-market trading decision support — signals, not auto-execution.</p>
-      </a>
+  </div>
+</section>
+<section class="ugc">
+  <div class="wrap">
+    <div class="phone rv"><div class="screen">
+      <img src="/sinema/img/ugc-ojol.jpg" alt="Illustration: an ojek driver talking to the camera" data-i18n-alt="alt_ojol" loading="lazy">
+      <div class="rec">REC</div><div class="ilu" data-i18n="ilu">ILLUSTRATION</div>
+      <div class="side"><i>♥</i><span data-i18n="like1">2.1k</span><i>💬</i>184<i>↗</i></div>
+      <div class="sub" data-sub="ojol"><span></span></div>
+      <div class="handle">@narik.malam</div>
+    </div></div>
+    <div class="copy rv">
+      <small class="disp" data-i18n="b1">ACT I</small> <span class="only sm" data-i18n="only">🇮🇩 Indonesia only</span>
+      <h3 class="disp" data-i18n="o_h">Know if each order pays, before you take it.</h3>
+      <p data-i18n="o_p1">The driver types three numbers: fare, pickup distance, trip distance. The app answers TAKE or SKIP, with the reason in rupiah.</p>
+      <p data-i18n="o_p2">It never touches the Gojek, Grab or Maxim app. Your account stays safe.</p>
+      <div class="facts">
+        <div><b>3.9 <span style="font-size:.6em">/ 12</span></b><span data-i18n="o_f1">hours actually driving out of 12 on shift</span></div>
+        <div><b data-i18n="o_f2b">Rp38.5k</b><span data-i18n="o_f2">fair target per driving hour</span></div>
+        <div><b data-i18n="o_f3b">Receipts</b><span data-i18n="o_f3">every skipped order = rupiah saved</span></div>
+      </div>
+      <a class="cta" href="/ojol/" data-i18n="o_cta">Try Ojol Untung →</a><span class="price" data-i18n="o_price">Rp15,000 / month</span>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section>
-    <h2>Alat lokal Indonesia</h2>
-    <div class="grid grid-2">
-      <a class="card" href="/kios/">
-        <div class="tag">Gratis</div>
-        <h3>Buku Kios</h3>
-        <p>Catat penjualan UKM lewat chat/foto/Excel, tanpa login.</p>
-      </a>
-      <a class="card" href="/ojol/">
-        <div class="tag">Rp 15rb/bln</div>
-        <h3>Ojol Untung</h3>
-        <p>Kalkulator untung-rugi order, plus info kebutuhan lokal buat driver.</p>
-      </a>
+<!-- ACT II : REVIEW ENGINE -->
+<section class="act" data-c="mustard" id="ulasan">
+  <div class="scene">
+    <div class="bg" style="background-image:url(/sinema/img/ulasan.jpg)"></div><div class="shade"></div>
+    <div class="lb t"></div><div class="lb b"></div>
+    <div class="chap disp"><small data-i18n="b2">ACT II</small><h2 data-i18n="u_t">Review Engine</h2></div>
+    <div class="beats disp">
+      <div class="beat" data-i18n="u1">The job was clean. The customer was happy.</div>
+      <div class="beat" data-i18n="u2">But nobody remembers <em>to leave a review.</em></div>
+      <div class="beat" data-i18n="u3">The moment a job is done, the engine asks. Then follows up three times.</div>
+      <div class="beat" data-i18n="u4">Stars go up. The phone rings.</div>
     </div>
-  </section>
+  </div>
+</section>
+<section class="ugc">
+  <div class="wrap">
+    <div class="phone rv"><div class="screen">
+      <img src="/sinema/img/ugc-ulasan.jpg" alt="Illustration: a technician talking to the camera" data-i18n-alt="alt_ulasan" loading="lazy">
+      <div class="rec">REC</div><div class="ilu" data-i18n="ilu">ILLUSTRATION</div>
+      <div class="side"><i>♥</i><span data-i18n="like2">1.4k</span><i>💬</i>96<i>↗</i></div>
+      <div class="sub" data-sub="ulasan"><span></span></div>
+      <div class="handle">@fixit.dan</div>
+    </div></div>
+    <div class="copy rv">
+      <small class="disp" data-i18n="b2">ACT II</small>
+      <h3 class="disp" data-i18n="u_h">Google reviews that run themselves.</h3>
+      <p data-i18n="u_p1">For service businesses: plumbers, HVAC, garages, salons. Every finished job triggers a review request, with up to three reminders.</p>
+      <p data-i18n="u_p2">Start with a free audit: we show your stars against your nearest competitors, from real Google Maps data.</p>
+      <div class="facts">
+        <div><b>201</b><span data-i18n="u_f1">real businesses already audited</span></div>
+        <div><b>1 + 3</b><span data-i18n="u_f2">request + automatic follow-ups</span></div>
+        <div><b>0</b><span data-i18n="u_f3">fake reviews. Real customers only.</span></div>
+      </div>
+      <a class="cta m" href="/u/abetterplumberanabsoluteplumbingcompany3980quebecst140denverco80207.html" data-i18n="u_cta">See a sample audit →</a><span class="price" data-i18n="u_price">$297 / month</span>
+    </div>
+  </div>
+</section>
 
-  <footer>
-    <p>OCKLU — <a href="mailto:octavianus@ocklu.com">octavianus@ocklu.com</a></p>
-  </footer>
+<!-- ACT III : AIRANK -->
+<section class="act" data-c="teal" id="airank">
+  <div class="scene">
+    <div class="bg" style="background-image:url(/sinema/img/airank.jpg)"></div><div class="shade"></div>
+    <div class="lb t"></div><div class="lb b"></div>
+    <div class="chap disp"><small data-i18n="b3">ACT III</small><h2>AIRANK</h2></div>
+    <div class="beats disp">
+      <div class="beat" data-i18n="a1">Customers don't just search Google anymore.</div>
+      <div class="beat" data-i18n="a2">They ask <em>AI.</em></div>
+      <div class="beat" data-i18n="a3">And AI names three brands. Not yours.</div>
+      <div class="beat" data-i18n="a4">Now you know when, where and why.</div>
+    </div>
+  </div>
+</section>
+<section class="ugc">
+  <div class="wrap">
+    <div class="phone rv"><div class="screen">
+      <img src="/sinema/img/ugc-airank.jpg" alt="Illustration: a brand founder talking to the camera" data-i18n-alt="alt_airank" loading="lazy">
+      <div class="rec">REC</div><div class="ilu" data-i18n="ilu">ILLUSTRATION</div>
+      <div class="side"><i>♥</i><span data-i18n="like3">3.2k</span><i>💬</i>210<i>↗</i></div>
+      <div class="sub" data-sub="airank"><span></span></div>
+      <div class="handle">@glow.studio</div>
+    </div></div>
+    <div class="copy rv">
+      <small class="disp" data-i18n="b3">ACT III</small>
+      <h3 class="disp" data-i18n="a_h">Does AI mention your brand?</h3>
+      <p data-i18n="a_p1">AIRANK asks AI engines your customers' questions every day and records who gets named, and in what position.</p>
+      <p data-i18n="a_p2">The difference: the raw AI answer is attached to every number. Check it yourself instead of trusting a score.</p>
+      <div class="facts">
+        <div><b data-i18n="a_f1b">2× / day</b><span data-i18n="a_f1">automatic scans</span></div>
+        <div><b data-i18n="a_f2b">Raw</b><span data-i18n="a_f2">original AI answer behind every number</span></div>
+        <div><b>$19</b><span data-i18n="a_f3">cheapest plan per month</span></div>
+      </div>
+      <a class="cta t" href="/airank/" data-i18n="a_cta">Check your brand →</a><span class="price" data-i18n="a_price">$19 · $99 · $299 / month</span>
+    </div>
+  </div>
+</section>
 
-</div>
+<!-- ACT IV : HERBAL -->
+<section class="act" data-c="mustard" id="herbal">
+  <div class="scene">
+    <div class="bg" style="background-image:url(/sinema/img/herbal.jpg)"></div><div class="shade"></div>
+    <div class="lb t"></div><div class="lb b"></div>
+    <div class="chap disp"><small data-i18n="b4">ACT IV</small><h2>Ocklu Herbal</h2></div>
+    <div class="beats disp">
+      <div class="beat" data-i18n="h1">Grandma knew which root to boil. <em>And for how long.</em></div>
+      <div class="beat" data-i18n="h2">Most of us forgot.</div>
+      <div class="beat" data-i18n="h3">284 plants. Doses measured. Cooking time down to the minute.</div>
+      <div class="beat" data-i18n="h4">And it warns you <em>before</em> a mix turns dangerous.</div>
+    </div>
+  </div>
+</section>
+<section class="ugc">
+  <div class="wrap">
+    <div class="phone rv"><div class="screen">
+      <img src="/sinema/img/ugc-herbal.jpg" alt="Illustration: a woman holding a glass of herbal drink" data-i18n-alt="alt_herbal" loading="lazy">
+      <div class="rec">REC</div><div class="ilu" data-i18n="ilu">ILLUSTRATION</div>
+      <div class="side"><i>♥</i><span data-i18n="like4">4.8k</span><i>💬</i>312<i>↗</i></div>
+      <div class="sub" data-sub="herbal"><span></span></div>
+      <div class="handle">@dapur.sehat</div>
+    </div></div>
+    <div class="copy rv">
+      <small class="disp" data-i18n="b4">ACT IV</small>
+      <h3 class="disp" data-i18n="h_h">The world's living pharmacy, in your pocket.</h3>
+      <p data-i18n="h_p1">Medicinal plants from traditions around the world, every Latin name checked against GBIF. Each plant: compounds, uses with evidence level, how to prepare it, dose, and who must avoid it.</p>
+      <p data-i18n="h_p2">The mix checker flags dangerous combinations, pregnancy and child warnings, and clashes with prescription drugs. Education, not treatment: it never replaces a doctor.</p>
+      <div class="facts">
+        <div><b>284</b><span data-i18n="h_f1">medicinal plants, verified names</span></div>
+        <div><b>65</b><span data-i18n="h_f2">classic and daily remedies</span></div>
+        <div><b data-i18n="h_f3b">Free</b><span data-i18n="h_f3">safety checks, forever</span></div>
+      </div>
+      <a class="cta m" href="/herbal/" data-i18n="h_cta">Open Ocklu Herbal →</a><span class="price" data-i18n="h_price">Free early access · later $5 / month</span>
+    </div>
+  </div>
+</section>
+
+<!-- ACT V : KROOG -->
+<section class="act" data-c="teal" id="kroog">
+  <div class="scene">
+    <div class="bg" style="background-image:url(/sinema/img/kroog.jpg)"></div><div class="shade"></div>
+    <div class="lb t"></div><div class="lb b"></div>
+    <div class="chap disp"><small data-i18n="b5">ACT V</small><h2>KROOG</h2></div>
+    <div class="beats disp">
+      <div class="beat" data-i18n="k1">Every minute, the world says something.</div>
+      <div class="beat" data-i18n="k2">1,000 AI reporters are listening. <em>In 39 countries.</em></div>
+      <div class="beat" data-i18n="k3">A story counts only when several outlets report it.</div>
+      <div class="beat" data-i18n="k4">A number that isn't in the source <em>gets cut.</em></div>
+    </div>
+  </div>
+</section>
+<section class="ugc">
+  <div class="wrap">
+    <div class="phone rv"><div class="screen">
+      <img src="/sinema/img/ugc-kroog.jpg" alt="Illustration: a commuter talking to the camera on a train" data-i18n-alt="alt_kroog" loading="lazy">
+      <div class="rec">REC</div><div class="ilu" data-i18n="ilu">ILLUSTRATION</div>
+      <div class="side"><i>♥</i><span data-i18n="like5">2.7k</span><i>💬</i>158<i>↗</i></div>
+      <div class="sub" data-sub="kroog"><span></span></div>
+      <div class="handle">@pagi.di.kereta</div>
+    </div></div>
+    <div class="copy rv">
+      <small class="disp" data-i18n="b5">ACT V</small>
+      <h3 class="disp" data-i18n="k_h">A newsroom that never sleeps.</h3>
+      <p data-i18n="k_p1">Kroog's reporters read news, trends and research feeds around the clock. Similar headlines are merged into one story, labelled with how many outlets carried it.</p>
+      <p data-i18n="k_p2">Summaries in English and Indonesian. If a summary contains a number the source doesn't, it is thrown away. Citizen reports stay "unverified" until other outlets confirm them.</p>
+      <div class="facts">
+        <div><b>1,000</b><span data-i18n="k_f1">AI reporters on rotation</span></div>
+        <div><b>39</b><span data-i18n="k_f2">countries covered</span></div>
+        <div><b>ID · EN</b><span data-i18n="k_f3">every story in two languages</span></div>
+      </div>
+      <a class="cta t" href="/kroog/" data-i18n="k_cta">Read Kroog →</a><span class="price" data-i18n="k_price">Free to read</span>
+    </div>
+  </div>
+</section>
+
+<!-- FINALE -->
+<section class="fin">
+  <div class="rv">
+    <img src="/sinema/img/logo-lego.jpg" alt="OCKLU Business Automation logo" loading="lazy">
+    <h2 class="disp" data-i18n="f_h">One builder. Five machines.<br>Pick your act.</h2>
+    <p data-i18n="f_p">Everything is built and run by OCKLU. The numbers on this page come from our own machines, not made up.</p>
+    <div class="row">
+      <a class="cta" href="/ojol/">Ojol Untung</a>
+      <a class="cta m" href="/u/abetterplumberanabsoluteplumbingcompany3980quebecst140denverco80207.html" data-i18n="u_t">Review Engine</a>
+      <a class="cta t" href="/airank/">AIRANK</a>
+      <a class="cta m" href="/herbal/">Ocklu Herbal</a>
+      <a class="cta t" href="/kroog/">KROOG</a>
+    </div>
+    <p class="note" data-i18n="f_note">People in the illustration videos are AI images, not customers. Their lines are usage examples.</p>
+  </div>
+</section>
+
+<!-- ALL MACHINES (old homepage directory) -->
+<section class="dir" id="all">
+  <div class="dirwrap">
+    <h2 class="disp" data-i18n="d_h">All OCKLU machines</h2>
+    <p class="lede2" data-i18n="d_p">Independent tools and audits, built and run by one person. No account required for anything free; paid work is fixed-price with a written guarantee.</p>
+    <h3 data-i18n="d_g1">Audits for businesses</h3>
+    <div class="grid2">
+      <a class="card" href="/tergigantic/"><div class="tg" data-i18n="d_paid39">Paid · from $39</div><h4 data-i18n="d_t1">Web Accessibility & AI Visibility</h4><p data-i18n="d_c1">WCAG 2.1 AA audits and AI-crawler readiness checks, fixed price, results guaranteed within 30 days.</p></a>
+      <a class="card" href="/ai-readiness/"><div class="tg" data-i18n="d_free">Free</div><h4 data-i18n="d_t2">AI Readiness Directory</h4><p data-i18n="d_c2">147 e-commerce sites checked for whether AI assistants can actually read and recommend them — see yours or a competitor's.</p></a>
+      <a class="card" href="/airank/"><div class="tg">$19 · $99 · $299</div><h4>AIRANK</h4><p data-i18n="d_c3">Track whether AI engines name your brand, with the raw answer behind every number.</p></a>
+      <a class="card" href="/u/abetterplumberanabsoluteplumbingcompany3980quebecst140denverco80207.html"><div class="tg">$297</div><h4 data-i18n="u_t">Review Engine</h4><p data-i18n="d_c4">Automatic Google review requests for service businesses. See a real sample audit.</p></a>
+    </div>
+    <h3 data-i18n="d_g2">For teams that write confidence numbers</h3>
+    <div class="grid2">
+      <a class="card" href="/kalibrasi/en/"><div class="tg" data-i18n="d_freetool">Free tool</div><h4 data-i18n="d_t5">Calibration Audit</h4><p data-i18n="d_c5">Drop a CSV of past forecasts and outcomes. Get Brier score, skill score against base rate and market price, and a reliability curve — computed in your browser, nothing uploaded.</p></a>
+    </div>
+    <h3 data-i18n="d_g3">Markets & news</h3>
+    <div class="grid2">
+      <a class="card" href="/radar/"><div class="tg" data-i18n="d_free">Free</div><h4 data-i18n="d_t6">Collectibles Price Radar</h4><p data-i18n="d_c6">What actually moved today across trading-card and collectibles markets.</p></a>
+      <a class="card" href="/trade/"><div class="tg">Dashboard</div><h4>OCKLU-TRADE</h4><p data-i18n="d_c7">Multi-market trading decision support — signals, not auto-execution.</p></a>
+      <a class="card" href="/kroog/"><div class="tg" data-i18n="d_free">Free</div><h4>KROOG</h4><p data-i18n="d_c8">News from 1,000 AI reporters in 39 countries, in English and Indonesian.</p></a>
+    </div>
+    <h3 data-i18n="d_g4">Health & learning</h3>
+    <div class="grid2">
+      <a class="card" href="/herbal/"><div class="tg" data-i18n="d_early">Free early access</div><h4>Ocklu Herbal</h4><p data-i18n="d_c9">284 medicinal plants with doses, cooking minutes and safety checks. Education, not treatment.</p></a>
+    </div>
+    <h3 data-i18n="d_g5">Local tools for Indonesia</h3>
+    <div class="grid2">
+      <a class="card" href="/kios/"><div class="tg" data-i18n="d_free">Free</div><h4 data-i18n="d_t10">Buku Kios (shop ledger)</h4><p data-i18n="d_c10">Record small-shop sales by chat, photo or Excel. No login.</p></a>
+      <a class="card" href="/ojol/"><div class="tg" data-i18n="o_price">Rp15,000 / month</div><h4>Ojol Untung</h4><p data-i18n="d_c11">Profit-or-loss calculator for every ride order, plus local info for drivers.</p></a>
+    </div>
+  </div>
+</section>
+<footer class="foot">© 2026 OCKLU · Business Automation · <a href="mailto:octavianus@ocklu.com">octavianus@ocklu.com</a></footer>
+<script>
+/* Bahasa dasar di HTML = English (bawaan halaman depan). Kamus di bawah = Bahasa Indonesia. */
+const ID={lead:"Lima mesin kecil.<br>Bekerja saat Anda tidur.",scroll:"GULIR UNTUK MULAI ↓",b1:"BABAK I",b2:"BABAK II",b3:"BABAK III",b4:"BABAK IV",b5:"BABAK V",ilu:"ILUSTRASI",only:"🇮🇩 Khusus Indonesia",
+ like1:"2,1rb",like2:"1,4rb",like3:"3,2rb",like4:"4,8rb",like5:"2,7rb",
+ alt_ojol:"Ilustrasi: pengemudi ojol bicara ke kamera",alt_ulasan:"Ilustrasi: teknisi bicara ke kamera",alt_airank:"Ilustrasi: pendiri merek bicara ke kamera",alt_herbal:"Ilustrasi: perempuan memegang segelas jamu",alt_kroog:"Ilustrasi: penumpang kereta bicara ke kamera",
+ o1:"Jam 9 malam. Order masuk. <em>Rp18.000.</em>",o2:"Kelihatannya lumayan. Tapi jemputnya 4 km, antarnya 7 km.",o3:"Dihitung per jam-jalan, order itu <em>rugi.</em>",o4:"Sekarang dia tahu sebelum menekan \"Ambil\".",
+ o_h:"Tahu untung-rugi tiap order, sebelum diambil.",o_p1:"Driver ketik tiga angka: tarif, jarak jemput, jarak antar. Aplikasi menjawab AMBIL atau LEWATI, dengan alasan dalam rupiah.",o_p2:"Tidak menyentuh aplikasi Gojek, Grab, atau Maxim. Akun Anda aman.",
+ o_f1:"jam benar-benar mengantar dari 12 jam narik",o_f2b:"Rp38,5rb",o_f2:"target wajar per jam-jalan",o_f3b:"Struk",o_f3:"tiap order yang ditolak = rupiah yang diselamatkan",o_cta:"Coba Ojol Untung →",o_price:"Rp15.000 / bulan",
+ u_t:"Mesin Ulasan",u1:"Pekerjaannya rapi. Pelanggannya puas.",u2:"Tapi tak ada yang ingat <em>menulis ulasan.</em>",u3:"Begitu pekerjaan selesai, mesin yang memintanya. Lalu menyusul tiga kali.",u4:"Bintang bertambah. Telepon berdering.",
+ u_h:"Ulasan Google yang jalan sendiri.",u_p1:"Untuk usaha jasa: tukang ledeng, AC, bengkel, salon. Tiap pekerjaan selesai, pelanggan otomatis diminta ulasan, lalu diingatkan sampai tiga kali.",u_p2:"Mulai dengan audit gratis: kami tunjukkan posisi bintang Anda dibanding pesaing terdekat, dari data Google Maps yang asli.",
+ u_f1:"usaha nyata sudah kami audit",u_f2:"permintaan + susulan otomatis",u_f3:"ulasan palsu. Hanya pelanggan sungguhan.",u_cta:"Lihat contoh audit →",u_price:"$297 / bulan",
+ a1:"Pelanggan tak lagi sekadar mencari di Google.",a2:"Mereka bertanya ke <em>AI.</em>",a3:"Dan AI menyebut tiga merek. Bukan merek Anda.",a4:"Sekarang Anda tahu kapan, di mana, dan kenapa.",
+ a_h:"Apakah AI menyebut merek Anda?",a_p1:"AIRANK menanyakan pertanyaan pelanggan Anda ke mesin AI setiap hari, lalu mencatat siapa yang disebut dan di urutan berapa.",a_p2:"Bedanya: jawaban mentah AI ditempel di setiap angka. Anda bisa cek sendiri, bukan cuma percaya skor.",
+ a_f1b:"2× / hari",a_f1:"pemindaian otomatis",a_f2b:"Mentah",a_f2:"jawaban asli AI di tiap angka",a_f3:"paket termurah per bulan",a_cta:"Cek merek Anda →",a_price:"$19 · $99 · $299 / bulan",
+ h1:"Nenek tahu akar mana yang direbus. <em>Dan berapa lama.</em>",h2:"Kebanyakan dari kita sudah lupa.",h3:"284 tanaman. Takaran dihitung. Waktu masak sampai ke menit.",h4:"Dan ia memperingatkan <em>sebelum</em> campuran jadi berbahaya.",
+ h_h:"Apotek hidup sedunia, di saku Anda.",h_p1:"Tanaman obat dari berbagai tradisi dunia, setiap nama latin dicek ke GBIF. Tiap tanaman: kandungan, khasiat beserta tingkat bukti, cara olah, takaran, dan siapa yang wajib menghindarinya.",h_p2:"Cek campuran menandai kombinasi berbahaya, peringatan hamil dan anak, serta tabrakan dengan obat dokter. Ini pendidikan, bukan pengobatan: tidak pernah menggantikan dokter.",
+ h_f1:"tanaman obat, nama terverifikasi",h_f2:"ramuan klasik & harian",h_f3b:"Gratis",h_f3:"cek keselamatan, selamanya",h_cta:"Buka Ocklu Herbal →",h_price:"Early access gratis · nanti $5 / bulan",
+ k1:"Setiap menit, dunia mengatakan sesuatu.",k2:"1.000 wartawan AI mendengarkan. <em>Di 39 negara.</em>",k3:"Sebuah cerita baru dihitung kalau beberapa media memberitakannya.",k4:"Angka yang tak ada di sumber <em>dibuang.</em>",
+ k_h:"Kantor berita yang tak pernah tidur.",k_p1:"Wartawan Kroog membaca berita, tren, dan riset sepanjang waktu. Judul yang mirip digabung jadi satu cerita, diberi label berapa media yang memuatnya.",k_p2:"Ringkasan dalam Bahasa Indonesia dan Inggris. Kalau ringkasan memuat angka yang tak ada di sumber, ringkasan itu dibuang. Laporan warga tetap \"belum diverifikasi\" sampai media lain mengonfirmasi.",
+ k_f1:"wartawan AI bergiliran",k_f2:"negara diliput",k_f3:"tiap berita dalam dua bahasa",k_cta:"Baca Kroog →",k_price:"Gratis dibaca",
+ f_h:"Satu pembangun. Lima mesin.<br>Pilih babak Anda.",f_p:"Semua dibangun dan dijalankan oleh OCKLU. Angka di halaman ini berasal dari mesin kami sendiri, bukan karangan.",f_note:"Orang di video ilustrasi adalah gambar AI, bukan pelanggan. Kalimatnya adalah contoh pemakaian.",
+ d_h:"Semua mesin OCKLU",d_p:"Alat dan audit independen, dibangun dan dijalankan oleh satu orang. Yang gratis tidak perlu akun; pekerjaan berbayar harga tetap dengan jaminan tertulis.",
+ d_g1:"Audit untuk bisnis",d_paid39:"Berbayar · mulai $39",d_t1:"Aksesibilitas Web & Keterlihatan AI",d_c1:"Audit WCAG 2.1 AA dan kesiapan crawler AI, harga tetap, hasil dijamin dalam 30 hari.",d_free:"Gratis",d_t2:"Direktori Kesiapan AI",d_c2:"147 toko online dicek apakah asisten AI benar-benar bisa membaca dan merekomendasikannya — lihat milik Anda atau pesaing.",d_c3:"Pantau apakah mesin AI menyebut merek Anda, dengan jawaban mentah di balik tiap angka.",d_c4:"Permintaan ulasan Google otomatis untuk usaha jasa. Lihat contoh audit sungguhan.",
+ d_g2:"Untuk tim yang menulis angka keyakinan",d_freetool:"Alat gratis",d_t5:"Audit Kalibrasi",d_c5:"Unggah CSV ramalan dan hasilnya. Dapatkan skor Brier, skor keahlian terhadap angka dasar dan harga pasar, serta kurva keandalan — dihitung di browser, tidak ada yang diunggah.",
+ d_g3:"Pasar & berita",d_t6:"Radar Harga Koleksi",d_c6:"Apa yang benar-benar bergerak hari ini di pasar kartu koleksi.",d_c7:"Pendukung keputusan trading multi-pasar — sinyal, bukan eksekusi otomatis.",d_c8:"Berita dari 1.000 wartawan AI di 39 negara, dalam Bahasa Indonesia dan Inggris.",
+ d_g4:"Kesehatan & belajar",d_early:"Early access gratis",d_c9:"284 tanaman obat dengan takaran, menit memasak, dan cek keselamatan. Pendidikan, bukan pengobatan.",
+ d_g5:"Alat lokal Indonesia",d_t10:"Buku Kios",d_c10:"Catat penjualan UKM lewat chat, foto, atau Excel. Tanpa login.",d_c11:"Kalkulator untung-rugi tiap order, plus info kebutuhan lokal buat driver."
+};
+const SUBS={
+ en:{ojol:["I used to take every order.","Turns out far pickups lose money.","Now I check first. Three seconds."],
+     ulasan:["Job's done, customer's happy.","But reviews? Nobody writes them.","Now the engine asks for me."],
+     airank:["I asked AI for the best acne cream.","My brand wasn't mentioned at all.","Now I know exactly what to fix."],
+     herbal:["Ginger and turmeric, how long to boil?","It gave me the minutes and the water.","And which mix to avoid with my meds."],
+     kroog:["One story, five outlets, one summary.","And it says how many confirmed it.","My morning news in two minutes."]},
+ id:{ojol:["Dulu semua order gw ambil.","Ternyata yang jemput jauh itu rugi.","Sekarang gw cek dulu, 3 detik."],
+     ulasan:["Pekerjaannya beres, pelanggan senang.","Tapi ulasan? Nggak ada yang nulis.","Sekarang mesinnya yang minta."],
+     airank:["Gw tanya AI: krim jerawat terbaik?","Merek gw nggak disebut sama sekali.","Sekarang gw tahu harus benerin apa."],
+     herbal:["Jahe sama kunyit, direbus berapa lama?","Dijawab lengkap: menit dan airnya.","Plus campuran yang jangan bareng obatku."],
+     kroog:["Satu cerita, lima media, satu ringkasan.","Dan ditulis berapa media yang memuat.","Berita pagiku beres dua menit."]}
+};
+const TITLE={en:"OCKLU — Business Automation in Five Acts",id:"OCKLU — Otomasi Bisnis dalam Lima Babak"};
+const EN={},ENALT={};
+document.querySelectorAll("[data-i18n]").forEach(e=>{EN[e.dataset.i18n]??=e.innerHTML});
+document.querySelectorAll("[data-i18n-alt]").forEach(e=>{ENALT[e.dataset.i18nAlt]=e.alt});
+let L="en";
+function setLang(l){
+  L=l==="id"?"id":"en";document.documentElement.lang=L;document.title=TITLE[L];
+  document.querySelectorAll("[data-i18n]").forEach(e=>{const k=e.dataset.i18n;e.innerHTML=L==="id"&&ID[k]!=null?ID[k]:EN[k]});
+  document.querySelectorAll("[data-i18n-alt]").forEach(e=>{const k=e.dataset.i18nAlt;e.alt=L==="id"&&ID[k]?ID[k]:ENALT[k]});
+  document.querySelectorAll(".lang button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.l===L));
+  document.querySelectorAll("[data-sub] span").forEach(s=>s.textContent=SUBS[L][s.parentElement.dataset.sub][0]);
+}
+let saved=null;try{saved=localStorage.getItem("ocklu.lang")}catch(e){}
+setLang(saved||"en");
+document.querySelectorAll(".lang button").forEach(b=>b.onclick=()=>{setLang(b.dataset.l);try{localStorage.setItem("ocklu.lang",L)}catch(e){}});
+
+/* subtitle UGC bergilir */
+document.querySelectorAll("[data-sub]").forEach(el=>{
+  let i=1;const s=el.querySelector("span");
+  setInterval(()=>{const arr=SUBS[L][el.dataset.sub];s.textContent=arr[i%arr.length];i++},2600);
+});
+
+/* muncul saat terlihat */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("on");io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll(".rv").forEach(e=>io.observe(e));
+
+/* adegan digerakkan scroll */
+const acts=[...document.querySelectorAll(".act")],intro=document.getElementById("intro"),lead=document.getElementById("lead"),atom=document.querySelector(".atom"),prog=document.getElementById("prog");
+let ticking=false;
+function frame(){
+  ticking=false;const vh=innerHeight,y=scrollY;
+  prog.style.width=(y/Math.max(1,document.body.scrollHeight-vh)*100)+"%";
+  const ip=Math.min(1,Math.max(0,y/(intro.offsetHeight-vh)));
+  atom.style.transform=`scale(${1+ip*.5}) rotate(${ip*40}deg)`;atom.parentElement.style.opacity=1-ip*1.3;
+  lead.style.opacity=Math.max(0,Math.min(1,(ip-.35)*3));lead.style.transform=`translateY(${(1-ip)*30}px)`;
+  acts.forEach(a=>{
+    const r=a.getBoundingClientRect(),p=Math.min(1,Math.max(0,-r.top/(a.offsetHeight-vh)));
+    const inView=r.top<vh&&r.bottom>0;a.classList.toggle("on",inView&&p>0.02);
+    if(!inView)return;
+    a.querySelector(".bg").style.transform=`scale(${1.04+p*.16}) translateY(${(p-.5)*-3}%)`;
+    a.querySelector(".chap").style.opacity=Math.max(0,1-p*4);
+    const beats=a.querySelectorAll(".beat"),n=beats.length,idx=Math.min(n-1,Math.floor(Math.max(0,p-.12)/.88*n));
+    beats.forEach((b,i)=>b.classList.toggle("on",p>.12&&i===idx));
+  });
+}
+addEventListener("scroll",()=>{if(!ticking){ticking=true;requestAnimationFrame(frame)}},{passive:true});
+addEventListener("resize",frame);frame();
+</script>
 </body>
 </html>
