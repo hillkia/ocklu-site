@@ -38,7 +38,7 @@ html,body{margin:0;height:100%;overflow:hidden;background:#f3d3ae;color:var(--ti
 button.chip{font:inherit;font-weight:800}
 /* sambutan sinematik */
 #sambut{position:fixed;inset:0;display:grid;place-items:center;text-align:center;
-  background:radial-gradient(ellipse at 50% 60%,rgba(255,240,220,.0),rgba(60,30,10,.55));transition:opacity 1.2s;z-index:5}
+  background:radial-gradient(ellipse at 50% 50%,rgba(60,30,10,.25),rgba(60,30,10,.05) 60%);transition:opacity 1.2s;z-index:5}
 #sambut h1{font-size:clamp(40px,9vw,88px);margin:0;color:#fff;font-weight:900;letter-spacing:1px;
   text-shadow:0 4px 0 #e0702a,0 12px 40px rgba(0,0,0,.35)}
 #sambut p{color:#fff;font-weight:800;font-size:clamp(15px,3.6vw,20px);margin:10px 16px 26px;text-shadow:0 2px 10px rgba(0,0,0,.4)}
@@ -116,6 +116,11 @@ textarea,input[type=text]{width:100%;font:inherit;font-size:17px;font-weight:700
 #joy{position:fixed;left:22px;bottom:46px;width:130px;height:130px;cursor:grab;border-radius:50%;background:rgba(255,255,255,.35);border:3px solid rgba(255,255,255,.85);display:block;z-index:4;touch-action:none;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
 #joy div{position:absolute;left:50%;top:50%;width:46px;height:46px;margin:-23px 0 0 -23px;border-radius:50%;background:#fff;box-shadow:0 4px 12px rgba(0,0,0,.2)}
 #b-masuk{display:none;position:fixed;left:50%;bottom:64px;transform:translateX(-50%);z-index:6;font:inherit;font-size:18px;font-weight:900;border:0;border-radius:999px;padding:14px 24px;cursor:pointer;background:linear-gradient(180deg,#ffb36b,#ff7a2d);color:#fff;box-shadow:0 5px 0 #c95a17,0 12px 26px rgba(0,0,0,.25);white-space:nowrap}
+#vinyet{position:fixed;inset:0;pointer-events:none;z-index:2;background:radial-gradient(ellipse at 50% 45%,transparent 55%,rgba(60,25,5,.28) 100%)}
+.bilah{position:fixed;left:0;right:0;height:11vh;background:#120a06;z-index:6;transition:transform 1s ease;pointer-events:none}
+#bilah-a{top:0}#bilah-b{bottom:0}
+body.main .bilah#bilah-a{transform:translateY(-100%)}body.main .bilah#bilah-b{transform:translateY(100%)}
+#judul-film{position:fixed;left:0;right:0;bottom:15vh;text-align:center;z-index:6;color:#fff;font-weight:900;font-size:clamp(22px,5vw,40px);letter-spacing:2px;text-shadow:0 3px 18px rgba(0,0,0,.6);opacity:0;transition:opacity .8s;pointer-events:none}
 #toast{position:fixed;left:50%;bottom:90px;transform:translateX(-50%);background:var(--tinta);color:#fff;padding:12px 18px;border-radius:999px;
   font-weight:800;z-index:20;opacity:0;transition:opacity .3s;pointer-events:none;max-width:90vw;text-align:center}
 #toast.on{opacity:1}
@@ -139,6 +144,7 @@ body.malam .judul{color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.5)}body.malam .ju
   <button class="chip" id="b-profil" title="Ganti teman">🦊 <span id="b-nama">Tamu</span> · ⭐ <span id="b-bintang">0</span></button>
 </div>
 
+<div id="vinyet"></div><div class="bilah" id="bilah-a"></div><div class="bilah" id="bilah-b"></div><div id="judul-film"></div>
 <div id="sambut">
   <div>
     <h1>Anak Gusti</h1>
@@ -178,7 +184,7 @@ async function cekServer() {
 const alamat = k => MODE === 'awan' ? AWAN + '?k=' + encodeURIComponent(k) : '/api/store/' + k;
 const store = {
   async get(k, d) {
-    if (await cekServer()) { try { const r = await fetch(alamat(k)); if (r.ok) { const j = await r.json(); if (j !== null) { try { localStorage.setItem('ag-cache-' + k, JSON.stringify(j)); } catch {} return j; } return d; } } catch {} }
+    if (await cekServer()) { try { const r = await fetch(alamat(k), sesiGuru && sesiGuru.token ? { headers: { 'x-guru': sesiGuru.token } } : undefined); if (r.ok) { const j = await r.json(); if (j !== null) { try { localStorage.setItem('ag-cache-' + k, JSON.stringify(j)); } catch {} return j; } return d; } } catch {} }
     else { try { const c = localStorage.getItem('ag-cache-' + k); if (c) return JSON.parse(c); } catch {} if (SNAP && SNAP[k] != null) return SNAP[k]; return d; }
     try { const c = localStorage.getItem('ag-cache-' + k); if (c) return JSON.parse(c); } catch {}
     return d;
@@ -270,8 +276,8 @@ const camera = new THREE.PerspectiveCamera(40, 1, 0.1, 400);
   scene.environment = pm.fromScene(env, .03).texture; scene.environmentIntensity = .55;
 }
 const hemi = new THREE.HemisphereLight(0xfff4e6, 0xb88a64, .55); scene.add(hemi);
-const matahari = new THREE.DirectionalLight(0xfff0d8, 2.6);
-matahari.position.set(-22, 38, 18); matahari.castShadow = true;
+const matahari = new THREE.DirectionalLight(0xffd9a8, 2.8);   // cahaya jam emas (hangat, rendah)
+matahari.position.set(-40, 30, 26); matahari.castShadow = true;
 matahari.shadow.mapSize.set(1024, 1024);
 Object.assign(matahari.shadow.camera, { left: -62, right: 62, top: 62, bottom: -62, near: 1, far: 160 });
 matahari.shadow.bias = -0.0004; scene.add(matahari);
@@ -553,7 +559,28 @@ function daftarPos(g) {                                // isi tiap gedung = isi 
     default: return [p('👋', 'Pilih Namaku', () => RUANG.rumah(), '#ff9f5a')];
   }
 }
+const bingkaiGaleri = [];
+function pasangGaleri(g) {       // 6 bingkai di dinding belakang aula Studio
+  const kayu = KILAP(0xd98b4f);
+  for (let i = 0; i < 6; i++) {
+    const x = (i % 3 - 1) * 4.4, y = i < 3 ? 3.4 : 1.6, z = -g.D / 2 + .32;
+    g.aula.add(kotak(3.4, 1.55, .12, kayu, x, y, z - .02, false));
+    const kanvasG = mesh(new THREE.PlaneGeometry(3.1, 1.3), new THREE.MeshStandardMaterial({ color: 0xfff6ea, emissive: 0xffffff, emissiveIntensity: .12 }), x, y, z + .06, false);
+    g.aula.add(kanvasG); bingkaiGaleri.push(kanvasG);
+  }
+  muatGaleri(); setInterval(muatGaleri, 60000);
+}
+async function muatGaleri() {
+  if (!bingkaiGaleri.length) return;
+  const daftar = (await store.get('karya-anak', []) || []).filter(x => x && x.ok && x.img).slice(-6).reverse();
+  bingkaiGaleri.forEach((b, i) => {
+    const k = daftar[i];
+    if (!k) { b.material.map = null; b.material.color.set(0xfff6ea); b.material.needsUpdate = true; return; }
+    new THREE.TextureLoader().load(k.img, tex => { tex.colorSpace = THREE.SRGBColorSpace; b.material.map = tex; b.material.emissiveMap = tex; b.material.color.set(0xffffff); b.material.needsUpdate = true; });
+  });
+}
 function isiAula(g) {
+  if (g.id === 'studio') pasangGaleri(g);
   const W = g.W, D = g.D, daftar = daftarPos(g);
   if (g.id === 'tonton') {
     const layarTex = teksTekstur((x, w, h) => { const gr = x.createLinearGradient(0, 0, w, h); gr.addColorStop(0, '#2b2350'); gr.addColorStop(1, '#4b2a5a'); x.fillStyle = gr; x.fillRect(0, 0, w, h);
@@ -979,9 +1006,13 @@ function putar() {
   });
   // kamera
   if (!mulai) {
-    waktuIntro += dt; const a = waktuIntro * .12;
-    kamPos.lerp(sementara.set(Math.sin(a) * 78, 38 + Math.sin(waktuIntro * .3) * 5, Math.cos(a) * 78), 1 - Math.pow(.02, dt));
-    kamLihat.lerp(sementara.set(0, 3, 0), .05);
+    waktuIntro += dt;
+    // tur sinematik: kamera melayang dari gedung ke gedung, nama gedung muncul seperti judul film
+    const LAMA = 4.2, idx = Math.floor(waktuIntro / LAMA) % GEDUNG.length, u = (waktuIntro % LAMA) / LAMA, g = GEDUNG[idx], a0 = g.sudut * Math.PI / 180 + (u - .5) * .5;
+    const r = JARAK_GEDUNG - 20 + u * 4;
+    kamPos.lerp(sementara.set(Math.cos(a0) * r, 9 + Math.sin(u * Math.PI) * 4, Math.sin(a0) * r), 1 - Math.pow(.15, dt));
+    kamLihat.lerp(sementara.copy(g.aula ? g.aula.position : g.grup.position).setY(3), 1 - Math.pow(.05, dt));
+    const jf = document.getElementById('judul-film'); if (jf) { const t2 = `${g.e} ${g.nama}`; if (jf.textContent !== t2) jf.textContent = t2; jf.style.opacity = u > .15 && u < .85 ? 1 : 0; }
   } else {
     const j = kam.jarak, ax = aku.position.x + Math.sin(kam.yaw) * Math.cos(kam.pitch) * j, ay = Math.sin(kam.pitch) * j + 1.5, az = aku.position.z + Math.cos(kam.yaw) * Math.cos(kam.pitch) * j;
     kamPos.lerp(sementara.set(ax, ay, az), 1 - Math.pow(.0005, dt));
@@ -1003,6 +1034,7 @@ requestAnimationFrame(putar);   // ditunda: ruangEl dibuat lebih bawah
 
 document.getElementById('b-mulai').onclick = () => {
   mulai = true; const s = document.getElementById('sambut'); s.style.opacity = 0; setTimeout(() => s.remove(), 1200);
+  document.body.classList.add('main'); document.getElementById('judul-film').style.opacity = 0;
   document.querySelectorAll('.lbl').forEach(l => l.classList.remove('redup'));
   document.getElementById('kendali').style.display = 'flex';
   const p = document.getElementById('petunjuk'); p.style.opacity = 1; setTimeout(() => p.style.opacity = 0, 8000);
@@ -1215,7 +1247,10 @@ const RUANG = {
     isi(`<h2><span class="e">🎨</span>Studio Kreasi</h2><p class="sub">Pilih latar, ketuk stiker, lalu geser stiker sesukamu. Buat gambar cerita Alkitabmu sendiri!</p>
       <div class="tab" id="latar">${BACKGROUNDS.map((b, i) => `<button data-i="${i}" class="${i === 0 ? 'on' : ''}">${esc(b.name)}</button>`).join('')}</div>
       <div class="studio" id="papan"></div><div class="stiker" id="stiker"></div>
-      <div class="baris" style="margin-top:12px"><button class="tombol putih" id="b-bersih">🧹 Bersihkan</button><button class="tombol hijau" id="b-simpan">💾 Simpan gambar</button></div>`);
+      <div class="baris" style="margin-top:12px"><button class="tombol putih" id="b-bersih">🧹 Bersihkan</button><button class="tombol hijau" id="b-simpan">💾 Simpan gambar</button></div>
+      <div class="kotak" style="margin-top:14px"><b>🖼 Kirim ke Galeri Karya Anak</b><p class="kecil" style="margin:4px 0 8px">Karyamu akan dipajang di dinding Studio setelah dilihat kakak guru. 💛</p>
+        <div class="baris"><input type="text" id="k-judul" maxlength="40" placeholder="Judul karyaku…" style="flex:1;min-width:150px"><button class="tombol" id="b-kirim-karya">📤 Kirim</button></div></div>
+      <details class="kotak"><summary style="font-weight:900;cursor:pointer">🔑 Khusus kakak guru: setujui karya anak</summary><div id="karya-guru" style="margin-top:10px"></div></details>`);
     const papan = panel.querySelector('#papan');
     const latar = () => papan.style.background = grad(BACKGROUNDS[bg].c); latar();
     panel.querySelectorAll('#latar button').forEach(b => b.onclick = () => { bg = +b.dataset.i; panel.querySelectorAll('#latar button').forEach(x => x.classList.toggle('on', x === b)); latar(); });
@@ -1229,6 +1264,38 @@ const RUANG = {
     const st = panel.querySelector('#stiker');
     STICKERS.forEach(e => { const b = document.createElement('button'); b.textContent = e; b.onclick = () => tempel(e, 20 + Math.random() * 60, 20 + Math.random() * 60); st.appendChild(b); });
     panel.querySelector('#b-bersih').onclick = () => papan.innerHTML = '';
+    function lukis(sk = 2) {
+      const r = papan.getBoundingClientRect(), c = document.createElement('canvas'); c.width = r.width * sk; c.height = r.height * sk;
+      const x = c.getContext('2d'), g = x.createLinearGradient(0, 0, c.width, c.height); g.addColorStop(0, BACKGROUNDS[bg].c[0]); g.addColorStop(1, BACKGROUNDS[bg].c[1]);
+      x.fillStyle = g; x.fillRect(0, 0, c.width, c.height); x.font = (46 * sk) + 'px serif'; x.textAlign = 'center'; x.textBaseline = 'middle';
+      papan.querySelectorAll('.st').forEach(s => x.fillText(s.textContent, parseFloat(s.style.left) / 100 * c.width, parseFloat(s.style.top) / 100 * c.height));
+      return c;
+    }
+    panel.querySelector('#b-kirim-karya').onclick = async () => {
+      if (!aktif) return toast('Pilih namamu dulu di Selamat Datang 🏠');
+      if (!papan.querySelector('.st')) return toast('Tempel stiker dulu ya 🎨');
+      const c = lukis(480 / papan.getBoundingClientRect().width), img = c.toDataURL('image/jpeg', .72);
+      let daftar = await store.get('karya-anak', []); if (!Array.isArray(daftar)) daftar = [];
+      daftar.push({ id: newId(), by: aktif.id, name: aktif.name, judul: panel.querySelector('#k-judul').value.trim().slice(0, 40), img, t: Date.now(), ok: false });
+      await store.set('karya-anak', daftar.slice(-30)); toast('Terkirim! Tunggu kakak guru memajangnya 🖼');
+    };
+    const kg = panel.querySelector('#karya-guru');
+    async function gambarKaryaGuru() {
+      if (!sesiGuru) return formMasukGuru(kg, gambarKaryaGuru);
+      const daftar = await store.get('karya-anak', []); kg.innerHTML = Array.isArray(daftar) && daftar.length ? '' : '<p class="kecil">Belum ada karya.</p>';
+      [...(daftar || [])].reverse().forEach(k => {
+        const d = document.createElement('div'); d.className = 'pos';
+        d.innerHTML = `<div class="kepala">${esc(k.name)}<i>${k.ok ? '✅ dipajang' : '⏳ menunggu'}</i></div>${k.img ? `<img src="${esc(k.img)}" style="width:100%;border-radius:12px;margin-top:6px">` : ''}<p>${esc(k.judul || '')}</p>
+          <div class="baris">${k.ok ? '' : '<button class="tombol hijau" data-a="ok" style="font-size:14px;padding:8px 14px">✅ Pajang</button>'}<button class="tombol putih" data-a="hapus" style="font-size:14px;padding:8px 14px">🗑 Hapus</button></div>`;
+        d.querySelectorAll('button').forEach(b => b.onclick = async () => {
+          const t = await store.get('karya-anak', []), arr = Array.isArray(t) ? t : [];
+          const baru = b.dataset.a === 'ok' ? arr.map(x => x.id === k.id ? { ...x, ok: true } : x) : arr.filter(x => x.id !== k.id);
+          await store.set('karya-anak', baru); toast(b.dataset.a === 'ok' ? 'Dipajang di Galeri 🖼' : 'Dihapus'); muatGaleri(); gambarKaryaGuru();
+        });
+        kg.appendChild(d);
+      });
+    }
+    panel.querySelector('details').addEventListener('toggle', gambarKaryaGuru, { once: true });
     panel.querySelector('#b-simpan').onclick = () => {
       const r = papan.getBoundingClientRect(), c = document.createElement('canvas'); c.width = r.width * 2; c.height = r.height * 2;
       const x = c.getContext('2d'), g = x.createLinearGradient(0, 0, c.width, c.height); g.addColorStop(0, BACKGROUNDS[bg].c[0]); g.addColorStop(1, BACKGROUNDS[bg].c[1]);
