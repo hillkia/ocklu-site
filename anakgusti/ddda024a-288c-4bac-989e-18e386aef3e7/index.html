@@ -699,7 +699,7 @@ addEventListener('resize', ukur); ukur();
 /* pad joystick — selalu tampil (HP & laptop) */
 const joy = { x: 0, y: 0, id: null };
 const joyEl = document.getElementById('joy'), joyBola = joyEl.firstElementChild;
-joyEl.addEventListener('pointerdown', e => { e.stopPropagation(); joy.id = e.pointerId; joyEl.setPointerCapture(e.pointerId); geserJoy(e); });
+joyEl.addEventListener('pointerdown', e => { e.stopPropagation(); joy.id = e.pointerId; try { joyEl.setPointerCapture(e.pointerId); } catch {} geserJoy(e); });
 joyEl.addEventListener('pointermove', e => { if (e.pointerId === joy.id) geserJoy(e); });
 const lepasJoy = () => { joy.id = null; joy.x = joy.y = 0; joyBola.style.transform = ''; };
 joyEl.addEventListener('pointerup', lepasJoy); joyEl.addEventListener('pointercancel', lepasJoy);
@@ -718,7 +718,7 @@ document.getElementById('z-bantu').onclick = () => { petunjukEl.style.opacity = 
 
 /* seret = putar kamera, ketuk = jalan ke situ, cubit/roda = zoom */
 const titik = new Map(); let seret = null, jarakCubit = 0, pindah = 0;
-kanvas.addEventListener('pointerdown', e => { titik.set(e.pointerId, e); seret = { x: e.clientX, y: e.clientY, yaw: kam.yaw, pitch: kam.pitch }; pindah = 0; kanvas.setPointerCapture(e.pointerId); });
+kanvas.addEventListener('pointerdown', e => { titik.set(e.pointerId, e); seret = { x: e.clientX, y: e.clientY, yaw: kam.yaw, pitch: kam.pitch }; pindah = 0; try { kanvas.setPointerCapture(e.pointerId); } catch {} });
 kanvas.addEventListener('pointermove', e => {
   if (!titik.has(e.pointerId)) { const h = sasaranDi(e); kanvas.style.cursor = h ? 'pointer' : 'grab'; disorot = h && h.g; return; }
   titik.set(e.pointerId, e);
