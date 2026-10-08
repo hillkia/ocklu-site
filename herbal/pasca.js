@@ -7,10 +7,10 @@
   var TX={
     id:{judul:'Early access',gratis:'Gratis sekarang',nanti:'Nanti $5 / bulan',isi:'Semua fitur terbuka selama masa early access. Saat berbayar dimulai, fitur keselamatan (cek campuran berbahaya, pantangan hamil/anak, tabrakan obat) tetap gratis selamanya.',
         dapat:['Racikan tersimpan tanpa batas','Arsip ramuan harian','Unduh & cetak tanpa batas','Peta lengkap + daftar negara','Fitur baru duluan'],
-        email:'Email kamu',daftar:'Kabari saya',ok:'Terima kasih. Kamu akan dikabari sebelum harga berlaku.',salah:'Alamat email belum benar.',gagal:'Belum terkirim. Coba lagi sebentar.',privasi:'Email hanya dipakai untuk kabar Ocklu Herbal. Tidak dijual.'},
+        email:'Email kamu',daftar:'Kabari saya',ok:'Terima kasih. Kamu akan dikabari sebelum harga berlaku.',salah:'Alamat email belum benar.',gagal:'Belum terkirim. Coba lagi sebentar.',privasi:'Email hanya dipakai untuk kabar Ocklu Herbal. Tidak dijual.',dukung:'Dukung & kunci harga $5/bulan →',dukungJ:'Mau ikut membiayai proyek ini sekarang? Kamu dapat kode lisensi untuk fitur Premium saat mulai berlaku.'},
     en:{judul:'Early access',gratis:'Free right now',nanti:'Later $5 / month',isi:'Every feature is open during early access. When paid plans start, safety features (dangerous-mix check, pregnancy/child warnings, drug interactions) stay free forever.',
         dapat:['Unlimited saved formulas','Daily remedy archive','Unlimited export & print','Full map + country lists','New features first'],
-        email:'Your email',daftar:'Notify me',ok:'Thank you. You will hear from us before pricing starts.',salah:'That email address doesn’t look right.',gagal:'Not sent yet. Please try again shortly.',privasi:'Your email is only used for Ocklu Herbal news. Never sold.'}
+        email:'Your email',daftar:'Notify me',ok:'Thank you. You will hear from us before pricing starts.',salah:'That email address doesn’t look right.',gagal:'Not sent yet. Please try again shortly.',privasi:'Your email is only used for Ocklu Herbal news. Never sold.',dukung:'Support & lock in $5/month →',dukungJ:'Want to fund the project now? You get a license key for Premium features as they switch on.'}
   };
   var bhs=function(){try{return localStorage.getItem('oh_bhs')||'en'}catch(e){return 'en'}};
   var x=function(){return TX[bhs()==='id'?'id':'en']};
@@ -27,7 +27,8 @@
       '<section class="blok" style="border:0"><div class="kotak baik"><b>✓ '+esc(t.gratis)+'</b><div class="mini">'+esc(t.nanti)+'</div></div>'+
       '<div class="kotak"><div class="mini" style="margin-bottom:8px">'+esc(t.isi)+'</div><ul class="daftar">'+t.dapat.map(function(d){return '<li>'+esc(d)+'</li>'}).join('')+'</ul></div>'+
       '<form class="kotak" id="formAntre" style="display:flex;gap:8px;flex-wrap:wrap"><input class="t" id="emailAntre" type="email" required autocomplete="email" placeholder="'+esc(t.email)+'" style="flex:1;min-width:180px">'+
-      '<button class="btn utama" type="submit">'+esc(t.daftar)+'</button><div class="mini" id="hasilAntre" style="width:100%">'+esc(t.privasi)+'</div></form></section>';
+      '<button class="btn utama" type="submit">'+esc(t.daftar)+'</button><div class="mini" id="hasilAntre" style="width:100%">'+esc(t.privasi)+'</div></form>'+
+      '<div class="kotak"><div class="mini" style="margin-bottom:8px">'+esc(t.dukungJ)+'</div><a class="btn" style="display:block;text-align:center;text-decoration:none" href="https://hillkia.gumroad.com/l/herbal" target="_blank" rel="noopener">'+esc(t.dukung)+'</a></div></section>';
     document.getElementById('formAntre').onsubmit=function(e){
       e.preventDefault();var em=(document.getElementById('emailAntre').value||'').trim(),h=document.getElementById('hasilAntre');
       if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em)){h.textContent=t.salah;return}
