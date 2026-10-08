@@ -164,23 +164,28 @@ import * as THREE from 'three';
 
 /* ============ PENYIMPANAN (sama persis dengan AntiokhiaKids) ============ */
 // Mode publik (link HP di ocklu.com): tidak ada server → isi aman dari snapshot.json, sisanya tersimpan di HP sendiri
-let ADA_SERVER = null, SNAP = null;
+// Server: (1) server laptop/WiFi (/api) kalau ada, (2) server awan Supabase untuk link HP, (3) snapshot kalau dua-duanya mati
+const AWAN = 'https://njghzieuuopukuagrswu.supabase.co/functions/v1/anakgusti-api';
+let ADA_SERVER = null, MODE = 'snapshot', SNAP = null;
 async function cekServer() {
   if (ADA_SERVER !== null) return ADA_SERVER;
-  try { const r = await fetch('/api/status'); ADA_SERVER = r.ok && (r.headers.get('content-type') || '').includes('json'); } catch { ADA_SERVER = false; }
+  try { const r = await fetch('/api/status'); if (r.ok && (r.headers.get('content-type') || '').includes('json')) MODE = 'lokal'; } catch {}
+  if (MODE !== 'lokal') { try { const r = await fetch(AWAN + '?aksi=status'); if (r.ok) MODE = 'awan'; } catch {} }
+  ADA_SERVER = MODE !== 'snapshot';
   if (!ADA_SERVER) { try { SNAP = await (await fetch('snapshot.json')).json(); } catch { SNAP = {}; } }
   return ADA_SERVER;
 }
+const alamat = k => MODE === 'awan' ? AWAN + '?k=' + encodeURIComponent(k) : '/api/store/' + k;
 const store = {
   async get(k, d) {
-    if (await cekServer()) { try { const r = await fetch('/api/store/' + k); if (r.ok) { const j = await r.json(); if (j !== null) { try { localStorage.setItem('ag-cache-' + k, JSON.stringify(j)); } catch {} return j; } return d; } } catch {} }
+    if (await cekServer()) { try { const r = await fetch(alamat(k)); if (r.ok) { const j = await r.json(); if (j !== null) { try { localStorage.setItem('ag-cache-' + k, JSON.stringify(j)); } catch {} return j; } return d; } } catch {} }
     else { try { const c = localStorage.getItem('ag-cache-' + k); if (c) return JSON.parse(c); } catch {} if (SNAP && SNAP[k] != null) return SNAP[k]; return d; }
     try { const c = localStorage.getItem('ag-cache-' + k); if (c) return JSON.parse(c); } catch {}
     return d;
   },
   async set(k, v) {
     try { localStorage.setItem('ag-cache-' + k, JSON.stringify(v)); } catch {}
-    if (ADA_SERVER) try { await fetch('/api/store/' + k, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(v) }); } catch {}
+    if (ADA_SERVER) try { await fetch(alamat(k), { method: 'POST', headers: { 'Content-Type': 'application/json', ...(sesiGuru && sesiGuru.token ? { 'x-guru': sesiGuru.token } : {}) }, body: JSON.stringify(v) }); } catch {}
   },
 };
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -797,7 +802,13 @@ function formMasukGuru(area, lalu) {
   area.innerHTML = `<input type="text" id="g-nama" maxlength="20" placeholder="Nama kakak guru"><input type="text" id="g-pin" inputmode="numeric" maxlength="6" placeholder="PIN" style="margin-top:8px">
     <div class="baris" style="margin-top:8px"><button class="tombol hijau" id="g-masuk">🔓 Masuk</button></div>`;
   area.querySelector('#g-masuk').onclick = async () => {
-    const staff = await store.get('staff', {}), n = area.querySelector('#g-nama').value.trim(), pin = area.querySelector('#g-pin').value.trim();
+    const n = area.querySelector('#g-nama').value.trim(), pin = area.querySelector('#g-pin').value.trim();
+    await cekServer();
+    if (MODE === 'awan') {
+      try { const r = await fetch(AWAN + '?aksi=masuk', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name: n, pin }) }); const j = await r.json();
+        if (!j.ok) return toast('Nama atau PIN salah 🙈'); sesiGuru = { name: j.name, role: j.role, token: j.token }; return lalu(); } catch { return toast('Server sedang tidak bisa dihubungi 📶'); }
+    }
+    const staff = await store.get('staff', {});
     const m = ((staff && staff.members) || []).find(x => x.name.toLowerCase() === n.toLowerCase() && x.pin === pin);
     if (!m) return toast('Nama atau PIN salah 🙈');
     sesiGuru = { name: m.name, role: m.role }; lalu();
@@ -815,7 +826,7 @@ async function bicaraGuru(g, daftar, ke = 'guru') {
     <div class="baris" style="margin-bottom:14px"><button class="tombol" id="b-mulai-pos">${esc(daftar[0].e)} ${esc(daftar[0].judul)}</button></div>
     <div class="kotak"><b>💬 Ngobrol dengan ${esc(judul)}</b><p class="kecil" style="margin:4px 0 0">Tulis pertanyaan atau ceritamu. ${esc(judul)} akan membalas sendiri — nanti balasannya muncul di sini. 💛</p>
       <div id="obrol"></div>
-      ${ADA_SERVER ? '' : `<p class="kecil" style="margin-top:10px;color:#c95a17">📶 Mengirim pesan ke ${esc(judul)} hanya bisa lewat Anak Gusti di WiFi gereja / sekolah minggu. Di link ini pesanmu belum bisa sampai.</p>`}
+      ${ADA_SERVER ? '' : `<p class="kecil" style="margin-top:10px;color:#c95a17">📶 Server sedang tidak bisa dihubungi. Coba lagi nanti ya.</p>`}
       <textarea ${ADA_SERVER ? '' : 'disabled'} id="tulis-guru" rows="2" maxlength="240" placeholder="${ke === 'gembala' ? 'Shalom, aku mau cerita…' : 'Kak, aku mau tanya…'}" style="margin-top:10px"></textarea>
       <div class="baris" style="justify-content:flex-end;margin-top:8px"><button class="tombol hijau" id="b-kirim-guru">Kirim 💌</button></div></div>
     <details class="kotak"><summary style="font-weight:900;cursor:pointer">🔑 Khusus ${ke === 'gembala' ? 'Bapak Gembala' : 'kakak guru'}: balas pesan anak-anak</summary><div id="guru-balas" style="margin-top:10px"></div></details>`);
@@ -832,7 +843,7 @@ async function bicaraGuru(g, daftar, ke = 'guru') {
     if (ubah) await store.set('tanya-guru', semua);
   }
   panel.querySelector('#b-kirim-guru').onclick = async () => {
-    if (!ADA_SERVER) return toast('Pesan hanya bisa dikirim lewat WiFi gereja 📶');
+    if (!ADA_SERVER) return toast('Server sedang tidak bisa dihubungi 📶');
     if (!aktif) return toast('Pilih namamu dulu di Selamat Datang 🏠');
     const teks = panel.querySelector('#tulis-guru').value.trim(); if (!teks) return toast('Tulis dulu ya 😊');
     let semua = await store.get('tanya-guru', []); if (!Array.isArray(semua)) semua = [];
@@ -1027,17 +1038,7 @@ const RUANG = {
     });
     const area = panel.querySelector('#guru-area');
     function gambarGuru() {
-      if (!sesiGuru) {
-        area.innerHTML = `<input type="text" id="g-nama" maxlength="20" placeholder="Nama kakak guru"><input type="text" id="g-pin" inputmode="numeric" maxlength="6" placeholder="PIN" style="margin-top:8px">
-          <div class="baris" style="margin-top:8px"><button class="tombol hijau" id="g-masuk">🔓 Masuk</button></div>`;
-        area.querySelector('#g-masuk').onclick = async () => {
-          const staff = await store.get('staff', {}), n = area.querySelector('#g-nama').value.trim(), pin = area.querySelector('#g-pin').value.trim();
-          const m = ((staff && staff.members) || []).find(x => x.name.toLowerCase() === n.toLowerCase() && x.pin === pin);
-          if (!m) return toast('Nama atau PIN salah 🙈');
-          sesiGuru = { name: m.name }; gambarGuru();
-        };
-        return;
-      }
+      if (!sesiGuru) return formMasukGuru(area, gambarGuru);
       area.innerHTML = `<p class="kecil">Masuk sebagai Kak ${esc(sesiGuru.name)}. Tempel tautan YouTube video sekolah minggu yang sudah kakak tonton dan periksa.</p>
         <input type="text" id="v-url" placeholder="https://youtu.be/…"><input type="text" id="v-judul" maxlength="60" placeholder="Judul untuk anak-anak" style="margin-top:8px">
         <div class="baris" style="margin-top:8px"><button class="tombol hijau" id="v-tambah">➕ Tambah</button></div><div id="v-daftar"></div>`;
@@ -1133,7 +1134,7 @@ const RUANG = {
     let posts = await store.get(R.key, []); if (!Array.isArray(posts)) posts = [];
     isi(`<h2><span class="e">⛪</span>Ruang Doa</h2><p class="sub">Tempat berbagi bersama teman-teman sekolah minggu.</p>
       <div class="tab">${['doa', 'tolong', 'kesaksian'].map(k => `<button data-k="${k}" class="${k === jenis ? 'on' : ''}">${{ doa: '🙏 Doa', tolong: '🤝 Tolong', kesaksian: '🌟 Kesaksian' }[k]}</button>`).join('')}</div>
-      ${ADA_SERVER ? '' : '<p class="kecil" style="color:#c95a17">📶 Di link ini tulisanmu hanya tersimpan di HP-mu sendiri. Untuk berbagi dengan teman-teman, buka Anak Gusti di WiFi gereja.</p>'}
+      ${ADA_SERVER ? '' : '<p class="kecil" style="color:#c95a17">📶 Server sedang tidak bisa dihubungi — tulisanmu tersimpan di HP-mu dulu.</p>'}
       <div class="kotak"><b>${esc(R.hint)}</b><textarea id="tulis" rows="3" maxlength="240" placeholder="${esc(R.ph)}" style="margin-top:8px"></textarea>
       <div class="baris" style="justify-content:flex-end;margin-top:8px"><button class="tombol hijau" id="b-kirim">Kirim 💌</button></div></div><div id="daftar"></div>`);
     panel.querySelectorAll('.tab button').forEach(b => b.onclick = () => RUANG.doa(b.dataset.k));
