@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Panduan Warung Rame</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: satu kolom bacaan ±70 karakter; tab dua dokumen menempel di atas; kotak teks WA dengan tombol Salin */
+:root{--bg:#e9ecea;--surface:#fff;--surface2:#dfe4e1;--ink:#161b1a;--muted:#56605c;--line:#c9d0cc;--teal:#22707e;--oranye:#c8501c;--good:#2e8b57;
+  --display:"Archivo","Arial Narrow",Arial,sans-serif;--body:"IBM Plex Sans",system-ui,sans-serif;--mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121615;--surface:#1a201e;--surface2:#232b28;--ink:#e8e4da;--muted:#9aa29d;--line:#313a37;--teal:#56aebd;--oranye:#f07a45;--good:#5cc08b;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121615;--surface:#1a201e;--surface2:#232b28;--ink:#e8e4da;--muted:#9aa29d;--line:#313a37;--teal:#56aebd;--oranye:#f07a45;--good:#5cc08b;color-scheme:dark}
+*{box-sizing:border-box}html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;padding-inline:16px;padding-block:calc(12px + env(safe-area-inset-top,0px)) 56px}
+.wrap{max-width:760px;margin:0 auto}
+.kepala{display:grid;gap:4px;padding-block:8px 14px}
+.kepala .label{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.tab{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:flex;gap:6px;padding-block:8px;background:var(--bg);border-bottom:1px solid var(--line)}
+.tab button{font:600 .92rem var(--body);padding:.45rem .9rem;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+.tab button[aria-selected="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+h1,h2,h3,h4{font-family:var(--display);font-stretch:80%;line-height:1.1;text-wrap:balance;margin:1.4em 0 .4em}
+h2{font-size:clamp(1.7rem,6vw,2.3rem);font-weight:900;margin-top:.6em}h3{font-size:1.45rem;font-weight:800}h4{font-size:1.15rem;font-weight:700}
+p,ul,ol{margin:.5em 0}li{margin:.2em 0}
+a{color:var(--teal);word-break:break-word}
+code{font-family:var(--mono);font-size:.88em;background:var(--surface2);padding:.05em .3em;border-radius:3px}
+hr{border:0;border-top:1px solid var(--line);margin:2em 0}
+blockquote{margin:.8em 0;padding:.6em 1em;border-left:4px solid var(--oranye);background:var(--surface)}
+.tabel{overflow-x:auto;margin:.8em 0;border:1px solid var(--line);border-radius:4px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:.9rem}th,td{text-align:left;padding:.5rem .6rem;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:var(--mono);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}tr:last-child td{border-bottom:0}
+.kotak{position:relative;margin:.8em 0;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--good);border-radius:4px}
+.kotak pre{margin:0;padding:44px 14px 14px;white-space:pre-wrap;word-break:break-word;font-family:var(--body);font-size:.95rem;line-height:1.55}
+.salin{position:absolute;top:8px;right:8px;font:600 .85rem var(--body);padding:.35rem .8rem;border-radius:4px;border:1px solid var(--good);background:var(--good);color:#fff;cursor:pointer}
+.salin.ok{background:transparent;color:var(--good)}
+button:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+.kaki{margin-top:2em;font-size:.82rem;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="kepala"><span class="label">OCKLU · Warung Rame · panduan tim</span></header>
+<nav class="tab" role="tablist"><button role="tab" aria-selected="true" data-t="teks-wa">Teks WA</button><button role="tab" aria-selected="false" data-t="naskah">Naskah ajak warung</button></nav>
+<section id="teks-wa" class="dok"><h2>Teks WA Warung Rame — siap tempel</h2>
+<p>9 Okt 2026 · Semua teks di dalam kotak tinggal disalin ke WhatsApp. Isi yang di dalam [kurung siku] sebelum dikirim.</p>
+<p>Link yang dipakai:</p>
+<ul><li>Penjelasan bersuara + tanya jawab Bang Jibi: <a href="https://ocklu.com/warung/penjelasan/" rel="noopener">https://ocklu.com/warung/penjelasan/</a></li><li>Halaman untuk pemilik warung: <a href="https://ocklu.com/warung/" rel="noopener">https://ocklu.com/warung/</a></li><li>Etalase pembeli: <a href="https://ocklu.com/warung/etalase.html" rel="noopener">https://ocklu.com/warung/etalase.html</a></li></ul>
+<hr>
+<h3>1. Ajakan untuk koordinator</h3>
+<p>Sesuaikan sapaan ("Bang", "gw") dengan koordinatornya. Bonus Rp50 ribu/minggu masih usulan; kalau belum yakin, ganti dengan "bonus koordinator dibahas pas ketemu".</p>
+<div class="kotak"><button class="salin" data-k="k1">Salin</button><pre id="k1">Assalamualaikum Bang, apa kabar?
+
+Gw lagi mulai program baru OCKLU namanya *Warung Rame*. Singkatnya: ojol pangkalan bantu warung dekat pangkalan dapat pembeli baru, potongannya cuma 7% dari harga menu (aplikasi biasanya 20–30%). Ojol dapat bagian dari tiap pembeli yang dia bawa.
+
+Biar jelas, gw bikinin penjelasan 2 menit pakai suara, tinggal klik:
+👉 https://ocklu.com/warung/penjelasan/
+
+Di bawahnya ada tombol tanya jawab. Kalau ada yang belum jelas, ketik aja pertanyaannya, nanti dijawab langsung.
+
+Peran Abang sebagai koordinator:
+1. Pilih 3 ojol yang bisa dipercaya di wilayah Abang.
+2. Pastikan tiap ojol pegang 2 warung yang dia kenal (total 6 warung buat uji coba).
+3. Jadi tempat ojol &amp; warung nanya kalau ada masalah.
+
+Abang nggak pegang uang sama sekali. Uang makanan langsung ke QRIS warung, potongannya langsung ke OCKLU. Selama uji coba ada bonus buat koordinator (usulan Rp50 ribu/minggu kalau 6 warung jalan).
+
+Jujur ya Bang, ini masih uji coba, belum bisa janji ramai. Kita coba kecil dulu, lihat hasilnya bareng.
+
+Info buat pemilik warung: https://ocklu.com/warung/
+
+Kalau Abang oke, kabarin gw ya. Kita ketemuan bahas siapa 3 ojolnya.</pre></div>
+<hr>
+<h3>2. Ajakan untuk ojol</h3>
+<p>Ganti [NAMA KOORDINATOR]. Kalimat "bulan pertama komisi belum jalan" sengaja ditulis terang supaya ojol tidak kecewa di minggu ke-3.</p>
+<div class="kotak"><button class="salin" data-k="k2">Salin</button><pre id="k2">Bang, gw mau ngajak Abang ikut program baru OCKLU namanya *Warung Rame*. Buat nambah uang di sela narik, bukan janji kaya ya 😄
+
+Intinya:
+1. Abang pilih 1–2 warung dekat pangkalan yang Abang kenal. Itu jatah Abang, nggak ada rebutan.
+2. Warung tempel stiker QR berisi kode Abang.
+3. Abang ajak teman pangkalan makan di situ, pasang QR di status WA.
+4. Tiap pembeli lewat kode Abang, Abang dapat bagian. Contoh nasi 15 ribu → bagian Abang Rp735. Berlaku 3 bulan per pembeli, tiap dia belanja lagi.
+5. Kalau nanti fitur antar dibuka, ongkirnya 100% buat Abang.
+
+Yang penting:
+• Abang nggak pegang uang makanan, pembeli bayar langsung ke QRIS warung.
+• Nggak pasang aplikasi baru, nggak nyentuh aplikasi ojol.
+• Ke warung pakai jaket tanpa logo aplikasi.
+
+Jujur ya Bang: bulan pertama warung gratis, jadi komisi Abang juga baru jalan mulai bulan kedua. Ini masih uji coba, cuma 3 ojol dulu.
+
+Penjelasan 2 menit pakai suara, tinggal klik:
+👉 https://ocklu.com/warung/penjelasan/
+Ada tombol tanya jawab di bawahnya, tanya aja yang belum jelas.
+
+Kalau Abang minat, bales &quot;IKUT&quot; ya Bang. Nanti koordinator [NAMA KOORDINATOR] yang dampingi.</pre></div>
+<hr>
+<h3>3. Ajakan untuk pemilik warung (dikirim ojol pembina)</h3>
+<p>Isi [NAMA PEMILIK] dan [NAMA OJOL]; ganti "Bu" ke "Pak" kalau pemiliknya laki-laki. "Cukup balas WA ini" dipakai selama nomor WA OCKLU belum ada; setelah ada, ganti dengan nomor resmi.</p>
+<div class="kotak"><button class="salin" data-k="k3">Salin</button><pre id="k3">Assalamualaikum Bu [NAMA PEMILIK], saya [NAMA OJOL], ojol yang biasa mangkal dekat warung Ibu.
+
+Saya mau kenalin program OCKLU Warung Rame. Programnya bantu warung dapat pembeli baru dari komunitas ojol, tanpa ribet daftar seperti di aplikasi.
+
+Bedanya:
+• Potongan cuma 7% dari harga menu (aplikasi biasanya 20–30%), dan HANYA untuk pembeli yang datang lewat kode saya.
+• Pelanggan lama Ibu tidak kena potongan.
+• Pembeli bayar makanan langsung ke QRIS Ibu.
+• Bulan pertama gratis.
+• Tidak perlu KTP, rekening, atau pasang aplikasi. Boleh berhenti kapan saja.
+
+Penjelasan lengkap dan hitungannya bisa Ibu lihat di sini:
+👉 https://ocklu.com/warung/
+
+Di halaman itu ada kalkulator, Ibu bisa coba isi harga menu sendiri dan lihat berapa yang tetap di warung.
+
+Jujur ya Bu, programnya baru mulai, saya belum bisa janji ramai. Tapi saya bantu bawa teman pangkalan dan orang sekitar ke warung Ibu.
+
+Kalau Ibu berminat, cukup balas WA ini. Nanti saya bantu kirim alamat, menu, dan harganya. Kalau ada yang mau ditanyakan, saya mampir langsung juga boleh.
+
+Terima kasih, Bu 🙏</pre></div>
+<hr>
+<h3>3b. Ringkasan untuk pemilik warung (setelah ngobrol langsung)</h3>
+<p>Dikirim ojol kalau pemilik warung minta tulisannya. Naskah obrolan lengkap ada di <i>Naskah Ajak Warung Pertama.md</i>.</p>
+<div class="kotak"><button class="salin" data-k="k4">Salin</button><pre id="k4">Assalamualaikum Bu [NAMA], saya [NAMA OJOL] yang tadi mampir.
+
+Ringkasnya program OCKLU Warung Rame:
+1. Bulan pertama gratis.
+2. Setelah itu potongan 7% dari harga menu, HANYA untuk pembeli yang datang lewat kode saya, 3 bulan per pembeli. Pelanggan lama tidak kena.
+3. Pembeli bayar makanan langsung ke QRIS Ibu.
+4. Tidak perlu aplikasi, KTP, atau rekening. Boleh berhenti kapan saja.
+
+Kalau Ibu mau coba, cukup kirim ke WA OCKLU: lokasi warung, menu dan harga, promo kalau ada, dan QRIS warung.
+
+Lengkapnya: ocklu.com/warung
+Terima kasih, Bu.</pre></div>
+<hr>
+<h3>4. Laporan koordinator lewat WA (sementara, selama uji coba 6 warung)</h3>
+<p>Koordinator belum bisa membuka dasbor Claude (hanya untuk anggota organisasi). Selama uji coba, laporan masuk lewat WA ke owner, lalu ditempel ke Claude untuk diisikan ke Dasbor Warung Rame.</p>
+<h4>4a. Pesan pengantar (kirim sekali)</h4>
+<div class="kotak"><button class="salin" data-k="k5">Salin</button><pre id="k5">Bang, buat uji coba Warung Rame, laporannya lewat WA ke gw aja ya. Ada 2 format:
+
+1) DAFTAR WARUNG BARU — kirim tiap ada warung yang setuju ikut.
+2) REKAP RABU — kirim tiap Rabu malam, satu pesan untuk semua warung di wilayah Abang.
+
+Angka &quot;pembeli baru&quot; dan &quot;porsi&quot; dihitung dari chat WA yang masuk pakai kode ojol, bukan tebakan. Kalau belum tahu, tulis &quot;?&quot; aja, jangan dikarang.
+
+Formatnya gw kirim di bawah, tinggal salin dan isi.</pre></div>
+<h4>4b. Format daftar warung baru</h4>
+<div class="kotak"><button class="salin" data-k="k6">Salin</button><pre id="k6">#WARUNG_BARU
+Nama warung: 
+Pemilik (panggilan): 
+Area (RW/kelurahan): 
+Patokan: 
+Jam buka: 
+Kode ojol: 
+Hari 1 program (tgl): 
+Menu = harga:
+- 
+- 
+- 
+Promo (kalau ada): 
+Pemilik setuju tampil di ocklu.com? (YA/BELUM): </pre></div>
+<p>Contoh terisi (contoh karangan, bukan warung sungguhan):</p>
+<div class="kotak"><button class="salin" data-k="k7">Salin</button><pre id="k7">#WARUNG_BARU
+Nama warung: Bubur Ayam Bu Sri
+Pemilik (panggilan): Bu Sri
+Area (RW/kelurahan): Kukusan RW 05
+Patokan: depan masjid Al-Ikhlas
+Jam buka: 06.00–10.00
+Kode ojol: ANDI-01
+Hari 1 program (tgl): 13 Okt 2026
+Menu = harga:
+- Bubur ayam = 12000
+- Bubur spesial = 15000
+- Teh manis = 3000
+Promo (kalau ada): teh tawar gratis buat pembeli baru
+Pemilik setuju tampil di ocklu.com? (YA/BELUM): BELUM</pre></div>
+<h4>4c. Format rekap Rabu</h4>
+<div class="kotak"><button class="salin" data-k="k8">Salin</button><pre id="k8">#REKAP_RABU minggu ke-__ (tgl __)
+Koordinator: 
+
+== [Nama warung] · [kode ojol]
+Pembeli baru: 
+Pembeli kembali: 
+Porsi terjual lewat kode:
+- [menu] x [jumlah]
+- [menu] x [jumlah]
+Diantar: 
+Keluhan / catatan: 
+
+== [Nama warung] · [kode ojol]
+Pembeli baru: 
+...</pre></div>
+<p>Contoh terisi (contoh karangan):</p>
+<div class="kotak"><button class="salin" data-k="k9">Salin</button><pre id="k9">#REKAP_RABU minggu ke-1 (tgl 15 Okt)
+Koordinator: Pak Joko
+
+== Bubur Ayam Bu Sri · ANDI-01
+Pembeli baru: 6
+Pembeli kembali: 1
+Porsi terjual lewat kode:
+- Bubur ayam x 5
+- Bubur spesial x 2
+- Teh manis x 4
+Diantar: 0
+Keluhan / catatan: pagi jam 7 antre, Bu Sri minta voucher dibatasi
+
+== Warteg Mas Udin · ANDI-01
+Pembeli baru: ?
+Pembeli kembali: ?
+Porsi terjual lewat kode: belum dihitung
+Diantar: 0
+Keluhan / catatan: stiker QR sobek, minta ganti</pre></div>
+<h4>Cara owner memakai laporan</h4>
+<ul><li>Tempel #WARUNG_BARU atau #REKAP_RABU ke Claude. Claude mengisikannya ke Dasbor Warung Rame; tahap, peringatan, dan komisi 7% terhitung sendiri.</li><li>Tanda "?" berarti belum dihitung, bukan nol. Minggu itu tampil sebagai "angka belum diisi".</li><li>Warung baru dicentang <b>Tampil</b> di etalase ocklu.com hanya kalau kolom setuju tampil berisi YA.</li></ul></section><section id="naskah" class="dok" hidden><h2>Naskah Ajak Warung Pertama — Warung Rame OCKLU</h2>
+<p>9 Okt 2026 · Untuk ojol pembina · Sesuai keputusan owner 9 Okt: potongan 7% dari harga menu, bulan pertama gratis, makanan dibayar ke QRIS warung, antar menyusul.</p>
+<p>Naskah ini menggantikan bagian naskah dan tanya-jawab di <i>Alur Warung Anti-Bingung</i> (yang masih memakai Rp1.000 per kunjungan). Prinsip "5 Tidak", jam datang, dan lembar kesepakatan di sana tetap berlaku.</p>
+<hr>
+<h3>Sebelum berangkat (owner)</h3>
+<ul><li>☐ Nomor WA Business OCKLU sudah ada. <b>Tanpa nomor ini demo tidak bisa jalan</b>: stiker QR dan pesan pembeli butuh nomor itu.</li><li>☐ Kartu QR DEMO dicetak (berisi nomor WA OCKLU + kode ojol).</li><li>☐ 2 lembar kesepakatan per warung (1 untuk warung).</li><li>☐ Ojol pembina sudah baca naskah ini dan latihan sekali di depan koordinator.</li></ul>
+<h3>Siapa, kapan, bagaimana</h3>
+<div class="tabel"><table><thead><tr><th></th><th>Aturan</th></tr></thead><tbody><tr><td>Siapa</td><td>Ojol yang <b>sudah langganan</b> di warung itu. Sendirian, bukan rombongan.</td></tr><tr><td>Penampilan</td><td>Jaket dan helm <b>tanpa logo aplikasi</b>. Bilang: "Ini komunitas ojol, bukan program aplikasi."</td></tr><tr><td>Kapan</td><td>Jam sepi warung. Kalau ada yang antre, beli saja, ngobrolnya lain hari.</td></tr><tr><td>Caranya</td><td>Beli dulu, bayar, baru ngobrol. Paling lama 5 menit.</td></tr></tbody></table></div>
+<hr>
+<h3>Versi hafalan (±1 menit)</h3>
+<blockquote><p>"Bu Sri, maaf ganggu sebentar, boleh dua menit? Saya Andi, yang biasa sarapan bubur di sini.</p><p>Bu, Ibu pernah ikut aplikasi pesan-antar? <i>(dengarkan dulu)</i> Potongannya lumayan ya, Bu, biasanya dua puluh sampai tiga puluh persen, daftarnya juga ribet.</p><p>Saya ikut komunitas ojol namanya OCKLU. Programnya baru mulai, jadi saya jujur aja: <b>saya belum bisa janji ramai.</b></p><p>Caranya gini, Bu. Saya ajak teman pangkalan sama orang sekitar sini beli di sini. Ibu cuma tempel stiker kecil. Pembeli dari saya scan stikernya, kirim WA, terus tunjukin layarnya ke Ibu. Bayar makanannya langsung ke QRIS Ibu sendiri, bukan ke saya.</p><p>Saya contohin ya, Bu. <i>(scan, kirim, tunjukkan layar)</i> Nah, begini yang nanti Ibu lihat.</p><p>Bulan pertama gratis. Ibu nggak bayar apa-apa, nggak pasang aplikasi, nggak kasih KTP atau rekening. Kalau lanjut, potongannya cuma <b>tujuh persen dari harga menu</b>, dan cuma buat pembeli yang datang lewat kode saya, tiga bulan per orang. Nasi lima belas ribu, potongannya seribu lima puluh. Pelanggan lama Ibu nggak kena sama sekali.</p><p>Daftarnya cukup kirim lewat WA: alamat, menu, harga, sama promo kalau ada. Nggak ada dokumen.</p><p>Nggak cocok? Stiker saya copot, nggak ada denda.</p><p>Ini kertasnya, Bu, dibaca dulu aja. Besok saya mampir lagi."</p></blockquote>
+<h3>Langkah demi langkah</h3>
+<div class="tabel"><table><thead><tr><th>Langkah</th><th>Yang diucapkan / dilakukan</th><th>Jangan</th></tr></thead><tbody><tr><td>1. Pembuka</td><td>Sebut nama, sebut biasa beli apa, minta izin 2 menit.</td><td>Langsung jualan.</td></tr><tr><td>2. Tanya dulu</td><td>"Pernah ikut aplikasi pesan-antar, Bu?" "Paling ramai jam berapa?" Dengarkan.</td><td>Bilang "warung Ibu sepi".</td></tr><tr><td>3. Mengaku jujur</td><td>"Programnya baru mulai. Saya belum bisa janji ramai."</td><td>Menyebut angka pembeli.</td></tr><tr><td>4. Tawaran</td><td>Stiker + pembeli bayar ke QRIS Ibu + potongan 7% hanya pembeli berkode.</td><td>Menjelaskan sistem di belakang.</td></tr><tr><td>5. Demo</td><td>Pakai HP ojol sendiri: scan kartu QR DEMO, kirim, tunjukkan layar.</td><td>Pakai HP warung.</td></tr><tr><td>6. Ajakan</td><td>"Coba sebulan aja, gratis. Nggak cocok, saya copot."</td><td>Minta tanda tangan hari itu.</td></tr><tr><td>7. Penutup</td><td>Serahkan lembar kesepakatan. "Besok saya mampir."</td><td>Memaksa jawab sekarang.</td></tr></tbody></table></div>
+<p><b>Kalau warung bilang "ya":</b> minta Ibu kirim ke WA OCKLU: pin lokasi, nama warung, foto warung, daftar menu dan harga, promo (kalau ada), dan QRIS warung. Sepakati hari tempel stiker dan bonus kecil untuk pembeli pertama (teh tawar, kerupuk, atau yang paling murah buat warung).</p>
+<hr>
+<h3>Hitungan untuk ditunjukkan ke warung</h3>
+<div class="tabel"><table><thead><tr><th>Harga menu</th><th>Potongan aplikasi (sekitar 20–30%)</th><th>Potongan OCKLU 7%</th></tr></thead><tbody><tr><td>Rp10.000</td><td>Rp2.000–Rp3.000</td><td>Rp700</td></tr><tr><td>Rp15.000</td><td>Rp3.000–Rp4.500</td><td>Rp1.050</td></tr><tr><td>Rp20.000</td><td>Rp4.000–Rp6.000</td><td>Rp1.400</td></tr></tbody></table></div>
+<p>Kisaran 20–30% dari berita dan panduan merchant 2026 (Kontan, Bisnis.com, HitungCerdas); angka pasti tergantung kontrak tiap warung. Potongan OCKLU hanya untuk pembeli lewat kode ojol, tiga bulan per pembeli. Halaman lengkap dan kalkulatornya: <b>ocklu.com/warung</b>.</p>
+<hr>
+<h3>Tanya-jawab keberatan</h3>
+<div class="tabel"><table><thead><tr><th>#</th><th>Warung bertanya</th><th>Jawaban pendek &amp; jujur</th></tr></thead><tbody><tr><td>1</td><td>"Ini penipuan ya?"</td><td>"Wajar curiga, Bu. Saya nggak minta uang, KTP, rekening, atau kode OTP. Uang pembeli masuk ke QRIS Ibu sendiri. Kalau ada yang ngaku OCKLU minta itu semua, itu penipu."</td></tr><tr><td>2</td><td>"Nanti saya bayar berapa?"</td><td>"Bulan pertama nol. Setelah itu tujuh persen dari harga menu, cuma buat pembeli yang lewat kode saya. Nasi lima belas ribu, potongannya seribu lima puluh. Rekapnya dikirim lewat WA tiap minggu."</td></tr><tr><td>3</td><td>"Pelanggan lama saya kena?"</td><td>"Nggak, Bu. Cuma yang kirim WA dari stiker. Kalau pelanggan lama ikut scan, bilang aja, dicoret."</td></tr><tr><td>4</td><td>"Kalau nggak ada yang datang?"</td><td>"Ibu nggak bayar apa-apa. Nol pembeli, nol potongan."</td></tr><tr><td>5</td><td>"Uang pembeli ke siapa?"</td><td>"Langsung ke QRIS Ibu. Saya nggak pegang uang makanan sama sekali."</td></tr><tr><td>6</td><td>"Potongannya bayar ke mana?"</td><td>"Ke QRIS OCKLU, sesuai rekap WA. Jangan pernah titip ke saya atau ke koordinator."</td></tr><tr><td>7</td><td>"Saya sudah pakai aplikasi, harus keluar?"</td><td>"Nggak, Bu. Tetap pakai aja. Ini tambahan buat pembeli sekitar yang lewat komunitas ojol, potongannya lebih kecil."</td></tr><tr><td>8</td><td>"Bisa diantar?"</td><td>"Bisa, nanti setelah fitur antarnya dibuka buat warung Ibu. Ongkirnya dibayar pembeli ke ojol yang antar, nggak dipotong dari Ibu. Uang makanannya tetap ke QRIS Ibu."</td></tr><tr><td>9</td><td>"Ojolnya dapat apa?"</td><td>"Terus terang, Bu: dari potongan tujuh persen itu, tujuh puluh persennya buat ojol yang bawa pembeli. Saya dapat kalau Ibu dapat pembeli."</td></tr><tr><td>10</td><td>"Saya nggak bisa main HP."</td><td>"Nggak perlu, Bu. Yang pegang HP pembelinya. Ibu cukup lihat layarnya. Kirim menu boleh saya bantu fotoin."</td></tr><tr><td>11</td><td>"Data saya buat apa?"</td><td>"Buat tampil di etalase: nama warung, patokan, menu, harga, promo. Nama Ibu dan nomor HP Ibu nggak ditampilkan. Kalau berhenti, boleh minta dihapus."</td></tr><tr><td>12</td><td>"Kalau mau berhenti?"</td><td>"Bilang ke saya atau balas WA OCKLU 'BERHENTI'. Stiker saya copot. Nggak ada denda."</td></tr><tr><td>13</td><td>"Bonus teh gratis rugi dong."</td><td>"Ibu pilih yang paling murah, sekali per pembeli baru. Pembeli itu tadinya nggak datang sama sekali."</td></tr></tbody></table></div>
+<h3>Kalimat yang dilarang</h3>
+<ul><li>"Dijamin ramai" / "pasti untung" / angka pembeli apa pun.</li><li>"Ini program Gojek/Grab" atau memakai atribut aplikasi.</li><li>"Bayarnya ke saya aja dulu."</li><li>Menjelekkan aplikasi lain. Cukup bandingkan potongannya.</li></ul>
+<h3>Versi WA (kalau warung minta dikirim tulisan)</h3>
+<div class="kotak"><button class="salin" data-k="k1">Salin</button><pre id="k1">Assalamualaikum Bu Sri, saya Andi yang tadi mampir.
+
+Ringkasnya program OCKLU Warung Rame:
+1. Bulan pertama gratis.
+2. Setelah itu potongan 7% dari harga menu, HANYA untuk pembeli yang datang lewat kode saya, 3 bulan per pembeli. Pelanggan lama tidak kena.
+3. Pembeli bayar makanan langsung ke QRIS Ibu.
+4. Tidak perlu aplikasi, KTP, atau rekening. Boleh berhenti kapan saja.
+
+Kalau Ibu mau coba, cukup kirim ke WA OCKLU: lokasi warung, menu dan harga, promo kalau ada, dan QRIS warung.
+
+Lengkapnya: ocklu.com/warung
+Terima kasih, Bu.</pre></div></section>
+<p class="kaki">Tekan <b>Salin</b> di kotak hijau, lalu tempel ke WhatsApp. Isi bagian dalam [kurung siku] sebelum dikirim. Penjelasan bersuara: <a href="../penjelasan/">ocklu.com/warung/penjelasan</a>.</p>
+</div>
+<script>
+document.querySelectorAll('.tab button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tab button').forEach(x=>x.setAttribute('aria-selected',x===b));document.querySelectorAll('.dok').forEach(s=>s.hidden=s.id!==b.dataset.t);window.scrollTo(0,0)});
+document.querySelectorAll('.salin').forEach(b=>b.onclick=async()=>{const t=document.getElementById(b.dataset.k).textContent;
+  try{await navigator.clipboard.writeText(t);b.textContent='Tersalin';b.classList.add('ok');setTimeout(()=>{b.textContent='Salin';b.classList.remove('ok')},2000)}
+  catch{const r=document.createRange();r.selectNodeContents(document.getElementById(b.dataset.k));const s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Tekan salin di HP'}});
+</script>
+</body>
+</html>
