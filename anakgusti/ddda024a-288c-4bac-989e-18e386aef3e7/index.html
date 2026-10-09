@@ -573,7 +573,8 @@ function aulaGedung(g) {
   g.grup.position.set(0, 0, -D / 2 - 4.8); g.grup.rotation.set(0, 0, 0); g.grup.scale.setScalar(1.25); scene.remove(g.grup); aula.add(g.grup);
   if (g.id === 'ayat') {
     const tt = teksTekstur((x, w, h) => { x.fillStyle = '#fffaf3'; x.fillRect(0, 0, w, h); x.fillStyle = '#eadbc8'; x.font = '600 70px Fredoka, sans-serif'; x.textAlign = 'center'; x.textBaseline = 'middle'; x.fillText('ocklu', w / 2, h / 2 + 4); }, 256, 96);
-    const tanda = mesh(new THREE.PlaneGeometry(1, .38), new THREE.MeshStandardMaterial({ map: tt }), 0, .3, -D / 2 - 4.8 - 5.95, false); tanda.rotation.y = Math.PI; aula.add(tanda);
+    // di badan menara (garis putih), sisi belakang — kecil, baru terbaca kalau di-zoom
+    const tanda = mesh(new THREE.PlaneGeometry(1.1, .42), new THREE.MeshStandardMaterial({ map: tt }), 0, 3.4, -D / 2 - 4.8 - 2.74, false); tanda.rotation.y = Math.PI; aula.add(tanda);
   }
   aula.userData.g = g; kenaKlik.push(aula);
   aula.updateMatrixWorld(true);
