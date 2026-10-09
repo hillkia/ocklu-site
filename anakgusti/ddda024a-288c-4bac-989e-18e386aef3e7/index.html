@@ -588,8 +588,18 @@ function aulaGedung(g) {
   g.pintuLuar = ke(0, D / 2 + 2); g.pintuDalam = ke(0, D / 2 - 1.5); g.pintu = g.pintuLuar;
   const [FL, FR, BL, BR, DL, DR] = [ke(-W / 2, D / 2), ke(W / 2, D / 2), ke(-W / 2, -D / 2), ke(W / 2, -D / 2), ke(-pintu / 2, D / 2), ke(pintu / 2, D / 2)];
   segDinding.push([BL, BR], [BL, FL], [BR, FR], [FL, DL], [DR, FR]);
-  const mk = ke(0, -D / 2 - 4.8); penghalang.push({ x: mk.x, z: mk.z, r: 5.5 });
+  const mk = ke(0, -D / 2 - 4.8); penghalang.push({ x: mk.x, z: mk.z, r: 5.5, gedung: true });
   g.lokal = p => aula.worldToLocal(p.clone());
+}
+// gedung padat: dinding aula & bentuk gedung di belakangnya tidak bisa ditembus — masuk hanya lewat pintu
+function tabrakGedung(p, r = .5) {
+  for (const [a, b] of segDinding) {
+    const ex = b.x - a.x, ez = b.z - a.z, L = ex * ex + ez * ez || 1;
+    const t = Math.max(0, Math.min(1, ((p.x - a.x) * ex + (p.z - a.z) * ez) / L));
+    const cx = a.x + ex * t, cz = a.z + ez * t, dx = p.x - cx, dz = p.z - cz, d = Math.hypot(dx, dz);
+    if (d < r) { const n = d > 1e-4 ? d : 1; p.x = cx + (d > 1e-4 ? dx / n : -ez / Math.sqrt(L)) * r; p.z = cz + (d > 1e-4 ? dz / n : ex / Math.sqrt(L)) * r; }
+  }
+  for (const h of penghalang) { if (!h.gedung) continue; const dx = p.x - h.x, dz = p.z - h.z, d = Math.hypot(dx, dz), rr = h.r + r; if (d < rr && d > 1e-4) { p.x = h.x + dx / d * rr; p.z = h.z + dz / d * rr; } }
 }
 function diAula(p) { for (const g of GEDUNG) { const l = g.lokal(p); if (Math.abs(l.x) < g.W / 2 && Math.abs(l.z) < g.D / 2) return g; } return null; }
 
@@ -1130,7 +1140,8 @@ function putar() {
   if (n > .01) {
     const v = 5.5 * lari * Math.min(1, n > 1.2 ? 1 : n);
     aku.position.x += mx / n * v * dt; aku.position.z += mz / n * v * dt;
-    const dk = Math.hypot(aku.position.x, aku.position.z); if (dk > 64) { aku.position.x *= 64 / dk; aku.position.z *= 64 / dk; }   // tidak ada penghalang, hanya batas kota
+    const dk = Math.hypot(aku.position.x, aku.position.z); if (dk > 64) { aku.position.x *= 64 / dk; aku.position.z *= 64 / dk; }
+    tabrakGedung(aku.position);   // tidak ada penghalang, hanya batas kota
     const ar = Math.atan2(mx, mz); let d = ar - aku.rotation.y; d = Math.atan2(Math.sin(d), Math.cos(d)); aku.rotation.y += d * Math.min(1, dt * 14);
   }
   if (!aku.userData.duduk) ayunkan(aku, n > .01 ? lari : 0, dt);
@@ -1158,7 +1169,7 @@ function putar() {
     if (!m.tujuan) { m.tunggu -= dt; ayunkan(m.o, 0, dt); if (m.tunggu <= 0) m.tujuan = titikAcak(); return; }
     sementara.subVectors(m.tujuan, m.o.position); const d = sementara.length();
     if (d < .3) { m.tujuan = null; m.tunggu = 1 + Math.random() * 4; return; }
-    m.o.position.addScaledVector(sementara.normalize(), 2.2 * dt);
+    m.o.position.addScaledVector(sementara.normalize(), 2.2 * dt); tabrakGedung(m.o.position);
     m.o.rotation.y = Math.atan2(sementara.x, sementara.z); ayunkan(m.o, .6, dt);
   });
   // kamera
