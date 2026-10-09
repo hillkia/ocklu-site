@@ -4,6 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <title>Anak Gusti</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
 <meta name="description" content="Kota mini sekolah minggu: masuk ke gedung-gedung untuk membaca cerita Alkitab, ayat hafalan, berdoa bersama, dan bermain.">
 <meta name="theme-color" content="#f6d9b5">
 <meta name="robots" content="noindex,nofollow">
@@ -131,6 +133,49 @@ footer{position:fixed;bottom:10px;left:0;right:0;text-align:center;font-weight:9
 body.malam .judul{color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.5)}body.malam .judul small{color:#e9dcff}
 @media (max-width:520px){.judul{font-size:18px}.lbl{font-size:12px;padding:5px 10px 5px 6px}.lbl b{font-size:15px}.teks{font-size:18px}}
 @media (prefers-reduced-motion:reduce){.panel{animation:none}}
+
+/* === RASA: angka persis dari bingkai video acuan (desain/token.json) — bukan karangan === */
+:root{--kertas:#fbf1e6;--tinta:#5e301f;--lembut:#956f67;--oranye:#d8611d;--oranye2:#e59553;--hijau:#6b8f3a;--ungu:#956f67;
+  --netral1:#ddae92;--netral2:#f2d5bc;--garis:rgba(94,48,31,.16);--kaca:#fbf1e6;--bayang:0 28px 60px rgba(94,48,31,.28)}
+html,body{font-family:"Atkinson Hyperlegible",system-ui,sans-serif;color:var(--tinta)}
+.judul,.panel h2,#sambut h1,.tombol,.mulai,#b-masuk,.kartu span,.profil,#toast,.chip,.tab button,.pilihan button,#judul-film{font-family:"Fredoka","Atkinson Hyperlegible",system-ui,sans-serif}
+.judul{font-weight:600;font-size:21px;text-shadow:none;letter-spacing:0}
+.judul small{font-family:"Atkinson Hyperlegible",sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--lembut)}
+.chip{background:var(--kertas);backdrop-filter:none;-webkit-backdrop-filter:none;border:1.5px solid var(--netral1);box-shadow:none;font-weight:500;color:var(--tinta)}
+.panel{background:var(--kertas);border:0;border-radius:22px;box-shadow:var(--bayang)}
+.panel h2{font-weight:600;font-size:24px}
+.panel .sub{color:var(--lembut);font-weight:400}
+.tombol{background:var(--tinta);color:var(--kertas);box-shadow:none;border-radius:14px;font-weight:500;padding:12px 18px}
+.tombol.hijau{background:var(--hijau);box-shadow:none}.tombol.ungu{background:var(--lembut);box-shadow:none}
+.tombol.putih{background:transparent;color:var(--tinta);border:1.5px solid var(--netral1);box-shadow:none}
+.tombol:active{transform:translateY(1px)}
+.kotak,.pos{background:#fff9f2;border:1.5px solid var(--netral2)}
+.kartu{box-shadow:none;border-radius:16px}
+.tab button{border:1.5px solid var(--netral1);background:transparent;font-weight:500}
+.tab button.on{background:var(--tinta);border-color:var(--tinta);color:var(--kertas)}
+.pilihan button{border:1.5px solid var(--netral2);background:#fff9f2;font-weight:500}
+.ayat{color:var(--tinta)}.ref{color:var(--oranye)}
+#b-masuk{background:var(--oranye);box-shadow:0 2px 0 #9c4512,0 14px 30px rgba(94,48,31,.25);border-radius:16px;font-weight:600}
+#toast{background:var(--tinta);color:var(--kertas);border-radius:14px;font-weight:500}
+#joy{background:rgba(251,241,230,.5);border:2px solid var(--kertas);backdrop-filter:none;-webkit-backdrop-filter:none}
+#joy div{background:var(--kertas)}
+#zoom button{background:var(--kertas);border:1.5px solid var(--netral1);box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none;color:var(--tinta);font-size:22px}
+#petunjuk{background:var(--kertas);border:1.5px solid var(--netral1);box-shadow:none}
+footer{font-family:"Fredoka",sans-serif;font-weight:500;letter-spacing:.08em;text-shadow:0 1px 8px rgba(0,0,0,.35)}
+/* kartu judul pembuka seperti film */
+#sambut{background:radial-gradient(ellipse at 50% 55%,rgba(30,12,4,.38),rgba(30,12,4,.08) 65%)}
+#sambut h1{font-weight:600;color:var(--kertas);letter-spacing:.01em;text-shadow:0 2px 40px rgba(0,0,0,.45)}
+#sambut .kecil-film{color:var(--netral2);font-size:12px;letter-spacing:.32em;text-transform:uppercase;margin:0 0 14px;text-shadow:0 1px 10px rgba(0,0,0,.5)}
+#sambut p{font-weight:400;color:var(--kertas);text-shadow:0 1px 12px rgba(0,0,0,.5)}
+.mulai{background:var(--kertas);color:var(--tinta);box-shadow:none;border-radius:14px;padding:14px 36px;font-weight:600;font-size:18px}
+.mulai:active{transform:translateY(1px);box-shadow:none}
+#judul-film{font-family:"Fredoka",sans-serif;font-weight:500;letter-spacing:.06em;color:var(--kertas)}
+/* butiran film tipis */
+#butir{position:fixed;inset:-50%;pointer-events:none;z-index:3;opacity:.07;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation:butir .9s steps(4) infinite}
+@keyframes butir{0%{transform:translate(0,0)}25%{transform:translate(-3%,2%)}50%{transform:translate(2%,-3%)}75%{transform:translate(-2%,-1%)}}
+@media (prefers-reduced-motion:reduce){#butir{animation:none}}
 </style>
 </head>
 <body>
@@ -138,18 +183,19 @@ body.malam .judul{color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.5)}body.malam .ju
 <div id="label"></div>
 
 <div id="atas">
-  <div class="judul">✝️ Anak Gusti<small>Kota kecil sekolah minggu</small></div>
+  <div class="judul">Anak Gusti<small>Sekolah Minggu Antiokhia</small></div>
   <span class="chip" id="lokasi" style="display:none">🏙 Kota Anak Gusti</span>
   <button class="chip" id="b-waktu" title="Ganti siang / senja">☀️</button>
   <button class="chip" id="b-profil" title="Ganti teman">🦊 <span id="b-nama">Tamu</span> · ⭐ <span id="b-bintang">0</span></button>
 </div>
 
-<div id="vinyet"></div><div class="bilah" id="bilah-a"></div><div class="bilah" id="bilah-b"></div><div id="judul-film"></div>
+<div id="vinyet"></div><div id="butir"></div><div class="bilah" id="bilah-a"></div><div class="bilah" id="bilah-b"></div><div id="judul-film"></div>
 <div id="sambut">
   <div>
+    <p class="kecil-film">Sekolah Minggu Antiokhia</p>
     <h1>Anak Gusti</h1>
-    <p>Selamat datang di kota kecil kita!<br>Jalan-jalan dan masuk ke gedung-gedungnya. 🏠</p>
-    <button class="mulai" id="b-mulai">Ayo Masuk Kota ✨</button>
+    <p>Jalan-jalan, masuk gedung, dengar cerita,<br>dan ngobrol sama kakak guru.</p>
+    <button class="mulai" id="b-mulai">Mulai</button>
   </div>
 </div>
 
@@ -161,7 +207,7 @@ body.malam .judul{color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.5)}body.malam .ju
 
 <div id="ruang" role="dialog" aria-modal="true"><div class="tirai"></div><div class="panel" id="panel"></div></div>
 <div id="toast"></div>
-<footer>Jesus is God ✝️</footer>
+<footer>Jesus is God</footer>
 
 <script src="data.js"></script>
 <script type="importmap">{ "imports": { "three": "./three.module.min.js" } }</script>
@@ -217,7 +263,7 @@ function pitaProfil() {
   document.getElementById('b-profil').firstChild.textContent = (aktif ? aktif.avatar : '🙂') + ' ';
 }
 async function tambahBintang(n, alasan) {
-  if (!aktif) { toast('Pilih namamu di Selamat Datang supaya bintangmu tersimpan ⭐'); return; }
+  if (!aktif) { toast('Pilih namamu di Selamat Datang supaya bintangmu tersimpan'); return; }
   // ambil versi terbaru dulu supaya tidak menimpa bintang dari HP lain
   const terbaru = await store.get('profiles', []);
   if (Array.isArray(terbaru)) profiles = terbaru.map(fixProfile);
@@ -264,6 +310,13 @@ const scene = new THREE.Scene();
 const LANGIT_SIANG = new THREE.Color(0xf7dcbc), LANGIT_SENJA = new THREE.Color(0x3a2a55);
 scene.background = LANGIT_SIANG.clone();
 scene.fog = new THREE.Fog(scene.background, 75, 160);
+const langit = new THREE.Mesh(new THREE.SphereGeometry(320, 32, 16), new THREE.ShaderMaterial({
+  side: THREE.BackSide, depthWrite: false, fog: false,
+  uniforms: { atas: { value: new THREE.Color(0xf2d5bc) }, bawah: { value: new THREE.Color(0xe59553) } },
+  vertexShader: 'varying float h; void main(){ h = normalize(position).y; gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0); }',
+  fragmentShader: 'uniform vec3 atas; uniform vec3 bawah; varying float h; void main(){ gl_FragColor = vec4(mix(bawah, atas, smoothstep(-0.02, 0.5, h)), 1.0); \n#include <tonemapping_fragment>\n#include <colorspace_fragment>\n}'
+}));
+scene.add(langit);
 const camera = new THREE.PerspectiveCamera(40, 1, 0.1, 400);
 
 // pantulan lembut untuk kaca & plastik mengkilap (dibuat sendiri, tanpa file luar)
@@ -559,7 +612,44 @@ function daftarPos(g) {                                // isi tiap gedung = isi 
     default: return [p('👋', 'Pilih Namaku', () => RUANG.rumah(), '#ff9f5a')];
   }
 }
-const bingkaiGaleri = [];
+const bingkaiGaleri = [], papanKarya = [];
+function spriteTeks(teks, warna = '#5e301f') {      // label nama kecil di atas kepala
+  const t = teksTekstur((x, w, h) => { x.fillStyle = 'rgba(251,241,230,.92)'; x.beginPath(); x.roundRect(4, 8, w - 8, h - 16, 24); x.fill();
+    x.fillStyle = warna; x.font = '600 30px Fredoka, sans-serif'; x.textAlign = 'center'; x.textBaseline = 'middle'; x.fillText(teks, w / 2, h / 2 + 1); }, 256, 64);
+  const sp = new THREE.Sprite(new THREE.SpriteMaterial({ map: t, transparent: true, depthWrite: false })); sp.scale.set(2.2, .55, 1); return sp;
+}
+function namaiTeman() {                             // teman yang jalan-jalan = anak-anak sungguhan dari daftar profil
+  const ps = (profiles || []).filter(p => p && p.name && (!aktif || p.id !== aktif.id));
+  teman.forEach((m, i) => { const p = ps[i]; if (!p || m.o.userData.label) return; const sp = spriteTeks(`${p.avatar || ''} ${p.name}`.trim()); sp.position.y = 2.7; m.o.add(sp); m.o.userData.label = sp; });
+}
+function papanAlunAlun() {                          // papan karya anak di alun-alun, menghadap tempat mulai
+  const a = SUDUT_AWAL, grp = new THREE.Group(); grp.position.set(Math.cos(a) * 9, 0, Math.sin(a) * 9); grp.rotation.y = Math.atan2(Math.cos(a), Math.sin(a)); scene.add(grp);
+  const kayu = KILAP(0x5e301f), krem = KILAP(0xfbf1e6);
+  grp.add(kotak(.25, 4.2, .25, kayu, -4.3, 2.1, 0)); grp.add(kotak(.25, 4.2, .25, kayu, 4.3, 2.1, 0));
+  grp.add(kotak(8.9, 2.6, .18, krem, 0, 2.6, -.05));
+  const judul = teksTekstur((x, w, h) => { x.fillStyle = '#d8611d'; x.beginPath(); x.roundRect(0, 0, w, h, 26); x.fill(); x.fillStyle = '#fbf1e6'; x.font = '600 58px Fredoka, sans-serif'; x.textAlign = 'center'; x.textBaseline = 'middle'; x.fillText('Karya Anak-anak', w / 2, h / 2 + 2); }, 640, 96);
+  grp.add(mesh(new THREE.PlaneGeometry(4.4, .66), new THREE.MeshStandardMaterial({ map: judul, emissive: 0xffffff, emissiveMap: judul, emissiveIntensity: .2 }), 0, 4.2, .05, false));
+  for (let i = 0; i < 3; i++) { const f = mesh(new THREE.PlaneGeometry(2.6, 1.8), new THREE.MeshStandardMaterial({ color: 0xf2d5bc, emissive: 0xffffff, emissiveIntensity: .1 }), (i - 1) * 2.85, 2.55, .06, false); grp.add(f); papanKarya.push(f); }
+  muatGaleri();
+}
+const catatanKesaksian = [];
+function papanKesaksian(g) {                        // kesaksian anak-anak tertempel di dinding Ruang Doa
+  for (let i = 0; i < 4; i++) { const n = mesh(new THREE.PlaneGeometry(2.6, 2), new THREE.MeshStandardMaterial({ color: 0xfff3c4, emissive: 0xffffff, emissiveIntensity: .1 }), (i - 1.5) * 3, 3.1, -g.D / 2 + .3, false); n.rotation.z = (i % 2 ? .04 : -.03); g.aula.add(n); catatanKesaksian.push(n); }
+  muatKesaksian(); setInterval(muatKesaksian, 60000);
+}
+async function muatKesaksian() {
+  const posts = (await store.get('room-kesaksian', []) || []).filter(p => p && p.text).slice(-4).reverse();
+  catatanKesaksian.forEach((n, i) => {
+    const p = posts[i];
+    const t = teksTekstur((x, w, h) => {
+      x.fillStyle = ['#fff3c4', '#ffe3d1', '#e7f3d6', '#fde0ea'][i]; x.fillRect(0, 0, w, h);
+      x.fillStyle = '#5e301f'; x.font = '600 26px Fredoka, sans-serif'; x.fillText(p ? p.name : 'Kesaksian', 22, 44);
+      x.font = '22px "Atkinson Hyperlegible", sans-serif'; const kata = (p ? p.text : 'Tulis kesaksianmu di Ruang Doa, nanti tertempel di sini.').split(' '); let b = '', y = 86;
+      for (const k of kata) { if (x.measureText(b + k).width > w - 44) { x.fillText(b, 22, y); b = ''; y += 30; if (y > h - 20) break; } b += k + ' '; } if (y <= h - 20) x.fillText(b, 22, y);
+    }, 320, 246);
+    n.material.map = t; n.material.emissiveMap = t; n.material.color.set(0xffffff); n.material.needsUpdate = true;
+  });
+}
 function pasangGaleri(g) {       // 6 bingkai di dinding belakang aula Studio
   const kayu = KILAP(0xd98b4f);
   for (let i = 0; i < 6; i++) {
@@ -570,17 +660,25 @@ function pasangGaleri(g) {       // 6 bingkai di dinding belakang aula Studio
   }
   muatGaleri(); setInterval(muatGaleri, 60000);
 }
+let ajakanTex = null;
+function teksAjakan() {
+  if (!ajakanTex) ajakanTex = teksTekstur((x, w, h) => { x.fillStyle = '#f2d5bc'; x.fillRect(0, 0, w, h); x.strokeStyle = '#ddae92'; x.setLineDash([14, 10]); x.lineWidth = 6; x.strokeRect(14, 14, w - 28, h - 28);
+    x.fillStyle = '#956f67'; x.textAlign = 'center'; x.font = '600 34px Fredoka, sans-serif'; x.fillText('Tempat karyamu', w / 2, h / 2 - 8); x.font = '24px "Atkinson Hyperlegible", sans-serif'; x.fillText('Buat di Studio Kreasi, lalu Kirim', w / 2, h / 2 + 30); }, 420, 290);
+  return ajakanTex;
+}
 async function muatGaleri() {
-  if (!bingkaiGaleri.length) return;
+  if (!bingkaiGaleri.length && !papanKarya.length) return;
   const daftar = (await store.get('karya-anak', []) || []).filter(x => x && x.ok && x.img).slice(-6).reverse();
+  papanKarya.forEach((b, i) => { const k = daftar[i]; if (!k) { b.material.map = b.material.emissiveMap = teksAjakan(); b.material.color.set(0xffffff); b.material.needsUpdate = true; } else new THREE.TextureLoader().load(k.img, tex => { tex.colorSpace = THREE.SRGBColorSpace; b.material.map = tex; b.material.emissiveMap = tex; b.material.color.set(0xffffff); b.material.needsUpdate = true; }); });
   bingkaiGaleri.forEach((b, i) => {
     const k = daftar[i];
-    if (!k) { b.material.map = null; b.material.color.set(0xfff6ea); b.material.needsUpdate = true; return; }
+    if (!k) { b.material.map = b.material.emissiveMap = teksAjakan(); b.material.color.set(0xffffff); b.material.needsUpdate = true; return; }
     new THREE.TextureLoader().load(k.img, tex => { tex.colorSpace = THREE.SRGBColorSpace; b.material.map = tex; b.material.emissiveMap = tex; b.material.color.set(0xffffff); b.material.needsUpdate = true; });
   });
 }
 function isiAula(g) {
   if (g.id === 'studio') pasangGaleri(g);
+  if (g.id === 'doa') papanKesaksian(g);
   const W = g.W, D = g.D, daftar = daftarPos(g);
   if (g.id === 'tonton') {
     const layarTex = teksTekstur((x, w, h) => { const gr = x.createLinearGradient(0, 0, w, h); gr.addColorStop(0, '#2b2350'); gr.addColorStop(1, '#4b2a5a'); x.fillStyle = gr; x.fillRect(0, 0, w, h);
@@ -797,15 +895,15 @@ function ketuk(e) {
 function jalanKe(g) { const t = g.pintuDalam.clone().lerp(g.aula.position, .35); tandai(t); ruteKe(t); }
 
 const SAPA_GURU = {
-  cerita: 'Halo! Di sini ada banyak rak cerita. Pilih yang kamu suka, baca sampai selesai, lalu jawab kuisnya ya. ⭐',
-  ayat: 'Halo! Yuk baca ayat hari ini tiga kali dengan suara keras, lalu coba hafalkan. ✋',
-  doa: 'Halo! Di sini kamu boleh menulis pokok doa, saling menolong, dan berbagi cerita baik dengan teman-teman. 💛',
-  alkitab: 'Halo! Alkitab punya 66 kitab. Coba buka rak-rak di sini satu per satu ya. 📚',
-  main: 'Halo! Mau main apa hari ini? Urutkan cerita atau kuis kilat? 🎮',
-  jadwal: 'Halo! Ini jadwal cerita minggu ini yang sudah disiapkan kakak guru. 🗓',
-  studio: 'Halo! Ayo buat gambar dengan stiker, lalu simpan gambarmu. 🎨',
-  tonton: 'Halo! Ayo duduk di kursi dan nonton video dari kakak guru bersama teman-teman. Jangan lupa tenang ya. 🎬',
-  rumah: 'Selamat datang di Anak Gusti! Pilih namamu dulu supaya bintangmu tersimpan. 🏠',
+  cerita: 'Halo! Di sini ada banyak rak cerita. Pilih yang kamu suka, baca sampai selesai, lalu jawab kuisnya ya.',
+  ayat: 'Halo! Yuk baca ayat hari ini tiga kali dengan suara keras, lalu coba hafalkan.',
+  doa: 'Halo! Di sini kamu boleh menulis pokok doa, saling menolong, dan berbagi cerita baik dengan teman-teman.',
+  alkitab: 'Halo! Alkitab punya 66 kitab. Coba buka rak-rak di sini satu per satu ya.',
+  main: 'Halo! Mau main apa hari ini? Urutkan cerita atau kuis kilat?',
+  jadwal: 'Halo! Ini jadwal cerita minggu ini yang sudah disiapkan kakak guru.',
+  studio: 'Halo! Ayo buat gambar dengan stiker, lalu simpan gambarmu.',
+  tonton: 'Halo! Ayo duduk di kursi dan nonton video dari kakak guru bersama teman-teman. Jangan lupa tenang ya.',
+  rumah: 'Selamat datang di Anak Gusti! Pilih namamu dulu supaya bintangmu tersimpan.',
 };
 /* 💬 ngobrol dengan kakak guru: pesan anak dibalas KAKAK GURU MANUSIA (bukan mesin) — store 'tanya-guru' */
 let pantauObrolan = null;
@@ -833,11 +931,11 @@ function formMasukGuru(area, lalu) {
     await cekServer();
     if (MODE === 'awan') {
       try { const r = await fetch(AWAN + '?aksi=masuk', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name: n, pin }) }); const j = await r.json();
-        if (!j.ok) return toast('Nama atau PIN salah 🙈'); sesiGuru = { name: j.name, role: j.role, token: j.token }; return lalu(); } catch { return toast('Server sedang tidak bisa dihubungi 📶'); }
+        if (!j.ok) return toast('Nama atau PIN salah'); sesiGuru = { name: j.name, role: j.role, token: j.token }; return lalu(); } catch { return toast('Server sedang tidak bisa dihubungi'); }
     }
     const staff = await store.get('staff', {});
     const m = ((staff && staff.members) || []).find(x => x.name.toLowerCase() === n.toLowerCase() && x.pin === pin);
-    if (!m) return toast('Nama atau PIN salah 🙈');
+    if (!m) return toast('Nama atau PIN salah');
     sesiGuru = { name: m.name, role: m.role }; lalu();
   };
 }
@@ -846,16 +944,16 @@ async function bicaraGuru(g, daftar, ke = 'guru') {
   const judul = P.judul();
   const daily = await store.get('daily', null), hari = new Date().toISOString().slice(0, 10);
   const ayat = daily && daily.date === hari && daily.verse && !daily.byJiby ? daily.verse : null;   // hanya isian kakak guru
-  const sapa = ke === 'gembala' ? `Shalom! Ini ${judul}. Kalau kamu mau bercerita, minta didoakan, atau bertanya, tulis saja di bawah ya. Nanti kami balas sendiri. 🙏` : (SAPA_GURU[g.id] || SAPA_GURU.rumah);
+  const sapa = ke === 'gembala' ? `Shalom! Ini ${judul}. Kalau kamu mau bercerita, minta didoakan, atau bertanya, tulis saja di bawah ya. Nanti kami balas sendiri.` : (SAPA_GURU[g.id] || SAPA_GURU.rumah);
   isi(`<h2><span class="e">${P.e}</span>${esc(judul)}</h2><p class="sub">${esc(g.e)} ${esc(g.nama)}</p>
     <div class="kotak" style="background:#fff6ea;border-color:#ffd9b0"><div class="teks">${esc(sapa)}</div></div>
     ${ayat ? `<div class="kotak"><b>Ayat hari ini dari kakak guru:</b><div class="ayat" style="font-size:20px;margin-top:6px">“${esc(ayat.text)}”</div><div class="ref">— ${esc(ayat.ref)}</div></div>` : ''}
     <div class="baris" style="margin-bottom:14px"><button class="tombol" id="b-mulai-pos">${esc(daftar[0].e)} ${esc(daftar[0].judul)}</button></div>
-    <div class="kotak"><b>💬 Ngobrol dengan ${esc(judul)}</b><p class="kecil" style="margin:4px 0 0">Tulis pertanyaan atau ceritamu. ${esc(judul)} akan membalas sendiri — nanti balasannya muncul di sini. 💛</p>
+    <div class="kotak"><b>💬 Ngobrol dengan ${esc(judul)}</b><p class="kecil" style="margin:4px 0 0">Tulis pertanyaan atau ceritamu. ${esc(judul)} akan membalas sendiri — nanti balasannya muncul di sini.</p>
       <div id="obrol"></div>
       ${ADA_SERVER ? '' : `<p class="kecil" style="margin-top:10px;color:#c95a17">📶 Server sedang tidak bisa dihubungi. Coba lagi nanti ya.</p>`}
       <textarea ${ADA_SERVER ? '' : 'disabled'} id="tulis-guru" rows="2" maxlength="240" placeholder="${ke === 'gembala' ? 'Shalom, aku mau cerita…' : 'Kak, aku mau tanya…'}" style="margin-top:10px"></textarea>
-      <div class="baris" style="justify-content:flex-end;margin-top:8px"><button class="tombol hijau" id="b-kirim-guru">Kirim 💌</button></div></div>
+      <div class="baris" style="justify-content:flex-end;margin-top:8px"><button class="tombol hijau" id="b-kirim-guru">Kirim</button></div></div>
     <details class="kotak"><summary style="font-weight:900;cursor:pointer">🔑 Khusus ${ke === 'gembala' ? 'Bapak Gembala' : 'kakak guru'}: balas pesan anak-anak</summary><div id="guru-balas" style="margin-top:10px"></div></details>`);
   panel.querySelector('#b-mulai-pos').onclick = () => daftar[0].aksi();
   const wadah = panel.querySelector('#obrol');
@@ -864,15 +962,15 @@ async function bicaraGuru(g, daftar, ke = 'guru') {
     if (!aktif) { wadah.innerHTML = `<p class="kecil" style="margin-top:8px">Pilih namamu dulu di 🏠 Selamat Datang supaya kakak guru tahu siapa yang bertanya.</p>`; return; }
     const semua = await store.get('tanya-guru', []), punyaku = (Array.isArray(semua) ? semua : []).filter(x => x.by === aktif.id && (x.ke || 'guru') === ke);
     const pesan = punyaku.flatMap(x => x.pesan).sort((a, b) => a.t - b.t).slice(-30);
-    wadah.innerHTML = pesan.length ? pesan.map(gelembung).join('') : `<p class="kecil" style="margin-top:8px">Belum ada obrolan. Ayo sapa kakak guru! 👋</p>`;
+    wadah.innerHTML = pesan.length ? pesan.map(gelembung).join('') : `<p class="kecil" style="margin-top:8px">Belum ada obrolan. Ayo sapa kakak guru!</p>`;
     // tandai balasan guru sudah dibaca
     let ubah = false; punyaku.forEach(x => { if (x.belumDibacaAnak) { x.belumDibacaAnak = false; ubah = true; } });
     if (ubah) await store.set('tanya-guru', semua);
   }
   panel.querySelector('#b-kirim-guru').onclick = async () => {
-    if (!ADA_SERVER) return toast('Server sedang tidak bisa dihubungi 📶');
-    if (!aktif) return toast('Pilih namamu dulu di Selamat Datang 🏠');
-    const teks = panel.querySelector('#tulis-guru').value.trim(); if (!teks) return toast('Tulis dulu ya 😊');
+    if (!ADA_SERVER) return toast('Server sedang tidak bisa dihubungi');
+    if (!aktif) return toast('Pilih namamu dulu di Selamat Datang');
+    const teks = panel.querySelector('#tulis-guru').value.trim(); if (!teks) return toast('Tulis dulu ya');
     let semua = await store.get('tanya-guru', []); if (!Array.isArray(semua)) semua = [];
     let utas = semua.find(x => x.by === aktif.id && x.gedung === g.id && (x.ke || 'guru') === ke);
     if (!utas) { utas = { id: newId(), by: aktif.id, name: aktif.name, avatar: aktif.avatar, gedung: g.id, ke, pesan: [] }; semua.push(utas); }
@@ -891,12 +989,12 @@ async function bicaraGuru(g, daftar, ke = 'guru') {
       const gd = GEDUNG.find(x => x.id === u.gedung);
       const d = document.createElement('div'); d.className = 'pos'; if (u.belumDibacaGuru) d.style.borderColor = '#ff8a3d';
       d.innerHTML = `<div class="kepala">${avatar(u, 22)}${esc(u.name)}<i>${gd ? gd.e + ' ' + esc(gd.nama) : ''}${u.belumDibacaGuru ? ' · 🔴 baru' : ''}</i></div>${u.pesan.slice(-6).map(gelembung).join('')}
-        <textarea rows="2" maxlength="400" placeholder="Balas ${esc(u.name)}…" style="margin-top:8px"></textarea><div class="baris" style="justify-content:flex-end;margin-top:6px"><button class="tombol hijau" style="font-size:14px;padding:8px 14px">Balas 💌</button></div>`;
+        <textarea rows="2" maxlength="400" placeholder="Balas ${esc(u.name)}…" style="margin-top:8px"></textarea><div class="baris" style="justify-content:flex-end;margin-top:6px"><button class="tombol hijau" style="font-size:14px;padding:8px 14px">Balas</button></div>`;
       d.querySelector('button').onclick = async () => {
         const teks = d.querySelector('textarea').value.trim(); if (!teks) return;
         const t2 = await store.get('tanya-guru', []), x = (Array.isArray(t2) ? t2 : []).find(y => y.id === u.id); if (!x) return;
         x.pesan.push({ dari: 'guru', nama: sesiGuru.name, gelar: (ke === 'gembala' ? '⛪ ' + 'Bapak Gembala ' : '🧑‍🏫 Kak ') + sesiGuru.name, teks: teks.slice(0, 400), t: Date.now() }); x.belumDibacaGuru = false; x.belumDibacaAnak = true; x.t = Date.now();
-        await store.set('tanya-guru', t2); toast('Balasan terkirim 💛'); gambarGuru();
+        await store.set('tanya-guru', t2); toast('Balasan terkirim'); gambarGuru();
       };
       area.appendChild(d);
     });
@@ -944,6 +1042,8 @@ function aturWaktu() {
   senja += (senjaTuju - senja) * .03;
   document.getElementById('b-waktu').textContent = senjaTuju ? '🌙' : '☀️'; document.body.classList.toggle('malam', senja > .5);
   scene.background.copy(LANGIT_SIANG).lerp(LANGIT_SENJA, senja);
+  langit.material.uniforms.atas.value.set(0xf2d5bc).lerp(new THREE.Color(0x2b2350), senja); langit.material.uniforms.bawah.value.set(0xe59553).lerp(new THREE.Color(0x7a3f3a), senja);
+  langit.position.copy(camera.position); scene.background.copy(langit.material.uniforms.bawah.value);
   scene.fog.color.copy(scene.background);
   matahari.intensity = 2.6 - senja * 2.2; hemi.intensity = .55 - senja * .3; renderer.toneMappingExposure = .92 - senja * .15;
   lampuJalan.forEach(({ bola }) => { bola.material.emissiveIntensity = .2 + senja * 2.5; });
@@ -985,7 +1085,7 @@ function putar() {
   // di aula mana? (tanpa pindah layar)
   const kini = diAula(aku.position);
   if (kini !== diDalam) { diDalam = kini; document.getElementById('lokasi').textContent = kini ? `${kini.e} ${kini.nama}` : '🏙 Kota Anak Gusti';
-    if (kini) { toast(`Selamat datang di ${kini.nama}! 💛`); if (aktif) store.get('tanya-guru', []).then(t => { if (Array.isArray(t) && t.some(u => u.by === aktif.id && u.belumDibacaAnak)) setTimeout(() => toast('💌 Ada balasan untukmu! Ngobrol dengan Kakak Guru untuk membaca.'), 2400); }); } }
+    if (kini) { toast(`Selamat datang di ${kini.nama}!`); if (aktif) store.get('tanya-guru', []).then(t => { if (Array.isArray(t) && t.some(u => u.by === aktif.id && u.belumDibacaAnak)) setTimeout(() => toast('💌 Ada balasan untukmu! Ngobrol dengan Kakak Guru untuk membaca.'), 2400); }); } }
   // yang terdekat → tombol besar "Masuk / Buka"
   dekat = null;
   if (mulai && !transisi && !panelBuka) {
@@ -1052,7 +1152,7 @@ const RUANG = {
   async tonton(putarId) {
     let vids = await store.get('video-guru', []); if (!Array.isArray(vids)) vids = [];
     const dipilih = vids.find(v => v.id === putarId);
-    isi(`<h2><span class="e">🎬</span>Bioskop Kakak Guru</h2><p class="sub">Duduk yang manis, kita nonton bersama teman-teman. 🍿</p>
+    isi(`<h2><span class="e">🎬</span>Bioskop Kakak Guru</h2><p class="sub">Duduk yang manis, kita nonton bersama teman-teman.</p>
       ${dipilih ? `<div style="position:relative;padding-top:56.25%;border-radius:18px;overflow:hidden;background:#000;margin-bottom:12px">
         <iframe src="https://www.youtube-nocookie.com/embed/${esc(dipilih.id)}?rel=0&modestbranding=1&playsinline=1&autoplay=1" title="${esc(dipilih.judul)}"
           style="position:absolute;inset:0;width:100%;height:100%;border:0" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
@@ -1061,7 +1161,7 @@ const RUANG = {
       <details class="kotak" style="margin-top:16px"><summary style="font-weight:900;cursor:pointer">🔑 Khusus kakak guru: tambah video</summary>
         <div id="guru-area" style="margin-top:10px"></div></details>`);
     const w = panel.querySelector('#vids');
-    if (!vids.length) w.innerHTML = `<div class="kotak kecil">Belum ada video. Kakak guru bisa menambahkan video di bawah. 🎥</div>`;
+    if (!vids.length) w.innerHTML = `<div class="kotak kecil">Belum ada video. Kakak guru bisa menambahkan video di bawah.</div>`;
     vids.forEach(v => {
       const b = document.createElement('button'); b.className = 'kartu'; b.style.cssText = 'background:#3b2a1e;padding:0;overflow:hidden;min-height:0';
       b.innerHTML = `<img src="https://i.ytimg.com/vi/${esc(v.id)}/mqdefault.jpg" alt="" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block" loading="lazy">
@@ -1076,11 +1176,11 @@ const RUANG = {
         <div class="baris" style="margin-top:8px"><button class="tombol hijau" id="v-tambah">➕ Tambah</button></div><div id="v-daftar"></div>`;
       area.querySelector('#v-tambah').onclick = async () => {
         const m = area.querySelector('#v-url').value.match(/(?:v=|youtu\.be\/|shorts\/|embed\/|live\/)([\w-]{11})/), judul = area.querySelector('#v-judul').value.trim();
-        if (!m) return toast('Tautan YouTube tidak dikenali 🙈'); if (!judul) return toast('Tulis judulnya dulu ya');
+        if (!m) return toast('Tautan YouTube tidak dikenali'); if (!judul) return toast('Tulis judulnya dulu ya');
         const terbaru = await store.get('video-guru', []); const daftar = Array.isArray(terbaru) ? terbaru : [];
         if (daftar.some(v => v.id === m[1])) return toast('Video ini sudah ada');
         daftar.unshift({ id: m[1], judul, oleh: sesiGuru.name, t: Date.now() }); await store.set('video-guru', daftar);
-        toast('Video ditambahkan 🎬'); RUANG.tonton();
+        toast('Video ditambahkan'); RUANG.tonton();
       };
       const dl = area.querySelector('#v-daftar');
       vids.forEach(v => { const d = document.createElement('div'); d.className = 'pos'; d.innerHTML = `<div class="kepala">${esc(v.judul)}<i>Kak ${esc(v.oleh)}</i></div><button class="tombol putih" style="font-size:13px;padding:6px 12px;margin-top:6px">🗑 Hapus</button>`;
@@ -1093,28 +1193,28 @@ const RUANG = {
   /* 🏠 Selamat Datang — pilih / buat teman */
   async rumah() {
     await muatProfil();
-    isi(`<h2><span class="e">🏠</span>Selamat Datang</h2><p class="sub">Siapa namamu? Pilih dirimu supaya bintangmu tersimpan. ⭐</p>
+    isi(`<h2><span class="e">🏠</span>Selamat Datang</h2><p class="sub">Siapa namamu? Pilih dirimu supaya bintangmu tersimpan.</p>
       <div class="grid" id="daftar"></div>
       <div class="kotak" style="margin-top:14px"><b>Teman baru? Tulis namamu:</b>
         <div class="baris" style="margin-top:8px"><input type="text" id="nama-baru" maxlength="16" placeholder="Namaku…" style="flex:1;min-width:160px">
-        <button class="tombol hijau" id="b-buat">Buat ✨</button></div>
+        <button class="tombol hijau" id="b-buat">Buat </button></div>
         <div class="stiker" id="pilih-ava"></div></div>`);
     const daftar = panel.querySelector('#daftar');
-    if (!profiles.length) daftar.innerHTML = `<p class="kecil">Belum ada teman. Jadilah yang pertama! 🌟</p>`;
+    if (!profiles.length) daftar.innerHTML = `<p class="kecil">Belum ada teman. Jadilah yang pertama!</p>`;
     profiles.forEach(p => {
       const b = document.createElement('button'); b.className = 'profil' + (aktif && aktif.id === p.id ? ' on' : '');
       b.innerHTML = `${p.photo ? `<img src="${esc(p.photo)}">` : `<span class="ava">${esc(p.avatar)}</span>`}<span>${esc(p.name)}</span><span class="kecil">⭐ ${p.points} · 📖 ${p.read.length}</span>`;
-      b.onclick = () => { aktif = p; try { localStorage.setItem('ak-active', p.id); } catch {} pitaProfil(); toast(`Halo, ${p.name}! 👋`); RUANG.rumah(); };
+      b.onclick = () => { aktif = p; try { localStorage.setItem('ak-active', p.id); } catch {} pitaProfil(); toast(`Halo, ${p.name}!`); RUANG.rumah(); };
       daftar.appendChild(b);
     });
     let ava = AVATARS[Math.floor(Math.random() * AVATARS.length)];
     const pa = panel.querySelector('#pilih-ava');
     AVATARS.forEach(a => { const b = document.createElement('button'); b.textContent = a; if (a === ava) b.style.borderColor = '#ff8a3d'; b.onclick = () => { ava = a; pa.querySelectorAll('button').forEach(x => x.style.borderColor = ''); b.style.borderColor = '#ff8a3d'; }; pa.appendChild(b); });
     panel.querySelector('#b-buat').onclick = async () => {
-      const n = panel.querySelector('#nama-baru').value.trim(); if (!n) return toast('Tulis namamu dulu ya 😊');
+      const n = panel.querySelector('#nama-baru').value.trim(); if (!n) return toast('Tulis namamu dulu ya');
       const terbaru = await store.get('profiles', []); profiles = (Array.isArray(terbaru) ? terbaru : []).map(fixProfile);
       const p = fixProfile({ id: newId(), name: n.slice(0, 16), avatar: ava }); profiles.push(p); await store.set('profiles', profiles);
-      aktif = p; try { localStorage.setItem('ak-active', p.id); } catch {} pitaProfil(); toast(`Selamat datang, ${p.name}! 🎉`); RUANG.rumah();
+      aktif = p; try { localStorage.setItem('ak-active', p.id); } catch {} pitaProfil(); toast(`Selamat datang, ${p.name}!`); RUANG.rumah();
     };
   },
 
@@ -1143,13 +1243,13 @@ const RUANG = {
     isi(`<h2><span class="e">📜</span>Ayat Emas</h2><p class="sub">Ayat hafalan hari ini — baca 3 kali dengan suara keras ya!</p>
       <div class="kotak" style="background:linear-gradient(135deg,#fff6df,#ffe2b8);border-color:#ffd38a">
         <div class="ayat">“${esc(v.text)}”</div><div class="ref">— ${esc(v.ref)}</div>
-        ${renungan ? `<p style="font-weight:700;margin-top:12px">💛 ${esc(renungan)}</p>` : ''}
+        ${renungan ? `<p style="font-weight:700;margin-top:12px">${esc(renungan)}</p>` : ''}
         <div class="baris" style="margin-top:14px"><button class="tombol" id="b-hafal">✋ Aku sudah hafal!</button></div></div>
       <h3>Semua ayat hafalan</h3><div id="semua"></div>`);
     const kunci = 'ag-hafal-' + hari + (aktif ? aktif.id : '');
     panel.querySelector('#b-hafal').onclick = async e => {
       let sudah = false; try { sudah = !!localStorage.getItem(kunci); } catch {}
-      if (sudah) return toast('Hebat! Hari ini kamu sudah hafal 🌟');
+      if (sudah) return toast('Hebat! Hari ini kamu sudah hafal');
       try { localStorage.setItem(kunci, 1); } catch {} await tambahBintang(5, 'hafal ayat'); e.target.disabled = true;
     };
     const wadah = panel.querySelector('#semua');
@@ -1159,32 +1259,32 @@ const RUANG = {
   /* 🙏 Ruang Doa — tiga ruang bersama */
   async doa(jenis = 'doa') {
     const R = {
-      doa: { key: 'room-doa', e: '🙏', t: 'Ruang Doa', hint: 'Tulis pokok doamu. Teman-teman akan mendoakanmu. 💜', ph: 'Tolong doakan aku supaya…', act: '🙏 Aku doakan', done: 'sudah didoakan' },
-      tolong: { key: 'room-tolong', e: '🤝', t: 'Tolong-Menolong', hint: 'Butuh bantuan atau mau menolong? Tulis di sini ya. 💚', ph: 'Aku butuh bantuan… / Aku mau menolong…', act: '🤝 Aku bantu', done: 'siap membantu' },
-      kesaksian: { key: 'room-kesaksian', e: '🌟', t: 'Kesaksian', hint: 'Ceritakan hal baik yang Tuhan buat untukmu! 🌟', ph: 'Puji Tuhan, hari ini…', act: '❤️ Amin', done: 'amin' },
+      doa: { key: 'room-doa', e: '🙏', t: 'Ruang Doa', hint: 'Tulis pokok doamu. Teman-teman akan mendoakanmu.', ph: 'Tolong doakan aku supaya…', act: '🙏 Aku doakan', done: 'sudah didoakan' },
+      tolong: { key: 'room-tolong', e: '🤝', t: 'Tolong-Menolong', hint: 'Butuh bantuan atau mau menolong? Tulis di sini ya.', ph: 'Aku butuh bantuan… / Aku mau menolong…', act: '🤝 Aku bantu', done: 'siap membantu' },
+      kesaksian: { key: 'room-kesaksian', e: '🌟', t: 'Kesaksian', hint: 'Ceritakan hal baik yang Tuhan buat untukmu!', ph: 'Puji Tuhan, hari ini…', act: '❤️ Amin', done: 'amin' },
     }[jenis];
     let posts = await store.get(R.key, []); if (!Array.isArray(posts)) posts = [];
     isi(`<h2><span class="e">⛪</span>Ruang Doa</h2><p class="sub">Tempat berbagi bersama teman-teman sekolah minggu.</p>
       <div class="tab">${['doa', 'tolong', 'kesaksian'].map(k => `<button data-k="${k}" class="${k === jenis ? 'on' : ''}">${{ doa: '🙏 Doa', tolong: '🤝 Tolong', kesaksian: '🌟 Kesaksian' }[k]}</button>`).join('')}</div>
       ${ADA_SERVER ? '' : '<p class="kecil" style="color:#c95a17">📶 Server sedang tidak bisa dihubungi — tulisanmu tersimpan di HP-mu dulu.</p>'}
       <div class="kotak"><b>${esc(R.hint)}</b><textarea id="tulis" rows="3" maxlength="240" placeholder="${esc(R.ph)}" style="margin-top:8px"></textarea>
-      <div class="baris" style="justify-content:flex-end;margin-top:8px"><button class="tombol hijau" id="b-kirim">Kirim 💌</button></div></div><div id="daftar"></div>`);
+      <div class="baris" style="justify-content:flex-end;margin-top:8px"><button class="tombol hijau" id="b-kirim">Kirim</button></div></div><div id="daftar"></div>`);
     panel.querySelectorAll('.tab button').forEach(b => b.onclick = () => RUANG.doa(b.dataset.k));
     const daftar = panel.querySelector('#daftar');
     const jamnya = t => { const d = new Date(t); return d.toDateString() === new Date().toDateString() ? d.toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit' }) : d.toLocaleDateString('id-ID', { day: 'numeric', month: 'short' }); };
     function gambar() {
-      daftar.innerHTML = posts.length ? '' : `<div class="kotak tengah kecil">Belum ada. Jadilah yang pertama berbagi! 🌟</div>`;
+      daftar.innerHTML = posts.length ? '' : `<div class="kotak tengah kecil">Belum ada. Jadilah yang pertama berbagi!</div>`;
       [...posts].reverse().forEach(p => {
         const sudah = aktif && (p.reactedBy || []).includes(aktif.id);
         const d = document.createElement('div'); d.className = 'pos';
         d.innerHTML = `<div class="kepala">${avatar(p, 24)}${esc(p.name)}<i>${jamnya(p.t)}</i></div><p>${esc(p.text)}</p>
           <button class="tombol ${sudah ? 'hijau' : 'putih'}" style="font-size:14px;padding:8px 14px">${R.act} <b>${(p.reactedBy || []).length || ''}</b></button>`;
         d.querySelector('button').onclick = async () => {
-          if (!aktif) return toast('Pilih namamu dulu di Selamat Datang 🏠');
+          if (!aktif) return toast('Pilih namamu dulu di Selamat Datang');
           const terbaru = await store.get(R.key, []); posts = Array.isArray(terbaru) ? terbaru : posts;
           const q = posts.find(x => x.id === p.id); if (!q) return gambar();
           q.reactedBy = q.reactedBy || []; const i = q.reactedBy.indexOf(aktif.id);
-          if (i >= 0) q.reactedBy.splice(i, 1); else { q.reactedBy.push(aktif.id); toast(R.done + ' 💛'); }
+          if (i >= 0) q.reactedBy.splice(i, 1); else { q.reactedBy.push(aktif.id); toast(R.done); }
           await store.set(R.key, posts); gambar();
         };
         daftar.appendChild(d);
@@ -1192,12 +1292,12 @@ const RUANG = {
     }
     gambar();
     panel.querySelector('#b-kirim').onclick = async () => {
-      if (!aktif) return toast('Pilih namamu dulu di Selamat Datang 🏠');
-      const text = panel.querySelector('#tulis').value.trim(); if (!text) return toast('Tulis dulu ya 😊');
+      if (!aktif) return toast('Pilih namamu dulu di Selamat Datang');
+      const text = panel.querySelector('#tulis').value.trim(); if (!text) return toast('Tulis dulu ya');
       const terbaru = await store.get(R.key, []); posts = Array.isArray(terbaru) ? terbaru : [];
       posts.push({ id: newId(), by: aktif.id, name: aktif.name, avatar: aktif.avatar, photo: aktif.photo || null, text: text.slice(0, 240), t: Date.now(), reactedBy: [] });
       if (posts.length > 150) posts = posts.slice(-150);
-      await store.set(R.key, posts); panel.querySelector('#tulis').value = ''; toast('Terkirim 💌'); gambar();
+      await store.set(R.key, posts); panel.querySelector('#tulis').value = ''; toast('Terkirim'); gambar();
     };
   },
 
@@ -1235,7 +1335,7 @@ const RUANG = {
     HARI.forEach((h, i) => {
       const c = s[i] && SEMUA_CERITA.find(x => x.id === s[i].storyId);
       const d = document.createElement('div'); d.className = 'pos'; if (i === kini) d.style.borderColor = '#ff8a3d';
-      d.innerHTML = `<div class="kepala">${i === kini ? '👉 ' : ''}${h}${i === kini ? ' (hari ini)' : ''}<i>${c ? esc(c.ref || '') : ''}</i></div><p>${c ? `${esc(c.emoji || '📖')} ${esc(c.title)}` : '<span class="kecil">Belum dijadwalkan</span>'}</p>${c ? '<button class="tombol" style="font-size:14px;padding:8px 14px">Baca 📖</button>' : ''}`;
+      d.innerHTML = `<div class="kepala">${i === kini ? '👉 ' : ''}${h}${i === kini ? ' (hari ini)' : ''}<i>${c ? esc(c.ref || '') : ''}</i></div><p>${c ? `${esc(c.emoji || '📖')} ${esc(c.title)}` : '<span class="kecil">Belum dijadwalkan</span>'}</p>${c ? '<button class="tombol" style="font-size:14px;padding:8px 14px">Baca</button>' : ''}`;
       if (c) d.querySelector('button').onclick = () => bacaCerita(c, 0);
       w.appendChild(d);
     });
@@ -1248,7 +1348,7 @@ const RUANG = {
       <div class="tab" id="latar">${BACKGROUNDS.map((b, i) => `<button data-i="${i}" class="${i === 0 ? 'on' : ''}">${esc(b.name)}</button>`).join('')}</div>
       <div class="studio" id="papan"></div><div class="stiker" id="stiker"></div>
       <div class="baris" style="margin-top:12px"><button class="tombol putih" id="b-bersih">🧹 Bersihkan</button><button class="tombol hijau" id="b-simpan">💾 Simpan gambar</button></div>
-      <div class="kotak" style="margin-top:14px"><b>🖼 Kirim ke Galeri Karya Anak</b><p class="kecil" style="margin:4px 0 8px">Karyamu akan dipajang di dinding Studio setelah dilihat kakak guru. 💛</p>
+      <div class="kotak" style="margin-top:14px"><b>🖼 Kirim ke Galeri Karya Anak</b><p class="kecil" style="margin:4px 0 8px">Karyamu akan dipajang di dinding Studio setelah dilihat kakak guru.</p>
         <div class="baris"><input type="text" id="k-judul" maxlength="40" placeholder="Judul karyaku…" style="flex:1;min-width:150px"><button class="tombol" id="b-kirim-karya">📤 Kirim</button></div></div>
       <details class="kotak"><summary style="font-weight:900;cursor:pointer">🔑 Khusus kakak guru: setujui karya anak</summary><div id="karya-guru" style="margin-top:10px"></div></details>`);
     const papan = panel.querySelector('#papan');
@@ -1272,12 +1372,12 @@ const RUANG = {
       return c;
     }
     panel.querySelector('#b-kirim-karya').onclick = async () => {
-      if (!aktif) return toast('Pilih namamu dulu di Selamat Datang 🏠');
-      if (!papan.querySelector('.st')) return toast('Tempel stiker dulu ya 🎨');
+      if (!aktif) return toast('Pilih namamu dulu di Selamat Datang');
+      if (!papan.querySelector('.st')) return toast('Tempel stiker dulu ya');
       const c = lukis(480 / papan.getBoundingClientRect().width), img = c.toDataURL('image/jpeg', .72);
       let daftar = await store.get('karya-anak', []); if (!Array.isArray(daftar)) daftar = [];
       daftar.push({ id: newId(), by: aktif.id, name: aktif.name, judul: panel.querySelector('#k-judul').value.trim().slice(0, 40), img, t: Date.now(), ok: false });
-      await store.set('karya-anak', daftar.slice(-30)); toast('Terkirim! Tunggu kakak guru memajangnya 🖼');
+      await store.set('karya-anak', daftar.slice(-30)); toast('Terkirim! Tunggu kakak guru memajangnya');
     };
     const kg = panel.querySelector('#karya-guru');
     async function gambarKaryaGuru() {
@@ -1290,7 +1390,7 @@ const RUANG = {
         d.querySelectorAll('button').forEach(b => b.onclick = async () => {
           const t = await store.get('karya-anak', []), arr = Array.isArray(t) ? t : [];
           const baru = b.dataset.a === 'ok' ? arr.map(x => x.id === k.id ? { ...x, ok: true } : x) : arr.filter(x => x.id !== k.id);
-          await store.set('karya-anak', baru); toast(b.dataset.a === 'ok' ? 'Dipajang di Galeri 🖼' : 'Dihapus'); muatGaleri(); gambarKaryaGuru();
+          await store.set('karya-anak', baru); toast(b.dataset.a === 'ok' ? 'Dipajang di Galeri' : 'Dihapus'); muatGaleri(); gambarKaryaGuru();
         });
         kg.appendChild(d);
       });
@@ -1316,7 +1416,7 @@ function bacaCerita(s, i) {
     <div class="adegan" style="background:${grad(s.grad || ['#ffe2b8', '#ffb36b'])}">${esc(pg.scene || '')}</div>
     <div class="teks">${esc(pg.text)}</div>
     <div class="baris ujung" style="margin-top:18px"><button class="tombol putih" id="b-mundur" ${i === 0 ? 'disabled' : ''}>◀ Kembali</button>
-    <button class="tombol" id="b-maju">${i === s.pages.length - 1 ? 'Selesai 🎉' : 'Lanjut ▶'}</button></div>`);
+    <button class="tombol" id="b-maju">${i === s.pages.length - 1 ? 'Selesai' : 'Lanjut ▶'}</button></div>`);
   panel.querySelector('#b-mundur').onclick = () => bacaCerita(s, i - 1);
   panel.querySelector('#b-maju').onclick = () => bacaCerita(s, i + 1);
 }
@@ -1327,7 +1427,7 @@ async function kuisCerita(s) {
     await tambahBintang(10, 'selesai membaca');
   }
   const soal = Array.isArray(s.quiz) ? s.quiz : [];
-  if (!soal.length) return isi(`<h2><span class="e">🎉</span>Hebat!</h2><p class="sub">Kamu sudah selesai membaca “${esc(s.title)}”.</p>${s.verse ? `<div class="kotak"><div class="ayat" style="font-size:20px">${esc(s.verse)}</div></div>` : ''}<button class="tombol" onclick="document.getElementById('b-keluar').click()">Kembali ke kota 🏙</button>`);
+  if (!soal.length) return isi(`<h2><span class="e">🎉</span>Hebat!</h2><p class="sub">Kamu sudah selesai membaca “${esc(s.title)}”.</p>${s.verse ? `<div class="kotak"><div class="ayat" style="font-size:20px">${esc(s.verse)}</div></div>` : ''}<button class="tombol" onclick="document.getElementById('b-keluar').click()">Kembali ke kota</button>`);
   let n = 0, benar = 0;
   function tampil() {
     if (n >= soal.length) {
@@ -1357,7 +1457,7 @@ function mainUrut() {
   acakan.forEach(o => { const b = document.createElement('button'); b.className = 'tombol putih'; b.textContent = o.t; b.style.textAlign = 'left';
     b.onclick = () => {
       if (o.i === berikut) { b.className = 'tombol hijau'; b.textContent = (berikut + 1) + '. ' + o.t; b.disabled = true; berikut++;
-        if (berikut === s.order.length) { toast('Urutannya benar semua! 🎉'); tambahBintang(salah ? 3 : 5, 'urutan benar'); } }
+        if (berikut === s.order.length) { toast('Urutannya benar semua!'); tambahBintang(salah ? 3 : 5, 'urutan benar'); } }
       else { salah++; b.animate([{ transform: 'translateX(-6px)' }, { transform: 'translateX(6px)' }, { transform: 'none' }], 250); }
     }; w.appendChild(b); });
   panel.querySelector('#b-lain').onclick = mainUrut; panel.querySelector('#b-balik').onclick = RUANG.main;
@@ -1379,7 +1479,7 @@ function mainKuis() {
   tampil();
 }
 
-muatProfil(); Promise.all([muatCerita(), muatGembala()]).then(() => GEDUNG.forEach(isiAula));
+Promise.all([muatProfil(), muatCerita(), muatGembala()]).then(() => { GEDUNG.forEach(isiAula); papanAlunAlun(); namaiTeman(); });
 </script>
 </body>
 </html>
