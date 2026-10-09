@@ -568,7 +568,7 @@ function aulaGedung(g) {
     if (g.sub) { x.font = '900 64px Nunito, system-ui, sans-serif'; x.fillText(g.e + ' ' + g.nama.toUpperCase(), w / 2, h * .36); x.font = '800 40px Nunito, system-ui, sans-serif'; x.fillText(g.sub.toUpperCase(), w / 2, h * .78); }
     else { x.font = '900 74px Nunito, system-ui, sans-serif'; x.fillText(g.e + ' ' + g.nama.toUpperCase(), w / 2, h / 2 + 4); }
   }, 1024, g.sub ? 220 : 160);
-  aula.add(mesh(new THREE.BoxGeometry(6.4, g.sub ? 1.4 : 1, .2), [rangka, rangka, rangka, rangka, new THREE.MeshStandardMaterial({ map: namaTex, emissive: 0xffffff, emissiveMap: namaTex, emissiveIntensity: .25 }), rangka], 0, T + 1.2, D / 2 + .5));
+  aula.add(g.papanGerbang = mesh(new THREE.BoxGeometry(6.4, g.sub ? 1.4 : 1, .2), [rangka, rangka, rangka, rangka, new THREE.MeshStandardMaterial({ map: namaTex, emissive: 0xffffff, emissiveMap: namaTex, emissiveIntensity: .25 }), rangka], 0, T + 1.2, D / 2 + .5));
   // bentuk khas gedung berdiri di belakang aula sebagai penanda
   g.grup.position.set(0, 0, -D / 2 - 4.8); g.grup.rotation.set(0, 0, 0); g.grup.scale.setScalar(1.25); scene.remove(g.grup); aula.add(g.grup);
   if (g.id === 'ayat') {
@@ -629,9 +629,43 @@ function spriteTeks(teks, warna = '#5e301f') {      // label nama kecil di atas 
     x.fillStyle = warna; x.font = '600 30px Fredoka, sans-serif'; x.textAlign = 'center'; x.textBaseline = 'middle'; x.fillText(teks, w / 2, h / 2 + 1); }, 256, 64);
   const sp = new THREE.Sprite(new THREE.SpriteMaterial({ map: t, transparent: true, depthWrite: false })); sp.scale.set(2.2, .55, 1); return sp;
 }
+// obrolan aman: anak memilih kalimat dari daftar tetap (server hanya menerima nomornya) — tanpa teks bebas, tanpa AI
+const SAPAAN = ['Halo!', 'Selamat pagi!', 'Ayo main bareng!', 'Ayo ke Perpustakaan Cerita', 'Ayo ke Taman Games', 'Ayo nonton di Bioskop', 'Karyamu bagus!', 'Terima kasih!', 'Semangat ya!', 'Aku senang ketemu kamu', 'Maaf ya', 'Sampai jumpa!'];
+function gelembungKata(o, teks) {
+  if (o.userData.gelembung) o.remove(o.userData.gelembung);
+  const sp = spriteTeks(teks, '#d8611d'); sp.scale.set(3.2, .8, 1); sp.position.y = 3.5; o.add(sp); o.userData.gelembung = sp;
+  setTimeout(() => { if (o.userData.gelembung === sp) { o.remove(sp); o.userData.gelembung = null; } }, 4000);
+}
+async function bukaSapa(p, m) {
+  ruangEl.classList.add('buka');
+  if (!aktif) return isi(`<h2>Sapa ${esc(p.name)}</h2><p class="sub">Pilih namamu dulu di gedung Selamat Datang supaya temanmu tahu siapa yang menyapa.</p>`);
+  const semua = await store.get('obrolan-teman', []), riwayat = (Array.isArray(semua) ? semua : []).filter(x => (x.dari === aktif.id && x.ke === p.id) || (x.dari === p.id && x.ke === aktif.id)).slice(-12);
+  isi(`<h2><span class="e">${esc(p.avatar || '')}</span>${esc(p.name)}</h2><p class="sub">Pilih kata-kata untuk menyapa temanmu.</p>
+    <div id="riwayat-sapa">${riwayat.map(x => gelembung({ dari: x.dari === aktif.id ? 'anak' : 'guru', nama: x.dari === aktif.id ? aktif.name : p.name, gelar: (p.avatar || '') + ' ' + p.name, teks: SAPAAN[x.i] || '', t: x.t })).join('') || '<p class="kecil">Belum pernah saling sapa.</p>'}</div>
+    <div class="grid" id="pilih-sapa" style="margin-top:14px;grid-template-columns:repeat(auto-fill,minmax(140px,1fr))"></div>`);
+  const w = panel.querySelector('#pilih-sapa');
+  SAPAAN.forEach((k, i) => { const b = document.createElement('button'); b.className = 'tombol putih'; b.textContent = k; b.onclick = async () => {
+    let t = await store.get('obrolan-teman', []); if (!Array.isArray(t)) t = [];
+    t.push({ dari: aktif.id, ke: p.id, i, t: Date.now() }); await store.set('obrolan-teman', t.slice(-300));
+    tutupPanel(); gelembungKata(aku, k); toast(`Terkirim ke ${p.name}`);
+  }; w.appendChild(b); });
+}
+// sapaan masuk dari teman: muncul sebagai pesan, dicek berkala
+async function cekSapaan() {
+  if (!aktif) return;
+  const t = await store.get('obrolan-teman', []); if (!Array.isArray(t)) return;
+  let lihat = 0; try { lihat = +localStorage.getItem('ag-sapa-' + aktif.id) || 0; } catch {}
+  const baru = t.filter(x => x.ke === aktif.id && x.t > lihat);
+  if (!baru.length) return;
+  const x = baru[baru.length - 1], dari = (profiles || []).find(p => p.id === x.dari);
+  toast(`${dari ? dari.name : 'Temanmu'} menyapamu: "${SAPAAN[x.i] || ''}"`);
+  const npc = teman.find(m => m.profil && m.profil.id === x.dari); if (npc) gelembungKata(npc.o, SAPAAN[x.i] || '');
+  try { localStorage.setItem('ag-sapa-' + aktif.id, String(x.t)); } catch {}
+}
+setInterval(cekSapaan, 20000); setTimeout(cekSapaan, 5000);
 function namaiTeman() {                             // teman yang jalan-jalan = anak-anak sungguhan dari daftar profil
   const ps = (profiles || []).filter(p => p && p.name && (!aktif || p.id !== aktif.id));
-  teman.forEach((m, i) => { const p = ps[i]; if (!p || m.o.userData.label) return; const sp = spriteTeks(`${p.avatar || ''} ${p.name}`.trim()); sp.position.y = 2.7; m.o.add(sp); m.o.userData.label = sp; });
+  teman.forEach((m, i) => { const p = ps[i]; if (!p || m.o.userData.label) return; m.profil = p; const sp = spriteTeks(`${p.avatar || ''} ${p.name}`.trim()); sp.position.y = 2.7; m.o.add(sp); m.o.userData.label = sp; });
 }
 function papanAlunAlun() {                          // papan karya anak di alun-alun, menghadap tempat mulai
   const a = SUDUT_AWAL, grp = new THREE.Group(); grp.position.set(Math.cos(a) * 9, 0, Math.sin(a) * 9); grp.rotation.y = Math.atan2(Math.cos(a), Math.sin(a)); scene.add(grp);
@@ -735,10 +769,12 @@ function bukaPandangan(dt) {      // seperti game: yang menghalangi kamera → t
   const halang = new Set();
   for (const h of sinarHalang.intersectObjects(kenaKlik, true)) { if (h.object.userData.tetap || h.object.isSprite) continue; let o = h.object; while (o && !o.userData.g) o = o.parent; if (o) halang.add(o.userData.g); }
   if (diDalam) halang.add(diDalam);
+  GEDUNG.forEach(g => { if (g.pintuLuar && aku.position.distanceTo(g.pintuLuar) < 6) halang.add(g); });   // dekat pintu: gerbang & dinding ikut tembus
   GEDUNG.forEach(g => {
     const tuju = halang.has(g) ? .18 : 1; if (Math.abs(g.tembus - tuju) < .01) return;
     g.tembus += (tuju - g.tembus) * Math.min(1, dt * 10);
     g.mats.forEach(m => { m.transparent = g.tembus < .99 || m.userData.tr; m.opacity = m.userData.op * g.tembus; m.depthWrite = g.tembus > .99; });
+    if (g.papanGerbang) g.papanGerbang.visible = g.tembus > .6;
   });
 }
 penghalang.push({ x: 0, z: 0, r: 3.9 });                         // air mancur
@@ -1102,7 +1138,8 @@ function putar() {
   dekat = null;
   if (mulai && !transisi && !panelBuka) {
     // di dalam gedung: tombol Buka SELALU muncul untuk pos terdekat di gedung itu; di luar: hanya kalau dekat
-    let best = diDalam ? Infinity : 2.6; pos.forEach(p => { if (diDalam && p.g !== diDalam) return; const d = Math.hypot(aku.position.x - p.x, aku.position.z - p.z); if (d < best) { best = d; dekat = { teks: `${p.e} Buka: ${p.judul}`, jalankan: () => bukaPos(p), p }; } });
+    if (!diDalam) { let bt = 2.8; teman.forEach(m => { if (!m.profil) return; const d = m.o.position.distanceTo(aku.position); if (d < bt) { bt = d; dekat = { teks: `Sapa ${m.profil.name}`, jalankan: () => bukaSapa(m.profil, m) }; } }); if (dekat) { /* teman lebih dulu */ } }
+    let best = diDalam ? Infinity : (dekat ? 0 : 2.6); pos.forEach(p => { if (diDalam && p.g !== diDalam) return; const d = Math.hypot(aku.position.x - p.x, aku.position.z - p.z); if (d < best) { best = d; dekat = { teks: `${p.e} Buka: ${p.judul}`, jalankan: () => bukaPos(p), p }; } });
   }
   tombolMasuk.style.display = dekat ? 'block' : 'none';
   if (dekat) tombolMasuk.textContent = dekat.teks;
@@ -1110,6 +1147,7 @@ function putar() {
   pos.forEach(p => { const aktifP = dekat && dekat.p === p; p.papan.position.y = p.y0 + Math.sin(t * 2 + p.x) * .12 + (aktifP ? .3 : 0); p.cincin.material.emissiveIntensity = aktifP ? 1.5 : .5; });
   // teman-teman
   teman.forEach(m => {
+    if (m.profil && m.o.position.distanceTo(aku.position) < 3) { m.o.lookAt(aku.position.x, 0, aku.position.z); ayunkan(m.o, 0, dt); return; }   // berhenti & menoleh saat kita dekat
     if (!m.tujuan) { m.tunggu -= dt; ayunkan(m.o, 0, dt); if (m.tunggu <= 0) m.tujuan = titikAcak(); return; }
     sementara.subVectors(m.tujuan, m.o.position); const d = sementara.length();
     if (d < .3) { m.tujuan = null; m.tunggu = 1 + Math.random() * 4; return; }
