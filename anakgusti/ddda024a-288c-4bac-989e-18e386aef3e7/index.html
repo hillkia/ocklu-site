@@ -591,7 +591,7 @@ function aulaGedung(g) {
   const mk = ke(0, -D / 2 - 4.8); penghalang.push({ x: mk.x, z: mk.z, r: 5.5, gedung: true });
   g.lokal = p => aula.worldToLocal(p.clone());
 }
-// gedung padat: dinding aula & bentuk gedung di belakangnya tidak bisa ditembus — masuk hanya lewat pintu
+// gedung, pohon & air mancur padat: dinding aula tidak bisa ditembus — masuk hanya lewat pintu
 function tabrakGedung(p, r = .5) {
   for (const [a, b] of segDinding) {
     const ex = b.x - a.x, ez = b.z - a.z, L = ex * ex + ez * ez || 1;
@@ -599,7 +599,9 @@ function tabrakGedung(p, r = .5) {
     const cx = a.x + ex * t, cz = a.z + ez * t, dx = p.x - cx, dz = p.z - cz, d = Math.hypot(dx, dz);
     if (d < r) { const n = d > 1e-4 ? d : 1; p.x = cx + (d > 1e-4 ? dx / n : -ez / Math.sqrt(L)) * r; p.z = cz + (d > 1e-4 ? dz / n : ex / Math.sqrt(L)) * r; }
   }
-  for (const h of penghalang) { if (!h.gedung) continue; const dx = p.x - h.x, dz = p.z - h.z, d = Math.hypot(dx, dz), rr = h.r + r; if (d < rr && d > 1e-4) { p.x = h.x + dx / d * rr; p.z = h.z + dz / d * rr; } }
+  // gedung, pohon, air mancur: padat — kalau menabrak, didorong keluar lalu meluncur memutar supaya tidak tersangkut
+  for (const h of penghalang) { const dx = p.x - h.x, dz = p.z - h.z, d = Math.hypot(dx, dz), rr = h.r + r;
+    if (d < rr && d > 1e-4) { const nx = dx / d, nz = dz / d, sisi = (nx * 0.7 + nz * 0.3) >= 0 ? 1 : -1; p.x = h.x + nx * rr - nz * .06 * sisi; p.z = h.z + nz * rr + nx * .06 * sisi; } }
 }
 function diAula(p) { for (const g of GEDUNG) { const l = g.lokal(p); if (Math.abs(l.x) < g.W / 2 && Math.abs(l.z) < g.D / 2) return g; } return null; }
 
