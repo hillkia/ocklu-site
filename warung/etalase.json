@@ -1,0 +1,17 @@
+{
+ "jenis": "ocklu-etalase-paket",
+ "versi": 1,
+ "dibuat": "2026-10-09T08:13:45",
+ "wa": "",
+ "ongkir": {
+  "dekat": 5000,
+  "jauh": 8000
+ },
+ "angka": {
+  "warung": 0,
+  "pesanan": 0,
+  "nilai": 0,
+  "komisi": 0
+ },
+ "warung": []
+}

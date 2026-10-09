@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Etalase Warung Rame</title>
+<meta name="description" content="Warung binaan ojol pangkalan di Jakarta: menu, harga, promo, ambil sendiri atau diantar. Pesan lewat WhatsApp, bayar ke QRIS warung.">
+<link rel="canonical" href="https://ocklu.com/warung/etalase.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: pita judul gelap → saringan area → kartu warung (foto asli, menu berharga, pesan) satu kolom di HP, dua di layar lebar */
+:root{
+  --bg:#e9ecea; --surface:#ffffff; --surface2:#dfe4e1; --ink:#161b1a; --muted:#56605c; --line:#c9d0cc;
+  --teal:#22707e; --oranye:#c8501c; --mustard:#b88a1e; --malam:#0f1314; --layar:#f1e4c8; --good:#2e8b57;
+  --display:"Archivo","Arial Narrow",Arial,sans-serif; --body:"IBM Plex Sans",system-ui,sans-serif; --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#121615; --surface:#1a201e; --surface2:#232b28; --ink:#e8e4da; --muted:#9aa29d; --line:#313a37;
+  --teal:#56aebd; --oranye:#f07a45; --mustard:#e0b048; --malam:#0b0f10; --good:#5cc08b; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121615; --surface:#1a201e; --surface2:#232b28; --ink:#e8e4da; --muted:#9aa29d; --line:#313a37;
+  --teal:#56aebd; --oranye:#f07a45; --mustard:#e0b048; --malam:#0b0f10; --good:#5cc08b; color-scheme:dark}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.5;padding-top:env(safe-area-inset-top,0px)}
+img{max-width:100%;display:block}
+[hidden]{display:none!important}
+h1,h2,h3{font-family:var(--display);font-stretch:80%;line-height:1.05;margin:0;text-wrap:balance}
+p{margin:0}
+a{color:var(--teal)}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:16px}
+.label{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.pita{background:var(--malam);color:var(--layar);padding-block:30px 26px;border-bottom:6px solid var(--oranye)}
+.pita .wrap{display:grid;gap:10px}
+.pita h1{font-size:clamp(2.2rem,6vw,4rem);font-weight:900;font-stretch:72%;text-transform:uppercase}
+.pita p{color:#e6dcc6;max-width:60ch}
+.pita a{color:var(--layar)}
+.saring{display:flex;flex-wrap:wrap;gap:8px;padding-block:18px}
+.saring button{font:500 .9rem var(--body);padding:.4rem .8rem;border:1px solid var(--line);border-radius:999px;background:var(--surface);color:var(--ink);cursor:pointer}
+.saring button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.daftar{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;padding-bottom:48px}
+@media (max-width:820px){.daftar{grid-template-columns:1fr}}
+.kartu{background:var(--surface);border:1px solid var(--line);border-radius:4px;overflow:hidden;display:grid;min-width:0}
+.foto{position:relative;aspect-ratio:16/9;background:var(--surface2);max-width:100%}
+.foto img{width:100%;height:100%;object-fit:cover}
+.foto .geser{position:absolute;bottom:8px;right:8px;display:flex;gap:4px}
+.foto .geser button{width:10px;height:10px;border-radius:50%;border:0;background:rgba(255,255,255,.5);padding:0;cursor:pointer}
+.foto .geser button[aria-pressed="true"]{background:#fff}
+.foto .asli{position:absolute;top:8px;left:8px;font-family:var(--mono);font-size:.66rem;background:rgba(0,0,0,.6);color:#fff;padding:.12rem .4rem;border-radius:3px}
+.foto .tanpa{position:absolute;inset:0;display:grid;place-items:center;color:var(--muted);font-size:.85rem}
+.isi{padding:16px;display:grid;gap:12px}
+.isi h2{font-size:1.6rem;font-weight:850}
+.meta{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:.88rem;color:var(--muted)}
+.promo{border-left:4px solid var(--oranye);padding:6px 10px;background:var(--surface2);font-size:.92rem}
+.menu{display:grid;gap:6px}
+.menu label{display:grid;grid-template-columns:minmax(0,1fr) auto 64px;gap:10px;align-items:center;font-size:.95rem}
+.menu .h{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.menu input{font:500 1rem var(--mono);width:64px;padding:.35rem .4rem;text-align:right;border:1px solid var(--line);border-radius:4px;background:var(--bg);color:var(--ink)}
+.cara{display:flex;flex-wrap:wrap;gap:8px}
+.cara label{display:flex;gap:6px;align-items:center;border:1px solid var(--line);border-radius:4px;padding:.35rem .6rem;font-size:.9rem;cursor:pointer}
+.cara input{accent-color:var(--oranye)}
+.total{display:flex;justify-content:space-between;gap:8px;font-family:var(--mono);font-variant-numeric:tabular-nums;border-top:1px solid var(--line);padding-top:10px}
+.btn{display:inline-flex;justify-content:center;align-items:center;gap:8px;font:600 1rem var(--body);padding:.75rem 1rem;border-radius:4px;border:1px solid var(--oranye);background:var(--oranye);color:#fff;text-decoration:none;cursor:pointer;width:100%}
+.btn[aria-disabled="true"]{opacity:.5;pointer-events:none}
+.btn:focus-visible,input:focus-visible,button:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+.tunjuk{white-space:pre-wrap;font-family:var(--mono);font-size:.85rem;background:var(--surface2);border-radius:4px;padding:10px;border:1px dashed var(--line)}
+.kosong{border:1px dashed var(--line);border-radius:4px;padding:28px;display:grid;gap:10px;background:var(--surface);max-width:70ch}
+.catatan{font-size:.82rem;color:var(--muted)}
+.tutup{background:var(--malam);color:#cfc6b2;padding-block:24px;font-size:.85rem}
+.tutup a{color:var(--layar)}
+</style>
+</head>
+<body>
+<header class="pita"><div class="wrap">
+  <span class="label" style="color:var(--mustard)">OCKLU · Warung Rame · Jakarta</span>
+  <h1>Makan di warung dekat pangkalan</h1>
+  <p>Warung binaan ojol pangkalan. Harga sama dengan di warung, bayar langsung ke QRIS warung. Ambil sendiri, atau diantar ojol kalau warungnya melayani antar. <a href="./">Punya warung? Daftar di sini.</a></p>
+</div></header>
+<div class="wrap">
+  <div class="saring" id="saring" aria-label="Saring area"></div>
+  <div class="daftar" id="daftar">
+    <div class="kosong"><h2>Memuat etalase…</h2></div>
+  </div>
+</div>
+<footer class="tutup"><div class="wrap" style="display:grid;gap:6px">
+  <span>Foto di etalase adalah foto asli warung dan menu, dikirim ojol pembina dengan izin pemilik. Harga dari daftar menu yang dikirim warung; kalau berbeda di tempat, harga warung yang berlaku.</span>
+  <span><a href="./">Tentang Warung Rame</a> · <a href="/">ocklu.com</a></span>
+</div></footer>
+<script src="inti.js"></script>
+<script>
+(function(){
+const W=window.Warung,$=id=>document.getElementById(id);
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+let D=null,area="";
+function kartu(w,i){
+  const el=document.createElement("article");el.className="kartu";
+  const foto=(w.foto||[]);
+  el.innerHTML=`<div class="foto">${foto.length?`<img src="${esc(foto[0])}" alt="Foto asli ${esc(w.nama)}" loading="lazy"><span class="asli">FOTO ASLI</span>${foto.length>1?`<div class="geser">${foto.map((_,j)=>`<button aria-label="Foto ${j+1}" aria-pressed="${j===0}"></button>`).join("")}</div>`:""}`:`<span class="tanpa">Foto warung menyusul</span>`}</div>
+  <div class="isi">
+    <div style="display:grid;gap:4px"><span class="label">${esc(w.area)} · kode ojol ${esc(w.kodeOjol)}</span><h2>${esc(w.nama)}</h2>
+    <div class="meta">${w.patokan?`<span>Patokan: ${esc(w.patokan)}</span>`:""}${w.jam?`<span>Buka: ${esc(w.jam)}</span>`:""}<span>${w.antar?"Ambil sendiri atau diantar":"Ambil sendiri / makan di tempat"}</span></div></div>
+    ${w.promo?`<div class="promo">${esc(w.promo)}</div>`:""}
+    <div class="menu">${(w.menu||[]).map((m,j)=>`<label><span>${esc(m.nama)}</span><span class="h">${W.rp(m.harga)}</span><input inputmode="numeric" data-menu="${esc(m.nama)}" aria-label="Jumlah ${esc(m.nama)}" placeholder="0"></label>`).join("")}</div>
+    <div class="cara"><label><input type="radio" name="cara${i}" value="ambil" checked>Ambil sendiri</label>${w.antar?`<label><input type="radio" name="cara${i}" value="dekat">Antar ≤ 1 km (${W.rp(D.ongkir.dekat)})</label><label><input type="radio" name="cara${i}" value="jauh">Antar 1–3 km (${W.rp(D.ongkir.jauh)})</label>`:""}</div>
+    <div class="total"><span>Total</span><b class="t">Rp0</b></div>
+    <a class="btn" aria-disabled="true">Pilih menu dulu</a>
+    <div class="tunjuk" hidden></div>
+    <p class="catatan">Makanan dibayar ke QRIS warung.${w.antar?" Ongkir dibayar langsung ke ojol pengantar.":""}</p>
+  </div>`;
+  const hitung=()=>{const pil={};el.querySelectorAll("input[data-menu]").forEach(x=>{const q=parseInt(x.value.replace(/\D/g,""),10);if(q>0)pil[x.dataset.menu]=Math.min(q,99)});
+    const c=el.querySelector(`input[name="cara${i}"]:checked`).value;const antar=c!=="ambil";const p=W.pesanan(w,pil,antar?"antar":"ambil",antar?D.ongkir[c]:0);
+    el.querySelector(".t").textContent=W.rp(p.total+p.ongkir);const b=el.querySelector(".btn"),tj=el.querySelector(".tunjuk");
+    if(p.kosong){b.setAttribute("aria-disabled","true");b.removeAttribute("href");b.textContent="Pilih menu dulu";tj.hidden=true;return}
+    b.removeAttribute("aria-disabled");const link=W.linkWA(D.wa,p.teks);
+    if(link){b.href=link;b.target="_blank";b.rel="noopener";b.textContent="Pesan lewat WhatsApp";tj.hidden=true}
+    else{b.removeAttribute("href");b.textContent="Tunjukkan pesanan ini ke penjual";b.onclick=()=>{tj.hidden=false;tj.textContent=p.teks+"\n\n(Nomor WA OCKLU sedang disiapkan. Tunjukkan teks ini di warung atau ke ojol pembina di pangkalan.)"}}};
+  el.querySelectorAll("input").forEach(x=>x.addEventListener("input",hitung));el.querySelectorAll('input[type="radio"]').forEach(x=>x.addEventListener("change",hitung));
+  el.querySelectorAll(".geser button").forEach((bt,j)=>bt.onclick=()=>{el.querySelector(".foto img").src=foto[j];el.querySelectorAll(".geser button").forEach((x,k)=>x.setAttribute("aria-pressed",k===j))});
+  return el}
+function render(){const L=(D.warung||[]).filter(w=>!area||w.area===area);const box=$("daftar");box.innerHTML="";
+  if(!L.length){box.innerHTML=`<div class="kosong"><h2>Etalase dibuka setelah uji coba berjalan</h2><p>Uji coba dimulai dengan 6 warung di Jakarta. Warung muncul di sini setelah pemiliknya setuju tampil dan foto aslinya masuk. Punya warung? <a href="./">Baca cara daftarnya</a>.</p></div>`;return}
+  L.forEach((w,i)=>box.appendChild(kartu(w,i)))}
+function saring(){const A=[...new Set((D.warung||[]).map(w=>w.area))].sort();const s=$("saring");s.innerHTML="";if(A.length<2)return;
+  ["",...A].forEach(a=>{const b=document.createElement("button");b.textContent=a||"Semua area";b.setAttribute("aria-pressed",a===area);b.onclick=()=>{area=a;saring();render()};s.appendChild(b)})}
+fetch("etalase.json",{cache:"no-store"}).then(r=>r.ok?r.json():Promise.reject()).then(d=>{D=Object.assign({wa:"",ongkir:{dekat:5000,jauh:8000},warung:[]},d);saring();render()})
+ .catch(()=>{D={wa:"",ongkir:{dekat:5000,jauh:8000},warung:[]};render()});
+})();
+</script>
+</body>
+</html>

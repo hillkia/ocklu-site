@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Warung Rame OCKLU</title>
+<meta name="description" content="Potongan 7% dari harga menu, hanya untuk pembeli yang datang lewat kode ojol. Daftar cukup kirim alamat, menu, harga, dan promo lewat WhatsApp.">
+<link rel="canonical" href="https://ocklu.com/warung/">
+<meta property="og:title" content="Warung Rame OCKLU: potongan 7%, bukan 20–30%">
+<meta property="og:description" content="Ojol pangkalan membawa pembeli ke warung dekatnya. Warung cukup kirim alamat, menu, harga, dan promo lewat WhatsApp.">
+<meta property="og:image" content="https://ocklu.com/warung/img/pemilik.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: layar lebar foto (ilustrasi AI) → papan angka nyata → kalkulator potongan → 5 babak bergulir → cara daftar → tanya jawab */
+:root{
+  --bg:#e9ecea; --surface:#ffffff; --surface2:#dfe4e1; --ink:#161b1a; --muted:#56605c; --line:#c9d0cc;
+  --teal:#22707e; --oranye:#c8501c; --mustard:#b88a1e; --malam:#0f1314; --layar:#f1e4c8; --good:#2e8b57;
+  --display:"Archivo","Arial Narrow",Arial,sans-serif; --body:"IBM Plex Sans",system-ui,sans-serif; --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#121615; --surface:#1a201e; --surface2:#232b28; --ink:#e8e4da; --muted:#9aa29d; --line:#313a37;
+  --teal:#56aebd; --oranye:#f07a45; --mustard:#e0b048; --malam:#0b0f10; --good:#5cc08b; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121615; --surface:#1a201e; --surface2:#232b28; --ink:#e8e4da; --muted:#9aa29d; --line:#313a37;
+  --teal:#56aebd; --oranye:#f07a45; --mustard:#e0b048; --malam:#0b0f10; --good:#5cc08b; color-scheme:dark}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55;padding-top:env(safe-area-inset-top,0px)}
+img{max-width:100%;display:block}
+[hidden]{display:none!important}
+h1,h2,h3{font-family:var(--display);font-stretch:80%;line-height:1.05;margin:0;text-wrap:balance}
+p{margin:0}
+a{color:var(--teal)}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:16px}
+.label{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.btn{display:inline-flex;align-items:center;gap:8px;font:600 1rem var(--body);padding:.75rem 1.1rem;border-radius:4px;border:1px solid var(--line);background:var(--surface);color:var(--ink);text-decoration:none;cursor:pointer}
+.btn.utama{background:var(--oranye);border-color:var(--oranye);color:#fff}
+.btn:focus-visible,input:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+.kepala{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:14px}
+.kepala b{font-family:var(--display);font-weight:900;font-stretch:115%;letter-spacing:.03em}
+.kepala nav{display:flex;gap:14px;font-size:.92rem}
+.kepala nav a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line)}
+
+/* layar lebar */
+.layar{position:relative;background:var(--malam);color:var(--layar);overflow:hidden}
+.layar img{width:100%;height:clamp(420px,62vw,640px);object-fit:cover;opacity:.9}
+.layar::before,.layar::after{content:"";position:absolute;left:0;right:0;height:26px;background:#000;z-index:2}
+.layar::before{top:0}.layar::after{bottom:0}
+.layar .bayang{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.82) 0%,rgba(0,0,0,.55) 45%,rgba(0,0,0,.05) 100%);z-index:1}
+.layar .isi{position:absolute;inset:0;z-index:3;display:grid;align-content:center}
+.layar .isi .wrap{width:100%;display:grid;gap:16px}
+.layar h1{font-size:clamp(2.4rem,7vw,5.2rem);font-weight:900;font-stretch:72%;text-transform:uppercase;max-width:13ch;color:var(--layar)}
+.layar h1 s{text-decoration-thickness:6px;text-decoration-color:var(--oranye);opacity:.75}
+.layar p{max-width:46ch;color:#e6dcc6;font-size:1.05rem}
+.ai{position:absolute;right:12px;bottom:34px;z-index:3;font-family:var(--mono);font-size:.68rem;background:rgba(0,0,0,.55);color:var(--layar);padding:.15rem .45rem;border-radius:3px}
+.aksi{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.cadangan{font-size:.88rem;color:#e6dcc6;max-width:40ch}
+
+section.bag{padding-block:56px;display:grid;gap:22px}
+section.bag > .wrap{display:grid;gap:22px}
+h2{font-size:clamp(1.7rem,3.6vw,2.6rem);font-weight:850}
+
+/* papan angka */
+.papan{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:3px solid var(--ink);border-bottom:1px solid var(--line)}
+.papan > div{padding:16px 14px 18px;border-right:1px solid var(--line);display:grid;gap:6px;min-width:0}
+.papan > div:last-child{border-right:0}
+.papan .n{font-family:var(--display);font-weight:850;font-size:clamp(1.8rem,4vw,2.8rem);font-variant-numeric:tabular-nums;line-height:1}
+.papan .k{font-size:.85rem;color:var(--muted)}
+@media (max-width:760px){.papan{grid-template-columns:1fr 1fr}.papan > div:nth-child(2){border-right:0}.papan > div:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+
+/* kalkulator */
+.hitung{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:24px;align-items:start}
+.isian{display:grid;gap:14px;background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:18px}
+.isian label{display:grid;gap:6px;font-size:.9rem;color:var(--muted)}
+.isian input{font:500 1.15rem var(--mono);padding:.55rem .7rem;border:1px solid var(--line);border-radius:4px;background:var(--bg);color:var(--ink);width:100%}
+.batang{display:grid;gap:14px}
+.baris{display:grid;gap:6px}
+.baris .ket{display:flex;justify-content:space-between;gap:8px;font-size:.92rem}
+.baris .ket b{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.baris .rel{height:16px;background:var(--surface2);border-radius:2px;overflow:hidden}
+.baris .isi{height:100%;background:var(--muted)}
+.baris.kita .isi{background:var(--oranye)}
+.hemat{border-left:4px solid var(--good);padding:10px 14px;background:var(--surface);font-size:.95rem}
+.hemat b{font-family:var(--display);font-size:1.5rem}
+.catatan{font-size:.82rem;color:var(--muted);max-width:80ch}
+@media (max-width:760px){.hitung{grid-template-columns:1fr}}
+
+/* babak */
+.babak{position:relative;background:var(--malam);color:var(--layar);overflow:hidden}
+.babak img{width:100%;height:clamp(300px,48vw,520px);object-fit:cover;transform:scale(1.03);transition:transform 6s ease-out}
+.babak.lihat img{transform:scale(1.1)}
+.babak .bayang{position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.85) 0%,rgba(0,0,0,.25) 55%,rgba(0,0,0,0) 100%)}
+.babak .teks{position:absolute;left:0;right:0;bottom:0;padding:24px 0 30px}
+.babak .teks .wrap{display:grid;gap:8px}
+.babak .no{font-family:var(--mono);font-size:.75rem;letter-spacing:.14em;color:var(--mustard)}
+.babak h3{font-size:clamp(1.8rem,4.6vw,3.2rem);font-weight:900;font-stretch:74%;text-transform:uppercase;color:var(--layar)}
+.babak p{max-width:58ch;color:#e6dcc6}
+.babak .ai{bottom:auto;top:10px}
+@media (prefers-reduced-motion:reduce){.babak img,.babak.lihat img{transform:none;transition:none}}
+
+/* langkah & tanya */
+.langkah{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;counter-reset:l;border-top:3px solid var(--ink)}
+.langkah li{list-style:none;padding:16px 16px 18px 0;display:grid;gap:6px;counter-increment:l}
+.langkah li::before{content:counter(l);font-family:var(--display);font-weight:900;font-size:2.4rem;color:var(--oranye);line-height:1}
+.langkah ol{margin:0;padding:0;display:contents}
+@media (max-width:760px){.langkah{grid-template-columns:1fr}}
+details{border-bottom:1px solid var(--line);padding-block:12px}
+summary{cursor:pointer;font-weight:600}
+details p{margin-top:8px;color:var(--muted);max-width:70ch}
+.tutup{background:var(--malam);color:#cfc6b2;padding-block:28px;font-size:.85rem}
+.tutup a{color:var(--layar)}
+.tutup .wrap{display:grid;gap:8px}
+</style>
+</head>
+<body>
+<div class="wrap kepala"><b>OCKLU · WARUNG RAME</b><nav><a href="etalase.html">Lihat etalase</a><a href="#daftar">Cara daftar</a></nav></div>
+
+<header class="layar">
+  <img src="img/pemilik.jpg" alt="Pemilik warung memeriksa daftar harga di balik meja" width="1376" height="768">
+  <div class="bayang"></div>
+  <div class="isi"><div class="wrap">
+    <span class="label" style="color:var(--mustard)">Untuk pemilik warung dan gerobak di Jakarta</span>
+    <h1>Potongan 7%, bukan <s>20–30%</s>.</h1>
+    <p>Ojol di pangkalan dekat warung Bapak/Ibu membawa pembeli baru. Warung cukup kirim alamat, menu, harga, dan promo lewat WhatsApp. Potongan hanya untuk pembeli yang datang lewat kode ojol.</p>
+    <div class="aksi" id="cta"></div>
+  </div></div>
+  <span class="ai">Ilustrasi AI</span>
+</header>
+
+<section class="bag"><div class="wrap">
+  <div style="display:grid;gap:8px"><span class="label" id="angkaTgl">Angka program</span><h2>Angka sejauh ini</h2></div>
+  <div class="papan">
+    <div><span class="n" id="pWarung">0</span><span class="k">warung binaan aktif</span></div>
+    <div><span class="n" id="pPesan">0</span><span class="k">pembeli lewat kode ojol, 4 minggu terakhir</span></div>
+    <div><span class="n" id="pKomisi">Rp0</span><span class="k">potongan 7% yang dibayar warung, 4 minggu terakhir</span></div>
+    <div><span class="n" id="pHemat">Rp0</span><span class="k">uang yang tetap di warung dibanding potongan 20%</span></div>
+  </div>
+  <p class="catatan" id="angkaCatatan">Uji coba dimulai dengan 6 warung. Angka muncul setelah minggu pertama berjalan dan hanya dihitung dari pesanan yang benar-benar tercatat.</p>
+</div></section>
+
+<section class="bag" style="background:var(--surface2)"><div class="wrap">
+  <div style="display:grid;gap:8px"><span class="label">Hitung sendiri</span><h2>Berapa yang tetap di warung</h2></div>
+  <div class="hitung">
+    <div class="isian">
+      <label for="hHarga">Harga menu (Rp)<input id="hHarga" inputmode="numeric" value="15000"></label>
+      <label for="hJumlah">Pesanan lewat aplikasi atau kode per bulan<input id="hJumlah" inputmode="numeric" value="200"></label>
+      <p class="catatan">Contoh awal: 200 porsi nasi ayam Rp15.000 sebulan. Ganti dengan angka warung sendiri.</p>
+    </div>
+    <div class="batang" id="batang"></div>
+  </div>
+  <p class="catatan">Kisaran 20–30% adalah potongan yang dilaporkan untuk aplikasi pesan-antar makanan besar di Indonesia; besarnya tergantung kontrak, dan ada yang ditambah biaya per transaksi serta PPN. Sumber: <a href="https://industri.kontan.co.id/news/gofood-potong-20rp1000-per-produk-terjual-dari-mitra-pelaku-umkm-makin-terjepit" rel="noopener">Kontan</a>, <a href="https://ekonomi.bisnis.com/read/20220512/12/1532674/grab-dan-gojek-buka-suara-soal-petisi-tolak-komisi-20-persen" rel="noopener">Bisnis.com</a>, <a href="https://hitungcerdas.net/blog/potongan-gofood-grabfood-shopeefood" rel="noopener">HitungCerdas 2026</a>. Cek kontrak warung sendiri untuk angka pastinya.</p>
+</div></section>
+
+<section aria-label="Lima tahap program">
+  <article class="babak"><img src="img/babak1.jpg" alt="Pemilik warung merapikan meja di sore hari" loading="lazy" width="1376" height="768"><div class="bayang"></div><span class="ai">Ilustrasi AI</span>
+    <div class="teks"><div class="wrap"><span class="no">TAHAP 1 · HARI 1–3</span><h3>Siap tampil</h3><p>Kirim alamat, nama warung, menu dengan harga, dan promo lewat WA. Tanpa dokumen, tanpa foto standar marketplace. Stiker QR ditempel di meja.</p></div></div></article>
+  <article class="babak"><img src="img/babak2.jpg" alt="Tiga pengemudi ojek makan siang di bangku warung" loading="lazy" width="1376" height="768"><div class="bayang"></div><span class="ai">Ilustrasi AI</span>
+    <div class="teks"><div class="wrap"><span class="no">TAHAP 2 · MINGGU 1</span><h3>Pembeli pertama</h3><p>Ojol pembina mengajak teman pangkalan makan di warung dan memasang kode di status WA. Pembeli pertama tercatat dari pesan WA.</p></div></div></article>
+  <article class="babak"><img src="img/babak3.jpg" alt="Antrean pembeli di warung gang pada siang hari" loading="lazy" width="1376" height="768"><div class="bayang"></div><span class="ai">Ilustrasi AI</span>
+    <div class="teks"><div class="wrap"><span class="no">TAHAP 3 · MINGGU 2–4</span><h3>Bikin ramai</h3><p>Satu promo seminggu ke grup RT, kantor, dan pangkalan. Pembeli ambil sendiri atau diantar ojol dengan ongkir yang 100% untuk ojolnya.</p></div></div></article>
+  <article class="babak"><img src="img/babak4.jpg" alt="Pembeli langganan berbincang dengan pemilik warung" loading="lazy" width="1376" height="768"><div class="bayang"></div><span class="ai">Ilustrasi AI</span>
+    <div class="teks"><div class="wrap"><span class="no">TAHAP 4 · BULAN 2</span><h3>Pembeli balik lagi</h3><p>Kartu stempel dari warung dan testimoni asli dengan izin. Potongan 7% berlaku 3 bulan per pembeli; pelanggan lama tidak kena.</p></div></div></article>
+  <article class="babak"><img src="img/babak5.jpg" alt="Pengemudi memuat tumpukan nasi kotak ke motor" loading="lazy" width="1376" height="768"><div class="bayang"></div><span class="ai">Ilustrasi AI</span>
+    <div class="teks"><div class="wrap"><span class="no">TAHAP 5 · BULAN 3+</span><h3>Naik skala</h3><p>Pesanan nasi kotak untuk kantor dan arisan, jam jualan kedua, tempat promosi baru tiap bulan.</p></div></div></article>
+</section>
+
+<section class="bag" id="daftar"><div class="wrap">
+  <div style="display:grid;gap:8px"><span class="label">Daftar</span><h2>Tiga langkah, semuanya lewat WhatsApp</h2></div>
+  <div class="langkah"><ol>
+    <li><b>Kirim data warung</b><span>Alamat (pin lokasi), nama warung, foto warung, daftar menu dan harga, promo, dan QRIS warung.</span></li>
+    <li><b>Terima stiker QR</b><span>Berisi kode ojol pembina. Bukan alat bayar: pembeli tetap bayar ke QRIS warung.</span></li>
+    <li><b>Jualan seperti biasa</b><span>Bulan pertama gratis. Setelah itu warung membayar 7% dari harga menu untuk pesanan lewat kode, langsung ke QRIS OCKLU.</span></li>
+  </ol></div>
+  <div class="aksi" id="cta2"></div>
+</div></section>
+
+<section class="bag" style="background:var(--surface2)"><div class="wrap">
+  <h2>Yang sering ditanya</h2>
+  <div>
+    <details><summary>Apakah pelanggan lama warung kena potongan?</summary><p>Tidak. Potongan hanya untuk pembeli yang datang lewat kode ojol. Tiap minggu warung dapat rekap dan boleh mencoret nama yang ia ragukan.</p></details>
+    <details><summary>Siapa yang memegang uang pembeli?</summary><p>Warung. Pembeli membayar makanan langsung ke QRIS warung, termasuk pesanan antar. Ojol hanya menerima ongkirnya sendiri. Potongan 7% dibayar warung ke QRIS OCKLU.</p></details>
+    <details><summary>Bisa diantar?</summary><p>Bisa, setelah fitur antar dinyalakan untuk warung itu. Ongkir usulan Rp5.000 sampai 1 km dan Rp8.000 untuk 1–3 km, seluruhnya untuk ojol pengantar dan tidak kena potongan.</p></details>
+    <details><summary>Boleh berhenti?</summary><p>Boleh kapan saja, tanpa biaya. Stiker dilepas, selesai.</p></details>
+    <details><summary>Kenapa gambar orang di halaman ini ilustrasi?</summary><p>Untuk menjaga privasi wajah orang sungguhan. Foto menu dan warung di etalase adalah foto asli kiriman ojol pembina dengan izin pemiliknya.</p></details>
+  </div>
+</div></section>
+
+<footer class="tutup"><div class="wrap">
+  <span>OCKLU · Warung Rame. Program uji coba di Jakarta. Tidak ada janji penghasilan; angka di halaman ini hanya dari pesanan yang tercatat.</span>
+  <span>Gambar orang di halaman ini dibuat dengan AI dan bukan pelanggan atau pemilik warung sungguhan. <a href="etalase.html">Etalase warung</a> · <a href="/">ocklu.com</a></span>
+</div></footer>
+
+<script src="inti.js"></script>
+<script>
+(function(){
+const W=window.Warung,$=id=>document.getElementById(id);
+function gambarBatang(){const h=parseInt(String($("hHarga").value).replace(/\D/g,""),10)||0,j=parseInt(String($("hJumlah").value).replace(/\D/g,""),10)||0;const b=W.banding(h,j),maks=Math.max(1,b.apl30);
+  const baris=(ket,v,kelas)=>`<div class="baris ${kelas||""}"><div class="ket"><span>${ket}</span><b>${W.rp(v)}</b></div><div class="rel"><div class="isi" style="width:${(v/maks*100).toFixed(1)}%"></div></div></div>`;
+  $("batang").innerHTML=`<div class="ket mono" style="font-size:.85rem;color:var(--muted)">Penjualan ${W.rp(b.total)} per bulan</div>`+baris("Potongan aplikasi 30%",b.apl30)+baris("Potongan aplikasi 20%",b.apl20)+baris("Potongan OCKLU 7%",b.ocklu,"kita")+
+  `<div class="hemat">Tetap di warung: <b>${W.rp(b.hematMin)}–${W.rp(b.hematMax)}</b> per bulan dibanding aplikasi.</div>`}
+["hHarga","hJumlah"].forEach(id=>$(id).addEventListener("input",gambarBatang));gambarBatang();
+function pasangCTA(wa){const teks="Halo OCKLU, saya pemilik warung dan mau daftar Warung Rame.";const link=W.linkWA(wa,teks);
+  const isi=link?`<a class="btn utama" href="${link}" rel="noopener">Daftar lewat WhatsApp</a><a class="btn" href="etalase.html">Lihat etalase</a>`:`<a class="btn utama" href="#daftar">Cara daftar</a><span class="cadangan">Nomor WA OCKLU sedang disiapkan. Sementara itu tanya ojol pembina di pangkalan terdekat.</span>`;
+  $("cta").innerHTML=isi;$("cta2").innerHTML=isi}
+pasangCTA("");
+fetch("etalase.json",{cache:"no-store"}).then(r=>r.ok?r.json():null).then(d=>{if(!d)return;pasangCTA(d.wa);const a=d.angka||{};
+  $("pWarung").textContent=a.warung||0;$("pPesan").textContent=a.pesanan||0;$("pKomisi").textContent=W.rp(a.komisi||0);$("pHemat").textContent=W.rp(Math.max(0,Math.round((a.nilai||0)*0.20)-(a.komisi||0)));
+  if(d.dibuat)$("angkaTgl").textContent="Diperbarui "+new Date(d.dibuat).toLocaleDateString("id-ID",{day:"numeric",month:"long",year:"numeric"});
+  if(a.pesanan>0)$("angkaCatatan").textContent="Dihitung hanya dari pesanan lewat kode ojol yang tercatat di WA OCKLU. Pembanding memakai batas bawah potongan aplikasi, 20%.";}).catch(()=>{});
+const io="IntersectionObserver" in window?new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add("lihat")}),{threshold:.35}):null;
+document.querySelectorAll(".babak").forEach(b=>io?io.observe(b):b.classList.add("lihat"));
+})();
+</script>
+</body>
+</html>
