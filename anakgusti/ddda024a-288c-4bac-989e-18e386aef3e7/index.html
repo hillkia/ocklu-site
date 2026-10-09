@@ -176,6 +176,13 @@ footer{font-family:"Fredoka",sans-serif;font-weight:500;letter-spacing:.08em;tex
   animation:butir .9s steps(4) infinite}
 @keyframes butir{0%{transform:translate(0,0)}25%{transform:translate(-3%,2%)}50%{transform:translate(2%,-3%)}75%{transform:translate(-2%,-1%)}}
 @media (prefers-reduced-motion:reduce){#butir{animation:none}}
+@media (pointer:coarse),(max-width:520px){
+  .judul small{display:none}.judul{font-size:18px}
+  #b-masuk{left:auto;right:16px;transform:none;bottom:44px;max-width:calc(100vw - 186px);white-space:normal;font-size:15px;padding:12px 16px;text-align:left}
+  #toast{bottom:auto;top:76px}
+  #petunjuk{bottom:auto;top:70px}
+  #zoom{bottom:120px}
+}
 </style>
 </head>
 <body>
@@ -564,6 +571,10 @@ function aulaGedung(g) {
   aula.add(mesh(new THREE.BoxGeometry(6.4, g.sub ? 1.4 : 1, .2), [rangka, rangka, rangka, rangka, new THREE.MeshStandardMaterial({ map: namaTex, emissive: 0xffffff, emissiveMap: namaTex, emissiveIntensity: .25 }), rangka], 0, T + 1.2, D / 2 + .5));
   // bentuk khas gedung berdiri di belakang aula sebagai penanda
   g.grup.position.set(0, 0, -D / 2 - 4.8); g.grup.rotation.set(0, 0, 0); g.grup.scale.setScalar(1.25); scene.remove(g.grup); aula.add(g.grup);
+  if (g.id === 'ayat') {
+    const tt = teksTekstur((x, w, h) => { x.fillStyle = '#fffaf3'; x.fillRect(0, 0, w, h); x.fillStyle = '#eadbc8'; x.font = '600 70px Fredoka, sans-serif'; x.textAlign = 'center'; x.textBaseline = 'middle'; x.fillText('ocklu', w / 2, h / 2 + 4); }, 256, 96);
+    const tanda = mesh(new THREE.PlaneGeometry(1, .38), new THREE.MeshStandardMaterial({ map: tt }), 0, .3, -D / 2 - 4.8 - 5.95, false); tanda.rotation.y = Math.PI; aula.add(tanda);
+  }
   aula.userData.g = g; kenaKlik.push(aula);
   aula.updateMatrixWorld(true);
   const ke = (x, z) => aula.localToWorld(new THREE.Vector3(x, 0, z));
@@ -1084,7 +1095,8 @@ function putar() {
   if (gembalaObj && gembalaObj.position.distanceTo(aku.position) < 14) gembalaObj.lookAt(aku.position.x, 0, aku.position.z);
   // di aula mana? (tanpa pindah layar)
   const kini = diAula(aku.position);
-  if (kini !== diDalam) { diDalam = kini; document.getElementById('lokasi').textContent = kini ? `${kini.e} ${kini.nama}` : '🏙 Kota Anak Gusti';
+  if (kini !== diDalam) { if (kini && !diDalam) { kam.yaw = Math.atan2(kini.pintuLuar.x - kini.aula.position.x, kini.pintuLuar.z - kini.aula.position.z); kam.pitch = Math.max(kam.pitch, .78); }   // kamera di belakang anak, menghadap ke dalam
+    diDalam = kini; document.getElementById('lokasi').textContent = kini ? `${kini.e} ${kini.nama}` : '🏙 Kota Anak Gusti';
     if (kini) { toast(`Selamat datang di ${kini.nama}!`); if (aktif) store.get('tanya-guru', []).then(t => { if (Array.isArray(t) && t.some(u => u.by === aktif.id && u.belumDibacaAnak)) setTimeout(() => toast('💌 Ada balasan untukmu! Ngobrol dengan Kakak Guru untuk membaca.'), 2400); }); } }
   // yang terdekat → tombol besar "Masuk / Buka"
   dekat = null;
@@ -1137,7 +1149,7 @@ document.getElementById('b-mulai').onclick = () => {
   document.body.classList.add('main'); document.getElementById('judul-film').style.opacity = 0;
   document.querySelectorAll('.lbl').forEach(l => l.classList.remove('redup'));
   document.getElementById('kendali').style.display = 'flex';
-  const p = document.getElementById('petunjuk'); p.style.opacity = 1; setTimeout(() => p.style.opacity = 0, 8000);
+  const p = document.getElementById('petunjuk'); if (matchMedia('(pointer:coarse)').matches) p.textContent = 'Geser bulatan untuk jalan · ketuk lantai atau gedung'; p.style.opacity = 1; setTimeout(() => p.style.opacity = 0, 8000);
 };
 document.getElementById('b-profil').onclick = () => { if (mulai && !diDalam) jalanKe(GEDUNG.find(g => g.id === 'rumah')); };
 /* ============ RUANG-RUANG (isi dari AntiokhiaKids) ============ */
