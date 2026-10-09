@@ -575,6 +575,12 @@ function aulaGedung(g) {
     const tt = teksTekstur((x, w, h) => { x.fillStyle = '#fffaf3'; x.fillRect(0, 0, w, h); x.fillStyle = '#eadbc8'; x.font = '600 70px Fredoka, sans-serif'; x.textAlign = 'center'; x.textBaseline = 'middle'; x.fillText('ocklu', w / 2, h / 2 + 4); }, 256, 96);
     // di badan menara (garis putih), sisi belakang — kecil, baru terbaca kalau di-zoom
     const tanda = mesh(new THREE.PlaneGeometry(1.1, .42), new THREE.MeshStandardMaterial({ map: tt }), 0, 3.4, -D / 2 - 4.8 - 2.74, false); tanda.rotation.y = Math.PI; aula.add(tanda);
+    // sisi DEPAN menara bagian atas (garis putih teratas) — terlihat dari alun-alun kalau di-zoom
+    const tt2 = teksTekstur((x, w, h) => { x.fillStyle = '#fffaf3'; x.fillRect(0, 0, w, h); x.fillStyle = '#dcc3a6'; x.font = '600 70px Fredoka, sans-serif'; x.textAlign = 'center'; x.textBaseline = 'middle'; x.fillText('ocklu', w / 2, h / 2 + 4); }, 256, 96);
+    for (let k = 0; k < 4; k++) {   // empat sisi menara, garis putih teratas
+      const th = k * Math.PI / 2, tp = mesh(new THREE.PlaneGeometry(1.15, .43), new THREE.MeshStandardMaterial({ map: tt2 }), Math.sin(th) * 2.16, 7.45, -D / 2 - 4.8 + Math.cos(th) * 2.16, false);
+      tp.rotation.y = th; aula.add(tp);
+    }
   }
   aula.userData.g = g; kenaKlik.push(aula);
   aula.updateMatrixWorld(true);
@@ -770,12 +776,12 @@ function bukaPandangan(dt) {      // seperti game: yang menghalangi kamera → t
   const halang = new Set();
   for (const h of sinarHalang.intersectObjects(kenaKlik, true)) { if (h.object.userData.tetap || h.object.isSprite) continue; let o = h.object; while (o && !o.userData.g) o = o.parent; if (o) halang.add(o.userData.g); }
   if (diDalam) halang.add(diDalam);
-  GEDUNG.forEach(g => { if (g.pintuLuar && aku.position.distanceTo(g.pintuLuar) < 6) halang.add(g); });   // dekat pintu: gerbang & dinding ikut tembus
+  GEDUNG.forEach(g => { g.dekatPintu = !!(g.pintuLuar && aku.position.distanceTo(g.pintuLuar) < 6); if (g.papanGerbang) g.papanGerbang.visible = g.tembus > .6 && !g.dekatPintu; });   // dekat pintu: HANYA papan gerbang yg disembunyikan, menara tetap utuh
   GEDUNG.forEach(g => {
     const tuju = halang.has(g) ? .18 : 1; if (Math.abs(g.tembus - tuju) < .01) return;
     g.tembus += (tuju - g.tembus) * Math.min(1, dt * 10);
     g.mats.forEach(m => { m.transparent = g.tembus < .99 || m.userData.tr; m.opacity = m.userData.op * g.tembus; m.depthWrite = g.tembus > .99; });
-    if (g.papanGerbang) g.papanGerbang.visible = g.tembus > .6;
+    if (g.papanGerbang) g.papanGerbang.visible = g.tembus > .6 && !g.dekatPintu;
   });
 }
 penghalang.push({ x: 0, z: 0, r: 3.9 });                         // air mancur
