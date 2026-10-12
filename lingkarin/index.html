@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Lingkarin OCKLU</title>
-<meta name="description" content="Lingkarin OCKLU: makanan warung dekat pangkalan ojol di Jakarta. Menu, harga, promo, ambil sendiri atau diantar. Pesan lewat WhatsApp, bayar ke QRIS warung.">
+<meta name="description" content="Lingkarin OCKLU: usaha kecil dekat pangkalan ojol di Jakarta, dari warung makan sampai sayur, kue, mainan, dan jasa. Barang, harga, promo, ambil sendiri atau diantar. Pesan lewat WhatsApp, bayar ke QRIS warung.">
 <link rel="canonical" href="https://ocklu.com/lingkarin/">
-<meta property="og:title" content="Lingkarin OCKLU: makanan warung dekat pangkalan">
+<meta property="og:title" content="Lingkarin OCKLU: usaha kecil dekat pangkalan ojol">
 <meta property="og:image" content="https://ocklu.com/warung/img/babak3.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -39,6 +39,7 @@ a{color:var(--teal)}
 .pita h1{font-size:clamp(2.2rem,6vw,4rem);font-weight:900;font-stretch:72%;text-transform:uppercase}
 .pita p{color:#e6dcc6;max-width:60ch}
 .pita a{color:var(--layar)}
+.cari{padding-top:18px}.cari input{font:500 1rem var(--body);width:100%;padding:.7rem .9rem;border:1px solid var(--line);border-radius:4px;background:var(--surface);color:var(--ink)}
 .saring{display:flex;flex-wrap:wrap;gap:8px;padding-block:18px}
 .saring button{font:500 .9rem var(--body);padding:.4rem .8rem;border:1px solid var(--line);border-radius:999px;background:var(--surface);color:var(--ink);cursor:pointer}
 .saring button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
@@ -78,39 +79,40 @@ a{color:var(--teal)}
 <header class="pita"><div class="wrap">
   <span class="label" style="color:var(--mustard)">LINGKARIN · dari OCKLU · Jakarta</span>
   <h1>Lingkarin OCKLU</h1>
-  <p style="font-family:var(--display);font-stretch:80%;font-weight:700;font-size:clamp(1.3rem,3.4vw,2rem);color:var(--layar);text-transform:uppercase">Makanan warung dekat pangkalan ojol</p>
-  <p>Warung binaan ojol pangkalan. Harga sama dengan di warung, bayar langsung ke QRIS warung. Ambil sendiri, atau diantar ojol kalau warungnya melayani antar. <a href="/warung/">Punya warung? Daftar di sini.</a></p>
+  <p style="font-family:var(--display);font-stretch:80%;font-weight:700;font-size:clamp(1.3rem,3.4vw,2rem);color:var(--layar);text-transform:uppercase">Usaha kecil dekat pangkalan ojol</p>
+  <p>Warung makan, tukang sayur, lapak kue, mainan, jasa, dan usaha kecil lain yang dibina ojol pangkalan. Harga sama dengan di tempat, bayar langsung ke QRIS usahanya. Ambil sendiri, atau diantar ojol kalau warungnya melayani antar. <a href="/warung/#daftar-tunggu">Punya usaha? Daftar di sini.</a></p>
 </div></header>
 <div class="wrap">
+  <div class="cari"><input id="cari" type="search" placeholder="Cari: sayur, kue, nasi, mainan, cukur…" aria-label="Cari usaha atau barang"></div>
   <div class="saring" id="saring" aria-label="Saring area"></div>
   <div class="daftar" id="daftar">
     <div class="kosong"><h2>Memuat warung…</h2></div>
   </div>
 </div>
 <footer class="tutup"><div class="wrap" style="display:grid;gap:6px">
-  <span>Foto di Lingkarin adalah foto asli warung dan menu, dikirim ojol pembina dengan izin pemilik. Harga dari daftar menu yang dikirim warung; kalau berbeda di tempat, harga warung yang berlaku.</span>
-  <span><a href="/warung/">Untuk pemilik warung</a> · <a href="/">ocklu.com</a></span>
+  <span>Foto di Lingkarin adalah foto asli usaha dan barangnya, dikirim ojol pembina dengan izin pemilik. Harga dari daftar yang dikirim pemilik usaha; kalau berbeda di tempat, harga di tempat yang berlaku. Barang terlarang (pinjol, judi, obat keras, rokok, miras, dan sejenisnya) tidak diterima.</span>
+  <span><a href="/warung/">Untuk pemilik usaha</a> · <a href="/">ocklu.com</a></span>
 </div></footer>
 <script src="/warung/inti.js"></script>
 <script>
 (function(){
 const W=window.Warung,$=id=>document.getElementById(id);
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-let D=null,area="";
+let D=null,area="",kata="";
 function kartu(w,i){
   const el=document.createElement("article");el.className="kartu";
   const foto=(w.foto||[]).map(f=>/^(https?:)?\//.test(f)?f:"/warung/"+f);
   el.innerHTML=`<div class="foto">${foto.length?`<img src="${esc(foto[0])}" alt="Foto asli ${esc(w.nama)}" loading="lazy"><span class="asli">FOTO ASLI</span>${foto.length>1?`<div class="geser">${foto.map((_,j)=>`<button aria-label="Foto ${j+1}" aria-pressed="${j===0}"></button>`).join("")}</div>`:""}`:`<span class="tanpa">Foto warung menyusul</span>`}</div>
   <div class="isi">
-    <div style="display:grid;gap:4px"><span class="label">${esc(w.area)} · kode ojol ${esc(w.kodeOjol)}</span><h2>${esc(w.nama)}</h2>
-    <div class="meta">${w.patokan?`<span>Patokan: ${esc(w.patokan)}</span>`:""}${w.jam?`<span>Buka: ${esc(w.jam)}</span>`:""}<span>${w.antar?"Ambil sendiri atau diantar":"Ambil sendiri / makan di tempat"}</span></div></div>
+    <div style="display:grid;gap:4px"><span class="label">${esc(w.area)} · kode ojol ${esc(w.kodeOjol)}</span><h2>${esc(w.nama)}</h2>${w.jenis?`<span class="meta">${esc(w.jenis)}</span>`:""}
+    <div class="meta">${w.patokan?`<span>Patokan: ${esc(w.patokan)}</span>`:""}${w.jam?`<span>Buka: ${esc(w.jam)}</span>`:""}<span>${w.antar?"Ambil sendiri atau diantar":"Ambil sendiri"}</span></div></div>
     ${w.promo?`<div class="promo">${esc(w.promo)}</div>`:""}
     <div class="menu">${(w.menu||[]).map((m,j)=>`<label><span>${esc(m.nama)}</span><span class="h">${W.rp(m.harga)}</span><input inputmode="numeric" data-menu="${esc(m.nama)}" aria-label="Jumlah ${esc(m.nama)}" placeholder="0"></label>`).join("")}</div>
     <div class="cara"><label><input type="radio" name="cara${i}" value="ambil" checked>Ambil sendiri</label>${w.antar?`<label><input type="radio" name="cara${i}" value="dekat">Antar ≤ 1 km (${W.rp(D.ongkir.dekat)})</label><label><input type="radio" name="cara${i}" value="jauh">Antar 1–3 km (${W.rp(D.ongkir.jauh)})</label>`:""}</div>
     <div class="total"><span>Total</span><b class="t">Rp0</b></div>
     <a class="btn" aria-disabled="true">Pilih menu dulu</a>
     <div class="tunjuk" hidden></div>
-    <p class="catatan">Makanan dibayar ke QRIS warung.${w.antar?" Ongkir dibayar langsung ke ojol pengantar.":""}</p>
+    <p class="catatan">Dibayar ke QRIS usaha ini.${w.antar?" Ongkir dibayar langsung ke ojol pengantar.":""}</p>
   </div>`;
   const hitung=()=>{const pil={};el.querySelectorAll("input[data-menu]").forEach(x=>{const q=parseInt(x.value.replace(/\D/g,""),10);if(q>0)pil[x.dataset.menu]=Math.min(q,99)});
     const c=el.querySelector(`input[name="cara${i}"]:checked`).value;const antar=c!=="ambil";const p=W.pesanan(w,pil,antar?"antar":"ambil",antar?D.ongkir[c]:0);
@@ -122,11 +124,13 @@ function kartu(w,i){
   el.querySelectorAll("input").forEach(x=>x.addEventListener("input",hitung));el.querySelectorAll('input[type="radio"]').forEach(x=>x.addEventListener("change",hitung));
   el.querySelectorAll(".geser button").forEach((bt,j)=>bt.onclick=()=>{el.querySelector(".foto img").src=foto[j];el.querySelectorAll(".geser button").forEach((x,k)=>x.setAttribute("aria-pressed",k===j))});
   return el}
-function render(){const L=(D.warung||[]).filter(w=>!area||w.area===area);const box=$("daftar");box.innerHTML="";
-  if(!L.length){box.innerHTML=`<div class="kosong"><h2>Lingkarin dibuka setelah uji coba berjalan</h2><p>Uji coba dimulai dengan 6 warung di Jakarta. Warung muncul di sini setelah pemiliknya setuju tampil dan foto aslinya masuk. Punya warung? <a href="/warung/">Baca cara daftarnya</a>.</p></div>`;return}
+function cocok(w){if(!kata)return true;const t=[w.nama,w.jenis,w.area,w.patokan,w.promo,...(w.menu||[]).map(m=>m.nama)].join(" ").toLowerCase();return kata.split(/\s+/).every(k=>t.includes(k))}
+function render(){const L=(D.warung||[]).filter(w=>(!area||w.area===area)&&cocok(w));const box=$("daftar");box.innerHTML="";
+  if(!L.length){box.innerHTML=`<div class="kosong"><h2>${kata?"Belum ada yang cocok":"Lingkarin dibuka setelah uji coba berjalan"}</h2><p>${kata?"Coba kata lain, atau hapus pencarian.":"Uji coba dimulai dengan 6 usaha di Jakarta. Usaha muncul di sini setelah pemiliknya setuju tampil dan foto aslinya masuk."} Punya usaha? <a href="/warung/#daftar-tunggu">Daftar di sini</a>.</p></div>`;return}
   L.forEach((w,i)=>box.appendChild(kartu(w,i)))}
 function saring(){const A=[...new Set((D.warung||[]).map(w=>w.area))].sort();const s=$("saring");s.innerHTML="";if(A.length<2)return;
   ["",...A].forEach(a=>{const b=document.createElement("button");b.textContent=a||"Semua area";b.setAttribute("aria-pressed",a===area);b.onclick=()=>{area=a;saring();render()};s.appendChild(b)})}
+document.getElementById("cari").addEventListener("input",e=>{kata=e.target.value.trim().toLowerCase();render()});
 fetch("/warung/etalase.json",{cache:"no-store"}).then(r=>r.ok?r.json():Promise.reject()).then(d=>{D=Object.assign({wa:"",ongkir:{dekat:5000,jauh:8000},warung:[]},d);saring();render()})
  .catch(()=>{D={wa:"",ongkir:{dekat:5000,jauh:8000},warung:[]};render()});
 })();
