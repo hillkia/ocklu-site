@@ -113,6 +113,17 @@ details p{margin-top:8px;color:var(--muted);max-width:70ch}
 .tutup{background:var(--malam);color:#cfc6b2;padding-block:28px;font-size:.85rem}
 .tutup a{color:var(--layar)}
 .tutup .wrap{display:grid;gap:8px}
+.formulir{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:20px}
+.formulir label{display:grid;gap:6px;font-size:.9rem;color:var(--muted)}
+.formulir .lebar{grid-column:1/-1}
+.formulir input,.formulir textarea{font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:.6rem .7rem;width:100%;min-width:0}
+.formulir .cek{display:flex;gap:10px;align-items:flex-start;color:var(--ink)}
+.formulir .cek input{width:auto;margin-top:.3rem}
+.formulir .jebak{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.hasil-daftar{font-size:.95rem;padding:12px 14px;border-radius:4px}
+.hasil-daftar.ok{border-left:4px solid var(--good);background:var(--surface)}
+.hasil-daftar.salah{border-left:4px solid var(--oranye);background:var(--surface)}
+@media (max-width:760px){.formulir{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -177,6 +188,25 @@ details p{margin-top:8px;color:var(--muted);max-width:70ch}
   <div class="aksi" id="cta2"></div>
 </div></section>
 
+<section class="bag" id="daftar-tunggu"><div class="wrap">
+  <div style="display:grid;gap:8px"><span class="label">Daftar sendiri</span><h2>Daftarkan warung Anda</h2>
+  <p style="max-width:62ch;color:var(--muted)">Belum kenal ojol pembina? Isi formulir ini. Warung masuk <b>daftar tunggu</b>, lalu koordinator mencarikan ojol di pangkalan terdekat. Selama uji coba tempatnya terbatas, jadi kami kabari dulu lewat WhatsApp sebelum mulai. Nomor WA Anda tidak ditampilkan di mana pun.</p></div>
+  <form class="formulir" id="fDaftar" novalidate>
+    <label>Nama warung<input id="dNama" required maxlength="60" placeholder="Bubur Ayam Bu Sri"></label>
+    <label>Nama panggilan pemilik<input id="dPemilik" maxlength="40" placeholder="Bu Sri"></label>
+    <label>Nomor WhatsApp<input id="dWa" required inputmode="tel" maxlength="16" placeholder="0812xxxxxxx"></label>
+    <label>Area (kelurahan / RW)<input id="dArea" required maxlength="60" placeholder="Kukusan RW 05"></label>
+    <label>Patokan<input id="dPatokan" maxlength="80" placeholder="Depan masjid Al-Ikhlas"></label>
+    <label>Jualan apa<input id="dJenis" maxlength="60" placeholder="Bubur ayam, nasi uduk"></label>
+    <label class="lebar">Menu dan harga (boleh nanti)<textarea id="dMenu" rows="3" maxlength="500" placeholder="Bubur ayam = 12000&#10;Teh manis = 3000"></textarea></label>
+    <label class="lebar">Sudah kenal ojol pembina? Tulis kodenya (boleh kosong)<input id="dKode" maxlength="20" placeholder="ANDI-01"></label>
+    <label class="jebak" aria-hidden="true">Situs<input id="dSitus" tabindex="-1" autocomplete="off"></label>
+    <label class="cek lebar"><input type="checkbox" id="dSetuju">Saya setuju dihubungi OCKLU lewat WhatsApp soal program ini.</label>
+    <div class="lebar aksi"><button class="btn utama" type="submit" id="dKirim">Masuk daftar tunggu</button></div>
+    <div class="lebar hasil-daftar" id="dHasil" hidden></div>
+  </form>
+</div></section>
+
 <section class="bag" style="background:var(--surface2)"><div class="wrap">
   <h2>Yang sering ditanya</h2>
   <div>
@@ -203,7 +233,7 @@ function gambarBatang(){const h=parseInt(String($("hHarga").value).replace(/\D/g
   `<div class="hemat">Tetap di warung: <b>${W.rp(b.hematMin)}–${W.rp(b.hematMax)}</b> per bulan dibanding aplikasi.</div>`}
 ["hHarga","hJumlah"].forEach(id=>$(id).addEventListener("input",gambarBatang));gambarBatang();
 function pasangCTA(wa){const teks="Halo OCKLU, saya pemilik warung dan mau daftar Warung Rame.";const link=W.linkWA(wa,teks);
-  const isi=link?`<a class="btn utama" href="${link}" rel="noopener">Daftar lewat WhatsApp</a><a class="btn" href="/lingkarin/">Lihat Lingkarin</a>`:`<a class="btn utama" href="#daftar">Cara daftar</a><span class="cadangan">Nomor WA OCKLU sedang disiapkan. Sementara itu tanya ojol pembina di pangkalan terdekat.</span>`;
+  const isi=link?`<a class="btn utama" href="${link}" rel="noopener">Daftar lewat WhatsApp</a><a class="btn" href="/lingkarin/">Lihat Lingkarin</a>`:`<a class="btn utama" href="#daftar-tunggu">Daftarkan warung</a><a class="btn" href="/lingkarin/">Lihat Lingkarin</a>`;
   $("cta").innerHTML=isi;$("cta2").innerHTML=isi}
 pasangCTA("");
 fetch("etalase.json",{cache:"no-store"}).then(r=>r.ok?r.json():null).then(d=>{if(!d)return;pasangCTA(d.wa);const a=d.angka||{};
@@ -212,6 +242,14 @@ fetch("etalase.json",{cache:"no-store"}).then(r=>r.ok?r.json():null).then(d=>{if
   if(a.pesanan>0)$("angkaCatatan").textContent="Dihitung hanya dari pesanan lewat kode ojol yang tercatat di WA OCKLU. Pembanding memakai batas bawah potongan aplikasi, 20%.";}).catch(()=>{});
 const io="IntersectionObserver" in window?new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add("lihat")}),{threshold:.35}):null;
 document.querySelectorAll(".babak").forEach(b=>io?io.observe(b):b.classList.add("lihat"));
+const fD=document.getElementById("fDaftar");
+fD.addEventListener("submit",async e=>{e.preventDefault();const h=document.getElementById("dHasil"),k=document.getElementById("dKirim"),v=id=>document.getElementById(id).value.trim();
+  const isi={nama_warung:v("dNama"),pemilik:v("dPemilik"),wa:v("dWa"),area:v("dArea"),patokan:v("dPatokan"),jenis:v("dJenis"),menu:v("dMenu"),kode_ojol:v("dKode"),situs:v("dSitus"),setuju:document.getElementById("dSetuju").checked};
+  k.disabled=true;h.hidden=false;h.className="lebar hasil-daftar";h.textContent="Mengirim…";
+  try{const r=await fetch("https://njghzieuuopukuagrswu.supabase.co/functions/v1/warung-daftar",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(isi)});const d=await r.json().catch(()=>({}));
+    if(d.ok){h.className="lebar hasil-daftar ok";h.textContent=d.sudah?"Warung Anda sudah ada di daftar tunggu. Kami kabari lewat WhatsApp.":"Terima kasih, warung Anda masuk daftar tunggu. Koordinator akan mencarikan ojol pembina di pangkalan terdekat, lalu kami kabari lewat WhatsApp. Selama uji coba tempat terbatas, mohon sabar ya.";fD.reset()}
+    else{h.className="lebar hasil-daftar salah";h.textContent=d.galat||"Gagal mengirim. Coba lagi sebentar."}}
+  catch{h.className="lebar hasil-daftar salah";h.textContent="Sinyal putus. Coba lagi sebentar."}finally{k.disabled=false}});
 })();
 </script>
 </body>
