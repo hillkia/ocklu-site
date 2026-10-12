@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Putaran Lingkarin</title>
+<meta name="description" content="Putaran Lingkarin Bikin Rame: OCKLU, ojol, warung, pembeli, dan Lingkarin saling menyambung. Ikut itu pilihan.">
+<link rel="canonical" href="https://ocklu.com/lingkarin/putaran/">
+<meta property="og:title" content="Putaran Lingkarin Bikin Rame">
+<meta property="og:image" content="https://ocklu.com/warung/img/babak2.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Satu panggung gelap: cincin 5 titik (OCKLU → Ojol → Warung → Pembeli → Lingkarin → balik), komet oranye memutar, foto tengah berganti pelan seperti potongan film. */
+:root{
+  --malam:#0d1110; --malam2:#151b19; --garis:#2c3532; --ink:#ece7dc; --muted:#9aa39e;
+  --oranye:#f07a45; --teal:#56aebd; --mustard:#e0b048; --layar:#f1e4c8;
+  --display:"Archivo","Arial Narrow",Arial,sans-serif; --body:"IBM Plex Sans",system-ui,sans-serif; --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  --cincin:min(72vw,62vh,560px);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--malam);color:var(--ink);font-family:var(--body)}
+body{min-height:100svh;display:flex;flex-direction:column;align-items:center;overflow-x:hidden;
+  background:radial-gradient(ellipse at 50% 45%,#1b2321 0%,var(--malam) 62%)}
+/* butiran film + vinyet */
+body::before{content:"";position:fixed;inset:-50%;pointer-events:none;z-index:5;opacity:.09;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation:butir .5s steps(4) infinite}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:4;background:radial-gradient(ellipse at center,transparent 55%,rgba(0,0,0,.6) 100%)}
+@keyframes butir{0%{transform:translate(0,0)}25%{transform:translate(-3%,2%)}50%{transform:translate(2%,-3%)}75%{transform:translate(-2%,-1%)}100%{transform:translate(0,0)}}
+
+header{width:100%;max-width:900px;padding:clamp(20px,4vh,40px) 16px 0;text-align:center;position:relative;z-index:6}
+.label{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--mustard)}
+h1{font-family:var(--display);font-stretch:78%;font-weight:800;text-transform:uppercase;line-height:.95;
+  font-size:clamp(2rem,7vw,3.6rem);margin:.25em 0 .1em;color:var(--layar)}
+.sub{color:var(--muted);margin:0;font-size:clamp(.95rem,2.4vw,1.1rem)}
+
+.panggung{position:relative;width:var(--cincin);height:var(--cincin);margin:calc(var(--cincin) * .13 + 28px) auto calc(var(--cincin) * .13);z-index:6}
+.panggung svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.jalur{fill:none;stroke:var(--garis);stroke-width:1.4;stroke-dasharray:2 7}
+.jalur-hidup{fill:none;stroke:var(--oranye);stroke-width:2.2;stroke-linecap:round;opacity:.9;filter:drop-shadow(0 0 6px rgba(240,122,69,.8));
+  transition:stroke-dashoffset 1.4s cubic-bezier(.65,0,.35,1)}
+.putar{position:absolute;inset:0;transition:transform 1.4s cubic-bezier(.65,0,.35,1)}
+.komet{position:absolute;left:50%;top:0;width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%;background:#ffd2b8;
+  box-shadow:0 0 0 4px rgba(240,122,69,.35),0 0 24px 8px rgba(240,122,69,.55)}
+
+/* foto tengah */
+.tengah{position:absolute;left:50%;top:50%;width:54%;height:54%;transform:translate(-50%,-50%);border-radius:50%;overflow:hidden;
+  box-shadow:0 0 0 1px var(--garis),0 30px 80px rgba(0,0,0,.6);background:var(--malam2)}
+.tengah figure{position:absolute;inset:0;margin:0;opacity:0;transition:opacity 1.2s ease}
+.tengah figure.aktif{opacity:1}
+.tengah img{width:100%;height:100%;object-fit:cover;transform:scale(1.12);filter:saturate(.85) contrast(1.05)}
+.tengah figure.aktif img{animation:kenburns 7s ease-out forwards}
+@keyframes kenburns{from{transform:scale(1.18) translate(2%,1%)}to{transform:scale(1.04) translate(-1%,-1%)}}
+.tengah .merek{display:grid;place-items:center;background:radial-gradient(circle,#1d2624,#0d1110);text-align:center}
+.merek b{font-family:var(--display);font-stretch:75%;font-weight:900;font-size:clamp(1.6rem,7vw,3rem);letter-spacing:.04em;color:var(--layar)}
+.merek small{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.2em;color:var(--mustard);margin-top:4px}
+.tengah::after{content:"";position:absolute;inset:0;border-radius:50%;pointer-events:none;
+  background:linear-gradient(180deg,rgba(0,0,0,0) 55%,rgba(0,0,0,.55) 100%)}
+.ai{position:absolute;left:50%;bottom:9%;transform:translateX(-50%);z-index:2;font-family:var(--mono);font-size:10px;letter-spacing:.08em;
+  color:#fff;background:rgba(0,0,0,.55);padding:2px 8px;border-radius:99px;white-space:nowrap}
+
+/* titik cincin */
+.titik{position:absolute;width:23%;aspect-ratio:1;transform:translate(-50%,-50%);border:0;padding:0;background:none;cursor:pointer;color:inherit;font:inherit}
+.titik .bulat{display:block;width:100%;height:100%;border-radius:50%;overflow:hidden;background:var(--malam2);
+  box-shadow:0 0 0 2px var(--garis);transition:box-shadow .6s,transform .6s;filter:grayscale(.7) brightness(.7)}
+.titik img{width:100%;height:100%;object-fit:cover}
+.titik .bulat.ock{display:grid;place-items:center;font-family:var(--display);font-stretch:75%;font-weight:900;font-size:clamp(.8rem,3vw,1.15rem);color:var(--layar)}
+.titik.aktif .bulat{filter:none;transform:scale(1.1);box-shadow:0 0 0 3px var(--oranye),0 0 30px rgba(240,122,69,.55)}
+.titik .nama{position:absolute;left:50%;top:calc(100% + 6px);transform:translateX(-50%);white-space:nowrap;
+  font-family:var(--display);font-stretch:80%;font-weight:800;text-transform:uppercase;letter-spacing:.06em;font-size:clamp(.72rem,2.6vw,.95rem);color:var(--muted);transition:color .6s}
+.titik.aktif .nama{color:var(--ink)}
+.titik:focus-visible .bulat{outline:2px solid var(--teal);outline-offset:4px}
+
+/* takarir di bawah */
+.takarir{position:relative;z-index:6;width:100%;max-width:640px;padding:12px 16px 0;text-align:center;min-height:170px}
+.langkah{font-family:var(--mono);font-size:12px;letter-spacing:.16em;color:var(--oranye);text-transform:uppercase}
+.takarir h2{font-family:var(--display);font-stretch:80%;font-weight:800;text-transform:uppercase;font-size:clamp(1.5rem,5vw,2.2rem);margin:.2em 0 .25em;line-height:1}
+.takarir p{margin:0;color:#cfd3cc;font-size:clamp(1rem,2.6vw,1.12rem);line-height:1.5}
+.ganti{animation:muncul .9s ease both}
+@keyframes muncul{from{opacity:0;transform:translateY(10px);filter:blur(4px)}to{opacity:1;transform:none;filter:none}}
+
+footer{position:relative;z-index:6;width:100%;max-width:640px;padding:28px 16px 40px;text-align:center;color:var(--muted);font-size:.9rem}
+footer .pilih{display:inline-block;border:1px solid var(--garis);border-radius:8px;padding:10px 14px;color:var(--ink);margin-bottom:14px}
+footer a{color:var(--teal)}
+.kendali{display:inline-flex;gap:6px;margin-top:14px}
+.kendali button{background:var(--malam2);color:var(--ink);border:1px solid var(--garis);border-radius:99px;padding:6px 14px;font:500 .85rem var(--body);cursor:pointer}
+
+@media (prefers-reduced-motion: reduce){
+  body::before{animation:none}
+  .putar,.jalur-hidup{transition:none}
+  .tengah figure.aktif img{animation:none;transform:scale(1.05)}
+  .ganti{animation:none}
+}
+</style>
+</head>
+<body>
+<header>
+  <span class="label">OCKLU · Lingkarin Bikin Rame</span>
+  <h1>Satu putaran,<br>semua kebagian</h1>
+  <p class="sub">Uang makanan nggak lewat tangan siapa pun selain pembeli dan warung.</p>
+</header>
+
+<div class="panggung" id="panggung" aria-label="Putaran Lingkarin">
+  <svg viewBox="0 0 100 100" aria-hidden="true">
+    <circle class="jalur" cx="50" cy="50" r="50"/>
+    <circle class="jalur-hidup" id="jalurHidup" cx="50" cy="50" r="50" transform="rotate(-90 50 50)"/>
+  </svg>
+  <div class="tengah" id="tengah"></div>
+  <div class="putar" id="putar" aria-hidden="true"><span class="komet"></span></div>
+</div>
+
+<section class="takarir" aria-live="polite" id="takarir"></section>
+
+<footer>
+  <div class="pilih"><b>Ikut itu pilihan.</b> Usaha yang nggak mau ikut Lingkarin, nggak apa-apa.</div>
+  <div>Foto: Ilustrasi AI, bukan orang sungguhan. · <a href="/lingkarin/">Buka Lingkarin</a> · <a href="/warung/">Untuk pemilik usaha</a></div>
+  <div class="kendali"><button id="tombolJeda" type="button">Jeda</button></div>
+</footer>
+
+<script>
+(function(){
+  var IMG = "/warung/img/";
+  var TAHAP = [
+    {nama:"OCKLU", foto:null, judul:"OCKLU siapkan jalannya",
+     teks:"Aturan, kode ojol, stiker QR, dan hitungan mingguan. OCKLU nggak pegang uang makanan."},
+    {nama:"Ojol", foto:"babak2.jpg", alt:"Pengemudi ojek makan di bangku warung", judul:"Ojol bina usaha dekat pangkalan",
+     teks:"Pegang 1–2 usaha yang ia kenal, ajak pembeli baru lewat kodenya. Dapat 70% dari potongan 7%."},
+    {nama:"Warung", foto:"babak1.jpg", alt:"Pemilik warung menata lauk di etalase", judul:"Warung jualan seperti biasa",
+     teks:"Pembeli bayar ke QRIS warung sendiri. Potongan 7% cuma dari pembeli baru berkode, setor tiap Kamis."},
+    {nama:"Pembeli", foto:"babak4.jpg", alt:"Dua pembeli makan dan tertawa di warung", judul:"Pembeli dapat warung dekat",
+     teks:"Scan, pesan lewat WA, beli. Harganya sama dengan di tempat, nggak dinaikin."},
+    {nama:"Lingkarin", foto:"pemilik.jpg", alt:"Pemilik warung melihat HP di dapurnya", judul:"Lingkarin menyambung lagi",
+     teks:"Warung update dagangannya, ojol lihat hasil binaannya, pembeli cari usaha dekat. Lalu putaran jalan lagi."}
+  ];
+  var N = TAHAP.length, DURASI = 4200;
+  var panggung = document.getElementById("panggung"), tengah = document.getElementById("tengah"),
+      putar = document.getElementById("putar"), takarir = document.getElementById("takarir"),
+      jalur = document.getElementById("jalurHidup"), tombol = document.getElementById("tombolJeda");
+  var KELILING = 2 * Math.PI * 50;
+  jalur.style.strokeDasharray = KELILING; jalur.style.strokeDashoffset = KELILING;
+
+  var titik = [], figur = [];
+  TAHAP.forEach(function(t, i){
+    var sudut = (-90 + i * 360 / N) * Math.PI / 180;
+    var b = document.createElement("button");
+    b.type = "button"; b.className = "titik";
+    b.style.left = (50 + 50 * Math.cos(sudut)) + "%"; b.style.top = (50 + 50 * Math.sin(sudut)) + "%";
+    b.setAttribute("aria-label", "Langkah " + (i + 1) + ": " + t.nama);
+    b.innerHTML = t.foto ? '<span class="bulat"><img src="' + IMG + t.foto + '" alt="" loading="lazy"></span><span class="nama">' + t.nama + '</span>'
+                         : '<span class="bulat ock">OCKLU</span><span class="nama">' + t.nama + '</span>';
+    b.addEventListener("click", function(){ ke(i, true); });
+    panggung.appendChild(b); titik.push(b);
+    var f = document.createElement("figure");
+    if (t.foto) { f.innerHTML = '<img src="' + IMG + t.foto + '" alt="' + t.alt + ' (ilustrasi AI)"><span class="ai">Ilustrasi AI</span>'; }
+    else { f.className = "merek"; f.innerHTML = '<div><b>OCKLU</b><small>LINGKARIN BIKIN RAME</small></div>'; }
+    tengah.appendChild(f); figur.push(f);
+  });
+
+  var kini = -1, putaran = 0, jalan = true, waktu = null;
+  function ke(i, manual){
+    if (i === kini) return;
+    if (kini >= 0 && i < kini && !manual) putaran++;        // lewat titik nol: komet terus memutar searah jarum jam
+    if (manual && kini >= 0 && i < kini) putaran++;
+    kini = i;
+    titik.forEach(function(b, j){ b.classList.toggle("aktif", j === i); });
+    figur.forEach(function(f, j){ f.classList.toggle("aktif", j === i); if (j === i && f.querySelector("img")) { var im = f.querySelector("img"); im.style.animation = "none"; void im.offsetWidth; im.style.animation = ""; } });
+    putar.style.transform = "rotate(" + (putaran * 360 + i * 360 / N) + "deg)";
+    jalur.style.strokeDashoffset = KELILING * (1 - (i === 0 ? 0.002 : i / N));
+    var t = TAHAP[i];
+    takarir.innerHTML = '<div class="ganti"><div class="langkah">Langkah ' + (i + 1) + ' dari ' + N + ' · ' + t.nama + '</div><h2>' + t.judul + '</h2><p>' + t.teks + '</p></div>';
+    if (manual) mulai();
+  }
+  function maju(){ ke((kini + 1) % N); }
+  function mulai(){ clearInterval(waktu); if (jalan) waktu = setInterval(maju, DURASI); }
+  tombol.addEventListener("click", function(){ jalan = !jalan; tombol.textContent = jalan ? "Jeda" : "Putar lagi"; mulai(); });
+  document.addEventListener("visibilitychange", function(){ if (document.hidden) clearInterval(waktu); else mulai(); });
+  ke(0); mulai();
+})();
+</script>
+</body>
+</html>
