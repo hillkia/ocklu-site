@@ -116,7 +116,7 @@ details p{margin-top:8px;color:var(--muted);max-width:70ch}
 </style>
 </head>
 <body>
-<div class="wrap kepala"><b>OCKLU · WARUNG RAME</b><nav><a href="/pasarin/">Lihat Pasarin</a><a href="#daftar">Cara daftar</a></nav></div>
+<div class="wrap kepala"><b>OCKLU · WARUNG RAME</b><nav><a href="/lingkarin/">Lihat Lingkarin</a><a href="#daftar">Cara daftar</a></nav></div>
 
 <header class="layar">
   <img src="img/pemilik.jpg" alt="Pemilik warung memeriksa daftar harga di balik meja" width="1376" height="768">
@@ -190,7 +190,7 @@ details p{margin-top:8px;color:var(--muted);max-width:70ch}
 
 <footer class="tutup"><div class="wrap">
   <span>OCKLU · Warung Rame. Program uji coba di Jakarta. Tidak ada janji penghasilan; angka di halaman ini hanya dari pesanan yang tercatat.</span>
-  <span>Gambar orang di halaman ini dibuat dengan AI dan bukan pelanggan atau pemilik warung sungguhan. <a href="/pasarin/">Pasarin</a> · <a href="/">ocklu.com</a></span>
+  <span>Gambar orang di halaman ini dibuat dengan AI dan bukan pelanggan atau pemilik warung sungguhan. <a href="/lingkarin/">Lingkarin</a> · <a href="/">ocklu.com</a></span>
 </div></footer>
 
 <script src="inti.js"></script>
@@ -203,7 +203,7 @@ function gambarBatang(){const h=parseInt(String($("hHarga").value).replace(/\D/g
   `<div class="hemat">Tetap di warung: <b>${W.rp(b.hematMin)}–${W.rp(b.hematMax)}</b> per bulan dibanding aplikasi.</div>`}
 ["hHarga","hJumlah"].forEach(id=>$(id).addEventListener("input",gambarBatang));gambarBatang();
 function pasangCTA(wa){const teks="Halo OCKLU, saya pemilik warung dan mau daftar Warung Rame.";const link=W.linkWA(wa,teks);
-  const isi=link?`<a class="btn utama" href="${link}" rel="noopener">Daftar lewat WhatsApp</a><a class="btn" href="/pasarin/">Lihat Pasarin</a>`:`<a class="btn utama" href="#daftar">Cara daftar</a><span class="cadangan">Nomor WA OCKLU sedang disiapkan. Sementara itu tanya ojol pembina di pangkalan terdekat.</span>`;
+  const isi=link?`<a class="btn utama" href="${link}" rel="noopener">Daftar lewat WhatsApp</a><a class="btn" href="/lingkarin/">Lihat Lingkarin</a>`:`<a class="btn utama" href="#daftar">Cara daftar</a><span class="cadangan">Nomor WA OCKLU sedang disiapkan. Sementara itu tanya ojol pembina di pangkalan terdekat.</span>`;
   $("cta").innerHTML=isi;$("cta2").innerHTML=isi}
 pasangCTA("");
 fetch("etalase.json",{cache:"no-store"}).then(r=>r.ok?r.json():null).then(d=>{if(!d)return;pasangCTA(d.wa);const a=d.angka||{};
