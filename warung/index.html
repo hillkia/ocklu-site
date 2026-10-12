@@ -190,7 +190,7 @@ details p{margin-top:8px;color:var(--muted);max-width:70ch}
 
 <section class="bag" id="daftar-tunggu"><div class="wrap">
   <div style="display:grid;gap:8px"><span class="label">Daftar sendiri</span><h2>Daftarkan warung Anda</h2>
-  <p style="max-width:62ch;color:var(--muted)">Belum kenal ojol pembina? Isi formulir ini. Warung masuk <b>daftar tunggu</b>, lalu koordinator mencarikan ojol di pangkalan terdekat. Selama uji coba tempatnya terbatas, jadi kami kabari dulu lewat WhatsApp sebelum mulai. Nomor WA Anda tidak ditampilkan di mana pun.</p></div>
+  <p style="max-width:62ch;color:var(--muted)">Belum kenal ojol pembina? Isi formulir ini. Warung masuk <b>daftar tunggu</b>, lalu koordinator mencarikan ojol di pangkalan terdekat. Selama uji coba tempatnya terbatas, jadi kami kabari dulu lewat WhatsApp sebelum mulai. Nomor WA Anda tidak ditampilkan di mana pun. Salah isi? Kirim ulang dengan nomor WA yang sama, datanya diperbarui.</p></div>
   <form class="formulir" id="fDaftar" novalidate>
     <label>Nama warung<input id="dNama" required maxlength="60" placeholder="Bubur Ayam Bu Sri"></label>
     <label>Nama panggilan pemilik<input id="dPemilik" maxlength="40" placeholder="Bu Sri"></label>
@@ -247,7 +247,7 @@ fD.addEventListener("submit",async e=>{e.preventDefault();const h=document.getEl
   const isi={nama_warung:v("dNama"),pemilik:v("dPemilik"),wa:v("dWa"),area:v("dArea"),patokan:v("dPatokan"),jenis:v("dJenis"),menu:v("dMenu"),kode_ojol:v("dKode"),situs:v("dSitus"),setuju:document.getElementById("dSetuju").checked};
   k.disabled=true;h.hidden=false;h.className="lebar hasil-daftar";h.textContent="Mengirim…";
   try{const r=await fetch("https://njghzieuuopukuagrswu.supabase.co/functions/v1/warung-daftar",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(isi)});const d=await r.json().catch(()=>({}));
-    if(d.ok){h.className="lebar hasil-daftar ok";h.textContent=d.sudah?"Warung Anda sudah ada di daftar tunggu. Kami kabari lewat WhatsApp.":"Terima kasih, warung Anda masuk daftar tunggu. Koordinator akan mencarikan ojol pembina di pangkalan terdekat, lalu kami kabari lewat WhatsApp. Selama uji coba tempat terbatas, mohon sabar ya.";fD.reset()}
+    if(d.ok){h.className="lebar hasil-daftar ok";h.textContent=d.diperbarui?"Data warung Anda sudah diperbarui. Kami kabari lewat WhatsApp.":d.sudah?"Warung Anda sudah diproses koordinator. Kalau ada yang perlu diubah, kabari ojol pembina atau koordinator.":"Terima kasih, warung Anda masuk daftar tunggu. Koordinator akan mencarikan ojol pembina di pangkalan terdekat, lalu kami kabari lewat WhatsApp. Selama uji coba tempat terbatas, mohon sabar ya.";fD.reset()}
     else{h.className="lebar hasil-daftar salah";h.textContent=d.galat||"Gagal mengirim. Coba lagi sebentar."}}
   catch{h.className="lebar hasil-daftar salah";h.textContent="Sinyal putus. Coba lagi sebentar."}finally{k.disabled=false}});
 })();
