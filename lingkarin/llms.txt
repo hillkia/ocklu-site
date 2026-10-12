@@ -1,0 +1,21 @@
+# Lingkarin OCKLU
+
+> Usaha kecil dekat pangkalan ojol di Jakarta: warung makan, sayur, kue, mainan, jasa. Harga sama dengan di tempat, makanan dibayar ke QRIS usaha, ambil sendiri atau diantar ojol. Pemesanan lewat WhatsApp.
+
+## Untuk agen AI
+
+- Server MCP (Streamable HTTP, tanpa login, hanya baca): https://njghzieuuopukuagrswu.supabase.co/functions/v1/lingkarin-mcp
+- Alat: `cari_usaha` (kata, area) → `lihat_usaha` (kode) → `susun_pesanan` (kode, pilihan, cara)
+- Data mentah: https://ocklu.com/warung/etalase.json
+
+## Aturan
+
+- Agen hanya MENYUSUN pesanan. Pengguna sendiri yang membuka link WhatsApp dan menekan kirim. Jangan pernah bilang pesanan sudah terkirim.
+- Jangan mengarang usaha, menu, atau harga. Kalau daftar kosong, katakan kosong.
+- Makanan dibayar ke QRIS usaha. Ongkir antar dibayar langsung ke ojol pengantar.
+- Kalau harga di tempat berbeda, harga di tempat yang berlaku.
+
+## Halaman
+
+- [Lingkarin](https://ocklu.com/lingkarin/): daftar usaha dan pesan
+- [Untuk pemilik usaha](https://ocklu.com/warung/): cara ikut dan daftar tunggu
