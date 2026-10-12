@@ -71,6 +71,16 @@ a{color:var(--teal)}
 .tunjuk{white-space:pre-wrap;font-family:var(--mono);font-size:.85rem;background:var(--surface2);border-radius:4px;padding:10px;border:1px dashed var(--line)}
 .kosong{border:1px dashed var(--line);border-radius:4px;padding:28px;display:grid;gap:10px;background:var(--surface);max-width:70ch}
 .catatan{font-size:.82rem;color:var(--muted)}
+.kenapa{border-top:1px solid var(--line);padding-block:40px 48px;display:grid;gap:20px}
+.kenapa h2{font-size:clamp(1.8rem,4.5vw,2.8rem);font-weight:900;text-transform:uppercase}
+.kenapa .lead{max-width:62ch;color:var(--muted)}
+.pelajaran{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:0;padding:0;list-style:none;counter-reset:p}
+@media (max-width:820px){.pelajaran{grid-template-columns:1fr}}
+.pelajaran li{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--teal);border-radius:4px;padding:16px;display:grid;gap:6px;counter-increment:p}
+.pelajaran li::before{content:"0" counter(p);font-family:var(--mono);font-size:.78rem;color:var(--oranye)}
+.pelajaran h3{font-size:1.3rem;font-weight:800}
+.pelajaran p{font-size:.95rem}
+.pelajaran .di{font-size:.88rem;color:var(--muted);border-top:1px dashed var(--line);padding-top:8px}
 .tutup{background:var(--malam);color:#cfc6b2;padding-block:24px;font-size:.85rem}
 .tutup a{color:var(--layar)}
 </style>
@@ -88,6 +98,19 @@ a{color:var(--teal)}
   <div class="daftar" id="daftar">
     <div class="kosong"><h2>Memuat warung…</h2></div>
   </div>
+  <section class="kenapa" aria-labelledby="kenapa-judul">
+    <span class="label">Untuk pemilik usaha</span>
+    <h2 id="kenapa-judul">Kenapa Lingkarin</h2>
+    <p class="lead">Usaha kecil jarang tutup karena barangnya jelek. Biasanya tutup karena tidak ada yang tahu, atau karena ongkos cari pembelinya lebih besar dari untungnya. Lingkarin dibuat untuk lima hal ini.</p>
+    <ol class="pelajaran">
+      <li><h3>Barang bagus saja belum cukup</h3><p>Yang menang adalah yang paling mudah ditemukan, bukan yang paling enak. Banyak warung enak sepi karena orang tidak lewat depannya.</p><p class="di">Di Lingkarin: ojol pangkalan yang mengenalkan usahamu ke orang yang mereka antar dan temui tiap hari.</p></li>
+      <li><h3>Jangan bayar mahal untuk cari pembeli</h3><p>Iklan dibayar di depan, laku atau tidak. Kalau ongkos dapat satu pembeli lebih besar dari belanjaannya, makin ramai malah makin rugi.</p><p class="di">Di Lingkarin: tanpa biaya daftar, tanpa iklan. Potongan 7% hanya dari menu yang benar-benar terjual.</p></li>
+      <li><h3>Pembeli yang balik lebih berharga dari pembeli baru</h3><p>Usaha yang tiap bulan kehilangan pelanggan harus terus lari hanya supaya tidak mundur. Langganan tetap itu yang bikin usaha tenang.</p><p class="di">Di Lingkarin: pembeli datang dari lingkungan sekitar pangkalan, orang yang bisa beli lagi besok.</p></li>
+      <li><h3>Usaha biasa justru yang bertahan</h3><p>Nasi, sayur, kue, cukur, jahit. Tidak keren di media sosial, tapi dibutuhkan tiap hari dan pembelinya tidak gampang pindah.</p><p class="di">Di Lingkarin: semua usaha kecil boleh ikut, tanpa kategori. Tulis sendiri kamu jualan apa.</p></li>
+      <li><h3>Jangan bakar uang sebelum terbukti</h3><p>Banyak usaha mati karena modal habis duluan sebelum pembelinya ketemu, bukan karena idenya salah.</p><p class="di">Di Lingkarin: tidak ada setoran di depan. Uji coba dulu, dan bayar makanan langsung ke QRIS usahamu sendiri.</p></li>
+    </ol>
+    <p class="catatan">Disarikan dari video “The Economics of Owning a Software Company” (Cost Anatomy). Pelajarannya sama untuk warung: barang mudah ditiru, jalan ke pembeli yang mahal. <a href="/warung/#daftar-tunggu">Daftar di sini</a>.</p>
+  </section>
 </div>
 <footer class="tutup"><div class="wrap" style="display:grid;gap:6px">
   <span>Foto di Lingkarin adalah foto asli usaha dan barangnya, dikirim ojol pembina dengan izin pemilik. Harga dari daftar yang dikirim pemilik usaha; kalau berbeda di tempat, harga di tempat yang berlaku. Barang terlarang (pinjol, judi, obat keras, rokok, miras, dan sejenisnya) tidak diterima.</span>
