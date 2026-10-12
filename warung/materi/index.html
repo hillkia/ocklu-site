@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Materi Koordinator Warung Rame</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: satu kolom HP: judul, tombol unduh semua, daftar file, daftar link */
+:root{--bg:#e9ecea;--surface:#fff;--ink:#161b1a;--muted:#56605c;--line:#c9d0cc;--teal:#22707e;--oranye:#c8501c;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121615;--surface:#1a201e;--ink:#e8e4da;--muted:#9aa29d;--line:#313a37;--teal:#56aebd;--oranye:#f07a45;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121615;--surface:#1a201e;--ink:#e8e4da;--muted:#9aa29d;--line:#313a37;--teal:#56aebd;--oranye:#f07a45;color-scheme:dark}
+*{box-sizing:border-box}html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:'IBM Plex Sans',Arial,sans-serif;font-size:16px;line-height:1.5;padding-inline:16px;padding-block:calc(20px + env(safe-area-inset-top,0px)) 48px}
+.wrap{max-width:640px;margin:0 auto;display:grid;gap:22px}
+h1,h2{font-family:'Archivo Narrow',Arial,sans-serif;line-height:1.05;margin:0}
+h1{font-size:2.4rem;font-weight:700}h2{font-size:1.4rem;font-weight:700}
+.label{font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--oranye);font-weight:600}
+a{color:var(--teal)}
+.utama{display:block;text-align:center;background:var(--oranye);color:#fff;text-decoration:none;font-weight:600;padding:.9rem 1rem;border-radius:4px}
+.daftar{display:grid;gap:8px}
+.daftar a{display:flex;justify-content:space-between;gap:12px;background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:.8rem 1rem;color:var(--ink);text-decoration:none}
+.daftar a span:last-child{color:var(--muted);font-size:.85rem;white-space:nowrap}
+.daftar a:focus-visible,.utama:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+p{margin:0;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div style="display:grid;gap:8px"><span class="label">OCKLU · Warung Rame</span><h1>Materi untuk koordinator</h1>
+  <p>Semua bahan program uji coba Warung Rame. Mulai dari "Mulai di Sini", lalu tonton penjelasan bersuaranya.</p></div>
+  <a class="utama" href="bundle-koordinator-warung-rame.zip" download>Unduh semua (ZIP, 1 MB)</a>
+  <div class="daftar">
+    <h2>File</h2>
+    <a href="mulai-di-sini.pdf"><span>1 · Mulai di Sini</span><span>PDF · 2 hal</span></a>
+    <a href="deck-warung-rame.pdf"><span>2 · Deck presentasi</span><span>PDF · 12 hal</span></a>
+    <a href="teks-wa.pdf"><span>3 · Teks WA siap kirim</span><span>PDF</span></a>
+    <a href="naskah-ajak-warung.pdf"><span>4 · Naskah ajak warung</span><span>PDF</span></a>
+  </div>
+  <div class="daftar">
+    <h2>Link</h2>
+    <a href="/warung/penjelasan/"><span>Penjelasan bersuara + tanya Bang Jibi</span><span>›</span></a>
+    <a href="/warung/panduan/"><span>Panduan tim: teks WA dengan tombol Salin</span><span>›</span></a>
+    <a href="/warung/"><span>Untuk pemilik warung + kalkulator</span><span>›</span></a>
+    <a href="/warung/#daftar-tunggu"><span>Formulir daftar tunggu warung</span><span>›</span></a>
+    <a href="/lingkarin/"><span>Lingkarin: etalase untuk pembeli</span><span>›</span></a>
+  </div>
+  <p>Uji coba kecil, belum ada janji ramai. Gambar orang di materi adalah ilustrasi AI.</p>
+</div>
+</body>
+</html>
