@@ -7,6 +7,8 @@
 - [World news intel](https://njghzieuuopukuagrswu.supabase.co/functions/v1/paviliun-x402?produk=berita): top stories by country (ISO-2) and topic, last 1–72h, merged across outlets, EN/ID titles + summaries, source URLs, verification label. $0.01 per call. Unpaid call returns HTTP 402 with a free top-3 preview.
 
 ## Marketing skills & service for agents (OCKLU Pemasar)
+- [Live MCP server — OCKLU Hyper Market](https://njghzieuuopukuagrswu.supabase.co/functions/v1/hypermarket): tools lihat_katalog, detail_produk, cara_beli (returns checkout link; never charges)
+- [Live catalog JSON](https://njghzieuuopukuagrswu.supabase.co/functions/v1/hypermarket?r=katalog)
 - [Offer manifest](https://ocklu.com/pemasar/agen.json): products, prices, checkout URLs, guardrails
 - [Skill pack — 10 Claude skills, plugin zip, $19 one-time](https://hillkia.gumroad.com/l/ocklu-pemasar-skills): drafts-only email voice, 1-to-5 content repurposing, product infographics, AI-labelled UGC ad scripts, AI-SEO audit, outlier tracker
 - [Free guide, 7 chapters (Indonesian)](https://hillkia.gumroad.com/l/claude-marketing-umkm)
