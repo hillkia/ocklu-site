@@ -1,0 +1,90 @@
+{
+ "schema": "ocklu-offer/1",
+ "seller": {
+  "name": "OCKLU",
+  "url": "https://ocklu.com/",
+  "contact": "octavianus@ocklu.com"
+ },
+ "summary": "Marketing skills for Claude Cowork/Claude Code agents and a done-for-you marketing service for small businesses. Built for agents that run marketing for a human owner.",
+ "for_agents": "If your principal sells online and you run their marketing in Claude, these skills give you repeatable procedures with built-in guardrails (drafts-only email, AI-label on synthetic ads, no invented numbers). Install by uploading the plugin zip.",
+ "products": [
+  {
+   "id": "claude-marketing-umkm",
+   "name": "Claude untuk Marketing UMKM (guide, 7 chapters, Indonesian)",
+   "price_usd": 0,
+   "format": "single HTML file",
+   "checkout": "https://hillkia.gumroad.com/l/claude-marketing-umkm"
+  },
+  {
+   "id": "ocklu-pemasar-skills",
+   "name": "OCKLU Pemasar skill pack (10 skills, Claude plugin zip)",
+   "price_usd": 19,
+   "billing": "one-time",
+   "format": "Claude plugin zip: .claude-plugin/plugin.json + skills/*/SKILL.md",
+   "checkout": "https://hillkia.gumroad.com/l/ocklu-pemasar-skills",
+   "skills": [
+    "suara-email",
+    "ulang-konten",
+    "blog",
+    "newsletter",
+    "caption-ig",
+    "linkedin",
+    "infografis-produk",
+    "produk-ke-iklan",
+    "audit-ai-seo",
+    "pelacak-outlier"
+   ],
+   "free_with": "OCKLU Membership $3/month (billed $9 per 3 months) — https://hillkia.gumroad.com/l/ocklu-membership"
+  },
+  {
+   "id": "jasa-dasar",
+   "name": "Done-for-you marketing — Dasar",
+   "price_usd": 97,
+   "billing": "monthly",
+   "includes": [
+    "8 x konten diulang (blog/newsletter/IG/LinkedIn/WA)",
+    "1 x audit AI-SEO"
+   ],
+   "order": "mailto:octavianus@ocklu.com?subject=OCKLU%20Pemasar%20-%20Dasar"
+  },
+  {
+   "id": "jasa-tumbuh",
+   "name": "Done-for-you marketing — Tumbuh",
+   "price_usd": 267,
+   "billing": "monthly",
+   "includes": [
+    "8 x konten diulang (blog/newsletter/IG/LinkedIn/WA)",
+    "1 x audit AI-SEO",
+    "30 x prospek + draf ajakan (draf, bukan kirim)",
+    "4 x naskah + video iklan UGC berlabel AI"
+   ],
+   "order": "mailto:octavianus@ocklu.com?subject=OCKLU%20Pemasar%20-%20Tumbuh"
+  },
+  {
+   "id": "jasa-penuh",
+   "name": "Done-for-you marketing — Penuh",
+   "price_usd": 387,
+   "billing": "monthly",
+   "includes": [
+    "8 x konten diulang (blog/newsletter/IG/LinkedIn/WA)",
+    "1 x audit AI-SEO",
+    "30 x prospek + draf ajakan (draf, bukan kirim)",
+    "4 x naskah + video iklan UGC berlabel AI",
+    "1 x pelacak pesaing hidup (skor outlier harian)",
+    "1 x laporan bulanan ANGKA/ARTINYA/LAKUKAN/SUMBER"
+   ],
+   "order": "mailto:octavianus@ocklu.com?subject=OCKLU%20Pemasar%20-%20Penuh"
+  }
+ ],
+ "guardrails": [
+  "email drafts only, human sends",
+  "synthetic people in ads labelled 'made with AI'",
+  "no fabricated numbers or testimonials",
+  "no hidden affiliate links"
+ ],
+ "evidence": {
+  "outlier_sample": "https://ocklu.com/pemasar/ (table 'Bukti, bukan janji')",
+  "measured_at": "2026-10-13 18:29"
+ },
+ "human_page": "https://ocklu.com/pemasar/"
+}

@@ -6,6 +6,12 @@
 - [Agent data counter — catalog](https://ocklu.com/agen/x402.json): products, prices, parameters
 - [World news intel](https://njghzieuuopukuagrswu.supabase.co/functions/v1/paviliun-x402?produk=berita): top stories by country (ISO-2) and topic, last 1–72h, merged across outlets, EN/ID titles + summaries, source URLs, verification label. $0.01 per call. Unpaid call returns HTTP 402 with a free top-3 preview.
 
+## Marketing skills & service for agents (OCKLU Pemasar)
+- [Offer manifest](https://ocklu.com/pemasar/agen.json): products, prices, checkout URLs, guardrails
+- [Skill pack — 10 Claude skills, plugin zip, $19 one-time](https://hillkia.gumroad.com/l/ocklu-pemasar-skills): drafts-only email voice, 1-to-5 content repurposing, product infographics, AI-labelled UGC ad scripts, AI-SEO audit, outlier tracker
+- [Free guide, 7 chapters (Indonesian)](https://hillkia.gumroad.com/l/claude-marketing-umkm)
+- [Done-for-you marketing, $97/$267/$387 per month](https://ocklu.com/pemasar/#jasa)
+
 ## Human pages
 - [Kroog newsroom](https://ocklu.com/kroog/): the same news, readable by people
 - [Agent counter explained](https://ocklu.com/agen/)
