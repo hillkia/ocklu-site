@@ -1,0 +1,86 @@
+{
+  "mata_uang": "USD",
+  "paket": [
+    {
+      "paket": "Dasar",
+      "usd_bulan": 97,
+      "mentah": 93,
+      "butir": [
+        {
+          "jumlah": 8,
+          "nama": "konten diulang (blog/newsletter/IG/LinkedIn/WA)",
+          "mesin": "skill ulang-konten"
+        },
+        {
+          "jumlah": 1,
+          "nama": "audit AI-SEO",
+          "mesin": "OCKLU AIRANK + skill audit-ai-seo"
+        }
+      ]
+    },
+    {
+      "paket": "Tumbuh",
+      "usd_bulan": 267,
+      "mentah": 263,
+      "butir": [
+        {
+          "jumlah": 8,
+          "nama": "konten diulang (blog/newsletter/IG/LinkedIn/WA)",
+          "mesin": "skill ulang-konten"
+        },
+        {
+          "jumlah": 1,
+          "nama": "audit AI-SEO",
+          "mesin": "OCKLU AIRANK + skill audit-ai-seo"
+        },
+        {
+          "jumlah": 30,
+          "nama": "prospek + draf ajakan (draf, bukan kirim)",
+          "mesin": "OCKLU C-Founder + skill suara-email"
+        },
+        {
+          "jumlah": 4,
+          "nama": "naskah + video iklan UGC berlabel AI",
+          "mesin": "OCKLU UGC Studio + skill produk-ke-iklan"
+        }
+      ]
+    },
+    {
+      "paket": "Penuh",
+      "usd_bulan": 387,
+      "mentah": 383,
+      "butir": [
+        {
+          "jumlah": 8,
+          "nama": "konten diulang (blog/newsletter/IG/LinkedIn/WA)",
+          "mesin": "skill ulang-konten"
+        },
+        {
+          "jumlah": 1,
+          "nama": "audit AI-SEO",
+          "mesin": "OCKLU AIRANK + skill audit-ai-seo"
+        },
+        {
+          "jumlah": 30,
+          "nama": "prospek + draf ajakan (draf, bukan kirim)",
+          "mesin": "OCKLU C-Founder + skill suara-email"
+        },
+        {
+          "jumlah": 4,
+          "nama": "naskah + video iklan UGC berlabel AI",
+          "mesin": "OCKLU UGC Studio + skill produk-ke-iklan"
+        },
+        {
+          "jumlah": 1,
+          "nama": "pelacak pesaing hidup (skor outlier harian)",
+          "mesin": "OCKLU Radar + skill pelacak-outlier"
+        },
+        {
+          "jumlah": 1,
+          "nama": "laporan bulanan ANGKA/ARTINYA/LAKUKAN/SUMBER",
+          "mesin": "OCKLU Lapor"
+        }
+      ]
+    }
+  ]
+}
