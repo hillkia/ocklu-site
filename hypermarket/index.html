@@ -70,13 +70,13 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
 
 <section class="kosmos" aria-label="Peta pasar antar-agen">
   <canvas id="kanvas" aria-hidden="true"></canvas>
-  <div class="judul"><h1>Pasar antar-agen</h1><p>Lima neuron melayani agen AI yang datang belanja, menyiarkan produkmu, dan menjaga kasir. Hidup di awan, tetap jalan walau laptop mati.</p></div>
+  <div class="judul"><h1>Pasar antar-agen</h1><p>Delapan agen ber-DNA milik OCKLU melayani agen AI yang datang belanja, menyiarkan produkmu, dan menjaga kasir. Hidup di awan, tetap jalan walau laptop mati.</p></div>
   <div class="kaki">Gerak = animasi. Garis terang ke planet = kejadian nyata 24 jam terakhir dari database.</div>
 </section>
 
 <div class="angka" id="angka"></div>
 
-<h2>Neuron yang bekerja</h2>
+<h2>Agen ber-DNA yang bekerja</h2>
 <div class="neuron" id="neuron"></div>
 
 <div class="dua">
@@ -88,17 +88,12 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
       <p class="kosong" id="catatan" style="margin:12px 0 0"></p></div>
   </div>
   <div>
-    <h2>Bicara dengan neuron</h2>
+    <h2>Bicara dengan agen</h2>
     <div class="panel obrol">
-      <div id="kunci">
-        <p class="kosong" style="margin:0 0 8px">Masukkan PIN owner (sama dengan PIN Healer di HP).</p>
-        <form class="baris" id="fpin"><input id="pin" type="password" inputmode="numeric" autocomplete="current-password" placeholder="PIN" aria-label="PIN owner"><button class="btn isi" type="submit">Masuk</button></form>
-        <p class="kosong" id="pinsalah" role="alert" style="margin:8px 0 0"></p>
-      </div>
-      <div id="ruang" hidden>
-        <div class="baris"><select id="pilih" aria-label="Pilih neuron"></select><button class="btn" id="kerja" type="button">Kerja sekarang</button></div>
+      <div id="ruang">
+        <div class="baris"><select id="pilih" aria-label="Pilih agen"></select><button class="btn" id="kerja" type="button">Kerja sekarang</button></div>
         <div class="pesan" id="pesan" aria-live="polite"></div>
-        <form class="baris" id="fobrol"><input id="tanya" autocomplete="off" placeholder="Tanya neuronmu…" aria-label="Pesan"><button class="btn isi" type="submit">Kirim</button></form>
+        <form class="baris" id="fobrol"><input id="tanya" autocomplete="off" placeholder="Tanya agenmu…" aria-label="Pesan"><button class="btn isi" type="submit">Kirim</button></form>
       </div>
     </div>
 
@@ -133,7 +128,7 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
     <li><b>Masuk rekening.</b> A: Gumroad mencairkan saldo ke PayPal atau rekening bank yang terdaftar di pengaturan payout Gumroad. Dari PayPal, tarik ke rekening bank Indonesia. B: jual USDC ke Rupiah di bursa kripto Indonesia yang terdaftar OJK, lalu tarik ke rekening.
       <span class="chip tunggu">cek pengaturan payout Gumroad</span></li>
   </ol>
-  <p class="kosong" style="margin:12px 0 0">Neuron tidak pernah membayar atau menagih atas nama siapa pun. Uang hanya bergerak ketika pembeli (manusia atau agen yang diberi kuasa) menyelesaikan checkout.</p>
+  <p class="kosong" style="margin:12px 0 0">Agen tidak pernah membayar atau menagih atas nama siapa pun. Uang hanya bergerak ketika pembeli (manusia atau agen yang diberi kuasa) menyelesaikan checkout.</p>
 </div>
 
 <h2>Yang dijual</h2>
@@ -146,7 +141,7 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
 (function(){
 "use strict";
 var API="https://njghzieuuopukuagrswu.supabase.co/functions/v1/hypermarket";
-var WARNA={sinta:"#7cf5d4",bayu:"#7cb8ff",bintang:"#ffd27a",raka:"#ff9fc8",rara:"#b99bff"};
+var WARNA={};
 var PLANET=[
   {id:"chatgpt",nama:"ChatGPT",cocok:/ChatGPT|OpenAI/},{id:"claude",nama:"Claude",cocok:/Claude|Anthropic/},
   {id:"perplexity",nama:"Perplexity",cocok:/Perplexity/},{id:"gemini",nama:"Gemini",cocok:/Gemini|Google/},
@@ -184,14 +179,14 @@ function gambar(now){
     cx.fillStyle=on?"#7cf5d4":"rgba(185,155,255,.55)";cx.beginPath();cx.arc(q.x,q.y,on?9:6,0,7);cx.fill();
     cx.fillStyle=on?"#eef0ff":"#9aa0bd";cx.font=(on?"600 ":"")+"12px -apple-system,sans-serif";cx.fillText(p.nama+(on?" · "+aktif[p.id]:""),q.x,q.y-14)});
   // neuron
-  var ids=Object.keys(WARNA);
+  var ids=Object.keys(WARNA);if(!ids.length)ids=[];
   ids.forEach(function(id,k){
     var tujuan=neuronT[id],pos;
     if(tujuan&&gerakOk){var q=posPlanet(tujuan.i,t),f=(Math.sin((t-tujuan.mulai)*.0012)+1)/2;pos={x:pc.x+(q.x-pc.x)*f,y:pc.y+(q.y-pc.y)*f}}
     else{var a=k/ids.length*Math.PI*2+(gerakOk?t*.0006:0),r=46+k*7;pos={x:pc.x+Math.cos(a)*r*1.5,y:pc.y+Math.sin(a)*r*.8}}
     var gg=cx.createRadialGradient(pos.x,pos.y,0,pos.x,pos.y,14);gg.addColorStop(0,WARNA[id]);gg.addColorStop(1,"rgba(0,0,0,0)");
     cx.fillStyle=gg;cx.beginPath();cx.arc(pos.x,pos.y,14,0,7);cx.fill();cx.fillStyle="#fff";cx.beginPath();cx.arc(pos.x,pos.y,2.6,0,7);cx.fill();
-    if(W>520){cx.fillStyle=WARNA[id];cx.font="600 11px -apple-system,sans-serif";cx.fillText(id.charAt(0).toUpperCase()+id.slice(1),pos.x,pos.y+24)}
+    if(W>520){cx.fillStyle=WARNA[id];cx.font="600 11px -apple-system,sans-serif";cx.fillText(id.toUpperCase(),pos.x,pos.y+24)}
   });
   if(gerakOk)requestAnimationFrame(gambar);
 }
@@ -199,8 +194,8 @@ requestAnimationFrame(gambar);
 
 function planetDari(p){
   var teks=(p.sasaran||"")+" "+(p.aksi||"");
-  if(p.neuron==="raka")return"gumroad";
-  if(p.neuron==="bintang")return"bing";
+  if(p.neuron==="tomas")return"gumroad";
+  if(p.neuron==="seo")return"bing";
   for(var i=0;i<PLANET.length;i++)if(PLANET[i].cocok.test(teks))return PLANET[i].id;
   return null;
 }
@@ -208,6 +203,8 @@ function planetDari(p){
 // ---------------------------------------------------------------- data
 function render(){
   if(!S)return;
+  (S.neuron||[]).forEach(function(n){WARNA[n.id]=n.warna||"#7cf5d4"});
+  var sel=document.getElementById("pilih");if(sel&&!sel.options.length)(S.neuron||[]).forEach(function(n){var e=document.createElement("option");e.value=n.id;e.textContent=n.nama+" · "+n.peran.split(" — ")[0];sel.appendChild(e)});
   var ag=S.agen||{},nama=Object.keys(ag).filter(function(k){return k!=="browser manusia"});
   var tot=0,h24=0;nama.forEach(function(k){tot+=ag[k].total;h24+=ag[k].h24});
   var mcp=(S.kunjungan||[]).filter(function(k){return k.saluran==="mcp"}).length;
@@ -219,7 +216,7 @@ function render(){
   ].map(function(a){return'<div class="a"><b>'+a[0]+'</b><span>'+a[1]+'</span></div>'}).join("");
   document.getElementById("neuron").innerHTML=(S.neuron||[]).map(function(n){
     return'<button class="n" type="button" data-n="'+n.id+'"><div class="nm"><span class="bulat" style="background:'+WARNA[n.id]+';box-shadow:0 0 10px '+WARNA[n.id]+'"></span>'+esc(n.nama)+'</div><div class="pr">'+esc(n.peran)+'</div><div class="kr">'+(n.aksi?esc(n.aksi)+" · "+esc(n.hasil)+' <span class="kosong">('+lalu(n.terakhir)+')</span>':'<span class="kosong">menunggu tugas pertama</span>')+'</div></button>'}).join("");
-  document.querySelectorAll(".n").forEach(function(b){b.onclick=function(){var s=document.getElementById("pilih");s.value=b.getAttribute("data-n");document.getElementById("tanya").focus&&document.getElementById("tanya").focus();document.getElementById("kunci").scrollIntoView({behavior:"smooth",block:"center"})}});
+  document.querySelectorAll(".n").forEach(function(b){b.onclick=function(){var s=document.getElementById("pilih");s.value=b.getAttribute("data-n");document.getElementById("tanya").focus&&document.getElementById("tanya").focus();document.getElementById("ruang").scrollIntoView({behavior:"smooth",block:"center"})}});
   var ps=S.peristiwa||[];
   document.getElementById("feed").innerHTML=ps.length?ps.slice(0,40).map(function(p){var nm=(S.neuron||[]).find(function(n){return n.id===p.neuron});
     return'<li><time>'+lalu(p.pada)+'</time><b style="color:'+(WARNA[p.neuron]||"inherit")+'">'+esc(nm?nm.nama:p.neuron)+'</b> '+esc(p.aksi)+(p.sasaran?' → '+esc(p.sasaran):'')+' · '+esc(p.hasil)+'</li>'}).join(""):'<li class="kosong">Belum ada kerja tercatat. Neuron bangun tiap 30 menit.</li>';
@@ -247,22 +244,16 @@ document.querySelectorAll("[data-salin]").forEach(function(b){b.onclick=function
   (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(function(){b.textContent="Tersalin ✓";setTimeout(function(){b.textContent="Salin"},1500)},function(){b.textContent="Tahan & salin"})}});
 
 // ---------------------------------------------------------------- obrolan
-var PIN=ls("hm_pin")||"",riwayat=[];
-function bukaRuang(){document.getElementById("kunci").hidden=true;document.getElementById("ruang").hidden=false;
-  var s=document.getElementById("pilih");if(!s.options.length){[["sinta","Sinta · Etalase MCP"],["bayu","Bayu · Katalog"],["bintang","Bintang · Penyiar"],["raka","Raka · Kasir"],["rara","Rara · Pencatat"]].forEach(function(o){var e=document.createElement("option");e.value=o[0];e.textContent=o[1];s.appendChild(e)})}}
-function cekPin(p){return fetch(API+"?r=pin",{method:"POST",headers:{"x-pin":p}}).then(function(r){return r.json()}).then(function(d){return!!d.ok}).catch(function(){return false})}
-if(PIN)cekPin(PIN).then(function(ok){if(ok)bukaRuang();else{PIN="";ls("hm_pin",null)}});
-document.getElementById("fpin").onsubmit=function(e){e.preventDefault();var p=document.getElementById("pin").value.trim();if(!p)return;
-  cekPin(p).then(function(ok){if(ok){PIN=p;ls("hm_pin",p);bukaRuang()}else document.getElementById("pinsalah").textContent="PIN salah."})};
+var riwayat=[];
 function tambah(dari,isi,kecil){var d=document.createElement("div");d.className="m "+(dari==="owner"?"o":"a");d.textContent=isi;if(kecil){var s=document.createElement("small");s.textContent=kecil;d.appendChild(s)}
   var box=document.getElementById("pesan");box.appendChild(d);box.scrollTop=box.scrollHeight}
 document.getElementById("fobrol").onsubmit=function(e){e.preventDefault();var i=document.getElementById("tanya"),t=i.value.trim();if(!t)return;i.value="";
   var n=document.getElementById("pilih").value;tambah("owner",t);riwayat.push({dari:"owner",isi:t});
-  fetch(API+"?r=obrol",{method:"POST",headers:{"x-pin":PIN,"content-type":"application/json"},body:JSON.stringify({neuron:n,pesan:t,riwayat:riwayat.slice(-8)})})
-  .then(function(r){return r.json()}).then(function(d){if(d.jawab){tambah("agen",d.jawab,d.otak);riwayat.push({dari:n,isi:d.jawab})}else tambah("agen","⚠ "+(d.galat||"tidak ada jawaban"))})
+  fetch(API+"?r=obrol",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({neuron:n,pesan:t,riwayat:riwayat.slice(-8)})})
+  .then(function(r){return r.json()}).then(function(d){if(d.jawab){tambah("agen",d.jawab,(d.agen?d.agen+" · ":"")+d.otak);riwayat.push({dari:n,isi:d.jawab})}else tambah("agen","⚠ "+(d.galat||"tidak ada jawaban"))})
   .catch(function(){tambah("agen","⚠ awan tak terjangkau")})};
 document.getElementById("kerja").onclick=function(){var b=this;b.disabled=true;b.textContent="bekerja…";
-  fetch(API+"?r=kerja",{method:"POST",headers:{"x-pin":PIN}}).then(function(r){return r.json()}).then(function(d){tambah("agen","Hasil kerja: "+Object.keys(d).map(function(k){return k+": "+d[k]}).join(" · "));muat()})
+  fetch(API+"?r=kerja",{method:"POST"}).then(function(r){return r.json()}).then(function(d){tambah("agen","Hasil kerja: "+Object.keys(d).map(function(k){return k+": "+d[k]}).join(" · "));muat()})
   .catch(function(){tambah("agen","⚠ gagal")}).then(function(){b.disabled=false;b.textContent="Kerja sekarang"})};
 
 // ---------------------------------------------------------------- Gibberlink (ggwave)
