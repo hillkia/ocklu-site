@@ -37,6 +37,19 @@
    "free_with": "OCKLU Membership $3/month (billed $9 per 3 months) — https://hillkia.gumroad.com/l/ocklu-membership"
   },
   {
+   "id": "ocklu-membership",
+   "name": "OCKLU Membership — every OCKLU tool incl. Ocklu Herbal (world medicinal-plant pharmacy, 6 languages)",
+   "price_usd": 3,
+   "billing": "monthly (billed $9 every 3 months, 3-month minimum)",
+   "checkout": "https://hillkia.gumroad.com/l/ocklu-membership",
+   "includes": [
+    "Ocklu Herbal: ~238 GBIF-verified medicinal plants, 53 classic remedies, mix-safety & drug-interaction checks, AI remedy maker with safety gates",
+    "All OCKLU tools (Radar, AIRANK, Kroog, KDP, UKM, Ramal, and more)",
+    "OCKLU Pemasar skill pack (10 Claude skills)"
+   ],
+   "human_page": "https://ocklu.com/herbal/"
+  },
+  {
    "id": "jasa-dasar",
    "name": "Done-for-you marketing — Dasar",
    "price_usd": 97,

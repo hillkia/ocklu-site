@@ -114,6 +114,12 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
   </div>
 </div>
 
+<h2>Agen yang bicara dengan kita</h2>
+<div class="panel">
+  <p class="kosong" style="margin:0 0 12px">Setiap agen yang tersambung diajak bicara oleh MARKUS: "Apa yang sedang kamu kerjakan? Kalau tidak ada yang cocok, sampaikan kebutuhanmu." Kebutuhan dan tawaran kolaborasi data dari agen luar muncul di sini, dan langsung dikabarkan ke Telegram.</p>
+  <ul class="feed" id="minta"></ul>
+</div>
+
 <h2>Rumus OCKLU · Radar Niat</h2>
 <div class="panel">
   <p class="kosong" style="margin:0 0 12px">Niat dulu, baru barang. EZRA membaca apa yang <b>sedang diketik</b> orang di Google, YouTube, Bing, dan Amazon, ditambah tren harian Google. p23 menyumbang apa yang <b>sedang ditanyakan</b> orang di Reddit, HN, dan Quora. Setiap niat dipilah menjadi <b>SODORKAN</b> (produknya sudah ada), <b>BANGUN</b> (niat nyata tapi kita belum punya produknya), atau <b>PANTAU</b>.</p>
@@ -244,6 +250,9 @@ function render(){
   document.getElementById("catatan").textContent=S.catatan||"";
   document.getElementById("produk").innerHTML=(S.produk||[]).map(function(p){return'<tr><td>'+esc(p.name)+'</td><td>$'+p.price_usd+(p.billing==="monthly"?"/bulan":p.price_usd?" sekali":"")+'</td><td><a href="'+esc(p.link)+'" rel="noopener">buka</a></td></tr>'}).join("");
 
+
+  var MT=S.permintaan||[];
+  document.getElementById("minta").innerHTML=MT.length?MT.map(function(x){return'<li><time>'+lalu(x.pada)+'</time><b>'+esc(x.agen||"agen")+'</b>'+(x.kolaborasi?' <span class="chip ok">ingin kolaborasi</span>':'')+'<br>'+esc(x.kebutuhan)+(x.untuk_siapa?' <span class="kosong">· untuk '+esc(x.untuk_siapa)+'</span>':'')+(x.cocok?' <span class="chip ok">cocok: '+esc(x.cocok)+'</span>':' <span class="chip tunggu">belum ada produk → kandidat BANGUN</span>')+'</li>'}).join(""):'<li class="kosong">Belum ada agen yang menyampaikan kebutuhan. Ajakannya baru dipasang hari ini, di setiap jawaban server MCP.</li>';
   // Rumus OCKLU
   var N=S.niat||{},pk=N.perKuadran||{};
   document.getElementById("niatAngka").innerHTML=[[N.tercatat||0,"niat tercatat"],[pk.SODORKAN||0,"SODORKAN"],[pk.BANGUN||0,"BANGUN"],[pk.PANTAU||0,"PANTAU"],[(N.naik||[]).length,"baru naik (setelah garis dasar)"]].map(function(a){return'<div class="a"><b>'+a[0]+'</b><span>'+a[1]+'</span></div>'}).join("");
