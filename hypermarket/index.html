@@ -70,7 +70,7 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
 
 <section class="kosmos" aria-label="Peta pasar antar-agen">
   <canvas id="kanvas" aria-hidden="true"></canvas>
-  <div class="judul"><h1>Pasar antar-agen</h1><p>Delapan agen ber-DNA milik OCKLU melayani agen AI yang datang belanja, menyiarkan produkmu, dan menjaga kasir. Hidup di awan, tetap jalan walau laptop mati.</p></div>
+  <div class="judul"><h1>Pasar antar-agen</h1><p>Sembilan agen ber-DNA milik OCKLU melayani agen AI yang datang belanja, menyiarkan produkmu, dan menjaga kasir. Hidup di awan, tetap jalan walau laptop mati.</p></div>
   <div class="kaki">Gerak = animasi. Garis terang ke planet = kejadian nyata 24 jam terakhir dari database.</div>
 </section>
 
@@ -112,6 +112,25 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
       <div class="salin"><code id="ukat">https://njghzieuuopukuagrswu.supabase.co/functions/v1/hypermarket?r=katalog</code><button class="btn" type="button" data-salin="ukat">Salin</button></div>
     </div>
   </div>
+</div>
+
+<h2>Rumus OCKLU · Radar Niat</h2>
+<div class="panel">
+  <p class="kosong" style="margin:0 0 12px">Niat dulu, baru barang. EZRA membaca apa yang <b>sedang diketik</b> orang di Google, YouTube, Bing, dan Amazon, ditambah tren harian Google. p23 menyumbang apa yang <b>sedang ditanyakan</b> orang di Reddit, HN, dan Quora. Setiap niat dipilah menjadi <b>SODORKAN</b> (produknya sudah ada), <b>BANGUN</b> (niat nyata tapi kita belum punya produknya), atau <b>PANTAU</b>.</p>
+  <div class="angka" id="niatAngka" style="margin:0 0 16px"></div>
+  <div class="dua">
+    <div><h3 style="margin:0 0 8px;font-size:16px">BANGUN · permintaan tanpa produk</h3><ul class="feed" id="niatBangun"></ul></div>
+    <div><h3 style="margin:0 0 8px;font-size:16px">SODORKAN · cocok dengan produk</h3><ul class="feed" id="niatSodor"></ul></div>
+  </div>
+  <h3 style="margin:16px 0 8px;font-size:16px">Percakapan (p23 · Reddit · HN · Quora)</h3><ul class="feed" id="niatP23"></ul>
+  <h3 style="margin:16px 0 8px;font-size:16px">Sensor</h3><div id="niatSensor" style="display:flex;flex-wrap:wrap;gap:8px"></div>
+</div>
+
+<h2>Pengunjung manusia ocklu.com</h2>
+<div class="panel">
+  <p class="kosong" style="margin:0 0 12px">Dihitung tanpa cookie dan tanpa menyimpan IP. MARKUS memilih penawaran sesuai asal pengunjung. Yang tercatat hanya halaman, situs asal, HP atau laptop, dan klik.</p>
+  <div class="angka" id="manAngka" style="margin:0 0 16px"></div>
+  <div class="dua"><div><h3 style="margin:0 0 8px;font-size:16px">Datang dari</h3><ul class="feed" id="manAsal"></ul></div><div><h3 style="margin:0 0 8px;font-size:16px">Halaman</h3><ul class="feed" id="manHal"></ul></div></div>
 </div>
 
 <h2>Alur uang: dari nol sampai rekening</h2>
@@ -224,6 +243,21 @@ function render(){
   document.getElementById("agen").innerHTML=tb||'<tr><td colspan="5" class="kosong">Belum ada agen yang datang lewat MCP atau katalog hidup. Ini angka jujur hari pertama, dan akan terisi setelah pendaftaran ke direktori agen.</td></tr>';
   document.getElementById("catatan").textContent=S.catatan||"";
   document.getElementById("produk").innerHTML=(S.produk||[]).map(function(p){return'<tr><td>'+esc(p.name)+'</td><td>$'+p.price_usd+(p.billing==="monthly"?"/bulan":p.price_usd?" sekali":"")+'</td><td><a href="'+esc(p.link)+'" rel="noopener">buka</a></td></tr>'}).join("");
+
+  // Rumus OCKLU
+  var N=S.niat||{},pk=N.perKuadran||{};
+  document.getElementById("niatAngka").innerHTML=[[N.tercatat||0,"niat tercatat"],[pk.SODORKAN||0,"SODORKAN"],[pk.BANGUN||0,"BANGUN"],[pk.PANTAU||0,"PANTAU"],[(N.naik||[]).length,"baru naik (setelah garis dasar)"]].map(function(a){return'<div class="a"><b>'+a[0]+'</b><span>'+a[1]+'</span></div>'}).join("");
+  function daftarKuat(xs){return xs&&xs.length?xs.map(function(x){return'<li><b>'+esc(x.kata)+'</b> <span class="chip">'+x.sensor.length+' sensor</span> <span class="kosong">'+esc(x.sensor.join(", "))+(x.produk?' → '+esc(x.produk):'')+'</span></li>'}).join(""):'<li class="kosong">Belum ada kata yang muncul di 2 sensor atau lebih.</li>'}
+  document.getElementById("niatBangun").innerHTML=daftarKuat(N.kuatBangun);
+  document.getElementById("niatSodor").innerHTML=daftarKuat(N.kuatSodorkan);
+  document.getElementById("niatP23").innerHTML=(N.percakapan||[]).length?N.percakapan.map(function(x){return'<li><span class="chip'+(x.kuadran==="SODORKAN"?" ok":"")+'">'+esc(x.kuadran)+'</span> <a href="'+esc(x.url)+'" rel="noopener nofollow">'+esc(x.kata)+'</a> <span class="kosong">'+esc(x.sumber.replace("p23:",""))+'</span></li>'}).join(""):'<li class="kosong">Belum ada niat percakapan dari p23.</li>';
+  document.getElementById("niatSensor").innerHTML=(N.sensor||[]).map(function(x){return'<span class="chip'+(x.status==="hidup"?" ok":x.status.indexOf("sinkron")===0?" ok":" tunggu")+'">'+esc(x.nama)+' · '+esc(x.status)+'</span>'}).join("");
+  // pengunjung manusia
+  var M=S.manusia||{};
+  document.getElementById("manAngka").innerHTML=[[M.h24||0,"pengunjung · 24 jam"],[M.h30||0,"pengunjung · 30 hari"],[M.ditawari||0,"ditawari"],[M.klik||0,"klik penawaran"]].map(function(a){return'<div class="a"><b>'+a[0]+'</b><span>'+a[1]+'</span></div>'}).join("");
+  function dft(xs,kos){return xs&&xs.length?xs.map(function(x){return'<li>'+esc(x[0])+' <span class="chip">'+x[1]+'</span></li>'}).join(""):'<li class="kosong">'+kos+'</li>'}
+  document.getElementById("manAsal").innerHTML=dft(M.asal,"Belum ada pengunjung tercatat. Penghitung baru dipasang hari ini.");
+  document.getElementById("manHal").innerHTML=dft(M.halaman,"—");
   // kanvas: kejadian 24 jam
   var batas=Date.now()-864e5;aliran=[];neuronT={};var mulai=performance.now()-t0;
   ps.forEach(function(p){if(new Date(p.pada).getTime()<batas)return;var pl=planetDari(p);if(!pl)return;aliran.push({planet:pl});
