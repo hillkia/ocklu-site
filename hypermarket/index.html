@@ -114,6 +114,13 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
   </div>
 </div>
 
+<h2>Rumus Arus · cara Google Maps membaca macet</h2>
+<div class="panel">
+  <p class="kosong" style="margin:0 0 12px">Google Maps tahu macet tanpa kamera: banyak HP melambat bersamaan di jalan yang sama, dibanding kebiasaan jalan itu di jam yang sama. EZRA memakai cara yang sama untuk niat beli. Yang dihitung: seberapa cepat sebuah kata naik, berapa sensor yang setuju (Google, YouTube, Bing, Amazon), dan perbandingannya dengan jam &amp; hari yang sama. Satu sensor saja tidak pernah dianggap macet.</p>
+  <div class="angka" id="arusAngka" style="margin:0 0 12px"></div>
+  <ul class="feed" id="arusDaftar"></ul>
+</div>
+
 <h2>Agen yang bicara dengan kita</h2>
 <div class="panel">
   <p class="kosong" style="margin:0 0 12px">Setiap agen yang tersambung diajak bicara oleh MARKUS: "Apa yang sedang kamu kerjakan? Kalau tidak ada yang cocok, sampaikan kebutuhanmu." Kebutuhan dan tawaran kolaborasi data dari agen luar muncul di sini, dan langsung dikabarkan ke Telegram.</p>
@@ -251,6 +258,11 @@ function render(){
   document.getElementById("produk").innerHTML=(S.produk||[]).map(function(p){return'<tr><td>'+esc(p.name)+'</td><td>$'+p.price_usd+(p.billing==="monthly"?"/bulan":p.price_usd?" sekali":"")+'</td><td><a href="'+esc(p.link)+'" rel="noopener">buka</a></td></tr>'}).join("");
 
 
+
+  var A=S.arus||{},pk2=A.perKelas||{};
+  document.getElementById("arusAngka").innerHTML=[["MACET",pk2.MACET||0],["PADAT",pk2.PADAT||0],["LANCAR",pk2.LANCAR||0],["SEPI",pk2.SEPI||0],["TIPIS (data belum cukup)",pk2.TIPIS||0]].map(function(a){return'<div class="a"><b>'+a[1]+'</b><span>'+a[0]+'</span></div>'}).join("");
+  var ta=A.teratas||[];
+  document.getElementById("arusDaftar").innerHTML=ta.length?ta.map(function(x){return'<li><span class="chip'+(x.kelas==="MACET"?" ok":x.kelas==="PADAT"?" tunggu":"")+'">'+esc(x.kelas)+'</span> <b>'+esc(x.kata)+'</b> <span class="kosong">'+esc(x.alasan)+'</span></li>'}).join(""):'<li class="kosong">Rumus Arus butuh deret waktu: minimal 6 titik per kata, dan pembanding jam &amp; hari yang sama butuh beberapa minggu. EZRA merekam setiap 2 jam sejak 16/10, jadi kelasnya akan terisi bertahap. Sebelum cukup, semua jujur ditandai TIPIS.</li>';
   var MT=S.permintaan||[];
   document.getElementById("minta").innerHTML=MT.length?MT.map(function(x){return'<li><time>'+lalu(x.pada)+'</time><b>'+esc(x.agen||"agen")+'</b>'+(x.kolaborasi?' <span class="chip ok">ingin kolaborasi</span>':'')+'<br>'+esc(x.kebutuhan)+(x.untuk_siapa?' <span class="kosong">· untuk '+esc(x.untuk_siapa)+'</span>':'')+(x.cocok?' <span class="chip ok">cocok: '+esc(x.cocok)+'</span>':' <span class="chip tunggu">belum ada produk → kandidat BANGUN</span>')+'</li>'}).join(""):'<li class="kosong">Belum ada agen yang menyampaikan kebutuhan. Ajakannya baru dipasang hari ini, di setiap jawaban server MCP.</li>';
   // Rumus OCKLU
