@@ -142,7 +142,10 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
   <div class="angka" id="mkAngka" style="margin:0 0 12px"></div>
   <div id="mkIndustri" style="display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px"></div>
   <div style="overflow-x:auto"><table><thead><tr><th>Penawaran</th><th>Industri</th><th>Jenis</th><th>Harga</th><th>Wilayah</th></tr></thead><tbody id="mkDaftar"></tbody></table></div>
-  <div class="owner-saja" hidden style="margin-top:12px"><h3 style="margin:0 0 8px;font-size:16px">Menunggu tinjauan (mode owner)</h3><ul class="feed" id="mkTinjau"></ul></div>
+  <div class="owner-saja" hidden style="margin-top:12px"><h3 style="margin:0 0 8px;font-size:16px">Menunggu tinjauan (mode owner)</h3><ul class="feed" id="mkTinjau"></ul>
+    <h3 style="margin:12px 0 8px;font-size:16px">Penerima komisi PayPal (mode owner)</h3>
+    <div class="baris"><input id="ppEmail" type="email" autocomplete="off" placeholder="email akun PayPal penerima komisi" aria-label="Email PayPal"><button class="btn mini" type="button" id="ppSimpan">Simpan</button></div>
+    <p class="kosong" id="ppKet" style="margin:6px 0 0">Disimpan di brankas server, tidak tampil di halaman publik. Komisi 7% dibuat jadi link PayPal otomatis & berubah LUNAS sendiri saat PayPal mengabari.</p></div>
   <div class="dua" style="margin-top:16px">
     <div><h3 style="margin:0 0 8px;font-size:16px">Pasang jualan</h3>
       <form id="fPasang" style="display:grid;gap:8px">
@@ -384,7 +387,7 @@ var TAHAP={antre:"antre",rencana:"direncanakan","diambil-laptop":"dikerjakan Cla
 (function(){var q=new URLSearchParams(location.search).get("pin");if(q){ls("hm_pin",q);history.replaceState(null,"",location.pathname+location.hash)}})();
 var OWNER=false;
 function kirimOwner(b){return fetch(API+"?r=owner",{method:"POST",headers:{"Content-Type":"application/json","x-owner":ls("hm_pin")||""},body:JSON.stringify(b)}).then(function(r){return r.json()}).catch(function(e){return{galat:String(e)}})}
-if(ls("hm_pin"))kirimOwner({aksi:"cek"}).then(function(d){if(d.ok){OWNER=true;pasangOwner()}else ls("hm_pin",null)});
+if(ls("hm_pin"))kirimOwner({aksi:"cek"}).then(function(d){if(d.ok){OWNER=true;pasangOwner();cekPaypal()}else ls("hm_pin",null)});
 function pasangOwner(){document.querySelectorAll(".owner-saja").forEach(function(e){e.hidden=!OWNER})}
 document.getElementById("gibSimpan").onclick=function(){var v=document.getElementById("gibIn").value.trim();if(!v)return;this.textContent="menyimpan…";var b=this;kirimOwner({aksi:"teks",k:"gibberlink",v:v}).then(function(d){b.textContent=d.ok?"Tersimpan ✓":"Gagal";setTimeout(function(){b.textContent="Simpan kalimat"},1500);muat()})};
 document.getElementById("gibAsal").onclick=function(){kirimOwner({aksi:"teks",k:"gibberlink",v:""}).then(muat)};
@@ -407,11 +410,14 @@ document.getElementById("fPasang").onsubmit=function(e){e.preventDefault();var f
 function gambarJodoh(tok){var el=document.getElementById("mkJodoh");el.innerHTML='<li class="kosong">memeriksa…</li>';mcpPanggil("cek_jodoh",{token:tok}).then(function(d){
   if(d.galat){el.innerHTML='<li class="kosong">'+esc(d.galat)+'</li>';return}
   el.innerHTML=(d.jodoh||[]).map(function(j){var kl=typeof j.kontak_lawan==="object"?Object.values(j.kontak_lawan).join(" · "):j.kontak_lawan;var bisaSetuju=(j.peran_kamu==="penjual"&&!j.penjual_setuju)||(j.peran_kamu==="pembeli"&&!j.pembeli_setuju);
-    return'<li><b>#'+j.jodoh_id+' '+esc(j.penawaran||"")+'</b> <span class="chip">'+esc(j.status)+'</span> <span class="kosong">kamu: '+esc(j.peran_kamu)+'</span>'+(j.kebutuhan_pembeli?'<br>'+esc(j.kebutuhan_pembeli):'')+'<br><span class="kosong">kontak: '+esc(kl)+'</span>'+(j.komisi?'<br>komisi 7%: '+esc(j.komisi)+' '+esc(j.mata_uang||""):'')
+    return'<li><b>#'+j.jodoh_id+' '+esc(j.penawaran||"")+'</b> <span class="chip">'+esc(j.status)+'</span> <span class="kosong">kamu: '+esc(j.peran_kamu)+'</span>'+(j.kebutuhan_pembeli?'<br>'+esc(j.kebutuhan_pembeli):'')+'<br><span class="kosong">kontak: '+esc(kl)+'</span>'+(j.komisi?'<br>komisi 7%: '+esc(j.komisi)+' '+esc(j.mata_uang||"")+(j.status==="lunas"?' <span class="chip ok">lunas</span>':''):'')+(j.link_bayar_komisi&&j.status!=="lunas"?'<br><a class="btn mini isi" href="'+esc(j.link_bayar_komisi)+'" target="_blank" rel="noopener">Bayar komisi via PayPal</a>':'')
       +(bisaSetuju&&j.status!=="batal"?'<br><button class="btn mini" data-jodoh="'+j.jodoh_id+'" data-setuju="1">Setujui</button> <button class="btn mini" data-jodoh="'+j.jodoh_id+'" data-setuju="0">Tolak</button>':'')
       +(j.peran_kamu==="penjual"&&j.status==="kontak_dibuka"?'<div class="baris" style="margin-top:6px"><input type="number" min="0" step="any" placeholder="Nilai transaksi" data-nilai="'+j.jodoh_id+'"><button class="btn mini" data-lapor="'+j.jodoh_id+'">Lapor transaksi</button></div>':'')+'</li>'}).join("")||'<li class="kosong">Belum ada jodoh untuk token ini.</li>';
   el.querySelectorAll("[data-jodoh]").forEach(function(b){b.onclick=function(){b.disabled=true;mcpPanggil("setujui_jodoh",{token:tok,jodoh_id:+b.getAttribute("data-jodoh"),setuju:b.getAttribute("data-setuju")==="1"}).then(function(){gambarJodoh(tok)})}});
   el.querySelectorAll("[data-lapor]").forEach(function(b){b.onclick=function(){var id=b.getAttribute("data-lapor"),v=+el.querySelector('[data-nilai="'+id+'"]').value;if(!(v>0))return;b.disabled=true;mcpPanggil("lapor_transaksi",{token:tok,jodoh_id:+id,nilai:v}).then(function(){gambarJodoh(tok)})}})})}
+document.getElementById("ppSimpan").onclick=function(){var e=document.getElementById("ppEmail").value.trim(),k=document.getElementById("ppKet");if(!e)return;k.textContent="menyimpan…";
+  kirimOwner({aksi:"bayar_ke",email:e}).then(function(d){k.textContent=d.ok?"Tersimpan: "+d.tersamar+" — link komisi PayPal aktif.":"Gagal: "+(d.galat||"?");if(d.ok)document.getElementById("ppEmail").value=""})};
+function cekPaypal(){if(!OWNER)return;kirimOwner({aksi:"bayar_cek"}).then(function(d){var k=document.getElementById("ppKet");if(d.ok)k.textContent=d.ada?"Penerima komisi saat ini: "+d.tersamar+". Ganti dengan mengisi email baru.":"Belum diisi — komisi belum bisa ditagih otomatis. Isi email akun PayPal-mu."})}
 document.getElementById("fCek").onsubmit=function(e){e.preventDefault();var t=document.getElementById("mkToken").value.trim();if(t.length<20)return;try{ls("hm_token_mk",t)}catch(x){}gambarJodoh(t)};
 (function(){var t=ls("hm_token_mk");if(t)document.getElementById("mkToken").value=t})();
 function muat(){
