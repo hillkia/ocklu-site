@@ -191,12 +191,14 @@ else{
     t.innerHTML=h;const tw=el('div','tblwrap');tw.append(t);gd.append(tw);
   }else gd.textContent=g?g.reason:'—';
 
-  // arus (pengamat, bobot 0 — tidak dibaca PEGASUS)
+  // arus — IKUT MENENTUKAN beli/jual sejak 16/10 (keputusan owner); pagar PEGASUS tetap berlaku
   const ad=document.getElementById('arus');const AR=D.arus||{};
   if(AR.galat){ad.textContent='Rumus Arus galat: '+AR.galat;}
   else if(AR.per_kelas){
     ad.append(el('div','kv',Object.entries(AR.per_kelas).map(([k,v])=>`${k} <b>${v}</b>`).join(' · ')));
     (AR.macet||[]).forEach(m=>ad.append(el('div','kv',`<b>${m.symbol.split('_')[0]}</b> MACET · arah <b style="color:${m.arah==='naik'?'var(--long)':m.arah==='turun'?'var(--short)':'var(--mut)'}">${m.arah}</b> — ${m.alasan}`)));
+    (AR.keputusan||[]).forEach(k=>ad.append(el('div','kv',`<b>${k.symbol.split('_')[0]}</b> → <b style="color:${/JUAL/.test(k.aksi)?'var(--short)':/BELI|beli/.test(k.aksi)?'var(--long)':'var(--mut)'}">${k.aksi}</b> · ${k.asal.direction||'-'} ${(+k.asal.conviction||0).toFixed(2)} → ${k.jadi.direction} ${(+k.jadi.conviction||0).toFixed(2)} (${k.jadi.label})`)));
+    if(AR.keputusan&&!AR.keputusan.length)ad.append(el('div','kv','Putaran ini Arus tidak mengubah keputusan apa pun (tidak ada MACET/PADAT/SEPI dengan arah jelas).'));
     ad.append(el('div','flags','ℹ '+(AR.catatan||'')));
   }else ad.textContent='Rumus Arus belum dihitung (muncul di putaran run.py berikutnya).';
 
