@@ -129,9 +129,11 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
 
     <h2>Cari agen &amp; server MCP</h2>
     <div class="panel">
-      <form class="baris" id="fcari"><input id="qcari" autocomplete="off" placeholder="mis. invoice, email, crypto, travel" aria-label="Cari agen"><button class="btn isi" type="submit">Cari</button></form>
+      <p style="margin:0 0 10px">Cari <b>agen &amp; alat AI lain</b> di seluruh dunia yang bisa disambungkan ke Claude, ChatGPT, atau Cursor. Ketik keperluanmu (bahasa Inggris paling banyak hasilnya), atau klik contoh:</p>
+      <div id="cariContoh" style="display:flex;flex-wrap:wrap;gap:6px;margin:0 0 10px"></div>
+      <form class="baris" id="fcari"><input id="qcari" autocomplete="off" placeholder="mis. invoice, email, calendar, crypto, travel" aria-label="Cari agen"><button class="btn isi" type="submit">Cari</button></form>
       <ul class="feed" id="hcari" style="margin-top:12px"></ul>
-      <p class="kosong" style="margin:8px 0 0">Sumber: registri MCP resmi (registry.modelcontextprotocol.io) — agen &amp; alat yang bisa disambung ke Claude, ChatGPT, Cursor.</p>
+      <p class="kosong" style="margin:8px 0 0"><b>Cara pakai hasilnya:</b> klik "Salin alamat", lalu di Claude buka Pengaturan → Konektor → Tambah konektor kustom, tempel alamatnya. Sumber: registri MCP resmi.</p>
     </div>
   </div>
 </div>
@@ -399,7 +401,9 @@ document.getElementById("ubahJudul").onclick=function(){var j=document.querySele
   document.getElementById("ejB").onclick=function(){Promise.all([kirimOwner({aksi:"teks",k:"judul",v:""}),kirimOwner({aksi:"teks",k:"intro",v:""})]).then(function(){box.remove();muat()})}};
 document.getElementById("fcari").onsubmit=function(e){e.preventDefault();var q=document.getElementById("qcari").value.trim(),h=document.getElementById("hcari");if(q.length<2)return;h.innerHTML='<li class="kosong">mencari…</li>';
   fetch(API+"?r=cari_agen&q="+encodeURIComponent(q)).then(function(r){return r.json()}).then(function(d){var x=d.hasil||[];
-    h.innerHTML=d.galat?'<li class="kosong">'+esc(d.galat)+'</li>':x.length?x.map(function(a){var u=(a.remote&&a.remote[0])||a.situs;return'<li><b>'+esc(a.judul||a.nama)+'</b> <span class="kosong">'+esc(a.nama)+(a.versi?' · v'+esc(a.versi):'')+'</span><br>'+esc(a.deskripsi)+(u&&/^https?:/.test(u)?'<br><a href="'+esc(u)+'" target="_blank" rel="noopener nofollow">'+esc(u)+'</a>':'')+'</li>'}).join(""):'<li class="kosong">Tidak ada yang cocok untuk “'+esc(q)+'”.</li>'})
+    h.innerHTML=d.galat?'<li class="kosong">'+esc(d.galat)+'</li>':x.length?'<li class="kosong">'+x.length+' hasil untuk “'+esc(q)+'”</li>'+x.map(function(a){var rm=a.remote&&a.remote[0],u=rm||a.situs;return'<li><b>'+esc(a.judul||a.nama)+'</b> <span class="kosong">'+esc(a.nama)+(a.versi?' · v'+esc(a.versi):'')+'</span><br>'+esc(a.deskripsi)
+      +(rm&&/^https?:/.test(rm)?'<br><span class="chip ok">bisa langsung disambung</span> <button class="btn mini" type="button" data-salinurl="'+esc(rm)+'">Salin alamat</button>':'')+(a.situs&&/^https?:/.test(a.situs)?' <a href="'+esc(a.situs)+'" target="_blank" rel="noopener nofollow">situs</a>':'')+'</li>'}).join(""):'<li class="kosong">Tidak ada yang cocok untuk “'+esc(q)+'”. Coba kata bahasa Inggris yang lebih umum (mis. "invoice", "email").</li>';
+    h.querySelectorAll("[data-salinurl]").forEach(function(b){b.onclick=function(){var t=b.getAttribute("data-salinurl");(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(function(){b.textContent="Tersalin ✓"},function(){b.textContent=t})}})})
   .catch(function(){h.innerHTML='<li class="kosong">Pencarian gagal, coba lagi.</li>'})};
 // ---------------------------------------------------------------- makelar: formulir & cek jodoh (lewat API yang sama dengan agen)
 function mcpPanggil(nama,args){return fetch(API,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({jsonrpc:"2.0",id:Date.now(),method:"tools/call",params:{name:nama,arguments:args}})}).then(function(r){return r.json()}).then(function(d){try{return JSON.parse(d.result.content[0].text)}catch(e){return{galat:"jawaban tak terbaca"}}})}
@@ -420,6 +424,7 @@ document.getElementById("ppSimpan").onclick=function(){var e=document.getElement
 function cekPaypal(){if(!OWNER)return;kirimOwner({aksi:"bayar_cek"}).then(function(d){var k=document.getElementById("ppKet");if(d.ok)k.textContent=d.ada?"Penerima komisi saat ini: "+d.tersamar+". Ganti dengan mengisi email baru.":"Belum diisi — komisi belum bisa ditagih otomatis. Isi email akun PayPal-mu."})}
 document.getElementById("fCek").onsubmit=function(e){e.preventDefault();var t=document.getElementById("mkToken").value.trim();if(t.length<20)return;try{ls("hm_token_mk",t)}catch(x){}gambarJodoh(t)};
 (function(){var t=ls("hm_token_mk");if(t)document.getElementById("mkToken").value=t})();
+(function(){var c=document.getElementById("cariContoh");if(!c)return;["invoice","email","calendar","crypto","travel","marketplace","translate","database"].forEach(function(k){var b=document.createElement("button");b.type="button";b.className="btn mini";b.textContent=k;b.onclick=function(){document.getElementById("qcari").value=k;document.getElementById("fcari").requestSubmit()};c.appendChild(b)})})();
 function muat(){
   fetch(API+"?r=status",{cache:"no-store"}).then(function(r){return r.json()}).then(function(d){if(d.galat)throw new Error(d.galat);S=d;render();
     document.getElementById("detak").textContent="hidup · "+new Date(d.sekarang).toLocaleTimeString("id-ID",{hour:"2-digit",minute:"2-digit"})})
