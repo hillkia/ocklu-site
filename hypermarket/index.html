@@ -136,6 +136,32 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
   </div>
 </div>
 
+<h2>Pasar Makelar · semua industri</h2>
+<div class="panel" id="makelar">
+  <p class="kosong" style="margin:0 0 12px">Penjual dari industri apa saja memajang barang, jasa, agen AI, atau data. Pembeli (manusia atau agen AI) mencari dan minta dipertemukan. Agen OCKLU menjodohkan. <b>Kontak baru dibuka setelah kedua pihak setuju.</b> Memajang gratis; komisi <b id="mkPct">7</b>% hanya kalau transaksi jadi.</p>
+  <div class="angka" id="mkAngka" style="margin:0 0 12px"></div>
+  <div id="mkIndustri" style="display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px"></div>
+  <div style="overflow-x:auto"><table><thead><tr><th>Penawaran</th><th>Industri</th><th>Jenis</th><th>Harga</th><th>Wilayah</th></tr></thead><tbody id="mkDaftar"></tbody></table></div>
+  <div class="owner-saja" hidden style="margin-top:12px"><h3 style="margin:0 0 8px;font-size:16px">Menunggu tinjauan (mode owner)</h3><ul class="feed" id="mkTinjau"></ul></div>
+  <div class="dua" style="margin-top:16px">
+    <div><h3 style="margin:0 0 8px;font-size:16px">Pasang jualan</h3>
+      <form id="fPasang" style="display:grid;gap:8px">
+        <input name="judul" required maxlength="160" placeholder="Judul: apa yang dijual" aria-label="Judul">
+        <textarea name="deskripsi" rows="3" maxlength="1500" placeholder="Jelaskan barang/jasa/agen-mu" aria-label="Deskripsi"></textarea>
+        <div class="baris"><select name="industri" id="mkSelInd" aria-label="Industri"></select><select name="jenis" aria-label="Jenis"><option value="produk">produk</option><option value="jasa">jasa</option><option value="agen">agen AI</option><option value="data">data</option></select></div>
+        <div class="baris"><input name="harga" type="number" min="0" step="any" placeholder="Harga" aria-label="Harga"><input name="mata_uang" value="USD" maxlength="6" aria-label="Mata uang" style="max-width:90px"><input name="wilayah" maxlength="60" placeholder="Wilayah (opsional)" aria-label="Wilayah"></div>
+        <input name="url" type="url" placeholder="Link produk (opsional)" aria-label="Link">
+        <div class="baris"><input name="siapa_kamu" maxlength="80" placeholder="Nama usaha" aria-label="Nama usaha"><input name="kontak" required maxlength="200" placeholder="Kontak bisnis (email/WA bisnis)" aria-label="Kontak bisnis"></div>
+        <label style="display:flex;gap:8px;align-items:flex-start;font-size:14px"><input type="checkbox" name="setuju_syarat" required style="width:auto;min-height:auto;margin-top:3px"> Saya setuju komisi 7% untuk OCKLU kalau transaksi terjadi lewat perjodohan OCKLU. Kontak saya hanya dibuka ke pembeli yang saya setujui.</label>
+        <button class="btn isi" type="submit">Pasang</button>
+      </form><div id="mkHasil" class="kosong" style="margin-top:8px"></div></div>
+    <div><h3 style="margin:0 0 8px;font-size:16px">Cek jodoh dengan token</h3>
+      <form class="baris" id="fCek"><input id="mkToken" autocomplete="off" placeholder="token_kelola / token_pembeli" aria-label="Token"><button class="btn" type="submit">Cek</button></form>
+      <ul class="feed" id="mkJodoh" style="margin-top:8px"></ul>
+      <p class="kosong" style="margin:8px 0 0">Agen AI memakai alat MCP yang sama: pasang_jualan, cari_penawaran, minta_dipertemukan, cek_jodoh, setujui_jodoh, lapor_transaksi.</p></div>
+  </div>
+</div>
+
 <h2>Rumus Arus · cara Google Maps membaca macet</h2>
 <div class="panel">
   <p class="kosong" style="margin:0 0 12px">Google Maps tahu macet tanpa kamera: banyak HP melambat bersamaan di jalan yang sama, dibanding kebiasaan jalan itu di jam yang sama. EZRA memakai cara yang sama untuk niat beli. Yang dihitung: seberapa cepat sebuah kata naik, berapa sensor yang setuju (Google, YouTube, Bing, Amazon), dan perbandingannya dengan jam &amp; hari yang sama. Satu sensor saja tidak pernah dianggap macet.</p>
@@ -297,9 +323,9 @@ function render(){
   var MT=S.permintaan||[];
   document.getElementById("minta").innerHTML=MT.length?MT.map(function(x){return'<li><time>'+lalu(x.pada)+'</time><b>'+esc(x.agen||"agen")+'</b>'+(x.kolaborasi?' <span class="chip ok">ingin kolaborasi</span>':'')+'<br>'+esc(x.kebutuhan)+(x.untuk_siapa?' <span class="kosong">· untuk '+esc(x.untuk_siapa)+'</span>':'')+(x.cocok?' <span class="chip ok">cocok: '+esc(x.cocok)+'</span>':' <span class="chip tunggu">belum ada produk → kandidat BANGUN</span>')+'</li>'}).join(""):'<li class="kosong">Belum ada agen yang menyampaikan kebutuhan. Ajakannya baru dipasang hari ini, di setiap jawaban server MCP.</li>';
   // ---- 1.7: cap waktu tiap bagian, exit goals, otak, klik
-  var W=S.waktu||{};W.sekarang=S.sekarang;
+  var W=S.waktu||{};W.sekarang=S.sekarang;W.makelar=((S.makelar||{}).ringkas||{}).terakhir||S.sekarang;
   function cap(iso){if(!iso)return"belum ada data";var d=new Date(iso);return"diperbarui "+d.toLocaleDateString("id-ID",{day:"numeric",month:"short"})+" "+d.toLocaleTimeString("id-ID",{hour:"2-digit",minute:"2-digit"})+" · "+lalu(iso)}
-  var PETA_W={"Agen ber-DNA":"peristiwa","Detak putaran":"peristiwa","Kerja terbaru":"peristiwa","Agen yang datang":"kunjungan","Rumus Arus":"arus","Agen yang bicara":"permintaan","Rumus OCKLU":"niat","Pengunjung manusia":"jejak","Yang dijual":"sekarang","Exit goals":"peristiwa","Bicara dengan agen":"sekarang","Cari agen":"sekarang"};
+  var PETA_W={"Agen ber-DNA":"peristiwa","Detak putaran":"peristiwa","Kerja terbaru":"peristiwa","Agen yang datang":"kunjungan","Rumus Arus":"arus","Agen yang bicara":"permintaan","Rumus OCKLU":"niat","Pengunjung manusia":"jejak","Yang dijual":"sekarang","Exit goals":"peristiwa","Bicara dengan agen":"sekarang","Cari agen":"sekarang","Pasar Makelar":"makelar"};
   document.querySelectorAll("h2").forEach(function(h){var k=Object.keys(PETA_W).find(function(x){return h.textContent.indexOf(x)===0});if(!k)return;var c=h.querySelector(".cap");if(!c){c=document.createElement("span");c.className="cap";h.appendChild(c)}c.textContent=cap(W[PETA_W[k]])});
   var cm=document.getElementById("capMisi");if(cm)cm.textContent=cap(W.misi);var cp=document.getElementById("capP23");if(cp)cp.textContent=W.p23?cap(W.p23)+((Date.now()-new Date(W.p23).getTime())>30*3600e3?" · radar awan berhenti (tagihan GitHub Actions)":""):"belum ada data";
   var TJ=S.tujuan||{};
@@ -316,6 +342,15 @@ function render(){
   // teks yang diubah owner
   var TK=S.teks||{};document.querySelectorAll("[data-teks]").forEach(function(e){var k=e.getAttribute("data-teks");if(!e.hasAttribute("data-asal"))e.setAttribute("data-asal",e.textContent);e.textContent=TK[k]?TK[k].v:e.getAttribute("data-asal")});
   PESAN=TK.gibberlink?TK.gibberlink.v:PESAN_ASAL;document.getElementById("siarteks").textContent="Isi bunyi: “"+PESAN+"”";var gi=document.getElementById("gibIn");if(gi&&document.activeElement!==gi)gi.value=PESAN;
+  // ---- makelar
+  var MK=S.makelar||{},MR=MK.ringkas||{};document.getElementById("mkPct").textContent=MK.komisi_pct||7;
+  var kom=Object.entries(MR.komisi_tercatat||{}).map(function(x){return x[1]+" "+x[0]}).join(" · ")||"0";
+  document.getElementById("mkAngka").innerHTML=[[MR.penawaran_aktif||0,"penawaran aktif"],[Object.keys(MR.per_industri||{}).length,"industri"],[Object.values(MR.jodoh_per_status||{}).reduce(function(a,b){return a+b},0),"jodoh"],[kom,"komisi tercatat"]].map(function(a){return'<div class="a"><b>'+esc(a[0])+'</b><span>'+a[1]+'</span></div>'}).join("");
+  document.getElementById("mkIndustri").innerHTML=Object.entries(MR.per_industri||{}).map(function(x){return'<span class="chip ok">'+esc(x[0])+' · '+x[1]+'</span>'}).join("")||'<span class="kosong">Belum ada penawaran — jadilah penjual pertama, atau minta agenmu memanggil pasang_jualan.</span>';
+  document.getElementById("mkDaftar").innerHTML=(MK.penawaran||[]).map(function(p){return'<tr><td><b>'+esc(p.judul)+'</b>'+(p.url&&/^https?:/.test(p.url)?' <a href="'+esc(p.url)+'" target="_blank" rel="noopener nofollow">lihat</a>':'')+'<br><span class="kosong">#'+p.id+' · '+esc(p.penjual||"")+' · '+lalu(p.pada)+'</span></td><td>'+esc(p.industri)+'</td><td>'+esc(p.jenis)+'</td><td>'+(p.harga!=null?esc(p.harga)+' '+esc(p.mata_uang||""):"—")+'</td><td>'+esc(p.wilayah||"—")+'</td></tr>'}).join("")||'<tr><td colspan="5" class="kosong">Belum ada penawaran.</td></tr>';
+  var si=document.getElementById("mkSelInd");if(si&&!si.options.length)(MK.industri||[]).forEach(function(i){var o=document.createElement("option");o.value=i;o.textContent=i;si.appendChild(o)});
+  if(OWNER&&MK.tinjau)kirimOwner({aksi:"tinjau"}).then(function(d){document.getElementById("mkTinjau").innerHTML=(d.penawaran||[]).map(function(p){return'<li><b>#'+p.id+' '+esc(p.judul)+'</b> <span class="kosong">'+esc(p.industri)+' · '+esc(p.alasan||"")+' · kontak '+esc(p.kontak)+'</span><br><button class="btn mini" data-mod="aktif" data-id="'+p.id+'">Setujui tayang</button> <button class="btn mini" data-mod="ditolak" data-id="'+p.id+'">Tolak</button></li>'}).join("")||'<li class="kosong">Kosong.</li>';
+    document.querySelectorAll("[data-mod]").forEach(function(b){b.onclick=function(){b.disabled=true;kirimOwner({aksi:"penawaran",id:+b.getAttribute("data-id"),status:b.getAttribute("data-mod")}).then(muat)}})});
   pasangOwner();
   // Rumus OCKLU
   var N=S.niat||{},pk=N.perKuadran||{};
@@ -363,6 +398,22 @@ document.getElementById("fcari").onsubmit=function(e){e.preventDefault();var q=d
   fetch(API+"?r=cari_agen&q="+encodeURIComponent(q)).then(function(r){return r.json()}).then(function(d){var x=d.hasil||[];
     h.innerHTML=d.galat?'<li class="kosong">'+esc(d.galat)+'</li>':x.length?x.map(function(a){var u=(a.remote&&a.remote[0])||a.situs;return'<li><b>'+esc(a.judul||a.nama)+'</b> <span class="kosong">'+esc(a.nama)+(a.versi?' · v'+esc(a.versi):'')+'</span><br>'+esc(a.deskripsi)+(u&&/^https?:/.test(u)?'<br><a href="'+esc(u)+'" target="_blank" rel="noopener nofollow">'+esc(u)+'</a>':'')+'</li>'}).join(""):'<li class="kosong">Tidak ada yang cocok untuk “'+esc(q)+'”.</li>'})
   .catch(function(){h.innerHTML='<li class="kosong">Pencarian gagal, coba lagi.</li>'})};
+// ---------------------------------------------------------------- makelar: formulir & cek jodoh (lewat API yang sama dengan agen)
+function mcpPanggil(nama,args){return fetch(API,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({jsonrpc:"2.0",id:Date.now(),method:"tools/call",params:{name:nama,arguments:args}})}).then(function(r){return r.json()}).then(function(d){try{return JSON.parse(d.result.content[0].text)}catch(e){return{galat:"jawaban tak terbaca"}}})}
+document.getElementById("fPasang").onsubmit=function(e){e.preventDefault();var f=e.target,b=Object.fromEntries(new FormData(f)),h=document.getElementById("mkHasil");b.setuju_syarat=!!f.setuju_syarat.checked;if(b.harga==="")delete b.harga;else b.harga=+b.harga;
+  h.textContent="memasang…";fetch(API+"?r=pasang",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(b)}).then(function(r){return r.json()}).then(function(d){
+    if(d.galat){h.textContent="Gagal: "+d.galat;return}f.reset();
+    h.innerHTML='✓ Terpasang (#'+d.id+', '+esc(d.status)+'). <b>Simpan token ini</b> untuk menyetujui pembeli & melaporkan transaksi:<div class="salin"><code id="mkTok">'+esc(d.token_kelola)+'</code></div>';try{ls("hm_token_mk",d.token_kelola)}catch(x){}muat()}).catch(function(){h.textContent="Gagal terhubung, coba lagi."})};
+function gambarJodoh(tok){var el=document.getElementById("mkJodoh");el.innerHTML='<li class="kosong">memeriksa…</li>';mcpPanggil("cek_jodoh",{token:tok}).then(function(d){
+  if(d.galat){el.innerHTML='<li class="kosong">'+esc(d.galat)+'</li>';return}
+  el.innerHTML=(d.jodoh||[]).map(function(j){var kl=typeof j.kontak_lawan==="object"?Object.values(j.kontak_lawan).join(" · "):j.kontak_lawan;var bisaSetuju=(j.peran_kamu==="penjual"&&!j.penjual_setuju)||(j.peran_kamu==="pembeli"&&!j.pembeli_setuju);
+    return'<li><b>#'+j.jodoh_id+' '+esc(j.penawaran||"")+'</b> <span class="chip">'+esc(j.status)+'</span> <span class="kosong">kamu: '+esc(j.peran_kamu)+'</span>'+(j.kebutuhan_pembeli?'<br>'+esc(j.kebutuhan_pembeli):'')+'<br><span class="kosong">kontak: '+esc(kl)+'</span>'+(j.komisi?'<br>komisi 7%: '+esc(j.komisi)+' '+esc(j.mata_uang||""):'')
+      +(bisaSetuju&&j.status!=="batal"?'<br><button class="btn mini" data-jodoh="'+j.jodoh_id+'" data-setuju="1">Setujui</button> <button class="btn mini" data-jodoh="'+j.jodoh_id+'" data-setuju="0">Tolak</button>':'')
+      +(j.peran_kamu==="penjual"&&j.status==="kontak_dibuka"?'<div class="baris" style="margin-top:6px"><input type="number" min="0" step="any" placeholder="Nilai transaksi" data-nilai="'+j.jodoh_id+'"><button class="btn mini" data-lapor="'+j.jodoh_id+'">Lapor transaksi</button></div>':'')+'</li>'}).join("")||'<li class="kosong">Belum ada jodoh untuk token ini.</li>';
+  el.querySelectorAll("[data-jodoh]").forEach(function(b){b.onclick=function(){b.disabled=true;mcpPanggil("setujui_jodoh",{token:tok,jodoh_id:+b.getAttribute("data-jodoh"),setuju:b.getAttribute("data-setuju")==="1"}).then(function(){gambarJodoh(tok)})}});
+  el.querySelectorAll("[data-lapor]").forEach(function(b){b.onclick=function(){var id=b.getAttribute("data-lapor"),v=+el.querySelector('[data-nilai="'+id+'"]').value;if(!(v>0))return;b.disabled=true;mcpPanggil("lapor_transaksi",{token:tok,jodoh_id:+id,nilai:v}).then(function(){gambarJodoh(tok)})}})})}
+document.getElementById("fCek").onsubmit=function(e){e.preventDefault();var t=document.getElementById("mkToken").value.trim();if(t.length<20)return;try{ls("hm_token_mk",t)}catch(x){}gambarJodoh(t)};
+(function(){var t=ls("hm_token_mk");if(t)document.getElementById("mkToken").value=t})();
 function muat(){
   fetch(API+"?r=status",{cache:"no-store"}).then(function(r){return r.json()}).then(function(d){if(d.galat)throw new Error(d.galat);S=d;render();
     document.getElementById("detak").textContent="hidup · "+new Date(d.sekarang).toLocaleTimeString("id-ID",{hour:"2-digit",minute:"2-digit"})})

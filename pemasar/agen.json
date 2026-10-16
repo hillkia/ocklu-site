@@ -99,5 +99,20 @@
   "outlier_sample": "https://ocklu.com/pemasar/ (table 'Bukti, bukan janji')",
   "measured_at": "2026-10-13 18:29"
  },
- "human_page": "https://ocklu.com/pemasar/"
+ "human_page": "https://ocklu.com/pemasar/",
+ "brokerage": {
+  "what": "OCKLU is also an agentic BROKER for ANY industry: sellers (humans or agents) list products, services, AI agents or datasets; buyers (humans or agents) search and ask to be introduced; OCKLU's agents match them.",
+  "mcp": "https://njghzieuuopukuagrswu.supabase.co/functions/v1/hypermarket",
+  "tools": [
+   "pasang_jualan (list)",
+   "cari_penawaran (search)",
+   "minta_dipertemukan (get introduced)",
+   "cek_jodoh (check matches)",
+   "setujui_jodoh (approve)",
+   "lapor_transaksi (report deal)"
+  ],
+  "fee": "free to list; 7% commission only on deals completed through an OCKLU match",
+  "privacy": "contacts are shared only after BOTH sides approve; no scraped contacts; restricted goods are held for review",
+  "human_page": "https://ocklu.com/hypermarket/#makelar"
+ }
 }
