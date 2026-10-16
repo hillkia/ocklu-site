@@ -55,6 +55,12 @@ table{width:100%;border-collapse:collapse;font-size:14px}th,td{text-align:left;p
 .baris select option{color:#141629}
 .chip{display:inline-block;font-size:12px;padding:2px 8px;border-radius:999px;border:1px solid var(--garis);color:var(--redup)}
 .chip.ok{color:var(--aksen);border-color:var(--aksen)}.chip.tunggu{color:var(--emas);border-color:var(--emas)}
+.cap{font-size:12px;font-weight:400;color:var(--redup);margin-left:8px;white-space:nowrap}
+.tujuan{margin:0;padding-left:0;list-style:none;display:grid;gap:8px}.tujuan li{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;border:1px solid var(--garis);border-radius:12px}
+.tujuan li.ok{border-color:var(--aksen)}.tujuan .t{font-weight:700}.tujuan .ic{width:22px;flex:none;text-align:center}.tujuan li.kini{border-color:var(--emas)}
+.a.klik,.bisa{cursor:pointer}.a.klik:hover,tr.bisa:hover td{background:rgba(124,245,212,.06)}
+.mini{min-height:32px;padding:4px 10px;font-size:13px}.owner-saja[hidden]{display:none!important}
+.otak{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px}.edit-baris{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}.edit-baris input,.edit-baris textarea{flex:1;min-width:200px}
 .alur{margin:0;padding-left:20px}.alur li{margin:0 0 16px}.alur li:last-child{margin:0}.alur .chip{margin-top:4px}
 footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
 .tema{border:1px solid var(--garis);background:var(--kartu);color:var(--teks);border-radius:8px;min-height:36px;padding:4px 12px;cursor:pointer}
@@ -67,16 +73,19 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
 <div class="w">
 <header>
   <a class="logo" href="/">OCKLU <span>Hyper Market</span></a>
-  <div style="display:flex;gap:12px;align-items:center"><span class="hidup"><span class="titik"></span><span id="detak">menghubungi awan…</span></span><button class="tema" id="tema" type="button" aria-label="Ganti tema">◐</button></div>
+  <div style="display:flex;gap:12px;align-items:center"><span class="hidup"><span class="titik"></span><span id="detak">menghubungi awan…</span></span><span class="chip ok owner-saja" id="ownerChip" hidden>mode owner</span><button class="tema" id="tema" type="button" aria-label="Ganti tema">◐</button></div>
 </header>
 
 <section class="kosmos" aria-label="Peta pasar antar-agen">
   <canvas id="kanvas" aria-hidden="true"></canvas>
-  <div class="judul"><h1>Pasar antar-agen</h1><p>Sembilan agen ber-DNA milik OCKLU melayani agen AI yang datang belanja, menyiarkan produkmu, dan menjaga kasir. Hidup di awan, tetap jalan walau laptop mati.</p></div>
+  <div class="judul"><h1 data-teks="judul">Pasar antar-agen</h1><p data-teks="intro">Sembilan agen ber-DNA milik OCKLU melayani agen AI yang datang belanja, menyiarkan produkmu, dan menjaga kasir. Hidup di awan, tetap jalan walau laptop mati.</p><button class="btn mini owner-saja" id="ubahJudul" type="button" hidden>✎ Ubah judul &amp; kalimat</button></div>
   <div class="kaki">Gerak = animasi. Garis terang ke planet = kejadian nyata 24 jam terakhir dari database.</div>
 </section>
 
 <div class="angka" id="angka"></div>
+
+<h2 data-w="peristiwa">Exit goals · jalan sampai bisa dijual</h2>
+<div class="panel"><ol class="tujuan" id="tujuan"></ol><p class="kosong" id="tujuanKet" style="margin:12px 0 0"></p></div>
 
 <h2>Agen ber-DNA yang bekerja</h2>
 <div class="neuron" id="neuron"></div>
@@ -94,6 +103,7 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
   <div>
     <h2>Bicara dengan agen</h2>
     <div class="panel obrol">
+      <div class="otak" id="otakStatus" aria-label="Otak yang tersambung"></div>
       <div id="ruang">
         <div class="baris"><select id="pilih" aria-label="Pilih agen"></select><button class="btn" id="kerja" type="button">Kerja sekarang</button></div>
         <div class="pesan" id="pesan" aria-live="polite"></div>
@@ -106,6 +116,7 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
       <p style="margin:0 0 12px">Gibberlink: dua agen suara yang sadar lawan bicaranya AI beralih dari ucapan ke bunyi data (protokol <b>ggwave</b>). Tombol ini memutar penawaranmu dalam bunyi itu, jadi agen suara di dekat speaker bisa menangkapnya.</p>
       <div class="baris"><button class="btn isi" id="siar" type="button">▶ Siarkan penawaran</button><span class="chip" id="siarket">belum diputar</span></div>
       <p class="kosong" style="margin:12px 0 0" id="siarteks"></p>
+      <div class="edit-baris owner-saja" hidden><input id="gibIn" maxlength="140" aria-label="Kalimat Gibberlink"><button class="btn mini" id="gibSimpan" type="button">Simpan kalimat</button><button class="btn mini" id="gibAsal" type="button">Kembalikan bawaan</button></div>
     </div>
 
     <h2>Cara agen belanja di sini</h2>
@@ -114,6 +125,13 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
       <div class="salin"><code id="umcp">https://njghzieuuopukuagrswu.supabase.co/functions/v1/hypermarket</code><button class="btn" type="button" data-salin="umcp">Salin</button></div>
       <p style="margin:0" class="kosong">Katalog JSON hidup:</p>
       <div class="salin"><code id="ukat">https://njghzieuuopukuagrswu.supabase.co/functions/v1/hypermarket?r=katalog</code><button class="btn" type="button" data-salin="ukat">Salin</button></div>
+    </div>
+
+    <h2>Cari agen &amp; server MCP</h2>
+    <div class="panel">
+      <form class="baris" id="fcari"><input id="qcari" autocomplete="off" placeholder="mis. invoice, email, crypto, travel" aria-label="Cari agen"><button class="btn isi" type="submit">Cari</button></form>
+      <ul class="feed" id="hcari" style="margin-top:12px"></ul>
+      <p class="kosong" style="margin:8px 0 0">Sumber: registri MCP resmi (registry.modelcontextprotocol.io) — agen &amp; alat yang bisa disambung ke Claude, ChatGPT, Cursor.</p>
     </div>
   </div>
 </div>
@@ -139,7 +157,10 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
     <div><h3 style="margin:0 0 8px;font-size:16px">BANGUN · permintaan tanpa produk</h3><ul class="feed" id="niatBangun"></ul></div>
     <div><h3 style="margin:0 0 8px;font-size:16px">SODORKAN · cocok dengan produk</h3><ul class="feed" id="niatSodor"></ul></div>
   </div>
-  <h3 style="margin:16px 0 8px;font-size:16px">Percakapan (p23 · Reddit · HN · Quora)</h3><ul class="feed" id="niatP23"></ul>
+  <h3 style="margin:16px 0 8px;font-size:16px">Misi dari Rumus OCKLU <span class="cap" id="capMisi"></span></h3>
+  <p class="kosong" style="margin:0 0 8px">Tombol <b>Bangun</b> / <b>Sodorkan</b> (mode owner) mengirim kata ke antrean Tabib. Claude di laptop mengerjakannya sampai jadi berkas & halaman, lalu hasilnya muncul di sini. Tidak ada yang terbit sebelum owner setuju.</p>
+  <ul class="feed" id="misi"></ul>
+  <h3 style="margin:16px 0 8px;font-size:16px">Percakapan (p23 · Reddit · HN · Quora) <span class="cap" id="capP23"></span></h3><ul class="feed" id="niatP23"></ul>
   <h3 style="margin:16px 0 8px;font-size:16px">Sensor</h3><div id="niatSensor" style="display:flex;flex-wrap:wrap;gap:8px"></div>
 </div>
 
@@ -275,12 +296,38 @@ function render(){
   document.getElementById("arusDaftar").innerHTML=ta.length?ta.map(function(x){return'<li><span class="chip'+(x.kelas==="MACET"?" ok":x.kelas==="PADAT"?" tunggu":"")+'">'+esc(x.kelas)+'</span> <b>'+esc(x.kata)+'</b> <span class="kosong">'+esc(x.alasan)+'</span></li>'}).join(""):'<li class="kosong">Rumus Arus butuh deret waktu: minimal 6 titik per kata, dan pembanding jam &amp; hari yang sama butuh beberapa minggu. EZRA merekam setiap 2 jam sejak 16/10, jadi kelasnya akan terisi bertahap. Sebelum cukup, semua jujur ditandai TIPIS.</li>';
   var MT=S.permintaan||[];
   document.getElementById("minta").innerHTML=MT.length?MT.map(function(x){return'<li><time>'+lalu(x.pada)+'</time><b>'+esc(x.agen||"agen")+'</b>'+(x.kolaborasi?' <span class="chip ok">ingin kolaborasi</span>':'')+'<br>'+esc(x.kebutuhan)+(x.untuk_siapa?' <span class="kosong">· untuk '+esc(x.untuk_siapa)+'</span>':'')+(x.cocok?' <span class="chip ok">cocok: '+esc(x.cocok)+'</span>':' <span class="chip tunggu">belum ada produk → kandidat BANGUN</span>')+'</li>'}).join(""):'<li class="kosong">Belum ada agen yang menyampaikan kebutuhan. Ajakannya baru dipasang hari ini, di setiap jawaban server MCP.</li>';
+  // ---- 1.7: cap waktu tiap bagian, exit goals, otak, klik
+  var W=S.waktu||{};W.sekarang=S.sekarang;
+  function cap(iso){if(!iso)return"belum ada data";var d=new Date(iso);return"diperbarui "+d.toLocaleDateString("id-ID",{day:"numeric",month:"short"})+" "+d.toLocaleTimeString("id-ID",{hour:"2-digit",minute:"2-digit"})+" · "+lalu(iso)}
+  var PETA_W={"Agen ber-DNA":"peristiwa","Detak putaran":"peristiwa","Kerja terbaru":"peristiwa","Agen yang datang":"kunjungan","Rumus Arus":"arus","Agen yang bicara":"permintaan","Rumus OCKLU":"niat","Pengunjung manusia":"jejak","Yang dijual":"sekarang","Exit goals":"peristiwa","Bicara dengan agen":"sekarang","Cari agen":"sekarang"};
+  document.querySelectorAll("h2").forEach(function(h){var k=Object.keys(PETA_W).find(function(x){return h.textContent.indexOf(x)===0});if(!k)return;var c=h.querySelector(".cap");if(!c){c=document.createElement("span");c.className="cap";h.appendChild(c)}c.textContent=cap(W[PETA_W[k]])});
+  var cm=document.getElementById("capMisi");if(cm)cm.textContent=cap(W.misi);var cp=document.getElementById("capP23");if(cp)cp.textContent=W.p23?cap(W.p23)+((Date.now()-new Date(W.p23).getTime())>30*3600e3?" · radar awan berhenti (tagihan GitHub Actions)":""):"belum ada data";
+  var TJ=S.tujuan||{};
+  document.getElementById("tujuan").innerHTML=(TJ.tahap||[]).map(function(t){var kini=t.judul===TJ.berikut;return'<li class="'+(t.tercapai?"ok":kini?"kini":"")+'"><span class="ic">'+(t.tercapai?"✅":kini?"▶":"○")+'</span><div><div class="t">'+esc(t.judul)+'</div><div class="kosong">'+esc(t.ukur)+' · sumber: '+esc(t.sumber)+'</div>'+(t.sumber==="owner"&&!t.tercapai?'<button class="btn mini owner-saja" type="button" data-tandai="'+esc(t.id)+'"'+(OWNER?'':' hidden')+'>Tandai tercapai</button>':'')+(t.sumber==="owner"&&t.tercapai?'<button class="btn mini owner-saja" type="button" data-batal="'+esc(t.id)+'"'+(OWNER?'':' hidden')+'>Batalkan</button>':'')+'</div></li>'}).join("");
+  document.getElementById("tujuanKet").textContent=(TJ.berikut?"Langkah berikut: "+TJ.berikut+". ":"Semua tahap tercapai. ")+(TJ.catatan||"");
+  document.querySelectorAll("[data-tandai],[data-batal]").forEach(function(b){b.onclick=function(){var id=b.getAttribute("data-tandai")||b.getAttribute("data-batal");b.disabled=true;
+    kirimOwner({aksi:"teks",k:"tujuan:"+id,v:b.hasAttribute("data-tandai")?new Date().toLocaleDateString("id-ID"):""}).then(function(){muat()})}});
+  document.getElementById("otakStatus").innerHTML=(S.otak||[]).map(function(o){return'<span class="chip '+(o.tersambung?"ok":"tunggu")+'" title="'+esc(o.peran)+'">'+(o.tersambung?"● ":"○ ")+esc(o.nama)+(o.tersambung?"":" · belum tersambung")+'</span>'}).join("");
+  // kartu angka bisa diklik → bagian terkait
+  var tujuanKlik=["Agen yang datang","Agen yang datang","Agen yang datang","Kerja terbaru","Kerja terbaru","Kerja terbaru"];
+  document.querySelectorAll("#angka .a").forEach(function(a,i){a.classList.add("klik");a.title="Lihat rinciannya";a.onclick=function(){var h=[].find.call(document.querySelectorAll("h2"),function(x){return x.textContent.indexOf(tujuanKlik[i]||"Kerja terbaru")===0});if(h)h.scrollIntoView({behavior:"smooth",block:"start"})}});
+  // baris agen bisa diklik → tanya ELIA soal agen itu
+  document.querySelectorAll("#agen tr").forEach(function(tr){var nm=tr.firstChild&&tr.firstChild.textContent;if(!nm)return;tr.classList.add("bisa");tr.title="Tanya ELIA soal agen ini";tr.onclick=function(){document.getElementById("pilih").value="elia";var t=document.getElementById("tanya");t.value="Ceritakan agen "+nm+": kapan datang, lewat saluran apa, dan apa yang dia lihat?";document.getElementById("ruang").scrollIntoView({behavior:"smooth",block:"center"});t.focus()}});
+  // teks yang diubah owner
+  var TK=S.teks||{};document.querySelectorAll("[data-teks]").forEach(function(e){var k=e.getAttribute("data-teks");if(!e.hasAttribute("data-asal"))e.setAttribute("data-asal",e.textContent);e.textContent=TK[k]?TK[k].v:e.getAttribute("data-asal")});
+  PESAN=TK.gibberlink?TK.gibberlink.v:PESAN_ASAL;document.getElementById("siarteks").textContent="Isi bunyi: “"+PESAN+"”";var gi=document.getElementById("gibIn");if(gi&&document.activeElement!==gi)gi.value=PESAN;
+  pasangOwner();
   // Rumus OCKLU
   var N=S.niat||{},pk=N.perKuadran||{};
   document.getElementById("niatAngka").innerHTML=[[N.tercatat||0,"niat tercatat"],[pk.SODORKAN||0,"SODORKAN"],[pk.BANGUN||0,"BANGUN"],[pk.PANTAU||0,"PANTAU"],[(N.naik||[]).length,"baru naik (setelah garis dasar)"]].map(function(a){return'<div class="a"><b>'+a[0]+'</b><span>'+a[1]+'</span></div>'}).join("");
-  function daftarKuat(xs){return xs&&xs.length?xs.map(function(x){return'<li><b>'+esc(x.kata)+'</b> <span class="chip">'+x.sensor.length+' sensor</span> <span class="kosong">'+esc(x.sensor.join(", "))+(x.produk?' → '+esc(x.produk):'')+'</span></li>'}).join(""):'<li class="kosong">Belum ada kata yang muncul di 2 sensor atau lebih.</li>'}
-  document.getElementById("niatBangun").innerHTML=daftarKuat(N.kuatBangun);
-  document.getElementById("niatSodor").innerHTML=daftarKuat(N.kuatSodorkan);
+  var MS=S.misi||[];
+  function statusMisi(jenis,kata){var m=MS.find(function(x){return x.judul==="[HM] "+jenis+": "+kata});return m?' <span class="chip '+(/selesai/.test(m.tahap)?"ok":"tunggu")+'">misi #'+m.id+' · '+esc(TAHAP[m.tahap]||m.tahap)+'</span>':""}
+  function daftarKuat(xs,jenis){return xs&&xs.length?xs.map(function(x){var st=statusMisi(jenis,x.kata);return'<li><b>'+esc(x.kata)+'</b> <span class="chip">'+x.sensor.length+' sensor</span> <span class="kosong">'+esc(x.sensor.join(", "))+(x.produk?' → '+esc(x.produk):'')+'</span>'+st+(st?'':' <button class="btn mini owner-saja" type="button" data-misi="'+jenis+'" data-kata="'+esc(x.kata)+'" data-produk="'+esc(x.produk||"")+'"'+(OWNER?'':' hidden')+'>'+(jenis==="BANGUN"?"🛠 Bangun":"📣 Sodorkan")+'</button>')+'</li>'}).join(""):'<li class="kosong">Belum ada kata yang muncul di 2 sensor atau lebih.</li>'}
+  document.getElementById("niatBangun").innerHTML=daftarKuat(N.kuatBangun,"BANGUN");
+  document.getElementById("niatSodor").innerHTML=daftarKuat(N.kuatSodorkan,"SODORKAN");
+  document.getElementById("misi").innerHTML=MS.length?MS.map(function(m){return'<li><time>'+lalu(m.pada)+'</time><b>'+esc(m.judul.replace("[HM] ",""))+'</b> <span class="chip '+(/selesai/.test(m.tahap)?"ok":"tunggu")+'">'+esc(TAHAP[m.tahap]||m.tahap)+'</span>'+(m.otak?' <span class="kosong">· '+esc(m.otak)+'</span>':'')+(m.hasil?'<details><summary>Lihat hasil</summary><div style="white-space:pre-wrap;font-size:14px">'+esc(m.hasil)+'</div></details>':'')+'</li>'}).join(""):'<li class="kosong">Belum ada misi. Buka dasbor lewat link owner, lalu tekan Bangun / Sodorkan pada kata di atas.</li>';
+  document.querySelectorAll("[data-misi]").forEach(function(b){b.onclick=function(){b.disabled=true;b.textContent="mengirim…";
+    kirimOwner({aksi:"misi",jenis:b.getAttribute("data-misi"),kata:b.getAttribute("data-kata"),produk:b.getAttribute("data-produk")}).then(function(d){b.textContent=d.ok?(d.sudah?"sudah ada di antrean":"✓ masuk antrean #"+d.id):"gagal: "+(d.galat||"?");if(d.ok)setTimeout(muat,1500)})}});
   document.getElementById("niatP23").innerHTML=(N.percakapan||[]).length?N.percakapan.map(function(x){return'<li><span class="chip'+(x.kuadran==="SODORKAN"?" ok":"")+'">'+esc(x.kuadran)+'</span> <a href="'+esc(x.url)+'" rel="noopener nofollow">'+esc(x.kata)+'</a> <span class="kosong">'+esc(x.sumber.replace("p23:",""))+'</span></li>'}).join(""):'<li class="kosong">Belum ada niat percakapan dari p23.</li>';
   document.getElementById("niatSensor").innerHTML=(N.sensor||[]).map(function(x){return'<span class="chip'+(x.status==="hidup"?" ok":x.status.indexOf("sinkron")===0?" ok":" tunggu")+'">'+esc(x.nama)+' · '+esc(x.status)+'</span>'}).join("");
   // pengunjung manusia
@@ -297,6 +344,25 @@ function render(){
   if(!gerakOk)requestAnimationFrame(gambar);
 }
 var lastSiar=Number(ls("hm_siar")||0);
+// ---------------------------------------------------------------- 1.7: mode owner (PIN dibawa sekali lewat ?pin=, disimpan di perangkat ini)
+var TAHAP={antre:"antre",rencana:"direncanakan","diambil-laptop":"dikerjakan Claude (laptop)",dikerjakan:"dikerjakan","selesai":"selesai","selesai-awan":"selesai (otak awan)",tinjau:"menunggu tinjauan",gagal:"gagal"};
+(function(){var q=new URLSearchParams(location.search).get("pin");if(q){ls("hm_pin",q);history.replaceState(null,"",location.pathname+location.hash)}})();
+var OWNER=false;
+function kirimOwner(b){return fetch(API+"?r=owner",{method:"POST",headers:{"Content-Type":"application/json","x-owner":ls("hm_pin")||""},body:JSON.stringify(b)}).then(function(r){return r.json()}).catch(function(e){return{galat:String(e)}})}
+if(ls("hm_pin"))kirimOwner({aksi:"cek"}).then(function(d){if(d.ok){OWNER=true;pasangOwner()}else ls("hm_pin",null)});
+function pasangOwner(){document.querySelectorAll(".owner-saja").forEach(function(e){e.hidden=!OWNER})}
+document.getElementById("gibSimpan").onclick=function(){var v=document.getElementById("gibIn").value.trim();if(!v)return;this.textContent="menyimpan…";var b=this;kirimOwner({aksi:"teks",k:"gibberlink",v:v}).then(function(d){b.textContent=d.ok?"Tersimpan ✓":"Gagal";setTimeout(function(){b.textContent="Simpan kalimat"},1500);muat()})};
+document.getElementById("gibAsal").onclick=function(){kirimOwner({aksi:"teks",k:"gibberlink",v:""}).then(muat)};
+document.getElementById("ubahJudul").onclick=function(){var j=document.querySelector("[data-teks=judul]"),i=document.querySelector("[data-teks=intro]"),box=document.getElementById("editJudul");
+  if(box){box.remove();return}box=document.createElement("div");box.id="editJudul";box.className="edit-baris";
+  box.innerHTML='<input id="ejJ" maxlength="80" aria-label="Judul"><textarea id="ejI" rows="3" maxlength="400" aria-label="Kalimat pembuka"></textarea><button class="btn mini" type="button" id="ejS">Simpan</button><button class="btn mini" type="button" id="ejB">Kembalikan bawaan</button>';
+  this.after(box);document.getElementById("ejJ").value=j.textContent;document.getElementById("ejI").value=i.textContent;
+  document.getElementById("ejS").onclick=function(){Promise.all([kirimOwner({aksi:"teks",k:"judul",v:document.getElementById("ejJ").value}),kirimOwner({aksi:"teks",k:"intro",v:document.getElementById("ejI").value})]).then(function(){box.remove();muat()})};
+  document.getElementById("ejB").onclick=function(){Promise.all([kirimOwner({aksi:"teks",k:"judul",v:""}),kirimOwner({aksi:"teks",k:"intro",v:""})]).then(function(){box.remove();muat()})}};
+document.getElementById("fcari").onsubmit=function(e){e.preventDefault();var q=document.getElementById("qcari").value.trim(),h=document.getElementById("hcari");if(q.length<2)return;h.innerHTML='<li class="kosong">mencari…</li>';
+  fetch(API+"?r=cari_agen&q="+encodeURIComponent(q)).then(function(r){return r.json()}).then(function(d){var x=d.hasil||[];
+    h.innerHTML=d.galat?'<li class="kosong">'+esc(d.galat)+'</li>':x.length?x.map(function(a){var u=(a.remote&&a.remote[0])||a.situs;return'<li><b>'+esc(a.judul||a.nama)+'</b> <span class="kosong">'+esc(a.nama)+(a.versi?' · v'+esc(a.versi):'')+'</span><br>'+esc(a.deskripsi)+(u&&/^https?:/.test(u)?'<br><a href="'+esc(u)+'" target="_blank" rel="noopener nofollow">'+esc(u)+'</a>':'')+'</li>'}).join(""):'<li class="kosong">Tidak ada yang cocok untuk “'+esc(q)+'”.</li>'})
+  .catch(function(){h.innerHTML='<li class="kosong">Pencarian gagal, coba lagi.</li>'})};
 function muat(){
   fetch(API+"?r=status",{cache:"no-store"}).then(function(r){return r.json()}).then(function(d){if(d.galat)throw new Error(d.galat);S=d;render();
     document.getElementById("detak").textContent="hidup · "+new Date(d.sekarang).toLocaleTimeString("id-ID",{hour:"2-digit",minute:"2-digit"})})
@@ -322,7 +388,7 @@ document.getElementById("kerja").onclick=function(){var b=this;b.disabled=true;b
   .catch(function(){tambah("agen","⚠ gagal")}).then(function(){b.disabled=false;b.textContent="Kerja sekarang"})};
 
 // ---------------------------------------------------------------- Gibberlink (ggwave)
-var PESAN="OCKLU HYPER MARKET: 10 Claude marketing skills $19. Agents: MCP at ocklu.com/hypermarket";
+var PESAN_ASAL="OCKLU HYPER MARKET: 10 Claude marketing skills $19. Agents: MCP at ocklu.com/hypermarket",PESAN=PESAN_ASAL;
 document.getElementById("siarteks").textContent="Isi bunyi: “"+PESAN+"”";
 var gw=null,gwInst=null,actx=null;
 function muatGgwave(){return new Promise(function(ok,no){if(window.ggwave_factory)return ok();var s=document.createElement("script");s.src="https://cdn.jsdelivr.net/npm/ggwave@0.4.0/ggwave.js";s.onload=ok;s.onerror=function(){no(new Error("ggwave gagal dimuat"))};document.head.appendChild(s)})}
