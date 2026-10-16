@@ -93,6 +93,9 @@
   <h2>Graf portofolio (NX) — korelasi & lead-lag</h2>
   <div class="card" id="graph"></div>
 
+  <h2>Rumus Arus · cara Google Maps membaca macet</h2>
+  <div class="card" id="arus"></div>
+
   <h2>Polymarket</h2>
   <div class="card" id="poly"></div>
 
@@ -187,6 +190,15 @@ else{
     g.correlation_matrix.forEach((row,i)=>{h+=`<tr><th>${sy[i].split('_')[0]}</th>`+row.map(v=>`<td style="color:${v>0.7?'var(--short)':v<0.3?'var(--long)':'var(--mut)'}">${v}</td>`).join('')+'</tr>';});
     t.innerHTML=h;const tw=el('div','tblwrap');tw.append(t);gd.append(tw);
   }else gd.textContent=g?g.reason:'—';
+
+  // arus (pengamat, bobot 0 — tidak dibaca PEGASUS)
+  const ad=document.getElementById('arus');const AR=D.arus||{};
+  if(AR.galat){ad.textContent='Rumus Arus galat: '+AR.galat;}
+  else if(AR.per_kelas){
+    ad.append(el('div','kv',Object.entries(AR.per_kelas).map(([k,v])=>`${k} <b>${v}</b>`).join(' · ')));
+    (AR.macet||[]).forEach(m=>ad.append(el('div','kv',`<b>${m.symbol.split('_')[0]}</b> MACET · arah <b style="color:${m.arah==='naik'?'var(--long)':m.arah==='turun'?'var(--short)':'var(--mut)'}">${m.arah}</b> — ${m.alasan}`)));
+    ad.append(el('div','flags','ℹ '+(AR.catatan||'')));
+  }else ad.textContent='Rumus Arus belum dihitung (muncul di putaran run.py berikutnya).';
 
   // poly
   const pd=document.getElementById('poly');
