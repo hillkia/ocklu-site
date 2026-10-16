@@ -117,6 +117,10 @@ nav span{display:block;font-size:19px;margin-bottom:1px}
   border:1px solid var(--line);border-radius:9px;padding:10px}
 .calcbox .hasil b{font-size:19px;color:var(--acc);font-variant-numeric:tabular-nums}
 .mini{font-size:11px;color:var(--dim);text-align:center;padding:8px 0 2px}
+.br-arus{display:grid;gap:6px;margin:0 0 10px}.br-arus:empty{display:none}
+.br-arus details{border:1px solid rgba(127,127,127,.3);border-radius:10px;padding:8px 10px}.br-arus summary{cursor:pointer;display:flex;justify-content:space-between;gap:8px;font-weight:600}
+.br-arus .ak{font-size:.75rem;font-weight:800;letter-spacing:.04em}.br-arus .ak.MACET{color:#c0392b}.br-arus .ak.PADAT{color:#d9822b}.br-arus .ak.LANCAR{color:#2f7a3a}.br-arus .ak.SEPI,.br-arus .ak.TIPIS{color:#888}
+.br-arus .al{font-size:.8rem;opacity:.75;margin-top:6px}.br-arus .aj{display:block;font-size:.85rem;margin-top:4px}
 </style>
 
 <div class="top">
@@ -257,6 +261,7 @@ nav span{display:block;font-size:19px;margin-bottom:1px}
   <div style="display:flex;gap:8px;margin-bottom:12px">
     <button class="b-gh" id="br-id" style="flex:1">Indonesia</button><button class="b-gh" id="br-en" style="flex:1">English</button>
   </div>
+  <div id="br-arus" class="br-arus"></div>
   <div id="br-list"></div>
   <div class="mini">Berita dari Kroog · tiap berita bertautan ke media aslinya</div>
 </div>
@@ -517,6 +522,11 @@ function gambarBerita(){
   const jam=Math.floor((Date.now()-Date.parse(D.w))/3600000);
   el('br-jml').textContent=en?`${D.berita.length} stories`:`${D.berita.length} berita`;
   el('br-kapan').textContent=jam<1?(en?'updated just now':'baru diperbarui'):(en?`updated ${jam}h ago`:`diperbarui ${jam} jam lalu`);
+  // Rumus Arus: isu jalan & kerja yang sedang ramai di berita Indonesia (banyak meja berita setuju = bukan kebetulan)
+  const AL={MACET:en?'Surging':'Ramai sekali',PADAT:en?'Busy':'Ramai',LANCAR:en?'Normal':'Biasa',SEPI:en?'Quiet':'Sepi',TIPIS:en?'Not enough data':'Data belum cukup'};
+  const ar=Array.isArray(D.arus)?D.arus:[];
+  el('br-arus').innerHTML=ar.length?`<div class="j1">${en?'Road & work issues in the news (Flow Formula)':'Isu jalan & kerja di berita (Rumus Arus)'}</div>`+ar.map(a=>`<details><summary><span>${esc(a.label)}</span><span class="ak ${esc(a.kelas)}">${esc(AL[a.kelas]||a.kelas)}</span></summary>
+      <div class="al">${esc(a.alasan)}</div>${(a.contoh||[]).map(c=>/^https?:\/\//.test(c.url||'')?`<a class="aj" href="${esc(c.url)}" target="_blank" rel="noopener nofollow">${esc(c.judul)} · ${esc(c.media)}</a>`:'').join('')}</details>`).join(''):'';
   el('br-list').innerHTML=D.berita.map(b=>{
     const j=b.judul[BL]||b.judul.id, i=b.isi[BL]||b.isi.id||'';
     const wa=encodeURIComponent(`🇮🇩 ${b.judul.id}\n${b.isi.id||''}\n\n🇬🇧 ${b.judul.en}\n${b.isi.en||''}\n\n${b.sumber.url||'https://ocklu.com/ojol/'}`);

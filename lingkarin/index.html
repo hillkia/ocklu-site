@@ -83,6 +83,12 @@ a{color:var(--teal)}
 .pelajaran .di{font-size:.88rem;color:var(--muted);border-top:1px dashed var(--line);padding-top:8px}
 .tutup{background:var(--malam);color:#cfc6b2;padding-block:24px;font-size:.85rem}
 .tutup a{color:var(--layar)}
+.arus-isi{display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}
+.arus-kartu{border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:var(--surface)}
+.arus-kartu b{display:block;font-size:1.05rem}.arus-kartu small{color:var(--muted);display:block;margin-top:4px}
+.arus-kelas{font:700 .72rem/1 var(--mono,monospace);letter-spacing:.06em;text-transform:uppercase}
+.k-MACET{color:#c0392b}.k-PADAT{color:var(--oranye,#d9822b)}.k-LANCAR{color:var(--good,#2f7a3a)}.k-SEPI,.k-TIPIS{color:var(--muted)}
+.kosong-arus{color:var(--muted)}
 </style>
 </head>
 <body>
@@ -98,6 +104,12 @@ a{color:var(--teal)}
   <div class="daftar" id="daftar">
     <div class="kosong"><h2>Memuat warung…</h2></div>
   </div>
+  <section class="kenapa arus" aria-labelledby="arus-judul">
+    <span class="label">Rumus Arus · cara Google Maps membaca macet</span>
+    <h2 id="arus-judul">Lagi dicari orang</h2>
+    <p class="lead">Kata yang sedang diketik orang di Google, YouTube, dan Bing soal makanan &amp; usaha kecil, dibandingkan dengan kebiasaannya di jam &amp; hari yang sama. "Ramai" hanya kalau beberapa sumber setuju. Cocok untuk memilih menu atau barang yang dipajang minggu ini.</p>
+    <div id="arus-isi" class="arus-isi"><p class="kosong-arus">Memuat…</p></div>
+  </section>
   <section class="kenapa" aria-labelledby="kenapa-judul">
     <span class="label">Untuk pemilik usaha</span>
     <h2 id="kenapa-judul">Kenapa Lingkarin</h2>
@@ -122,6 +134,28 @@ a{color:var(--teal)}
   <span><a href="/warung/">Untuk pemilik usaha</a> · <a href="/">ocklu.com</a></span>
 </div></footer>
 <script src="/warung/inti.js"></script>
+<script>
+// Rumus Arus untuk Lingkarin: baca fungsi publik lingkarin_arus() (agregat autocomplete, tanpa data orang).
+(function(){
+  var KUNCI="sb_publishable_Flgot78lOen26q5dQDV8JA_4MV_0FSn", URL_="https://njghzieuuopukuagrswu.supabase.co/rest/v1/rpc/lingkarin_arus";
+  var LABEL={MACET:"Ramai sekali",PADAT:"Ramai",LANCAR:"Biasa",SEPI:"Sepi",TIPIS:"Data belum cukup"};
+  var esc=function(t){return String(t==null?"":t).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})};
+  var box=document.getElementById("arus-isi"); if(!box)return;
+  fetch(URL_,{method:"POST",headers:{"apikey":KUNCI,"Authorization":"Bearer "+KUNCI,"Content-Type":"application/json"},body:"{}"})
+  .then(function(r){return r.ok?r.json():Promise.reject(r.status)}).then(function(d){
+    var kata=(d&&d.kata)||[], dicari=(d&&d.dicari)||[];
+    var dinilai=kata.filter(function(x){return x.kelas!=="TIPIS"});
+    if(dinilai.length){
+      box.innerHTML=dinilai.map(function(x){return'<div class="arus-kartu"><span class="arus-kelas k-'+esc(x.kelas)+'">'+esc(LABEL[x.kelas]||x.kelas)+'</span><b>'+esc(x.kata)+'</b><small>'+esc(x.alasan)+'</small></div>'}).join("");
+    }else if(dicari.length){
+      box.innerHTML=dicari.map(function(x){return'<div class="arus-kartu"><span class="arus-kelas k-TIPIS">Baru direkam</span><b>'+esc(x.kata)+'</b><small>muncul di '+x.sensor+' sumber · ramai/sepi-nya belum bisa dinilai</small></div>'}).join("")
+        +'<p class="kosong-arus" style="grid-column:1/-1">Rumus Arus butuh beberapa hari rekaman sebelum bisa bilang ramai atau sepi — sebelum itu jujur ditandai "baru direkam".</p>';
+    }else{
+      box.innerHTML='<p class="kosong-arus">Perekaman baru dimulai (tiap 2 jam). Daftar kata muncul di sini dalam beberapa jam.</p>';
+    }
+  }).catch(function(){box.innerHTML='<p class="kosong-arus">Data arus sedang tidak bisa dimuat. Coba lagi nanti.</p>'});
+})();
+</script>
 <script>
 (function(){
 const W=window.Warung,$=id=>document.getElementById(id);
