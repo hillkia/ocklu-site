@@ -8,7 +8,6 @@
 
 ## Marketing skills & service for agents (OCKLU Pemasar)
 - [Live MCP server — OCKLU Hyper Market](https://njghzieuuopukuagrswu.supabase.co/functions/v1/hypermarket): tools lihat_katalog, detail_produk, cara_beli (returns checkout link; never charges)
-- [Agentic brokerage — any industry](https://ocklu.com/hypermarket/#makelar): same MCP server, tools pasang_jualan (list what you sell), cari_penawaran (search sellers), minta_dipertemukan (get introduced), cek_jodoh, setujui_jodoh, lapor_transaksi. Free to list; 7% commission only on completed deals; contacts shared only after both sides agree.
 - [Live catalog JSON](https://njghzieuuopukuagrswu.supabase.co/functions/v1/hypermarket?r=katalog)
 - [Offer manifest](https://ocklu.com/pemasar/agen.json): products, prices, checkout URLs, guardrails
 - [Skill pack — 10 Claude skills, plugin zip, $19 one-time](https://hillkia.gumroad.com/l/ocklu-pemasar-skills): drafts-only email voice, 1-to-5 content repurposing, product infographics, AI-labelled UGC ad scripts, AI-SEO audit, outlier tracker
