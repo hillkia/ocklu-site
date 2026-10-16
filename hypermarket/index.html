@@ -59,8 +59,8 @@ table{width:100%;border-collapse:collapse;font-size:14px}th,td{text-align:left;p
 footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
 .tema{border:1px solid var(--garis);background:var(--kartu);color:var(--teks);border-radius:8px;min-height:36px;padding:4px 12px;cursor:pointer}
 @media (prefers-reduced-motion:reduce){.titik{animation:none}}
-.detak{display:grid;grid-template-columns:repeat(48,1fr);gap:2px;align-items:end;height:44px}
-.detak i{display:block;border-radius:2px;background:var(--garis);min-height:6px}.detak i.ada{background:#7cf5d4}.detak i.bolong{background:transparent;border:1px dashed var(--merah,#ff6b6b)}
+.detak30{display:grid;grid-template-columns:repeat(48,1fr);gap:2px;align-items:end;height:44px}
+.detak30 i{display:block;border-radius:2px;background:var(--garis);min-height:6px}.detak30 i.ada{background:#7cf5d4}.detak30 i.bolong{background:transparent;border:1px dashed var(--merah,#ff6b6b)}
 </style>
 </head>
 <body>
@@ -84,7 +84,7 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
 <div class="dua">
   <div>
     <h2>Detak putaran tiap 30 menit</h2>
-    <div class="panel"><div id="detak" class="detak"></div><div class="kaki" id="detakket" style="margin-top:8px"></div></div>
+    <div class="panel"><div id="detak30" class="detak30"></div><div class="kaki" id="detak30ket" style="margin-top:8px"></div></div>
     <h2>Kerja terbaru</h2>
     <div class="panel"><ul class="feed" id="feed"><li class="kosong">memuat…</li></ul></div>
     <h2>Agen yang datang</h2>
@@ -252,10 +252,10 @@ function render(){
     [mcp,"panggilan MCP terakhir"],[periksa?esc(periksa.hasil):"—","link kasir ("+lalu(periksa&&periksa.pada)+")"],[siar?esc(siar.hasil):"—","siaran IndexNow ("+lalu(siar&&siar.pada)+")"]
   ].map(function(a){return'<div class="a"><b>'+a[0]+'</b><span>'+a[1]+'</span></div>'}).join("");
   var dk=S.detak||[],slot=[],kini=Date.now();for(var i=47;i>=0;i--){var a=kini-(i+1)*1800e3,b=kini-i*1800e3;slot.push(dk.filter(function(d){var t=new Date(d.pada).getTime();return t>a&&t<=b}))}
-  var dEl=document.getElementById("detak");if(dEl){var kosong=slot.filter(function(x){return!x.length}).length;
+  var dEl=document.getElementById("detak30");if(dEl){var kosong=slot.filter(function(x){return!x.length}).length;
     dEl.innerHTML=slot.map(function(x,i){var n=0;x.forEach(function(d){var m=/^(\d+) kunjungan/.exec(d.hasil||"");if(m)n+=+m[1]});var jam=new Date(kini-(47-i)*1800e3).toLocaleTimeString("id-ID",{hour:"2-digit",minute:"2-digit"});
       return'<i class="'+(x.length?"ada":"bolong")+'" style="height:'+(x.length?Math.min(100,18+n*6):100)+'%" title="'+jam+" · "+(x.length?esc(x.map(function(d){return d.hasil}).join(", ")):"tidak ada putaran")+'"></i>'}).join("");
-    document.getElementById("detakket").textContent=(kosong?kosong+" dari 48 slot kosong — putaran terlewat":"48/48 putaran jalan dalam 24 jam, termasuk malam")+". Batang pendek = putaran sepi (tidak ada agen datang), bukan berhenti. Sumber: catatan ELIA tiap putaran."}
+    document.getElementById("detak30ket").textContent=(kosong?kosong+" dari 48 slot kosong — putaran terlewat":"48/48 putaran jalan dalam 24 jam, termasuk malam")+". Batang pendek = putaran sepi (tidak ada agen datang), bukan berhenti. Sumber: catatan ELIA tiap putaran."}
   document.getElementById("neuron").innerHTML=(S.neuron||[]).map(function(n){
     return'<button class="n" type="button" data-n="'+n.id+'"><div class="nm"><span class="bulat" style="background:'+WARNA[n.id]+';box-shadow:0 0 10px '+WARNA[n.id]+'"></span>'+esc(n.nama)+'</div><div class="pr">'+esc(n.peran)+'</div><div class="kr">'+(n.aksi?esc(n.aksi)+" · "+esc(n.hasil)+' <span class="kosong">('+lalu(n.terakhir)+')</span>':'<span class="kosong">menunggu tugas pertama</span>')+'</div></button>'}).join("");
   document.querySelectorAll(".n").forEach(function(b){b.onclick=function(){var s=document.getElementById("pilih");s.value=b.getAttribute("data-n");document.getElementById("tanya").focus&&document.getElementById("tanya").focus();document.getElementById("ruang").scrollIntoView({behavior:"smooth",block:"center"})}});
