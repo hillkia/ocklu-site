@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OCKLU Makelar</title>
+<meta name="description" content="Mesin pencari alternatif untuk bisnis: agen AI OCKLU mencarikan pembeli & penjual di jaringan agen. Langganan + sukses fee 7%. Find buyers & sellers through the AI agent network.">
+<link rel="alternate" type="application/json" href="https://njghzieuuopukuagrswu.supabase.co/functions/v1/makelar?r=direktori" title="OCKLU Makelar directory (for agents)">
+<style>
+:root{--bg:#05060f;--kartu:rgba(255,255,255,.04);--garis:rgba(255,255,255,.1);--teks:#eef0ff;--redup:#9aa0bd;--aksen:#7cf5d4;--aksen2:#b99bff;--emas:#ffd27a;--merah:#ff8a8a}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#f4f5fb;--kartu:#fff;--garis:#dfe1ec;--teks:#14162b;--redup:#5b6080;--aksen:#0b9e7c;--aksen2:#6b4fd8;--emas:#a8700a;--merah:#c23b3b}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--teks);font:15px/1.55 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+a{color:var(--aksen)}main{max-width:1000px;margin:0 auto;padding:0 16px 60px}
+header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 0;flex-wrap:wrap}
+.logo{font-weight:800;letter-spacing:.5px}.logo span{color:var(--aksen)}
+nav{display:flex;gap:6px;flex-wrap:wrap}
+nav button,.btn{background:var(--kartu);color:var(--teks);border:1px solid var(--garis);border-radius:10px;padding:8px 12px;font:inherit;cursor:pointer}
+nav button.on{border-color:var(--aksen);color:var(--aksen)}
+.btn.utama{background:var(--aksen);color:#05060f;border-color:var(--aksen);font-weight:700}
+h1{font-size:clamp(26px,5vw,42px);line-height:1.15;margin:18px 0 10px}h2{margin:28px 0 10px;font-size:20px}
+.redup{color:var(--redup)}.kartu{background:var(--kartu);border:1px solid var(--garis);border-radius:14px;padding:16px}
+.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.harga{font-size:28px;font-weight:800;color:var(--emas)}
+input,select,textarea{width:100%;background:transparent;color:var(--teks);border:1px solid var(--garis);border-radius:10px;padding:9px 10px;font:inherit}
+textarea{min-height:70px}label{display:block;font-size:13px;color:var(--redup);margin:8px 0 3px}
+.baris{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.baris>*{flex:1 1 160px}
+.tag{display:inline-block;font-size:12px;border:1px solid var(--garis);border-radius:999px;padding:2px 8px;margin:2px 4px 2px 0;color:var(--redup)}
+code{background:var(--kartu);border:1px solid var(--garis);border-radius:6px;padding:1px 5px;word-break:break-all}
+.pesan{margin-top:8px;font-size:14px}.ok{color:var(--aksen)}.gagal{color:var(--merah)}
+section{display:none}section.on{display:block}
+ul.temuan{margin:6px 0 0;padding-left:18px;font-size:14px}
+footer{margin-top:40px;color:var(--redup);font-size:13px}
+</style>
+</head>
+<body>
+<main>
+<header>
+  <div class="logo">OCKLU <span>Makelar</span></div>
+  <nav id="nav">
+    <button data-s="beranda" data-t="nav_beranda">Beranda</button>
+    <button data-s="direktori" data-t="nav_direktori">Direktori</button>
+    <button data-s="agen" data-t="nav_agen">Find me by agent</button>
+    <button id="tabBtn" data-s="tab" data-t="nav_tab" hidden>Tab saya</button>
+    <button id="bahasa">EN</button>
+  </nav>
+</header>
+
+<section id="s-beranda">
+  <h1 data-t="judul">Mesin pencari alternatif untuk menemukan pembeli & penjual — lewat jaringan agen AI</h1>
+  <p class="redup" data-t="sub">Mesin pencari biasa terbatas. Agen OCKLU (PETRUS, YOHANES, PAULUS, MATIUS) berburu sinyal niat beli & penjual di jaringan agen AI yang sedang tumbuh — MCP, A2A, Agentverse — lalu mempertemukan kedua pihak kalau keduanya setuju. Semua industri: besar atau kecil, jasa atau barang.</p>
+  <div class="grid">
+    <div class="kartu"><b data-t="l1">1 · Pasang bisnismu</b><p class="redup" data-t="l1d">Kamu dapat tab sendiri: isi apa yang kamu jual atau cari, plus medsos.</p></div>
+    <div class="kartu"><b data-t="l2">2 · Agen kami berburu</b><p class="redup" data-t="l2d">Tiap 30 menit sinyal pembeli/penjual dicocokkan; temuan muncul di tabmu.</p></div>
+    <div class="kartu"><b data-t="l3">3 · Dikenalkan, deal</b><p class="redup" data-t="l3d">Kontak dibuka hanya kalau dua pihak setuju. Sukses fee 7% hanya kalau deal jadi.</p></div>
+  </div>
+  <h2 data-t="paket">Paket langganan</h2>
+  <div class="grid">
+    <div class="kartu"><b>Mulai · Starter</b><div class="harga">$9<small class="redup">/30 hari</small></div><p class="redup" data-t="pk1">3 jualan/kebutuhan aktif · tab sendiri · masuk direktori agen · + sukses fee 7%</p></div>
+    <div class="kartu"><b>Tumbuh · Growth</b><div class="harga">$29<small class="redup">/30 hari</small></div><p class="redup" data-t="pk2">15 jualan/kebutuhan aktif · prioritas perburuan · laporan temuan · + sukses fee 7%</p></div>
+  </div>
+  <p class="redup" data-t="bayar_info">Bayar lewat Ofin Pay (PayPal). Mau daftar? Hubungi kami:</p>
+  <a class="btn utama" href="mailto:octavianus@ocklu.com?subject=Daftar%20OCKLU%20Makelar" data-t="daftar">Daftar sekarang</a>
+</section>
+
+<section id="s-direktori">
+  <h2 data-t="nav_direktori">Direktori</h2>
+  <p class="redup" data-t="dir_sub">Bisnis pelanggan OCKLU Makelar. Kontak langsung dirahasiakan — minta dikenalkan, dua pihak setuju dulu.</p>
+  <div class="baris"><input id="q" placeholder="cari: kopi, video, konstruksi…" data-tp="cari_ph"><input id="ind" placeholder="industri" data-tp="ind_ph"><button class="btn" id="cariBtn" data-t="cari">Cari</button></div>
+  <div id="hasil" class="grid" style="margin-top:12px"></div>
+</section>
+
+<section id="s-agen">
+  <h2>Find me by agent</h2>
+  <p class="redup" data-t="agen_sub">Bisnis pelanggan bisa ditemukan oleh agen AI lain tanpa mesin pencari biasa:</p>
+  <div class="kartu"><ul>
+    <li><b>Direktori JSON</b> (A2A / HTTP): <code>https://njghzieuuopukuagrswu.supabase.co/functions/v1/makelar?r=direktori&amp;q=</code></li>
+    <li><b>MCP server</b>: <code>https://njghzieuuopukuagrswu.supabase.co/functions/v1/hypermarket</code> — <span data-t="mcp">jualan pelanggan ikut tampil di katalog; minta perkenalan dengan tool</span> <code>minta_dipertemukan</code></li>
+    <li><b>Agentverse / ASI:One</b>: <a href="https://asi1.ai/ai/agent1qtzwgzhkdepn6medp3rgngd63vzf846gqtqxeu8y9adnph2ymyxq6pfy5ff" rel="noopener">MARKUS · OCKLU Broker</a></li>
+    <li><b>llms.txt</b>: <a href="/llms.txt">ocklu.com/llms.txt</a></li>
+  </ul><p class="redup">Olformuls — We are a broker and we have products. Let me help you. / Kami makelar dan punya produk, mari saya bantu.</p></div>
+</section>
+
+<section id="s-tab">
+  <h2 id="tabJudul">Tab saya</h2>
+  <div id="tabStatus" class="kartu"></div>
+  <h2 data-t="temuan">Jualan & kebutuhan — temuan agen</h2>
+  <div id="tabItem" class="grid"></div>
+  <h2 data-t="tambah">Tambah jualan / kebutuhan</h2>
+  <div class="kartu">
+    <div class="baris"><select id="iJenis"><option value="cari_pembeli" data-t="o_jual">Saya JUAL → carikan pembeli</option><option value="cari_penjual" data-t="o_cari">Saya CARI → carikan penjual</option></select>
+      <input id="iHarga" type="number" placeholder="harga (opsional)" data-tp="harga_ph"><select id="iMu"><option>IDR</option><option>USD</option><option>EUR</option><option>SGD</option></select></div>
+    <label data-t="apa">Apa yang dijual / dicari</label><input id="iApa" maxlength="300">
+    <label data-t="catatan">Catatan (spesifikasi, jumlah, wilayah)</label><textarea id="iCat" maxlength="1000"></textarea>
+    <button class="btn utama" id="iBtn" data-t="simpan">Simpan</button><div id="iPesan" class="pesan"></div>
+  </div>
+  <h2 data-t="profil">Profil & medsos</h2>
+  <div class="kartu">
+    <div class="baris"><div><label data-t="f_bisnis">Nama bisnis</label><input id="pBisnis"></div><div><label data-t="f_ind">Industri</label><input id="pIndustri"></div><div><label data-t="f_kota">Kota</label><input id="pKota"></div></div>
+    <div class="baris"><div><label>Instagram</label><input id="pIg" placeholder="username"></div><div><label>TikTok</label><input id="pTiktok" placeholder="username"></div><div><label>LinkedIn</label><input id="pLinkedin" placeholder="https://…"></div><div><label>Website</label><input id="pSitus" placeholder="https://…"></div></div>
+    <div class="baris"><div><label data-t="f_kontak">Email (rahasia, untuk perkenalan)</label><input id="pKontak"></div><div><label>WhatsApp (rahasia)</label><input id="pWa"></div>
+      <div><label data-t="f_skala">Skala</label><select id="pSkala"><option value="kecil">kecil / small</option><option value="besar">besar / large</option></select></div>
+      <div><label data-t="f_jenis">Jenis</label><select id="pJenis"><option value="jasa">jasa / service</option><option value="barang">barang / goods</option></select></div></div>
+    <label data-t="f_tentang">Tentang bisnis</label><textarea id="pTentang" maxlength="600"></textarea>
+    <label><input type="checkbox" id="pDir" style="width:auto"> <span data-t="f_dir">Tampilkan di direktori (bisa ditemukan agen)</span></label>
+    <button class="btn utama" id="pBtn" data-t="simpan">Simpan</button><div id="pPesan" class="pesan"></div>
+  </div>
+</section>
+
+<section id="s-owner">
+  <h2>Owner · OCKLU Makelar</h2>
+  <div class="kartu"><div class="baris"><input id="oPin" type="password" placeholder="PIN owner"><button class="btn" id="oMuat">Muat pelanggan</button></div>
+    <h3>Pelanggan baru</h3>
+    <div class="baris"><input id="oNama" placeholder="nama pelanggan"><input id="oBisnis" placeholder="nama bisnis"><input id="oInd" placeholder="industri"><input id="oKota" placeholder="kota"></div>
+    <div class="baris"><input id="oKontak" placeholder="email pelanggan"><input id="oWa" placeholder="WA"><select id="oPaket"><option value="mulai">Mulai $9</option><option value="tumbuh">Tumbuh $29</option></select><input id="oHari" type="number" value="30" title="hari aktif"></div>
+    <button class="btn utama" id="oBuat">Buat & dapatkan link</button><div id="oPesan" class="pesan"></div>
+  </div>
+  <div id="oDaftar" class="grid" style="margin-top:12px"></div>
+</section>
+
+<footer>OCKLU Makelar · Ofin Pay · <span data-t="pagar">Kontak dibuka hanya kalau dua pihak setuju · sukses fee 7% hanya kalau deal jadi</span> · <a href="/hypermarket/">Hyper Market</a></footer>
+</main>
+<script>
+const F="https://njghzieuuopukuagrswu.supabase.co/functions/v1/makelar";
+const EN={nav_beranda:"Home",nav_direktori:"Directory",nav_tab:"My tab",judul:"An alternative search engine to find buyers & sellers — through the AI agent network",
+sub:"Regular search engines are limited. OCKLU agents (PETRUS, YOHANES, PAULUS, MATIUS) hunt buying intent and sellers across the growing AI agent networks — MCP, A2A, Agentverse — and introduce both sides when both agree. Every industry: large or small, services or goods.",
+l1:"1 · List your business",l1d:"You get your own tab: what you sell or need, plus social media.",l2:"2 · Our agents hunt",l2d:"Every 30 minutes buyer/seller signals are matched; findings show in your tab.",
+l3:"3 · Introduced, deal",l3d:"Contacts are shared only when both sides agree. 7% success fee only if a deal closes.",paket:"Subscription plans",
+pk1:"3 active listings/needs · own tab · listed in the agent directory · + 7% success fee",pk2:"15 active listings/needs · priority hunting · findings report · + 7% success fee",
+bayar_info:"Pay via Ofin Pay (PayPal). Want to join? Contact us:",daftar:"Join now",dir_sub:"OCKLU Makelar subscriber businesses. Direct contacts stay private — ask for an introduction, both sides agree first.",
+cari:"Search",agen_sub:"Subscriber businesses can be found by other AI agents without regular search engines:",mcp:"subscriber listings appear in the catalog; ask for an introduction with tool",
+temuan:"Listings & needs — agent findings",tambah:"Add a listing / need",o_jual:"I SELL → find buyers",o_cari:"I NEED → find sellers",apa:"What you sell / need",catatan:"Notes (specs, quantity, region)",
+simpan:"Save",profil:"Profile & social media",f_bisnis:"Business name",f_ind:"Industry",f_kota:"City",f_kontak:"Email (private, for introductions)",f_skala:"Scale",f_jenis:"Type",f_tentang:"About the business",
+f_dir:"Show in directory (findable by agents)",pagar:"Contacts shared only when both sides agree · 7% success fee only if a deal closes"};
+const EN_PH={cari_ph:"search: coffee, video, construction…",ind_ph:"industry",harga_ph:"price (optional)"};
+const ID={};document.querySelectorAll("[data-t]").forEach(e=>ID[e.dataset.t]??=e.textContent);
+const ID_PH={};document.querySelectorAll("[data-tp]").forEach(e=>ID_PH[e.dataset.tp]=e.placeholder);
+let bhs="id";try{bhs=localStorage.getItem("mk_bhs")||(navigator.language||"id").slice(0,2)}catch(e){}
+if(bhs!=="en")bhs="id";
+const T=k=>bhs==="en"?(EN[k]||ID[k]):ID[k];
+function terapBahasa(){document.documentElement.lang=bhs;document.querySelectorAll("[data-t]").forEach(e=>{const v=bhs==="en"?EN[e.dataset.t]:ID[e.dataset.t];if(v)e.textContent=v});
+ document.querySelectorAll("[data-tp]").forEach(e=>e.placeholder=bhs==="en"?EN_PH[e.dataset.tp]:ID_PH[e.dataset.tp]);document.getElementById("bahasa").textContent=bhs==="en"?"ID":"EN"}
+document.getElementById("bahasa").onclick=()=>{bhs=bhs==="en"?"id":"en";try{localStorage.setItem("mk_bhs",bhs)}catch(e){}terapBahasa()};
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const urlAman=u=>/^https:\/\//.test(u||"")?u:null;
+function buka(s){document.querySelectorAll("section").forEach(x=>x.classList.toggle("on",x.id==="s-"+s));document.querySelectorAll("#nav button[data-s]").forEach(b=>b.classList.toggle("on",b.dataset.s===s));if(s==="direktori"&&!document.getElementById("hasil").innerHTML)cari()}
+document.querySelectorAll("#nav button[data-s]").forEach(b=>b.onclick=()=>buka(b.dataset.s));
+function medsos(p){const a=[];if(p.ig)a.push(`<a href="https://instagram.com/${encodeURIComponent(p.ig.replace(/^@/,""))}" rel="noopener">IG</a>`);
+ if(p.tiktok)a.push(`<a href="https://tiktok.com/@${encodeURIComponent(p.tiktok.replace(/^@/,""))}" rel="noopener">TikTok</a>`);
+ if(urlAman(p.linkedin))a.push(`<a href="${esc(p.linkedin)}" rel="noopener">LinkedIn</a>`);if(urlAman(p.situs))a.push(`<a href="${esc(p.situs)}" rel="noopener">Web</a>`);return a.join(" · ")}
+async function cari(){const q=document.getElementById("q").value,ind=document.getElementById("ind").value,h=document.getElementById("hasil");h.innerHTML='<p class="redup">…</p>';
+ try{const d=await fetch(`${F}?r=direktori&q=${encodeURIComponent(q)}&industri=${encodeURIComponent(ind)}`).then(r=>r.json());
+  h.innerHTML=d.bisnis.length?d.bisnis.map(b=>`<div class="kartu"><b>${esc(b.bisnis||b.nama)}</b><div><span class="tag">${esc(b.industri)}</span><span class="tag">${esc(b.jenis)}</span><span class="tag">${esc(b.skala)}</span>${b.kota?`<span class="tag">${esc(b.kota)}</span>`:""}</div>
+   <p class="redup">${esc(b.tentang)}</p>${b.jual.length?`<div><b>${bhs==="en"?"Sells":"Jual"}:</b> ${b.jual.map(j=>esc(j.apa)+(j.harga?` (${esc(j.harga)} ${esc(j.mata_uang)})`:"")).join("; ")}</div>`:""}
+   ${b.cari.length?`<div><b>${bhs==="en"?"Needs":"Cari"}:</b> ${b.cari.map(j=>esc(j.apa)).join("; ")}</div>`:""}<div style="margin-top:6px">${medsos(b)}</div>
+   <a class="btn" style="display:inline-block;margin-top:8px" href="mailto:octavianus@ocklu.com?subject=${encodeURIComponent("Minta dikenalkan: "+(b.bisnis||b.nama))}">${bhs==="en"?"Ask for introduction":"Minta dikenalkan"}</a></div>`).join(""):`<p class="redup">${bhs==="en"?"No business found yet.":"Belum ada bisnis yang cocok."}</p>`}
+ catch(e){h.innerHTML=`<p class="gagal">${bhs==="en"?"Network error, try again.":"Gagal memuat, coba lagi."}</p>`}}
+document.getElementById("cariBtn").onclick=cari;document.getElementById("q").onkeydown=e=>{if(e.key==="Enter")cari()};
+// ---- tab pelanggan: #slug.kunci
+let SLUG=null,KUNCI=null;
+async function tabApi(b){const r=await fetch(`${F}?r=tab`,{method:"POST",headers:{"content-type":"application/json","x-kunci":KUNCI},body:JSON.stringify({s:SLUG,...b})});return {st:r.status,d:await r.json()}}
+async function muatTab(){const {st,d}=await tabApi({});const s=document.getElementById("tabStatus");
+ if(st!==200){s.innerHTML=`<p class="gagal">${esc(d.galat)}</p>`;return}
+ const p=d.profil;document.getElementById("tabJudul").textContent=(p.bisnis||p.nama);
+ s.innerHTML=`<div><b>${d.aktif?(bhs==="en"?"Active":"Aktif"):(bhs==="en"?"Expired":"Habis")}</b> · ${bhs==="en"?"until":"sampai"} ${new Date(p.berlaku_sampai).toLocaleDateString()} · ${bhs==="en"?"plan":"paket"} ${esc(d.paket[p.paket]?.nama)} · ${d.item.filter(i=>i.status==="aktif").length}/${d.batas} · ${bhs==="en"?"profile views":"profil dilihat"} ${p.dilihat}</div>
+  <div class="baris" style="margin-top:8px">${Object.entries(d.paket).map(([k,v])=>`<button class="btn" data-bayar="${k}">${bhs==="en"?"Pay":"Bayar"} ${esc(v.nama)} $${v.usd}</button>`).join("")}</div>`;
+ s.querySelectorAll("[data-bayar]").forEach(b=>b.onclick=async()=>{const {d}=await tabApi({aksi:"bayar",paket:b.dataset.bayar});if(d.link)location.href=d.link});
+ document.getElementById("tabItem").innerHTML=d.item.length?d.item.map(i=>`<div class="kartu"><span class="tag">${i.jenis==="cari_pembeli"?(bhs==="en"?"selling":"jual"):(bhs==="en"?"need":"cari")}</span><span class="tag">${esc(i.status)}</span><br><b>${esc(i.apa)}</b>
+  <div class="redup">${bhs==="en"?"Findings":"Temuan"}: ${i.temuan||0} · ${bhs==="en"?"matches":"jodoh"}: ${(i.jodoh||[]).length}</div>
+  ${i.temuan_terbaru?.length?`<ul class="temuan">${i.temuan_terbaru.map(t=>`<li>${esc(t.sumber||t.penjual||"")}: ${urlAman(t.url)?`<a href="${esc(t.url)}" rel="noopener">${esc(t.judul)}</a>`:esc(t.judul)}</li>`).join("")}</ul>`:`<p class="redup">${bhs==="en"?"Agents are hunting (every 30 min).":"Agen sedang berburu (tiap 30 menit)."}</p>`}
+  <button class="btn" data-item="${i.id}" data-st="${i.status==="aktif"?"selesai":"aktif"}">${i.status==="aktif"?(bhs==="en"?"Mark done":"Tandai selesai"):(bhs==="en"?"Reactivate":"Aktifkan lagi")}</button></div>`).join(""):`<p class="redup">${bhs==="en"?"No listings yet — add one below.":"Belum ada — tambahkan di bawah."}</p>`;
+ document.querySelectorAll("[data-item]").forEach(b=>b.onclick=async()=>{await tabApi({aksi:"ubah_item",id:+b.dataset.item,status:b.dataset.st});muatTab()});
+ for(const [id,k] of [["pBisnis","bisnis"],["pIndustri","industri"],["pKota","kota"],["pIg","ig"],["pTiktok","tiktok"],["pLinkedin","linkedin"],["pSitus","situs"],["pKontak","kontak"],["pWa","wa"],["pTentang","tentang"],["pSkala","skala"],["pJenis","jenis"]])document.getElementById(id).value=p[k]??"";
+ document.getElementById("pDir").checked=!!p.tampil_direktori;
+}
+document.getElementById("iBtn").onclick=async()=>{const m=document.getElementById("iPesan");const {st,d}=await tabApi({aksi:"tambah",jenis:iJenis.value,apa:iApa.value,catatan:iCat.value,harga:iHarga.value,mata_uang:iMu.value});
+ m.className="pesan "+(st===200?"ok":"gagal");m.textContent=st===200?(bhs==="en"?"Saved — agents start hunting.":"Tersimpan — agen mulai berburu."):d.galat;if(st===200){iApa.value=iCat.value="";muatTab()}};
+document.getElementById("pBtn").onclick=async()=>{const m=document.getElementById("pPesan");const b={aksi:"profil",tampil_direktori:pDir.checked};
+ for(const [id,k] of [["pBisnis","bisnis"],["pIndustri","industri"],["pKota","kota"],["pIg","ig"],["pTiktok","tiktok"],["pLinkedin","linkedin"],["pSitus","situs"],["pKontak","kontak"],["pWa","wa"],["pTentang","tentang"],["pSkala","skala"],["pJenis","jenis"]])b[k]=document.getElementById(id).value;
+ b.bahasa=bhs;const {st,d}=await tabApi(b);m.className="pesan "+(st===200?"ok":"gagal");m.textContent=st===200?(bhs==="en"?"Saved.":"Tersimpan."):d.galat;if(st===200)muatTab()};
+// ---- owner
+async function oApi(b){const r=await fetch(`${F}?r=pelanggan`,{method:"POST",headers:{"content-type":"application/json","x-owner":oPin.value},body:JSON.stringify(b)});return {st:r.status,d:await r.json()}}
+async function oMuatDaftar(){const {st,d}=await oApi({aksi:"daftar"});const el=document.getElementById("oDaftar");if(st!==200){el.innerHTML=`<p class="gagal">${esc(d.galat)}</p>`;return}
+ el.innerHTML=d.pelanggan.map(p=>`<div class="kartu"><b>${esc(p.nama)}</b> <span class="tag">${esc(p.status)}</span><span class="tag">${esc(p.paket)}</span><div class="redup">${esc(p.bisnis||"")} · ${esc(p.kontak||"")} · s/d ${new Date(p.berlaku_sampai).toLocaleDateString()} · dilihat ${p.dilihat}</div>
+  <div class="baris"><button class="btn" data-o="perpanjang" data-id="${p.id}">+30 hari</button><button class="btn" data-o="kunci_baru" data-id="${p.id}">Link baru</button><button class="btn" data-o="ubah" data-st="${p.status==="aktif"?"jeda":"aktif"}" data-id="${p.id}">${p.status==="aktif"?"Jeda":"Aktifkan"}</button></div></div>`).join("")||'<p class="redup">Belum ada pelanggan.</p>';
+ el.querySelectorAll("[data-o]").forEach(b=>b.onclick=async()=>{const {d}=await oApi({aksi:b.dataset.o,id:+b.dataset.id,hari:30,status:b.dataset.st});if(d.link){oPesan.className="pesan ok";oPesan.innerHTML=`Link pelanggan: <code>${esc(d.link)}</code>`}oMuatDaftar()})}
+document.getElementById("oMuat").onclick=oMuatDaftar;
+document.getElementById("oBuat").onclick=async()=>{const {st,d}=await oApi({aksi:"buat",nama:oNama.value,bisnis:oBisnis.value,industri:oInd.value,kota:oKota.value,kontak:oKontak.value,wa:oWa.value,paket:oPaket.value,hari:+oHari.value,bahasa:bhs});
+ oPesan.className="pesan "+(st===200?"ok":"gagal");oPesan.innerHTML=st===200?`Kirim link ini ke pelanggan (jangan disebar): <code>${esc(d.link)}</code>`:esc(d.galat);if(st===200)oMuatDaftar()};
+// ---- awal
+terapBahasa();
+const h=location.hash.slice(1);
+if(h==="owner"){buka("owner")}
+else if(/^[a-z0-9-]+\.[a-f0-9]{20,}$/.test(h)){[SLUG,KUNCI]=h.split(".");document.getElementById("tabBtn").hidden=false;buka("tab");muatTab()}
+else{const b=new URLSearchParams(location.search).get("b");if(b){document.getElementById("q").value="";buka("direktori")}else buka("beranda")}
+</script>
+</body>
+</html>
