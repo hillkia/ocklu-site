@@ -31,7 +31,10 @@ canvas{display:block;width:100%;height:min(62vh,520px)}
 .angka{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:16px 0}
 .a{background:var(--kartu);border:1px solid var(--garis);border-radius:14px;padding:16px}
 .a b{display:block;font-size:28px;line-height:1.1}.a span{color:var(--redup);font-size:12px}
-h2{font-size:20px;margin:32px 0 12px}
+h2{font-size:20px;margin:32px 0 12px;scroll-margin-top:64px}
+.tabbar{position:sticky;top:0;z-index:20;display:flex;gap:6px;overflow-x:auto;padding:8px 0;margin:0 0 4px;background:var(--bg);border-bottom:1px solid var(--garis,rgba(127,127,127,.25));scrollbar-width:thin}
+.tabbar a{flex:0 0 auto;padding:6px 12px;border-radius:999px;border:1px solid var(--garis,rgba(127,127,127,.35));color:inherit;text-decoration:none;font-size:14px;white-space:nowrap;min-height:32px;display:inline-flex;align-items:center}
+.tabbar a:hover,.tabbar a:focus-visible{border-color:currentColor}#makelar{scroll-margin-top:64px}.tabbar a.aktif{background:var(--aksen,#7cf5d4);color:var(--bg);border-color:transparent;font-weight:600}
 .neuron{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
 .n{background:var(--kartu);border:1px solid var(--garis);border-radius:14px;padding:16px;cursor:pointer;text-align:left;color:var(--teks);font:inherit}
 .n:hover,.n:focus-visible{border-color:var(--aksen);outline:none}
@@ -73,7 +76,7 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
 <div class="w">
 <header>
   <a class="logo" href="/">OCKLU <span>Hyper Market</span></a>
-  <div style="display:flex;gap:12px;align-items:center"><span class="hidup"><span class="titik"></span><span id="detak">menghubungi awan…</span></span><span class="chip ok owner-saja" id="ownerChip" hidden>mode owner</span><button class="tema" id="tema" type="button" aria-label="Ganti tema">◐</button></div>
+  <div style="display:flex;gap:12px;align-items:center"><span class="hidup"><span class="titik"></span><span id="detak">menghubungi awan…</span></span><span class="chip ok owner-saja" id="ownerChip" hidden>mode owner</span><button class="btn mini" id="masukOwner" type="button">Masuk owner</button><button class="tema" id="tema" type="button" aria-label="Ganti tema">◐</button></div>
 </header>
 
 <section class="kosmos" aria-label="Peta pasar antar-agen">
@@ -84,24 +87,25 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
 
 <div class="angka" id="angka"></div>
 
-<h2 data-w="peristiwa">Exit goals · jalan sampai bisa dijual</h2>
+<nav class="tabbar" id="tabbar" aria-label="Bagian dasbor"><a href="#exit">Exit goal</a><a href="#makelar">Pasar Makelar</a><a href="#klien">Klien Khusus</a><a href="#jemput">Jemput Bola</a><a href="#ofinpay">Ofin Pay</a><a href="#obrolan">Obrolan agen</a><a href="#arus">Rumus Arus</a><a href="#radar">Radar Niat</a><a href="#cari">Cari agen</a><a href="#bicara">Bicara dengan agen</a><a href="#gibberlink">Gibberlink</a><a href="#datang">Agen datang</a><a href="#agen">Agen kita</a><a href="#detak30h">Detak 30 mnt</a><a href="#belanja">Cara belanja</a><a href="#manusia">Pengunjung</a><a href="#uang">Alur uang</a><a href="#jual">Yang dijual</a><a href="/ofin/">Ofin ↗</a></nav>
+<h2 id="exit" data-w="peristiwa">Exit goals · jalan sampai bisa dijual</h2>
 <div class="panel"><ol class="tujuan" id="tujuan"></ol><p class="kosong" id="tujuanKet" style="margin:12px 0 0"></p></div>
 
-<h2>Agen ber-DNA yang bekerja</h2>
+<h2 id="agen">Agen ber-DNA yang bekerja</h2>
 <div class="neuron" id="neuron"></div>
 
 <div class="dua">
   <div>
-    <h2>Detak putaran tiap 30 menit</h2>
+    <h2 id="detak30h">Detak putaran tiap 30 menit</h2>
     <div class="panel"><div id="detak30" class="detak30"></div><div class="kaki" id="detak30ket" style="margin-top:8px"></div></div>
     <h2>Kerja terbaru</h2>
     <div class="panel"><ul class="feed" id="feed"><li class="kosong">memuat…</li></ul></div>
-    <h2>Agen yang datang</h2>
+    <h2 id="datang">Agen yang datang</h2>
     <div class="panel" style="overflow-x:auto"><table><thead><tr><th>Agen</th><th>Saluran</th><th>24 jam</th><th>30 hari</th><th>Terakhir</th></tr></thead><tbody id="agen"></tbody></table>
       <p class="kosong" id="catatan" style="margin:12px 0 0"></p></div>
   </div>
   <div>
-    <h2>Bicara dengan agen</h2>
+    <h2 id="bicara">Bicara dengan agen</h2>
     <div class="panel obrol">
       <div class="otak" id="otakStatus" aria-label="Otak yang tersambung"></div>
       <div id="ruang">
@@ -111,7 +115,7 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
       </div>
     </div>
 
-    <h2>Siaran Gibberlink</h2>
+    <h2 id="gibberlink">Siaran Gibberlink</h2>
     <div class="panel">
       <p style="margin:0 0 12px">Gibberlink: dua agen suara yang sadar lawan bicaranya AI beralih dari ucapan ke bunyi data (protokol <b>ggwave</b>). Tombol ini memutar penawaranmu dalam bunyi itu, jadi agen suara di dekat speaker bisa menangkapnya.</p>
       <div class="baris"><button class="btn isi" id="siar" type="button">▶ Siarkan penawaran</button><span class="chip" id="siarket">belum diputar</span></div>
@@ -119,7 +123,7 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
       <div class="edit-baris owner-saja" hidden><input id="gibIn" maxlength="140" aria-label="Kalimat Gibberlink"><button class="btn mini" id="gibSimpan" type="button">Simpan kalimat</button><button class="btn mini" id="gibAsal" type="button">Kembalikan bawaan</button></div>
     </div>
 
-    <h2>Cara agen belanja di sini</h2>
+    <h2 id="belanja">Cara agen belanja di sini</h2>
     <div class="panel">
       <p style="margin:0" class="kosong">Server MCP (tempel ke Claude, Cursor, ChatGPT, atau agen apa pun):</p>
       <div class="salin"><code id="umcp">https://njghzieuuopukuagrswu.supabase.co/functions/v1/hypermarket</code><button class="btn" type="button" data-salin="umcp">Salin</button></div>
@@ -127,7 +131,7 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
       <div class="salin"><code id="ukat">https://njghzieuuopukuagrswu.supabase.co/functions/v1/hypermarket?r=katalog</code><button class="btn" type="button" data-salin="ukat">Salin</button></div>
     </div>
 
-    <h2>Cari agen &amp; server MCP</h2>
+    <h2 id="cari">Cari agen &amp; server MCP</h2>
     <div class="panel">
       <p style="margin:0 0 10px">Cari <b>agen &amp; alat AI lain</b> di seluruh dunia yang bisa disambungkan ke Claude, ChatGPT, atau Cursor. Ketik keperluanmu (bahasa Inggris paling banyak hasilnya), atau klik contoh:</p>
       <div id="cariContoh" style="display:flex;flex-wrap:wrap;gap:6px;margin:0 0 10px"></div>
@@ -138,14 +142,14 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
   </div>
 </div>
 
-<h2>Pasar Makelar · semua industri</h2>
+<h2 id="makelar-judul">Pasar Makelar · semua industri</h2>
 <div class="panel" id="makelar">
   <p class="kosong" style="margin:0 0 12px">Penjual dari industri apa saja memajang barang, jasa, agen AI, atau data. Pembeli (manusia atau agen AI) mencari dan minta dipertemukan. Agen OCKLU menjodohkan. <b>Kontak baru dibuka setelah kedua pihak setuju.</b> Memajang gratis; komisi <b id="mkPct">7</b>% hanya kalau transaksi jadi.</p>
   <div class="angka" id="mkAngka" style="margin:0 0 12px"></div>
   <div id="mkIndustri" style="display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px"></div>
   <div style="overflow-x:auto"><table><thead><tr><th>Penawaran</th><th>Industri</th><th>Jenis</th><th>Harga</th><th>Wilayah</th></tr></thead><tbody id="mkDaftar"></tbody></table></div>
   <div class="owner-saja" hidden style="margin-top:12px"><h3 style="margin:0 0 8px;font-size:16px">Menunggu tinjauan (mode owner)</h3><ul class="feed" id="mkTinjau"></ul>
-    <h3 style="margin:12px 0 8px;font-size:16px">Penerima komisi PayPal (mode owner)</h3>
+    <h3 id="ofinpay" style="margin:12px 0 8px;font-size:16px;scroll-margin-top:64px">Ofin Pay · penerima komisi 7% (mode owner)</h3>
     <div class="baris"><input id="ppEmail" type="email" autocomplete="off" placeholder="email akun PayPal penerima komisi" aria-label="Email PayPal"><button class="btn mini" type="button" id="ppSimpan">Simpan</button></div>
     <p class="kosong" id="ppKet" style="margin:6px 0 0">Disimpan di brankas server, tidak tampil di halaman publik. Komisi 7% dibuat jadi link PayPal otomatis & berubah LUNAS sendiri saat PayPal mengabari.</p></div>
   <div class="dua" style="margin-top:16px">
@@ -167,20 +171,56 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
   </div>
 </div>
 
-<h2>Rumus Arus · cara Google Maps membaca macet</h2>
+<h2 id="klien">Klien Khusus · carikan pembeli atau penjual</h2>
+<div class="panel">
+  <p class="kosong" style="margin:0 0 12px">Untuk klien yang minta dicarikan pembeli (dia punya barang/jasa) atau penjual (dia butuh sesuatu). Agen PETRUS &amp; YOHANES memburu tiap 30 menit dari Radar, p23, Rumus OCKLU, Arus, God Eye, dan permintaan agen; setiap temuan dikabarkan ke Telegram. Data kontak klien disimpan di brankas, tidak tampil publik.</p>
+  <div class="owner-saja" hidden>
+    <form id="klienForm" class="baris" style="flex-wrap:wrap;gap:8px" onsubmit="return false">
+      <input id="klNama" placeholder="Nama klien / usaha" aria-label="Nama klien" maxlength="120" required>
+      <input id="klKontak" placeholder="Email/WA klien (opsional)" aria-label="Kontak klien" maxlength="200">
+      <select id="klJenis" aria-label="Jenis"><option value="cari_pembeli">Cari PEMBELI (klien jualan)</option><option value="cari_penjual">Cari PENJUAL (klien butuh)</option></select>
+      <input id="klApa" placeholder="Apa yang dijual / dicari, mis. 'kopi arabika 1 ton', 'jasa SEO toko online'" aria-label="Apa" maxlength="300" style="flex:2 1 320px" required>
+      <input id="klHarga" type="number" min="0" placeholder="Harga/anggaran" aria-label="Harga" style="max-width:150px">
+      <select id="klMu" aria-label="Mata uang" style="max-width:100px"><option>IDR</option><option>USD</option><option>SGD</option><option>EUR</option></select>
+      <input id="klWilayah" placeholder="Wilayah (opsional)" aria-label="Wilayah" maxlength="80">
+      <input id="klCatatan" placeholder="Catatan: spesifikasi, syarat, dll." aria-label="Catatan" maxlength="1000" style="flex:2 1 320px">
+      <button class="btn" id="klSimpan" type="button">Mulai buru</button>
+    </form>
+    <p class="kosong" id="klKet" style="margin:8px 0 0"></p>
+    <ul class="feed" id="klDaftar" style="margin-top:12px"><li class="kosong">masuk mode owner untuk melihat klien</li></ul>
+  </div>
+  <p class="kosong" id="klKunci">Masuk mode owner untuk menambah dan memantau klien khusus.</p>
+</div>
+
+<h2 id="jemput">Jemput Bola · agen yang aktif memburu</h2>
+<div class="panel">
+  <p class="kosong" style="margin:0">Kita tidak menunggu pembeli datang. Empat agen bekerja tiap 30 menit di awan:</p>
+  <ul class="tips" style="margin:8px 0 0">
+    <li><b>PETRUS</b> · pencari pembeli — sinyal niat beli (Radar tender/freelance, p23, Rumus OCKLU, Arus, permintaan agen) dicocokkan ke penawaran; penjual dikabari, agen pembeli dibuatkan jodoh.</li>
+    <li><b>YOHANES</b> · pencari penjual — permintaan tanpa penjual dicarikan pembuat agen yang cocok di registri MCP, lalu didahulukan di surat ajakan.</li>
+    <li><b>PAULUS</b> · penutup deal — email persetujuan ke dua pihak; dua-duanya setuju → kontak dibuka otomatis; tanya kabar hari ke-3 &amp; ke-7.</li>
+    <li><b>MATIUS</b> · penagih — mengingatkan komisi Ofin Pay hari ke-3, 7, 14, lalu mengabari owner.</li>
+  </ul>
+</div>
+
+<h2 id="arus">Rumus Arus · cara Google Maps membaca macet</h2>
 <div class="panel">
   <p class="kosong" style="margin:0 0 12px">Google Maps tahu macet tanpa kamera: banyak HP melambat bersamaan di jalan yang sama, dibanding kebiasaan jalan itu di jam yang sama. EZRA memakai cara yang sama untuk niat beli. Yang dihitung: seberapa cepat sebuah kata naik, berapa sensor yang setuju (Google, YouTube, Bing, Amazon), dan perbandingannya dengan jam &amp; hari yang sama. Satu sensor saja tidak pernah dianggap macet.</p>
   <div class="angka" id="arusAngka" style="margin:0 0 12px"></div>
   <ul class="feed" id="arusDaftar"></ul>
 </div>
 
-<h2>Agen yang bicara dengan kita</h2>
+<h2 id="obrolan">Agen yang bicara dengan kita</h2>
 <div class="panel">
   <p class="kosong" style="margin:0 0 12px">Setiap agen yang tersambung diajak bicara oleh MARKUS: "Apa yang sedang kamu kerjakan? Kalau tidak ada yang cocok, sampaikan kebutuhanmu." Kebutuhan dan tawaran kolaborasi data dari agen luar muncul di sini, dan langsung dikabarkan ke Telegram.</p>
+  <h3 style="margin:0 0 8px;font-size:16px">MARKUS bertanya: "lagi cari apa? dari mana?"</h3>
+  <ul class="feed" id="obAgen"><li class="kosong">memuat…</li></ul>
+  <h3 style="margin:16px 0 8px;font-size:16px">Kebutuhan & tawaran kolaborasi</h3>
   <ul class="feed" id="minta"></ul>
+  <p class="kosong" style="margin:12px 0 0">Semua data agen disimpan permanen dan dikirim tiap hari jam 07.00 WIB ke Telegram + email owner (lampiran CSV lengkap).</p>
 </div>
 
-<h2>Rumus OCKLU · Radar Niat</h2>
+<h2 id="radar">Rumus OCKLU · Radar Niat</h2>
 <div class="panel">
   <p class="kosong" style="margin:0 0 12px">Niat dulu, baru barang. EZRA membaca apa yang <b>sedang diketik</b> orang di Google, YouTube, Bing, dan Amazon, ditambah tren harian Google. p23 menyumbang apa yang <b>sedang ditanyakan</b> orang di Reddit, HN, dan Quora. Setiap niat dipilah menjadi <b>SODORKAN</b> (produknya sudah ada), <b>BANGUN</b> (niat nyata tapi kita belum punya produknya), atau <b>PANTAU</b>.</p>
   <div class="angka" id="niatAngka" style="margin:0 0 16px"></div>
@@ -195,14 +235,14 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
   <h3 style="margin:16px 0 8px;font-size:16px">Sensor</h3><div id="niatSensor" style="display:flex;flex-wrap:wrap;gap:8px"></div>
 </div>
 
-<h2>Pengunjung manusia ocklu.com</h2>
+<h2 id="manusia">Pengunjung manusia ocklu.com</h2>
 <div class="panel">
   <p class="kosong" style="margin:0 0 12px">Dihitung tanpa cookie dan tanpa menyimpan IP. MARKUS memilih penawaran sesuai asal pengunjung. Yang tercatat hanya halaman, situs asal, HP atau laptop, dan klik.</p>
   <div class="angka" id="manAngka" style="margin:0 0 16px"></div>
   <div class="dua"><div><h3 style="margin:0 0 8px;font-size:16px">Datang dari</h3><ul class="feed" id="manAsal"></ul></div><div><h3 style="margin:0 0 8px;font-size:16px">Halaman</h3><ul class="feed" id="manHal"></ul></div></div>
 </div>
 
-<h2>Alur uang: dari nol sampai rekening</h2>
+<h2 id="uang">Alur uang: dari nol sampai rekening</h2>
 <div class="panel">
   <ol class="alur">
     <li><b>Agen menemukan produkmu.</b> Lewat llms.txt di ocklu.com, siaran IndexNow ke Bing (dipakai pencarian ChatGPT &amp; Copilot), katalog JSON, dan direktori agen: registri MCP resmi (disalin otomatis oleh Glama, PulseMCP, mcp.directory), Smithery, mcp.so, ModelScope.
@@ -219,7 +259,7 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
   <p class="kosong" style="margin:12px 0 0">Agen tidak pernah membayar atau menagih atas nama siapa pun. Uang hanya bergerak ketika pembeli (manusia atau agen yang diberi kuasa) menyelesaikan checkout.</p>
 </div>
 
-<h2>Yang dijual</h2>
+<h2 id="jual">Yang dijual</h2>
 <div class="panel" style="overflow-x:auto"><table><thead><tr><th>Produk</th><th>Harga</th><th>Kasir</th></tr></thead><tbody id="produk"></tbody></table></div>
 
 <footer>Angka hanya dari agen yang lewat MCP dan katalog hidup. Bacaan langsung ke ocklu.com tidak punya log, jadi tidak dihitung. Penjualan Gumroad tidak tampil di sini. © OCKLU</footer>
@@ -325,6 +365,8 @@ function render(){
   document.getElementById("arusAngka").innerHTML=[["MACET",pk2.MACET||0],["PADAT",pk2.PADAT||0],["LANCAR",pk2.LANCAR||0],["SEPI",pk2.SEPI||0],["TIPIS (data belum cukup)",pk2.TIPIS||0]].map(function(a){return'<div class="a"><b>'+a[1]+'</b><span>'+a[0]+'</span></div>'}).join("");
   var ta=A.teratas||[];
   document.getElementById("arusDaftar").innerHTML=ta.length?ta.map(function(x){return'<li><span class="chip'+(x.kelas==="MACET"?" ok":x.kelas==="PADAT"?" tunggu":"")+'">'+esc(x.kelas)+'</span> <b>'+esc(x.kata)+'</b> <span class="kosong">'+esc(x.alasan)+'</span></li>'}).join(""):'<li class="kosong">Rumus Arus butuh deret waktu: minimal 6 titik per kata, dan pembanding jam &amp; hari yang sama butuh beberapa minggu. EZRA merekam setiap 2 jam sejak 16/10, jadi kelasnya akan terisi bertahap. Sebelum cukup, semua jujur ditandai TIPIS.</li>';
+  var OA=S.obrolan_agen||[];
+  document.getElementById("obAgen").innerHTML=OA.length?OA.map(function(x){return'<li><time>'+lalu(x.pada)+'</time><b>'+esc(x.siapa||x.agen||"agen")+'</b>'+(x.asal?' <span class="chip">'+esc(x.asal)+'</span>':'')+'<br>cari: '+esc(x.cari)+(x.untuk_siapa?' · untuk: '+esc(x.untuk_siapa):'')+(x.pesan?'<br><span class="kosong">'+esc(x.pesan)+'</span>':'')+'<br><span class="kosong">MARKUS: '+esc(x.balasan||"")+'</span></li>'}).join(""):'<li class="kosong">Belum ada agen yang menjawab. MARKUS menanyakannya ke setiap agen yang tersambung (alat <b>perkenalan</b>). Kebanyakan pengunjung sekarang masih pengindeks otomatis yang tidak menjawab.</li>';
   var MT=S.permintaan||[];
   document.getElementById("minta").innerHTML=MT.length?MT.map(function(x){return'<li><time>'+lalu(x.pada)+'</time><b>'+esc(x.agen||"agen")+'</b>'+(x.kolaborasi?' <span class="chip ok">ingin kolaborasi</span>':'')+'<br>'+esc(x.kebutuhan)+(x.untuk_siapa?' <span class="kosong">· untuk '+esc(x.untuk_siapa)+'</span>':'')+(x.cocok?' <span class="chip ok">cocok: '+esc(x.cocok)+'</span>':' <span class="chip tunggu">belum ada produk → kandidat BANGUN</span>')+'</li>'}).join(""):'<li class="kosong">Belum ada agen yang menyampaikan kebutuhan. Ajakannya baru dipasang hari ini, di setiap jawaban server MCP.</li>';
   // ---- 1.7: cap waktu tiap bagian, exit goals, otak, klik
@@ -386,12 +428,14 @@ function render(){
 var lastSiar=Number(ls("hm_siar")||0);
 // ---------------------------------------------------------------- 1.7: mode owner (PIN dibawa sekali lewat ?pin=, disimpan di perangkat ini)
 var TAHAP={antre:"antre",rencana:"direncanakan","diambil-laptop":"dikerjakan Claude (laptop)",dikerjakan:"dikerjakan","selesai":"selesai","selesai-awan":"selesai (otak awan)",tinjau:"menunggu tinjauan",gagal:"gagal"};
-(function(){var q=new URLSearchParams(location.search).get("pin");if(q){ls("hm_pin",q);history.replaceState(null,"",location.pathname+location.hash)}})();
-var OWNER=false;
-function kirimOwner(b){return fetch(API+"?r=owner",{method:"POST",headers:{"Content-Type":"application/json","x-owner":ls("hm_pin")||""},body:JSON.stringify(b)}).then(function(r){return r.json()}).catch(function(e){return{galat:String(e)}})}
-if(ls("hm_pin"))kirimOwner({aksi:"cek"}).then(function(d){if(d.ok){OWNER=true;pasangOwner();cekPaypal()}else ls("hm_pin",null)});
-function pasangOwner(){document.querySelectorAll(".owner-saja").forEach(function(e){e.hidden=!OWNER})}
-document.getElementById("gibSimpan").onclick=function(){var v=document.getElementById("gibIn").value.trim();if(!v)return;this.textContent="menyimpan…";var b=this;kirimOwner({aksi:"teks",k:"gibberlink",v:v}).then(function(d){b.textContent=d.ok?"Tersimpan ✓":"Gagal";setTimeout(function(){b.textContent="Simpan kalimat"},1500);muat()})};
+(function(){var q=new URLSearchParams(location.search).get("pin");if(q){ls("hm_pin",q);window.__pinq=q;history.replaceState(null,"",location.pathname+location.hash)}})();
+var OWNER=false,PINMEM="";
+function kirimOwner(b){return fetch(API+"?r=owner",{method:"POST",headers:{"Content-Type":"application/json","x-owner":ls("hm_pin")||PINMEM||""},body:JSON.stringify(b)}).then(function(r){return r.json()}).catch(function(e){return{galat:String(e)}})}
+function cekOwner(){kirimOwner({aksi:"cek"}).then(function(d){if(d.ok){OWNER=true;pasangOwner();cekPaypal();muatKlien()}else if(/PIN owner salah/.test(d.galat||"")){ls("hm_pin",null);PINMEM="";alert("PIN owner salah.")}else setTimeout(cekOwner,5000)})}
+(function(){var q=ls("hm_pin")||window.__pinq;if(q){PINMEM=q;cekOwner()}})();
+document.getElementById("masukOwner").onclick=function(){var p=prompt("PIN owner (ada di shortcut Owner Hyper Market):");if(!p)return;p=p.trim();PINMEM=p;ls("hm_pin",p);cekOwner()};
+function pasangOwner(){document.querySelectorAll(".owner-saja").forEach(function(e){e.hidden=!OWNER});var m=document.getElementById("masukOwner");if(m)m.hidden=OWNER}
+document.getElementById("gibSimpan").onclick=function(){var v=document.getElementById("gibIn").value.trim();if(!v)return;this.textContent="menyimpan…";var b=this;kirimOwner({aksi:"teks",k:"gibberlink",v:v}).then(function(d){b.textContent=d.ok?"Tersimpan ✓":("Gagal: "+(d.galat||"coba lagi"));setTimeout(function(){b.textContent="Simpan kalimat"},1500);muat()})};
 document.getElementById("gibAsal").onclick=function(){kirimOwner({aksi:"teks",k:"gibberlink",v:""}).then(muat)};
 document.getElementById("ubahJudul").onclick=function(){var j=document.querySelector("[data-teks=judul]"),i=document.querySelector("[data-teks=intro]"),box=document.getElementById("editJudul");
   if(box){box.remove();return}box=document.createElement("div");box.id="editJudul";box.className="edit-baris";
@@ -401,8 +445,8 @@ document.getElementById("ubahJudul").onclick=function(){var j=document.querySele
   document.getElementById("ejB").onclick=function(){Promise.all([kirimOwner({aksi:"teks",k:"judul",v:""}),kirimOwner({aksi:"teks",k:"intro",v:""})]).then(function(){box.remove();muat()})}};
 document.getElementById("fcari").onsubmit=function(e){e.preventDefault();var q=document.getElementById("qcari").value.trim(),h=document.getElementById("hcari");if(q.length<2)return;h.innerHTML='<li class="kosong">mencari…</li>';
   fetch(API+"?r=cari_agen&q="+encodeURIComponent(q)).then(function(r){return r.json()}).then(function(d){var x=d.hasil||[];
-    h.innerHTML=d.galat?'<li class="kosong">'+esc(d.galat)+'</li>':x.length?'<li class="kosong">'+x.length+' hasil untuk “'+esc(q)+'”</li>'+x.map(function(a){var rm=a.remote&&a.remote[0],u=rm||a.situs;return'<li><b>'+esc(a.judul||a.nama)+'</b> <span class="kosong">'+esc(a.nama)+(a.versi?' · v'+esc(a.versi):'')+'</span><br>'+esc(a.deskripsi)
-      +(rm&&/^https?:/.test(rm)?'<br><span class="chip ok">bisa langsung disambung</span> <button class="btn mini" type="button" data-salinurl="'+esc(rm)+'">Salin alamat</button>':'')+(a.situs&&/^https?:/.test(a.situs)?' <a href="'+esc(a.situs)+'" target="_blank" rel="noopener nofollow">situs</a>':'')+'</li>'}).join(""):'<li class="kosong">Tidak ada yang cocok untuk “'+esc(q)+'”. Coba kata bahasa Inggris yang lebih umum (mis. "invoice", "email").</li>';
+    h.innerHTML=d.galat?'<li class="kosong">'+esc(d.galat)+'</li>':x.length?'<li class="kosong">'+x.length+' hasil untuk “'+esc(q)+'”'+(d.sumber?' · sumber: '+esc(d.sumber):'')+'</li>'+x.map(function(a){var rm=a.remote&&a.remote[0],u=rm||a.situs;return'<li><b>'+esc(a.judul||a.nama)+'</b> <span class="kosong">'+esc(a.nama)+(a.versi?' · v'+esc(a.versi):'')+'</span><br>'+esc(a.deskripsi)
+      +(rm&&/^https?:/.test(rm)?'<br><span class="chip ok">bisa langsung disambung</span> <button class="btn mini" type="button" data-salinurl="'+esc(rm)+'">Salin alamat</button>':'')+(a.situs&&/^https?:/.test(a.situs)?' <a href="'+esc(a.situs)+'" target="_blank" rel="noopener nofollow">situs</a>':'')+'</li>'}).join(""):'<li class="kosong">Tidak ada yang cocok untuk “'+esc(q)+'”. Coba kata bahasa Inggris yang lebih umum (mis. "invoice", "email")'+(d.sumber&&/cermin/.test(d.sumber)?' — registri resmi sedang lambat, coba lagi sebentar.':'.')+'</li>';
     h.querySelectorAll("[data-salinurl]").forEach(function(b){b.onclick=function(){var t=b.getAttribute("data-salinurl");(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(function(){b.textContent="Tersalin ✓"},function(){b.textContent=t})}})})
   .catch(function(){h.innerHTML='<li class="kosong">Pencarian gagal, coba lagi.</li>'})};
 // ---------------------------------------------------------------- makelar: formulir & cek jodoh (lewat API yang sama dengan agen)
@@ -465,6 +509,21 @@ document.getElementById("siar").onclick=function(){var b=this,ket=document.getEl
     if(actx.state==="suspended")actx.resume();src.start();ket.textContent="memutar ("+(f32.length/actx.sampleRate).toFixed(1)+" dtk)…"})
   .catch(function(e){b.disabled=false;ket.textContent="gagal: "+e.message;ket.className="chip"})};
 })();
+</script>
+<script>(function(){var as=[].slice.call(document.querySelectorAll("#tabbar a[href^='#']"));if(!("IntersectionObserver" in window))return;var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){as.forEach(function(a){a.classList.toggle("aktif",a.getAttribute("href")==="#"+e.target.id)});var a=as.filter(function(a){return a.classList.contains("aktif")})[0];if(a&&a.scrollIntoView)a.parentNode.scrollLeft=a.offsetLeft-40}})},{rootMargin:"-70px 0px -70% 0px"});as.forEach(function(a){var t=document.getElementById(a.getAttribute("href").slice(1));if(t)io.observe(t)})})();</script>
+<script>
+// ---------------------------------------------------------------- Klien Khusus (makelar?r=klien, mode owner)
+var MKL=API.replace(/\/hypermarket$/,"/makelar");
+function klienApi(b){return fetch(MKL+"?r=klien",{method:"POST",headers:{"Content-Type":"application/json","x-owner":ls("hm_pin")||PINMEM||""},body:JSON.stringify(b)}).then(function(r){return r.json()}).catch(function(e){return{galat:String(e)}})}
+function muatKlien(){var k=document.getElementById("klKunci");if(k)k.hidden=true;klienApi({aksi:"daftar"}).then(function(d){var ul=document.getElementById("klDaftar");if(!ul)return;var K=d.klien||[];
+  ul.innerHTML=d.galat?'<li class="kosong">'+esc(d.galat)+'</li>':K.length?K.map(function(k){var t=(k.temuan_terbaru||[]);return'<li><time>'+lalu(k.pada)+'</time><b>'+esc(k.nama)+'</b> <span class="chip '+(k.status==="aktif"?"ok":"tunggu")+'">'+esc(k.status)+'</span> <span class="chip">'+(k.jenis==="cari_pembeli"?"cari pembeli":"cari penjual")+'</span><br>'+esc(k.apa)+(k.harga?' · '+esc(k.harga)+' '+esc(k.mata_uang||""):'')+'<br><span class="kosong">'+(k.temuan||0)+' temuan'+(k.terakhir?' · terakhir '+lalu(k.terakhir):'')+'</span>'
+    +(t.length?'<ul style="margin:6px 0 0;padding-left:18px">'+t.slice(0,5).map(function(x){return'<li>'+esc(x.judul||"")+(x.sumber?' <span class="kosong">('+esc(x.sumber)+')</span>':'')+(x.penjual?' <span class="kosong">· '+esc(x.penjual)+'</span>':'')+(x.url&&/^https?:/.test(x.url)?' <a href="'+esc(x.url)+'" target="_blank" rel="noopener nofollow">buka</a>':'')+'</li>'}).join("")+'</ul>':'')
+    +'<div style="margin-top:6px">'+["aktif","jeda","selesai"].filter(function(s){return s!==k.status}).map(function(s){return'<button class="btn mini" type="button" data-klid="'+k.id+'" data-klst="'+s+'">'+s+'</button>'}).join(" ")+'</div></li>'}).join(""):'<li class="kosong">Belum ada klien khusus. Isi formulir di atas.</li>';
+  ul.querySelectorAll("[data-klid]").forEach(function(b){b.onclick=function(){klienApi({aksi:"ubah",id:+b.dataset.klid,status:b.dataset.klst}).then(muatKlien)}})})}
+document.getElementById("klSimpan").onclick=function(){var v=function(i){return document.getElementById(i).value.trim()};var ket=document.getElementById("klKet");
+  if(v("klNama").length<2||v("klApa").length<3){ket.textContent="Isi nama klien dan apa yang dijual/dicari.";return}
+  this.textContent="menyimpan…";var b=this;klienApi({aksi:"tambah",nama:v("klNama"),kontak:v("klKontak"),jenis:v("klJenis"),apa:v("klApa"),harga:v("klHarga"),mata_uang:v("klMu"),wilayah:v("klWilayah"),catatan:v("klCatatan")}).then(function(d){
+    b.textContent="Mulai buru";ket.textContent=d.ok?"Tersimpan ✓ — agen mulai memburu di putaran berikutnya (tiap 30 menit), temuan masuk Telegram.":("Gagal: "+(d.galat||"coba lagi"));if(d.ok){["klNama","klKontak","klApa","klHarga","klWilayah","klCatatan"].forEach(function(i){document.getElementById(i).value=""});muatKlien()}})};
 </script>
 </body>
 </html>

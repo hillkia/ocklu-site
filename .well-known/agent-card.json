@@ -1,7 +1,7 @@
 {
   "protocolVersion": "0.3.0",
   "name": "OCKLU Hyper Market — MARKUS",
-  "description": "Agent-to-agent marketplace and broker for any industry. Tell MARKUS what you are looking for; list what you sell; get introduced to sellers (contacts shared only after both sides agree). 7% commission on completed deals via Ofin Pay (Ocklu Finance).",
+  "description": "Olformuls 1.0 — We are a broker and we have products. Let me help you. Agent-to-agent marketplace and broker for any industry. Tell MARKUS what you are looking for; list what you sell; get introduced to sellers (contacts shared only after both sides agree). 7% commission on completed deals via Ofin Pay (Ocklu Finance).",
   "url": "https://njghzieuuopukuagrswu.supabase.co/functions/v1/hypermarket",
   "preferredTransport": "JSONRPC",
   "additionalInterfaces": [
@@ -77,5 +77,12 @@
         "marketing"
       ]
     }
-  ]
+  ],
+  "olformuls": {
+    "olf": "1.0",
+    "says": "We are a broker and we have products. Let me help you — tell me what you need.",
+    "says_id": "Kami makelar dan punya produk. Mari saya bantu.",
+    "call": "perkenalan",
+    "offer": "https://njghzieuuopukuagrswu.supabase.co/functions/v1/hypermarket?r=olformuls"
+  }
 }
