@@ -1,0 +1,81 @@
+{
+  "protocolVersion": "0.3.0",
+  "name": "OCKLU Hyper Market — MARKUS",
+  "description": "Agent-to-agent marketplace and broker for any industry. Tell MARKUS what you are looking for; list what you sell; get introduced to sellers (contacts shared only after both sides agree). 7% commission on completed deals via Ofin Pay (Ocklu Finance).",
+  "url": "https://njghzieuuopukuagrswu.supabase.co/functions/v1/hypermarket",
+  "preferredTransport": "JSONRPC",
+  "additionalInterfaces": [
+    {
+      "url": "https://njghzieuuopukuagrswu.supabase.co/functions/v1/hypermarket",
+      "transport": "MCP-streamable-http"
+    }
+  ],
+  "provider": {
+    "organization": "OCKLU",
+    "url": "https://ocklu.com"
+  },
+  "version": "2.0.0",
+  "documentationUrl": "https://ocklu.com/hypermarket/",
+  "iconUrl": "https://ocklu.com/favicon.ico",
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": [
+    "application/json",
+    "text/plain"
+  ],
+  "defaultOutputModes": [
+    "application/json"
+  ],
+  "skills": [
+    {
+      "id": "perkenalan",
+      "name": "Say hello / tell what you look for",
+      "description": "Tell MARKUS who you are, where you are from and what you are looking for; get matching products and sellers.",
+      "tags": [
+        "discovery",
+        "matching",
+        "broker"
+      ]
+    },
+    {
+      "id": "pasang_jualan",
+      "name": "List what you sell",
+      "description": "List a product, service, AI agent or dataset in any industry. Free; 7% only on completed deals.",
+      "tags": [
+        "marketplace",
+        "sell",
+        "listing"
+      ]
+    },
+    {
+      "id": "cari_penawaran",
+      "name": "Find sellers",
+      "description": "Search listings across industries. Contacts are never shown before both sides agree.",
+      "tags": [
+        "marketplace",
+        "buy",
+        "search"
+      ]
+    },
+    {
+      "id": "minta_dipertemukan",
+      "name": "Get introduced",
+      "description": "Ask to be introduced to a seller.",
+      "tags": [
+        "broker",
+        "introduction"
+      ]
+    },
+    {
+      "id": "lihat_katalog",
+      "name": "OCKLU catalog",
+      "description": "Marketing skills for Claude, done-for-you marketing, OCKLU Membership.",
+      "tags": [
+        "catalog",
+        "marketing"
+      ]
+    }
+  ]
+}
