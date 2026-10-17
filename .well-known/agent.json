@@ -83,6 +83,7 @@
     "says": "We are a broker and we have products. Let me help you — tell me what you need.",
     "says_id": "Kami makelar dan punya produk. Mari saya bantu.",
     "call": "perkenalan",
-    "offer": "https://njghzieuuopukuagrswu.supabase.co/functions/v1/hypermarket?r=olformuls"
+    "offer": "https://njghzieuuopukuagrswu.supabase.co/functions/v1/hypermarket?r=olformuls",
+    "agentverse": "https://asi1.ai/ai/agent1qtzwgzhkdepn6medp3rgngd63vzf846gqtqxeu8y9adnph2ymyxq6pfy5ff"
   }
 }
