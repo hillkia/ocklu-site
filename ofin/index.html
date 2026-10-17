@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ofin · Ocklu Finance</title>
+<meta name="description" content="Ofin (Ocklu Finance) — lapisan pembayaran OCKLU. Ofin Pay menagih komisi makelar 7% Hyper Market lewat PayPal, tercatat dan terverifikasi.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='28' fill='%237cf5d4'/%3E%3Ctext x='32' y='42' font-size='30' text-anchor='middle' font-family='Arial' font-weight='700' fill='%2305060f'%3EO%3C/text%3E%3C/svg%3E">
+<style>
+:root{--bg:#05060f;--kartu:rgba(255,255,255,.045);--garis:rgba(255,255,255,.1);--teks:#eef0ff;--redup:#9aa0bd;--aksen:#7cf5d4;--emas:#ffd27a;--merah:#ff8a8a}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#f4f5fb;--kartu:#fff;--garis:#dfe1ec;--teks:#141629;--redup:#5b6078;--aksen:#0b8f74;--emas:#a86b00;--merah:#c0392b}}
+:root[data-theme="light"]{--bg:#f4f5fb;--kartu:#fff;--garis:#dfe1ec;--teks:#141629;--redup:#5b6078;--aksen:#0b8f74;--emas:#a86b00;--merah:#c0392b}
+:root[data-theme="dark"]{--bg:#05060f;--kartu:rgba(255,255,255,.045);--garis:rgba(255,255,255,.1);--teks:#eef0ff;--redup:#9aa0bd;--aksen:#7cf5d4;--emas:#ffd27a;--merah:#ff8a8a}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--teks);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px 48px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 0;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:20px}.logo i{width:34px;height:34px;border-radius:50%;background:var(--aksen);color:var(--bg);display:grid;place-items:center;font-style:normal}
+h1{font-size:clamp(26px,5vw,40px);margin:8px 0 6px;line-height:1.15}h2{font-size:19px;margin:28px 0 10px}
+.redup,.kosong{color:var(--redup)}a{color:var(--aksen)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.kartu{background:var(--kartu);border:1px solid var(--garis);border-radius:14px;padding:16px}
+.angka{font-size:26px;font-weight:700;font-variant-numeric:tabular-nums}.lbl{font-size:13px;color:var(--redup)}
+.chip{display:inline-block;padding:2px 10px;border-radius:999px;border:1px solid var(--garis);font-size:13px}.ok{color:var(--aksen);border-color:var(--aksen)}.tunggu{color:var(--emas);border-color:var(--emas)}
+table{width:100%;border-collapse:collapse;font-size:14px}th,td{text-align:left;padding:8px 6px;border-bottom:1px solid var(--garis)}th{color:var(--redup);font-weight:500}
+.tabel{overflow-x:auto}ol.alur{margin:0;padding-left:20px}ol.alur li{margin:6px 0}
+ul.todo{list-style:none;margin:0;padding:0}ul.todo li{display:flex;gap:10px;align-items:center;padding:8px 0;border-bottom:1px solid var(--garis)}ul.todo li.done span{text-decoration:line-through;color:var(--redup)}
+input[type=checkbox]{width:20px;height:20px;accent-color:var(--aksen)}
+.btn{min-height:40px;padding:8px 14px;border-radius:10px;border:1px solid var(--garis);background:transparent;color:inherit;font:inherit;cursor:pointer}.btn:hover{border-color:var(--aksen)}
+.baris{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.baris input{flex:1;min-width:180px;min-height:40px;padding:8px 10px;border-radius:10px;border:1px solid var(--garis);background:transparent;color:inherit;font:inherit}
+.hapus{margin-left:auto;background:none;border:0;color:var(--redup);cursor:pointer;font-size:18px;min-width:32px;min-height:32px}
+footer{margin-top:32px;font-size:13px;color:var(--redup)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header><div class="logo"><i>O</i>Ofin <span class="redup" style="font-weight:400;font-size:15px">· Ocklu Finance</span></div>
+<div><span class="chip" id="waktu">memuat…</span> <span class="chip ok" id="ownerChip" hidden>mode owner</span> <a href="/hypermarket/#makelar">Pasar Makelar ↗</a></div></header>
+
+<h1>Ofin Pay — pembayaran & komisi OCKLU</h1>
+<p class="redup" style="max-width:720px;margin:0">Setiap transaksi yang lahir dari perjodohan Pasar Makelar menghasilkan tagihan komisi 7% bernomor <b>OFIN-J…</b>. Penjual membayar lewat PayPal; begitu PayPal mengonfirmasi (IPN terverifikasi), status otomatis jadi <b>lunas</b> dan owner dikabari di Telegram.</p>
+
+<h2>Ringkasan</h2>
+<div class="grid" id="ringkas"><div class="kartu kosong">memuat…</div></div>
+
+<h2>Buku tagihan Ofin Pay</h2>
+<div class="kartu tabel"><table><thead><tr><th>Invoice</th><th>Waktu</th><th>Status</th><th>Nilai transaksi</th><th>Komisi 7%</th></tr></thead><tbody id="buku"><tr><td colspan="5" class="kosong">memuat…</td></tr></tbody></table></div>
+
+<h2>To-do Ofin</h2>
+<div class="kartu"><ul class="todo" id="todo"><li class="kosong">memuat…</li></ul>
+<div class="baris" id="todoTambah" hidden><input id="todoIn" maxlength="200" placeholder="tambah to-do…" aria-label="To-do baru"><button class="btn" id="todoBtn" type="button">Tambah</button></div>
+<p class="kosong" id="todoKet" style="margin:10px 0 0">Centang/tambah to-do: buka dulu shortcut <b>Owner Hyper Market</b> di perangkat ini.</p></div>
+
+<h2>Cara uang mengalir</h2>
+<div class="kartu"><ol class="alur">
+<li>Penjual memasang jualan di Pasar Makelar (gratis). Agen/pembeli minta dipertemukan.</li>
+<li>Dua pihak setuju → kontak dibuka. Transaksi terjadi langsung antara penjual & pembeli.</li>
+<li>Penjual melaporkan transaksi → Ofin Pay membuat tagihan komisi 7% (link PayPal, nomor OFIN-J…).</li>
+<li>PayPal mengabari server (IPN) → diverifikasi balik ke PayPal → status <b>lunas</b> + kabar Telegram.</li>
+</ol></div>
+
+<h2>Batas yang jujur</h2>
+<div class="kartu redup" id="batas">Ofin adalah merek. Uang diterima lewat PayPal/Gumroad/Stripe milik owner; Ofin tidak menyimpan saldo pihak lain. Memegang dana/dompet sendiri butuh izin Bank Indonesia.</div>
+
+<footer>Ofin · Ocklu Finance — bagian dari OCKLU. Data dibaca hidup dari server Hyper Market. <a href="/hypermarket/">Hyper Market</a></footer>
+</div>
+<script>
+var API="https://njghzieuuopukuagrswu.supabase.co/functions/v1/hypermarket";
+function ls(k){try{return localStorage.getItem(k)}catch(e){return null}}
+function esc(t){return String(t==null?"":t).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function uang(o){var k=Object.keys(o||{});return k.length?k.map(function(m){return o[m].toLocaleString("id-ID")+" "+m}).join(" · "):"0"}
+var STATUS={usul:"diusulkan MARKUS",menunggu_penjual:"menunggu penjual",menunggu_pembeli:"menunggu pembeli",kontak_dibuka:"kontak dibuka",transaksi:"transaksi (tagih manual)",tagih:"ditagih Ofin Pay",lunas:"lunas",batal:"batal"};
+var PIN=ls("hm_pin"),OWNER=false;
+function owner(b){return fetch(API+"?r=owner",{method:"POST",headers:{"Content-Type":"application/json","x-owner":PIN||""},body:JSON.stringify(b)}).then(function(r){return r.json()}).catch(function(e){return{galat:String(e)}})}
+function muat(){fetch(API+"?r=ofin").then(function(r){return r.json()}).then(function(d){
+  document.getElementById("waktu").textContent="diperbarui "+new Date(d.sekarang).toLocaleString("id-ID",{dateStyle:"medium",timeStyle:"short"});
+  var js=d.jodoh_per_status||{},mk=d.makelar||{};
+  document.getElementById("ringkas").innerHTML=[
+    ["Penerima Ofin Pay",d.penerima.ada?d.penerima.tersamar:"belum diisi",d.penerima.ada?"ok":"tunggu"],
+    ["Komisi ditagih",uang(d.komisi.tertagih),""],["Komisi lunas",uang(d.komisi.lunas),"ok"],
+    ["Penawaran aktif",String(mk.penawaran_aktif!=null?mk.penawaran_aktif:0),""],
+    ["Jodoh berjalan",String(Object.keys(js).filter(function(k){return k!=="batal"&&k!=="lunas"}).reduce(function(a,k){return a+js[k]},0)),""]
+  ].map(function(x){return'<div class="kartu"><div class="lbl">'+x[0]+'</div><div class="angka'+(x[2]?' '+x[2]:'')+'" style="'+(x[2]==="ok"?"color:var(--aksen)":x[2]==="tunggu"?"color:var(--emas)":"")+'">'+esc(x[1])+'</div></div>'}).join("");
+  var B=d.buku||[];
+  document.getElementById("buku").innerHTML=B.length?B.map(function(b){return"<tr><td><b>"+esc(b.invoice)+"</b></td><td>"+new Date(b.pada).toLocaleDateString("id-ID")+'</td><td><span class="chip '+(b.status==="lunas"?"ok":"tunggu")+'">'+esc(STATUS[b.status]||b.status)+"</span></td><td>"+esc(b.nilai)+" "+esc(b.mata_uang)+"</td><td>"+esc(b.komisi)+" "+esc(b.mata_uang)+"</td></tr>"}).join(""):'<tr><td colspan="5" class="kosong">Belum ada tagihan. Tagihan pertama muncul saat penjual melaporkan transaksi dari jodoh Pasar Makelar.</td></tr>';
+  var T=d.todo||[];
+  document.getElementById("todo").innerHTML=T.length?T.map(function(t){return'<li class="'+(t.selesai?"done":"")+'"><input type="checkbox" data-id="'+t.id+'" '+(t.selesai?"checked":"")+(OWNER?"":" disabled")+' aria-label="Selesai"><span>'+esc(t.judul)+'</span>'+(OWNER?'<button class="hapus" data-hapus="'+t.id+'" aria-label="Hapus">×</button>':'')+'</li>'}).join(""):'<li class="kosong">Belum ada to-do.</li>';
+  document.querySelectorAll("#todo input[data-id]").forEach(function(c){c.onchange=function(){owner({aksi:"todo_ubah",id:+c.dataset.id,selesai:c.checked}).then(muat)}});
+  document.querySelectorAll("#todo [data-hapus]").forEach(function(b){b.onclick=function(){owner({aksi:"todo_ubah",id:+b.dataset.hapus,hapus:true}).then(muat)}});
+  if(d.batas)document.getElementById("batas").textContent=d.batas;
+}).catch(function(){document.getElementById("waktu").textContent="server tidak terjangkau — coba muat ulang"})}
+document.getElementById("todoBtn").onclick=function(){var i=document.getElementById("todoIn");if(!i.value.trim())return;owner({aksi:"todo_tambah",judul:i.value.trim()}).then(function(d){if(d.ok)i.value="";muat()})};
+if(PIN)owner({aksi:"cek"}).then(function(d){if(d.ok){OWNER=true;document.getElementById("ownerChip").hidden=false;document.getElementById("todoTambah").hidden=false;document.getElementById("todoKet").hidden=true;muat()}});
+muat();setInterval(muat,60000);
+</script>
+</body>
+</html>
