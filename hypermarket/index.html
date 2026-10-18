@@ -495,6 +495,7 @@ function saringMk(){var n=0;document.querySelectorAll("#mkDaftar tr").forEach(fu
   k.innerHTML=mkFilter?'Menampilkan '+n+' penawaran industri <b>'+esc(mkFilter)+'</b>. <a href="#makelar" id="mkSemua">Tampilkan semua</a>':'Klik nama industri untuk menyaring penawaran.';
   var s=document.getElementById("mkSemua");if(s)s.onclick=function(e){e.preventDefault();mkFilter="";saringMk()}}
 function kirimOwner(b){return fetch(API+"?r=owner",{method:"POST",headers:{"Content-Type":"application/json","x-owner":ls("hm_pin")||PINMEM||""},body:JSON.stringify(b)}).then(function(r){return r.json()}).catch(function(e){return{galat:String(e)}})}
+window.HM={API:API,esc:esc,lalu:lalu,ls:ls,pin:function(){return ls("hm_pin")||PINMEM||""}};
 function cekOwner(){kirimOwner({aksi:"cek"}).then(function(d){if(d.ok){OWNER=true;pasangOwner();cekPaypal();muatKlien()}else if(/PIN owner salah/.test(d.galat||"")){ls("hm_pin",null);PINMEM="";alert("PIN owner salah.")}else setTimeout(cekOwner,5000)})}
 (function(){var q=ls("hm_pin")||window.__pinq;if(q){PINMEM=q;cekOwner()}})();
 document.getElementById("masukOwner").onclick=function(){var p=prompt("PIN owner (ada di shortcut Owner Hyper Market):");if(!p)return;p=p.trim();PINMEM=p;ls("hm_pin",p);cekOwner()};
@@ -577,8 +578,12 @@ document.getElementById("siar").onclick=function(){var b=this,ket=document.getEl
 <script>(function(){var as=[].slice.call(document.querySelectorAll("#tabbar a[href^='#']"));if(!("IntersectionObserver" in window))return;var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){as.forEach(function(a){a.classList.toggle("aktif",a.getAttribute("href")==="#"+e.target.id)});var a=as.filter(function(a){return a.classList.contains("aktif")})[0];if(a&&a.scrollIntoView)a.parentNode.scrollLeft=a.offsetLeft-40}})},{rootMargin:"-70px 0px -70% 0px"});as.forEach(function(a){var t=document.getElementById(a.getAttribute("href").slice(1));if(t)io.observe(t)})})();</script>
 <script>
 // ---------------------------------------------------------------- Klien Khusus (makelar?r=klien, mode owner)
+var API=(window.HM||{}).API||"https://njghzieuuopukuagrswu.supabase.co/functions/v1/hypermarket";
+var esc=(window.HM||{}).esc||function(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})};
+var lalu=(window.HM||{}).lalu||function(t){return t?new Date(t).toLocaleString("id-ID"):""};
+var ls=(window.HM||{}).ls||function(){return null};
 var MKL=API.replace(/\/hypermarket$/,"/makelar");
-function klienApi(b){return fetch(MKL+"?r=klien",{method:"POST",headers:{"Content-Type":"application/json","x-owner":ls("hm_pin")||PINMEM||""},body:JSON.stringify(b)}).then(function(r){return r.json()}).catch(function(e){return{galat:String(e)}})}
+function klienApi(b){return fetch(MKL+"?r=klien",{method:"POST",headers:{"Content-Type":"application/json","x-owner":(window.HM?window.HM.pin():"")},body:JSON.stringify(b)}).then(function(r){return r.json()}).catch(function(e){return{galat:String(e)}})}
 function muatKlien(){var k=document.getElementById("klKunci");if(k)k.hidden=true;klienApi({aksi:"daftar"}).then(function(d){var ul=document.getElementById("klDaftar");if(!ul)return;var K=d.klien||[];
   ul.innerHTML=d.galat?'<li class="kosong">'+esc(d.galat)+'</li>':K.length?K.map(function(k){var t=(k.temuan_terbaru||[]);return'<li><time>'+lalu(k.pada)+'</time><b>'+esc(k.nama)+'</b> <span class="chip '+(k.status==="aktif"?"ok":"tunggu")+'">'+esc(k.status)+'</span> <span class="chip">'+(k.jenis==="cari_pembeli"?"cari pembeli":"cari penjual")+'</span><br>'+esc(k.apa)+(k.harga?' · '+esc(k.harga)+' '+esc(k.mata_uang||""):'')+'<br><span class="kosong">'+(k.temuan||0)+' temuan'+(k.terakhir?' · terakhir '+lalu(k.terakhir):'')+'</span>'
     +(t.length?'<ul style="margin:6px 0 0;padding-left:18px">'+t.slice(0,5).map(function(x){return'<li>'+esc(x.judul||"")+(x.sumber?' <span class="kosong">('+esc(x.sumber)+')</span>':'')+(x.penjual?' <span class="kosong">· '+esc(x.penjual)+'</span>':'')+(x.url&&/^https?:/.test(x.url)?' <a href="'+esc(x.url)+'" target="_blank" rel="noopener nofollow">buka</a>':'')+'</li>'}).join("")+'</ul>':'')
