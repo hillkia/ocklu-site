@@ -531,7 +531,13 @@ window.HM={API:API,esc:esc,lalu:lalu,ls:ls,pin:function(){return ls("hm_pin")||P
 function cekOwner(){kirimOwner({aksi:"cek"}).then(function(d){if(d.ok){OWNER=true;pasangOwner();cekPaypal();muatKlien()}else if(/PIN owner salah/.test(d.galat||"")){ls("hm_pin",null);PINMEM="";var mc=document.getElementById("ownerChip");if(mc){mc.hidden=false;mc.hidden=true;mc.className="chip tunggu"}}else setTimeout(cekOwner,5000)})}
 (function(){var q=ls("hm_pin")||window.__pinq;if(q){PINMEM=q;cekOwner()}})();
 function normNama(t){return String(t||"").trim().toLowerCase().replace(/\s+/g," ")}
-document.getElementById("masukOwner").onclick=function(){var q=ls("hm_pin")||PINMEM;if(q){PINMEM=q;cekOwner()}else{this.textContent="Perangkat ini belum dikenali";this.disabled=true}};
+function normNama(t){return String(t||"").trim().toLowerCase().replace(/\s+/g," ")}
+document.getElementById("masukOwner").onclick=function(){
+  laci("Masuk owner",'<form id="fMasuk" class="baris"><input id="namaOwner" type="password" autocomplete="current-password" placeholder="Ketik nama kamu" aria-label="Nama kamu"><button class="btn mini" type="submit">Masuk</button></form><p class="kosong" id="masukKet"></p>');
+  setTimeout(function(){var n=document.getElementById("namaOwner");if(n)n.focus()},50);
+  document.getElementById("fMasuk").onsubmit=function(e){e.preventDefault();var v=normNama(document.getElementById("namaOwner").value);if(!v)return;document.getElementById("masukKet").textContent="memeriksa…";
+    fetch("https://njghzieuuopukuagrswu.supabase.co/functions/v1/kendali",{method:"POST",headers:{"Content-Type":"application/json","x-owner":v},body:JSON.stringify({aksi:"daftar"})}).then(function(r){
+      if(r.ok){ls("hm_pin",v);PINMEM=v;document.getElementById("laci").close();cekOwner()}else document.getElementById("masukKet").textContent=r.status===429?"Terlalu banyak percobaan, tunggu 10 menit.":"Nama belum cocok — ketik persis nama yang kamu simpan di Kendali."})}};
 var KENDALI="https://njghzieuuopukuagrswu.supabase.co/functions/v1/kendali";
 function kendaliApi(b){return fetch(KENDALI,{method:"POST",headers:{"Content-Type":"application/json","x-owner":ls("hm_pin")||PINMEM||""},body:JSON.stringify(b)}).then(function(r){return r.json()}).catch(function(e){return{galat:String(e)}})}
 function muatKendali(){var t=document.getElementById("kdDaftar");t.innerHTML='<tr><td colspan="6" class="kosong">memuat…</td></tr>';kendaliApi({aksi:"daftar"}).then(function(d){
