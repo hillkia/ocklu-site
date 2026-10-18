@@ -1,5 +1,5 @@
 {
- "w": "2026-10-18T07:59:30Z",
+ "w": "2026-10-18T09:03:28Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -21,8 +21,8 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-10-18T05:14:58Z",
-   "media": 4,
+   "waktu": "2026-10-18T08:11:00Z",
+   "media": 6,
    "judul": {
     "id": "Gubernur Khofifah Pastikan Stok BBM Aman, Bagikan Bantuan Gratis untuk Ojol di Malang",
     "en": "Gubernur Khofifah Pastikan Stok BBM Aman, Bagikan Bantuan Gratis untuk Ojol di Malang"
@@ -32,8 +32,25 @@
     "en": ""
    },
    "sumber": {
-    "nama": "Pojokkiri",
-    "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNYl9RYUM1Z3hpa1RHNDRGOGRLX19vZDQxX1RiRGJCbVZELVQzNkhyTVdSNE5IYmNXUmZzS0luSm1mX0VHZTZkMnB3OVpyMF9hdXhlYm9lNER6ZU1aYW1heERvaGQwSVk4X19zSHYyY1pVMVJMR3Jjd3RkS19fVUh4X05PRlc2Yk5wdmhyNlY4MWlfbXhLZHA0dWZNSFNzQzRoT2diVkhOZHFidWVGR0o2OW50aE9zTFFNenA3ZFEzVVJxRWVzZEF3SnZIbzRhTUx5Vlp5YTd0VU1halJ1QkJzcnl2LWY1NEkzc3cw?oc=5"
+    "nama": "RRI.co.id",
+    "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOOFd0eVNrVEFLRGZxRy14OUlKVFNoT0FuQnFEWWVVVnJDUHRYeUFXTUxvVkhzcnRXT3JCb21WQTFtUlNxZDNraXp1RFN2TTZjZXZoN0ZGa0ZKVk14ZkRBcktHdXhDYmxPQkJYdlJSaHp0a0xiMDhHZTJ1YjRFSFdibDU4bF91OXBRNFdEWDdmWDNiNkZ2dEhxYjRaYnlhdTYxc1JOMlkwTHRPYWJO?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-18T05:47:49Z",
+   "media": 4,
+   "judul": {
+    "id": "Dana Bencana Karhutla hingga Banjir Dikorupsi, Adik Eks Kepala BNPB Jadi Tersangka KPK",
+    "en": "Dana Bencana Karhutla hingga Banjir Dikorupsi, Adik Eks Kepala BNPB Jadi Tersangka KPK"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "kendaripos",
+    "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNdGc2aDdfYlVlN1hOS09HTHA5OTFsczhZX0FqdVZmMXFmTXR3QnhZNnZVU21fNXdQWUx1WjRsbEpVYnJRVVZFUDBzVjcyUHFGTzBiQVBESVdXRURRUncyMXlLNHBEODJBNVg3bVRBMUZqNDJGWW9VMzFGY3R0SEZjYldUY19xc2lTN2dZM3Z0TGFtLTk1MzM3WE1IZ3hiSDNmLVRQSU1aZ09vNnpVQXNENHhrWk5LdUdxYmJhYXpzdjgzNlV5cUVlQWJENThPaWswOWF3?oc=5"
    }
   },
   {
@@ -55,8 +72,25 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-10-18T02:06:10Z",
+   "waktu": "2026-10-18T05:44:01Z",
    "media": 3,
+   "judul": {
+    "id": "Viral Ojol Diduga Jual BBM ke Bule di Canggu Bali Rp200 Ribu per Botol, Polisi Turun Tangan",
+    "en": "Viral Ojol Diduga Jual BBM ke Bule di Canggu Bali Rp200 Ribu per Botol, Polisi Turun Tangan"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Tribunnews.com",
+    "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQLTBpWVRsWDkwOHVPT2dzY2E2UFBhS1FuMVd1dWd3SWliTWRwV3NlRFpUT3hKc3BNVXNMLWNqZXJRUDBtVkJ0cDV4R3BhbmNEWWtrUFNFaTN3UktZWDlNY3FmaXFEUXRIY24tYzV0TzNCYldaS0xMWXBscUhWQW5Ya01GY2o5aDRyWU8xMVRFeWFkbFJpZkZHb2N5R0xqZlkxTFdfRFprdFFxS09TU091ZXdrbzJueXlYek82YWN1SmVOUlJZcnVFbVpOai0tZDJq?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-18T02:06:10Z",
+   "media": 4,
    "judul": {
     "id": "Skema Bagi Hasil Ojol 92:8 Dinilai Berisiko, Pendapatan Pengemudi Belum Tentu Naik",
     "en": "Skema Bagi Hasil Ojol 92:8 Dinilai Berisiko, Pendapatan Pengemudi Belum Tentu Naik"
@@ -72,19 +106,19 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-10-18T05:44:01Z",
-   "media": 2,
+   "waktu": "2026-10-18T01:19:51Z",
+   "media": 3,
    "judul": {
-    "id": "Viral Ojol Diduga Jual BBM ke Bule di Canggu Bali Rp200 Ribu per Botol, Polisi Turun Tangan",
-    "en": "Viral Ojol Diduga Jual BBM ke Bule di Canggu Bali Rp200 Ribu per Botol, Polisi Turun Tangan"
+    "id": "Aturan Turunan Perpres Ojol, Pengantaran Barang dan Makanan Topang Jutaan Transaksi UMKM",
+    "en": "Aturan Turunan Perpres Ojol, Pengantaran Barang dan Makanan Topang Jutaan Transaksi UMKM"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "Tribunnews.com",
-    "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQLTBpWVRsWDkwOHVPT2dzY2E2UFBhS1FuMVd1dWd3SWliTWRwV3NlRFpUT3hKc3BNVXNMLWNqZXJRUDBtVkJ0cDV4R3BhbmNEWWtrUFNFaTN3UktZWDlNY3FmaXFEUXRIY24tYzV0TzNCYldaS0xMWXBscUhWQW5Ya01GY2o5aDRyWU8xMVRFeWFkbFJpZkZHb2N5R0xqZlkxTFdfRFprdFFxS09TU091ZXdrbzJueXlYek82YWN1SmVOUlJZcnVFbVpOai0tZDJq?oc=5"
+    "nama": "VIVA.co.id",
+    "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPM3Z6QVhTamx6UW53WHpvNE91R25ZTGRYb08yUjJRYWFNNHNVRUVMX0M3dDNRWEdlOWlCR0QwWjdaY0JlZjZMckRYLTgxTWpWYm5jZmdZQnIwanByRl9lRWJCOGJmM09TRlN2WUZVZE51eGl6RFA3SjhyZmJjNUNDVHhudnRrb25oX3NJZnA2ZTZJUzlYUnJHWU9zLUI4c3JDZ1ZOaC1KZXFRX0xhQ3hvdFpsbHBOUHk5d21GQ2JnN3ZxYU1UUW5GYmNmNC1peFhF0gHWAUFVX3lxTFBkcURFNzZnXzliUmVpN3hhV0FVbnFqRGJCeVRoa19QMlEwQUJnM3Nzb05tRTdrUEx1T3JnMm9xSVY0ZWhOLXJGbVRTdW51NmVaenVMa2tVTzg5dkc0UHdaR0E4TWsxN3NrTFdKLVJON2lIUVluNjFCdTBOaENtaVBDMkYzeXF0VW11RWVBM3IyZ0lqa3NOcHF3aExTOXozQkkyZ2x4RUMyTTZlUVRjeDBjanR2U1U1T1JsVFlVNEF2MDlJMVlqYUY3Zk4zVlJ1a1BtNlhSNHc?oc=5"
    }
   },
   {
@@ -140,19 +174,19 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-10-18T01:19:51Z",
-   "media": 2,
+   "waktu": "2026-10-18T08:01:38Z",
+   "media": 1,
    "judul": {
-    "id": "Aturan Turunan Perpres Ojol, Pengantaran Barang dan Makanan Topang Jutaan Transaksi UMKM",
-    "en": "Aturan Turunan Perpres Ojol, Pengantaran Barang dan Makanan Topang Jutaan Transaksi UMKM"
+    "id": "Jambret Wanita ASN Modus Tanya Alamat, Pria Berjaket Ojol di Medan Ditembak",
+    "en": "Jambret Wanita ASN Modus Tanya Alamat, Pria Berjaket Ojol di Medan Ditembak"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "VIVA.co.id",
-    "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPM3Z6QVhTamx6UW53WHpvNE91R25ZTGRYb08yUjJRYWFNNHNVRUVMX0M3dDNRWEdlOWlCR0QwWjdaY0JlZjZMckRYLTgxTWpWYm5jZmdZQnIwanByRl9lRWJCOGJmM09TRlN2WUZVZE51eGl6RFA3SjhyZmJjNUNDVHhudnRrb25oX3NJZnA2ZTZJUzlYUnJHWU9zLUI4c3JDZ1ZOaC1KZXFRX0xhQ3hvdFpsbHBOUHk5d21GQ2JnN3ZxYU1UUW5GYmNmNC1peFhF0gHWAUFVX3lxTFBkcURFNzZnXzliUmVpN3hhV0FVbnFqRGJCeVRoa19QMlEwQUJnM3Nzb05tRTdrUEx1T3JnMm9xSVY0ZWhOLXJGbVRTdW51NmVaenVMa2tVTzg5dkc0UHdaR0E4TWsxN3NrTFdKLVJON2lIUVluNjFCdTBOaENtaVBDMkYzeXF0VW11RWVBM3IyZ0lqa3NOcHF3aExTOXozQkkyZ2x4RUMyTTZlUVRjeDBjanR2U1U1T1JsVFlVNEF2MDlJMVlqYUY3Zk4zVlJ1a1BtNlhSNHc?oc=5"
+    "nama": "detikcom",
+    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNWEc5VTczT2Jvb1A2bXNMZGFUYXhMQ2RNenJPTmxjY0NQU1BQbFM5ZlJobnFUSXdTdUVOVkJvRXNTUG9QSjVuZng0cnJwZVFzZUdiTkswVW4zM2hHYV9fU2ozSkl3N042UmxDZkZMYmpfRDgyYWpOTDVSLTN6ZlY4ZmFDV1VDQ1VvRTZOXzdJRGFmSWROM0tpMEs5WWRnbXRHME1ZUVlJbWtSX0RrSHViX3hoRdIBuAFBVV95cUxQdzVOOUFrV1JGcmdpWXNYTmxQdTBDSHE5TnNDdm0yTWVjdVJzeTJlbFdGbldrdkNFaVdjUG9rV3d2aC1DOHJjdWp6RXlKQ0JQY3o0WUhCX0U5V1ZWVlVxZ2hfYy0zZFNRTnp5OXduazhad3lIaExyR01JTnMzVmY5UlpxWGdaZ1Y1MHdYclA5cnppZXlPU1ByZlcxVXI3NmVhZk5NNXpNTXEzZHFWMmR4WXFHN1R6YnQ0?oc=5"
    }
   },
   {
@@ -170,6 +204,40 @@
    "sumber": {
     "nama": "ANTARA News",
     "url": "https://news.google.com/rss/articles/CBMihAJBVV95cUxQNC11TUVmOS1zeXZNaExQekJfQy1BS2NoQV9DTlR3MHM5NHp3RkVSWUM2MVYza2JMQ3FiNkhJZHR5dU1CYjhOQXdSemRxcUZxVml0bkg1S1hjS3VmamFrRVlkODZjT1l0bFhoNUdONVJ2OHlWaFpIYW1vb1lUdm43dWF0R1pxcW9NaW5sWndwMmVtR0hDcWNRbUhnZ2xaSmdYSjI2WVVVcGxMcklsb0I0cHVEejAtWEVKTG5kR0lBYUxzbTNKUTM4UmNKRDUzNFlEY09feDU0S2U2WUp0MkxGQW9ZZG5tcWhsWkxBeWF0U3hnR2tqdm5laWhOOHpYaUl4MjFCcg?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-18T07:00:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Perpres Ojol: biaya platform 8%, aturan turunan akhir 2026",
+    "en": "Perpres Ojol: biaya platform 8%, aturan turunan akhir 2026"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "quasa.io",
+    "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNMjU0bUFDM0JtTWFoODRVbHFvZ2J1c0VtSjBSV1o1clJsdHpGMnBQLTVuckRRRlRPOUxEdHF1VnVTa0tuM2dLay1TUzh5NzFKTmMxWmx4MDFOc2FqR1ZONWJFLWMyNU9lZVgwNU9wbUpmaW5wUnEzTXBCeEJRMlNuNUlyUkNiNEl2c1d6UElPc3NKRGtzVGc?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-18T06:53:07Z",
+   "media": 1,
+   "judul": {
+    "id": "Pengemudi Ojol Dibegal dan Dibacok saat Mangkal Dekat Terminal Tanjung Priok, Motor Dirampas",
+    "en": "Pengemudi Ojol Dibegal dan Dibacok saat Mangkal Dekat Terminal Tanjung Priok, Motor Dirampas"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Tribunjakarta.com",
+    "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNdVd1VHJpR19sMDJvVmx2cHdrOWdobHAzcnZvdkdQWjNUZENpYVNlRVY1V01rWHVCVkE1UG5qQkhSMFFWd1ZLNFEtUXFNVDNuSlhlNkJKYWNodjFVTkNOS25oLVdDOVd0R3EyT3E1NHRhdVI0eFpPZ01IVGVxZmVKZmtDWElYWXFveXdNLVRBYkZEUUJLb3RzYzRHLTA5czBGYVU1bldhblJCTjlDbHdwVW1UcnM4aVBRdUhkbFV4eUV3M3JnSGxWaWFiSVpkWnJsX0s0?oc=5"
    }
   },
   {
@@ -225,6 +293,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-10-18T02:35:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Aksi Peduli Ojol hingga Evaluasi SPBU, Inilah Langkah Nyata Gubernur Khofifah di Malang",
+    "en": "Aksi Peduli Ojol hingga Evaluasi SPBU, Inilah Langkah Nyata Gubernur Khofifah di Malang"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Nusantara News",
+    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPejU1UTBUdHIwQ3c4aHlSZXpkeERBVW5HaXpQQXdxSU5uT25DM0hpN20zeWdoVFFpbm9JeWFJTnBQSFNBeHl1SXUzNzQ3RHVNNFlUSlIxZ0VVLWVDWUdfRTlVbG1uZlJHMnR3M3M5SGFtVy1XN3piSlBlNllQWkhKN1BiS2xDaWJLM2xWSUJpNWdJa3VqRVl5YnZMdUpWaEdIeEtJLXdBNTFEcTg5b2p3Zg?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-10-18T02:21:00Z",
    "media": 1,
    "judul": {
@@ -238,6 +323,23 @@
    "sumber": {
     "nama": "Radar Lampung",
     "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxObnJ2allmUklxVXM3UFNJUElreFE3NmJNM1ZqXzYyNEJDbXRUTi1RZW1VcklDTjBXVEtZeHp0d3Nkb3hDNERCMHp5bVhJeDd1UzVtQkhLYmVQaUF1c1ZNV1hyTXZQc2FGcmoxNVZOZmV4X3JuUk1KdUxiOHhMSEVoa3ZaS2VTSkl6SV96Z0ZHZUtNcldJOXUxZmpDVl9wRnRzdG5ibzJ6SnNUQ1lmVTAtMndLTE9hMXZnZFdyU0FfRdIBqgFBVV95cUxONm11bjIzUlhkY1R0blJHdXhCTS1TRHB4UkxwX2NkRUlHZnEybnAwZnZqQXJrUUlWZ2dlcmpQZDB6bWtvYV9tVTRadEUxMmoyUXQ1N1o5NXhOT0QzblE5UmJUSmZlNHVjSzZpVS1HejZUdk43R0haMTRROXlDWGRZNWwzNEh4TU42ZTJXYktKWGxxNWVueGNmYUVEa2oxa2hJaUxFcW1SMmJPUQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-18T02:14:00Z",
+   "media": 1,
+   "judul": {
+    "id": "F-SPTI Lampung Usul SIM Gratis dan BPJS Ojol Dibayar Aplikator",
+    "en": "F-SPTI Lampung Usul SIM Gratis dan BPJS Ojol Dibayar Aplikator"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Radar Lampung",
+    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNTktod0t2a2Rtb0d2ZDV1X3JMeklFNjg1cWYyMXJLSV9OOVF2TWRiT1gtNndvdjRaM1I3Z21CNC16VkFsTnMzRXlIWG9ZNmZQaGVVUjJWZjBaQW9UbGtQME16T0x1cnBoVFl4WnJLNUozUEpncVVvMWRDRGJaSDlSMEhfVDVvc3J1YmRSc3VYcHRjbWZ1Nkx1NlRiM3lpbWJCXzd1djZEUdIBpwFBVV95cUxNTktod0t2a2Rtb0d2ZDV1X3JMeklFNjg1cWYyMXJLSV9OOVF2TWRiT1gtNndvdjRaM1I3Z21CNC16VkFsTnMzRXlIWG9ZNmZQaGVVUjJWZjBaQW9UbGtQME16T0x1cnBoVFl4WnJLNUozUEpncVVvMWRDRGJaSDlSMEhfVDVvc3J1YmRSc3VYcHRjbWZ1Nkx1NlRiM3lpbWJCXzd1djZEUQ?oc=5"
    }
   },
   {
