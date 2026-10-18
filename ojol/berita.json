@@ -1,5 +1,5 @@
 {
- "w": "2026-10-18T11:49:24Z",
+ "w": "2026-10-18T12:52:19Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -22,10 +22,10 @@
   {
    "jenis": "berita",
    "waktu": "2026-10-18T08:11:00Z",
-   "media": 6,
+   "media": 8,
    "judul": {
-    "id": "Gubernur Khofifah Pastikan Stok BBM Aman, Bagikan Bantuan Gratis untuk Ojol di Malang",
-    "en": "Gubernur Khofifah Pastikan Stok BBM Aman, Bagikan Bantuan Gratis untuk Ojol di Malang"
+    "id": "Gubernur Khofifah Minta Warga Malang Tak Panic Buying BBM, Dijamin Stok Aman",
+    "en": "Gubernur Khofifah Minta Warga Malang Tak Panic Buying BBM, Dijamin Stok Aman"
    },
    "isi": {
     "id": "",
@@ -55,6 +55,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-10-18T05:44:01Z",
+   "media": 4,
+   "judul": {
+    "id": "Video: Bisa-bisanya Pria Berjaket Ojol di Bali Jual Bensin Eceran ke Bule Rp 200 Ribu",
+    "en": "Video: Bisa-bisanya Pria Berjaket Ojol di Bali Jual Bensin Eceran ke Bule Rp 200 Ribu"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Tribunnews.com",
+    "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQLTBpWVRsWDkwOHVPT2dzY2E2UFBhS1FuMVd1dWd3SWliTWRwV3NlRFpUT3hKc3BNVXNMLWNqZXJRUDBtVkJ0cDV4R3BhbmNEWWtrUFNFaTN3UktZWDlNY3FmaXFEUXRIY24tYzV0TzNCYldaS0xMWXBscUhWQW5Ya01GY2o5aDRyWU8xMVRFeWFkbFJpZkZHb2N5R0xqZlkxTFdfRFprdFFxS09TU091ZXdrbzJueXlYek82YWN1SmVOUlJZcnVFbVpOai0tZDJq?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-10-18T05:30:00Z",
    "media": 1,
    "judul": {
@@ -68,23 +85,6 @@
    "sumber": {
     "nama": "ANTARA News",
     "url": "https://www.antaranews.com/berita/5792925/bmkg-imbau-warga-waspadai-potensi-gelombang-tinggi-dan-banjir-rob"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-18T05:44:01Z",
-   "media": 3,
-   "judul": {
-    "id": "Viral Ojol Diduga Jual BBM ke Bule di Canggu Bali Rp200 Ribu per Botol, Polisi Turun Tangan",
-    "en": "Viral Ojol Diduga Jual BBM ke Bule di Canggu Bali Rp200 Ribu per Botol, Polisi Turun Tangan"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Tribunnews.com",
-    "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQLTBpWVRsWDkwOHVPT2dzY2E2UFBhS1FuMVd1dWd3SWliTWRwV3NlRFpUT3hKc3BNVXNMLWNqZXJRUDBtVkJ0cDV4R3BhbmNEWWtrUFNFaTN3UktZWDlNY3FmaXFEUXRIY24tYzV0TzNCYldaS0xMWXBscUhWQW5Ya01GY2o5aDRyWU8xMVRFeWFkbFJpZkZHb2N5R0xqZlkxTFdfRFprdFFxS09TU091ZXdrbzJueXlYek82YWN1SmVOUlJZcnVFbVpOai0tZDJq?oc=5"
    }
   },
   {
@@ -140,6 +140,40 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-10-18T05:47:42Z",
+   "media": 2,
+   "judul": {
+    "id": "10 Motor Untuk Ojek Online Paling Layak Dipilih, Irit BBM Dan Nyaman Buat Narik!",
+    "en": "10 Motor Untuk Ojek Online Paling Layak Dipilih, Irit BBM Dan Nyaman Buat Narik!"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "ChatNews.id",
+    "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1aM051SlRlRVYtcXZqM01mSENxOTc1VHBUYkJ4c0N6VlUyUGVPVUhqd3RkN05rbXZkSVBuQmZycXpMQ3VMV0lTX1c1d1Z3ejBEckVGSFkzOTd5aDFrX3ozWjZTZmk?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-18T11:11:29Z",
+   "media": 1,
+   "judul": {
+    "id": "Anak Pengemudi Ojol Buktikan Bisa Lulus Kuliah Tepat Waktu, Mayoritas Cum Laude",
+    "en": "Anak Pengemudi Ojol Buktikan Bisa Lulus Kuliah Tepat Waktu, Mayoritas Cum Laude"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Jawa Pos",
+    "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOYXhtbFpnRVRkQ0l2MzZ6VDJGRjE4Ml93RUE0Vm5LWGpNLTI4ejdZZmllN0hQcXM2WWd0SWJRNkk5YUlIYW9QMTZHUTRNV3pZZVliOTdVS3Fqd01RUzJHS21wcFgxY3pRaXlYcFY5dEh2WEF4Z3NFUWdzSzFKZ2FqWHFqSEVhaUNkVk1OOEhMWFhnOEdqcGthSV9TOV9Xam1jYTd1TkR5Z0NuSUc3WjZ6dlZrTFpwVGJHckZBRGllSDlTdw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-10-18T04:57:31Z",
    "media": 2,
    "judul": {
@@ -191,6 +225,40 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-10-18T10:30:32Z",
+   "media": 1,
+   "judul": {
+    "id": "Sosok Pelaku Begal di Terminal Tanjung Priok, Driver Ojol Alami Luka di Punggung",
+    "en": "Sosok Pelaku Begal di Terminal Tanjung Priok, Driver Ojol Alami Luka di Punggung"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Tribunnews.com",
+    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOLVVxMVdtaDRaQTlCenpGam94Zm5WZ2VhN2FLaFVSU2U0VVNKck9WSW9mcDBKRktpSEVzSzJGQ1hVUHFIV0ozTWJIUkN0cnN1bW95QklwM05KcG53RTJ0TmRaekkyck5ZRU82WVlVdTFEX0dmRWktMHZFY1RDNDZoV3hjOG5zWGZYakd0MjhYU3hSaDBmaEphS0FvVFdYYjdyek5uOUJMT0tQWTlqdndiUHZXMmxSa3l2azBxX3FvcmZDNnB1YWc?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-18T09:59:33Z",
+   "media": 1,
+   "judul": {
+    "id": "Kasus Sopir Alphard Rusak Motor Ojol Pak Mulyadi Berakhir Damai",
+    "en": "Kasus Sopir Alphard Rusak Motor Ojol Pak Mulyadi Berakhir Damai"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Warta Bela Negara",
+    "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNQzhPSjBlb1BtVDliRUpjUnNyd3F2Wjl6S1NEZVJMUTVQTEVQUjRIZm1JMC1mV1c5eUNhRGQyamlxcHZBQXJCb3V1WTdKVlJwQThIbl9lS21RXzVPQ3Brbk5ZTXhjc1VzX0dxTWJGWFJ6ejNrZ0xvNDlMeGlhRnprRG5jcFh5eEE?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-10-18T09:29:00Z",
    "media": 1,
    "judul": {
@@ -208,6 +276,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-10-18T09:19:45Z",
+   "media": 1,
+   "judul": {
+    "id": "Bentuk Ikhtiar Atasi Karhutla, Pemko Palangka Raya dan Pengemudi Ojol Gelar Salat Istisqa",
+    "en": "Bentuk Ikhtiar Atasi Karhutla, Pemko Palangka Raya dan Pengemudi Ojol Gelar Salat Istisqa"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Media Center Kota Palangka Raya",
+    "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPc1VpTmF2V2ZwVnBvMnNfXy1NTFlJSlJ2V0IzZDdORG9POEotU1VHVlZpSTlFdlZJOUxoNmtLWmFQQ0c2Mm9uS2JHQWFrVHgxdTRkQ1lha3QtYWNSTkpTc1hJNGJOSjdrU3BjaWl6azRKWDFfQ1gteDE3Z2pXcTIyWENueU0zcVFERGhCVmNrRUdTMTVFSlZDdXVoSU1JaGZxTS1iaE15bFJteUtiUHJUcTZkcWdDTHBiNVRoWm5QdXM4a3dRQlI4?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-10-18T09:15:58Z",
    "media": 1,
    "judul": {
@@ -221,6 +306,23 @@
    "sumber": {
     "nama": "NUSABALI.com",
     "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOckxIM1p6YVNUTWlxSHFhT1ZjcGJpRlFMdllqNXhmaVZ2QUpRMElHcEF1ZUZSbXpmRUNCMVFDOFRGeEZSSDlsM1EtbXNYMFNtdk5TbFVUZU1GNGstYlQ2ZW92Y3duUWdpb0NXTF9mdVppS2QxaEdTN0xhcmlQS2RnaXBETTFudWtCSWw4SE9FaTBpQQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-18T09:10:56Z",
+   "media": 1,
+   "judul": {
+    "id": "Polisi Tangkap 2 Begal Pengemudi Ojol di Tanjung Priok, Satu Pelaku Residivis Baru Bebas Penjara",
+    "en": "Polisi Tangkap 2 Begal Pengemudi Ojol di Tanjung Priok, Satu Pelaku Residivis Baru Bebas Penjara"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Tribunjakarta.com",
+    "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOY0NjYlNqd0NkbFd3UUlZSUhzMmljSlJzVUphWjV6ODdMSThDalBvVVpKYWlFM2E5SWJEQVdRZFl0TGxfeTJraFNYSk5aS2U4R2FkV3gyNmp2Uk5BN19YUlBaY01DYngxOHVjZTQyQVBQOG9vV1BSR2JyZV9RMXdqd3RtRmZaMEZNRHFYMExpc3R1YTZXMU5vR1hvR01Db0J4MjBnelNjU3NYQ3k0N2t3YTFpZXYyQnNZZTF6ZHVYbm5yN1ppS3BQZ3V0Qk5LVEFVdnBqbVpZeDU?oc=5"
    }
   },
   {
@@ -259,6 +361,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-10-18T07:13:04Z",
+   "media": 1,
+   "judul": {
+    "id": "Terdampak Kabut Asap Karhutla, Ojol hingga Sopir Angkutan di Jambi Akan Diberi Bantuan",
+    "en": "Terdampak Kabut Asap Karhutla, Ojol hingga Sopir Angkutan di Jambi Akan Diberi Bantuan"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Tribunjambi.com",
+    "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPVThoSGlpM1FpcWpPenpMdzdtMzlPbnNXZjUtNUw1bmFpTzZhbTdFNk01SlYtcmpTQlFLOTBMdHJjSm1QZ0ZqcGRUWVV3TmRvQjZsRzZFS0tjNnl3bUg4cm1uUU9EN0ZNYlRENU14a28yejdoWkJHWHJNcTNzdmtic2VLRkFFQUNkSXRLUkllQkpzdTMtbzc0WjUyaHl5dk4yaWxXc1VDQ0JqcmU2VzNwY2VKOXdYTzFCZEczUjZlT3A3azRpNGQ0LXh3?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-10-18T07:12:12Z",
    "media": 1,
    "judul": {
@@ -272,6 +391,23 @@
    "sumber": {
     "nama": "ANTARA News",
     "url": "https://news.google.com/rss/articles/CBMihAJBVV95cUxQNC11TUVmOS1zeXZNaExQekJfQy1BS2NoQV9DTlR3MHM5NHp3RkVSWUM2MVYza2JMQ3FiNkhJZHR5dU1CYjhOQXdSemRxcUZxVml0bkg1S1hjS3VmamFrRVlkODZjT1l0bFhoNUdONVJ2OHlWaFpIYW1vb1lUdm43dWF0R1pxcW9NaW5sWndwMmVtR0hDcWNRbUhnZ2xaSmdYSjI2WVVVcGxMcklsb0I0cHVEejAtWEVKTG5kR0lBYUxzbTNKUTM4UmNKRDUzNFlEY09feDU0S2U2WUp0MkxGQW9ZZG5tcWhsWkxBeWF0U3hnR2tqdm5laWhOOHpYaUl4MjFCcg?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-18T07:06:16Z",
+   "media": 1,
+   "judul": {
+    "id": "FISIP Unhas Gelar FGD Multi-Stakeholder, Bahas Kontribusi Ojol terhadap Ekonomi Sulsel",
+    "en": "FISIP Unhas Gelar FGD Multi-Stakeholder, Bahas Kontribusi Ojol terhadap Ekonomi Sulsel"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Rakyat Sulsel",
+    "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxORW5LMnpVbTV3UmwzYmk4T3FDZ0xWaXE0aWpCWUNBZmJZbUhvOE80ZXJzVWM1UWxmeENkVkpmQjRHRERFOF8zVDJlcTZ1VE05czc5QUo4d29VdEtzSk02R2dELTlVcGp5NzhEYmc2Z2s3MHYtYk1zRmxGaTYtdkRZTWxlM0V0alpNcnBoQURTRUFiU2NHRnhFYTBKaFNMdUNpTUhLVHRJR2lFUGVJMnpVQVlLNGp3UnRLYzgwOU93QTM5ZU5GcTdOQXlzVVFKdW8?oc=5"
    }
   },
   {
@@ -306,23 +442,6 @@
    "sumber": {
     "nama": "Tribunjakarta.com",
     "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNdVd1VHJpR19sMDJvVmx2cHdrOWdobHAzcnZvdkdQWjNUZENpYVNlRVY1V01rWHVCVkE1UG5qQkhSMFFWd1ZLNFEtUXFNVDNuSlhlNkJKYWNodjFVTkNOS25oLVdDOVd0R3EyT3E1NHRhdVI0eFpPZ01IVGVxZmVKZmtDWElYWXFveXdNLVRBYkZEUUJLb3RzYzRHLTA5czBGYVU1bldhblJCTjlDbHdwVW1UcnM4aVBRdUhkbFV4eUV3M3JnSGxWaWFiSVpkWnJsX0s0?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-18T05:45:00Z",
-   "media": 1,
-   "judul": {
-    "id": "10 Motor Untuk Ojek Online Paling Layak Dipilih, Irit BBM Dan Nyaman Buat Narik!",
-    "en": "10 Motor Untuk Ojek Online Paling Layak Dipilih, Irit BBM Dan Nyaman Buat Narik!"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Moladin",
-    "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE4tMm1NZEhqZUNmYVA4RWFQVnppUjAwX0lCY0pPcXNNQUQ3d2hqN0lQU3RBNnVhZVRSWnVkcUowbEE3MWo3N2hnNmNIRERmRkx1T0tMY0wxdW5rWGJkYlE?oc=5"
    }
   }
  ]
