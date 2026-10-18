@@ -1,11 +1,11 @@
 {
- "w": "2026-10-18T09:03:28Z",
+ "w": "2026-10-18T10:49:11Z",
  "dari": "Kroog",
  "berita": [
   {
    "jenis": "berita",
    "waktu": "2026-10-18T02:12:29Z",
-   "media": 13,
+   "media": 14,
    "judul": {
     "id": "KPK Ungkap Dana BNPB yang Diduga Dikorupsi untuk Karhutla, Gempa NTT, dan Banjir",
     "en": "KPK Ungkap Dana BNPB yang Diduga Dikorupsi untuk Karhutla, Gempa NTT, dan Banjir"
@@ -140,6 +140,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-10-18T10:35:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Menteri Pigai Keliling SPBU: Hari Ini Distribusi BBM Bali Aman!",
+    "en": "Menteri Pigai Keliling SPBU: Hari Ini Distribusi BBM Bali Aman!"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Rmol.id",
+    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPd2V4YVg4VUVfTFJKRmhieFEzSk5GNVo5cjAwOEl0Wnc0NndldVRJeF80U1poN3JQNFNLM2h3dllEX1JPRkNGckZNRGswRDgwMzlybWVna1BzOFp1Y2wwaXFCUVFadF9mVy10ZE1IUW1pNmdpSUVwSC1DUUY4UXlORC1fWUdVaEg2OFVtZGR5WV8zMGlNbVlUVmVTRWdGODJaRnJVMFlPX0Y1WUQ3bm9J?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-10-18T04:28:00Z",
    "media": 2,
    "judul": {
@@ -153,6 +170,23 @@
    "sumber": {
     "nama": "RRI.co.id",
     "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQVjBEOThXSWtaSXBmVjVnVFpOWmNiZnpOaHg1RWI1SW1nTDNFSDdiMDVaLWFKd3FyRkZ6aDBjZXRYNnhkdnZmT2VYSWhsTXhmbXZRbWJqLWdJbFJERG5lTFJrRFVsb2czUVlPWEdMWFQ4UzlNNDhHeHhQc0dHZ3F0WUpPYlI4T2pFQ0E5eFhnSkdoRmNEc3NiTXJrTXlydUNqSEtpSTVVamdjQ19xMnc?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-18T09:29:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Inovasi Jepang Kembangkan Kapsul Terapung Antibencana Tsunami dan Banjir",
+    "en": "Inovasi Jepang Kembangkan Kapsul Terapung Antibencana Tsunami dan Banjir"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "RRI.co.id",
+    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOY0FyRDc5bWF5UE1oTXNVWVRTV3pJLVltd3Brc1BmUkZpdGxIYThUdXY1bXYwczdoRkt4VVNpd2pjd3JfWHhZc0U4b3NfYlhKSjRIVHV5VEdrVjA4X0ZVWXE5Q2p1VmplbURRV3RwWFdWNkI5R3ROM25OWWpaUlc0c0ZuZzNmc2NEa1lENDlxb20wc0VhdVpIaWFxZkRoWkdXbHJQampoeUZla0R4Ym1mcU9RNA?oc=5"
    }
   },
   {
@@ -259,189 +293,19 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-10-18T03:54:48Z",
+   "waktu": "2026-10-18T05:01:00Z",
    "media": 1,
    "judul": {
-    "id": "Buntut Antrean BBM dan Blackout, YLKI Minta Prabowo Copot Bahlil",
-    "en": "Buntut Antrean BBM dan Blackout, YLKI Minta Prabowo Copot Bahlil"
+    "id": "Kisaran Biaya Perbaikan Baterai Lithium-ion Motor Listrik",
+    "en": "Kisaran Biaya Perbaikan Baterai Lithium-ion Motor Listrik"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "faktakalbar",
-    "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPOWpxOEJXT2RSZm1Pb2c5elp1NWdlVzdrN0VWc25rUkJGX1FWaW83N0xGOXJtRHo0eXNSWDFjeW9BMThabUwzeWMxd3VmZUttNFVmT3hQZTVveGJPRUZtbEZTT2JoT0lHdWdBc25CU2JPOW1YX2phYUxhb2VWR3paTi0yY1FuRFROM25CMEIxaWk0bmUwQ056WQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-18T02:37:35Z",
-   "media": 1,
-   "judul": {
-    "id": "Imbas BBM Langka di Bali: Ojol Hemat Bensin, WFH hingga Sekolah Online",
-    "en": "Imbas BBM Langka di Bali: Ojol Hemat Bensin, WFH hingga Sekolah Online"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Uzone.id",
-    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQaUJITERSSEV4cXJFa3cyX01NZWhLQWl3SzJpSG51M0lZTi05TmVOTmRfcVNNUmk2R0dxUTdCV1Y1UFB3S0NuWTg3REpnMzJUVklkOWdhbFMtaFlYX0YwaThTOHBVSW5pTXg3N05tSlJ0bW1idjVVMjlBVm1ZaFc4Z2tBWXhYdUhyblZ0Yl9n?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-18T02:35:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Aksi Peduli Ojol hingga Evaluasi SPBU, Inilah Langkah Nyata Gubernur Khofifah di Malang",
-    "en": "Aksi Peduli Ojol hingga Evaluasi SPBU, Inilah Langkah Nyata Gubernur Khofifah di Malang"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Nusantara News",
-    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPejU1UTBUdHIwQ3c4aHlSZXpkeERBVW5HaXpQQXdxSU5uT25DM0hpN20zeWdoVFFpbm9JeWFJTnBQSFNBeHl1SXUzNzQ3RHVNNFlUSlIxZ0VVLWVDWUdfRTlVbG1uZlJHMnR3M3M5SGFtVy1XN3piSlBlNllQWkhKN1BiS2xDaWJLM2xWSUJpNWdJa3VqRVl5YnZMdUpWaEdIeEtJLXdBNTFEcTg5b2p3Zg?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-18T02:21:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Banjir Promo Ulang Tahun Alfamart, Ini Daftar Produk Serba Gratis",
-    "en": "Banjir Promo Ulang Tahun Alfamart, Ini Daftar Produk Serba Gratis"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Radar Lampung",
-    "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxObnJ2allmUklxVXM3UFNJUElreFE3NmJNM1ZqXzYyNEJDbXRUTi1RZW1VcklDTjBXVEtZeHp0d3Nkb3hDNERCMHp5bVhJeDd1UzVtQkhLYmVQaUF1c1ZNV1hyTXZQc2FGcmoxNVZOZmV4X3JuUk1KdUxiOHhMSEVoa3ZaS2VTSkl6SV96Z0ZHZUtNcldJOXUxZmpDVl9wRnRzdG5ibzJ6SnNUQ1lmVTAtMndLTE9hMXZnZFdyU0FfRdIBqgFBVV95cUxONm11bjIzUlhkY1R0blJHdXhCTS1TRHB4UkxwX2NkRUlHZnEybnAwZnZqQXJrUUlWZ2dlcmpQZDB6bWtvYV9tVTRadEUxMmoyUXQ1N1o5NXhOT0QzblE5UmJUSmZlNHVjSzZpVS1HejZUdk43R0haMTRROXlDWGRZNWwzNEh4TU42ZTJXYktKWGxxNWVueGNmYUVEa2oxa2hJaUxFcW1SMmJPUQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-18T02:14:00Z",
-   "media": 1,
-   "judul": {
-    "id": "F-SPTI Lampung Usul SIM Gratis dan BPJS Ojol Dibayar Aplikator",
-    "en": "F-SPTI Lampung Usul SIM Gratis dan BPJS Ojol Dibayar Aplikator"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Radar Lampung",
-    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNTktod0t2a2Rtb0d2ZDV1X3JMeklFNjg1cWYyMXJLSV9OOVF2TWRiT1gtNndvdjRaM1I3Z21CNC16VkFsTnMzRXlIWG9ZNmZQaGVVUjJWZjBaQW9UbGtQME16T0x1cnBoVFl4WnJLNUozUEpncVVvMWRDRGJaSDlSMEhfVDVvc3J1YmRSc3VYcHRjbWZ1Nkx1NlRiM3lpbWJCXzd1djZEUdIBpwFBVV95cUxNTktod0t2a2Rtb0d2ZDV1X3JMeklFNjg1cWYyMXJLSV9OOVF2TWRiT1gtNndvdjRaM1I3Z21CNC16VkFsTnMzRXlIWG9ZNmZQaGVVUjJWZjBaQW9UbGtQME16T0x1cnBoVFl4WnJLNUozUEpncVVvMWRDRGJaSDlSMEhfVDVvc3J1YmRSc3VYcHRjbWZ1Nkx1NlRiM3lpbWJCXzd1djZEUQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-18T02:10:41Z",
-   "media": 1,
-   "judul": {
-    "id": "Sentuh Perjuangan Perempuan Pencari Nafkah, Lozy Hijab Apresiasi 30 Wiramudi Ojol Tasikmalaya",
-    "en": "Sentuh Perjuangan Perempuan Pencari Nafkah, Lozy Hijab Apresiasi 30 Wiramudi Ojol Tasikmalaya"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Analisa Global",
-    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNWkhsQlVjTWVwRTJhSHYyRGxqZERibXpQVlZGekRCakhqMFZUZTRsMjVoNFZFblRHdVlaSnBBN3FfQnY0ZXdZX2Y4T3BqSkZTX0JFOVZ3UjdFSzlSdEt5LXNXZVpCa05rVmFwZlREUFRMUDlXVEpKSjREclVUdmQ5NTZwOUdyeTBoeWs0MjRkQ3JIenBYVDNVSkswX3VPWHhITENaWDJFYXdyalk5U193NHI2ZkJBRFBuUWdHbi1MNjk?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-18T02:09:16Z",
-   "media": 1,
-   "judul": {
-    "id": "Pemerintah Matangkan Formula Tarif Ojol Antar Barang dan Makanan",
-    "en": "Pemerintah Matangkan Formula Tarif Ojol Antar Barang dan Makanan"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "BeritaSatu.com",
-    "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPN2E4VlliV0xqOUU3LUFKOFlQZ3N0NjBqeEljV2lsSFhQblNyNHI0SnVSdTZpV2J6VkM3anVoTXhFeG5FZndqelE2TWp6WjVtVDBsT0MwSDJHZjkta1ZrNEVfUTJLUWdFRzI1a05PQWRfUjJaZUFwWWxLQkpIdWgyOGwwWW42cXc5VGxiYXA0ZVZHc1VaX2RoVVlWTDlOd0c3dTY1MVNfd2x4aWM?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-18T02:08:14Z",
-   "media": 1,
-   "judul": {
-    "id": "Stok BBM Jatim Aman, Khofifah Minta Distribusi Tepat",
-    "en": "Stok BBM Jatim Aman, Khofifah Minta Distribusi Tepat"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Radar Bangsa",
-    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOT1ZhMTJyZHlXZjBOeU9fU3hpSTZCa3J0dTJNa3VPc1FLNldlLWlsRk11Uy1YSHhJSThKSHlfSl9hRDA2My1VNGRXQ0VXTmU2clVsR0Y5RW1lTENZZUl0dWNNRy1uSkowQ3VrdUpBZXN0cVRSYUxDM1ZzbW9YdmMzcUl0ODM1UllQZFFXRHFwLVRsdmlURWtUUm9uMTIzQTF4Sjkw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-18T02:08:07Z",
-   "media": 1,
-   "judul": {
-    "id": "Daftar Lengkap Harga BBM di SPBU Pertamina dan Swasta Hari Ini",
-    "en": "Daftar Lengkap Harga BBM di SPBU Pertamina dan Swasta Hari Ini"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "detikoto",
-    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOYW56QWJhejM0NW8tVWhQZnJsMjBKNWpJVTczWmlYc1FDeHUzdVRNS1QzN2FtNHFrRmU2OE5DMTJUckFaRmR1SGY4elY0dnM1M1ZSZ0l3MS1Fc1VaNjMyVV96QkFQeDVCV0JORlduM1ZzVGtLUUFuZVZQb292dzJJNU1RSnJUY3NuSDNyb0pMUXBvbk1RaEpGTkZKbVhfOHBHRmhn0gGoAUFVX3lxTE5XeXBoelp0eWd6MEVfYkU0bUNLeWs0amFjYnpJazlIcm93cDhyOXJfQkpBR1pfeE9aQXRGZjJwejRSczlYVDVrZ3RnVGdtZ1laRE9CbWtHeXVmV18zTDJqTC1qUkFQY1dMVVV1R0lYREx5R3FNRFJ3WHh5ZFZBUnRLYklsdUV4MEJFUFktTzFtMmhvRzB4d0JnX0hrOWZPQnRqZnhkNGFCbg?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-18T01:36:51Z",
-   "media": 1,
-   "judul": {
-    "id": "Kabut Asap Kalbar Tekan Pendapatan Ojol dan Pedagang, Pengamat Minta Pemda Bertindak",
-    "en": "Kabut Asap Kalbar Tekan Pendapatan Ojol dan Pedagang, Pengamat Minta Pemda Bertindak"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Tribunpontianak.co.id",
-    "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPVW9wem9OZUhYYVlLRVhPeVFlYy1GeE9aT3dsRDB4QnB0RnlJMmw4MHVFcVc2X0s1M3Vibld5QVNCemRmbU5lVkZVME1aZEUwS3FsRkJiRGtHWWpUd2FlX0RKNHFnbGdESzlndDhSSFA3SWFxdnVRMDdjdVRUZ25zeVNBaHVKRU81ak1XMHoza2JTZXprTldtbkxfVFJSbjFjX1UtZTFEMXpRdmpLeXRjSXE5WkZNZENvaXhSTFBXYndUOHlLNFI1SkpIOWJCRVNQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-18T01:22:46Z",
-   "media": 1,
-   "judul": {
-    "id": "Hukum sepekan, OTT KPK hingga gangguan layanan BBM",
-    "en": "Hukum sepekan, OTT KPK hingga gangguan layanan BBM"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "ANTARA News",
-    "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPczZ0M0paMVB1UFRVUFpfNUZxZ3lEeXdFSUctNmVxS3FlX084S29sZVZGdi1oT1h5V1J0X3V5X05OX3d5MHlyZW96eWRCQmN6YWRxMUJxeWpyaHZhVk1MZkYyMkJSUzVEbTAySFdRN1hDX2Y0U0tfOHJJWmpMTjNpb3RHRXdydmhzMzZFQnpFbDR2NG01S1dLS9IBmAFBVV95cUxPczZ0M0paMVB1UFRVUFpfNUZxZ3lEeXdFSUctNmVxS3FlX084S29sZVZGdi1oT1h5V1J0X3V5X05OX3d5MHlyZW96eWRCQmN6YWRxMUJxeWpyaHZhVk1MZkYyMkJSUzVEbTAySFdRN1hDX2Y0U0tfOHJJWmpMTjNpb3RHRXdydmhzMzZFQnpFbDR2NG01S1dLSw?oc=5"
+    "nama": "Kompas.com",
+    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPMXZ1bm1WNVYyYjBIbFdpS2FLSnlrZlRLMEdLSVZuVTBkellBYjUwX0R5ZjZleUdQakx2RUxWRlhMSzVncDdxcGV3OHQ1MG0tSXRXc2pqaTBzOXVHZng0LVpickdmTkMwei0wdGZsSW9Sbm5ZVTZMRFhZOWVZdXA5dVU3cS1icDg3LXJzZkdyZjB6eU1Pc0dRM2l2NVZZQ1VSRVJWbUl2cmdOa2cxdnlmWWpURDBtQUMwUHI3cw?oc=5"
    }
   }
  ]
