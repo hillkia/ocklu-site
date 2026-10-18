@@ -112,7 +112,7 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
     <h2>Kerja terbaru</h2>
     <div class="panel"><ul class="feed" id="feed"><li class="kosong">memuat…</li></ul></div>
     <h2 id="datang">Agen yang datang</h2>
-    <div class="panel" id="agenRingkas"></div><details class="panel owner-saja" hidden style="overflow-x:auto"><summary style="cursor:pointer;font-weight:600">Lihat daftar lengkap agen (owner)</summary><table style="margin-top:10px"><thead><tr><th>Agen</th><th>Saluran</th><th>24 jam</th><th>30 hari</th><th>Terakhir</th></tr></thead><tbody id="agen"></tbody></table>
+    <div class="panel" id="agenRingkas"></div><details class="panel owner-saja" hidden style="overflow-x:auto"><summary style="cursor:pointer;font-weight:600">Lihat daftar lengkap agen (owner)</summary><table style="margin-top:10px"><thead><tr><th>Agen</th><th>Jenis</th><th>24 jam</th><th>30 hari</th><th>Terakhir</th></tr></thead><tbody id="agen" style="font-size:14px"></tbody></table>
       <p class="kosong" id="catatan" style="margin:12px 0 0"></p></details>
   </div>
   <div>
@@ -383,11 +383,11 @@ function render(){
     if(!ag[L]){ag[L]={h24:0,total:0,terakhir:a.terakhir,saluran:a.saluran,asli:[]};nama.push(L)}var x=ag[L];x.h24+=a.h24;x.total+=a.total;x.asli.push(k);if(a.terakhir>x.terakhir)x.terakhir=a.terakhir});
   var grup={};nama.forEach(function(k){var g=kelompokAgen(ag[k].asli[0],ag[k]);if(/^Claude \/ Anthropic/.test(k))g="klien";(grup[g]=grup[g]||[]).push(k)});
   window.__agenData={ag:ag,bersih:bersihNama,kel:kelompokAgen,KEL:KEL};
-  var tb=["klien","pengindeks","pemeriksa","tanpa"].filter(function(g){return grup[g]}).map(function(g){var xs=grup[g].sort(function(a,b){return ag[b].h24-ag[a].h24||ag[b].total-ag[a].total});
-    var h24=xs.reduce(function(t,k){return t+ag[k].h24},0),tot=xs.reduce(function(t,k){return t+ag[k].total},0);
-    return'<tr class="grupAgen"><td colspan="5" style="padding-top:14px"><b>'+esc(KEL[g][0])+'</b> <span class="chip">'+xs.length+' agen</span> <span class="chip ok">'+h24+' kunjungan 24 jam</span> <span class="kosong">· '+tot+' total · '+esc(KEL[g][1])+'</span></td></tr>'
-      +xs.map(function(k,i){var a=ag[k];return'<tr class="baris-agen"'+(i>=5?' data-sembunyi="'+g+'" hidden':'')+' data-agen="'+esc(k)+'"><td>'+esc(k)+(ag[k].asli.length>1?' <span class="chip">'+ag[k].asli.length+' varian</span>':'')+'</td><td><span class="chip">'+esc(a.saluran)+'</span></td><td>'+a.h24+'</td><td>'+a.total+'</td><td>'+lalu(a.terakhir)+'</td></tr>'}).join("")
-      +(xs.length>5?'<tr><td colspan="5"><button class="btn mini" type="button" data-buka-grup="'+g+'">Tampilkan '+(xs.length-5)+' lagi</button></td></tr>':'')}).join("");
+  var JENIS={klien:"Agen/aplikasi",pengindeks:"Pengindeks AI",pemeriksa:"Direktori",tanpa:"Tanpa nama"};
+  var semua=[];["klien","pengindeks","pemeriksa","tanpa"].forEach(function(g){(grup[g]||[]).forEach(function(k){semua.push([k,g])})});
+  semua.sort(function(a,b){return ag[b[0]].h24-ag[a[0]].h24||ag[b[0]].total-ag[a[0]].total});
+  var tb=semua.map(function(x,i){var k=x[0],a=ag[k];return'<tr class="baris-agen"'+(i>=15?' data-sembunyi="semua" hidden':'')+' data-agen="'+esc(k)+'"><td>'+esc(k)+'</td><td>'+JENIS[x[1]]+'</td><td>'+a.h24+'</td><td>'+a.total+'</td><td>'+lalu(a.terakhir)+'</td></tr>'}).join("")
+    +(semua.length>15?'<tr><td colspan="5"><button class="btn mini" type="button" data-buka-grup="semua">Tampilkan '+(semua.length-15)+' lagi</button></td></tr>':'');
   var tot24=nama.reduce(function(t,k){return t+ag[k].h24},0);
   var LBL={klien:"Agen & aplikasi",pengindeks:"Pengindeks AI",pemeriksa:"Direktori"};document.getElementById("agenRingkas").innerHTML='<div class="angka empat" style="margin:0">'+["klien","pengindeks","pemeriksa"].map(function(g){var xs=grup[g]||[];return'<div class="a"><b>'+xs.length+'</b><span>'+LBL[g]+'</span></div>'}).join("")+'<div class="a"><b>'+tot24+'</b><span>Kunjungan 24 jam</span></div></div><p class="kosong" style="margin:10px 0 0">Agen AI, asisten, dan direktori dari seluruh dunia menyambung ke katalog OCKLU setiap hari.</p>';
   document.getElementById("agen").innerHTML=tb||'<tr><td colspan="5" class="kosong">Belum ada agen yang datang lewat MCP atau katalog hidup.</td></tr>';
