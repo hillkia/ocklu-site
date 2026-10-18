@@ -25,6 +25,8 @@ header{display:flex;justify-content:space-between;align-items:center;padding:16p
 :root[data-theme="light"] .kosmos{background:radial-gradient(ellipse at center,#20195a 0%,#0a0b1e 75%)}
 canvas{display:block;width:100%;height:min(62vh,520px)}
 .kosmos .judul{position:absolute;left:16px;top:16px;right:16px;pointer-events:none;color:#eef0ff}
+.judul button,.judul input,.judul textarea,.judul .edit-baris,#editJudul{pointer-events:auto;position:relative;z-index:5}
+[hidden]{display:none!important}
 .kosmos h1{margin:0;font-size:clamp(24px,5vw,40px);line-height:1.1}
 .kosmos p{margin:4px 0 0;color:#b8bdd9;font-size:14px;max-width:46ch}
 .kosmos .kaki{position:absolute;left:16px;bottom:12px;right:16px;font-size:12px;color:#8d93b3;pointer-events:none}
