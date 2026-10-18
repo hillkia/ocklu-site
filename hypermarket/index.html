@@ -110,7 +110,7 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
     <h2>Kerja terbaru</h2>
     <div class="panel"><ul class="feed" id="feed"><li class="kosong">memuat…</li></ul></div>
     <h2 id="datang">Agen yang datang</h2>
-    <div class="panel" style="overflow-x:auto"><table><thead><tr><th>Agen</th><th>Saluran</th><th>24 jam</th><th>30 hari</th><th>Terakhir</th></tr></thead><tbody id="agen"></tbody></table>
+    <div class="panel" id="agenRingkas"></div><div class="panel owner-saja" hidden style="overflow-x:auto"><table><thead><tr><th>Agen</th><th>Saluran</th><th>24 jam</th><th>30 hari</th><th>Terakhir</th></tr></thead><tbody id="agen"></tbody></table>
       <p class="kosong" id="catatan" style="margin:12px 0 0"></p></div>
   </div>
   <div>
@@ -386,6 +386,8 @@ function render(){
     return'<tr class="grupAgen"><td colspan="5" style="padding-top:14px"><b>'+esc(KEL[g][0])+'</b> <span class="chip">'+xs.length+' agen</span> <span class="chip ok">'+h24+' kunjungan 24 jam</span> <span class="kosong">· '+tot+' total · '+esc(KEL[g][1])+'</span></td></tr>'
       +xs.map(function(k,i){var a=ag[k];return'<tr class="baris-agen"'+(i>=5?' data-sembunyi="'+g+'" hidden':'')+' data-agen="'+esc(k)+'"><td>'+esc(k)+(ag[k].asli.length>1?' <span class="chip">'+ag[k].asli.length+' varian</span>':'')+'</td><td><span class="chip">'+esc(a.saluran)+'</span></td><td>'+a.h24+'</td><td>'+a.total+'</td><td>'+lalu(a.terakhir)+'</td></tr>'}).join("")
       +(xs.length>5?'<tr><td colspan="5"><button class="btn mini" type="button" data-buka-grup="'+g+'">Tampilkan '+(xs.length-5)+' lagi</button></td></tr>':'')}).join("");
+  var tot24=nama.reduce(function(t,k){return t+ag[k].h24},0);
+  document.getElementById("agenRingkas").innerHTML='<div class="angka" style="margin:0">'+["klien","pengindeks","pemeriksa"].map(function(g){var xs=grup[g]||[];return'<div class="a"><b>'+xs.length+'</b><span>'+esc(KEL[g][0].split(" (")[0])+'</span></div>'}).join("")+'<div class="a"><b>'+tot24+'</b><span>kunjungan agen · 24 jam</span></div></div><p class="kosong" style="margin:10px 0 0">Agen AI, asisten, dan direktori dari seluruh dunia menyambung ke katalog OCKLU setiap hari.</p>';
   document.getElementById("agen").innerHTML=tb||'<tr><td colspan="5" class="kosong">Belum ada agen yang datang lewat MCP atau katalog hidup.</td></tr>';
   document.querySelectorAll("[data-buka-grup]").forEach(function(b){b.onclick=function(){var g=b.getAttribute("data-buka-grup"),buka=b.textContent.indexOf("Tampilkan")===0;
     document.querySelectorAll('[data-sembunyi="'+g+'"]').forEach(function(tr){tr.hidden=!buka});b.textContent=buka?"Sembunyikan":"Tampilkan "+document.querySelectorAll('[data-sembunyi="'+g+'"]').length+" lagi"}});
