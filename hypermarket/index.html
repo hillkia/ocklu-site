@@ -268,6 +268,10 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
   <p class="kosong" style="margin:12px 0 0">Agen tidak pernah membayar atau menagih atas nama siapa pun. Uang hanya bergerak ketika pembeli (manusia atau agen yang diberi kuasa) menyelesaikan checkout.</p>
 </div>
 
+<div class="owner-saja" hidden><h2 id="kendali">Kendali mesin (owner)</h2>
+<div class="panel"><p class="kosong" style="margin:0 0 10px">Semua mesin terjadwal di awan. <b>Tidak ada yang diubah otomatis</b> — saklar di sini hanya untuk kamu, kalau satu mesin bermasalah dan perlu dimatikan sementara. Penjaga tidak bisa dimatikan. Setiap aksi dikabarkan ke Telegram.</p>
+<div class="baris" style="margin:0 0 10px"><button class="btn mini" type="button" id="kdMuat">Tampilkan mesin</button><button class="btn mini" type="button" id="kdKunci">Ganti kunci owner</button></div>
+<div style="overflow-x:auto"><table><thead><tr><th>Mesin</th><th>Kelompok</th><th>Jadwal</th><th>24 jam</th><th>Terakhir</th><th>Status</th></tr></thead><tbody id="kdDaftar"><tr><td colspan="6" class="kosong">Tekan “Tampilkan mesin”.</td></tr></tbody></table></div></div></div>
 <h2 id="jual">Yang dijual</h2>
 <div class="panel" style="overflow-x:auto"><table><thead><tr><th>Produk</th><th>Harga</th><th>Kasir</th></tr></thead><tbody id="produk"></tbody></table></div>
 
@@ -518,6 +522,20 @@ window.HM={API:API,esc:esc,lalu:lalu,ls:ls,pin:function(){return ls("hm_pin")||P
 function cekOwner(){kirimOwner({aksi:"cek"}).then(function(d){if(d.ok){OWNER=true;pasangOwner();cekPaypal();muatKlien()}else if(/PIN owner salah/.test(d.galat||"")){ls("hm_pin",null);PINMEM="";var mc=document.getElementById("ownerChip");if(mc){mc.hidden=false;mc.textContent="kunci owner lama — buka shortcut Owner di Desktop";mc.className="chip tunggu"}}else setTimeout(cekOwner,5000)})}
 (function(){var q=ls("hm_pin")||window.__pinq;if(q){PINMEM=q;cekOwner()}})();
 document.getElementById("masukOwner").onclick=function(){laci("Masuk mode owner",jelas("<b>Tidak perlu mengetik PIN.</b> Buka shortcut <b>“Owner Hyper Market”</b> di Desktop laptop (atau scan QR-nya dari HP) <b>sekali saja</b> — perangkat ini langsung dikenali dan diingat seterusnya.")+"<p class=\"kosong\">Kalau ganti HP/browser, cukup buka shortcut itu lagi sekali. Kunci owner tetap rahasia di dalam shortcut, tidak pernah tampil di halaman.</p>")};
+var KENDALI="https://njghzieuuopukuagrswu.supabase.co/functions/v1/kendali";
+function kendaliApi(b){return fetch(KENDALI,{method:"POST",headers:{"Content-Type":"application/json","x-owner":ls("hm_pin")||PINMEM||""},body:JSON.stringify(b)}).then(function(r){return r.json()}).catch(function(e){return{galat:String(e)}})}
+function muatKendali(){var t=document.getElementById("kdDaftar");t.innerHTML='<tr><td colspan="6" class="kosong">memuat…</td></tr>';kendaliApi({aksi:"daftar"}).then(function(d){
+  if(d.galat){t.innerHTML='<tr><td colspan="6" class="kosong">'+esc(d.galat)+'</td></tr>';return}
+  var M=(d.mesin||[]).sort(function(a,b){return a.kelompok.localeCompare(b.kelompok)||a.jobname.localeCompare(b.jobname)});
+  t.innerHTML=M.map(function(m){var penjaga=/^ocklu-(jaga|kesehatan)$/.test(m.jobname);return'<tr><td><b>'+esc(m.jobname)+'</b></td><td>'+esc(m.kelompok)+'</td><td><code>'+esc(m.schedule)+'</code></td><td>'+m.ok24+' ok'+(m.gagal24?' · <span style="color:var(--merah,#e66)">'+m.gagal24+' gagal</span>':'')+'</td><td>'+(m.terakhir?lalu(m.terakhir):'—')+'</td><td>'
+    +(penjaga?'<span class="chip ok">selalu nyala</span>':'<button class="btn mini" type="button" data-saklar="'+esc(m.jobname)+'" data-nyala="'+(m.active?0:1)+'">'+(m.active?'● nyala · matikan':'○ mati · nyalakan')+'</button>')+'</td></tr>'}).join("");
+  t.querySelectorAll("[data-saklar]").forEach(function(b){b.onclick=function(){var n=b.getAttribute("data-saklar"),nyala=b.getAttribute("data-nyala")==="1";
+    if(!confirm((nyala?"Nyalakan":"Matikan")+" mesin "+n+"?"))return;b.disabled=true;kendaliApi({aksi:"saklar",nama:n,nyala:nyala}).then(function(r){if(r.galat)alert(r.galat);muatKendali()})}})})}
+(function(){var a=document.getElementById("kdMuat");if(a)a.onclick=muatKendali;var k=document.getElementById("kdKunci");if(k)k.onclick=function(){
+  if(!confirm("Ganti kunci owner? Shortcut lama di Desktop/HP jadi tidak berlaku; link baru akan ditampilkan."))return;kendaliApi({aksi:"ganti_kunci"}).then(function(d){
+    if(!d.ok){alert(d.galat||"gagal");return}ls("hm_pin",d.kunci);PINMEM=d.kunci;
+    laci("Kunci owner baru",jelas("<b>Simpan link ini</b> (jadikan bookmark/shortcut di laptop & HP). Browser ini sudah memakai kunci baru.")+'<p><code style="word-break:break-all">'+esc(d.link)+'</code></p><p><button class="btn mini" type="button" id="salinKunci">Salin link</button></p><p class="kosong">Link lama tidak berlaku lagi. Telegram sudah dikabari.</p>');
+    var s=document.getElementById("salinKunci");if(s)s.onclick=function(){navigator.clipboard&&navigator.clipboard.writeText(d.link).then(function(){s.textContent="Tersalin ✓"})}})}})();
 function pasangOwner(){document.querySelectorAll(".owner-saja").forEach(function(e){e.hidden=!OWNER});var m=document.getElementById("masukOwner");if(m)m.hidden=OWNER}
 document.getElementById("gibSimpan").onclick=function(){var v=document.getElementById("gibIn").value.trim();if(!v)return;this.textContent="menyimpan…";var b=this;kirimOwner({aksi:"teks",k:"gibberlink",v:v}).then(function(d){b.textContent=d.ok?"Tersimpan ✓":("Gagal: "+(d.galat||"coba lagi"));setTimeout(function(){b.textContent="Simpan kalimat"},1500);muat()})};
 document.getElementById("gibAsal").onclick=function(){kirimOwner({aksi:"teks",k:"gibberlink",v:""}).then(muat)};
