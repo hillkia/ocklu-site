@@ -1,11 +1,11 @@
 {
- "w": "2026-10-18T06:49:01Z",
+ "w": "2026-10-18T07:59:30Z",
  "dari": "Kroog",
  "berita": [
   {
    "jenis": "berita",
    "waktu": "2026-10-18T02:12:29Z",
-   "media": 12,
+   "media": 13,
    "judul": {
     "id": "KPK Ungkap Dana BNPB yang Diduga Dikorupsi untuk Karhutla, Gempa NTT, dan Banjir",
     "en": "KPK Ungkap Dana BNPB yang Diduga Dikorupsi untuk Karhutla, Gempa NTT, dan Banjir"
@@ -157,6 +157,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-10-18T07:12:12Z",
+   "media": 1,
+   "judul": {
+    "id": "Menteri HAM tekankan pemerataan stok BBM pulihkan antrean di Bali",
+    "en": "Menteri HAM tekankan pemerataan stok BBM pulihkan antrean di Bali"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "ANTARA News",
+    "url": "https://news.google.com/rss/articles/CBMihAJBVV95cUxQNC11TUVmOS1zeXZNaExQekJfQy1BS2NoQV9DTlR3MHM5NHp3RkVSWUM2MVYza2JMQ3FiNkhJZHR5dU1CYjhOQXdSemRxcUZxVml0bkg1S1hjS3VmamFrRVlkODZjT1l0bFhoNUdONVJ2OHlWaFpIYW1vb1lUdm43dWF0R1pxcW9NaW5sWndwMmVtR0hDcWNRbUhnZ2xaSmdYSjI2WVVVcGxMcklsb0I0cHVEejAtWEVKTG5kR0lBYUxzbTNKUTM4UmNKRDUzNFlEY09feDU0S2U2WUp0MkxGQW9ZZG5tcWhsWkxBeWF0U3hnR2tqdm5laWhOOHpYaUl4MjFCcg?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-10-18T05:45:00Z",
    "media": 1,
    "judul": {
@@ -204,6 +221,23 @@
    "sumber": {
     "nama": "Uzone.id",
     "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQaUJITERSSEV4cXJFa3cyX01NZWhLQWl3SzJpSG51M0lZTi05TmVOTmRfcVNNUmk2R0dxUTdCV1Y1UFB3S0NuWTg3REpnMzJUVklkOWdhbFMtaFlYX0YwaThTOHBVSW5pTXg3N05tSlJ0bW1idjVVMjlBVm1ZaFc4Z2tBWXhYdUhyblZ0Yl9n?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-18T02:21:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Banjir Promo Ulang Tahun Alfamart, Ini Daftar Produk Serba Gratis",
+    "en": "Banjir Promo Ulang Tahun Alfamart, Ini Daftar Produk Serba Gratis"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Radar Lampung",
+    "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxObnJ2allmUklxVXM3UFNJUElreFE3NmJNM1ZqXzYyNEJDbXRUTi1RZW1VcklDTjBXVEtZeHp0d3Nkb3hDNERCMHp5bVhJeDd1UzVtQkhLYmVQaUF1c1ZNV1hyTXZQc2FGcmoxNVZOZmV4X3JuUk1KdUxiOHhMSEVoa3ZaS2VTSkl6SV96Z0ZHZUtNcldJOXUxZmpDVl9wRnRzdG5ibzJ6SnNUQ1lmVTAtMndLTE9hMXZnZFdyU0FfRdIBqgFBVV95cUxONm11bjIzUlhkY1R0blJHdXhCTS1TRHB4UkxwX2NkRUlHZnEybnAwZnZqQXJrUUlWZ2dlcmpQZDB6bWtvYV9tVTRadEUxMmoyUXQ1N1o5NXhOT0QzblE5UmJUSmZlNHVjSzZpVS1HejZUdk43R0haMTRROXlDWGRZNWwzNEh4TU42ZTJXYktKWGxxNWVueGNmYUVEa2oxa2hJaUxFcW1SMmJPUQ?oc=5"
    }
   },
   {
@@ -306,74 +340,6 @@
    "sumber": {
     "nama": "ANTARA News",
     "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPczZ0M0paMVB1UFRVUFpfNUZxZ3lEeXdFSUctNmVxS3FlX084S29sZVZGdi1oT1h5V1J0X3V5X05OX3d5MHlyZW96eWRCQmN6YWRxMUJxeWpyaHZhVk1MZkYyMkJSUzVEbTAySFdRN1hDX2Y0U0tfOHJJWmpMTjNpb3RHRXdydmhzMzZFQnpFbDR2NG01S1dLS9IBmAFBVV95cUxPczZ0M0paMVB1UFRVUFpfNUZxZ3lEeXdFSUctNmVxS3FlX084S29sZVZGdi1oT1h5V1J0X3V5X05OX3d5MHlyZW96eWRCQmN6YWRxMUJxeWpyaHZhVk1MZkYyMkJSUzVEbTAySFdRN1hDX2Y0U0tfOHJJWmpMTjNpb3RHRXdydmhzMzZFQnpFbDR2NG01S1dLSw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-18T00:01:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Populer Padang: Razia Tempat Hiburan Malam, Dampak Kabut Asap Terhadap Pendapatan Pedagang dan Ojol",
-    "en": "Populer Padang: Razia Tempat Hiburan Malam, Dampak Kabut Asap Terhadap Pendapatan Pedagang dan Ojol"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Tribunpadang.com",
-    "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNOWVFckFia1VpZ1pZR1hSclVJRDZJMEJCeVRQbTQ0VC1INm5rUnNReWJNdnBqZmxGLUlXZEdtQ2U2dWJGSkRxTk51bDdqeEtybW80cDNsSVoxMkNwa3ppenM1Zk52UjJHOWlQcHA3UDBEYjd4YV9PZDlPQjlicmUzMEZSZUljeGlzOFd4dTkzU1dlbHlic1dzTjFfT0ZlWWVoVTBqZHpWY1pvQ0IyWmp0VDQ1czUyZTFDNWljQXJObklFMFlTeThqUWMtRWtBYU9VRGE5MEZWOC0?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-17T23:24:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Ratusan Pengemudi Ojek Online Menggelar Salat Istiska, Minta Hujan Segera Turun",
-    "en": "Ratusan Pengemudi Ojek Online Menggelar Salat Istiska, Minta Hujan Segera Turun"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "RRI.co.id",
-    "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQeG5tM29uMWVfeHM1UF94S2JhUllIcks2elJzUmxBeWVYUlNyNFd3bmJ0eHFpYkxXVTFqV3hYU0hvQU9QelBPWW9ZUFdUX1ljUVdHTHZDaHQtNEtnb29KN1dXbGZGRktyWFFUY08zT0cyd2V6MkdzX182b2t4eUg1bTNrR01WWWYydFJWNEJ0LVNRaEhjTXNXbE5HZGF3YUMta3NNNlEtSy1mOC1hc1c2V0QzRHJOOUVkcUhHUUVxMjRPSmFtV2I4eA?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-17T22:00:00Z",
-   "media": 1,
-   "judul": {
-    "id": "ITFC Danai Impor BBM",
-    "en": "ITFC Danai Impor BBM"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "https://feedberry.com/",
-    "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOdF9rQXdFU2lpOVBpMUFNUmhrRWlxOVR0SlVYNGZReXFEUi1saUhIR0ZRRkxkQnFzYm93NGNkeUdzT1c4azRuT3dyUXpXY05HaHVNUklLUjR4bUhfNXdfbEJBYzJ0cjVNaWIwZjFsTFJKUEp0bHNfM1JLaldZdDloRTNvcXFDNGhJQVpzd1d1WQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-17T10:31:40Z",
-   "media": 3,
-   "judul": {
-    "id": "Video: Polisi Masih Buru Pria Beratribut Ojol Jual BBM Rp 200 Ribu di Canggu",
-    "en": "Video: Polisi Masih Buru Pria Beratribut Ojol Jual BBM Rp 200 Ribu di Canggu"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "20detik",
-    "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPRDEzaEpQY3psRUUzS3pDOXdpNmg4ZVRPU3BUbTVST0hmdVJONUVkUzlVRUJVZDQxcWQ2dkdDcy1jZ2tKczZEeDdFSWkydFl0emVXc1V0Q2xKX1pSQi1lUENwcndqRHBMVWFvQVN4QVlaUk5CMi1NQlV5dEZRSGU2S2Y3c21EVFRuV2dtUUY3bjJhTkZNZzZLdU1KZk5wdzk4bFFDMWh1Y0xBVHBOTm01R3ZRbEZfT21CSmpmNUFET3BpRm9kLW13?oc=5"
    }
   }
  ]
