@@ -87,6 +87,76 @@
     "1 x laporan bulanan ANGKA/ARTINYA/LAKUKAN/SUMBER"
    ],
    "order": "mailto:octavianus@ocklu.com?subject=OCKLU%20Pemasar%20-%20Penuh"
+  },
+  {
+   "id": "ai-foto-produk",
+   "name": "Edit Foto Produk dengan AI — Panduan UMKM",
+   "price_usd": 4,
+   "format": "digital download (ZIP/PDF)",
+   "checkout": "https://hillkia.gumroad.com/l/ai-foto-produk"
+  },
+  {
+   "id": "ai-gambar",
+   "name": "100 Prompt Gambar AI untuk Konten & Jualan",
+   "price_usd": 5,
+   "format": "digital download (ZIP/PDF)",
+   "checkout": "https://hillkia.gumroad.com/l/ai-gambar"
+  },
+  {
+   "id": "ai-job-hunt",
+   "name": "AI Job Hunt Kit — Resume, Cover Letter & Interview Prompts",
+   "price_usd": 9,
+   "format": "digital download (ZIP/PDF)",
+   "checkout": "https://hillkia.gumroad.com/l/ai-job-hunt"
+  },
+  {
+   "id": "ai-language-tutor",
+   "name": "Learn Japanese or Spanish with AI — 30-Day Tutor Prompts",
+   "price_usd": 7,
+   "format": "digital download (ZIP/PDF)",
+   "checkout": "https://hillkia.gumroad.com/l/ai-language-tutor"
+  },
+  {
+   "id": "ai-ppt",
+   "name": "Bikin PPT 10 Menit dengan AI",
+   "price_usd": 4,
+   "format": "digital download (ZIP/PDF)",
+   "checkout": "https://hillkia.gumroad.com/l/ai-ppt"
+  },
+  {
+   "id": "ai-video",
+   "name": "AI untuk Video Pendek — Reels, TikTok, Shorts",
+   "price_usd": 5,
+   "format": "digital download (ZIP/PDF)",
+   "checkout": "https://hillkia.gumroad.com/l/ai-video"
+  },
+  {
+   "id": "calorie-planner",
+   "name": "Calorie & Meal Planner Kit — with AI Prompts",
+   "price_usd": 7,
+   "format": "digital download (ZIP/PDF)",
+   "checkout": "https://hillkia.gumroad.com/l/calorie-planner"
+  },
+  {
+   "id": "excel-word-otomatis",
+   "name": "Excel & Word Otomatis — 40 Trik Kantor + Template",
+   "price_usd": 4,
+   "format": "digital download (ZIP/PDF)",
+   "checkout": "https://hillkia.gumroad.com/l/excel-word-otomatis"
+  },
+  {
+   "id": "mcp-starter-kit",
+   "name": "MCP Server Starter Kit — Build, Publish & Sell Your AI Agent",
+   "price_usd": 12,
+   "format": "digital download (ZIP/PDF)",
+   "checkout": "https://hillkia.gumroad.com/l/mcp-starter-kit"
+  },
+  {
+   "id": "vibe-coding",
+   "name": "Vibe Coding Starter Kit — Bikin Aplikasi Pertamamu dengan AI",
+   "price_usd": 9,
+   "format": "digital download (ZIP/PDF)",
+   "checkout": "https://hillkia.gumroad.com/l/vibe-coding"
   }
  ],
  "guardrails": [
