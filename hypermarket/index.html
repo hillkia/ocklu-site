@@ -62,6 +62,8 @@ table{width:100%;border-collapse:collapse;font-size:14px}th,td{text-align:left;p
 .tujuan{margin:0;padding-left:0;list-style:none;display:grid;gap:8px}.tujuan li{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;border:1px solid var(--garis);border-radius:12px}
 .tujuan li.ok{border-color:var(--aksen)}.tujuan .t{font-weight:700}.tujuan .ic{width:22px;flex:none;text-align:center}.tujuan li.kini{border-color:var(--emas)}
 .a.klik,.bisa{cursor:pointer}
+.angka.empat{grid-template-columns:repeat(4,1fr)}@media(max-width:700px){.angka.empat{grid-template-columns:repeat(2,1fr)}}
+.angka.empat .a b{font-size:24px}
 .a.klik{position:relative}.a.klik::after{content:"lihat rincian ›";position:absolute;right:12px;bottom:8px;font-size:11px;opacity:.55}
 .chip.klik:hover,.chip.aktif{outline:2px solid var(--aksen)}
 #laci{max-width:min(720px,94vw);width:100%;max-height:86vh;border:1px solid var(--garis);border-radius:16px;background:var(--bg);color:inherit;padding:0}
@@ -110,8 +112,8 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
     <h2>Kerja terbaru</h2>
     <div class="panel"><ul class="feed" id="feed"><li class="kosong">memuat…</li></ul></div>
     <h2 id="datang">Agen yang datang</h2>
-    <div class="panel" id="agenRingkas"></div><div class="panel owner-saja" hidden style="overflow-x:auto"><table><thead><tr><th>Agen</th><th>Saluran</th><th>24 jam</th><th>30 hari</th><th>Terakhir</th></tr></thead><tbody id="agen"></tbody></table>
-      <p class="kosong" id="catatan" style="margin:12px 0 0"></p></div>
+    <div class="panel" id="agenRingkas"></div><details class="panel owner-saja" hidden style="overflow-x:auto"><summary style="cursor:pointer;font-weight:600">Lihat daftar lengkap agen (owner)</summary><table style="margin-top:10px"><thead><tr><th>Agen</th><th>Saluran</th><th>24 jam</th><th>30 hari</th><th>Terakhir</th></tr></thead><tbody id="agen"></tbody></table>
+      <p class="kosong" id="catatan" style="margin:12px 0 0"></p></details>
   </div>
   <div>
     <h2 id="bicara">Bicara dengan agen</h2>
@@ -387,7 +389,7 @@ function render(){
       +xs.map(function(k,i){var a=ag[k];return'<tr class="baris-agen"'+(i>=5?' data-sembunyi="'+g+'" hidden':'')+' data-agen="'+esc(k)+'"><td>'+esc(k)+(ag[k].asli.length>1?' <span class="chip">'+ag[k].asli.length+' varian</span>':'')+'</td><td><span class="chip">'+esc(a.saluran)+'</span></td><td>'+a.h24+'</td><td>'+a.total+'</td><td>'+lalu(a.terakhir)+'</td></tr>'}).join("")
       +(xs.length>5?'<tr><td colspan="5"><button class="btn mini" type="button" data-buka-grup="'+g+'">Tampilkan '+(xs.length-5)+' lagi</button></td></tr>':'')}).join("");
   var tot24=nama.reduce(function(t,k){return t+ag[k].h24},0);
-  document.getElementById("agenRingkas").innerHTML='<div class="angka" style="margin:0">'+["klien","pengindeks","pemeriksa"].map(function(g){var xs=grup[g]||[];return'<div class="a"><b>'+xs.length+'</b><span>'+esc(KEL[g][0].split(" (")[0])+'</span></div>'}).join("")+'<div class="a"><b>'+tot24+'</b><span>kunjungan agen · 24 jam</span></div></div><p class="kosong" style="margin:10px 0 0">Agen AI, asisten, dan direktori dari seluruh dunia menyambung ke katalog OCKLU setiap hari.</p>';
+  var LBL={klien:"Agen & aplikasi",pengindeks:"Pengindeks AI",pemeriksa:"Direktori"};document.getElementById("agenRingkas").innerHTML='<div class="angka empat" style="margin:0">'+["klien","pengindeks","pemeriksa"].map(function(g){var xs=grup[g]||[];return'<div class="a"><b>'+xs.length+'</b><span>'+LBL[g]+'</span></div>'}).join("")+'<div class="a"><b>'+tot24+'</b><span>Kunjungan 24 jam</span></div></div><p class="kosong" style="margin:10px 0 0">Agen AI, asisten, dan direktori dari seluruh dunia menyambung ke katalog OCKLU setiap hari.</p>';
   document.getElementById("agen").innerHTML=tb||'<tr><td colspan="5" class="kosong">Belum ada agen yang datang lewat MCP atau katalog hidup.</td></tr>';
   document.querySelectorAll("[data-buka-grup]").forEach(function(b){b.onclick=function(){var g=b.getAttribute("data-buka-grup"),buka=b.textContent.indexOf("Tampilkan")===0;
     document.querySelectorAll('[data-sembunyi="'+g+'"]').forEach(function(tr){tr.hidden=!buka});b.textContent=buka?"Sembunyikan":"Tampilkan "+document.querySelectorAll('[data-sembunyi="'+g+'"]').length+" lagi"}});
