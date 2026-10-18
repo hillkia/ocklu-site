@@ -87,7 +87,7 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
 <div class="w">
 <header>
   <a class="logo" href="/">OCKLU <span>Hyper Market</span></a>
-  <div style="display:flex;gap:12px;align-items:center"><span class="hidup"><span class="titik"></span><span id="detak">menghubungi awan…</span></span><span class="chip ok owner-saja" id="ownerChip" hidden>mode owner</span><button class="btn mini" id="masukOwner" type="button" hidden style="display:none">Masuk owner</button><button class="tema" id="tema" type="button" aria-label="Ganti tema">◐</button></div>
+  <div style="display:flex;gap:12px;align-items:center"><span class="hidup"><span class="titik"></span><span id="detak">menghubungi awan…</span></span><span class="chip ok owner-saja" id="ownerChip" hidden>mode owner</span><button class="btn mini" id="masukOwner" type="button">Masuk owner</button><button class="tema" id="tema" type="button" aria-label="Ganti tema">◐</button></div>
 </header>
 
 <section class="kosmos" aria-label="Peta pasar antar-agen">
@@ -530,12 +530,7 @@ window.HM={API:API,esc:esc,lalu:lalu,ls:ls,pin:function(){return ls("hm_pin")||P
 function cekOwner(){kirimOwner({aksi:"cek"}).then(function(d){if(d.ok){OWNER=true;pasangOwner();cekPaypal();muatKlien()}else if(/PIN owner salah/.test(d.galat||"")){ls("hm_pin",null);PINMEM="";var mc=document.getElementById("ownerChip");if(mc){mc.hidden=false;mc.hidden=true;mc.className="chip tunggu"}}else setTimeout(cekOwner,5000)})}
 (function(){var q=ls("hm_pin")||window.__pinq;if(q){PINMEM=q;cekOwner()}})();
 function normNama(t){return String(t||"").trim().toLowerCase().replace(/\s+/g," ")}
-document.getElementById("masukOwner").onclick=function(){
-  laci("Masuk owner",'<form id="fMasuk" class="baris"><input id="namaOwner" autocomplete="current-password" type="password" placeholder="ketik nama owner" aria-label="Nama owner"><button class="btn mini" type="submit">Masuk</button></form><p class="kosong" id="masukKet"></p>');
-  setTimeout(function(){var n=document.getElementById("namaOwner");if(n)n.focus()},50);
-  document.getElementById("fMasuk").onsubmit=function(e){e.preventDefault();var v=normNama(document.getElementById("namaOwner").value);if(!v)return;
-    fetch("https://njghzieuuopukuagrswu.supabase.co/functions/v1/kendali",{method:"POST",headers:{"Content-Type":"application/json","x-owner":v},body:JSON.stringify({aksi:"daftar"})}).then(function(r){
-      if(r.ok){ls("hm_pin",v);PINMEM=v;document.getElementById("laci").close();cekOwner()}else document.getElementById("masukKet").textContent=r.status===429?"Terlalu banyak percobaan, tunggu 10 menit.":"Nama tidak cocok."})}};
+document.getElementById("masukOwner").onclick=function(){var q=ls("hm_pin")||PINMEM;if(q){PINMEM=q;cekOwner()}else{this.textContent="Perangkat ini belum dikenali";this.disabled=true}};
 var KENDALI="https://njghzieuuopukuagrswu.supabase.co/functions/v1/kendali";
 function kendaliApi(b){return fetch(KENDALI,{method:"POST",headers:{"Content-Type":"application/json","x-owner":ls("hm_pin")||PINMEM||""},body:JSON.stringify(b)}).then(function(r){return r.json()}).catch(function(e){return{galat:String(e)}})}
 function muatKendali(){var t=document.getElementById("kdDaftar");t.innerHTML='<tr><td colspan="6" class="kosong">memuat…</td></tr>';kendaliApi({aksi:"daftar"}).then(function(d){
@@ -548,7 +543,7 @@ function muatKendali(){var t=document.getElementById("kdDaftar");t.innerHTML='<t
 (function(){var a=document.getElementById("kdMuat");if(a)a.onclick=muatKendali;var k=document.getElementById("kdSimpanNama");if(k)k.onclick=function(){var v=normNama(document.getElementById("kdNama").value),ket=document.getElementById("kdNamaKet");
   if(v.length<6){ket.textContent="Minimal 6 huruf.";return}if(!confirm("Mulai sekarang masuk owner dengan nama ini?"))return;
   kendaliApi({aksi:"atur_nama",nama:v}).then(function(d){if(!d.ok){ket.textContent=d.galat||"gagal";return}ls("hm_pin",v);PINMEM=v;document.getElementById("kdNama").value="";ket.textContent="✓ Tersimpan. Di HP/browser lain: klik Masuk owner, ketik nama itu."})}})();
-function pasangOwner(){document.querySelectorAll(".owner-saja").forEach(function(e){e.hidden=!OWNER});var m=document.getElementById("masukOwner");if(m)m.hidden=true}
+function pasangOwner(){document.querySelectorAll(".owner-saja").forEach(function(e){e.hidden=!OWNER});var m=document.getElementById("masukOwner");if(m)m.hidden=OWNER}
 document.getElementById("gibSimpan").onclick=function(){var v=document.getElementById("gibIn").value.trim();if(!v)return;this.textContent="menyimpan…";var b=this;kirimOwner({aksi:"teks",k:"gibberlink",v:v}).then(function(d){b.textContent=d.ok?"Tersimpan ✓":("Gagal: "+(d.galat||"coba lagi"));setTimeout(function(){b.textContent="Simpan kalimat"},1500);muat()})};
 document.getElementById("gibAsal").onclick=function(){kirimOwner({aksi:"teks",k:"gibberlink",v:""}).then(muat)};
 document.getElementById("ubahJudul").onclick=function(){var j=document.querySelector("[data-teks=judul]"),i=document.querySelector("[data-teks=intro]"),box=document.getElementById("editJudul");
