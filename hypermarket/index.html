@@ -530,7 +530,7 @@ window.HM={API:API,esc:esc,lalu:lalu,ls:ls,pin:function(){return ls("hm_pin")||P
 function cekOwner(){kirimOwner({aksi:"cek"}).then(function(d){if(d.ok){OWNER=true;pasangOwner();cekPaypal();muatKlien()}else if(/PIN owner salah/.test(d.galat||"")){ls("hm_pin",null);PINMEM="";var mc=document.getElementById("ownerChip");if(mc){mc.hidden=false;mc.textContent="mode owner tidak aktif";mc.className="chip tunggu"}}else setTimeout(cekOwner,5000)})}
 (function(){var q=ls("hm_pin")||window.__pinq;if(q){PINMEM=q;cekOwner()}})();
 function normNama(t){return String(t||"").trim().toLowerCase().replace(/\s+/g," ")}
-document.getElementById("masukOwner").onclick=function(){var q=ls("hm_pin")||PINMEM;if(q){PINMEM=q;cekOwner();return}
+document.getElementById("masukOwner").onclick=function(){
   laci("Masuk owner",'<form id="fMasuk" class="baris"><input id="namaOwner" autocomplete="current-password" type="password" placeholder="ketik nama owner" aria-label="Nama owner"><button class="btn mini" type="submit">Masuk</button></form><p class="kosong" id="masukKet"></p>');
   setTimeout(function(){var n=document.getElementById("namaOwner");if(n)n.focus()},50);
   document.getElementById("fMasuk").onsubmit=function(e){e.preventDefault();var v=normNama(document.getElementById("namaOwner").value);if(!v)return;
