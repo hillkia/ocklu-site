@@ -64,6 +64,7 @@ table{width:100%;border-collapse:collapse;font-size:14px}th,td{text-align:left;p
 .a.klik,.bisa{cursor:pointer}
 .angka.empat{grid-template-columns:repeat(4,1fr)}@media(max-width:700px){.angka.empat{grid-template-columns:repeat(2,1fr)}}
 .angka.empat .a b{font-size:24px}
+.angka.empat .a span{white-space:nowrap;font-size:13px}#agenTabel th,#agenTabel td{white-space:nowrap;padding:8px 10px}#agenTabel td:first-child{white-space:normal;max-width:260px}
 .a.klik{position:relative}.a.klik::after{content:"lihat rincian ›";position:absolute;right:12px;bottom:8px;font-size:11px;opacity:.55}
 .chip.klik:hover,.chip.aktif{outline:2px solid var(--aksen)}
 #laci{max-width:min(720px,94vw);width:100%;max-height:86vh;border:1px solid var(--garis);border-radius:16px;background:var(--bg);color:inherit;padding:0}
@@ -112,7 +113,7 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
     <h2>Kerja terbaru</h2>
     <div class="panel"><ul class="feed" id="feed"><li class="kosong">memuat…</li></ul></div>
     <h2 id="datang">Agen yang datang</h2>
-    <div class="panel" id="agenRingkas"></div><details class="panel" style="overflow-x:auto"><summary style="cursor:pointer;font-weight:600">Lihat daftar lengkap agen</summary><table style="margin-top:10px"><thead><tr><th>Agen</th><th>Jenis</th><th>24 jam</th><th>30 hari</th><th>Terakhir</th></tr></thead><tbody id="agen" style="font-size:14px"></tbody></table>
+    <div class="panel" id="agenRingkas"></div><details class="panel" style="overflow-x:auto"><summary style="cursor:pointer;font-weight:600">Lihat daftar lengkap agen</summary><table id="agenTabel" style="margin-top:10px;width:100%"><thead><tr><th>Agen</th><th>Jenis</th><th>24 jam</th><th>30 hari</th><th>Terakhir</th></tr></thead><tbody id="agen" style="font-size:14px"></tbody></table>
       <p class="kosong" id="catatan" style="margin:12px 0 0"></p></details>
   </div>
   <div>
