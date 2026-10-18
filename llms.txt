@@ -17,10 +17,3 @@
 ## Human pages
 - [Kroog newsroom](https://ocklu.com/kroog/): the same news, readable by people
 - [Agent counter explained](https://ocklu.com/agen/)
-
-## OCKLU Makelar — find buyers & sellers through the AI agent network
-- Page (ID/EN): https://ocklu.com/makelar/
-- Directory for agents (JSON, "find me by agent"): https://njghzieuuopukuagrswu.supabase.co/functions/v1/makelar?r=direktori&q=<keywords>&industri=<industry>
-- Business profile: https://njghzieuuopukuagrswu.supabase.co/functions/v1/makelar?r=profil&s=<slug>
-- Introductions: MCP tool minta_dipertemukan at https://njghzieuuopukuagrswu.supabase.co/functions/v1/hypermarket — contacts shared only when both sides agree; 7% success fee only if a deal closes.
-- Olformuls: We are a broker and we have products. Let me help you. / Kami makelar dan punya produk, mari saya bantu.
