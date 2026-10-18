@@ -108,7 +108,7 @@ footer{margin-top:40px;color:var(--redup);font-size:13px}
 
 <section id="s-owner">
   <h2>Owner · OCKLU Makelar</h2>
-  <div class="kartu"><div class="baris"><input id="oPin" type="password" placeholder="PIN owner"><button class="btn" id="oMuat">Muat pelanggan</button></div>
+  <div class="kartu"><div class="baris"><span id="oStatus" class="kosong">Mengenali owner…</span><button class="btn" id="oMuat">Muat ulang pelanggan</button></div>
     <h3>Pelanggan baru</h3>
     <div class="baris"><input id="oNama" placeholder="nama pelanggan"><input id="oBisnis" placeholder="nama bisnis"><input id="oInd" placeholder="industri"><input id="oKota" placeholder="kota"></div>
     <div class="baris"><input id="oKontak" placeholder="email pelanggan"><input id="oWa" placeholder="WA"><select id="oPaket"><option value="mulai">Mulai $9</option><option value="tumbuh">Tumbuh $29</option></select><input id="oHari" type="number" value="30" title="hari aktif"></div>
@@ -177,9 +177,11 @@ document.getElementById("iBtn").onclick=async()=>{const m=document.getElementByI
 document.getElementById("pBtn").onclick=async()=>{const m=document.getElementById("pPesan");const b={aksi:"profil",tampil_direktori:pDir.checked};
  for(const [id,k] of [["pBisnis","bisnis"],["pIndustri","industri"],["pKota","kota"],["pIg","ig"],["pTiktok","tiktok"],["pLinkedin","linkedin"],["pSitus","situs"],["pKontak","kontak"],["pWa","wa"],["pTentang","tentang"],["pSkala","skala"],["pJenis","jenis"]])b[k]=document.getElementById(id).value;
  b.bahasa=bhs;const {st,d}=await tabApi(b);m.className="pesan "+(st===200?"ok":"gagal");m.textContent=st===200?(bhs==="en"?"Saved.":"Tersimpan."):d.galat;if(st===200)muatTab()};
-// ---- owner
-async function oApi(b){const r=await fetch(`${F}?r=pelanggan`,{method:"POST",headers:{"content-type":"application/json","x-owner":oPin.value},body:JSON.stringify(b)});return {st:r.status,d:await r.json()}}
-async function oMuatDaftar(){const {st,d}=await oApi({aksi:"daftar"});const el=document.getElementById("oDaftar");if(st!==200){el.innerHTML=`<p class="gagal">${esc(d.galat)}</p>`;return}
+// ---- owner (tanpa ketik PIN: kunci dari shortcut owner, diingat browser di seluruh ocklu.com)
+function kunciOwner(){try{return localStorage.getItem("hm_pin")||""}catch(e){return""}}
+(function(){var q=new URLSearchParams(location.search).get("pin");if(q){try{localStorage.setItem("hm_pin",q)}catch(e){}history.replaceState(null,"",location.pathname+location.hash)}})();
+async function oApi(b){const r=await fetch(`${F}?r=pelanggan`,{method:"POST",headers:{"content-type":"application/json","x-owner":kunciOwner()},body:JSON.stringify(b)});return {st:r.status,d:await r.json()}}
+async function oMuatDaftar(){const os=document.getElementById("oStatus");if(!kunciOwner()){os.innerHTML="Belum dikenali. Klik dua kali ikon <b>Owner Hyper Market</b> di Desktop sekali saja, lalu buka halaman ini lagi.";return}const {st,d}=await oApi({aksi:"daftar"});const el=document.getElementById("oDaftar");if(st!==200){os.innerHTML="Kunci owner di browser ini sudah lama. Buka ikon <b>Owner Hyper Market</b> di Desktop sekali lagi.";el.innerHTML="";return}os.textContent="✓ Owner dikenali otomatis";
  el.innerHTML=d.pelanggan.map(p=>`<div class="kartu"><b>${esc(p.nama)}</b> <span class="tag">${esc(p.status)}</span><span class="tag">${esc(p.paket)}</span><div class="redup">${esc(p.bisnis||"")} · ${esc(p.kontak||"")} · s/d ${new Date(p.berlaku_sampai).toLocaleDateString()} · dilihat ${p.dilihat}</div>
   <div class="baris"><button class="btn" data-o="perpanjang" data-id="${p.id}">+30 hari</button><button class="btn" data-o="kunci_baru" data-id="${p.id}">Link baru</button><button class="btn" data-o="ubah" data-st="${p.status==="aktif"?"jeda":"aktif"}" data-id="${p.id}">${p.status==="aktif"?"Jeda":"Aktifkan"}</button></div></div>`).join("")||'<p class="redup">Belum ada pelanggan.</p>';
  el.querySelectorAll("[data-o]").forEach(b=>b.onclick=async()=>{const {d}=await oApi({aksi:b.dataset.o,id:+b.dataset.id,hari:30,status:b.dataset.st});if(d.link){oPesan.className="pesan ok";oPesan.innerHTML=`Link pelanggan: <code>${esc(d.link)}</code>`}oMuatDaftar()})}
@@ -189,7 +191,7 @@ document.getElementById("oBuat").onclick=async()=>{const {st,d}=await oApi({aksi
 // ---- awal
 terapBahasa();
 const h=location.hash.slice(1);
-if(h==="owner"){buka("owner")}
+if(h==="owner"){buka("owner");oMuatDaftar()}
 else if(/^[a-z0-9-]+\.[a-f0-9]{20,}$/.test(h)){[SLUG,KUNCI]=h.split(".");document.getElementById("tabBtn").hidden=false;buka("tab");muatTab()}
 else{const b=new URLSearchParams(location.search).get("b");if(b){document.getElementById("q").value="";buka("direktori")}else buka("beranda")}
 </script>
