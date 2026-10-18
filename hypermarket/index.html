@@ -87,7 +87,7 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
 <div class="w">
 <header>
   <a class="logo" href="/">OCKLU <span>Hyper Market</span></a>
-  <div style="display:flex;gap:12px;align-items:center"><span class="hidup"><span class="titik"></span><span id="detak">menghubungi awan…</span></span><span class="chip ok owner-saja" id="ownerChip" hidden>mode owner</span><button class="btn mini" id="masukOwner" type="button">Masuk owner</button><button class="tema" id="tema" type="button" aria-label="Ganti tema">◐</button></div>
+  <div style="display:flex;gap:12px;align-items:center"><span class="hidup"><span class="titik"></span><span id="detak">menghubungi awan…</span></span><span class="chip ok owner-saja" id="ownerChip" hidden>mode owner</span><button class="btn mini" id="masukOwner" type="button" hidden style="display:none">Masuk owner</button><button class="tema" id="tema" type="button" aria-label="Ganti tema">◐</button></div>
 </header>
 
 <section class="kosmos" aria-label="Peta pasar antar-agen">
@@ -112,7 +112,7 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
     <h2>Kerja terbaru</h2>
     <div class="panel"><ul class="feed" id="feed"><li class="kosong">memuat…</li></ul></div>
     <h2 id="datang">Agen yang datang</h2>
-    <div class="panel" id="agenRingkas"></div><details class="panel owner-saja" hidden style="overflow-x:auto"><summary style="cursor:pointer;font-weight:600">Lihat daftar lengkap agen (owner)</summary><table style="margin-top:10px"><thead><tr><th>Agen</th><th>Jenis</th><th>24 jam</th><th>30 hari</th><th>Terakhir</th></tr></thead><tbody id="agen" style="font-size:14px"></tbody></table>
+    <div class="panel" id="agenRingkas"></div><details class="panel" style="overflow-x:auto"><summary style="cursor:pointer;font-weight:600">Lihat daftar lengkap agen</summary><table style="margin-top:10px"><thead><tr><th>Agen</th><th>Jenis</th><th>24 jam</th><th>30 hari</th><th>Terakhir</th></tr></thead><tbody id="agen" style="font-size:14px"></tbody></table>
       <p class="kosong" id="catatan" style="margin:12px 0 0"></p></details>
   </div>
   <div>
@@ -527,7 +527,7 @@ function saringMk(){var n=0;document.querySelectorAll("#mkDaftar tr").forEach(fu
   var s=document.getElementById("mkSemua");if(s)s.onclick=function(e){e.preventDefault();mkFilter="";saringMk()}}
 function kirimOwner(b){return fetch(API+"?r=owner",{method:"POST",headers:{"Content-Type":"application/json","x-owner":ls("hm_pin")||PINMEM||""},body:JSON.stringify(b)}).then(function(r){return r.json()}).catch(function(e){return{galat:String(e)}})}
 window.HM={API:API,esc:esc,lalu:lalu,ls:ls,pin:function(){return ls("hm_pin")||PINMEM||""}};
-function cekOwner(){kirimOwner({aksi:"cek"}).then(function(d){if(d.ok){OWNER=true;pasangOwner();cekPaypal();muatKlien()}else if(/PIN owner salah/.test(d.galat||"")){ls("hm_pin",null);PINMEM="";var mc=document.getElementById("ownerChip");if(mc){mc.hidden=false;mc.textContent="mode owner tidak aktif";mc.className="chip tunggu"}}else setTimeout(cekOwner,5000)})}
+function cekOwner(){kirimOwner({aksi:"cek"}).then(function(d){if(d.ok){OWNER=true;pasangOwner();cekPaypal();muatKlien()}else if(/PIN owner salah/.test(d.galat||"")){ls("hm_pin",null);PINMEM="";var mc=document.getElementById("ownerChip");if(mc){mc.hidden=false;mc.hidden=true;mc.className="chip tunggu"}}else setTimeout(cekOwner,5000)})}
 (function(){var q=ls("hm_pin")||window.__pinq;if(q){PINMEM=q;cekOwner()}})();
 function normNama(t){return String(t||"").trim().toLowerCase().replace(/\s+/g," ")}
 document.getElementById("masukOwner").onclick=function(){
@@ -548,7 +548,7 @@ function muatKendali(){var t=document.getElementById("kdDaftar");t.innerHTML='<t
 (function(){var a=document.getElementById("kdMuat");if(a)a.onclick=muatKendali;var k=document.getElementById("kdSimpanNama");if(k)k.onclick=function(){var v=normNama(document.getElementById("kdNama").value),ket=document.getElementById("kdNamaKet");
   if(v.length<6){ket.textContent="Minimal 6 huruf.";return}if(!confirm("Mulai sekarang masuk owner dengan nama ini?"))return;
   kendaliApi({aksi:"atur_nama",nama:v}).then(function(d){if(!d.ok){ket.textContent=d.galat||"gagal";return}ls("hm_pin",v);PINMEM=v;document.getElementById("kdNama").value="";ket.textContent="✓ Tersimpan. Di HP/browser lain: klik Masuk owner, ketik nama itu."})}})();
-function pasangOwner(){document.querySelectorAll(".owner-saja").forEach(function(e){e.hidden=!OWNER});var m=document.getElementById("masukOwner");if(m)m.hidden=OWNER}
+function pasangOwner(){document.querySelectorAll(".owner-saja").forEach(function(e){e.hidden=!OWNER});var m=document.getElementById("masukOwner");if(m)m.hidden=true}
 document.getElementById("gibSimpan").onclick=function(){var v=document.getElementById("gibIn").value.trim();if(!v)return;this.textContent="menyimpan…";var b=this;kirimOwner({aksi:"teks",k:"gibberlink",v:v}).then(function(d){b.textContent=d.ok?"Tersimpan ✓":("Gagal: "+(d.galat||"coba lagi"));setTimeout(function(){b.textContent="Simpan kalimat"},1500);muat()})};
 document.getElementById("gibAsal").onclick=function(){kirimOwner({aksi:"teks",k:"gibberlink",v:""}).then(muat)};
 document.getElementById("ubahJudul").onclick=function(){var j=document.querySelector("[data-teks=judul]"),i=document.querySelector("[data-teks=intro]"),box=document.getElementById("editJudul");
