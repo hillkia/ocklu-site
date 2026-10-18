@@ -363,8 +363,24 @@ function render(){
   var ps=S.peristiwa||[];
   document.getElementById("feed").innerHTML=ps.length?ps.slice(0,40).map(function(p){var nm=(S.neuron||[]).find(function(n){return n.id===p.neuron});
     return'<li><time>'+lalu(p.pada)+'</time><b style="color:'+(WARNA[p.neuron]||"inherit")+'">'+esc(nm?nm.nama:p.neuron)+'</b> '+esc(p.aksi)+(p.sasaran?' → '+esc(p.sasaran):'')+' · '+esc(p.hasil)+'</li>'}).join(""):'<li class="kosong">Belum ada kerja tercatat. Neuron bangun tiap 30 menit.</li>';
-  var tb=nama.sort(function(a,b){return ag[b].total-ag[a].total}).map(function(k){var a=ag[k];return'<tr><td>'+esc(k)+'</td><td><span class="chip">'+esc(a.saluran)+'</span></td><td>'+a.h24+'</td><td>'+a.total+'</td><td>'+lalu(a.terakhir)+'</td></tr>'}).join("");
-  document.getElementById("agen").innerHTML=tb||'<tr><td colspan="5" class="kosong">Belum ada agen yang datang lewat MCP atau katalog hidup. Ini angka jujur hari pertama, dan akan terisi setelah pendaftaran ke direktori agen.</td></tr>';
+  // 18/10: dirapikan — dikelompokkan, nama dibersihkan, 5 teratas per kelompok + tombol "tampilkan semua"
+  function bersihNama(k){return String(k).replace(/^MCP:\s*/,"").replace(/\s*\((your listing|http)[^)]*\)?/i,"").replace(/\s+v?\d+(\.\d+)*(-[\w.]+)?$/,"").replace(/\s+[0-9a-f]{7,}$/,"").trim()||k}
+  function kelompokAgen(k,a){if(/^(agen tak dikenal|tanpa identitas|skrip\/agen kustom)$/.test(k))return"tanpa";
+    if(/bot\b|anthropic|openai|gpt|google|bing|perplexity|amazonbot|applebot|bytespider|claudebot/i.test(k)&&a.saluran!=="mcp"||/ClaudeBot|Amazonbot|GPTBot|PerplexityBot/i.test(k))return"pengindeks";
+    if(/glama|smithery|probe|check|scan|verif|health|monitor|index|crawl|registry|catalog|directory|census|observ|uptime|audit|trust|grader|inspect|harvest|collector|research|snapshot|meter|watch|pulse|stats|lookup|almanac|bureau|scout|sonda|prober|classifier|enricher|survey|reachability|compat|rugpull|map|rank|junction|hub|market|station|beat|rush|field|cost/i.test(k))return"pemeriksa";
+    return"klien"}
+  var KEL={pengindeks:["Pengindeks AI (mesin pencari & model AI)","Membaca katalog kita supaya OCKLU muncul di jawaban AI."],pemeriksa:["Pemeriksa & direktori MCP","Robot direktori/registri yang mengecek server kita masih hidup dan mendaftarkannya. Belum pembeli, tapi membuat kita mudah ditemukan."],
+    klien:["Agen / aplikasi MCP","Program atau agen yang menyambung ke server MCP kita — paling dekat dengan calon pembeli."],tanpa:["Tanpa nama","Penghubung yang tidak menyebut namanya (header kosong) atau skrip buatan sendiri. Dihitung, tapi tidak bisa dikenali."]};
+  var grup={};nama.forEach(function(k){var g=kelompokAgen(k,ag[k]);(grup[g]=grup[g]||[]).push(k)});
+  window.__agenData={ag:ag,bersih:bersihNama,kel:kelompokAgen,KEL:KEL};
+  var tb=["klien","pengindeks","pemeriksa","tanpa"].filter(function(g){return grup[g]}).map(function(g){var xs=grup[g].sort(function(a,b){return ag[b].h24-ag[a].h24||ag[b].total-ag[a].total});
+    var h24=xs.reduce(function(t,k){return t+ag[k].h24},0),tot=xs.reduce(function(t,k){return t+ag[k].total},0);
+    return'<tr class="grupAgen"><td colspan="5" style="padding-top:14px"><b>'+esc(KEL[g][0])+'</b> <span class="chip">'+xs.length+' agen</span> <span class="chip ok">'+h24+' kunjungan 24 jam</span> <span class="kosong">· '+tot+' total · '+esc(KEL[g][1])+'</span></td></tr>'
+      +xs.map(function(k,i){var a=ag[k];return'<tr class="baris-agen"'+(i>=5?' data-sembunyi="'+g+'" hidden':'')+' data-agen="'+esc(k)+'"><td>'+esc(bersihNama(k))+'</td><td><span class="chip">'+esc(a.saluran)+'</span></td><td>'+a.h24+'</td><td>'+a.total+'</td><td>'+lalu(a.terakhir)+'</td></tr>'}).join("")
+      +(xs.length>5?'<tr><td colspan="5"><button class="btn mini" type="button" data-buka-grup="'+g+'">Tampilkan '+(xs.length-5)+' lagi</button></td></tr>':'')}).join("");
+  document.getElementById("agen").innerHTML=tb||'<tr><td colspan="5" class="kosong">Belum ada agen yang datang lewat MCP atau katalog hidup.</td></tr>';
+  document.querySelectorAll("[data-buka-grup]").forEach(function(b){b.onclick=function(){var g=b.getAttribute("data-buka-grup"),buka=b.textContent.indexOf("Tampilkan")===0;
+    document.querySelectorAll('[data-sembunyi="'+g+'"]').forEach(function(tr){tr.hidden=!buka});b.textContent=buka?"Sembunyikan":"Tampilkan "+document.querySelectorAll('[data-sembunyi="'+g+'"]').length+" lagi"}});
   document.getElementById("catatan").textContent=S.catatan||"";
   document.getElementById("produk").innerHTML=(S.produk||[]).map(function(p){return'<tr><td>'+esc(p.name)+'</td><td>$'+p.price_usd+(p.billing==="monthly"?"/bulan":p.price_usd?" sekali":"")+'</td><td><a href="'+esc(p.link)+'" rel="noopener">buka</a></td></tr>'}).join("");
 
@@ -394,7 +410,10 @@ function render(){
   var tujuanKlik=["Agen yang datang","Agen yang datang","Agen yang datang","Kerja terbaru","Kerja terbaru","Kerja terbaru"];
   document.querySelectorAll("#angka .a").forEach(function(a,i){a.classList.add("klik");a.title="Lihat rinciannya";a.onclick=function(){var h=[].find.call(document.querySelectorAll("h2"),function(x){return x.textContent.indexOf(tujuanKlik[i]||"Kerja terbaru")===0});if(h)h.scrollIntoView({behavior:"smooth",block:"start"})}});
   // baris agen bisa diklik → tanya ELIA soal agen itu
-  document.querySelectorAll("#agen tr").forEach(function(tr){var nm=tr.firstChild&&tr.firstChild.textContent;if(!nm)return;tr.classList.add("bisa");tr.title="Tanya ELIA soal agen ini";tr.onclick=function(){document.getElementById("pilih").value="elia";var t=document.getElementById("tanya");t.value="Ceritakan agen "+nm+": kapan datang, lewat saluran apa, dan apa yang dia lihat?";document.getElementById("ruang").scrollIntoView({behavior:"smooth",block:"center"});t.focus()}});
+  document.querySelectorAll("#agen tr.baris-agen").forEach(function(tr){var k=tr.getAttribute("data-agen");tr.classList.add("bisa");tr.title="Lihat rincian agen ini";tr.onclick=function(){var D=window.__agenData,a=D.ag[k],g=D.kel(k,a);
+    laci(D.bersih(k),jelas("<b>"+esc(D.KEL[g][0])+"</b> — "+esc(D.KEL[g][1]))+"<ul><li>Nama asli yang dikirim: <code>"+esc(k)+"</code></li><li>Saluran: "+esc(a.saluran)+"</li><li>Kunjungan 24 jam: <b>"+a.h24+"</b> · total: <b>"+a.total+"</b></li><li>Terakhir datang: "+lalu(a.terakhir)+"</li></ul>"
+      +'<p><button class="btn mini" type="button" id="tanyaElia">Tanya ELIA soal agen ini</button></p>');
+    var b=document.getElementById("tanyaElia");if(b)b.onclick=function(){document.getElementById("laci").close();document.getElementById("pilih").value="elia";var t=document.getElementById("tanya");t.value="Ceritakan agen "+k+": kapan datang, lewat saluran apa, dan apa yang dia lihat?";document.getElementById("ruang").scrollIntoView({behavior:"smooth",block:"center"});t.focus()}}});
   // teks yang diubah owner
   var TK=S.teks||{};document.querySelectorAll("[data-teks]").forEach(function(e){var k=e.getAttribute("data-teks");if(!e.hasAttribute("data-asal"))e.setAttribute("data-asal",e.textContent);e.textContent=TK[k]?TK[k].v:e.getAttribute("data-asal")});
   PESAN=TK.gibberlink?TK.gibberlink.v:PESAN_ASAL;document.getElementById("siarteks").textContent="Isi bunyi: “"+PESAN+"”";var gi=document.getElementById("gibIn");if(gi&&document.activeElement!==gi)gi.value=PESAN;
