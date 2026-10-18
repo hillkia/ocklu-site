@@ -25,8 +25,6 @@ header{display:flex;justify-content:space-between;align-items:center;padding:16p
 :root[data-theme="light"] .kosmos{background:radial-gradient(ellipse at center,#20195a 0%,#0a0b1e 75%)}
 canvas{display:block;width:100%;height:min(62vh,520px)}
 .kosmos .judul{position:absolute;left:16px;top:16px;right:16px;pointer-events:none;color:#eef0ff}
-.judul button,.judul input,.judul textarea,.judul .edit-baris,#editJudul{pointer-events:auto;position:relative;z-index:5}
-[hidden]{display:none!important}
 .kosmos h1{margin:0;font-size:clamp(24px,5vw,40px);line-height:1.1}
 .kosmos p{margin:4px 0 0;color:#b8bdd9;font-size:14px;max-width:46ch}
 .kosmos .kaki{position:absolute;left:16px;bottom:12px;right:16px;font-size:12px;color:#8d93b3;pointer-events:none}
@@ -82,6 +80,10 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
 @media (prefers-reduced-motion:reduce){.titik{animation:none}}
 .detak30{display:grid;grid-template-columns:repeat(48,1fr);gap:2px;align-items:end;height:44px}
 .detak30 i{display:block;border-radius:2px;background:var(--garis);min-height:6px}.detak30 i.ada{background:#7cf5d4}.detak30 i.bolong{background:transparent;border:1px dashed var(--merah,#ff6b6b)}
+
+/* 18/10: tombol di atas kanvas harus bisa diklik; atribut hidden harus menang dari .btn */
+.judul button,.judul input,.judul textarea,.judul .edit-baris,#editJudul,#ubahJudul{pointer-events:auto!important;position:relative;z-index:5}
+[hidden],#masukOwner[hidden]{display:none!important}
 </style>
 </head>
 <body>
