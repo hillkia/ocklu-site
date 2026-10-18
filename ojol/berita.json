@@ -1,5 +1,125 @@
 {
- "w": "2026-10-18T05:37:08Z",
+ "w": "2026-10-18T05:43:00Z",
  "dari": "Kroog",
- "berita": []
+ "berita": [
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-18T02:12:29Z",
+   "media": 12,
+   "judul": {
+    "id": "KPK Ungkap Dana BNPB yang Diduga Dikorupsi untuk Karhutla, Gempa NTT, dan Banjir",
+    "en": "KPK Ungkap Dana BNPB yang Diduga Dikorupsi untuk Karhutla, Gempa NTT, dan Banjir"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Serambinews.com",
+    "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPTjJvWmVpOFBYclR2dlQ0U2tONmIxM0RFcl9GaEpFR3ZiY0xYamN0cmpUOGpBWUFEQVF2NGpiWVZ1c05qd183ZnFreXVmWXIwYmRMNGNMMVRBbW1RRnhJODNRU2NpVU4tZDZXR3lpTDVXWE5fZW9jTE5RakM4UXByMkFZODNDdldDSWlWcWtacjNOWDE5M2FKanpXY2FwbzRtT2FnanRjZC0tZ0lzekZIT2tmcHJjZ21TdTNINFlCbXRQYTNsMlZlZnZwWjR4TWV3ZVBJ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-18T05:30:00Z",
+   "media": 1,
+   "judul": {
+    "id": "BMKG imbau warga waspadai potensi gelombang tinggi dan banjir rob",
+    "en": "BMKG imbau warga waspadai potensi gelombang tinggi dan banjir rob"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "ANTARA News",
+    "url": "https://www.antaranews.com/berita/5792925/bmkg-imbau-warga-waspadai-potensi-gelombang-tinggi-dan-banjir-rob"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-18T03:54:48Z",
+   "media": 1,
+   "judul": {
+    "id": "Buntut Antrean BBM dan Blackout, YLKI Minta Prabowo Copot Bahlil",
+    "en": "Buntut Antrean BBM dan Blackout, YLKI Minta Prabowo Copot Bahlil"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "faktakalbar",
+    "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPOWpxOEJXT2RSZm1Pb2c5elp1NWdlVzdrN0VWc25rUkJGX1FWaW83N0xGOXJtRHo0eXNSWDFjeW9BMThabUwzeWMxd3VmZUttNFVmT3hQZTVveGJPRUZtbEZTT2JoT0lHdWdBc25CU2JPOW1YX2phYUxhb2VWR3paTi0yY1FuRFROM25CMEIxaWk0bmUwQ056WQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-18T02:08:07Z",
+   "media": 1,
+   "judul": {
+    "id": "Daftar Lengkap Harga BBM di SPBU Pertamina dan Swasta Hari Ini",
+    "en": "Daftar Lengkap Harga BBM di SPBU Pertamina dan Swasta Hari Ini"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "detikoto",
+    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOYW56QWJhejM0NW8tVWhQZnJsMjBKNWpJVTczWmlYc1FDeHUzdVRNS1QzN2FtNHFrRmU2OE5DMTJUckFaRmR1SGY4elY0dnM1M1ZSZ0l3MS1Fc1VaNjMyVV96QkFQeDVCV0JORlduM1ZzVGtLUUFuZVZQb292dzJJNU1RSnJUY3NuSDNyb0pMUXBvbk1RaEpGTkZKbVhfOHBHRmhn0gGoAUFVX3lxTE5XeXBoelp0eWd6MEVfYkU0bUNLeWs0amFjYnpJazlIcm93cDhyOXJfQkpBR1pfeE9aQXRGZjJwejRSczlYVDVrZ3RnVGdtZ1laRE9CbWtHeXVmV18zTDJqTC1qUkFQY1dMVVV1R0lYREx5R3FNRFJ3WHh5ZFZBUnRLYklsdUV4MEJFUFktTzFtMmhvRzB4d0JnX0hrOWZPQnRqZnhkNGFCbg?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-18T01:22:46Z",
+   "media": 1,
+   "judul": {
+    "id": "Hukum sepekan, OTT KPK hingga gangguan layanan BBM",
+    "en": "Hukum sepekan, OTT KPK hingga gangguan layanan BBM"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "ANTARA News",
+    "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPczZ0M0paMVB1UFRVUFpfNUZxZ3lEeXdFSUctNmVxS3FlX084S29sZVZGdi1oT1h5V1J0X3V5X05OX3d5MHlyZW96eWRCQmN6YWRxMUJxeWpyaHZhVk1MZkYyMkJSUzVEbTAySFdRN1hDX2Y0U0tfOHJJWmpMTjNpb3RHRXdydmhzMzZFQnpFbDR2NG01S1dLS9IBmAFBVV95cUxPczZ0M0paMVB1UFRVUFpfNUZxZ3lEeXdFSUctNmVxS3FlX084S29sZVZGdi1oT1h5V1J0X3V5X05OX3d5MHlyZW96eWRCQmN6YWRxMUJxeWpyaHZhVk1MZkYyMkJSUzVEbTAySFdRN1hDX2Y0U0tfOHJJWmpMTjNpb3RHRXdydmhzMzZFQnpFbDR2NG01S1dLSw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-17T23:25:33Z",
+   "media": 1,
+   "judul": {
+    "id": "RUU Perubahan Iklim Mulai Dibahas, DPR Soroti Kebakaran Hutan dan Banjir di Sumatera",
+    "en": "RUU Perubahan Iklim Mulai Dibahas, DPR Soroti Kebakaran Hutan dan Banjir di Sumatera"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "VOI.ID",
+    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNU0JPYWY0cndpTmQ2cnN5c1VIR1JTRHl6bk1IbWhZVzBkZnZpOEdoNHVURlU2YnRkTnUtb3l3Y1VSQm9heE1ZeVV1UFJtMUZ2RW9rV3VlUFg0TkJVM29KWVlBRmFsS3E3WUpTY19Ld3lCZ2JfRzRpd0VRT0Znc3ptX0NoQlJVUFNDTllEb043WEpOdWhyLXNkTVNOS05FMUpPVzdZVzNMblpfbHRsYXfSAa4BQVVfeXFMTVNCT2FmNHJ3aU5kNnJzeXNVSEdSU0R5em5NSG1oWVcwZGZ2aThHaDR1VEZVNmJ0ZE51LW95d2NVUkJvYXhNWXlVdVBSbTFGdkVva1d1ZVBYNE5CVTNvSllZQUZhbEtxN1lKU2NfS3d5QmdiX0c0aXdFUU9GZ3N6bV9DaEJSVVBTQ05ZRG9ON1hKTnVoci1zZE1TTktORTFKT1c3WVczTG5aX2x0bGF3?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-17T22:00:00Z",
+   "media": 1,
+   "judul": {
+    "id": "ITFC Danai Impor BBM",
+    "en": "ITFC Danai Impor BBM"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "https://feedberry.com/",
+    "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOdF9rQXdFU2lpOVBpMUFNUmhrRWlxOVR0SlVYNGZReXFEUi1saUhIR0ZRRkxkQnFzYm93NGNkeUdzT1c4azRuT3dyUXpXY05HaHVNUklLUjR4bUhfNXdfbEJBYzJ0cjVNaWIwZjFsTFJKUEp0bHNfM1JLaldZdDloRTNvcXFDNGhJQVpzd1d1WQ?oc=5"
+   }
+  }
+ ]
 }
