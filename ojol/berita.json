@@ -1,7 +1,24 @@
 {
- "w": "2026-10-19T09:01:01Z",
+ "w": "2026-10-19T12:46:25Z",
  "dari": "Kroog",
  "berita": [
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-19T00:36:47Z",
+   "media": 17,
+   "judul": {
+    "id": "KPK Ungkap Dana BNPB yang Diduga Dikorupsi untuk Karhutla, Gempa NTT, dan Banjir",
+    "en": "KPK Ungkap Dana BNPB yang Diduga Dikorupsi untuk Karhutla, Gempa NTT, dan Banjir"
+   },
+   "isi": {
+    "id": "KPK mengungkap dana BNPB yang seharusnya untuk penanganan kebakaran hutan, gempa NTT, dan banjir Sumatera diduga dikorupsi. Semua media melaporkan hal yang sama tanpa perbedaan.",
+    "en": "The KPK revealed that BNPB funds intended for handling forest fires, the NTT earthquake, and Sumatra floods were allegedly embezzled. All outlets reported the same information with no differing viewpoints."
+   },
+   "sumber": {
+    "nama": "Aspek.id",
+    "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPRGE5OGJJQTgzOU9yM2daNlltM1ROV1h6Y0hWUGlUX2dla3lWLXgwR1lXMVFTeEU3WkNGRFhPb1FkUEgxSkpIdjNmTlU4SDltMjZKdkIzaXN2QTdjNk1EVXBTSktZUjliWVBaSldlNWFTYURndWQ4Z2UyVm4tVGNsRQ?oc=5"
+   }
+  },
   {
    "jenis": "berita",
    "waktu": "2026-10-18T15:45:00Z",
@@ -17,23 +34,6 @@
    "sumber": {
     "nama": "infonews.id",
     "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOLWpPTndOVGVJUkZ1SmliaFV4ZFI4TkwxMkFOenpVSVJDS2Y3bHJpWExRV0p1Y1ExN3JtSTFBSlNFbUlOQ25LaEtIWTZqYzFxdi1oMGZjdGxHNVBpelhxWS1RS1NfVnV6LXBLcEdRUWtERFc5LXMtTlNheERvTVJsczUweUhnaXlFN05WWk00RFdWcDVTelVlQjNsbGlwRGtmQkZ6Z1dwVWRnMWRlRnloeFZYQ0tpZGIySmxtTTNEVVRaNTJhT1VOd3NweFBTUzI5NWl1am5fTdIB3AFBVV95cUxQNzV1TWtYQ3M3OHBtY3o0TkM4YWI0b1FXWXlDQTNkdElxT3ZpYlhhVkVzZ0N3VlBEeTVsM1dsNjkzd3pNNk93OWZZVFRJc0s4c3ZMTFhYSi1fUGhvaXFSSTMxb25RVGZkeHhqbE84MVJiSGJzWElKcFZFTk53MzBKQ1VTSG9HQkNvYjVDdmpOclZKRUE4X1hNS3dfWVN5aVJIZV9pcmR3SzM2Y1dYOWRUd1Z1ZERibjVIWGhzMWh4ODdvYm5WRFN4bHlOd3J0RE16WDJzTkU1Y09KbVkx?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-18T02:12:29Z",
-   "media": 16,
-   "judul": {
-    "id": "KPK Ungkap Dana BNPB yang Diduga Dikorupsi untuk Karhutla, Gempa NTT, dan Banjir",
-    "en": "KPK Ungkap Dana BNPB yang Diduga Dikorupsi untuk Karhutla, Gempa NTT, dan Banjir"
-   },
-   "isi": {
-    "id": "KPK mengungkap dana BNPB yang seharusnya untuk penanganan kebakaran hutan, gempa NTT, dan banjir Sumatera diduga dikorupsi. Semua media melaporkan hal yang sama tanpa perbedaan.",
-    "en": "The KPK revealed that BNPB funds intended for handling forest fires, the NTT earthquake, and Sumatra floods were allegedly embezzled. All outlets reported the same information with no differing viewpoints."
-   },
-   "sumber": {
-    "nama": "Serambinews.com",
-    "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPTjJvWmVpOFBYclR2dlQ0U2tONmIxM0RFcl9GaEpFR3ZiY0xYamN0cmpUOGpBWUFEQVF2NGpiWVZ1c05qd183ZnFreXVmWXIwYmRMNGNMMVRBbW1RRnhJODNRU2NpVU4tZDZXR3lpTDVXWE5fZW9jTE5RakM4UXByMkFZODNDdldDSWlWcWtacjNOWDE5M2FKanpXY2FwbzRtT2FnanRjZC0tZ0lzekZIT2tmcHJjZ21TdTNINFlCbXRQYTNsMlZlZnZwWjR4TWV3ZVBJ?oc=5"
    }
   },
   {
@@ -357,159 +357,6 @@
    "sumber": {
     "nama": "KilasJatim.com",
     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPVFFXSGxnT3dMckp2ZW51MnNqR09WRmh6SWpWNllBcUd6YWF6MG5mVXhUSjdidm13RnllWXVoZVRhUVhfT05IU0VZRjlWTXRoQUFNRTJFeDNRUVBscGh5QTRjZlhjYnkzdXd3S0cwR05DY0ZZSkdNbTREODJ0THBYQU1zQmJxSF9PMy1sQTFIUDJmUDdET2xsS1NYZnV5U21ia2pNSlAtVFU2RVZQcGxwOUxLR2Y?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-18T04:56:08Z",
-   "media": 2,
-   "judul": {
-    "id": "Dana Bencana Diduga Diselewengkan, KPK Telusuri Pengadaan untuk Karhutla hingga Banjir",
-    "en": "Dana Bencana Diduga Diselewengkan, KPK Telusuri Pengadaan untuk Karhutla hingga Banjir"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Semangat News",
-    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPNUNqSXF2RnBvWTMtamhOMnBQcTFqaTVvSFVabWVLbG5WLVM0eExoLThyU2JyLTByZWlTcFB6MmFFVHp1NEVmOTk2OHdJVHV0OUVjZ3R1X0o4aEpGbERzejIzU2NxYWJWbS1BTVNFbWI1aXM4ZGctWGJGM2JqSWF6d3pVaW1PaW4yUDZ3R2xqc0V4SWtLZzhJTjJUMVMtLUdhNHVMckR0eUplbFpYWGhsaEQycVZmQQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-18T10:49:30Z",
-   "media": 1,
-   "judul": {
-    "id": "DPRD Minta Pemkot Bandung Perluas Mitigasi Selain Banjir",
-    "en": "DPRD Minta Pemkot Bandung Perluas Mitigasi Selain Banjir"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "detikcom",
-    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOeDRFNnoxUEZabTVSY0RRRDFqeEtBZFhjQ2d6Nm11eHhHRkxDeE1HajRjSGkwUEh4cHUycXNnRGk3aml5VkNtREJhQmpQd1pXNWR3SHBrR01SOHYteWFtcEVSc2RFRlV5ZXc0WWI2SDVsXzJ5YXZnV19JdTByRHNESUl3aHFORGx6SDdRelRpTW9rZXV2Z3M0OTdCaGpzSnVGRTBR0gGoAUFVX3lxTE9SZ1pVOEZsTVdVZXA0blBVRzVMYVR2WF9FOVQxa3lkN245T3RoMm9QeC00QmFuQWVlN0Y4RWp6MUE5VF9qREY5LVNBSklEMmtkMDliMjZmWDkxeC13ZE51TEhlcHd0cUVhTkN4TlpMdjA5NHpfWU10dmx4S0RlcVRxQ19GbGdQZHZlb29GLXFHd2Rrekh2aGpqMEVhTF90a3g1bnM5V21qQQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-18T10:35:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Menteri Pigai Keliling SPBU: Hari Ini Distribusi BBM Bali Aman!",
-    "en": "Menteri Pigai Keliling SPBU: Hari Ini Distribusi BBM Bali Aman!"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Rmol.id",
-    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPd2V4YVg4VUVfTFJKRmhieFEzSk5GNVo5cjAwOEl0Wnc0NndldVRJeF80U1poN3JQNFNLM2h3dllEX1JPRkNGckZNRGswRDgwMzlybWVna1BzOFp1Y2wwaXFCUVFadF9mVy10ZE1IUW1pNmdpSUVwSC1DUUY4UXlORC1fWUdVaEg2OFVtZGR5WV8zMGlNbVlUVmVTRWdGODJaRnJVMFlPX0Y1WUQ3bm9J?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-18T04:28:00Z",
-   "media": 2,
-   "judul": {
-    "id": "Wali Kota Bengkulu Tinjau Taman Perjuangan, Apresiasi Peran Ojol Trantibum Jaga Ketertiban",
-    "en": "Wali Kota Bengkulu Tinjau Taman Perjuangan, Apresiasi Peran Ojol Trantibum Jaga Ketertiban"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "RRI.co.id",
-    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQVjBEOThXSWtaSXBmVjVnVFpOWmNiZnpOaHg1RWI1SW1nTDNFSDdiMDVaLWFKd3FyRkZ6aDBjZXRYNnhkdnZmT2VYSWhsTXhmbXZRbWJqLWdJbFJERG5lTFJrRFVsb2czUVlPWEdMWFQ4UzlNNDhHeHhQc0dHZ3F0WUpPYlI4T2pFQ0E5eFhnSkdoRmNEc3NiTXJrTXlydUNqSEtpSTVVamdjQ19xMnc?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-18T10:30:32Z",
-   "media": 1,
-   "judul": {
-    "id": "Sosok Pelaku Begal di Terminal Tanjung Priok, Driver Ojol Alami Luka di Punggung",
-    "en": "Sosok Pelaku Begal di Terminal Tanjung Priok, Driver Ojol Alami Luka di Punggung"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Tribunnews.com",
-    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOLVVxMVdtaDRaQTlCenpGam94Zm5WZ2VhN2FLaFVSU2U0VVNKck9WSW9mcDBKRktpSEVzSzJGQ1hVUHFIV0ozTWJIUkN0cnN1bW95QklwM05KcG53RTJ0TmRaekkyck5ZRU82WVlVdTFEX0dmRWktMHZFY1RDNDZoV3hjOG5zWGZYakd0MjhYU3hSaDBmaEphS0FvVFdYYjdyek5uOUJMT0tQWTlqdndiUHZXMmxSa3l2azBxX3FvcmZDNnB1YWc?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-18T09:59:33Z",
-   "media": 1,
-   "judul": {
-    "id": "Kasus Sopir Alphard Rusak Motor Ojol Pak Mulyadi Berakhir Damai",
-    "en": "Kasus Sopir Alphard Rusak Motor Ojol Pak Mulyadi Berakhir Damai"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Warta Bela Negara",
-    "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNQzhPSjBlb1BtVDliRUpjUnNyd3F2Wjl6S1NEZVJMUTVQTEVQUjRIZm1JMC1mV1c5eUNhRGQyamlxcHZBQXJCb3V1WTdKVlJwQThIbl9lS21RXzVPQ3Brbk5ZTXhjc1VzX0dxTWJGWFJ6ejNrZ0xvNDlMeGlhRnprRG5jcFh5eEE?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-18T09:29:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Inovasi Jepang Kembangkan Kapsul Terapung Antibencana Tsunami dan Banjir",
-    "en": "Inovasi Jepang Kembangkan Kapsul Terapung Antibencana Tsunami dan Banjir"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "RRI.co.id",
-    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOY0FyRDc5bWF5UE1oTXNVWVRTV3pJLVltd3Brc1BmUkZpdGxIYThUdXY1bXYwczdoRkt4VVNpd2pjd3JfWHhZc0U4b3NfYlhKSjRIVHV5VEdrVjA4X0ZVWXE5Q2p1VmplbURRV3RwWFdWNkI5R3ROM25OWWpaUlc0c0ZuZzNmc2NEa1lENDlxb20wc0VhdVpIaWFxZkRoWkdXbHJQampoeUZla0R4Ym1mcU9RNA?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-18T09:19:45Z",
-   "media": 1,
-   "judul": {
-    "id": "Bentuk Ikhtiar Atasi Karhutla, Pemko Palangka Raya dan Pengemudi Ojol Gelar Salat Istisqa",
-    "en": "Bentuk Ikhtiar Atasi Karhutla, Pemko Palangka Raya dan Pengemudi Ojol Gelar Salat Istisqa"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Media Center Kota Palangka Raya",
-    "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPc1VpTmF2V2ZwVnBvMnNfXy1NTFlJSlJ2V0IzZDdORG9POEotU1VHVlZpSTlFdlZJOUxoNmtLWmFQQ0c2Mm9uS2JHQWFrVHgxdTRkQ1lha3QtYWNSTkpTc1hJNGJOSjdrU3BjaWl6azRKWDFfQ1gteDE3Z2pXcTIyWENueU0zcVFERGhCVmNrRUdTMTVFSlZDdXVoSU1JaGZxTS1iaE15bFJteUtiUHJUcTZkcWdDTHBiNVRoWm5QdXM4a3dRQlI4?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-18T09:15:58Z",
-   "media": 1,
-   "judul": {
-    "id": "Jual Pertalite Via Facebook, Pemuda Dibekuk Polisi",
-    "en": "Jual Pertalite Via Facebook, Pemuda Dibekuk Polisi"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "NUSABALI.com",
-    "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOckxIM1p6YVNUTWlxSHFhT1ZjcGJpRlFMdllqNXhmaVZ2QUpRMElHcEF1ZUZSbXpmRUNCMVFDOFRGeEZSSDlsM1EtbXNYMFNtdk5TbFVUZU1GNGstYlQ2ZW92Y3duUWdpb0NXTF9mdVppS2QxaEdTN0xhcmlQS2RnaXBETTFudWtCSWw4SE9FaTBpQQ?oc=5"
    }
   }
  ]
