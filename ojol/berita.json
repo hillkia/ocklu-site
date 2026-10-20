@@ -1,5 +1,5 @@
 {
- "w": "2026-10-20T02:40:54Z",
+ "w": "2026-10-20T03:43:41Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -72,6 +72,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-10-20T02:19:34Z",
+   "media": 2,
+   "judul": {
+    "id": "Motor Listrik Terbengkalai di Bekasi Bikin Heboh, Kejagung Bantah Terkait Kasus Korupsi BGN",
+    "en": "Motor Listrik Terbengkalai di Bekasi Bikin Heboh, Kejagung Bantah Terkait Kasus Korupsi BGN"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "VIVA.co.id",
+    "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPY2hDcjlJaGJ6TDRFR0Q5NnJvNUoxaGJFY0FOMmVtVi1pcE5zU0U4TTlqTEpKVE1uY21sLWVmZVlzcXJMZTZlU21yY29CbEpheFhNRko4ZF9oRi1BclFJUmd6bFRXT3VUd09Qb0ZVYjBtUEhianpEY0dhazdseEZ0YVd4VlhuMGhkbDhGcTlfMVZEQVg0UFFDRDlkOEtmTmZabEc1bnhrbW9ZSmxhZ0lneDY3VVpnWldod0I3dWdoejZ3Yml6a1B0eHo2WVRPREVHbUNMbzJnb2tpYkdvMjh2MU5pbE44bDhROVBQZ9IB8gFBVV95cUxPdFJRQ3hCbDN3N3d6TkdQaURfcDZHNFp2ekxNQ0M0NXliQ20ya1BrdE1BZEtVcUJ2NjFuVUtmZlBLdnhVZElaMzE1MndmTUdYZ2hYbXFGcnJwNktJQmZXX1k4ZnVmYVNfS1laZDc1NFZjZFJxcWhaM0FMTDVuZjhUY0FTOXBvU2x4U1BiOEpiOS1iMll6TFZxeXZ2WFAzUlljVk55dlN6R2RzdjBPX2tnNnRoLVBTeGxRSEhQZWx3MEdqSnpMT3plZTlxRnIxQzE1bzdVbTNIc1pUNjVBbWM4NnpKdmVrWEFDemFYYnpNcjFKdw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-10-19T13:57:29Z",
    "media": 5,
    "judul": {
@@ -85,6 +102,23 @@
    "sumber": {
     "nama": "Kaki News",
     "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPaGFOaHhJUE91eExGbEVIYjhQTklWLUVjSTZCcEhDM2VWeFVvR21wMVk5WmtnSEpsbkU5d0FoRUF5R1pRZ25jM2hCbi1iQTdmQ3k0TXhtT2U5a0hYQUNONTdkekZhVjF5Q01xMUNJX1NfLUJ3NnZsYkJxWTRtQVN1UDhlS0lnRmVmLUFyUm52QW55cy1kMnN2Zk05Nkl3UjVRR2l0VEhsUHNuZw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-20T02:50:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Polisi Sidak SPBU Kebon Rojo Blitar, Pertalite Tersedia tapi Tak Dijual Dugaan Penyelewengan Diselidiki",
+    "en": "Polisi Sidak SPBU Kebon Rojo Blitar, Pertalite Tersedia tapi Tak Dijual Dugaan Penyelewengan Diselidiki"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Ketik",
+    "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPa2Zxd0N6RG96cEltdVVSOGF2M0hhazRiWTlUdDFKMmdlWmpBYk1PMUdRLUZUeXMzdHljZEpQaC1Da3RmRFFteHhBaFVnd2FSME4yd3RwN3ljckc0Unlrbmx3Nk9ES0pPWThYZGs0TW5KeTRsRGI5b25GejZKSnR5bm5jaVlkMzNnTVpnVWVONGt3ejA4RHNWSkN4Z2hpUnhfcWw2cjduclBDRFVKR21WVjc0aEVWYUZqOUF1VGZZN3hxRUhUMUxOYXRac3QyVzlhWHcwYmJfYnNKd9IBwgFBVV95cUxPcWxadzkwd05RNVNrcDBELWR3T1ppTkI4d3ZRT19iRnhOQmowU2l3N1BoS3BFejhoODRaTFhzSnc2YjVqOHpxZk04ZHQzVV93RWJOZkZWNEx2S1BGSzUwcmlDS2IySnZOanZaUW9nSENnMnhUa2tzSkFhb2NPSFNTc2g2cG92cG53alNDVlBLRnRjeWlZd296MnpWaGJuU2pxckxXcGwtVVdDdEFyRV9FaWpTVThyUlNCSUxXLUtfb0xxdw?oc=5"
    }
   },
   {
@@ -238,142 +272,6 @@
    "sumber": {
     "nama": "Liputan Jatim",
     "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPVTd6V2gyaGd2d0Z1Q1hHOTlFcm03UEhtc1hrNnlwUmdWWloyUlBfQU1WUHZDSVJ5ZDdFQW4xcV9FWWhESzhNY0JDNmtjd3FoMnRuUHVMdkxiLWdtbks3RlRxT2VTMElIR3dodFdGRmlRZF9xUXdqeGdlQkl5am4tLXRZV3VXdThOcjRfSzVlM1F0eTRaXzJac3NOSQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-19T08:42:53Z",
-   "media": 3,
-   "judul": {
-    "id": "DPR minta pemerintah evaluasi kebijakan potongan komisi ojol 8 persen",
-    "en": "DPR minta pemerintah evaluasi kebijakan potongan komisi ojol 8 persen"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "ANTARA News Megapolitan",
-    "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPMVQxVkp6SmZfNl9TZ0pTRHZKTGRBNXl2amtiU1pOZ0JweU0yWURuVVZDVlljaTNUQ3RQX2laVkVGSUFWYlNRSDZlRmtPNHJWYWY0UXVGQmZwamh2SnJVVGYzYW4wVWZER21rVXdMNUMwbHE2ZkprX1FUeHVWeFNEblN2bnVqRVVvS19WLS1MWmlPeGtoU0NTQXB1cl9uZXJEdGVCRWpHLXVkNGpQX3d2RU5hMjhfYUh0THhLcWtWTdIBvwFBVV95cUxPMVQxVkp6SmZfNl9TZ0pTRHZKTGRBNXl2amtiU1pOZ0JweU0yWURuVVZDVlljaTNUQ3RQX2laVkVGSUFWYlNRSDZlRmtPNHJWYWY0UXVGQmZwamh2SnJVVGYzYW4wVWZER21rVXdMNUMwbHE2ZkprX1FUeHVWeFNEblN2bnVqRVVvS19WLS1MWmlPeGtoU0NTQXB1cl9uZXJEdGVCRWpHLXVkNGpQX3d2RU5hMjhfYUh0THhLcWtWTQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-19T12:46:35Z",
-   "media": 2,
-   "judul": {
-    "id": "Kisah Ika Widianingsih, Driver Ojol Surabaya yang Siap Bantu Korban Kecelakaan",
-    "en": "Kisah Ika Widianingsih, Driver Ojol Surabaya yang Siap Bantu Korban Kecelakaan"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Kompas.com",
-    "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNRGk3bGF3b1hEbEcyYlFwYTVtSWpGNTFMZEs4SDhfVTc0RTN2UWZjZGl1c1pEN25rcjZ2bGpNb19wQzJkQVlrU3FtTnRVeUpiVUxra3ZhZnJjX1gzbS1XNURjZHZNX3JIamhESFZtWi1aYVVLb21IMmRiWENnQVR1a2xzMWtnTVQzbG5mNnViR2tPMDlHUnRXOU00clMzRFhaYk1uRF9jbUY0N3Zmem1yVWJXZTFQVUJaSXhBWGVMRkVpSGVrcXgyTVp3aU9TNTA?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-19T18:45:58Z",
-   "media": 1,
-   "judul": {
-    "id": "Robinsar bersama Forkopimda Kota Cilegon turut hadir dalam Doa dan Tabur Bunga bersama Ojol",
-    "en": "Robinsar bersama Forkopimda Kota Cilegon turut hadir dalam Doa dan Tabur Bunga bersama Ojol"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Berita Cilegon",
-    "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPNFNMZlZ6N2ZPYW5iNGNGbUdobGRIc2M3NUlZNGJfV3UzZVpXMnE1Y1l5cWdkZlNBQlFoNUN0SVBaWS1Jd2VfZnNWU0VfNUhFMDlUeExyOVVzQ2VqelE0S2JhbXpRT2FzUFNBQ3VncG5fbDZJNUhTSWlWTkpZbHZ6UUxOejIycnJpZUJXMjZnQjdPdFZSM183cFlpaGhKNFFkRURkbk1BQmN0Q21TaUJSWmRiaWRFdmNXTjBpd2l5OG9mX3g2Rkd6a0JQNk9UalpCZVNkcjRtU09RVGM?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-19T12:02:00Z",
-   "media": 2,
-   "judul": {
-    "id": "Aturan Baru Ojol 2026: Pengemudi Bebas Kerja di Banyak Aplikator",
-    "en": "Aturan Baru Ojol 2026: Pengemudi Bebas Kerja di Banyak Aplikator"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "swarajombang.com",
-    "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPaDdJTXFoR21wR0dzVTd6ekxWTGJjaDk1TGNUOFd5UjFjNVdtSHhQV1oxczY5RnN6UHNYNW1YNG1BOUN6UEMwNWZ1UG42aUs4YktXVUJTMFpWWGFmcTFIYi0tb0tScG5JMEFXYlQ0SnVwRWR1c2RqS2R3bEFQYmM0OA?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-19T11:57:55Z",
-   "media": 2,
-   "judul": {
-    "id": "Prabowo Klaim Pendapatan Ojol Naik Berkat Komisi 8%, DPR Minta Evaluasi",
-    "en": "Prabowo Klaim Pendapatan Ojol Naik Berkat Komisi 8%, DPR Minta Evaluasi"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "VOICE Indonesia",
-    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPeU1pR0l4aWFNYUtLU1NBeFMwcXRObUJvOEhpSVpEeXd4TE5qTW9ESWNmRzBRNExEMEVtRVA5dHpoZWxjbjhoaTNsMzVBeURZbmRBU1pKdUdsNnNOTTBJNWxtR0VkeTV5enM2eHRlZDRESnE0bnB4a1g5WXpDRXoyUlhXeG92M2h4ZExhaVhZbEE2c1ZRTmtyOGFrZi1oUU1lTXd3a3hOYTU5bGlQSHhJLXVneEdTcGlT?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-19T16:39:27Z",
-   "media": 1,
-   "judul": {
-    "id": "Perlindungan Pekerja Platform Transportasi Daring Diperkuat",
-    "en": "Perlindungan Pekerja Platform Transportasi Daring Diperkuat"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "MetroTVNews.com",
-    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNZlFOQld6SkFwMXhKRjFPdEFULWl4SXBYS21zX000NDJWUHQwdVJJcW8wT09rYjNBaGpvSUE3ZnFaai1lcjVna3l4WlZUODY4OVhhaGNiaTZqN0UtbTZmWlpJQzRLQUNhdXlzRGs0aEhSbmo1YTFHQ2g4NDNEd1Y0WUVWSFE1a2pOT2xvX3g3NklocXhId0ZBQktmRlRYY3Q3U3gw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-19T16:38:15Z",
-   "media": 1,
-   "judul": {
-    "id": "Momen Akrab Kapolresta Surakarta AKBP Condro Bareng Ojol di Solo, Guyonan hingga Bagi Sembako",
-    "en": "Momen Akrab Kapolresta Surakarta AKBP Condro Bareng Ojol di Solo, Guyonan hingga Bagi Sembako"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Polresta Surakarta",
-    "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOVDd3UlAzd2pKVml4LVhxZF81R2luZl95VHpOUGJmUGNjSWloTHpnNk8yVDNNdGlPbFp5U2tBY2RkYlRaeVBvUENwWFpSd2ZYbDM4YWRDWUdheUxyblpEdmpRUVVGMEFOWFA5UTd6ZzNNMExXTk1iM1p0N2FtZ1BDWlFOdmNzWDBzN0Q4WWRKMkFaVUtZX0tlV3F5SC16MjJ3Qkt2RkhONnlBNy1JaC02dWp5SXgzMkdEcmFrTnN5WTgxSVpN?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-19T16:12:35Z",
-   "media": 1,
-   "judul": {
-    "id": "Ojol Rasakan Dampak Kabut Asap, Grab Berikan Bantuan",
-    "en": "Ojol Rasakan Dampak Kabut Asap, Grab Berikan Bantuan"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Pontianak Post",
-    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPdktXaTVReTNqX0FoNE55YzlwY0ROV0luWXpEbHdDU3ZrbWxQZndBRWNKLWc1MkhkZEtIcXlRY2E4al9MRjRydWdzdUtRNzQwVWpKQURCaUg5Ri1adGJaQjEwUnBpNWY4bWthRlhtQ29QLVpMRF84S0pXX0dTdEVaa3lJVkFrRlF1MnlvVEhLclJRb09heWk1VXUxS1pNdXBjSFNwWlROaDFlanhQbTFoSdIBsAFBVV95cUxPdktXaTVReTNqX0FoNE55YzlwY0ROV0luWXpEbHdDU3ZrbWxQZndBRWNKLWc1MkhkZEtIcXlRY2E4al9MRjRydWdzdUtRNzQwVWpKQURCaUg5Ri1adGJaQjEwUnBpNWY4bWthRlhtQ29QLVpMRF84S0pXX0dTdEVaa3lJVkFrRlF1MnlvVEhLclJRb09heWk1VXUxS1pNdXBjSFNwWlROaDFlanhQbTFoSQ?oc=5"
    }
   }
  ]
