@@ -1,5 +1,5 @@
 {
- "w": "2026-10-21T19:44:40Z",
+ "w": "2026-10-21T23:32:12Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -191,6 +191,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-10-21T14:54:00Z",
+   "media": 1,
+   "judul": {
+    "id": "520 Kelompok Peternak Korban Banjir Aceh Utara Terima Bantuan Obat Hewan",
+    "en": "520 Kelompok Peternak Korban Banjir Aceh Utara Terima Bantuan Obat Hewan"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "AJNN.net",
+    "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQYUtmbkx4azMyRDBqZVltdFdNT2pPd2pNUTIyRmhVWHFJaWQ2aXllTnFVV01XRk5XOWJvUWQ3d0xKbHI1WVlDbVloNE1RcFRCckxSb1BQZzBUMUpOdHdHdGFjc0Y2Y01xaE5vM1IzODB0dGd3djBqRTFEaFAtdFppTlpYbTJmMjZfQlBpMHprYnpobVJDSG9DLVE3dVhCTGZXMWU3WUswZW1QMEnSAasBQVVfeXFMUGFLZm5MeGszMkQwamVZbXRXTU9qT3dqTVEyMkZoVVhxSWlkNml5ZU5xVVdNV0ZOVzlib1FkN3dMSmxyNVlZQ21ZaDRNUXBUQnJMUm9QUGcwVDFKTnR3R3RhY3NGNmNNcWhObzNSMzgwdHRnd3YwakUxRGhQLXRaaU5aWG0yZjI2X0JQaTB6a2J6aG1SQ0hvQy1RN3VYQkxmVzFlN1lLMGVtUDBJ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-10-21T08:34:36Z",
    "media": 2,
    "judul": {
@@ -306,74 +323,6 @@
    "sumber": {
     "nama": "Kompas.com",
     "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPY3Vkc1RlbXN6TnlQaGg1RU56TVczNENRWVJUWTRuTWNXdk9OVXRPYkNpUFNaazdqUlRHc3k4S2ZKUmFGU0w5SUl3cGpZdENyRFB3M0NUUkxiMFBUVms0SV8ycmMyRnRicU5mRElqTG5wa082cERGdlBuZTVfODRPN2wwUVdFdl80VTFXSUhMTUZ3UFFtM1Ftb0R3cy1Nb2Vlc3FkU0F2c0x6YTRndVo3czFYUkpEdFY0ZFZack1VUnJWUQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-21T06:55:20Z",
-   "media": 2,
-   "judul": {
-    "id": "Perpres 27 Tahun 2026 Izinkan Ojol Bermitra dengan Banyak Aplikasi",
-    "en": "Perpres 27 Tahun 2026 Izinkan Ojol Bermitra dengan Banyak Aplikasi"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "ChatNews.id",
-    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5KM2cxd0s4d2pGd0dMYXkwck52THBHQmdBTnZBLXBNaTkyQzFzXy1obkhBVENaNjRaczFQVjBleWpnSjZ3TFpYSXB6SDNrdlEwYXA4M2tDWkF3YVh0Zmp2UEtNVFV4bWJEQkpiSg?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-21T12:48:15Z",
-   "media": 1,
-   "judul": {
-    "id": "Insentif Mobil Hybrid, PHEV, dan REEV Didorong untuk Hemat BBM Nasional",
-    "en": "Insentif Mobil Hybrid, PHEV, dan REEV Didorong untuk Hemat BBM Nasional"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "SuaraGlobal.id",
-    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQUHNfbXVlUy1xaUZpY0xSaWpPRWZsNEVKMHZNM3Z4M3dYYTAtZmMyblNxa3BfQVZkRHZINzFpYVJCSElwUzh0enBPS3JEYU01VnBKa0E1NDhWc1ItLXRtaTRPS2ZWcHFKT0RjQ042RXpfTjBFTzBSMFVXMWdhblc5LWRPSTJhajN0eE15TWQ2YXE2a2NDSFBXQnhYVU01NFl2MUNobE9BS29GeTd4WkRFaUJVR3dKY2fSAbwBQVVfeXFMT18wbFNHRHd2SVp1R1c5clYxX0NXQVpHazFOdHdRV0lVRkRvQlAyZktrTmNVYUljNEJCSkpHWS1WZE9Ga2lWc3VaSEl6bnBSdGozZGRQX2ZodFoyOURNWTRiNzk5N2w1NGNEeWI4ZEZ1ajlzcnp4UHNyUHlUM0Z0WUI4SGRkb0VfZVVDSk5EUUdBbWZ0anVnOUs2RzNzNkluQzZLVnp2eFhFQjRRcTBMZW9NZnJtNFB5cXBteWs?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-21T12:42:26Z",
-   "media": 1,
-   "judul": {
-    "id": "Polisi Ringkus Pelangsir Bio Solar di Perawang, 1,2 Ton BBM Diamankan",
-    "en": "Polisi Ringkus Pelangsir Bio Solar di Perawang, 1,2 Ton BBM Diamankan"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Haluan Riau",
-    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPbUZzOTU3RlVEb1NoMVd2VXk3THB1djJDYlA0a0Q0YUk0MEtrdUJHWXBhM3IzSU9nZ0JBdDV6NXlISmZmWG5hLWYwS3RTY2VnOV9vVEcwa3I0d3pfVUJ6eXZuTzVPYkZmQmh5eVh4UEdNS1l3Z0lJVkNYQjFJX2dTdlJGNXp5bFR3WlRxNVhuRE1lWm9yUUpRRHc2QWtmSjgtYnVxSWhhOG5lc0FzWmFjTmxNeE9zUdIBuwFBVV95cUxQNlRzcE5ieTBnMkNqRTFLVktfRXlUeTViX3FHajV3QUhSNFVXUGpLclc1dGhCY3FBWm9kTEluWl9oZk5MemZmN1JCU1REV2lhZDR5RlVubDliWklJWkd1MEY3bm9Xd3pFSHVSWUhyNnhNdXI5Q1hGY3p4ZlN0UF94RVVMbGgxUUIwWlVXb2xFMG95bGdkbHMtcGFTRzhQRzNwLVNsLXc3bEpBX2RzUHd5bGF4bVZIdHhJTjVJ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-21T12:38:36Z",
-   "media": 1,
-   "judul": {
-    "id": "Bakom RI Tegaskan Keberpihakan Pemerintah Terhadap Buruh dan Pengemudi Ojol",
-    "en": "Bakom RI Tegaskan Keberpihakan Pemerintah Terhadap Buruh dan Pengemudi Ojol"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "MetroTVNews.com",
-    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNRmNDSzJqcmVsS09BYVdWWEZwU1pjZTdhbXZRQ1VkOTNFbW9EYXI3dG5HR1A0WFdaN0hkMFpzLV9ZaE5VWF85ck1ZZHVMTXhDNlplZ0ZaSGZpUVU2c3lQb05oWGowUTd5YnN0dmZ5SVpzMlNxdy0wRWVRNk5MWkc4Q3hKS21wY3lfSklrd0NoSF91S29KS1ZjbWNMazF5RW0tU0E1TWxIOVpQR2MweHczMHJBUHVDOUhv?oc=5"
    }
   }
  ]
