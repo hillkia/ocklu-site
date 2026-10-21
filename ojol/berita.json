@@ -1,7 +1,92 @@
 {
- "w": "2026-10-21T03:10:45Z",
+ "w": "2026-10-21T04:47:52Z",
  "dari": "Kroog",
  "berita": [
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-20T19:03:21Z",
+   "media": 5,
+   "judul": {
+    "id": "Diprotes Driver, Nunik Desak Pemerintah Evaluasi Aturan Potongan Ojol 8 Persen",
+    "en": "Diprotes Driver, Nunik Desak Pemerintah Evaluasi Aturan Potongan Ojol 8 Persen"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Todaynews.id",
+    "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOWDlhVTh6Smx6R3hRZDRTVzMtZmQya1VnejBtUUt0RnRzbXBsZlFiRW5XaGVUOUZXSFdPcmRfTG9GT3BQdlc2T0dkRnZVbzcxbHh2WUtfUEdXVGs0MTFDdXRkTVhVUWhmRnFXd2NjTlY1WUVESjIyV1dSNnN6bXhFWEs0UjN5cjNKQzJmZGg0ZHF2UUlHZlE?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-21T04:30:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Sekarang Ojol Boleh Kerja di Banyak Aplikasi Sekaligus, Ini Aturannya",
+    "en": "Sekarang Ojol Boleh Kerja di Banyak Aplikasi Sekaligus, Ini Aturannya"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "CNBC Indonesia",
+    "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPdFREWGQzWVljRTVPeGloTUJFTVhRNFNQWVRISFFqUnRqU0RmbWVrTFdXNU1RU2NoWDhSbnUzUnlsNWYtaWVUNkJoMHctVTZ5WWRXeElKZVFzNmVzVDRUd3RvMjNzc2ZDLVV3b0VtWW9KZnZvd3hodndZeUFhcGxWUHZmTVlReFdoZEVRSVhzZzNCb01mSFVERzJaU0FnVkFubkhjUURxZGVmVmRvdVY0NUlObGVla2NPR2lmVXB0QWF5NFY2TEFB?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-21T04:12:17Z",
+   "media": 1,
+   "judul": {
+    "id": "Ojol Balikpapan Resah Balap Liar saat Antar Pesanan, Ketua RT Minta Polisi Rutin Sambangi Warga",
+    "en": "Ojol Balikpapan Resah Balap Liar saat Antar Pesanan, Ketua RT Minta Polisi Rutin Sambangi Warga"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Tribunkaltim.co",
+    "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNOWFCQVVkdDNadEpsWTZXME9mdDg3azVxTkFmYndiRGtOOFZjUnpKcUxYSndNU3dRdzVGdWJ5dWxxTXFrMU1JQ2pEeDlJVzdmcUI4MTBMc0ZBNTVBd0FUVW1TajVwR1RwZ0xRYmJQNlEyLWhKOHloRHRpbXhXTmNycEd3dHdDTTR2SnZtVkJkeWI2WVowOWcwRk1sYUZ6ckk4andOZVN2TkNJR1BobUtUR2dDNXl6MzlzZEhBeHRlOVBFNmRoX0tydWFqUEZaczl4M0d3QzdDTXNCOUN4?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-21T03:59:48Z",
+   "media": 1,
+   "judul": {
+    "id": "Polres Pandeglang Gelar Kumpul Bersama Komunitas Ojol, Wakapolres Sampaikan Pesan Kamtibmas",
+    "en": "Polres Pandeglang Gelar Kumpul Bersama Komunitas Ojol, Wakapolres Sampaikan Pesan Kamtibmas"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "https://tribratanewspandeglang.com/",
+    "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNN2dFM3VQUk15emJvaWVad3RlMjB5bFhPYzRrTWxSWmJuTFlsR3ZSTW5RRmFWWGVjckF4NGN0ekZWdWRyaFJ5QXV2a3BjMW5Yc2lSdFhTN09aT2Y5VEtlOTlzYlMxcExqSWtMWjIxQm9yMEZSdDl2ekE2eHFLRmRpZWc4TjZaR0JnSTU2RFFUbnZEa0wwOTg1Ulp5Z2p5WDNWR0Y3eVloaXZwdE5fTmszdGdHODkyQkQwTlFuaFVRM2h2TzNxeGxWVXk2cUhILVhCOVJN?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-20T23:59:55Z",
+   "media": 1,
+   "judul": {
+    "id": "HUT ke-62 Golkar DKI Dirayakan Bersama Ojol dan PKL",
+    "en": "HUT ke-62 Golkar DKI Dirayakan Bersama Ojol dan PKL"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Bela Rakyat",
+    "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOaDF3QjFjTUlSbldsU3pLSTdVOGlkanV6b1dQQng4MVNYcEdfbUg0RTZRYVY4NE03SWUxNDRMUWVWb1pyTHNiWkFFSjNwQkNQVmRneVdzSjBpNXdPMGhrMDlNd21LbnpJOGk5OEt6M3d1MWtZc2pWZVFndndvR0owTA?oc=5"
+   }
+  },
   {
    "jenis": "berita",
    "waktu": "2026-10-20T12:39:50Z",
@@ -21,53 +106,36 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-10-19T14:57:00Z",
-   "media": 10,
+   "waktu": "2026-10-20T14:35:00Z",
+   "media": 2,
    "judul": {
-    "id": "HUT ke-75, Bidhumas Polda Jatim ajak Ojol Jaga Kamtibmas, Hindari Berita Hoax",
-    "en": "HUT ke-75, Bidhumas Polda Jatim ajak Ojol Jaga Kamtibmas, Hindari Berita Hoax"
+    "id": "Ojol Kini Bebas Gabung Banyak Aplikator, Perpres Baru Atur Biaya hingga Jaminan Sosial",
+    "en": "Ojol Kini Bebas Gabung Banyak Aplikator, Perpres Baru Atur Biaya hingga Jaminan Sosial"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "RRI.co.id",
-    "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPWDBCZFgxcDJXNFdvR0FGbEYyMzBtcG1PLVlmczYwYWFuZ2twdG0zWloxU0lMeXVEMEVGRVlhc1owR0lXeHl2RTlBLU9fRlowNUxIbVlfY1VSWnB2Q294bElhaTV6X1FTSVhOVWVYWlI4RU50TWx1X2RPRkxrNllDcHdsOExiTEdzZ3FiazFpZFBRbjlSTUloZU5GMA?oc=5"
+    "nama": "kabarbisnis.com",
+    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOTGNfVmhxeEFfQzlZZ2VPOGJLc3lQY29UYXFPbDQ0QzNxMDBfZGlfM3lHZVZNZU1Kb2dTRXppa29oUVNwLW9WVUtES3pGcTVOMzFpNmRkem1EMHluLVM1cFFOUF91ald5MURfbUViRU9Kb2dNdllJemtMOExxZUxNZ0xnWHgyMHdLS3BoanZQYVhBYkxYMG43Q05ITGZNbkhFQVdIM1R4N0wyd1g0Z1VLeWhNdGRTdW5KZml0cjN4QUlsald6bkE?oc=5"
    }
   },
   {
    "jenis": "berita",
-   "waktu": "2026-10-20T03:29:00Z",
-   "media": 4,
+   "waktu": "2026-10-20T20:00:10Z",
+   "media": 1,
    "judul": {
-    "id": "Diprotes Driver, Nunik Desak Pemerintah Evaluasi Aturan Potongan Ojol 8 Persen",
-    "en": "Diprotes Driver, Nunik Desak Pemerintah Evaluasi Aturan Potongan Ojol 8 Persen"
+    "id": "Dilema Sepeda Motor di Indonesia (2): Wacana Sepeda Motor Sebagai Angkutan Umum",
+    "en": "Dilema Sepeda Motor di Indonesia (2): Wacana Sepeda Motor Sebagai Angkutan Umum"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "rmbanten.com",
-    "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQNUF5SDJJQ1FtVWIybGdPVVlaX3ZwNFRtQTZ0TGlMU0pDN1drTWdIb2xuRWFHZHZWemF1ajNxTlBVODZkbnM2OHY5TlpnWkJuemJwdGZXYlVhODNyZTEyR0tRTmpNME44aFBPVmNPUjJ1OTVtYlVXQ09EZWltcVpFNlVtYnpya042RGZTOF9DekpPdExOX0VuRml3a2g3REVhLWNCNnl3RWZNYWc?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-19T12:36:21Z",
-   "media": 10,
-   "judul": {
-    "id": "Bagikan BBM Gratis ke Ojol Malang, Gubernur Khofifah Pastikan Stok Jatim Aman",
-    "en": "Bagikan BBM Gratis ke Ojol Malang, Gubernur Khofifah Pastikan Stok Jatim Aman"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Sabdanews",
-    "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxPYmxMUjc5dTl5dU1YdjJ1cUdDa2ZTUFhjNy1pLU82SWV2YTZqSFZZQ1NzWVpndUk2UXNOMnBhY0hUdVRJOHF6aGw5Mi13MWRWMmx1QTVqb3pXOFVOcGpEUlphXzJBRnVIY1dVM3FyamVfOGVzRm5mbG5NaGwxZHpvZF9OSmItZjdoejFtWE9FQ1BEQXB5Ukh3SDZZVEpFNlNxS05wWlBVbS1QbHFjT0o2cjlNcC1nd3l5bXJKaHdTNnptOVN5MkF4c3I0bE51TENNN1VrUWFmM252OVN5VzJ2c0RrX0M3T1lwdndQaER2aw?oc=5"
+    "nama": "TheStance",
+    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPSU5Ra0RTYVBJa3F2Y0dnZmdRTHd1UkE3Z3YyWDFFSnR3bzNKRnlfNUl4Qnk4X01tdlJQRlpfTkM5bUpXVUkzaVdfWll3Q1ZGWi1WUmQwbVRnS2R1UVZua0s4NEdHMjVMTXNJUU1TTDhYbml5U1A4aTdpZklldWxKUXRudmptOGI3RFF6NGNETzJkQ3JOWjVNZzA5VUZfQQ?oc=5"
    }
   }
  ]
