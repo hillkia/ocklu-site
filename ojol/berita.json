@@ -1,5 +1,5 @@
 {
- "w": "2026-10-21T07:32:13Z",
+ "w": "2026-10-21T09:25:45Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -17,6 +17,23 @@
    "sumber": {
     "nama": "Todaynews.id",
     "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOWDlhVTh6Smx6R3hRZDRTVzMtZmQya1VnejBtUUt0RnRzbXBsZlFiRW5XaGVUOUZXSFdPcmRfTG9GT3BQdlc2T0dkRnZVbzcxbHh2WUtfUEdXVGs0MTFDdXRkTVhVUWhmRnFXd2NjTlY1WUVESjIyV1dSNnN6bXhFWEs0UjN5cjNKQzJmZGg0ZHF2UUlHZlE?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-21T07:57:35Z",
+   "media": 1,
+   "judul": {
+    "id": "Pakai Lima Barcode, Pria Pasuruan Beli 250 Liter Pertalite Sehari, Berakhir Dibekuk Polisi",
+    "en": "Pakai Lima Barcode, Pria Pasuruan Beli 250 Liter Pertalite Sehari, Berakhir Dibekuk Polisi"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Akurat Jatim",
+    "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQTXpkTVNRSk9zNlNocHVzcGdnaUE1NmtHaWd0UjYxTU11YXdNQ2prcWdMNmdOWHhLWnJaV3d0S1VhVkUwdXJUdkxaTHlpOFpuVVN5eE1lUS1jT1JsYUR6SmstQWFzNmJvSHVTSFVzNWhnVW1yS1ktOUFMV2lBaWE5N1VwMjRsZ1hLaU4zUEVfeW1hUXJDSjZfd21IUVJKRURRdkZJd1F1VkIwVnRleU5UOUkzYTQxdkoxNV9OclZHajBHX25UVVdn?oc=5"
    }
   },
   {
@@ -102,23 +119,6 @@
    "sumber": {
     "nama": "https://tribratanewspandeglang.com/",
     "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNN2dFM3VQUk15emJvaWVad3RlMjB5bFhPYzRrTWxSWmJuTFlsR3ZSTW5RRmFWWGVjckF4NGN0ekZWdWRyaFJ5QXV2a3BjMW5Yc2lSdFhTN09aT2Y5VEtlOTlzYlMxcExqSWtMWjIxQm9yMEZSdDl2ekE2eHFLRmRpZWc4TjZaR0JnSTU2RFFUbnZEa0wwOTg1Ulp5Z2p5WDNWR0Y3eVloaXZwdE5fTmszdGdHODkyQkQwTlFuaFVRM2h2TzNxeGxWVXk2cUhILVhCOVJN?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-21T03:08:24Z",
-   "media": 1,
-   "judul": {
-    "id": "BBM Langka, Robi Navicula Dorong Energi Bersih",
-    "en": "BBM Langka, Robi Navicula Dorong Energi Bersih"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "NUSABALI.com",
-    "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNRDEtZzh2RFhzcldodXpQSjVVTWxjcWNnV3ZiZVlsY2w3RUhGNXpCTHJOUFBiSzRTODhDeXJmbHJkbVhQbV84QTc4S2RPNWJtNURZcW1HaER4Q2ZpSWdKekR4ZERfMFFxUDk4NFpLRnZGZjMzeGpmTUcxV1p5Y2hrZGI5dFhLVjRtS3A1Qg?oc=5"
    }
   }
  ]
