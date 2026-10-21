@@ -1,5 +1,5 @@
 {
- "w": "2026-10-20T22:54:43Z",
+ "w": "2026-10-21T01:08:57Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -55,19 +55,19 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-10-19T00:36:47Z",
-   "media": 18,
+   "waktu": "2026-10-20T10:56:03Z",
+   "media": 1,
    "judul": {
-    "id": "KPK Ungkap Dana BNPB yang Diduga Dikorupsi untuk Karhutla, Gempa NTT, dan Banjir",
-    "en": "KPK Ungkap Dana BNPB yang Diduga Dikorupsi untuk Karhutla, Gempa NTT, dan Banjir"
+    "id": "NOVUS One, Motor Listrik Berbahan Serat Karbon dengan Torsi 430 Nm",
+    "en": "NOVUS One, Motor Listrik Berbahan Serat Karbon dengan Torsi 430 Nm"
    },
    "isi": {
-    "id": "KPK mengungkap dana BNPB yang seharusnya untuk penanganan kebakaran hutan, gempa NTT, dan banjir Sumatera diduga dikorupsi. Semua media melaporkan hal yang sama tanpa perbedaan.",
-    "en": "The KPK revealed that BNPB funds intended for handling forest fires, the NTT earthquake, and Sumatra floods were allegedly embezzled. All outlets reported the same information with no differing viewpoints."
+    "id": "",
+    "en": ""
    },
    "sumber": {
-    "nama": "Aspek.id",
-    "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPRGE5OGJJQTgzOU9yM2daNlltM1ROV1h6Y0hWUGlUX2dla3lWLXgwR1lXMVFTeEU3WkNGRFhPb1FkUEgxSkpIdjNmTlU4SDltMjZKdkIzaXN2QTdjNk1EVXBTSktZUjliWVBaSldlNWFTYURndWQ4Z2UyVm4tVGNsRQ?oc=5"
+    "nama": "SINDOnews Otomotif",
+    "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNU2hPRDFYSUhDMk1fd0ZSTk9sV2FWbEhNQ1Bla3pzc3BKN09nQWMzUXVkSmtsdV9BQUFNMkwzckw4Vks3STY3MHg1NWkyTTJrS1lOREJULUpGcDRDSFN2LVB5bFFZNFhwMnRvWlo1VUo3OEM4NmxfR0tvUm1KdnFQYWduaE81TUMxU2JGMFRkTVN2ZkJhd21yUkVoNTFia3l0T2VTc2w5djg4SGtFMHBvT3JQQ01ndkJsWllzaWxEUnFTZ9IBxwFBVV95cUxQRHEzNExRWUtOay1TQXQ2cWJUMnJVWm5JZHI2RVJOekhhejI4MWVZMGNsN09GOHFkWTY0ME9fODY1NURvTURyY3VFREo2RzdnZnVRS0xSRmFNQlNtanp4SVVzM0ZJc2pveGItb05lVzZXWmZmZmh2NEhpOExEMjlTdXg4bF9iUWR4T3IwdFVjOUtZUnFwOW1SNFpuMnFwbU9pZkNyay1PTGo3V0dkVHNPQmNoc3ctTzhlQUwwckwyMGNuUkN0LVEw?oc=5"
    }
   },
   {
@@ -123,6 +123,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-10-20T08:23:02Z",
+   "media": 1,
+   "judul": {
+    "id": "Antrean BBM Merembet ke Jatim, Khofifah-Emil Datangi Kantor Bahlil",
+    "en": "Antrean BBM Merembet ke Jatim, Khofifah-Emil Datangi Kantor Bahlil"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "detikFinance",
+    "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPLVd5a3Zwd0toTkJKd2N5Z0lJS096Q2VEaWJWX1FDbGVVVWlrUHRxZGlXeXdadlJURVYwb19rc20tbVZ4RV9Ga2NIMGNmZ2pLRWFMekNPbk4weFlnTDdJeW5KTXRfVm1YU3pJMDZCOC03SmczMEFyOTM1OVR1eW5MTGtKWE1sRnMyeVYtQWtTVVpxMC1wcldqbTRTMEtBR1p4OVdZaUh1M2pHT0Na0gGyAUFVX3lxTFAxUFducjZzMlZRT09kb01iRk5GbkEtZzZwamtSVExfM3Bua1ZxQTNscWFMSERFdUlRNDQ1WFJiX01jTlRpcWJ5VnY3VVEyQU1mRGxndS00YmUybFZXMk0tNTJKTW9ZWWhsbEdPUnk1UFluN3pCRFJFU0tjaTlEaDc0a2hSLVdGSGFuZ19hN20wcUM1ZVNKVFlRR3h3VTZacWJIOHphbVJJckdLajFHcUZ3MHc?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-10-20T02:19:34Z",
    "media": 2,
    "judul": {
@@ -153,6 +170,23 @@
    "sumber": {
     "nama": "VIVA.co.id",
     "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQb1BNYkd2M0Q3cHI4cDl0N081aVhpTURYaHpvU2liSFVCQmt3d09oQU5SXzhvYWVyVTNvYm5UZzhkUk5wdmtiMUs5T24tRTNnZlA5aE55LXJQbDFCSzBoN0ItalNiVndvdUZSdHpYckluVXJranhweDZyTkd3RHVWWmlrVFRGQUVib1pHYVB2QWw5elplVjBMOHJhakRjdFNZdl9sNjdSak9WN0p3QjBNaG1PZ25FTHBualNUS2J6UWZaNl9wc2F6SjliRi1DRm1FWkU0RWRrVUNiemxFejhJ0gHkAUFVX3lxTE54aXM2ekxlLTVCMWY1WmpwT3pTWl9vM01PWG1UTnJ4eW9zaE55SzFGWHJ0eUY4ellsSllSbzNiQ0dzZURSUlpDSC1hQTFHMFVMdV9KTVk2ZUQ4YXozMTJNbmR2ZmlNYzlobU01S2hqUk9Ub1BZVzZVWFU1NUFLX2o4ZmhPWVFacHk3dVFuMmJPeFF6WHVYeUJKY1pNNjVwT1U0MDNURVhjSWE4XzE1aXZVYjZwUXc4WGd5TE9FaWxJVlZma25PS0g4dWNiM1IwTEM0TW41YjBZZGU0dzFmeV9OekcwWQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-20T07:37:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Dari ALVA hingga Polytron, Ini Motor Listrik dengan Jarak Tempuh Terjauh Tahun 2026",
+    "en": "Dari ALVA hingga Polytron, Ini Motor Listrik dengan Jarak Tempuh Terjauh Tahun 2026"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "okinews",
+    "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPeml0MlB1YVpyc0VNQ2NyVEhEWW1hZnZWOC1rYjV5NjN2MUMxem14WmdXandMVmgxWW0tVExwZm94Wkg5ekpEM1FTNTl3UFgxVHgzTVB6c1VzNFY3YmxNcU1IZHVmSmlVUGM0UEYxMFdyb2h1QzFwdWxBR1Q1eVFydlViN1hPaThqZmdyMTJSMTVsN2N3Si1lYkJmclhNVEE1N2VZdVBPNnNZOFJuWEJINDlQa29PSXZMT0F4ZUgwUVdwM0nSAboBQVVfeXFMUGxMYXVZakItWUFTbFpncVlCdkxsV2xlMFBxNG9vRE5NRnJXZkUwQU5yMkpqVkxHQk1MM3BYX2YyRndpOWVuUzQ1dVc4WHRZRjV4THRuTHlPSF9BVlo3QVFnQ19mY0NBTWxPZmtCYkZfY2hGbHNGWWdPRmZ2Wm1PdnpzZ2lOUFZCQU5UV1kwQnB2RDFXa1F1RjFDZ3FXNUlrSTF3Y0RuNDZaYmdONll6MjZINFh0NWs5LWRR?oc=5"
    }
   },
   {
@@ -204,23 +238,6 @@
    "sumber": {
     "nama": "Kabarindoraya.com",
     "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNenlLNXN0TEZyNXVXVDlaaWtXT1phUkxkdnFCeUtEVHhQMExEcnJYZ1RJdEpWUjZfNGoxY2VmRExkdlJPNjFjMXNGYlN1N083RnlUNlpJVjZVZWN1VHdDdERyTnQtc0pqUWpZTXdVbVFDRE8yR2ZfOUY2M1Q3M1p2Qi1tal9EZVhuT1BsUElESkhJSmlhVjRaRUg3bC1uWXpFRkN5dkVtOGU?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-20T06:09:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Dua Tahun Prabowo-Gibran, IESR Desak Pembenahan Pasokan BBM dan Keandalan Listrik",
-    "en": "Dua Tahun Prabowo-Gibran, IESR Desak Pembenahan Pasokan BBM dan Keandalan Listrik"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "TopBusiness.id",
-    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOYUpGTExXNHVUZi1taFp1Slh3ejdDUlJmYTVKVU9kY0lFd3c3dGg1UG93bHNualI4Q29FSVdoSDNTeTdJR1d6VVN0WkxPT2RGQ21XR1ZVcUh6eTBhQ0ZXaVNDemdWVFdyMTcxbDBXSWY5Ny1nX3QySlZqSmQ3SDZUeF9xQ1RCcEg2OWt5RXk3Wm5BMWRqaXRiMjFCMmVad0Qxa09HQzZNTTgxRkRJSldCbExYRHA5RE9JQlpj?oc=5"
    }
   }
  ]
