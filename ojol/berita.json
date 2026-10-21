@@ -1,11 +1,62 @@
 {
- "w": "2026-10-21T17:46:21Z",
+ "w": "2026-10-21T19:44:40Z",
  "dari": "Kroog",
  "berita": [
   {
    "jenis": "berita",
-   "waktu": "2026-10-21T07:52:57Z",
-   "media": 3,
+   "waktu": "2026-10-21T14:15:51Z",
+   "media": 4,
+   "judul": {
+    "id": "Penuh Kehangatan, Wakapolda Bali Serap Aspirasi Driver Ojol dan Perkuat Sinergi Kamtibmas",
+    "en": "Penuh Kehangatan, Wakapolda Bali Serap Aspirasi Driver Ojol dan Perkuat Sinergi Kamtibmas"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Putra Bhayangkara",
+    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQcGt4eVd5RW9WcUt0eWdEOFg2WEtEZklSeHFhRFU3amhudVBvVU95eDNReFoycDkycEFPck5sOFhSR0w1WUpLSUdCZVI5cklRNzdUallhOWNHcEFoME9kMkVublZNREpKY0hhSGw4UlVYM216WmFVUEY5VmFEdEVUZVNhQ1g2VFJGeHp6VGhaNHZDODBKZTNhZkVGTV9PLUN5cEpINHM5WTlHaHRwQlY1Qjg5OVZSbEtk?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-21T18:01:21Z",
+   "media": 2,
+   "judul": {
+    "id": "Driver Ojol Adukan Dugaan Judi hingga Kemacetan Nataru ke Wakapolda Bali",
+    "en": "Driver Ojol Adukan Dugaan Judi hingga Kemacetan Nataru ke Wakapolda Bali"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "BaliNews.id",
+    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNTjlLdlhDS3k2OHFHdHZBZUNZMkhyanlUWHdfNHJzX0xZRWlJQTk4bmw0NFpTbjV3SUFtSUtZMXFMQWJ6eThYTUFtM3BEYVBuUUhmRlFCb2FNa0FGdWs5VWdGUzZmUld4VW1KWHcwMXFJRHJlSm5DZEdiSEc1ZWZaRG1WTlkzOWlGdU1EX3p2WkZGS3pXYUc0?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-21T16:26:59Z",
+   "media": 2,
+   "judul": {
+    "id": "Pemkab Magetan Himpun Masukan Ojol, PKL, dan Petani untuk Perkuat Ekonomi",
+    "en": "Pemkab Magetan Himpun Masukan Ojol, PKL, dan Petani untuk Perkuat Ekonomi"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "RRI.co.id",
+    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPR2N4bUtsMEYzc2hRTUtRcFp4eFptOWdCLS1IekljdkYyZnp6eThXckt0XzRXM2wwY0xHUlJ1TnRGNXNGWHl1OXo1OE9ROTFuS1lrSHMzMlJlUjdpOC1BbG8wSm5IdXdJbEg0WktSeFBLUWpWQnhqX2dNYlpmMG5ZblhrRHJjTlNHbzBwcDhzbVE2RnpzUlRob3lXajZIRWU1QkRqMXJBNEhPT3FVd3lHQU9UOA?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-21T08:02:00Z",
+   "media": 4,
    "judul": {
     "id": "Polres Subang Gelar Ganti Oli Gratis bagi Seratusan Driver Ojek Online (Ojol)",
     "en": "Polres Subang Gelar Ganti Oli Gratis bagi Seratusan Driver Ojek Online (Ojol)"
@@ -15,8 +66,25 @@
     "en": ""
    },
    "sumber": {
-    "nama": "Jabarpress.com",
-    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQSXM0d2lGWVUyTGFzemFJSTNFMDl5REZWWllKb3FMUGpYdml3RW13WmNmencxX1l5MmJSY3lOZlBSVDNYS2FudXR3bHB2ckpRejJ4WXBSLXViQjZQQ3EtYjZqVXFfVnpqQ3hxblJ1ZXBGU2VWZFpsWE54MjRwRk8yeHM5TkxDM3U4TFdhOTM5eWxZMExGZEItbHp1aU02aWpLTnVfUld2NGh6VWw0RWhtbUZZTUQ?oc=5"
+    "nama": "lampuhijau.co.id",
+    "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPN2g1R1Z1R0dPeUlobXFjSDF1QV8tY0R3QWV1cHVWbWt5a2JURWZPRGVKcTdnbGFCSG5MMXFBNlVvV1U1TE1ORW42VWZqbHo0UnY3VThKUURhM19wdFBuRTNsSlBiejVUbmhXYWJXeHZBZHpEUE9nc2ZZbWR1ZzJEYnoxc3BLaG4yVVB1bElzLS0weHdteTFlWko3QlA3MXlaSEtSZlJMTUlVX0ltcFVrVFFaZUREOGdKVEltUldhTWlJQQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-21T13:04:00Z",
+   "media": 2,
+   "judul": {
+    "id": "Pemerintah Klaim Upah Buruh Naik 6,5 Persen, Ojol Kini Disebut Terima 92 Persen Tarif",
+    "en": "Pemerintah Klaim Upah Buruh Naik 6,5 Persen, Ojol Kini Disebut Terima 92 Persen Tarif"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "VIVA.co.id",
+    "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNemdNX2hXSXBMNnpBXzRYangzZnVjc0c0RXpkYXVIQmtfMDR1M0c5RnRpa3dsaEJvNUxqNUdBVUNGS2pWZjVDalBzaE94eW5fWVRFLTZLVG9WdlhTV1BtNmdNd0xCSEo3VFFjbEpfempiQVI2LVk3VlF6bFVSaXVxNV9icWhqTzFkaE9RUHFhOUQ5b3laUDlJVjRpX184Sk4wa3NsYXQxTXBiUElJb1hobVIwbFJTS085dkZtdHBRWWNEOXVSVHFuTnRNSGdNc2fSAc8BQVVfeXFMTXpnTV9oV0lwTDZ6QV80WGp4M2Z1Y3NHNEV6ZGF1SEJrXzA0dTNHOUZ0aWt3bGhCbzVMajVHQVVDRktqVmY1Q2pQc2hPeHluX1lURS02S1RvVnZYU1dQbTZnTXdMQkhKN1RRY2xKX3pqYkFSNi1ZN1ZRemxVUml1cTVfYnFoak8xZGhPUVBxYTlEOW95WlA5SVY0aV9fOEpOMGtzbGF0MU1wYlBJSW9YaG1SMGxSU0tPOXZGbXRwUVljRDl1UlRxbk50TUhnTXNn?oc=5"
    }
   },
   {
@@ -38,6 +106,57 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-10-21T10:50:21Z",
+   "media": 2,
+   "judul": {
+    "id": "Perpres 27 Tahun 2026 Batasi Potongan Ojol Maksimal 8 Persen",
+    "en": "Perpres 27 Tahun 2026 Batasi Potongan Ojol Maksimal 8 Persen"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "ChatNews.id",
+    "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9oX21XSXRkb1VFZHA2QjV6cW1VV00wLW81X0VVem1mOGdOUk1oR25ZM2ZvMHRmYnBNQnFjajJJMWEwb09tcGJ3QjdGQm5lSGRVU2Rybi0zNGVIdUxS?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-21T16:48:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Kenaikan Upah 6,5% dan Potongan Ojol Jadi 8%, Bakom RI: Prabowo Pro Buruh",
+    "en": "Kenaikan Upah 6,5% dan Potongan Ojol Jadi 8%, Bakom RI: Prabowo Pro Buruh"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "InvestorTrust",
+    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNYmtDUklhYnN3VHg1WUJEbUNndkRrVUY5QWFzSjMzUWo2N2IyeV9aQlg4dVhZbURoajJ2THotMjRCbmZoOWhDNU93ZnF1UnFGTHd3WkI1Ti1XaThvRnpTdDllbkxfZDl4UkRfVEdDa2o5NTB1UlNKZ01UMnJGR2dOdkNnRXkzSnNERVU4ajdjamNUYzcwVkVTUnpLeno2RGhpQ3l4RzdoSGJTTGxqLWpj?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-21T16:31:43Z",
+   "media": 1,
+   "judul": {
+    "id": "Temui Komunitas Ojol Makassar, Hamka B Kady Jelaskan Nasib Driver di Revisi UU LLAJ",
+    "en": "Temui Komunitas Ojol Makassar, Hamka B Kady Jelaskan Nasib Driver di Revisi UU LLAJ"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Bela Rakyat",
+    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQMTAtQnU3SkhwcXl4ZXNmb1lxZXBITTFCam9wYXpJeFd1VjZWeHhtbjh5VHlqRWRxNFBmcTFmcHhrSGdHbmdfdjFnd0N1Tl9ncEN5d3ZkU0paWnJtYV9ITF9TdXBuR1VESlpkSG1rc2VQbmJHcHpEOTJSWmp5M3ZNeW1oYWx0WEMtQVhFTENBTm50SjVOeG80VWdPLW1oNlFESGV1ZHpPQ0hydw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-10-21T09:48:11Z",
    "media": 2,
    "judul": {
@@ -55,19 +174,19 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-10-21T09:01:00Z",
-   "media": 2,
+   "waktu": "2026-10-21T15:21:41Z",
+   "media": 1,
    "judul": {
-    "id": "Wakapolda Bali Serap Aspirasi Driver Ojol, Perkuat Sinergi Kamtibmas",
-    "en": "Wakapolda Bali Serap Aspirasi Driver Ojol, Perkuat Sinergi Kamtibmas"
+    "id": "Kepala Bakom Sebut Kepastian Status Pengemudi Ojol Perlu Dikawal",
+    "en": "Kepala Bakom Sebut Kepastian Status Pengemudi Ojol Perlu Dikawal"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "Kabarindoraya.com",
-    "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOVU91ckl4Q1l6YnlTX1B3U0szb09mNjNUSWd0V0lxSnN1cmdxRmhzdEV3Q3VzX21PMW5ONzhROVdLU1F5ak9RUkhLd25IVFg1VDYtWlpzSDMwaXdrQ1ZubEdBVGllUUJpMHZORWdSc1hwN212QzdnaFB2RWN5SzBTN29DMmFmMWJCWWozX2dZQkIxNUU?oc=5"
+    "nama": "MetroTVNews.com",
+    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPR2dMMVk1bGM4d0F4SDkwQ19EdmJISnVONEFoUG00VEZDdTdJT2dEOWhEZXZ1MzRpOVI5cmdWajA5Q3dsMm95bFVmcGViMUhtcDZncVEwY09FVWhoT1dzTVRZcm1HYTE3SGJmUWl5VllXeUVhOGhQZzVwY1FqQUMtT2ZHNDR6Skx6eFBFcTJXbTA3TG1Dak5zYmI1MXlfOGZHWHU1M0xzTE0yQQ?oc=5"
    }
   },
   {
@@ -102,6 +221,74 @@
    "sumber": {
     "nama": "Liputan Pontianak",
     "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQVElMYjM1LTdjd1ZUSlZiVUw4elItdks2ek5XTTN6ZVVNRGo4NmNVV1J2ZS1BVjZMQk5qVXNQRUhvVTJTSEhsUC1oeGxCRkdaQlFoRTJLaUVZblBUSm9ZQy1oS25kSld5YUg2eFh1UDFzT1pIejAzQ3VxWEtGbWp4ZXphTk14TU9BZXdVR2JMcGhldG9u?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-21T14:04:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Cerita Al Finsih, Anak Ojol yang Jadi Wisudawan Terbaik FEB UNJ",
+    "en": "Cerita Al Finsih, Anak Ojol yang Jadi Wisudawan Terbaik FEB UNJ"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Kompas.com",
+    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOMGlHVk11UkFmZnY4S2hNZUQ4VmJWMk9FUXNhcDRDeUlsampjYXNZUDdXT0VNZi0wTDVqSGRDYkxFakdOVzI1c0dIZUtMUW1POHNFWW5ZT1Q3MFJONDJBa29yOWlpU0hrNUlueDVOZEk4M2lpSjdRM1Aya2tNSTNDWUlJdEE0azdGYWM1a0tXTWhhbHF3Q21kU29FTkdzV1JBS1BMdThCRmZnNXNxUzkyRmNWS0pLQQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-21T13:43:48Z",
+   "media": 1,
+   "judul": {
+    "id": "Perpres Ojol Jadi Contoh Dialog Kebijakan Pemerintah",
+    "en": "Perpres Ojol Jadi Contoh Dialog Kebijakan Pemerintah"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "investor.id",
+    "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOQ01JOEZuZE9FTUxmR1J6TkRBcFRVaDFSVFEyU0xMSm41NFBLQlE5bzhZdkJ2d0paYWZSeEtPV1p3X2Y4ZWt1eEd4Zm1ZMWpuWnF0eFpWZTZCaVVEbWlKV0lGankySHhxM2dFbktYRGVwWDVDTEI0VjFkTTA0RlljQ2VWQk1NbkJuT0ZNeE42VVl0Zw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-21T13:23:32Z",
+   "media": 1,
+   "judul": {
+    "id": "Biaya Layanan dan Jaminan Keselamatan dalam Perpres Ojol",
+    "en": "Biaya Layanan dan Jaminan Keselamatan dalam Perpres Ojol"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Hukumonline",
+    "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOZXExQUd3aDJjWEFyMHZ4ajZ4dXlJSjFmb0RwU3BlUVBJUjZDQjdaRVIxLW9NY3hLOFVMV1N0aS1OdndqWXBBX05XX0ZWUmpQaHVKTDl1TVdSYjFMM0dnekhzZDhNMDVlX2RZOFZOeGxKLU5SbWhjQjJnbEUwTFZ0bXZ6ZHBFakU?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-21T13:13:49Z",
+   "media": 1,
+   "judul": {
+    "id": "Jaga Jakarta On The Spot, Danramil 02/Tambora Ajak Ojol dan Warga Jaga Keamanan Lingkungan",
+    "en": "Jaga Jakarta On The Spot, Danramil 02/Tambora Ajak Ojol dan Warga Jaga Keamanan Lingkungan"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "https://actualnews.id/",
+    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxON1ZCTEQySV9NcmpQV2ZBamdtUmJESkF5WGdkbE5EVkFYTDFVTllmVndSNDVBMFczYmdEUVg4NUxtdkdBS0EtNmpZQVZkRTdCOUxIeFp0bzVmbmpWWHJNWlkzRW1KS1F4SWw5SVdldzYyUDhIVk1obERObVNEdFdOazNNRWxPNWtqcURtOUtURUYtbTQ4RGZheVVGSmxIY2xBZXVqcHlOZXh0QWJKbW1HSWJTelRQZjBydEdN?oc=5"
    }
   },
   {
@@ -170,6 +357,23 @@
    "sumber": {
     "nama": "Haluan Riau",
     "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPbUZzOTU3RlVEb1NoMVd2VXk3THB1djJDYlA0a0Q0YUk0MEtrdUJHWXBhM3IzSU9nZ0JBdDV6NXlISmZmWG5hLWYwS3RTY2VnOV9vVEcwa3I0d3pfVUJ6eXZuTzVPYkZmQmh5eVh4UEdNS1l3Z0lJVkNYQjFJX2dTdlJGNXp5bFR3WlRxNVhuRE1lWm9yUUpRRHc2QWtmSjgtYnVxSWhhOG5lc0FzWmFjTmxNeE9zUdIBuwFBVV95cUxQNlRzcE5ieTBnMkNqRTFLVktfRXlUeTViX3FHajV3QUhSNFVXUGpLclc1dGhCY3FBWm9kTEluWl9oZk5MemZmN1JCU1REV2lhZDR5RlVubDliWklJWkd1MEY3bm9Xd3pFSHVSWUhyNnhNdXI5Q1hGY3p4ZlN0UF94RVVMbGgxUUIwWlVXb2xFMG95bGdkbHMtcGFTRzhQRzNwLVNsLXc3bEpBX2RzUHd5bGF4bVZIdHhJTjVJ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-21T12:38:36Z",
+   "media": 1,
+   "judul": {
+    "id": "Bakom RI Tegaskan Keberpihakan Pemerintah Terhadap Buruh dan Pengemudi Ojol",
+    "en": "Bakom RI Tegaskan Keberpihakan Pemerintah Terhadap Buruh dan Pengemudi Ojol"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "MetroTVNews.com",
+    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNRmNDSzJqcmVsS09BYVdWWEZwU1pjZTdhbXZRQ1VkOTNFbW9EYXI3dG5HR1A0WFdaN0hkMFpzLV9ZaE5VWF85ck1ZZHVMTXhDNlplZ0ZaSGZpUVU2c3lQb05oWGowUTd5YnN0dmZ5SVpzMlNxdy0wRWVRNk5MWkc4Q3hKS21wY3lfSklrd0NoSF91S29KS1ZjbWNMazF5RW0tU0E1TWxIOVpQR2MweHczMHJBUHVDOUhv?oc=5"
    }
   }
  ]
