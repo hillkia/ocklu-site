@@ -1,7 +1,126 @@
 {
- "w": "2026-10-22T08:10:50Z",
+ "w": "2026-10-22T12:13:36Z",
  "dari": "Kroog",
  "berita": [
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-22T10:51:24Z",
+   "media": 4,
+   "judul": {
+    "id": "Konsumsi BBM Naik 9,1%, INDEF GTI Desak Percepatan Insentif Mobil Listrik",
+    "en": "Konsumsi BBM Naik 9,1%, INDEF GTI Desak Percepatan Insentif Mobil Listrik"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Lensa Hukum",
+    "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9tSUNuYnppZVpJYVh4S25nTlRCU1NGanl2OGc0dENHeE5PTzM5cU1jTkpWREN3YktxY3hQcTZ0NFhLYVVSMm5ScTVVNVRPVmNfMVFwZUhhS1R2N1ZnOGQ0eV9rZVBjbVNaUC0wYl9nTElUWVV0?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-22T08:00:30Z",
+   "media": 2,
+   "judul": {
+    "id": "BBM Sulit Didapat, Listrik Padam Bergilir, Gubernur Kalbar Panggil Pertamina dan PLN",
+    "en": "BBM Sulit Didapat, Listrik Padam Bergilir, Gubernur Kalbar Panggil Pertamina dan PLN"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "detikcom",
+    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNZ2ZjTTVhdnpUVTlvblZ2RUtzYThYenFNZ1REMXZSNU5hcTJXeW1BQUcxc3dtM1d6RXFYci1telhScG85bXJNZjh2enY4YnRmaGk1akc2aWphNXVjU1M0MW53dlRPa3dOeUR5VTI0MnVhNU01MHdKdG9FNGpaTXJ5X1hmQnZ5QzZrVERRRG43R2NONkZHQzIwQk1tYXctbVFLR3VlYUpTV19ib193bVRGVUpncUlpVEROcDBFQtIBwgFBVV95cUxQRmVDSXl3T0Uxd2FUcm5kWXhEb0k1V0VCUVczWlB4ODF2RFY2UG1WQXZEM21jd1NWazYtMENHOXk4RDdHR1Z2Mk05eGxoaUhTZ1ZMV0VNZW5lMndGU1p4SW5qdlI5T2I3UVhlOVNBWndBNTJrcG1JMGlKWF9POVpXa04xc3NBQ0x6Zk8wRlpVZXUyNTk4T2ctQS1QQ0RGNC1VX0ZHekk5al9hVFVFSG1nMzJmRjhEdHZZMnBTeVp0eU5fdw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-22T04:11:25Z",
+   "media": 2,
+   "judul": {
+    "id": "Menperin Usul Mobil Hybrid Bebas Ganjil Genap & Dapat Parkir Khusus",
+    "en": "Menperin Usul Mobil Hybrid Bebas Ganjil Genap & Dapat Parkir Khusus"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "detikoto",
+    "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPM1dIcU9NMTBBMFNsS29VZ0p5aXdGZDRkcTdweWxGMDl5WUFZM0FTM2tPSGRmZmhUX09vZjJ0MUplb2JVMWdvX2dFYU16WHdQWTFtTWtfbEJybGpFNmNOc0tEb3hzbC01cXA2Ym1MUU5tTU5nWEk2ckNQOVVqcGE4REJZY1lKd3Z4cHEwZDBzSWl6QdIBlwFBVV95cUxORjQxWncyMVZRbmtnY2N6R0JPMHA5ZC1RX0xBQ09SV0piOTMxQTg5dk1WcTRFeU1OT2xpejR6YUJ5NlhkRFJkTnFLVzRXaGljbnZXMkpNWWFOUVQ1VXRvZER2TmlrYzdPbWVaZTh4cWtQQkFNMWh2cDFYNjdxVVhhX05TRGp2aU5hc1MxZWdVX3NBNlNlNllF?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-22T08:32:54Z",
+   "media": 1,
+   "judul": {
+    "id": "Bahlil Buka Suara soal Harga BBM Subsidi",
+    "en": "Bahlil Buka Suara soal Harga BBM Subsidi"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Listrik Indonesia",
+    "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNb2ZXWmdtUHFNQXA1anBMNkh2OWJEb0Job2dnYXRyYTlSekx2T21mejlib1BscHZMdkt1bTFLaEFLMDA0d2ZIT1dOTVdwc0JmZFR5bHp5czVJWUZnWFRWV3RfUENpNzlSNmJpTWFVdnY4eHJ5cHpGT1VqdmIyUGUwc3NuRzJzWkRlY2c?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-22T07:44:47Z",
+   "media": 1,
+   "judul": {
+    "id": "7 Motor Matic Paling Irit untuk Kerja Harian, Cocok bagi Pengguna yang Ingin Hemat BBM",
+    "en": "7 Motor Matic Paling Irit untuk Kerja Harian, Cocok bagi Pengguna yang Ingin Hemat BBM"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Harian Banyuasin",
+    "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPdnV5NHpOalpydmtBU05Cd2EtSFJ1amZjOGMyU1dlNUh3RHlJRUc1REt1MklKYzlBWWRiMHRLZmJITHA4ejd1cnhFMFBTejYzVFExSUM5LXFYOFk4LVF4MzN6TjF5aXhKVGNfcTRWQUxuT2tBdFlKa1BLOERsZkNHVTVIaDlSTnJkeWh6VG0xaFVWdk9PcjRIYkFjS0lsTDgzSnBXQWdYcXp5dHBLWUtVbkVrOHlzVTNjaG5JS1hWSkZkWXBQaF81Sno2MnRBMTRkUWdCUXBxONIBygFBVV95cUxNSGtvaklHUUFIc3FsbVltSjNOSmVJVFhLTkpXOFE5RzJWOVZvZ1hiT253NnEtc19USndrTG9sX0Rlank1bV8yV3NFcW02LS1wNHIyQ1FEMllLRjhZWi14ajN3RDBUeFBySlhjNm5TdlBYUzRKOXNmeUQySDhUWkJicjZtRmNNYndSbkVONHEwR21fbWQxMDM0UkF5dm5CaXlzWTJFQ3FUQWRwSXQtRktrYllzMFdVUnVKMWgxSExNM1dkby0xeHIwSFFR?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-22T06:09:49Z",
+   "media": 1,
+   "judul": {
+    "id": "Duduk Bersama Pendemo, Rudy Mas’ud Buka-bukaan soal BBM, Listrik hingga Gratispol",
+    "en": "Duduk Bersama Pendemo, Rudy Mas’ud Buka-bukaan soal BBM, Listrik hingga Gratispol"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "lenteraKalimantan.com",
+    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNdnZPZzAwVXdlMUotOHduekxRdjZ5WGlmRlg5YjQ1dWo1Wko0LTZGek9LeV8xMDZjRWxiZkN0QmJJMHFkSFNiT0pYeHU0NUhBbGdzTFN1cFZfSzNKYTYyVW51QmNxRHMyeTRXX2o2YlpaQkhEQWh4LWM1NXpYMTJTdHB0QW0yRTlvZ3NibVVic0pqTndxRHltWjJJd2RYclR5c0RaNGQ1eTFlcFEyVEtWLThBWXE3Y0FD?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-22T05:02:42Z",
+   "media": 1,
+   "judul": {
+    "id": "BBM Langka, apakah kita akan pindah ke kendaraan listrik?",
+    "en": "BBM Langka, apakah kita akan pindah ke kendaraan listrik?"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Banten Raya",
+    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQUURPYnVHa2I5aXgyUkp2TU1jZGkwODU2SHljVFFEQ3NQdlZQTGU5cGlBTmZjam5acHNoeks5U2puM0xEekYtS01JUXJkRENZYVJoX2RDS3loZGFlU2Fvemljd3dSWWZ4dVhaLUd2V2hOd2VGc2VUTEJYUFFESGpQYkpPa1RtTGVrSE9HVDctd2VNSjlscVhHVWxfd3lJUQ?oc=5"
+   }
+  },
   {
    "jenis": "berita",
    "waktu": "2026-10-21T14:15:51Z",
@@ -21,308 +140,19 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-10-21T18:01:21Z",
-   "media": 2,
-   "judul": {
-    "id": "Driver Ojol Adukan Dugaan Judi hingga Kemacetan Nataru ke Wakapolda Bali",
-    "en": "Driver Ojol Adukan Dugaan Judi hingga Kemacetan Nataru ke Wakapolda Bali"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "BaliNews.id",
-    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNTjlLdlhDS3k2OHFHdHZBZUNZMkhyanlUWHdfNHJzX0xZRWlJQTk4bmw0NFpTbjV3SUFtSUtZMXFMQWJ6eThYTUFtM3BEYVBuUUhmRlFCb2FNa0FGdWs5VWdGUzZmUld4VW1KWHcwMXFJRHJlSm5DZEdiSEc1ZWZaRG1WTlkzOWlGdU1EX3p2WkZGS3pXYUc0?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-21T16:26:59Z",
-   "media": 2,
-   "judul": {
-    "id": "Pemkab Magetan Himpun Masukan Ojol, PKL, dan Petani untuk Perkuat Ekonomi",
-    "en": "Pemkab Magetan Himpun Masukan Ojol, PKL, dan Petani untuk Perkuat Ekonomi"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "RRI.co.id",
-    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPR2N4bUtsMEYzc2hRTUtRcFp4eFptOWdCLS1IekljdkYyZnp6eThXckt0XzRXM2wwY0xHUlJ1TnRGNXNGWHl1OXo1OE9ROTFuS1lrSHMzMlJlUjdpOC1BbG8wSm5IdXdJbEg0WktSeFBLUWpWQnhqX2dNYlpmMG5ZblhrRHJjTlNHbzBwcDhzbVE2RnpzUlRob3lXajZIRWU1QkRqMXJBNEhPT3FVd3lHQU9UOA?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-21T08:02:00Z",
-   "media": 4,
-   "judul": {
-    "id": "Polres Subang Gelar Ganti Oli Gratis bagi Seratusan Driver Ojek Online (Ojol)",
-    "en": "Polres Subang Gelar Ganti Oli Gratis bagi Seratusan Driver Ojek Online (Ojol)"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "lampuhijau.co.id",
-    "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPN2g1R1Z1R0dPeUlobXFjSDF1QV8tY0R3QWV1cHVWbWt5a2JURWZPRGVKcTdnbGFCSG5MMXFBNlVvV1U1TE1ORW42VWZqbHo0UnY3VThKUURhM19wdFBuRTNsSlBiejVUbmhXYWJXeHZBZHpEUE9nc2ZZbWR1ZzJEYnoxc3BLaG4yVVB1bElzLS0weHdteTFlWko3QlA3MXlaSEtSZlJMTUlVX0ltcFVrVFFaZUREOGdKVEltUldhTWlJQQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-21T13:04:00Z",
-   "media": 2,
-   "judul": {
-    "id": "Pemerintah Klaim Upah Buruh Naik 6,5 Persen, Ojol Kini Disebut Terima 92 Persen Tarif",
-    "en": "Pemerintah Klaim Upah Buruh Naik 6,5 Persen, Ojol Kini Disebut Terima 92 Persen Tarif"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "VIVA.co.id",
-    "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNemdNX2hXSXBMNnpBXzRYangzZnVjc0c0RXpkYXVIQmtfMDR1M0c5RnRpa3dsaEJvNUxqNUdBVUNGS2pWZjVDalBzaE94eW5fWVRFLTZLVG9WdlhTV1BtNmdNd0xCSEo3VFFjbEpfempiQVI2LVk3VlF6bFVSaXVxNV9icWhqTzFkaE9RUHFhOUQ5b3laUDlJVjRpX184Sk4wa3NsYXQxTXBiUElJb1hobVIwbFJTS085dkZtdHBRWWNEOXVSVHFuTnRNSGdNc2fSAc8BQVVfeXFMTXpnTV9oV0lwTDZ6QV80WGp4M2Z1Y3NHNEV6ZGF1SEJrXzA0dTNHOUZ0aWt3bGhCbzVMajVHQVVDRktqVmY1Q2pQc2hPeHluX1lURS02S1RvVnZYU1dQbTZnTXdMQkhKN1RRY2xKX3pqYkFSNi1ZN1ZRemxVUml1cTVfYnFoak8xZGhPUVBxYTlEOW95WlA5SVY0aV9fOEpOMGtzbGF0MU1wYlBJSW9YaG1SMGxSU0tPOXZGbXRwUVljRDl1UlRxbk50TUhnTXNn?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-21T11:55:28Z",
-   "media": 2,
-   "judul": {
-    "id": "Kapolresta Condro Ngariung Bareng Ojol di Solo, Guyonan Pecah hingga Bagi Sembako",
-    "en": "Kapolresta Condro Ngariung Bareng Ojol di Solo, Guyonan Pecah hingga Bagi Sembako"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Mettanews.id",
-    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNUmYyeFRRV0lFNGZiRDN6WjU0WkluU0JzeFA0TV9lM3dsQXE1bW1UN21GY3NDYmZ1LVZUd2NFeE1UM2pwVW9UbnpvSVdHWHBteThOdW1sUjJEY2I3c09MMmNyZjJwSmt1YUNzb1BKdWxvT1FaMlBheXRENDQ4Z1RzTWtuQ1BlZUVyOFM2c054b3hzUk0xdnNkOGZ3S3IybHdYMUIxVw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-21T10:50:21Z",
-   "media": 2,
-   "judul": {
-    "id": "Perpres 27 Tahun 2026 Batasi Potongan Ojol Maksimal 8 Persen",
-    "en": "Perpres 27 Tahun 2026 Batasi Potongan Ojol Maksimal 8 Persen"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "ChatNews.id",
-    "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9oX21XSXRkb1VFZHA2QjV6cW1VV00wLW81X0VVem1mOGdOUk1oR25ZM2ZvMHRmYnBNQnFjajJJMWEwb09tcGJ3QjdGQm5lSGRVU2Rybi0zNGVIdUxS?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-21T16:48:00Z",
+   "waktu": "2026-10-22T03:38:35Z",
    "media": 1,
    "judul": {
-    "id": "Kenaikan Upah 6,5% dan Potongan Ojol Jadi 8%, Bakom RI: Prabowo Pro Buruh",
-    "en": "Kenaikan Upah 6,5% dan Potongan Ojol Jadi 8%, Bakom RI: Prabowo Pro Buruh"
+    "id": "Honda Luncurkan Skutik Bongsor Mesin 125 cc, Konsumsi BBM Tembus 50 Km/Liter",
+    "en": "Honda Luncurkan Skutik Bongsor Mesin 125 cc, Konsumsi BBM Tembus 50 Km/Liter"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "InvestorTrust",
-    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNYmtDUklhYnN3VHg1WUJEbUNndkRrVUY5QWFzSjMzUWo2N2IyeV9aQlg4dVhZbURoajJ2THotMjRCbmZoOWhDNU93ZnF1UnFGTHd3WkI1Ti1XaThvRnpTdDllbkxfZDl4UkRfVEdDa2o5NTB1UlNKZ01UMnJGR2dOdkNnRXkzSnNERVU4ajdjamNUYzcwVkVTUnpLeno2RGhpQ3l4RzdoSGJTTGxqLWpj?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-21T16:31:43Z",
-   "media": 1,
-   "judul": {
-    "id": "Temui Komunitas Ojol Makassar, Hamka B Kady Jelaskan Nasib Driver di Revisi UU LLAJ",
-    "en": "Temui Komunitas Ojol Makassar, Hamka B Kady Jelaskan Nasib Driver di Revisi UU LLAJ"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Bela Rakyat",
-    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQMTAtQnU3SkhwcXl4ZXNmb1lxZXBITTFCam9wYXpJeFd1VjZWeHhtbjh5VHlqRWRxNFBmcTFmcHhrSGdHbmdfdjFnd0N1Tl9ncEN5d3ZkU0paWnJtYV9ITF9TdXBuR1VESlpkSG1rc2VQbmJHcHpEOTJSWmp5M3ZNeW1oYWx0WEMtQVhFTENBTm50SjVOeG80VWdPLW1oNlFESGV1ZHpPQ0hydw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-21T09:48:11Z",
-   "media": 2,
-   "judul": {
-    "id": "Kapolresta Banjarmasin Rangkul Ojol Dan Ormas, Perkuat Sinergi Jaga Kamtibmas",
-    "en": "Kapolresta Banjarmasin Rangkul Ojol Dan Ormas, Perkuat Sinergi Jaga Kamtibmas"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Kalimantan Post",
-    "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQN3FGNHBxOUtyZm9na2FtU3gtbGdiYzIxcmdRb2RJb3AtdF9tWFBGel8xek9CRTlDZzExSWFkQWpzMXNGeTFjN1d1NTByWmJNdHNZeXNoR1REYnQzbDVicnVxNTJ6d05sb3NrUTJyOWpyZWdhdGtENHBYYlh1eHBISVJZTnNsYW1VU1A4ZVFSYndhLUhyRnBLRk9yWHREWENxTnJ1ZmxPTVZ4NWlPeTVyeURB?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-21T15:21:41Z",
-   "media": 1,
-   "judul": {
-    "id": "Kepala Bakom Sebut Kepastian Status Pengemudi Ojol Perlu Dikawal",
-    "en": "Kepala Bakom Sebut Kepastian Status Pengemudi Ojol Perlu Dikawal"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "MetroTVNews.com",
-    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPR2dMMVk1bGM4d0F4SDkwQ19EdmJISnVONEFoUG00VEZDdTdJT2dEOWhEZXZ1MzRpOVI5cmdWajA5Q3dsMm95bFVmcGViMUhtcDZncVEwY09FVWhoT1dzTVRZcm1HYTE3SGJmUWl5VllXeUVhOGhQZzVwY1FqQUMtT2ZHNDR6Skx6eFBFcTJXbTA3TG1Dak5zYmI1MXlfOGZHWHU1M0xzTE0yQQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-21T14:54:00Z",
-   "media": 1,
-   "judul": {
-    "id": "520 Kelompok Peternak Korban Banjir Aceh Utara Terima Bantuan Obat Hewan",
-    "en": "520 Kelompok Peternak Korban Banjir Aceh Utara Terima Bantuan Obat Hewan"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "AJNN.net",
-    "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQYUtmbkx4azMyRDBqZVltdFdNT2pPd2pNUTIyRmhVWHFJaWQ2aXllTnFVV01XRk5XOWJvUWQ3d0xKbHI1WVlDbVloNE1RcFRCckxSb1BQZzBUMUpOdHdHdGFjc0Y2Y01xaE5vM1IzODB0dGd3djBqRTFEaFAtdFppTlpYbTJmMjZfQlBpMHprYnpobVJDSG9DLVE3dVhCTGZXMWU3WUswZW1QMEnSAasBQVVfeXFMUGFLZm5MeGszMkQwamVZbXRXTU9qT3dqTVEyMkZoVVhxSWlkNml5ZU5xVVdNV0ZOVzlib1FkN3dMSmxyNVlZQ21ZaDRNUXBUQnJMUm9QUGcwVDFKTnR3R3RhY3NGNmNNcWhObzNSMzgwdHRnd3YwakUxRGhQLXRaaU5aWG0yZjI2X0JQaTB6a2J6aG1SQ0hvQy1RN3VYQkxmVzFlN1lLMGVtUDBJ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-21T08:34:36Z",
-   "media": 2,
-   "judul": {
-    "id": "Driver Ojol Terdampak Karhutla, Asrul Indrawan Apresiasi Bantuan Beras Pemprov Sumsel: Bukti Negara Hadir",
-    "en": "Driver Ojol Terdampak Karhutla, Asrul Indrawan Apresiasi Bantuan Beras Pemprov Sumsel: Bukti Negara Hadir"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Berita - Suara Rakyat",
-    "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOQlJZdUhfRGdxNXNpWjN5Q19zOEowazdHeXkwdkdsUUxZN0ozWV85WEE5V3hMemJQdmVVZDFkNHVFS0lBV2JmQjV2U2tfOUg4WXF3d1l3WUdpV29hNFo3UVktd2NEV3ZzNjB1NTFSc3BXalJ2VGRCZHJNczNvcVJkaFF1N3NBSHZWeTlKMnlBRGtWV1ZsUG9iQjFlcGNaYU9GMXZPc1NjazFIVW5zNS1wLUJabnR1UEtkMkNabURyVVJwYUl4cFBweDFDbTBCVnc?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-21T14:34:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Ria Norsan Panggil Pertamina dan PLN, Kelangkaan BBM serta Pemadaman Listrik Dibahas",
-    "en": "Ria Norsan Panggil Pertamina dan PLN, Kelangkaan BBM serta Pemadaman Listrik Dibahas"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Liputan Pontianak",
-    "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQVElMYjM1LTdjd1ZUSlZiVUw4elItdks2ek5XTTN6ZVVNRGo4NmNVV1J2ZS1BVjZMQk5qVXNQRUhvVTJTSEhsUC1oeGxCRkdaQlFoRTJLaUVZblBUSm9ZQy1oS25kSld5YUg2eFh1UDFzT1pIejAzQ3VxWEtGbWp4ZXphTk14TU9BZXdVR2JMcGhldG9u?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-21T14:04:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Cerita Al Finsih, Anak Ojol yang Jadi Wisudawan Terbaik FEB UNJ",
-    "en": "Cerita Al Finsih, Anak Ojol yang Jadi Wisudawan Terbaik FEB UNJ"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Kompas.com",
-    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOMGlHVk11UkFmZnY4S2hNZUQ4VmJWMk9FUXNhcDRDeUlsampjYXNZUDdXT0VNZi0wTDVqSGRDYkxFakdOVzI1c0dIZUtMUW1POHNFWW5ZT1Q3MFJONDJBa29yOWlpU0hrNUlueDVOZEk4M2lpSjdRM1Aya2tNSTNDWUlJdEE0azdGYWM1a0tXTWhhbHF3Q21kU29FTkdzV1JBS1BMdThCRmZnNXNxUzkyRmNWS0pLQQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-21T13:43:48Z",
-   "media": 1,
-   "judul": {
-    "id": "Perpres Ojol Jadi Contoh Dialog Kebijakan Pemerintah",
-    "en": "Perpres Ojol Jadi Contoh Dialog Kebijakan Pemerintah"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "investor.id",
-    "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOQ01JOEZuZE9FTUxmR1J6TkRBcFRVaDFSVFEyU0xMSm41NFBLQlE5bzhZdkJ2d0paYWZSeEtPV1p3X2Y4ZWt1eEd4Zm1ZMWpuWnF0eFpWZTZCaVVEbWlKV0lGankySHhxM2dFbktYRGVwWDVDTEI0VjFkTTA0RlljQ2VWQk1NbkJuT0ZNeE42VVl0Zw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-21T13:23:32Z",
-   "media": 1,
-   "judul": {
-    "id": "Biaya Layanan dan Jaminan Keselamatan dalam Perpres Ojol",
-    "en": "Biaya Layanan dan Jaminan Keselamatan dalam Perpres Ojol"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Hukumonline",
-    "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOZXExQUd3aDJjWEFyMHZ4ajZ4dXlJSjFmb0RwU3BlUVBJUjZDQjdaRVIxLW9NY3hLOFVMV1N0aS1OdndqWXBBX05XX0ZWUmpQaHVKTDl1TVdSYjFMM0dnekhzZDhNMDVlX2RZOFZOeGxKLU5SbWhjQjJnbEUwTFZ0bXZ6ZHBFakU?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-21T13:13:49Z",
-   "media": 1,
-   "judul": {
-    "id": "Jaga Jakarta On The Spot, Danramil 02/Tambora Ajak Ojol dan Warga Jaga Keamanan Lingkungan",
-    "en": "Jaga Jakarta On The Spot, Danramil 02/Tambora Ajak Ojol dan Warga Jaga Keamanan Lingkungan"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "https://actualnews.id/",
-    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxON1ZCTEQySV9NcmpQV2ZBamdtUmJESkF5WGdkbE5EVkFYTDFVTllmVndSNDVBMFczYmdEUVg4NUxtdkdBS0EtNmpZQVZkRTdCOUxIeFp0bzVmbmpWWHJNWlkzRW1KS1F4SWw5SVdldzYyUDhIVk1obERObVNEdFdOazNNRWxPNWtqcURtOUtURUYtbTQ4RGZheVVGSmxIY2xBZXVqcHlOZXh0QWJKbW1HSWJTelRQZjBydEdN?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-21T13:13:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Dilema Cuaca Ekstrem Sumbar: Dikepung Kabut Asap, Diintai Banjir Bandang",
-    "en": "Dilema Cuaca Ekstrem Sumbar: Dikepung Kabut Asap, Diintai Banjir Bandang"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Kompas.com",
-    "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPY3Vkc1RlbXN6TnlQaGg1RU56TVczNENRWVJUWTRuTWNXdk9OVXRPYkNpUFNaazdqUlRHc3k4S2ZKUmFGU0w5SUl3cGpZdENyRFB3M0NUUkxiMFBUVms0SV8ycmMyRnRicU5mRElqTG5wa082cERGdlBuZTVfODRPN2wwUVdFdl80VTFXSUhMTUZ3UFFtM1Ftb0R3cy1Nb2Vlc3FkU0F2c0x6YTRndVo3czFYUkpEdFY0ZFZack1VUnJWUQ?oc=5"
+    "nama": "detikoto",
+    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPMk5DN1BwY3hMRkJRRmZHZGVYS0hiNU8zQlJtajliU1pVSTZYeV9WYWxpUlFzZ0JoaF9yTlpsOTBwQV94V25LSERuRko4UFVqVzQ4YVo1c21XQ0lUdmV2NUZ3S2Yyckd6b1NmYzgydkMzY3FBdWhIVndISi15RUswVVdrdUZibGlKNHJRdzExQUUxMUpiWlRFSEJYX3NSUnA1dEMwcW1lZnctV0xnNG03a2Q2ONIBuAFBVV95cUxQTFVWczNOdThrQTVRbC10dTVWTWVkLTB6ZlFWUVdGS2FjRzFCQ1ZoWkxfaTRJczA2Wk1NRFJPUkFpenlacjJqaF85UzNHUWZmUVFGb1Z4OHlLMXhpOVpTWlNWVFpBMmxlc3BkRFlYVGlITTVxOXNjeFB4ck9MQlAzM2RwajUxNTBKRkRFVDZTdlNFM1FlMzVGQWFuaG9FXy03ZWwyM0poQzR4UU95NU51OWhnRFJoRVVz?oc=5"
    }
   }
  ]
