@@ -210,6 +210,9 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
 
 <h2 id="jemput">Jemput Bola · agen yang aktif memburu</h2>
 <div class="panel">
+  <div class="owner-saja" hidden style="margin:0 0 12px"><b>Suruh MARKUS ke…</b> (daerah, nama MCP, atau nama agen; pisah koma, maks 3)<br>
+    <input id="sasaranIsi" maxlength="120" placeholder="mis. Bali, supplier kopi, volix" style="width:min(420px,100%);margin:6px 0">
+    <button id="sasaranSimpan" type="button">Kirim</button> <span class="kosong" id="sasaranKet"></span></div>
   <p class="kosong" style="margin:0">Kita tidak menunggu pembeli datang. Empat agen bekerja tiap 30 menit di awan:</p>
   <ul class="tips" style="margin:8px 0 0">
     <li><b>PETRUS</b> · pencari pembeli — sinyal niat beli (Radar tender/freelance, p23, Rumus OCKLU, Arus, permintaan agen) dicocokkan ke penawaran; penjual dikabari, agen pembeli dibuatkan jodoh.</li>
@@ -662,6 +665,12 @@ document.getElementById("klSimpan").onclick=function(){var v=function(i){return 
   if(v("klNama").length<2||v("klApa").length<3){ket.textContent="Isi nama klien dan apa yang dijual/dicari.";return}
   this.textContent="menyimpan…";var b=this;klienApi({aksi:"tambah",nama:v("klNama"),kontak:v("klKontak"),jenis:v("klJenis"),apa:v("klApa"),harga:v("klHarga"),mata_uang:v("klMu"),wilayah:v("klWilayah"),catatan:v("klCatatan")}).then(function(d){
     b.textContent="Mulai buru";ket.textContent=d.ok?"Tersimpan ✓ — agen mulai memburu di putaran berikutnya (tiap 30 menit), temuan masuk Telegram.":("Gagal: "+(d.galat||"coba lagi"));if(d.ok){["klNama","klKontak","klApa","klHarga","klWilayah","klCatatan"].forEach(function(i){document.getElementById(i).value=""});muatKlien()}})};
+</script>
+<script>
+(function(){var i=document.getElementById("sasaranIsi"),k=document.getElementById("sasaranKet"),t=document.getElementById("sasaranSimpan");if(!i)return;
+function kirim(b){return fetch(API+"?r=owner",{method:"POST",headers:{"Content-Type":"application/json","x-owner":(window.HM?window.HM.pin():"")},body:JSON.stringify(b)}).then(function(r){return r.json()})}
+var tunggu=setInterval(function(){if(!OWNER)return;clearInterval(tunggu);kirim({aksi:"sasaran_lihat"}).then(function(d){if(d.ok){i.value=d.sasaran||"";k.textContent=d.sasaran?"sasaran aktif":"belum ada sasaran"}})},1500);
+t.onclick=function(){k.textContent="mengirim…";kirim({aksi:"sasaran",sasaran:i.value}).then(function(d){k.textContent=d.ok?(d.sasaran?"MARKUS akan ke sana di putaran berikutnya (≤30 mnt)":"sasaran dihapus"):(d.galat||"gagal")}).catch(function(){k.textContent="gagal"})}})();
 </script>
 </body>
 </html>
