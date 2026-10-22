@@ -1,5 +1,5 @@
 {
- "w": "2026-10-22T13:16:58Z",
+ "w": "2026-10-22T16:47:51Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -34,6 +34,23 @@
    "sumber": {
     "nama": "RRI.co.id",
     "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNeXFZVHVCOW1ZVXA2NTAxaFk3MnFzcWJxdmVTN3F6OWVjVDgwZldwV2xibzZrUVZwODU3X1B2SmdReEJqTl8xd2FHdl9fa01HdjhsSEVQLU9Rc0tHcTNnT3NOWjZ6bHVZdklyWjNHUTVWNTVycWlTOUMwRUpoZkhlN3pfWXBpeERXeF9SZWRYTURBVHROdUtBN2k3ZjZwLWpLVVlQRU1R?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-22T14:03:06Z",
+   "media": 2,
+   "judul": {
+    "id": "Ria Norsan Panggil Pertamina dan PLN, Kelangkaan BBM serta Pemadaman Listrik Dibahas",
+    "en": "Ria Norsan Panggil Pertamina dan PLN, Kelangkaan BBM serta Pemadaman Listrik Dibahas"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Dio TV",
+    "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNOXFDczVwVWoyTUpKRVMyWHp4WWtRajNNb1RfdlRsb3YybVRobnlNejczek1iVXlzOXYxRjR4YUpzZkFrUF9Oc25JOXBwYm9iWmFSWXZkMnlOeUFRMGJQODJ0TnpIeHh1QXZMQ054LTVXVDRzMUk3NEVvNG1hYWZWMW52VFN3WUVIS0dNUUd2d29uZkRIYU5HeEVaejdQYjZKaUdXWXEwRXRqWTN4OHUyakc5Z0p4SThRMnYza1huU09UU3pDWEQyQXNaWWpsejcxMnQtaHE1QmxyMVRZM29ZQtIB5gFBVV95cUxQdFpVaFkzbzZSSDZ4R1d2anA1Yzd4WVd5ZVp2MkVfdVUyeUJaNlR5aDU4OEF3U291MWJ3d1ZTeS1HU1lwd0o0MTA3ZVBIRkctbjF6SW1SSnlMeHpvV0ZmYVFSS3h2U1hCei1mYmViZFBJVy1HTlZRUEJ3WUZnaEJuUVlLQmxKQXlQeTJPM0hmY3JQa0U5cWxLeTMzRDJyaEJveWFvQVdKUzNJbEI3QmNxRlJTWjZqOUdOT0FWbmhaYjNkcmhSTFJaTG5iUnJyaW85RUVnTmt5ZGRqTWcwZk85aG54dGV5dw?oc=5"
    }
   },
   {
@@ -85,6 +102,40 @@
    "sumber": {
     "nama": "harianSIB.com",
     "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOYmd5VktFSDZRYUk0MEhDcWlLOGVvTVJlbWRsN1o3Rmoyc19XWEl5TzNTbm5IRGIwWWV0Zm5MZFJOWGV2WEZBcEFheW5RSFVTNDZlME5FemptRmtBV1p0b3YwMEh6ckkxUVFqTUhfZ3JBZ2RVZzJ6RTlkRHFDd0xUaGRRbEdIUEJIaGZPM295YVBJd3NSTUttZjNvNUc0VklzeEhYYlZHamZxNnpoVnBwY2tXRVRPZUk1TTcw0gG7AUFVX3lxTE5tdnZMMVMwLVF4Vm42QnYwSEQxTEs1ZUM0eFh1bDA0eTQ1bVRyODNUYWs5LTFCeHB0WjR1WF8tNlk2XzJENGxSMFRUdjQ3T29FTkFhNGdlVlZmeUVIeUZMcHFTSS16aDJuaWJWTkEwOC1ja1ZLWVRJT3RtNm02ZkFOemFGOWJIYXg4Z1pnOXB0ZHVBMWJseXhoRmJ0OThaLXNKTXk3UWZrOUE4WUNLdHVvVW5VeC1Sb0wzNUk?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-22T15:06:28Z",
+   "media": 1,
+   "judul": {
+    "id": "BBM Bali Masih Bermasalah, Koster Dorong Kendaraan Listrik Lewat Pelun",
+    "en": "BBM Bali Masih Bermasalah, Koster Dorong Kendaraan Listrik Lewat Pelun"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "BaliNews.id",
+    "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQbWRZTVJXT3kyRElyOFFhVWNZcU52Tkh5Rlp2UGNLWG5Uc041ODVQVXB6RDAweEFUNkdjZVZreGFLc0tXZzJ5dkwyWU11bVhUWl85cEJNUWJkTHF3cEt0QU1NcUxnZFljWTM1TlVCUkJVYUoxWFFBbVR5MWp1bjB1Z2Rpdm9KQ3NSeVVjTmxuVy1YT2x5WXFYcXVEZUN0eGotRDlzSnlwaWt2M3p5?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-22T14:20:49Z",
+   "media": 1,
+   "judul": {
+    "id": "Koster Klaim Penjualan Mobil Listrik di Bali Meningkat, Motor Listrik Masih Tertinggal",
+    "en": "Koster Klaim Penjualan Mobil Listrik di Bali Meningkat, Motor Listrik Masih Tertinggal"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "BaliNews.id",
+    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQSnRHYm12Smt6NzBSa2t6X2R4N3VtZm9ldk9NLTk2al84a0lQRVNoVGQza1JFWDViNjdNM1lIekxVRTdRT1lYS0pwZnAwSFZVU1VDSmhFbmw1aE5BdzBOTy1rQlhDQ3hMNDFEQ09vTUZLdzBCMU82WjJRNUNZRnQxcHlLNkFRbzV0Zm55Z3lsenJRTG4zZXlway1kX1BqODRIN3hPSVNUQkU?oc=5"
    }
   },
   {
@@ -174,6 +225,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-10-22T11:20:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Tekan BBM dan Emisi, Moeldoko Usulkan Insentif Mobil Listrik Komersial",
+    "en": "Tekan BBM dan Emisi, Moeldoko Usulkan Insentif Mobil Listrik Komersial"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "NTVNews.id",
+    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNNTJEYUpmRVJpWl9yN0RYelZ4MUdmRkN6NHpNUVphQzRfSk1TNWVXd0V1dXNSX3dmMU1xNTQ3eWlWenhQTHdZUUN4dWZjQmF6ekVsdVJMYk5LMklpb0ZtNFhsOWM3c0J1WjRYbk9NN25OTE9BSWhhOG0zTWtObjU0Q0ZOTjJvb3JNYlQ0MVVmMF9qb0hiakhiZ2ZEQnRBVElUNEpLeTJ6V3N5T0lpOXV3?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-10-22T10:37:00Z",
    "media": 1,
    "judul": {
@@ -204,74 +272,6 @@
    "sumber": {
     "nama": "CNN Indonesia",
     "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQdm9xMkRDcTJfYmFPR0pXUjVqV2lSM2lKSkdSbmFReUJVcVpiTGpDRDN4WVAzYzNBbEtlMUlVWFJnQVRNVTlhRjJ0MjhoN0hSOVFiamo0b1cyVjdFNkRPTGpVdnVKa3R2eC00WGVycnJSQlhsdVJDZXp0MDg2YUtodEtQRkt6RHdhQXlHc0FIT0puNE15M01scTNyejRpdDVVYVNabTVDVGpoR0d6U244aHRhT0lPT2ZaMWFaMTBLSHQ5aFNORE4ySkhiSkpBZ9IB0wFBVV95cUxOZVBSd2lWUFRCclhWSUNnUGdXNE1IZUszMGtyMkZVMWI5eFhjVmNnbUNUUXZXWTJOZXB3MnE2YVlQMnRTU282cF9Rb2tkSm9qcmh2TmZEVzlYTnhibUxYRi03TlBBVTRCVF8ydW4zb2JXOTFBQ2JYNFk1QklLdXpKbzFkZTdPWUE2cW1yZ0J4QzJ1NXcyellVcWtfNmdWRFJMSjJaMDVRRzVCQ2oxZGtRMXk4cXNQdmRmRXdyQjB3VnV0RGoxd0h4ZDU2aHpmcmQzT05B?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-22T04:11:25Z",
-   "media": 2,
-   "judul": {
-    "id": "Menperin Usul Mobil Hybrid Bebas Ganjil Genap & Dapat Parkir Khusus",
-    "en": "Menperin Usul Mobil Hybrid Bebas Ganjil Genap & Dapat Parkir Khusus"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "detikoto",
-    "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPM1dIcU9NMTBBMFNsS29VZ0p5aXdGZDRkcTdweWxGMDl5WUFZM0FTM2tPSGRmZmhUX09vZjJ0MUplb2JVMWdvX2dFYU16WHdQWTFtTWtfbEJybGpFNmNOc0tEb3hzbC01cXA2Ym1MUU5tTU5nWEk2ckNQOVVqcGE4REJZY1lKd3Z4cHEwZDBzSWl6QdIBlwFBVV95cUxORjQxWncyMVZRbmtnY2N6R0JPMHA5ZC1RX0xBQ09SV0piOTMxQTg5dk1WcTRFeU1OT2xpejR6YUJ5NlhkRFJkTnFLVzRXaGljbnZXMkpNWWFOUVQ1VXRvZER2TmlrYzdPbWVaZTh4cWtQQkFNMWh2cDFYNjdxVVhhX05TRGp2aU5hc1MxZWdVX3NBNlNlNllF?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-22T09:34:00Z",
-   "media": 1,
-   "judul": {
-    "id": "jelang Operasi Patuh Kapuas 2026, Ojol Kubu Raya Diingatkan Utamakan Keselamatan",
-    "en": "jelang Operasi Patuh Kapuas 2026, Ojol Kubu Raya Diingatkan Utamakan Keselamatan"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "RRI.co.id",
-    "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNV0NlR24xWm9wUVN3b0ZBT2ExX3FlMTVldk5MU2NUNVZ4WTZTMTZTdjlPYVg5VE8xVnk2Y2FIRXV4ZFJSN0tlQ3duSGRuUzBOdXpaVHJYakk4LW4zTk5jQTFkZV9CNDhYUF9LV2RiWjEtVEVCSDYwUEQ1cXg5SFR5QkVWTng2QU9FTjQ2NDh4RGdEd1lNMU9QN0NDYU1rUTdxSlFIU1plaDNWcmFTWkZTVEdlQ2RLNFFpbVlEc25qVmhzdw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-22T03:19:41Z",
-   "media": 2,
-   "judul": {
-    "id": "Temui Komunitas Ojol Makassar, Hamka B Kady Jelaskan Nasib Driver di Revisi UU LLAJ",
-    "en": "Temui Komunitas Ojol Makassar, Hamka B Kady Jelaskan Nasib Driver di Revisi UU LLAJ"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Rakyat Sulsel",
-    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPRzFOR254M1A3NWNGUUlMRkhFQ1FzTEVDTlpTOExaM1R0ZUwtNVA2bmdrNXFBb1ZQVG1BUUp0RXRkenRTdG9SalZ1UF90anJtWHFwbGlNVlJmR1J6aXRZODZxaUNwblVuSEJfaklrX0h0Q3BVRHVpU1FhVGdfSnJ3QmZyRzFpdVpVY1VKbDI4eDlHaW9UVUlkcUpIUHQ4V2dWWURoSXFlc1UyNENwNlNobjA3YkRQVzQ3WXBzag?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-22T08:32:54Z",
-   "media": 1,
-   "judul": {
-    "id": "Bahlil Buka Suara soal Harga BBM Subsidi",
-    "en": "Bahlil Buka Suara soal Harga BBM Subsidi"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Listrik Indonesia",
-    "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNb2ZXWmdtUHFNQXA1anBMNkh2OWJEb0Job2dnYXRyYTlSekx2T21mejlib1BscHZMdkt1bTFLaEFLMDA0d2ZIT1dOTVdwc0JmZFR5bHp5czVJWUZnWFRWV3RfUENpNzlSNmJpTWFVdnY4eHJ5cHpGT1VqdmIyUGUwc3NuRzJzWkRlY2c?oc=5"
    }
   }
  ]
