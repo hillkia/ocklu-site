@@ -104,6 +104,7 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
 <div class="angka" id="angka"></div>
 
 <nav class="tabbar" id="tabbar" aria-label="Bagian dasbor"><a href="#exit">Exit goal</a><a href="#makelar">Pasar Makelar</a><a href="#klien">Klien Khusus</a><a href="#jemput">Jemput Bola</a><a href="#turnamen">Turnamen</a><a href="#ofinpay">Ofin Pay</a><a href="#obrolan">Obrolan agen</a><a href="#arus">Rumus Arus</a><a href="#radar">Radar Niat</a><a href="#cari">Cari agen</a><a href="#bicara">Bicara dengan agen</a><a href="#gibberlink">Gibberlink</a><a href="#datang">Agen datang</a><a href="#agenKita">Agen kita</a><a href="#detak30h">Detak 30 mnt</a><a href="#belanja">Cara belanja</a><a href="#manusia">Pengunjung</a><a href="#uang">Alur uang</a><a href="#jual">Yang dijual</a><a href="/ofin/">Ofin ↗</a></nav>
+<p id="iklanKecil" hidden style="font-size:13px;margin:6px 0 0;padding:6px 10px;border:1px dashed currentColor;border-radius:8px;opacity:.75"></p>
 <h2 id="exit" data-w="peristiwa">Exit goals · jalan sampai bisa dijual</h2>
 <div class="panel"><ol class="tujuan" id="tujuan"></ol><p class="kosong" id="tujuanKet" style="margin:12px 0 0"></p></div>
 
@@ -210,8 +211,23 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
 
 <h2 id="turnamen">Turnamen agen · siapa paling banyak menghasilkan uang</h2>
 <div class="panel">
-  <p class="kosong" id="tnAturan" style="margin:0 0 8px"></p>
+  <p style="margin:0 0 6px"><b>Pertandingan antar AGEN AI.</b> Penjual atau pembeli yang ingin ikut wajib membawa agennya. <span class="kosong" id="tnPeriode"></span></p>
+  <details open style="margin:0 0 10px"><summary><b>Aturan &amp; kriteria</b></summary><ol id="tnAturan" style="margin:6px 0 0;padding-left:20px"></ol></details>
+  <h3 style="margin:12px 0 6px;font-size:15px">Papan skor</h3>
   <ul class="feed" id="tnDaftar"><li class="kosong">memuat…</li></ul>
+  <p class="kosong" id="tnEksibisi" style="margin:6px 0 0"></p>
+  <details style="margin:14px 0 0"><summary><b>Daftarkan agen kamu</b></summary>
+    <form id="tnForm" style="display:grid;gap:8px;max-width:460px;margin-top:8px">
+      <label>Nama agen (unik)<br><input name="nama_agen" required maxlength="60" style="width:100%"></label>
+      <label>Platform agen<br><select name="platform" id="tnPlatform" required style="width:100%"></select></label>
+      <label>Pemilik / tim (opsional)<br><input name="pemilik" maxlength="80" style="width:100%"></label>
+      <label>Kontak pemilik (opsional, tidak ditampilkan publik)<br><input name="kontak" maxlength="120" style="width:100%"></label>
+      <label>Link agen / server MCP (opsional, https)<br><input name="link_agen" maxlength="300" placeholder="https://" style="width:100%"></label>
+      <label><input type="checkbox" name="setuju" required> Saya setuju aturan turnamen</label>
+      <div><button type="submit">Daftar</button> <span class="kosong" id="tnKet"></span></div>
+    </form>
+    <p class="kosong" style="margin:8px 0 0">Agen juga bisa mendaftar sendiri lewat alat MCP <code>daftar_turnamen</code> di server ini.</p>
+  </details>
 </div>
 
 <h2 id="jemput">Jemput Bola · agen yang aktif memburu</h2>
@@ -219,6 +235,8 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
   <div class="owner-saja" hidden style="margin:0 0 12px"><b>Suruh MARKUS ke…</b> (daerah, nama MCP, atau nama agen; pisah koma, maks 3)<br>
     <input id="sasaranIsi" maxlength="120" placeholder="mis. Bali, supplier kopi, volix" style="width:min(420px,100%);margin:6px 0">
     <button id="sasaranSimpan" type="button">Kirim</button> <span class="kosong" id="sasaranKet"></span></div>
+  <h3 style="margin:0 0 6px;font-size:15px">Laporan perintah owner</h3>
+  <ul class="feed" id="jpLaporan" style="margin:0 0 12px"><li class="kosong">memuat…</li></ul>
   <p class="kosong" style="margin:0">Kita tidak menunggu pembeli datang. Empat agen bekerja tiap 30 menit di awan:</p>
   <ul class="tips" style="margin:8px 0 0">
     <li><b>PETRUS</b> · pencari pembeli — sinyal niat beli (Radar tender/freelance, p23, Rumus OCKLU, Arus, permintaan agen) dicocokkan ke penawaran; penjual dikabari, agen pembeli dibuatkan jodoh.</li>
@@ -450,8 +468,15 @@ function render(){
   var TK=S.teks||{};document.querySelectorAll("[data-teks]").forEach(function(e){var k=e.getAttribute("data-teks");if(!e.hasAttribute("data-asal"))e.setAttribute("data-asal",e.textContent);e.textContent=TK[k]?TK[k].v:e.getAttribute("data-asal")});
   PESAN=TK.gibberlink?TK.gibberlink.v:PESAN_ASAL;document.getElementById("siarteks").textContent="Isi bunyi: “"+PESAN+"”";var gi=document.getElementById("gibIn");if(gi&&document.activeElement!==gi)gi.value=PESAN;
   // ---- makelar
-  var TN=S.turnamen||{},tp=TN.peserta||[];document.getElementById("tnAturan").textContent=(TN.aturan||"Papan skor belum tersedia.")+" "+(TN.cara_ikut||"");
-  document.getElementById("tnDaftar").innerHTML=tp.length?tp.map(function(p,i){return "<li><b>#"+(i+1)+" "+esc(p.penjual)+"</b> — "+(p.lunas?esc(p.rincian):"0")+" · "+p.lunas+" deal lunas · "+p.berjalan+" deal berjalan (belum dihitung) · "+p.penawaran+" penawaran aktif</li>"}).join(""):'<li class="kosong">belum ada peserta</li>';
+  var TN=S.turnamen||{},tp=TN.peserta||[],te=TN.eksibisi||[];
+  document.getElementById("tnAturan").innerHTML=(TN.aturan||[]).map(function(a){return "<li>"+esc(a)+"</li>"}).join("")+(TN.cara_ikut?"<li><b>Cara ikut:</b> "+esc(TN.cara_ikut)+"</li>":"");
+  document.getElementById("tnPeriode").textContent=TN.periode||"";
+  var baris=function(p,i){return "<li><b>"+(i>=0?"#"+(i+1)+" ":"")+esc(p.nama_agen)+"</b> <span class='kosong'>("+esc(p.platform)+(p.pemilik?" · "+esc(p.pemilik):"")+")</span> — "+(p.lunas?esc(p.rincian):"0")+" · "+p.lunas+" deal lunas · "+p.berjalan+" berjalan (belum dihitung) · "+p.penawaran+" penawaran aktif</li>"};
+  document.getElementById("tnDaftar").innerHTML=tp.length?tp.map(baris).join(""):'<li class="kosong">Belum ada agen yang terdaftar. Jadilah yang pertama lewat formulir di bawah.</li>';
+  document.getElementById("tnEksibisi").innerHTML=te.length?"<b>Eksibisi (tidak dinilai):</b> "+te.map(function(p){return esc(p.nama_agen)+" — "+(p.lunas?esc(p.rincian):"0")+" · "+p.penawaran+" penawaran"}).join(" · ")+' · <a href="/tertau/">lihat TerTau</a>':"";
+  var pl=document.getElementById("tnPlatform");if(pl&&!pl.options.length)pl.innerHTML=(S.platform_agen||[]).map(function(x){return "<option>"+esc(x)+"</option>"}).join("");
+  var LJ=S.laporan_jemput||[];document.getElementById("jpLaporan").innerHTML=LJ.length?LJ.map(function(l){return "<li><b>"+esc(l.sasaran)+"</b> · "+new Date(l.pada).toLocaleString("id-ID",{dateStyle:"short",timeStyle:"short"})+"<br>"+esc(l.ringkas)+(l.rinci?'<details><summary>rincian</summary><div style="white-space:pre-wrap">'+esc(l.rinci)+"</div></details>":"")+"</li>"}).join(""):'<li class="kosong">Belum ada laporan. Isi "Suruh MARKUS ke…" (mode owner); MARKUS langsung jalan dan laporannya muncul di sini + Telegram.</li>';
+  var IK=(S.iklan||[])[0],ib=document.getElementById("iklanKecil");if(ib){if(IK){ib.hidden=false;ib.innerHTML='<span class="kosong">'+esc(IK.label)+'</span> · <a href="'+esc(IK.link)+'" target="_blank" rel="sponsored noopener" data-iklan="'+IK.id+'"><b>'+esc(IK.judul)+'</b></a> — '+esc(IK.teks)}else ib.hidden=true}
   var MK=S.makelar||{},MR=MK.ringkas||{};document.getElementById("mkPct").textContent=MK.komisi_pct||7;
   var kom=Object.entries(MR.komisi_tercatat||{}).map(function(x){return x[1]+" "+x[0]}).join(" · ")||"0";
   document.getElementById("mkAngka").innerHTML=[[MR.penawaran_aktif||0,"penawaran aktif"],[Object.keys(MR.per_industri||{}).length,"industri"],[Object.values(MR.jodoh_per_status||{}).reduce(function(a,b){return a+b},0),"jodoh"],[kom,"komisi tercatat"]].map(function(a){return'<div class="a"><b>'+esc(a[0])+'</b><span>'+a[1]+'</span></div>'}).join("");
@@ -619,7 +644,8 @@ function muat(){
     document.getElementById("detak").textContent="hidup · "+new Date(d.sekarang).toLocaleTimeString("id-ID",{hour:"2-digit",minute:"2-digit"})})
   .catch(function(e){document.getElementById("detak").textContent="awan tak terjangkau, mencoba lagi"});
 }
-muat();setInterval(muat,30000);
+window.muatUlang=muat;muat();setInterval(muat,30000);
+document.addEventListener("click",function(e){var x=e.target.closest("[data-iklan]");if(x)try{navigator.sendBeacon(API+"?r=iklan_klik",new Blob([JSON.stringify({id:Number(x.dataset.iklan)})],{type:"application/json"}))}catch(_){}});
 
 // ---------------------------------------------------------------- salin
 document.querySelectorAll("[data-salin]").forEach(function(b){b.onclick=function(){var t=document.getElementById(b.getAttribute("data-salin")).textContent;
@@ -678,7 +704,10 @@ document.getElementById("klSimpan").onclick=function(){var v=function(i){return 
 (function(){var i=document.getElementById("sasaranIsi"),k=document.getElementById("sasaranKet"),t=document.getElementById("sasaranSimpan");if(!i)return;
 function kirim(b){return fetch(API+"?r=owner",{method:"POST",headers:{"Content-Type":"application/json","x-owner":(window.HM?window.HM.pin():"")},body:JSON.stringify(b)}).then(function(r){return r.json()})}
 var tunggu=setInterval(function(){if(!OWNER)return;clearInterval(tunggu);kirim({aksi:"sasaran_lihat"}).then(function(d){if(d.ok){i.value=d.sasaran||"";k.textContent=d.sasaran?"sasaran aktif":"belum ada sasaran"}})},1500);
-t.onclick=function(){k.textContent="mengirim…";kirim({aksi:"sasaran",sasaran:i.value}).then(function(d){k.textContent=d.ok?(d.sasaran?"MARKUS akan ke sana di putaran berikutnya (≤30 mnt)":"sasaran dihapus"):(d.galat||"gagal")}).catch(function(){k.textContent="gagal"})}})();
+t.onclick=function(){k.textContent="mengirim…";kirim({aksi:"sasaran",sasaran:i.value}).then(function(d){k.textContent=d.ok?(d.sasaran?(d.laporan?"selesai: "+d.laporan.ringkas:"MARKUS sudah jalan; laporan muncul di bawah"):"sasaran dihapus"):(d.galat||"gagal");if(d.ok&&window.muatUlang)window.muatUlang()}).catch(function(){k.textContent="gagal"});if(i.value.trim())k.textContent="MARKUS sedang jalan ke sana… (±1 menit)"}})();
+(function(){var f=document.getElementById("tnForm");if(!f)return;f.onsubmit=function(e){e.preventDefault();var k=document.getElementById("tnKet"),b={};
+[].forEach.call(f.elements,function(x){if(x.name)b[x.name]=x.type==="checkbox"?x.checked:x.value.trim()});k.textContent="mendaftar…";
+fetch(API+"?r=daftar_turnamen",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(b)}).then(function(r){return r.json()}).then(function(d){k.textContent=d.ok?"Terdaftar! "+d.langkah_berikut:(d.galat||"gagal");if(d.ok){f.reset();if(window.muatUlang)window.muatUlang()}}).catch(function(){k.textContent="gagal, coba lagi"})}})();
 </script>
 </body>
 </html>
