@@ -1,5 +1,5 @@
 {
- "w": "2026-10-22T23:08:05Z",
+ "w": "2026-10-23T00:11:19Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -89,6 +89,40 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-10-22T23:51:02Z",
+   "media": 1,
+   "judul": {
+    "id": "Motor Listrik dan Solar Panel: Solusi Realistis Negara Kepulauan",
+    "en": "Motor Listrik dan Solar Panel: Solusi Realistis Negara Kepulauan"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Kompasiana.com",
+    "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPRi1yNVM1cHVsWkQ1T1h1Uld0ZlhpbU1VWDdIWVE3SVBuVGVzWnJkeTMxd2ZaVlJ2NHRERTdyWkFVcHBqZnpVa2dPUVZVNFBFMWkwcEJPZ010MEdycmY0MUN6QXJuODZRUWhTazNzMF9zZm51TFhwTWZTc2V2WXpKemtpcW5CNW1GUnY1YV9SNVcwNFg5UjBzZ0gtWnpGc3BEUnVibFQ4M082U3RGQnZQWWlSNng4ZW9oNWpLRFZqUmJtQ3dleW5Sbk5IZGM?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-22T23:30:00Z",
+   "media": 1,
+   "judul": {
+    "id": "BBM Langka, Pemerintah Diminta Prioritaskan Insentif Kendaraan Listrik Dibanding Hybrid",
+    "en": "BBM Langka, Pemerintah Diminta Prioritaskan Insentif Kendaraan Listrik Dibanding Hybrid"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Pikiran-Rakyat.com",
+    "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQNWE5YmNZcVg5bU1ER0FKcExNQ2xlVHdFNkxSbEtRaUJrOWlEcEVEdmVHWlo0eXRsQkhtR2h5TjFYRDkyRUNpSm5rRHN4WElHaG5fMTdYYURBamtvRXJsaGtva3NldEthZFVjUXF0RlAzVHNIY2FUcm9uVTFuQndjSG5hOVBtN2RVMTEybGlvY1FNeFRhTWU2N291RGpWVnE3Vi10azhGWnR0NkJ5T0VQWmxReE9RYmlWM0w0dmZzMU5ObTk4bEV1WjdoZTRwZzY1WXfSAdcBQVVfeXFMTzRZTmc2MFVkWDRzYjFHZUg0UmxBaGl0S2xWeDk1MnpUbWFsVnFYaURDZ21hRUd6RXg1dEdLM1R1NDI0OTJDeE42UGxITnY2d3VFeHJ5Q1dPOVRRRHk3eXoxeHRqbGI2UHlOSjBYQ2lDZHlFbERiYmxkRVA5ckR0cFlib3JTUnhwR2RldUYwYTRHWXY0SUdTSFRyWUh0RzdkX05UQ0NWeDJjdi1PczduRVROM2tZM0RiNVBXNUhiTWpySm4yQnloWFRFdkN0Y1lSeThRRnVjZjQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-10-21T23:35:00Z",
    "media": 7,
    "judul": {
@@ -119,6 +153,23 @@
    "sumber": {
     "nama": "iNews.ID",
     "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPUVBLMTJuV2JRT3BvZEhMd2gwNkRFSUJITjVvT2RBMnpOdFItdUZ6d0hiMHpmOGN2YlVXSmExcFl6cWxMeWxVbGVIVTVhN3JEVXpsdGJ3c2hWUnFOeUhiMjk1M1dISzZqM2RBNUNKX0pQTklyMHFyek5fZ1JPTmt2WW5CNmVxUWpTTjFUanlRUTRFOHFHRThZQ0ZyWGVnYlFyRlRUNHlDakhEYUZWMzhXWdIBrwFBVV95cUxNOEhPS3MxaDdLRWt5VmFjOXN1QldtSWdxNFBoXzF4a3VtT05GVmN6emx3amVfYXlCZ1c0NUNtRUxYSEVqTjB6bDRZVG1rWWRHLTdWamdLWnZyaWVLWFVFZ0UwM1pZLVA0UGVEaW9VV3dENlJONzIzWE9UT3pOMkFkOGlsbnlTMTVDOFktc1F5R3BhY3FsbHQ2RU1NRllnWFppRWtMZ3llTW14emI0Tndr?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-22T21:00:27Z",
+   "media": 1,
+   "judul": {
+    "id": "IESR Minta Pemerintah Benahi Pasokan BBM dan Keandalan Listrik",
+    "en": "IESR Minta Pemerintah Benahi Pasokan BBM dan Keandalan Listrik"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Betahita",
+    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPYU8wTnhmNV8zZmM3VUtFMXNRcU90R3pCdThYb0tITGM4QktmTGZPYzR2SENpeTlVRHJKMGVuZmFNelBqT2J3MkxmNXNnNnJxcXNpdV9BaEJVQm9zMlk4eld4MzhHWm9PQm1ES0d1NjhQZWtIaHNrY0lMYUxrd2cyaWRvVFE0Yi1kTklZRGpRLVJPVlJRUUdoRXQ4dE9UcEdE?oc=5"
    }
   },
   {
@@ -238,125 +289,6 @@
    "sumber": {
     "nama": "RCTI+",
     "url": "https://news.google.com/rss/articles/CBMiwAJBVV95cUxOY2VtbWVuOEZxa3Nnb2pZN04tcEp5a1pIb0VOcEhZWml6dzJIOG5NT3IyNTBncDUxODN0NzhmeHdMU0pyY3Q2bExlSDVvRlhZcmQyZ2w0WUFxRVpyWVk2aTZITUhfMHNtMC1aNHJqRldpbXE1WGRVeGM3bFJqOHFUbTdXUjZRdzBnNFAxTlRHbHBzTUN2WkxiX3pHai02dTZVUjdmUk5GMzd4SkxhU25vdHVWeEJBRW1oeHkzbHoyWFFwYnNEY2R3QUZlZmU0WVFJa2pYZ2lERFBKVnozYkdwT09LeUQtdzRRcFk2ZnRKY1BxTXQ5NWpPeGU3R3lHQXptWlZkTkw5b3lRUENxT2tjejJvazdzSGdyd19PcmIxamJGMXZaNWNBcHo1ZE1rMlJQRm1KdFJSYXVpZzFtNlU4dw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-22T15:06:28Z",
-   "media": 1,
-   "judul": {
-    "id": "BBM Bali Masih Bermasalah, Koster Dorong Kendaraan Listrik Lewat Pelun",
-    "en": "BBM Bali Masih Bermasalah, Koster Dorong Kendaraan Listrik Lewat Pelun"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "BaliNews.id",
-    "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQbWRZTVJXT3kyRElyOFFhVWNZcU52Tkh5Rlp2UGNLWG5Uc041ODVQVXB6RDAweEFUNkdjZVZreGFLc0tXZzJ5dkwyWU11bVhUWl85cEJNUWJkTHF3cEt0QU1NcUxnZFljWTM1TlVCUkJVYUoxWFFBbVR5MWp1bjB1Z2Rpdm9KQ3NSeVVjTmxuVy1YT2x5WXFYcXVEZUN0eGotRDlzSnlwaWt2M3p5?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-22T14:34:51Z",
-   "media": 1,
-   "judul": {
-    "id": "Ojol Jadi UMKM, KUR 6% Berbasis Data Transaksi",
-    "en": "Ojol Jadi UMKM, KUR 6% Berbasis Data Transaksi"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "https://feedberry.com/",
-    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9mSFNMUVgzUk9xdE1QUURRVnFacUt1Q1RScHJHUzQyVG8wUzZ6OEdyWmVMMlpqQWZKNGF3emNTcnk5akJoVTRqUXhRZEZNd253SDkwd1RRdDlTTURPWmZpRGRBTlFjTDA1c3B5WVpiMGlET3hibmRjUk1mZHdGbW8?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-22T14:27:09Z",
-   "media": 1,
-   "judul": {
-    "id": "Momen Haru AKBP Wikha Tinggalkan Polres Bogor, Diantar Ojol-Supeltas",
-    "en": "Momen Haru AKBP Wikha Tinggalkan Polres Bogor, Diantar Ojol-Supeltas"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "detikNews",
-    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNYUpiRi1Cc0RVT2pIY2hxT3d5Q2ViNDdUSXdDR3hwVnRpWWpaMnJ3MWMzZWx4YWI5V3JFMElmMjFOMlZVdHducFBGakcxYmNQR3g1dHczMVhjZkpPbHRHeDdYTk9aX2NEdXl2Ynl2NlJabHE5QUZQRXBxMTRtZ3J3bWo4VGxFV0ZZRUMwRVZlQ25KRzEwYzNySHZLQ3FoM2QyWm1VdVZ3QWMtVTdSMGx30gG0AUFVX3lxTE1WQXA0VjF3N2VmWEd2SWJNUlRVU2lLTnVXb0szOTlQeE5UcVZZN2ZidGdHWEV4YU1FLXF1cV9yeGpzcWx1bnhvZVJMaHozSzA5dFR0bl81dUNzU003c1lzTEw1TDBydG4wcDIyVzlEMko2YWd3Njl4Nmx3cFJQNUxlcTk1U3dYOF9tTFFYdVo5S0F6SXoyVmVERzFaVDN0MjgyRF9IMTg0c25YWkx2TXFrM1NfNA?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-22T14:20:49Z",
-   "media": 1,
-   "judul": {
-    "id": "Koster Klaim Penjualan Mobil Listrik di Bali Meningkat, Motor Listrik Masih Tertinggal",
-    "en": "Koster Klaim Penjualan Mobil Listrik di Bali Meningkat, Motor Listrik Masih Tertinggal"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "BaliNews.id",
-    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQSnRHYm12Smt6NzBSa2t6X2R4N3VtZm9ldk9NLTk2al84a0lQRVNoVGQza1JFWDViNjdNM1lIekxVRTdRT1lYS0pwZnAwSFZVU1VDSmhFbmw1aE5BdzBOTy1rQlhDQ3hMNDFEQ09vTUZLdzBCMU82WjJRNUNZRnQxcHlLNkFRbzV0Zm55Z3lsenJRTG4zZXlway1kX1BqODRIN3hPSVNUQkU?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-22T08:00:30Z",
-   "media": 2,
-   "judul": {
-    "id": "BBM Sulit Didapat, Listrik Padam Bergilir, Gubernur Kalbar Panggil Pertamina dan PLN",
-    "en": "BBM Sulit Didapat, Listrik Padam Bergilir, Gubernur Kalbar Panggil Pertamina dan PLN"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "detikcom",
-    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNZ2ZjTTVhdnpUVTlvblZ2RUtzYThYenFNZ1REMXZSNU5hcTJXeW1BQUcxc3dtM1d6RXFYci1telhScG85bXJNZjh2enY4YnRmaGk1akc2aWphNXVjU1M0MW53dlRPa3dOeUR5VTI0MnVhNU01MHdKdG9FNGpaTXJ5X1hmQnZ5QzZrVERRRG43R2NONkZHQzIwQk1tYXctbVFLR3VlYUpTV19ib193bVRGVUpncUlpVEROcDBFQtIBwgFBVV95cUxQRmVDSXl3T0Uxd2FUcm5kWXhEb0k1V0VCUVczWlB4ODF2RFY2UG1WQXZEM21jd1NWazYtMENHOXk4RDdHR1Z2Mk05eGxoaUhTZ1ZMV0VNZW5lMndGU1p4SW5qdlI5T2I3UVhlOVNBWndBNTJrcG1JMGlKWF9POVpXa04xc3NBQ0x6Zk8wRlpVZXUyNTk4T2ctQS1QQ0RGNC1VX0ZHekk5al9hVFVFSG1nMzJmRjhEdHZZMnBTeVp0eU5fdw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-22T13:27:02Z",
-   "media": 1,
-   "judul": {
-    "id": "Polresta Kendari Tangkap Ojol Pelaku Pemerkosaan Gadis 17 Tahun Penyandang Disabilitas",
-    "en": "Polresta Kendari Tangkap Ojol Pelaku Pemerkosaan Gadis 17 Tahun Penyandang Disabilitas"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Kendariinfo",
-    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPczdDdEpnT2d6VFlwMmpMVUg5cTd3cWdjUHJUVndDNnkxMEhjVTFMbmFNSFpwUFk0R2I3X2FOX1NraEduWDhvY3F4WTVYMURncS1OVlMteFpKZFlER0FDS2lqNlZsa3FxSmFITnBtQU5KaFpUN1hSa2g3LU83bld6bDh1QlZGRE13UkVqaHh6S18xaS1aVmtWMXYxQmU0Z1FrenRLMUQ0MFFvS3ZHYm1HddIBtgFBVV95cUxPNXBPZnNubEpydTRTTHFyTFJyX0t2LXBVVGkyWWZlejJwTnlfRTZiaFo3QkJNN3RKTVAwcFJvbTlpM1duOW50STR1NFpVT2JsbGZuQTNlMGFzS2Z5dUV5cWp2OHlmYUFWUnpnU0dsS04yM3lrN0dHTTgzYmpubkV3Uzg5ZERPMXZXNFlxajhrOHBOUjZqY0NRbzN1ZWNNUm1oTDBtU01oZm91QnRfUmdWa3lZT2lJdw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-22T12:47:57Z",
-   "media": 1,
-   "judul": {
-    "id": "Pemerintah Tetapkan Pengemudi Ojol sebagai Usaha Mikro",
-    "en": "Pemerintah Tetapkan Pengemudi Ojol sebagai Usaha Mikro"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "شبكة تواصل الإخبارية",
-    "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE54aWd3cGxIbnZfX29zZmVtMDAtd2ptVE9WU3V2dEV5cm9hb1lLWXItX25nY2hFVjdYYWg5OE9lbFJlb0xpc1Yxak9oQW9qSlAyS0Qw?oc=5"
    }
   }
  ]
