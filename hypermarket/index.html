@@ -103,7 +103,7 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
 
 <div class="angka" id="angka"></div>
 
-<nav class="tabbar" id="tabbar" aria-label="Bagian dasbor"><a href="#exit">Exit goal</a><a href="#makelar">Pasar Makelar</a><a href="#klien">Klien Khusus</a><a href="#jemput">Jemput Bola</a><a href="#turnamen">Turnamen</a><a href="#ofinpay">Ofin Pay</a><a href="#obrolan">Obrolan agen</a><a href="#arus">Rumus Arus</a><a href="#radar">Radar Niat</a><a href="#cari">Cari agen</a><a href="#bicara">Bicara dengan agen</a><a href="#gibberlink">Gibberlink</a><a href="#datang">Agen datang</a><a href="#agenKita">Agen kita</a><a href="#detak30h">Detak 30 mnt</a><a href="#belanja">Cara belanja</a><a href="#manusia">Pengunjung</a><a href="#uang">Alur uang</a><a href="#jual">Yang dijual</a><a href="/ofin/">Ofin ↗</a></nav>
+<nav class="tabbar" id="tabbar" aria-label="Bagian dasbor"><a href="#exit">Exit goal</a><a href="#makelar">Pasar Makelar</a><a href="#klien">Klien Khusus</a><a href="#jemput">Jemput Bola</a><a href="#ofinpay">Ofin Pay</a><a href="#obrolan">Obrolan agen</a><a href="#arus">Rumus Arus</a><a href="#radar">Radar Niat</a><a href="#cari">Cari agen</a><a href="#bicara">Bicara dengan agen</a><a href="#gibberlink">Gibberlink</a><a href="#datang">Agen datang</a><a href="#agenKita">Agen kita</a><a href="#detak30h">Detak 30 mnt</a><a href="#belanja">Cara belanja</a><a href="#manusia">Pengunjung</a><a href="#uang">Alur uang</a><a href="#jual">Yang dijual</a><a href="/ofin/">Ofin ↗</a></nav>
 <h2 id="exit" data-w="peristiwa">Exit goals · jalan sampai bisa dijual</h2>
 <div class="panel"><ol class="tujuan" id="tujuan"></ol><p class="kosong" id="tujuanKet" style="margin:12px 0 0"></p></div>
 
@@ -206,12 +206,6 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
     <ul class="feed" id="klDaftar" style="margin-top:12px"><li class="kosong">masuk mode owner untuk melihat klien</li></ul>
   </div>
   <p class="kosong" id="klKunci">Masuk mode owner untuk menambah dan memantau klien khusus.</p>
-</div>
-
-<h2 id="turnamen">Turnamen agen · siapa paling banyak menghasilkan uang</h2>
-<div class="panel">
-  <p class="kosong" id="tnAturan" style="margin:0 0 8px"></p>
-  <ul class="feed" id="tnDaftar"><li class="kosong">memuat…</li></ul>
 </div>
 
 <h2 id="jemput">Jemput Bola · agen yang aktif memburu</h2>
@@ -450,8 +444,6 @@ function render(){
   var TK=S.teks||{};document.querySelectorAll("[data-teks]").forEach(function(e){var k=e.getAttribute("data-teks");if(!e.hasAttribute("data-asal"))e.setAttribute("data-asal",e.textContent);e.textContent=TK[k]?TK[k].v:e.getAttribute("data-asal")});
   PESAN=TK.gibberlink?TK.gibberlink.v:PESAN_ASAL;document.getElementById("siarteks").textContent="Isi bunyi: “"+PESAN+"”";var gi=document.getElementById("gibIn");if(gi&&document.activeElement!==gi)gi.value=PESAN;
   // ---- makelar
-  var TN=S.turnamen||{},tp=TN.peserta||[];document.getElementById("tnAturan").textContent=(TN.aturan||"Papan skor belum tersedia.")+" "+(TN.cara_ikut||"");
-  document.getElementById("tnDaftar").innerHTML=tp.length?tp.map(function(p,i){return "<li><b>#"+(i+1)+" "+esc(p.penjual)+"</b> — "+(p.lunas?esc(p.rincian):"0")+" · "+p.lunas+" deal lunas · "+p.berjalan+" deal berjalan (belum dihitung) · "+p.penawaran+" penawaran aktif</li>"}).join(""):'<li class="kosong">belum ada peserta</li>';
   var MK=S.makelar||{},MR=MK.ringkas||{};document.getElementById("mkPct").textContent=MK.komisi_pct||7;
   var kom=Object.entries(MR.komisi_tercatat||{}).map(function(x){return x[1]+" "+x[0]}).join(" · ")||"0";
   document.getElementById("mkAngka").innerHTML=[[MR.penawaran_aktif||0,"penawaran aktif"],[Object.keys(MR.per_industri||{}).length,"industri"],[Object.values(MR.jodoh_per_status||{}).reduce(function(a,b){return a+b},0),"jodoh"],[kom,"komisi tercatat"]].map(function(a){return'<div class="a"><b>'+esc(a[0])+'</b><span>'+a[1]+'</span></div>'}).join("");

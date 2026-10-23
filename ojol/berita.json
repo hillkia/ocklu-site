@@ -1,5 +1,5 @@
 {
- "w": "2026-10-23T02:15:40Z",
+ "w": "2026-10-23T03:19:53Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -89,6 +89,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-10-23T02:40:00Z",
+   "media": 2,
+   "judul": {
+    "id": "Kepala Bakom Sebut Kepastian Status Pengemudi Ojol Perlu Dikawal",
+    "en": "Kepala Bakom Sebut Kepastian Status Pengemudi Ojol Perlu Dikawal"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "RRI.co.id",
+    "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPWEt5YzRxelFFVHdUMlVoNHpZeGZTQ0V4NW1oMTJYRUM0eFZUWm1UWkFLNHJfOVk1dzhvbGF4MVRKY0VwR3hRU0R6dmJxbFRESEZmaWV3OVdnVjg4WU94ajR0UlNidWpLT09ic0otdnN4T1AzaE5RTVNwMUJRbGdTQkJJMUY0VU81Y2c?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-10-22T13:40:17Z",
    "media": 4,
    "judul": {
@@ -102,6 +119,23 @@
    "sumber": {
     "nama": "Sumut Pos",
     "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNcVhqMTR0N21xaTR5ZDhub2ZqLVhrLU9SSDRIQjZZSVBxNTFtLW1NMHRmVVV4UHJXQ0hTOEhBXzFWTGFMa1hEU1E3cjcxWW15T0I5TG5tS0FhdERLTFhfZnJENjVDVUtyc25yTUd3TWhfck9aRjdpNUI1SkxxUFlkY1BQUjJ4V25Kb1ktbGM2YVlkOWJUeWJjdDBTenBjb2V1WFVqTnZqX05aNi14aFHSAbMBQVVfeXFMT3lLRklJd3pnakJBQjRxZ18yeVhNWGZsQ0kwd2t1cHVUcjRoY1BhWGdmX25ScldzZzROYVVNSVJNUlFQS3dsWHFIMVNEbWl0cmNJQURwVnM0RXhBTWdTSDBxWkoxVDV5Tl82UDZqTHc3SWxjTjBkc0xJcE9YZmFyOGpEVHU3MjRNR28wWnozVmtEaEFtOXZhMXJNWkpOaHZMRVBUYmR3bXFzUnRNTk1CMnYtNWc?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-23T02:48:01Z",
+   "media": 1,
+   "judul": {
+    "id": "Soroti Kesejahteraan Driver Ojol, DPRD DIY Minta Manajemen Maxim Tanggap Keluhan Program Turbo",
+    "en": "Soroti Kesejahteraan Driver Ojol, DPRD DIY Minta Manajemen Maxim Tanggap Keluhan Program Turbo"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Gerbang Patriot",
+    "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOd2dOcTNYZUtnSFVfdkppa2k5bG5TTlBhMGh3MUtheFhqOWxReThvN3E1YUxTVVhCX05zejB6c1lIU0RCMDJSMTE2dklEQlZYbzBtcURyUV81UDBZeEZBN3JfOXBVOU5QTnVUVllPRU5Sdm1FaHRzZkJxNk5ZLWw2MFVibE9sQVZVcDdNT3lpc241VHNuRnhnREhDckhyVEE4N1RwWVlPTHVaU0hkQUpfYnpQTzJoQUFhQXpuQmtNRlcwaFZHbjBfZE9mZG8?oc=5"
    }
   },
   {
@@ -123,6 +157,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-10-23T02:28:45Z",
+   "media": 1,
+   "judul": {
+    "id": "Pemerintah Buka KUR bagi Pengemudi Ojol, Bunga 6 Persen per Tahun",
+    "en": "Pemerintah Buka KUR bagi Pengemudi Ojol, Bunga 6 Persen per Tahun"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Harian Dialog",
+    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOSDU4THFXM1hROEl0Q1Z2c056LVN5NHJ4LUVzMUM5VEhOSTIwQkFnWXdmLUhOcVk4ZW5Sc1lyM1ZteDdpeUhCb0FQNGlLV0ZtZ3VHcnNDelVIX094eUE1cjBoblBUVzl2SWM1WkRiRmZKNTh3SVlkcFdpYnJJbHhUaXF3ZUZoSjc1My1kZDBELXhBWjZ0dHk0?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-10-22T15:22:11Z",
    "media": 3,
    "judul": {
@@ -136,6 +187,23 @@
    "sumber": {
     "nama": "Fraksi Partai Golkar",
     "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQS0lJTkQ4cHE3WmxvOFRuNnNOSDBMTWtHTy0yQVhUZXZTUTR3LUFZRkFvZHpGYzhxcm52OTVXVjJnN21vVGFzaFVhUzJ0c05fZXdCWFZHZkJfTUJDem95R1oxb0ZiTmRBYUsyRmtPemNaNXRFekdfM2ZIOXNqQ1ppUzhIWXJqR1VFV2VCakVXZFByMWstTjVpWmprU3V0TG5tY0FQRktMdnJLLXRoXzlXNGdoUTBJLUpBNWg5RERUcElBeDhkb1VSd2l4dw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-23T01:50:40Z",
+   "media": 1,
+   "judul": {
+    "id": "Aturan Turunan Perpres Ojol, Menteri UMKM Pertimbangkan Nasib Gojek-Grab Cs",
+    "en": "Aturan Turunan Perpres Ojol, Menteri UMKM Pertimbangkan Nasib Gojek-Grab Cs"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Bisnis Tekno",
+    "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQSEZsTE5jcGxNaEpsek1wWFhKbEZJWFVUM3pYZzFGU1dfckNfME1wejZjQnR6ZEVTUnl6ZmV6LUwwazJodXNtN1pzNVZJZ3lIMG5Ja2FnRWpreEEyeXdWTFdUT3UxNmM4bE04VzI2RmsxMTR0bURSUk1pR2lkSW1Vc0tLMGgzckoxaXVSRm9NUGJNMk91QTkyeUZSaWxpY0FnTmpvaUFSb3VFR3VxOVFKajN6ZFpTQXpQbE9pV2JuNGg2b09reWpNZw?oc=5"
    }
   },
   {
@@ -289,91 +357,6 @@
    "sumber": {
     "nama": "Pikiran-Rakyat.com",
     "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQNWE5YmNZcVg5bU1ER0FKcExNQ2xlVHdFNkxSbEtRaUJrOWlEcEVEdmVHWlo0eXRsQkhtR2h5TjFYRDkyRUNpSm5rRHN4WElHaG5fMTdYYURBamtvRXJsaGtva3NldEthZFVjUXF0RlAzVHNIY2FUcm9uVTFuQndjSG5hOVBtN2RVMTEybGlvY1FNeFRhTWU2N291RGpWVnE3Vi10azhGWnR0NkJ5T0VQWmxReE9RYmlWM0w0dmZzMU5ObTk4bEV1WjdoZTRwZzY1WXfSAdcBQVVfeXFMTzRZTmc2MFVkWDRzYjFHZUg0UmxBaGl0S2xWeDk1MnpUbWFsVnFYaURDZ21hRUd6RXg1dEdLM1R1NDI0OTJDeE42UGxITnY2d3VFeHJ5Q1dPOVRRRHk3eXoxeHRqbGI2UHlOSjBYQ2lDZHlFbERiYmxkRVA5ckR0cFlib3JTUnhwR2RldUYwYTRHWXY0SUdTSFRyWUh0RzdkX05UQ0NWeDJjdi1PczduRVROM2tZM0RiNVBXNUhiTWpySm4yQnloWFRFdkN0Y1lSeThRRnVjZjQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-21T23:35:00Z",
-   "media": 7,
-   "judul": {
-    "id": "Penuh Kehangatan, Wakapolda Bali Serap Aspirasi Driver Ojol dan Perkuat Sinergi Kamtibmas",
-    "en": "Penuh Kehangatan, Wakapolda Bali Serap Aspirasi Driver Ojol dan Perkuat Sinergi Kamtibmas"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "RRI.co.id",
-    "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNeXFZVHVCOW1ZVXA2NTAxaFk3MnFzcWJxdmVTN3F6OWVjVDgwZldwV2xibzZrUVZwODU3X1B2SmdReEJqTl8xd2FHdl9fa01HdjhsSEVQLU9Rc0tHcTNnT3NOWjZ6bHVZdklyWjNHUTVWNTVycWlTOUMwRUpoZkhlN3pfWXBpeERXeF9SZWRYTURBVHROdUtBN2k3ZjZwLWpLVVlQRU1R?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-22T15:16:58Z",
-   "media": 2,
-   "judul": {
-    "id": "Polres Subang Gandeng Komunitas Ojol, Perkuat Kemitraan untuk Jaga Kamtibmas",
-    "en": "Polres Subang Gandeng Komunitas Ojol, Perkuat Kemitraan untuk Jaga Kamtibmas"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "iNews.ID",
-    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPUVBLMTJuV2JRT3BvZEhMd2gwNkRFSUJITjVvT2RBMnpOdFItdUZ6d0hiMHpmOGN2YlVXSmExcFl6cWxMeWxVbGVIVTVhN3JEVXpsdGJ3c2hWUnFOeUhiMjk1M1dISzZqM2RBNUNKX0pQTklyMHFyek5fZ1JPTmt2WW5CNmVxUWpTTjFUanlRUTRFOHFHRThZQ0ZyWGVnYlFyRlRUNHlDakhEYUZWMzhXWdIBrwFBVV95cUxNOEhPS3MxaDdLRWt5VmFjOXN1QldtSWdxNFBoXzF4a3VtT05GVmN6emx3amVfYXlCZ1c0NUNtRUxYSEVqTjB6bDRZVG1rWWRHLTdWamdLWnZyaWVLWFVFZ0UwM1pZLVA0UGVEaW9VV3dENlJONzIzWE9UT3pOMkFkOGlsbnlTMTVDOFktc1F5R3BhY3FsbHQ2RU1NRllnWFppRWtMZ3llTW14emI0Tndr?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-22T21:00:27Z",
-   "media": 1,
-   "judul": {
-    "id": "IESR Minta Pemerintah Benahi Pasokan BBM dan Keandalan Listrik",
-    "en": "IESR Minta Pemerintah Benahi Pasokan BBM dan Keandalan Listrik"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Betahita",
-    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPYU8wTnhmNV8zZmM3VUtFMXNRcU90R3pCdThYb0tITGM4QktmTGZPYzR2SENpeTlVRHJKMGVuZmFNelBqT2J3MkxmNXNnNnJxcXNpdV9BaEJVQm9zMlk4eld4MzhHWm9PQm1ES0d1NjhQZWtIaHNrY0lMYUxrd2cyaWRvVFE0Yi1kTklZRGpRLVJPVlJRUUdoRXQ4dE9UcEdE?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-22T14:27:00Z",
-   "media": 2,
-   "judul": {
-    "id": "Satreskrim Polsek Patumbak Ringkus Dua Maling Handphone Driver Ojol",
-    "en": "Satreskrim Polsek Patumbak Ringkus Dua Maling Handphone Driver Ojol"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "MedanMerdeka.com",
-    "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPZDRScGkxTWMtZm1LQ2wyYXVMNWZyQzhmanFrQ1ZXWWswU0NUSjRQTkFlb2dZZXpFVks4V3ZTZzhUWXBZNHZnRVlrQVpqbFNiRThHZTNmTlZJTkZWUmhVVmxhc3RndHdHbUVvM29HOXRwSHZvbUFfbGhSQzJIX2NIXy1DbmhlZFE?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-22T14:03:06Z",
-   "media": 2,
-   "judul": {
-    "id": "Ria Norsan Panggil Pertamina dan PLN, Kelangkaan BBM serta Pemadaman Listrik Dibahas",
-    "en": "Ria Norsan Panggil Pertamina dan PLN, Kelangkaan BBM serta Pemadaman Listrik Dibahas"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Dio TV",
-    "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNOXFDczVwVWoyTUpKRVMyWHp4WWtRajNNb1RfdlRsb3YybVRobnlNejczek1iVXlzOXYxRjR4YUpzZkFrUF9Oc25JOXBwYm9iWmFSWXZkMnlOeUFRMGJQODJ0TnpIeHh1QXZMQ054LTVXVDRzMUk3NEVvNG1hYWZWMW52VFN3WUVIS0dNUUd2d29uZkRIYU5HeEVaejdQYjZKaUdXWXEwRXRqWTN4OHUyakc5Z0p4SThRMnYza1huU09UU3pDWEQyQXNaWWpsejcxMnQtaHE1QmxyMVRZM29ZQtIB5gFBVV95cUxQdFpVaFkzbzZSSDZ4R1d2anA1Yzd4WVd5ZVp2MkVfdVUyeUJaNlR5aDU4OEF3U291MWJ3d1ZTeS1HU1lwd0o0MTA3ZVBIRkctbjF6SW1SSnlMeHpvV0ZmYVFSS3h2U1hCei1mYmViZFBJVy1HTlZRUEJ3WUZnaEJuUVlLQmxKQXlQeTJPM0hmY3JQa0U5cWxLeTMzRDJyaEJveWFvQVdKUzNJbEI3QmNxRlJTWjZqOUdOT0FWbmhaYjNkcmhSTFJaTG5iUnJyaW85RUVnTmt5ZGRqTWcwZk85aG54dGV5dw?oc=5"
    }
   }
  ]
