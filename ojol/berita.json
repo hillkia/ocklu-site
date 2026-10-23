@@ -1,11 +1,11 @@
 {
- "w": "2026-10-23T03:19:53Z",
+ "w": "2026-10-23T04:24:03Z",
  "dari": "Kroog",
  "berita": [
   {
    "jenis": "berita",
-   "waktu": "2026-10-22T23:10:00Z",
-   "media": 3,
+   "waktu": "2026-10-23T00:04:44Z",
+   "media": 4,
    "judul": {
     "id": "Menperin Usul Mobil Hybrid Bisa Bebas Ganjil Genap-Dapat Parkir Khusus",
     "en": "Menperin Usul Mobil Hybrid Bisa Bebas Ganjil Genap-Dapat Parkir Khusus"
@@ -15,8 +15,8 @@
     "en": ""
    },
    "sumber": {
-    "nama": "CNBC Indonesia",
-    "url": "https://www.cnbcindonesia.com/news/20261022173133-4-778674/menperin-usul-mobil-hybrid-bisa-bebas-ganjil-genap-dapat-parkir-khusus"
+    "nama": "detikOto",
+    "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNTmJHMUlGVnJ3cF9YNF9iVkJJWE1DaUVITnZRNWwxZHN5UVE5NTJJY3VZSE85UmFMOEV6RmVFQm5kOE8yZWlwUjZaS0Q3bVpZOGxwTGwtVDRPc24zOUhseHVBaGE1TVlwWXRZdUEweEQ4SXQtVWFFbzUwT05XRGt1dW04MTRxV09mXzJYbXVuam9pRlUwaVHSAZsBQVVfeXFMUHlkWkdHNnA2QzhzWV9XQ2VNdG5mSU4tZ2hJNXhyVnhnZVpVN2tPbmJHcUlnMDM3c0ZiMWxnTUZfSDJ6NlRSTUEtZk5rY0VJUDBCY195ZjBqS3JJNDlCdnlBOGRwUTRTMWdoME1qWDdaYVJtdGdUdEM0cVBHbEhESlA1eXRPUUhKY1htVk5KQ3Z1RzJxbW83cnVKRnc?oc=5"
    }
   },
   {
@@ -272,91 +272,6 @@
    "sumber": {
     "nama": "MediaAksara.id",
     "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPb0RiQ2YxWFZSUHVwcXF0djUtV0paT09wSVgtU2FxWjE3ZDRsaHJLZWNwWk5MM0NzdHFKVUxpak4ydzJEYk1tQ0NiUWI0OWM4bmkwVjNTS3lGMWZUdHpLOGZpTkpRSVJZQmZZS2U0NjlYX1NNNkpyTEFLMnI4dGxHbVRwMEZnTGpvTlZmY1JJWFBVU2Z4c1NPdmdPbWo3akF6d0xTdm03enN5dGFMQ0JwN3g2WGpQMkhlYmdtQzNUMXRTRzg0NWs0SUhaelRQbEk?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-23T00:14:30Z",
-   "media": 1,
-   "judul": {
-    "id": "Jumat Berkah for Ojol, DT Peduli Cirebon Bagikan Paket Makanan di Jalan Perjuangan",
-    "en": "Jumat Berkah for Ojol, DT Peduli Cirebon Bagikan Paket Makanan di Jalan Perjuangan"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "DT Peduli",
-    "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPYkluQ3pPSUVCdi12Yll5N3VKd2Fyc0dXSXhwMTUtNGRjWUJ1MmF2M1BVTHBrMk9udnZYdVFDbzZsOEtfcFFoZDVzVVVmYTN1TExDenNsRFRMSWpRLXJCc19aaWo4YUQzTGlrZHlVSlBLVXgwOUJQZGpYS3BRSG9RNE1nTC16QkY4d3BNVkZnOEpxRFJKV1M3UUhzam5MNFVZbXJuaHFpVW5hcmMzLUdCRGg4aVRpQWtXdDJQZFZ0eFVCd2gtMGVr?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-23T00:13:14Z",
-   "media": 1,
-   "judul": {
-    "id": "Tawuran Geng Motor di Makassar Tewaskan Ojol, 19 Orang Jadi Tersangka, Mayoritas Masih di Bawah Umur",
-    "en": "Tawuran Geng Motor di Makassar Tewaskan Ojol, 19 Orang Jadi Tersangka, Mayoritas Masih di Bawah Umur"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "VIVA.co.id",
-    "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPcDFqNlBnalFuNU4yMS1fdXY0VzVlMjJDMUZEeW9HWEJ4OTdEbDRmVVdBZEtDc3Z4RjV2Ujd4blVLUl92WVYwdFBJLU9FMlhaMmJCVHc5VDdpbDNWYTV2Q1duam9QcUkwdlVUUkFON2x2UjdDbzY4OG5FZHBaQ1U5TEFtNXR2cFRDQ1NMa1haZHdjRkR3SzI1Z1ZiQUxpeHJQT1lTS1g2Y1dmLTRMYlkyQnBqOGR3M3RWOW5seXNMSWtzTHgyTU85YjM4dFJnUGc?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-22T23:56:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Aturan Turunan Perpres Ojol Ditargetkan Rampung Akhir Desember 2026",
-    "en": "Aturan Turunan Perpres Ojol Ditargetkan Rampung Akhir Desember 2026"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "RRI.co.id",
-    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOcGdhR1RWWGYzSU54ZFp3ZFVXdUFlblVTSlhWaTlRU3V3eUhuQjZpQmZFWkVIQkEwT0ZFVjFlR0MwZmhlaG02dkloMmttLXg0YTBSZDRVc1NhZldBWktJWmtrNGpUdUxFMG1NUFd2ZWJyTHR2VXZXOVdES3Bjak9NMVpwV1d3TGhiQUh0RXpjVmUtdDZUbmdkNUV3SGNvYi1pZFdXSg?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-22T23:51:02Z",
-   "media": 1,
-   "judul": {
-    "id": "Motor Listrik dan Solar Panel: Solusi Realistis Negara Kepulauan",
-    "en": "Motor Listrik dan Solar Panel: Solusi Realistis Negara Kepulauan"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Kompasiana.com",
-    "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPRi1yNVM1cHVsWkQ1T1h1Uld0ZlhpbU1VWDdIWVE3SVBuVGVzWnJkeTMxd2ZaVlJ2NHRERTdyWkFVcHBqZnpVa2dPUVZVNFBFMWkwcEJPZ010MEdycmY0MUN6QXJuODZRUWhTazNzMF9zZm51TFhwTWZTc2V2WXpKemtpcW5CNW1GUnY1YV9SNVcwNFg5UjBzZ0gtWnpGc3BEUnVibFQ4M082U3RGQnZQWWlSNng4ZW9oNWpLRFZqUmJtQ3dleW5Sbk5IZGM?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-22T23:30:00Z",
-   "media": 1,
-   "judul": {
-    "id": "BBM Langka, Pemerintah Diminta Prioritaskan Insentif Kendaraan Listrik Dibanding Hybrid",
-    "en": "BBM Langka, Pemerintah Diminta Prioritaskan Insentif Kendaraan Listrik Dibanding Hybrid"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Pikiran-Rakyat.com",
-    "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQNWE5YmNZcVg5bU1ER0FKcExNQ2xlVHdFNkxSbEtRaUJrOWlEcEVEdmVHWlo0eXRsQkhtR2h5TjFYRDkyRUNpSm5rRHN4WElHaG5fMTdYYURBamtvRXJsaGtva3NldEthZFVjUXF0RlAzVHNIY2FUcm9uVTFuQndjSG5hOVBtN2RVMTEybGlvY1FNeFRhTWU2N291RGpWVnE3Vi10azhGWnR0NkJ5T0VQWmxReE9RYmlWM0w0dmZzMU5ObTk4bEV1WjdoZTRwZzY1WXfSAdcBQVVfeXFMTzRZTmc2MFVkWDRzYjFHZUg0UmxBaGl0S2xWeDk1MnpUbWFsVnFYaURDZ21hRUd6RXg1dEdLM1R1NDI0OTJDeE42UGxITnY2d3VFeHJ5Q1dPOVRRRHk3eXoxeHRqbGI2UHlOSjBYQ2lDZHlFbERiYmxkRVA5ckR0cFlib3JTUnhwR2RldUYwYTRHWXY0SUdTSFRyWUh0RzdkX05UQ0NWeDJjdi1PczduRVROM2tZM0RiNVBXNUhiTWpySm4yQnloWFRFdkN0Y1lSeThRRnVjZjQ?oc=5"
    }
   }
  ]
