@@ -30,18 +30,16 @@ button{font:inherit;font-weight:700;background:var(--aksen);color:#fff;border:0;
 </div>
 <h2>Jurnal kerja</h2><ul id="dJurnal"></ul>
 <h2>Obrolan owner ↔ TerTau</h2>
-<div id="masuk"><p class="catatan">Khusus owner. Tempel kunci owner sekali; disimpan di browser ini saja.</p><input id="kunci" type="password" placeholder="kunci owner" autocomplete="off"><button id="simpan">Masuk</button></div>
-<div id="ruang" hidden><ul id="obrolan"></ul><textarea id="isi" rows="3" placeholder="Tulis pesan untuk TerTau…"></textarea><button id="kirim">Kirim</button> <button id="keluar" style="background:transparent;color:var(--redup)">Keluar</button></div>
+<div id="ruang"><p class="catatan">Obrolan ini terbuka (tanpa PIN). TerTau menolak perintah berisiko dari sini: transfer uang, kunci/kata sandi, hapus data.</p><ul id="obrolan"></ul><textarea id="isi" rows="3" placeholder="Tulis pesan untuk TerTau…"></textarea><button id="kirim">Kirim</button></div>
 <p class="catatan" id="status"></p>
 </main><script>
 var API="https://njghzieuuopukuagrswu.supabase.co/functions/v1/tertau";
 function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
-function kunci(){try{return localStorage.getItem("tt_kunci")||""}catch(e){return""}}
 function waktu(t){return new Date(t).toLocaleString("id-ID",{dateStyle:"medium",timeStyle:"short"})}
 function daftar(id,arr,f,kosong){document.getElementById(id).innerHTML=arr.length?arr.map(f).join(""):'<li class="kosong">'+kosong+'</li>'}
 function rp(n,mu){return (mu||"IDR")+" "+Number(n).toLocaleString("id-ID")}
 function muat(){
-  fetch(API+"?r=data",{headers:kunci()?{"x-kunci":kunci()}:{}}).then(function(r){return r.json()}).then(function(d){
+  fetch(API+"?r=data").then(function(r){return r.json()}).then(function(d){
     var J=d.jurnal||[],U=d.uang||[],per={};
     U.forEach(function(u){per[u.mata_uang]=(per[u.mata_uang]||0)+Number(u.jumlah)});
     document.getElementById("aUang").textContent=Object.keys(per).length?Object.keys(per).map(function(m){return rp(per[m],m)}).join(" · "):"Rp0";
@@ -53,14 +51,10 @@ function muat(){
     daftar("dIde",J.filter(function(j){return j.jenis==="ide"}),li,"Belum ada ide tercatat.");
     daftar("dGagal",J.filter(function(j){return j.jenis==="gagal"}),li,"Belum ada kegagalan tercatat.");
     daftar("dJurnal",J.slice(0,40),li,"TerTau belum menulis jurnal.");
-    var owner=d.peran==="owner";document.getElementById("masuk").hidden=owner;document.getElementById("ruang").hidden=!owner;
-    if(kunci()&&!owner)document.getElementById("status").textContent="Kunci owner salah.";
-    if(owner)daftar("obrolan",(d.pesan||[]).slice().reverse(),function(p){return '<li class="'+(p.dari==="owner"?"owner":"jual")+'"><small>'+(p.dari==="owner"?"Owner":"TerTau")+' · '+waktu(p.pada)+'</small><br>'+esc(p.teks)+'</li>'},"Belum ada obrolan.");
+    daftar("obrolan",(d.pesan||[]).slice().reverse(),function(p){return '<li class="'+(p.dari==="owner"?"owner":"jual")+'"><small>'+(p.dari==="owner"?"Owner":"TerTau")+' · '+waktu(p.pada)+'</small><br>'+esc(p.teks)+'</li>'},"Belum ada obrolan.");
   }).catch(function(){document.getElementById("status").textContent="Gagal memuat data."});
 }
-document.getElementById("simpan").onclick=function(){try{localStorage.setItem("tt_kunci",document.getElementById("kunci").value.trim())}catch(e){}document.getElementById("status").textContent="";muat()};
-document.getElementById("keluar").onclick=function(){try{localStorage.removeItem("tt_kunci")}catch(e){}muat()};
 document.getElementById("kirim").onclick=function(){var t=document.getElementById("isi").value.trim();if(!t)return;
-  fetch(API+"?r=pesan",{method:"POST",headers:{"content-type":"application/json","x-kunci":kunci()},body:JSON.stringify({teks:t})}).then(function(r){if(!r.ok)throw 0;document.getElementById("isi").value="";muat()}).catch(function(){document.getElementById("status").textContent="Pesan gagal terkirim."})};
+  fetch(API+"?r=pesan",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({teks:t})}).then(function(r){if(!r.ok)throw 0;document.getElementById("isi").value="";muat()}).catch(function(){document.getElementById("status").textContent="Pesan gagal terkirim."})};
 muat();setInterval(muat,30000);
 </script></body></html>
