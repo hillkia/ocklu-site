@@ -81,7 +81,11 @@ function tautan(s){return esc(s).replace(/https?:\/\/[^\s<"]+/g,function(u){retu
 function waktu(t){return new Date(t).toLocaleString("id-ID",{dateStyle:"medium",timeStyle:"short"})}
 function lalu(t){var m=Math.round((Date.now()-new Date(t))/60000);return m<1?"baru saja":m<60?m+" menit lalu":m<1440?Math.round(m/60)+" jam lalu":Math.round(m/1440)+" hari lalu"}
 function rp(n,mu){return (mu||"IDR")+" "+Number(n).toLocaleString("id-ID")}
-var NAMA={ide:"ide",catatan:"kerja",gagal:"gagal",jual:"jual"};
+var NAMA={ide:"ide",catatan:"kerja",gagal:"gagal",jual:"jual"},ubah=null;
+function simpanHarga(){var f=$("hargaBaru"),m=$("hargaPesan"),b=document.querySelector("[data-simpan]");if(!f)return;b.disabled=true;m.textContent="menyimpan…";
+  fetch(API+"?r=harga",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({id:ubah,harga:Number(String(f.value).replace(",","."))})}).then(function(r){return r.json()})
+    .then(function(d){if(d.galat){m.textContent=d.galat;b.disabled=false;return}ubah=null;muat()}).catch(function(){m.textContent="Gagal terhubung, coba lagi";b.disabled=false})}
+document.addEventListener("keydown",function(e){if(e.target.id!=="hargaBaru")return;if(e.key==="Enter"){e.preventDefault();simpanHarga()}else if(e.key==="Escape"){ubah=null;tampil()}});
 function tampil(){
   var J=D.jurnal,U=D.uang,P=D.pesan,per={};
   U.forEach(function(u){per[u.mata_uang]=(per[u.mata_uang]||0)+Number(u.jumlah)});
@@ -94,10 +98,12 @@ function tampil(){
   $("aktif").textContent=akhir?"TerTau terakhir aktif "+lalu(akhir.pada):"TerTau belum pernah aktif";
   $("titik").style.background=akhir&&Date.now()-new Date(akhir.pada)<6*3600000?"var(--aksen)":"var(--redup)";
   $("dUang").innerHTML=U.length?U.map(function(u){return '<li class="item jual"><b>'+esc(rp(u.jumlah,u.mata_uang))+'</b> · '+esc(u.produk)+' · pembeli '+esc(u.pembeli_anon)+'<br><small>'+esc(u.sumber)+' · '+waktu(u.pada)+'</small></li>'}).join(""):'<li class="kosong">Belum ada uang masuk. Angka ini baru bergerak kalau ada pembayaran asli.</li>';
-  var T=(D.produk||[]).slice().sort(function(a,b){return (a.status==="berhenti")-(b.status==="berhenti")});$("dToko").innerHTML=T.length?T.map(function(p){var harga=esc(p.mata_uang)+" "+Number(p.harga).toFixed(2),st=p.status;
+  // Saat owner sedang mengetik harga, daftar toko tidak digambar ulang oleh penyegaran 20 detik.
+  var T=(D.produk||[]).slice().sort(function(a,b){return (a.status==="berhenti")-(b.status==="berhenti")});if(ubah===null||!$("hargaBaru"))$("dToko").innerHTML=T.length?T.map(function(p){var harga=esc(p.mata_uang)+" "+Number(p.harga).toFixed(2),st=p.status;
     return '<li class="item '+(st==="dijual"?"jual":st==="berhenti"?"gagal":"ide")+'"><b>'+esc(p.nama)+'</b> · '+harga+' · '+(st==="dijual"?"dijual · "+p.terjual+" terjual":st==="berhenti"?"dihentikan":"draf, menunggu persetujuan")+(p.deskripsi?'<div class="isi">'+tautan(p.deskripsi)+'</div>':'')+
     '<div class="bar">'+(st==="dijual"?'<a class="utama" style="text-decoration:none;padding:8px 16px;border-radius:8px;background:var(--aksen);color:#fff" href="'+API+'?r=beli&id='+p.id+'">Beli '+harga+' (PayPal)</a> <button class="chip" data-setuju="'+p.id+'" data-jual="0">Hentikan</button>':'<button class="utama" data-setuju="'+p.id+'" data-jual="1">'+(st==="berhenti"?"Jual lagi":"Setujui &amp; jual")+'</button>')+
-    ' <button class="chip" data-harga="'+p.id+'" data-kini="'+Number(p.harga).toFixed(2)+'" data-mu="'+esc(p.mata_uang)+'">Ubah harga</button></div></li>'}).join(""):'<li class="kosong">Belum ada produk. TerTau menyimpan produk jadi di sini untuk kamu setujui.</li>';
+    (ubah===p.id?' <span style="display:inline-flex;gap:6px;align-items:center;flex-wrap:wrap">'+esc(p.mata_uang)+' <input id="hargaBaru" type="number" inputmode="decimal" step="0.01" min="1" value="'+Number(p.harga).toFixed(2)+'" style="width:110px" aria-label="Harga baru"> <button class="utama" data-simpan="'+p.id+'">Simpan</button> <button class="chip" data-batal="1">Batal</button> <small id="hargaPesan"></small></span>'
+      :' <button class="chip" data-harga="'+p.id+'">Ubah harga</button>')+'</div></li>'}).join(""):'<li class="kosong">Belum ada produk. TerTau menyimpan produk jadi di sini untuk kamu setujui.</li>';
   var q=$("cari").value.trim().toLowerCase();
   var L=J.filter(function(j){return (saring==="semua"||j.jenis===saring)&&(!q||(j.judul+" "+j.teks).toLowerCase().indexOf(q)>=0)});
   $("dJurnal").innerHTML=L.length?L.map(function(j){return '<li class="item '+esc(j.jenis)+'" title="Klik untuk buka/tutup"><b>'+esc(j.judul)+'</b>'+(j.teks?'<div class="isi potong">'+tautan(j.teks)+'</div>':'')+'<small>'+(NAMA[j.jenis]||esc(j.jenis))+' · '+waktu(j.pada)+'</small></li>'}).join(""):'<li class="kosong">'+(J.length?"Tidak ada yang cocok.":"TerTau belum menulis jurnal.")+'</li>';
@@ -115,9 +121,11 @@ document.addEventListener("click",function(e){
   var q=e.target.closest("[data-cepat]");if(q){kirim(q.dataset.cepat);return}
   var ik=e.target.closest("[data-iklan]");if(ik){try{navigator.sendBeacon("https://njghzieuuopukuagrswu.supabase.co/functions/v1/hypermarket?r=iklan_klik",new Blob([JSON.stringify({id:Number(ik.dataset.iklan)})],{type:"application/json"}))}catch(_){}return}
   var s=e.target.closest("[data-setuju]");if(s){s.disabled=true;fetch(API+"?r=setujui",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({id:Number(s.dataset.setuju),jual:s.dataset.jual==="1"})}).then(muat);return}
-  var h=e.target.closest("[data-harga]");if(h){var n=prompt("Harga baru ("+h.dataset.mu+"):",h.dataset.kini);if(n===null)return;h.disabled=true;
-    fetch(API+"?r=harga",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({id:Number(h.dataset.harga),harga:Number(String(n).replace(",","."))})}).then(function(r){return r.json()}).then(function(d){if(d.galat)alert(d.galat);muat()}).catch(function(){alert("Gagal terhubung");muat()});return}
-  var i=e.target.closest("li.item");if(i&&!e.target.closest("a")){var x=i.querySelector(".isi");if(x)x.classList.toggle("potong")}
+  // Kolom harga di dalam kartu, bukan prompt(): banyak browser HP/dalam aplikasi diam-diam memblokir prompt().
+  var h=e.target.closest("[data-harga]");if(h){ubah=Number(h.dataset.harga);tampil();var f=$("hargaBaru");if(f){f.focus();f.select()}return}
+  if(e.target.closest("[data-batal]")){ubah=null;tampil();return}
+  if(e.target.closest("[data-simpan]")){simpanHarga();return}
+  var i=e.target.closest("li.item");if(i&&!e.target.closest("a,input,button")){var x=i.querySelector(".isi");if(x)x.classList.toggle("potong")}
 });
 // Titip jual memakai mesin makelar Hyper Market yang sama (hm_penawaran), jadi PETRUS ikut menjodohkan dengan pembeli.
 $("fTitip").onsubmit=function(e){e.preventDefault();var f=e.target,h=$("titipHasil"),b={judul:f.judul.value,deskripsi:f.deskripsi.value,harga:f.harga.value===""?undefined:Number(f.harga.value),
