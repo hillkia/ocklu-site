@@ -1,5 +1,5 @@
 {
- "w": "2026-10-23T06:36:03Z",
+ "w": "2026-10-23T07:37:16Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -55,6 +55,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-10-23T06:24:26Z",
+   "media": 3,
+   "judul": {
+    "id": "Aturan Turunan Perpres Ojol, Menteri UMKM Pertimbangkan Nasib Gojek-Grab Cs",
+    "en": "Aturan Turunan Perpres Ojol, Menteri UMKM Pertimbangkan Nasib Gojek-Grab Cs"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "RCTI+",
+    "url": "https://news.google.com/rss/articles/CBMioAJBVV95cUxORkpNdzVocUp5N2ZqOXBhWnFOSFVCdVZSTDlvcjF5eEpqU21DQnd6OXdXVFF6a045NTRrbVMtSW81bnVCS0VXcjQ3dEdKT284RWhEV3ZHYWdGbUtfM05DdDhORjFOeFVCUVMwemtlTER3ckFkT0Nsa3VpVnlBalpYeHh4c0VoRTk3VXB6MmFzXzZ1N0E1cUZVX25SbFhXRkR4OVlBWktJUnBneTh4Y1pvc1JEZElZNnNGQVdUNGxkdUtGbmIyY3dxY3FYZ01kdnNGTDdqTXdZR1VzcXdfcmNSeVg5QVJqeE9ZYWl6TWpRa3JFd01wQW5DWXhkN0VfcjlnT3d4Z3dZcjJqNVNhNEsxaTl6WkZOekNXdXFIZzdDamk?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-10-23T01:44:16Z",
    "media": 3,
    "judul": {
@@ -106,23 +123,6 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-10-23T04:20:04Z",
-   "media": 2,
-   "judul": {
-    "id": "Aturan Turunan Perpres Ojol, Menteri UMKM Pertimbangkan Nasib Gojek-Grab Cs",
-    "en": "Aturan Turunan Perpres Ojol, Menteri UMKM Pertimbangkan Nasib Gojek-Grab Cs"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "RCTI+",
-    "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPSEJEeTE1ay1teGprUGcxVHZITlpzeTlfZlQtMlNidDFRY0E3NEJzTGtfMUowQWxNSFhwWTh4V0VNVmVYcUpHUHF2WkxEeERHdjR1R0ZzSVBjMWQ2U3hWLXRfOG9RT3lMUHpDak8weEhEUmZpa3pvSTFpMmtId21ZSlBTOW1scXJORjdtLVpYTkxoTHl0WjRQS1V1QnVhdDR0Rlpha0pRR2ZJbmlqa1VIOUhiNFo4Ti1RcWpZOEp5clp3dWhMWnlTS0wtY2RlZXpiZjlDekF0RDhBY2RWeTIw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
    "waktu": "2026-10-23T02:40:00Z",
    "media": 2,
    "judul": {
@@ -140,121 +140,70 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-10-22T13:40:17Z",
-   "media": 4,
-   "judul": {
-    "id": "Giat Patroli Siaga, Reskrim Polsek Patumbak Ringkus Dua Pelaku Pencurian HP Ojol",
-    "en": "Giat Patroli Siaga, Reskrim Polsek Patumbak Ringkus Dua Pelaku Pencurian HP Ojol"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Sumut Pos",
-    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNcVhqMTR0N21xaTR5ZDhub2ZqLVhrLU9SSDRIQjZZSVBxNTFtLW1NMHRmVVV4UHJXQ0hTOEhBXzFWTGFMa1hEU1E3cjcxWW15T0I5TG5tS0FhdERLTFhfZnJENjVDVUtyc25yTUd3TWhfck9aRjdpNUI1SkxxUFlkY1BQUjJ4V25Kb1ktbGM2YVlkOWJUeWJjdDBTenBjb2V1WFVqTnZqX05aNi14aFHSAbMBQVVfeXFMT3lLRklJd3pnakJBQjRxZ18yeVhNWGZsQ0kwd2t1cHVUcjRoY1BhWGdmX25ScldzZzROYVVNSVJNUlFQS3dsWHFIMVNEbWl0cmNJQURwVnM0RXhBTWdTSDBxWkoxVDV5Tl82UDZqTHc3SWxjTjBkc0xJcE9YZmFyOGpEVHU3MjRNR28wWnozVmtEaEFtOXZhMXJNWkpOaHZMRVBUYmR3bXFzUnRNTk1CMnYtNWc?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-23T03:20:00Z",
+   "waktu": "2026-10-23T06:16:36Z",
    "media": 1,
    "judul": {
-    "id": "Wanita di Bangka Ditangkap Atas Penyelewengan BBM, 240 Liter Pertalite Disita",
-    "en": "Wanita di Bangka Ditangkap Atas Penyelewengan BBM, 240 Liter Pertalite Disita"
+    "id": "Maesyal: Pemkab Tangerang Perhatikan Nasib Ojol",
+    "en": "Maesyal: Pemkab Tangerang Perhatikan Nasib Ojol"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "detikcom",
-    "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQOG03OG13cnJ2emxmS1puZEtTdzE4LWl6WXNCanhoZXVZeWd0eTF6S3JmWUhQcWtBWG9hMFRZOVo0bEhNUXd1VDRsdzE3M3AwRFluZmhaUGwtTklhUnNEV1A3UFJLcUlWOEdMZ0ZRZm9GSGJZZXF0NlpQODQ5b0VFU0tpbUxrX0VQZDVJNXh6djFycVUxVmp6N01vSm41N0F4M0NzMXdkWnA1czZhdU93ZjZMTG05S2lPZDJzVE4zb2paZGpTaVg5VVI1TVgtekhfV21GM1A2Z1XSAdgBQVVfeXFMUDhtNzhtd3JydnpsZktabmRLU3cxOC1pellzQmp4aGV1WXlndHkxektyZllIUHFrQVhvYTBUWTlaNGxITVF3dVQ0bHcxNzNwMERZbmZoWlBsLU5JYVJzRFdQN1BSS3FJVjhHTGdGUWZvRkhiWWVxdDZaUDg0OW9FRVNLaW1Ma19FUGQ1STV4enYxcnFVMVZqejdNb0puNTdBeDNDczF3ZFpwNXM2YXVPd2Y2TExtOUtpT2Qyc1ROM29qWmRqU2lYOVVSNU1YLXpIX1dtRjNQNmdV?oc=5"
+    "nama": "tangselpos.id",
+    "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPRjcxdFNOVDBnYjBSa0Zjd2lEZmhGZENQbXBHTngzRklzR3BlZDV2WTJFVlFjWnI2OGxod285cDMtMW8wUWQ4czhJRkg1Mll1U3NlX1N4a1lGVFFuUGltbmR4T1dnTFIyZ1FFbjlqMXZYQ1pNdWZGTWtKVTlLYmR4QTVYa1JZdnZr?oc=5"
    }
   },
   {
    "jenis": "berita",
-   "waktu": "2026-10-23T02:48:01Z",
+   "waktu": "2026-10-23T06:04:01Z",
    "media": 1,
    "judul": {
-    "id": "Soroti Kesejahteraan Driver Ojol, DPRD DIY Minta Manajemen Maxim Tanggap Keluhan Program Turbo",
-    "en": "Soroti Kesejahteraan Driver Ojol, DPRD DIY Minta Manajemen Maxim Tanggap Keluhan Program Turbo"
+    "id": "Hadiri HUT FORBETA, Bupati Tangerang Pemkab Tangerang Tegaskan Kepedulian kepada Ojol Sebagai Penggerak Ekonomi dan Bantu Mobilitas Warga",
+    "en": "Hadiri HUT FORBETA, Bupati Tangerang Pemkab Tangerang Tegaskan Kepedulian kepada Ojol Sebagai Penggerak Ekonomi dan Bantu Mobilitas Warga"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "Gerbang Patriot",
-    "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOd2dOcTNYZUtnSFVfdkppa2k5bG5TTlBhMGh3MUtheFhqOWxReThvN3E1YUxTVVhCX05zejB6c1lIU0RCMDJSMTE2dklEQlZYbzBtcURyUV81UDBZeEZBN3JfOXBVOU5QTnVUVllPRU5Sdm1FaHRzZkJxNk5ZLWw2MFVibE9sQVZVcDdNT3lpc241VHNuRnhnREhDckhyVEE4N1RwWVlPTHVaU0hkQUpfYnpQTzJoQUFhQXpuQmtNRlcwaFZHbjBfZE9mZG8?oc=5"
+    "nama": "Web Terpadu Kabupaten Tangerang",
+    "url": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxPN1Z3Tk5ISmNIS1R4d3cxbWRZQU9SNlNFRWZqVkVNeWVrdUMzYXRsQjNZZVlkaHktQlhJSExLREdYOWlfbElNRVA1RFpqZjk5dUUtZkVJekg5VUNiTy01cTFlU2puRW5fOGZaSkYxSVdKX2VGSjMzWHpOU1RFZ1lVd2ttUWFKN1ZWdDZSX0FSc3lXVDh6VkVkOHEzWWctR3A4bWVQRG5tb3FhZ3FLMU5Gblh5M1BCT0w5U3o0d1g4QU9vLTByYWd4VEx1RXpnYU5ocFg5Y2pnWTlIRnlfR2ZzbUROMHJvcGo3YW01X0ZOYkUtbUI4VE1RV1Byb3JIMkh6VE9MMG9wcVg?oc=5"
    }
   },
   {
    "jenis": "berita",
-   "waktu": "2026-10-22T16:06:39Z",
-   "media": 3,
-   "judul": {
-    "id": "Driver Ojol di Kendari Perkosa Gadis di Bawah Umur Penyandang Disabilitas",
-    "en": "Driver Ojol di Kendari Perkosa Gadis di Bawah Umur Penyandang Disabilitas"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Sultranesia",
-    "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOdU9uMzVLRk9TekdvTnZWZGhWeFFCR0JjNHJqMGg2THg4dnBVa1J6Y2tkbVdwT3pYdGlLUlg0dUlnVzRZRElxaENsSVp4Q1cwV2NZRl8tQUg1VWZFNTZQcHgtWVpqQXE2TXhIclI1MzJSX0Y4d2ZLZ2l4c2lFdEVGcDFUR2RsM01ZUmVKREk3YUNWaFlzTFJPdXFJN2x0YVnSAacBQVVfeXFMT29JeDU1UFc3S1UxRFU3X1lHSUc4dE11LWFHNEhxZ1JfaUlNc3pTdk5xUndmLXQ2QlEzc1hwaU1IV1RmTXlMWlRTSlNiYVhXLXJlSHdOU3diVWJvbFZZc2lMWkRnUF9ianJ3bzNYcHkxOXF0WTViMEcwaC1WaTV6V1RsT1A4NWhfY2NyQ21DaGt6UFduZkdLVjRYSWJKZk5sRlJNci1sLW8?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-23T02:29:19Z",
+   "waktu": "2026-10-23T05:29:00Z",
    "media": 1,
    "judul": {
-    "id": "200 Porsi Makan Siang Gratis dihidangkan oleh Polisi di Bandar Lampung, Warga dan Ojol Antusias",
-    "en": "200 Porsi Makan Siang Gratis dihidangkan oleh Polisi di Bandar Lampung, Warga dan Ojol Antusias"
+    "id": "Gubernur Al Haris Salurkan 250 Paket Sembako dan Masker untuk Ojol Terdampak Kabut Asap",
+    "en": "Gubernur Al Haris Salurkan 250 Paket Sembako dan Masker untuk Ojol Terdampak Kabut Asap"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "Website Resmi Polri",
-    "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxNTjhwUFJLajRfX21qSmJXWnBGN1Z2S1BFdWtsb2ExUmJqeFJoM3N3SkY2WGpfRG1vbUJnUm5HWmpQd002SzN5R3hZMXpxcWt0NERfemhnUXIydDc5N2xyd0hrbHlJLXpMcWNGR2V2UEZxLTB4LXUxMWczQzlHYW8zVU1hRjQzLVlqZ1JIclhyalRyRm92X0h4X2JVbmVmU014dUFHeFFHdHlFVUdrbWFjSHpPYW9BeC1JVk4tOW05REM4dTQ2X0p6T1JfNm1vZjNBYWVZUng3VmhMallyZ3hHc05KS3l2MzhVWV9rOXVPdE9UcmphTzBqME5R?oc=5"
+    "nama": "Jambi Ekspres",
+    "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPR3ZMWTJBajlMaGtfOGphbjU3NGhlMGF2SVB5LXJfc2lTNXVpOS1Uekh2WU11ZW11YlUxYVNBS3E3NnZXNmhhQTA0RVpBaDM4YmdjODZYN2JnZlo5amk5UlIxZi1RTEZBTkJwS2h1NURmRXFONHRmSnNOQWZaT25MSTA5d0xSby1HWWZmQ1dLZEtqa2F1RlUtZV9FdHQxUGdrZGFvQWtkekFCckVkWTc1SnJWdjhXZk8xUnctcjRPWEk3TVVqakVHNdIByAFBVV95cUxPR3ZMWTJBajlMaGtfOGphbjU3NGhlMGF2SVB5LXJfc2lTNXVpOS1Uekh2WU11ZW11YlUxYVNBS3E3NnZXNmhhQTA0RVpBaDM4YmdjODZYN2JnZlo5amk5UlIxZi1RTEZBTkJwS2h1NURmRXFONHRmSnNOQWZaT25MSTA5d0xSby1HWWZmQ1dLZEtqa2F1RlUtZV9FdHQxUGdrZGFvQWtkekFCckVkWTc1SnJWdjhXZk8xUnctcjRPWEk3TVVqakVHNQ?oc=5"
    }
   },
   {
    "jenis": "berita",
-   "waktu": "2026-10-23T02:28:45Z",
+   "waktu": "2026-10-23T05:26:05Z",
    "media": 1,
    "judul": {
-    "id": "Pemerintah Buka KUR bagi Pengemudi Ojol, Bunga 6 Persen per Tahun",
-    "en": "Pemerintah Buka KUR bagi Pengemudi Ojol, Bunga 6 Persen per Tahun"
+    "id": "Pasokan BBM Sisa Sepekan? Koster Gaungkan Beralih ke Kendaraan Baterai",
+    "en": "Pasokan BBM Sisa Sepekan? Koster Gaungkan Beralih ke Kendaraan Baterai"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "Harian Dialog",
-    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOSDU4THFXM1hROEl0Q1Z2c056LVN5NHJ4LUVzMUM5VEhOSTIwQkFnWXdmLUhOcVk4ZW5Sc1lyM1ZteDdpeUhCb0FQNGlLV0ZtZ3VHcnNDelVIX094eUE1cjBoblBUVzl2SWM1WkRiRmZKNTh3SVlkcFdpYnJJbHhUaXF3ZUZoSjc1My1kZDBELXhBWjZ0dHk0?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-23T01:42:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Begini Aturan Driver Ojol Bisa Narik di Banyak Aplikasi Sekaligus",
-    "en": "Begini Aturan Driver Ojol Bisa Narik di Banyak Aplikasi Sekaligus"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Kompas.com",
-    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQU1dZODRpMnJFdXUzMXpqcm9Ua1RJcGNlUmtHVG9UYTFnY2FtQW9HYndzbkxzUDhPaEY5QmVCdFRpaC1ULXEzMGVqQ3REem94b1NseUE1QWtQVUQxNTlsNHRXZlZraGw2LVVUQ3pPWVBOcnJqaFRSUkY3S1BnbWFVYk1ZdmRra0ZzNmtjbkVVNnhkTzFpeGNNa2loZThkbXFxQzlYLW1XT0FVLXJtYlFacGg1Zi04TThGZHVZ?oc=5"
+    "nama": "Balinetizen",
+    "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPcGJKOE9NeF9nS0FHTlh0ckdsaVRoVUNaMXV1R0t3N1M1VTNuVmc0TTltZ3ZOeHlzUGNMY21keGVVb3M3QlNETmZrT1RnZDV0TTFSbTBScFVZQThhS3BmdVNkVHBoTUtBeVo4Y1BtVzc2bHo1UmdQZW5PdWg5NjlXaWpGWkVEd2RBWFJoUTFpdkxJNjF1RXRnTjBmSk16Tkk?oc=5"
    }
   }
  ]
