@@ -39,8 +39,20 @@ button.utama{font:inherit;font-weight:700;background:var(--aksen);color:#fff;bor
 
 <div id="unduhBox" hidden class="kartu" style="margin:16px 0;cursor:default"></div>
 <h2 id="hToko">Toko TerTau</h2>
-<p class="catatan">Produk digital buatan TerTau. Draf baru dijual setelah owner menekan <b>Setujui &amp; jual</b>. Pembayaran lewat PayPal; file terkirim otomatis setelah PayPal mengonfirmasi.</p>
+<p class="catatan">Produk digital buatan TerTau. Draf baru dijual setelah owner menekan <b>Setujui &amp; jual</b>; yang dihentikan bisa dinyalakan lagi dengan <b>Jual lagi</b>, dan harga bisa diubah lewat <b>Ubah harga</b>. Pembayaran masuk ke PayPal owner; file terkirim otomatis setelah PayPal mengonfirmasi.</p>
 <ul id="dToko"></ul>
+
+<h2 id="hTitip">Titip jual: kami carikan pembeli</h2>
+<p class="catatan">Punya produk, jasa, agen AI, atau data? Pasang di sini, gratis. Agen makelar OCKLU Hyper Market mencarikan pembeli dan mengabarimu. Kontakmu baru dibuka setelah kamu menyetujui pembeli. Komisi 7% hanya kalau transaksi terjadi lewat perjodohan kami.</p>
+<form id="fTitip" class="kartu" style="cursor:default;display:grid;gap:8px">
+  <input name="judul" required minlength="4" maxlength="160" aria-label="Apa yang dijual" placeholder="Apa yang dijual? (mis. Jasa desain logo UMKM)">
+  <textarea name="deskripsi" rows="3" maxlength="1500" aria-label="Deskripsi" placeholder="Jelaskan singkat: isi, keunggulan, wilayah layanan"></textarea>
+  <div class="bar" style="margin:0"><input name="harga" type="number" min="0" step="0.01" aria-label="Harga" placeholder="Harga" style="flex:1;width:auto"><input name="mata_uang" value="IDR" maxlength="6" aria-label="Mata uang" style="width:90px"></div>
+  <input name="kontak" required minlength="5" maxlength="200" aria-label="Kontak bisnis" placeholder="Kontak bisnis (email / WA bisnis)">
+  <input name="siapa_kamu" maxlength="80" aria-label="Nama atau toko" placeholder="Nama kamu / toko">
+  <label style="font-size:14px"><input type="checkbox" name="setuju" required style="width:auto"> Saya setuju komisi 7% kalau terjual lewat perjodohan OCKLU</label>
+  <div class="bar" style="margin:0"><button class="utama" type="submit">Pasang &amp; carikan pembeli</button><span class="catatan" id="titipHasil"></span></div>
+</form>
 <h2 id="hUang">Uang masuk (terverifikasi)</h2><ul id="dUang"></ul>
 
 <h2 id="hJurnal">Jurnal TerTau</h2>
@@ -82,9 +94,10 @@ function tampil(){
   $("aktif").textContent=akhir?"TerTau terakhir aktif "+lalu(akhir.pada):"TerTau belum pernah aktif";
   $("titik").style.background=akhir&&Date.now()-new Date(akhir.pada)<6*3600000?"var(--aksen)":"var(--redup)";
   $("dUang").innerHTML=U.length?U.map(function(u){return '<li class="item jual"><b>'+esc(rp(u.jumlah,u.mata_uang))+'</b> · '+esc(u.produk)+' · pembeli '+esc(u.pembeli_anon)+'<br><small>'+esc(u.sumber)+' · '+waktu(u.pada)+'</small></li>'}).join(""):'<li class="kosong">Belum ada uang masuk. Angka ini baru bergerak kalau ada pembayaran asli.</li>';
-  var T=D.produk||[];$("dToko").innerHTML=T.length?T.map(function(p){var harga=esc(p.mata_uang)+" "+Number(p.harga).toFixed(2);
-    return '<li class="item '+(p.status==="dijual"?"jual":"ide")+'"><b>'+esc(p.nama)+'</b> · '+harga+' · '+(p.status==="dijual"?"dijual · "+p.terjual+" terjual":"draf, menunggu persetujuan")+(p.deskripsi?'<div class="isi">'+tautan(p.deskripsi)+'</div>':'')+
-    '<div class="bar">'+(p.status==="dijual"?'<a class="utama" style="text-decoration:none;padding:8px 16px;border-radius:8px;background:var(--aksen);color:#fff" href="'+API+'?r=beli&id='+p.id+'">Beli '+harga+' (PayPal)</a> <button class="chip" data-setuju="'+p.id+'" data-jual="0">Hentikan</button>':'<button class="utama" data-setuju="'+p.id+'" data-jual="1">Setujui &amp; jual</button>')+'</div></li>'}).join(""):'<li class="kosong">Belum ada produk. TerTau menyimpan produk jadi di sini untuk kamu setujui.</li>';
+  var T=(D.produk||[]).slice().sort(function(a,b){return (a.status==="berhenti")-(b.status==="berhenti")});$("dToko").innerHTML=T.length?T.map(function(p){var harga=esc(p.mata_uang)+" "+Number(p.harga).toFixed(2),st=p.status;
+    return '<li class="item '+(st==="dijual"?"jual":st==="berhenti"?"gagal":"ide")+'"><b>'+esc(p.nama)+'</b> · '+harga+' · '+(st==="dijual"?"dijual · "+p.terjual+" terjual":st==="berhenti"?"dihentikan":"draf, menunggu persetujuan")+(p.deskripsi?'<div class="isi">'+tautan(p.deskripsi)+'</div>':'')+
+    '<div class="bar">'+(st==="dijual"?'<a class="utama" style="text-decoration:none;padding:8px 16px;border-radius:8px;background:var(--aksen);color:#fff" href="'+API+'?r=beli&id='+p.id+'">Beli '+harga+' (PayPal)</a> <button class="chip" data-setuju="'+p.id+'" data-jual="0">Hentikan</button>':'<button class="utama" data-setuju="'+p.id+'" data-jual="1">'+(st==="berhenti"?"Jual lagi":"Setujui &amp; jual")+'</button>')+
+    ' <button class="chip" data-harga="'+p.id+'" data-kini="'+Number(p.harga).toFixed(2)+'" data-mu="'+esc(p.mata_uang)+'">Ubah harga</button></div></li>'}).join(""):'<li class="kosong">Belum ada produk. TerTau menyimpan produk jadi di sini untuk kamu setujui.</li>';
   var q=$("cari").value.trim().toLowerCase();
   var L=J.filter(function(j){return (saring==="semua"||j.jenis===saring)&&(!q||(j.judul+" "+j.teks).toLowerCase().indexOf(q)>=0)});
   $("dJurnal").innerHTML=L.length?L.map(function(j){return '<li class="item '+esc(j.jenis)+'" title="Klik untuk buka/tutup"><b>'+esc(j.judul)+'</b>'+(j.teks?'<div class="isi potong">'+tautan(j.teks)+'</div>':'')+'<small>'+(NAMA[j.jenis]||esc(j.jenis))+' · '+waktu(j.pada)+'</small></li>'}).join(""):'<li class="kosong">'+(J.length?"Tidak ada yang cocok.":"TerTau belum menulis jurnal.")+'</li>';
@@ -102,8 +115,15 @@ document.addEventListener("click",function(e){
   var q=e.target.closest("[data-cepat]");if(q){kirim(q.dataset.cepat);return}
   var ik=e.target.closest("[data-iklan]");if(ik){try{navigator.sendBeacon("https://njghzieuuopukuagrswu.supabase.co/functions/v1/hypermarket?r=iklan_klik",new Blob([JSON.stringify({id:Number(ik.dataset.iklan)})],{type:"application/json"}))}catch(_){}return}
   var s=e.target.closest("[data-setuju]");if(s){s.disabled=true;fetch(API+"?r=setujui",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({id:Number(s.dataset.setuju),jual:s.dataset.jual==="1"})}).then(muat);return}
+  var h=e.target.closest("[data-harga]");if(h){var n=prompt("Harga baru ("+h.dataset.mu+"):",h.dataset.kini);if(n===null)return;h.disabled=true;
+    fetch(API+"?r=harga",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({id:Number(h.dataset.harga),harga:Number(String(n).replace(",","."))})}).then(function(r){return r.json()}).then(function(d){if(d.galat)alert(d.galat);muat()}).catch(function(){alert("Gagal terhubung");muat()});return}
   var i=e.target.closest("li.item");if(i&&!e.target.closest("a")){var x=i.querySelector(".isi");if(x)x.classList.toggle("potong")}
 });
+// Titip jual memakai mesin makelar Hyper Market yang sama (hm_penawaran), jadi PETRUS ikut menjodohkan dengan pembeli.
+$("fTitip").onsubmit=function(e){e.preventDefault();var f=e.target,h=$("titipHasil"),b={judul:f.judul.value,deskripsi:f.deskripsi.value,harga:f.harga.value===""?undefined:Number(f.harga.value),
+  mata_uang:f.mata_uang.value||"IDR",kontak:f.kontak.value,siapa_kamu:f.siapa_kamu.value,jenis:"produk",setuju_syarat:f.setuju.checked};h.textContent="memasang…";
+  fetch("https://njghzieuuopukuagrswu.supabase.co/functions/v1/hypermarket?r=pasang",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify(b)}).then(function(r){return r.json()}).then(function(d){
+    if(d.galat){h.textContent="Gagal: "+d.galat;return}f.reset();h.innerHTML='Terpasang (#'+d.id+', '+esc(d.status)+'). <b>Simpan token ini</b> untuk cek &amp; setujui pembeli: <code>'+esc(d.token_kelola)+'</code> · <a href="/hypermarket/#makelar">cek jodoh di Hyper Market</a>'}).catch(function(){h.textContent="Gagal terhubung, coba lagi."})};
 $("cari").oninput=tampil;$("kirim").onclick=function(){kirim()};
 $("isi").onkeydown=function(e){if(e.key==="Enter"&&!e.shiftKey){e.preventDefault();kirim()}};
 $("segarkan").onclick=function(e){e.preventDefault();muat()};
