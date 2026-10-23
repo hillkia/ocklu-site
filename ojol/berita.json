@@ -1,5 +1,5 @@
 {
- "w": "2026-10-23T07:37:16Z",
+ "w": "2026-10-23T08:39:09Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -17,6 +17,23 @@
    "sumber": {
     "nama": "detikOto",
     "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNTmJHMUlGVnJ3cF9YNF9iVkJJWE1DaUVITnZRNWwxZHN5UVE5NTJJY3VZSE85UmFMOEV6RmVFQm5kOE8yZWlwUjZaS0Q3bVpZOGxwTGwtVDRPc24zOUhseHVBaGE1TVlwWXRZdUEweEQ4SXQtVWFFbzUwT05XRGt1dW04MTRxV09mXzJYbXVuam9pRlUwaVHSAZsBQVVfeXFMUHlkWkdHNnA2QzhzWV9XQ2VNdG5mSU4tZ2hJNXhyVnhnZVpVN2tPbmJHcUlnMDM3c0ZiMWxnTUZfSDJ6NlRSTUEtZk5rY0VJUDBCY195ZjBqS3JJNDlCdnlBOGRwUTRTMWdoME1qWDdaYVJtdGdUdEM0cVBHbEhESlA1eXRPUUhKY1htVk5KQ3Z1RzJxbW83cnVKRnc?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-23T07:49:00Z",
+   "media": 3,
+   "judul": {
+    "id": "Kendaraan Listrik Berpotensi Kurangi Subsidi BBM, Populasinya Naik dari 40 Ribu Jadi 530 Ribu Unit",
+    "en": "Kendaraan Listrik Berpotensi Kurangi Subsidi BBM, Populasinya Naik dari 40 Ribu Jadi 530 Ribu Unit"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "gadget.qoo10.co.id",
+    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1sY24xbHhDVlpYOVQwLXE3Uy1WWTQxZmN0NFI5XzU0Q1lVSWlDRzYtQXZuZWZxOGxsNVNFRWVkRExMcmFVUjZaTENJNU5meElReTRZaVR0WEZuVVBQWGppUmhxV0M1eGlVMXA2OGp4SlVNNVFrQkhHMnNvdjhYVnM?oc=5"
    }
   },
   {
@@ -140,6 +157,40 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-10-23T08:25:50Z",
+   "media": 1,
+   "judul": {
+    "id": "Krisis BBM Lari Ke Geothermal: Transisi Energi atau Transisi Bisnis?",
+    "en": "Krisis BBM Lari Ke Geothermal: Transisi Energi atau Transisi Bisnis?"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Kuningan Mass",
+    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOaExlQzBpV204VDBKRUVaeFgzNDZtOXFnY0pwTVN3WUxZSk5FcVBzdmFvalJPbGh2aTlrLUtiNkVCZzlESE90RjdDN3hXR2YwM2lZVXpMRWtSRzBCczlPaVNMRXh0VERncVkzc3lya1RXdTIyWVp0VmVLYWRWMGVFaWhuZi14Z2twYW1mZkJRTjVhamoxaU4w?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-23T07:58:21Z",
+   "media": 1,
+   "judul": {
+    "id": "Krisis BBM Bali Menandai Rapuhnya Sistem Energi Fosil",
+    "en": "Krisis BBM Bali Menandai Rapuhnya Sistem Energi Fosil"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Transisi energi berkeadilan",
+    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPdmh1MFg2Q1J1emxKTDhfSkhXX0oyRGZIWmpBNVRXbHpwTmwxREdtbmU2NEhsVFBQS2dzX3BEaE5iTldPbXhweF85YnJzYXd0ajlpZlo4VjRaNjBmbVAzYUpwZWdiS2lLSk9zaDJkdGtwSThjLXZpMG5CSHNsb1lET0RXNzBlcklmNjBub1p6NlRZYkJsb2loMmhnWWZVbHFaODh3RlZNaDY1azRfbjE4SFUyLW1adTg?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-10-23T06:16:36Z",
    "media": 1,
    "judul": {
@@ -174,36 +225,19 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-10-23T05:29:00Z",
+   "waktu": "2026-10-23T05:53:32Z",
    "media": 1,
    "judul": {
-    "id": "Gubernur Al Haris Salurkan 250 Paket Sembako dan Masker untuk Ojol Terdampak Kabut Asap",
-    "en": "Gubernur Al Haris Salurkan 250 Paket Sembako dan Masker untuk Ojol Terdampak Kabut Asap"
+    "id": "Audio Viral Prabowo Sarankan Warga Bawa Bekal Saat Antre BBM Ternyata Hasil Rekayasa AI",
+    "en": "Audio Viral Prabowo Sarankan Warga Bawa Bekal Saat Antre BBM Ternyata Hasil Rekayasa AI"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "Jambi Ekspres",
-    "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPR3ZMWTJBajlMaGtfOGphbjU3NGhlMGF2SVB5LXJfc2lTNXVpOS1Uekh2WU11ZW11YlUxYVNBS3E3NnZXNmhhQTA0RVpBaDM4YmdjODZYN2JnZlo5amk5UlIxZi1RTEZBTkJwS2h1NURmRXFONHRmSnNOQWZaT25MSTA5d0xSby1HWWZmQ1dLZEtqa2F1RlUtZV9FdHQxUGdrZGFvQWtkekFCckVkWTc1SnJWdjhXZk8xUnctcjRPWEk3TVVqakVHNdIByAFBVV95cUxPR3ZMWTJBajlMaGtfOGphbjU3NGhlMGF2SVB5LXJfc2lTNXVpOS1Uekh2WU11ZW11YlUxYVNBS3E3NnZXNmhhQTA0RVpBaDM4YmdjODZYN2JnZlo5amk5UlIxZi1RTEZBTkJwS2h1NURmRXFONHRmSnNOQWZaT25MSTA5d0xSby1HWWZmQ1dLZEtqa2F1RlUtZV9FdHQxUGdrZGFvQWtkekFCckVkWTc1SnJWdjhXZk8xUnctcjRPWEk3TVVqakVHNQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-23T05:26:05Z",
-   "media": 1,
-   "judul": {
-    "id": "Pasokan BBM Sisa Sepekan? Koster Gaungkan Beralih ke Kendaraan Baterai",
-    "en": "Pasokan BBM Sisa Sepekan? Koster Gaungkan Beralih ke Kendaraan Baterai"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Balinetizen",
-    "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPcGJKOE9NeF9nS0FHTlh0ckdsaVRoVUNaMXV1R0t3N1M1VTNuVmc0TTltZ3ZOeHlzUGNMY21keGVVb3M3QlNETmZrT1RnZDV0TTFSbTBScFVZQThhS3BmdVNkVHBoTUtBeVo4Y1BtVzc2bHo1UmdQZW5PdWg5NjlXaWpGWkVEd2RBWFJoUTFpdkxJNjF1RXRnTjBmSk16Tkk?oc=5"
+    "nama": "DW.com",
+    "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNM2plaG9lTXEtTzhSZWtZQWdjQkZldVBCMG1CeFZRczh6VDREaW1CQ09ZWkxJY0hOdERBRy1TVWp4VlBpYno4LUx2THhiTWdYd2Y0dnlUQmtDU3RnOXJtMEhiOThXRXRxWGotaFc2RWpQQVhLcVpkaWhqdE1NWGZ5Zk1oVkhpbXo5UlFqVFhQaEZfMTRv0gGUAUFVX3lxTE0zamVob2VNcS1POFJla1lBZ2NCRmV1UEIwbUJ4VlFzOHpUNERpbUJDT1laTEljSE50REFHLVNVanhWUGliejgtTHZMeGJNZ1h3ZjR2eVRCa0NTdGc5cm0wSGI5OFdFdHFYai1oVzZFalBBWEtxWmRpaGp0TU1YZnlmTWhWSGltejlSUWpUWFBoRl8xNG8?oc=5"
    }
   }
  ]
