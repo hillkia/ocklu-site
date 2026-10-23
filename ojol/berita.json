@@ -1,10 +1,27 @@
 {
- "w": "2026-10-23T10:53:38Z",
+ "w": "2026-10-23T12:29:06Z",
  "dari": "Kroog",
  "berita": [
   {
    "jenis": "berita",
-   "waktu": "2026-10-23T00:04:44Z",
+   "waktu": "2026-10-23T06:05:00Z",
+   "media": 4,
+   "judul": {
+    "id": "Google Maps Hadirkan Gemini di Apple CarPlay untuk Bantu Pengemudi",
+    "en": "Google Maps Hadirkan Gemini di Apple CarPlay untuk Bantu Pengemudi"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "VOI.ID",
+    "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQNGlINGd3MXpNNVdieEpNalliQXJIWmtfRVR1aktuMUhUS21WWUI0UFBxNmcxQlRtQTVqZUFwTWhXZXZIZ0p0SVdBYmx6cFpQbFJmMTZVRzk0TmpyUFY4SnFaa2xxdC1ZYnJhZUpjVjI0OXFidi1YUXlLYnFYUE1xdF80VVlROFV5MmY4VUhCSTBnb0dsQ2J4TmZnblNkelnSAZcBQVVfeXFMTnNrZ1lJdS04Z1RVRGltLVl4WHM0ZzJicWt5aHJuVlM0dXNkVzFnNGVXSFJSdUc3V1pheW1ReU4yMUpYZEJJMVc3Wnl5ZzZ5UXhjRXVHdW1MZGpOdElIbmNRVXRINnhPSDJDaTlfMTgxVTR6N2pDUUxlT2MySHU5WVAwTHVUb2VheGZMNUVpeDZmZkxWQU9fNA?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-23T07:06:19Z",
    "media": 4,
    "judul": {
     "id": "Menperin Usul Mobil Hybrid Bisa Bebas Ganjil Genap-Dapat Parkir Khusus",
@@ -16,7 +33,7 @@
    },
    "sumber": {
     "nama": "detikOto",
-    "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNTmJHMUlGVnJ3cF9YNF9iVkJJWE1DaUVITnZRNWwxZHN5UVE5NTJJY3VZSE85UmFMOEV6RmVFQm5kOE8yZWlwUjZaS0Q3bVpZOGxwTGwtVDRPc24zOUhseHVBaGE1TVlwWXRZdUEweEQ4SXQtVWFFbzUwT05XRGt1dW04MTRxV09mXzJYbXVuam9pRlUwaVHSAZsBQVVfeXFMUHlkWkdHNnA2QzhzWV9XQ2VNdG5mSU4tZ2hJNXhyVnhnZVpVN2tPbmJHcUlnMDM3c0ZiMWxnTUZfSDJ6NlRSTUEtZk5rY0VJUDBCY195ZjBqS3JJNDlCdnlBOGRwUTRTMWdoME1qWDdaYVJtdGdUdEM0cVBHbEhESlA1eXRPUUhKY1htVk5KQ3Z1RzJxbW83cnVKRnc?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPbEN4c3dOYk9oZmxJdVlGX3k4Qjd0Zk14SWk5aDBmRFFhRGNxeTJhSXFQd2poSzNKay1FbnJTYVNUY2prWjZMMF9FZWhDVXRWWVFpdm4ySjV0aEgxQWhxbEJqd3MtMXc3cl9EaWdmR2huclAtNk91c3BxWWE5dnZ2cEZWdHRhMHFaUnBsRmFkeTdPdndkVnpEV01pTWVMWGVTYVpMXzRhVXBJZXlvVkhCa9IBtgFBVV95cUxPTmxBVTV6UXRCLTZ2UEhqb2lMZDg0a3hiMVM1TWhCcFlQVTI4MUtIWG9lcVh0V0NvcG90U2I5ZWFEdnFyXzVPZHRnMm9UaGhMNzhodFNOUktvd2d2OEtOZlZpT2RzRmhrNTJ1Q1FrTG9ISlVKTjZGRDBXc1NNNFkwZFZEaUt4TFdEc0hJUzdheG10bjhNa0lLZE0zY081dUJHekF2VkkyZVJmWkFzSlEyWERvdnFTdw?oc=5"
    }
   },
   {
@@ -170,6 +187,23 @@
    "sumber": {
     "nama": "RRI.co.id",
     "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPWEt5YzRxelFFVHdUMlVoNHpZeGZTQ0V4NW1oMTJYRUM0eFZUWm1UWkFLNHJfOVk1dzhvbGF4MVRKY0VwR3hRU0R6dmJxbFRESEZmaWV3OVdnVjg4WU94ajR0UlNidWpLT09ic0otdnN4T1AzaE5RTVNwMUJRbGdTQkJJMUY0VU81Y2c?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-23T08:35:33Z",
+   "media": 1,
+   "judul": {
+    "id": "Gara-gara Janji Manis Subsidi, Industri Motor Listrik RI Jadi Mandek",
+    "en": "Gara-gara Janji Manis Subsidi, Industri Motor Listrik RI Jadi Mandek"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "detikOto",
+    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOLU9CazR3RnNEbGQtU2g0eG5hcGk0YnYzc09uZno4ZnpueC1XZ1Myb3BjRW5fbEtMS2R5c0VQX2lWQ3BiWWNWTzlydjZFM2xOYW05bnlveWVGOWxnclhYZHJya25pMHFzWHhNcExieS1UakZCZWNaT3FTRUs4X2dVMW5WQWdKeC16SGtQdHlUUERSTXVuWDJYZUoxSW9vaE1RWkpRNmVyWXpWQdIBrwFBVV95cUxQZEVuX2FpUWRqZTRiS0hrdkpkRHZKd2pCLVk4NUtwYVhWYXpOSzJYNlIxS1JtclJUeEMwaENDMDc4c1hMNVZidFVuRC0wRUJJQUxWeHEzanJzT3JBSzNQXzdkeDRTcHgzbnN0MVpRY2VTTlhBMmtiMEpqRWFnaVpIQy0zX01XTER6a3JYaXFnRzFZdHJFT29ZM1c1Z05mNGE1NzhOb2FnR3Y4VkRYWFBF?oc=5"
    }
   },
   {
