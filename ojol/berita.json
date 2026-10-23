@@ -1,5 +1,5 @@
 {
- "w": "2026-10-23T04:24:03Z",
+ "w": "2026-10-23T04:56:11Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -21,8 +21,25 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-10-23T00:09:36Z",
+   "waktu": "2026-10-23T03:57:13Z",
    "media": 4,
+   "judul": {
+    "id": "RUU LLAJ Bahas Nasib Ojol, Hamka B Kady Serap Aspirasi Pengemudi di Makassar",
+    "en": "RUU LLAJ Bahas Nasib Ojol, Hamka B Kady Serap Aspirasi Pengemudi di Makassar"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Bela Rakyat",
+    "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPajRMdG0zb0dFLXdhbk93dW5tdlZPSzI0a2dlNWdibGk1eWZmdGZUeFlVcm95ZG5FRUl5TldXY0dmbmhQSTRCT0RLMmU1VXlBLWFJaVZkQ19Iemg3SHl3Q1RNV2lmekhFR0hYWlJsZXkwOTRjVlFlaGVJZHhJRmswUkRTanNtR2RyTS1Ic3dHdGdWSDF5VGgybG5n?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-23T00:45:56Z",
+   "media": 5,
    "judul": {
     "id": "Menteri UMKM: Ojol Kini Bisa Akses KUR untuk Motor dan Modal Usaha",
     "en": "Menteri UMKM: Ojol Kini Bisa Akses KUR untuk Motor dan Modal Usaha"
@@ -32,8 +49,8 @@
     "en": ""
    },
    "sumber": {
-    "nama": "MetroTVNews.com",
-    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQemhacU5MLTlkWkxhMUtOU2t4TExiTmtDUmhpUFNNeHRSaDZRdS1wMHpkWjFGTW1uUV9vQUlScXUtbWlUd3pnRG0ySkpfdGFkM3g2MFQ5NGRrMmwyY0ZKSmJmMlhjZDg5QmsxaTlXSlY4bFE5VUhKNXhWaDAxNGxiQnNnck1nTFg1MmIwZ29GNS02cXdBclN5Qk5hWGlHTW5ydENV?oc=5"
+    "nama": "ANTARA News Gorontalo",
+    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOd2p2TFNjU1FYOWRjdEw3MzZEd0w1c0dWQTViMkdoOWZ3aTRiNVBWc2RjbDBpX0h4S19wMUVNMGJXNEhNNHFnUkl4M2Z2amhhMUJtQnJWYUl5UGJ4YjBoQi1vRm50ZVQ2UXFOT1Vuc0Q3c1FlMmVPWmxlajBSbU9YUTRFYmtNbTE0TWVXdmlzZUpnMFhOY0dnXzhBRjBVeTBGMUJsY2FjZTA4NFZIYWNyOXdFczJhdzDSAbcBQVVfeXFMTndqdkxTY1NRWDlkY3RMNzM2RHdMNXNHVkE1YjJHaDlmd2k0YjVQVnNkY2wwaV9IeEtfcDFFTTBiVzRITTRxZ1JJeDNmdmpoYTFCbUJyVmFJeVBieGIwaEItb0ZudGVUNlFxTk9VbnNEN3NRZTJlT1psZWowUm1PWFE0RWJrTW0xNE1lV3Zpc2VKZzBYTmNHZ184QUYwVXkwRjFCbGNhY2UwODRWSGFjcjl3RXMyYXcw?oc=5"
    }
   },
   {
@@ -89,6 +106,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-10-23T04:20:04Z",
+   "media": 2,
+   "judul": {
+    "id": "Aturan Turunan Perpres Ojol, Menteri UMKM Pertimbangkan Nasib Gojek-Grab Cs",
+    "en": "Aturan Turunan Perpres Ojol, Menteri UMKM Pertimbangkan Nasib Gojek-Grab Cs"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "RCTI+",
+    "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPSEJEeTE1ay1teGprUGcxVHZITlpzeTlfZlQtMlNidDFRY0E3NEJzTGtfMUowQWxNSFhwWTh4V0VNVmVYcUpHUHF2WkxEeERHdjR1R0ZzSVBjMWQ2U3hWLXRfOG9RT3lMUHpDak8weEhEUmZpa3pvSTFpMmtId21ZSlBTOW1scXJORjdtLVpYTkxoTHl0WjRQS1V1QnVhdDR0Rlpha0pRR2ZJbmlqa1VIOUhiNFo4Ti1RcWpZOEp5clp3dWhMWnlTS0wtY2RlZXpiZjlDekF0RDhBY2RWeTIw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-10-23T02:40:00Z",
    "media": 2,
    "judul": {
@@ -119,6 +153,23 @@
    "sumber": {
     "nama": "Sumut Pos",
     "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNcVhqMTR0N21xaTR5ZDhub2ZqLVhrLU9SSDRIQjZZSVBxNTFtLW1NMHRmVVV4UHJXQ0hTOEhBXzFWTGFMa1hEU1E3cjcxWW15T0I5TG5tS0FhdERLTFhfZnJENjVDVUtyc25yTUd3TWhfck9aRjdpNUI1SkxxUFlkY1BQUjJ4V25Kb1ktbGM2YVlkOWJUeWJjdDBTenBjb2V1WFVqTnZqX05aNi14aFHSAbMBQVVfeXFMT3lLRklJd3pnakJBQjRxZ18yeVhNWGZsQ0kwd2t1cHVUcjRoY1BhWGdmX25ScldzZzROYVVNSVJNUlFQS3dsWHFIMVNEbWl0cmNJQURwVnM0RXhBTWdTSDBxWkoxVDV5Tl82UDZqTHc3SWxjTjBkc0xJcE9YZmFyOGpEVHU3MjRNR28wWnozVmtEaEFtOXZhMXJNWkpOaHZMRVBUYmR3bXFzUnRNTk1CMnYtNWc?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-23T03:20:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Wanita di Bangka Ditangkap Atas Penyelewengan BBM, 240 Liter Pertalite Disita",
+    "en": "Wanita di Bangka Ditangkap Atas Penyelewengan BBM, 240 Liter Pertalite Disita"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "detikcom",
+    "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQOG03OG13cnJ2emxmS1puZEtTdzE4LWl6WXNCanhoZXVZeWd0eTF6S3JmWUhQcWtBWG9hMFRZOVo0bEhNUXd1VDRsdzE3M3AwRFluZmhaUGwtTklhUnNEV1A3UFJLcUlWOEdMZ0ZRZm9GSGJZZXF0NlpQODQ5b0VFU0tpbUxrX0VQZDVJNXh6djFycVUxVmp6N01vSm41N0F4M0NzMXdkWnA1czZhdU93ZjZMTG05S2lPZDJzVE4zb2paZGpTaVg5VVI1TVgtekhfV21GM1A2Z1XSAdgBQVVfeXFMUDhtNzhtd3JydnpsZktabmRLU3cxOC1pellzQmp4aGV1WXlndHkxektyZllIUHFrQVhvYTBUWTlaNGxITVF3dVQ0bHcxNzNwMERZbmZoWlBsLU5JYVJzRFdQN1BSS3FJVjhHTGdGUWZvRkhiWWVxdDZaUDg0OW9FRVNLaW1Ma19FUGQ1STV4enYxcnFVMVZqejdNb0puNTdBeDNDczF3ZFpwNXM2YXVPd2Y2TExtOUtpT2Qyc1ROM29qWmRqU2lYOVVSNU1YLXpIX1dtRjNQNmdV?oc=5"
    }
   },
   {
@@ -157,6 +208,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-10-23T02:29:19Z",
+   "media": 1,
+   "judul": {
+    "id": "200 Porsi Makan Siang Gratis dihidangkan oleh Polisi di Bandar Lampung, Warga dan Ojol Antusias",
+    "en": "200 Porsi Makan Siang Gratis dihidangkan oleh Polisi di Bandar Lampung, Warga dan Ojol Antusias"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Website Resmi Polri",
+    "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxNTjhwUFJLajRfX21qSmJXWnBGN1Z2S1BFdWtsb2ExUmJqeFJoM3N3SkY2WGpfRG1vbUJnUm5HWmpQd002SzN5R3hZMXpxcWt0NERfemhnUXIydDc5N2xyd0hrbHlJLXpMcWNGR2V2UEZxLTB4LXUxMWczQzlHYW8zVU1hRjQzLVlqZ1JIclhyalRyRm92X0h4X2JVbmVmU014dUFHeFFHdHlFVUdrbWFjSHpPYW9BeC1JVk4tOW05REM4dTQ2X0p6T1JfNm1vZjNBYWVZUng3VmhMallyZ3hHc05KS3l2MzhVWV9rOXVPdE9UcmphTzBqME5R?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-10-23T02:28:45Z",
    "media": 1,
    "judul": {
@@ -170,40 +238,6 @@
    "sumber": {
     "nama": "Harian Dialog",
     "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOSDU4THFXM1hROEl0Q1Z2c056LVN5NHJ4LUVzMUM5VEhOSTIwQkFnWXdmLUhOcVk4ZW5Sc1lyM1ZteDdpeUhCb0FQNGlLV0ZtZ3VHcnNDelVIX094eUE1cjBoblBUVzl2SWM1WkRiRmZKNTh3SVlkcFdpYnJJbHhUaXF3ZUZoSjc1My1kZDBELXhBWjZ0dHk0?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-22T15:22:11Z",
-   "media": 3,
-   "judul": {
-    "id": "RUU LLAJ Bahas Nasib Ojol, Hamka B Kady Serap Aspirasi Pengemudi di Makassar",
-    "en": "RUU LLAJ Bahas Nasib Ojol, Hamka B Kady Serap Aspirasi Pengemudi di Makassar"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Fraksi Partai Golkar",
-    "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQS0lJTkQ4cHE3WmxvOFRuNnNOSDBMTWtHTy0yQVhUZXZTUTR3LUFZRkFvZHpGYzhxcm52OTVXVjJnN21vVGFzaFVhUzJ0c05fZXdCWFZHZkJfTUJDem95R1oxb0ZiTmRBYUsyRmtPemNaNXRFekdfM2ZIOXNqQ1ppUzhIWXJqR1VFV2VCakVXZFByMWstTjVpWmprU3V0TG5tY0FQRktMdnJLLXRoXzlXNGdoUTBJLUpBNWg5RERUcElBeDhkb1VSd2l4dw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-23T01:50:40Z",
-   "media": 1,
-   "judul": {
-    "id": "Aturan Turunan Perpres Ojol, Menteri UMKM Pertimbangkan Nasib Gojek-Grab Cs",
-    "en": "Aturan Turunan Perpres Ojol, Menteri UMKM Pertimbangkan Nasib Gojek-Grab Cs"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Bisnis Tekno",
-    "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQSEZsTE5jcGxNaEpsek1wWFhKbEZJWFVUM3pYZzFGU1dfckNfME1wejZjQnR6ZEVTUnl6ZmV6LUwwazJodXNtN1pzNVZJZ3lIMG5Ja2FnRWpreEEyeXdWTFdUT3UxNmM4bE04VzI2RmsxMTR0bURSUk1pR2lkSW1Vc0tLMGgzckoxaXVSRm9NUGJNMk91QTkyeUZSaWxpY0FnTmpvaUFSb3VFR3VxOVFKajN6ZFpTQXpQbE9pV2JuNGg2b09reWpNZw?oc=5"
    }
   },
   {
@@ -238,40 +272,6 @@
    "sumber": {
     "nama": "Lensa Hukum",
     "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9tSUNuYnppZVpJYVh4S25nTlRCU1NGanl2OGc0dENHeE5PTzM5cU1jTkpWREN3YktxY3hQcTZ0NFhLYVVSMm5ScTVVNVRPVmNfMVFwZUhhS1R2N1ZnOGQ0eV9rZVBjbVNaUC0wYl9nTElUWVV0?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-23T00:38:04Z",
-   "media": 1,
-   "judul": {
-    "id": "Berawal dari Sisa Uang Kembalian dan VN WhatsApp, Aksi Bejat Driver Ojol di Kendari Terbongkar",
-    "en": "Berawal dari Sisa Uang Kembalian dan VN WhatsApp, Aksi Bejat Driver Ojol di Kendari Terbongkar"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "IndoSultra.com",
-    "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQNVdSM3BkQzZoa0s1MzZla2d5akdYLUNOVmkzOUpzb2lPdWJIcks5N3VKVV9uaGNWOHdiSnNrTGJ4YjVKMmRlanVuQ0ZrZllMWU8ydmRiTHNyYTIxQ1BMRURXVDFSVHhtc01ubk1qQ1pJV2llbmlsX21aZS1IVEt2S3M1cFJXWERweVRPOS0xTWR3NXdqZVZqTjBrNGc5X0IxczZhNElHMzVBdklOMmdlbENxTjFYRlU0V3VjXzN3?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-23T00:35:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Terjerat Kasus Dugaan Pencurian di Toserba Sukabumi, Driver Ojol Berharap Keadilan Restoratif di Polsek Cibadak",
-    "en": "Terjerat Kasus Dugaan Pencurian di Toserba Sukabumi, Driver Ojol Berharap Keadilan Restoratif di Polsek Cibadak"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "MediaAksara.id",
-    "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPb0RiQ2YxWFZSUHVwcXF0djUtV0paT09wSVgtU2FxWjE3ZDRsaHJLZWNwWk5MM0NzdHFKVUxpak4ydzJEYk1tQ0NiUWI0OWM4bmkwVjNTS3lGMWZUdHpLOGZpTkpRSVJZQmZZS2U0NjlYX1NNNkpyTEFLMnI4dGxHbVRwMEZnTGpvTlZmY1JJWFBVU2Z4c1NPdmdPbWo3akF6d0xTdm03enN5dGFMQ0JwN3g2WGpQMkhlYmdtQzNUMXRTRzg0NWs0SUhaelRQbEk?oc=5"
    }
   }
  ]
