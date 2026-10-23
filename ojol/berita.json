@@ -1,5 +1,5 @@
 {
- "w": "2026-10-23T23:06:10Z",
+ "w": "2026-10-23T23:53:21Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -38,6 +38,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-10-23T05:59:43Z",
+   "media": 6,
+   "judul": {
+    "id": "Pengemudi Ojol Diusulkan Bisa Akses KUR untuk Motor dan Modal Usaha",
+    "en": "Pengemudi Ojol Diusulkan Bisa Akses KUR untuk Motor dan Modal Usaha"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Good News From Indonesia",
+    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPcWVCenBhNXVNNWtJTmlfZXo4dll1TDhia1A2WnNrcDFEcG13T0dwU2xkYVBjc3pzTUw1SV9hNHh4SUd4QnZxV083b09fWXFsOVdmT3RYOGxJWUczSWZSLXlEb2Qxa3RaWkdlc0RjYlVXNVhLN2xGWFVZUE5CakZPeXdGbXRwLWR0eFAyOThSMWtLakowTGJyTjkxZlR4UGJ4eGVqV0ozbHRLZXRFVUM0?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-10-23T07:49:00Z",
    "media": 4,
    "judul": {
@@ -51,6 +68,40 @@
    "sumber": {
     "nama": "gadget.qoo10.co.id",
     "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1sY24xbHhDVlpYOVQwLXE3Uy1WWTQxZmN0NFI5XzU0Q1lVSWlDRzYtQXZuZWZxOGxsNVNFRWVkRExMcmFVUjZaTENJNU5meElReTRZaVR0WEZuVVBQWGppUmhxV0M1eGlVMXA2OGp4SlVNNVFrQkhHMnNvdjhYVnM?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-23T06:24:26Z",
+   "media": 4,
+   "judul": {
+    "id": "Aturan Turunan Perpres Ojol, Menteri UMKM Pertimbangkan Nasib Gojek-Grab Cs",
+    "en": "Aturan Turunan Perpres Ojol, Menteri UMKM Pertimbangkan Nasib Gojek-Grab Cs"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "RCTI+",
+    "url": "https://news.google.com/rss/articles/CBMioAJBVV95cUxORkpNdzVocUp5N2ZqOXBhWnFOSFVCdVZSTDlvcjF5eEpqU21DQnd6OXdXVFF6a045NTRrbVMtSW81bnVCS0VXcjQ3dEdKT284RWhEV3ZHYWdGbUtfM05DdDhORjFOeFVCUVMwemtlTER3ckFkT0Nsa3VpVnlBalpYeHh4c0VoRTk3VXB6MmFzXzZ1N0E1cUZVX25SbFhXRkR4OVlBWktJUnBneTh4Y1pvc1JEZElZNnNGQVdUNGxkdUtGbmIyY3dxY3FYZ01kdnNGTDdqTXdZR1VzcXdfcmNSeVg5QVJqeE9ZYWl6TWpRa3JFd01wQW5DWXhkN0VfcjlnT3d4Z3dZcjJqNVNhNEsxaTl6WkZOekNXdXFIZzdDamk?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-23T01:55:00Z",
+   "media": 5,
+   "judul": {
+    "id": "Perpres Nomor 27 Tahun 2026 Izinkan Driver Ojol Narik di Banyak Aplikasi",
+    "en": "Perpres Nomor 27 Tahun 2026 Izinkan Driver Ojol Narik di Banyak Aplikasi"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "gadget.qoo10.co.id",
+    "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPZTdYNklGZEhjWVVIeV9DUm51akUweThoZWVobTBLQUgyeEY2bmJnU0ZMc0lGVGo1R09QTGtNLThESHZrZkI3eDNHLUtrd2RoenZZejFOazhJaDZrVXltLWZLSDV5V21GSTFxOWh3dWpZdDR5R1gwVzhMYldCSkY4d0lQckMzZWN6WUE?oc=5"
    }
   },
   {
@@ -89,36 +140,53 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-10-23T00:45:56Z",
-   "media": 5,
+   "waktu": "2026-10-23T06:35:20Z",
+   "media": 3,
    "judul": {
-    "id": "Menteri UMKM: Ojol Kini Bisa Akses KUR untuk Motor dan Modal Usaha",
-    "en": "Menteri UMKM: Ojol Kini Bisa Akses KUR untuk Motor dan Modal Usaha"
+    "id": "Gubernur Al Haris Salurkan 250 Paket Sembako dan Masker untuk Ojol Terdampak Kabut Asap",
+    "en": "Gubernur Al Haris Salurkan 250 Paket Sembako dan Masker untuk Ojol Terdampak Kabut Asap"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "ANTARA News Gorontalo",
-    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOd2p2TFNjU1FYOWRjdEw3MzZEd0w1c0dWQTViMkdoOWZ3aTRiNVBWc2RjbDBpX0h4S19wMUVNMGJXNEhNNHFnUkl4M2Z2amhhMUJtQnJWYUl5UGJ4YjBoQi1vRm50ZVQ2UXFOT1Vuc0Q3c1FlMmVPWmxlajBSbU9YUTRFYmtNbTE0TWVXdmlzZUpnMFhOY0dnXzhBRjBVeTBGMUJsY2FjZTA4NFZIYWNyOXdFczJhdzDSAbcBQVVfeXFMTndqdkxTY1NRWDlkY3RMNzM2RHdMNXNHVkE1YjJHaDlmd2k0YjVQVnNkY2wwaV9IeEtfcDFFTTBiVzRITTRxZ1JJeDNmdmpoYTFCbUJyVmFJeVBieGIwaEItb0ZudGVUNlFxTk9VbnNEN3NRZTJlT1psZWowUm1PWFE0RWJrTW0xNE1lV3Zpc2VKZzBYTmNHZ184QUYwVXkwRjFCbGNhY2UwODRWSGFjcjl3RXMyYXcw?oc=5"
+    "nama": "Jambiupdate.co",
+    "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOVXFEZU11Qk84Um5QdWZfUUw1SmFlYlpobXBiRWg0bGl5bXpJZTltXzZjckVxNnJQcjU0SXFfT0N6Yy1RZzJ1RmZGQVF6R1JmcENIWC1hRm41cHYwUjN5QTJFUkNUeHQ1ck9wZEJhNS1iemZFVzVtTTVyOV83R3dzTDU5cWJKWDBSYkdmbTVvcmhQRWY2RTQwRklWUFBSVHpDbHNOU1piSWZIbkw5NTJMR2NKRk9tM1lTVEV3M2JCTHV6WUNKYUl6TGYtUGd4YVlBQ3Nz?oc=5"
    }
   },
   {
    "jenis": "berita",
-   "waktu": "2026-10-23T06:24:26Z",
-   "media": 3,
+   "waktu": "2026-10-23T15:40:03Z",
+   "media": 1,
    "judul": {
-    "id": "Aturan Turunan Perpres Ojol, Menteri UMKM Pertimbangkan Nasib Gojek-Grab Cs",
-    "en": "Aturan Turunan Perpres Ojol, Menteri UMKM Pertimbangkan Nasib Gojek-Grab Cs"
+    "id": "Bupati dan Kepala Kejaksaan Hadiri ANNIVERSARY FORBETA ke-1, Kapolres Tangerang TakTerlihat",
+    "en": "Bupati dan Kepala Kejaksaan Hadiri ANNIVERSARY FORBETA ke-1, Kapolres Tangerang TakTerlihat"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "RCTI+",
-    "url": "https://news.google.com/rss/articles/CBMioAJBVV95cUxORkpNdzVocUp5N2ZqOXBhWnFOSFVCdVZSTDlvcjF5eEpqU21DQnd6OXdXVFF6a045NTRrbVMtSW81bnVCS0VXcjQ3dEdKT284RWhEV3ZHYWdGbUtfM05DdDhORjFOeFVCUVMwemtlTER3ckFkT0Nsa3VpVnlBalpYeHh4c0VoRTk3VXB6MmFzXzZ1N0E1cUZVX25SbFhXRkR4OVlBWktJUnBneTh4Y1pvc1JEZElZNnNGQVdUNGxkdUtGbmIyY3dxY3FYZ01kdnNGTDdqTXdZR1VzcXdfcmNSeVg5QVJqeE9ZYWl6TWpRa3JFd01wQW5DWXhkN0VfcjlnT3d4Z3dZcjJqNVNhNEsxaTl6WkZOekNXdXFIZzdDamk?oc=5"
+    "nama": "Antero.co",
+    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNblFmRG91NFpDT2JvV0REbFpaM2c1MDg2Y21KRG4yTllQbnNSZW1ScU93bVlRSEtQbDBRbnhXTnhNb3A4V1QyX2FVdjFDcHI4YUFNN3ByWm1fMC13OGNDN094V2k0SHljSl9MYWgxeDl6ZmZVUmRySmdCRUhaYjFHNGhGUXBEUUZxRW9Rb25mQVAwclYzUmpaTGlXdnhkblFlbXZDMlRpYkZKcGxaeFpvUmdacm44QQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-23T15:21:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Pengemudi Ojol Terlindas Taksi Online di Jaksel, Sopir Diduga Hendak Kabur hingga Naik Trotoar",
+    "en": "Pengemudi Ojol Terlindas Taksi Online di Jaksel, Sopir Diduga Hendak Kabur hingga Naik Trotoar"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Tribunjakarta.com",
+    "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQN2ZhN1dUS2t4cU56RC13N0x2eHlQRnpkVFBIQmdDSHAtQ0E5UUJockFzRXUwSXBmNGZaZFRIUU95SXVVUlFCY19HMXhvRGlZZlRnRENMMFdkTHQ2VFpPSVJXb3l0M21SU1Fsemo1VkVpSmUyelZhUWZyVDBoX0E2S2oxWUxIU0xfUlA4UUVMNi1YYWxJTkxaSE5fRF9ENk5aLVJDWGpLcEpfZnNzOWRQWkhDYUF6RnBpN1dQYXpReTVnRXVGWDFQNmw2aE5kQWJaS0pGNXRn?oc=5"
    }
   },
   {
@@ -136,23 +204,6 @@
    "sumber": {
     "nama": "SINDOnews Otomotif",
     "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOZlZJWHNwSjVwcUR3RktGNU1PLW9udDZTY2VDUzU0MmZXc3dQck1PdXpwbDNnN2pWSUFBVTNqU2lkVmRXdlJyNk9JVVg3dTRQOUZ3NVZkc1pLY3BEM3YtOV9zSGZSLUVEMHN1WkdXUWZYcUpBMFY4SUxQQVdYVEdEemJrMWhkWnJPdmFQYnVtOERwUVFGZnNfcUhBNTJkZ1UxdFNZRDBTUkZpYzdQVWRZaEEzUdIBuAFBVV95cUxPMlVmczJWTW0xaWVDRFBCWHkyc3F6NnhXZkR3ZUNDS09hYmhJWDJTOVJESGdBYVIwX2c5TVdMS0tja3MwbFA2aUtTWURPUnM0S0tWZ3ZKcFJLREpHRjRFQzdQVXRmZHRxaUtrN2Y0aldsN0treXhWcVhLbFYza2VFOURLUUhoQkFwRUpReWlfQWJzbEFvcUl5SGpodndpd3Fnd1luTTJVcnNkV2YxX2UwQi1RTjFqcmhJ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-23T14:30:34Z",
-   "media": 1,
-   "judul": {
-    "id": "Menteri Bahlil Beberkan Kondisi Energi Nasional, dari Stok BBM hingga Pasokan Listrik",
-    "en": "Menteri Bahlil Beberkan Kondisi Energi Nasional, dari Stok BBM hingga Pasokan Listrik"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Saibumi.com",
-    "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOMUY1V2MwYmN4aVBMUmRXcFFvWVR6dldqR3BGUFpOc092SFlqWkpLTUFhTHZBQVpfaUFKMnlibnJFQlFERzBScmpLbFNiakw1Z083RlRzRW1VMVpqS1dPbzl0MW1JVUZ1d3p1cnVOQWVhTTdQOEtTQi1SN0hiVDk2QjV5bzNzYlhOZmNJcERTWVZVenVJd2VER2N6bVo4cUNaam5OYkRUc0t3d094dGIzYVd3T1czZk4yTWdSclZPYzJVdEFwTVZ3?oc=5"
    }
   }
  ]
