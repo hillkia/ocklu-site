@@ -1,5 +1,5 @@
 {
- "w": "2026-10-23T22:50:07Z",
+ "w": "2026-10-23T23:06:10Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -39,7 +39,7 @@
   {
    "jenis": "berita",
    "waktu": "2026-10-23T07:49:00Z",
-   "media": 3,
+   "media": 4,
    "judul": {
     "id": "Kendaraan Listrik Berpotensi Kurangi Subsidi BBM, Populasinya Naik dari 40 Ribu Jadi 530 Ribu Unit",
     "en": "Kendaraan Listrik Berpotensi Kurangi Subsidi BBM, Populasinya Naik dari 40 Ribu Jadi 530 Ribu Unit"
@@ -51,6 +51,23 @@
    "sumber": {
     "nama": "gadget.qoo10.co.id",
     "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1sY24xbHhDVlpYOVQwLXE3Uy1WWTQxZmN0NFI5XzU0Q1lVSWlDRzYtQXZuZWZxOGxsNVNFRWVkRExMcmFVUjZaTENJNU5meElReTRZaVR0WEZuVVBQWGppUmhxV0M1eGlVMXA2OGp4SlVNNVFrQkhHMnNvdjhYVnM?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-23T19:00:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Bahlil Pastikan Stok BBM di Bali Aman dan Listrik Batam Pulih",
+    "en": "Bahlil Pastikan Stok BBM di Bali Aman dan Listrik Batam Pulih"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "BeritaSatu.com",
+    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQUTRuNUs4cTE4dTg1OVg1dHFacDEtWVBpeENjUDJJMzFkNVJ1eDJUWTZqYnF0T1Z4N3RmVmlKcGVVVmNMZFNHTy1NT3F0WVcxZFVfMGRHb1Vsa21GamdoS05lOEZyeFVOX2JtR05jd3dBT053dEN4Wmw4bldZTXVBSWVBOF9LLVhTX1d5RExTQlJzbmF0RnpKWUxIaE0yT1czdXlENVc5aw?oc=5"
    }
   },
   {
@@ -106,138 +123,36 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-10-23T06:35:20Z",
-   "media": 2,
-   "judul": {
-    "id": "Gubernur Al Haris Salurkan 250 Paket Sembako dan Masker untuk Ojol Terdampak Kabut Asap",
-    "en": "Gubernur Al Haris Salurkan 250 Paket Sembako dan Masker untuk Ojol Terdampak Kabut Asap"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Jambiupdate.co",
-    "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOVXFEZU11Qk84Um5QdWZfUUw1SmFlYlpobXBiRWg0bGl5bXpJZTltXzZjckVxNnJQcjU0SXFfT0N6Yy1RZzJ1RmZGQVF6R1JmcENIWC1hRm41cHYwUjN5QTJFUkNUeHQ1ck9wZEJhNS1iemZFVzVtTTVyOV83R3dzTDU5cWJKWDBSYkdmbTVvcmhQRWY2RTQwRklWUFBSVHpDbHNOU1piSWZIbkw5NTJMR2NKRk9tM1lTVEV3M2JCTHV6WUNKYUl6TGYtUGd4YVlBQ3Nz?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-23T01:44:16Z",
-   "media": 3,
-   "judul": {
-    "id": "Perpres 27 Tahun 2026 Izinkan Ojol Bermitra dengan Banyak Aplikasi",
-    "en": "Perpres 27 Tahun 2026 Izinkan Ojol Bermitra dengan Banyak Aplikasi"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Demokratis.co.id",
-    "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE14ZGhsMEpMeG9zQ1hnWWR1NmFucWNtMFM1Ul9PeVFIZU5ONVpvM1BVdUZZdGZPcWVaRGFRWEhHZVVYWHNUMXNvUlV4c3g0ZXBaR0lPbDZKQ3cwSk16cWh5dGVzSQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-22T22:30:00Z",
+   "waktu": "2026-10-23T15:12:30Z",
    "media": 1,
    "judul": {
-    "id": "Begini Penampakan Banjir di Paraguay Usai Diguyur Hujan Deras",
-    "en": "Begini Penampakan Banjir di Paraguay Usai Diguyur Hujan Deras"
+    "id": "Motor Listrik Taran Lebih Bertenaga dari Porsche Macan",
+    "en": "Motor Listrik Taran Lebih Bertenaga dari Porsche Macan"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "detikNews",
-    "url": "https://news.detik.com/foto-news/d-8718598/begini-penampakan-banjir-di-paraguay-usai-diguyur-hujan-deras"
+    "nama": "SINDOnews Otomotif",
+    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOZlZJWHNwSjVwcUR3RktGNU1PLW9udDZTY2VDUzU0MmZXc3dQck1PdXpwbDNnN2pWSUFBVTNqU2lkVmRXdlJyNk9JVVg3dTRQOUZ3NVZkc1pLY3BEM3YtOV9zSGZSLUVEMHN1WkdXUWZYcUpBMFY4SUxQQVdYVEdEemJrMWhkWnJPdmFQYnVtOERwUVFGZnNfcUhBNTJkZ1UxdFNZRDBTUkZpYzdQVWRZaEEzUdIBuAFBVV95cUxPMlVmczJWTW0xaWVDRFBCWHkyc3F6NnhXZkR3ZUNDS09hYmhJWDJTOVJESGdBYVIwX2c5TVdMS0tja3MwbFA2aUtTWURPUnM0S0tWZ3ZKcFJLREpHRjRFQzdQVXRmZHRxaUtrN2Y0aldsN0treXhWcVhLbFYza2VFOURLUUhoQkFwRUpReWlfQWJzbEFvcUl5SGpodndpd3Fnd1luTTJVcnNkV2YxX2UwQi1RTjFqcmhJ?oc=5"
    }
   },
   {
    "jenis": "berita",
-   "waktu": "2026-10-22T22:30:00Z",
+   "waktu": "2026-10-23T14:30:34Z",
    "media": 1,
    "judul": {
-    "id": "Banjir Meluas di Paraguay, Ribuan Keluarga Terdampak dan Dievakuasi",
-    "en": "Banjir Meluas di Paraguay, Ribuan Keluarga Terdampak dan Dievakuasi"
+    "id": "Menteri Bahlil Beberkan Kondisi Energi Nasional, dari Stok BBM hingga Pasokan Listrik",
+    "en": "Menteri Bahlil Beberkan Kondisi Energi Nasional, dari Stok BBM hingga Pasokan Listrik"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "patrolihukumindonesia.com",
-    "url": "https://patrolihukumindonesia.com/banjir-meluas-di-paraguay-ribuan-keluarga-terdampak-dan-dievakuasi/"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-23T02:40:00Z",
-   "media": 2,
-   "judul": {
-    "id": "Kepala Bakom Sebut Kepastian Status Pengemudi Ojol Perlu Dikawal",
-    "en": "Kepala Bakom Sebut Kepastian Status Pengemudi Ojol Perlu Dikawal"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "RRI.co.id",
-    "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPWEt5YzRxelFFVHdUMlVoNHpZeGZTQ0V4NW1oMTJYRUM0eFZUWm1UWkFLNHJfOVk1dzhvbGF4MVRKY0VwR3hRU0R6dmJxbFRESEZmaWV3OVdnVjg4WU94ajR0UlNidWpLT09ic0otdnN4T1AzaE5RTVNwMUJRbGdTQkJJMUY0VU81Y2c?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-23T08:35:33Z",
-   "media": 1,
-   "judul": {
-    "id": "Gara-gara Janji Manis Subsidi, Industri Motor Listrik RI Jadi Mandek",
-    "en": "Gara-gara Janji Manis Subsidi, Industri Motor Listrik RI Jadi Mandek"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "detikOto",
-    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOLU9CazR3RnNEbGQtU2g0eG5hcGk0YnYzc09uZno4ZnpueC1XZ1Myb3BjRW5fbEtMS2R5c0VQX2lWQ3BiWWNWTzlydjZFM2xOYW05bnlveWVGOWxnclhYZHJya25pMHFzWHhNcExieS1UakZCZWNaT3FTRUs4X2dVMW5WQWdKeC16SGtQdHlUUERSTXVuWDJYZUoxSW9vaE1RWkpRNmVyWXpWQdIBrwFBVV95cUxQZEVuX2FpUWRqZTRiS0hrdkpkRHZKd2pCLVk4NUtwYVhWYXpOSzJYNlIxS1JtclJUeEMwaENDMDc4c1hMNVZidFVuRC0wRUJJQUxWeHEzanJzT3JBSzNQXzdkeDRTcHgzbnN0MVpRY2VTTlhBMmtiMEpqRWFnaVpIQy0zX01XTER6a3JYaXFnRzFZdHJFT29ZM1c1Z05mNGE1NzhOb2FnR3Y4VkRYWFBF?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-23T08:25:50Z",
-   "media": 1,
-   "judul": {
-    "id": "Krisis BBM Lari Ke Geothermal: Transisi Energi atau Transisi Bisnis?",
-    "en": "Krisis BBM Lari Ke Geothermal: Transisi Energi atau Transisi Bisnis?"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Kuningan Mass",
-    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOaExlQzBpV204VDBKRUVaeFgzNDZtOXFnY0pwTVN3WUxZSk5FcVBzdmFvalJPbGh2aTlrLUtiNkVCZzlESE90RjdDN3hXR2YwM2lZVXpMRWtSRzBCczlPaVNMRXh0VERncVkzc3lya1RXdTIyWVp0VmVLYWRWMGVFaWhuZi14Z2twYW1mZkJRTjVhamoxaU4w?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-23T08:09:36Z",
-   "media": 1,
-   "judul": {
-    "id": "Terminal Kampung Rambutan Sediakan Shelter Ojol & Taksi Online, Dilengkapi Kursi hingga Kipas Angin",
-    "en": "Terminal Kampung Rambutan Sediakan Shelter Ojol & Taksi Online, Dilengkapi Kursi hingga Kipas Angin"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Tribunjakarta.com",
-    "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOd1RlZTNzWHo3UDdsa1kxeUZ0cUVGWlZudEFuaEZwZ083REVnbmtXcks5ZU1wYUVQTGV2WTV1Ul9rZldwVG1ENjBNSS1LZTVSZER0TS1XSG5neHl5aVM2cGx4N2dGNG5PRjdBYWczZ3A5XzB0aEdmZjdwYXpLWXZTdzdWNER2ZDYyN08wN3JQZDdmeS04YjFiZVFJVGtXbll6LU9ib1g5UjJCaUpXSTlQY1FxaVVkVW5WZWtwYnVCUG1BVDNlbEpMR0wwemQ4WWxfZEo2YndLbmlTdw?oc=5"
+    "nama": "Saibumi.com",
+    "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOMUY1V2MwYmN4aVBMUmRXcFFvWVR6dldqR3BGUFpOc092SFlqWkpLTUFhTHZBQVpfaUFKMnlibnJFQlFERzBScmpLbFNiakw1Z083RlRzRW1VMVpqS1dPbzl0MW1JVUZ1d3p1cnVOQWVhTTdQOEtTQi1SN0hiVDk2QjV5bzNzYlhOZmNJcERTWVZVenVJd2VER2N6bVo4cUNaam5OYkRUc0t3d094dGIzYVd3T1czZk4yTWdSclZPYzJVdEFwTVZ3?oc=5"
    }
   }
  ]
