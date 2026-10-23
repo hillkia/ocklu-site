@@ -47,7 +47,7 @@ button.utama{font:inherit;font-weight:700;background:var(--aksen);color:#fff;bor
 <ul id="dJurnal"></ul>
 
 <h2 id="hObrolan">Obrolan dengan TerTau</h2>
-<p class="catatan">Terbuka tanpa PIN. TerTau menolak perintah berisiko dari sini: transfer uang, kunci/kata sandi, hapus data. TerTau membalas di putaran kerja berikutnya.</p>
+<p class="catatan">Terbuka tanpa PIN. TerTau menolak perintah berisiko dari sini: transfer uang, kunci/kata sandi, hapus data. Balasan ⚡ kilat datang seketika (AI Groq/Gemini, hanya menjawab dari jurnal); kerja dan riset dikerjakan Claude di putaran 08, 12, 16, 20 WIB.</p>
 <div class="bar">
   <button class="chip" data-cepat="Kerja sekarang: cari ide baru dan lanjutkan ide terbaik.">Kerja sekarang</button>
   <button class="chip" data-cepat="Kirim laporan singkat: apa yang sudah dikerjakan dan apa langkah berikutnya?">Minta laporan</button>
@@ -86,7 +86,7 @@ function tampil(){
 }
 function muat(){fetch(API+"?r=data").then(function(r){return r.json()}).then(function(d){D.jurnal=d.jurnal||[];D.uang=d.uang||[];D.pesan=d.pesan||[];tampil()}).catch(function(){$("aktif").textContent="Gagal memuat data"})}
 function pilih(j){saring=j;[].forEach.call(document.querySelectorAll("#chips .chip"),function(c){c.classList.toggle("aktif",c.dataset.j===j)});tampil()}
-function kirim(t){t=(t||$("isi").value).trim();if(!t)return;$("status").textContent="mengirim…";
+function kirim(t){t=(t||$("isi").value).trim();if(!t)return;$("status").textContent="mengirim… TerTau sedang membalas";
   fetch(API+"?r=pesan",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({teks:t})}).then(function(r){return r.json().then(function(b){if(!r.ok)throw b.galat||"gagal";$("isi").value="";$("status").textContent="terkirim";muat()})}).catch(function(e){$("status").textContent="Pesan gagal: "+e})}
 document.addEventListener("click",function(e){
   var k=e.target.closest(".kartu");if(k){var s=k.dataset.saring;if(s==="uang")$("hUang").scrollIntoView({behavior:"smooth"});else if(s==="obrolan")$("hObrolan").scrollIntoView({behavior:"smooth"});else{pilih(s);$("hJurnal").scrollIntoView({behavior:"smooth"})}return}
