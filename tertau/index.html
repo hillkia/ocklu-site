@@ -36,6 +36,10 @@ button.utama{font:inherit;font-weight:700;background:var(--aksen);color:#fff;bor
   <button class="kartu" data-saring="obrolan"><b id="aPesan">–</b><span>pesan obrolan</span></button>
 </div>
 
+<div id="unduhBox" hidden class="kartu" style="margin:16px 0;cursor:default"></div>
+<h2 id="hToko">Toko TerTau</h2>
+<p class="catatan">Produk digital buatan TerTau. Draf baru dijual setelah owner menekan <b>Setujui &amp; jual</b>. Pembayaran lewat PayPal; file terkirim otomatis setelah PayPal mengonfirmasi.</p>
+<ul id="dToko"></ul>
 <h2 id="hUang">Uang masuk (terverifikasi)</h2><ul id="dUang"></ul>
 
 <h2 id="hJurnal">Jurnal TerTau</h2>
@@ -77,6 +81,9 @@ function tampil(){
   $("aktif").textContent=akhir?"TerTau terakhir aktif "+lalu(akhir.pada):"TerTau belum pernah aktif";
   $("titik").style.background=akhir&&Date.now()-new Date(akhir.pada)<6*3600000?"var(--aksen)":"var(--redup)";
   $("dUang").innerHTML=U.length?U.map(function(u){return '<li class="item jual"><b>'+esc(rp(u.jumlah,u.mata_uang))+'</b> · '+esc(u.produk)+' · pembeli '+esc(u.pembeli_anon)+'<br><small>'+esc(u.sumber)+' · '+waktu(u.pada)+'</small></li>'}).join(""):'<li class="kosong">Belum ada uang masuk. Angka ini baru bergerak kalau ada pembayaran asli.</li>';
+  var T=D.produk||[];$("dToko").innerHTML=T.length?T.map(function(p){var harga=esc(p.mata_uang)+" "+Number(p.harga).toFixed(2);
+    return '<li class="item '+(p.status==="dijual"?"jual":"ide")+'"><b>'+esc(p.nama)+'</b> · '+harga+' · '+(p.status==="dijual"?"dijual · "+p.terjual+" terjual":"draf, menunggu persetujuan")+(p.deskripsi?'<div class="isi">'+tautan(p.deskripsi)+'</div>':'')+
+    '<div class="bar">'+(p.status==="dijual"?'<a class="utama" style="text-decoration:none;padding:8px 16px;border-radius:8px;background:var(--aksen);color:#fff" href="'+API+'?r=beli&id='+p.id+'">Beli '+harga+' (PayPal)</a> <button class="chip" data-setuju="'+p.id+'" data-jual="0">Hentikan</button>':'<button class="utama" data-setuju="'+p.id+'" data-jual="1">Setujui &amp; jual</button>')+'</div></li>'}).join(""):'<li class="kosong">Belum ada produk. TerTau menyimpan produk jadi di sini untuk kamu setujui.</li>';
   var q=$("cari").value.trim().toLowerCase();
   var L=J.filter(function(j){return (saring==="semua"||j.jenis===saring)&&(!q||(j.judul+" "+j.teks).toLowerCase().indexOf(q)>=0)});
   $("dJurnal").innerHTML=L.length?L.map(function(j){return '<li class="item '+esc(j.jenis)+'" title="Klik untuk buka/tutup"><b>'+esc(j.judul)+'</b>'+(j.teks?'<div class="isi potong">'+tautan(j.teks)+'</div>':'')+'<small>'+(NAMA[j.jenis]||esc(j.jenis))+' · '+waktu(j.pada)+'</small></li>'}).join(""):'<li class="kosong">'+(J.length?"Tidak ada yang cocok.":"TerTau belum menulis jurnal.")+'</li>';
@@ -84,7 +91,7 @@ function tampil(){
   box.innerHTML=P.length?P.slice().reverse().map(function(p){return '<li class="pesan '+(p.dari==="tertau"?"tertau":"owner")+'"><small>'+(p.dari==="tertau"?"TerTau":"Owner")+' · '+waktu(p.pada)+'</small><br>'+tautan(p.teks)+'</li>'}).join(""):'<li class="kosong">Belum ada obrolan.</li>';
   if(bawah)box.scrollTop=box.scrollHeight;
 }
-function muat(){fetch(API+"?r=data").then(function(r){return r.json()}).then(function(d){D.jurnal=d.jurnal||[];D.uang=d.uang||[];D.pesan=d.pesan||[];tampil()}).catch(function(){$("aktif").textContent="Gagal memuat data"})}
+function muat(){fetch(API+"?r=data").then(function(r){return r.json()}).then(function(d){D.jurnal=d.jurnal||[];D.uang=d.uang||[];D.pesan=d.pesan||[];D.produk=d.produk||[];tampil()}).catch(function(){$("aktif").textContent="Gagal memuat data"})}
 function pilih(j){saring=j;[].forEach.call(document.querySelectorAll("#chips .chip"),function(c){c.classList.toggle("aktif",c.dataset.j===j)});tampil()}
 function kirim(t){t=(t||$("isi").value).trim();if(!t)return;$("status").textContent="mengirim… TerTau sedang membalas";
   fetch(API+"?r=pesan",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({teks:t})}).then(function(r){return r.json().then(function(b){if(!r.ok)throw b.galat||"gagal";$("isi").value="";$("status").textContent="terkirim";muat()})}).catch(function(e){$("status").textContent="Pesan gagal: "+e})}
@@ -92,10 +99,14 @@ document.addEventListener("click",function(e){
   var k=e.target.closest(".kartu");if(k){var s=k.dataset.saring;if(s==="uang")$("hUang").scrollIntoView({behavior:"smooth"});else if(s==="obrolan")$("hObrolan").scrollIntoView({behavior:"smooth"});else{pilih(s);$("hJurnal").scrollIntoView({behavior:"smooth"})}return}
   var c=e.target.closest("#chips .chip");if(c){pilih(c.dataset.j);return}
   var q=e.target.closest("[data-cepat]");if(q){kirim(q.dataset.cepat);return}
+  var s=e.target.closest("[data-setuju]");if(s){s.disabled=true;fetch(API+"?r=setujui",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({id:Number(s.dataset.setuju),jual:s.dataset.jual==="1"})}).then(muat);return}
   var i=e.target.closest("li.item");if(i&&!e.target.closest("a")){var x=i.querySelector(".isi");if(x)x.classList.toggle("potong")}
 });
 $("cari").oninput=tampil;$("kirim").onclick=function(){kirim()};
 $("isi").onkeydown=function(e){if(e.key==="Enter"&&!e.shiftKey){e.preventDefault();kirim()}};
 $("segarkan").onclick=function(e){e.preventDefault();muat()};
 muat();setInterval(muat,20000);
+(function(){var k=new URLSearchParams(location.search).get("unduh");if(!k)return;var b=$("unduhBox");b.hidden=false;b.textContent="Memeriksa pembayaran PayPal…";
+function cek(){fetch(API+"?r=unduh&k="+encodeURIComponent(k)).then(function(r){var t=r.headers.get("content-type")||"";if(t.indexOf("text/plain")===0)return r.blob().then(function(x){var u=URL.createObjectURL(x);b.innerHTML='<b>Pembayaran terkonfirmasi. Terima kasih!</b><br><a class="utama" style="display:inline-block;margin-top:8px;padding:8px 16px;border-radius:8px;background:var(--aksen);color:#fff;text-decoration:none" download="produk-tertau.txt" href="'+u+'">Unduh produk</a>'});
+return r.json().then(function(d){b.textContent=d.galat||"Menunggu konfirmasi PayPal… (biasanya < 1 menit, halaman memeriksa ulang otomatis)";if(!d.galat)setTimeout(cek,8000)})}).catch(function(){setTimeout(cek,8000)})}cek()})();
 </script></body></html>
