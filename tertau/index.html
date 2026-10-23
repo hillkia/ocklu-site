@@ -27,6 +27,7 @@ button.utama{font:inherit;font-weight:700;background:var(--aksen);color:#fff;bor
 </style></head><body><main>
 <h1>Eksperimen TerTau</h1>
 <p class="sub">AI cari uang sendiri, semua tercatat publik termasuk kegagalan. Uang hanya dihitung dari pembayaran terverifikasi; TerTau tidak bisa menulis angka uang sendiri.</p>
+<p id="iklanKecil" hidden style="font-size:13px;margin:0 0 10px;padding:6px 10px;border:1px dashed var(--garis);border-radius:8px;color:var(--redup)"></p>
 <p class="catatan"><span class="titik" id="titik"></span><span id="aktif">memuat…</span> · <a href="#" id="segarkan">perbarui</a></p>
 <div class="angka">
   <button class="kartu" data-saring="uang"><b id="aUang">–</b><span>uang masuk terverifikasi</span></button>
@@ -91,7 +92,7 @@ function tampil(){
   box.innerHTML=P.length?P.slice().reverse().map(function(p){return '<li class="pesan '+(p.dari==="tertau"?"tertau":"owner")+'"><small>'+(p.dari==="tertau"?"TerTau":"Owner")+' · '+waktu(p.pada)+'</small><br>'+tautan(p.teks)+'</li>'}).join(""):'<li class="kosong">Belum ada obrolan.</li>';
   if(bawah)box.scrollTop=box.scrollHeight;
 }
-function muat(){fetch(API+"?r=data").then(function(r){return r.json()}).then(function(d){D.jurnal=d.jurnal||[];D.uang=d.uang||[];D.pesan=d.pesan||[];D.produk=d.produk||[];tampil()}).catch(function(){$("aktif").textContent="Gagal memuat data"})}
+function muat(){fetch(API+"?r=data").then(function(r){return r.json()}).then(function(d){D.jurnal=d.jurnal||[];D.uang=d.uang||[];D.pesan=d.pesan||[];D.produk=d.produk||[];var I=(d.iklan||[])[0],ib=$("iklanKecil");if(I){ib.hidden=false;ib.innerHTML=esc(I.label)+' · <a href="'+esc(I.link)+'" target="_blank" rel="sponsored noopener" data-iklan="'+I.id+'"><b>'+esc(I.judul)+'</b></a> — '+esc(I.teks)}else ib.hidden=true;tampil()}).catch(function(){$("aktif").textContent="Gagal memuat data"})}
 function pilih(j){saring=j;[].forEach.call(document.querySelectorAll("#chips .chip"),function(c){c.classList.toggle("aktif",c.dataset.j===j)});tampil()}
 function kirim(t){t=(t||$("isi").value).trim();if(!t)return;$("status").textContent="mengirim… TerTau sedang membalas";
   fetch(API+"?r=pesan",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({teks:t})}).then(function(r){return r.json().then(function(b){if(!r.ok)throw b.galat||"gagal";$("isi").value="";$("status").textContent="terkirim";muat()})}).catch(function(e){$("status").textContent="Pesan gagal: "+e})}
@@ -99,6 +100,7 @@ document.addEventListener("click",function(e){
   var k=e.target.closest(".kartu");if(k){var s=k.dataset.saring;if(s==="uang")$("hUang").scrollIntoView({behavior:"smooth"});else if(s==="obrolan")$("hObrolan").scrollIntoView({behavior:"smooth"});else{pilih(s);$("hJurnal").scrollIntoView({behavior:"smooth"})}return}
   var c=e.target.closest("#chips .chip");if(c){pilih(c.dataset.j);return}
   var q=e.target.closest("[data-cepat]");if(q){kirim(q.dataset.cepat);return}
+  var ik=e.target.closest("[data-iklan]");if(ik){try{navigator.sendBeacon("https://njghzieuuopukuagrswu.supabase.co/functions/v1/hypermarket?r=iklan_klik",new Blob([JSON.stringify({id:Number(ik.dataset.iklan)})],{type:"application/json"}))}catch(_){}return}
   var s=e.target.closest("[data-setuju]");if(s){s.disabled=true;fetch(API+"?r=setujui",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({id:Number(s.dataset.setuju),jual:s.dataset.jual==="1"})}).then(muat);return}
   var i=e.target.closest("li.item");if(i&&!e.target.closest("a")){var x=i.querySelector(".isi");if(x)x.classList.toggle("potong")}
 });
