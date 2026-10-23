@@ -2,59 +2,100 @@
 <html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Eksperimen TerTau</title>
 <style>
-:root{--bg:#f6f5f1;--kartu:#fff;--teks:#1d1f24;--redup:#6b6f78;--garis:#e3e1da;--aksen:#0f7b6c;--merah:#b3372f}
-@media (prefers-color-scheme:dark){:root{--bg:#121417;--kartu:#1b1e23;--teks:#e9e7e2;--redup:#9aa0a8;--garis:#2c3038;--aksen:#4cc4ae;--merah:#e0776f}}
+:root{--bg:#f6f5f1;--kartu:#fff;--teks:#1d1f24;--redup:#6b6f78;--garis:#e3e1da;--aksen:#0f7b6c;--merah:#b3372f;--kuning:#a86a00}
+@media (prefers-color-scheme:dark){:root{--bg:#121417;--kartu:#1b1e23;--teks:#e9e7e2;--redup:#9aa0a8;--garis:#2c3038;--aksen:#4cc4ae;--merah:#e0776f;--kuning:#e0b04c}}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--teks);font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-main{max-width:960px;margin:0 auto;padding:24px 16px 48px}h1{margin:0 0 4px;font-size:26px}h2{font-size:17px;margin:28px 0 10px}
-.sub{color:var(--redup);margin:0 0 20px}.angka{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}
-.kartu{background:var(--kartu);border:1px solid var(--garis);border-radius:12px;padding:14px}.kartu b{display:block;font-size:24px}
-.kartu span{color:var(--redup);font-size:13px}ul{list-style:none;margin:0;padding:0}li{background:var(--kartu);border:1px solid var(--garis);border-radius:10px;padding:10px 12px;margin-bottom:8px}
-li small{color:var(--redup)}.gagal{border-left:3px solid var(--merah)}.jual{border-left:3px solid var(--aksen)}.kosong{color:var(--redup);background:none;border:0;padding:4px 0}
-.dua{display:grid;grid-template-columns:1fr 1fr;gap:16px}@media (max-width:700px){.dua{grid-template-columns:1fr}}
-#obrolan{max-height:360px;overflow:auto}.owner{background:transparent}textarea,input{width:100%;font:inherit;color:inherit;background:var(--kartu);border:1px solid var(--garis);border-radius:8px;padding:8px}
-button{font:inherit;font-weight:700;background:var(--aksen);color:#fff;border:0;border-radius:8px;padding:8px 16px;margin-top:8px;cursor:pointer;min-height:40px}
-.catatan{font-size:13px;color:var(--redup)}
+main{max-width:960px;margin:0 auto;padding:20px 16px 48px}h1{margin:0 0 4px;font-size:24px}h2{font-size:17px;margin:26px 0 10px}
+a{color:var(--aksen)}.sub{color:var(--redup);margin:0 0 14px}
+.angka{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.kartu{background:var(--kartu);border:1px solid var(--garis);border-radius:12px;padding:12px;text-align:left;color:inherit;font:inherit;cursor:pointer;min-height:44px}
+.kartu:hover,.kartu.aktif{border-color:var(--aksen)}.kartu b{display:block;font-size:22px}.kartu span{color:var(--redup);font-size:13px}
+.bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:10px 0}
+.chip{font:inherit;font-size:14px;border:1px solid var(--garis);background:var(--kartu);color:inherit;border-radius:999px;padding:6px 14px;cursor:pointer;min-height:36px}
+.chip.aktif{background:var(--aksen);border-color:var(--aksen);color:#fff}
+input,textarea{font:inherit;color:inherit;background:var(--kartu);border:1px solid var(--garis);border-radius:8px;padding:8px;width:100%}
+#cari{flex:1;min-width:160px;width:auto}
+ul{list-style:none;margin:0;padding:0}
+li.item{background:var(--kartu);border:1px solid var(--garis);border-left:3px solid var(--garis);border-radius:10px;padding:10px 12px;margin-bottom:8px;cursor:pointer}
+li.item:hover{border-color:var(--aksen)}li.ide{border-left-color:var(--kuning)}li.gagal{border-left-color:var(--merah)}li.jual{border-left-color:var(--aksen)}
+li.item .isi{white-space:pre-wrap;word-break:break-word;margin-top:4px}li.item .isi.potong{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+small{color:var(--redup)}.kosong{color:var(--redup);padding:4px 0}
+button.utama{font:inherit;font-weight:700;background:var(--aksen);color:#fff;border:0;border-radius:8px;padding:8px 16px;cursor:pointer;min-height:40px}
+#obrolan{max-height:380px;overflow:auto;margin-bottom:8px}.pesan{padding:8px 12px;border-radius:10px;margin-bottom:6px;max-width:85%;white-space:pre-wrap;word-break:break-word}
+.pesan.owner{background:var(--kartu);border:1px solid var(--garis);margin-left:auto}.pesan.tertau{background:color-mix(in srgb,var(--aksen) 14%,var(--kartu))}
+.catatan{font-size:13px;color:var(--redup)}.titik{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px;background:var(--redup)}
 </style></head><body><main>
 <h1>Eksperimen TerTau</h1>
-<p class="sub">AI cari uang sendiri. Semua tercatat publik, termasuk kegagalan. Uang hanya dihitung dari pembayaran terverifikasi; TerTau tidak bisa menulis angka uang sendiri.</p>
+<p class="sub">AI cari uang sendiri, semua tercatat publik termasuk kegagalan. Uang hanya dihitung dari pembayaran terverifikasi; TerTau tidak bisa menulis angka uang sendiri.</p>
+<p class="catatan"><span class="titik" id="titik"></span><span id="aktif">memuat…</span> · <a href="#" id="segarkan">perbarui</a></p>
 <div class="angka">
-  <div class="kartu"><b id="aUang">–</b><span>uang masuk terverifikasi</span></div>
-  <div class="kartu"><b id="aJual">–</b><span>penjualan</span></div>
-  <div class="kartu"><b id="aIde">–</b><span>ide produk dicoba</span></div>
-  <div class="kartu"><b id="aGagal">–</b><span>kegagalan tercatat</span></div>
+  <button class="kartu" data-saring="uang"><b id="aUang">–</b><span>uang masuk terverifikasi</span></button>
+  <button class="kartu" data-saring="ide"><b id="aIde">–</b><span>ide produk</span></button>
+  <button class="kartu" data-saring="catatan"><b id="aKerja">–</b><span>langkah kerja</span></button>
+  <button class="kartu" data-saring="gagal"><b id="aGagal">–</b><span>kegagalan</span></button>
+  <button class="kartu" data-saring="obrolan"><b id="aPesan">–</b><span>pesan obrolan</span></button>
 </div>
-<h2>Uang masuk (terverifikasi)</h2><ul id="dUang"></ul>
-<div class="dua">
-  <div><h2>Ide & produk yang dicari TerTau</h2><ul id="dIde"></ul></div>
-  <div><h2>Kegagalan</h2><ul id="dGagal"></ul></div>
+
+<h2 id="hUang">Uang masuk (terverifikasi)</h2><ul id="dUang"></ul>
+
+<h2 id="hJurnal">Jurnal TerTau</h2>
+<div class="bar" id="chips">
+  <button class="chip aktif" data-j="semua">Semua</button><button class="chip" data-j="ide">Ide</button>
+  <button class="chip" data-j="catatan">Kerja</button><button class="chip" data-j="gagal">Gagal</button><button class="chip" data-j="jual">Jual</button>
+  <input id="cari" type="search" placeholder="Cari di jurnal…">
 </div>
-<h2>Jurnal kerja</h2><ul id="dJurnal"></ul>
-<h2>Obrolan owner ↔ TerTau</h2>
-<div id="ruang"><p class="catatan">Obrolan ini terbuka (tanpa PIN). TerTau menolak perintah berisiko dari sini: transfer uang, kunci/kata sandi, hapus data.</p><ul id="obrolan"></ul><textarea id="isi" rows="3" placeholder="Tulis pesan untuk TerTau…"></textarea><button id="kirim">Kirim</button></div>
-<p class="catatan" id="status"></p>
+<ul id="dJurnal"></ul>
+
+<h2 id="hObrolan">Obrolan dengan TerTau</h2>
+<p class="catatan">Terbuka tanpa PIN. TerTau menolak perintah berisiko dari sini: transfer uang, kunci/kata sandi, hapus data. TerTau membalas di putaran kerja berikutnya.</p>
+<div class="bar">
+  <button class="chip" data-cepat="Kerja sekarang: cari ide baru dan lanjutkan ide terbaik.">Kerja sekarang</button>
+  <button class="chip" data-cepat="Kirim laporan singkat: apa yang sudah dikerjakan dan apa langkah berikutnya?">Minta laporan</button>
+  <button class="chip" data-cepat="Ide mana yang paling kuat sekarang, dan apa buktinya?">Ide terkuat?</button>
+</div>
+<ul id="obrolan"></ul>
+<textarea id="isi" rows="3" placeholder="Tulis pesan untuk TerTau… (Enter kirim, Shift+Enter baris baru)"></textarea>
+<div class="bar"><button class="utama" id="kirim">Kirim</button><span class="catatan" id="status"></span></div>
 </main><script>
-var API="https://njghzieuuopukuagrswu.supabase.co/functions/v1/tertau";
+var API="https://njghzieuuopukuagrswu.supabase.co/functions/v1/tertau",D={jurnal:[],uang:[],pesan:[]},saring="semua";
+function $(i){return document.getElementById(i)}
 function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function tautan(s){return esc(s).replace(/https?:\/\/[^\s<"]+/g,function(u){return '<a href="'+u+'" target="_blank" rel="noopener">'+u+'</a>'})}
 function waktu(t){return new Date(t).toLocaleString("id-ID",{dateStyle:"medium",timeStyle:"short"})}
-function daftar(id,arr,f,kosong){document.getElementById(id).innerHTML=arr.length?arr.map(f).join(""):'<li class="kosong">'+kosong+'</li>'}
+function lalu(t){var m=Math.round((Date.now()-new Date(t))/60000);return m<1?"baru saja":m<60?m+" menit lalu":m<1440?Math.round(m/60)+" jam lalu":Math.round(m/1440)+" hari lalu"}
 function rp(n,mu){return (mu||"IDR")+" "+Number(n).toLocaleString("id-ID")}
-function muat(){
-  fetch(API+"?r=data").then(function(r){return r.json()}).then(function(d){
-    var J=d.jurnal||[],U=d.uang||[],per={};
-    U.forEach(function(u){per[u.mata_uang]=(per[u.mata_uang]||0)+Number(u.jumlah)});
-    document.getElementById("aUang").textContent=Object.keys(per).length?Object.keys(per).map(function(m){return rp(per[m],m)}).join(" · "):"Rp0";
-    document.getElementById("aJual").textContent=U.length;
-    document.getElementById("aIde").textContent=J.filter(function(j){return j.jenis==="ide"}).length;
-    document.getElementById("aGagal").textContent=J.filter(function(j){return j.jenis==="gagal"}).length;
-    daftar("dUang",U,function(u){return '<li class="jual"><b>'+esc(rp(u.jumlah,u.mata_uang))+'</b> · '+esc(u.produk)+' · pembeli '+esc(u.pembeli_anon)+'<br><small>'+esc(u.sumber)+' · '+waktu(u.pada)+'</small></li>'},"Belum ada uang masuk. Angka ini baru bergerak kalau ada pembayaran asli.");
-    var li=function(j){return '<li class="'+esc(j.jenis)+'"><b>'+esc(j.judul)+'</b>'+(j.teks?'<br>'+esc(j.teks):'')+'<br><small>'+esc(j.jenis)+' · '+waktu(j.pada)+'</small></li>'};
-    daftar("dIde",J.filter(function(j){return j.jenis==="ide"}),li,"Belum ada ide tercatat.");
-    daftar("dGagal",J.filter(function(j){return j.jenis==="gagal"}),li,"Belum ada kegagalan tercatat.");
-    daftar("dJurnal",J.slice(0,40),li,"TerTau belum menulis jurnal.");
-    daftar("obrolan",(d.pesan||[]).slice().reverse(),function(p){return '<li class="'+(p.dari==="owner"?"owner":"jual")+'"><small>'+(p.dari==="owner"?"Owner":"TerTau")+' · '+waktu(p.pada)+'</small><br>'+esc(p.teks)+'</li>'},"Belum ada obrolan.");
-  }).catch(function(){document.getElementById("status").textContent="Gagal memuat data."});
+var NAMA={ide:"ide",catatan:"kerja",gagal:"gagal",jual:"jual"};
+function tampil(){
+  var J=D.jurnal,U=D.uang,P=D.pesan,per={};
+  U.forEach(function(u){per[u.mata_uang]=(per[u.mata_uang]||0)+Number(u.jumlah)});
+  $("aUang").textContent=Object.keys(per).length?Object.keys(per).map(function(m){return rp(per[m],m)}).join(" · "):"Rp0";
+  $("aIde").textContent=J.filter(function(j){return j.jenis==="ide"}).length;
+  $("aKerja").textContent=J.filter(function(j){return j.jenis==="catatan"}).length;
+  $("aGagal").textContent=J.filter(function(j){return j.jenis==="gagal"}).length;
+  $("aPesan").textContent=P.length;
+  var akhir=J[0]||P.filter(function(p){return p.dari==="tertau"})[0];
+  $("aktif").textContent=akhir?"TerTau terakhir aktif "+lalu(akhir.pada):"TerTau belum pernah aktif";
+  $("titik").style.background=akhir&&Date.now()-new Date(akhir.pada)<6*3600000?"var(--aksen)":"var(--redup)";
+  $("dUang").innerHTML=U.length?U.map(function(u){return '<li class="item jual"><b>'+esc(rp(u.jumlah,u.mata_uang))+'</b> · '+esc(u.produk)+' · pembeli '+esc(u.pembeli_anon)+'<br><small>'+esc(u.sumber)+' · '+waktu(u.pada)+'</small></li>'}).join(""):'<li class="kosong">Belum ada uang masuk. Angka ini baru bergerak kalau ada pembayaran asli.</li>';
+  var q=$("cari").value.trim().toLowerCase();
+  var L=J.filter(function(j){return (saring==="semua"||j.jenis===saring)&&(!q||(j.judul+" "+j.teks).toLowerCase().indexOf(q)>=0)});
+  $("dJurnal").innerHTML=L.length?L.map(function(j){return '<li class="item '+esc(j.jenis)+'" title="Klik untuk buka/tutup"><b>'+esc(j.judul)+'</b>'+(j.teks?'<div class="isi potong">'+tautan(j.teks)+'</div>':'')+'<small>'+(NAMA[j.jenis]||esc(j.jenis))+' · '+waktu(j.pada)+'</small></li>'}).join(""):'<li class="kosong">'+(J.length?"Tidak ada yang cocok.":"TerTau belum menulis jurnal.")+'</li>';
+  var box=$("obrolan"),bawah=box.scrollHeight-box.scrollTop-box.clientHeight<40;
+  box.innerHTML=P.length?P.slice().reverse().map(function(p){return '<li class="pesan '+(p.dari==="tertau"?"tertau":"owner")+'"><small>'+(p.dari==="tertau"?"TerTau":"Owner")+' · '+waktu(p.pada)+'</small><br>'+tautan(p.teks)+'</li>'}).join(""):'<li class="kosong">Belum ada obrolan.</li>';
+  if(bawah)box.scrollTop=box.scrollHeight;
 }
-document.getElementById("kirim").onclick=function(){var t=document.getElementById("isi").value.trim();if(!t)return;
-  fetch(API+"?r=pesan",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({teks:t})}).then(function(r){if(!r.ok)throw 0;document.getElementById("isi").value="";muat()}).catch(function(){document.getElementById("status").textContent="Pesan gagal terkirim."})};
-muat();setInterval(muat,30000);
+function muat(){fetch(API+"?r=data").then(function(r){return r.json()}).then(function(d){D.jurnal=d.jurnal||[];D.uang=d.uang||[];D.pesan=d.pesan||[];tampil()}).catch(function(){$("aktif").textContent="Gagal memuat data"})}
+function pilih(j){saring=j;[].forEach.call(document.querySelectorAll("#chips .chip"),function(c){c.classList.toggle("aktif",c.dataset.j===j)});tampil()}
+function kirim(t){t=(t||$("isi").value).trim();if(!t)return;$("status").textContent="mengirim…";
+  fetch(API+"?r=pesan",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({teks:t})}).then(function(r){return r.json().then(function(b){if(!r.ok)throw b.galat||"gagal";$("isi").value="";$("status").textContent="terkirim";muat()})}).catch(function(e){$("status").textContent="Pesan gagal: "+e})}
+document.addEventListener("click",function(e){
+  var k=e.target.closest(".kartu");if(k){var s=k.dataset.saring;if(s==="uang")$("hUang").scrollIntoView({behavior:"smooth"});else if(s==="obrolan")$("hObrolan").scrollIntoView({behavior:"smooth"});else{pilih(s);$("hJurnal").scrollIntoView({behavior:"smooth"})}return}
+  var c=e.target.closest("#chips .chip");if(c){pilih(c.dataset.j);return}
+  var q=e.target.closest("[data-cepat]");if(q){kirim(q.dataset.cepat);return}
+  var i=e.target.closest("li.item");if(i&&!e.target.closest("a")){var x=i.querySelector(".isi");if(x)x.classList.toggle("potong")}
+});
+$("cari").oninput=tampil;$("kirim").onclick=function(){kirim()};
+$("isi").onkeydown=function(e){if(e.key==="Enter"&&!e.shiftKey){e.preventDefault();kirim()}};
+$("segarkan").onclick=function(e){e.preventDefault();muat()};
+muat();setInterval(muat,20000);
 </script></body></html>
