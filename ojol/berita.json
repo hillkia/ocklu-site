@@ -1,7 +1,75 @@
 {
- "w": "2026-10-23T00:11:19Z",
+ "w": "2026-10-23T01:04:40Z",
  "dari": "Kroog",
  "berita": [
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-22T23:10:00Z",
+   "media": 3,
+   "judul": {
+    "id": "Menperin Usul Mobil Hybrid Bisa Bebas Ganjil Genap-Dapat Parkir Khusus",
+    "en": "Menperin Usul Mobil Hybrid Bisa Bebas Ganjil Genap-Dapat Parkir Khusus"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "CNBC Indonesia",
+    "url": "https://www.cnbcindonesia.com/news/20261022173133-4-778674/menperin-usul-mobil-hybrid-bisa-bebas-ganjil-genap-dapat-parkir-khusus"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-23T00:09:36Z",
+   "media": 4,
+   "judul": {
+    "id": "Menteri UMKM: Ojol Kini Bisa Akses KUR untuk Motor dan Modal Usaha",
+    "en": "Menteri UMKM: Ojol Kini Bisa Akses KUR untuk Motor dan Modal Usaha"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "MetroTVNews.com",
+    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQemhacU5MLTlkWkxhMUtOU2t4TExiTmtDUmhpUFNNeHRSaDZRdS1wMHpkWjFGTW1uUV9vQUlScXUtbWlUd3pnRG0ySkpfdGFkM3g2MFQ5NGRrMmwyY0ZKSmJmMlhjZDg5QmsxaTlXSlY4bFE5VUhKNXhWaDAxNGxiQnNnck1nTFg1MmIwZ29GNS02cXdBclN5Qk5hWGlHTW5ydENV?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-22T22:30:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Begini Penampakan Banjir di Paraguay Usai Diguyur Hujan Deras",
+    "en": "Begini Penampakan Banjir di Paraguay Usai Diguyur Hujan Deras"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "detikNews",
+    "url": "https://news.detik.com/foto-news/d-8718598/begini-penampakan-banjir-di-paraguay-usai-diguyur-hujan-deras"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-22T22:30:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Banjir Meluas di Paraguay, Ribuan Keluarga Terdampak dan Dievakuasi",
+    "en": "Banjir Meluas di Paraguay, Ribuan Keluarga Terdampak dan Dievakuasi"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "patrolihukumindonesia.com",
+    "url": "https://patrolihukumindonesia.com/banjir-meluas-di-paraguay-ribuan-keluarga-terdampak-dan-dievakuasi/"
+   }
+  },
   {
    "jenis": "berita",
    "waktu": "2026-10-22T13:40:17Z",
@@ -55,23 +123,6 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-10-22T14:34:51Z",
-   "media": 3,
-   "judul": {
-    "id": "Menteri UMKM: Ojol Kini Bisa Akses KUR untuk Motor dan Modal Usaha",
-    "en": "Menteri UMKM: Ojol Kini Bisa Akses KUR untuk Motor dan Modal Usaha"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "investor.id",
-    "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPTTFGV3FXZzhJUVRpanFDVFVSOGJsaF81SlB1eUhNSnFSc2tHdTZUblJESlRuY21hdTN5WUc0UWEyelYtVS0zbXctbmhyQTh5c2xoSEY2MG1UYzNBUFU1LTRYbkg2RU5WQ1hLZzhvUnVqWWNOWHFrTXB2UVlkd0dRdDBTQUZEWmVOLTBLVVJSWWxZYkk?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
    "waktu": "2026-10-22T10:51:24Z",
    "media": 4,
    "judul": {
@@ -85,6 +136,23 @@
    "sumber": {
     "nama": "Lensa Hukum",
     "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9tSUNuYnppZVpJYVh4S25nTlRCU1NGanl2OGc0dENHeE5PTzM5cU1jTkpWREN3YktxY3hQcTZ0NFhLYVVSMm5ScTVVNVRPVmNfMVFwZUhhS1R2N1ZnOGQ0eV9rZVBjbVNaUC0wYl9nTElUWVV0?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-22T23:56:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Aturan Turunan Perpres Ojol Ditargetkan Rampung Akhir Desember 2026",
+    "en": "Aturan Turunan Perpres Ojol Ditargetkan Rampung Akhir Desember 2026"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "RRI.co.id",
+    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOcGdhR1RWWGYzSU54ZFp3ZFVXdUFlblVTSlhWaTlRU3V3eUhuQjZpQmZFWkVIQkEwT0ZFVjFlR0MwZmhlaG02dkloMmttLXg0YTBSZDRVc1NhZldBWktJWmtrNGpUdUxFMG1NUFd2ZWJyTHR2VXZXOVdES3Bjak9NMVpwV1d3TGhiQUh0RXpjVmUtdDZUbmdkNUV3SGNvYi1pZFdXSg?oc=5"
    }
   },
   {
@@ -242,7 +310,7 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-10-22T15:45:00Z",
+   "waktu": "2026-10-22T16:02:57Z",
    "media": 1,
    "judul": {
     "id": "Dari Pengemudi Ojol Buka Toko hingga Petani Kopi, OJK Ungkap Manfaat Pembiayaan Usaha",
@@ -254,41 +322,7 @@
    },
    "sumber": {
     "nama": "VOI.ID",
-    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQSzRyRzZqeDdja2RLT2pjTlJmUEQ5SWxyYlVHZmRtaEdEZFAtZ0s1QjNwenRaUURyUGJNVXFFQ09ieDZfR0d2VXB0bXdfWl9sNndaVlN5MktVWExJZGVfVmNJLVNDZVZfM1JGZEZxUnkxU0hwVjloRTJCNTJCU042WUxHQ1loMEVDNEhUN0NQLXZ0RVlpeWJTM2dMOHo5ZmlJMHZWdlVleTlfSDRkWjVHTEpNbXrSAa8BQVVfeXFMTmhON3J5MUU2YjdqbjRfZ0lvMzB4RFltUVNSUW53R0RPdUF2VlEtSXhCcEdMTldDbTZqeUNfYXVlRVg2bTlUMkZGb3BTQWZNMTZweXhLLTVIRjZhOFIyazhDbmd3VUtGOU9KVk0wSGVIYzFrWFZFc2I5NmZwUXdXcjNqanJxUFQxSWFWWU4zOUc3cjZubldIX1V6VXNrOXVjQW1HeDBWMHFNeWlYVURucw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-22T15:45:00Z",
-   "media": 1,
-   "judul": {
-    "id": "From Ojol Driver to Open a Shop to Coffee Farmer, OJK Reveals the Benefits of Business Financing",
-    "en": "From Ojol Driver to Open a Shop to Coffee Farmer, OJK Reveals the Benefits of Business Financing"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "VOI.ID",
-    "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTFBDeUY3QUJ1YzBwUk1DSFpJS3l0MWFLOHVmMTA3a05UTGhyWXJ0TUM4dGJ0UTR4cFlaa0NaWk5ZblV2YVdFck5F0gFCQVVfeXFMT3J2NkM2S1ZvM0Z2bWVTWUgyZjFCRnRzbWpJekFFMTdxVlpocWlLYnFTOEJDc2FIS2dUMnJWUWNaVENn?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-22T09:30:06Z",
-   "media": 2,
-   "judul": {
-    "id": "Prabowo Sebut TPAKD Telah Terbentuk hingga Tingkat Bawah, Ojol dan Santri Jadi Penerima Manfaat",
-    "en": "Prabowo Sebut TPAKD Telah Terbentuk hingga Tingkat Bawah, Ojol dan Santri Jadi Penerima Manfaat"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "RCTI+",
-    "url": "https://news.google.com/rss/articles/CBMiwAJBVV95cUxOY2VtbWVuOEZxa3Nnb2pZN04tcEp5a1pIb0VOcEhZWml6dzJIOG5NT3IyNTBncDUxODN0NzhmeHdMU0pyY3Q2bExlSDVvRlhZcmQyZ2w0WUFxRVpyWVk2aTZITUhfMHNtMC1aNHJqRldpbXE1WGRVeGM3bFJqOHFUbTdXUjZRdzBnNFAxTlRHbHBzTUN2WkxiX3pHai02dTZVUjdmUk5GMzd4SkxhU25vdHVWeEJBRW1oeHkzbHoyWFFwYnNEY2R3QUZlZmU0WVFJa2pYZ2lERFBKVnozYkdwT09LeUQtdzRRcFk2ZnRKY1BxTXQ5NWpPeGU3R3lHQXptWlZkTkw5b3lRUENxT2tjejJvazdzSGdyd19PcmIxamJGMXZaNWNBcHo1ZE1rMlJQRm1KdFJSYXVpZzFtNlU4dw?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOaE43cnkxRTZiN2puNF9nSW8zMHhEWW1RU1JRbndHRE91QXZWUS1JeEJwR0xOV0NtNmp5Q19hdWVFWDZtOVQyRkZvcFNBZk0xNnB5eEstNUhGNmE4UjJrOENuZ3dVS0Y5T0pWTTBIZUhjMWtYVkVzYjk2ZnBRd1dyM2pqcnFQVDFJYVZZTjM5RzdyNm5uV0hfVXpVc2s5dWNBbUd4MFYwcU15aVhVRG5z0gGvAUFVX3lxTE5oTjdyeTFFNmI3am40X2dJbzMweERZbVFTUlFud0dET3VBdlZRLUl4QnBHTE5XQ202anlDX2F1ZUVYNm05VDJGRm9wU0FmTTE2cHl4Sy01SEY2YThSMms4Q25nd1VLRjlPSlZNMEhlSGMxa1hWRXNiOTZmcFF3V3IzampycVBUMUlhVllOMzlHN3I2bm5XSF9VelVzazl1Y0FtR3gwVjBxTXlpWFVEbnM?oc=5"
    }
   }
  ]
