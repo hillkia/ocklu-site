@@ -60,6 +60,14 @@ var k=document.createElement("p");k.textContent=d.kesimpulan;o.appendChild(k);if
  <div class="kartu"><h3>Jujur soal batasnya</h3><ul><li><b>Tidak menjanjikan viral</b> atau jumlah penonton tertentu.</li><li><b>Tidak membuka pembatasan</b> di YouTube, TikTok, Instagram, atau platform lain, dan kami tidak memakai bot, akun palsu, atau trik yang bisa membuat akunmu diblokir.</li><li>Situsmu tetap tunduk pada hukum Indonesia dan aturan penyedia hosting. Bedanya: arsip dan daftar pengikut tetap milikmu, tidak hilang bersama satu akun.</li></ul></div>
 </div>
 
+<h2 id="kartu">Untuk penjual tanpa situs: Kartu Siap Dibaca AI</h2>
+<p>Jualan hanya lewat YouTube, IG, TikTok, Threads, Snack Video, X, FB, WhatsApp, atau Telegram? AI sulit membaca akun-akun itu dan tidak tahu bahwa semuanya milik orang yang sama. Kartu menyatukannya dalam satu halaman yang bisa dibaca AI, lengkap dengan katalog, harga, dan tombol WhatsApp. Contoh: <a href="/kartu/ocklu/">ocklu.com/kartu/ocklu</a>.</p>
+<div class="paket"><!--PAKET:kartu--><!--/PAKET--></div>
+<div id="kartuOwner" hidden class="kartu" style="margin-top:12px"><b>Buat kartu klien (owner)</b>
+<p class="redup">Alamat jadi ocklu.com/kartu/alamat. Setelah dibuat, kirim link edit ke klien: dia mengisi sosmed, katalog, dan harga sendiri dari HP. Kamu tetap bisa mengedit semua kartu dari perangkat ini.</p>
+<label>Alamat<input id="kbSlug" placeholder="mis. toko-budi"></label><label>Nama usaha<input id="kbNama" placeholder="mis. Toko Budi"></label>
+<button class="tombol" id="kbBuat" style="border:0;cursor:pointer">Buat kartu</button><div id="kbHasil" style="margin-top:8px;overflow-wrap:anywhere"></div></div>
+
 <h2>Yang kami janjikan, dan yang tidak</h2>
 <p><b>Dijanjikan:</b> situsmu bisa dibaca dan dipahami AI dan mesin pencari, dengan bukti yang bisa kamu cek sendiri (data produk terbaca, file terpasang, terdaftar di direktori).</p>
 <p><b>Tidak dijanjikan:</b> peringkat tertentu, pasti disebut ChatGPT, atau pasti laku. Itu keputusan Google dan pembuat AI. Penyedia yang menjanjikan "pasti nomor satu" tidak jujur.</p>
@@ -90,11 +98,15 @@ function gambar(){document.querySelectorAll("[data-blok]").forEach(function(w){v
   document.querySelectorAll("[data-t]").forEach(function(el){var k=el.getAttribute("data-t");if(EDIT){if(!el.querySelector("textarea"))el.innerHTML='<textarea data-tk="'+k+'" rows="'+(k==="judul"?1:5)+'" style="width:100%">'+esc(D.teks[k]||"")+'</textarea>'}else el.textContent=D.teks[k]||el.textContent});
   document.getElementById("ownerEdit").textContent=EDIT?"Simpan":"Edit (owner)"}
 document.querySelectorAll(".paket").forEach(function(w){var m=w.innerHTML.match(/data-p="([^"]+)"/g);if(m)w.setAttribute("data-blok",m.map(function(x){return x.slice(8,-1)}).join(","))});
-function muat(){fetch(API+"?r=data",{headers:K?{"x-perangkat":K}:{}}).then(function(r){return r.json()}).then(function(d){if(!d.paket)return;D=d;if(!EDIT)gambar();document.getElementById("ownerBar").hidden=!d.owner}).catch(function(){})}
+function muat(){fetch(API+"?r=data",{headers:K?{"x-perangkat":K}:{}}).then(function(r){return r.json()}).then(function(d){if(!d.paket)return;D=d;if(!EDIT)gambar();document.getElementById("ownerBar").hidden=!d.owner;document.getElementById("kartuOwner").hidden=!d.owner}).catch(function(){})}
 document.getElementById("ownerEdit").onclick=function(){if(!EDIT){EDIT=true;gambar();return}
   var b={paket:[],teks:{}};document.querySelectorAll("[data-p]").forEach(function(c){var o={id:c.getAttribute("data-p")};c.querySelectorAll("[data-f]").forEach(function(i){o[i.getAttribute("data-f")]=i.value});b.paket.push(o)});
   document.querySelectorAll("[data-tk]").forEach(function(t){b.teks[t.getAttribute("data-tk")]=t.value});
   fetch(API+"?r=simpan",{method:"POST",headers:{"content-type":"application/json","x-perangkat":K},body:JSON.stringify(b)}).then(function(r){return r.json()}).then(function(d){if(d.galat){alert(d.galat);return}D=d;EDIT=false;gambar();alert("Tersimpan. Pengunjung langsung melihat perubahan; versi untuk Google & agen AI diperbarui otomatis paling lambat 3 jam.")}).catch(function(){alert("Gagal terhubung, coba lagi")})};
+document.getElementById("kbBuat").onclick=function(){var h=document.getElementById("kbHasil");h.textContent="membuat…";
+  fetch(API+"?r=kartu_buat",{method:"POST",headers:{"content-type":"application/json","x-perangkat":K},body:JSON.stringify({slug:document.getElementById("kbSlug").value,nama:document.getElementById("kbNama").value})})
+  .then(function(r){return r.json()}).then(function(d){if(d.galat){h.textContent=d.galat;return}h.innerHTML='Kartu dibuat: <a href="'+esc(d.halaman)+'">'+esc(d.halaman)+'</a><br><b>Link edit untuk klien (simpan, hanya tampil sekali):</b><br><code>'+esc(d.link_edit)+'</code><br>Halaman publik tayang setelah pembaruan berikutnya (≤3 jam).';try{navigator.clipboard.writeText(d.link_edit)}catch(_){}})
+  .catch(function(){h.textContent="gagal terhubung"})};
 function pesan(t){document.getElementById("ownerPesan").textContent=t}
 document.getElementById("ownerMasuk").onclick=function(ev){ev.preventDefault();var p=document.getElementById("ownerPanel");p.hidden=!p.hidden;if(D&&D.owner)pesan("Perangkat ini sudah dikenali: pakai tombol Edit (owner) di kanan bawah.")};
 document.getElementById("ownerKode").onclick=function(){pesan("mengirim…");fetch(API+"?r=kenali",{method:"POST",headers:{"content-type":"application/json"},body:"{}"}).then(function(r){return r.json()}).then(function(d){pesan(d.galat||"Kode terkirim ke Telegram (berlaku 15 menit).")}).catch(function(){pesan("gagal terhubung")})};
