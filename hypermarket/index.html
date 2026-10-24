@@ -103,7 +103,7 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
 
 <div class="angka" id="angka"></div>
 
-<nav class="tabbar" id="tabbar" aria-label="Bagian dasbor"><a href="#exit">Exit goal</a><a href="#makelar">Pasar Makelar</a><a href="#klien">Klien Khusus</a><a href="#jemput">Jemput Bola</a><a href="#turnamen">Turnamen</a><a href="#ofinpay">Ofin Pay</a><a href="#obrolan">Obrolan agen</a><a href="#arus">Rumus Arus</a><a href="#radar">Radar Niat</a><a href="#cari">Cari agen</a><a href="#bicara">Bicara dengan agen</a><a href="#gibberlink">Gibberlink</a><a href="#datang">Agen datang</a><a href="#agenKita">Agen kita</a><a href="#detak30h">Detak 30 mnt</a><a href="#belanja">Cara belanja</a><a href="#manusia">Pengunjung</a><a href="#uang">Alur uang</a><a href="#jual">Yang dijual</a><a href="/ofin/">Ofin ↗</a></nav>
+<nav class="tabbar" id="tabbar" aria-label="Bagian dasbor"><a href="#exit">Exit goal</a><a href="#penjaga">Penjaga</a><a href="#makelar">Pasar Makelar</a><a href="#klien">Klien Khusus</a><a href="#jemput">Jemput Bola</a><a href="#turnamen">Turnamen</a><a href="#ofinpay">Ofin Pay</a><a href="#obrolan">Obrolan agen</a><a href="#arus">Rumus Arus</a><a href="#radar">Radar Niat</a><a href="#cari">Cari agen</a><a href="#bicara">Bicara dengan agen</a><a href="#gibberlink">Gibberlink</a><a href="#datang">Agen datang</a><a href="#agenKita">Agen kita</a><a href="#detak30h">Detak 30 mnt</a><a href="#belanja">Cara belanja</a><a href="#manusia">Pengunjung</a><a href="#uang">Alur uang</a><a href="#jual">Yang dijual</a><a href="/ofin/">Ofin ↗</a></nav>
 <p id="iklanKecil" hidden style="font-size:13px;margin:6px 0 0;padding:6px 10px;border:1px dashed currentColor;border-radius:8px;opacity:.75"></p>
 <h2 id="exit" data-w="peristiwa">Exit goals · jalan sampai bisa dijual</h2>
 <div class="panel"><ol class="tujuan" id="tujuan"></ol><p class="kosong" id="tujuanKet" style="margin:12px 0 0"></p></div>
@@ -157,6 +157,13 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
       <p class="kosong" style="margin:8px 0 0"><b>Cara pakai hasilnya:</b> klik "Salin alamat", lalu di Claude buka Pengaturan → Konektor → Tambah konektor kustom, tempel alamatnya. Sumber: registri MCP resmi.</p>
     </div>
   </div>
+</div>
+
+<h2 id="penjaga-judul">Penjaga OCKLU · keamanan semua dasbor</h2>
+<div class="panel" id="penjaga" style="scroll-margin-top:64px">
+  <p class="kosong" style="margin:0 0 12px">Setiap pengunjung Hyper Market dan TerTau dinilai satu penjaga yang sama. Browser biasa dan agen yang belanja lewat; agen AI, skrip, dan bot tercatat. Yang memindai celah (.php, wp-login, ../, injeksi), membanjiri permintaan, atau mengincar tombol owner langsung dicekal di semua dasbor oleh agen penjaga MICHAEL, dan owner dikabari lewat Telegram.</p>
+  <div class="angka" id="pjAngka" style="margin:0 0 12px"></div>
+  <ul class="feed" id="pjDaftar"></ul>
 </div>
 
 <h2 id="makelar-judul">Pasar Makelar · semua industri</h2>
@@ -332,6 +339,15 @@ var PLANET=[
 var S=null, aliran=[];
 function ls(k,v){try{if(v===undefined)return localStorage.getItem(k);if(v===null)localStorage.removeItem(k);else localStorage.setItem(k,v)}catch(e){return null}}
 function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+// Penjaga OCKLU: data dari otak penjaga bersama (pj_ringkas), sama dengan panel di TerTau.
+var PJ_JENIS={agen:"agen masuk",curiga:"curiga",php:"pola serangan",probe:"alat pemindai",banjir:"banjir permintaan",ditolak:"ditolak (sedang dicekal)",lihat:"lihat"};
+function muatPenjaga(){fetch("https://njghzieuuopukuagrswu.supabase.co/functions/v1/tertau?r=penjaga").then(function(r){return r.json()}).then(function(d){
+  document.getElementById("pjAngka").innerHTML=[[d.pengunjung_24j,"pengunjung 24 jam"],[d.agen_24j,"agen/skrip/bot 24 jam"],[d.curiga_24j,"perilaku curiga"],[d.ditolak_24j,"permintaan ditolak"],[d.cekal_aktif,"sedang dicekal"]]
+    .map(function(a){return'<div class="a"><b>'+Number(a[0]||0)+'</b><span>'+a[1]+'</span></div>'}).join("");
+  var L=d.terbaru||[];document.getElementById("pjDaftar").innerHTML=L.length?L.map(function(x){var bahaya=/php|probe|banjir|ditolak/.test(x.jenis);
+    return'<li><time>'+lalu(x.pada)+'</time><b>'+esc(x.label)+'</b> #'+esc(x.siapa)+' · '+esc(x.situs)+' · '+esc(x.rute||"-")+' <span class="chip'+(bahaya?'':' ok')+'">'+esc(PJ_JENIS[x.jenis]||x.jenis)+'</span>'+(x.alasan?'<br><span class="kosong">'+esc(x.alasan)+'</span>':'')+'</li>'}).join("")
+    :'<li class="kosong">Belum ada agen atau ancaman tercatat.</li>'}).catch(function(){})}
+setTimeout(muatPenjaga,800);setInterval(muatPenjaga,60000);
 function lalu(iso){if(!iso)return"belum";var d=(Date.now()-new Date(iso).getTime())/1000;if(d<60)return"barusan";if(d<3600)return Math.floor(d/60)+" mnt lalu";if(d<86400)return Math.floor(d/3600)+" jam lalu";return Math.floor(d/86400)+" hari lalu"}
 
 // tema
