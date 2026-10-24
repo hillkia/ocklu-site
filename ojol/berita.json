@@ -1,11 +1,11 @@
 {
- "w": "2026-10-23T23:53:21Z",
+ "w": "2026-10-24T00:56:46Z",
  "dari": "Kroog",
  "berita": [
   {
    "jenis": "berita",
-   "waktu": "2026-10-23T06:05:00Z",
-   "media": 4,
+   "waktu": "2026-10-23T12:25:00Z",
+   "media": 5,
    "judul": {
     "id": "Google Maps Hadirkan Gemini di Apple CarPlay untuk Bantu Pengemudi",
     "en": "Google Maps Hadirkan Gemini di Apple CarPlay untuk Bantu Pengemudi"
@@ -15,8 +15,42 @@
     "en": ""
    },
    "sumber": {
-    "nama": "VOI.ID",
-    "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQNGlINGd3MXpNNVdieEpNalliQXJIWmtfRVR1aktuMUhUS21WWUI0UFBxNmcxQlRtQTVqZUFwTWhXZXZIZ0p0SVdBYmx6cFpQbFJmMTZVRzk0TmpyUFY4SnFaa2xxdC1ZYnJhZUpjVjI0OXFidi1YUXlLYnFYUE1xdF80VVlROFV5MmY4VUhCSTBnb0dsQ2J4TmZnblNkelnSAZcBQVVfeXFMTnNrZ1lJdS04Z1RVRGltLVl4WHM0ZzJicWt5aHJuVlM0dXNkVzFnNGVXSFJSdUc3V1pheW1ReU4yMUpYZEJJMVc3Wnl5ZzZ5UXhjRXVHdW1MZGpOdElIbmNRVXRINnhPSDJDaTlfMTgxVTR6N2pDUUxlT2MySHU5WVAwTHVUb2VheGZMNUVpeDZmZkxWQU9fNA?oc=5"
+    "nama": "TecnoAndroid",
+    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPbWJzVENiSC1ORXRjaWVqYzZvSXRFa2hqRTRvRlpwLXJycGtZOTdPWUZlZzlCLWE5QWk3ck1pMmdRdmQtZ3h0QmtNWEd0cUNuV3BvSHd5RWZUVy1HeE5YOHFJQVVQaFpNaDlnWEJZVHZ0TUtsZXQ0dk0yNFdfYWRIaTduUkY0MGxzQjFhdFRPeVJ1TXZsLXNaYVRTSFV3OERKMlVNd0RIaw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-23T22:45:24Z",
+   "media": 2,
+   "judul": {
+    "id": "Turun Langsung ke Warung Ojol Kamtibmas, Kapolres Kukar Pastikan Layanan Kesehatan Gratis Menyentuh Masyarakat",
+    "en": "Turun Langsung ke Warung Ojol Kamtibmas, Kapolres Kukar Pastikan Layanan Kesehatan Gratis Menyentuh Masyarakat"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Target Hukum",
+    "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPMC1WOHp3eW1zbkxGdVRpRDZhc2NfQi1uaUF3Ulh0U3pjMjh6MGk2ZFE5SkxUUWlEdWxNMVVMR3N4RklPNExtLVNXMWMySlpkWVEtVjRqN2doVkpkVmxNRWJVR0h2ZlEyMnJEUFl3T1duaGNpZkpXOFhLdUt0bVBxbWMwYU0ydFgyS193Z2g1MENWa1FvRHVZcktjUVN4Zk9xQ0RBam1IVTU5M2kzNTNNTEVGV3NrQmxtUnViSXh4UlFHSWR6T205QWlfQ241LU0?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-23T05:59:43Z",
+   "media": 7,
+   "judul": {
+    "id": "KUR untuk Ojol Dibuka, Pengemudi Bisa Ajukan Kredit Motor dan Modal Usaha",
+    "en": "KUR untuk Ojol Dibuka, Pengemudi Bisa Ajukan Kredit Motor dan Modal Usaha"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Good News From Indonesia",
+    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPcWVCenBhNXVNNWtJTmlfZXo4dll1TDhia1A2WnNrcDFEcG13T0dwU2xkYVBjc3pzTUw1SV9hNHh4SUd4QnZxV083b09fWXFsOVdmT3RYOGxJWUczSWZSLXlEb2Qxa3RaWkdlc0RjYlVXNVhLN2xGWFVZUE5CakZPeXdGbXRwLWR0eFAyOThSMWtLakowTGJyTjkxZlR4UGJ4eGVqV0ozbHRLZXRFVUM0?oc=5"
    }
   },
   {
@@ -34,23 +68,6 @@
    "sumber": {
     "nama": "detikOto",
     "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPbEN4c3dOYk9oZmxJdVlGX3k4Qjd0Zk14SWk5aDBmRFFhRGNxeTJhSXFQd2poSzNKay1FbnJTYVNUY2prWjZMMF9FZWhDVXRWWVFpdm4ySjV0aEgxQWhxbEJqd3MtMXc3cl9EaWdmR2huclAtNk91c3BxWWE5dnZ2cEZWdHRhMHFaUnBsRmFkeTdPdndkVnpEV01pTWVMWGVTYVpMXzRhVXBJZXlvVkhCa9IBtgFBVV95cUxPTmxBVTV6UXRCLTZ2UEhqb2lMZDg0a3hiMVM1TWhCcFlQVTI4MUtIWG9lcVh0V0NvcG90U2I5ZWFEdnFyXzVPZHRnMm9UaGhMNzhodFNOUktvd2d2OEtOZlZpT2RzRmhrNTJ1Q1FrTG9ISlVKTjZGRDBXc1NNNFkwZFZEaUt4TFdEc0hJUzdheG10bjhNa0lLZE0zY081dUJHekF2VkkyZVJmWkFzSlEyWERvdnFTdw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-23T05:59:43Z",
-   "media": 6,
-   "judul": {
-    "id": "Pengemudi Ojol Diusulkan Bisa Akses KUR untuk Motor dan Modal Usaha",
-    "en": "Pengemudi Ojol Diusulkan Bisa Akses KUR untuk Motor dan Modal Usaha"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Good News From Indonesia",
-    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPcWVCenBhNXVNNWtJTmlfZXo4dll1TDhia1A2WnNrcDFEcG13T0dwU2xkYVBjc3pzTUw1SV9hNHh4SUd4QnZxV083b09fWXFsOVdmT3RYOGxJWUczSWZSLXlEb2Qxa3RaWkdlc0RjYlVXNVhLN2xGWFVZUE5CakZPeXdGbXRwLWR0eFAyOThSMWtLakowTGJyTjkxZlR4UGJ4eGVqV0ozbHRLZXRFVUM0?oc=5"
    }
   },
   {
@@ -153,57 +170,6 @@
    "sumber": {
     "nama": "Jambiupdate.co",
     "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOVXFEZU11Qk84Um5QdWZfUUw1SmFlYlpobXBiRWg0bGl5bXpJZTltXzZjckVxNnJQcjU0SXFfT0N6Yy1RZzJ1RmZGQVF6R1JmcENIWC1hRm41cHYwUjN5QTJFUkNUeHQ1ck9wZEJhNS1iemZFVzVtTTVyOV83R3dzTDU5cWJKWDBSYkdmbTVvcmhQRWY2RTQwRklWUFBSVHpDbHNOU1piSWZIbkw5NTJMR2NKRk9tM1lTVEV3M2JCTHV6WUNKYUl6TGYtUGd4YVlBQ3Nz?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-23T15:40:03Z",
-   "media": 1,
-   "judul": {
-    "id": "Bupati dan Kepala Kejaksaan Hadiri ANNIVERSARY FORBETA ke-1, Kapolres Tangerang TakTerlihat",
-    "en": "Bupati dan Kepala Kejaksaan Hadiri ANNIVERSARY FORBETA ke-1, Kapolres Tangerang TakTerlihat"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Antero.co",
-    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNblFmRG91NFpDT2JvV0REbFpaM2c1MDg2Y21KRG4yTllQbnNSZW1ScU93bVlRSEtQbDBRbnhXTnhNb3A4V1QyX2FVdjFDcHI4YUFNN3ByWm1fMC13OGNDN094V2k0SHljSl9MYWgxeDl6ZmZVUmRySmdCRUhaYjFHNGhGUXBEUUZxRW9Rb25mQVAwclYzUmpaTGlXdnhkblFlbXZDMlRpYkZKcGxaeFpvUmdacm44QQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-23T15:21:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Pengemudi Ojol Terlindas Taksi Online di Jaksel, Sopir Diduga Hendak Kabur hingga Naik Trotoar",
-    "en": "Pengemudi Ojol Terlindas Taksi Online di Jaksel, Sopir Diduga Hendak Kabur hingga Naik Trotoar"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Tribunjakarta.com",
-    "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQN2ZhN1dUS2t4cU56RC13N0x2eHlQRnpkVFBIQmdDSHAtQ0E5UUJockFzRXUwSXBmNGZaZFRIUU95SXVVUlFCY19HMXhvRGlZZlRnRENMMFdkTHQ2VFpPSVJXb3l0M21SU1Fsemo1VkVpSmUyelZhUWZyVDBoX0E2S2oxWUxIU0xfUlA4UUVMNi1YYWxJTkxaSE5fRF9ENk5aLVJDWGpLcEpfZnNzOWRQWkhDYUF6RnBpN1dQYXpReTVnRXVGWDFQNmw2aE5kQWJaS0pGNXRn?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-23T15:12:30Z",
-   "media": 1,
-   "judul": {
-    "id": "Motor Listrik Taran Lebih Bertenaga dari Porsche Macan",
-    "en": "Motor Listrik Taran Lebih Bertenaga dari Porsche Macan"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "SINDOnews Otomotif",
-    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOZlZJWHNwSjVwcUR3RktGNU1PLW9udDZTY2VDUzU0MmZXc3dQck1PdXpwbDNnN2pWSUFBVTNqU2lkVmRXdlJyNk9JVVg3dTRQOUZ3NVZkc1pLY3BEM3YtOV9zSGZSLUVEMHN1WkdXUWZYcUpBMFY4SUxQQVdYVEdEemJrMWhkWnJPdmFQYnVtOERwUVFGZnNfcUhBNTJkZ1UxdFNZRDBTUkZpYzdQVWRZaEEzUdIBuAFBVV95cUxPMlVmczJWTW0xaWVDRFBCWHkyc3F6NnhXZkR3ZUNDS09hYmhJWDJTOVJESGdBYVIwX2c5TVdMS0tja3MwbFA2aUtTWURPUnM0S0tWZ3ZKcFJLREpHRjRFQzdQVXRmZHRxaUtrN2Y0aldsN0treXhWcVhLbFYza2VFOURLUUhoQkFwRUpReWlfQWJzbEFvcUl5SGpodndpd3Fnd1luTTJVcnNkV2YxX2UwQi1RTjFqcmhJ?oc=5"
    }
   }
  ]
