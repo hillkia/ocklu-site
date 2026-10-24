@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Eksperimen TerTau</title>
+<title>TerTau: toko produk digital OCKLU (template Google Sheets UMKM)</title>
+<meta name="description" content="TerTau, agen AI OCKLU yang mencari uang secara terbuka: template Google Sheets untuk UMKM dan seller Shopee/TikTok Shop, bayar lewat PayPal, file terkirim otomatis.">
+<link rel="canonical" href="https://ocklu.com/tertau/">
 <style>
 :root{--bg:#f6f5f1;--kartu:#fff;--teks:#1d1f24;--redup:#6b6f78;--garis:#e3e1da;--aksen:#0f7b6c;--merah:#b3372f;--kuning:#a86a00}
 @media (prefers-color-scheme:dark){:root{--bg:#121417;--kartu:#1b1e23;--teks:#e9e7e2;--redup:#9aa0a8;--garis:#2c3038;--aksen:#4cc4ae;--merah:#e0776f;--kuning:#e0b04c}}
@@ -41,6 +43,7 @@ button.utama{font:inherit;font-weight:700;background:var(--aksen);color:#fff;bor
 <div id="unduhBox" hidden class="kartu" style="margin:16px 0;cursor:default"></div>
 <h2 id="hToko">Toko TerTau</h2>
 <p class="catatan">Produk digital buatan TerTau. Draf baru dijual setelah owner menekan <b>Setujui &amp; jual</b>; yang dihentikan bisa dinyalakan lagi dengan <b>Jual lagi</b>, dan harga bisa diubah lewat <b>Ubah harga</b>. Pembayaran masuk ke PayPal owner; file terkirim otomatis setelah PayPal mengonfirmasi.</p>
+<p class="catatan">Daftar produk versi teks (untuk mesin pencari dan agen AI): <a href="/tertau/produk/">ocklu.com/tertau/produk</a></p>
 <ul id="dToko"></ul>
 
 <h2 id="hTitip">Titip jual: kami carikan pembeli</h2>
@@ -124,7 +127,7 @@ function tampil(){
   // Saat owner sedang mengetik harga, daftar toko tidak digambar ulang oleh penyegaran 20 detik.
   var T=(D.produk||[]).slice().sort(function(a,b){return (a.status==="berhenti")-(b.status==="berhenti")});if(ubah===null||!$("hargaBaru"))$("dToko").innerHTML=T.length?T.map(function(p){var harga=esc(p.mata_uang)+" "+Number(p.harga).toFixed(2),st=p.status;
     return '<li class="item '+(st==="dijual"?"jual":st==="berhenti"?"gagal":"ide")+'"><b>'+esc(p.nama)+'</b> · '+harga+' · '+(st==="dijual"?"dijual · "+p.terjual+" terjual":st==="berhenti"?"dihentikan":"draf, menunggu persetujuan")+(p.deskripsi?'<div class="isi">'+tautan(p.deskripsi)+'</div>':'')+
-    '<div class="bar">'+(st==="dijual"?'<a class="utama" style="text-decoration:none;padding:8px 16px;border-radius:8px;background:var(--aksen);color:#fff" href="'+API+'?r=beli&id='+p.id+'">Beli '+harga+' (PayPal)</a>'+(PEMILIK?' <button class="chip" data-setuju="'+p.id+'" data-jual="0">Hentikan</button>':''):PEMILIK?'<button class="utama" data-setuju="'+p.id+'" data-jual="1">'+(st==="berhenti"?"Jual lagi":"Setujui &amp; jual")+'</button>':'<small>belum dijual</small>')+
+    '<div class="bar">'+(st==="dijual"?'<a class="utama" rel="nofollow" style="text-decoration:none;padding:8px 16px;border-radius:8px;background:var(--aksen);color:#fff" href="'+API+'?r=beli&id='+p.id+'">Beli '+harga+' (PayPal)</a>'+(PEMILIK?' <button class="chip" data-setuju="'+p.id+'" data-jual="0">Hentikan</button>':''):PEMILIK?'<button class="utama" data-setuju="'+p.id+'" data-jual="1">'+(st==="berhenti"?"Jual lagi":"Setujui &amp; jual")+'</button>':'<small>belum dijual</small>')+
     (ubah===p.id?' <span style="display:inline-flex;gap:6px;align-items:center;flex-wrap:wrap">'+esc(p.mata_uang)+' <input id="hargaBaru" type="number" inputmode="decimal" step="0.01" min="1" value="'+Number(p.harga).toFixed(2)+'" style="width:110px" aria-label="Harga baru"> <button class="utama" data-simpan="'+p.id+'">Simpan</button> <button class="chip" data-batal="1">Batal</button> <small id="hargaPesan"></small></span>'
       :PEMILIK?' <button class="chip" data-harga="'+p.id+'">Ubah harga</button>':'')+'</div></li>'}).join(""):'<li class="kosong">Belum ada produk. TerTau menyimpan produk jadi di sini untuk kamu setujui.</li>';
   var q=$("cari").value.trim().toLowerCase();
