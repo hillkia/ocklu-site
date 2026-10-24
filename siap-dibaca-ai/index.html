@@ -17,7 +17,20 @@ h1{font-size:30px;line-height:1.2;margin:0 0 8px}h2{font-size:21px;margin:36px 0
 <p class="redup">OCKLU · jasa untuk UMKM, seller, dan bisnis online</p>
 <h1 data-t="judul">Siap Dibaca AI</h1>
 <p data-t="pembuka">Makin banyak orang bertanya ke ChatGPT, Gemini, atau Perplexity sebelum membeli, dan makin banyak agen AI yang disuruh majikannya mencari barang. Kalau situsmu tidak bisa dibaca dan dipahami AI, produkmu tidak ikut disebut. Kami pasang data yang dibaca AI dan mesin pencari, dengan cara yang sama seperti toko kami sendiri.</p>
-<p><a class="tombol" href="/ai-readiness/">Cek gratis dulu: apakah situsmu terbaca AI?</a></p>
+<div class="uji-ai" style="max-width:900px;margin:16px auto;padding:16px;border:1px solid #0b7a5e;border-radius:14px;font:16px/1.5 system-ui,sans-serif;box-sizing:border-box">
+<b>Uji baca AI gratis</b><br><span style="opacity:.8">Apakah situsmu bisa dibaca ChatGPT, Gemini & agen belanja? 4 syarat, sekitar 10 detik.</span>
+<form onsubmit="return ujiAI(this)" style="display:flex;flex-wrap:wrap;gap:8px;margin-top:10px">
+<input name="situs" required maxlength="300" placeholder="alamat situs, mis. tokoku.com" style="flex:2;min-width:200px;padding:10px;border:1px solid #9aa4b2;border-radius:10px;font:inherit;background:transparent;color:inherit">
+<input name="email" type="email" maxlength="254" placeholder="email (opsional, untuk laporan)" style="flex:1;min-width:180px;padding:10px;border:1px solid #9aa4b2;border-radius:10px;font:inherit;background:transparent;color:inherit">
+<button style="padding:10px 16px;border:0;border-radius:10px;background:#0b7a5e;color:#fff;font:inherit;font-weight:700;cursor:pointer">Uji sekarang</button></form>
+<small style="opacity:.7">Dengan mengisi email, kamu setuju dihubungi OCKLU soal hasil ini.</small><div class="uji-hasil" style="margin-top:10px"></div></div>
+<script>function ujiAI(f){var o=f.parentNode.querySelector(".uji-hasil");o.textContent="menguji… (±10 detik)";
+fetch("https://njghzieuuopukuagrswu.supabase.co/functions/v1/siapdibaca?r=uji",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({situs:f.situs.value,email:f.email.value,asal:location.pathname})})
+.then(function(r){return r.json()}).then(function(d){o.textContent="";if(d.galat){o.textContent=d.galat;return}var h=document.createElement("b");h.textContent=d.lulus+"/4 lolos · "+d.situs;o.appendChild(h);
+d.cek.forEach(function(c){var p=document.createElement("div");p.textContent=(c.ok?"✓ ":"✗ ")+c.nama+" — "+c.rinci;p.style.color=c.ok?"":"#c0392b";o.appendChild(p)});
+var k=document.createElement("p");k.textContent=d.kesimpulan;o.appendChild(k);if(d.lulus<4){var a=document.createElement("a");a.href="/siap-dibaca-ai/";a.textContent="Perbaiki dengan paket Siap Dibaca AI (garansi uang kembali)";o.appendChild(a)}})
+.catch(function(){o.textContent="Gagal terhubung, coba lagi."});return false}</script>
+
 <div class="kartu utama" id="garansi" style="margin-top:16px"><h3>Garansi uang kembali 100%</h3>
 <p>Kalau dalam <b>7 hari kerja</b> situsmu belum <b>lolos uji baca AI</b>, uangmu kami kembalikan penuh. Hitungan 7 hari kerja dimulai sejak kami menerima akses situs dan data produk yang lengkap.</p>
 <p class="redup">Lolos uji baca AI berarti keempatnya terpenuhi, dan bisa kamu cek sendiri di <a href="/ai-readiness/">ai-readiness</a>: (1) data produk atau layanan schema.org valid dan terbaca, (2) <code>llms.txt</code> tayang, (3) sitemap memuat halaman produk, (4) produk terbaca tanpa JavaScript. Garansi berlaku untuk biaya pemasangan semua paket; biaya bulanan bisa dihentikan kapan saja. Garansi ini tentang terbaca AI, bukan tentang peringkat atau penjualan.</p></div>
