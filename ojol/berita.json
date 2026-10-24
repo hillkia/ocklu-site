@@ -1,7 +1,41 @@
 {
- "w": "2026-10-24T06:54:06Z",
+ "w": "2026-10-24T07:58:09Z",
  "dari": "Kroog",
  "berita": [
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-24T05:06:42Z",
+   "media": 6,
+   "judul": {
+    "id": "Kronologi BYD Tabrak Beruntun 4 Mobil dan Lindas Ojol hingga Naik Trotoar di Blok M",
+    "en": "Kronologi BYD Tabrak Beruntun 4 Mobil dan Lindas Ojol hingga Naik Trotoar di Blok M"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Kantor Berita Kemanusiaan",
+    "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPVFJJUlpSYk9kQkFsV09JTnRsamtwX2tNWURNQnN6VnFUai0zTl8zeWFYQjVkLXZfWkhqM0pfTnBXNEpGb2xGS19zYW9SZkZZVlNRd0Rob3lIZW40eFZOMmp4LTdsMXFUb1BJNkJ0T0hlVE94cUJVXzc2YjBVdmt5X2FUNVc?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-24T05:32:00Z",
+   "media": 4,
+   "judul": {
+    "id": "Sopir BYD yang Tabrak 4 Mobil dan Lindas Ojol di Blok M Jaksel Diamankan Polisi",
+    "en": "Sopir BYD yang Tabrak 4 Mobil dan Lindas Ojol di Blok M Jaksel Diamankan Polisi"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Kompas.com",
+    "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPb3F3QU5RMGxYNXRVLThuLWE1XzhkUmlIUGlEZWprMjY2a2lKS3hzQ1UtM2FwM0NMMzNfV1hKYVNjNHBxZXpzOFA3Wm1MNWtXamJKdWw3cWdwMnZRX1JoVVcxWndDZGhPS2pYaFl2SkZ6TEMzYTQ3bzJWNnB4bFpDQnBKN2U3UUdvTHRnOFVDZ04xUXBTMXdEdS1fZVV2LVJOSmN5eF9xLXVtVG9fUnFXN0VrejU2R3dDZUZSNk9jVDB2RkJOU0dB?oc=5"
+   }
+  },
   {
    "jenis": "berita",
    "waktu": "2026-10-24T02:00:00Z",
@@ -17,6 +51,23 @@
    "sumber": {
     "nama": "Olenka",
     "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPMUhOZXRKelJrR1N5aUIwcXJfem5BNkZWdFZheENOM0trM1UyTnB2YW5TU3EtemduTExfN1JtdVFoNU9FNm1CZHFUb0JnaExFX2hjVld5RVFObU44aURjZXVxYzZJQi1WMXNIY0gwRjc0TEhrTUtrdnRDcFhURl93X1RQOHY4TjTSAYwBQVVfeXFMTkdfMVJDV2c1NGdqLWFicEl6UVlUbVpiS1VraldhdnhVSktTdHE3ZEthWkQ3em5SSm9pWkpJcW5oUlFnNTlSWHA4Y3hBelNXdTZqUnBiVWRQS01PZmQwYWVMcEVOdzZqOTlxRm8wdkZaTklkdWhUYm5nUjJTRi1zSzBrZVR2V1RCaUJ6bm8?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-24T04:11:00Z",
+   "media": 4,
+   "judul": {
+    "id": "Gubernur Al Haris Salurkan 250 Paket Sembako dan Masker untuk Ojol Terdampak Kabut Asap",
+    "en": "Gubernur Al Haris Salurkan 250 Paket Sembako dan Masker untuk Ojol Terdampak Kabut Asap"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Disway",
+    "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQS1loOXBmQmVyaVRhWjZ6M3RMODNpNVpEZ3BjSDNZYVVueVlEbGJ2cWpoMEVVaEtiWkM2dUVhc3RSY21pTTd4ZlBRQzEzSEhDTmJiNzBZSmJ6aWtXellEeE1lb0xYWkV4WXBaQ00tdU1iVHdrRWp1LWpPdVUxWkFuQXZvbHl6VS1waWRMZGU4OGxqSllqVjdJMWowUmxza1E1cHVlR1RySy1nTWNKT3RlYkpaaVRDNnlQZnA0YXN4bGMxSjdOUWRRS2FveEdkZ9IBwwFBVV95cUxOenk1VXMzWVQ5T0JQUFNybTh1VU9YTExvOGlkaVJnNnBfWGRrcnRQeXZKZU1ZWnZUM3VOQlJhalJTMHozVDlib0o1RnlsbzA5R2hIUFhaZ19scmJjVzVTZS1QcS1UWVhNd0NfWFZzbXRGQXJUektfZzVaVU5YaS1aQTNZSUg5Yjd6cWpIcnBYQlE0cFg4WGVsaVFlMTUtZWs2ZzBlVDRMVV9PNU50aVdPNUJud1JzNVMxWDNYRExMaXp6UzQ?oc=5"
    }
   },
   {
@@ -38,19 +89,19 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-10-24T03:54:54Z",
-   "media": 4,
+   "waktu": "2026-10-24T06:54:09Z",
+   "media": 3,
    "judul": {
-    "id": "Kronologi BYD Tabrak Beruntun 4 Mobil dan Lindas Ojol hingga Naik Trotoar di Blok M",
-    "en": "Kronologi BYD Tabrak Beruntun 4 Mobil dan Lindas Ojol hingga Naik Trotoar di Blok M"
+    "id": "Kapolda Metro Jaya Tanggapi Keluhan Pengemudi Ojol Lewat \"Sabtu Berkah\"",
+    "en": "Kapolda Metro Jaya Tanggapi Keluhan Pengemudi Ojol Lewat \"Sabtu Berkah\""
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "شبكة تواصل الإخبارية",
-    "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5jQ08wQUZfdzdmMkNsdWJiN0VsMHdEZko1ODg1NFNrckdRc2l4Nm5zQmJ6aUlQS1NrczMwWFNFWGJqTkFpX3E0RWkzaFh4cFFlbV9N?oc=5"
+    "nama": "Harian Pelita -",
+    "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPLVBXSFdyWTN0YkVOVEZLa09EdFcxQ3NmWGNPMmxBLU1Bazk2aXUydnozZUQwai1YQk1yWmNmZWNITDNtSFFYYnNWcWJhY3Jray1teGU0VEx2c1RVd1Q3NGxHcHpKd1ozTVI5ZFdlZHJ4X3JUak9NSHNEMGZmZElNaDVaQnVFUkZtWVlwaDlSYmlKd3l0QmJ1blpnRjFtdkY4YzlWM01JX0NjN2dDR2FBOVpR?oc=5"
    }
   },
   {
@@ -72,19 +123,53 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-10-24T03:56:40Z",
+   "waktu": "2026-10-24T04:27:31Z",
    "media": 3,
    "judul": {
-    "id": "Mobil BYD Tabrak 4 Mobil dan Lindas Driver Ojol hingga Patah Tulang di Blok M Jaksel",
-    "en": "Mobil BYD Tabrak 4 Mobil dan Lindas Driver Ojol hingga Patah Tulang di Blok M Jaksel"
+    "id": "Pengemudi Ojol Terlindas Taksi Online di Jaksel, Korban Patah Kaki dan Tangan",
+    "en": "Pengemudi Ojol Terlindas Taksi Online di Jaksel, Korban Patah Kaki dan Tangan"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "www.suaralandak.co.id",
-    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9kM0xhVEx0UmtsS0xHcHdaRTMxX1V6bDBPN1VQMVAxTWVtMHNaOGlhMzB6enU0alZ3YlBCZ2stZllsV2lvSEdMUmMzZHc3SGFrcGRXcVpUT0ZiRGJrZ25ZdVZ6RngwczBFU09IRQ?oc=5"
+    "nama": "Suara.com",
+    "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNdVIzTThKLTNUZU1YX1AtZTAyOW1Yc3NYcVRXY21rQWd4b0VLOTk5UllJaVg4c01wa1JSMElscEw2RnI5MzZGaTBnM0tCeHFaRzdnY2l1MnZ3c2xleWZSZ3d3aExQbklMeHo4LWl6OXJXS1B4VFF3anp6T2lzOHpTLW9RTW9vRUFGTzBFUFBaWmR6WkFVc1F0WHBtdW56WG42SURPemozMFpzeVRxZXpKSnpzd3JaQmZUT2U3OUNrd3RhalU5d0xhT2lNcUFBQlBDSnfSAdIBQVVfeXFMTWtuNlF0eWQ5Mko2ZlJRb09mRmd6clNJZlVfR3VQLXp3T3RXY0ZTMko0Smx5ei1sUFRmMzU0ODNSNXh0NkdvcXQtZnZKR1YxYlI2d3dsbVhSSi1jQmVJV0JodUlOQmxfT3NaNmVPblBQOW9MT0cxNWs0Z0M3MmRNVTBSeDhTTjJJWGZqVjA0OVRBQlNNOFRYNXc4aXVpZG5JdUprNEZ5TlItVkJ3QVpGQkNDSzU2TkdNUlpuNVFqZGtaUkYwVWZYNWVGVmctYW9WNC1R?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-24T04:23:00Z",
+   "media": 3,
+   "judul": {
+    "id": "Driver Ojol di Blok M yang Dilindas Mobil BYD Alami Patah Kaki Kiri",
+    "en": "Driver Ojol di Blok M yang Dilindas Mobil BYD Alami Patah Kaki Kiri"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Kompas.com",
+    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNaUlQQUVoRXdqWjJDMGRfMFQ0X0J1X0k3MDhuRF80MzdGQlV5c1FlZU53MWk5cnl4eTQtM2VjVExhY0hMb3ZRMFZhd0RwQ1dqbGx4OGJsZHBCajExeEl4aVV4dVpXMnpHT3ZWbzg3VG8wSnFlaks3TVVKdmw0a2tzTHhfckJQTWM5d25CZkxEVHNpS1NpeFd1NTNyRHBNbEhMZnpXeFl5SThONkw0a2tlNlVXLXgwODYwTTB1Vk5jNUk?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-24T05:23:00Z",
+   "media": 2,
+   "judul": {
+    "id": "Detik-detik BYD Lindas Ojol hingga Patah Kaki",
+    "en": "Detik-detik BYD Lindas Ojol hingga Patah Kaki"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "tangselpos.id",
+    "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE4xcng1U0hfNlRDd3FwYVBwQkh0OTdkd3hvVkZDQVFYaXJKbEFTOGRpTXNOTkdmQzZDTTQzVV9UYnZPenVqb2k1OWFSRzUtQ1EzODNEUGo4bjRBX3U4MVFYSTFCVDhzM0dNQ1hHalBhYll3NElwUTlhN1dR?oc=5"
    }
   },
   {
@@ -123,23 +208,6 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-10-24T01:05:19Z",
-   "media": 2,
-   "judul": {
-    "id": "Pengemudi Ojol Terlindas Taksi Online di Jaksel, Korban Patah Kaki dan Tangan",
-    "en": "Pengemudi Ojol Terlindas Taksi Online di Jaksel, Korban Patah Kaki dan Tangan"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Tribunnews.com",
-    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOdVdZUS1xSTFoMTFJUVBMa3V0bktBeEFlazlUTlZzUXRPaFpuOTFCbk8yLVItY1NTcTlRRWduWGl5R2lQZmNWWHIwTGNQU1ZXM0dlSUVybGVPbkUzZUVjRmxGNnVTRlRJTW1PbjZxU0ZjWUFGY19JemZyYmliMnA4N0JLbmZhQndqTDN0bHppQml2WmU5LUc2UXQ0X3FpdHhHa19jODZMWm9RR21KTTdUS20zTTZNRVpp?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
    "waktu": "2026-10-24T00:44:42Z",
    "media": 2,
    "judul": {
@@ -153,6 +221,91 @@
    "sumber": {
     "nama": "TribunWow.com",
     "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOLVh2OVNEV0NERmxGZWNhZnQ5V3l4WDB0eVA4S2pBM21rS2poXzd1N0dxejI1V0xXOXNra2syMmdVNmtvWS0tekFOM2ZoaUZFRXctTmIyUlNNYndHWmFJZS1feDMyY0hDandhUFRwYXVRUHhwNmdpdUhVcGpnOFBVd0V1QXBMTnVhVVBlTnlScnJVT3FLcUdZRFY5YzVoVUxxMVpxOFNoM2hFcVBHejU2X0pfbDlUMlpqdXhfMXpMV09lcTkySWhBRk44SEg5QQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-24T06:44:29Z",
+   "media": 1,
+   "judul": {
+    "id": "Kronologi Kecelakaan Beruntun di Panglima Polim: Ojol Patah Kaki, Sejumlah Kendaraan Rusak",
+    "en": "Kronologi Kecelakaan Beruntun di Panglima Polim: Ojol Patah Kaki, Sejumlah Kendaraan Rusak"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "patrolihukumindonesia.com",
+    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQb3dPc0NBMmFKc04xV3ltZkIydVppdmNQWUlVWE1ISERlYk1QUUgxVnZucXM4OXpJNl9HTjQ4NzlScUd0LTZ5Q0h5dXRQMXNVNnhaTVZMbDR3WFRNMzZ1c3g3bEhHbFlOLWJDVUhSdjZ4bjA3SF8tdklGZUt1SERRcEM1UVF4dHRPdWFjR3I2Y2pzT01pVWdQbjhqd1V4SVlpd0VKVTYxdWpzdTE4eXhEOExZcHo4MFRjM2QzY2xyaHI?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-24T06:19:00Z",
+   "media": 1,
+   "judul": {
+    "id": "GBI ROCK Palangka Raya Bagikan Sembako kepada Ojol dan Porter Terdampak Karhutla",
+    "en": "GBI ROCK Palangka Raya Bagikan Sembako kepada Ojol dan Porter Terdampak Karhutla"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "RRI.co.id",
+    "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNRzlhQkpvYUJzYU56a1BUNlVpVGFqaURPaDRuYnY0dVR1Y0R6VF9RQW1LNlp2MDdrLThHY3lweVdPSXdrNHNIemJPcTNlUV90eGd2MjJRNnR0TU9INXl3VVh4VkNMMVg1TjZjeXE2NXZ6d2IwNEdYOXI4MW84V2x0YXZBNzJwRWY5c3Nhb1pLaUtDWXpEZTliX1NqNF84Tk9rSkE0TTJfTXpXYjhHYU5zX0pTR1E0RGtScnpxd0JubG9faGlrWW9rSg?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-24T06:17:15Z",
+   "media": 1,
+   "judul": {
+    "id": "Kabakom Tegaskan Pemerintah Berpihak kepada Buruh: Upah Naik Hingga 6,5 Persen, Bagi Hasil Ojol 92 Persen",
+    "en": "Kabakom Tegaskan Pemerintah Berpihak kepada Buruh: Upah Naik Hingga 6,5 Persen, Bagi Hasil Ojol 92 Persen"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Radio Idola Semarang",
+    "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOaklLWlhOc3JJZFdWX2dBRm82WDVSNllQYlIyMDFQOWkwbzNoQk5xb0xhRE1HRjl0M1JEcV9waExXZG9mYmRYZHVVX2Njc3B3eE1Jd2dfM0h2Vm1FSi16RkV4VlJYZlZCNlQwazZMdUI5NnhJWGVENElwMzBoWEV0YmZ6S19YZl9VQWJjVURHZ2czc28xcjhxUmZBWEhjT1JjWTBXM2R0RHkzdzlDTkVWMjV6Y3h6V0ZTY2lib1FOblJsWlc4YU9XQ3BqZw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-24T05:26:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Tanpa Suara, BYD Atto 1 Seruduk Mobil dan Lindas Pengemudi Ojol",
+    "en": "Tanpa Suara, BYD Atto 1 Seruduk Mobil dan Lindas Pengemudi Ojol"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Rmol.id",
+    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNV1ljTWRzdHdQY0lFUzhOcTRiLUVGMDYxVFBDSldHdmIwYnlvaU96eTRzOFJuR0hLT01ILUcyZ2xwNHRNUDhMWEp2Nlh6enJPYnZNTFRvcU56S0Z3bW5Gc3lucnlKUlBmc2p1VnpWbW9ULVFpYW94MXNYYTBZRUtBOGF1Z000bGZMdVdYcUJ1RHVfd0hHOUs5cGNtRnpIT19yaU1j?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-24T04:50:48Z",
+   "media": 1,
+   "judul": {
+    "id": "Jumat Berkah Ditlantas Polda Kaltim, Perkuat Kedekatan dengan Komunitas Ojek Online",
+    "en": "Jumat Berkah Ditlantas Polda Kaltim, Perkuat Kedekatan dengan Komunitas Ojek Online"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "TribrataNews Polda Kaltim",
+    "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOZVJ2TjJOaWUxU3NBNDlJOTd6LVFURkV5ckJDYVVjQkh6Z0ZkUnZZbzh2blZKMERrMEd3Z1pRVjFlQnVNNVllTmFwWldibnBvanZUWEFEZlQxZlRDWWZrNG9XY2twb1d5ejhVMHYzZ2toMnZ2UHRjYjNQNmg4RGplTWJnLTJla2gzMmNDOGF6ZGs3a2dRSkJCV2dPc3QyYWFsajktcFpTV2hZV3E3QjJPWURaX0owVVlzQU93eWRmUUFFcnZ5emhjdlln?oc=5"
    }
   },
   {
@@ -191,19 +344,19 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-10-24T04:23:00Z",
+   "waktu": "2026-10-24T04:34:00Z",
    "media": 1,
    "judul": {
-    "id": "Driver Ojol di Blok M yang Dilindas Mobil BYD Alami Patah Kaki Kiri",
-    "en": "Driver Ojol di Blok M yang Dilindas Mobil BYD Alami Patah Kaki Kiri"
+    "id": "Berita Video - Pengemudi Ojol Suarakan Aspirasi Karhutla Kalsel",
+    "en": "Berita Video - Pengemudi Ojol Suarakan Aspirasi Karhutla Kalsel"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "Kompas.com",
-    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNaUlQQUVoRXdqWjJDMGRfMFQ0X0J1X0k3MDhuRF80MzdGQlV5c1FlZU53MWk5cnl4eTQtM2VjVExhY0hMb3ZRMFZhd0RwQ1dqbGx4OGJsZHBCajExeEl4aVV4dVpXMnpHT3ZWbzg3VG8wSnFlaks3TVVKdmw0a2tzTHhfckJQTWM5d25CZkxEVHNpS1NpeFd1NTNyRHBNbEhMZnpXeFl5SThONkw0a2tlNlVXLXgwODYwTTB1Vk5jNUk?oc=5"
+    "nama": "RRI.co.id",
+    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOU3p6X3FwVUZSeVBnMjFQTF9VY1BOZHBvRzBEUnNmS3p5RjAtSzd1RHhkbERyQktTRldkVWdBVmp2MTY2NUJ1ODRGRkRJRHRKSUM4N0tHWkprQmFiWEw4VldraVdnMXdfZ1FXWW5LWmk2Q21wTHFxZEplbmhnd2xPTGtKMW11bXRzaU5VcXVnVXBhaF9LRnp6dHdwUFZqdw?oc=5"
    }
   },
   {
@@ -276,6 +429,40 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-10-24T03:15:07Z",
+   "media": 1,
+   "judul": {
+    "id": "BYD Atto 1 Tabrak Beruntun di Jaksel, Pengendara Ojol Dilindas hingga Patah Tulang",
+    "en": "BYD Atto 1 Tabrak Beruntun di Jaksel, Pengendara Ojol Dilindas hingga Patah Tulang"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "OWRITE",
+    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPMmNlQmxmSXNHUl9xWGFkN04zT3BMejR2WlQ0RmhINXI3bDZCd0NZTnAwSjl0Y2t4UXF2NlJfLVg0UElCWHhFZExfYzJXNFdwekV3cTQ5NERBTlBVS2RsYU4wWW85VDdxVDlGRmhfbzBqVm8wU1A3cDNacEo2WlhRdFlPbWJPZ0VZNHd4X3JSNW5GdzRQelBONjVqeEZwdnk3Q2YyS1FaQXNZMzdYbTc0SFhreFNpbGE2aUNuV3F4aUZqZWs4Q0E?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-24T03:00:15Z",
+   "media": 1,
+   "judul": {
+    "id": "Polisi Bongkar Kasus Penyelewengan BBM Subsidi di Bangka Tengah",
+    "en": "Polisi Bongkar Kasus Penyelewengan BBM Subsidi di Bangka Tengah"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "detikcom",
+    "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPV1VvTU52SW5SLW53VGw3dmVqUkhIdUkxampmRFpSU3JYeHZ2QUl5bW5VdUdkVkhDU0ZaLU9NeU5LbGhlU2pNSE95c1djRWJ4WVI0LTVOcW9WcVpvOEpnMG15dmUxcUpyVVNUd1dhazJUVUllcE1QbW5oa2VtTm1LM0hTUTA2UTlLOFdwWFhLcDRVakw5WENjTm9fM3duR0piQ1VoTzN6Mm94eHM1QkU0M2NKZHhJeF9pNkNLZkVHZkdhd0FxWnJN0gHHAUFVX3lxTE9XVW9NTnZJblItbndUbDd2ZWpSSEh1STFqamZEWlJTclh4dnZBSXltblV1R2RWSENTRlotT015TktsaGVTak1IT3lzV2NFYnhZUjQtNU5xb1ZxWm84SmcwbXl2ZTFxSnJVU1R3V2FrMlRVSWVwTVBtbmhrZW1ObUszSFNRMDZROUs4V3BYWEtwNFVqTDlYQ2NOb18zd25HSmJDVWhPM3oyb3h4czVCRTQzY0pkeEl4X2k2Q0tmRUdmR2F3QXFack0?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-10-24T02:45:52Z",
    "media": 1,
    "judul": {
@@ -289,57 +476,6 @@
    "sumber": {
     "nama": "Tribunkaltim.co",
     "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxONG9UcHNCOExWa0E0VWRaeDctYnUtdkU4QkNuUDltU3prNTJIZmNyRjJPMzhaZVJ0VmRmQkh1cjJndVdMRVZaTWdXR2JHeUdzVWx3SDV6dWNublFoN3lyUm9teURmWDQ2bnByR20wdGFqUGtYajBMYU5XdmhMaEVXRFowc0JnekR2S2ZUaFYxdGlUNThPQ1B2ZTFVV2pfTkowVXg1YldZS3N2NU9uWGxtQU1lUHhsNWQ0S1ZlbXp3Q3BkYmNMYnFoOXpPVVFCMF9r?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-24T02:00:55Z",
-   "media": 1,
-   "judul": {
-    "id": "Anak Buah Prabowo Putar Otak Cari Jalan Tengah Aturan Turunan Perpres Ojol",
-    "en": "Anak Buah Prabowo Putar Otak Cari Jalan Tengah Aturan Turunan Perpres Ojol"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Bisnis Tekno",
-    "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOaWFTdC1lNnBpdk5Pc0hwUnFtLXBlUVRfMld5My1TSmwtdTJMS1AyZWRNTXFWRWJxQTdvMTkzNm4wSHdreWdqNjdXQ013OEZuVjVyT2UxYnJWeXhLaEtZQUd0X0lNRFRWV2ZvejI2OWtqMmdmYTVZTW5kZ0dCQkxBa1NqcVdYaUVhcEE3c29jMGFtQnVhV0dWTGV0WVdBQUJxSUptUkVBRGhLOU4tNGMzUHZ5cU1ac0hiWVgxV3dYVXFqckY0MEVpMg?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-24T00:22:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Pengujian Motor Listrik Yamaha Rampung, Bagaimana Hasilnya?",
-    "en": "Pengujian Motor Listrik Yamaha Rampung, Bagaimana Hasilnya?"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Kompas.com",
-    "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPQ0VRQ1QxSG8zQ21YNG54NS1PMTBDSkxQX0xqcFpQMklzSzlOUGJ4RWhOWTZOUVBvZFBFSFhqUnUwa0dUWC1ic1pJNEltTjlxV1hUalB3M1J5SlNOdFdEekZvdTk3RHpXVm10Z2xRM1U2OXc5Z2xCQml5by1KTVlxd2JxVnZoTmFOZkx1RW9GbnZ6d1EzLTJtOEdNT19RX0hVcXRYTXNpekE2OWE3RDZPbm83ZlNGaTVwN2d1N0p3?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-24T00:00:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Potret Nyata Sulitnya Ekonomi saat Ini dari Kacamata Ojek Online",
-    "en": "Potret Nyata Sulitnya Ekonomi saat Ini dari Kacamata Ojek Online"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "IDN Times",
-    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPRlJ6cEdIeFR5YW4tSElJSVhDbVBJb3FIbzI2bWNVSlcyNVBGbl9UdXVqbXBMdmdXenJyMEU2aGpjMHNmNXY3a2E5dUhuT2JEQlBPMzUtVWYxcllwdTY0ZVYtUHVSZXcxbGJRWFVvd3pMa3J3MFVIYTBHai1uYjJlZFB1ODM1MkI5LTRMMVY3UkhMTXZiN1doNU5vdFpRSFYwelB1REtVTHlHWUlsbEdyUmIycDE1NnpaYWVVQw?oc=5"
    }
   }
  ]
