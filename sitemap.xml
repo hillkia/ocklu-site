@@ -1266,4 +1266,5 @@
 <url><loc>https://ocklu.com/tertau/produk/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
 <url><loc>https://ocklu.com/siap-dibaca-ai/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://ocklu.com/hypermarket/pasar/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+<url><loc>https://ocklu.com/warung/siap/</loc><changefreq>daily</changefreq><priority>0.7</priority></url>
 </urlset>
