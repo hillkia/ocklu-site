@@ -74,8 +74,8 @@ button.utama{font:inherit;font-weight:700;background:var(--aksen);color:#fff;bor
 <ul id="obrolan"></ul>
 <textarea id="isi" rows="3" placeholder="Tulis pesan untuk TerTau… (Enter kirim, Shift+Enter baris baru)"></textarea>
 <div class="bar"><button class="utama" id="kirim">Kirim</button><span class="catatan" id="status"></span></div>
-<h2 id="hPenjaga">Penjaga OCKLU</h2>
-<p class="catatan">Satu penjaga untuk semua dasbor OCKLU. Setiap pengunjung dinilai: browser biasa lewat, agen AI dan skrip dicatat. Yang memindai celah (.php, wp-login, ../, injeksi), membanjiri permintaan, atau mengincar tombol owner langsung dicekal di semua dasbor oleh agen penjaga MICHAEL, dan owner dikabari lewat Telegram.</p>
+<h2 id="hPenjaga">Grigori, penjaga OCKLU</h2>
+<p class="catatan">Satu penjaga untuk semua dasbor OCKLU. Setiap pengunjung dinilai: browser biasa lewat, agen AI dan skrip dicatat. Yang memindai celah (.php, wp-login, ../, injeksi), membanjiri permintaan, atau mengincar tombol owner langsung dicekal di semua dasbor oleh Grigori (artinya: para penjaga), dan owner dikabari lewat Telegram.</p>
 <div class="angka" id="pjAngka"></div><ul id="pjDaftar" style="margin-top:10px"></ul>
 </main><script>
 var API="https://njghzieuuopukuagrswu.supabase.co/functions/v1/tertau",D={jurnal:[],uang:[],pesan:[]},saring="semua";
@@ -86,11 +86,11 @@ function waktu(t){return new Date(t).toLocaleString("id-ID",{dateStyle:"medium",
 function lalu(t){var m=Math.round((Date.now()-new Date(t))/60000);return m<1?"baru saja":m<60?m+" menit lalu":m<1440?Math.round(m/60)+" jam lalu":Math.round(m/1440)+" hari lalu"}
 function rp(n,mu){return (mu||"IDR")+" "+Number(n).toLocaleString("id-ID")}
 var NAMA={ide:"ide",catatan:"kerja",gagal:"gagal",jual:"jual"},ubah=null;
-// Penjaga OCKLU: tombol owner hanya aktif di perangkat yang dikenali (kunci perangkat dari kode Telegram), tanpa PIN.
+// Grigori, penjaga OCKLU: tombol owner hanya aktif di perangkat yang dikenali (kunci perangkat dari kode Telegram), tanpa PIN.
 var PEMILIK=false,PK="",pjTadi=null;try{PK=localStorage.getItem("pj_kunci")||""}catch(_){}
 function HK(){var h={"content-type":"application/json"};if(PK)h["x-perangkat"]=PK;return h}
-function barPj(){if(pjTadi===PEMILIK)return;pjTadi=PEMILIK;var b=$("pjBar");b.hidden=false;b.innerHTML=PEMILIK?'🛡️ <b>Perangkat owner dikenali</b> oleh Penjaga OCKLU. Tombol toko dan obrolan owner aktif di perangkat ini.'
-  :'🔒 <b>Tombol owner terkunci di perangkat ini.</b> Penjaga OCKLU hanya membuka tombol toko dan obrolan owner di perangkat yang sudah dikenali, supaya agen atau orang lain tidak bisa mengubah toko. Pembeli tetap bisa membeli seperti biasa.'
+function barPj(){if(pjTadi===PEMILIK)return;pjTadi=PEMILIK;var b=$("pjBar");b.hidden=false;b.innerHTML=PEMILIK?'🛡️ <b>Perangkat owner dikenali</b> oleh Grigori, penjaga OCKLU. Tombol toko dan obrolan owner aktif di perangkat ini.'
+  :'🔒 <b>Tombol owner terkunci di perangkat ini.</b> Grigori, penjaga OCKLU hanya membuka tombol toko dan obrolan owner di perangkat yang sudah dikenali, supaya agen atau orang lain tidak bisa mengubah toko. Pembeli tetap bisa membeli seperti biasa.'
   +'<div class="bar"><button class="utama" id="pjKenali">Kenali perangkat ini</button><input id="pjKode" placeholder="kode dari Telegram" autocomplete="one-time-code" aria-label="Kode dari Telegram" style="width:170px;text-transform:uppercase"><button class="chip" id="pjMasuk">Masukkan kode</button> <small id="pjPesan"></small></div>'}
 function pasangKode(k){k=String(k||"").trim().toUpperCase();if(!k)return;var m=$("pjPesan");if(m)m.textContent="memeriksa kode…";
   fetch(API+"?r=pasang",{method:"POST",headers:HK(),body:JSON.stringify({kode:k})}).then(function(r){return r.json()}).then(function(d){if(!d.ok){m=$("pjPesan");if(m)m.textContent=d.galat||"kode ditolak";return}
