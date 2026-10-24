@@ -1,7 +1,24 @@
 {
- "w": "2026-10-24T03:02:56Z",
+ "w": "2026-10-24T04:06:44Z",
  "dari": "Kroog",
  "berita": [
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-24T02:00:00Z",
+   "media": 5,
+   "judul": {
+    "id": "Konsumsi BBM Naik 9,1%, INDEF GTI Desak Percepatan Insentif Mobil Listrik",
+    "en": "Konsumsi BBM Naik 9,1%, INDEF GTI Desak Percepatan Insentif Mobil Listrik"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Olenka",
+    "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPMUhOZXRKelJrR1N5aUIwcXJfem5BNkZWdFZheENOM0trM1UyTnB2YW5TU3EtemduTExfN1JtdVFoNU9FNm1CZHFUb0JnaExFX2hjVld5RVFObU44aURjZXVxYzZJQi1WMXNIY0gwRjc0TEhrTUtrdnRDcFhURl93X1RQOHY4TjTSAYwBQVVfeXFMTkdfMVJDV2c1NGdqLWFicEl6UVlUbVpiS1VraldhdnhVSktTdHE3ZEthWkQ3em5SSm9pWkpJcW5oUlFnNTlSWHA4Y3hBelNXdTZqUnBiVWRQS01PZmQwYWVMcEVOdzZqOTlxRm8wdkZaTklkdWhUYm5nUjJTRi1zSzBrZVR2V1RCaUJ6bm8?oc=5"
+   }
+  },
   {
    "jenis": "berita",
    "waktu": "2026-10-23T12:25:00Z",
@@ -21,6 +38,57 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-10-24T03:16:52Z",
+   "media": 3,
+   "judul": {
+    "id": "Kronologi BYD Tabrak Beruntun 4 Mobil dan Lindas Ojol hingga Naik Trotoar di Blok M",
+    "en": "Kronologi BYD Tabrak Beruntun 4 Mobil dan Lindas Ojol hingga Naik Trotoar di Blok M"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "CNN Indonesia",
+    "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNdDNoS1N0bFF5c3RZNFdvYVlMS1U4WDBFUGtRTkdtcTlNbmRKYm1nRkZleXQ3Z2JsVVh5Nl85WFZSaHhUUGVDZk5Sb09iUC1UV1Zkam5aTjZnQ3JnUkNKMzJTMFJRZ1psMWd5TmRBSW9JelFVXzFCNFQyakM2dWxHSThIUXZkV0hLbkNURVJMQ1Fla3Ztc1FoYzVVczVhQkJxdHBVbFJ3QTFGNk5mOHVfbDE5YUlPMFJ2QnJReG4zeEppTUFoM0swNHdXT2pCS1HSAdQBQVVfeXFMT3FOV0F0V1NQMFRjc0FsNlIxU0Z3SU53YXRBZHdONWFKOXV3WEFMNUJwR0dmdVlFRUtUN2MwbEh3VHJyZGl3ek03Qk9SbXdhYlJITnppbFdTaE1rcDJKdWRLaWFyYUt1OTlRb2tYeDdzOXFJX0RSM3FhRDdlVWhZU2FSN1hVakIwd1lRQ29zSzJiY0J4ZmFoNVRuTFYwUlBnU3cyRlUwR2p4T0otSzktOVU0QXhPUDc2ZGpkMndxbVJCM0lwNHFfMUc2c3BFdVkwOGp4aFI?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-24T02:39:44Z",
+   "media": 2,
+   "judul": {
+    "id": "200 Porsi Makan Siang Gratis dihidangkan oleh Polisi di Bandar Lampung, Warga dan Ojol Antusias",
+    "en": "200 Porsi Makan Siang Gratis dihidangkan oleh Polisi di Bandar Lampung, Warga dan Ojol Antusias"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Tribratanews Polda Lampung",
+    "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNVmNkLWszYUJUNDVybnFtM2ptdmoxMUhoOFB2QzE1SE1kQ2JIWnFSMHNGdDJMSjVJME9Ub3pZeXJxMk56czVLS2lsVWZmZDE1LVVsVEtueHdBLVhNaFEtMnhnWVhtZ19rajk4ZWlKMnNOTVRPSnlIZkx1VEZ2QWtLZWxab1Y2RzhRRGowYVpROUtCUEhidWpCR28yMzRkTnNabmFYT2M4ZHZFVm1MWHEwbnJLdlR3eTZNSnVIaVp0dDdTeFF0T0ZJVkk1ZF9KVjEyZkNtelVOUTRQX1I0aW1nLQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-24T01:53:00Z",
+   "media": 2,
+   "judul": {
+    "id": "Viral Video Mobil Listrik BYD Tabrak Mobil dan Pengemudi Ojol di Jaksel",
+    "en": "Viral Video Mobil Listrik BYD Tabrak Mobil dan Pengemudi Ojol di Jaksel"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Tribunjambi.com",
+    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPdmFTZmRNQTB5QTZORXd5d05pUlZUbEJSdDB1OWlMTExPMzM4RmhIOW5GYlI2T3NITjFORjVwQ3AwVGVFM0xRYzNPRmtWcTNsZWhkcTEzUGNLYm1IVGlmVlp1Mk04TVh6cDlFV2FUcGZucVlmTmViSzNuY1d2SE1tLVNTMTAzeVc2Nl9sSVB1TUFoX1VUSHBXcHFCVXlnNGdwelBTcEFMN2FfcE0tV1FqVkZ0cDBzdw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-10-24T01:38:00Z",
    "media": 2,
    "judul": {
@@ -34,6 +102,40 @@
    "sumber": {
     "nama": "Kompas.com",
     "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNZzhIdjVFZFZjZ3VfQVI0Y2ZROC15Rmg4T28zemZNb0VESllMczFlaktOcTBKZDdpMWVRN0lmRzhTSGNfYVhZNk81bW9vWWpsY2hiRUpmV3pqWmNiNkZxb2laRTI4SHA5cEdPU2lUdHFKd0hVY2lpekZDdXVyWmJ0dlpNY3JmX3BzZXMwd2lmVm5LLU5xa1FHb2ozeFNNUmRFQjIwRHBXVm1MWVRmMEtMRDZndTU1S0Y5eHZTckE3N2hlYlFu?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-24T01:05:19Z",
+   "media": 2,
+   "judul": {
+    "id": "Pengemudi Ojol Terlindas Taksi Online di Jaksel, Korban Patah Kaki dan Tangan",
+    "en": "Pengemudi Ojol Terlindas Taksi Online di Jaksel, Korban Patah Kaki dan Tangan"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Tribunnews.com",
+    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOdVdZUS1xSTFoMTFJUVBMa3V0bktBeEFlazlUTlZzUXRPaFpuOTFCbk8yLVItY1NTcTlRRWduWGl5R2lQZmNWWHIwTGNQU1ZXM0dlSUVybGVPbkUzZUVjRmxGNnVTRlRJTW1PbjZxU0ZjWUFGY19JemZyYmliMnA4N0JLbmZhQndqTDN0bHppQml2WmU5LUc2UXQ0X3FpdHhHa19jODZMWm9RR21KTTdUS20zTTZNRVpp?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-24T00:44:42Z",
+   "media": 2,
+   "judul": {
+    "id": "Pengemudi Ojol Terlindas Taksi Online di Jaksel, Sopir Diduga Hendak Kabur hingga Naik Trotoar",
+    "en": "Pengemudi Ojol Terlindas Taksi Online di Jaksel, Sopir Diduga Hendak Kabur hingga Naik Trotoar"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "TribunWow.com",
+    "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOLVh2OVNEV0NERmxGZWNhZnQ5V3l4WDB0eVA4S2pBM21rS2poXzd1N0dxejI1V0xXOXNra2syMmdVNmtvWS0tekFOM2ZoaUZFRXctTmIyUlNNYndHWmFJZS1feDMyY0hDandhUFRwYXVRUHhwNmdpdUhVcGpnOFBVd0V1QXBMTnVhVVBlTnlScnJVT3FLcUdZRFY5YzVoVUxxMVpxOFNoM2hFcVBHejU2X0pfbDlUMlpqdXhfMXpMV09lcTkySWhBRk44SEg5QQ?oc=5"
    }
   },
   {
@@ -89,6 +191,91 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-10-24T02:45:52Z",
+   "media": 1,
+   "judul": {
+    "id": "SPBU Modular di Balikpapan Bantu Pengendara Hemat Waktu, Ojol Tak Perlu Lama Mengantre",
+    "en": "SPBU Modular di Balikpapan Bantu Pengendara Hemat Waktu, Ojol Tak Perlu Lama Mengantre"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Tribunkaltim.co",
+    "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxONG9UcHNCOExWa0E0VWRaeDctYnUtdkU4QkNuUDltU3prNTJIZmNyRjJPMzhaZVJ0VmRmQkh1cjJndVdMRVZaTWdXR2JHeUdzVWx3SDV6dWNublFoN3lyUm9teURmWDQ2bnByR20wdGFqUGtYajBMYU5XdmhMaEVXRFowc0JnekR2S2ZUaFYxdGlUNThPQ1B2ZTFVV2pfTkowVXg1YldZS3N2NU9uWGxtQU1lUHhsNWQ0S1ZlbXp3Q3BkYmNMYnFoOXpPVVFCMF9r?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-24T02:10:09Z",
+   "media": 1,
+   "judul": {
+    "id": "Kronologi Mobil Listrik BYD Tabrak Pengemudi Ojol dan 4 Mobil, Terakhir Tiang Listrik",
+    "en": "Kronologi Mobil Listrik BYD Tabrak Pengemudi Ojol dan 4 Mobil, Terakhir Tiang Listrik"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Tribunjambi.com",
+    "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPT1N6UnYtclFLS3h2S0I4emZsNER3UVlaeDJGb2xfdDBMU25wTVRRY2hRTXl3TkVfU2F1cGhZMEZMTXJQOG1Ha3hTNVVJWlhaZVJSZjctR2FWelBGbWhQY1EyOVk0MkZQajJZeXNlTlEtSjdGaXE4bk5pN3Bwd0wta0hTUk1GWm56azY5WkdiMW40djVpbnNOWmZ5WTBHVmltclI5YzREWl9xWTNMaUNrTlFOU2lrdkpaUm5LbTRjcV9NdmFJ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-24T02:00:55Z",
+   "media": 1,
+   "judul": {
+    "id": "Anak Buah Prabowo Putar Otak Cari Jalan Tengah Aturan Turunan Perpres Ojol",
+    "en": "Anak Buah Prabowo Putar Otak Cari Jalan Tengah Aturan Turunan Perpres Ojol"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Bisnis Tekno",
+    "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOaWFTdC1lNnBpdk5Pc0hwUnFtLXBlUVRfMld5My1TSmwtdTJMS1AyZWRNTXFWRWJxQTdvMTkzNm4wSHdreWdqNjdXQ013OEZuVjVyT2UxYnJWeXhLaEtZQUd0X0lNRFRWV2ZvejI2OWtqMmdmYTVZTW5kZ0dCQkxBa1NqcVdYaUVhcEE3c29jMGFtQnVhV0dWTGV0WVdBQUJxSUptUkVBRGhLOU4tNGMzUHZ5cU1ac0hiWVgxV3dYVXFqckY0MEVpMg?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-24T00:00:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Potret Nyata Sulitnya Ekonomi saat Ini dari Kacamata Ojek Online",
+    "en": "Potret Nyata Sulitnya Ekonomi saat Ini dari Kacamata Ojek Online"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "IDN Times",
+    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPRlJ6cEdIeFR5YW4tSElJSVhDbVBJb3FIbzI2bWNVSlcyNVBGbl9UdXVqbXBMdmdXenJyMEU2aGpjMHNmNXY3a2E5dUhuT2JEQlBPMzUtVWYxcllwdTY0ZVYtUHVSZXcxbGJRWFVvd3pMa3J3MFVIYTBHai1uYjJlZFB1ODM1MkI5LTRMMVY3UkhMTXZiN1doNU5vdFpRSFYwelB1REtVTHlHWUlsbEdyUmIycDE1NnpaYWVVQw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-23T23:26:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Bahlil Pastikan Stok Pertalite Aman Sampai 18 Hari, Kasus Blackout Batam Diklaim Sudah Beres",
+    "en": "Bahlil Pastikan Stok Pertalite Aman Sampai 18 Hari, Kasus Blackout Batam Diklaim Sudah Beres"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Konteks.co.id",
+    "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPYzZRMGk3TWpRNlIxbmlGbkVtS3RsZEowWmNFbDVEVFdGNTJRQmVnZGQ5RnROMDRPVjF6YjM0MmhUZjY5aUl3YWFKZnNoY29HRFdoblRBR05iREprU01pM3VaRVdzTWExWFZrNVRyQlZzNl9LTHZGcm9oOTYta3RPLU5CU2E3a1Q3Tm1Id3o5eklnV2VIdWY2bXJxWnZwY3pVc1pvWFJzTnd2b0lUa2EzZFBBUmQtVFBRUVdnRUd4dDQ1OXl5V3F3LWgwU2szODFpU1JfWXJHb9IB1wFBVV95cUxPYzZRMGk3TWpRNlIxbmlGbkVtS3RsZEowWmNFbDVEVFdGNTJRQmVnZGQ5RnROMDRPVjF6YjM0MmhUZjY5aUl3YWFKZnNoY29HRFdoblRBR05iREprU01pM3VaRVdzTWExWFZrNVRyQlZzNl9LTHZGcm9oOTYta3RPLU5CU2E3a1Q3Tm1Id3o5eklnV2VIdWY2bXJxWnZwY3pVc1pvWFJzTnd2b0lUa2EzZFBBUmQtVFBRUVdnRUd4dDQ1OXl5V3F3LWgwU2szODFpU1JfWXJHbw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-10-23T22:40:00Z",
    "media": 1,
    "judul": {
@@ -119,57 +306,6 @@
    "sumber": {
     "nama": "gadget.qoo10.co.id",
     "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1sY24xbHhDVlpYOVQwLXE3Uy1WWTQxZmN0NFI5XzU0Q1lVSWlDRzYtQXZuZWZxOGxsNVNFRWVkRExMcmFVUjZaTENJNU5meElReTRZaVR0WEZuVVBQWGppUmhxV0M1eGlVMXA2OGp4SlVNNVFrQkhHMnNvdjhYVnM?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-23T06:24:26Z",
-   "media": 4,
-   "judul": {
-    "id": "Aturan Turunan Perpres Ojol, Menteri UMKM Pertimbangkan Nasib Gojek-Grab Cs",
-    "en": "Aturan Turunan Perpres Ojol, Menteri UMKM Pertimbangkan Nasib Gojek-Grab Cs"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "RCTI+",
-    "url": "https://news.google.com/rss/articles/CBMioAJBVV95cUxORkpNdzVocUp5N2ZqOXBhWnFOSFVCdVZSTDlvcjF5eEpqU21DQnd6OXdXVFF6a045NTRrbVMtSW81bnVCS0VXcjQ3dEdKT284RWhEV3ZHYWdGbUtfM05DdDhORjFOeFVCUVMwemtlTER3ckFkT0Nsa3VpVnlBalpYeHh4c0VoRTk3VXB6MmFzXzZ1N0E1cUZVX25SbFhXRkR4OVlBWktJUnBneTh4Y1pvc1JEZElZNnNGQVdUNGxkdUtGbmIyY3dxY3FYZ01kdnNGTDdqTXdZR1VzcXdfcmNSeVg5QVJqeE9ZYWl6TWpRa3JFd01wQW5DWXhkN0VfcjlnT3d4Z3dZcjJqNVNhNEsxaTl6WkZOekNXdXFIZzdDamk?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-23T01:55:00Z",
-   "media": 5,
-   "judul": {
-    "id": "Perpres Nomor 27 Tahun 2026 Izinkan Driver Ojol Narik di Banyak Aplikasi",
-    "en": "Perpres Nomor 27 Tahun 2026 Izinkan Driver Ojol Narik di Banyak Aplikasi"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "gadget.qoo10.co.id",
-    "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPZTdYNklGZEhjWVVIeV9DUm51akUweThoZWVobTBLQUgyeEY2bmJnU0ZMc0lGVGo1R09QTGtNLThESHZrZkI3eDNHLUtrd2RoenZZejFOazhJaDZrVXltLWZLSDV5V21GSTFxOWh3dWpZdDR5R1gwVzhMYldCSkY4d0lQckMzZWN6WUE?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-23T19:00:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Bahlil Pastikan Stok BBM di Bali Aman dan Listrik Batam Pulih",
-    "en": "Bahlil Pastikan Stok BBM di Bali Aman dan Listrik Batam Pulih"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "BeritaSatu.com",
-    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQUTRuNUs4cTE4dTg1OVg1dHFacDEtWVBpeENjUDJJMzFkNVJ1eDJUWTZqYnF0T1Z4N3RmVmlKcGVVVmNMZFNHTy1NT3F0WVcxZFVfMGRHb1Vsa21GamdoS05lOEZyeFVOX2JtR05jd3dBT053dEN4Wmw4bldZTXVBSWVBOF9LLVhTX1d5RExTQlJzbmF0RnpKWUxIaE0yT1czdXlENVc5aw?oc=5"
    }
   }
  ]
