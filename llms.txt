@@ -43,3 +43,7 @@ We are a broker and we have products. Let me help you — tell me what you need.
 - Includes schema.org product data, llms.txt, auto-refreshed text product pages, MCP directory listing. No ranking guarantees.
 - Rumah Kreator (for content creators, Rp1.990.000 + Rp99.000/month): an AI-readable home site + content archive + direct follower list owned by the creator. Does not promise virality or bypassing platform restrictions: https://ocklu.com/siap-dibaca-ai/#kreator
 - Order: octavianus@ocklu.com. Live examples: https://ocklu.com/tertau/produk/ and the whole Hyper Market (every listing is AI-readable): https://ocklu.com/hypermarket/pasar/
+
+## Warung Ocklu Ojol — food stalls with menus and IDR prices (AI-readable, refreshed every 3 hours)
+- Stall list with menus & prices (schema.org Restaurant + Menu): https://ocklu.com/warung/siap/
+- Order via Ocklu Ojol: https://ocklu.com/warung/
