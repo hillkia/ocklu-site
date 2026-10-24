@@ -1,7 +1,24 @@
 {
- "w": "2026-10-24T11:10:13Z",
+ "w": "2026-10-24T13:50:59Z",
  "dari": "Kroog",
  "berita": [
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-24T09:52:56Z",
+   "media": 7,
+   "judul": {
+    "id": "Sabtu Berkah Bersama Ojol, Kapolda Metro Jaya Ajak Pengemudi Utamakan Keselamatan",
+    "en": "Sabtu Berkah Bersama Ojol, Kapolda Metro Jaya Ajak Pengemudi Utamakan Keselamatan"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Radar Indonesia News",
+    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQbGZjb01VUkVxZVBVRDBjZU15Q0d4cEEwMnRCbEE4bWVyMDduOUpnc0lTUUJvcFc2X1dlazNPaWh1cmtHdVRpNkhKVkcxX1BMVnlxcUVNdXo5aEtGaVE4VEgxbjhTWUR1cDNkRnV4R1cwZENxTk9acENwR2w5bFZnbTBsQWlSRW9IZlBTOEVnYlJIX2lUNEE1Q3R0TUNSMzQ0Z29jeTMybGl1OFlXb2N6LWFXbld5clk?oc=5"
+   }
+  },
   {
    "jenis": "berita",
    "waktu": "2026-10-24T09:00:42Z",
@@ -17,23 +34,6 @@
    "sumber": {
     "nama": "Inforiau",
     "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQbEE0d3liV0NMTFVmZGc0S2RqcEY4UmpHYTRFWW96UDNRTGNUamhpTzNKMFl5bDJiNjhROEdLekh1VVBYaHBLYkIzbkVjNzhLQmo5TnpqWE9kSXowYjJETWg2RHY3c3ZhMi1NOEhibG1TdkdLSmdwR3hZdWNCdEJOemkxWFJHdTVxdDFiRDBUVEJGRk00ZHFyMlVKRVBXLUxYM0hIejR1aEdyUnloVmNxY0h0SWpfSmxHSFpSNHMzTmVIUTlOWXF1OFBB?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-24T09:52:56Z",
-   "media": 6,
-   "judul": {
-    "id": "Sabtu Berkah Bersama Ojol, Kapolda Metro Jaya Ajak Pengemudi Utamakan Keselamatan",
-    "en": "Sabtu Berkah Bersama Ojol, Kapolda Metro Jaya Ajak Pengemudi Utamakan Keselamatan"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Radar Indonesia News",
-    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQbGZjb01VUkVxZVBVRDBjZU15Q0d4cEEwMnRCbEE4bWVyMDduOUpnc0lTUUJvcFc2X1dlazNPaWh1cmtHdVRpNkhKVkcxX1BMVnlxcUVNdXo5aEtGaVE4VEgxbjhTWUR1cDNkRnV4R1cwZENxTk9acENwR2w5bFZnbTBsQWlSRW9IZlBTOEVnYlJIX2lUNEE1Q3R0TUNSMzQ0Z29jeTMybGl1OFlXb2N6LWFXbld5clk?oc=5"
    }
   },
   {
@@ -157,6 +157,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-10-24T11:23:00Z",
+   "media": 2,
+   "judul": {
+    "id": "Jumat Berkah Ditlantas Polda Kaltim, Perkuat Kedekatan dengan Komunitas Ojek Online",
+    "en": "Jumat Berkah Ditlantas Polda Kaltim, Perkuat Kedekatan dengan Komunitas Ojek Online"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Global Expose TV",
+    "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOajRISjVWQllfUEFLMHhYMnprdnJpWndYNFVDSWpuVnpjRFdMRS1Tel9QOEdXUEowT09LMGZNUEtUNTZRNjdqZ2VzSklfQTdUZHFhZk9oUFFDX0loYjJKeUVkWnNQQ1lWRDZ1N0h5R3NhcmxSX3VZWVU1WUtSR0d3YzJqT3ZPbERUSFN4STVYcFJHMEJ4cVBwcERGSlpjYXd2VGwyb2Fn?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-10-23T12:25:00Z",
    "media": 5,
    "judul": {
@@ -187,6 +204,23 @@
    "sumber": {
     "nama": "tangselpos.id",
     "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE4xcng1U0hfNlRDd3FwYVBwQkh0OTdkd3hvVkZDQVFYaXJKbEFTOGRpTXNOTkdmQzZDTTQzVV9UYnZPenVqb2k1OWFSRzUtQ1EzODNEUGo4bjRBX3U4MVFYSTFCVDhzM0dNQ1hHalBhYll3NElwUTlhN1dR?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-24T09:37:32Z",
+   "media": 2,
+   "judul": {
+    "id": "Sopir BYD Tabrak 4 Mobil dan Lindas Ojol di Blok M Dites Urine, Ini Hasilnya",
+    "en": "Sopir BYD Tabrak 4 Mobil dan Lindas Ojol di Blok M Dites Urine, Ini Hasilnya"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Kompas.com",
+    "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNQnM5emp4Q1dYTHFpbGZvTVNWUk1vWjNfNXBwb0xKbjhJcUxHOF9VM3RGQlRwOUJITFFNSGpsa1c0eUttWkN4bjFrb0FDdWhmRWdVQkxtMTRkaWhSLWFRemMyOGZRSFBGdU45Qm9Cc05tUTNFY3lQeXp1c2V4WHRNNXVNQXJkeGotWGRIeGJDX3NyaXlmVzltWlNnTTBXbENFRmotS2VuTDVaV2I2Q05mQ25famtJNjVGMjI5WV8xYU1tVlBPV3NUbTkyVFMyS3BsS2c?oc=5"
    }
   },
   {
@@ -259,6 +293,57 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-10-24T10:27:34Z",
+   "media": 1,
+   "judul": {
+    "id": "Kapolres Purwakarta Buka Ruang Dialog dengan Pengemudi Ojol",
+    "en": "Kapolres Purwakarta Buka Ruang Dialog dengan Pengemudi Ojol"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Media Indonesia",
+    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPV21FVjVPRXktbmQyY05Ec1c0cE9UOHQ5WXFGemRBVW5DTDBpRldralg1ZWtOTW9wd3FCdE8zbnJlS0JjUGktRFRoVkVyRjM3cHRlemZBamVyMGNOdWVtUVprYXdEakoxZ04tOEZSOFBzWkxfSl8zSUpJR3RYejR4UXFVWFFfX3pGLVdXOWpDRmZGTEdaV2t4bktTYzN3dGZBSklyQ3hwMHdLQQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-24T10:15:48Z",
+   "media": 1,
+   "judul": {
+    "id": "Catatan Redaksi: Energi untuk Rakyat Jangan Biarkan Listrik Padam, BBM Menghilang",
+    "en": "Catatan Redaksi: Energi untuk Rakyat Jangan Biarkan Listrik Padam, BBM Menghilang"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "RuangEnergi.com",
+    "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQRE5XRml5YzV1OGZyZW90UHNHS0lIdTVpSkdhek1tWmltNWFjNnlYZWxaZEd3Ym5zNmNOQXZxOXJoQkN3a2hJcmJVMlZXcTloZ2dwMFQtU25PVkVZTTU0MHFMMFNGNzRodkxBYUhqMGpPUVlYM2pLdk9DY094TTlqLUhYVUNfa2lWd2oyNXFQOHVjNlVyelhKV0hSVm85VzYxd2NvelZnWnB6azA5?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-24T09:21:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Vegetasi Arjuno-Welirang Terbakar, Pemkot Batu Antisipasi Banjir Bandang Dampak Karhutla",
+    "en": "Vegetasi Arjuno-Welirang Terbakar, Pemkot Batu Antisipasi Banjir Bandang Dampak Karhutla"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Jatim TIMES",
+    "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNVERBWjBDeFFRLW45TG5pLV9PT21YemQ0anM0enVSSk9Db0llam9ORmdhdlpjc1pXeHYxYXBURGZGNWdCcXhvYnJaVGxIZzhYOWVBMGV2c3VmODF2V3JDYXZnMUZHQWIxSmFqVDB2WS1hN0Z2YW9LUWc0NDhteFB6WTVQUk9JcGdnOTNVWjBxQWNDNjVsendGeGJmaHBlZ2NIRmpPbTFHN1d5V2RINjVaOFZ5TUlqLWRUa1hnVDlWWkhLemR2ak9waTZyeGh3TG5rVVoxc0dSX1hlQdIB3wFBVV95cUxOeUhLYVVqU0toYll4VWdhTzJrVXljMk95QUxpdTJSeXd3MkpWZEJvVEQ5d0lqeGhNQXRWRG1GbjZRQzZmMHFsZ3U4N0lid2l4RW03QkNjYWNvNVc5ZlFEQmd0Z3ZEbEE5Z2ZKTG1UbUNrUUZIRGdwZzJwbnhNRV9Tc0s2VVNCZ3VVSEw4V205V0xKZDMtQkNTeFVxM2hFUkFDZDZGd3JQZTdJdzdEVW9SVGw4aGVQMXVFMmVKRDhMMWxPckJ4MjJOcjNocW5sWkFPY1hQdUNRT3lYd09uaWtz?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-10-24T08:54:33Z",
    "media": 1,
    "judul": {
@@ -289,40 +374,6 @@
    "sumber": {
     "nama": "Tribratanews Polda Lampung",
     "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNVmNkLWszYUJUNDVybnFtM2ptdmoxMUhoOFB2QzE1SE1kQ2JIWnFSMHNGdDJMSjVJME9Ub3pZeXJxMk56czVLS2lsVWZmZDE1LVVsVEtueHdBLVhNaFEtMnhnWVhtZ19rajk4ZWlKMnNOTVRPSnlIZkx1VEZ2QWtLZWxab1Y2RzhRRGowYVpROUtCUEhidWpCR28yMzRkTnNabmFYT2M4ZHZFVm1MWHEwbnJLdlR3eTZNSnVIaVp0dDdTeFF0T0ZJVkk1ZF9KVjEyZkNtelVOUTRQX1I0aW1nLQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-24T08:22:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Hilang Kendali di Kebayoran Baru, Sopir Mobil Listrik Lindas Ojol Sebelum Hantam Mobil Parkir",
-    "en": "Hilang Kendali di Kebayoran Baru, Sopir Mobil Listrik Lindas Ojol Sebelum Hantam Mobil Parkir"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "news.indozone.id",
-    "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQNlBjY0Z5SngxcktzVU9ZblliUFFUWWIwMGt2cEpRU21VMWRZdHF0MzFZSGp4blBDemFCV3BBR05iUXhrNldPOXhJUlpjNXpROFNWSFdobXhkWlNLSTlTcm56VHo1c0VQSHdWRExXR2Q0aEpiWU1OaHFkMXlqSTFGQ0RnbDYzN2pZYjdFVi1HbkFYY3B3Y1M0Z2IzcFA2NExXR0hEcGNyV09aUXlpeVlsTVByeU9EWHBlaG1WRlBwNlg5TFhMX0ZmUWpUOE0wa3IwTXNndWt5MkZneC1R?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-24T08:16:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Saksi Ungkap Detik-detik Mobil BYD Lindas Ojol di Jaksel, Pengemudi Sempat Diamuk Massa",
-    "en": "Saksi Ungkap Detik-detik Mobil BYD Lindas Ojol di Jaksel, Pengemudi Sempat Diamuk Massa"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Kompas.com",
-    "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPQkpxUjBBMVg1bjBJN3FBQ1J1WjNsWmlUMlBnbHFkNTBBelRIbUdMbmNpZnlBc0FPTjBQRjhzSzAwc2lQejNrUndLZEQ4dXAyQUoxbUgxX0tIWDRWTnVwY2psZV9jeU9fa3plYzhhLXRJREs0dnFBWHhwMHFOTVduWE91SFNjdU9oWDNUeUhqbnJLcmJNNjNWeGtqb1R5alZJelRNcFFYbm1NWl9BUmRrOEZtZjBqRmM2Q3ZKZ2h1ZTRmX0VGUDZLMQ?oc=5"
    }
   }
  ]
