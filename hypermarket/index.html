@@ -172,6 +172,9 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
   <div class="angka" id="mkAngka" style="margin:0 0 12px"></div>
   <div id="mkIndustri" style="display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px"></div>
   <div style="overflow-x:auto"><table><thead><tr><th>Penawaran</th><th>Industri</th><th>Jenis</th><th>Harga</th><th>Wilayah</th></tr></thead><tbody id="mkDaftar"></tbody></table></div>
+  <div class="owner-saja" hidden style="margin-top:12px"><h3 style="margin:0 0 8px;font-size:16px">⚡ Eksekusi per industri (mode owner)</h3>
+   <p class="kosong" style="margin:0 0 8px">Angka sinyal = postingan calon pembeli yang dinilai PETRUS cocok dengan penawaran di industri itu, bukan pembeli pasti. Eksekusi: PETRUS·PAULUS jalan sekarang (kirim otomatis hanya ke pihak yang sudah setuju) + draf untuk 5 sinyal teratas di Jemput Bola.</p>
+   <ul class="feed" id="mkEksekusi"><li class="kosong">memuat…</li></ul></div>
   <div class="owner-saja" hidden style="margin-top:12px"><h3 style="margin:0 0 8px;font-size:16px">Menunggu tinjauan (mode owner)</h3><ul class="feed" id="mkTinjau"></ul>
     <h3 id="ofinpay" style="margin:12px 0 8px;font-size:16px;scroll-margin-top:64px">Ofin Pay · penerima komisi 7% (mode owner)</h3>
     <div class="baris"><input id="ppEmail" type="email" autocomplete="off" placeholder="email akun PayPal penerima komisi" aria-label="Email PayPal"><button class="btn mini" type="button" id="ppSimpan">Simpan</button></div>
@@ -246,6 +249,9 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
     <h3 style="margin:0 0 6px;font-size:15px">🎯 Calon pembeli hari ini <button id="clBuat" type="button" style="font-size:13px">Buat sekarang</button> <span class="kosong" id="clKet"></span></h3>
     <p class="kosong" style="margin:0 0 6px">Sudah disaring (berita, lowongan, gema dibuang). Tekan <b>Salin &amp; buka</b>: draf tersalin, postingan terbuka di tab baru, tinggal tempel &amp; kirim. Draf boleh diedit dulu.</p>
     <ul class="feed" id="clDaftar"><li class="kosong">memuat…</li></ul>
+    <h3 style="margin:14px 0 6px;font-size:15px">🏪 Calon penjual hari ini <button id="cpBuat" type="button" style="font-size:13px">Buat sekarang</button> <span class="kosong" id="cpKet"></span></h3>
+    <p class="kosong" style="margin:0 0 6px">Pembuat agen dan layanan di MCP Registry resmi, diajak memasang gratis di Hyper Market. Draf tidak dikirim otomatis: tekan "Salin &amp; buka".</p>
+    <ul class="feed" id="cpDaftar"><li class="kosong">memuat…</li></ul>
   </div>
   <h3 style="margin:0 0 6px;font-size:15px">Laporan perintah owner</h3>
   <ul class="feed" id="jpLaporan" style="margin:0 0 12px"><li class="kosong">memuat…</li></ul>
@@ -737,16 +743,24 @@ document.getElementById("klSimpan").onclick=function(){var v=function(i){return 
 function kirim(b){return fetch(API+"?r=owner",{method:"POST",headers:{"Content-Type":"application/json","x-owner":(window.HM?window.HM.pin():"")},body:JSON.stringify(b)}).then(function(r){return r.json()})}
 var tunggu=setInterval(function(){if(!(window.HM&&window.HM.owner()))return;clearInterval(tunggu);kirim({aksi:"sasaran_lihat"}).then(function(d){if(d.ok){i.value=d.sasaran||"";k.textContent=d.sasaran?"sasaran aktif":"belum ada sasaran"}})},1500);
 t.onclick=function(){k.textContent="mengirim…";kirim({aksi:"sasaran",sasaran:i.value}).then(function(d){k.textContent=d.ok?(d.sasaran?(d.laporan?"selesai: "+d.laporan.ringkas:"MARKUS sudah jalan; laporan muncul di bawah"):"sasaran dihapus"):(d.galat||"gagal");if(d.ok&&window.muatUlang)window.muatUlang()}).catch(function(){k.textContent="gagal"});if(i.value.trim())k.textContent="MARKUS sedang jalan ke sana… (±1 menit)"}})();
-(function(){var ul=document.getElementById("clDaftar"),ket=document.getElementById("clKet");if(!ul)return;
+function calonUI(U,KT,BT,peran){var ul=document.getElementById(U),ket=document.getElementById(KT);if(!ul)return;
 function api(b){return fetch(API+"?r=owner",{method:"POST",headers:{"Content-Type":"application/json","x-owner":(window.HM?window.HM.pin():"")},body:JSON.stringify(b)}).then(function(r){return r.json()})}
-function tampil(){api({aksi:"calon_lihat"}).then(function(d){var C=(d.calon||[]);if(!d.ok){ul.innerHTML='<li class="kosong">'+esc(d.galat||"gagal memuat")+'</li>';return}
+function tampil(){api({aksi:"calon_lihat",peran:peran}).then(function(d){var C=(d.calon||[]);if(!d.ok){ul.innerHTML='<li class="kosong">'+esc(d.galat||"gagal memuat")+'</li>';return}
 ul.innerHTML=C.length?C.map(function(c){var sel=c.status!=="siap";return '<li data-id="'+c.id+'"'+(sel?' style="opacity:.55"':'')+'><b>'+esc(c.judul)+'</b> <span class="kosong">· '+esc(c.sumber)+' · '+esc(c.status)+'</span><br><a href="'+esc(c.url)+'" target="_blank" rel="noopener">'+esc(c.url.slice(0,80))+'</a>'+
 (sel?'':'<textarea rows="4" style="width:100%;margin:6px 0">'+esc(c.draf)+'</textarea><button type="button" data-k="kirim">Salin &amp; buka</button> <button type="button" data-k="lewat">Lewati</button>')+'</li>'}).join(""):'<li class="kosong">Belum ada calon. Tekan "Buat sekarang", atau tunggu putaran harian.</li>'})}
 ul.addEventListener("click",function(e){var b=e.target.closest("button[data-k]");if(!b)return;var li=b.closest("li"),id=Number(li.dataset.id),ta=li.querySelector("textarea");
 if(b.dataset.k==="kirim"){var t=ta?ta.value:"";try{navigator.clipboard.writeText(t)}catch(_){}window.open(li.querySelector("a").href,"_blank","noopener");api({aksi:"calon_tandai",id:id,status:"terkirim",draf:t}).then(tampil)}
 else api({aksi:"calon_tandai",id:id,status:"lewat"}).then(tampil)});
-document.getElementById("clBuat").onclick=function(){ket.textContent="membuat… (±1 menit)";api({aksi:"calon_buat"}).then(function(d){ket.textContent=d.ok?d.hasil:(d.galat||"gagal");tampil()}).catch(function(){ket.textContent="gagal"})};
-var t=setInterval(function(){if(!(window.HM&&window.HM.owner()))return;clearInterval(t);tampil()},1500)})();
+document.getElementById(BT).onclick=function(){ket.textContent="membuat… (±1 menit)";api({aksi:"calon_buat",peran:peran}).then(function(d){ket.textContent=d.ok?d.hasil:(d.galat||"gagal");tampil()}).catch(function(){ket.textContent="gagal"})};
+var t=setInterval(function(){if(!(window.HM&&window.HM.owner()))return;clearInterval(t);tampil()},1500)}
+calonUI("clDaftar","clKet","clBuat","pembeli");calonUI("cpDaftar","cpKet","cpBuat","penjual");
+(function(){var ul=document.getElementById("mkEksekusi");if(!ul)return;
+function api(b){return fetch(API+"?r=owner",{method:"POST",headers:{"Content-Type":"application/json","x-owner":(window.HM?window.HM.pin():"")},body:JSON.stringify(b)}).then(function(r){return r.json()})}
+function muat(){api({aksi:"industri_ringkas"}).then(function(d){var I=Object.entries(d.industri||{}).sort(function(a,b){return b[1].sinyal-a[1].sinyal||b[1].penawaran-a[1].penawaran});
+  ul.innerHTML=I.length?I.map(function(x){return'<li><b>'+esc(x[0])+'</b> · '+x[1].penawaran+' penawaran · <b>'+x[1].sinyal+'</b> sinyal pembeli cocok <button type="button" class="btn mini" data-eks="'+esc(x[0])+'">Eksekusi</button> <span class="kosong" data-eksket></span></li>'}).join(""):'<li class="kosong">Belum ada penawaran aktif.</li>'})}
+ul.addEventListener("click",function(e){var b=e.target.closest("[data-eks]");if(!b)return;var k=b.parentNode.querySelector("[data-eksket]");b.disabled=true;k.textContent="agen bekerja… (±1 menit)";
+  api({aksi:"eksekusi",industri:b.getAttribute("data-eks")}).then(function(d){k.textContent=d.ok?(d.sinyal+" sinyal · "+d.hasil+" · lihat Jemput Bola & Telegram"):(d.galat||"gagal");b.disabled=false})});
+var t=setInterval(function(){if(!(window.HM&&window.HM.owner()))return;clearInterval(t);muat()},1500)})();
 (function(){var f=document.getElementById("tnForm");if(!f)return;f.onsubmit=function(e){e.preventDefault();var k=document.getElementById("tnKet"),b={};
 [].forEach.call(f.elements,function(x){if(x.name)b[x.name]=x.type==="checkbox"?x.checked:x.value.trim()});k.textContent="mendaftar…";
 fetch(API+"?r=daftar_turnamen",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(b)}).then(function(r){return r.json()}).then(function(d){k.textContent=d.ok?"Terdaftar! "+d.langkah_berikut:(d.galat||"gagal");if(d.ok){f.reset();if(window.muatUlang)window.muatUlang()}}).catch(function(){k.textContent="gagal, coba lagi"})}})();
