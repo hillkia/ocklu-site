@@ -594,7 +594,7 @@ function saringMk(){var n=0;document.querySelectorAll("#mkDaftar tr").forEach(fu
   k.innerHTML=mkFilter?'Menampilkan '+n+' penawaran industri <b>'+esc(mkFilter)+'</b>. <a href="#makelar" id="mkSemua">Tampilkan semua</a>':'Klik nama industri untuk menyaring penawaran.';
   var s=document.getElementById("mkSemua");if(s)s.onclick=function(e){e.preventDefault();mkFilter="";saringMk()}}
 function kirimOwner(b){return fetch(API+"?r=owner",{method:"POST",headers:{"Content-Type":"application/json","x-owner":ls("hm_pin")||PINMEM||""},body:JSON.stringify(b)}).then(function(r){return r.json()}).catch(function(e){return{galat:String(e)}})}
-window.HM={API:API,esc:esc,lalu:lalu,ls:ls,pin:function(){return ls("hm_pin")||PINMEM||""}};
+window.HM={API:API,esc:esc,lalu:lalu,ls:ls,pin:function(){return ls("hm_pin")||PINMEM||""},owner:function(){return OWNER}};
 function cekOwner(){kirimOwner({aksi:"cek"}).then(function(d){if(d.ok){OWNER=true;pasangOwner();cekPaypal();muatKlien()}else if(/PIN owner salah/.test(d.galat||"")){ls("hm_pin",null);PINMEM="";var mc=document.getElementById("ownerChip");if(mc){mc.hidden=false;mc.hidden=true;mc.className="chip tunggu"}}else setTimeout(cekOwner,5000)})}
 (function(){var q=ls("hm_pin")||window.__pinq;if(q){PINMEM=q;cekOwner()}})();
 function normNama(t){return String(t||"").trim().toLowerCase().replace(/\s+/g," ")}
@@ -724,7 +724,7 @@ document.getElementById("klSimpan").onclick=function(){var v=function(i){return 
 <script>
 (function(){var i=document.getElementById("sasaranIsi"),k=document.getElementById("sasaranKet"),t=document.getElementById("sasaranSimpan");if(!i)return;
 function kirim(b){return fetch(API+"?r=owner",{method:"POST",headers:{"Content-Type":"application/json","x-owner":(window.HM?window.HM.pin():"")},body:JSON.stringify(b)}).then(function(r){return r.json()})}
-var tunggu=setInterval(function(){if(!OWNER)return;clearInterval(tunggu);kirim({aksi:"sasaran_lihat"}).then(function(d){if(d.ok){i.value=d.sasaran||"";k.textContent=d.sasaran?"sasaran aktif":"belum ada sasaran"}})},1500);
+var tunggu=setInterval(function(){if(!(window.HM&&window.HM.owner()))return;clearInterval(tunggu);kirim({aksi:"sasaran_lihat"}).then(function(d){if(d.ok){i.value=d.sasaran||"";k.textContent=d.sasaran?"sasaran aktif":"belum ada sasaran"}})},1500);
 t.onclick=function(){k.textContent="mengirim…";kirim({aksi:"sasaran",sasaran:i.value}).then(function(d){k.textContent=d.ok?(d.sasaran?(d.laporan?"selesai: "+d.laporan.ringkas:"MARKUS sudah jalan; laporan muncul di bawah"):"sasaran dihapus"):(d.galat||"gagal");if(d.ok&&window.muatUlang)window.muatUlang()}).catch(function(){k.textContent="gagal"});if(i.value.trim())k.textContent="MARKUS sedang jalan ke sana… (±1 menit)"}})();
 (function(){var ul=document.getElementById("clDaftar"),ket=document.getElementById("clKet");if(!ul)return;
 function api(b){return fetch(API+"?r=owner",{method:"POST",headers:{"Content-Type":"application/json","x-owner":(window.HM?window.HM.pin():"")},body:JSON.stringify(b)}).then(function(r){return r.json()})}
@@ -735,7 +735,7 @@ ul.addEventListener("click",function(e){var b=e.target.closest("button[data-k]")
 if(b.dataset.k==="kirim"){var t=ta?ta.value:"";try{navigator.clipboard.writeText(t)}catch(_){}window.open(li.querySelector("a").href,"_blank","noopener");api({aksi:"calon_tandai",id:id,status:"terkirim",draf:t}).then(tampil)}
 else api({aksi:"calon_tandai",id:id,status:"lewat"}).then(tampil)});
 document.getElementById("clBuat").onclick=function(){ket.textContent="membuat… (±1 menit)";api({aksi:"calon_buat"}).then(function(d){ket.textContent=d.ok?d.hasil:(d.galat||"gagal");tampil()}).catch(function(){ket.textContent="gagal"})};
-var t=setInterval(function(){if(!OWNER)return;clearInterval(t);tampil()},1500)})();
+var t=setInterval(function(){if(!(window.HM&&window.HM.owner()))return;clearInterval(t);tampil()},1500)})();
 (function(){var f=document.getElementById("tnForm");if(!f)return;f.onsubmit=function(e){e.preventDefault();var k=document.getElementById("tnKet"),b={};
 [].forEach.call(f.elements,function(x){if(x.name)b[x.name]=x.type==="checkbox"?x.checked:x.value.trim()});k.textContent="mendaftar…";
 fetch(API+"?r=daftar_turnamen",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(b)}).then(function(r){return r.json()}).then(function(d){k.textContent=d.ok?"Terdaftar! "+d.langkah_berikut:(d.galat||"gagal");if(d.ok){f.reset();if(window.muatUlang)window.muatUlang()}}).catch(function(){k.textContent="gagal, coba lagi"})}})();
