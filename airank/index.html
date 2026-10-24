@@ -46,7 +46,20 @@ footer{margin-top:60px;border-top:1px solid var(--garis);padding-top:18px;font-s
 <div class=cap>OCKLU AIRANK</div>
 <h1>Buyers stopped googling.<br>They ask AI — and it <em>doesn't name you</em>.</h1>
 <p class=lead>AIRANK fires the questions your buyers actually type into ChatGPT, Gemini and AI Search, then shows you the raw answer: who got recommended, in what order, and whether you were in the room at all.</p>
-<form id=f onsubmit="location.href='mailto:hillkiacakep@gmail.com?subject='+encodeURIComponent('AIRANK free scan: '+document.getElementById('d').value)+'&body='+encodeURIComponent('Domain: '+document.getElementById('d').value+'\n\nSend me the free AI visibility scan for this domain.\n');return false"><input id=d name=domain placeholder="yourdomain.com" autocomplete=off required><button>Request free scan</button></form>
+<div class="uji-ai" style="max-width:900px;margin:16px auto;padding:16px;border:1px solid #0b7a5e;border-radius:14px;font:16px/1.5 system-ui,sans-serif;box-sizing:border-box">
+<b>Free AI readability test</b><br><span style="opacity:.8">Can ChatGPT, Gemini and shopping agents read your site? 4 checks, about 10 seconds.</span>
+<form onsubmit="return ujiAI(this)" style="display:flex;flex-wrap:wrap;gap:8px;margin-top:10px">
+<input name="situs" required maxlength="300" placeholder="your site, e.g. yourstore.com" style="flex:2;min-width:200px;padding:10px;border:1px solid #9aa4b2;border-radius:10px;font:inherit;background:transparent;color:inherit">
+<input name="email" type="email" maxlength="254" placeholder="email (optional, for the report)" style="flex:1;min-width:180px;padding:10px;border:1px solid #9aa4b2;border-radius:10px;font:inherit;background:transparent;color:inherit">
+<button style="padding:10px 16px;border:0;border-radius:10px;background:#0b7a5e;color:#fff;font:inherit;font-weight:700;cursor:pointer">Test now</button></form>
+<small style="opacity:.7">Leaving an email means OCKLU may contact you about this result.</small><div class="uji-hasil" style="margin-top:10px"></div></div>
+<script>function ujiAI(f){var o=f.parentNode.querySelector(".uji-hasil");o.textContent="testing… (about 10 seconds)";
+fetch("https://njghzieuuopukuagrswu.supabase.co/functions/v1/siapdibaca?r=uji",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({situs:f.situs.value,email:f.email.value,asal:location.pathname})})
+.then(function(r){return r.json()}).then(function(d){o.textContent="";if(d.galat){o.textContent=d.galat;return}var h=document.createElement("b");h.textContent=d.lulus+"/4 passed · "+d.situs;o.appendChild(h);
+d.cek.forEach(function(c){var p=document.createElement("div");p.textContent=(c.ok?"✓ ":"✗ ")+c.nama+" — "+c.rinci;p.style.color=c.ok?"":"#c0392b";o.appendChild(p)});
+var k=document.createElement("p");k.textContent=d.kesimpulan;o.appendChild(k);if(d.lulus<4){var a=document.createElement("a");a.href="/siap-dibaca-ai/";a.textContent="Fix it with Siap Dibaca AI (money-back guarantee)";o.appendChild(a)}})
+.catch(function(){o.textContent="Could not connect, try again."});return false}</script>
+
 <p class=kecil>No signup. 5 buyer questions × 2 AI engines. Raw answers included — you can check every claim.</p>
 <div id=hasil></div>
 <div class=grid>
