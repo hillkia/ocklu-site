@@ -89,9 +89,12 @@ var NAMA={ide:"ide",catatan:"kerja",gagal:"gagal",jual:"jual"},ubah=null;
 // Grigori, penjaga OCKLU: tombol owner hanya aktif di perangkat yang dikenali (kunci perangkat dari kode Telegram), tanpa PIN.
 var PEMILIK=false,PK="",pjTadi=null;try{PK=localStorage.getItem("pj_kunci")||""}catch(_){}
 function HK(){var h={"content-type":"application/json"};if(PK)h["x-perangkat"]=PK;return h}
-function barPj(){if(pjTadi===PEMILIK)return;pjTadi=PEMILIK;var b=$("pjBar");b.hidden=false;b.innerHTML=PEMILIK?'🛡️ <b>Perangkat owner dikenali</b> oleh Grigori, penjaga OCKLU. Tombol toko dan obrolan owner aktif di perangkat ini.'
+function barPj(){if(pjTadi===PEMILIK)return;pjTadi=PEMILIK;setTimeout(function(){if(PEMILIK)muatPerangkat()},0);var b=$("pjBar");b.hidden=false;b.innerHTML=PEMILIK?'🛡️ <b>Perangkat owner dikenali</b> oleh Grigori, penjaga OCKLU. Tombol toko dan obrolan owner aktif di perangkat ini.<div id="pjPerangkat" style="margin-top:8px"></div>'
   :'🔒 <b>Tombol owner terkunci di perangkat ini.</b> Grigori, penjaga OCKLU hanya membuka tombol toko dan obrolan owner di perangkat yang sudah dikenali, supaya agen atau orang lain tidak bisa mengubah toko. Pembeli tetap bisa membeli seperti biasa.'
   +'<div class="bar"><button class="utama" id="pjKenali">Kenali perangkat ini</button><input id="pjKode" placeholder="kode dari Telegram" autocomplete="one-time-code" aria-label="Kode dari Telegram" style="width:170px;text-transform:uppercase"><button class="chip" id="pjMasuk">Masukkan kode</button> <small id="pjPesan"></small></div>'}
+function muatPerangkat(){fetch(API+"?r=perangkat",{headers:HK()}).then(function(r){return r.json()}).then(function(L){var b=$("pjPerangkat");if(!b||!L.map)return;
+  b.innerHTML='<small>Perangkat owner yang dikenali:</small>'+L.map(function(p){return '<div class="bar" style="margin:4px 0">'+esc(p.nama||"perangkat")+(p.ini?' <b>(perangkat ini)</b>':'')+' <small>· aktif '+lalu(p.terakhir||p.pada)+'</small> <button class="chip" data-keluar="'+p.id+'" data-ini="'+(p.ini?1:0)+'">Kick out</button></div>'}).join("")})}
+function keluarkan(b){return fetch(API+"?r=keluarkan",{method:"POST",headers:HK(),body:JSON.stringify(b)}).then(function(r){return r.json()})}
 function pasangKode(k){k=String(k||"").trim().toUpperCase();if(!k)return;var m=$("pjPesan");if(m)m.textContent="memeriksa kode…";
   fetch(API+"?r=pasang",{method:"POST",headers:HK(),body:JSON.stringify({kode:k})}).then(function(r){return r.json()}).then(function(d){if(!d.ok){m=$("pjPesan");if(m)m.textContent=d.galat||"kode ditolak";return}
     PK=d.kunci;try{localStorage.setItem("pj_kunci",PK)}catch(_){}pjTadi=null;muat();muatPj()}).catch(function(){if(m)m.textContent="gagal terhubung, coba lagi"})}
@@ -100,7 +103,7 @@ function muatPj(){fetch(API+"?r=penjaga",{headers:HK()}).then(function(r){return
   $("pjAngka").innerHTML=[["pengunjung_24j","pengunjung 24 jam"],["agen_24j","agen/skrip/bot 24 jam"],["curiga_24j","perilaku curiga"],["ditolak_24j","permintaan ditolak"],["cekal_aktif","sedang dicekal"]]
     .map(function(a){return '<div class="kartu" style="cursor:default"><b>'+Number(d[a[0]]||0)+'</b><span>'+a[1]+'</span></div>'}).join("");
   var L=d.terbaru||[];$("pjDaftar").innerHTML=L.length?L.map(function(x){var c=/php|probe|banjir|ditolak/.test(x.jenis)?"gagal":x.jenis==="curiga"?"ide":"";
-    return '<li class="item '+c+'" style="cursor:default"><b>'+esc(x.label)+'</b> #'+esc(x.siapa)+' · '+esc(x.situs)+' · '+esc(x.rute||"-")+' · '+esc(JENIS[x.jenis]||x.jenis)+(x.alasan?'<br><small>'+esc(x.alasan)+'</small>':'')+'<br><small>'+lalu(x.pada)+'</small></li>'}).join("")
+    return '<li class="item '+c+'" style="cursor:default"><b>'+esc(x.label)+'</b> #'+esc(x.siapa)+' · '+esc(x.situs)+' · '+esc(x.rute||"-")+' · '+esc(JENIS[x.jenis]||x.jenis)+(x.alasan?'<br><small>'+esc(x.alasan)+'</small>':'')+'<br><small>'+lalu(x.pada)+'</small>'+(PEMILIK&&x.label!=="owner"?' <button class="chip" data-kick="'+esc(x.siapa)+'">Kick out 7 hari</button>':'')+'</li>'}).join("")
     :'<li class="kosong">Belum ada agen atau ancaman tercatat.</li>'}).catch(function(){})}
 function simpanHarga(){var f=$("hargaBaru"),m=$("hargaPesan"),b=document.querySelector("[data-simpan]");if(!f)return;b.disabled=true;m.textContent="menyimpan…";
   fetch(API+"?r=harga",{method:"POST",headers:HK(),body:JSON.stringify({id:ubah,harga:Number(String(f.value).replace(",","."))})}).then(function(r){return r.json()})
@@ -140,6 +143,9 @@ document.addEventListener("click",function(e){
   if(e.target.id==="pjKenali"){var kb=e.target;kb.disabled=true;$("pjPesan").textContent="mengirim kode…";fetch(API+"?r=kenali",{method:"POST",headers:HK(),body:"{}"}).then(function(r){return r.json()})
     .then(function(d){$("pjPesan").textContent=d.galat||"Kode dikirim ke Telegram owner (berlaku 15 menit). Ketik kodenya di sini atau ketuk link di Telegram.";kb.disabled=false}).catch(function(){$("pjPesan").textContent="gagal terhubung";kb.disabled=false});return}
   if(e.target.id==="pjMasuk"){pasangKode($("pjKode").value);return}
+  var kk=e.target.closest("[data-kick]");if(kk){if(!confirm("Keluarkan pengunjung #"+kk.dataset.kick+" dari semua dasbor OCKLU selama 7 hari?"))return;kk.disabled=true;keluarkan({siapa:kk.dataset.kick}).then(function(d){kk.textContent=d.ok?"dikeluarkan":(d.galat||"gagal");muatPj()});return}
+  var kp=e.target.closest("[data-keluar]");if(kp){var ini=kp.dataset.ini==="1";if(!confirm(ini?"Keluarkan perangkat INI? Tombol owner akan terkunci lagi di sini.":"Keluarkan perangkat ini dari daftar owner?"))return;kp.disabled=true;
+    keluarkan({perangkat:Number(kp.dataset.keluar)}).then(function(){if(ini){PK="";try{localStorage.removeItem("pj_kunci")}catch(_){}pjTadi=null;muat()}else muatPerangkat()});return}
   var k=e.target.closest(".kartu");if(k){var s=k.dataset.saring;if(s==="uang")$("hUang").scrollIntoView({behavior:"smooth"});else if(s==="obrolan")$("hObrolan").scrollIntoView({behavior:"smooth"});else{pilih(s);$("hJurnal").scrollIntoView({behavior:"smooth"})}return}
   var c=e.target.closest("#chips .chip");if(c){pilih(c.dataset.j);return}
   var q=e.target.closest("[data-cepat]");if(q){kirim(q.dataset.cepat);return}
