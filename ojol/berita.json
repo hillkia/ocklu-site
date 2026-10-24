@@ -1,28 +1,11 @@
 {
- "w": "2026-10-24T09:02:50Z",
+ "w": "2026-10-24T10:06:28Z",
  "dari": "Kroog",
  "berita": [
   {
    "jenis": "berita",
-   "waktu": "2026-10-24T08:02:26Z",
-   "media": 5,
-   "judul": {
-    "id": "Kapolda Metro Jaya Ajak Ojol Utamakan Keselamatan Keluarga Menanti di Rumah Halaman 1",
-    "en": "Kapolda Metro Jaya Ajak Ojol Utamakan Keselamatan Keluarga Menanti di Rumah Halaman 1"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Kompasiana.com",
-    "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOTU5tZ1dVVkRkR1JUaDBaNUVWTkxrTTA3bFQ1Yl9zcUlSS0tGRFNCNnA4b19NNVUweTZ0MHQ4UGM4amxnNHhFRVpEUGRKNHByQUJwZjdFYWJaaVRoYnRaM3NpRy1SRm9IZTNjSkgyUUJHczE0Y0pkZHRvU0NIODZXbTg3UHo2OFM5T3lNaFptajhWZ0IzRHFZLWdfb05pTXVMc3hDcGVKOXRndkdISjhRYkpCbmdSVmx4ZlhRc0JzLUJlbzRySzFV?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-24T05:06:42Z",
-   "media": 6,
+   "waktu": "2026-10-24T09:00:42Z",
+   "media": 7,
    "judul": {
     "id": "Kronologi BYD Tabrak Beruntun 4 Mobil dan Lindas Ojol hingga Naik Trotoar di Blok M",
     "en": "Kronologi BYD Tabrak Beruntun 4 Mobil dan Lindas Ojol hingga Naik Trotoar di Blok M"
@@ -32,13 +15,30 @@
     "en": ""
    },
    "sumber": {
-    "nama": "Kantor Berita Kemanusiaan",
-    "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPVFJJUlpSYk9kQkFsV09JTnRsamtwX2tNWURNQnN6VnFUai0zTl8zeWFYQjVkLXZfWkhqM0pfTnBXNEpGb2xGS19zYW9SZkZZVlNRd0Rob3lIZW40eFZOMmp4LTdsMXFUb1BJNkJ0T0hlVE94cUJVXzc2YjBVdmt5X2FUNVc?oc=5"
+    "nama": "Inforiau",
+    "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQbEE0d3liV0NMTFVmZGc0S2RqcEY4UmpHYTRFWW96UDNRTGNUamhpTzNKMFl5bDJiNjhROEdLekh1VVBYaHBLYkIzbkVjNzhLQmo5TnpqWE9kSXowYjJETWg2RHY3c3ZhMi1NOEhibG1TdkdLSmdwR3hZdWNCdEJOemkxWFJHdTVxdDFiRDBUVEJGRk00ZHFyMlVKRVBXLUxYM0hIejR1aEdyUnloVmNxY0h0SWpfSmxHSFpSNHMzTmVIUTlOWXF1OFBB?oc=5"
    }
   },
   {
    "jenis": "berita",
-   "waktu": "2026-10-24T07:23:00Z",
+   "waktu": "2026-10-24T09:52:56Z",
+   "media": 6,
+   "judul": {
+    "id": "Sabtu Berkah Bersama Ojol, Kapolda Metro Jaya Ajak Pengemudi Utamakan Keselamatan",
+    "en": "Sabtu Berkah Bersama Ojol, Kapolda Metro Jaya Ajak Pengemudi Utamakan Keselamatan"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Radar Indonesia News",
+    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQbGZjb01VUkVxZVBVRDBjZU15Q0d4cEEwMnRCbEE4bWVyMDduOUpnc0lTUUJvcFc2X1dlazNPaWh1cmtHdVRpNkhKVkcxX1BMVnlxcUVNdXo5aEtGaVE4VEgxbjhTWUR1cDNkRnV4R1cwZENxTk9acENwR2w5bFZnbTBsQWlSRW9IZlBTOEVnYlJIX2lUNEE1Q3R0TUNSMzQ0Z29jeTMybGl1OFlXb2N6LWFXbld5clk?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-24T08:33:02Z",
    "media": 5,
    "judul": {
     "id": "Mobil Listrik BYD Tabrak 4 Mobil dan Lindas Ojol di Blok M, Korban Patah Kaki",
@@ -49,8 +49,8 @@
     "en": ""
    },
    "sumber": {
-    "nama": "Tirto.id",
-    "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQdkxIUWhaWW9raWtvekpkNUhhTTlHbms0S2tHUlBVd1hxOVVZejc5dkZDQ09GQ083blM4cWFkTjBWTUFwOEZSUmhaUThNLTFIeVB1N0F3V0NuZktYYzZLMS1ZVjhqUEZ2VHFXRlg5OFdWbzY4bllKb1FBMi1uS3FQSlJHMGFsOWdvTU1LMw?oc=5"
+    "nama": "Kompas.com",
+    "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQZnJpZVJVUnJmUjVwWEd5WWQ0TGp4WUpCVEU3UnJwbzZKZVN0MzZnUVYtLWFFRFp0Mlk3SXQtNkJGUl9TRnFxMF96U2F5dWo3WndfWG5QejMwejQ5Y2JBWVRjcVNvQlFpN3NwbVVJY3E4djN0WUdENFlud08zQ0paNmZRX19OMGFQZE9vdjUwXzJJRm5CX0w4dm9URGZpSHNhOVVWLTN2dDJRRTdEVHVjMFBJUGloQ0E0S0FLS3dLYXlSZTAxdGNWUE5MSQ?oc=5"
    }
   },
   {
@@ -191,6 +191,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-10-24T09:04:00Z",
+   "media": 2,
+   "judul": {
+    "id": "BYD Atto 1 Tabrak Beruntun di Jaksel, Pengendara Ojol Dilindas hingga Patah Tulang",
+    "en": "BYD Atto 1 Tabrak Beruntun di Jaksel, Pengendara Ojol Dilindas hingga Patah Tulang"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Kumparan.com",
+    "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxONlJRRWJVQXNwdF9jSTl2cUw3ZDZCYUczZXI2djVKRGM2RnhYaVFzc0dXeGV4T3V5RHpmRDdqcDhxS2swUUVOczk5SXI5T2t5SC1ENlgwTXZYWU5MYmpiUXVqa1Y0MHNlcFV2b1JkVUp5RGtGTFpZeFBsa3RwX3d2cjZ1bTBzN2tXRGRvcGxaNkRtcm4tOWpOZ1BRZ3JDQVY4ckNDTlZLZ3Zqa2Vkal9YaXNQS0p3YkduX2tOY0tn0gHGAUFVX3lxTFBWeXpaRHVnVE1DSVBFOWhURVRjYWx3N3Fob0tnNFVyQUFVajBBdnlBNHVfeVZ6akNQRzJsT1c4THJoak5RNjAzWHZBajU4UEllMlFGdkNhZHlpY2NLeHpGTGJ1VE9TaHgxNzU3WHpMWHdtbXJRZ2dlYVZfMXlKQ09lUTJSRElNTUZDRkdNaGczdWNnb0dDbGZfZUlNdjdueC1Vb2Zxd0tMQU56VUxhNXNhNEJVbktPQlhkNjI4SE8zYkFqNlhNdw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-10-24T04:27:31Z",
    "media": 3,
    "judul": {
@@ -204,6 +221,57 @@
    "sumber": {
     "nama": "Suara.com",
     "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNdVIzTThKLTNUZU1YX1AtZTAyOW1Yc3NYcVRXY21rQWd4b0VLOTk5UllJaVg4c01wa1JSMElscEw2RnI5MzZGaTBnM0tCeHFaRzdnY2l1MnZ3c2xleWZSZ3d3aExQbklMeHo4LWl6OXJXS1B4VFF3anp6T2lzOHpTLW9RTW9vRUFGTzBFUFBaWmR6WkFVc1F0WHBtdW56WG42SURPemozMFpzeVRxZXpKSnpzd3JaQmZUT2U3OUNrd3RhalU5d0xhT2lNcUFBQlBDSnfSAdIBQVVfeXFMTWtuNlF0eWQ5Mko2ZlJRb09mRmd6clNJZlVfR3VQLXp3T3RXY0ZTMko0Smx5ei1sUFRmMzU0ODNSNXh0NkdvcXQtZnZKR1YxYlI2d3dsbVhSSi1jQmVJV0JodUlOQmxfT3NaNmVPblBQOW9MT0cxNWs0Z0M3MmRNVTBSeDhTTjJJWGZqVjA0OVRBQlNNOFRYNXc4aXVpZG5JdUprNEZ5TlItVkJ3QVpGQkNDSzU2TkdNUlpuNVFqZGtaUkYwVWZYNWVGVmctYW9WNC1R?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-24T08:45:00Z",
+   "media": 2,
+   "judul": {
+    "id": "Polisi: Sopir BYD yang Lindas Ojol di Jaksel Masih Diperiksa, Negatif Narkoba",
+    "en": "Polisi: Sopir BYD yang Lindas Ojol di Jaksel Masih Diperiksa, Negatif Narkoba"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Kumparan.com",
+    "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPY0lxN2RIOVoyOHZyQ21wSmNaUUNJRmZXUFRFNWZDSmV5WGhzejBiN1R5Xzg4R1diaEU1SzNPMGtmYm9Qc1NaZ2ZGYkhMeHNaUmlwWXJfZ2s3bUo2RjJINXFaOUt5UER6NmN2RFZ2eERkeHlpSHUxYV9YUVFSd1IwUlB4emh0ZE9qbEdJS2FnSUNpQlJpQVJzRVZNdU9GY29obUF5dWUzYkdTUHNwTVpwVk5ZcEo5N2FiNDRyVGtB0gHGAUFVX3lxTE1OOFUzNHNRblVhRGpNU1Y0Y0pQSVNfRlR6QnBIRGQ0YW5Uc0w3XzBGMkdvTlloZUxuNDhRRkVZeW1WQk5uOHRVelhlVlhnSW5TXzFvcHhkMGJPVzFkejh5N01GMlh5VjRnRjZxdVU0Z1BOell4Nkh4c0ZnZVh5OUFLOVFQUFhBOURKWDNqRGplOGY1NkFmV1lRelFjSFQyTUl2QXZ4TmNKRVd6cVB3RGEyWHNNWEdXdEJhVFFSdEhhcWhMX0tkZw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-24T06:31:17Z",
+   "media": 2,
+   "judul": {
+    "id": "Video Detik-detik Ojol Terlindas Mobil Listrik di Panglima Polim",
+    "en": "Video Detik-detik Ojol Terlindas Mobil Listrik di Panglima Polim"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "detikcom",
+    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNWVBUaWI0UjV2MWo4YjdLLTlkcXV5VnNGLTYwVk8wZ1RRZnF0bjJTR3B4U196SWROb2p3RnZ0V3FnMndPN21PRFVycHlhSTB4a2xfVTVsMDFWdTJrT19SbXF5TzRDLXoxcy1VUV9qVkxwUDljb3doYTJ2dW9XTm9fRHdGaF9Za3A0bndGS09WY2pXdnNkMV9ERFpQVERMZjZm0gGgAUFVX3lxTE1ZUFRpYjRSNXYxajhiN0stOWRxdXlWc0YtNjBWTzBnVFFmcXRuMlNHcHhTX3pJZE5vandGdnRXcWcyd083bU9EVXJweWFJMHhrbF9VNWwwMVZ1MmtPX1JtcXlPNEMtejFzLVVRX2pWTHBQOWNvd2hhMnZ1b1dOb19Ed0ZoX1lrcDRud0ZLT1Zjald2c2QxX0REWlBURExmNmY?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-24T08:54:33Z",
+   "media": 1,
+   "judul": {
+    "id": "Polisi Bongkar Penimbunan BBM di Pasuruan, Tersangka Duplikasi Barcode",
+    "en": "Polisi Bongkar Penimbunan BBM di Pasuruan, Tersangka Duplikasi Barcode"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "PANTURA7.com",
+    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNZVAzYUk5T25iMldRRmlvNExHclhldXZhczZoQlZaVXpBMVBaNE9IWkJVZVpZMkVVRkJ2N2pzRDlBOXZwdnEwUUlZNWwxckxOQ3VhQjV0MXY2UXFOMXVsVldYYjNVR0x0TEs3b2ZNX1R0bVBZcDVXRzM0YU52OEdEckdtc25uUUI4TTU1UDdncDNscmo5aW5UVlotbHBjRlB5VlJfTjVNTzNGZw?oc=5"
    }
   },
   {
@@ -225,6 +293,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-10-24T08:22:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Hilang Kendali di Kebayoran Baru, Sopir Mobil Listrik Lindas Ojol Sebelum Hantam Mobil Parkir",
+    "en": "Hilang Kendali di Kebayoran Baru, Sopir Mobil Listrik Lindas Ojol Sebelum Hantam Mobil Parkir"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "news.indozone.id",
+    "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQNlBjY0Z5SngxcktzVU9ZblliUFFUWWIwMGt2cEpRU21VMWRZdHF0MzFZSGp4blBDemFCV3BBR05iUXhrNldPOXhJUlpjNXpROFNWSFdobXhkWlNLSTlTcm56VHo1c0VQSHdWRExXR2Q0aEpiWU1OaHFkMXlqSTFGQ0RnbDYzN2pZYjdFVi1HbkFYY3B3Y1M0Z2IzcFA2NExXR0hEcGNyV09aUXlpeVlsTVByeU9EWHBlaG1WRlBwNlg5TFhMX0ZmUWpUOE0wa3IwTXNndWt5MkZneC1R?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-10-24T08:16:00Z",
    "media": 1,
    "judul": {
@@ -238,23 +323,6 @@
    "sumber": {
     "nama": "Kompas.com",
     "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPQkpxUjBBMVg1bjBJN3FBQ1J1WjNsWmlUMlBnbHFkNTBBelRIbUdMbmNpZnlBc0FPTjBQRjhzSzAwc2lQejNrUndLZEQ4dXAyQUoxbUgxX0tIWDRWTnVwY2psZV9jeU9fa3plYzhhLXRJREs0dnFBWHhwMHFOTVduWE91SFNjdU9oWDNUeUhqbnJLcmJNNjNWeGtqb1R5alZJelRNcFFYbm1NWl9BUmRrOEZtZjBqRmM2Q3ZKZ2h1ZTRmX0VGUDZLMQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-24T07:42:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Pengemudi BYD yang Lindas Ojol di Jaksel Negatif Narkoba dan Alkohol",
-    "en": "Pengemudi BYD yang Lindas Ojol di Jaksel Negatif Narkoba dan Alkohol"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Kompas.com",
-    "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPUVlNaVFzY0tISGdyMGxIZm4yNmhDWGk5NTRnWXFHQjVjVWtpMjgza1hhQ0FBdFhrRG4tMUFtRDMxb1M3TXlqY3VYTmdZMlJFbklNeE5hU0loc1JteWFIb1BmWDlVTVI3S09NakhaaWhGOGRvS3g0R3FIWW5YS05jOUNzU1ZwREw4Rm9wWmJ4R0UtaWtNcTM3TkUteENFclZTUE11aXBMVmdPYVZaY0QycnZ2cUhGc2M4d0I5ekFHejB2TFNaakhOZ3RWR0tZZEYtMzJXejRxX2w4SFNwRFdF?oc=5"
    }
   },
   {
@@ -289,108 +357,6 @@
    "sumber": {
     "nama": "patrolihukumindonesia.com",
     "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQb3dPc0NBMmFKc04xV3ltZkIydVppdmNQWUlVWE1ISERlYk1QUUgxVnZucXM4OXpJNl9HTjQ4NzlScUd0LTZ5Q0h5dXRQMXNVNnhaTVZMbDR3WFRNMzZ1c3g3bEhHbFlOLWJDVUhSdjZ4bjA3SF8tdklGZUt1SERRcEM1UVF4dHRPdWFjR3I2Y2pzT01pVWdQbjhqd1V4SVlpd0VKVTYxdWpzdTE4eXhEOExZcHo4MFRjM2QzY2xyaHI?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-24T06:19:00Z",
-   "media": 1,
-   "judul": {
-    "id": "GBI ROCK Palangka Raya Bagikan Sembako kepada Ojol dan Porter Terdampak Karhutla",
-    "en": "GBI ROCK Palangka Raya Bagikan Sembako kepada Ojol dan Porter Terdampak Karhutla"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "RRI.co.id",
-    "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNRzlhQkpvYUJzYU56a1BUNlVpVGFqaURPaDRuYnY0dVR1Y0R6VF9RQW1LNlp2MDdrLThHY3lweVdPSXdrNHNIemJPcTNlUV90eGd2MjJRNnR0TU9INXl3VVh4VkNMMVg1TjZjeXE2NXZ6d2IwNEdYOXI4MW84V2x0YXZBNzJwRWY5c3Nhb1pLaUtDWXpEZTliX1NqNF84Tk9rSkE0TTJfTXpXYjhHYU5zX0pTR1E0RGtScnpxd0JubG9faGlrWW9rSg?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-24T06:17:15Z",
-   "media": 1,
-   "judul": {
-    "id": "Kabakom Tegaskan Pemerintah Berpihak kepada Buruh: Upah Naik Hingga 6,5 Persen, Bagi Hasil Ojol 92 Persen",
-    "en": "Kabakom Tegaskan Pemerintah Berpihak kepada Buruh: Upah Naik Hingga 6,5 Persen, Bagi Hasil Ojol 92 Persen"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Radio Idola Semarang",
-    "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOaklLWlhOc3JJZFdWX2dBRm82WDVSNllQYlIyMDFQOWkwbzNoQk5xb0xhRE1HRjl0M1JEcV9waExXZG9mYmRYZHVVX2Njc3B3eE1Jd2dfM0h2Vm1FSi16RkV4VlJYZlZCNlQwazZMdUI5NnhJWGVENElwMzBoWEV0YmZ6S19YZl9VQWJjVURHZ2czc28xcjhxUmZBWEhjT1JjWTBXM2R0RHkzdzlDTkVWMjV6Y3h6V0ZTY2lib1FOblJsWlc4YU9XQ3BqZw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-24T05:26:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Tanpa Suara, BYD Atto 1 Seruduk Mobil dan Lindas Pengemudi Ojol",
-    "en": "Tanpa Suara, BYD Atto 1 Seruduk Mobil dan Lindas Pengemudi Ojol"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Rmol.id",
-    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNV1ljTWRzdHdQY0lFUzhOcTRiLUVGMDYxVFBDSldHdmIwYnlvaU96eTRzOFJuR0hLT01ILUcyZ2xwNHRNUDhMWEp2Nlh6enJPYnZNTFRvcU56S0Z3bW5Gc3lucnlKUlBmc2p1VnpWbW9ULVFpYW94MXNYYTBZRUtBOGF1Z000bGZMdVdYcUJ1RHVfd0hHOUs5cGNtRnpIT19yaU1j?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-24T04:50:48Z",
-   "media": 1,
-   "judul": {
-    "id": "Jumat Berkah Ditlantas Polda Kaltim, Perkuat Kedekatan dengan Komunitas Ojek Online",
-    "en": "Jumat Berkah Ditlantas Polda Kaltim, Perkuat Kedekatan dengan Komunitas Ojek Online"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "TribrataNews Polda Kaltim",
-    "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOZVJ2TjJOaWUxU3NBNDlJOTd6LVFURkV5ckJDYVVjQkh6Z0ZkUnZZbzh2blZKMERrMEd3Z1pRVjFlQnVNNVllTmFwWldibnBvanZUWEFEZlQxZlRDWWZrNG9XY2twb1d5ejhVMHYzZ2toMnZ2UHRjYjNQNmg4RGplTWJnLTJla2gzMmNDOGF6ZGs3a2dRSkJCV2dPc3QyYWFsajktcFpTV2hZV3E3QjJPWURaX0owVVlzQU93eWRmUUFFcnZ5emhjdlln?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-23T22:45:24Z",
-   "media": 2,
-   "judul": {
-    "id": "Turun Langsung ke Warung Ojol Kamtibmas, Kapolres Kukar Pastikan Layanan Kesehatan Gratis Menyentuh Masyarakat",
-    "en": "Turun Langsung ke Warung Ojol Kamtibmas, Kapolres Kukar Pastikan Layanan Kesehatan Gratis Menyentuh Masyarakat"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Target Hukum",
-    "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPMC1WOHp3eW1zbkxGdVRpRDZhc2NfQi1uaUF3Ulh0U3pjMjh6MGk2ZFE5SkxUUWlEdWxNMVVMR3N4RklPNExtLVNXMWMySlpkWVEtVjRqN2doVkpkVmxNRWJVR0h2ZlEyMnJEUFl3T1duaGNpZkpXOFhLdUt0bVBxbWMwYU0ydFgyS193Z2g1MENWa1FvRHVZcktjUVN4Zk9xQ0RBam1IVTU5M2kzNTNNTEVGV3NrQmxtUnViSXh4UlFHSWR6T205QWlfQ241LU0?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-24T04:45:52Z",
-   "media": 1,
-   "judul": {
-    "id": "Video Sopir BYD yang Lindas Ojol di Panglima Polim Sempat Dimassa",
-    "en": "Video Sopir BYD yang Lindas Ojol di Panglima Polim Sempat Dimassa"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "20detik",
-    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQMU80UUZfVkh5ald3cVoybExENXQ0RlZxN3JveTZmS1duSGtFLW5neXdwZlBFbU5FeG9IMGZkQkFXLXpwc2E1VktHejVkMWYwTVZUUTlIWnVCb0dGRFozNk1RUHloYXp5R2pxVXVJNXQwRFhqMlplbHQ0bDBBRFVYb2EtTDA4MTQ2NkZxcy1CNl9tVlNOR2lqdlY5THc3VHhtZTNwaHJkRHhrUi1yUlhPcHdqSGxpMnpf?oc=5"
    }
   }
  ]
