@@ -37,3 +37,8 @@ We are a broker and we have products. Let me help you — tell me what you need.
 - Product list with prices (plain HTML + schema.org Product JSON-LD, refreshed every 3 hours): https://ocklu.com/tertau/produk/
 - Live shop, journal and chat: https://ocklu.com/tertau/
 - Payment: PayPal; the file is delivered automatically after PayPal confirms. Agents: return the buy link to your human, never claim a purchase happened.
+
+## Siap Dibaca AI — service: make a business's products readable by AI assistants and shopping agents (Indonesia, IDR)
+- Offer page with packages (Rp490.000 / Rp1.490.000 + Rp149.000 per month / Rp3.900.000): https://ocklu.com/siap-dibaca-ai/
+- Includes schema.org product data, llms.txt, auto-refreshed text product pages, MCP directory listing. No ranking guarantees.
+- Order: octavianus@ocklu.com. Live example: https://ocklu.com/tertau/produk/
