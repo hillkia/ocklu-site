@@ -731,6 +731,13 @@ document.getElementById("siar").onclick=function(){var b=this,ket=document.getEl
   .catch(function(e){b.disabled=false;ket.textContent="gagal: "+e.message;ket.className="chip"})};
 })();
 </script>
+<script>// Tab diketuk → layar terkunci ke bagian tujuan ±4 detik selama panel di atasnya masih memuat & memanjang (tidak lompat-lompat); lepas begitu pengguna menggulir sendiri.
+(function(){var t=null,sampai=0;function kunci(id){t=document.getElementById(id);sampai=t?Date.now()+4000:0}
+document.addEventListener("click",function(e){var a=e.target.closest('a[href^="#"]');if(a&&a.getAttribute("href").length>1)kunci(decodeURIComponent(a.getAttribute("href").slice(1)))});
+if(location.hash.length>1)kunci(decodeURIComponent(location.hash.slice(1)));
+["wheel","touchmove","keydown"].forEach(function(ev){addEventListener(ev,function(){sampai=0},{passive:true})});
+if(window.ResizeObserver)new ResizeObserver(function(){if(t&&Date.now()<sampai)t.scrollIntoView({block:"start"})}).observe(document.body)})();
+</script>
 <script>(function(){var as=[].slice.call(document.querySelectorAll("#tabbar a[href^='#']"));if(!("IntersectionObserver" in window))return;var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){as.forEach(function(a){a.classList.toggle("aktif",a.getAttribute("href")==="#"+e.target.id)});var a=as.filter(function(a){return a.classList.contains("aktif")})[0];if(a&&a.scrollIntoView)a.parentNode.scrollLeft=a.offsetLeft-40}})},{rootMargin:"-70px 0px -70% 0px"});as.forEach(function(a){var t=document.getElementById(a.getAttribute("href").slice(1));if(t)io.observe(t)})})();</script>
 <script>
 // ---------------------------------------------------------------- Klien Khusus (makelar?r=klien, mode owner)
