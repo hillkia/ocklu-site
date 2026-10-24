@@ -27,7 +27,7 @@ def butir(i, p):
 
 ld = {"@context": "https://schema.org", "@type": "ItemList", "name": "OCKLU Hyper Market — penawaran aktif / active listings",
       "url": "https://ocklu.com/hypermarket/pasar/", "itemListElement": [butir(i, p) for i, p in enumerate(P, 1)]}
-ld_teks = json.dumps(ld, ensure_ascii=False, indent=1).replace("</", "<\\/")
+ld_teks = json.dumps(ld, ensure_ascii=False, indent=1).replace("<", "\\u003c")
 
 def kartu(p):
     situs = p.get("url") or ""
