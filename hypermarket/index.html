@@ -341,12 +341,20 @@ function ls(k,v){try{if(v===undefined)return localStorage.getItem(k);if(v===null
 function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
 // Grigori, penjaga OCKLU: data dari otak penjaga bersama (pj_ringkas), sama dengan panel di TerTau.
 var PJ_JENIS={agen:"agen masuk",curiga:"curiga",php:"pola serangan",probe:"alat pemindai",banjir:"banjir permintaan",ditolak:"ditolak (sedang dicekal)",lihat:"lihat"};
-function muatPenjaga(){fetch("https://njghzieuuopukuagrswu.supabase.co/functions/v1/tertau?r=penjaga").then(function(r){return r.json()}).then(function(d){
-  document.getElementById("pjAngka").innerHTML=[[d.pengunjung_24j,"pengunjung 24 jam"],[d.agen_24j,"agen/skrip/bot 24 jam"],[d.curiga_24j,"perilaku curiga"],[d.ditolak_24j,"permintaan ditolak"],[d.cekal_aktif,"sedang dicekal"]]
-    .map(function(a){return'<div class="a"><b>'+Number(a[0]||0)+'</b><span>'+a[1]+'</span></div>'}).join("");
+var PJ_K=null;function pjBaris(x){var bahaya=/php|probe|banjir|ditolak|cekal/.test(x.jenis);return'<li><time>'+lalu(x.pada)+'</time><b>'+esc(x.label)+'</b> #'+esc(x.siapa)+' · '+esc(x.situs)+' · '+esc(x.rute||"-")+' <span class="chip'+(bahaya?'':' ok')+'">'+esc(PJ_JENIS[x.jenis]||x.jenis)+'</span>'+(x.alasan?'<br><span class="kosong">'+esc(x.alasan)+'</span>':'')+(window.HM&&window.HM.owner&&window.HM.owner()&&x.label!=="owner"&&x.jenis!=="cekal"?' <button class="chip" data-kick="'+esc(x.siapa)+'">Kick out 7 hari</button>':'')+'</li>'}
+function pjSaring(k){PJ_K=k;var L=document.getElementById("pjDaftar");L.innerHTML='<li class="kosong">memuat…</li>';fetch(API+"?r=penjaga&k="+k).then(function(r){return r.json()}).then(function(xs){
+  L.innerHTML='<li class="kosong">Menampilkan: <b>'+esc({pengunjung:"pengunjung 24 jam",agen:"agen/skrip/bot 24 jam",curiga:"perilaku curiga",ditolak:"permintaan ditolak",cekal:"sedang dicekal"}[k])+'</b> ('+xs.length+') · <a href="#penjaga" id="pjSemua">tampilkan terbaru</a></li>'+(xs.length?xs.map(pjBaris).join(""):'<li class="kosong">Kosong.</li>')})}
+document.addEventListener("click",function(e){var c=e.target.closest("#pjAngka [data-k]");if(c){pjSaring(c.getAttribute("data-k"));return}if(e.target.id==="pjSemua"){e.preventDefault();PJ_K=null;muatPenjaga()}});
+function muatPenjaga(){if(PJ_K)return;fetch(API+"?r=penjaga").then(function(r){return r.json()}).then(function(d){
+  document.getElementById("pjAngka").innerHTML=[[d.pengunjung_24j,"pengunjung 24 jam","pengunjung"],[d.agen_24j,"agen/skrip/bot 24 jam","agen"],[d.curiga_24j,"perilaku curiga","curiga"],[d.ditolak_24j,"permintaan ditolak","ditolak"],[d.cekal_aktif,"sedang dicekal","cekal"]]
+    .map(function(a){return'<div class="a" data-k="'+a[2]+'" style="cursor:pointer" title="Ketuk untuk melihat daftarnya"><b>'+Number(a[0]||0)+'</b><span>'+a[1]+' ›</span></div>'}).join("");
   var L=d.terbaru||[];document.getElementById("pjDaftar").innerHTML=L.length?L.map(function(x){var bahaya=/php|probe|banjir|ditolak/.test(x.jenis);
     return'<li><time>'+lalu(x.pada)+'</time><b>'+esc(x.label)+'</b> #'+esc(x.siapa)+' · '+esc(x.situs)+' · '+esc(x.rute||"-")+' <span class="chip'+(bahaya?'':' ok')+'">'+esc(PJ_JENIS[x.jenis]||x.jenis)+'</span>'+(x.alasan?'<br><span class="kosong">'+esc(x.alasan)+'</span>':'')+(window.HM&&window.HM.owner&&window.HM.owner()&&x.label!=="owner"?' <button class="chip" data-kick="'+esc(x.siapa)+'">Kick out 7 hari</button>':'')+'</li>'}).join("")
     :'<li class="kosong">Belum ada agen atau ancaman tercatat.</li>'}).catch(function(){})}
+document.addEventListener("click",function(e){var g=e.target.closest("[data-grup-pilih]");if(g){var v=g.getAttribute("data-grup-pilih"),d=document.getElementById("agenTabel").closest("details");if(d)d.open=true;
+    document.querySelectorAll("#agen tr.baris-agen").forEach(function(tr){tr.hidden=v!=="semua"&&tr.getAttribute("data-grup")!==v});d&&d.scrollIntoView({behavior:"smooth"});return}
+  var a=e.target.closest("[data-asal]");if(a){var box=document.getElementById("asalRinci");box.hidden=false;box.innerHTML='<span class="kosong">memuat…</span>';
+    fetch(API+"?r=rinci&jenis=asal&nilai="+encodeURIComponent(a.getAttribute("data-asal"))).then(function(r){return r.json()}).then(function(xs){box.innerHTML='<b>Kunjungan dari '+esc(a.getAttribute("data-asal"))+'</b> (30 hari, maks 50)'+(xs.length?xs.map(function(x){return'<br><span class="kosong">'+lalu(x.pada)+'</span> · '+esc(x.a||"-")+(x.b?' · kata: '+esc(x.b):'')+(x.c?' · '+esc(x.c):'')}).join(""):'<br><span class="kosong">Kosong.</span>')})}});
 setTimeout(muatPenjaga,800);setInterval(muatPenjaga,60000);
 document.addEventListener("click",function(e){var k=e.target.closest("[data-kick]");if(!k||!window.HM||!window.HM.owner())return;
   if(!confirm("Keluarkan pengunjung #"+k.dataset.kick+" dari semua dasbor OCKLU selama 7 hari?"))return;k.disabled=true;
@@ -443,10 +451,10 @@ function render(){
   var JENIS={klien:"Agen/aplikasi",pengindeks:"Pengindeks AI",pemeriksa:"Direktori",tanpa:"Tanpa nama"};
   var semua=[];["klien","pengindeks","pemeriksa","tanpa"].forEach(function(g){(grup[g]||[]).forEach(function(k){semua.push([k,g])})});
   semua.sort(function(a,b){return ag[b[0]].h24-ag[a[0]].h24||ag[b[0]].total-ag[a[0]].total});
-  var tb=semua.map(function(x,i){var k=x[0],a=ag[k];return'<tr class="baris-agen"'+(i>=15?' data-sembunyi="semua" hidden':'')+' data-agen="'+esc(k)+'"><td>'+esc(k)+'</td><td>'+JENIS[x[1]]+'</td><td>'+a.h24+'</td><td>'+a.total+'</td><td>'+lalu(a.terakhir)+'</td></tr>'}).join("")
+  var tb=semua.map(function(x,i){var k=x[0],a=ag[k];return'<tr class="baris-agen"'+(i>=15?' data-sembunyi="semua" hidden':'')+' data-agen="'+esc(k)+'" data-grup="'+esc(x[1])+'"><td>'+esc(k)+'</td><td>'+JENIS[x[1]]+'</td><td>'+a.h24+'</td><td>'+a.total+'</td><td>'+lalu(a.terakhir)+'</td></tr>'}).join("")
     +(semua.length>15?'<tr><td colspan="5"><button class="btn mini" type="button" data-buka-grup="semua">Tampilkan '+(semua.length-15)+' lagi</button></td></tr>':'');
   var tot24=nama.reduce(function(t,k){return t+ag[k].h24},0);
-  var LBL={klien:"Agen & aplikasi",pengindeks:"Pengindeks AI",pemeriksa:"Direktori"};document.getElementById("agenRingkas").innerHTML='<div class="angka empat" style="margin:0">'+["klien","pengindeks","pemeriksa"].map(function(g){var xs=grup[g]||[];return'<div class="a"><b>'+xs.length+'</b><span>'+LBL[g]+'</span></div>'}).join("")+'<div class="a"><b>'+tot24+'</b><span>Kunjungan 24 jam</span></div></div><p class="kosong" style="margin:10px 0 0">Agen AI, asisten, dan direktori dari seluruh dunia menyambung ke katalog OCKLU setiap hari.</p>';
+  var LBL={klien:"Agen & aplikasi",pengindeks:"Pengindeks AI",pemeriksa:"Direktori"};document.getElementById("agenRingkas").innerHTML='<div class="angka empat" style="margin:0">'+["klien","pengindeks","pemeriksa"].map(function(g){var xs=grup[g]||[];return'<div class="a" data-grup-pilih="'+g+'" style="cursor:pointer" title="Ketuk untuk melihat daftarnya"><b>'+xs.length+'</b><span>'+LBL[g]+' ›</span></div>'}).join("")+'<div class="a" data-grup-pilih="semua" style="cursor:pointer"><b>'+tot24+'</b><span>Kunjungan 24 jam ›</span></div></div><p class="kosong" style="margin:10px 0 0">Agen AI, asisten, dan direktori dari seluruh dunia menyambung ke katalog OCKLU setiap hari.</p>';
   document.getElementById("agen").innerHTML=tb||'<tr><td colspan="5" class="kosong">Belum ada agen yang datang lewat MCP atau katalog hidup.</td></tr>';
   document.querySelectorAll("[data-buka-grup]").forEach(function(b){b.onclick=function(){var g=b.getAttribute("data-buka-grup"),buka=b.textContent.indexOf("Tampilkan")===0;
     document.querySelectorAll('[data-sembunyi="'+g+'"]').forEach(function(tr){tr.hidden=!buka});b.textContent=buka?"Sembunyikan":"Tampilkan "+document.querySelectorAll('[data-sembunyi="'+g+'"]').length+" lagi"}});
@@ -527,7 +535,7 @@ function render(){
   var M=S.manusia||{};
   document.getElementById("manAngka").innerHTML=[[M.h24||0,"pengunjung · 24 jam"],[M.h30||0,"pengunjung · 30 hari"],[M.ditawari||0,"ditawari"],[M.klik||0,"klik penawaran"]].map(function(a){return'<div class="a"><b>'+a[0]+'</b><span>'+a[1]+'</span></div>'}).join("");
   function dft(xs,kos){return xs&&xs.length?xs.map(function(x){return'<li>'+esc(x[0])+' <span class="chip">'+x[1]+'</span></li>'}).join(""):'<li class="kosong">'+kos+'</li>'}
-  document.getElementById("manAsal").innerHTML=dft(M.asal,"Belum ada pengunjung tercatat. Penghitung baru dipasang hari ini.");
+  document.getElementById("manAsal").innerHTML=M.asal&&M.asal.length?M.asal.map(function(x){return'<li data-asal="'+esc(x[0])+'" style="cursor:pointer" title="Ketuk untuk melihat kunjungannya">'+esc(x[0])+' <span class="chip">'+x[1]+'</span> ›</li>'}).join("")+'<li id="asalRinci" hidden></li>':'<li class="kosong">Belum ada pengunjung tercatat.</li>';
   document.getElementById("manHal").innerHTML=dft(M.halaman,"—");
   // ---- 18/10: SEMUA kotak angka & kategori bisa diklik → laci rincian berisi data asli + penjelasan
   pasangLaci(S);
