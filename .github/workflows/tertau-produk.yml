@@ -16,10 +16,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Buat halaman produk
-        run: python3 tertau/terbit.py && python3 hypermarket/terbit-pasar.py
+        run: python3 tertau/terbit.py && python3 hypermarket/terbit-pasar.py && python3 warung/terbit-siap.py
       - name: Simpan kalau berubah
         run: |
           git config user.name "ocklu-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add tertau/produk/index.html hypermarket/pasar/index.html
-          git diff --cached --quiet || { git commit -m "Siap dibaca AI: perbarui produk TerTau & pasar Hyper Market"; git push; }
+          git add tertau/produk/index.html hypermarket/pasar/index.html warung/siap/index.html
+          git diff --cached --quiet || { git commit -m "Siap dibaca AI: perbarui produk TerTau, pasar Hyper Market & warung Ojol"; git push; }
