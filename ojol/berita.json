@@ -1,5 +1,5 @@
 {
- "w": "2026-10-24T01:02:07Z",
+ "w": "2026-10-24T01:59:57Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -72,6 +72,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-10-23T22:40:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Raja Ekonomis, Berikut 3 Mobil Keluarga Bekas yang Irit BBM Terbaik Untuk Harian dan Traveling",
+    "en": "Raja Ekonomis, Berikut 3 Mobil Keluarga Bekas yang Irit BBM Terbaik Untuk Harian dan Traveling"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Radar Cirebon",
+    "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNUjc3aGktcUpZbmNSTG1kNHB1MU5ETUVCUFRlQ3lmeEZ6Z29ESC1xV29nQjJvT1Z6VnQwc041LVh3ZGdTbFUxXzA5TmZlTUhXNmw1MVdyVHhkWU1Vd0ZSaVJ5d2tSQVR4S2VCVGRoOTk0ajM4OG82anZINzVaTGpTRC1jV0NrNS00T014OWdMWExjUGs4U0NmWnJzdGdfazBFV0RHS1I5TnJoZENRRGtlcVdFbUEtYUEwakJLNWFZdmNGSXF3bkJMSVA2bkFvS0RkMXphY1FaZUdfZ9IB0AFBVV95cUxNVEowOXJVcXlZbWZha3RDRm8tLUYzVklQY3VDcHVZTm94RjdzM01ILURjZ3FhMzVqUmVzY2lKSnV6X3N2RE9POEo5U09lYlg0dmt3S0F2eXQyY3BqVkIta1RhY2daU0tLelhhcmpJejI1aFZSQmRTeVR1X0NsN242SjJUV3hyWTVoS1RaRDR1LUFmeGpzbE8xb3F0bmQ1dUs3ak5sd2l3NFJ4X1ZJbjNCYVpsZU16OFV2SzMtTjNkeWVYZF9fYUI5TGM0X0VfdDZN?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-10-23T07:49:00Z",
    "media": 4,
    "judul": {
@@ -136,40 +153,6 @@
    "sumber": {
     "nama": "BeritaSatu.com",
     "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQUTRuNUs4cTE4dTg1OVg1dHFacDEtWVBpeENjUDJJMzFkNVJ1eDJUWTZqYnF0T1Z4N3RmVmlKcGVVVmNMZFNHTy1NT3F0WVcxZFVfMGRHb1Vsa21GamdoS05lOEZyeFVOX2JtR05jd3dBT053dEN4Wmw4bldZTXVBSWVBOF9LLVhTX1d5RExTQlJzbmF0RnpKWUxIaE0yT1czdXlENVc5aw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-23T03:57:13Z",
-   "media": 4,
-   "judul": {
-    "id": "RUU LLAJ Bahas Nasib Ojol, Hamka B Kady Serap Aspirasi Pengemudi di Makassar",
-    "en": "RUU LLAJ Bahas Nasib Ojol, Hamka B Kady Serap Aspirasi Pengemudi di Makassar"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Bela Rakyat",
-    "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPajRMdG0zb0dFLXdhbk93dW5tdlZPSzI0a2dlNWdibGk1eWZmdGZUeFlVcm95ZG5FRUl5TldXY0dmbmhQSTRCT0RLMmU1VXlBLWFJaVZkQ19Iemg3SHl3Q1RNV2lmekhFR0hYWlJsZXkwOTRjVlFlaGVJZHhJRmswUkRTanNtR2RyTS1Ic3dHdGdWSDF5VGgybG5n?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-23T06:35:20Z",
-   "media": 3,
-   "judul": {
-    "id": "Gubernur Al Haris Salurkan 250 Paket Sembako dan Masker untuk Ojol Terdampak Kabut Asap",
-    "en": "Gubernur Al Haris Salurkan 250 Paket Sembako dan Masker untuk Ojol Terdampak Kabut Asap"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Jambiupdate.co",
-    "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOVXFEZU11Qk84Um5QdWZfUUw1SmFlYlpobXBiRWg0bGl5bXpJZTltXzZjckVxNnJQcjU0SXFfT0N6Yy1RZzJ1RmZGQVF6R1JmcENIWC1hRm41cHYwUjN5QTJFUkNUeHQ1ck9wZEJhNS1iemZFVzVtTTVyOV83R3dzTDU5cWJKWDBSYkdmbTVvcmhQRWY2RTQwRklWUFBSVHpDbHNOU1piSWZIbkw5NTJMR2NKRk9tM1lTVEV3M2JCTHV6WUNKYUl6TGYtUGd4YVlBQ3Nz?oc=5"
    }
   }
  ]
