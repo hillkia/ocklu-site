@@ -46,6 +46,20 @@ code{background:var(--soft);padding:1px 5px;border-radius:4px;font-size:13px}
 </style></head><body><div class="wrap">
 <div class="eyebrow">AI Readiness Directory</div>
 <h1>Which e-commerce sites can AI assistants actually read?</h1>
+<div class="uji-ai" style="max-width:900px;margin:16px auto;padding:16px;border:1px solid #0b7a5e;border-radius:14px;font:16px/1.5 system-ui,sans-serif;box-sizing:border-box">
+<b>Free AI readability test</b><br><span style="opacity:.8">Can ChatGPT, Gemini and shopping agents read your site? 4 checks, about 10 seconds.</span>
+<form onsubmit="return ujiAI(this)" style="display:flex;flex-wrap:wrap;gap:8px;margin-top:10px">
+<input name="situs" required maxlength="300" placeholder="your site, e.g. yourstore.com" style="flex:2;min-width:200px;padding:10px;border:1px solid #9aa4b2;border-radius:10px;font:inherit;background:transparent;color:inherit">
+<input name="email" type="email" maxlength="254" placeholder="email (optional, for the report)" style="flex:1;min-width:180px;padding:10px;border:1px solid #9aa4b2;border-radius:10px;font:inherit;background:transparent;color:inherit">
+<button style="padding:10px 16px;border:0;border-radius:10px;background:#0b7a5e;color:#fff;font:inherit;font-weight:700;cursor:pointer">Test now</button></form>
+<small style="opacity:.7">Leaving an email means OCKLU may contact you about this result.</small><div class="uji-hasil" style="margin-top:10px"></div></div>
+<script>function ujiAI(f){var o=f.parentNode.querySelector(".uji-hasil");o.textContent="testing… (about 10 seconds)";
+fetch("https://njghzieuuopukuagrswu.supabase.co/functions/v1/siapdibaca?r=uji",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({situs:f.situs.value,email:f.email.value,asal:location.pathname})})
+.then(function(r){return r.json()}).then(function(d){o.textContent="";if(d.galat){o.textContent=d.galat;return}var h=document.createElement("b");h.textContent=d.lulus+"/4 passed · "+d.situs;o.appendChild(h);
+d.cek.forEach(function(c){var p=document.createElement("div");p.textContent=(c.ok?"✓ ":"✗ ")+c.nama+" — "+c.rinci;p.style.color=c.ok?"":"#c0392b";o.appendChild(p)});
+var k=document.createElement("p");k.textContent=d.kesimpulan;o.appendChild(k);if(d.lulus<4){var a=document.createElement("a");a.href="/siap-dibaca-ai/";a.textContent="Fix it with Siap Dibaca AI (money-back guarantee)";o.appendChild(a)}})
+.catch(function(){o.textContent="Could not connect, try again."});return false}</script>
+
 <p class="sub">147 sites checked · updated 2026-08-28 · free, no signup</p>
 
 <p>Two different things get confused constantly: whether an AI assistant is
@@ -73,6 +87,4 @@ corrected or removed, email
 <footer>Ocklu — Web Accessibility &amp; AI Visibility ·
 <a href="https://ocklu.com">ocklu.com</a></footer>
 </div><script src="/hm.js" defer></script>
-<div style="max-width:900px;margin:24px auto;padding:16px;border:1px solid #0b7a5e;border-radius:14px;font:16px/1.5 system-ui,sans-serif">
-<b>Perbaiki dengan Siap Dibaca AI / Fix it with Siap Dibaca AI</b><br>Kami pasang data produk, llms.txt, dan halaman otomatis agar bisnismu terbaca ChatGPT, Gemini & agen belanja. Harga Rupiah mulai Rp490.000. <a href="/siap-dibaca-ai/">Lihat paket / See packages</a> · <a href="/hypermarket/pasar/">Contoh: pasar Hyper Market</a></div>
-<!-- ocklu-membership:mulai --><div style="background:#16213e;border:1px solid rgba(0,212,255,.35);border-radius:8px;padding:14px 16px;margin:24px auto;max-width:720px;text-align:center;font:14px/1.5 -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#e0e0e0"><b>OCKLU Membership</b> &mdash; all tools, $3/month (billed $9 every 3 months). <a href="/bundel/" style="color:#00d4ff">See what is included</a></div><!-- ocklu-membership:selesai --></body></html>
+</body></html>
