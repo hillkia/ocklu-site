@@ -159,9 +159,9 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
   </div>
 </div>
 
-<h2 id="penjaga-judul">Penjaga OCKLU · keamanan semua dasbor</h2>
+<h2 id="penjaga-judul">Grigori, penjaga OCKLU · keamanan semua dasbor</h2>
 <div class="panel" id="penjaga" style="scroll-margin-top:64px">
-  <p class="kosong" style="margin:0 0 12px">Setiap pengunjung Hyper Market dan TerTau dinilai satu penjaga yang sama. Browser biasa dan agen yang belanja lewat; agen AI, skrip, dan bot tercatat. Yang memindai celah (.php, wp-login, ../, injeksi), membanjiri permintaan, atau mengincar tombol owner langsung dicekal di semua dasbor oleh agen penjaga MICHAEL, dan owner dikabari lewat Telegram.</p>
+  <p class="kosong" style="margin:0 0 12px">Setiap pengunjung Hyper Market dan TerTau dinilai satu penjaga yang sama. Browser biasa dan agen yang belanja lewat; agen AI, skrip, dan bot tercatat. Yang memindai celah (.php, wp-login, ../, injeksi), membanjiri permintaan, atau mengincar tombol owner langsung dicekal di semua dasbor oleh Grigori (artinya: para penjaga), dan owner dikabari lewat Telegram.</p>
   <div class="angka" id="pjAngka" style="margin:0 0 12px"></div>
   <ul class="feed" id="pjDaftar"></ul>
 </div>
@@ -339,7 +339,7 @@ var PLANET=[
 var S=null, aliran=[];
 function ls(k,v){try{if(v===undefined)return localStorage.getItem(k);if(v===null)localStorage.removeItem(k);else localStorage.setItem(k,v)}catch(e){return null}}
 function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
-// Penjaga OCKLU: data dari otak penjaga bersama (pj_ringkas), sama dengan panel di TerTau.
+// Grigori, penjaga OCKLU: data dari otak penjaga bersama (pj_ringkas), sama dengan panel di TerTau.
 var PJ_JENIS={agen:"agen masuk",curiga:"curiga",php:"pola serangan",probe:"alat pemindai",banjir:"banjir permintaan",ditolak:"ditolak (sedang dicekal)",lihat:"lihat"};
 function muatPenjaga(){fetch("https://njghzieuuopukuagrswu.supabase.co/functions/v1/tertau?r=penjaga").then(function(r){return r.json()}).then(function(d){
   document.getElementById("pjAngka").innerHTML=[[d.pengunjung_24j,"pengunjung 24 jam"],[d.agen_24j,"agen/skrip/bot 24 jam"],[d.curiga_24j,"perilaku curiga"],[d.ditolak_24j,"permintaan ditolak"],[d.cekal_aktif,"sedang dicekal"]]
