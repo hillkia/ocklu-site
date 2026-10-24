@@ -51,6 +51,9 @@ h1{font-size:30px;line-height:1.2;margin:0 0 8px}h2{font-size:21px;margin:36px 0
 <p>1) Kirim email pesanan dengan alamat situs dan daftar produk. 2) Kami kirim rencana dan rincian pembayaran. 3) Pemasangan selesai 3–7 hari kerja, lalu kamu menerima laporan dan cara memeriksanya sendiri.</p>
 <p class="redup">Pertanyaan: <a href="mailto:octavianus@ocklu.com?subject=Tanya%20Siap%20Dibaca%20AI">octavianus@ocklu.com</a> · Untuk agen AI: penawaran ini juga ada di <a href="/hypermarket/">OCKLU Hyper Market</a> (MCP).</p>
 </main><div id="ownerBar" hidden style="position:fixed;right:12px;bottom:12px;z-index:9"><button class="tombol" id="ownerEdit" style="border:0;cursor:pointer">Edit (owner)</button></div>
+<p style="max-width:900px;margin:0 auto;padding:0 16px 32px;font-size:13px"><a href="#" id="ownerMasuk" class="redup">Owner</a></p>
+<div id="ownerPanel" hidden style="max-width:900px;margin:0 auto 32px;padding:0 16px"><div class="kartu"><b>Masuk sebagai owner</b><p class="redup">Kode sekali pakai dikirim ke Telegram owner. Perangkat yang sudah dikenali juga otomatis dikenali di TerTau.</p>
+<button class="tombol" id="ownerKode" style="border:0;cursor:pointer">Kirim kode ke Telegram</button> <input id="ownerIsi" placeholder="kode dari Telegram" autocomplete="one-time-code" style="font:inherit;padding:8px;border:1px solid var(--garis);border-radius:8px;width:170px;text-transform:uppercase"> <button class="tombol" id="ownerPasang" style="border:0;cursor:pointer">Masukkan</button> <span id="ownerPesan" class="redup"></span></div></div>
 <script>
 (function(){var API="https://njghzieuuopukuagrswu.supabase.co/functions/v1/siapdibaca",K="",D=null,EDIT=false;try{K=localStorage.getItem("pj_kunci")||""}catch(_){}
 function esc(t){return String(t==null?"":t).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
@@ -67,6 +70,11 @@ document.getElementById("ownerEdit").onclick=function(){if(!EDIT){EDIT=true;gamb
   var b={paket:[],teks:{}};document.querySelectorAll("[data-p]").forEach(function(c){var o={id:c.getAttribute("data-p")};c.querySelectorAll("[data-f]").forEach(function(i){o[i.getAttribute("data-f")]=i.value});b.paket.push(o)});
   document.querySelectorAll("[data-tk]").forEach(function(t){b.teks[t.getAttribute("data-tk")]=t.value});
   fetch(API+"?r=simpan",{method:"POST",headers:{"content-type":"application/json","x-perangkat":K},body:JSON.stringify(b)}).then(function(r){return r.json()}).then(function(d){if(d.galat){alert(d.galat);return}D=d;EDIT=false;gambar();alert("Tersimpan. Pengunjung langsung melihat perubahan; versi untuk Google & agen AI diperbarui otomatis paling lambat 3 jam.")}).catch(function(){alert("Gagal terhubung, coba lagi")})};
+function pesan(t){document.getElementById("ownerPesan").textContent=t}
+document.getElementById("ownerMasuk").onclick=function(ev){ev.preventDefault();var p=document.getElementById("ownerPanel");p.hidden=!p.hidden;if(D&&D.owner)pesan("Perangkat ini sudah dikenali: pakai tombol Edit (owner) di kanan bawah.")};
+document.getElementById("ownerKode").onclick=function(){pesan("mengirim…");fetch(API+"?r=kenali",{method:"POST",headers:{"content-type":"application/json"},body:"{}"}).then(function(r){return r.json()}).then(function(d){pesan(d.galat||"Kode terkirim ke Telegram (berlaku 15 menit).")}).catch(function(){pesan("gagal terhubung")})};
+document.getElementById("ownerPasang").onclick=function(){var k=document.getElementById("ownerIsi").value.trim().toUpperCase();if(!k)return;pesan("memeriksa…");
+  fetch(API+"?r=pasang",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({kode:k})}).then(function(r){return r.json()}).then(function(d){if(!d.ok){pesan(d.galat||"kode ditolak");return}K=d.kunci;try{localStorage.setItem("pj_kunci",K)}catch(_){}document.getElementById("ownerPanel").hidden=true;muat()}).catch(function(){pesan("gagal terhubung")})};
 muat()})();
 </script>
 </body></html>
