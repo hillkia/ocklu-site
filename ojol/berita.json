@@ -1,7 +1,24 @@
 {
- "w": "2026-10-30T06:34:08Z",
+ "w": "2026-10-30T07:38:43Z",
  "dari": "Kroog",
  "berita": [
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-30T04:33:00Z",
+   "media": 6,
+   "judul": {
+    "id": "2 WN Arab Saudi Tikam 2 Ojol dan Satpam di Bali Usai Diusir dari Kelab Malam",
+    "en": "2 WN Arab Saudi Tikam 2 Ojol dan Satpam di Bali Usai Diusir dari Kelab Malam"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Kompas.com",
+    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxORzhKQlF0QVh1T0xTMWdtRWdoR0lXSzd5X18tS3hyTXZIQ1FrY2wtcTI3VHp6QmtQd0ZuM0ltLWgxLTBhdVBESkhiZ2pHamtVVlN0amsza0xhX3MtZUJiRDRCcVlYVVFGN2JrazdtQk1sbGlEVkltaXRIQVRILXlYbHV5bWF6aHMtNnkxUjZ3bnExTDFfdGl0NHBzTWlnakgzSWRzRHZCQ0NYRkRMUkRENUR0TEItWTFyM1pOTG4zZnZDVlVlV1E?oc=5"
+   }
+  },
   {
    "jenis": "berita",
    "waktu": "2026-10-30T03:05:00Z",
@@ -34,6 +51,40 @@
    "sumber": {
     "nama": "PPID Jateng",
     "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPZnhadVpwTWJFN2lRbFhCN1NkTjR6ZU9lNjhtRVV0cGZQNzVld0NwSXhCY3UtS0k5ZExoaWF5VVlaUnBib0UwSVJHb28xRElkMFF5dDBPdnZ3MVRYaU9rNEZYc1cxcnQxOU02TVFkeUVwZDRJSGlhU2Vlc1JQeUVBdE5Ia2RtaFpJWlNZRUc1eFBPVDBRTi1ZS05vd2JtOGRncU9qNEhHbzVtaU0zS2Y2U1V4Yw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-30T06:20:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Generasi Muda Hebat: Mahasiswa Jadi Garda Terdepan Penjaga Persatuan dan Inovasi Nasional",
+    "en": "Generasi Muda Hebat: Mahasiswa Jadi Garda Terdepan Penjaga Persatuan dan Inovasi Nasional"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "beritanasionalupdate.com",
+    "url": "https://beritanasionalupdate.com/news/details/2062/simbol-salib-merah-di-tengah-demo-mahasiswa,-jangan-biarkan-perbedaan-memecah-belah-bangsa"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-30T06:20:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Apakah Baterai Motor Listrik Boleh Di-charge Semalaman? Ini Fakta & Dampaknya!",
+    "en": "Apakah Baterai Motor Listrik Boleh Di-charge Semalaman? Ini Fakta & Dampaknya!"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Momotor.id",
+    "url": "https://momotor.id/news/apakah-baterai-motor-listrik-boleh-di-charge-semalaman"
    }
   },
   {
@@ -72,6 +123,40 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-10-30T06:44:45Z",
+   "media": 2,
+   "judul": {
+    "id": "Polda Sumut Gandeng Komunitas Ojol, Ajak Jadi Pelopor Keselamatan Berlalu Lintas",
+    "en": "Polda Sumut Gandeng Komunitas Ojol, Ajak Jadi Pelopor Keselamatan Berlalu Lintas"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Suara Buruh Nasional",
+    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQZ0ZfY3F4djJwUzNJcTlITTJyNEZ6MmRHaHd6Y3JuYkV6TkZqNXNiUHRwVzFZNHByTGlpNHEwXzg5anBjdGNwWmw3YUpfc1BtWkVlVEZCOTZRUkQ0emlhZkpkTFZYSEZyWFdBYnBrNVFfLWVQUWJ3YjF0TXJfSGI2NDZCVS1LOGgwbFN6RldfV2M1UzBENFNUY0tvQk1HYnl6c0tYTlBKd3VHRTloLW0td1pwSzVPLWh0cVNHWWx3U0w?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-30T01:41:23Z",
+   "media": 3,
+   "judul": {
+    "id": "BNPB: Banjir Rendam Ribuan Rumah di Sumut dan Aceh, Gempa M6,4 Guncang Tanimbar",
+    "en": "BNPB: Banjir Rendam Ribuan Rumah di Sumut dan Aceh, Gempa M6,4 Guncang Tanimbar"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Pos Aceh",
+    "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxORUtkaVJwNVlMbUxnQldKT3AtZUVGbU5BZVlLUUNvVUdSTG9NTzdMczJtajlleWU3ZS1Qb1pSXzFaNHpWcjh6aFhYTDZKbXdtNUdSRFljYmV0QlQ0ckZfOGFoenJOQ25ieDQyamYydzlIUFlwc3VTeThYYnlZeG04X2Rmcmc4eEViZ3Vv?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-10-29T10:33:26Z",
    "media": 7,
    "judul": {
@@ -89,6 +174,74 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-10-30T07:19:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Polres Malang Sasar Ojol dan Sopir Angkutan dalam Edukasi Operasi Patuh Semeru",
+    "en": "Polres Malang Sasar Ojol dan Sopir Angkutan dalam Edukasi Operasi Patuh Semeru"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Tribratanews Polres Malang",
+    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPcVRPc25fVVc0VUZhRDAzN2JWWmRTeHFJS21PekswZG9SMjZyY3dWbFY0WkRpcURPWkROXzg2b2FLN1hvRkl4ZGdPeWNOUTV2UFZvSmtYQzFtV091cnJMaGwwTTN1ODZJS1l1WjhvOXlaY0xpMHJzc3VrTW5qZXp5MkRoX2N4U3dwcmxYVDNkN01mYmNOWUtpeEl2ZzZLcGs4ZTRIdjhWUlBVWG11OVpadERfd1RULTltQ0xTamxEVmd3RTJFZWc?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-30T06:50:05Z",
+   "media": 1,
+   "judul": {
+    "id": "KPK Periksa Eks GM PT PINS Ernist Rindang Marojahan di Kasus Digitalisasi SPBU",
+    "en": "KPK Periksa Eks GM PT PINS Ernist Rindang Marojahan di Kasus Digitalisasi SPBU"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "JPNN.com",
+    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNSFVsczBqdGJCeFBsN2x4b2NRZUQ4dDE2Wnc4UGRBVmhvc2ROX1JWZkhlQm9BbGk1XzFRYl8wdEpJTzNvMi1UelNQMkZULVNnZlRKenV2bU56U1hzTHM0MTZEaklEbkM1YTVOOWMxLXFReGJJWllpa3BFN1lHSnpPU0VQNzJIUnVZbzAtSDVfMDl4N3A2clhKSjJhNEdNZXZiZGNvTURHUdIBqgFBVV95cUxOV25iVkYzb3dBVVczR2NHbFB3Zy1NX2RXektoRmJ5b1dsVFc0Zi1uRUYtbUR5dGZ5bEpadnJHVlo5TFkwOGxKRjU5dWpLZkRDRWhEU0JiUEZVUXBodmVkVV9HVGxta29DTGNTY25jclROU1FMOHJhZnRQQmVFOXZnVWV2UTA0NEFvOHZrQzZnTC15MlliN2M1RWllS3hxNDc5YThGN3c1bDJlZw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-30T06:44:32Z",
+   "media": 1,
+   "judul": {
+    "id": "Dikmas Ops Patuh Toba 2026 Sasar Karyawan dan Pengemudi Ojek Online di Rantauprapat",
+    "en": "Dikmas Ops Patuh Toba 2026 Sasar Karyawan dan Pengemudi Ojek Online di Rantauprapat"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Website Resmi Polri",
+    "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQbzA2eDNiRGFTZDNwdE1ZWW1GVXVwT0h0QXpCOTdfUUU2bkJEY3R0M0J1LTU3dnhqczdpMzQwSWJvczdRZ0pNZGlLOC03ejRqeHN1aGdiZUw1VHMzMWtPbW5CLUt3RTZReEstQzRfNi1QWnE4TTdqMGlmRWw1cGpYQlZodGdmbVp4VFhqUGR2dVhQbXVZVGNhWDFwUTlVaElpUWJIU2JDQWFQYTM0SWRVTlNqMTU4M3d0eGVfWVEtM0t6ZGtVaXJsRjRqWkxMdDBfcW5HSQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-30T06:01:46Z",
+   "media": 1,
+   "judul": {
+    "id": "Jumat Berkah NasDem Sulsel, Pengemudi Ojol hingga Warga Makassar Kebagian Makanan Gratis",
+    "en": "Jumat Berkah NasDem Sulsel, Pengemudi Ojol hingga Warga Makassar Kebagian Makanan Gratis"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "suaracelebes",
+    "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQQUlYRC1UdndOdmNJQnhJbExaZWxLWEFtdnB6ekFmTWtPcllmTUpYMVoxSmtDU2dlMlZoVlV3ODQ0cmdlNlc0Q2o3Q1pHUDVTZFR6NmltX3RyS2JDalR0UXJRcEI5cGc5TThWcVFWLXRZVEZVbTQ5WmhGNzZZbkQ2dU0xZDNpZDNOd2kyWFJhLXVtaE9UVkxFWkRWejFVVGVGTzRLQUo1eV92WXBjOU4yMGV6MDVDVGdNMGpFRVhOclY1dw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-10-30T05:22:00Z",
    "media": 1,
    "judul": {
@@ -102,74 +255,6 @@
    "sumber": {
     "nama": "brilian-news.id",
     "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNZHdQUElYc202WlVSWGFNNlR2QnR6YUZxYzRFRmJadXc1XzdwN2piamp1Z1ZQUzRwSXo2YmE4TnpUU0VDd0ludE1fcEpjbWlhMkU5aFQxd2dKX1VUUkdfRndoY3k0ODVEc09Na1l4VE03eVU1ZFRRTUp0NTJGbzJFNXRfWl9vWFZRUzByc1VMYjZ5bjBQb3VydFcwZTl6RXJQQWFXQzZTTGs5S2VxQWFiM0RrQ2ZTUDdRTE5BU2hQUU5FTnh0cDcw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-30T04:28:05Z",
-   "media": 1,
-   "judul": {
-    "id": "Wanita Pengemudi Ojol Tewas Dibunuh Teman | Patroli",
-    "en": "Wanita Pengemudi Ojol Tewas Dibunuh Teman | Patroli"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Vidio",
-    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPanYzQ3c1TnkxQlpTQjNXT1Nadzh3TjhfVjQtODhXNi1OVFo1UUpnTnU0SDNPRjdncW5RdkRROUo0Vm43NmhKNVN1blNQSzdFYlF0SjM5V1o5eEpJSGFOQjhuaW9Nc0YwMVZjc2lpN2FsbkRRbEsxdUxWelFDR3JxWDlYMExNLVRYZ0MtXzhn?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-30T04:14:29Z",
-   "media": 1,
-   "judul": {
-    "id": "Motor Hilang Diduga Akibat Hipnotis, Driver Ojol Lansia di Cimahi Tetap Antar Pesanan dengan Angkot",
-    "en": "Motor Hilang Diduga Akibat Hipnotis, Driver Ojol Lansia di Cimahi Tetap Antar Pesanan dengan Angkot"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Pewarta Nusantara",
-    "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOclBZZnl6bWpvWFRRSWJoRzZlajI2d3BpeGp3Qzc2OGZyUTVkYmg0OVRpWnNGb3ZJQkpBM1VmcTRRajJad1VCODROLXdTUkhZUjNpdXdQX3ZjNjFSR04tYVhaN2NKRnB0YndLZkFMc29UWDJGSnZlOEFidUNOTlpnYnFvYWVWMU43UVV5RkthcENJSWNmc3JsWkxjM0IxOU9GRDJSNmdsY0lRY1BuY2Zpa0lPQjUxd2RmRkt2RUJoWkt3Vl9CMTk2a0hXdVNfX2dJTE45WWVB?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-30T04:00:41Z",
-   "media": 1,
-   "judul": {
-    "id": "Polisi Bongkar Praktik Penimbunan BBM di 3 Lokasi Babel, 4 Orang Ditangkap",
-    "en": "Polisi Bongkar Praktik Penimbunan BBM di 3 Lokasi Babel, 4 Orang Ditangkap"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "detikcom",
-    "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQeW12M0FRRklxdEt4bWVkblhmSnZScUJhSDdZYS1fcUdCdDJwQXdzN19INGJ2TmVHS2RVX2dFX1lLWHV2bWlCeFF6SXdLczJ6U2JITzhyUnJ2NjdWUVZlTUtmS0tsYkgtUTk4MFVyb1lqY2VLWWliS1N1RWljNm40b3dVY241Q21xQy04ZnE0ZEh6V1FWSGpxNG0xdVhjeHRKUUkxVzJncXpQTUZ0R1VfZ1pzc1ozaC1FS01iVHNOSW4wX2FkYkhmQktnazJ4UlHSAdQBQVVfeXFMTXBXcHpudGVnLVFPdXhjRXJJWml4MVFMMjF1eEJnXzhvb09NZEpBVjZWck5SZnpaTHBGdW9YVzJGSkJrUXdjZVJXdVVyRGxySjhEaDFkNmZFUkZzekZQQzBlX3QtOTU5dGIwdEtKSGlGVWFmLURDZDBfSTJWRUc3ZGRCUzRNNDRNZ3NQNmZmeDYzTWtKZWFPeHlSb19xQVhCT2h0dTB2SGdQZVZrOG5UUWR2anFMSmlaTDZVdUt1a2x1aVVUcnp5aV96VUJhV3JhQ196RHA?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-30T03:05:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Driver Ojol Bangka Bisa Isi BBM tanpa Antre",
-    "en": "Driver Ojol Bangka Bisa Isi BBM tanpa Antre"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "RRI.co.id",
-    "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNV3FFMFZ3dnZYSDkyVTJXSE9NNmFtVkJYeklVU1luV1c3YlR2OEpoa2w0V2laNGpGa1o1SzA1ejZYRmlQOGJ4akx4SUxtX0FLc1BVOVhtSVU2NnpadFFmSTJ6N242YmxsX3daUzc4R2N2MTNWWVhsZDJ1Q08xWVdXTXlHRldFcTg2N1JGX3FJVmc5X0ZVOUE?oc=5"
    }
   }
  ]
