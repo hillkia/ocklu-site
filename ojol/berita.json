@@ -1,7 +1,24 @@
 {
- "w": "2026-10-30T14:44:58Z",
+ "w": "2026-10-30T16:12:00Z",
  "dari": "Kroog",
  "berita": [
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-30T09:09:17Z",
+   "media": 9,
+   "judul": {
+    "id": "Foto : Polisi Ungkap 2 WNA Arab Saudi Mabuk Saat Aniaya 2 Ojol dan Sekuriti di Bali",
+    "en": "Foto : Polisi Ungkap 2 WNA Arab Saudi Mabuk Saat Aniaya 2 Ojol dan Sekuriti di Bali"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "patrolipost",
+    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOWGZnQXFMLTRjZGhfWVozWi1kb25La003RHNreUZVcEFtb1ZIWVF0dmthZHFVVmJsaFAtbFFMQmZpb2d5NjNGNjdjSngwenA3NWUzRTJlY2lvNERpaV9hNXc2WU9iNTZvMDNkOWt0NmVQWkF3Nm0tWklpNkJkbW9TQlZYaThyRjdpYUJkRW9sNmxTSDBXUFl2MGdEQlRaUDFnOVJHc3cwTDdtSEI0WGVDVndua3dMRlXSAbcBQVVfeXFMTlhmZ0FxTC00Y2RoX1laM1otZG9uS2tNN0Rza3lGVXBBbW9WSFlRdHZrYWRxVVZibGhQLWxRTEJmaW9neTYzRjY3Y0p4MHpwNzVlM0UyZWNpbzREaWlfYTV3NllPYjU2bzAzZDlrdDZlUFpBdzZtLVpJaTZCZG1vU0JWWGk4ckY3aWFCZEVvbDZsU0gwV1BZdjBnREJUWlAxZzlSR3N3MEw3bUhCNFhlQ1Z3bmt3TEZV?oc=5"
+   }
+  },
   {
    "jenis": "berita",
    "waktu": "2026-10-30T10:50:00Z",
@@ -17,6 +34,23 @@
    "sumber": {
     "nama": "Kompas.id",
     "url": "https://www.kompas.id/artikel/spbu-shell-resmi-beralih-ke-sefas-group"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-30T11:24:00Z",
+   "media": 5,
+   "judul": {
+    "id": "Jumat Berkah, Polda Jatim Salurkan 600 Paket Sembako untuk Pengemudi Ojol",
+    "en": "Jumat Berkah, Polda Jatim Salurkan 600 Paket Sembako untuk Pengemudi Ojol"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "RRI.co.id",
+    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPRTB4cnIwYk9QRndiRlJWa0J0X3dSeXJGX2M2VEU3T1NPZXMxMVJjNno0QkRvTmhzbzVLWlg3UzlTTGhLRjBpd21oUXZSQlg4LUkxbFQyTHhwS3M5cVhrcnhFMzloVWVZRUxNd3ltU2Q1LVliamxHRXNrN3F5YmE0NF9sQnA0UjQ1Ulc1YjdVRHpXWXhuX3R3RlhOUXRVdzRXVkpqWW0xSXR6UWxjcW85YUVmOGpuUQ?oc=5"
    }
   },
   {
@@ -55,19 +89,19 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-10-30T11:24:00Z",
-   "media": 4,
+   "waktu": "2026-10-30T08:20:40Z",
+   "media": 5,
    "judul": {
-    "id": "Jumat Berkah, Polda Jatim Salurkan 600 Paket Sembako untuk Pengemudi Ojol",
-    "en": "Jumat Berkah, Polda Jatim Salurkan 600 Paket Sembako untuk Pengemudi Ojol"
+    "id": "Polda Sumut Gandeng Komunitas Ojol, Ajak Jadi Pelopor Keselamatan Berlalu Lintas",
+    "en": "Polda Sumut Gandeng Komunitas Ojol, Ajak Jadi Pelopor Keselamatan Berlalu Lintas"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "RRI.co.id",
-    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPRTB4cnIwYk9QRndiRlJWa0J0X3dSeXJGX2M2VEU3T1NPZXMxMVJjNno0QkRvTmhzbzVLWlg3UzlTTGhLRjBpd21oUXZSQlg4LUkxbFQyTHhwS3M5cVhrcnhFMzloVWVZRUxNd3ltU2Q1LVliamxHRXNrN3F5YmE0NF9sQnA0UjQ1Ulc1YjdVRHpXWXhuX3R3RlhOUXRVdzRXVkpqWW0xSXR6UWxjcW85YUVmOGpuUQ?oc=5"
+    "nama": "dailyklik.id",
+    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQUFlKdExLTmNhT1d0UHlrQnZ4Wng2cTdTMTFFRVAzSGxHanJqX0NtanhfWjl1aDBTZlJDZlRaT2ozSnJVakZwdkR2bjFFSHhNLWg1Vi1tRFM2ZnM1Uk5DTzdWZnVGZTV5ckdINHRIanJ6SkltOW1RbS1aRU5hcVVDT0J6N3E1ak93RHQ1YUhYYkhkaEdqaGVyZTJXbzVKSE55My1BUWRnajRUY2ZoR1RNRjgtNG9wUQ?oc=5"
    }
   },
   {
@@ -123,6 +157,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-10-30T13:30:00Z",
+   "media": 2,
+   "judul": {
+    "id": "Wali Kota Pontianak Apresiasi Peran Ojol Gerakkan Ekonomi",
+    "en": "Wali Kota Pontianak Apresiasi Peran Ojol Gerakkan Ekonomi"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "RRI.co.id",
+    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQNF9UNXRLMWRkV2dGNDhVNnhGWm15Rk9iYjJVZUxucW5JT1ZyMlg2a2JxQnJDR29maE9rdTdBNHVISVpZTXZON2M5QUxjTGd3X3lpT2cxTHZkRWdXeXU2WDNVdnV3b20zMDlabHVsWUNCSEVIWWNoQ2lZdEpvLTRIRUNHNFBEMW04eURTV0hpRFdJc1kydWNCTmRRYlpGR2VVd0pRS3d3dw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-10-30T06:20:00Z",
    "media": 1,
    "judul": {
@@ -136,6 +187,40 @@
    "sumber": {
     "nama": "beritanasionalupdate.com",
     "url": "https://beritanasionalupdate.com/news/details/2062/simbol-salib-merah-di-tengah-demo-mahasiswa,-jangan-biarkan-perbedaan-memecah-belah-bangsa"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-30T13:11:21Z",
+   "media": 2,
+   "judul": {
+    "id": "Polres Malang Sasar Ojol dan Sopir Angkutan dalam Edukasi Operasi Patuh Semeru",
+    "en": "Polres Malang Sasar Ojol dan Sopir Angkutan dalam Edukasi Operasi Patuh Semeru"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "malang-post.com",
+    "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOQTRndEtDQ3dJY0J2Q0NWS05pVDBpSUtmRmFSYXo0Z0EzVFFjOFhqd0ZGT2hQVW1KWV8xMDJTSWJjZy0wZHNzdFE0U29jRnhnNzJhd0wxZHBQLW9vQjZ2clVsSldyMGVVeWM1clZXdkFUYjBKbGg0T3ZXSDI2N0tjNzJTMTlSaVNiZm9qTmg3R1ZsbGs4eUpsYWJBNWF3VzI0Ti1rS0s4blF6OUNkeE5rWV9wMzYzNmhPNlhadl9Qalo2RHpsNlJXSlNVVDFLdnZ3TEE?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-30T12:21:00Z",
+   "media": 2,
+   "judul": {
+    "id": "Program Jumat Berkah, Kapolda Jatim Bagikan 600 Paket Sembako kepada Ojol",
+    "en": "Program Jumat Berkah, Kapolda Jatim Bagikan 600 Paket Sembako kepada Ojol"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Memorandum.co.id",
+    "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQWFFUTHA5eWVYRUFvcW45RnJldHN4NHl5QkFwaWI3anBTWU9aVGRIUmdCdmhkaUJsZWMxM0l2cUo2Q1lmWURDVG52UUtNMmU4eW5ySFRnNHM4MnJKRm8tMzdLWGs4aUdUaWNpZlZaOUhpN0ttQXNEWmVvWms0TjkzTkRBVll0STRXV1VwX1NYWm1haDBIZGlnX20xUXNXdU5jS0dqNUlfZXY5ZWtkeFJHUmN30gGyAUFVX3lxTFBYUVRMcDl5ZVhFQW9xbjlGcmV0c3g0eXlCQXBpYjdqcFNZT1pUZEhSZ0J2aGRpQmxlYzEzSXZxSjZDWWZZRENUbnZRS00yZTh5bnJIVGc0czgyckpGby0zN0tYazhpR1RpY2lmVlo5SGk3S21Bc0RaZW9aazROOTNOREFWWXRJNFdXVXBfU1habWFoMEhkaWdfbTFRc1d1TmNLR2o1SV9ldjlla2R4UkdSY3c?oc=5"
    }
   },
   {
@@ -174,19 +259,87 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-10-30T06:44:45Z",
-   "media": 3,
+   "waktu": "2026-10-30T15:31:37Z",
+   "media": 1,
    "judul": {
-    "id": "Polda Sumut Gandeng Komunitas Ojol, Ajak Jadi Pelopor Keselamatan Berlalu Lintas",
-    "en": "Polda Sumut Gandeng Komunitas Ojol, Ajak Jadi Pelopor Keselamatan Berlalu Lintas"
+    "id": "ASN yang Dijambret Pria Berjaket Ojol di Medan Ternyata Hakim",
+    "en": "ASN yang Dijambret Pria Berjaket Ojol di Medan Ternyata Hakim"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "Suara Buruh Nasional",
-    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQZ0ZfY3F4djJwUzNJcTlITTJyNEZ6MmRHaHd6Y3JuYkV6TkZqNXNiUHRwVzFZNHByTGlpNHEwXzg5anBjdGNwWmw3YUpfc1BtWkVlVEZCOTZRUkQ0emlhZkpkTFZYSEZyWFdBYnBrNVFfLWVQUWJ3YjF0TXJfSGI2NDZCVS1LOGgwbFN6RldfV2M1UzBENFNUY0tvQk1HYnl6c0tYTlBKd3VHRTloLW0td1pwSzVPLWh0cVNHWWx3U0w?oc=5"
+    "nama": "detikcom",
+    "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOYXBwUkdPb1B3S25uSzRqSVdHdnlUU2VNUkM0MVp2RTlaMFBndkN2VUl5aW96VFBYSXlFYWhUNEdlcTJHUDF1eVRwRk1Ia3RpM3lSV0s3MEM4VkxRcTJXUUtfWVQ4WVFnaFRuT2FSWkxVQk02YXc3WVZ1X1p1UXN2bGZBYkhSXzI1a1c2djAwZ2pFck9wa1hKVnpraGpweUVMSFpjTmgwQUVTVlhfTGl5SnhqNS1zLTZWNXfSAb8BQVVfeXFMUFR6VXRBYnVWakhVUTdYVS1qTWJjQk5UNDczS3h0bzhody1odXdJQ042OFJjNFhQQlBqdUpBaG1JMTcxTVMyZHozT0E2eWFZUmpraUJvVDBlc2d4MFdHSGMzLTZwcTRRa2ZfYklSODg0OE8yTlN6am01cVd4dW40bnk1WHBLTHdCSEVLUmFfa2Z4Vk5HZFhJYXVGZ1FYemlkbFZGM25tREdZYkhqemxaMHB6RGhnMVlTSk5WdGdPQWs?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-30T15:31:26Z",
+   "media": 1,
+   "judul": {
+    "id": "Wanita di Makassar Dirampok dan Nyaris Dirudapaksa Driver Ojol yang Mengantarnya",
+    "en": "Wanita di Makassar Dirampok dan Nyaris Dirudapaksa Driver Ojol yang Mengantarnya"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Rakyat Sulsel",
+    "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPRXlVbzZURjdrR3ROeFRHSkhTeTZHeDRoTEx4UEZPaUpMZXNpdHRlcC1LREhJalNMRVJ6UllfdkQwYUJlWGNUclpHbFJya1hVeXZMTUZ5cm5OYy1IdkJwQnVWSGk5MGZCTW9LVWY5TVU1ak1hclU5QmNPTVdwNkFqSVRfQVJ6ckt0ZDAyZWExYzk2c3dXNzlQTWYyTy1PanhwaWxEMktzellVX1RGbmtoMGJKMi1BRDEwNmJldGZMSDJZdFE?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-30T15:25:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Sambangi Pangkalan Ojek Online, Satsamapta Polresta Palangka Raya Edukasikan Layanan 110",
+    "en": "Sambangi Pangkalan Ojek Online, Satsamapta Polresta Palangka Raya Edukasikan Layanan 110"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "NEWS IN KALTENG",
+    "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNdGk0R2Nza0EtZzFoQ1RsX2RqYUZkdGpEX3NUOFNCaHlZd3BsOFJLZkpqTUN3ZWhoX056dHlQWVBUR2hQV0hZMlZ0WHYyRXlVTDVDRU9NMFF0ajA2R0RSQzk1ZnZVNEJjU0U2aXVpYVNEZVFVSjMzSzZ3OEFpQlRCSw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-30T15:14:12Z",
+   "media": 1,
+   "judul": {
+    "id": "Pengemudi Ojol Pontianak Kini Punya Rumah Singgah, Terbuka untuk Semua Komunitas",
+    "en": "Pengemudi Ojol Pontianak Kini Punya Rumah Singgah, Terbuka untuk Semua Komunitas"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Pontianak Post",
+    "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQVXFZeE5KdGtTZExISDVNN3QwaEtsd2ZocG9JYVY3R1BkeFRMUXpCSklhckVaNHJwcU5vdVdKOTAwOE9Yajl6bjVCeHN6dEhZUjlsNnRyTmZYUmhmbjNLam0wQ2xmQ2YtMUkxYWNfRURNSjVCSGRhcDhRSDRQRWdYRHBGNHB2YXlGT2dWdHducFhpUnl0OXJCWk9oWTIzemZYZk5reEZDNl93N3B6MXB4aEx3X0k4OU5rcXhxWFltdGhsV0hjYXBuYkJfd05CcTVC0gHWAUFVX3lxTE93cm81dGNOX0FYWGtaOHdob21MRWs2S09nVlFuZWlBR0xVMW91QmZEQ212a0JIRk9uX2VmWW04a1AzOVAwMWg4SkxTeUpERXpfUmJGbS0xbXk5c0pUcVU5Z1l5V3ZpOTVjREEyUG9zREdZWGJuNkV0ZUlpVXNmcW1DUzRwbWtiQ0lzNWo1aGRQYm1wZ3phSDAwT0lWeklUZ0J6MGJIVEV3dVhKUlFMdmNab2xaS2ZzbXVacFRJakFmWkhQVlAxZ09rbHlZNGJTQkhhck5aRHc?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-30T14:39:59Z",
+   "media": 1,
+   "judul": {
+    "id": "Penjambret Nyaru Driver Ojol Diringkus Beraksi 47 Kali di Medan Tuntungan",
+    "en": "Penjambret Nyaru Driver Ojol Diringkus Beraksi 47 Kali di Medan Tuntungan"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Oke Medan",
+    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOU0p1ZWRKazFIN3JjZk9EX1JaRHpTTnZCNkFOcGFfNl9VSHB5N0h2bzNKNXd0aDU3djhOY0FTd2k3ZWFDUHdQZlQ2OUpTa1JJRkMtdGtCcFdfcEdRUmNfQlFpZmVQY1hTVkhxYmFTMlY1eC1UVjhWQnM2c0xrZUJNZmszLXJaQkJ6ZlZDc0twb19VVGNoZ3llSHUxTUN4ZnF6cVpXTjdOdEtfUQ?oc=5"
    }
   },
   {
@@ -208,6 +361,40 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-10-30T13:28:05Z",
+   "media": 1,
+   "judul": {
+    "id": "Ditreskrimsus Polda Kepri Bersama Media Gelar \"Jumat Berkah\", Bagikan Ratusan Kantong Beras ke Porter Hingga Ojol",
+    "en": "Ditreskrimsus Polda Kepri Bersama Media Gelar \"Jumat Berkah\", Bagikan Ratusan Kantong Beras ke Porter Hingga Ojol"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "BatamInfo.co.id",
+    "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPd3hOdGdjdVFFa24wb1l2d21Rd01PTVpQVXdYOWZkQlpwX1Z4SU5TM2prY3BGZW5sMDVNZnRZYTgxZTJXaHRCOTJVVXJsWm1HVVpKaHc5ajR4SG9jWGlQUU5CZHVsb2Z6b0R3eG9BbnhsNWhmYU5IbmxrSDdiaWlJY0NCcWFSSlVxWTlRWjFHUkZIRV8td1VpS3hIUVhpeURTZUFxTU5nTWc1YWgwRGt3bzZMQTVUclN3c25tTV91Rk1uZzNDZVhOdWhRaHBuZVlK?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-30T13:27:08Z",
+   "media": 1,
+   "judul": {
+    "id": "Senyum Semringah Pengemudi Ojol, Dapat Nasi Padang Gratis dari Petugas Samsat Manyar Surabaya",
+    "en": "Senyum Semringah Pengemudi Ojol, Dapat Nasi Padang Gratis dari Petugas Samsat Manyar Surabaya"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Pojokkiri",
+    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPN25CZDFpOFI4aG5wamVMZnBfVHJQQ0lVS2lkbXA0Z3BZM0s1bW9kaFI3SjNFZlFLQUNrUHQ5b3J6OFNmeTBGY1h2SzBBYWNtT3NXU1VUZTZPcHg2bFBsV21qODJldEYxM2JrZmVBbzlPbURZcEJEbXhyUVJtXy1QQ2pBYjRBS1kzNVFpWEVFVlJDaXBjWTFaUGR3OEhBa01rNWctcVV3ZUNTLTRoanlNX2p5Tk5Edw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-10-30T02:40:00Z",
    "media": 3,
    "judul": {
@@ -221,6 +408,91 @@
    "sumber": {
     "nama": "VOI.ID",
     "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQS0xBd08zSnJlMnRicGV0bF9VM2kwTU1HXzRJbkxELVRXQ3Y4M3NrUXJsMzdyRnNVaFRMVElieXpvUC1jRWNQRTdNU0plNWJIaktUMEIwUnJZcXJkclBrc0I0MjlHT1BUOWlDWkNyRTNTU1dXZGhEbjI1YnVnWHdZSnU2ODNBd2d4ckpPeW1rWEFhSk9zNk1xdmdId0htaFoz0gGcAUFVX3lxTE9xRU1Wa0FERDhOMWtaLUlqcDhmQXUyOGllZDV2dm1XMTRwYXlvd2d0RV8wT2VSYzg5UFJMM0xKbzRGOF9KcEJ6SUpNdUwxeW5tUmtlQWhXbElDTG5PSzh5d0psR09Bd0lmNkFDbTAta21RSHN0RkkyNHcya01iWmpSWldnMDBWR2w3WkN6MHYybDdoVzI5NkFXV1Yzeg?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-30T13:03:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Nyamar Jadi Ojol, Residivis Curas Gasak Korban 47 Kali! Hakim PN Medan Korban Terakhir",
+    "en": "Nyamar Jadi Ojol, Residivis Curas Gasak Korban 47 Kali! Hakim PN Medan Korban Terakhir"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "harianSIB.com",
+    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPZFo0M2NmV1hhSnZZT29vZldpS3V4NzNNdkZUM2F1UXRPYUdMWDFaRm9QMmgzZmhyVmdQc0FpSU1wSzVpUDFGQ2w0dS1sUHdVY0wzdWtBOUNma3hIbXR5MS14NEFtUWREWmpzbXVSdGJOUV9ITGdONXpfd0hrc3VmazVwQlB1TnlXZFd3SEdtam5STjVBSWdySDlQUXgzVDZVUC1MaFdNYTNDM29icUJ6M1NsbnZoTExwMkhzbDNxcHhkRzd4X0HSAcYBQVVfeXFMTXlJMzA1cGFBU2NfV0NCQkN2blEzSWs2WUxCWGUyblF3UlQ5Z1JFMlljV0JMTkc4dmdwZXd1VF9YMl9felNZdk1oNzliNE1nQzJsYVRuaF9XV2VzYTJoTUJzRFl4RzRpVXJmSUpNdHdNemNoSmMwbkFtdktDb2JYcjFIdWxNV3ZKWWJETHl4bXkzdEZ5RFdIT284QkEtT3ZkZWZaOWh5Q19jaUlma2hyclVkUENZSk12Y3BLdVRfZ1RYQU1NVTdR?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-30T12:58:59Z",
+   "media": 1,
+   "judul": {
+    "id": "Pemerintah Mau Kurir dan Ojol Pakai Motor Listrik di 2027",
+    "en": "Pemerintah Mau Kurir dan Ojol Pakai Motor Listrik di 2027"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Uzone.id",
+    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE4tU0lPU1Z5YS1QMVZxS1QyRlUySTBiRU9tUUY1U0EtenZfVWxlRzRRWThDNHhKVVEweTc0MkN3bXJkN3lrQ1pFUHdFaGdHTzRvY3NqSkVHVTI2MmJYclZhLTUtOG5iTVExVkpyc0cyaTZIUTBoSkItaDBVaVZ3V2c?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-30T12:43:55Z",
+   "media": 1,
+   "judul": {
+    "id": "Nyamar Jadi Ojol, Jambret 47 Kali Beraksi Ditembak Polrestabes",
+    "en": "Nyamar Jadi Ojol, Jambret 47 Kali Beraksi Ditembak Polrestabes"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "AnalisaDaily.com",
+    "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOSVpqRUczdHFVUXZEOHd5NXVCa2hnbjhhbVdiU0VVUTdfSlBSOWExNHB0bVhqQ0phTkpveXM4UFY1MmdFRldFazFnbTc2LVlkRktDZlpLMml4Tkhqdi1ZMVpvNEtNZkx2SnFLOHlBc3kydzRTVFZLNGpURmlLV3ZWc203ZElHcGJJN1BKUlZHcXhfXzdYUzBOaW1MZFlvR3ZITFV2a3FMbWJoTWVRb20waGJXVllTQWNheHc?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-30T12:32:36Z",
+   "media": 1,
+   "judul": {
+    "id": "Rumah Singgah Ojol di Pontianak Jadi Tempat Istirahat dan Perkuat Solidaritas",
+    "en": "Rumah Singgah Ojol di Pontianak Jadi Tempat Istirahat dan Perkuat Solidaritas"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Kalbaronline",
+    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQcWlFbFNvZ0JKNEZONm51eVJoaDFrdF9QbTkzaTByVGZmbDdPblpUeTV0cXQzMm5FeGl0ZXdEcDB6MnhxMmR4VWd0MEpsMEh6ME5sdkRyTHZxRXJpT1ByNjlBdVV3UU9JWHF1OFp4RkJ5YVZiNkd3WG9vMDVSYWl0c29jRHpoUDEwTlp6Y3JnVEEyeHFnU25SZm5nS3IyNVdDQ21ROV9jSW9oakhRSzNOa2paYw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-30T12:32:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Polres Malang Gencarkan Edukasi Lalu Lintas, Sasar Pelajar hingga Pengemudi Ojol",
+    "en": "Polres Malang Gencarkan Edukasi Lalu Lintas, Sasar Pelajar hingga Pengemudi Ojol"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Memorandum.co.id",
+    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQR3I2M2dvSlVmSzVmVUJvVG53UmRScno3cEs2RHFkZ3RmM2UwUFFkdWdSV2dQWnpMeXhrVWxab0U3ZDZycE5salJLMmtCNzlnVTBud0o5SFBJemlsbHNjcTFLeGVXUHoyamRkUkRIRU1JYVNLMktDaTVDSk5MNVY2SXFJaGtxTHBqUnlpdnEyOF9Kb0VoODhKbUpRb2d6MVZYRnQzTnpfMDk4bDkzdUJaQzRJc1JicHJtQnVz0gG7AUFVX3lxTFBHcjYzZ29KVWZLNWZVQm9UbndSZFJyejdwSzZEcWRndGYzZTBQUWR1Z1JXZ1Baekx5eGtVbFpvRTdkNnJwTmxqUksya0I3OWdVMG53SjlIUEl6aWxsc2NxMUt4ZVdQejJqZGRSREhFTUlhU0syS0NpNUNKTkw1VjZJcUloa3FMcGpSeWl2cTI4X0pvRWg4OEptSlFvZ3oxVlhGdDNOel8wOThsOTN1QlpDNElzUmJwcm1CdXM?oc=5"
    }
   },
   {
