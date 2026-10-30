@@ -109,7 +109,7 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
 <details class="panel" style="overflow-x:auto;margin-top:10px"><summary style="cursor:pointer;font-weight:600">8 minggu terakhir</summary><table><thead><tr><th>Minggu</th><th>Minta link</th><th>Kasir TerTau dibuka</th><th>Tagihan x402</th><th>Minta dipertemukan</th><th>Lunas</th></tr></thead><tbody id="sinyalTabel"></tbody></table></details>
 <p class="kaki" id="sinyalKet" style="margin-top:8px"></p>
 
-<nav class="tabbar" id="tabbar" aria-label="Bagian dasbor"><a href="#sinyal">Sinyal beli 🛒</a><a href="#exit">Exit goal</a><a href="#penjaga">Grigori 🛡️</a><a href="#makelar">Pasar Makelar</a><a href="#klien">Klien Khusus</a><a href="#jemput">Jemput Bola</a><a href="#turnamen">Turnamen</a><a href="#ofinpay">Ofin Pay</a><a href="#obrolan">Obrolan agen</a><a href="#arus">Rumus Arus</a><a href="#radar">Radar Niat</a><a href="#cari">Cari agen</a><a href="#bicara">Bicara dengan agen</a><a href="#gibberlink">Gibberlink</a><a href="#datang">Agen datang</a><a href="#agenKita">Agen kita</a><a href="#detak30h">Detak 30 mnt</a><a href="#belanja">Cara belanja</a><a href="#manusia">Pengunjung</a><a href="#uang">Alur uang</a><a href="#jual">Yang dijual</a><a href="/ofin/">Ofin ↗</a><a href="/hypermarket/pasar/">Pasar teks ↗</a><a href="/siap-dibaca-ai/">Siap Dibaca AI ↗</a><a href="/airank/">AIRANK ↗</a><a href="/ai-readiness/">AI-readiness ↗</a><a href="/direktori-agen/">Direktori agen ↗</a><a href="https://glama.ai/mcp/servers?query=ocklu" target="_blank" rel="noopener">MCP Registry ↗</a></nav>
+<nav class="tabbar" id="tabbar" aria-label="Bagian dasbor"><a href="#sinyal">Sinyal beli 🛒</a><a href="#bukti">Bukti MARKUS 📜</a><a href="#exit">Exit goal</a><a href="#penjaga">Grigori 🛡️</a><a href="#makelar">Pasar Makelar</a><a href="#klien">Klien Khusus</a><a href="#jemput">Jemput Bola</a><a href="#turnamen">Turnamen</a><a href="#ofinpay">Ofin Pay</a><a href="#obrolan">Obrolan agen</a><a href="#arus">Rumus Arus</a><a href="#radar">Radar Niat</a><a href="#cari">Cari agen</a><a href="#bicara">Bicara dengan agen</a><a href="#gibberlink">Gibberlink</a><a href="#datang">Agen datang</a><a href="#agenKita">Agen kita</a><a href="#detak30h">Detak 30 mnt</a><a href="#belanja">Cara belanja</a><a href="#manusia">Pengunjung</a><a href="#uang">Alur uang</a><a href="#jual">Yang dijual</a><a href="/ofin/">Ofin ↗</a><a href="/hypermarket/pasar/">Pasar teks ↗</a><a href="/siap-dibaca-ai/">Siap Dibaca AI ↗</a><a href="/airank/">AIRANK ↗</a><a href="/ai-readiness/">AI-readiness ↗</a><a href="/direktori-agen/">Direktori agen ↗</a><a href="https://glama.ai/mcp/servers?query=ocklu" target="_blank" rel="noopener">MCP Registry ↗</a></nav>
 <p id="iklanKecil" hidden style="font-size:13px;margin:6px 0 0;padding:6px 10px;border:1px dashed currentColor;border-radius:8px;opacity:.75"></p>
 <h2 id="exit" data-w="peristiwa">Exit goals · jalan sampai bisa dijual</h2>
 <div class="panel"><ol class="tujuan" id="tujuan"></ol><p class="kosong" id="tujuanKet" style="margin:12px 0 0"></p></div>
@@ -244,6 +244,15 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
     </form>
     <p class="kosong" style="margin:8px 0 0">Agen juga bisa mendaftar sendiri lewat alat MCP <code>daftar_turnamen</code> di server ini.</p>
   </details>
+</div>
+
+<h2 id="bukti">📜 Bukti kunjungan MARKUS · untuk laporan klien</h2>
+<div class="panel">
+  <p class="kosong" style="margin:0 0 8px"><b>Gampangnya:</b> MARKUS itu seperti sales yang mengetuk pintu toko-toko agen lain dan bertanya "ada yang cari ini?". Dia <b>hanya bertanya (mencari)</b>, <b>tidak menempel</b> brosur atau iklan apa pun di sana, jadi pemilik agen tidak akan menemukan barang kita di tokonya. Jejaknya ada di <b>buku tamu (log server)</b> mereka: minta mereka cari kode bukti (MKS-…) atau kata <code>OckluHyperMarket</code> pada jam yang tertulis di bawah. Kode bukti ada sejak 30 Okt 08:35 WIB.</p>
+  <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin:0 0 10px"><input id="bkKata" maxlength="80" placeholder="kata klien / sasaran, mis. Google" style="flex:1;min-width:160px"><select id="bkHari"><option value="7">7 hari</option><option value="30">30 hari</option><option value="1">24 jam</option></select><button id="bkLihat" type="button">Tampilkan</button><a id="bkCsv" href="#" download>Unduh CSV untuk klien</a></div>
+  <div class="angka" id="bkAngka"></div>
+  <div style="overflow-x:auto;margin-top:10px"><table><thead><tr><th>Waktu (WIB)</th><th>Agen</th><th>Kode bukti</th><th>Dicari</th><th>Hasil</th></tr></thead><tbody id="bkDaftar"><tr><td colspan="5" class="kosong">memuat…</td></tr></tbody></table></div>
+  <p class="kaki" id="bkKet" style="margin-top:8px"></p>
 </div>
 
 <h2 id="jemput">Jemput Bola · agen yang aktif memburu</h2>
@@ -705,6 +714,23 @@ function cekPaypal(){if(!OWNER)return;kirimOwner({aksi:"bayar_cek"}).then(functi
 document.getElementById("fCek").onsubmit=function(e){e.preventDefault();var t=document.getElementById("mkToken").value.trim();if(t.length<20)return;try{ls("hm_token_mk",t)}catch(x){}gambarJodoh(t)};
 (function(){var t=ls("hm_token_mk");if(t)document.getElementById("mkToken").value=t})();
 (function(){var c=document.getElementById("cariContoh");if(!c)return;["invoice","email","calendar","crypto","travel","marketplace","translate","database"].forEach(function(k){var b=document.createElement("button");b.type="button";b.className="btn mini";b.textContent=k;b.onclick=function(){document.getElementById("qcari").value=k;document.getElementById("fcari").requestSubmit()};c.appendChild(b)})})();
+// Bukti kunjungan MARKUS: dimuat terpisah dari status, jadi kalau gagal bagian lain dasbor tetap jalan.
+function muatBukti(){
+  var kata=document.getElementById("bkKata").value.trim(),hari=document.getElementById("bkHari").value,q="?r=bukti&hari="+hari+(kata?"&kata="+encodeURIComponent(kata):"");
+  document.getElementById("bkCsv").href=API+q+"&format=csv";
+  fetch(API+q,{cache:"no-store"}).then(function(r){return r.json()}).then(function(d){
+    if(d.galat)throw new Error(d.galat);
+    var R=d.ringkas||{};
+    document.getElementById("bkAngka").innerHTML=[[R.didatangi,"kunjungan MARKUS"],[R.agen_unik,"agen berbeda"],[R.tersambung,"berhasil tersambung"],[R.ada_temuan,"agen menjawab pencarian"],[R.temuan,"jawaban dikumpulkan"],[R.berkode_bukti,"kunjungan berkode bukti"]].map(function(a){return'<div class="a"><b>'+(a[0]||0)+'</b><span>'+a[1]+'</span></div>'}).join("");
+    var B=(d.baris||[]).slice(0,30);
+    document.getElementById("bkDaftar").innerHTML=B.length?B.map(function(b){return"<tr><td>"+new Date(b.pada).toLocaleString("id-ID",{timeZone:"Asia/Jakarta",day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"})+"</td><td>"+esc(b.agen)+'<br><span class="kosong">'+esc(b.server||"")+"</span></td><td>"+(b.bukti?"<code>"+esc(b.bukti)+"</code>":'<span class="kosong">tanpa kode (versi lama)</span>')+"</td><td>"+esc((b.dicari||[]).join(" | "))+"</td><td>"+esc(b.hasil||"")+(b.cuplikan?'<br><span class="kosong">'+esc(b.cuplikan)+"</span>":"")+"</td></tr>"}).join(""):'<tr><td colspan="5" class="kosong">Belum ada kunjungan yang cocok di periode ini.</td></tr>';
+    document.getElementById("bkKet").textContent="Menampilkan 30 terbaru dari "+(R.didatangi||0)+" kunjungan"+(d.kata?' yang cocok dengan "'+d.kata+'"':"")+" · "+d.hari+" hari terakhir. CSV berisi sampai 1000 baris + cuplikan jawaban mereka. Dihitung di database pukul "+new Date(d.dihitung).toLocaleTimeString("id-ID",{hour:"2-digit",minute:"2-digit"})+".";
+  }).catch(function(e){document.getElementById("bkDaftar").innerHTML='<tr><td colspan="5" class="kosong">Laporan bukti gagal dimuat ('+esc(e.message)+'). Bagian lain dasbor tetap jalan; tekan Tampilkan lagi.</td></tr>'});
+}
+document.getElementById("bkLihat").addEventListener("click",muatBukti);
+document.getElementById("bkKata").addEventListener("keydown",function(e){if(e.key==="Enter")muatBukti()});
+document.getElementById("bkHari").addEventListener("change",muatBukti);
+muatBukti();
 function muat(){
   fetch(API+"?r=status",{cache:"no-store"}).then(function(r){return r.json()}).then(function(d){if(d.galat)throw new Error(d.galat);S=d;render();
     document.getElementById("detak").textContent="hidup · "+new Date(d.sekarang).toLocaleTimeString("id-ID",{hour:"2-digit",minute:"2-digit"})})
