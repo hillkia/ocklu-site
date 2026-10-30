@@ -1,5 +1,5 @@
 {
- "w": "2026-10-30T08:46:42Z",
+ "w": "2026-10-30T10:10:02Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -157,6 +157,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-10-30T04:55:32Z",
+   "media": 2,
+   "judul": {
+    "id": "Banjir Kembali Terjang Kampung Badak Gayo Lues, 339 KK Terdampak",
+    "en": "Banjir Kembali Terjang Kampung Badak Gayo Lues, 339 KK Terdampak"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Tatarmedia",
+    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOV1RLaklIbHFfYk9ZWWpsaTF1ejhCVklZc1JLdHhzTzc4bTRCdXJCeGtFZ1l1aTJRTjFkYXVYRS15U3hDc1hwNmRlVEh1cy03RElFQ2J5bW1MbDZNdnhSVWJhcDRDNENDeXFFMnRRZlVtT3d5aFdOamNPbXBPMWQxcVgwamNEVDdrM0hYVzdTU0tNRTdYWFplMjBoaU9xcnBGdHBieEF4alJEZTZhWmfSAbMBQVVfeXFMTnQtODd4dVp5Q010bmJDMU1jdVQ4S3hMWGUxYUlJQjZJVl9DTGtjOV9GcmdFV3Q1UURCaUZtUVVGUTBiUFdCX20ySlllT21vWnJZbWZ5X2o2SHRqTl82cE1HdUpHTGZYazVWV1hoNmVmVmRBYUJnNkl4UjhoTGQxY1VqQ0JyZm54MzdoT2g4b0dPZ2ZBdDdSUl9jTzRNMU91WXhRQWxzekpzVU55ZUVpLVM2Wjg?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-10-29T10:33:26Z",
    "media": 7,
    "judul": {
@@ -187,57 +204,6 @@
    "sumber": {
     "nama": "Tribratanews Polres Malang",
     "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPcVRPc25fVVc0VUZhRDAzN2JWWmRTeHFJS21PekswZG9SMjZyY3dWbFY0WkRpcURPWkROXzg2b2FLN1hvRkl4ZGdPeWNOUTV2UFZvSmtYQzFtV091cnJMaGwwTTN1ODZJS1l1WjhvOXlaY0xpMHJzc3VrTW5qZXp5MkRoX2N4U3dwcmxYVDNkN01mYmNOWUtpeEl2ZzZLcGs4ZTRIdjhWUlBVWG11OVpadERfd1RULTltQ0xTamxEVmd3RTJFZWc?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-30T06:50:05Z",
-   "media": 1,
-   "judul": {
-    "id": "KPK Periksa Eks GM PT PINS Ernist Rindang Marojahan di Kasus Digitalisasi SPBU",
-    "en": "KPK Periksa Eks GM PT PINS Ernist Rindang Marojahan di Kasus Digitalisasi SPBU"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "JPNN.com",
-    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNSFVsczBqdGJCeFBsN2x4b2NRZUQ4dDE2Wnc4UGRBVmhvc2ROX1JWZkhlQm9BbGk1XzFRYl8wdEpJTzNvMi1UelNQMkZULVNnZlRKenV2bU56U1hzTHM0MTZEaklEbkM1YTVOOWMxLXFReGJJWllpa3BFN1lHSnpPU0VQNzJIUnVZbzAtSDVfMDl4N3A2clhKSjJhNEdNZXZiZGNvTURHUdIBqgFBVV95cUxOV25iVkYzb3dBVVczR2NHbFB3Zy1NX2RXektoRmJ5b1dsVFc0Zi1uRUYtbUR5dGZ5bEpadnJHVlo5TFkwOGxKRjU5dWpLZkRDRWhEU0JiUEZVUXBodmVkVV9HVGxta29DTGNTY25jclROU1FMOHJhZnRQQmVFOXZnVWV2UTA0NEFvOHZrQzZnTC15MlliN2M1RWllS3hxNDc5YThGN3c1bDJlZw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-30T06:44:32Z",
-   "media": 1,
-   "judul": {
-    "id": "Dikmas Ops Patuh Toba 2026 Sasar Karyawan dan Pengemudi Ojek Online di Rantauprapat",
-    "en": "Dikmas Ops Patuh Toba 2026 Sasar Karyawan dan Pengemudi Ojek Online di Rantauprapat"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Website Resmi Polri",
-    "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQbzA2eDNiRGFTZDNwdE1ZWW1GVXVwT0h0QXpCOTdfUUU2bkJEY3R0M0J1LTU3dnhqczdpMzQwSWJvczdRZ0pNZGlLOC03ejRqeHN1aGdiZUw1VHMzMWtPbW5CLUt3RTZReEstQzRfNi1QWnE4TTdqMGlmRWw1cGpYQlZodGdmbVp4VFhqUGR2dVhQbXVZVGNhWDFwUTlVaElpUWJIU2JDQWFQYTM0SWRVTlNqMTU4M3d0eGVfWVEtM0t6ZGtVaXJsRjRqWkxMdDBfcW5HSQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-30T06:26:39Z",
-   "media": 1,
-   "judul": {
-    "id": "Motor Listrik Honda Kena Diskon Rp 25 Jutaan!",
-    "en": "Motor Listrik Honda Kena Diskon Rp 25 Jutaan!"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "detikOto",
-    "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNU1BxSnlIcUpHeU9yTEp2ZUFRNEJjRWVkcHZ3NWpNUFpvRDJRNG9HYll0Q0l4YXZEM2ZVcDJzWlhycW9iR1NaSU92NkdndTNmbU5lT2hhRFg0dDNtOTRGLUZzdWxJVUtiVGxIMUIwZnNwVWNkNUV4TFE3WEM2VlV6UGxlaGJVUDdqOGfSAY8BQVVfeXFMUGotUDhfRjItS2tPZ1ZydFl5UG4yZEpjV2VDTGdGbFNJaF8yWlcxVGoyS0VLQmstNktnaXJSWDZDTXdtU3BkLUJ6YTFzRXM0T1dleE5TMjdEdGllcVZyOEl6b2w2X293MlRoTktRdldtSnBWNFRMT1JmcVVNemNyM1pGbmNiTzEyZ1ltVlpLR1E?oc=5"
    }
   }
  ]
