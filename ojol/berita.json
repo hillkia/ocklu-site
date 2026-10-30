@@ -1,5 +1,5 @@
 {
- "w": "2026-10-30T23:07:24Z",
+ "w": "2026-10-30T23:39:46Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -51,6 +51,40 @@
    "sumber": {
     "nama": "Kompas.id",
     "url": "https://www.kompas.id/artikel/spbu-shell-resmi-beralih-ke-sefas-group"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-30T23:10:00Z",
+   "media": 2,
+   "judul": {
+    "id": "Jumat Berkah, Ditreskrimsus Polda Kepri dan Wartawan Bagikan 100 Kantong Beras untuk Porter hingga Ojol",
+    "en": "Jumat Berkah, Ditreskrimsus Polda Kepri dan Wartawan Bagikan 100 Kantong Beras untuk Porter hingga Ojol"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Riaukepri.com",
+    "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNRi1pU3ljQi1uWmxXeVpuWXdVOXljQ0F4Y0hjOXI2aUoyUzJsT2tUVUNDV1hlalVXRi1VYXFwWUdZVVNIeFJ4OW0xdFRVTTdJYkNkWkxHUTNGY1JoZGJLTVd6YWR1TkVYUVVvOGFYQ1Q5NUhKN3pZYmdRbEVJMHNSZ0IwbGR4dWxmN3RlMmV0WDU1NWp2ZmFoeDFyeU1qWHQyR2R6Rmp1MUgyQWxmSVczSTVqTERUNGp3UEJtREtxZGZiYWdtd080alZ2VTdDb2FrWGU3VUg2WQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-30T18:31:21Z",
+   "media": 3,
+   "judul": {
+    "id": "Wanita di Makassar Dirampok dan Nyaris Dirudapaksa Driver Ojol yang Mengantarnya",
+    "en": "Wanita di Makassar Dirampok dan Nyaris Dirudapaksa Driver Ojol yang Mengantarnya"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "IDN Times Sulsel",
+    "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNTm5SX082RnY4WFljTTFqaUJ4VlpMRlVxUzRRd3JyU1A4NXJHVFUyY09wcWlmTlc5TUlUdnRTRlNTRmRTZm9LUEdpSDlTZGpLd0V0NlZ0ckNRUHg5TWVsZWFCTXQ3N0lRdGJ4cm81cVZJU3BEcl9fTUZZd3hzYVNlaEN1QkY2aXBUUFJGUERsb2dmR0o4R0xQOHg2Ny00YzNOZlJUaG5aTDFGdVdORDJwSFc1b05xZTBtZFFINEFVOTRHeFdrV2NqeURfYUTSAdIBQVVfeXFMTmJTQjh3bkY0S0xoLXJldGpmakw2d3hHLWJwTzRFOVNobDRZUTZlWFJ2dDFuUUQ1cm54bDRTUjJBREtuZ29CaGFBUmR2WVNBSXUzbFhYLTFXbWhrMWl3X195eEpMNlIxdFFZQ1dyT2xsaGZad2dpdUh2dFhwNWE3OUNMRTcwUkNONmdPSG9YcUNBRWRCS3hOcEl6NEtnSkQxOHJFenVISkpOeTFIdnNWckM4b29hQXJTMHdWYWpWb1dZc3A5a2pSYjdQbHJxeFdzOWN3?oc=5"
    }
   },
   {
@@ -140,6 +174,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-10-30T23:13:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Kapolres Bogor Bangun Kedekatan dengan Pengemudi Ojek Online, Ngariung Bareng Ojol Kamtibmas",
+    "en": "Kapolres Bogor Bangun Kedekatan dengan Pengemudi Ojek Online, Ngariung Bareng Ojol Kamtibmas"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Kabarindoraya.com",
+    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQQ3VFQXZUV1hQbmtFSEs5cG9WT19VbkRvOFFiZ3ZZOTRiOVlNa0NXUU55dlVHQmRVdWE4WFlFVUFmbGtIYnR1LVNxdVpmVUM3SmZSUU5wd1FKaG42ejVhZkxVSS00VzFOTllmZy1sRmJGSEI0djNBWlJVcl93cjVoQUJqTTJmejRVY0xkTGk4NGxZZVp6X2tFNVducHJla0xvQUN1MTA3Ni1OSklodlhON25DOThpaEps?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-10-30T03:05:00Z",
    "media": 6,
    "judul": {
@@ -153,23 +204,6 @@
    "sumber": {
     "nama": "Kompas.tv",
     "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNMXNJWFRXRDVHRElmN3pzUVhXemtkWEdPZ2R4blpTa3NXSmRDTlMwUEhCWENxTXlmQWtSbkY1RmZEV3RUU2FNYTFodjJ5U0hXNWltWVVtYU5oa3JLMnNCU0doT0NQS0Uwcmk2dm9Oc09QQWZBc1RzejlUUXAtZ2JfVjlLNkVrS2NvVkJxNDFpa0VtTzlGd0hBcjZZa2c1SWdGUWtoMDhWbEg5SzczOGt2R1BRbDFnSzhnVk95cDlFaWdlb0w3U2UyTNIBzgFBVV95cUxOY2p6eVBaWkFmU3ZRX1FsTFZGNm1qV0FfT185WHVIR1ZYVEJpWHQ5OVFaTDJoOGlWNzluYkF2bnp1em5BOTRySkFXNUVkelJZYy1EcjFOT3dXVGRweHFQSmpieGduV0oycndZTGw3VzBNQnVlRVVoOHVZd2EtYzFadXkzYWlJVjZ5ZFcyNHZiMDQ1LWxwT2pDeGZvNExtcnFYOGhWQ0Rad0Fyc09HeTNDUm5UQW1ZRFY3LVUwOFJnRkRYamlzUUZCQy0xTWlOZw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-30T15:31:26Z",
-   "media": 2,
-   "judul": {
-    "id": "Wanita di Makassar Dirampok dan Nyaris Dirudapaksa Driver Ojol yang Mengantarnya",
-    "en": "Wanita di Makassar Dirampok dan Nyaris Dirudapaksa Driver Ojol yang Mengantarnya"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Rakyat Sulsel",
-    "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPRXlVbzZURjdrR3ROeFRHSkhTeTZHeDRoTEx4UEZPaUpMZXNpdHRlcC1LREhJalNMRVJ6UllfdkQwYUJlWGNUclpHbFJya1hVeXZMTUZ5cm5OYy1IdkJwQnVWSGk5MGZCTW9LVWY5TVU1ak1hclU5QmNPTVdwNkFqSVRfQVJ6ckt0ZDAyZWExYzk2c3dXNzlQTWYyTy1PanhwaWxEMktzellVX1RGbmtoMGJKMi1BRDEwNmJldGZMSDJZdFE?oc=5"
    }
   },
   {
@@ -289,23 +323,6 @@
    "sumber": {
     "nama": "Momotor.id",
     "url": "https://momotor.id/news/apakah-baterai-motor-listrik-boleh-di-charge-semalaman"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-29T12:51:20Z",
-   "media": 8,
-   "judul": {
-    "id": "Peta Jalan Elektrifikasi Motor Listrik Sasar Ojol dan Kendaraan Dinas Mulai 2027",
-    "en": "Peta Jalan Elektrifikasi Motor Listrik Sasar Ojol dan Kendaraan Dinas Mulai 2027"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Koridor.co.id",
-    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFA5RU0xSGFFX25XUXMzYVdSYzJ4WDFqWDRCMnY1czZkdWthLW9OcTd3T1YwMEpnX00zbWpGdFR2Zk0wUmFNY2d2YnI5dFZyOTB2eUlua05jMm9ia0FuT0pZd1dvaHR0aEpoMGp0RnVn?oc=5"
    }
   }
  ]
