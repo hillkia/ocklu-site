@@ -103,7 +103,13 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
 
 <div class="angka" id="angka"></div>
 
-<nav class="tabbar" id="tabbar" aria-label="Bagian dasbor"><a href="#exit">Exit goal</a><a href="#penjaga">Grigori 🛡️</a><a href="#makelar">Pasar Makelar</a><a href="#klien">Klien Khusus</a><a href="#jemput">Jemput Bola</a><a href="#turnamen">Turnamen</a><a href="#ofinpay">Ofin Pay</a><a href="#obrolan">Obrolan agen</a><a href="#arus">Rumus Arus</a><a href="#radar">Radar Niat</a><a href="#cari">Cari agen</a><a href="#bicara">Bicara dengan agen</a><a href="#gibberlink">Gibberlink</a><a href="#datang">Agen datang</a><a href="#agenKita">Agen kita</a><a href="#detak30h">Detak 30 mnt</a><a href="#belanja">Cara belanja</a><a href="#manusia">Pengunjung</a><a href="#uang">Alur uang</a><a href="#jual">Yang dijual</a><a href="/ofin/">Ofin ↗</a><a href="/hypermarket/pasar/">Pasar teks ↗</a><a href="/siap-dibaca-ai/">Siap Dibaca AI ↗</a><a href="/airank/">AIRANK ↗</a><a href="/ai-readiness/">AI-readiness ↗</a><a href="/direktori-agen/">Direktori agen ↗</a><a href="https://glama.ai/mcp/servers?query=ocklu" target="_blank" rel="noopener">MCP Registry ↗</a></nav>
+<h2 id="sinyal">🛒 Sinyal beli agen · minggu ini</h2>
+<p class="kaki" style="margin:-4px 0 10px">Yang dihitung cuma langkah yang dekat ke bayar. Kunjungan crawler/pengindeks <b>tidak</b> dihitung di sini. Minggu mulai Senin (WIB).</p>
+<div class="angka" id="sinyalAngka"></div>
+<details class="panel" style="overflow-x:auto;margin-top:10px"><summary style="cursor:pointer;font-weight:600">8 minggu terakhir</summary><table><thead><tr><th>Minggu</th><th>Minta link</th><th>Kasir TerTau dibuka</th><th>Tagihan x402</th><th>Minta dipertemukan</th><th>Lunas</th></tr></thead><tbody id="sinyalTabel"></tbody></table></details>
+<p class="kaki" id="sinyalKet" style="margin-top:8px"></p>
+
+<nav class="tabbar" id="tabbar" aria-label="Bagian dasbor"><a href="#sinyal">Sinyal beli 🛒</a><a href="#exit">Exit goal</a><a href="#penjaga">Grigori 🛡️</a><a href="#makelar">Pasar Makelar</a><a href="#klien">Klien Khusus</a><a href="#jemput">Jemput Bola</a><a href="#turnamen">Turnamen</a><a href="#ofinpay">Ofin Pay</a><a href="#obrolan">Obrolan agen</a><a href="#arus">Rumus Arus</a><a href="#radar">Radar Niat</a><a href="#cari">Cari agen</a><a href="#bicara">Bicara dengan agen</a><a href="#gibberlink">Gibberlink</a><a href="#datang">Agen datang</a><a href="#agenKita">Agen kita</a><a href="#detak30h">Detak 30 mnt</a><a href="#belanja">Cara belanja</a><a href="#manusia">Pengunjung</a><a href="#uang">Alur uang</a><a href="#jual">Yang dijual</a><a href="/ofin/">Ofin ↗</a><a href="/hypermarket/pasar/">Pasar teks ↗</a><a href="/siap-dibaca-ai/">Siap Dibaca AI ↗</a><a href="/airank/">AIRANK ↗</a><a href="/ai-readiness/">AI-readiness ↗</a><a href="/direktori-agen/">Direktori agen ↗</a><a href="https://glama.ai/mcp/servers?query=ocklu" target="_blank" rel="noopener">MCP Registry ↗</a></nav>
 <p id="iklanKecil" hidden style="font-size:13px;margin:6px 0 0;padding:6px 10px;border:1px dashed currentColor;border-radius:8px;opacity:.75"></p>
 <h2 id="exit" data-w="peristiwa">Exit goals · jalan sampai bisa dijual</h2>
 <div class="panel"><ol class="tujuan" id="tujuan"></ol><p class="kosong" id="tujuanKet" style="margin:12px 0 0"></p></div>
@@ -443,6 +449,14 @@ function render(){
     [tot,"kunjungan agen · "+lbl30],[h24,"kunjungan agen · 24 jam"],[nama.length,"jenis agen berbeda"],
     [mcp,"panggilan MCP terakhir"],[periksa?esc(periksa.hasil):"—","link kasir ("+lalu(periksa&&periksa.pada)+")"],[siar?esc(siar.hasil):"—","siaran IndexNow ("+lalu(siar&&siar.pada)+")"]
   ].map(function(a){return'<div class="a"><b>'+a[0]+'</b><span>'+a[1]+'</span></div>'}).join("");
+  var SB=S.sinyal_beli,mg=(SB&&SB.minggu)||[],ini=mg[0]||{};
+  document.getElementById("sinyalAngka").innerHTML=SB?[
+    [ini.minta_link,"agen minta link beli (cara_beli)"],[ini.kasir_tertau,"kasir PayPal TerTau dibuka (bisa crawler/uji)"],[ini.tagih_x402,"agen minta tagihan x402"],
+    [ini.dipertemukan,"agen minta dipertemukan penjual"],[ini.lunas_n,"LUNAS · uang benar-benar masuk"],["$"+(ini.lunas_usd||0),"uang masuk minggu ini (USD/USDC)"]
+  ].map(function(a){return'<div class="a"><b>'+(a[0]||0)+'</b><span>'+a[1]+'</span></div>'}).join(""):'<div class="a"><b>—</b><span>sinyal beli belum terbaca</span></div>';
+  document.getElementById("sinyalTabel").innerHTML=mg.map(function(m){return"<tr><td>"+esc(m.mulai)+"</td><td>"+m.minta_link+(m.agen_minta_link?" ("+m.agen_minta_link+" agen)":"")+"</td><td>"+m.kasir_tertau+"</td><td>"+m.tagih_x402+(m.x402_dompet_kosong?" · ditolak dompet kosong "+m.x402_dompet_kosong:"")+"</td><td>"+m.dipertemukan+"</td><td><b>"+m.lunas_n+"</b> ($"+m.lunas_usd+")</td></tr>"}).join("");
+  var dkos=mg.reduce(function(n,m){return n+(m.x402_dompet_kosong||0)},0);
+  document.getElementById("sinyalKet").textContent=(dkos?"⚠️ "+dkos+" agen mau bayar x402 tapi ditolak karena dompet penerima belum dipasang. ":"")+"Gampangnya: kalau angka LUNAS masih 0, belum ada agen yang benar-benar membayar — seberapa ramai pun kunjungannya.";
   var dk=S.detak||[],slot=[],kini=Date.now();for(var i=47;i>=0;i--){var a=kini-(i+1)*1800e3,b=kini-i*1800e3;slot.push(dk.filter(function(d){var t=new Date(d.pada).getTime();return t>a&&t<=b}))}
   var dEl=document.getElementById("detak30");if(dEl){var kosong=slot.filter(function(x){return!x.length}).length;
     dEl.innerHTML=slot.map(function(x,i){var n=0;x.forEach(function(d){var m=/^(\d+) kunjungan/.exec(d.hasil||"");if(m)n+=+m[1]});var jam=new Date(kini-(47-i)*1800e3).toLocaleTimeString("id-ID",{hour:"2-digit",minute:"2-digit"});
