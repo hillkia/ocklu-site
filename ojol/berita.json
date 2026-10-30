@@ -1,5 +1,5 @@
 {
- "w": "2026-10-30T02:22:28Z",
+ "w": "2026-10-30T03:27:53Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -72,6 +72,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-10-30T01:40:04Z",
+   "media": 1,
+   "judul": {
+    "id": "Bikin Geram! Niat Bantu WNA Jatuh di Bali, Driver Ojol Malah Ditikam",
+    "en": "Bikin Geram! Niat Bantu WNA Jatuh di Bali, Driver Ojol Malah Ditikam"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Warta Bali Online",
+    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQc0FFaFk5MFhoWEFyYng0b0pfbnZKdFNReTNUcFhxUGtKa3hCaW43Z2tTZ2JIWEhSbU1nZDVVeDZhX1BnV1owWnZ1OEZIaDdNS2p3QndSUzBCbE1mTnlIV0ZuOXJHQlJEQWdybHZFcUlKYkRkS1V1TlhadmphcUltRnhFSG1BSHN5blVGZnhqSE03ano5STZxRmxnUC1xb1hwbnhDdVFaT1FUZw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-10-29T03:26:10Z",
    "media": 7,
    "judul": {
@@ -136,6 +153,23 @@
    "sumber": {
     "nama": "BaliNews.id",
     "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPQU9nUDd0VVJmSEc2c0lOcmtab3ZsalRGS2lIUUFFY1BQWDZtM0Qycm0wTnMxSmNZT1dqR1lweHBLRGZqRTJURThjb2VYemFyQU1ycGhTTmRIeG85Mk0wc2dHN0ZGREZvR1NUZUNEZ25QaEl4RjNORmJEMnh5MGNUZFYxeTBMRDFMSVBfQ3pLSE9RYzhRS1V2dl9GZ0lxUC1Ed0RlX2V3SlpHaTNkUWkwMEtncw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-29T17:44:00Z",
+   "media": 2,
+   "judul": {
+    "id": "Moeldoko Sebut Kendaraan Listrik Bisa Tekan Impor dan Subsidi BBM",
+    "en": "Moeldoko Sebut Kendaraan Listrik Bisa Tekan Impor dan Subsidi BBM"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "RuangOjoL.com",
+    "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNdXpVdXI3Y0w0NG1FUjFvSkJRVUVta2xCLWNZRkRpR0Z5c0dwNjZzSGxXSkNTMnJtSkZBeEZyZ0NQblptMkVhYUhHWVo1OGFaNl85a2NXZzd0VHdQTjcwUWN3aTFsYzBkcE9OV3RPMEFYVnBTaDVWUF9GR0h2eUlveHRn?oc=5"
    }
   }
  ]
