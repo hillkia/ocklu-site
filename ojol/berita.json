@@ -1,5 +1,5 @@
 {
- "w": "2026-10-30T21:04:58Z",
+ "w": "2026-10-30T21:52:41Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -174,6 +174,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-10-30T20:17:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Bagikan 150 Nasi Bungkus, Jurnalis dan Ojol Samarinda Kampanyekan Tertib Lalu Lintas",
+    "en": "Bagikan 150 Nasi Bungkus, Jurnalis dan Ojol Samarinda Kampanyekan Tertib Lalu Lintas"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Kaltim Faktual",
+    "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFB6RVF6bjhyaS1fX3JhS0YwYXpQbHNIeXl2SmItd2F6Q1pYaXJxZDF0c3ZneVR0VWdYNWlzUFZMVTd2M3JGREdtdzZIaU9FcEdTc1R6UHZ6WUlqd2VlVTluSGNfamRvNjBHVVowdWRIN1Bqc0NTMU9FODQwTks?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-10-30T13:30:00Z",
    "media": 2,
    "judul": {
@@ -289,40 +306,6 @@
    "sumber": {
     "nama": "Koridor.co.id",
     "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFA5RU0xSGFFX25XUXMzYVdSYzJ4WDFqWDRCMnY1czZkdWthLW9OcTd3T1YwMEpnX00zbWpGdFR2Zk0wUmFNY2d2YnI5dFZyOTB2eUlua05jMm9ia0FuT0pZd1dvaHR0aEpoMGp0RnVn?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-30T10:20:00Z",
-   "media": 2,
-   "judul": {
-    "id": "Jumat Berkah NasDem Sulsel, Pengguna Jalan hingga Ojol Kebagian Makanan Gratis",
-    "en": "Jumat Berkah NasDem Sulsel, Pengguna Jalan hingga Ojol Kebagian Makanan Gratis"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Pedomanrakyat.com",
-    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOaHl0RG83OG9XbnJVSzI1OENkeklUVXRrRkVtemJnSGU5Wm1EcmZobHpENUR2Y2pIYU9VTk1NREppSlBxdnhTRFNvX3V0VFBvWDZEV0lzRDd2ZGl3c1RjcmJ0UE5fbzJVcVA0LXUtU1dPaFRXU19WMW5oY0E4LVRHRFBJYnAzUlVMMFRBTUFqZlNuS2R0eXQ1UVlvYjNBMy0zLW11SVJUd9IBrAFBVV95cUxPM0U4b3NZRF9FVzRkelk2cl9tR3BvbjJrVWN3S3dMcjdfcW82UlU5NjR0dmFOY2xiRWd3QVQzbUZfeENkM0tnVzlVUVQ0elp2Y0ItX3lfcGh0dWxfM3MzZjJIV2xOTWNhdTNOR0EzVDlMd3F6Y3Q0eVh4T25GdDlUZ1Fia1h0SmRYRGtqbG15TUhtTzU3YzlfY09oNU4tZkdKczdnNkZjTkNZMl9k?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-30T15:31:37Z",
-   "media": 1,
-   "judul": {
-    "id": "ASN yang Dijambret Pria Berjaket Ojol di Medan Ternyata Hakim",
-    "en": "ASN yang Dijambret Pria Berjaket Ojol di Medan Ternyata Hakim"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "detikcom",
-    "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOYXBwUkdPb1B3S25uSzRqSVdHdnlUU2VNUkM0MVp2RTlaMFBndkN2VUl5aW96VFBYSXlFYWhUNEdlcTJHUDF1eVRwRk1Ia3RpM3lSV0s3MEM4VkxRcTJXUUtfWVQ4WVFnaFRuT2FSWkxVQk02YXc3WVZ1X1p1UXN2bGZBYkhSXzI1a1c2djAwZ2pFck9wa1hKVnpraGpweUVMSFpjTmgwQUVTVlhfTGl5SnhqNS1zLTZWNXfSAb8BQVVfeXFMUFR6VXRBYnVWakhVUTdYVS1qTWJjQk5UNDczS3h0bzhody1odXdJQ042OFJjNFhQQlBqdUpBaG1JMTcxTVMyZHozT0E2eWFZUmpraUJvVDBlc2d4MFdHSGMzLTZwcTRRa2ZfYklSODg0OE8yTlN6am01cVd4dW40bnk1WHBLTHdCSEVLUmFfa2Z4Vk5HZFhJYXVGZ1FYemlkbFZGM25tREdZYkhqemxaMHB6RGhnMVlTSk5WdGdPQWs?oc=5"
    }
   }
  ]
