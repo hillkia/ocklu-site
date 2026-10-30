@@ -210,7 +210,8 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
   <div class="owner-saja" hidden>
     <form id="klienForm" class="baris" style="flex-wrap:wrap;gap:8px" onsubmit="return false">
       <input id="klNama" placeholder="Nama klien / usaha" aria-label="Nama klien" maxlength="120" required>
-      <input id="klKontak" placeholder="Email/WA klien (opsional)" aria-label="Kontak klien" maxlength="200">
+      <input id="klKontak" placeholder="WA klien (mis. 0812…) atau email" aria-label="Kontak klien" maxlength="200">
+      <input id="klKanal" placeholder="Link toko/medsos: Shopee, Tokopedia, TikTok Shop, Instagram… (pisah koma)" aria-label="Link toko atau medsos klien" maxlength="1200" style="flex:2 1 320px">
       <select id="klJenis" aria-label="Jenis"><option value="cari_pembeli">Cari PEMBELI (klien jualan)</option><option value="cari_penjual">Cari PENJUAL (klien butuh)</option></select>
       <input id="klApa" placeholder="Apa yang dijual / dicari, mis. 'kopi arabika 1 ton', 'jasa SEO toko online'" aria-label="Apa" maxlength="300" style="flex:2 1 320px" required>
       <input id="klHarga" type="number" min="0" placeholder="Harga/anggaran" aria-label="Harga" style="max-width:150px">
@@ -812,8 +813,8 @@ function muatKlien(){var k=document.getElementById("klKunci");if(k)k.hidden=true
   ul.querySelectorAll("[data-klid]").forEach(function(b){b.onclick=function(){klienApi({aksi:"ubah",id:+b.dataset.klid,status:b.dataset.klst}).then(muatKlien)}})})}
 document.getElementById("klSimpan").onclick=function(){var v=function(i){return document.getElementById(i).value.trim()};var ket=document.getElementById("klKet");
   if(v("klNama").length<2||v("klApa").length<3){ket.textContent="Isi nama klien dan apa yang dijual/dicari.";return}
-  this.textContent="menyimpan…";var b=this;klienApi({aksi:"tambah",nama:v("klNama"),kontak:v("klKontak"),jenis:v("klJenis"),apa:v("klApa"),harga:v("klHarga"),mata_uang:v("klMu"),wilayah:v("klWilayah"),catatan:v("klCatatan")}).then(function(d){
-    b.textContent="Mulai buru";ket.textContent=d.ok?"Tersimpan ✓ — agen mulai memburu di putaran berikutnya (tiap 30 menit), temuan masuk Telegram.":("Gagal: "+(d.galat||"coba lagi"));if(d.ok){["klNama","klKontak","klApa","klHarga","klWilayah","klCatatan"].forEach(function(i){document.getElementById(i).value=""});muatKlien()}})};
+  this.textContent="menyimpan…";var b=this;klienApi({aksi:"tambah",nama:v("klNama"),kontak:v("klKontak"),jenis:v("klJenis"),apa:v("klApa"),harga:v("klHarga"),mata_uang:v("klMu"),wilayah:v("klWilayah"),catatan:v("klCatatan"),kanal:v("klKanal")}).then(function(d){
+    b.textContent="Mulai buru";ket.textContent=d.ok?"Tersimpan ✓ — agen mulai memburu di putaran berikutnya (tiap 30 menit), temuan masuk Telegram.":("Gagal: "+(d.galat||"coba lagi"));if(d.ok){["klNama","klKontak","klKanal","klApa","klHarga","klWilayah","klCatatan"].forEach(function(i){document.getElementById(i).value=""});muatKlien()}})};
 </script>
 <script>
 (function(){var i=document.getElementById("sasaranIsi"),k=document.getElementById("sasaranKet"),t=document.getElementById("sasaranSimpan");if(!i)return;

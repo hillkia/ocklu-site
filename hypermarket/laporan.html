@@ -22,6 +22,7 @@ a{color:var(--aksen)}button{font:inherit;padding:8px 14px;border-radius:10px;bor
   <h1 id="judul">Laporan klien OCKLU</h1>
   <p class="kecil" id="sub">memuat…</p>
   <div class="angka" id="angka"></div>
+  <div class="kartu" id="kanalKartu" hidden><b>Toko & medsos Anda yang ikut kami tunjukkan ke agen AI</b><ul id="kanal"></ul></div>
   <div class="kartu"><b>Temuan terbaru</b> <span class="kecil">(lihat jenisnya: postingan publik atau jawaban agen)</span><ul id="contoh"><li class="kecil">memuat…</li></ul></div>
   <div class="kartu kecil" id="jujur">
     <b>Cara membaca laporan ini (jujur):</b>
@@ -50,6 +51,7 @@ else fetch(API+"?r=kpi_klien&hari=30&t="+encodeURIComponent(t),{cache:"no-store"
   document.getElementById("sub").textContent=(k.jenis==="cari_pembeli"?"Dicarikan pembeli untuk: ":"Dicarikan penjual untuk: ")+(k.apa||"-")+" · klien sejak "+tgl(k.sejak)+" · periode "+k.hari+" hari terakhir";
   document.getElementById("angka").innerHTML=[[k.calon,"calon pembeli dari postingan publik ("+k.hari+" hari)"],[k.jawaban_agen||0,"jawaban agen AI lain yang menyebut barang sejenis"],[m.didatangi||0,"agen AI lain ditanyai soal barang Anda"],[nj,"calon dikenalkan ke Anda"],[k.lunas,"transaksi jadi"]]
     .map(function(a){return'<div class="a"><b>'+(a[0]||0)+"</b><span>"+a[1]+"</span></div>"}).join("");
+  var KN=k.kanal||[];if(KN.length){document.getElementById("kanalKartu").hidden=false;document.getElementById("kanal").innerHTML=KN.map(function(u){return'<li><a href="'+esc(u)+'" target="_blank" rel="noopener">'+esc(u.replace(/^https?:\/\//,""))+"</a></li>"}).join("")}
   var C=k.contoh||[];
   document.getElementById("contoh").innerHTML=C.length?C.map(function(c){return"<li>"+(c.url?'<a href="'+esc(c.url)+'" target="_blank" rel="noopener">'+esc(c.judul)+"</a>":esc(c.judul))+' <span class="kecil">· <b>'+esc(c.jenis||"")+"</b> · "+esc(c.sumber)+" · "+tgl(c.pada)+"</span></li>"}).join(""):'<li class="kecil">Belum ada temuan. Agen terus mencari tiap 30 menit.</li>';
   document.getElementById("kaki").textContent="Dihitung langsung dari database OCKLU pada "+new Date(k.dihitung).toLocaleString("id-ID")+". Data kontak pihak lain tidak ditampilkan.";
