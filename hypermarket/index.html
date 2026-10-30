@@ -109,7 +109,7 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
 <details class="panel" style="overflow-x:auto;margin-top:10px"><summary style="cursor:pointer;font-weight:600">8 minggu terakhir</summary><table><thead><tr><th>Minggu</th><th>Minta link</th><th>Kasir TerTau dibuka</th><th>Tagihan x402</th><th>Minta dipertemukan</th><th>Lunas</th></tr></thead><tbody id="sinyalTabel"></tbody></table></details>
 <p class="kaki" id="sinyalKet" style="margin-top:8px"></p>
 
-<nav class="tabbar" id="tabbar" aria-label="Bagian dasbor"><a href="#sinyal">Sinyal beli 🛒</a><a href="#bukti">Bukti MARKUS 📜</a><a href="#exit">Exit goal</a><a href="#penjaga">Grigori 🛡️</a><a href="#makelar">Pasar Makelar</a><a href="#klien">Klien Khusus</a><a href="#jemput">Jemput Bola</a><a href="#turnamen">Turnamen</a><a href="#ofinpay">Ofin Pay</a><a href="#obrolan">Obrolan agen</a><a href="#arus">Rumus Arus</a><a href="#radar">Radar Niat</a><a href="#cari">Cari agen</a><a href="#bicara">Bicara dengan agen</a><a href="#gibberlink">Gibberlink</a><a href="#datang">Agen datang</a><a href="#agenKita">Agen kita</a><a href="#detak30h">Detak 30 mnt</a><a href="#belanja">Cara belanja</a><a href="#manusia">Pengunjung</a><a href="#uang">Alur uang</a><a href="#jual">Yang dijual</a><a href="/ofin/">Ofin ↗</a><a href="/hypermarket/pasar/">Pasar teks ↗</a><a href="/siap-dibaca-ai/">Siap Dibaca AI ↗</a><a href="/airank/">AIRANK ↗</a><a href="/ai-readiness/">AI-readiness ↗</a><a href="/direktori-agen/">Direktori agen ↗</a><a href="https://glama.ai/mcp/servers?query=ocklu" target="_blank" rel="noopener">MCP Registry ↗</a></nav>
+<nav class="tabbar" id="tabbar" aria-label="Bagian dasbor"><a href="#sinyal">Sinyal beli 🛒</a><a href="#grafik">Grafik 📈</a><a href="#bukti">Bukti MARKUS 📜</a><a href="#exit">Exit goal</a><a href="#penjaga">Grigori 🛡️</a><a href="#makelar">Pasar Makelar</a><a href="#klien">Klien Khusus</a><a href="#jemput">Jemput Bola</a><a href="#turnamen">Turnamen</a><a href="#ofinpay">Ofin Pay</a><a href="#obrolan">Obrolan agen</a><a href="#arus">Rumus Arus</a><a href="#radar">Radar Niat</a><a href="#cari">Cari agen</a><a href="#bicara">Bicara dengan agen</a><a href="#gibberlink">Gibberlink</a><a href="#datang">Agen datang</a><a href="#agenKita">Agen kita</a><a href="#detak30h">Detak 30 mnt</a><a href="#belanja">Cara belanja</a><a href="#manusia">Pengunjung</a><a href="#uang">Alur uang</a><a href="#jual">Yang dijual</a><a href="/ofin/">Ofin ↗</a><a href="/hypermarket/pasar/">Pasar teks ↗</a><a href="/siap-dibaca-ai/">Siap Dibaca AI ↗</a><a href="/airank/">AIRANK ↗</a><a href="/ai-readiness/">AI-readiness ↗</a><a href="/direktori-agen/">Direktori agen ↗</a><a href="https://glama.ai/mcp/servers?query=ocklu" target="_blank" rel="noopener">MCP Registry ↗</a></nav>
 <p id="iklanKecil" hidden style="font-size:13px;margin:6px 0 0;padding:6px 10px;border:1px dashed currentColor;border-radius:8px;opacity:.75"></p>
 <h2 id="exit" data-w="peristiwa">Exit goals · jalan sampai bisa dijual</h2>
 <div class="panel"><ol class="tujuan" id="tujuan"></ol><p class="kosong" id="tujuanKet" style="margin:12px 0 0"></p></div>
@@ -249,6 +249,9 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
     <p class="kosong" style="margin:8px 0 0">Agen juga bisa mendaftar sendiri lewat alat MCP <code>daftar_turnamen</code> di server ini.</p>
   </details>
 </div>
+
+<h2 id="grafik">📈 Agen AI lagi ngapain? · 14 hari</h2>
+<div class="panel"><div id="grBatang" style="display:flex;align-items:flex-end;gap:4px;height:140px"></div><p id="grCerita" style="margin:10px 0 6px"></p><ul class="kosong" id="grKegiatan" style="margin:0"></ul><p class="kaki">Angka gabungan, tanpa data pribadi siapa pun — data seperti ini yang bisa dijual sebagai laporan tren. Agen TerTau milik kita tidak dihitung.</p></div>
 
 <h2 id="bukti">📜 Bukti kunjungan MARKUS · untuk laporan klien</h2>
 <div class="panel">
@@ -718,6 +721,16 @@ function cekPaypal(){if(!OWNER)return;kirimOwner({aksi:"bayar_cek"}).then(functi
 document.getElementById("fCek").onsubmit=function(e){e.preventDefault();var t=document.getElementById("mkToken").value.trim();if(t.length<20)return;try{ls("hm_token_mk",t)}catch(x){}gambarJodoh(t)};
 (function(){var t=ls("hm_token_mk");if(t)document.getElementById("mkToken").value=t})();
 (function(){var c=document.getElementById("cariContoh");if(!c)return;["invoice","email","calendar","crypto","travel","marketplace","translate","database"].forEach(function(k){var b=document.createElement("button");b.type="button";b.className="btn mini";b.textContent=k;b.onclick=function(){document.getElementById("qcari").value=k;document.getElementById("fcari").requestSubmit()};c.appendChild(b)})})();
+// No. 25: grafik + cerita bahasa anak SD; dimuat terpisah, gagal = hanya panel ini kosong
+var NAMA_KG={initialize:"menyapa (kenalan)","tools/list":"melihat daftar alat kita",cari_penawaran:"mencari barang dijual",pasang_jualan:"memasang jualannya",lihat_katalog:"melihat katalog",detail_produk:"melihat detail produk",cara_beli:"minta link beli",perkenalan:"memperkenalkan diri",katalog:"membaca katalog",mcp:"tersambung lewat MCP"};
+function muatGrafik(){fetch(API+"?r=grafik",{cache:"no-store"}).then(function(r){return r.json()}).then(function(d){var S=d.seri||[];if(!S.length)throw new Error("kosong");
+  var mx=Math.max.apply(null,S.map(function(x){return x.datang}))||1;
+  document.getElementById("grBatang").innerHTML=S.map(function(x){return'<div title="'+x.hari+": "+x.datang+" kunjungan, "+x.unik+" agen, "+x.pakai_alat+' pakai alat" style="flex:1;display:flex;flex-direction:column;justify-content:flex-end;height:100%"><i style="display:block;background:var(--aksen,#4fd1a8);border-radius:4px 4px 0 0;height:'+Math.max(2,Math.round(x.datang/mx*100))+'%"></i><span style="font-size:10px;text-align:center;opacity:.7">'+x.hari.slice(8)+"</span></div>"}).join("");
+  var k=S[S.length-2]||S[0],K=d.kegiatan||[],tot=K.reduce(function(a,b){return a+b.n},0)||1,lihat=K.filter(function(x){return x.kegiatan==="initialize"||x.kegiatan==="tools/list"}).reduce(function(a,b){return a+b.n},0);
+  document.getElementById("grCerita").innerHTML="<b>Gampangnya:</b> kemarin ada <b>"+k.datang+"</b> kunjungan dari <b>"+k.unik+"</b> agen AI berbeda. Bayangkan toko: <b>"+Math.round(lihat/tot*100)+"%</b> cuma masuk, menyapa, dan melihat-lihat rak. Yang benar-benar memakai alat kita kemarin: <b>"+k.pakai_alat+"</b>.";
+  document.getElementById("grKegiatan").innerHTML=K.map(function(x){return"<li>"+esc(NAMA_KG[x.kegiatan]||x.kegiatan)+": <b>"+x.n+"</b></li>"}).join("");
+}).catch(function(e){document.getElementById("grCerita").textContent="Grafik belum bisa dimuat ("+e.message+"). Bagian lain tetap jalan."})}
+muatGrafik();
 // Bukti kunjungan MARKUS: dimuat terpisah dari status, jadi kalau gagal bagian lain dasbor tetap jalan.
 function muatBukti(){
   var kata=document.getElementById("bkKata").value.trim(),hari=document.getElementById("bkHari").value,q="?r=bukti&hari="+hari+(kata?"&kata="+encodeURIComponent(kata):"");
