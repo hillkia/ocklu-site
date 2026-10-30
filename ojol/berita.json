@@ -1,5 +1,5 @@
 {
- "w": "2026-10-30T05:34:00Z",
+ "w": "2026-10-30T06:34:08Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -89,6 +89,40 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-10-30T05:22:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Bapenda Jatim UPT Pasuruan Gencarkan Sosialisasi Pemutihan Pajak Kendaraan, Sasar Pengendara hingga Ojol",
+    "en": "Bapenda Jatim UPT Pasuruan Gencarkan Sosialisasi Pemutihan Pajak Kendaraan, Sasar Pengendara hingga Ojol"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "brilian-news.id",
+    "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNZHdQUElYc202WlVSWGFNNlR2QnR6YUZxYzRFRmJadXc1XzdwN2piamp1Z1ZQUzRwSXo2YmE4TnpUU0VDd0ludE1fcEpjbWlhMkU5aFQxd2dKX1VUUkdfRndoY3k0ODVEc09Na1l4VE03eVU1ZFRRTUp0NTJGbzJFNXRfWl9vWFZRUzByc1VMYjZ5bjBQb3VydFcwZTl6RXJQQWFXQzZTTGs5S2VxQWFiM0RrQ2ZTUDdRTE5BU2hQUU5FTnh0cDcw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-30T04:28:05Z",
+   "media": 1,
+   "judul": {
+    "id": "Wanita Pengemudi Ojol Tewas Dibunuh Teman | Patroli",
+    "en": "Wanita Pengemudi Ojol Tewas Dibunuh Teman | Patroli"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Vidio",
+    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPanYzQ3c1TnkxQlpTQjNXT1Nadzh3TjhfVjQtODhXNi1OVFo1UUpnTnU0SDNPRjdncW5RdkRROUo0Vm43NmhKNVN1blNQSzdFYlF0SjM5V1o5eEpJSGFOQjhuaW9Nc0YwMVZjc2lpN2FsbkRRbEsxdUxWelFDR3JxWDlYMExNLVRYZ0MtXzhn?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-10-30T04:14:29Z",
    "media": 1,
    "judul": {
@@ -136,57 +170,6 @@
    "sumber": {
     "nama": "RRI.co.id",
     "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNV3FFMFZ3dnZYSDkyVTJXSE9NNmFtVkJYeklVU1luV1c3YlR2OEpoa2w0V2laNGpGa1o1SzA1ejZYRmlQOGJ4akx4SUxtX0FLc1BVOVhtSVU2NnpadFFmSTJ6N242YmxsX3daUzc4R2N2MTNWWVhsZDJ1Q08xWVdXTXlHRldFcTg2N1JGX3FJVmc5X0ZVOUE?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-30T02:59:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Pendaftaran Bansos 2027 Lebih Mudah, Ojol di Jateng Dilibatkan Jadi Agen Perlinsos",
-    "en": "Pendaftaran Bansos 2027 Lebih Mudah, Ojol di Jateng Dilibatkan Jadi Agen Perlinsos"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "RRI.co.id",
-    "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNekdmQzFnMFlMaGZ1S1ZXOGI1Q0pKdURmbWlfQ1hvOUpDRkd0RmZ2Uk9vcGN1c1V6NkNURDJtWWljUURESnlpdXgzM2VLdFJCaUx2cW4yWm9QaTVzd1FTSlJHeXViN0JSWFFlLUw4cGloRHh4R1NXNGNoekRGdFhMRmFBZDFfUGlLeWlVVXp5RFU0M0xiWjNFOS1ZaEJZVFo4VkNLV3ZXZkhfaENWUFh6ck1WeEhsNzJkQlpPSVJfeFE1T2M?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-30T02:45:55Z",
-   "media": 1,
-   "judul": {
-    "id": "2027: Saat Motor Listrik Ojol Hanya Jadi Proyek Ambisius di Atas Kertas Halaman 1",
-    "en": "2027: Saat Motor Listrik Ojol Hanya Jadi Proyek Ambisius di Atas Kertas Halaman 1"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Kompasiana.com",
-    "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOZ1RqdE1SNml0X2xlZURELXNsYndpRmRBNTdVZHU3cWtjLTdhaE1qbW1kS0NCYmRRY0QwSE8tU1RteUIzbmJPQ0toSHc0Qlo0cEJHUzhtNV9JV1FnSjVkbWEtLVFlSVZ1QnU3R1JUTWdfOVZYQWNnVlhyU0pQaW9FUnRmamtjMkhiWmVhTFlqVnNNS294UkRjT2lHU2xlcVNQVk1ZamFwZXdRdG1vTmtMS1BlZHdkNUZ5a0VGN1dFMUdHeTV5cHc2UWVqY1hsclI0SmRTTzlMcnM?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-30T02:44:33Z",
-   "media": 1,
-   "judul": {
-    "id": "Shell Jualan BBM Lagi di Indonesia, tapi....",
-    "en": "Shell Jualan BBM Lagi di Indonesia, tapi...."
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "detikOto",
-    "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQZGppcVpJbDd4dmVrUTZ5Tk42cWtGNFdfNXVEUHg1Q2Y4RHJreVlNNjlxeHNpVTRVbS1vZlF2dVNVXzBwMW5BV2pYbXJiYThYZjNvMzN5WkdtRVRCOGo0c2hCLWF4Z1p0WExPUl9IdGM3ZlVHZnM5dlZGNVFTVHRNM21MUEnSAYoBQVVfeXFMT293WXdGcjZ2djlQbHlyeWZ3YVVXOVE3WU9FT1kyYTN2LTlDd2VfTzdDcUh6RExoWXRxeGtwVF9fMGVvZ2I3SUQ3VnFaRHRwbUZNem5MQ1JmdV9JbnkyZlBacTBHMXQ2YWV0SzMxNGpla1J6NHFEbGQ3eVVRSHhRSkUzN1VlNExWZW9n?oc=5"
    }
   }
  ]
