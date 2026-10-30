@@ -221,6 +221,9 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
     </form>
     <p class="kosong" id="klKet" style="margin:8px 0 0"></p>
     <ul class="feed" id="klDaftar" style="margin-top:12px"><li class="kosong">masuk mode owner untuk melihat klien</li></ul>
+    <h3 style="margin:16px 0 6px;font-size:15px">📊 Laporan KPI klien · 30 hari <span class="kosong" id="kpiKet"></span></h3>
+    <p class="kosong" style="margin:0 0 6px">Gampangnya: <b>Calon</b> = tanda orang/lembaga yang sedang mencari barang klien (bukan pembeli pasti). <b>MARKUS bertanya</b> = berapa agen AI lain yang ditanyai soal barang ini. <b>Dikenalkan</b> = pembeli &amp; penjual yang dipertemukan. <b>Lunas</b> = transaksi jadi. Tombol <b>Salin link</b> menyalin laporan khusus satu klien (tanpa data klien lain) untuk dikirim ke klien.</p>
+    <div style="overflow-x:auto"><table><thead><tr><th>Klien</th><th>Calon 30 hr (total)</th><th>MARKUS bertanya</th><th>Dikenalkan</th><th>Lunas</th><th>Laporan klien</th></tr></thead><tbody id="kpiDaftar"><tr><td colspan="6" class="kosong">masuk mode owner untuk melihat</td></tr></tbody></table></div>
   </div>
   <p class="kosong" id="klKunci">Masuk mode owner untuk menambah dan memantau klien khusus.</p>
 </div>
@@ -649,7 +652,7 @@ function saringMk(){var n=0;document.querySelectorAll("#mkDaftar tr").forEach(fu
   var s=document.getElementById("mkSemua");if(s)s.onclick=function(e){e.preventDefault();mkFilter="";saringMk()}}
 function kirimOwner(b){return fetch(API+"?r=owner",{method:"POST",headers:{"Content-Type":"application/json","x-owner":ls("hm_pin")||PINMEM||""},body:JSON.stringify(b)}).then(function(r){return r.json()}).catch(function(e){return{galat:String(e)}})}
 window.HM={API:API,esc:esc,lalu:lalu,ls:ls,pin:function(){return ls("hm_pin")||PINMEM||""},owner:function(){return OWNER}};
-function cekOwner(){kirimOwner({aksi:"cek"}).then(function(d){if(d.ok){OWNER=true;pasangOwner();cekPaypal();muatKlien()}else if(/PIN owner salah/.test(d.galat||"")){ls("hm_pin",null);PINMEM="";var mc=document.getElementById("ownerChip");if(mc){mc.hidden=false;mc.hidden=true;mc.className="chip tunggu"}}else setTimeout(cekOwner,5000)})}
+function cekOwner(){kirimOwner({aksi:"cek"}).then(function(d){if(d.ok){OWNER=true;pasangOwner();cekPaypal();muatKlien();muatKpi()}else if(/PIN owner salah/.test(d.galat||"")){ls("hm_pin",null);PINMEM="";var mc=document.getElementById("ownerChip");if(mc){mc.hidden=false;mc.hidden=true;mc.className="chip tunggu"}}else setTimeout(cekOwner,5000)})}
 (function(){var q=ls("hm_pin")||window.__pinq;if(q){PINMEM=q;cekOwner()}})();
 function normNama(t){return String(t||"").trim().toLowerCase().replace(/\s+/g," ")}
 function normNama(t){return String(t||"").trim().toLowerCase().replace(/\s+/g," ")}
@@ -749,7 +752,8 @@ function tambah(dari,isi,kecil){var d=document.createElement("div");d.className=
   var box=document.getElementById("pesan");box.appendChild(d);box.scrollTop=box.scrollHeight}
 document.getElementById("fobrol").onsubmit=function(e){e.preventDefault();var i=document.getElementById("tanya"),t=i.value.trim();if(!t)return;i.value="";
   var n=document.getElementById("pilih").value;tambah("owner",t);riwayat.push({dari:"owner",isi:t});
-  fetch(API+"?r=obrol",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({neuron:n,pesan:t,riwayat:riwayat.slice(-8)})})
+  var ho={"content-type":"application/json"};try{ho["x-perangkat"]=localStorage.getItem("pj_kunci")||"";if(window.HM&&window.HM.owner&&window.HM.owner())ho["x-owner"]=window.HM.pin()}catch(e){}
+  fetch(API+"?r=obrol",{method:"POST",headers:ho,body:JSON.stringify({neuron:n,pesan:t,riwayat:riwayat.slice(-8)})})
   .then(function(r){return r.json()}).then(function(d){if(d.jawab){tambah("agen",d.jawab,(d.agen?d.agen+" · ":"")+d.otak);riwayat.push({dari:n,isi:d.jawab})}else tambah("agen","⚠ "+(d.galat||"tidak ada jawaban"))})
   .catch(function(){tambah("agen","⚠ awan tak terjangkau")})};
 document.getElementById("kerja").onclick=function(){var b=this;b.disabled=true;b.textContent="bekerja…";
@@ -789,6 +793,18 @@ var lalu=(window.HM||{}).lalu||function(t){return t?new Date(t).toLocaleString("
 var ls=(window.HM||{}).ls||function(){return null};
 var MKL=API.replace(/\/hypermarket$/,"/makelar");
 function klienApi(b){return fetch(MKL+"?r=klien",{method:"POST",headers:{"Content-Type":"application/json","x-owner":(window.HM?window.HM.pin():"")},body:JSON.stringify(b)}).then(function(r){return r.json()}).catch(function(e){return{galat:String(e)}})}
+// No. 21: KPI per klien (khusus owner: PIN atau perangkat owner). Gagal → hanya panel ini yang kosong.
+function muatKpi(){var tb=document.getElementById("kpiDaftar");if(!tb)return;var h={"x-owner":(window.HM?window.HM.pin():"")||""};try{h["x-perangkat"]=localStorage.getItem("pj_kunci")||""}catch(e){}
+  fetch(API+"?r=kpi_klien&hari=30",{headers:h,cache:"no-store"}).then(function(r){return r.json()}).then(function(d){if(d.galat)throw new Error(d.galat);var K=d.klien||[];
+    tb.innerHTML=K.length?K.map(function(k){var j=k.jodoh||{},nj=0;for(var x in j)nj+=j[x];var m=k.markus||{};
+      var C=k.contoh||[],D=k.dikenalkan||[];
+      var rinci=(C.length||D.length)?'<details><summary style="cursor:pointer">Lihat nama ('+C.length+" calon terbaru, "+D.length+" dikenalkan)</summary>"+(C.length?"<b>Calon terbaru:</b><ul>"+C.map(function(c){return"<li>"+(c.url?'<a href="'+esc(c.url)+'" target="_blank" rel="noopener">'+esc(c.judul)+"</a>":esc(c.judul))+' <span class="kosong">· '+esc(c.sumber)+" · "+lalu(c.pada)+"</span></li>"}).join("")+"</ul>":"")+(D.length?"<b>Sudah dikenalkan:</b><ul>"+D.map(function(x){return"<li>"+esc(x.pembeli||"(tanpa nama)")+' <span class="kosong">· '+esc(x.status)+" · "+lalu(x.pada)+"</span></li>"}).join("")+"</ul>":"")+'<span class="kosong">IP tidak ada: calon ditemukan agen di tempat publik, tidak pernah mengunjungi situs kita. IP pengunjung situs ada di tab Grigori.</span></details>':"";
+      return"<tr><td><b>"+esc(k.nama)+'</b><br><span class="kosong">'+esc(k.apa||"")+"</span>"+rinci+"</td><td><b>"+k.calon+"</b> ("+k.calon_total+")</td><td>"+(m.didatangi||0)+' agen<br><span class="kosong">'+(m.jawaban||0)+" jawaban</span></td><td>"+nj+"</td><td>"+k.lunas+'</td><td>'+(k.token_lapor?'<button type="button" data-kpi="'+esc(k.token_lapor)+'">Salin link</button>':"")+"</td></tr>"}).join(""):'<tr><td colspan="6" class="kosong">Belum ada klien aktif.</td></tr>';
+    document.getElementById("kpiKet").textContent="· dihitung "+new Date().toLocaleTimeString("id-ID",{hour:"2-digit",minute:"2-digit"});
+  }).catch(function(e){tb.innerHTML='<tr><td colspan="6" class="kosong">'+esc(e.message==="khusus owner"?"masuk mode owner untuk melihat":"Laporan KPI gagal dimuat ("+e.message+"). Bagian lain tetap jalan.")+"</td></tr>"});
+}
+document.addEventListener("click",function(e){var b=e.target.closest&&e.target.closest("[data-kpi]");if(!b)return;var url="https://ocklu.com/hypermarket/laporan.html?t="+b.getAttribute("data-kpi");
+  (navigator.clipboard?navigator.clipboard.writeText(url):Promise.reject()).then(function(){b.textContent="Tersalin ✓"},function(){window.prompt("Salin link laporan klien:",url)})});
 function muatKlien(){var k=document.getElementById("klKunci");if(k)k.hidden=true;klienApi({aksi:"daftar"}).then(function(d){var ul=document.getElementById("klDaftar");if(!ul)return;var K=d.klien||[];
   ul.innerHTML=d.galat?'<li class="kosong">'+esc(d.galat)+'</li>':K.length?K.map(function(k){var t=(k.temuan_terbaru||[]);return'<li><time>'+lalu(k.pada)+'</time><b>'+esc(k.nama)+'</b> <span class="chip '+(k.status==="aktif"?"ok":"tunggu")+'">'+esc(k.status)+'</span> <span class="chip">'+(k.jenis==="cari_pembeli"?"cari pembeli":"cari penjual")+'</span><br>'+esc(k.apa)+(k.harga?' · '+esc(k.harga)+' '+esc(k.mata_uang||""):'')+'<br><span class="kosong">'+(k.temuan||0)+' temuan'+(k.terakhir?' · terakhir '+lalu(k.terakhir):'')+'</span>'
     +(t.length?'<ul style="margin:6px 0 0;padding-left:18px">'+t.slice(0,5).map(function(x){return'<li>'+esc(x.judul||"")+(x.sumber?' <span class="kosong">('+esc(x.sumber)+')</span>':'')+(x.penjual?' <span class="kosong">· '+esc(x.penjual)+'</span>':'')+(x.url&&/^https?:/.test(x.url)?' <a href="'+esc(x.url)+'" target="_blank" rel="noopener nofollow">buka</a>':'')+'</li>'}).join("")+'</ul>':'')

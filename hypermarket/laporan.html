@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Laporan Klien OCKLU</title>
+<style>
+:root{--latar:#f6f7f9;--kartu:#fff;--teks:#14171c;--redup:#5b6573;--garis:#e3e6eb;--aksen:#0f8a6c}
+@media (prefers-color-scheme:dark){:root{--latar:#0e1116;--kartu:#161b22;--teks:#e8ecf1;--redup:#9aa5b4;--garis:#262d38;--aksen:#4fd1a8}}
+*{box-sizing:border-box}body{margin:0;background:var(--latar);color:var(--teks);font:16px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:760px;margin:0 auto;padding:24px 16px 48px}h1{font-size:24px;margin:0 0 4px}.kecil{color:var(--redup);font-size:14px}
+.angka{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin:18px 0}
+.a{background:var(--kartu);border:1px solid var(--garis);border-radius:14px;padding:14px}.a b{display:block;font-size:30px;line-height:1.1;color:var(--aksen)}.a span{font-size:14px}
+.kartu{background:var(--kartu);border:1px solid var(--garis);border-radius:14px;padding:14px;margin:12px 0}ul{padding-left:18px;margin:6px 0}li{margin:6px 0}
+a{color:var(--aksen)}button{font:inherit;padding:8px 14px;border-radius:10px;border:1px solid var(--garis);background:var(--kartu);color:var(--teks);cursor:pointer}
+@media print{button{display:none}body{background:#fff;color:#000}.a b{color:#000}}
+</style>
+</head>
+<body>
+<main>
+  <h1 id="judul">Laporan klien OCKLU</h1>
+  <p class="kecil" id="sub">memuat…</p>
+  <div class="angka" id="angka"></div>
+  <div class="kartu"><b>Calon pembeli terbaru</b><ul id="contoh"><li class="kecil">memuat…</li></ul></div>
+  <div class="kartu kecil" id="jujur">
+    <b>Cara membaca laporan ini (jujur):</b>
+    <ul>
+      <li><b>Calon</b> = tanda ada orang/lembaga yang sedang mencari barang seperti milik Anda. Itu <b>peluang</b>, bukan pembeli pasti.</li>
+      <li><b>Agen AI ditanyai</b> = agen OCKLU (MARKUS) bertanya ke server agen AI lain apakah ada yang mencari barang ini. MARKUS hanya <b>bertanya</b>, tidak memasang iklan di sana.</li>
+      <li><b>Dikenalkan</b> = calon pembeli yang sudah dipertemukan dengan Anda. Kontak dibuka setelah kedua pihak setuju.</li>
+      <li><b>Transaksi jadi</b> = penjualan yang tercatat lunas.</li>
+    </ul>
+  </div>
+  <p><button type="button" onclick="window.print()">Simpan sebagai PDF</button></p>
+  <p class="kecil" id="kaki"></p>
+</main>
+<script>
+var API="https://njghzieuuopukuagrswu.supabase.co/functions/v1/hypermarket";
+function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
+function tgl(t){return t?new Date(t).toLocaleDateString("id-ID",{day:"numeric",month:"long",year:"numeric"}):"-"}
+var t="";try{t=new URLSearchParams(location.search).get("t")||""}catch(e){}
+if(!t){document.getElementById("sub").textContent="Link laporan tidak lengkap. Minta link baru ke OCKLU."}
+else fetch(API+"?r=kpi_klien&hari=30&t="+encodeURIComponent(t),{cache:"no-store"}).then(function(r){return r.json()}).then(function(k){
+  if(k.galat)throw new Error(k.galat);
+  var j=k.jodoh||{},nj=0;for(var x in j)nj+=j[x];var m=k.markus||{};
+  document.title="Laporan OCKLU · "+k.nama;
+  document.getElementById("judul").textContent="Laporan untuk "+k.nama;
+  document.getElementById("sub").textContent=(k.jenis==="cari_pembeli"?"Dicarikan pembeli untuk: ":"Dicarikan penjual untuk: ")+(k.apa||"-")+" · klien sejak "+tgl(k.sejak)+" · periode "+k.hari+" hari terakhir";
+  document.getElementById("angka").innerHTML=[[k.calon,"calon pembeli ditemukan ("+k.hari+" hari)"],[k.calon_total,"calon pembeli sejak awal"],[m.didatangi||0,"agen AI lain ditanyai soal barang Anda"],[nj,"calon dikenalkan ke Anda"],[k.lunas,"transaksi jadi"]]
+    .map(function(a){return'<div class="a"><b>'+(a[0]||0)+"</b><span>"+a[1]+"</span></div>"}).join("");
+  var C=k.contoh||[];
+  document.getElementById("contoh").innerHTML=C.length?C.map(function(c){return"<li>"+(c.url?'<a href="'+esc(c.url)+'" target="_blank" rel="noopener">'+esc(c.judul)+"</a>":esc(c.judul))+' <span class="kecil">· '+esc(c.sumber)+" · "+tgl(c.pada)+"</span></li>"}).join(""):'<li class="kecil">Belum ada calon pembeli yang ditemukan. Agen terus mencari tiap 30 menit.</li>';
+  document.getElementById("kaki").textContent="Dihitung langsung dari database OCKLU pada "+new Date(k.dihitung).toLocaleString("id-ID")+". Data kontak pihak lain tidak ditampilkan.";
+}).catch(function(e){document.getElementById("sub").textContent="Laporan belum bisa dibuka ("+e.message+"). Coba muat ulang, atau minta link baru ke OCKLU."});
+</script>
+</body>
+</html>
