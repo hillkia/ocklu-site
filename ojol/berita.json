@@ -1,5 +1,5 @@
 {
- "w": "2026-10-30T13:11:19Z",
+ "w": "2026-10-30T14:44:58Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -191,6 +191,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-10-30T14:06:54Z",
+   "media": 1,
+   "judul": {
+    "id": "Abdul Hadi Pilih Mobil Listrik VinFast VF3, Lebih Hemat dan Praktis di Tengah Antrean BBM",
+    "en": "Abdul Hadi Pilih Mobil Listrik VinFast VF3, Lebih Hemat dan Praktis di Tengah Antrean BBM"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "BERITAWAJO.ID",
+    "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPR3UxS2xUd3VwcUo0NHV0LTFucVpiYWIxcklDd21EQ1N4Ti1vYWVOMnIxcUJTdEpzSmtIcEwyd1VRQlUwRTNOaFRCeXNXek0yMjlWOEhYVHJ2Ylp4X2FaSjBYYTdJaUE5RXR0X3FMeWEycmk1TmxxVVNENm1Zcktla1VhWQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-10-30T02:40:00Z",
    "media": 3,
    "judul": {
@@ -221,74 +238,6 @@
    "sumber": {
     "nama": "Pos Aceh",
     "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxORUtkaVJwNVlMbUxnQldKT3AtZUVGbU5BZVlLUUNvVUdSTG9NTzdMczJtajlleWU3ZS1Qb1pSXzFaNHpWcjh6aFhYTDZKbXdtNUdSRFljYmV0QlQ0ckZfOGFoenJOQ25ieDQyamYydzlIUFlwc3VTeThYYnlZeG04X2Rmcmc4eEViZ3Vv?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-30T04:55:32Z",
-   "media": 2,
-   "judul": {
-    "id": "Banjir Kembali Terjang Kampung Badak Gayo Lues, 339 KK Terdampak",
-    "en": "Banjir Kembali Terjang Kampung Badak Gayo Lues, 339 KK Terdampak"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Tatarmedia",
-    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOV1RLaklIbHFfYk9ZWWpsaTF1ejhCVklZc1JLdHhzTzc4bTRCdXJCeGtFZ1l1aTJRTjFkYXVYRS15U3hDc1hwNmRlVEh1cy03RElFQ2J5bW1MbDZNdnhSVWJhcDRDNENDeXFFMnRRZlVtT3d5aFdOamNPbXBPMWQxcVgwamNEVDdrM0hYVzdTU0tNRTdYWFplMjBoaU9xcnBGdHBieEF4alJEZTZhWmfSAbMBQVVfeXFMTnQtODd4dVp5Q010bmJDMU1jdVQ4S3hMWGUxYUlJQjZJVl9DTGtjOV9GcmdFV3Q1UURCaUZtUVVGUTBiUFdCX20ySlllT21vWnJZbWZ5X2o2SHRqTl82cE1HdUpHTGZYazVWV1hoNmVmVmRBYUJnNkl4UjhoTGQxY1VqQ0JyZm54MzdoT2g4b0dPZ2ZBdDdSUl9jTzRNMU91WXhRQWxzekpzVU55ZUVpLVM2Wjg?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-29T10:33:26Z",
-   "media": 8,
-   "judul": {
-    "id": "Foto : Polisi Ungkap 2 WNA Arab Saudi Mabuk Saat Aniaya 2 Ojol dan Sekuriti di Bali",
-    "en": "Foto : Polisi Ungkap 2 WNA Arab Saudi Mabuk Saat Aniaya 2 Ojol dan Sekuriti di Bali"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Lentera.co",
-    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPVWhVb1k3SWlqNVJRbnBZX3Z3RFlwenRDYmpFWVhCaENaU29LR21NTllOOHNGWlpOdEVNeE4wZWo1ZS1yUVh4d1hqWm1Qc3BGSVpxRjR3OS1rb3hlRVd6d2g0T0xhUl9Denp4c19IenhKQUR4Y1lMREtCRHF5a2gtN2JKcU9kOXZ6WGh1NWRRRTVSTmRFYmFPMHRHWVRQa0t0RWNlbjItbTJvUQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-30T10:18:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Ojol di Bangka Dapat Prioritas Beli BBM Subsidi tanpa Antre Panjang di SPBU",
-    "en": "Ojol di Bangka Dapat Prioritas Beli BBM Subsidi tanpa Antre Panjang di SPBU"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "RRI.co.id",
-    "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQTjVadGkzdnp1YlBiNGJCT1R5Sm9qU184bFpnYUxtdHhRdlBldUtfTWlsUHZ2MnIyVWNVWmd1dTdyNlUxaXpZVUlOeFpvMnpOM21GbTJLYTNPR3llZ1lIaDhaRGZCSXJFRi1zUG5wdXJENU1wQUYwUjZSR0NJMmprOXFjbWdQaVBKSE1fdGFRSVJOQ09Ua0g3TlF6UUxMQk0zU0NsMmVZUGdraW5GV2lELXpNLTFsN0JwY29tS2Rn?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-30T10:06:26Z",
-   "media": 1,
-   "judul": {
-    "id": "Ojol-Matel Ricuh Diduga Akibat Penarikan Paksa Kendaraan di Cikupa",
-    "en": "Ojol-Matel Ricuh Diduga Akibat Penarikan Paksa Kendaraan di Cikupa"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Suarabantennews.com",
-    "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOdFgxaE9FMGpKRllMcXB0NGl4X3JDYU9rRHRNVVQxUTJYRkU4R0dZOF8tMEE1NTdiQlNrYW5KNEN6azNJVFZOR25ZSnl5ZDBYalBTNkpkTGJremRwS2FRQ0xlM3B1N3BwSWVYbTBNU3FmQXItNW5vUE1XcXd1Z0ZEV3VzT2lPNlA1UXhlcG43cDRqdzIzWEdpUzZEYw?oc=5"
    }
   }
  ]
