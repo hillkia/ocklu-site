@@ -1,7 +1,75 @@
 {
- "w": "2026-10-30T10:10:02Z",
+ "w": "2026-10-30T12:09:16Z",
  "dari": "Kroog",
  "berita": [
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-30T10:50:00Z",
+   "media": 2,
+   "judul": {
+    "id": "SPBU Shell Resmi Dikelola SEFAS Group Mulai Hari Ini!",
+    "en": "SPBU Shell Resmi Dikelola SEFAS Group Mulai Hari Ini!"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Kompas.id",
+    "url": "https://www.kompas.id/artikel/spbu-shell-resmi-beralih-ke-sefas-group"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-30T10:50:00Z",
+   "media": 1,
+   "judul": {
+    "id": "SPBU Shell Resmi Beroperasi Lagi dengan Kepemilikan Baru",
+    "en": "SPBU Shell Resmi Beroperasi Lagi dengan Kepemilikan Baru"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Kompas.com",
+    "url": "https://otomotif.kompas.com/read/2026/10/30/150100015/spbu-shell-resmi-beroperasi-lagi-dengan-kepemilikan-baru"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-30T10:50:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Shell tuntaskan pengalihan kepemilikan bisnis SPBU di Indonesia",
+    "en": "Shell tuntaskan pengalihan kepemilikan bisnis SPBU di Indonesia"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "ANTARA News Bali",
+    "url": "https://bali.antaranews.com/berita/417379/shell-tuntaskan-pengalihan-kepemilikan-bisnis-spbu-di-indonesia"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-30T11:24:00Z",
+   "media": 4,
+   "judul": {
+    "id": "Jumat Berkah, Polda Jatim Salurkan 600 Paket Sembako untuk Pengemudi Ojol",
+    "en": "Jumat Berkah, Polda Jatim Salurkan 600 Paket Sembako untuk Pengemudi Ojol"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "RRI.co.id",
+    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPRTB4cnIwYk9QRndiRlJWa0J0X3dSeXJGX2M2VEU3T1NPZXMxMVJjNno0QkRvTmhzbzVLWlg3UzlTTGhLRjBpd21oUXZSQlg4LUkxbFQyTHhwS3M5cVhrcnhFMzloVWVZRUxNd3ltU2Q1LVliamxHRXNrN3F5YmE0NF9sQnA0UjQ1Ulc1YjdVRHpXWXhuX3R3RlhOUXRVdzRXVkpqWW0xSXR6UWxjcW85YUVmOGpuUQ?oc=5"
+   }
+  },
   {
    "jenis": "berita",
    "waktu": "2026-10-30T04:33:00Z",
@@ -106,6 +174,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-10-30T06:44:45Z",
+   "media": 3,
+   "judul": {
+    "id": "Polda Sumut Gandeng Komunitas Ojol, Ajak Jadi Pelopor Keselamatan Berlalu Lintas",
+    "en": "Polda Sumut Gandeng Komunitas Ojol, Ajak Jadi Pelopor Keselamatan Berlalu Lintas"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Suara Buruh Nasional",
+    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQZ0ZfY3F4djJwUzNJcTlITTJyNEZ6MmRHaHd6Y3JuYkV6TkZqNXNiUHRwVzFZNHByTGlpNHEwXzg5anBjdGNwWmw3YUpfc1BtWkVlVEZCOTZRUkQ0emlhZkpkTFZYSEZyWFdBYnBrNVFfLWVQUWJ3YjF0TXJfSGI2NDZCVS1LOGgwbFN6RldfV2M1UzBENFNUY0tvQk1HYnl6c0tYTlBKd3VHRTloLW0td1pwSzVPLWh0cVNHWWx3U0w?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-10-30T02:40:00Z",
    "media": 3,
    "judul": {
@@ -119,23 +204,6 @@
    "sumber": {
     "nama": "VOI.ID",
     "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQS0xBd08zSnJlMnRicGV0bF9VM2kwTU1HXzRJbkxELVRXQ3Y4M3NrUXJsMzdyRnNVaFRMVElieXpvUC1jRWNQRTdNU0plNWJIaktUMEIwUnJZcXJkclBrc0I0MjlHT1BUOWlDWkNyRTNTU1dXZGhEbjI1YnVnWHdZSnU2ODNBd2d4ckpPeW1rWEFhSk9zNk1xdmdId0htaFoz0gGcAUFVX3lxTE9xRU1Wa0FERDhOMWtaLUlqcDhmQXUyOGllZDV2dm1XMTRwYXlvd2d0RV8wT2VSYzg5UFJMM0xKbzRGOF9KcEJ6SUpNdUwxeW5tUmtlQWhXbElDTG5PSzh5d0psR09Bd0lmNkFDbTAta21RSHN0RkkyNHcya01iWmpSWldnMDBWR2w3WkN6MHYybDdoVzI5NkFXV1Yzeg?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-30T06:44:45Z",
-   "media": 2,
-   "judul": {
-    "id": "Polda Sumut Gandeng Komunitas Ojol, Ajak Jadi Pelopor Keselamatan Berlalu Lintas",
-    "en": "Polda Sumut Gandeng Komunitas Ojol, Ajak Jadi Pelopor Keselamatan Berlalu Lintas"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Suara Buruh Nasional",
-    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQZ0ZfY3F4djJwUzNJcTlITTJyNEZ6MmRHaHd6Y3JuYkV6TkZqNXNiUHRwVzFZNHByTGlpNHEwXzg5anBjdGNwWmw3YUpfc1BtWkVlVEZCOTZRUkQ0emlhZkpkTFZYSEZyWFdBYnBrNVFfLWVQUWJ3YjF0TXJfSGI2NDZCVS1LOGgwbFN6RldfV2M1UzBENFNUY0tvQk1HYnl6c0tYTlBKd3VHRTloLW0td1pwSzVPLWh0cVNHWWx3U0w?oc=5"
    }
   },
   {
@@ -175,7 +243,7 @@
   {
    "jenis": "berita",
    "waktu": "2026-10-29T10:33:26Z",
-   "media": 7,
+   "media": 8,
    "judul": {
     "id": "Foto : Polisi Ungkap 2 WNA Arab Saudi Mabuk Saat Aniaya 2 Ojol dan Sekuriti di Bali",
     "en": "Foto : Polisi Ungkap 2 WNA Arab Saudi Mabuk Saat Aniaya 2 Ojol dan Sekuriti di Bali"
@@ -191,19 +259,104 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-10-30T07:19:00Z",
+   "waktu": "2026-10-30T10:18:00Z",
    "media": 1,
    "judul": {
-    "id": "Polres Malang Sasar Ojol dan Sopir Angkutan dalam Edukasi Operasi Patuh Semeru",
-    "en": "Polres Malang Sasar Ojol dan Sopir Angkutan dalam Edukasi Operasi Patuh Semeru"
+    "id": "Ojol di Bangka Dapat Prioritas Beli BBM Subsidi tanpa Antre Panjang di SPBU",
+    "en": "Ojol di Bangka Dapat Prioritas Beli BBM Subsidi tanpa Antre Panjang di SPBU"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "Tribratanews Polres Malang",
-    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPcVRPc25fVVc0VUZhRDAzN2JWWmRTeHFJS21PekswZG9SMjZyY3dWbFY0WkRpcURPWkROXzg2b2FLN1hvRkl4ZGdPeWNOUTV2UFZvSmtYQzFtV091cnJMaGwwTTN1ODZJS1l1WjhvOXlaY0xpMHJzc3VrTW5qZXp5MkRoX2N4U3dwcmxYVDNkN01mYmNOWUtpeEl2ZzZLcGs4ZTRIdjhWUlBVWG11OVpadERfd1RULTltQ0xTamxEVmd3RTJFZWc?oc=5"
+    "nama": "RRI.co.id",
+    "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQTjVadGkzdnp1YlBiNGJCT1R5Sm9qU184bFpnYUxtdHhRdlBldUtfTWlsUHZ2MnIyVWNVWmd1dTdyNlUxaXpZVUlOeFpvMnpOM21GbTJLYTNPR3llZ1lIaDhaRGZCSXJFRi1zUG5wdXJENU1wQUYwUjZSR0NJMmprOXFjbWdQaVBKSE1fdGFRSVJOQ09Ua0g3TlF6UUxMQk0zU0NsMmVZUGdraW5GV2lELXpNLTFsN0JwY29tS2Rn?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-30T10:06:26Z",
+   "media": 1,
+   "judul": {
+    "id": "Ojol-Matel Ricuh Diduga Akibat Penarikan Paksa Kendaraan di Cikupa",
+    "en": "Ojol-Matel Ricuh Diduga Akibat Penarikan Paksa Kendaraan di Cikupa"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Suarabantennews.com",
+    "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOdFgxaE9FMGpKRllMcXB0NGl4X3JDYU9rRHRNVVQxUTJYRkU4R0dZOF8tMEE1NTdiQlNrYW5KNEN6azNJVFZOR25ZSnl5ZDBYalBTNkpkTGJremRwS2FRQ0xlM3B1N3BwSWVYbTBNU3FmQXItNW5vUE1XcXd1Z0ZEV3VzT2lPNlA1UXhlcG43cDRqdzIzWEdpUzZEYw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-30T09:53:41Z",
+   "media": 1,
+   "judul": {
+    "id": "Niat Pulang ke Maros Malah Dianiaya di Jalan Tol! Oknum Ojol Tega Rampok Penumpang Wanita di Samping Jalan Tol",
+    "en": "Niat Pulang ke Maros Malah Dianiaya di Jalan Tol! Oknum Ojol Tega Rampok Penumpang Wanita di Samping Jalan Tol"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "https://berandasulsel.com/",
+    "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPVjZZUlEzOVJCSFQwenphQlVSOWJDRVI0Z2ljTXJCWE9JejB4Y1hMaExrZHhIMFdIRmxUZ1ZuS0VVS21leGFFXzI2aUVydXR5eTE1TUhaX25leFZrbDBsVEJBQ1hmVWVmVkg5aUtZNzMwZVc5OWktd0RLbEFvS3lEcTV5Ym9UWnBWelVVSDlEOGY0YkVjTzRPQVhkYkg0Qko5ZTB2djJuSW56eWZyYkNZa1ZuNTliMkxJRGhEQ3FyN2VmeHRTUTZ5QlNCNEJLYl9kVnc?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-30T09:14:28Z",
+   "media": 1,
+   "judul": {
+    "id": "Semringah 600 Ojol Terima Paket Jumat Berkah dari Kapolda Jatim",
+    "en": "Semringah 600 Ojol Terima Paket Jumat Berkah dari Kapolda Jatim"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "detikcom",
+    "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQNWVaTnkwNlNhMzV0TDgtbW9mZ0pDR0s0TVRKZ3dHTW1EUU94TEVmQWp5eUpsWVZJWUF2Y0ZIZGowQkYwVDhJdlE5NzY5c1BycVhGbHBNaFVCUEU2S29vNFdiVWtrZlhiVjdvbjZGNWV5OUxGTXV3WGJoMjdtdjNjWl9iREdQdTFIbXNBSkxFYWY2U3piZ0NraFRianZCSG9pZkdQa0oydE9ueWdMOWVrekZ30gG3AUFVX3lxTFBKN1BJQ1RXS0hWd2MxOUx0U1M4dFNJeVFmeXZMV2d4cDhUZVZRaDMwWk5hSjdSNTRXeGdzM2pRQkFpS0hPN3YzVi1BeVh2Tm5RclRGQTNlYkFFWU1UeXg1Z0hyalFCNHEwdVhQbTdUd2plZHZfYV9mWDFFR18yaWtndFgxRlNJbjM5TFE2Q1FrZ25xem8zWmh2dENJUi1BVHRhZ0I0QjlpVGlReDV3bGloWTJuVDVqSQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-30T09:07:34Z",
+   "media": 1,
+   "judul": {
+    "id": "Sarapan Bersama dan Cek Kesehatan Gratis, Polresta Malang Kota Dekatkan Pelayanan kepada Ojol dan Masyarakat",
+    "en": "Sarapan Bersama dan Cek Kesehatan Gratis, Polresta Malang Kota Dekatkan Pelayanan kepada Ojol dan Masyarakat"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Website Resmi Polri",
+    "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPa1dyVTVOYVB5WkhHTkZ1cUxsVWF3WHdQRzNGYTZHVzVYQ0lIbkJhclhCRHBkY2ZUQS1SMlZvZmtyMGRCbGEtQ3ZIQ3dDeXBDU1RFRHJTNjR1Mmx3NGRaVkNzNzhLLTFNR0lJSTNGX0FIWDVwcGJkN012aml5S2hqeUk2Q2RBUVo2bU5INTRZZjdhdjlWcXRjdGZhN1RGOVdOSXVkc2cxOWxDRG9hdFZ6OGpKLWpQZ1F5Ny1mV3FRQjhLT0hzSG5CaklwWENxMnQ3elB6S0o5X1FvemlDVU8tQ09tZ24?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-30T08:51:55Z",
+   "media": 1,
+   "judul": {
+    "id": "Suzuki NEX II, Motor Matic Irit dan Praktis untuk Aktivitas Harian hingga Ojol",
+    "en": "Suzuki NEX II, Motor Matic Irit dan Praktis untuk Aktivitas Harian hingga Ojol"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "About Cirebon",
+    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQRDJHeS01U1dLR2V3SkpNMm41VkhFZEVRWnpkaUMyVW1TSHctOTFXQkVZZ2tzRHhXbGVCQnFibkZuZVRoa0JmUFRYNVRkSXpPYzVkdWpBR2FBTWNmdFZnR3hwS0ZReHJEU19jZm1YRFpQWGkxZi1PcTFrX1BlXzNWQjVsNWZSbHFQbUVfc2hoLWhKeElKX01ob1NtOXFwN0NHUVZINQ?oc=5"
    }
   }
  ]
