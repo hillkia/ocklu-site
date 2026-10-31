@@ -1,5 +1,5 @@
 {
- "w": "2026-10-31T01:01:49Z",
+ "w": "2026-10-31T03:00:39Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -38,6 +38,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-10-31T01:21:00Z",
+   "media": 2,
+   "judul": {
+    "id": "Rumah Singgah Ojol di Pontianak Jadi Tempat Istirahat dan Perkuat Solidaritas",
+    "en": "Rumah Singgah Ojol di Pontianak Jadi Tempat Istirahat dan Perkuat Solidaritas"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "RRI.co.id",
+    "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQZndyTWxURzNRMExZb1FwX2NvekZkMVZLOENiY2lOd1FZdlBleTUwMzQwdmJmd0xQUXN5ZVpjS2tzXzFSM2N1RHYzRzd2djVWSC0xeURySWl2eWlJTUlMR0V6QUVoa2tIM01GaFJ1ZE1EQkE5UU84Tjg3QUw3QjNLSzJZdWJUcXByM0JUQzV5b3UwaWh5bG9KQXNjdjAyUVVCa1dPM3Y1N3ZFTWM?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-10-31T00:45:46Z",
    "media": 2,
    "judul": {
@@ -51,6 +68,23 @@
    "sumber": {
     "nama": "MerahPutih",
     "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNZU96WlYxdnZXRkxfLVBTRi04WmRCRVo4Vm4zNnpxQVNDZXZiRmN0UTNOR1hlTFZzZzRzTkI1YUh3S2l4R2ZLeFJzei05MU5fdW85ellYLVhoeTdUZkZfSVppQllQVFNVemQ5NVFBUFA5MzFVNFdRelltTGZxdzZPdHFxYnVfTUh0VmZ2VjV0ckbSAY8BQVVfeXFMTUZ5UUJUV0hxMGktNEprcllWQ0dWNmViVG1WVC1rQWk2NzVqcG1Bb1hTYjF5dDltUU40RUdaMi1fcE93cnQxaFRQbC01ejh2ck9uampMSGg4R21FaHk4NzFCbWdJSUhqeWoyTUJwazBlalJucEw4SzBMNGlDM1Z2OHJzRnpCWlFhS2JKTW9mdE0?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-31T00:39:16Z",
+   "media": 2,
+   "judul": {
+    "id": "Bagikan 150 Nasi Bungkus, Jurnalis dan Ojol Samarinda Kampanyekan Tertib Lalu Lintas",
+    "en": "Bagikan 150 Nasi Bungkus, Jurnalis dan Ojol Samarinda Kampanyekan Tertib Lalu Lintas"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Swarakaltim.com",
+    "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQOXNZM0k0QlF4QzkxX0FQSkJNbUVCRGstcks0Ymx0SXBIamJWYnFyMXRhbllNMS13MlRkWnlQaFZnMUQyTFRKc3c4akVZb0FRZjZGaFB1enU4RUdOMF9qSGdGS19ZN1hlZFNWQ1FpNlNvTjd4YTdCLVdLNk9SbjNxRE43SlhWeTVUUGx4Z19WLXZtd2V6MUtHck9iTFFzUjFTMkFVVFJkZzJjY0dlTkVHWl9aMzJUcmRmcDRoZFVPanVhbDkyZ3UxVmtsN3hmZw?oc=5"
    }
   },
   {
@@ -238,74 +272,6 @@
    "sumber": {
     "nama": "Kompas.tv",
     "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNMXNJWFRXRDVHRElmN3pzUVhXemtkWEdPZ2R4blpTa3NXSmRDTlMwUEhCWENxTXlmQWtSbkY1RmZEV3RUU2FNYTFodjJ5U0hXNWltWVVtYU5oa3JLMnNCU0doT0NQS0Uwcmk2dm9Oc09QQWZBc1RzejlUUXAtZ2JfVjlLNkVrS2NvVkJxNDFpa0VtTzlGd0hBcjZZa2c1SWdGUWtoMDhWbEg5SzczOGt2R1BRbDFnSzhnVk95cDlFaWdlb0w3U2UyTNIBzgFBVV95cUxOY2p6eVBaWkFmU3ZRX1FsTFZGNm1qV0FfT185WHVIR1ZYVEJpWHQ5OVFaTDJoOGlWNzluYkF2bnp1em5BOTRySkFXNUVkelJZYy1EcjFOT3dXVGRweHFQSmpieGduV0oycndZTGw3VzBNQnVlRVVoOHVZd2EtYzFadXkzYWlJVjZ5ZFcyNHZiMDQ1LWxwT2pDeGZvNExtcnFYOGhWQ0Rad0Fyc09HeTNDUm5UQW1ZRFY3LVUwOFJnRkRYamlzUUZCQy0xTWlOZw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-30T20:17:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Bagikan 150 Nasi Bungkus, Jurnalis dan Ojol Samarinda Kampanyekan Tertib Lalu Lintas",
-    "en": "Bagikan 150 Nasi Bungkus, Jurnalis dan Ojol Samarinda Kampanyekan Tertib Lalu Lintas"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Kaltim Faktual",
-    "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFB6RVF6bjhyaS1fX3JhS0YwYXpQbHNIeXl2SmItd2F6Q1pYaXJxZDF0c3ZneVR0VWdYNWlzUFZMVTd2M3JGREdtdzZIaU9FcEdTc1R6UHZ6WUlqd2VlVTluSGNfamRvNjBHVVowdWRIN1Bqc0NTMU9FODQwTks?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-30T13:30:00Z",
-   "media": 2,
-   "judul": {
-    "id": "Wali Kota Pontianak Apresiasi Peran Ojol Gerakkan Ekonomi",
-    "en": "Wali Kota Pontianak Apresiasi Peran Ojol Gerakkan Ekonomi"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "RRI.co.id",
-    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQNF9UNXRLMWRkV2dGNDhVNnhGWm15Rk9iYjJVZUxucW5JT1ZyMlg2a2JxQnJDR29maE9rdTdBNHVISVpZTXZON2M5QUxjTGd3X3lpT2cxTHZkRWdXeXU2WDNVdnV3b20zMDlabHVsWUNCSEVIWWNoQ2lZdEpvLTRIRUNHNFBEMW04eURTV0hpRFdJc1kydWNCTmRRYlpGR2VVd0pRS3d3dw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-30T06:20:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Generasi Muda Hebat: Mahasiswa Jadi Garda Terdepan Penjaga Persatuan dan Inovasi Nasional",
-    "en": "Generasi Muda Hebat: Mahasiswa Jadi Garda Terdepan Penjaga Persatuan dan Inovasi Nasional"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "beritanasionalupdate.com",
-    "url": "https://beritanasionalupdate.com/news/details/2062/simbol-salib-merah-di-tengah-demo-mahasiswa,-jangan-biarkan-perbedaan-memecah-belah-bangsa"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-30T13:11:21Z",
-   "media": 2,
-   "judul": {
-    "id": "Polres Malang Sasar Ojol dan Sopir Angkutan dalam Edukasi Operasi Patuh Semeru",
-    "en": "Polres Malang Sasar Ojol dan Sopir Angkutan dalam Edukasi Operasi Patuh Semeru"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "malang-post.com",
-    "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOQTRndEtDQ3dJY0J2Q0NWS05pVDBpSUtmRmFSYXo0Z0EzVFFjOFhqd0ZGT2hQVW1KWV8xMDJTSWJjZy0wZHNzdFE0U29jRnhnNzJhd0wxZHBQLW9vQjZ2clVsSldyMGVVeWM1clZXdkFUYjBKbGg0T3ZXSDI2N0tjNzJTMTlSaVNiZm9qTmg3R1ZsbGs4eUpsYWJBNWF3VzI0Ti1rS0s4blF6OUNkeE5rWV9wMzYzNmhPNlhadl9Qalo2RHpsNlJXSlNVVDFLdnZ3TEE?oc=5"
    }
   }
  ]
