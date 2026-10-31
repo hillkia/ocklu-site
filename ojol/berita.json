@@ -1,7 +1,24 @@
 {
- "w": "2026-10-31T12:31:52Z",
+ "w": "2026-10-31T17:04:36Z",
  "dari": "Kroog",
  "berita": [
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-31T00:00:00Z",
+   "media": 2,
+   "judul": {
+    "id": "SPBU Shell Resmi Beroperasi Lagi dengan Kepemilikan Baru",
+    "en": "SPBU Shell Resmi Beroperasi Lagi dengan Kepemilikan Baru"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "detikFinance",
+    "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQWFg2YmVmTUdOOGtEZk5paHFvaW5KQXp2T1l1bVM0ckNZNHVFLTlfdzEwMkpCaWE1LTNEdDNLRmw0UUVJVU85di1kMkNjbVRQcVM2WXhSai0tU21mZjMxbjc2dWxNcHBmMUF6aFdnU3o5WldVTTdHY0lhNlBTNmc5UWx0bG3SAYoBQVVfeXFMUGJVN2FfNUJEZTBjU1FxTnFUNGZmYzJJNmtNV0d0MGRfTzNFYjRMOXBTdnJZUDc3aFRHTFNYbzFQdGtqb1FsWGF2WkZMUzRnREZucEdTMC1HR281UWdBVTNvQ3VmV3ZLbFR4UzVBTGxHSU03R01QSWZuM3lVdFRZaVhUS19GVWhqdWRR?oc=5"
+   }
+  },
   {
    "jenis": "berita",
    "waktu": "2026-10-30T18:00:00Z",
@@ -34,6 +51,40 @@
    "sumber": {
     "nama": "patrolipost",
     "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOWGZnQXFMLTRjZGhfWVozWi1kb25La003RHNreUZVcEFtb1ZIWVF0dmthZHFVVmJsaFAtbFFMQmZpb2d5NjNGNjdjSngwenA3NWUzRTJlY2lvNERpaV9hNXc2WU9iNTZvMDNkOWt0NmVQWkF3Nm0tWklpNkJkbW9TQlZYaThyRjdpYUJkRW9sNmxTSDBXUFl2MGdEQlRaUDFnOVJHc3cwTDdtSEI0WGVDVndua3dMRlXSAbcBQVVfeXFMTlhmZ0FxTC00Y2RoX1laM1otZG9uS2tNN0Rza3lGVXBBbW9WSFlRdHZrYWRxVVZibGhQLWxRTEJmaW9neTYzRjY3Y0p4MHpwNzVlM0UyZWNpbzREaWlfYTV3NllPYjU2bzAzZDlrdDZlUFpBdzZtLVpJaTZCZG1vU0JWWGk4ckY3aWFCZEVvbDZsU0gwV1BZdjBnREJUWlAxZzlSR3N3MEw3bUhCNFhlQ1Z3bmt3TEZV?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-31T10:00:27Z",
+   "media": 1,
+   "judul": {
+    "id": "Hitung-hitungan Harga BBM Non-Subsidi per 1 November 2026, Bakal Naik?",
+    "en": "Hitung-hitungan Harga BBM Non-Subsidi per 1 November 2026, Bakal Naik?"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "CNBC Indonesia",
+    "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNSTdjLUJScU5XWHFDd0p0YThjX1hyMkxxdnNnVm9VVDAwRWpNYjV6SGNfd1lmMFIxOEFiSnNDaEdmZDJ6bkRxNktfcEFnOTllZkFRalZqMnA1QnFGWEFFUVpyX0RqeDRJZEtNZzVWVC1uZHkyOWIxdWl1OWtWbDAzb2tvODFiekZKa2hKeUVLV001Z2MzdXdOTlZNdUkxVnBodnJxQTFaOVF4aDh1c1BZX292c2JjQXhONWFGN1EtbFNFVF8xbThGRHZFangzdw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-31T08:41:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Polytron Fox-R Jadi Motor Listrik Pilihan, Jarak Tempuh Tembus 130 Km",
+    "en": "Polytron Fox-R Jadi Motor Listrik Pilihan, Jarak Tempuh Tembus 130 Km"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "okinews",
+    "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOSVZ5Sk4tc290eF9JSjVkMVRldFJpbC1Bc0dFQ3dHcnhkYlliLVhzU21reGJXX1VpVXBLcUItaDFPZUpacHFkTGR1WkVRT1ZHNl9rS2RPVFh6aW5GcGRENnhZd2ktVEhxOHRvcjA5dUh4eGxiY1NVc0R6aHN3cmpwNk5uS213WHNhTC04cmdfbFkzVld2Wm81MUJsTTluMVgwWW1TRU4wdTF2QmNpcDZac0tBUnNkVEltbTVpcEc1dkZOQ2tLMGZQNU8tOVE2d2PSAcIBQVVfeXFMUExjOTJQbGtDalFVOWJ4TUNHNURyc24zRzg0MndEbDA0RHJLaTNvMk1uaU1Sa3UySndXMW9waVZxUXhwQ280cFZqS1ZNVGZ4SGZuSEE4ckJYazJvX3FDTVBxdUplQTdGdkRZbkNyMVoxZS0xYzJ6c3VYWmZhbk0yWmZZWXMyakhCaDFvMHU5dC1rdVYycjRfSzRlUEJyRGZKNS1qQWNGa2ltQzgzVTBmZXppR1NVOE9ra29Ebk5aM2JUX1E?oc=5"
    }
   },
   {
@@ -85,193 +136,6 @@
    "sumber": {
     "nama": "Swarakaltim.com",
     "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQOXNZM0k0QlF4QzkxX0FQSkJNbUVCRGstcks0Ymx0SXBIamJWYnFyMXRhbllNMS13MlRkWnlQaFZnMUQyTFRKc3c4akVZb0FRZjZGaFB1enU4RUdOMF9qSGdGS19ZN1hlZFNWQ1FpNlNvTjd4YTdCLVdLNk9SbjNxRE43SlhWeTVUUGx4Z19WLXZtd2V6MUtHck9iTFFzUjFTMkFVVFJkZzJjY0dlTkVHWl9aMzJUcmRmcDRoZFVPanVhbDkyZ3UxVmtsN3hmZw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-30T10:50:00Z",
-   "media": 2,
-   "judul": {
-    "id": "SPBU Shell Resmi Dikelola SEFAS Group Mulai Hari Ini!",
-    "en": "SPBU Shell Resmi Dikelola SEFAS Group Mulai Hari Ini!"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Kompas.id",
-    "url": "https://www.kompas.id/artikel/spbu-shell-resmi-beralih-ke-sefas-group"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-30T23:10:00Z",
-   "media": 2,
-   "judul": {
-    "id": "Jumat Berkah, Ditreskrimsus Polda Kepri dan Wartawan Bagikan 100 Kantong Beras untuk Porter hingga Ojol",
-    "en": "Jumat Berkah, Ditreskrimsus Polda Kepri dan Wartawan Bagikan 100 Kantong Beras untuk Porter hingga Ojol"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Riaukepri.com",
-    "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNRi1pU3ljQi1uWmxXeVpuWXdVOXljQ0F4Y0hjOXI2aUoyUzJsT2tUVUNDV1hlalVXRi1VYXFwWUdZVVNIeFJ4OW0xdFRVTTdJYkNkWkxHUTNGY1JoZGJLTVd6YWR1TkVYUVVvOGFYQ1Q5NUhKN3pZYmdRbEVJMHNSZ0IwbGR4dWxmN3RlMmV0WDU1NWp2ZmFoeDFyeU1qWHQyR2R6Rmp1MUgyQWxmSVczSTVqTERUNGp3UEJtREtxZGZiYWdtd080alZ2VTdDb2FrWGU3VUg2WQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-30T18:31:21Z",
-   "media": 3,
-   "judul": {
-    "id": "Wanita di Makassar Dirampok dan Nyaris Dirudapaksa Driver Ojol yang Mengantarnya",
-    "en": "Wanita di Makassar Dirampok dan Nyaris Dirudapaksa Driver Ojol yang Mengantarnya"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "IDN Times Sulsel",
-    "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNTm5SX082RnY4WFljTTFqaUJ4VlpMRlVxUzRRd3JyU1A4NXJHVFUyY09wcWlmTlc5TUlUdnRTRlNTRmRTZm9LUEdpSDlTZGpLd0V0NlZ0ckNRUHg5TWVsZWFCTXQ3N0lRdGJ4cm81cVZJU3BEcl9fTUZZd3hzYVNlaEN1QkY2aXBUUFJGUERsb2dmR0o4R0xQOHg2Ny00YzNOZlJUaG5aTDFGdVdORDJwSFc1b05xZTBtZFFINEFVOTRHeFdrV2NqeURfYUTSAdIBQVVfeXFMTmJTQjh3bkY0S0xoLXJldGpmakw2d3hHLWJwTzRFOVNobDRZUTZlWFJ2dDFuUUQ1cm54bDRTUjJBREtuZ29CaGFBUmR2WVNBSXUzbFhYLTFXbWhrMWl3X195eEpMNlIxdFFZQ1dyT2xsaGZad2dpdUh2dFhwNWE3OUNMRTcwUkNONmdPSG9YcUNBRWRCS3hOcEl6NEtnSkQxOHJFenVISkpOeTFIdnNWckM4b29hQXJTMHdWYWpWb1dZc3A5a2pSYjdQbHJxeFdzOWN3?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-30T10:50:00Z",
-   "media": 1,
-   "judul": {
-    "id": "SPBU Shell Resmi Beroperasi Lagi dengan Kepemilikan Baru",
-    "en": "SPBU Shell Resmi Beroperasi Lagi dengan Kepemilikan Baru"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Kompas.com",
-    "url": "https://otomotif.kompas.com/read/2026/10/30/150100015/spbu-shell-resmi-beroperasi-lagi-dengan-kepemilikan-baru"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-30T10:50:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Shell tuntaskan pengalihan kepemilikan bisnis SPBU di Indonesia",
-    "en": "Shell tuntaskan pengalihan kepemilikan bisnis SPBU di Indonesia"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "ANTARA News Bali",
-    "url": "https://bali.antaranews.com/berita/417379/shell-tuntaskan-pengalihan-kepemilikan-bisnis-spbu-di-indonesia"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-30T08:20:40Z",
-   "media": 5,
-   "judul": {
-    "id": "Polda Sumut Gandeng Komunitas Ojol, Ajak Jadi Pelopor Keselamatan Berlalu Lintas",
-    "en": "Polda Sumut Gandeng Komunitas Ojol, Ajak Jadi Pelopor Keselamatan Berlalu Lintas"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "dailyklik.id",
-    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQUFlKdExLTmNhT1d0UHlrQnZ4Wng2cTdTMTFFRVAzSGxHanJqX0NtanhfWjl1aDBTZlJDZlRaT2ozSnJVakZwdkR2bjFFSHhNLWg1Vi1tRFM2ZnM1Uk5DTzdWZnVGZTV5ckdINHRIanJ6SkltOW1RbS1aRU5hcVVDT0J6N3E1ak93RHQ1YUhYYkhkaEdqaGVyZTJXbzVKSE55My1BUWRnajRUY2ZoR1RNRjgtNG9wUQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-31T00:25:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Mengurangi Ketergantungan BBM di Sektor Pariwisata",
-    "en": "Mengurangi Ketergantungan BBM di Sektor Pariwisata"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Katadata.co.id",
-    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOajhyU3lYVUFKTXZXdTlSRWNwOGFBcEN1bFdkMXQ3VWhzbllKX3pCdVUyMl8zbjZfU0o3RWRicGlKM2kxdUZGLXlWaXNEelZ2ZEJZUVRTZk11QXRuaWNGeHJGR05mNGNLbU1JTEVzR0VHMEVQOXA1alB2R2p5bkNJQjFJM1oxa21MYVVsOWdKclBza2t4UmpxMjFJdGF5WUdhLXZv0gGoAUFVX3lxTE9TMXBURVZLZmtubGI4S1NhWU8xS21iUklSaXRnOVpjWnV1MGs4OFRQNlVsVzl0emw4SE1HdFcxU3BZb1QzckU3T0NQeWtnYlpXRjVyM04wVkVKcmRCWmtoNnAtMUZHaTE0RTQ3V3JhMm5hOEtEVUNneDFPT2FMTTNrVjRGVzU3RFczSy1kV21NX2dCbjN3UUx0NWo1WnV4R2ZndTdfcXBqbQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-30T04:33:00Z",
-   "media": 6,
-   "judul": {
-    "id": "2 WN Arab Saudi Tikam 2 Ojol dan Satpam di Bali Usai Diusir dari Kelab Malam",
-    "en": "2 WN Arab Saudi Tikam 2 Ojol dan Satpam di Bali Usai Diusir dari Kelab Malam"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Kompas.com",
-    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxORzhKQlF0QVh1T0xTMWdtRWdoR0lXSzd5X18tS3hyTXZIQ1FrY2wtcTI3VHp6QmtQd0ZuM0ltLWgxLTBhdVBESkhiZ2pHamtVVlN0amsza0xhX3MtZUJiRDRCcVlYVVFGN2JrazdtQk1sbGlEVkltaXRIQVRILXlYbHV5bWF6aHMtNnkxUjZ3bnExTDFfdGl0NHBzTWlnakgzSWRzRHZCQ0NYRkRMUkRENUR0TEItWTFyM1pOTG4zZnZDVlVlV1E?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-30T04:16:53Z",
-   "media": 6,
-   "judul": {
-    "id": "Pemprov Jateng Ajak Ojol Cek Kelayakan Penerima Bansos 2027 Melalui Perlinsos",
-    "en": "Pemprov Jateng Ajak Ojol Cek Kelayakan Penerima Bansos 2027 Melalui Perlinsos"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "PPID Jateng",
-    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPZnhadVpwTWJFN2lRbFhCN1NkTjR6ZU9lNjhtRVV0cGZQNzVld0NwSXhCY3UtS0k5ZExoaWF5VVlaUnBib0UwSVJHb28xRElkMFF5dDBPdnZ3MVRYaU9rNEZYc1cxcnQxOU02TVFkeUVwZDRJSGlhU2Vlc1JQeUVBdE5Ia2RtaFpJWlNZRUc1eFBPVDBRTi1ZS05vd2JtOGRncU9qNEhHbzVtaU0zS2Y2U1V4Yw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-30T23:13:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Kapolres Bogor Bangun Kedekatan dengan Pengemudi Ojek Online, Ngariung Bareng Ojol Kamtibmas",
-    "en": "Kapolres Bogor Bangun Kedekatan dengan Pengemudi Ojek Online, Ngariung Bareng Ojol Kamtibmas"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Kabarindoraya.com",
-    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQQ3VFQXZUV1hQbmtFSEs5cG9WT19VbkRvOFFiZ3ZZOTRiOVlNa0NXUU55dlVHQmRVdWE4WFlFVUFmbGtIYnR1LVNxdVpmVUM3SmZSUU5wd1FKaG42ejVhZkxVSS00VzFOTllmZy1sRmJGSEI0djNBWlJVcl93cjVoQUJqTTJmejRVY0xkTGk4NGxZZVp6X2tFNVducHJla0xvQUN1MTA3Ni1OSklodlhON25DOThpaEps?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-30T03:05:00Z",
-   "media": 6,
-   "judul": {
-    "id": "BPJS Ketenagakerjaan Pastikan Hak Ojol Korban Kecelakaan BYD Terpenuhi",
-    "en": "BPJS Ketenagakerjaan Pastikan Hak Ojol Korban Kecelakaan BYD Terpenuhi"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Kompas.tv",
-    "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNMXNJWFRXRDVHRElmN3pzUVhXemtkWEdPZ2R4blpTa3NXSmRDTlMwUEhCWENxTXlmQWtSbkY1RmZEV3RUU2FNYTFodjJ5U0hXNWltWVVtYU5oa3JLMnNCU0doT0NQS0Uwcmk2dm9Oc09QQWZBc1RzejlUUXAtZ2JfVjlLNkVrS2NvVkJxNDFpa0VtTzlGd0hBcjZZa2c1SWdGUWtoMDhWbEg5SzczOGt2R1BRbDFnSzhnVk95cDlFaWdlb0w3U2UyTNIBzgFBVV95cUxOY2p6eVBaWkFmU3ZRX1FsTFZGNm1qV0FfT185WHVIR1ZYVEJpWHQ5OVFaTDJoOGlWNzluYkF2bnp1em5BOTRySkFXNUVkelJZYy1EcjFOT3dXVGRweHFQSmpieGduV0oycndZTGw3VzBNQnVlRVVoOHVZd2EtYzFadXkzYWlJVjZ5ZFcyNHZiMDQ1LWxwT2pDeGZvNExtcnFYOGhWQ0Rad0Fyc09HeTNDUm5UQW1ZRFY3LVUwOFJnRkRYamlzUUZCQy0xTWlOZw?oc=5"
    }
   }
  ]
