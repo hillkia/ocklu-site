@@ -1,5 +1,5 @@
 {
- "w": "2026-11-01T14:49:21Z",
+ "w": "2026-11-01T16:20:25Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -191,6 +191,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-01T13:00:49Z",
+   "media": 1,
+   "judul": {
+    "id": "Update Driver Adreno Bikin Performa Snapdragon X2 Elite Turun hingga 87%",
+    "en": "Update Driver Adreno Bikin Performa Snapdragon X2 Elite Turun hingga 87%"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Jagat Review",
+    "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5tUVpqRzlIODh4amZNUmFuRmliOC1iNGRzT21ncDB4bC1iMDYzMjB1T0FVRnUyLXFYVzNGeVRtS0FpSmxYWnhacGlUdGJsWGR3RXZPb1NKd09CaXVINnVRMW82X21CU011WXRvYjF6V083Q3o4NUZSZllB?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-01T12:10:06Z",
    "media": 1,
    "judul": {
@@ -289,40 +306,6 @@
    "sumber": {
     "nama": "Pawarta Jawa Timur",
     "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNcnBTbEYzYmI4dms0Y3RQZHc4Q2lxM2VPOVFzcVFCZkt2NElISHVPU0RJSHdOcnRQTlR4TGZwMnBLbkhTd0pLVVJwcl9mUWRUM2xxa3lLUzdaa0RpdTBJS3dNY0g4a2o2QTB1M0QzUHYyeVB1RVU0MWtUS3oyZVJhR3ZiZ1N0QnpsNmw0b0ZFNF9qSkU?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-01T09:15:49Z",
-   "media": 1,
-   "judul": {
-    "id": "Polisi menyelidiki kasus pengemudi ojek online yang diancam karena menawarkan perbaikan ban gratis.",
-    "en": "Polisi menyelidiki kasus pengemudi ojek online yang diancam karena menawarkan perbaikan ban gratis."
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Vietnam.vn",
-    "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOSU91cVpONnBBVjNuaTItQnZNa3BUa2xTNkZQV1BDMjVhV2ZQOGNvczFZeFQ5Z1RhajN2UFhWOEg2bllfek9HQ1MzR0tSWWk3T3RwNEF0RFdSSmw5YVZobnlROTdFSnhOSHh1Y3dOcFEyd2pRZ3pMNlp0UEY4ckpQdjg0amVTVWZrXzk5MTJUTGVpWWZ4?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-01T03:04:00Z",
-   "media": 2,
-   "judul": {
-    "id": "Wali Kota Pontianak Apresiasi Rumah Singgah Ojol, Dorong Penguatan Solidaritas dan Ekonomi Keluarga",
-    "en": "Wali Kota Pontianak Apresiasi Rumah Singgah Ojol, Dorong Penguatan Solidaritas dan Ekonomi Keluarga"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Dio TV",
-    "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQdDVaVG9UbEJwZ29lQUQ1cEJucmRocFJnWTBBa01ac1JRdzJUSnJFZjhidFIyd1lTZjFLRTdpZHRmcDlBZk5iVF9nOWNWbUw4T3Q3VUw3RTB3a1B5UE1XeTR1OEUzbEVZdWVRYkl5eEJIYnkyUEcyQ2VBQUF0XzViOFlsZ1E5Y2dHdDM2MVM4M0Z4TlJ6NzdRbS1LYVlNbXplaW5SSi1ZOUdraWZSVnUzY19WTW1UbW5sakhieENOazh5cnBPbU15eC1xM1J2Q1doVjZINWY5NXU0bHh1OUHSAeMBQVVfeXFMT21NZXMyLU1VaWQtXzY4c2NoVFNtZndkeXktcHBMbXdFbUQ1Rm1YR0cyYUpwT1dfVlpmRENBek5OMXhvelo2Q2g4aW4zVWFyYzFxbUtQdzNRQjMybW9sdUVJdjhIcVFaY01yVVpGbFZ4SUNZc2JtM2RxWEEtdU4wZkM0V05wV2NIcFdLMWNoZlBkZnhDdy1kQ2lneFUzZVItZFRmaUdmUXRldDJMaE9JcDRiRWV5bDlqS0NITXlnY2hYY0ZuQ1I4Y1Axc0VpZUFfTEdsU0xmb0xlQTdaNzVuNkxteFk?oc=5"
    }
   }
  ]
