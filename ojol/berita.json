@@ -1,7 +1,24 @@
 {
- "w": "2026-11-01T19:06:32Z",
+ "w": "2026-11-01T20:40:09Z",
  "dari": "Kroog",
  "berita": [
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-01T15:13:41Z",
+   "media": 3,
+   "judul": {
+    "id": "Pelaku Jambret Puluhan Kali Beraksi, Nyamar Jadi Pengendara Ojol",
+    "en": "Pelaku Jambret Puluhan Kali Beraksi, Nyamar Jadi Pengendara Ojol"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Posmetro Medan",
+    "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE4zWXRrT3ZONTQ4RHktNFZ5bENaSEU3TjBLSHUtVnpBNUUyNFpsYnp1U0dQY041RzRCZmswZkc5cnZQcTRydDFSa19USzBXa1hOSnU3dGdSaTNUWXVzaHdDVy1feVZHMzk3SXI0akU1bzdRZGd1VTM5Qg?oc=5"
+   }
+  },
   {
    "jenis": "berita",
    "waktu": "2026-11-01T12:12:21Z",
@@ -34,6 +51,23 @@
    "sumber": {
     "nama": "Head Topics",
     "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNYjZPcUZxMmJERWxRTlZRTTdHRnlJcmYzSTBBZllhNWdqLTBDajJpbjlFRW1hVWRsalNzM0hiNzBoS3dyX1VaTnNrN0xpMDh1bFVWVFhiWG1sUHZ1WjJvMzBLa0ZmbUc4aVJKOWZfczVQdmQzZkt2MGF5MC0wZDdMMWM3dW9OdTViamFDRVBKLXJNOWVCRlRFQWhZTFV3UQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-31T22:24:00Z",
+   "media": 8,
+   "judul": {
+    "id": "Pemerintah Mau Kurir dan Ojol Pakai Motor Listrik di 2027, Ini Peta Jalannya",
+    "en": "Pemerintah Mau Kurir dan Ojol Pakai Motor Listrik di 2027, Ini Peta Jalannya"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Koridor.co.id",
+    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBoZk93WFd4ak5sZUcydU0xRmFUNzlleGhtQ1p5WUNiY3pqMEhiQktrdFlxaTFBSEQ1SzhkNWtrNDFnRjFXek9RQnIydzI4bkY4QWw0bDFXXzhjbjFYVUV4NEw3UUZfWEVYNFJzTA?oc=5"
    }
   },
   {
@@ -72,23 +106,6 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-10-31T22:24:00Z",
-   "media": 5,
-   "judul": {
-    "id": "Pemerintah Mau Kurir dan Ojol Pakai Motor Listrik di 2027, Ini Peta Jalannya",
-    "en": "Pemerintah Mau Kurir dan Ojol Pakai Motor Listrik di 2027, Ini Peta Jalannya"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Koridor.co.id",
-    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBoZk93WFd4ak5sZUcydU0xRmFUNzlleGhtQ1p5WUNiY3pqMEhiQktrdFlxaTFBSEQ1SzhkNWtrNDFnRjFXek9RQnIydzI4bkY4QWw0bDFXXzhjbjFYVUV4NEw3UUZfWEVYNFJzTA?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
    "waktu": "2026-11-01T05:00:22Z",
    "media": 3,
    "judul": {
@@ -119,6 +136,23 @@
    "sumber": {
     "nama": "CNN Indonesia",
     "url": "https://www.cnnindonesia.com/internasional/20261027103855-120-1420037/singapura-tak-naikkan-tarif-listrik-meski-ri-pangkas-ekspor-gas-alam"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-01T03:54:55Z",
+   "media": 3,
+   "judul": {
+    "id": "Satlantas Polres Kubu Raya Edukasi 100 Ojol soal Safety Riding",
+    "en": "Satlantas Polres Kubu Raya Edukasi 100 Ojol soal Safety Riding"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "شبكة تواصل الإخبارية",
+    "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9HVUJOSUZIdWlpX25YMDZUX0p2QlBWQWw1Y2toc2RPcEpFT3BQNlZjdkVORmFKaWFseTlEYUJXQWRUTlB1VEFQN00ybmszR0VQSVFn?oc=5"
    }
   },
   {
@@ -208,6 +242,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-01T12:35:41Z",
+   "media": 1,
+   "judul": {
+    "id": "Ditegur karena Belok Tanpa Sein, Pemuda di Bandung Barat Bacok Pengemudi Ojol",
+    "en": "Ditegur karena Belok Tanpa Sein, Pemuda di Bandung Barat Bacok Pengemudi Ojol"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Delik Jabar",
+    "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNM0dBbVJlekI4UUM3bm11czlJQXViX2dHVWlQTmVJa2hhcFVsR1prWTE3NXJFX0NwdFl3aXBqQWNIb3Q4OVNSUzBUblpBbXlpVUxNUF9vNXlEa3d2OEs5NkJQVDdyZjVDVkt4REhFQUc4a19XNDJBRVh1ZlFqMzI4TnFEZ1RXbWVuQWRiUFlFMTE0dDV2UXpjQ3B6T19OVGpxeUM1ckx0dDVZOGFpR1BpMXEyNXkxcXZuamtaQ3ZSQdIBxAFBVV95cUxPSm5Dc01VZ1lGU2NndEVoaEdyY2ZQUTU0MWJvek5nWFpfUklGMjhaZ2NDM0FPSWhOMDNVdTNCMUp3U29vczFEVm9hbkgzemEwb3BNRkZfbGNfekh5Z2tTWE8tMjFUQWUwT1NFUVNFckN5WC11eDNwcEhOTmtKT1JsWUVId2Job1Bsc3k5MDd2djljN25JVWFDdzk4U21aWUZpVjU3UGNYdFg5QnkwYVdHOG5aNWhPb0NHM1doUFVobW1NcDFJ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-01T12:10:06Z",
    "media": 1,
    "judul": {
@@ -238,23 +289,6 @@
    "sumber": {
     "nama": "Kaltim Post",
     "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPM0Jpc28xYWhRU1VvVTRhZ1dKUWNKX2hDOWstUGxwYW56SlUtcnlHSDhvYXBGOUhwOFg0cnI0cW9UMGpjak44ckh0MmtlZ3ZCTEd0dTNZZU9iNjhTVWc2Z1lVRWF5Um5rMDNfbVlGRW95N0U2M1BtT0FENHdoTTFlM3VhTng2S3ZMZG4zbnBnZzFQWDJaMFBOVlktaW0zeVhzNGRhNjlyWEJzRV9COUJRZHRJS2ZrZXA0VVhmbjdnSHRocURKcmtKa0dzTmZ2WE91V0530gHYAUFVX3lxTE9GdFFlYWRIdnVjbTRndWx3SE16QS10RmxFQ1VhVVpTOWRnOVpoM0VSODRnX3BIbkRPbG9ueGtySFdoLWRiWmszZldDQlF0YmdQZXVFUDczNThxajJxUmRMY3YwVHdQRFVRd1VoM1B6eUpZR21HMG9VOWRsamw0cjZGcWNwZFBVNm1RX3czX3dGMXpsQm4tOHBrYUlRcHNvdEJ2MF85aGJtQWYyTHkzYVFWRk9MOVNBeHJ3bVlYR2h1V00xdE5qZVRyTTVKdVJwb1NMVl9QeGIyWg?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-01T11:01:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Polisi Bersama Masyarakat: Satlantas Polres Majalengka Dekatkan Diri Lewat Dialog dan Edukasi Keselamatan Bersama Komunitas Ojek Online",
-    "en": "Polisi Bersama Masyarakat: Satlantas Polres Majalengka Dekatkan Diri Lewat Dialog dan Edukasi Keselamatan Bersama Komunitas Ojek Online"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Tribratanews Polda Jabar",
-    "url": "https://news.google.com/rss/articles/CBMihAJBVV95cUxQZjBLU25LNmUxU1JJenV0bzRLWGJwMExOTzFSa1BnSm5Db2k2MWF0c2p5ZDhwMGJRS2szbW9RbkVYNFNxVkRRUVBSMVpVVk9va3NBN3hYRDZIUW5yd2xMclhsdDlzdDB2QlBMdlh6WFJqeGpEY3NXZW1FNFNOeEFDWkxTNDY0OVoxN2J4N291Y1lNMlQ1cEZ0SXFuZUNOeFl6MUthQlpOUDlSVGVvVVdrc2R4R0lCb1BPdWhfOEpzaTV2ekt1Y0FITzRkdnkxQm5Ca3AyQmE1Y1dPX3dOZzNmYWxQZWNJaHhkYVFhZ29nX2tXX2d3eFM1bk9LUHZvYVl6ZGR2VQ?oc=5"
    }
   }
  ]
