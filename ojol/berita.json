@@ -1,7 +1,24 @@
 {
- "w": "2026-11-01T13:02:36Z",
+ "w": "2026-11-01T13:45:54Z",
  "dari": "Kroog",
  "berita": [
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-01T12:12:21Z",
+   "media": 3,
+   "judul": {
+    "id": "Viral Kericuhan Pengemudi Ojek Online di Pecatu, Diduga Rebutan Penumpang",
+    "en": "Viral Kericuhan Pengemudi Ojek Online di Pecatu, Diduga Rebutan Penumpang"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "NUSABALI.com",
+    "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOREcxc211WmNmQU5FdkZ6Z20tYXM5T1lKMC1lMUpOM3BCTFhBVDRMczdiLXVKQU1jdVk2dklPNW9LM3VSXzluSFhoZHhXamRNNkFUSzJqUGhud05vak5WcW8yX0JLNnBOVWtnOGJrYVc2REZaeEdxRmptWGplbHdmUGwzOWtTZFU?oc=5"
+   }
+  },
   {
    "jenis": "berita",
    "waktu": "2026-10-31T22:36:08Z",
@@ -72,6 +89,57 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-01T03:51:40Z",
+   "media": 3,
+   "judul": {
+    "id": "Driver Ojol Ditemukan Tewas Membusuk di Kamar Kos Bulak Banteng Surabaya",
+    "en": "Driver Ojol Ditemukan Tewas Membusuk di Kamar Kos Bulak Banteng Surabaya"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Sorot News",
+    "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPU19RZ1ZQZjlvdVZIeUhSTjBCdW1JejBPVEp2eW1nUHNQNUdwYjBRYnRodGNBYVZZSFMyOTJVRC1oYk84em1rQkdReWhvRHNiX2lZYVJOV0hEcUtidGtVdHg3eWE4YnBuRy1WQnlDTVB4ZlNoQkNRUlN2ejFkSXdZcndRMEhjcW91b1doM1RVMW5zRDdFalF4ZmJrRnQ4YUc4M05JSDlWcXZkazRkeUVLdWoyY2N6WVp2SldSdFdreHMyQ0F3?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-01T07:29:41Z",
+   "media": 2,
+   "judul": {
+    "id": "Polres Metro melalui Sat Intelkam Salurkan Bantuan kepada Driver Ojol, Wujud Kepedulian Polri",
+    "en": "Polres Metro melalui Sat Intelkam Salurkan Bantuan kepada Driver Ojol, Wujud Kepedulian Polri"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Tribratanews Polda Lampung",
+    "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNb3ZUdVBHNk5WaGpBNW1EN19Jd2l3OC01eEZtRGdQaHdtSzA5SnBWTWZQRXVBeEkxX2ZEOFVPYTY3NDU1LURxZlJiRnlxYUhxNDhOWWR1Q0VRal9iUnVDbkRzb1VBY2kyYldLU2U4MVlXWWF6cERCQ1d3THk1LXRjazYxdXZuc2N5cndSMGp1NzZ4M3FYQ2czYmlHZVRCZjZLV08zZlhKdWJOT1MteDlPcE1sY1d4X1M1V1VXNUc3dUpJNE9BUTZ0RFJPN0NmdTdTYTZUNEN2LWRoWG9Gc1E?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-01T12:10:06Z",
+   "media": 1,
+   "judul": {
+    "id": "Ojol Rebutan Pelanggan di Pantai Suluban Pecatu, Polisi Turun Tangan",
+    "en": "Ojol Rebutan Pelanggan di Pantai Suluban Pecatu, Polisi Turun Tangan"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Beritabali.com",
+    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQTlhkblJuNDZ6eWpzaDgtS2tRUGhzT0o5UnktSVJrTktIbEp0LUduVUJhMDdaeFNPSmh4dnlyLXBnZkVCbEk0WnpldlR4QTVIYmx6TUZvSXFQRUd6R1JnYVU3V3cwZ2RQc2JzY0lGQWZsUHNyemlJWkd0dGxnblVOZlF3RlUyaTVnMDM4VHFTdndEdmpXcUY0QlRydTJ3bzZSY3E5bVNEYzZhV0N0Q2ZRckg4bUI?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-01T11:59:43Z",
    "media": 1,
    "judul": {
@@ -85,6 +153,23 @@
    "sumber": {
     "nama": "Kaltim Post",
     "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPM0Jpc28xYWhRU1VvVTRhZ1dKUWNKX2hDOWstUGxwYW56SlUtcnlHSDhvYXBGOUhwOFg0cnI0cW9UMGpjak44ckh0MmtlZ3ZCTEd0dTNZZU9iNjhTVWc2Z1lVRWF5Um5rMDNfbVlGRW95N0U2M1BtT0FENHdoTTFlM3VhTng2S3ZMZG4zbnBnZzFQWDJaMFBOVlktaW0zeVhzNGRhNjlyWEJzRV9COUJRZHRJS2ZrZXA0VVhmbjdnSHRocURKcmtKa0dzTmZ2WE91V0530gHYAUFVX3lxTE9GdFFlYWRIdnVjbTRndWx3SE16QS10RmxFQ1VhVVpTOWRnOVpoM0VSODRnX3BIbkRPbG9ueGtySFdoLWRiWmszZldDQlF0YmdQZXVFUDczNThxajJxUmRMY3YwVHdQRFVRd1VoM1B6eUpZR21HMG9VOWRsamw0cjZGcWNwZFBVNm1RX3czX3dGMXpsQm4tOHBrYUlRcHNvdEJ2MF85aGJtQWYyTHkzYVFWRk9MOVNBeHJ3bVlYR2h1V00xdE5qZVRyTTVKdVJwb1NMVl9QeGIyWg?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-01T11:01:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Polisi Bersama Masyarakat: Satlantas Polres Majalengka Dekatkan Diri Lewat Dialog dan Edukasi Keselamatan Bersama Komunitas Ojek Online",
+    "en": "Polisi Bersama Masyarakat: Satlantas Polres Majalengka Dekatkan Diri Lewat Dialog dan Edukasi Keselamatan Bersama Komunitas Ojek Online"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Tribratanews Polda Jabar",
+    "url": "https://news.google.com/rss/articles/CBMihAJBVV95cUxQZjBLU25LNmUxU1JJenV0bzRLWGJwMExOTzFSa1BnSm5Db2k2MWF0c2p5ZDhwMGJRS2szbW9RbkVYNFNxVkRRUVBSMVpVVk9va3NBN3hYRDZIUW5yd2xMclhsdDlzdDB2QlBMdlh6WFJqeGpEY3NXZW1FNFNOeEFDWkxTNDY0OVoxN2J4N291Y1lNMlQ1cEZ0SXFuZUNOeFl6MUthQlpOUDlSVGVvVVdrc2R4R0lCb1BPdWhfOEpzaTV2ekt1Y0FITzRkdnkxQm5Ca3AyQmE1Y1dPX3dOZzNmYWxQZWNJaHhkYVFhZ29nX2tXX2d3eFM1bk9LUHZvYVl6ZGR2VQ?oc=5"
    }
   },
   {
@@ -106,6 +191,40 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-10-31T10:01:30Z",
+   "media": 8,
+   "judul": {
+    "id": "Jumat Berkah, Polda Jatim Salurkan 600 Paket Sembako untuk Pengemudi Ojol",
+    "en": "Blessed Friday, East Java Police Distribute 600 Basic Food Packages to Motorbike Couriers"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Pawarta Jawa Timur",
+    "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNcnBTbEYzYmI4dms0Y3RQZHc4Q2lxM2VPOVFzcVFCZkt2NElISHVPU0RJSHdOcnRQTlR4TGZwMnBLbkhTd0pLVVJwcl9mUWRUM2xxa3lLUzdaa0RpdTBJS3dNY0g4a2o2QTB1M0QzUHYyeVB1RVU0MWtUS3oyZVJhR3ZiZ1N0QnpsNmw0b0ZFNF9qSkU?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-01T09:15:49Z",
+   "media": 1,
+   "judul": {
+    "id": "Polisi menyelidiki kasus pengemudi ojek online yang diancam karena menawarkan perbaikan ban gratis.",
+    "en": "Polisi menyelidiki kasus pengemudi ojek online yang diancam karena menawarkan perbaikan ban gratis."
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Vietnam.vn",
+    "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOSU91cVpONnBBVjNuaTItQnZNa3BUa2xTNkZQV1BDMjVhV2ZQOGNvczFZeFQ5Z1RhajN2UFhWOEg2bllfek9HQ1MzR0tSWWk3T3RwNEF0RFdSSmw5YVZobnlROTdFSnhOSHh1Y3dOcFEyd2pRZ3pMNlp0UEY4ckpQdjg0amVTVWZrXzk5MTJUTGVpWWZ4?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-01T09:00:10Z",
    "media": 1,
    "judul": {
@@ -123,19 +242,36 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-10-31T10:01:30Z",
-   "media": 7,
+   "waktu": "2026-11-01T08:54:35Z",
+   "media": 1,
    "judul": {
-    "id": "Jumat Berkah, Polda Jatim Salurkan 600 Paket Sembako untuk Pengemudi Ojol",
-    "en": "Blessed Friday, East Java Police Distribute 600 Basic Food Packages to Motorbike Couriers"
+    "id": "Koleksi Link Bokep SMA, Bokep Hijab, Bokep Ojol, Bokep Crot dan Bokep Montok Paling Lengkap Full Hd",
+    "en": "Koleksi Link Bokep SMA, Bokep Hijab, Bokep Ojol, Bokep Crot dan Bokep Montok Paling Lengkap Full Hd"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "Pawarta Jawa Timur",
-    "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNcnBTbEYzYmI4dms0Y3RQZHc4Q2lxM2VPOVFzcVFCZkt2NElISHVPU0RJSHdOcnRQTlR4TGZwMnBLbkhTd0pLVVJwcl9mUWRUM2xxa3lLUzdaa0RpdTBJS3dNY0g4a2o2QTB1M0QzUHYyeVB1RVU0MWtUS3oyZVJhR3ZiZ1N0QnpsNmw0b0ZFNF9qSkU?oc=5"
+    "nama": "Pierce Manufacturing",
+    "url": "https://news.google.com/rss/articles/CBMi4gJBVV95cUxQZ1NZTWpjOFRqU0g1QS1ULWc2SFJrOFFaNDN2Q2ZfNk1ZN3hJVjZZaE96clcwLUduX0lpazJzRHdEMmRmeWNMYllTWTJlblU5czMyY0hqY25TNWxwZy05Sm9LZGdycjROaGxRejY0NnQ5aE5yTlhtSHZ0Z1BRZnZKRXJzX0U5TW5feFc3UlIyRkdKZE85OXJheGR5RXluU0YzaE4yUEJFZ2luZEdPN1NlQnA4cjd6b3F6MFhzQkdwb0pFVnd0azQxaUVkcnFxME9CWGwwbE8wcTNHdVN5ajFGN3JqM3pIWFM4UE1wNXNOTjhDdUtwTkJ4NUNXaHlDcXhJME4yaGxaZENiWV9YWjN3dTRTei1BZnk0VUhlMERpM1J2SFhLdkV1UnhNOGM1YkRRY2xpc0tpRjJOSzh0bTRFYTFOSExXQXV3T0JLTERWaERIcXJYS1h1ZWJmNXRTNlFWNkE?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-31T08:28:00Z",
+   "media": 8,
+   "judul": {
+    "id": "Polda Sumut Gandeng Komunitas Ojol, Ajak Jadi Pelopor Keselamatan Berlalu Lintas",
+    "en": "Polda Sumut Gandeng Komunitas Ojol, Ajak Jadi Pelopor Keselamatan Berlalu Lintas"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Radargep.com",
+    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQMXdXRjMtU3lUazFhdnBzbTdWT3NPWlpZa3N6SWFOOWJ3QUVUMTlOZFlVVjU0WllSTjVOMXlZUFJDallwSG1uWXoyZGk2UVNOYl9ST2VRTkJCdFlSTlRzdlRYUG5RNHFOc2syWFE5X0V4bjJlZDA5d3lFcWxyeGJMT2ZfYVAwSFhnb3lObDJvWE4zb1FJSjZ4VkN6V2NOY2JwUThtSDI2NGw?oc=5"
    }
   },
   {
@@ -157,155 +293,19 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-01T05:53:04Z",
+   "waktu": "2026-11-01T07:10:17Z",
    "media": 1,
    "judul": {
-    "id": "Berkedok Pangkalan Ojek, Pria di Mangga Besar Diduga Edarkan Puluhan Paket Sabu",
-    "en": "Berkedok Pangkalan Ojek, Pria di Mangga Besar Diduga Edarkan Puluhan Paket Sabu"
+    "id": "Perkuat Kemitraan dengan Masyarakat, Kapolres Badung Gelar Minggu Kasih di Tibubeneng",
+    "en": "Perkuat Kemitraan dengan Masyarakat, Kapolres Badung Gelar Minggu Kasih di Tibubeneng"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "Jejak Narasi",
-    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOU1UteVVNVjJ4akpRUEY5QXZYbmRkMlZqWlBWT3haa1pORHgwcV9oWWlybUJ0UnpsamN6X2dXTWt2UDRESElmcUUwUi03MnFfZnA3TXFoX09PSWZPZ0lTX3RsQnVIdHJmU3lZajU2YVVWWkROelRTSGh3Q294SkJET0d6SElnNFZkTzd4TFhmWWhLTXFpOUpyMzFuVjBOZXYxRUxPTGVCWHphSGxRS1BVaDVlRQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-01T05:33:28Z",
-   "media": 1,
-   "judul": {
-    "id": "Vietnam Pangkas Tarif Listrik dan Hapus Pajak Bensin",
-    "en": "Vietnam Pangkas Tarif Listrik dan Hapus Pajak Bensin"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "CentralBatam",
-    "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1JdG9wVDFfSGY4eUhkc2dJUDBMZWc4OGJhcWlWZVVCeDRseHplbTB1SjNxaWhYa0FaZDdIWENfSW16d1ZHOVE4VElnbTcwZ2h4d1ZYLTFCWUFMVG5nWlNZMHBXSzJUWjRNSXZncFZORUt1VS1wZkNhRA?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-01T05:10:01Z",
-   "media": 1,
-   "judul": {
-    "id": "Ekspor Skuter Listrik China Melonjak di Asia Selatan Imbas Krisis BBM Selat Hormuz",
-    "en": "Ekspor Skuter Listrik China Melonjak di Asia Selatan Imbas Krisis BBM Selat Hormuz"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "kawula.id",
-    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPaUx0WHo5Q1Vrd0Z3NFV5UDFPeEl2OWppdDZCNmtreUt6M1Bqb0haa09FNTlrVjNJOEw2UW9FM0xObDhBaTlyMTVJYk9kMWVIcm1OUk9kNzFKMndtQl8wcWxELTAyeTZwQy16c21UVWdUVTVkWmNaYU42SE84Rnpzc3U1ZGtFbEFENFQxeWM4U2hVazNqeFZNNk5SQmNXVDlsMlHSAacBQVVfeXFMUHJFZ3Fqd3V6MmVTVEEyRGsxMWRickNrV3otd0J6YWdPdWtNSW1raHRULVlzYXB3QkJOel9wRjRXU19TOG9DbjVLaDZnRVFqZnl4eWU1N0RnNGNFTV9va0VlczFNZUFmczc3a3NDS0F3UzRGRllBOEJWRjNFVm5tWmFaNTZnNU1hclk3d3RaWnZjdV8yQWJMNHg4SjBsN0M2elZqTkNFalU?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-01T04:27:00Z",
-   "media": 1,
-   "judul": {
-    "id": "China meraup keuntungan dari tren motor listrik di India, Pakistan, dan Bangladesh",
-    "en": "China meraup keuntungan dari tren motor listrik di India, Pakistan, dan Bangladesh"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Tempo.co",
-    "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNYTRiTTJCT1dXN0pKNVJPdUpEYnBjY3JXczJxOGZ4OGRxSFdPU2kzR0dvMjZhRzhKY3dnUFRwWDg5aV8yWTgxREJHMVl3eDMxVXl1MVBPWmJMRUhpcHM5RGY5OWVKMUhBajlUeVduT2dLbmpVZ3Fpenl3eWViNHdiVktKZ3dGUnE4cm10Qm52dzFjdXZiTGl2U3dKSnJYY0tzQUhkVHBEWFp1UlJ6Mjh1cTVqeWxpRXJNb3JtcHFrZWw2cTA?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-01T04:10:56Z",
-   "media": 1,
-   "judul": {
-    "id": "Musim Hujan Diprediksi Lebih Awal, Begini Persiapan DKI Hadapi Potensi Banjir",
-    "en": "Musim Hujan Diprediksi Lebih Awal, Begini Persiapan DKI Hadapi Potensi Banjir"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "detikNews",
-    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNa055VmFkM1ctWGZEQ0VKLVdvUlp0Z3RSZmNHMXJNV09sQXBMZ1R3VlM1NmxiN0x2ZFpnNnJUNGpOVFFpbHRDeXVValFLSnctYWpiYjlQWXFYLVRleXBGTnhXYmpISHRkN01vWVFILVlqWk1fbjFkTS1WMWZVTnY0c3J3MHA0eFFiTDRlZjR4dERCWnJvbGtwOXJWOGwyMHJCbGtZenFuenFFS2ltSW9XeUhoUUlQSmfSAbwBQVVfeXFMTmV1cHhRN1ZoR3ZFR281d2REREgtc0Z5MTdqUjlJLUtIZUN4X2wyaGJBeVpGdUpuSDd6aFdPdmI3amNpbmN1WWF0bzI4TlVrQWowdzRjekRsZ0VzUm1tNVhRNzgwRlEzLWxyV0kzaXBsd1NoZ1dubmJhaDZUTU11U1dvcWgxN0JzZkpIT0YtZzVTSkt5RGl2bUFwZDBkS1g0N24wQzg4VlR2WU9ZVDdBbkxMMG1hOG85REZTRGk?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-31T06:08:00Z",
-   "media": 7,
-   "judul": {
-    "id": "Polda Sumut Gandeng Komunitas Ojol, Ajak Jadi Pelopor Keselamatan Berlalu Lintas",
-    "en": "Polda Sumut Gandeng Komunitas Ojol, Ajak Jadi Pelopor Keselamatan Berlalu Lintas"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Tribrata News",
-    "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOc1JUdkJ5eHF4eF9oaWZvajBYdDlPWnRrQ1RFVzBQYkpnemgwZkVFaFdVWEotZm5RMV9hNktmdk5DV1dGdUhwVzJ3a0pMYjloY2ZHV096YnNLWkdJQzlhRFAxbzdRODlWTlVFQ2toN0xseDNQSGJkclFsUWV6TVBuemNCNWJBTUlLWEVLVUhjSkN0cy1uZ0lOWlA5Q3VIcUV1bk8tNGduMDVkMno0S2hwUVZVZ0pfUU15SzQxZzFZUG9JcXdoRVVxV1VNQ3k3UktSUUxlZThqT3FucmtPSlpmVXNpclRUTHV1?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-01T03:59:14Z",
-   "media": 1,
-   "judul": {
-    "id": "Update Tarif Listrik November 2026, Ini Penyebab Saldo Token Berbeda dari Nominal Pembelian",
-    "en": "Update Tarif Listrik November 2026, Ini Penyebab Saldo Token Berbeda dari Nominal Pembelian"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Ayo Bandung",
-    "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNQ2dIb29pWC1zUTR3dnFTaWJQb3BHV2dXU0NvZFVWX0RzcG9SY1NrSnJNd09oSHplU1lEb0ZiVTBFTG5jbnhPekJ5ZkgzVjh0azJKVmdmNm1WLWpuMHBvMFB4b0JYMGl3bFJMenRnV1NpMGcyd1ZHMjZsS2dlc0NwMGxPX1hZVzU0NmJYaEZxODlIWTZXN25jamJSOEtQQ2tYbjV4QksteW91eFVBQ2hwa3h2TXk1aV9OZk5HYmlfT0g5dW5WZ0hpYmdlOUNEd9IB0wFBVV95cUxQa19oYndMUV9SWHJHczd1cV85cGxVRzFieUMtV1FXN1FrOFI4R19lNlQ2bk5WS0xpY3NyWGZKbnRrUk1DOUQ1YmdHZTljOEFGM3VCZUZ1ZHB3dm1UalB0aTNIeE43MURjT0d1WGxkSWVTa0VUX05wN3RfNVp3VkNYV1dYVEhBS2kxTUZ4UEFNbFdKa3gzN1ZjbEQxV1pjeDc2N1JqNzROWkp3dlppZWNraHZxeGR6X3pZSENQc0RmeXlFUGswdmwxS1doUkRQaGxubWNv?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-01T03:30:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Perkuat Ketahanan BBM, Bahlil Siapkan Storage Minyak",
-    "en": "Perkuat Ketahanan BBM, Bahlil Siapkan Storage Minyak"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Listrik Indonesia",
-    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNRDRkU1pudDZQOWNneWNZT1NjczJhWDZXb0Z6Zmt1SWtVdDJzTVVUZG94N1FFdGNVOTBEQjh5Qks0YXZNLXpBUUJ6N2ZRMmRfU3dMQ1NCQzZkM1FXdlVYX1ZHNFl5M2NUbXhRMmFoUHdzUGdHS0xqeWhrRzlBMTVIYUxtWTFic2Zpa0dhZWl4UnNYVHBWWDdRRTBpd25MQmk5cUFDNEZzWGNrREJwNHhBQg?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-31T12:59:58Z",
-   "media": 4,
-   "judul": {
-    "id": "Bagikan 150 Nasi Bungkus, Jurnalis dan Ojol Samarinda Kampanyekan Tertib Lalu Lintas",
-    "en": "Distribute 150 Packaged Rice Meals, Samarinda Journalists and Motorbike Couriers Campaign for Traffic Order"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "KutaiRaya.com",
-    "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9ZYUZhTV9DemVTUXFDZGhwdThMTUlEUnV4LUVzc1BHcXVQSXdrcWlCZ3p1MjRQR2liM012eW5pVkZTMTFaUWRFY0pvRGRiX2JhZEVhanJ3?oc=5"
+    "nama": "Deteksi Post",
+    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNNXUzcEhvdVZzNVBkeEZzWHlfV0dHeHlfaVlLYjR4eWFQYVNudkJqU1kzVkVVVEhBRWFCRi1KSUc1YzYwQ1VkNzgtTnhNck8xVkFaRlZYSVREa3FlbDJTdnpzNXl1VUJTOThhcE4xOXE0eUJGaGgzSHBYUnVCcU9KYm4wT0hseDE0RkJ0aXRFdDVJWjBtcDl6bzVnZkZKTDNoeEZuanFUTE1aOV9vZ3pfeW5VLTdlb05Sb2ZtVA?oc=5"
    }
   }
  ]
