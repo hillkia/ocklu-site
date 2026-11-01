@@ -391,9 +391,13 @@ var API="https://njghzieuuopukuagrswu.supabase.co/functions/v1/hypermarket";
 var WARNA={};
 var PLANET=[
   {id:"chatgpt",nama:"ChatGPT",cocok:/ChatGPT|OpenAI/},{id:"claude",nama:"Claude",cocok:/Claude|Anthropic/},
-  {id:"perplexity",nama:"Perplexity",cocok:/Perplexity/},{id:"gemini",nama:"Gemini",cocok:/Gemini|Google/},
+  {id:"perplexity",nama:"Perplexity",cocok:/Perplexity/},{id:"gemini",nama:"Gemini",cocok:/Gemini/},
   {id:"bing",nama:"Bing · Copilot",cocok:/Bing|IndexNow|Yandex/},{id:"mcp",nama:"Agen MCP",cocok:/^MCP|Cursor|skrip|agen tak/},
-  {id:"gumroad",nama:"Kasir Gumroad",cocok:/kasir|gumroad/i},{id:"suara",nama:"Agen suara",cocok:/gibberlink/i}
+  {id:"gumroad",nama:"Kasir Gumroad",cocok:/kasir|gumroad/i},{id:"suara",nama:"Agen suara",cocok:/gibberlink/i},
+  // planet luar (1 Nov): garis menyala dari aktivitas nyata (S.planet_luar), yang belum tersambung digambar redup "belum"
+  {id:"google",nama:"Google · YouTube",cocok:/Google|YouTube/,luar:1},{id:"amazon",nama:"Amazon",cocok:/Amazon/,luar:1},{id:"hn",nama:"Hacker News",cocok:/Hacker News/,luar:1},
+  {id:"shopee",nama:"Shopee",cocok:/Shopee/,luar:1},{id:"facebook",nama:"Facebook · IG",cocok:/Facebook|Instagram/,luar:1},{id:"shopify",nama:"Shopify",cocok:/Shopify/,luar:1},
+  {id:"fiverr",nama:"Fiverr",cocok:/Fiverr/,luar:1},{id:"alibaba",nama:"Alibaba",cocok:/Alibaba|AliExpress/,luar:1},{id:"baidu",nama:"Baidu",cocok:/Baidu/,luar:1}
 ];
 var S=null, aliran=[];
 function ls(k,v){try{if(v===undefined)return localStorage.getItem(k);if(v===null)localStorage.removeItem(k);else localStorage.setItem(k,v)}catch(e){return null}}
@@ -454,11 +458,11 @@ function gambar(now){
   cx.fillStyle=g;cx.beginPath();cx.arc(pc.x,pc.y,60,0,7);cx.fill();
   cx.fillStyle="#eef0ff";cx.font="700 12px -apple-system,sans-serif";cx.textAlign="center";cx.fillText("OCKLU",pc.x,pc.y+4);
   // planet
-  var aktif={};aliran.forEach(function(a){aktif[a.planet]=(aktif[a.planet]||0)+1});
-  PLANET.forEach(function(p,i){var q=posPlanet(i,t),on=!!aktif[p.id];
+  var aktif={},L=(S&&S.planet_luar)||{};aliran.forEach(function(a){aktif[a.planet]=(aktif[a.planet]||0)+1});
+  PLANET.forEach(function(p,i){var q=posPlanet(i,t),lu=p.luar?L[p.id]:null,on=!!aktif[p.id]||!!(lu&&lu.n>0);
     cx.strokeStyle=on?"rgba(124,245,212,.55)":"rgba(255,255,255,.07)";cx.lineWidth=on?1.4:1;cx.setLineDash(on?[]:[3,6]);cx.beginPath();cx.moveTo(pc.x,pc.y);cx.lineTo(q.x,q.y);cx.stroke();cx.setLineDash([]);
     cx.fillStyle=on?"#7cf5d4":"rgba(185,155,255,.55)";cx.beginPath();cx.arc(q.x,q.y,on?9:6,0,7);cx.fill();
-    cx.fillStyle=on?"#eef0ff":"#9aa0bd";cx.font=(on?"600 ":"")+"12px -apple-system,sans-serif";cx.fillText(p.nama+(on?" · "+aktif[p.id]:""),q.x,q.y-14)});
+    cx.fillStyle=on?"#eef0ff":"#9aa0bd";cx.font=(on?"600 ":"")+"12px -apple-system,sans-serif";cx.fillText(p.nama+(lu?(lu.n>0?" · "+Number(lu.n).toLocaleString("id-ID")+" "+lu.ket:" · belum"):(on?" · "+aktif[p.id]:"")),q.x,q.y-14)});
   // neuron
   var ids=Object.keys(WARNA);if(!ids.length)ids=[];
   ids.forEach(function(id,k){
