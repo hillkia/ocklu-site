@@ -1,5 +1,5 @@
 {
- "w": "2026-11-01T13:45:54Z",
+ "w": "2026-11-01T14:49:21Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -38,6 +38,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-01T14:08:00Z",
+   "media": 2,
+   "judul": {
+    "id": "Banjir Rendam Enam Desa di Kecamatan Pante Ceureumen Aceh Barat",
+    "en": "Banjir Rendam Enam Desa di Kecamatan Pante Ceureumen Aceh Barat"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Akurat.co",
+    "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1YQTJMUTczaTViMnBkLWh1azZpSlh3Tk52MlVKbFN4OERSTkVDRW10elMxVEVXbU1tZjVZTnpxYV9uYkFCTlNfdktURFYxVTR5M0QzZTNiNUIxTkNDZUNrSXRMeHJBc2tvNDlLZi02UkdHN1lqcUxXTHVIaw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-01T12:49:00Z",
    "media": 2,
    "judul": {
@@ -51,6 +68,23 @@
    "sumber": {
     "nama": "Inilah.com",
     "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOdWdTVXVwbUV1Yy1ZVjl5RGJpMWNHTk5ldVh3cnFuS080R3d1X0Z4R0JWZTc0bzVoZlFCcEtXdTZ3MVduNHFuZjVSWjFKcUNrMEt2Q0steklOMXRjY1N0QkdLVlo1bF9xZUVjSERnZkN0bk9ld3pxV09TSy1TbFBGdGhIYldZWEZt?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-10-31T22:24:00Z",
+   "media": 5,
+   "judul": {
+    "id": "Pemerintah Mau Kurir dan Ojol Pakai Motor Listrik di 2027, Ini Peta Jalannya",
+    "en": "Pemerintah Mau Kurir dan Ojol Pakai Motor Listrik di 2027, Ini Peta Jalannya"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Koridor.co.id",
+    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBoZk93WFd4ak5sZUcydU0xRmFUNzlleGhtQ1p5WUNiY3pqMEhiQktrdFlxaTFBSEQ1SzhkNWtrNDFnRjFXek9RQnIydzI4bkY4QWw0bDFXXzhjbjFYVUV4NEw3UUZfWEVYNFJzTA?oc=5"
    }
   },
   {
@@ -102,6 +136,40 @@
    "sumber": {
     "nama": "Sorot News",
     "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPU19RZ1ZQZjlvdVZIeUhSTjBCdW1JejBPVEp2eW1nUHNQNUdwYjBRYnRodGNBYVZZSFMyOTJVRC1oYk84em1rQkdReWhvRHNiX2lZYVJOV0hEcUtidGtVdHg3eWE4YnBuRy1WQnlDTVB4ZlNoQkNRUlN2ejFkSXdZcndRMEhjcW91b1doM1RVMW5zRDdFalF4ZmJrRnQ4YUc4M05JSDlWcXZkazRkeUVLdWoyY2N6WVp2SldSdFdreHMyQ0F3?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-01T14:16:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Mengevaluasi Efek Bumerang Komisi Ojol 8 Persen",
+    "en": "Mengevaluasi Efek Bumerang Komisi Ojol 8 Persen"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "HARIAN DISWAY",
+    "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOdGxtMkdqNUZUdllHWWZaNG5SV1lDM2ZLUmdhd0dIZUFOQ0VzNHU5ME0xZ1laaU1qTHBzdXR3OFZmb3dsbG9KdklKWmwyQ1dnenhVMUNfSGVsZ2VtNVUxQmxOc1dtbnZfV3Q2M1RoRi1yQkN5MXlkMS1mclRrMW8yNlBpU2JPdjZNRzUxNtIBiwFBVV95cUxORlpZbGI3MVU3NDRoWVczT2Z6ekkyVVYxaG1hTG94b2d1TFB6VkhnOTVfZEFnX3NIUTBHUVptbFdlMVVzNTEtRTM1ZVd4SHpxd0lOMWxOVDJQQnVUcHpWSGFqa1VaTlJlZmRkRmFRVFNTT1RoeEFEeXpybHh6ZDJNQlFzeHFtcFRWdG9n?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-01T13:58:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Viral Kericuhan Ojol di Pantai Suluban Bali, Ini Temuan Polsek Kuta Selatan",
+    "en": "Viral Kericuhan Ojol di Pantai Suluban Bali, Ini Temuan Polsek Kuta Selatan"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "JPNN.com",
+    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPN1JnM1JTTUtxUHVKSEtVczh4U3Y0T2lrMFUzekJJcmVYRG0wcnRMR3NSVjQ0Vzg5bkswcHZJbFJZX3RMNmdGNFc2ZnJENklDczZNLTdzbU9INWpUYlhJVW9aTTNHZ203Y09NSWRvcFNBbHY0cEx4Ym55UFctWWdiUjZiMDNON1dhV3czZGhXTENRbERuWldEcVJwSDB0VjVVMVlta1JNU01XZVhiZGs0WA?oc=5"
    }
   },
   {
@@ -191,6 +259,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-01T10:16:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Deretan HP Ojol 2026 Paling Dicari dengan Baterai Monster 7000 mAh yang Tangguh Dipakai Narik Seharian Penuh",
+    "en": "Deretan HP Ojol 2026 Paling Dicari dengan Baterai Monster 7000 mAh yang Tangguh Dipakai Narik Seharian Penuh"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Disway Jogja",
+    "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNWFA5S1FsZDd0NjdZRURDeWNsSWVwWGdWbXpXempWTnRtRTFZVkNudWhiTFVodXlDYVZkN1JCQktsbWxuNUdtX0Ftcmo0blN4SmtxdVhwQkx2eERKMnJIZ3NGQl9NRlhfSlFleEplRXU0SjdaU2lvQkZNZjVFbWJkVm43eUNaSjhnT29YcERmQ1hiS2RLZ2UtU1R6d0ltTUlvSVB0aDg1ZWI1WGtHZUhvT1RJUTRJV3ZYcTNRcjFDdFFTbDJoV19iY21razlJMXlvZ0hOTlZmNlQ0c3fSAdsBQVVfeXFMTVhQOUtRbGQ3dDY3WUVEQ3ljbEllcFhnVm16V3pqVk50bUUxWVZDbnVoYkxVaHV5Q2FWZDdSQkJLbG1sbjVHbV9BbXJqNG5TeEprcXVYcEJMdnhESjJySGdzRkJfTUZYX0pRZXhKZUV1NEo3WlNpb0JGTWY1RW1iZFZuN3lDWko4Z09vWHBEZkNYYktkS2dlLVNUendJbU1Jb0lQdGg4NWViNVhrR2VIb09USVE0SVd2WHEzUXIxQ3RRU2wyaFdfYmNta2s5STF5b2dITk5WZjZUNHN3?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-10-31T10:01:30Z",
    "media": 8,
    "judul": {
@@ -225,87 +310,19 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-01T09:00:10Z",
-   "media": 1,
+   "waktu": "2026-11-01T03:04:00Z",
+   "media": 2,
    "judul": {
-    "id": "Cek! Ini Daftar Harga BBM di Semua SPBU per 1 November",
-    "en": "Cek! Ini Daftar Harga BBM di Semua SPBU per 1 November"
+    "id": "Wali Kota Pontianak Apresiasi Rumah Singgah Ojol, Dorong Penguatan Solidaritas dan Ekonomi Keluarga",
+    "en": "Wali Kota Pontianak Apresiasi Rumah Singgah Ojol, Dorong Penguatan Solidaritas dan Ekonomi Keluarga"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "detikFinance",
-    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPM2staTRQcWl6Q2hudm5hS3diTzJNOHNDMl9yanY4aEwyZFp4WGJXeUwzZmFZNGF5ME5abFIzeGphR0JQMTFhVWRXbDV2Wm9DcHZzWkpYRFFlem9pWmV3RVI5cXVSOUZqVmNUaVVTLXcxWF95bkxjREJjaEpRcGxQalBiaUZ4X0Q2bWw4UUpjOFpQS05CdmFSbF9aR03SAaIBQVVfeXFMTXFyVmNMYl91RmZ5ODhWLVpIQmg4cEptVDJ1ZFpOdW5OWmUzSXF2T0JVakpmUFkzdWhZMW1pVW1EdElDVU5kSGUwWUM4c3lfaW92TDB3SlZyUnBsUzcwS0JDeWp0N01qVXlKLXRIOEYyVW5hQnk4d285V3N0NGI3WVBwS09Nc25aVm1FQzNIQWhTdUpzSTc4RDRMa1BNRVg3UkZ3?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-01T08:54:35Z",
-   "media": 1,
-   "judul": {
-    "id": "Koleksi Link Bokep SMA, Bokep Hijab, Bokep Ojol, Bokep Crot dan Bokep Montok Paling Lengkap Full Hd",
-    "en": "Koleksi Link Bokep SMA, Bokep Hijab, Bokep Ojol, Bokep Crot dan Bokep Montok Paling Lengkap Full Hd"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Pierce Manufacturing",
-    "url": "https://news.google.com/rss/articles/CBMi4gJBVV95cUxQZ1NZTWpjOFRqU0g1QS1ULWc2SFJrOFFaNDN2Q2ZfNk1ZN3hJVjZZaE96clcwLUduX0lpazJzRHdEMmRmeWNMYllTWTJlblU5czMyY0hqY25TNWxwZy05Sm9LZGdycjROaGxRejY0NnQ5aE5yTlhtSHZ0Z1BRZnZKRXJzX0U5TW5feFc3UlIyRkdKZE85OXJheGR5RXluU0YzaE4yUEJFZ2luZEdPN1NlQnA4cjd6b3F6MFhzQkdwb0pFVnd0azQxaUVkcnFxME9CWGwwbE8wcTNHdVN5ajFGN3JqM3pIWFM4UE1wNXNOTjhDdUtwTkJ4NUNXaHlDcXhJME4yaGxaZENiWV9YWjN3dTRTei1BZnk0VUhlMERpM1J2SFhLdkV1UnhNOGM1YkRRY2xpc0tpRjJOSzh0bTRFYTFOSExXQXV3T0JLTERWaERIcXJYS1h1ZWJmNXRTNlFWNkE?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-31T08:28:00Z",
-   "media": 8,
-   "judul": {
-    "id": "Polda Sumut Gandeng Komunitas Ojol, Ajak Jadi Pelopor Keselamatan Berlalu Lintas",
-    "en": "Polda Sumut Gandeng Komunitas Ojol, Ajak Jadi Pelopor Keselamatan Berlalu Lintas"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Radargep.com",
-    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQMXdXRjMtU3lUazFhdnBzbTdWT3NPWlpZa3N6SWFOOWJ3QUVUMTlOZFlVVjU0WllSTjVOMXlZUFJDallwSG1uWXoyZGk2UVNOYl9ST2VRTkJCdFlSTlRzdlRYUG5RNHFOc2syWFE5X0V4bjJlZDA5d3lFcWxyeGJMT2ZfYVAwSFhnb3lObDJvWE4zb1FJSjZ4VkN6V2NOY2JwUThtSDI2NGw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-31T17:14:00Z",
-   "media": 4,
-   "judul": {
-    "id": "Pemerintah Mau Kurir dan Ojol Pakai Motor Listrik di 2027, Ini Peta Jalannya",
-    "en": "Pemerintah Mau Kurir dan Ojol Pakai Motor Listrik di 2027, Ini Peta Jalannya"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Demokratis.co.id",
-    "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE04U1A4LWFwRktNcE05Y0UyTnI5NWRkOWI2aW0yaUwtclNfZFlRZ0ljN0xMWmZQMzdwZVkxLXhjUmJVRXVJTmM0WWtWdkRJa0ZYVG1MdHpGV09JZlJRZm15Z0pHbkhaZ1lE?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-01T07:10:17Z",
-   "media": 1,
-   "judul": {
-    "id": "Perkuat Kemitraan dengan Masyarakat, Kapolres Badung Gelar Minggu Kasih di Tibubeneng",
-    "en": "Perkuat Kemitraan dengan Masyarakat, Kapolres Badung Gelar Minggu Kasih di Tibubeneng"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Deteksi Post",
-    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNNXUzcEhvdVZzNVBkeEZzWHlfV0dHeHlfaVlLYjR4eWFQYVNudkJqU1kzVkVVVEhBRWFCRi1KSUc1YzYwQ1VkNzgtTnhNck8xVkFaRlZYSVREa3FlbDJTdnpzNXl1VUJTOThhcE4xOXE0eUJGaGgzSHBYUnVCcU9KYm4wT0hseDE0RkJ0aXRFdDVJWjBtcDl6bzVnZkZKTDNoeEZuanFUTE1aOV9vZ3pfeW5VLTdlb05Sb2ZtVA?oc=5"
+    "nama": "Dio TV",
+    "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQdDVaVG9UbEJwZ29lQUQ1cEJucmRocFJnWTBBa01ac1JRdzJUSnJFZjhidFIyd1lTZjFLRTdpZHRmcDlBZk5iVF9nOWNWbUw4T3Q3VUw3RTB3a1B5UE1XeTR1OEUzbEVZdWVRYkl5eEJIYnkyUEcyQ2VBQUF0XzViOFlsZ1E5Y2dHdDM2MVM4M0Z4TlJ6NzdRbS1LYVlNbXplaW5SSi1ZOUdraWZSVnUzY19WTW1UbW5sakhieENOazh5cnBPbU15eC1xM1J2Q1doVjZINWY5NXU0bHh1OUHSAeMBQVVfeXFMT21NZXMyLU1VaWQtXzY4c2NoVFNtZndkeXktcHBMbXdFbUQ1Rm1YR0cyYUpwT1dfVlpmRENBek5OMXhvelo2Q2g4aW4zVWFyYzFxbUtQdzNRQjMybW9sdUVJdjhIcVFaY01yVVpGbFZ4SUNZc2JtM2RxWEEtdU4wZkM0V05wV2NIcFdLMWNoZlBkZnhDdy1kQ2lneFUzZVItZFRmaUdmUXRldDJMaE9JcDRiRWV5bDlqS0NITXlnY2hYY0ZuQ1I4Y1Axc0VpZUFfTEdsU0xmb0xlQTdaNzVuNkxteFk?oc=5"
    }
   }
  ]
