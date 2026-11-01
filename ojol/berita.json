@@ -1,5 +1,5 @@
 {
- "w": "2026-11-01T08:25:33Z",
+ "w": "2026-11-01T12:40:42Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -38,6 +38,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-01T09:00:10Z",
+   "media": 1,
+   "judul": {
+    "id": "Cek! Ini Daftar Harga BBM di Semua SPBU per 1 November",
+    "en": "Cek! Ini Daftar Harga BBM di Semua SPBU per 1 November"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "detikFinance",
+    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPM2staTRQcWl6Q2hudm5hS3diTzJNOHNDMl9yanY4aEwyZFp4WGJXeUwzZmFZNGF5ME5abFIzeGphR0JQMTFhVWRXbDV2Wm9DcHZzWkpYRFFlem9pWmV3RVI5cXVSOUZqVmNUaVVTLXcxWF95bkxjREJjaEpRcGxQalBiaUZ4X0Q2bWw4UUpjOFpQS05CdmFSbF9aR03SAaIBQVVfeXFMTXFyVmNMYl91RmZ5ODhWLVpIQmg4cEptVDJ1ZFpOdW5OWmUzSXF2T0JVakpmUFkzdWhZMW1pVW1EdElDVU5kSGUwWUM4c3lfaW92TDB3SlZyUnBsUzcwS0JDeWp0N01qVXlKLXRIOEYyVW5hQnk4d285V3N0NGI3WVBwS09Nc25aVm1FQzNIQWhTdUpzSTc4RDRMa1BNRVg3UkZ3?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-10-31T10:01:30Z",
    "media": 7,
    "judul": {
@@ -68,6 +85,23 @@
    "sumber": {
     "nama": "Demokratis.co.id",
     "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE04U1A4LWFwRktNcE05Y0UyTnI5NWRkOWI2aW0yaUwtclNfZFlRZ0ljN0xMWmZQMzdwZVkxLXhjUmJVRXVJTmM0WWtWdkRJa0ZYVG1MdHpGV09JZlJRZm15Z0pHbkhaZ1lE?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-01T04:10:56Z",
+   "media": 1,
+   "judul": {
+    "id": "Musim Hujan Diprediksi Lebih Awal, Begini Persiapan DKI Hadapi Potensi Banjir",
+    "en": "Musim Hujan Diprediksi Lebih Awal, Begini Persiapan DKI Hadapi Potensi Banjir"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "detikNews",
+    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNa055VmFkM1ctWGZEQ0VKLVdvUlp0Z3RSZmNHMXJNV09sQXBMZ1R3VlM1NmxiN0x2ZFpnNnJUNGpOVFFpbHRDeXVValFLSnctYWpiYjlQWXFYLVRleXBGTnhXYmpISHRkN01vWVFILVlqWk1fbjFkTS1WMWZVTnY0c3J3MHA0eFFiTDRlZjR4dERCWnJvbGtwOXJWOGwyMHJCbGtZenFuenFFS2ltSW9XeUhoUUlQSmfSAbwBQVVfeXFMTmV1cHhRN1ZoR3ZFR281d2REREgtc0Z5MTdqUjlJLUtIZUN4X2wyaGJBeVpGdUpuSDd6aFdPdmI3amNpbmN1WWF0bzI4TlVrQWowdzRjekRsZ0VzUm1tNVhRNzgwRlEzLWxyV0kzaXBsd1NoZ1dubmJhaDZUTU11U1dvcWgxN0JzZkpIT0YtZzVTSkt5RGl2bUFwZDBkS1g0N24wQzg4VlR2WU9ZVDdBbkxMMG1hOG85REZTRGk?oc=5"
    }
   },
   {
