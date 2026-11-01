@@ -109,7 +109,7 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
 <details class="panel" style="overflow-x:auto;margin-top:10px"><summary style="cursor:pointer;font-weight:600">8 minggu terakhir</summary><table><thead><tr><th>Minggu</th><th>Minta link</th><th>Kasir TerTau dibuka</th><th>Tagihan x402</th><th>Minta dipertemukan</th><th>Lunas</th></tr></thead><tbody id="sinyalTabel"></tbody></table></details>
 <p class="kaki" id="sinyalKet" style="margin-top:8px"></p>
 
-<nav class="tabbar" id="tabbar" aria-label="Bagian dasbor"><a href="#sinyal">Sinyal beli 🛒</a><a href="#grafik">Grafik 📈</a><a href="#tebar">Tebar Jala 🕸️</a><a href="#komunitas">Komunitas agen 🤝</a><a href="#bukti">Bukti MARKUS 📜</a><a href="#exit">Exit goal</a><a href="#penjaga">Grigori 🛡️</a><a href="#makelar">Pasar Makelar</a><a href="#klien">Klien Khusus</a><a href="#jemput">Jemput Bola</a><a href="#turnamen">Turnamen</a><a href="#ofinpay">Ofin Pay</a><a href="#obrolan">Obrolan agen</a><a href="#arus">Rumus Arus</a><a href="#radar">Radar Niat</a><a href="#cari">Cari agen</a><a href="#bicara">Bicara dengan agen</a><a href="#gibberlink">Gibberlink</a><a href="#datang">Agen datang</a><a href="#agenKita">Agen kita</a><a href="#neuronOwner">Neuron · Owner 🔧</a><a href="#detak30h">Detak 30 mnt</a><a href="#belanja">Cara belanja</a><a href="#manusia">Pengunjung</a><a href="#uang">Alur uang</a><a href="#jual">Yang dijual</a><a href="/ofin/">Ofin ↗</a><a href="/hypermarket/pasar/">Pasar teks ↗</a><a href="/siap-dibaca-ai/">Siap Dibaca AI ↗</a><a href="/airank/">AIRANK ↗</a><a href="/ai-readiness/">AI-readiness ↗</a><a href="/direktori-agen/">Direktori agen ↗</a><a href="https://glama.ai/mcp/servers?query=ocklu" target="_blank" rel="noopener">MCP Registry ↗</a></nav>
+<nav class="tabbar" id="tabbar" aria-label="Bagian dasbor"><a href="#sinyal">Sinyal beli 🛒</a><a href="#grafik">Grafik 📈</a><a href="#tebar">Tebar Jala 🕸️</a><a href="#komunitas">Komunitas agen 🤝</a><a href="#bukti">Bukti MARKUS 📜</a><a href="#exit">Exit goal</a><a href="#penjaga">Grigori 🛡️</a><a href="#makelar">Pasar Makelar</a><a href="#klien">Klien Khusus</a><a href="#saranIklan">Saran Iklan 📣</a><a href="#jemput">Jemput Bola</a><a href="#turnamen">Turnamen</a><a href="#ofinpay">Ofin Pay</a><a href="#obrolan">Obrolan agen</a><a href="#arus">Rumus Arus</a><a href="#radar">Radar Niat</a><a href="#cari">Cari agen</a><a href="#bicara">Bicara dengan agen</a><a href="#gibberlink">Gibberlink</a><a href="#datang">Agen datang</a><a href="#agenKita">Agen kita</a><a href="#neuronOwner">Neuron · Owner 🔧</a><a href="#detak30h">Detak 30 mnt</a><a href="#belanja">Cara belanja</a><a href="#manusia">Pengunjung</a><a href="#uang">Alur uang</a><a href="#jual">Yang dijual</a><a href="/ofin/">Ofin ↗</a><a href="/hypermarket/pasar/">Pasar teks ↗</a><a href="/siap-dibaca-ai/">Siap Dibaca AI ↗</a><a href="/airank/">AIRANK ↗</a><a href="/ai-readiness/">AI-readiness ↗</a><a href="/direktori-agen/">Direktori agen ↗</a><a href="https://glama.ai/mcp/servers?query=ocklu" target="_blank" rel="noopener">MCP Registry ↗</a></nav>
 <p id="iklanKecil" hidden style="font-size:13px;margin:6px 0 0;padding:6px 10px;border:1px dashed currentColor;border-radius:8px;opacity:.75"></p>
 <h2 id="exit" data-w="peristiwa">Exit goals · jalan sampai bisa dijual</h2>
 <div class="panel"><ol class="tujuan" id="tujuan"></ol><p class="kosong" id="tujuanKet" style="margin:12px 0 0"></p></div>
@@ -285,6 +285,12 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
   <div class="angka" id="bkAngka"></div>
   <div style="overflow-x:auto;margin-top:10px"><table><thead><tr><th>Waktu (WIB)</th><th>Agen</th><th>Kode bukti</th><th>Dicari</th><th>Hasil</th></tr></thead><tbody id="bkDaftar"><tr><td colspan="5" class="kosong">memuat…</td></tr></tbody></table></div>
   <p class="kaki" id="bkKet" style="margin-top:8px"></p>
+</div>
+
+<h2 id="saranIklan">📣 Saran iklan minggu ini · per klien</h2>
+<div class="panel">
+  <p class="kosong" style="margin:0 0 8px">Pengganti tebak-tebakan iklan: kata yang sedang diketik orang di Google, YouTube, dan Bing untuk barang tiap klien, lengkap dengan judul, caption, status WA, kata kunci iklan, dan kata negatif siap salin. Klien melihat bagian yang sama di laporan pribadinya.</p>
+  <div id="siDaftar" class="kosong">buka dari perangkat owner untuk memuat…</div>
 </div>
 
 <h2 id="jemput">Jemput Bola · agen yang aktif memburu</h2>
@@ -795,6 +801,11 @@ function muatKom(){fetch(API+"?r=komunitas&n=50&semua=1",{headers:hOw(),cache:"n
 document.getElementById("komTulis").onsubmit=function(ev){ev.preventDefault();var f=this,k=document.getElementById("komKet");k.textContent="mengirim…";
   fetch(API+"?r=komunitas",{method:"POST",headers:hOw(),body:JSON.stringify({aksi:"tulis",isi:f.isi.value,jenis:"info"})}).then(function(r){return r.json()}).then(function(d){k.textContent=d.galat?"✗ "+d.galat:"terkirim (#"+d.id+")";if(!d.galat){f.reset();muatKom()}}).catch(function(){k.textContent="✗ gagal mengirim"})};
 muatKom();
+function muatSaranIklan(){var el=document.getElementById("siDaftar");fetch(API+"?r=kpi_klien&hari=30",{headers:hOw(),cache:"no-store"}).then(function(r){return r.json()}).then(function(d){if(d.galat){el.textContent=d.galat;return}
+  var K=(d.klien||[]).filter(function(k){return k.jenis==="cari_pembeli"});el.className="";
+  el.innerHTML=K.length?K.map(function(k,i){var t=((k.iklan||{}).kata||[]).slice(0,3).map(function(x){return x.kata}).join(" · ");return'<details'+(i?'':' open')+' style="margin:0 0 10px"><summary style="cursor:pointer"><b>'+esc(k.nama)+'</b> <span class="kosong">'+esc(t||"belum ada data")+'</span></summary>'+(window.saranIklan?window.saranIklan(k):"")+'</details>'}).join(""):'<span class="kosong">Belum ada klien cari pembeli.</span>'
+}).catch(function(){el.textContent="gagal memuat saran iklan"})}
+muatSaranIklan();
 function muatNw(){var tb=document.getElementById("nwDaftar");fetch(API+"?r=neuron_owner",{headers:hOw(),cache:"no-store"}).then(function(r){return r.json()}).then(function(d){if(d.galat){tb.innerHTML='<tr><td colspan="5" class="kosong">'+esc(d.galat)+"</td></tr>";return}
   tb.innerHTML=(d.neuron||[]).map(function(n){return'<tr><td><span class="bulat" style="background:'+esc(n.warna)+'"></span> <b>'+esc(n.nama)+"</b></td><td>"+esc(n.peran)+"</td><td>"+(n.bertugas?"⚙️ ada":'<span class="kosong">belum</span>')+"</td><td>"+(n.aktif?"tersambung":'<span class="kosong">belum tersambung</span>')+'</td><td><button type="button" data-nw="'+esc(n.id)+'" data-na="'+(n.aktif?"lepas":"sambung")+'">'+(n.aktif?"Lepas":"Sambungkan")+"</button></td></tr>"}).join("");
   tb.querySelectorAll("[data-nw]").forEach(function(b){b.onclick=function(){var a=b.getAttribute("data-na");if(a==="lepas"&&!confirm("Lepas "+b.getAttribute("data-nw").toUpperCase()+" dari dasbor? DNA tetap disimpan."))return;b.disabled=true;
@@ -929,4 +940,5 @@ fetch(API+"?r=daftar_turnamen",{method:"POST",headers:{"Content-Type":"applicati
 </body>
 </html>
 
+<script src="iklan.js"></script>
 <script src="/hm.js" defer></script>
