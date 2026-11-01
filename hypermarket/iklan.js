@@ -22,6 +22,31 @@
       + ".iklan .lemah{opacity:.75;font-size:13px}.iklan li{margin:4px 0}";
     document.head.appendChild(st);
   }
+  function saranKonten(k, K, N, ps, minggu1, link) {
+    // judul dari ketikan YouTube didahulukan (orang mencari VIDEO-nya), lalu Google/Bing
+    var Y = K.filter(function (x) { return (x.sumber || []).indexOf("youtube") >= 0; }).concat(K.filter(function (x) { return (x.sumber || []).indexOf("youtube") < 0; }));
+    var top = Y.slice(0, 10).map(function (x) { return x.kata; }), nama = k.nama || "";
+    var sub = /youtube\.com\/(@|channel\/|c\/)/i.test(link) ? link.replace(/[?#].*$/, "") + "?sub_confirmation=1" : link;
+    var judul = top.map(function (t, i) { return besar(t) + (i % 3 === 0 ? " (Lengkap)" : i % 3 === 1 ? " — Cara Mudah" : ""); });
+    var tag = Y.slice(0, 15).map(function (x) { return x.kata; }).join(", ");
+    var tg = Y.slice(0, 8).map(function (x) { return tagar(x.kata); }).join(" ");
+    var desk = "Di video ini: " + top[0] + ".\n" + (top[1] ? "Juga dibahas: " + top.slice(1, 4).join(", ") + ".\n" : "") + "\n00:00 Pembuka\n00:30 " + besar(top[0]) + "\n"
+      + (top[1] ? "03:00 " + besar(top[1]) + "\n" : "") + "\n" + (sub ? "Subscribe " + nama + ": " + sub + "\n" : "") + "\n" + tg;
+    var ide = [["Video pendek 30 detik", besar(top[0]) + " dalam 30 detik"], ["Sebelum vs sesudah", besar(top[1] || top[0])], ["3 kesalahan", "3 kesalahan soal " + (top[2] || top[0])],
+      ["Jawab pertanyaan", (top[3] || top[0]) + "? Ini jawabannya"], ["Seri harian", besar(top[0]) + " — hari 1 dari 7"]];
+    return '<div class="iklan">'
+      + '<p><b>🎬 Mode konten</b>: yang dipromosikan klien ini adalah channel, jadi saran berikut untuk <b>judul video, tag, dan deskripsi</b>. Sumber: ketikan nyata di YouTube'
+      + (ps.google ? ", Google" : "") + (ps.bing ? ", Bing" : "") + " (tingkat Indonesia, 7 hari)." + (minggu1 ? " <b>Minggu pertama dipantau</b>: tanda naik/turun muncul mulai minggu depan." : "") + "</p>"
+      + "<h3>1. Judul video yang sedang dicari orang</h3><ol>" + judul.map(function (j, i) { return "<li>" + e(j) + salin(j) + ' <span class="lemah">' + tren(Y[i], minggu1) + " · urutan " + (Y[i].pos || "-") + "</span></li>"; }).join("") + "</ol>"
+      + '<p class="lemah">Judul memakai kata persis yang diketik orang, supaya video muncul saat mereka mencari. Ganti akhiran sesuai isi video.</p>'
+      + "<h3>2. Tag dan tagar</h3><p><b>Tag YouTube</b>" + salin(tag) + "<pre>" + e(tag) + "</pre></p><p><b>Tagar (YouTube, TikTok, IG)</b>" + salin(tg) + "<pre>" + e(tg) + "</pre></p>"
+      + "<h3>3. Templat deskripsi video</h3><p>" + salin(desk, "Salin deskripsi") + "<pre>" + e(desk) + "</pre></p>"
+      + "<h3>4. Ide video pendek (Shorts, Reels, TikTok)</h3><ul>" + ide.map(function (x) { return "<li><b>" + e(x[0]) + "</b>: " + e(x[1]) + salin(x[1]) + "</li>"; }).join("") + "</ul>"
+      + "<h3>5. Langkah minggu ini</h3><ol><li>Unggah 2 video memakai judul nomor 1 dan 2.</li><li>Unggah 3 video pendek dari ide di atas, dengan link channel di keterangan.</li>"
+      + "<li>Sematkan komentar pertama berisi link subscribe, lalu balas setiap komentar dalam 24 jam.</li><li>Minggu depan: judul bertanda ▲ naik dijadikan video berikutnya.</li></ol>"
+      + (N.length ? '<p class="lemah">Kata yang sengaja dilewati (biasanya penonton yang tidak tertarik channel): ' + e(N.map(function (x) { return x.kata; }).join(", ")) + "</p>" : "")
+      + '<p class="lemah">Jujur: OCKLU tidak membeli atau memalsukan view dan subscriber (melanggar aturan YouTube, channel bisa dihapus). Yang kami lakukan: memperkenalkan channel ke agen AI dan mengarahkan konten ke yang sedang dicari orang. Angka subscriber tidak dijanjikan.</p></div>';
+  }
   window.saranIklan = function (k) {
     gaya();
     var I = k.iklan || {}, semua = I.kata || [];
@@ -29,6 +54,9 @@
     var B = (k.barang || []).filter(function (b) { return b.status === "aktif"; }), b0 = B[0] || {}, nama = k.nama || "", link = (k.kanal || [])[0] || "";
     var minggu1 = !I.mulai || Date.now() - new Date(I.mulai).getTime() < 7 * 864e5, ps = I.per_sumber || {};
     if (!K.length) return '<p class="lemah">Belum ada data saran ketik untuk barang ini. EZRA memeriksa tiap 2 jam; saran muncul setelah nama barang tercatat.</p>';
+    // MODE KONTEN (1 Nov): klien yang dipromosikan adalah channel (YouTube/TikTok/IG) → saran judul video, tag, deskripsi, ide video pendek
+    var kanalKonten = (k.kanal || []).filter(function (u) { return /youtube\.com|youtu\.be|tiktok\.com|instagram\.com/i.test(u); })[0] || "";
+    if (kanalKonten || B.some(function (b) { return /\b(channel|kanal|konten|youtube|tiktok|podcast|vlog)\b/i.test(b.judul); })) return saranKonten(k, K, N, ps, minggu1, kanalKonten || link);
     var top = K.slice(0, 3).map(function (x) { return x.kata; });
     var judul = besar(top[0]) + (rp(b0) ? " – " + rp(b0) : "") + (nama ? " | " + nama : "");
     var cap = "Lagi cari " + top[0] + "? " + (b0.judul ? besar(b0.judul) : "Barang kami") + (rp(b0) ? " cuma " + rp(b0) : "") + ". "
