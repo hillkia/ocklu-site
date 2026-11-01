@@ -1,5 +1,5 @@
 {
- "w": "2026-11-01T20:40:09Z",
+ "w": "2026-11-01T22:15:30Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -102,6 +102,23 @@
    "sumber": {
     "nama": "Inilah.com",
     "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOdWdTVXVwbUV1Yy1ZVjl5RGJpMWNHTk5ldVh3cnFuS080R3d1X0Z4R0JWZTc0bzVoZlFCcEtXdTZ3MVduNHFuZjVSWjFKcUNrMEt2Q0steklOMXRjY1N0QkdLVlo1bF9xZUVjSERnZkN0bk9ld3pxV09TSy1TbFBGdGhIYldZWEZt?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-01T16:35:37Z",
+   "media": 1,
+   "judul": {
+    "id": "Enam Tewas dalam Kecelakaan Truk Molen di Bekasi, Polisi Periksa Pengemudi",
+    "en": "Enam Tewas dalam Kecelakaan Truk Molen di Bekasi, Polisi Periksa Pengemudi"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "patrolihukumindonesia.com",
+    "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOdkpMaC03OFRJTE16WEk1NmtQaThNYnVtc3BCZndiZ2Q1OXhPakNFS1RyZUxUVUJmSDUwZkJOUFdGR0N2OVVyOXpWLU5nTXVHdzRzWnl3THo1dklPWHZ6Q2VTVmZXQ1FWQ1k4MDRUYWVnTXZmdXY3a3BleEhSV1NiZHYzeEpzT1BQd1JKemhRcDUwRXVlMDlQTEQzTFlDZlg2WGJLci1INnUtX0Vm?oc=5"
    }
   },
   {
@@ -255,40 +272,6 @@
    "sumber": {
     "nama": "Delik Jabar",
     "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNM0dBbVJlekI4UUM3bm11czlJQXViX2dHVWlQTmVJa2hhcFVsR1prWTE3NXJFX0NwdFl3aXBqQWNIb3Q4OVNSUzBUblpBbXlpVUxNUF9vNXlEa3d2OEs5NkJQVDdyZjVDVkt4REhFQUc4a19XNDJBRVh1ZlFqMzI4TnFEZ1RXbWVuQWRiUFlFMTE0dDV2UXpjQ3B6T19OVGpxeUM1ckx0dDVZOGFpR1BpMXEyNXkxcXZuamtaQ3ZSQdIBxAFBVV95cUxPSm5Dc01VZ1lGU2NndEVoaEdyY2ZQUTU0MWJvek5nWFpfUklGMjhaZ2NDM0FPSWhOMDNVdTNCMUp3U29vczFEVm9hbkgzemEwb3BNRkZfbGNfekh5Z2tTWE8tMjFUQWUwT1NFUVNFckN5WC11eDNwcEhOTmtKT1JsWUVId2Job1Bsc3k5MDd2djljN25JVWFDdzk4U21aWUZpVjU3UGNYdFg5QnkwYVdHOG5aNWhPb0NHM1doUFVobW1NcDFJ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-01T12:10:06Z",
-   "media": 1,
-   "judul": {
-    "id": "Ojol Rebutan Pelanggan di Pantai Suluban Pecatu, Polisi Turun Tangan",
-    "en": "Ojol Rebutan Pelanggan di Pantai Suluban Pecatu, Polisi Turun Tangan"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Beritabali.com",
-    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQTlhkblJuNDZ6eWpzaDgtS2tRUGhzT0o5UnktSVJrTktIbEp0LUduVUJhMDdaeFNPSmh4dnlyLXBnZkVCbEk0WnpldlR4QTVIYmx6TUZvSXFQRUd6R1JnYVU3V3cwZ2RQc2JzY0lGQWZsUHNyemlJWkd0dGxnblVOZlF3RlUyaTVnMDM4VHFTdndEdmpXcUY0QlRydTJ3bzZSY3E5bVNEYzZhV0N0Q2ZRckg4bUI?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-01T11:59:43Z",
-   "media": 1,
-   "judul": {
-    "id": "VinFast Motor Resmi Masuk Balikpapan, Hadirkan Motor Listrik dengan Layanan Tukar Baterai",
-    "en": "VinFast Motor Resmi Masuk Balikpapan, Hadirkan Motor Listrik dengan Layanan Tukar Baterai"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Kaltim Post",
-    "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPM0Jpc28xYWhRU1VvVTRhZ1dKUWNKX2hDOWstUGxwYW56SlUtcnlHSDhvYXBGOUhwOFg0cnI0cW9UMGpjak44ckh0MmtlZ3ZCTEd0dTNZZU9iNjhTVWc2Z1lVRWF5Um5rMDNfbVlGRW95N0U2M1BtT0FENHdoTTFlM3VhTng2S3ZMZG4zbnBnZzFQWDJaMFBOVlktaW0zeVhzNGRhNjlyWEJzRV9COUJRZHRJS2ZrZXA0VVhmbjdnSHRocURKcmtKa0dzTmZ2WE91V0530gHYAUFVX3lxTE9GdFFlYWRIdnVjbTRndWx3SE16QS10RmxFQ1VhVVpTOWRnOVpoM0VSODRnX3BIbkRPbG9ueGtySFdoLWRiWmszZldDQlF0YmdQZXVFUDczNThxajJxUmRMY3YwVHdQRFVRd1VoM1B6eUpZR21HMG9VOWRsamw0cjZGcWNwZFBVNm1RX3czX3dGMXpsQm4tOHBrYUlRcHNvdEJ2MF85aGJtQWYyTHkzYVFWRk9MOVNBeHJ3bVlYR2h1V00xdE5qZVRyTTVKdVJwb1NMVl9QeGIyWg?oc=5"
    }
   }
  ]
