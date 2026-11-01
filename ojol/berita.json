@@ -1,5 +1,5 @@
 {
- "w": "2026-11-01T01:00:56Z",
+ "w": "2026-11-01T03:46:41Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -17,6 +17,23 @@
    "sumber": {
     "nama": "Head Topics",
     "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNYjZPcUZxMmJERWxRTlZRTTdHRnlJcmYzSTBBZllhNWdqLTBDajJpbjlFRW1hVWRsalNzM0hiNzBoS3dyX1VaTnNrN0xpMDh1bFVWVFhiWG1sUHZ1WjJvMzBLa0ZmbUc4aVJKOWZfczVQdmQzZkt2MGF5MC0wZDdMMWM3dW9OdTViamFDRVBKLXJNOWVCRlRFQWhZTFV3UQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-01T03:00:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Singapura Tak Naikkan Tarif Listrik Meski RI Pangkas Ekspor Gas Alam",
+    "en": "Singapura Tak Naikkan Tarif Listrik Meski RI Pangkas Ekspor Gas Alam"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "CNN Indonesia",
+    "url": "https://www.cnnindonesia.com/internasional/20261027103855-120-1420037/singapura-tak-naikkan-tarif-listrik-meski-ri-pangkas-ekspor-gas-alam"
    }
   },
   {
@@ -272,23 +289,6 @@
    "sumber": {
     "nama": "Kompasiana.com",
     "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxObzAwN1pTWjltQW1ZV1RYMTFBcGlZNnJrb2o0VEFFdE9MT1UwazdIeTdhZUdMNlZMQ0NHaldMOVVEYTYycEdfaGh0Y3RsNEZQRWtFLXN5SldKWGRxOTQyOXR4VmtuS3dlUFhzTFdHZk04R2ZWQzZQMFQ0RnZLaVF5WmIyaExyZTBEdGpTbXZkeWtOZ0hLNlYtR1NGU3ZFQ1ZZVHBkSEtWOXkxU0h2RGs2eGJVVDNENWhObzB1eFpTc3hYdmZ4ZEFBX1U0eUFIb0E?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-31T05:38:23Z",
-   "media": 2,
-   "judul": {
-    "id": "Banjir hingga Longsor Terjang Banyumas, Tanggul Sungai Jimblem Jebol",
-    "en": "Banjir hingga Longsor Terjang Banyumas, Tanggul Sungai Jimblem Jebol"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Bintang Tenggara",
-    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQYjNDN3I0WUVrTWx2M1NnaWhuZkJ1SHJBTHJiNTBZc0p5NU83d2wwNkxmZi00a1hDa1Nfbm5Wdk1YRGZWQmlEUUdjNmpZc2N4Z3ZZaFc0bkhxXzNsRUdQU3dkTE9BdmxCdU5MRk1rVEFBRlQ1bDBwNU9RTnVSbGczSFZzejVMVzN1bEczaElDQ2FlYnJJWHp4eVZHXzRTdTFTSmZzOUFQQnp3UWZBdFN0WXNCM1Njd9IBuwFBVV95cUxOQUZwMzRmTXBMUVBoY2ZUUldpeGV0TzJIWlJuS2dXQmJibzFuV3laU2hHRlZic1VZUmxmVjlwN1Z0QzJ2Y1pDVzVUNUJaQTlRdGQzckhxUGdSZDhvVHJSbF94RjUxMFpaWE1XTk13THNIZFIybEt0eExvM3MtSmxGNXI1R045UTE5OWdDZUVOejJPR05OSTlmbklZQlU2LWdzOERiY2Z0eVJMTGJ5SXNDVnpibDJ4TjFFSU9r?oc=5"
    }
   }
  ]
