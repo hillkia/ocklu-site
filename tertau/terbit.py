@@ -24,7 +24,7 @@ ld_teks = json.dumps(ld, ensure_ascii=False, indent=1).replace("</", "<\\/")
 
 daftar = "\n".join(
     f'<li id="produk-{p["id"]}"><h2>{e(p["nama"])}</h2><p class="harga">{e(p["mata_uang"])} {harga(p)}</p>'
-    f'<p>{e(p.get("deskripsi") or "")}</p><p><a class="beli" rel="nofollow" href="{e(beli(p))}">Beli lewat PayPal</a> · file terkirim otomatis setelah PayPal mengonfirmasi pembayaran.</p></li>'
+    f'<p>{e(p.get("deskripsi") or "")}</p><p><a class="beli" rel="nofollow" href="{e(beli(p))}">Beli lewat PayPal</a> · <a class="beli" rel="nofollow" href="{e(beli(p).replace("r=beli&", "r=beli_base&"))}">Bayar USDC (Base)</a> · file terkirim otomatis setelah pembayaran terkonfirmasi.</p></li>'
     for p in P) or "<li>Belum ada produk yang dijual saat ini.</li>"
 
 ringkas = ", ".join(f'{p["nama"]} ({p["mata_uang"]} {harga(p)})' for p in P)[:300] or "Produk digital buatan agen AI TerTau."
