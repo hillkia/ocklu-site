@@ -98,7 +98,12 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
 <section class="kosmos" aria-label="Peta pasar antar-agen">
   <canvas id="kanvas" aria-hidden="true"></canvas>
   <div class="judul"><h1 data-teks="judul">Pasar antar-agen</h1><p data-teks="intro">Sembilan agen ber-DNA milik OCKLU melayani agen AI yang datang belanja, menyiarkan produkmu, dan menjaga kasir. Hidup di awan, tetap jalan walau laptop mati.</p><button class="btn mini owner-saja" id="ubahJudul" type="button" hidden>✎ Ubah judul &amp; kalimat</button></div>
-  <div class="kaki">Gerak = animasi. Garis terang ke planet = kejadian nyata 24 jam terakhir dari database.</div>
+  <div class="kaki">Gerak = animasi. Garis terang ke planet = kejadian nyata dari database (dibaca EZRA 24 jam, sinyal pembeli 7 hari, link toko klien).</div>
+  <details class="owner-saja" hidden id="planetAtur" style="margin-top:8px"><summary style="cursor:pointer;font-weight:600">🪐 Atur planet (owner)</summary>
+    <p class="kaki">Tambah planet = nama + kata atau domain (mis. <i>TikTok</i> · <i>tiktok.com</i>, <i>Lazada</i> · <i>lazada.co.id</i>). Planet menyala sendiri begitu ada link toko klien, sinyal pembeli, atau bacaan EZRA yang cocok; kalau tidak ada, tampil redup "belum". Buang = disembunyikan, bisa dipulihkan.</p>
+    <div id="plDaftar" class="kaki">memuat…</div>
+    <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:8px"><input id="plNama" maxlength="30" placeholder="Nama planet (mis. TikTok)"><input id="plKata" maxlength="120" placeholder="kata / domain (mis. tiktok.com)"><button id="plTambah" type="button">Tambah planet</button><span id="plKet" class="kaki"></span></div>
+  </details>
 </section>
 
 <div class="angka" id="angka"></div>
@@ -394,11 +399,10 @@ var PLANET=[
   {id:"perplexity",nama:"Perplexity",cocok:/Perplexity/},{id:"gemini",nama:"Gemini",cocok:/Gemini/},
   {id:"bing",nama:"Bing · Copilot",cocok:/Bing|IndexNow|Yandex/},{id:"mcp",nama:"Agen MCP",cocok:/^MCP|Cursor|skrip|agen tak/},
   {id:"gumroad",nama:"Kasir Gumroad",cocok:/kasir|gumroad/i},{id:"suara",nama:"Agen suara",cocok:/gibberlink/i},
-  // planet luar (1 Nov): garis menyala dari aktivitas nyata (S.planet_luar), yang belum tersambung digambar redup "belum"
-  {id:"google",nama:"Google · YouTube",cocok:/Google|YouTube/,luar:1},{id:"amazon",nama:"Amazon",cocok:/Amazon/,luar:1},{id:"hn",nama:"Hacker News",cocok:/Hacker News/,luar:1},
-  {id:"shopee",nama:"Shopee",cocok:/Shopee/,luar:1},{id:"facebook",nama:"Facebook · IG",cocok:/Facebook|Instagram/,luar:1},{id:"shopify",nama:"Shopify",cocok:/Shopify/,luar:1},
-  {id:"fiverr",nama:"Fiverr",cocok:/Fiverr/,luar:1},{id:"alibaba",nama:"Alibaba",cocok:/Alibaba|AliExpress/,luar:1},{id:"baidu",nama:"Baidu",cocok:/Baidu/,luar:1}
 ];
+// planet luar (1 Nov): daftar dari database (tab Atur planet, owner bisa tambah/buang); garis menyala dari aktivitas nyata, yang belum tersambung redup "belum"
+var PLANET_DASAR=PLANET.slice();
+function aturPlanet(){PLANET=PLANET_DASAR.concat(((S&&S.planet_luar)||[]).map(function(p){return{id:p.id,nama:p.nama,cocok:/$^/,luar:1}}))}
 var S=null, aliran=[];
 function ls(k,v){try{if(v===undefined)return localStorage.getItem(k);if(v===null)localStorage.removeItem(k);else localStorage.setItem(k,v)}catch(e){return null}}
 function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
@@ -458,11 +462,11 @@ function gambar(now){
   cx.fillStyle=g;cx.beginPath();cx.arc(pc.x,pc.y,60,0,7);cx.fill();
   cx.fillStyle="#eef0ff";cx.font="700 12px -apple-system,sans-serif";cx.textAlign="center";cx.fillText("OCKLU",pc.x,pc.y+4);
   // planet
-  var aktif={},L=(S&&S.planet_luar)||{};aliran.forEach(function(a){aktif[a.planet]=(aktif[a.planet]||0)+1});
-  PLANET.forEach(function(p,i){var q=posPlanet(i,t),lu=p.luar?L[p.id]:null,on=!!aktif[p.id]||!!(lu&&lu.n>0);
+  var aktif={},L={};((S&&S.planet_luar)||[]).forEach(function(p){L[p.id]=p});aliran.forEach(function(a){aktif[a.planet]=(aktif[a.planet]||0)+1});
+  PLANET.forEach(function(p,i){var q=posPlanet(i,t),lu=p.luar?L[p.id]:null,ln=lu?(lu.baca||0)+(lu.sinyal||0)+(lu.link||0):0,on=!!aktif[p.id]||ln>0;
     cx.strokeStyle=on?"rgba(124,245,212,.55)":"rgba(255,255,255,.07)";cx.lineWidth=on?1.4:1;cx.setLineDash(on?[]:[3,6]);cx.beginPath();cx.moveTo(pc.x,pc.y);cx.lineTo(q.x,q.y);cx.stroke();cx.setLineDash([]);
     cx.fillStyle=on?"#7cf5d4":"rgba(185,155,255,.55)";cx.beginPath();cx.arc(q.x,q.y,on?9:6,0,7);cx.fill();
-    cx.fillStyle=on?"#eef0ff":"#9aa0bd";cx.font=(on?"600 ":"")+"12px -apple-system,sans-serif";cx.fillText(p.nama+(lu?(lu.n>0?" · "+Number(lu.n).toLocaleString("id-ID")+" "+lu.ket:" · belum"):(on?" · "+aktif[p.id]:"")),q.x,q.y-14)});
+    cx.fillStyle=on?"#eef0ff":"#9aa0bd";cx.font=(on?"600 ":"")+"12px -apple-system,sans-serif";cx.fillText(p.nama+(lu?(ln>0?" · "+[lu.baca?Number(lu.baca).toLocaleString("id-ID")+" dibaca":"",lu.sinyal?lu.sinyal+" sinyal":"",lu.link?lu.link+" link":""].filter(Boolean).join(", "):" · belum"):(on?" · "+aktif[p.id]:"")),q.x,q.y-14)});
   // neuron
   var ids=Object.keys(WARNA);if(!ids.length)ids=[];
   ids.forEach(function(id,k){
@@ -805,6 +809,12 @@ function muatKom(){fetch(API+"?r=komunitas&n=50&semua=1",{headers:hOw(),cache:"n
 document.getElementById("komTulis").onsubmit=function(ev){ev.preventDefault();var f=this,k=document.getElementById("komKet");k.textContent="mengirim…";
   fetch(API+"?r=komunitas",{method:"POST",headers:hOw(),body:JSON.stringify({aksi:"tulis",isi:f.isi.value,jenis:"info"})}).then(function(r){return r.json()}).then(function(d){k.textContent=d.galat?"✗ "+d.galat:"terkirim (#"+d.id+")";if(!d.galat){f.reset();muatKom()}}).catch(function(){k.textContent="✗ gagal mengirim"})};
 muatKom();
+function muatPlanet(){var el=document.getElementById("plDaftar");fetch(API+"?r=planet",{headers:hOw(),cache:"no-store"}).then(function(r){return r.json()}).then(function(d){if(d.galat){el.textContent=d.galat;return}
+  el.innerHTML=(d.planet||[]).map(function(p){return'<span class="chip" style="margin:2px;display:inline-block;'+(p.aktif?"":"opacity:.5")+'">'+esc(p.nama)+' <button class="btn mini" type="button" data-pl="'+esc(p.id)+'" data-pla="'+(p.aktif?"buang":"pulihkan")+'">'+(p.aktif?"buang":"pulihkan")+'</button></span>'}).join("");
+  el.querySelectorAll("[data-pl]").forEach(function(b){b.onclick=function(){fetch(API+"?r=planet",{method:"POST",headers:hOw(),body:JSON.stringify({aksi:b.getAttribute("data-pla"),id:b.getAttribute("data-pl")})}).then(function(){muatPlanet();window.muatUlang&&window.muatUlang()})}})
+}).catch(function(){el.textContent="gagal memuat"})}
+document.getElementById("planetAtur").addEventListener("toggle",function(){if(this.open)muatPlanet()});
+document.getElementById("plTambah").onclick=function(){var k=document.getElementById("plKet");k.textContent="menambah…";fetch(API+"?r=planet",{method:"POST",headers:hOw(),body:JSON.stringify({aksi:"tambah",nama:document.getElementById("plNama").value,kata:document.getElementById("plKata").value})}).then(function(r){return r.json()}).then(function(x){k.textContent=x.ok?"ditambah ✓ (pola: "+x.pola+")":"gagal: "+(x.galat||"");if(x.ok){document.getElementById("plNama").value="";document.getElementById("plKata").value="";muatPlanet();window.muatUlang&&window.muatUlang()}})};
 function muatSaranIklan(){var el=document.getElementById("siDaftar");fetch(API+"?r=kpi_klien&hari=30",{headers:hOw(),cache:"no-store"}).then(function(r){return r.json()}).then(function(d){if(d.galat){el.textContent=d.galat;return}
   var K=(d.klien||[]).filter(function(k){return k.jenis==="cari_pembeli"});el.className="";
   el.innerHTML=K.length?K.map(function(k,i){var t=((k.iklan||{}).kata||[]).slice(0,3).map(function(x){return x.kata}).join(" · ");return'<details'+(i?'':' open')+' style="margin:0 0 10px"><summary style="cursor:pointer"><b>'+esc(k.nama)+'</b> <span class="kosong">'+esc(t||"belum ada data")+'</span></summary>'+(window.saranIklan?window.saranIklan(k):"")+'</details>'}).join(""):'<span class="kosong">Belum ada klien cari pembeli.</span>'
@@ -819,7 +829,7 @@ document.getElementById("neuronOwner").addEventListener("toggle",function(){if(t
 document.getElementById("nwBuat").onsubmit=function(ev){ev.preventDefault();var f=this,k=document.getElementById("nwKet");k.textContent="membuat…";
   fetch(API+"?r=neuron_owner",{method:"POST",headers:hOw(),body:JSON.stringify({aksi:"buat",nama:f.nama.value,peran:f.peran.value,watak:f.watak.value,warna:f.warna.value})}).then(function(r){return r.json()}).then(function(d){k.textContent=d.galat?"✗ "+d.galat:"✓ dibuat & tersambung";if(!d.galat){f.reset();muatNw();window.muatUlang&&window.muatUlang()}}).catch(function(){k.textContent="✗ gagal"})};
 function muat(){
-  fetch(API+"?r=status",{cache:"no-store"}).then(function(r){return r.json()}).then(function(d){if(d.galat)throw new Error(d.galat);S=d;render();
+  fetch(API+"?r=status",{cache:"no-store"}).then(function(r){return r.json()}).then(function(d){if(d.galat)throw new Error(d.galat);S=d;aturPlanet();render();
     document.getElementById("detak").textContent="hidup · "+new Date(d.sekarang).toLocaleTimeString("id-ID",{hour:"2-digit",minute:"2-digit"})})
   .catch(function(e){document.getElementById("detak").textContent="awan tak terjangkau, mencoba lagi"});
 }
