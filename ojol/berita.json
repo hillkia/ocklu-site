@@ -1,5 +1,5 @@
 {
- "w": "2026-11-02T02:29:00Z",
+ "w": "2026-11-02T03:33:09Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -17,6 +17,23 @@
    "sumber": {
     "nama": "ANTARA News Bali",
     "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPYTYtTHA3WVZKZUt3Z2RTWDM4OGgzTlh6TVlueVgwR3BUZm9PZk94RW9XNWtsZ1BlMXdYc0lfREtpUDJEMTJtNkxpcjhDb3N5TXRLd2ZtZk1LRFBmRTlBaHpzREZtWjI0dHdEQklrcFEyVlVxOEU3UnJHM3lPd0xVcFpCZ0JLM3R5b2l5MmNHQnJiUEMwcGJXQ9IBngFBVV95cUxNV0FRNjVyZVVIZzN5VmpWNzNOYTZKN3FJc09IRTJXVU5ZTkhkYjhScFI4aXhqa1F5b2xpRllHV09rcklMVVBjLXpCOTRRZ3JjT3JLc2Z3UWZUQjJhdTVnUE0zVUp1WFd2S2tQSklqdkpDc3NNMGI0NEhGdTlzazBVaDY0NktjV25Yck5sOFpFYlRoQ0JvTkpHcmQzZUF0Zw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-02T03:00:00Z",
+   "media": 2,
+   "judul": {
+    "id": "Performa Snapdragon X2 Elite Anjlok Parah, Pengguna Imbau Tunda Update Driver",
+    "en": "Performa Snapdragon X2 Elite Anjlok Parah, Pengguna Imbau Tunda Update Driver"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Gamebrott.com",
+    "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1fTnpMQ2E5UU1RWEFUSEZaSGwtVkpKZTZvX1E3Z3cxeHZwWmpmNW9MVjNfaGJIdHJZQjFDTVVtV0xqLTBXS3FraUZaN2x2TV8zejFRQ3BudW83dkxpelRxMzBaeXQwM2dTMHhWM0NjRkNjQQ?oc=5"
    }
   },
   {
@@ -119,57 +136,6 @@
    "sumber": {
     "nama": "VIVA Lampung",
     "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNY0pKb3JIdEM1OVlqb1NCMjZLVW1sdU1VOGJMYUFaLU4tZTl3TF9FTE1vUGYtXzNMSFV4bTN4NlJGV3pvdjc3XzRiaU9YLS1HQTlySWJCekhvdUpQdTY3Q1lyLWpwLXNSSldMQldacUJVbmJEbWZRa3hxcFMtV09YdDVORGNXZ0o5UTV3cU1IYXpxc3hRSmlyU2tPVnAyWV8zRU1jaUM1ZzhqXzc0cktFdElzWk8tVWtXdDdDcEIxc0RiWjUyeXc?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-01T23:00:44Z",
-   "media": 1,
-   "judul": {
-    "id": "Banjir Rendam 15 Gampong di Aceh Jaya, PCNU Ajak Warga NU Bantu Masyarakat Terdampak",
-    "en": "Banjir Rendam 15 Gampong di Aceh Jaya, PCNU Ajak Warga NU Bantu Masyarakat Terdampak"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "NU Online",
-    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPYWFhZmE0SEd1RXFFZWl1RVNDZ19EUEN2SlVqSkoyT2RCVF9yTk56NVJYSEU5Vkpha3ZJUm1XR213MVQ4UGxNemZETHdlN1pHcXJCUm4xbkQxYlEwOG15aTk4S0ZCZDZ1aVVSN3FFZjJob05fRE5JclcwU3c5UFFDWDJHdm1KOUowV2tVRF9JZ3pwak1Fb09tTkNCOUNqdzRrOU43Z0RHM0VRNTZTYmhRazJTSdIBuAFBVV95cUxNYW9IZTlmTFYzVEJZLXB0T3pyTTQzaW5kY1lYdXdUcEJmaXg4cmNZZmI3cFQyZVhESXUwcmpHXy1YWmVmd2Z0bEc5Q2VSc3YxdmRyajh4WDBRSG9yOW1sUFBzbU0za1BGendlVEFKVnlSajZCbVNSSEp2WEQ3UWhFTUdaSS1yb2xUa1dpdUh3VXJ3SXZzd1laSFppVjFBMU9MWF9ycW9YOVM4UFRTQ0pLdjFQbWtsZG9p?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-01T12:12:21Z",
-   "media": 3,
-   "judul": {
-    "id": "Viral Kericuhan Pengemudi Ojek Online di Pecatu, Diduga Rebutan Penumpang",
-    "en": "Viral Kericuhan Pengemudi Ojek Online di Pecatu, Diduga Rebutan Penumpang"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "NUSABALI.com",
-    "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOREcxc211WmNmQU5FdkZ6Z20tYXM5T1lKMC1lMUpOM3BCTFhBVDRMczdiLXVKQU1jdVk2dklPNW9LM3VSXzluSFhoZHhXamRNNkFUSzJqUGhud05vak5WcW8yX0JLNnBOVWtnOGJrYVc2REZaeEdxRmptWGplbHdmUGwzOWtTZFU?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-31T22:24:00Z",
-   "media": 8,
-   "judul": {
-    "id": "Pemerintah Mau Kurir dan Ojol Pakai Motor Listrik di 2027, Ini Peta Jalannya",
-    "en": "Pemerintah Mau Kurir dan Ojol Pakai Motor Listrik di 2027, Ini Peta Jalannya"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Koridor.co.id",
-    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBoZk93WFd4ak5sZUcydU0xRmFUNzlleGhtQ1p5WUNiY3pqMEhiQktrdFlxaTFBSEQ1SzhkNWtrNDFnRjFXek9RQnIydzI4bkY4QWw0bDFXXzhjbjFYVUV4NEw3UUZfWEVYNFJzTA?oc=5"
    }
   }
  ]
