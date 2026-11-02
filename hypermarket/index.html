@@ -92,8 +92,10 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
 <div class="w">
 <header>
   <a class="logo" href="/">OCKLU <span>Hyper Market</span></a>
-  <div style="display:flex;gap:12px;align-items:center"><span class="hidup"><span class="titik"></span><span id="detak">menghubungi awan…</span></span><span class="chip ok owner-saja" id="ownerChip" hidden>mode owner</span><button class="btn mini" id="masukOwner" type="button">Masuk owner</button><button class="tema" id="tema" type="button" aria-label="Ganti tema">◐</button></div>
+  <div style="display:flex;gap:12px;align-items:center"><span class="hidup"><span class="titik"></span><span id="detak">menghubungi awan…</span></span><span class="chip ok owner-saja" id="ownerChip" hidden>mode owner</span><button class="btn mini" id="masukOwner" type="button">Masuk owner</button><button class="tema" id="cariBtn" type="button" aria-label="Cari di dasbor">🔍</button><button class="tema owner-saja" hidden id="notifBtn" type="button" aria-label="Notifikasi" style="position:relative">🔔<b id="notifN" hidden style="position:absolute;top:-4px;right:-6px;background:var(--merah);color:#fff;border-radius:9px;font-size:10px;padding:1px 5px"></b></button><button class="tema" id="tema" type="button" aria-label="Ganti tema">◐</button></div>
 </header>
+<div id="cariPanel" class="panel" hidden style="position:sticky;top:0;z-index:20;margin:6px 0"><input id="cariIsi" type="search" placeholder="Cari tab, klien, pos Komunitas, kerja agen… (mis. Roy, jas hujan, buru)" style="width:100%"><ul class="feed" id="cariHasil" style="margin-top:6px;max-height:50vh;overflow:auto"></ul></div>
+<div id="notifPanel" class="panel" hidden style="position:sticky;top:0;z-index:20;margin:6px 0"><div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><b>🔔 Notifikasi · 7 hari</b><button class="btn mini" type="button" id="notifBaca">Tandai semua dibaca</button></div><ul class="feed" id="notifDaftar" style="margin-top:6px;max-height:55vh;overflow:auto"><li class="kosong">memuat…</li></ul></div>
 
 <section class="kosmos" aria-label="Peta pasar antar-agen">
   <canvas id="kanvas" aria-hidden="true"></canvas>
@@ -811,6 +813,25 @@ function muatKom(){fetch(API+"?r=komunitas&n=50&semua=1",{headers:hOw(),cache:"n
 document.getElementById("komTulis").onsubmit=function(ev){ev.preventDefault();var f=this,k=document.getElementById("komKet");k.textContent="mengirim…";
   fetch(API+"?r=komunitas",{method:"POST",headers:hOw(),body:JSON.stringify({aksi:"tulis",isi:f.isi.value,jenis:"info"})}).then(function(r){return r.json()}).then(function(d){k.textContent=d.galat?"✗ "+d.galat:"terkirim (#"+d.id+")";if(!d.galat){f.reset();muatKom()}}).catch(function(){k.textContent="✗ gagal mengirim"})};
 muatKom();
+// ---- 2 Nov: 🔍 cari di seluruh dasbor & 🔔 notifikasi owner
+function lompat(el){if(!el)return;var d=el.closest&&el.closest("details");if(d)d.open=true;el.scrollIntoView({behavior:"smooth",block:"center"});var o=el.style.outline;el.style.outline="2px solid var(--emas)";setTimeout(function(){el.style.outline=o},2500)}
+document.getElementById("cariBtn").onclick=function(){var p=document.getElementById("cariPanel");p.hidden=!p.hidden;document.getElementById("notifPanel").hidden=true;if(!p.hidden)document.getElementById("cariIsi").focus()};
+document.getElementById("cariIsi").oninput=function(){var q=this.value.trim().toLowerCase(),ul=document.getElementById("cariHasil");if(q.length<2){ul.innerHTML="";return}
+  var calon=[].slice.call(document.querySelectorAll("#tabbar a,h2[id],h3,#klDaftar>li,#kpiDaftar tr,#komDaftar>li,#feed>li,#nwDaftar tr,#siDaftar summary,#tjKanal tr"));
+  var H=calon.filter(function(el){return (el.textContent||"").toLowerCase().indexOf(q)>=0}).slice(0,25);
+  ul.innerHTML=H.length?H.map(function(el,i){var t=(el.textContent||"").replace(/\s+/g," ").trim(),k=t.toLowerCase().indexOf(q),cup=t.slice(Math.max(0,k-40),k+80);
+    var ruang=el.matches("#tabbar a")?"tab":el.closest("#klDaftar,#kpiDaftar")?"klien":el.closest("#komDaftar")?"komunitas":el.closest("#feed")?"kerja agen":el.closest("#nwDaftar")?"neuron":el.closest("#siDaftar")?"saran iklan":el.closest("#tjKanal")?"tebar jala":"bagian";
+    return'<li><a href="#" data-cari="'+i+'">'+esc(cup)+'</a> <span class="kosong">· '+ruang+'</span></li>'}).join(""):'<li class="kosong">Tidak ketemu. Beberapa daftar (klien, Komunitas) baru terisi setelah dimuat di mode owner.</li>';
+  ul.querySelectorAll("[data-cari]").forEach(function(a){a.onclick=function(ev){ev.preventDefault();var el=H[+a.getAttribute("data-cari")];
+    if(el.matches("#tabbar a")){var t=document.querySelector(el.getAttribute("href"));if(t)lompat(t);else location.href=el.href}else lompat(el);document.getElementById("cariPanel").hidden=true}})};
+function bacaNotif(){try{return +localStorage.getItem("notif_baca")||0}catch(e){return 0}}
+function muatNotif(){fetch(API+"?r=notif",{headers:hOw(),cache:"no-store"}).then(function(r){return r.json()}).then(function(d){if(d.galat)return;var N=d.notif||[],b=bacaNotif(),baru=N.filter(function(x){return new Date(x.pada).getTime()>b}).length,nb=document.getElementById("notifN");
+  nb.hidden=!baru;nb.textContent=baru>99?"99+":baru;
+  document.getElementById("notifDaftar").innerHTML=N.length?N.map(function(x){var br=new Date(x.pada).getTime()>b;return'<li style="'+(br?"font-weight:600":"opacity:.8")+'"><time>'+wibBuru(x.pada)+'</time>'+x.ikon+' <a href="'+esc(x.ke)+'" data-ke="'+esc(x.ke)+'">'+esc(x.teks)+'</a></li>'}).join(""):'<li class="kosong">Belum ada kejadian 7 hari terakhir.</li>';
+  document.querySelectorAll("#notifDaftar [data-ke]").forEach(function(a){a.onclick=function(ev){var t=document.querySelector(a.getAttribute("data-ke"));if(t){ev.preventDefault();lompat(t);document.getElementById("notifPanel").hidden=true}}})}).catch(function(){})}
+document.getElementById("notifBtn").onclick=function(){var p=document.getElementById("notifPanel");p.hidden=!p.hidden;document.getElementById("cariPanel").hidden=true;if(!p.hidden)muatNotif()};
+document.getElementById("notifBaca").onclick=function(){try{localStorage.setItem("notif_baca",Date.now())}catch(e){}muatNotif()};
+setTimeout(muatNotif,2500);setInterval(muatNotif,120000);
 // 2 Nov: penolakan x402 bisa dilihat bertanggal-jam, ditandai beres (tetap tercatat), atau dihapus — khusus owner
 document.addEventListener("click",function(ev){var a=ev.target.closest&&ev.target.closest("#x402Lihat");if(!a)return;ev.preventDefault();var el=document.getElementById("x402Daftar");el.hidden=!el.hidden;if(!el.hidden)muatX402()});
 function muatX402(){var el=document.getElementById("x402Daftar");el.innerHTML='<span class="kosong">memuat…</span>';fetch(API+"?r=x402_tolak",{headers:hOw(),cache:"no-store"}).then(function(r){return r.json()}).then(function(d){if(d.galat){el.textContent=d.galat;return}
