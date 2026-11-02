@@ -237,7 +237,7 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
     </form>
     <p class="kosong" id="klKet" style="margin:8px 0 0"></p>
     <ul class="feed" id="klDaftar" style="margin-top:12px"><li class="kosong">masuk mode owner untuk melihat klien</li></ul>
-    <h3 style="margin:16px 0 6px;font-size:15px">📊 Laporan KPI klien · 30 hari <span class="kosong" id="kpiKet"></span></h3>
+    <h3 style="margin:16px 0 6px;font-size:15px">📊 Laporan KPI klien · <select id="kpiHari" style="font-size:13px"><option value="1">hari ini</option><option value="3">3 hari</option><option value="7">7 hari</option><option value="30">30 hari</option></select> <button type="button" id="kpiPerbarui" style="font-size:13px">↻ Perbarui</button> <span class="kosong" id="kpiKet"></span></h3>
     <p class="kosong" style="margin:0 0 6px">Gampangnya (klien 🎬 channel: baca "pembeli" sebagai <b>penonton</b>): <b>Calon pembeli publik</b> = postingan orang/lembaga yang sedang mencari barang klien (bukan pembeli pasti). <b>Jawaban agen lain</b> = hasil cari di agen AI lain yang menyebut barang sejenis — bukan pembeli. <b>MARKUS bertanya</b> = berapa agen AI lain yang ditanyai soal barang ini. <b>Dikenalkan</b> = pembeli &amp; penjual yang dipertemukan. <b>Lunas</b> = transaksi jadi. Tombol <b>Salin link</b> menyalin laporan khusus satu klien (tanpa data klien lain) untuk dikirim ke klien.</p>
     <div style="overflow-x:auto"><table><thead><tr><th>Klien</th><th>Calon pembeli / penonton publik 30 hr (total)</th><th>Jawaban agen lain 30 hr</th><th>MARKUS bertanya</th><th>Dikenalkan</th><th>Lunas</th><th>Laporan klien</th></tr></thead><tbody id="kpiDaftar"><tr><td colspan="7" class="kosong">masuk mode owner untuk melihat</td></tr></tbody></table></div>
   </div>
@@ -890,8 +890,12 @@ function klienApi(b){return fetch(MKL+"?r=klien",{method:"POST",headers:{"Conten
 // No. 21: KPI per klien (khusus owner: PIN atau perangkat owner). Gagal → hanya panel ini yang kosong.
 // klien channel (1 Nov): yang dicari penonton, bukan pembeli
 function kontenKl(k){return (k.kanal||[]).some(function(u){return /youtube\.com|youtu\.be|tiktok\.com|instagram\.com/i.test(u)})||/\b(channel|kanal|konten|youtube|tiktok|podcast|vlog)\b/i.test((k.apa||"")+" "+(k.barang||[]).map(function(b){return b.judul}).join(" "))}
+var KPI_HARI=3;try{var kh=+localStorage.getItem("kpi_hari");if([1,3,7,30].indexOf(kh)>=0)KPI_HARI=kh}catch(e){}
+document.getElementById("kpiHari").value=String(KPI_HARI);
+document.getElementById("kpiHari").onchange=function(){KPI_HARI=+this.value;try{localStorage.setItem("kpi_hari",KPI_HARI)}catch(e){}muatKpi()};
+document.getElementById("kpiPerbarui").onclick=function(){muatKpi()};
 function muatKpi(){var tb=document.getElementById("kpiDaftar");if(!tb)return;var h={"x-owner":(window.HM?window.HM.pin():"")||""};try{h["x-perangkat"]=localStorage.getItem("pj_kunci")||""}catch(e){}
-  fetch(API+"?r=kpi_klien&hari=30",{headers:h,cache:"no-store"}).then(function(r){return r.json()}).then(function(d){if(d.galat)throw new Error(d.galat);var K=d.klien||[];
+  fetch(API+"?r=kpi_klien&hari="+KPI_HARI,{headers:h,cache:"no-store"}).then(function(r){return r.json()}).then(function(d){if(d.galat)throw new Error(d.galat);var K=d.klien||[];
     tb.innerHTML=K.length?K.map(function(k){var j=k.jodoh||{},nj=0;for(var x in j)nj+=j[x];var m=k.markus||{};
       var C=k.contoh||[],D=k.dikenalkan||[];
       var rinci=(C.length||D.length)?'<details><summary style="cursor:pointer">Lihat nama ('+C.length+" calon terbaru, "+D.length+" dikenalkan)</summary>"+(C.length?"<b>Temuan terbaru:</b><ul>"+C.map(function(c){return"<li><b>"+esc(c.jenis||"")+"</b>: "+(c.url?'<a href="'+esc(c.url)+'" target="_blank" rel="noopener">'+esc(c.judul)+"</a>":esc(c.judul))+' <span class="kosong">· '+esc(c.sumber)+" · "+lalu(c.pada)+"</span></li>"}).join("")+"</ul>":"")+(D.length?"<b>Sudah dikenalkan:</b><ul>"+D.map(function(x){return"<li>"+esc(x.pembeli||"(tanpa nama)")+' <span class="kosong">· '+esc(x.status)+" · "+lalu(x.pada)+"</span></li>"}).join("")+"</ul>":"")+'<span class="kosong">IP tidak ada: calon ditemukan agen di tempat publik, tidak pernah mengunjungi situs kita. IP pengunjung situs ada di tab Grigori.</span></details>':"";
@@ -899,7 +903,7 @@ function muatKpi(){var tb=document.getElementById("kpiDaftar");if(!tb)return;var
     document.getElementById("kpiKet").textContent="· dihitung "+new Date().toLocaleTimeString("id-ID",{hour:"2-digit",minute:"2-digit"});
   }).catch(function(e){tb.innerHTML='<tr><td colspan="7" class="kosong">'+esc(e.message==="khusus owner"?"masuk mode owner untuk melihat":"Laporan KPI gagal dimuat ("+e.message+"). Bagian lain tetap jalan.")+"</td></tr>"});
 }
-document.addEventListener("click",function(e){var b=e.target.closest&&e.target.closest("[data-kpi]");if(!b)return;var url="https://ocklu.com/hypermarket/laporan.html?t="+b.getAttribute("data-kpi");
+document.addEventListener("click",function(e){var b=e.target.closest&&e.target.closest("[data-kpi]");if(!b)return;var url="https://ocklu.com/hypermarket/laporan.html?t="+b.getAttribute("data-kpi")+"&hari="+KPI_HARI;
   (navigator.clipboard?navigator.clipboard.writeText(url):Promise.reject()).then(function(){b.textContent="Tersalin ✓"},function(){window.prompt("Salin link laporan klien:",url)})});
 function muatKlien(){var k=document.getElementById("klKunci");if(k)k.hidden=true;klienApi({aksi:"daftar"}).then(function(d){var ul=document.getElementById("klDaftar");if(!ul)return;var K=d.klien||[];
   ul.innerHTML=d.galat?'<li class="kosong">'+esc(d.galat)+'</li>':K.length?K.map(function(k){var t=(k.temuan_terbaru||[]);return'<li><time>'+lalu(k.pada)+'</time><b>'+esc(k.nama)+'</b> <span class="chip '+(k.status==="aktif"?"ok":"tunggu")+'">'+esc(k.status)+'</span> <span class="chip">'+(kontenKl(k)?"🎬 channel · cari penonton":k.jenis==="cari_pembeli"?"cari pembeli":"cari penjual")+'</span><br>'+esc(k.apa)+(k.harga?' · '+esc(k.harga)+' '+esc(k.mata_uang||""):'')+'<br><span class="kosong">'+(k.temuan||0)+' temuan'+(k.terakhir?' · terakhir '+lalu(k.terakhir):'')+'</span>'
