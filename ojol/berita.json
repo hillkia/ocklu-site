@@ -1,11 +1,11 @@
 {
- "w": "2026-11-02T09:02:57Z",
+ "w": "2026-11-02T09:35:17Z",
  "dari": "Kroog",
  "berita": [
   {
    "jenis": "berita",
-   "waktu": "2026-11-02T01:56:28Z",
-   "media": 10,
+   "waktu": "2026-11-02T08:25:00Z",
+   "media": 13,
    "judul": {
     "id": "Getaran Banjir Lahar Semeru Terekam Hampir 4 Jam, Aktivitas Warga Tetap Lancar",
     "en": "Getaran Banjir Lahar Semeru Terekam Hampir 4 Jam, Aktivitas Warga Tetap Lancar"
@@ -15,8 +15,42 @@
     "en": ""
    },
    "sumber": {
-    "nama": "ANTARA News Bali",
-    "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPYTYtTHA3WVZKZUt3Z2RTWDM4OGgzTlh6TVlueVgwR3BUZm9PZk94RW9XNWtsZ1BlMXdYc0lfREtpUDJEMTJtNkxpcjhDb3N5TXRLd2ZtZk1LRFBmRTlBaHpzREZtWjI0dHdEQklrcFEyVlVxOEU3UnJHM3lPd0xVcFpCZ0JLM3R5b2l5MmNHQnJiUEMwcGJXQ9IBngFBVV95cUxNV0FRNjVyZVVIZzN5VmpWNzNOYTZKN3FJc09IRTJXVU5ZTkhkYjhScFI4aXhqa1F5b2xpRllHV09rcklMVVBjLXpCOTRRZ3JjT3JLc2Z3UWZUQjJhdTVnUE0zVUp1WFd2S2tQSklqdkpDc3NNMGI0NEhGdTlzazBVaDY0NktjV25Yck5sOFpFYlRoQ0JvTkpHcmQzZUF0Zw?oc=5"
+    "nama": "Journalist Independent",
+    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQbUJBOXpWVHlPY0ZNZ0JPZE9vdC05NUUyNnJyalVUenRIYmE5bC1fdklhNUtrdmZSTVl1RDJLVTRfZDRSa1c4cUNWRVVEYmctTTBocklvd0R0N3JiMDdrNUd4VmRQSng1OHNqN3Y1TW8wVDdnZlhDalc5amZyVUNaeERUamV3LUdUcFFBNld2SzhwVjZJVmVWNHp2d1FLblBySHktS2dFWjRhdFVPdUNTYzB0Yw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-02T08:20:00Z",
+   "media": 9,
+   "judul": {
+    "id": "Aturan Turunan Perpres Ojol Ditargetkan Terbit Sebelum Akhir Desember 2026",
+    "en": "Aturan Turunan Perpres Ojol Ditargetkan Terbit Sebelum Akhir Desember 2026"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Head Topics",
+    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQRzRuaUVQQTRkRk5pSUF2Ty01bTBrdHltWWJlSGpEMVNwMXpFeHhMcGxwSkFtTG8tNnp3eFBKdG5JMW9DX0pNbTVFNm8yam95OVJ4ckhUSjBvdEFjX0RVR1UyWTZUNDNMWE1TZE90VXEyUko3QzNmT0NmajFLdnE2STR6U1ktWjFkaU1rWTRpWjlfOTBUTVotWFVWeUl3Zw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-02T06:45:37Z",
+   "media": 4,
+   "judul": {
+    "id": "Kementerian UMKM Siapkan Aturan Kemitraan Ojol hingga Desember 2026",
+    "en": "Kementerian UMKM Siapkan Aturan Kemitraan Ojol hingga Desember 2026"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Demokratis.co.id",
+    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1lUDZMRGlCdk54Nlc2dTVHRm5uenhaWnl1QWlmVjhNeFNWZGtoamFtaEJwNHl4cEhQOUN1ZDlKVHczOTNvb04zSV92MmJ6ZWxpX0NKYnJRRFNzUWV2b2hzeFVJYkZXRUIzTElsVw?oc=5"
    }
   },
   {
@@ -38,6 +72,91 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-02T09:08:22Z",
+   "media": 2,
+   "judul": {
+    "id": "Pemerintah Buka Opsi Tambah Subsidi BBM dan Listrik Jelang Nataru 2026",
+    "en": "Pemerintah Buka Opsi Tambah Subsidi BBM dan Listrik Jelang Nataru 2026"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Uzone.id",
+    "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPVFN0eHhyMU1kS2JJNTV6VklPa1hPcmxub0VkRkxIM0p2LVNRTnlXZWs3cFF4WFZsS05KQTUwbGdGNTNxSkNoWG5GcHpWTDdZYW1TcnpyRXBCTEVqa09PZVZORW1sY3hkU1dMMmxBdEJacUV4c1NMbU5KcTRxalQzR0lBNA?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-02T09:04:15Z",
+   "media": 2,
+   "judul": {
+    "id": "Ditegur karena Belok Tanpa Sein, Pemuda di Bandung Barat Bacok Pengemudi Ojol",
+    "en": "Ditegur karena Belok Tanpa Sein, Pemuda di Bandung Barat Bacok Pengemudi Ojol"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "bsinews.id",
+    "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBITG8tbV9XM3dOcHFnekZkOW96RDVhWm1sVkduR1g1YmJCTXliYzN3Q0thR2czME44VmM0ekJoVGdJSVJYTnRXQktIZDhqM2ZfVWcya21HX2I2elFlMG9FSzJ5NWxRT0tX?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-02T08:29:01Z",
+   "media": 2,
+   "judul": {
+    "id": "Jepang Bentuk Badan Bencana Baru untuk Menekan Dampak Gempa Megathrust dan Banjir",
+    "en": "Jepang Bentuk Badan Bencana Baru untuk Menekan Dampak Gempa Megathrust dan Banjir"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "IDN Times",
+    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNRTItSXR1ZEt3dURJZHRIcHE4M3J6c194am5ON0ZjXy1ETjBQMmhpUjhEemxMQU9zMk1ZVC1reUlLRWRKNC1vODdyUG9lYlFjN08yZUl0bEZCbWZEb0FOSHA0czRPY24tdFY5MjUyNXAxckE5S0k3NVVxcVlzandNbTFCZ2tOckJQM0pIcUJnaXNHenBRbThzUkdGTjBPRTV5NTVRN3dQX1RDc29FSkI0YUh6Y9IBuAFBVV95cUxPT29pZzRPUXBXZ0ZWZWhzVk12Q014NHctR1ctNjBSeGxmY0ctaERkUE9NZ3ctRXNLTmFmbEJybzlqdFEwODV4MVN6bUVRUnE1eHo0SzlJcE5SZE1lc1EtYjVLSHRma2FkM1lWQTR0NUt6dlFJWkhNLVRhRlFWeENLMUNmNWpXdUlLV2kwVGNmclk5MWVBRlhTNGN2WlZNMkhoSnlyaFRtUFhGbmp4bEZORGc4bW93T0hP?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-02T06:53:02Z",
+   "media": 2,
+   "judul": {
+    "id": "Ekspor Skuter Listrik China Melonjak di Asia Selatan Imbas Krisis BBM Selat Hormuz",
+    "en": "Ekspor Skuter Listrik China Melonjak di Asia Selatan Imbas Krisis BBM Selat Hormuz"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Lensa Hukum",
+    "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9zUTN0SnFWSmFDYkVDdlpRN29SODZPY0Z5WGZEa1JoTXZ4Y3hnU3BGY0lMTTd6eVQyRTJvdGZLaGt0RnFqTTFiTjlyd0o5V0J4R2U3bTljSl8wUUMxMVlhakhjem1VVUFN?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-02T03:25:55Z",
+   "media": 2,
+   "judul": {
+    "id": "Truk ODOL, Ojol, hingga Motor Listrik Masuk Sorotan Revisi UU LLAJ",
+    "en": "Truk ODOL, Ojol, hingga Motor Listrik Masuk Sorotan Revisi UU LLAJ"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "feedberry.com",
+    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQZDh2VWlDTC1fb0pLZGpZSUhjSU9jd3FhUG9fMllqSmw3RUQxR2hIVFhVQ0hQeEJHb04zX2lCdWlGazBKNFNTMFNQeWx3Zm5yZ1pWR2ZIa0pOMnh6bVowdEZOVXJWV2xWSlBqSWpRaDBMZ0drUloyb2lYakxaYUlrNnFHci04QWx5NkpiSFRn?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-02T03:00:00Z",
    "media": 2,
    "judul": {
@@ -51,6 +170,40 @@
    "sumber": {
     "nama": "Gamebrott.com",
     "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1fTnpMQ2E5UU1RWEFUSEZaSGwtVkpKZTZvX1E3Z3cxeHZwWmpmNW9MVjNfaGJIdHJZQjFDTVVtV0xqLTBXS3FraUZaN2x2TV8zejFRQ3BudW83dkxpelRxMzBaeXQwM2dTMHhWM0NjRkNjQQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-02T09:02:23Z",
+   "media": 1,
+   "judul": {
+    "id": "Pendapatan Ojol Turun hingga Rp60.619 Bersih Per Hari",
+    "en": "Pendapatan Ojol Turun hingga Rp60.619 Bersih Per Hari"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "ChatNews.id",
+    "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9BTWhMcXdia2haWVg2TjJsR3IxUF9Yd1plSjZ3dHNYZHNQNFQtcDFMbXFMbXpHYlA4RTRNejQ5TzFJWXVCQXpKUDk1WWhKWEx0T3FpMUVrd0xtUmxyTGc?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-02T09:00:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Segini Penghasilan Ojol Kerja Seharian, Makin Lama Makin Kecil",
+    "en": "Segini Penghasilan Ojol Kerja Seharian, Makin Lama Makin Kecil"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "CNBC Indonesia",
+    "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPM3RHV1pKS2prRDA1LTNzY3hCRUF2eHk0QlFkcktqZXQzNEdwckRObEFwS0xaZGtVaEVYVnIzZFhpbWFvWVRrTEd4WWg1YWtZX0ZEa2xkeHA1UklBRjktMW83NkRpTy10aG1zY1l5RGpKTkgxR0k2dEZQNXBmUW16QkhwUWdZc1pUOTRqODBSUWZzRFhoeHlwNVBUbkYzREczZHc1OUtHT05rWFdhcnlRd1EtRVJIUlFqNFFLSmt3?oc=5"
    }
   },
   {
@@ -72,6 +225,108 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-02T08:34:23Z",
+   "media": 1,
+   "judul": {
+    "id": "Terungkap! Perampok Mahasiswi Sidrap di Makassar Ternyata Bukan Driver Ojol",
+    "en": "Terungkap! Perampok Mahasiswi Sidrap di Makassar Ternyata Bukan Driver Ojol"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Tribun-timur.com",
+    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNT1F0R0NvXzJjXzNwZkxOS0U3cWY2S0pBa0F3ZHVaZ3o4WHhzYjBMOWNXWmxnUzdMNHBGaFhnSHI1NGhyWEExZTJRQkIzRFp6V09ROG9jeTJLZ1EwNmozbVFON3N4YWRySmYzV0FzWXJUQzE4cFFpeC1yVEpXOEp2NXBVYkVieTUxZ2c5emduQUhzU1ItOHplaldXXzAtMzZoM2g4aUREbjc3bVVQT0F3dmFEWWhUX21KZmpBUW1Ic1I?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-02T08:12:16Z",
+   "media": 1,
+   "judul": {
+    "id": "2 Hari Dikejar, Polisi Bongkar Identitas Pelaku Perampokan Mahasiswi Sidrap",
+    "en": "2 Hari Dikejar, Polisi Bongkar Identitas Pelaku Perampokan Mahasiswi Sidrap"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "FAJAR",
+    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQSXhlNjVuLW9ZY0dDTGNuQ0NZRDhrNTBpclRlbGRVRkstTnVkRXBhQ1hhaXJYWkJkR3hMd3ZCR052UHhSRVhjQjduX05GUEU1MVRzUG5HTUNxdktXYjBOTjQ0VnJCNFpDcHQ0RzhPMDNYR2hlQ1YyZnpPQXBEcUtKQTQwc2tlUlR1SVM3RzA2cTBKT0kwU2pHc0ZyNEE2emtIaU9seFJKbWpGdw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-02T08:12:04Z",
+   "media": 1,
+   "judul": {
+    "id": "Pria Aniaya-Rampok 13 Wanita di Makassar Bukan Driver Ojol",
+    "en": "Pria Aniaya-Rampok 13 Wanita di Makassar Bukan Driver Ojol"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "detikcom",
+    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNSkJyYkg5SWZrOTg4YTBkdkRLcTIyd19LTmtEcEVGUEN1eFVRNnBSa0IwYk1WWVdGN3FjQUJCRF96Z3F5WGlKZ0VQZE1uaF85dFR0ZmZVZnJiS3hJQTBwMHdBSktSdU1mNHdvNVAxLWhDdVNyblNFRG81RExrSmZXN3UzYzNDZ3pCQjB4TGtpbzhXbzVGMXFsc1JGRFduLXhWREp6QUx0by1rd9IBrwFBVV95cUxON1c3MXo3Q18wUzktSFc0ODJLVlNxdGNmbnpGeUVqZmtVU21XcmJQOGNaSTMxS3Rtd1FCTXNEWHZmQjVmQ0JPaDB0aTRkV0FaOVA0WVByaU5EZy1XOFU5V21heG1palFNNmZPMFBDUGQySEJxNEF4QVN5VlJpVHVzUXd5MUItZUJQQTVMZVFUMlNaZmNjV2J4WEVLV0huNFNZN2ItZnNFc0NORTc2WFp3?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-02T08:02:06Z",
+   "media": 1,
+   "judul": {
+    "id": "Rumah Singgah Bagi Ojek Online: Tempat yang Menyatukan Pengemudi Lintas Aplikasi",
+    "en": "Rumah Singgah Bagi Ojek Online: Tempat yang Menyatukan Pengemudi Lintas Aplikasi"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Pontianak Post",
+    "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxORFVEN3B2a254SXhkdUVDY2xCNWI3QWVYU0xkZW5RaGtGRHUxc1hkVEg1S19SR0FlQ1JQc3ladnRtLVVseFloRjg4TmV1ZE1QQjloR0FYNFk3QnNkVVdVaDE1ZVlzbzc1SktFaTRBa3RMMWxfNHJKRVFubVl5SFBodVRsaHZZQzZ1clVUV0dSX0NNWkVFLW5JM3ZPWVhFRWJFS2NHWDFLWVExUTFSLVU5QkFfWUNxeUF0VzVyeGU3LU56ZXVYd3dkNUttSnRhZ9IB0wFBVV95cUxQZTlXMUFYLU5UT2JMeVY2ekxpNlRFQldHM2VHUjJ5RV8xcTVKYjM2bVg5SXJRdE5MTWdXRVBnNjVQZUVjajM5eXdJQ1o0RUxodC1ZS1haZU1tdkVNbGtaWjNBUVpVa0twT0doeHI2ZmZFdERSOFVEUGVkTWl3MWtJSGZVMy1fOEF6cDItTDV5SVJXVzdRRUJMMnVwZlYxa1hRa1NsNUVMUkFkRXRBME5WZ043QVFkd2x0c09zS09GYjdsYjhSQ1pZQmxjSHRIU1M1aG5z?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-02T08:00:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Pria Rampok-Lecehkan Mahasiswi di Makassar Ditangkap, Ternyata Teknisi Wi-Fi",
+    "en": "Pria Rampok-Lecehkan Mahasiswi di Makassar Ditangkap, Ternyata Teknisi Wi-Fi"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Herald.ID",
+    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOa0J6bVZNN2RtTzlnMHVVWWZoMmkwZ2dTcW11Zk9fbVdkZjZLZGg4WHg0LXpPZWhROVZCLWFZNHNyUEgzRG9XMjk3YzNqaGNjOEhtdWlzUTdtTWtQM1E1Nkt5cUlwWjBuRGFpZmJwbzBkUXVTaUl1Q2lUUlA2N1BZNTJKUFJQbG5MZDFRZFdBNGVmaWoxc213dFZaVmtkd1M1UkJ5ZkQ0cDM?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-02T07:55:41Z",
+   "media": 1,
+   "judul": {
+    "id": "Meski Sering Diingatkan Polisi, Kericuhan Antarpengemudi Ojol Kembali Terjadi di Suluban",
+    "en": "Meski Sering Diingatkan Polisi, Kericuhan Antarpengemudi Ojol Kembali Terjadi di Suluban"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "BALIPOST.com",
+    "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPSVVneDRlb3Uxc2VFMnduNjBIZG01U2pwS2RxWUZZNW03YzIwQldEQ2w5eG9wMi02eGY2VUI3Z2pzeWhGRUFPYlNzYklQOWdaQTdLX3dIMUZlWkk2ZU8tckFVSXViaWdsRVZwdEVQRWxiMXVLZ1dSa3AxdW1UMXRCTjFoczBZa19iMmhtTUVRZEF2SFlMLVhlNmhDUQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-02T01:41:08Z",
    "media": 2,
    "judul": {
@@ -85,57 +340,6 @@
    "sumber": {
     "nama": "Tribratanews Polda Lampung",
     "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQUmRuRnU2UVdBZ0pRVnFUVUQ2ZllPUDZHRUNickt0Zm1EYlZ1WGpjNV9yTEFKaDI4S2ZMbURaN25HMVUyeWh4c2c4aUhxQ3k3Vm1fSjY5OGVIVnJ4YURqLVRCRlZsMzN0dHVYV21MOEtsMTZGelZTT0MweURDeXdQRFVPRVdHZXpuRHk5Xy1xNVJ2dFZyTWJSSEo0TUc4b3pQZWtFNHRtSVlwU3RYS055SlcyZHVjT3pvUHlXME42TW4tNDhCSUhKSHI3T1RQT1UyeWNwT2dnM0EzYXU2Mm5jQmVYcw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-02T01:20:03Z",
-   "media": 2,
-   "judul": {
-    "id": "Resmi! Daftar Harga BBM di SPBU Pertamina, Berlaku 2 November 2026",
-    "en": "Resmi! Daftar Harga BBM di SPBU Pertamina, Berlaku 2 November 2026"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "CNBC Indonesia",
-    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNYWZmSURlYk9EaTY2SWZJUnNxQjJIQ24zZE42RXBqLS1abDBBRmZVSmNEMFc2Qm5nTVRLVGN6T0JaWVJZOUU3WTZIdk9wTW1uc2ttOW5SWFVkbXRoWXV5akZDUGhLWC11NUpZbjM5U0RSaEFRV2dBUDZpb1pucXdtLWcyQnpLcUhJNlMwaXRvaEtzUEpCNTJ5d1ViYTFXdkItMGhVdTVQRWRFek80ME5sanZpdGxPR2RwOXVEM1ZRZVrSAcYBQVVfeXFMTThqbzd1X25makZKQVB6cHZZSkhkZ3JWekdabDI5anFHWXYyZ3I3MG1Td0NUcUN0TjAtRmlVdVZOanpzU3lMUW9KbVljZ3BzMjBKRmZIS3JjWGg4MlVLNVAwZFlXa2JQRHBmdE1DQzJQckJHajhXTm9fSnA0VlNHQ1pLVWd5Z3daQ09NR2lGbGJIcGdOZko0dXZaZjJCVFFNcEpMci05Q3pPaXlRdjNoYnpyRGFnaWRPekEzdVNCZ003R3VfSjBB?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-01T23:12:00Z",
-   "media": 2,
-   "judul": {
-    "id": "Pemerintah Prioritaskan Motor Listrik untuk Ojol dan Kendaraan Dinas pada 2027-2030",
-    "en": "Pemerintah Prioritaskan Motor Listrik untuk Ojol dan Kendaraan Dinas pada 2027-2030"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "gadget.qoo10.co.id",
-    "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE02a3NKbTMtMDh2R1h3eWVxV2F1SEczTG55S0piMk1zSmRiYTRraVZab2lkdHIzV0ZpX2tPekpReUtEY1lLcGtvd0ZKUVE0REFvcGhTME95cGljdmNFaG9CRldLUnpzRkdpWEp6X2luM0gyUEVPQ1RQRXctTktVUQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-02T04:36:00Z",
-   "media": 1,
-   "judul": {
-    "id": "500 Inovasi Anak Bangsa Siap Dipamerkan di Surabaya, Ada Robot AI hingga Motor Listrik",
-    "en": "500 Inovasi Anak Bangsa Siap Dipamerkan di Surabaya, Ada Robot AI hingga Motor Listrik"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "rentak.id",
-    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNY1hKaWU4d1lLUEhHdUZ6Z1NPVXZOeV9LWEhmdzhuUEtrOE9IaFpBajdUMWRWZlp6Zm5peW1KbGVhdF9aaVBKeElKcG5BaWdhWWU5WkQ2cjVpY2lPSTRod2tqaEpkWnMwQ0U4Sk10UDlxbUJJMkMyZmZXU29hbElZZnFSREpPSjVnelRvWGZocEFyRnpiU0JGNTFZZmVDRnVwU2VFX1U3QQ?oc=5"
    }
   }
  ]
