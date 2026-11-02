@@ -1,7 +1,24 @@
 {
- "w": "2026-11-01T23:17:13Z",
+ "w": "2026-11-02T00:21:43Z",
  "dari": "Kroog",
  "berita": [
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-01T23:12:00Z",
+   "media": 2,
+   "judul": {
+    "id": "Pemerintah Prioritaskan Motor Listrik untuk Ojol dan Kendaraan Dinas pada 2027-2030",
+    "en": "Pemerintah Prioritaskan Motor Listrik untuk Ojol dan Kendaraan Dinas pada 2027-2030"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "gadget.qoo10.co.id",
+    "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE02a3NKbTMtMDh2R1h3eWVxV2F1SEczTG55S0piMk1zSmRiYTRraVZab2lkdHIzV0ZpX2tPekpReUtEY1lLcGtvd0ZKUVE0REFvcGhTME95cGljdmNFaG9CRldLUnpzRkdpWEp6X2luM0gyUEVPQ1RQRXctTktVUQ?oc=5"
+   }
+  },
   {
    "jenis": "berita",
    "waktu": "2026-11-01T15:13:41Z",
@@ -21,6 +38,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-10-31T22:36:08Z",
+   "media": 9,
+   "judul": {
+    "id": "Getaran Banjir Lahar Semeru Terekam Hampir 4 Jam, Aktivitas Warga Tetap Lancar",
+    "en": "Getaran Banjir Lahar Semeru Terekam Hampir 4 Jam, Aktivitas Warga Tetap Lancar"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Head Topics",
+    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNYjZPcUZxMmJERWxRTlZRTTdHRnlJcmYzSTBBZllhNWdqLTBDajJpbjlFRW1hVWRsalNzM0hiNzBoS3dyX1VaTnNrN0xpMDh1bFVWVFhiWG1sUHZ1WjJvMzBLa0ZmbUc4aVJKOWZfczVQdmQzZkt2MGF5MC0wZDdMMWM3dW9OdTViamFDRVBKLXJNOWVCRlRFQWhZTFV3UQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-01T12:12:21Z",
    "media": 3,
    "judul": {
@@ -34,23 +68,6 @@
    "sumber": {
     "nama": "NUSABALI.com",
     "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOREcxc211WmNmQU5FdkZ6Z20tYXM5T1lKMC1lMUpOM3BCTFhBVDRMczdiLXVKQU1jdVk2dklPNW9LM3VSXzluSFhoZHhXamRNNkFUSzJqUGhud05vak5WcW8yX0JLNnBOVWtnOGJrYVc2REZaeEdxRmptWGplbHdmUGwzOWtTZFU?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-31T22:36:08Z",
-   "media": 8,
-   "judul": {
-    "id": "Getaran Banjir Lahar Semeru Terekam Hampir 4 Jam, Aktivitas Warga Tetap Lancar",
-    "en": "Getaran Banjir Lahar Semeru Terekam Hampir 4 Jam, Aktivitas Warga Tetap Lancar"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Head Topics",
-    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNYjZPcUZxMmJERWxRTlZRTTdHRnlJcmYzSTBBZllhNWdqLTBDajJpbjlFRW1hVWRsalNzM0hiNzBoS3dyX1VaTnNrN0xpMDh1bFVWVFhiWG1sUHZ1WjJvMzBLa0ZmbUc4aVJKOWZfczVQdmQzZkt2MGF5MC0wZDdMMWM3dW9OdTViamFDRVBKLXJNOWVCRlRFQWhZTFV3UQ?oc=5"
    }
   },
   {
@@ -153,108 +170,6 @@
    "sumber": {
     "nama": "Nukilan",
     "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPTXctX2FCVWxpbjJiUTJRMTVPM0Z3dFZBaC16c2NiS2NQVjI1XzAxYS1EeVhCR2FGZ1R4S3JXWFBBQklqRHBnbFYwbGtBODZRWWJTbFpoNTFIamxxNjRsdi1ZOXp1ODBqUlVqcEUtY3UwLUFlb3kwZmgtbGx4ZEdOOElzT3lVYTVieEc5SFRJRGl5eUQxNWYzbw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-01T03:00:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Singapura Tak Naikkan Tarif Listrik Meski RI Pangkas Ekspor Gas Alam",
-    "en": "Singapura Tak Naikkan Tarif Listrik Meski RI Pangkas Ekspor Gas Alam"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "CNN Indonesia",
-    "url": "https://www.cnnindonesia.com/internasional/20261027103855-120-1420037/singapura-tak-naikkan-tarif-listrik-meski-ri-pangkas-ekspor-gas-alam"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-01T03:54:55Z",
-   "media": 3,
-   "judul": {
-    "id": "Satlantas Polres Kubu Raya Edukasi 100 Ojol soal Safety Riding",
-    "en": "Satlantas Polres Kubu Raya Edukasi 100 Ojol soal Safety Riding"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "شبكة تواصل الإخبارية",
-    "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9HVUJOSUZIdWlpX25YMDZUX0p2QlBWQWw1Y2toc2RPcEpFT3BQNlZjdkVORmFKaWFseTlEYUJXQWRUTlB1VEFQN00ybmszR0VQSVFn?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-01T03:51:40Z",
-   "media": 3,
-   "judul": {
-    "id": "Driver Ojol Ditemukan Tewas Membusuk di Kamar Kos Bulak Banteng Surabaya",
-    "en": "Driver Ojol Ditemukan Tewas Membusuk di Kamar Kos Bulak Banteng Surabaya"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Sorot News",
-    "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPU19RZ1ZQZjlvdVZIeUhSTjBCdW1JejBPVEp2eW1nUHNQNUdwYjBRYnRodGNBYVZZSFMyOTJVRC1oYk84em1rQkdReWhvRHNiX2lZYVJOV0hEcUtidGtVdHg3eWE4YnBuRy1WQnlDTVB4ZlNoQkNRUlN2ejFkSXdZcndRMEhjcW91b1doM1RVMW5zRDdFalF4ZmJrRnQ4YUc4M05JSDlWcXZkazRkeUVLdWoyY2N6WVp2SldSdFdreHMyQ0F3?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-01T14:16:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Mengevaluasi Efek Bumerang Komisi Ojol 8 Persen",
-    "en": "Mengevaluasi Efek Bumerang Komisi Ojol 8 Persen"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "HARIAN DISWAY",
-    "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOdGxtMkdqNUZUdllHWWZaNG5SV1lDM2ZLUmdhd0dIZUFOQ0VzNHU5ME0xZ1laaU1qTHBzdXR3OFZmb3dsbG9KdklKWmwyQ1dnenhVMUNfSGVsZ2VtNVUxQmxOc1dtbnZfV3Q2M1RoRi1yQkN5MXlkMS1mclRrMW8yNlBpU2JPdjZNRzUxNtIBiwFBVV95cUxORlpZbGI3MVU3NDRoWVczT2Z6ekkyVVYxaG1hTG94b2d1TFB6VkhnOTVfZEFnX3NIUTBHUVptbFdlMVVzNTEtRTM1ZVd4SHpxd0lOMWxOVDJQQnVUcHpWSGFqa1VaTlJlZmRkRmFRVFNTT1RoeEFEeXpybHh6ZDJNQlFzeHFtcFRWdG9n?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-01T13:58:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Viral Kericuhan Ojol di Pantai Suluban Bali, Ini Temuan Polsek Kuta Selatan",
-    "en": "Viral Kericuhan Ojol di Pantai Suluban Bali, Ini Temuan Polsek Kuta Selatan"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "JPNN.com",
-    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPN1JnM1JTTUtxUHVKSEtVczh4U3Y0T2lrMFUzekJJcmVYRG0wcnRMR3NSVjQ0Vzg5bkswcHZJbFJZX3RMNmdGNFc2ZnJENklDczZNLTdzbU9INWpUYlhJVW9aTTNHZ203Y09NSWRvcFNBbHY0cEx4Ym55UFctWWdiUjZiMDNON1dhV3czZGhXTENRbERuWldEcVJwSDB0VjVVMVlta1JNU01XZVhiZGs0WA?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-01T07:29:41Z",
-   "media": 2,
-   "judul": {
-    "id": "Polres Metro melalui Sat Intelkam Salurkan Bantuan kepada Driver Ojol, Wujud Kepedulian Polri",
-    "en": "Polres Metro melalui Sat Intelkam Salurkan Bantuan kepada Driver Ojol, Wujud Kepedulian Polri"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Tribratanews Polda Lampung",
-    "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNb3ZUdVBHNk5WaGpBNW1EN19Jd2l3OC01eEZtRGdQaHdtSzA5SnBWTWZQRXVBeEkxX2ZEOFVPYTY3NDU1LURxZlJiRnlxYUhxNDhOWWR1Q0VRal9iUnVDbkRzb1VBY2kyYldLU2U4MVlXWWF6cERCQ1d3THk1LXRjazYxdXZuc2N5cndSMGp1NzZ4M3FYQ2czYmlHZVRCZjZLV08zZlhKdWJOT1MteDlPcE1sY1d4X1M1V1VXNUc3dUpJNE9BUTZ0RFJPN0NmdTdTYTZUNEN2LWRoWG9Gc1E?oc=5"
    }
   }
  ]
