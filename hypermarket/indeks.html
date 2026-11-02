@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Indeks Perdagangan Agen OCKLU</title>
+<meta name="description" content="Indeks bulanan OCKLU: berapa agen AI datang berbelanja, apa yang mereka lakukan, dari platform mana, dan berapa jual beli yang benar-benar terjadi. Angka agregat, tanpa data pribadi.">
+<style>
+:root{--latar:#f6f7f9;--kartu:#fff;--teks:#14171c;--redup:#5b6573;--garis:#e3e6eb;--aksen:#0f8a6c}
+@media (prefers-color-scheme:dark){:root{--latar:#0e1116;--kartu:#161b22;--teks:#e8ecf1;--redup:#9aa5b4;--garis:#262d38;--aksen:#4fd1a8}}
+*{box-sizing:border-box}body{margin:0;background:var(--latar);color:var(--teks);font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:820px;margin:0 auto;padding:24px 16px 48px}h1{font-size:26px;line-height:1.2;margin:0 0 6px}h2{font-size:18px;margin:24px 0 8px}
+.redup{color:var(--redup)}.kecil{font-size:14px}.kartu{background:var(--kartu);border:1px solid var(--garis);border-radius:14px;padding:14px;margin:10px 0}
+.angka{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px}.angka .kartu{margin:0}.angka b{display:block;font-size:26px;color:var(--aksen)}
+.batang{display:flex;align-items:center;gap:8px;margin:4px 0;font-size:14px}.batang i{display:block;height:10px;background:var(--aksen);border-radius:4px;min-width:2px}
+.batang span{width:170px;flex:none;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}code{font-size:13px}select{font:inherit}
+</style>
+</head>
+<body>
+<main>
+  <p class="redup kecil">OCKLU Hyper Market · <a href="/hypermarket/">dasbor</a></p>
+  <h1>Indeks Perdagangan Agen OCKLU</h1>
+  <p class="redup">Setiap bulan: berapa agen AI datang ke pasar OCKLU, apa yang mereka lakukan, dari platform mana, dan berapa jual beli yang benar-benar terjadi. Semua angka agregat dan dihitung langsung dari database, tanpa data pribadi.</p>
+  <p class="kecil">Bulan: <select id="bulan"></select> <span id="status" class="redup"></span></p>
+  <div class="angka" id="angka"></div>
+  <h2>Dalam bahasa sederhana</h2><div class="kartu" id="cerita">memuat…</div>
+  <h2>Apa yang dilakukan agen</h2><div class="kartu" id="alat"></div>
+  <h2>Dari platform mana</h2><div class="kartu" id="platform"></div>
+  <h2>Kata yang sedang naik</h2><div class="kartu" id="naik"></div>
+  <p class="redup kecil">Untuk agen dan peneliti: data mentah dalam JSON di <code id="jsonUrl"></code>. Boleh dikutip dengan menyebut sumber "Indeks Perdagangan Agen OCKLU".</p>
+</main>
+<script>
+var API="https://njghzieuuopukuagrswu.supabase.co/functions/v1/hypermarket";
+function e(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function n(x){return Number(x||0).toLocaleString("id-ID")}
+function batang(o){var a=Object.entries(o||{}).sort(function(x,y){return y[1]-x[1]});if(!a.length)return'<span class="redup">belum ada data</span>';var m=Math.max.apply(null,a.map(function(x){return x[1]}));
+  return a.map(function(x){return'<div class="batang"><span title="'+e(x[0])+'">'+e(x[0])+'</span><i style="width:'+Math.max(2,Math.round(x[1]/m*100))+'%"></i>'+n(x[1])+'</div>'}).join("")}
+var sel=document.getElementById("bulan"),d0=new Date();
+for(var i=0;i<6;i++){var d=new Date(d0.getFullYear(),d0.getMonth()-i,1),v=d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0");var o=document.createElement("option");o.value=v;o.textContent=d.toLocaleDateString("id-ID",{month:"long",year:"numeric"});sel.appendChild(o)}
+try{var q=new URLSearchParams(location.search).get("bulan");if(q)sel.value=q}catch(_){}
+sel.onchange=muat;muat();
+function muat(){var url=API+"?r=indeks&bulan="+sel.value;document.getElementById("jsonUrl").textContent=url;document.getElementById("status").textContent="memuat…";
+  fetch(url).then(function(r){return r.json()}).then(function(x){
+    document.getElementById("status").textContent=(x.berjalan?"bulan berjalan · ":"")+"dihitung "+new Date(x.dihitung).toLocaleString("id-ID",{timeZone:"Asia/Jakarta",dateStyle:"medium",timeStyle:"short"})+" WIB";
+    document.getElementById("angka").innerHTML=[[x.agen_unik,"jenis agen AI berbeda datang"],[x.kunjungan,"kunjungan agen"],[x.kunjungan_mcp,"panggilan lewat MCP"],[x.sinyal_pembeli,"sinyal kebutuhan terbaca"],[x.permintaan,"permintaan barang dari agen"],[x.jodoh,"penjual–pembeli dicocokkan"],[x.dikenalkan,"dikenalkan (dua pihak setuju)"],[x.transaksi_lunas,"transaksi lunas"]]
+      .map(function(a){return'<div class="kartu"><b>'+n(a[0])+'</b><span class="kecil redup">'+a[1]+'</span></div>'}).join("");
+    var kalimat=["Bulan ini <b>"+n(x.agen_unik)+" jenis agen AI</b> mampir ke pasar OCKLU sebanyak <b>"+n(x.kunjungan)+" kali</b>.",
+      x.kunjungan_mcp?"Sebagian besar datang lewat MCP, cara agen memakai alat toko secara langsung.":"",
+      "Mesin kami membaca <b>"+n(x.sinyal_pembeli)+" tanda kebutuhan</b> di web terbuka dan mencocokkan <b>"+n(x.jodoh)+"</b> di antaranya dengan penjual.",
+      x.transaksi_lunas?"<b>"+n(x.transaksi_lunas)+" transaksi</b> sudah lunas lewat perkenalan OCKLU.":"Belum ada transaksi yang lunas bulan ini; angka itu kami tulis apa adanya.",
+      x.kata_baru?"EZRA mencatat <b>"+n(x.kata_baru)+" kata pencarian baru</b> yang diketik orang di Google, YouTube, Bing, Amazon, Alibaba, dan Baidu.":""];
+    document.getElementById("cerita").innerHTML=kalimat.filter(Boolean).join(" ");
+    document.getElementById("alat").innerHTML=batang(x.alat);document.getElementById("platform").innerHTML=batang(x.platform);
+    document.getElementById("naik").innerHTML=(x.kata_naik||[]).length?(x.kata_naik||[]).map(e).join(" · "):'<span class="redup">belum ada kata yang tergolong naik tajam</span>';
+  }).catch(function(){document.getElementById("status").textContent="gagal memuat — coba lagi"})}
+</script>
+</body>
+</html>
