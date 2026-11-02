@@ -1,5 +1,5 @@
 {
- "w": "2026-11-02T04:37:31Z",
+ "w": "2026-11-02T05:04:52Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -89,6 +89,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-02T01:20:03Z",
+   "media": 2,
+   "judul": {
+    "id": "Resmi! Daftar Harga BBM di SPBU Pertamina, Berlaku 2 November 2026",
+    "en": "Resmi! Daftar Harga BBM di SPBU Pertamina, Berlaku 2 November 2026"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "CNBC Indonesia",
+    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNYWZmSURlYk9EaTY2SWZJUnNxQjJIQ24zZE42RXBqLS1abDBBRmZVSmNEMFc2Qm5nTVRLVGN6T0JaWVJZOUU3WTZIdk9wTW1uc2ttOW5SWFVkbXRoWXV5akZDUGhLWC11NUpZbjM5U0RSaEFRV2dBUDZpb1pucXdtLWcyQnpLcUhJNlMwaXRvaEtzUEpCNTJ5d1ViYTFXdkItMGhVdTVQRWRFek80ME5sanZpdGxPR2RwOXVEM1ZRZVrSAcYBQVVfeXFMTThqbzd1X25makZKQVB6cHZZSkhkZ3JWekdabDI5anFHWXYyZ3I3MG1Td0NUcUN0TjAtRmlVdVZOanpzU3lMUW9KbVljZ3BzMjBKRmZIS3JjWGg4MlVLNVAwZFlXa2JQRHBmdE1DQzJQckJHajhXTm9fSnA0VlNHQ1pLVWd5Z3daQ09NR2lGbGJIcGdOZko0dXZaZjJCVFFNcEpMci05Q3pPaXlRdjNoYnpyRGFnaWRPekEzdVNCZ003R3VfSjBB?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-01T23:12:00Z",
    "media": 2,
    "judul": {
@@ -102,6 +119,23 @@
    "sumber": {
     "nama": "gadget.qoo10.co.id",
     "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE02a3NKbTMtMDh2R1h3eWVxV2F1SEczTG55S0piMk1zSmRiYTRraVZab2lkdHIzV0ZpX2tPekpReUtEY1lLcGtvd0ZKUVE0REFvcGhTME95cGljdmNFaG9CRldLUnpzRkdpWEp6X2luM0gyUEVPQ1RQRXctTktVUQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-02T04:36:00Z",
+   "media": 1,
+   "judul": {
+    "id": "500 Inovasi Anak Bangsa Siap Dipamerkan di Surabaya, Ada Robot AI hingga Motor Listrik",
+    "en": "500 Inovasi Anak Bangsa Siap Dipamerkan di Surabaya, Ada Robot AI hingga Motor Listrik"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "rentak.id",
+    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNY1hKaWU4d1lLUEhHdUZ6Z1NPVXZOeV9LWEhmdzhuUEtrOE9IaFpBajdUMWRWZlp6Zm5peW1KbGVhdF9aaVBKeElKcG5BaWdhWWU5WkQ2cjVpY2lPSTRod2tqaEpkWnMwQ0U4Sk10UDlxbUJJMkMyZmZXU29hbElZZnFSREpPSjVnelRvWGZocEFyRnpiU0JGNTFZZmVDRnVwU2VFX1U3QQ?oc=5"
    }
   },
   {
@@ -123,19 +157,19 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-01T15:13:41Z",
-   "media": 3,
+   "waktu": "2026-11-02T02:41:33Z",
+   "media": 1,
    "judul": {
-    "id": "Pelaku Jambret Puluhan Kali Beraksi, Nyamar Jadi Pengendara Ojol",
-    "en": "Pelaku Jambret Puluhan Kali Beraksi, Nyamar Jadi Pengendara Ojol"
+    "id": "Banjir Lahar Semeru Terjang Sekitar Permukiman, Status Siaga",
+    "en": "Banjir Lahar Semeru Terjang Sekitar Permukiman, Status Siaga"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "Posmetro Medan",
-    "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE4zWXRrT3ZONTQ4RHktNFZ5bENaSEU3TjBLSHUtVnpBNUUyNFpsYnp1U0dQY041RzRCZmswZkc5cnZQcTRydDFSa19USzBXa1hOSnU3dGdSaTNUWXVzaHdDVy1feVZHMzk3SXI0akU1bzdRZGd1VTM5Qg?oc=5"
+    "nama": "detikNews",
+    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNRFhVMGlBeUllZ1Q5aXdobUE0Q1lIYzBUdE1MYXhNa2ZJZTVTSUJRU1FFZmNtcjlSZWM4Ry1VV2RXR2dWQXdpTFlRamh2a3JqWm5ZeTEweE9VV2F5dEJvWmNjbVhtSUFTdXZmRVNCMWt2Sk56M0tuWFF0bWFncjYzLWpCUDJyNmEtQWwyaTQwZ0U3QlZtam92OWxvSjdWMFpG0gGmAUFVX3lxTE9SQS11NlJvMWhyaW9PVjlGNkdfLVFyQjFWR1ZJT25YendTMUxyd3dMejdISktrZld0cHRKUFVkWWhHWTBZMG9EWTFpazNfRnM0ZE5wNHJ6bXlXRVdoa3NjZUVwc0I0X1VPcDU1OVlJUHZ4VWJhbW5SZVJlUWMxMXo1TjBZbVVleG9GcUdfZ19OeGF2MUxDWUNtdTc2ekR4T09PaGd2OHc?oc=5"
    }
   }
  ]
