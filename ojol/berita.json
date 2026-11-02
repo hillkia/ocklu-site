@@ -1,7 +1,41 @@
 {
- "w": "2026-11-02T01:25:15Z",
+ "w": "2026-11-02T02:29:00Z",
  "dari": "Kroog",
  "berita": [
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-02T01:56:28Z",
+   "media": 10,
+   "judul": {
+    "id": "Getaran Banjir Lahar Semeru Terekam Hampir 4 Jam, Aktivitas Warga Tetap Lancar",
+    "en": "Getaran Banjir Lahar Semeru Terekam Hampir 4 Jam, Aktivitas Warga Tetap Lancar"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "ANTARA News Bali",
+    "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPYTYtTHA3WVZKZUt3Z2RTWDM4OGgzTlh6TVlueVgwR3BUZm9PZk94RW9XNWtsZ1BlMXdYc0lfREtpUDJEMTJtNkxpcjhDb3N5TXRLd2ZtZk1LRFBmRTlBaHpzREZtWjI0dHdEQklrcFEyVlVxOEU3UnJHM3lPd0xVcFpCZ0JLM3R5b2l5MmNHQnJiUEMwcGJXQ9IBngFBVV95cUxNV0FRNjVyZVVIZzN5VmpWNzNOYTZKN3FJc09IRTJXVU5ZTkhkYjhScFI4aXhqa1F5b2xpRllHV09rcklMVVBjLXpCOTRRZ3JjT3JLc2Z3UWZUQjJhdTVnUE0zVUp1WFd2S2tQSklqdkpDc3NNMGI0NEhGdTlzazBVaDY0NktjV25Yck5sOFpFYlRoQ0JvTkpHcmQzZUF0Zw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-02T01:41:08Z",
+   "media": 2,
+   "judul": {
+    "id": "Edukasi Pengemudi Ojol, Satgas Preemtif Ops Patuh Krakatau Sosialisasi Keselamatan Berlalu Lintas",
+    "en": "Edukasi Pengemudi Ojol, Satgas Preemtif Ops Patuh Krakatau Sosialisasi Keselamatan Berlalu Lintas"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Tribratanews Polda Lampung",
+    "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQUmRuRnU2UVdBZ0pRVnFUVUQ2ZllPUDZHRUNickt0Zm1EYlZ1WGpjNV9yTEFKaDI4S2ZMbURaN25HMVUyeWh4c2c4aUhxQ3k3Vm1fSjY5OGVIVnJ4YURqLVRCRlZsMzN0dHVYV21MOEtsMTZGelZTT0MweURDeXdQRFVPRVdHZXpuRHk5Xy1xNVJ2dFZyTWJSSEo0TUc4b3pQZWtFNHRtSVlwU3RYS055SlcyZHVjT3pvUHlXME42TW4tNDhCSUhKSHI3T1RQT1UyeWNwT2dnM0EzYXU2Mm5jQmVYcw?oc=5"
+   }
+  },
   {
    "jenis": "berita",
    "waktu": "2026-11-01T23:12:00Z",
@@ -17,6 +51,23 @@
    "sumber": {
     "nama": "gadget.qoo10.co.id",
     "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE02a3NKbTMtMDh2R1h3eWVxV2F1SEczTG55S0piMk1zSmRiYTRraVZab2lkdHIzV0ZpX2tPekpReUtEY1lLcGtvd0ZKUVE0REFvcGhTME95cGljdmNFaG9CRldLUnpzRkdpWEp6X2luM0gyUEVPQ1RQRXctTktVUQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-02T02:23:09Z",
+   "media": 1,
+   "judul": {
+    "id": "Hujan Deras Picu Banjir Lahar Semeru, Tanggul di Lumajang Jebol",
+    "en": "Hujan Deras Picu Banjir Lahar Semeru, Tanggul di Lumajang Jebol"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Deliknews.com",
+    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPV3pKY21maWNBenpuTXhTVC02RmUwdGVMNlExMmVwWENCcEgwdnRPWGtPdm9MV0wyeUxWSHdOVlRNQ0lCTDR1eVlCZF9Ed0FOeXhuWWNyak5CX29nQkxvX1FVdjFaZmk4cWk5Z0h1UW80d2hYOTVsQUp3UWwyUnNlMkNlYmtVRnFodnBtODRPRWVzejRCMERKNXMwTnZsNy1fRUE?oc=5"
    }
   },
   {
@@ -51,23 +102,6 @@
    "sumber": {
     "nama": "TribunStyle.com",
     "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPVUlBM3luSG9DdHd5RU9CRFdDNS1aazg3T0t4OWhHN2h2QjNacm1lUWowYUg3SXVhaFNyanlWLVlzTGFGRnBrWHJ1RE9QWndPOXItbWhuQ3lNeHFxMFVDR0EzRG1kT3MyWVFfOVluY0tZaDZ4RXRqTUQ5OGRycVpPMzRMRXpkcG00R0t6OUhJVlR5MHZOczEyV3lUTTUzYnV5cTlxTUEwZWx4eDVWcGRRSFhUemxnXy1MaXJFMl9jZ0U2UmVLMFhqdndQZUFQdzhJcTdR?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-10-31T22:36:08Z",
-   "media": 9,
-   "judul": {
-    "id": "Getaran Banjir Lahar Semeru Terekam Hampir 4 Jam, Aktivitas Warga Tetap Lancar",
-    "en": "Getaran Banjir Lahar Semeru Terekam Hampir 4 Jam, Aktivitas Warga Tetap Lancar"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Head Topics",
-    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNYjZPcUZxMmJERWxRTlZRTTdHRnlJcmYzSTBBZllhNWdqLTBDajJpbjlFRW1hVWRsalNzM0hiNzBoS3dyX1VaTnNrN0xpMDh1bFVWVFhiWG1sUHZ1WjJvMzBLa0ZmbUc4aVJKOWZfczVQdmQzZkt2MGF5MC0wZDdMMWM3dW9OdTViamFDRVBKLXJNOWVCRlRFQWhZTFV3UQ?oc=5"
    }
   },
   {
@@ -136,74 +170,6 @@
    "sumber": {
     "nama": "Koridor.co.id",
     "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBoZk93WFd4ak5sZUcydU0xRmFUNzlleGhtQ1p5WUNiY3pqMEhiQktrdFlxaTFBSEQ1SzhkNWtrNDFnRjFXek9RQnIydzI4bkY4QWw0bDFXXzhjbjFYVUV4NEw3UUZfWEVYNFJzTA?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-01T14:08:00Z",
-   "media": 2,
-   "judul": {
-    "id": "Banjir Rendam Enam Desa di Kecamatan Pante Ceureumen Aceh Barat",
-    "en": "Banjir Rendam Enam Desa di Kecamatan Pante Ceureumen Aceh Barat"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Akurat.co",
-    "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1YQTJMUTczaTViMnBkLWh1azZpSlh3Tk52MlVKbFN4OERSTkVDRW10elMxVEVXbU1tZjVZTnpxYV9uYkFCTlNfdktURFYxVTR5M0QzZTNiNUIxTkNDZUNrSXRMeHJBc2tvNDlLZi02UkdHN1lqcUxXTHVIaw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-01T14:00:38Z",
-   "media": 2,
-   "judul": {
-    "id": "Mulai Hari Ini, Vietnam Pangkas Tarif Listrik & Hapus Pajak Bensin",
-    "en": "Mulai Hari Ini, Vietnam Pangkas Tarif Listrik & Hapus Pajak Bensin"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "detikFinance",
-    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQWjJHU2pQWkxYTGFYSXBqNm5HY0lfZUlKWUsxaXdNYUY0VUNUWVNrUFRsZDlQc2tzbVZKbUl3Nl8tcE9ydnA3TXB5ZV9UMnBMWVIzVkdUSzhzQnpOVUJvaERtLXJacVRpanFqOVdadDY1bFhVMlh2d2ZESkQ2YXY1RVI5bjloMHZRR3l4V3hBZFVUYjFmZUtSRkduaXljWGZqQ0VLTnZWTDJQQdIBrwFBVV95cUxQZmVNaktLcE1uaUdYaGV2aXM0b2RSelcyWVF2YW52Ym9jdDA5VC13TUs5aTRxYVhzcXV4MmduQWFNQnVYcG1FenR4X1dBcEVrSk1SUUY0LWtsTG9tR2JJVGhEMEJwUkhGc0dzeF9TUkZTZzladTZ3Q1ZyN3ZRWmRSOGV6ZEIxVzhEdjZlQk5EQ0FwQ2FWNUJ3bTF0N0tFcDNnUjU2dWNUSGJUUjZmb0tZ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-01T19:00:00Z",
-   "media": 1,
-   "judul": {
-    "id": "BNPB Ingatkan Papua Selatan Waspada Banjir dan Longsor di Tengah Karhutla",
-    "en": "BNPB Ingatkan Papua Selatan Waspada Banjir dan Longsor di Tengah Karhutla"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Memorandum.co.id",
-    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOOEpsUlZudF8tRTJ1UHhmR2NqSmE4N25HSWkxT1ZnemVUd2JMenU2cXF2d0pqOXM1cXlJbmFKZDZGV2NiUUczbkhmMHc5aFgtdDFWc2pYelM4c3pkUUNMbGdRRE5NR1RvaktweVljSVEzXzdOWmRBc1l4Q0lBSGI2VzZBOHZ4SWRWYlp6TUpKaGFTTzhjY2hISUhTV1RCUmdjY3NLNWg5YlJsZjZLRENPbDdJb9IBswFBVV95cUxOOEpsUlZudF8tRTJ1UHhmR2NqSmE4N25HSWkxT1ZnemVUd2JMenU2cXF2d0pqOXM1cXlJbmFKZDZGV2NiUUczbkhmMHc5aFgtdDFWc2pYelM4c3pkUUNMbGdRRE5NR1RvaktweVljSVEzXzdOWmRBc1l4Q0lBSGI2VzZBOHZ4SWRWYlp6TUpKaGFTTzhjY2hISUhTV1RCUmdjY3NLNWg5YlJsZjZLRENPbDdJbw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-01T12:49:00Z",
-   "media": 2,
-   "judul": {
-    "id": "Bolivia Dikepung Banjir dan Kekeringan, Presiden Tetapkan Darurat Nasional",
-    "en": "Bolivia Dikepung Banjir dan Kekeringan, Presiden Tetapkan Darurat Nasional"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Inilah.com",
-    "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOdWdTVXVwbUV1Yy1ZVjl5RGJpMWNHTk5ldVh3cnFuS080R3d1X0Z4R0JWZTc0bzVoZlFCcEtXdTZ3MVduNHFuZjVSWjFKcUNrMEt2Q0steklOMXRjY1N0QkdLVlo1bF9xZUVjSERnZkN0bk9ld3pxV09TSy1TbFBGdGhIYldZWEZt?oc=5"
    }
   }
  ]
