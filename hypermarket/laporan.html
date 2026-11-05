@@ -39,6 +39,7 @@ a{color:var(--aksen)}button{font:inherit;padding:8px 14px;border-radius:10px;bor
   </div>
   <p><button type="button" onclick="window.print()">Simpan sebagai PDF</button></p>
   <p class="kecil" id="kaki"></p>
+<section class="kartu" id="bayar" hidden style="margin-top:14px"></section>
 </main>
 <script>
 function wibBuru(t){return new Date(t).toLocaleString("id-ID",{timeZone:"Asia/Jakarta",day:"numeric",month:"short",year:"numeric",hour:"2-digit",minute:"2-digit"})+" WIB"}
@@ -81,6 +82,22 @@ fetch(API+"?r=kpi_klien&hari="+HARI+"&t="+encodeURIComponent(t),{cache:"no-store
 if(k.bahasa==="en")document.documentElement.classList.add("en");inggriskan();
 }).catch(function(e){document.getElementById("sub").textContent="Laporan belum bisa dibuka ("+e.message+"). Coba muat ulang, atau minta link baru ke OCKLU."});}
 muatLaporan();setInterval(function(){if(!document.hidden)muatLaporan()},15*60000);
+</script>
+<script>
+(function(){var t=new URLSearchParams(location.search).get("t"),A="https://njghzieuuopukuagrswu.supabase.co/functions/v1/hypermarket?r=klien_tagih",B=document.getElementById("bayar"),en=false,cek=null;if(!t)return;
+function el(n,x){var e=document.createElement(n);if(x)e.textContent=x;return e}
+function post(d){return fetch(A,{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify(d)}).then(function(r){return r.json()})}
+function judul(k){var hari=new Date().toISOString().slice(0,10),aktif=k.lunas_sampai&&k.lunas_sampai>=hari;
+  if(aktif)return en?"Paid until "+k.lunas_sampai:"Lunas sampai "+k.lunas_sampai;
+  if(k.status==="aktif"&&!k.lunas_sampai)return en?"Free trial until "+new Date(k.coba_sampai).toLocaleDateString("en-GB"):"Uji coba sampai "+new Date(k.coba_sampai).toLocaleDateString("id-ID");
+  return en?"Your agents have stopped. Pay to restart them right away.":"Agen Anda berhenti. Bayar agar langsung jalan lagi."}
+function gambar(k){B.hidden=false;B.textContent="";B.append(el("h2",en?"Subscription":"Langganan"),el("p",judul(k)));
+  var d=el("p");Object.keys(k.harga).forEach(function(p){var h=k.harga[p],b=el("button",(p==="mulai"?(en?"Starter":"Mulai"):(en?"Growth":"Tumbuh"))+(en?" · USD "+h.usd+"/month":" · USD "+h.usd+" (±Rp"+h.idr.toLocaleString("id-ID")+")/bulan"));b.style.margin="0 8px 8px 0";b.onclick=function(){tagih(p,k)};d.append(b)});B.append(d)}
+function tagih(p,k){var o=el("p",en?"Preparing…":"Menyiapkan…");B.append(o);post({t:t,paket:p}).then(function(x){if(x.galat){o.textContent=x.galat;return}o.textContent="";
+  var u=el("div");if(x.paypal){var a=el("a",en?"Pay with PayPal":"Bayar dengan PayPal");a.href=x.paypal;a.target="_blank";a.rel="noopener";u.append(a)}
+  u.append(el("p",en?"Or send exactly "+x.usdc.jumlah+" USDC on Base to:":"Atau kirim tepat "+x.usdc.jumlah+" USDC di jaringan Base ke:"));var c=el("code",x.usdc.alamat);c.style.wordBreak="break-all";u.append(c,el("p",en?"The exact amount identifies your payment, and agents restart automatically. This invoice lasts 3 days.":"Nilai persisnya menandai pembayaran Anda, dan agen otomatis jalan. Tagihan berlaku 3 hari."));
+  var s=el("p",en?"Waiting for payment…":"Menunggu pembayaran…");u.append(s);o.append(u);clearInterval(cek);var lama=k.lunas_sampai;cek=setInterval(function(){post({t:t,cek:1}).then(function(n){if(n.lunas_sampai&&n.lunas_sampai!==lama){clearInterval(cek);gambar(n)}}).catch(function(){})},15000)}).catch(function(){o.textContent=en?"Failed. Please retry.":"Gagal. Coba lagi."})}
+fetch(A+"&t="+encodeURIComponent(t),{cache:"no-store"}).then(function(r){return r.json()}).then(function(k){if(!k.mandiri)return;en=k.bahasa==="en";gambar(k);if(location.hash==="#bayar")B.scrollIntoView()}).catch(function(){})})();
 </script>
 </body>
 </html>
