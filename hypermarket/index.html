@@ -38,6 +38,7 @@ canvas{display:block;width:100%;height:min(66vh,560px)}
 .kp{background:linear-gradient(160deg,rgba(13,44,105,.88),rgba(4,14,38,.92));border:1px solid #2f9bff;border-radius:4px;clip-path:polygon(14px 0,100% 0,100% calc(100% - 14px),calc(100% - 14px) 100%,0 100%,0 14px);box-shadow:inset 0 0 26px rgba(47,155,255,.28)}
 .kp h3{font-size:15px;color:#bfe6ff;text-shadow:0 0 8px #2f9bff}.kp b.be{font-size:30px;color:#7fe7ff;text-shadow:0 0 12px rgba(53,200,255,.8)}
 .kp,.kalur div{cursor:pointer}.kp:hover{filter:brightness(1.18)}.kalur div:hover{filter:brightness(1.25)}
+.kzoom{position:absolute;right:10px;bottom:40px;display:grid;gap:6px;z-index:3}.kzoom button{width:38px;height:38px;font-size:20px;color:#bfe6ff;background:#071a40;border:1px solid #2f9bff;border-radius:8px;cursor:pointer}.kc canvas{touch-action:pan-y;cursor:grab}
 .kp.am{background:linear-gradient(160deg,rgba(90,56,8,.75),rgba(30,18,4,.92));border-color:#ffb03a}.kp.am b.be{color:#ffd27a;text-shadow:0 0 12px rgba(255,176,58,.8)}
 .kalur{gap:2px;margin-top:-6px}.kalur div{position:relative;padding:18px 12px;background:linear-gradient(180deg,rgba(14,50,118,.95),rgba(5,16,44,.95));border:0;border-radius:0;clip-path:polygon(16% 0,84% 0,100% 28%,100% 72%,84% 100%,16% 100%,0 72%,0 28%);box-shadow:none}.kalur b{font-size:26px;color:#7fe7ff;text-shadow:0 0 10px #35c8ff}.kalur i{color:#dff3ff;font-size:13px}.kalur div.ini{background:linear-gradient(180deg,rgba(120,76,10,.95),rgba(40,24,4,.95))}.kalur div.ini b{color:#ffd27a}
 .kc .kosmos{background:transparent;border:0;overflow:visible}.kc canvas{height:min(68vh,640px)}.kc .kosmos h1{font-size:24px;letter-spacing:.04em;text-transform:uppercase;text-shadow:0 0 12px #2f9bff}.kc .kosmos .kaki{display:none}
@@ -120,6 +121,7 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
 <div class="kcg"><div class="kcc"><div class="kp"><h3>Denyut Global</h3><b class="be" id="kcA">–</b><p class="ke">kunjungan agen 30 hari</p><b class="be" id="kcB">–</b><p class="ke">agen berbeda bulan ini</p><b class="be" id="kcC">–</b><p class="ke">pendapatan tercatat bulan ini</p><div id="kcSpark"></div></div><div class="kp"><h3>Gugus Teratas</h3><ul id="kcWil"></ul></div></div>
 <div class="kcc"><section class="kosmos" aria-label="Peta pasar antar-agen">
   <canvas id="kanvas" aria-hidden="true"></canvas>
+  <div class="kzoom"><button type="button" id="zoomIn" aria-label="Perbesar peta">+</button><button type="button" id="zoomOut" aria-label="Perkecil peta">−</button></div>
   <div class="judul"><h1 data-teks="judul">Pasar antar-agen</h1><p data-teks="intro">Sembilan agen ber-DNA milik OCKLU melayani agen AI yang datang belanja, menyiarkan produkmu, dan menjaga kasir. Hidup di awan, tetap jalan walau laptop mati.</p><button class="btn mini owner-saja" id="ubahJudul" type="button" hidden>✎ Ubah judul &amp; kalimat</button></div>
   <div class="kaki">Ketuk gugus untuk melihat planetnya. Gerak agen = animasi; garis terang dan angka = kejadian nyata dari database (dibaca EZRA 24 jam, sinyal 7 hari, link toko klien).</div>
 </section>
@@ -483,14 +485,19 @@ function ukur(){dpr=Math.min(2,window.devicePixelRatio||1);var r=cv.getBoundingC
 window.addEventListener("resize",ukur);ukur();
 // 6 Nov: kanvas PETA DUNIA + GUGUS planet (pilihan owner E+B): peta samar, OCKLU di Indonesia, agen terbang melengkung, ketuk gugus untuk melihat planetnya; siluet kanan atas tegas saat disentuh
 var PETA=["        ####         ###       ####   ###################   ","  ###############     #      #######################  ###   "," ##################        ##########################       ","     ################      ########################         ","      ##############       # ######################         ","       ###########        ###  ###################           ","        ########          ########  ############ #           ","         ####            ###########  ####  ###  ##          ","           ###           ############   ##    #   #          ","             ###           ##########         #  ##         ","             #####         #########            ####  ##     ","             ########       ########              ## ###     ","              ########      #######                 #######  ","               ######       #######              ###  ###    ","               #####         #####              ########     ","               ###           ####               #########    ","               ##             ##                    ###      ","               #                                       #     "];
-var GUGUS=[{id:"agen",nama:"Agen AI",c:9,r:3,w:"#b99bff",cocok:/chatgpt|claude|perplexity|gemini|mcp|suara|nvidia|grok|copilot|openai/},
-  {id:"cina",nama:"Pasar Tiongkok",c:44,r:3,w:"#ffb38a",cocok:/alibaba|aliexpress|taobao|tmall|baidu|1688|jd\b/},
-  {id:"sea",nama:"Asia Tenggara",c:45,r:10,w:"#ffd27a",cocok:/shopee|tokopedia|lazada|bukalapak/},
-  {id:"amerika",nama:"Pasar Amerika",c:18,r:9,w:"#ff9ec7",cocok:/amazon|ebay|shopify|fiverr|etsy|walmart|gumroad|hacker/},
-  {id:"cari",nama:"Pencarian",c:30,r:3,w:"#8ab8ff",cocok:/google|youtube|bing|brave|duck|yandex/},
-  {id:"web",nama:"Web lainnya",c:31,r:13,w:"#9aa0bd",cocok:/./}];
+var GUGUS=[{id:"agen",nama:"Agen AI",negara:"Amerika Serikat",c:-120,r:38,w:"#b99bff",cocok:/chatgpt|claude|perplexity|gemini|mcp|suara|nvidia|grok|copilot|openai/},
+  {id:"cina",nama:"Pasar Tiongkok",negara:"Tiongkok",c:112,r:34,w:"#ffb38a",cocok:/alibaba|aliexpress|taobao|tmall|baidu|1688|jd\b/},
+  {id:"sea",nama:"Asia Tenggara",negara:"Indonesia",c:112,r:-3,w:"#ffd27a",cocok:/shopee|tokopedia|lazada|bukalapak/},
+  {id:"amerika",nama:"Pasar Amerika",negara:"Amerika Serikat",c:-82,r:36,w:"#ff9ec7",cocok:/amazon|ebay|shopify|fiverr|etsy|walmart|gumroad|hacker/},
+  {id:"cari",nama:"Pencarian",negara:"Eropa",c:9,r:50,w:"#8ab8ff",cocok:/google|youtube|bing|brave|duck|yandex/},
+  {id:"web",nama:"Web lainnya",negara:"seluruh dunia",c:22,r:2,w:"#9aa0bd",cocok:/./}];
+var ARCS=[],NAMA=[],ZOOM=1,GESER=0;
+fetch("https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-110m.json").then(function(r){return r.json()}).then(function(t){var k=t.transform,D=Math.PI/180;
+  ARCS=t.arcs.map(function(a){var x=0,y=0;return a.map(function(p){x+=p[0];y+=p[1];return[(x*k.scale[0]+k.translate[0])*D,(y*k.scale[1]+k.translate[1])*D]})});
+  (t.objects.countries.geometries||[]).forEach(function(g){var f=g.arcs;while(Array.isArray(f))f=f[0];var A=ARCS[f<0?~f:f];if(!A||!g.properties)return;var m=A[Math.floor(A.length/2)];NAMA.push({n:g.properties.name,l:m[0],f:m[1]})})}).catch(function(){});
 var gPilih=null,tegas=0,petaC=null;
-var ROT=0;function geo(c,r){var R=Math.min(W*.44,H*.4),lon=c/60*6.283-3.1416+ROT,lat=(75-r/18*125)*.01745,cl=Math.cos(lat);return{x:W/2+R*cl*Math.sin(lon),y:H*.56-R*Math.sin(lat),z:cl*Math.cos(lon)}}
+var ROT=0;function proy(l,f){var R=Math.min(W*.44,H*.4)*ZOOM,lon=l+ROT+GESER,cl=Math.cos(f);return{x:W/2+R*cl*Math.sin(lon),y:H*.56-R*Math.sin(f),z:cl*Math.cos(lon)}}
+function geo(c,r){return proy(c*.01745,r*.01745)}
 function petakan(){var hit={};GUGUS.forEach(function(g){hit[g.id]=0});PLANET.forEach(function(p){var s=(p.id+" "+p.nama).toLowerCase(),g=GUGUS.filter(function(x){return x.cocok.test(s)})[0];p._g=g;p._k=hit[g.id]++})}
 function posPlanet(i,t){var p=PLANET[i%PLANET.length];if(!p._g)petakan();var o=geo(p._g.c,p._g.r),a=p._k*2.4+t*.00012,d=Math.min(W,H)*.024*Math.sqrt(p._k+1);return{x:o.x+Math.cos(a)*d,y:o.y+Math.sin(a)*d*.75}}
 function kurva(a,b,f){var d=Math.hypot(b.x-a.x,b.y-a.y),cx0=(a.x+b.x)/2,cy0=Math.min(a.y,b.y)-d*.22,u=1-f;return{x:u*u*a.x+2*u*f*cx0+f*f*b.x,y:u*u*a.y+2*u*f*cy0+f*f*b.y}}
@@ -499,10 +506,12 @@ function gambar(now){
   for(var i=0;i<bintang.length;i++){var b=bintang[i];cx.globalAlpha=.25+.25*Math.sin(t*.001+b.k);cx.fillStyle="#fff";cx.beginPath();cx.arc(b.x,b.y,b.r,0,7);cx.fill()}
   if(!petaC||petaC.w!==W||petaC.h!==H){var pk=document.createElement("canvas");pk.width=W*dpr;pk.height=H*dpr;var px=pk.getContext("2d");px.scale(dpr,dpr);px.fillStyle="#a9bcff";PETA.forEach(function(b,r){for(var i=0;i<b.length;i++)if(b[i]==="#"){px.beginPath();px.arc(W*.02+i/60*W*.96,H*.1+r/18*H*.82,Math.max(1.2,W/420),0,7);px.fill()}});petaC={c:pk,w:W,h:H}}
   cx.globalAlpha=.24;cx.drawImage(petaC.c,0,0,W,H);
-  ROT=t*.00007;var Rg=Math.min(W*.44,H*.4),Cy=H*.56;cx.globalAlpha=.6;cx.fillStyle="#040a1c";cx.beginPath();cx.arc(W/2,Cy,Rg,0,7);cx.fill();var hg=cx.createRadialGradient(W/2,Cy,Rg*.2,W/2,Cy,Rg*1.22);hg.addColorStop(0,"rgba(30,120,255,.34)");hg.addColorStop(.8,"rgba(30,120,255,.2)");hg.addColorStop(1,"rgba(30,120,255,0)");cx.globalAlpha=1;cx.fillStyle=hg;cx.beginPath();cx.arc(W/2,Cy,Rg*1.22,0,7);cx.fill();
+  if(ZOOM<=1.05)ROT=t*.00007;var Rg=Math.min(W*.44,H*.4)*ZOOM,Cy=H*.56;cx.globalAlpha=.6;cx.fillStyle="#040a1c";cx.beginPath();cx.arc(W/2,Cy,Rg,0,7);cx.fill();var hg=cx.createRadialGradient(W/2,Cy,Rg*.2,W/2,Cy,Rg*1.22);hg.addColorStop(0,"rgba(30,120,255,.34)");hg.addColorStop(.8,"rgba(30,120,255,.2)");hg.addColorStop(1,"rgba(30,120,255,0)");cx.globalAlpha=1;cx.fillStyle=hg;cx.beginPath();cx.arc(W/2,Cy,Rg*1.22,0,7);cx.fill();
   cx.strokeStyle="#59c6ff";cx.lineWidth=1;cx.globalAlpha=.16;for(var mi=0;mi<12;mi++){var ml=ROT%1.0472+mi*.5236-1.5708,ms=Math.sin(ml)*Rg;cx.beginPath();cx.ellipse(W/2,Cy,Math.abs(ms),Rg,0,0,7);cx.stroke()}for(var la=-2;la<=2;la++){var ly=la*.3,yy=Cy-Math.sin(ly*1.5)*Rg,rr=Math.cos(ly*1.5)*Rg;cx.beginPath();cx.ellipse(W/2,yy,rr,rr*.1,0,0,7);cx.stroke()}
   cx.globalAlpha=.95;cx.strokeStyle="#59c6ff";cx.lineWidth=1.6;cx.shadowColor="#2f9bff";cx.shadowBlur=18;cx.beginPath();cx.arc(W/2,Cy,Rg,0,7);cx.stroke();cx.shadowBlur=0;cx.globalAlpha=.5;cx.beginPath();cx.ellipse(W/2,Cy+Rg*.98,Rg*1.05,Rg*.13,0,0,7);cx.stroke();cx.beginPath();cx.ellipse(W/2,Cy+Rg*.98,Rg*.7,Rg*.08,0,0,7);cx.stroke();
-  cx.fillStyle="#8fdcff";PETA.forEach(function(b,r){for(var i=0;i<b.length;i++)if(b[i]==="#"){var p=geo(i,r);if(p.z>0){cx.globalAlpha=.3+p.z*.7;cx.fillRect(p.x-1.2,p.y-1.2,2.4,2.4)}}});
+  cx.strokeStyle="#8fdcff";cx.lineWidth=.8;cx.globalAlpha=.85;cx.beginPath();for(var ai=0;ai<ARCS.length;ai++){var ar=ARCS[ai],ada=false;for(var ap=0;ap<ar.length;ap++){var pq=proy(ar[ap][0],ar[ap][1]);if(pq.z>0){if(ada)cx.lineTo(pq.x,pq.y);else cx.moveTo(pq.x,pq.y);ada=true}else ada=false}}cx.stroke();
+  if(!ARCS.length){cx.fillStyle="#8fdcff";PETA.forEach(function(b,r){for(var i=0;i<b.length;i++)if(b[i]==="#"){var p=geo(i/60*360-180,75-r/18*125);if(p.z>0){cx.globalAlpha=.3+p.z*.7;cx.fillRect(p.x-1.2,p.y-1.2,2.4,2.4)}}})}
+  if(ZOOM>=1.7){cx.fillStyle="#cfeaff";cx.font="10px -apple-system,sans-serif";cx.textAlign="center";cx.globalAlpha=.8;NAMA.forEach(function(m){var q=proy(m.l,m.f);if(q.z>.3)cx.fillText(m.n,q.x,q.y)})}
   var kuat=Date.now()<tegas;cx.globalAlpha=kuat?.42:.055;cx.fillStyle="#eef0ff";cx.textAlign="right";cx.font="italic 600 "+Math.max(13,Math.min(24,W*.024))+"px Georgia,serif";cx.fillText("Paid In Full · Jesus is God",W-16,30);
   cx.globalAlpha=1;cx.textAlign="center";if(!PLANET[PLANET.length-1]._g)petakan();
   var pc={x:W/2,y:H*.56},aktif={},L={},jum={};((S&&S.planet_luar)||[]).forEach(function(p){L[p.id]=p});aliran.forEach(function(a){aktif[a.planet]=(aktif[a.planet]||0)+1});
@@ -520,7 +529,7 @@ function gambar(now){
   var ids=Object.keys(WARNA);
   ids.forEach(function(id,k){var tujuan=neuronT[id]||{i:(k*5)%PLANET.length,mulai:k*900},q=posPlanet(tujuan.i,t),f=gerakOk?(Math.sin((t-tujuan.mulai)*.0009)+1)/2:.5,pos=kurva(pc,q,f);
     var gg=cx.createRadialGradient(pos.x,pos.y,0,pos.x,pos.y,11);gg.addColorStop(0,WARNA[id]);gg.addColorStop(1,"rgba(0,0,0,0)");cx.fillStyle=gg;cx.beginPath();cx.arc(pos.x,pos.y,11,0,7);cx.fill();cx.fillStyle="#fff";cx.beginPath();cx.arc(pos.x,pos.y,2.2,0,7);cx.fill();
-    if(W>820){cx.fillStyle=WARNA[id];cx.font="600 10px -apple-system,sans-serif";cx.fillText(id.toUpperCase(),pos.x,pos.y+19)}});
+    var ng=(PLANET[tujuan.i%PLANET.length]._g||{}).negara||"";if(W>620||ZOOM>1.4){cx.fillStyle=WARNA[id];cx.font="600 10px -apple-system,sans-serif";cx.fillText(id.toUpperCase()+" → "+ng,pos.x,pos.y+19)}});
   // isi gugus yang diketuk
   if(gPilih){var D=PLANET.filter(function(p){return p._g===gPilih}).sort(function(a,b){return b._n-a._n}).slice(0,14),o=geo(gPilih.c,gPilih.r),bw=Math.min(W-24,230),bh=22+D.length*17,bx=Math.max(12,Math.min(W-bw-12,o.x-bw/2)),by=Math.max(12,Math.min(H-bh-12,o.y-bh/2));
     cx.fillStyle="rgba(8,10,28,.93)";cx.strokeStyle=gPilih.w;cx.beginPath();cx.roundRect?cx.roundRect(bx,by,bw,bh,10):cx.rect(bx,by,bw,bh);cx.fill();cx.stroke();cx.textAlign="left";cx.font="600 12px -apple-system,sans-serif";cx.fillStyle=gPilih.w;cx.fillText(gPilih.nama,bx+10,by+17);cx.font="12px -apple-system,sans-serif";
@@ -531,7 +540,13 @@ requestAnimationFrame(gambar);
 (function(){var k=document.querySelector(".kosmos");function xy(e){var r=cv.getBoundingClientRect();return{x:e.clientX-r.left,y:e.clientY-r.top}}
   function tegaskan(p){if(p.x>W*.55&&p.y<56){tegas=Date.now()+4000;if(!gerakOk){requestAnimationFrame(gambar);setTimeout(function(){requestAnimationFrame(gambar)},4100)}return true}}
   k.addEventListener("mousemove",function(e){tegaskan(xy(e))});
-  k.addEventListener("click",function(e){if(e.target.closest("button,a,input"))return;var p=xy(e);if(tegaskan(p))return;var g=null,dk=Math.max(46,W*.075);GUGUS.forEach(function(x){var o=geo(x.c,x.r),d=Math.hypot(o.x-p.x,o.y-p.y);if(o.z>-.1&&d<dk){dk=d;g=x}});gPilih=g===gPilih?null:g;if(!gerakOk)requestAnimationFrame(gambar)})})();
+  function zm(f){ZOOM=Math.max(1,Math.min(6,ZOOM*f));if(ZOOM<=1.05){ZOOM=1;GESER=0}if(!gerakOk)requestAnimationFrame(gambar)}
+  document.getElementById("zoomIn").onclick=function(){zm(1.4)};document.getElementById("zoomOut").onclick=function(){zm(1/1.4)};
+  cv.addEventListener("wheel",function(e){if(e.ctrlKey||ZOOM>1){e.preventDefault();zm(e.deltaY<0?1.12:1/1.12)}},{passive:false});
+  var geser=null,cubit=0,seret=false;cv.addEventListener("pointerdown",function(e){geser={x:e.clientX,g:GESER};seret=false});
+  window.addEventListener("pointermove",function(e){if(!geser)return;var dx=e.clientX-geser.x;if(Math.abs(dx)>4)seret=true;if(seret)GESER=geser.g+dx/(Math.min(W*.44,H*.4)*ZOOM)});window.addEventListener("pointerup",function(){geser=null});
+  cv.addEventListener("touchmove",function(e){if(e.touches.length===2){e.preventDefault();var d=Math.hypot(e.touches[0].clientX-e.touches[1].clientX,e.touches[0].clientY-e.touches[1].clientY);if(cubit)zm(d/cubit);cubit=d;geser=null}},{passive:false});cv.addEventListener("touchend",function(){cubit=0});
+  k.addEventListener("click",function(e){if(e.target.closest("button,a,input")||seret)return;var p=xy(e);if(tegaskan(p))return;var g=null,dk=Math.max(46,W*.075);GUGUS.forEach(function(x){var o=geo(x.c,x.r),d=Math.hypot(o.x-p.x,o.y-p.y);if(o.z>-.1&&d<dk){dk=d;g=x}});gPilih=g===gPilih?null:g;if(!gerakOk)requestAnimationFrame(gambar)})})();
 
 function planetDari(p){
   var teks=(p.sasaran||"")+" "+(p.aksi||"");
