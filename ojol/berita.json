@@ -1,22 +1,39 @@
 {
- "w": "2026-11-06T15:03:43Z",
+ "w": "2026-11-06T16:06:32Z",
  "dari": "Kroog",
  "berita": [
   {
    "jenis": "berita",
-   "waktu": "2026-11-06T13:04:00Z",
-   "media": 41,
+   "waktu": "2026-11-06T14:36:53Z",
+   "media": 45,
    "judul": {
     "id": "KPK Periksa Dirut KAI Bobby Rasyidin, Uang Rp2 Miliar Terkait Korupsi SPBU Disita",
     "en": "KPK Periksa Dirut KAI Bobby Rasyidin, Uang Rp2 Miliar Terkait Korupsi SPBU Disita"
    },
    "isi": {
-    "id": "KPK menyita uang sebesar Rp2 miliar dari Bobby Rasyidin, yang disebut sebagai Direktur Utama KAI dalam lima media, terkait kasus digitalisasi SPBU. Media kontan.co.id menyebutkan penyitaannya kepada mantan Direktur Utama Len Industri, berbeda dengan laporan lainnya.",
-    "en": "The KPK seized Rp2 billion from Bobby Rasyidin, identified as the CEO of KAI in five outlets, in connection with the SPBU digitalisation case. kontan.co.id reports the seizure as involving the former CEO of Len Industri, differing from the other reports."
+    "id": "KPK menyita Rp2 miliar dari Bobby Rasyidin, Dirut PT KAI, terkait dugaan korupsi digitalisasi SPBU. Beberapa media melaporkan ia mengembalikan dana tersebut, sementara media lain menyatakan ia diduga menerima dana itu.",
+    "en": "The KPK seized Rp2 billion from Bobby Rasyidin, CEO of PT KAI, in connection with alleged corruption in SPBU digitalisation. Some outlets report he returned the money, while others say he is alleged to have received it."
    },
    "sumber": {
-    "nama": "Kupas Tuntas",
-    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNY3JEM3dkcnoyWVczejQteFItZWl0VDR0N3dXWFdIMGMtdnVRdjkwRDNMa3NoTk5ERWl6REd6blhwbGd5SFNkbThHU0lBNTBzN2xTZHVHRzdUbzJDSHhuN2tJeEVKYVZudUJ1RlI0cEJBam94aUdZZnNsSzdKUmMycFk3a0h5N2JVWHE5ODl1WHpYeWdNUWJUV2dRNHVBaUNkd0lHbmpVUDJBUFhBb24wR1R1QUo4Mm0xdmpKNFozT2M?oc=5"
+    "nama": "Lentera.co",
+    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPclNIMEQ4YmRHT2w5QUZDZTBtNnJQMDgxU0dJb3c4cmplT01lNkpYSXVNcUJhYXRLbUMtcHU3aUVhM2ZUNVNTZ2JvM2J2ZWFFOE9xUDhSNUFiOXdST1BEWEVMeXFHMUpmcnZtYUtVZ3dzWnAyUkh2dDNfRkVBbFZnclpERkp6ZXN2OVZWUjAyNmJLcDFXZmFyYlZIUTRtZw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-06T13:51:42Z",
+   "media": 6,
+   "judul": {
+    "id": "KPK : Bobby Rasyidin Kooperatif Kembalikan Uang Terkait Digitalisasi SPBU",
+    "en": "KPK : Bobby Rasyidin Kooperatif Kembalikan Uang Terkait Digitalisasi SPBU"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "jurnas.com",
+    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPUFI0TkRrMHdvckRSaHF1UmlySFZXd1N4TjcwWmY3Wl9TNEtpdC1mVkFEUTY2NE5Ld3U2ZTYydHFjVUdzbk9zSHplOFhoNUdYWGQtczRnR21MdHh3X1FETTBnczF0ZWVfNHZkQ1hQTVhYM1Zlc2NabnRtNTVOX2JiOW1uWjF5aDBoZzZabERwTkxTMnBrZGVlZXhFM05zMzdoTWlVM2dYS05UQQ?oc=5"
    }
   },
   {
@@ -51,23 +68,6 @@
    "sumber": {
     "nama": "iNews.ID",
     "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQZm1OOUpfcmlXUVA1cy1CekpGUTRndGpzZ2NPYkdpU0NxNHNLcm4tN1ZHbnFkektOWmtwc0ZTcG5kVEd1N2N5NXpGNXR3Tnd2TUhiU213ZDdWYVFDSmg0NVVsNjhBYmx4ZUlqZ1hYeFc5c2stbnJxVmU5ZGhrSjZFbFh1eFpKZVU1S0dfQWFMcmdSajVUbEJ3Vzd3WGpOY1F2aERwdzVRUlFCWE9BQ2lRMnlMVnN3ODBTT2400gHAAUFVX3lxTE1uNk1KRTFEZlJqTWlLamQyYml6WlFOcGFZUUU5YVJUQmRTM3hKZ0ZuVDQ5andzWVpBN2JsTjQxRWpmU1hXdlVad19GZkJscFl1WFl3WXQtNW8wY1hteE54NlJZTlZVNE9xbFBweTlRV2FTaDZOVGY5TUpmRUNJcTVJeU0zdmo5blZKcmhCemNWb0lsMjMtdGRuN0lLU1laQnh3YXdrTG1kS1RPQzI2UmNGOEY3LUhpUFNuSkRVV3RtTQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-06T13:01:57Z",
-   "media": 2,
-   "judul": {
-    "id": "KPK : Bobby Rasyidin Kooperatif Kembalikan Uang Terkait Digitalisasi SPBU",
-    "en": "KPK : Bobby Rasyidin Kooperatif Kembalikan Uang Terkait Digitalisasi SPBU"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "MerahPutih",
-    "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPZkNrR25qcENrWWl0UjBCcDNWOXF6LWtuMHp3b3FHbHJhX0FnSV96enNZRlk3OXVNTE9NaUd2Rl9iakJnTUIwWlBLbDgwS1hxS1BCdmlKZVVlZjBzNXpSQzExZVVFRjBIZGRhYjZBdFVYcDhzSWIwUEluaHVOc3ZOV00wbTdUNzhkYk9mWkV4Y3UwdDhNbFdhQ2YzcFFKSEnSAZ4BQVVfeXFMT1N6OUQ0eGY2S0NmUC03NFI3WlFtZ2dIcTFSenljdjRhQ3FzT05KSmIzTXZrTDB0UXhMR0VyZktzNkVqcHFJcFdyUnZjdVpvcHlrX1hjNGdGLWt0Yi11UmswS0J1aGxEMXIzVzVUaGRvRWlfZ0YxN0NuRzBvZjdEdURXZE1kQzZOakFjSDk3OUczSFdDNmRwWDNISmprOXc?oc=5"
    }
   },
   {
@@ -136,6 +136,23 @@
    "sumber": {
     "nama": "Suryamalang.com",
     "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPRW85M2xZZFN6ODAxMWhQRVdoMmwyNzJNb2htTnBOcDgtUzVtdzRpNkJWeXQybHpQbTJEd0NPOExhOGJYQ0lJSzZXblNocUEzMmZJR3loQ0YxcHZxVkQxMWJUeW9zWlhWWUJTTE5VQVRibHUzdEw3RmhpQnd3WktHQWU5Y1YxWEx3MkVFb2hNc3FrUTNpMkJlMXpmUkdWT2lHUzVJNVRpY1YyTDRld1FlUFZBRTNtSzYwbnVuR2p0U3VVai0wa3BrSER5RXhBdTFtaUpJ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-06T13:43:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Dirut KAI Buka Suara Soal Kasus Korupsi SPBU Pertamina",
+    "en": "Dirut KAI Buka Suara Soal Kasus Korupsi SPBU Pertamina"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "https://www.trawlmediaindonesia.id/",
+    "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNZUpfbURxcWlQMEpmWFZSTWkyakZjN2hUTE4zcDk4Rk55LUVuLUhiWm5iMkgtcHV5elU2SE5KZFJtRGxqZWlxQXF5ZjhkaWo1aXdJYXBLRUZnZTJjdVk4SFcxbHRoVFEyVkY1b1JTdWhTWUM0WFJoOFlkT3cwcmhHaGtETFdHeGluVmJzQWt5VUQ?oc=5"
    }
   },
   {
@@ -221,23 +238,6 @@
    "sumber": {
     "nama": "detikNews",
     "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQUG1mOC1YQTFqTTl1dmFPN3Q5MDVOcUduSkxlaU9iRlZBTlh1V3B5cy1oR0NrTDk0VkdvVDg1QlJ0TmlLcTR3UTVUanJ2Q2pNVGRQMmVudkVmSDBNcGhKRG9IcU83R0dXZXM4SkJRNG5SR3YtVG8tODZSV1I0anBEcFhYdkpScFl2UGF3bFFKV3JSeTYwM0lmOE9oeDJsVGxOR0lwRktfcFhUZF9vZG1pVWotUXN4eFdi0gG-AUFVX3lxTE5wNGR6eGhweC01b1Q4V2hoc2FNWkZFR0txOWQ4ZGJncHJiOGRVNFB0bzVMVXplOF9GZVBza3pVS2RHdmhxakM5SUVGNzZWcEtLM3pOalAySDBlTEtnM0E0MHFwdThBWWNKRjNOU0tLWjhyZkhrOHhDWko1NHhkaWR1WUgxR25xUWZqQ2JEaWJiaW1mN0ZXNGNXb1VRMGVNVlVUckE4NjJuVkwtZVA0Q1dyQl9lRDlYbVNEN3A4RGc?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-06T11:18:54Z",
-   "media": 1,
-   "judul": {
-    "id": "Ancaman Banjir dan Longsor Depan Mata, Pemkot Bogor Minta Semua Siaga",
-    "en": "Ancaman Banjir dan Longsor Depan Mata, Pemkot Bogor Minta Semua Siaga"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "rmoljabar.id",
-    "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxObThPaXozYll6VTFZbk8zM3hPN1BGZWNnSE9HRkQ0SlBzNy1mV3FqdHJXTEpYNjZSaFBxb2RYdGF2U19hdEtweFpiY1JKS2hsTjRoZURjenZvbmZmbVBGM2dPaWh6TUV1NTE2MEZKalZqb0JnZm1tR1VWZDgtUm10cGVGRzBaVFphY2VjTXE0cHktbnRxZENNYw?oc=5"
    }
   }
  ]
