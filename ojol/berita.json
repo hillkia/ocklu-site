@@ -1,22 +1,22 @@
 {
- "w": "2026-11-06T06:25:51Z",
+ "w": "2026-11-06T07:30:09Z",
  "dari": "Kroog",
  "berita": [
   {
    "jenis": "berita",
-   "waktu": "2026-11-06T05:39:52Z",
-   "media": 18,
+   "waktu": "2026-11-06T06:24:10Z",
+   "media": 21,
    "judul": {
     "id": "KPK Periksa Dirut KAI Bobby Rasyidin, Uang Rp2 Miliar Terkait Korupsi SPBU Disita",
     "en": "KPK Periksa Dirut KAI Bobby Rasyidin, Uang Rp2 Miliar Terkait Korupsi SPBU Disita"
    },
    "isi": {
-    "id": "KPK menyita Rp2 miliar dari Dirut KAI Bobby Rasyidin terkait kasus digitalisasi SPBU, menurut sebagian besar media. Namun, Kontan.co.id melaporkan penyitaan tersebut berasal dari mantan Dirut Len Industri.",
-    "en": "The KPK seized Rp2 billion from KAI CEO Bobby Rasyidin in connection with the SPBU digitalisation case, as reported by most outlets. However, Kontan.co.id reported the seizure was from the former Len Industri CEO."
+    "id": "KPK menyita uang sebesar Rp2 miliar dari Bobby Rasyidin, yang disebut sebagai Direktur Utama KAI dalam lima media, terkait kasus digitalisasi SPBU. Media kontan.co.id menyebutkan penyitaannya kepada mantan Direktur Utama Len Industri, berbeda dengan laporan lainnya.",
+    "en": "The KPK seized Rp2 billion from Bobby Rasyidin, identified as the CEO of KAI in five outlets, in connection with the SPBU digitalisation case. kontan.co.id reports the seizure as involving the former CEO of Len Industri, differing from the other reports."
    },
    "sumber": {
-    "nama": "cek&ricek",
-    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPWlZJSnhmVWVMdF9xb3BadUp0MjNLMmx2bnRxbkhFS2xVZFNOQ190bzBEU0gtUUhpWm5GVHdxVVB1eGtRcTFsUzdnRF9lRDRTaml2TmdFRDBRYTg4bjRKbHJfdTQtX1Z2NDhlNHRHa1oyRFBzLWY2dlotcXFlcHZZeWp5dEVla2ktZGtwU2JBTDdjdk1YNlQzN01Zcl9EcndCWWszX0RiN0dxTjN5Q2dWQw?oc=5"
+    "nama": "VOICE Indonesia",
+    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPWC14Z2JxUVJkWFVrMHp2TmJvSmMyX2Zyc190akxaZ21nOXlKMnZNYTh4UXBDaW1DalctYTQzTUZid3hocGNFRDRyQWlqM3ZfSHJOdi1ZdzVvRjdJZ2xWU1hXTkJoTExWZ3ZlcGRBOVBOdGF0VnpRbzBmVnhCY0N2ZENrM2lGUkZBWkRITnlaV1NndldqVnVQYnlhWWRsMEtSZEY0ZUlHN08waFl3dnZUTTUtTQ?oc=5"
    }
   },
   {
@@ -34,6 +34,23 @@
    "sumber": {
     "nama": "iNews.ID",
     "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQZm1OOUpfcmlXUVA1cy1CekpGUTRndGpzZ2NPYkdpU0NxNHNLcm4tN1ZHbnFkektOWmtwc0ZTcG5kVEd1N2N5NXpGNXR3Tnd2TUhiU213ZDdWYVFDSmg0NVVsNjhBYmx4ZUlqZ1hYeFc5c2stbnJxVmU5ZGhrSjZFbFh1eFpKZVU1S0dfQWFMcmdSajVUbEJ3Vzd3WGpOY1F2aERwdzVRUlFCWE9BQ2lRMnlMVnN3ODBTT2400gHAAUFVX3lxTE1uNk1KRTFEZlJqTWlLamQyYml6WlFOcGFZUUU5YVJUQmRTM3hKZ0ZuVDQ5andzWVpBN2JsTjQxRWpmU1hXdlVad19GZkJscFl1WFl3WXQtNW8wY1hteE54NlJZTlZVNE9xbFBweTlRV2FTaDZOVGY5TUpmRUNJcTVJeU0zdmo5blZKcmhCemNWb0lsMjMtdGRuN0lLU1laQnh3YXdrTG1kS1RPQzI2UmNGOEY3LUhpUFNuSkRVV3RtTQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-06T06:16:59Z",
+   "media": 4,
+   "judul": {
+    "id": "KPK Sita Rp 2 Miliar dari Eks Dirut Len Industri dalam Kasus Digitalisasi SPBU",
+    "en": "KPK Sita Rp 2 Miliar dari Eks Dirut Len Industri dalam Kasus Digitalisasi SPBU"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Demokratis.co.id",
+    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5xTjd6MFlWbG5STEJfTWhmVkVHRHp4SC1iVWJhWGUyY2pqR0xEYmplbm9Zb01LQ1E4ajBwWUg2cWZoUFA5ejZVcGo1ZHhOQlV4UFNKb2pjbTNqckoxUVJvWXMtSVdJYTd3QVAxZWl3?oc=5"
    }
   },
   {
