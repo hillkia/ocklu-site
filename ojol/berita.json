@@ -1,5 +1,5 @@
 {
- "w": "2026-11-06T10:53:30Z",
+ "w": "2026-11-06T11:53:58Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -55,6 +55,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-06T10:32:43Z",
+   "media": 2,
+   "judul": {
+    "id": "Hendak Balik ke Garasi, Ambulans Dilempar Batu oleh Pemotor Berjaket Ojol di Sleman",
+    "en": "Hendak Balik ke Garasi, Ambulans Dilempar Batu oleh Pemotor Berjaket Ojol di Sleman"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "detikcom",
+    "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNTmxEMUZweFVWbndHbk5ZVzltZmRFM0cyR0dfT1J5OWpBdDBHZE54TmoxRlktU3Q3Mk9BOWlhXzMxQ09iOENOdEo0ZmVyQ083NVB1VnhrVnZhRHdqaXQweDhiWmRqbUFMQ3VGZVRoYldBd0RONHozcV9YLVVBWjUyQjJwaGVSak9iaU5jUjRzMDNub0FXRS01OFBsX1I1WmRsTkQ4ejBB0gGrAUFVX3lxTFB6S09qX0p3MWhJbWgya0dsZHhBNy1oRGtkNDZncUZac25JVWhsV0NhWFpGenB2M3pKeUVTLXZWMFJsYkF4aEhjc3JQODQxZUhRbVItSTBiQVQwMWVCdGEwMHdpRkZJZnZJUUVMY2FTV1lsazNYQ1BEcUZoVzhHa0g1aHdpeWh3RHRUcmI1Yks5VU9kQlJXeVowR0JDaTdqcTRtRDV5OUpsMWFwTQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-06T04:58:12Z",
    "media": 3,
    "judul": {
@@ -68,6 +85,23 @@
    "sumber": {
     "nama": "liputan4.com",
     "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNVHp2dHg5THRNb3pKVmpMaE9jUjJ4NjhMTzE1TEZJOHB1VS11SzU4TEMzZ2pIMkQzMlF4dVVvdENQZUNYNWdfdkU5Qlp3MDlZTzZvLWRBcV9CdlIxTFpzbGZ3VE9CUjRjZVVXaFdYd2VEQ3VENFJMelJtVjJxbVY3Yk1DMzF2QQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-06T09:10:00Z",
+   "media": 2,
+   "judul": {
+    "id": "Program POLIRAN, Kapolres Kotamobagu Rangkul Komunitas Ojol dan Ojek Pangkalan",
+    "en": "Program POLIRAN, Kapolres Kotamobagu Rangkul Komunitas Ojol dan Ojek Pangkalan"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "RRI.co.id",
+    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPanNyR3BaT2JUX2hUZkpnbVQ1TnlIb2hMUUJfU2dOVnFCa1hGUV9HaDRlNjdCRFBtOHlTUUNIVnJvZk5ncGNJMzlsMDNwMVlJN3hNOWk4TDNHTXQyN2Y1Y1hDNnR1alJvSjhMT0M5VFFmOFM0N09qQ0VCRWh6QWVxSGRFZTBabEplM09KSFRIalhuV2d0V1JoYWRlaXVTbm96cnNnd2QxcC1EZVpONnpCdnFWWGxXdTRvelBR?oc=5"
    }
   },
   {
@@ -140,6 +174,57 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-06T11:18:54Z",
+   "media": 1,
+   "judul": {
+    "id": "Ancaman Banjir dan Longsor Depan Mata, Pemkot Bogor Minta Semua Siaga",
+    "en": "Ancaman Banjir dan Longsor Depan Mata, Pemkot Bogor Minta Semua Siaga"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "rmoljabar.id",
+    "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxObThPaXozYll6VTFZbk8zM3hPN1BGZWNnSE9HRkQ0SlBzNy1mV3FqdHJXTEpYNjZSaFBxb2RYdGF2U19hdEtweFpiY1JKS2hsTjRoZURjenZvbmZmbVBGM2dPaWh6TUV1NTE2MEZKalZqb0JnZm1tR1VWZDgtUm10cGVGRzBaVFphY2VjTXE0cHktbnRxZENNYw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-06T10:11:15Z",
+   "media": 1,
+   "judul": {
+    "id": "Kapolres Wonogiri Sarapan Bersama Ojol dan Dengarkan Aspirasi",
+    "en": "Kapolres Wonogiri Sarapan Bersama Ojol dan Dengarkan Aspirasi"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Mitrapol",
+    "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxON0NzSVdwTjBkLTJEZmt5UWhlbklINGg4ZHRta3Zsd2RZRjFNdkExcWx0azZjSkJwNkZKTlZUYjJzRDJBYkRYMzZjX2RkcVRuX2Yyci1OMmU5ZEpsNnpwcHg3ZlUtSFlBSmQ3Q2hDdWZHa2VyN1BLYm9rV25KZ3gzQVkxdzFVNlgtd1p2eUlSVlhwQVVGRlNtbjhR?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-06T09:57:22Z",
+   "media": 1,
+   "judul": {
+    "id": "Inilah Bandit Curanmor yang Nyamar Pakai Jaket Ojol, Gasak Motor Karyawan RS Siti Khadijah Palembang",
+    "en": "Inilah Bandit Curanmor yang Nyamar Pakai Jaket Ojol, Gasak Motor Karyawan RS Siti Khadijah Palembang"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Sripoku.com",
+    "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPZmQ4Y0xtWW0tZHFNRzJEUW9ueVY0clhsSllsOE1fcU40M3REa3FiVHpOR0lUWjFLUlNPR3dyXzcxVkVBQm5tS1RCbGFwcEpyOFd6ODB1V0pmQmVXbkxKQkZQNU9IZHN1WExhRGtER3lUMHNHdTI1YlYybTMyOEZQSE81Z3JUbXpKWTMxeFlCSmg3V1piTzI1NUM3UUwxZU90eXAxT0hudEctWGtPak1LUURWSVBpWThYQlV1QVM5aXR4eUhqT0tjYkhFS3REcWdldDZxRTM3OXZ4dzhZY0NZ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-06T03:53:00Z",
    "media": 2,
    "judul": {
@@ -157,172 +242,70 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-06T08:09:21Z",
+   "waktu": "2026-11-06T09:32:22Z",
    "media": 1,
    "judul": {
-    "id": "Memverifikasi video seorang pengemudi ojek online yang berperilaku tidak pantas terhadap seorang wanita di tempat umum.",
-    "en": "Memverifikasi video seorang pengemudi ojek online yang berperilaku tidak pantas terhadap seorang wanita di tempat umum."
+    "id": "Tampang Pria Berjaket Ojol Viral Curi Motor Karyawan RS Siti Khadijah Palembang, Ditangkap Polisi",
+    "en": "Tampang Pria Berjaket Ojol Viral Curi Motor Karyawan RS Siti Khadijah Palembang, Ditangkap Polisi"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "Vietnam.vn",
-    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQbE1vMjBValpMS3BISXJiWWhwdVZHUXRHWjQxR2N4blhva1FFUmFSbEdmNzhBb0tuNXhBTm8tLUE5SmFkYVFEZmNoNU15NjU4b05FODd2Ul9TemRNNTJSNjB0N2hBcE1PZnpOVTJfS0dQWEZ2Rk5JSEFSb2tEVEROWnhkN19mSWlVeTllSG1aNlY0ZUtsZC0tVWwtNmJvNnZPMlE?oc=5"
+    "nama": "Tribunsumsel.com",
+    "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNc05za09HZDgzWWRCdTUtc2hsNnFnSWcxUzdrbTZGdF9MZlJDTjdHenh4aEdNM1lkM3Q3MDJQMDVENzJhTVpFeUo4d2FvbmpGbXE3RGo3WGM0ck9HbDZGT0hSUmwyczg1OGlhUWl0NXlUbmVZVVlobzdVZVRTYlkwcHNYSURqWmloaVhiVGJycGhJaE1SdGhpS1FEbGpka1hMTW5Tb3dzU3FnaUZxeHNrMHNZUk4tNnZxbDRKdnhRRUNjb1ZTdE1naGtxZWpWQlBJNzRWdGlLQUJ1ZUo0?oc=5"
    }
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-06T07:31:35Z",
+   "waktu": "2026-11-06T09:25:34Z",
    "media": 1,
    "judul": {
-    "id": "11 HP Murah untuk Ojol, Baterai Awet dan Layar Terang agar Tetap Nyaman di Jalan",
-    "en": "11 HP Murah untuk Ojol, Baterai Awet dan Layar Terang agar Tetap Nyaman di Jalan"
+    "id": "Komisi Ojol Turun Jadi 8 Persen, Tapi Penghasilan Driver Tertekan Pengurangan Subsidi",
+    "en": "Komisi Ojol Turun Jadi 8 Persen, Tapi Penghasilan Driver Tertekan Pengurangan Subsidi"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "Suara.com",
-    "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNQjJZTC1kVmFYNXhjSHRKYThzbHQ5Zk10cWVic2dBRmx1WTVWdlFWLTJVOE5HNUxwOGV3NXpGYVIyaE1tbkZGeV9aX1JITEFtckRheTJFT0dzdnZGbmxLQlN0RXJzWGlNWlRzZzk0MW1LUlRkZFd5Q3daczVwRGt5d25xVVJlNXlsSWZha2JtQ21vYVlUd2tRRWtJWm4tRUJpRTJUenBkZV96M18wU0J6UGtOQXlrZUV4aXlISEp6UHdwcDTSAcMBQVVfeXFMTUIyWUwtZFZhWDV4Y0h0SmE4c2x0OWZNdHFlYnNnQUZsdVk1VnZRVi0yVThORzVMcDhldzV6RmFSMmhNbW5GRnlfWl9SSExBbXJEYXkyRU9Hc3Z2Rm5sS0JTdEVyc1hpTVpUc2c5NDFtS1JUZGRXeUN3WnM1cERreXducVVSZTV5bElmYWtibUNtb2FZVHdrUUVrSVpuLUVCaUUyVHpwZGVfejNfMFNCelBrTkF5a2VFeGl5SEhKelB3cHA0?oc=5"
+    "nama": "iNews.ID",
+    "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQXzhSWEtvU21IaTQ5RXBQNUZkMURYS1Rzb05nV3NZdGhDMFpqM3pIMU80SHFWZWdGODJ1OFFqQ05FTlNwckZpNjQ2WWhKdTlidmFwbEZ4NWpseFJVOUJBM3MxdG5xT2NxT2MtbmJ1Z2FTVzdRdlI3MUxuSmdOQzd0Y3lXOERHVElCYmpUbE91UEpHYko4bFEybjhIMlpVeTNwMDZITEhhcFppaHMzSFNxazVkak5RbkZoTnNVZzJB0gG8AUFVX3lxTE9kRkh6a2ltcUJSNHpnUkI4NWx5ZC1mb3YtLWtRa1N2RmU0dk5MZjRIblNJN09CMFJQSnVoZ1dvNzNySG0wRHR5T29fdzJLblVGUFFQZGFfUnN6UDJTc0hOQnZNZURxS1ZweXBBYV9iRTdadGhnRUZOdDJiZjI4d2VZWVVUckwycG5ManUzZV9ncGFKS0FrSUU3aG5wU1NMQThST0JsXzI4Vy1DWF9hLVAxcmFTR3FyWkJaZ3hi?oc=5"
    }
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-06T07:25:30Z",
+   "waktu": "2026-11-06T09:22:34Z",
    "media": 1,
    "judul": {
-    "id": "Masih Berstatus Saksi, Dirut KAI Disita Rp2 Miliar oleh KPK, Bobby Disebut Tahu Proyek Korupsi SPBU sejak Awal",
-    "en": "Masih Berstatus Saksi, Dirut KAI Disita Rp2 Miliar oleh KPK, Bobby Disebut Tahu Proyek Korupsi SPBU sejak Awal"
+    "id": "PNM Perkuat Kemandirian Pengemudi Ojol Disabilitas Lewat Sosialisasi Literasi Keuangan & Safety Riding",
+    "en": "PNM Perkuat Kemandirian Pengemudi Ojol Disabilitas Lewat Sosialisasi Literasi Keuangan & Safety Riding"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "AFU.id",
-    "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNcTdJYUVYOXVheEg2dk1JQ013b0JvcDlMVWF3Qjh0bXktYjBMZG45UTVSNzhIRUhucHpVU2lBaWN6X1QwWXlFWFZISTFlOC1qbUw0V0E3ZWRMMncxT2NSaDBQeW43VFowVkNEUmZrbjBZVk1qeHN4ME5oZ3Q5Z3hzb3dhc3NoU2tlSjd4aHlhUkhPQnpGUjRLOWpYbjNQdjNnWk96NWVOSUQtQlFxcFIzWWUwMHBhei1lRnpGdDBzUHhPRlVzdzVBcU9XVGtLRzN5bDNHaA?oc=5"
+    "nama": "JPNN.com",
+    "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOX21zN1pXRm5ITFVGM3dPSmFyTEs3dGREbU9jVElkNFBMZG90bElqOS1XNGpoRXA4Q082ZktqeE10TjlwaVB2cGM0S0piTkhYSHFGc2N0SUZsNURlYWo3alNyTUwwNWJqVnBUNWR6N2ZKT2hrd18yeTduMDZVcUd1NmdINTFUdE1IaUtFRUVLM2VyTjY2UEFGNFpzNnBfSWwtUkhkR2hON1hQcFJwejRkQ1JMb012cGlQZW80S1R5VDJGcDBt0gHHAUFVX3lxTE5IV3RFQVFNeUIwUUNQOHRBN19IZzFzRVRDNVhNaVZrZ2dTalJZZVhwRGF5S1RDQjNOcVFOakJXdFkxZkpiWERfOWowMmlBa3cwd0pXTkRzZ2hOWURGblV6VnBsOE91ZnRXS2FxSW1YWlJZM2ZOdFFGUTF5bE5GMFF4WVlZREpsZEhqMUhWV09aaTRNX2hLcFBHMm1SSVVJbEFuY2ttSnhWM3ZBbnA3aXMxSUREa2VRNFlHdlZtbHNPSGdMbEd2MEk?oc=5"
    }
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-06T07:20:51Z",
+   "waktu": "2026-11-06T09:11:41Z",
    "media": 1,
    "judul": {
-    "id": "UU Reforma Agraria Disahkan, Pemerintah Bentuk Badan Kh...",
-    "en": "UU Reforma Agraria Disahkan, Pemerintah Bentuk Badan Kh..."
+    "id": "Siaga Hadapi Ancaman Banjir hingga Longsor, Polres Kediri Siagakan 500 Personel",
+    "en": "Siaga Hadapi Ancaman Banjir hingga Longsor, Polres Kediri Siagakan 500 Personel"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "EGINDO",
-    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNazRnUG95SmxLbklQcF9xang4RVFLWEpIUEJzSElLQVhHZnJVekpOanV0ZHJUVnBBZTRNa090NDZqcFZzWU9qTEM0dnRUTUZSZnJwMXJQOE45TnprZVA0anBGV3ZOSlc4UURzUnhaVk95S0h1Nkw0VVVCeVp3c0hSRE8zREhiUEMyRlMzUmFwR09wRmRHLWNn?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-06T07:15:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Polresta Karawang Tegaskan Polsek Purwasari Tak Pernah Tolak Laporan Ojol",
-    "en": "Polresta Karawang Tegaskan Polsek Purwasari Tak Pernah Tolak Laporan Ojol"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "PELITA KARAWANG",
-    "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPSVB6c05zaE9DX3lkU2RhZ3VlOTlEdkdobU8wTzhMX0JQRmtWekUtcnhJVGlpRzNCUGFzeDctd1FrSGtnUjlKdmZpUmpabTFwVmlkWWQ4Q3pRbGN0bURoOURqSkhlQTRpQm11QmtIT0RVdDhTQXJucEhCQXk3QlJQNUFqZw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-05T11:12:57Z",
-   "media": 6,
-   "judul": {
-    "id": "Cangkrukan Bareng Ojol, Kapolres Pelabuhan Tanjung Perak Ajak Jaga Keamanan Surabaya",
-    "en": "Gathering with Ojek Drivers, Tanjung Perak Port Police Chief Calls for Safeguarding Surabaya Security"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Surya.co.id",
-    "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNSVpKYXFOamVRc0lJWWZQbmhwUHVGajZHcUc2Q0lhREs4WEF2OEgzQ21aQm5CaFBUYmZFbDJqRm5lWWd3ck1aemlHYkF4YlpIXzJLcUIxMDFOTWhiRGtQaXRVOWdoU203dDJoTGY5ZEduQnFIMlhwd2I2LVppenZZS2xBZEVoM2hiSGxabFNERGNmWGlBV25vY29YTlRJdDhTa1V6QmtWV19hNkVGelYtekJZS2s5Yy1uUnp5Q21sLU90SFlFMkh2OVVZSnFjVklMQ3k1VUlPSlhfbXZWS2VEXzk3TjNWRXM?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-06T06:44:59Z",
-   "media": 1,
-   "judul": {
-    "id": "Dulu Langganan Banjir, SMKN 1 Sasak Ranah Pasisie Kini Punya Gedung Baru, Dukungan Program Revitalisasi Sekolah Pemerintah Pusat",
-    "en": "Dulu Langganan Banjir, SMKN 1 Sasak Ranah Pasisie Kini Punya Gedung Baru, Dukungan Program Revitalisasi Sekolah Pemerintah Pusat"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Minangsatu",
-    "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPU1J3UUdnMHdzeTFSZloxTjUtZHFOdF9zeTVCMEt5MHg0MUJTeTNMMDJKd0RjTnF0cGtIYVRLT0lwM3NySEhRTWxob01HYVo1WjVVN0ZuSTRlRkI4R0ZIWDBlZF9QVkJ5VWk3WEV5NHBiVFlmLU1nUGNTai1aQlBDSXptNVdoUnkzRUg5MEZsV0ZkYU52MnoyNnRSX24xVjEyM2dtS2Vyd0pzclN1YUxhNWQtSXdNSmpmaUtnRUlCaXU2eXd0TnBMd2dnSFRNOTQ5bnNGMWNBZDZWU2JaWXVmVW9sVUxDUU9WcnFF?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-06T00:20:00Z",
-   "media": 2,
-   "judul": {
-    "id": "Hendak Balik ke Garasi, Ambulans Dilempar Batu oleh Pemotor Berjaket Ojol di Sleman",
-    "en": "Hendak Balik ke Garasi, Ambulans Dilempar Batu oleh Pemotor Berjaket Ojol di Sleman"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Kompas.com",
-    "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOZWROd1A5RDBjMTN1cVk0ZmhyOGJ5SzdOYU9ZbmIwb2NNeXg1OVNVdXV3bHMyTUgtN2RhVEdtWFB6dHpEbm95aFpFT3RqNk1adTZVUUtwQnFZNWlYYzh2Ymw0VTlFVVNfRUVVYklDbzdDZ3pLY0NwWFB5UmtwbkFiOWNXREQ2aDVOVHhlYmV5ejVEb1FzX1FZcEVLU1JwbG8zQUNFeTQwaC01dEJHWHBSNDl4ZElhRjRYTVpIMDcyR0t4TTdxeTlhWGZISl9KQWJTNGJfSHhNYTJOZFNSa3NwTXdDZHFfUQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-06T06:07:43Z",
-   "media": 1,
-   "judul": {
-    "id": "Duduk Satu Meja dengan Ojol, Kapolres Wonogiri Serap Aspirasi Masyarakat",
-    "en": "Duduk Satu Meja dengan Ojol, Kapolres Wonogiri Serap Aspirasi Masyarakat"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Suara Merdeka Jakarta",
-    "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQc2Nvb09WSEtlVkFnb3lzWTJwUjEybms2N1ZYRC04NWVUS0I4c3lfN0xUZ2JKcDhjT2JCLXZmQXJZQU5WRHdteHlpdlZaLU9ybmd5Y0NNLTFfd2dPbHdpVlhTX1hYVGhnRGgyT2VXdWhJWlMxNlhPQlNKZUVpTGVaRnlmY0VmQ3pWeUNuanpUOVdmZzdESzBKMFNhRFRfS3BOUlFXM3pmRU45aTlYMEoxY1ZaTW84ekllZnF6MC1YT1ViSjDSAcgBQVVfeXFMT0FtZTlac21SUjZYMTFMWGNBR25FNTZ0NUQ4Uk5tR092cXpGUzRFUkp0UHNZWjRCRkJPbk5wZUNpd01qMFhyZDNjWUVsVE5lVXFMdXgxT1BEaWlHak5KZVp4ZDNRMUszRWdoamt6dENha1llTXMtc255eHVuVHFKV1o3NVhoVURUTkhoSGp0YVJGMEdJYlUtci10VGJtZl9idGYwZ2tOc3laemdtLTNOUDF3NzdaWTBfUkFTTGxZa1B0Skdpck4yU20?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-06T06:06:45Z",
-   "media": 1,
-   "judul": {
-    "id": "Penghuni Kalibata City apresiasi keputusan PTUN soal tarif air rusun",
-    "en": "Penghuni Kalibata City apresiasi keputusan PTUN soal tarif air rusun"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "ANTARA News",
-    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNWUw0ejNjTXFidlREajZFMHJIb29JM2t1RlBCSHNsM1pUcGphZE1QTjR3OEt3S1pqLW9xOXl3cEVKUWt0MGstTUJPUWdJUUUzOG00aGtpOG5JcENkTlE1SzVxTWJDRGtrblJld2tucG5VcVFEdHRwQ0hGV3RlU0tMU0J3a3dyZ21kTEItamgxYldESFZybE5RUGxULVViYzVETmppTnZ4Y3RqZVpHWVVv0gGyAUFVX3lxTE5PbEtsdmxwTWxZdE9GdW95U1RpcUotRXBRdnl6RHVZWXBFVU8yRUJLT1R0Z01OaXh6S3FaRE9YUWthV2ZmTnE0X0RLYV9zM3BiTlI5cFhpVG83THpBemJxb0NmZVhmeEkyZzJjM09yaF9kUlZFMkd0ZDEwVVViUlJOTTZtemNxYWRNeGhBMjdEbFhNWUhCdU5tVkx1TWVfT0ZhLUdOQUN1RUxBM0JTWENxVlE?oc=5"
+    "nama": "Radar Kediri",
+    "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQcWNvZnJ1NkFmanc3U05ScUF5QmhEWHNET1RVRmpoc3hZUTVKRHAyYU01TmRXUzJrWl81ZmxPTU5mVS15NjU3R0VWQTd0V0VRMmRRS1RZQWhnWk82Qk1mdFJzakx2Y3lRMjhURFBYblppYmEyeklfWHI5VWVOTEQtdnl2OVBjZVJDVnkyS2x2OWtZNU5PZnNkNUNXWmlhdVZpQXBFdWJMZlBUQmdxSXRINnI2TjM4bmpFeWVOWUx1eElTdGJ6VzFPLUwwWE1RQdIB0wFBVV95cUxNMVpkNHc3OGo1U1RQYkw2eENwQVNEejJLQmd1VU4zRmRfUDJBOGxtRWhMcjRyVnZVUjBVVGV1TjJwN0Z6S0RvUklOT2EydzlPYXNQcVU1TEoyWG5GYUhIbEd4b0pxU1c4bXlyczI0bDUtbUtPVmszMWdvY1REYmtjb0IxRm1WeV9LMFU1LTFpU1k2THBpQnhkN3llU0FFWW43VV9FVFVBR1dLZGsxa1p0WXF6X1pQR0lfUm1UUXhEb1pHeXVJS3B2WmFvYVp3dWZwb1ZR?oc=5"
    }
   }
  ]
