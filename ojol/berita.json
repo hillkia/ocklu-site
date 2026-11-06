@@ -1,11 +1,28 @@
 {
- "w": "2026-11-06T04:14:55Z",
+ "w": "2026-11-06T05:03:58Z",
  "dari": "Kroog",
  "berita": [
   {
    "jenis": "berita",
-   "waktu": "2026-11-06T02:19:27Z",
-   "media": 4,
+   "waktu": "2026-11-06T04:47:08Z",
+   "media": 11,
+   "judul": {
+    "id": "KPK Periksa Dirut KAI Bobby Rasyidin, Uang Rp2 Miliar Terkait Korupsi SPBU Disita",
+    "en": "KPK Periksa Dirut KAI Bobby Rasyidin, Uang Rp2 Miliar Terkait Korupsi SPBU Disita"
+   },
+   "isi": {
+    "id": "KPK menyita Rp2 miliar dari Dirut KAI Bobby Rasyidin terkait kasus digitalisasi SPBU, menurut sebagian besar media. Namun, Kontan.co.id melaporkan penyitaan tersebut berasal dari mantan Dirut Len Industri.",
+    "en": "The KPK seized Rp2 billion from KAI CEO Bobby Rasyidin in connection with the SPBU digitalisation case, as reported by most outlets. However, Kontan.co.id reported the seizure was from the former Len Industri CEO."
+   },
+   "sumber": {
+    "nama": "kontan.co.id",
+    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPTWxiWnFMRmJyU3NURF9RMFZabWlTYzg1QTN3WFRQdXNGN2V2Wnk0OUN5ek5TYlptTlBLZGpjLTdFWVZnR1BGVDlNWGhMTmxQQ3NPR0g1dnVfeW1PZnQ0WlNFUWdqTktjTm1Wb05uQmNHbTJXODlYNzdYcFA1VkZxSnM5MTRwaHo2bEtZdUhTeHBnWHp5a3FHM1RuMGtYZTljNWFNX2FGRDM1QXctSXB0X0xORkFLTkpJYW1Zc9IBtgFBVV95cUxNekk5VXFmTFlrNVFLdGhqYUlqb1dPZmJNZU93UGhIc2g0VXY1Uk14NmMyOWV4dzhCZzlaMFY3aE1mYlBoRUYxQTlic3hvN09Xb0sxRllrVmhjczRZZlBrZHhKQk9fU2dKampmeFlXOTlPVXo3eFVpbGwwSU9aU3h1RTZzM1l3bGE0YVlzSnlCcWtLN3czOXUzUFdLNnpTVFBCZ2sxSUsyN3ExVDI2X3FJbW9fbVBBZw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-06T03:36:00Z",
+   "media": 5,
    "judul": {
     "id": "Ojol Keluhkan Potongan Aplikator 8 Persen: Tak Dapat Bonus hingga Pendapatan Turun",
     "en": "Ojol Keluhkan Potongan Aplikator 8 Persen: Tak Dapat Bonus hingga Pendapatan Turun"
@@ -15,25 +32,42 @@
     "en": ""
    },
    "sumber": {
-    "nama": "faktakalbar",
-    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOV1FjOFd2QllILU93U0lIWlhza1lfRFZOYlhTUjBjN2g1T1UtS1JRNms4ajF4Z3VRVTZ2TjRSMW9xbTR4TVlQNTRLcE5ydllqOF9aWVkzTGV5eUpqblR0dkp1S09odnpIY3l4SHBTUDYzckFrZERMWW9sd1FuaWI0a0Y5MVY1WVRMcmo3YzZ0VnpBTTgxZGpJRVJBMUpidUtnRWVocUxIWUQ?oc=5"
+    "nama": "iNews.ID",
+    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQZm1OOUpfcmlXUVA1cy1CekpGUTRndGpzZ2NPYkdpU0NxNHNLcm4tN1ZHbnFkektOWmtwc0ZTcG5kVEd1N2N5NXpGNXR3Tnd2TUhiU213ZDdWYVFDSmg0NVVsNjhBYmx4ZUlqZ1hYeFc5c2stbnJxVmU5ZGhrSjZFbFh1eFpKZVU1S0dfQWFMcmdSajVUbEJ3Vzd3WGpOY1F2aERwdzVRUlFCWE9BQ2lRMnlMVnN3ODBTT2400gHAAUFVX3lxTE1uNk1KRTFEZlJqTWlLamQyYml6WlFOcGFZUUU5YVJUQmRTM3hKZ0ZuVDQ5andzWVpBN2JsTjQxRWpmU1hXdlVad19GZkJscFl1WFl3WXQtNW8wY1hteE54NlJZTlZVNE9xbFBweTlRV2FTaDZOVGY5TUpmRUNJcTVJeU0zdmo5blZKcmhCemNWb0lsMjMtdGRuN0lLU1laQnh3YXdrTG1kS1RPQzI2UmNGOEY3LUhpUFNuSkRVV3RtTQ?oc=5"
    }
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-06T03:27:54Z",
-   "media": 3,
+   "waktu": "2026-11-06T03:53:00Z",
+   "media": 2,
    "judul": {
-    "id": "KPK Periksa Dirut KAI Bobby Rasyidin, Uang Rp2 Miliar Terkait Korupsi SPBU Disita",
-    "en": "KPK Periksa Dirut KAI Bobby Rasyidin, Uang Rp2 Miliar Terkait Korupsi SPBU Disita"
+    "id": "Pemko Padang Evaluasi Izin Aplikator Ojol, Soroti KBLI hingga Potensi Pajak Atribut",
+    "en": "Pemko Padang Evaluasi Izin Aplikator Ojol, Soroti KBLI hingga Potensi Pajak Atribut"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "https://www.politikindonesia.id/",
-    "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOMzRoVVFNX3JhWHRCaThLUUdFZVVZY2ZDaHc1dWlaQ0xRSldqMFhjcDZJeGdOYkZLNGhEQlplMTkwTjlxNkVxYzNqbnBDbmtDNWNRY05CUjJfd0xHeG9ydjhrV0hJbHNWcU5xT1RoMmo0RTRQanAyT05mTFVMREpnR20zYWRXYlo2eDU5UkZ0Xy1lSXNOemlzVUxEemZWUU9PT243dVFYR1lkOTlxeFppcnpR?oc=5"
+    "nama": "InfoPublik",
+    "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPb3Z1M1J1SVliVXhNY29ZelAtd2k3bmRhMzZia0JLazRXcnNURmlCQlpOaUxZaXhVUENhVjdpLXk5b3BWNzRjLXlEY0VKSTdwemF1QnZ1X0o2eTJ6V1RtRGJKWjdMSTdUTG5YVnJFZVVHNXlQTnN5d1BPVmV2a0N6ZzZFT1djTjdidmE3LVppSXg5UGlhbTRFd3ZiVlI3a3hheC1fem9KRzlJX0tnTTlOU3ItbkdTa0JnRTk0LWhDaEJsR3J3Zl9KY0RB?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-06T03:17:08Z",
+   "media": 2,
+   "judul": {
+    "id": "Polda Sulbar Gandeng Komunitas Ojol Gelar Coaching Clinic Keselamatan Berkendara, Tekankan Etika Berkendara",
+    "en": "Polda Sulbar Gandeng Komunitas Ojol Gelar Coaching Clinic Keselamatan Berkendara, Tekankan Etika Berkendara"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "BugisPos.com",
+    "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxOb0NwTEgteWhSTi1faFk0SFhFUjBndFkxc3YwR0I1Vi13dFBFZHZjemZ4Q1BiNDFYajRQTFE0VnoybDMzbU9lV28ydkpod3NBLTBQM1VVRW1zWnU0c3pEQkNSenQxV1dzbFJ1YXNpRDNFWjh4Z0M2eVY0aDVyY3pHM25Ca0ZXazlPQTZ6R0s1OUlXSkVFRTlramFzQzQteDNoZUZNbTlqQnB5d0NqTWQxZFNnZnp4QTlxMUFXRU05Sng1M2NoY3BEU0Q3c2VReE1rcmpUUmxXOTdSV3p1OUJGRnhaUVhnNXJrcFBfSmFqRi0?oc=5"
    }
   },
   {
@@ -89,6 +123,91 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-06T04:38:56Z",
+   "media": 1,
+   "judul": {
+    "id": "PAM JAYA Percepat Transformasi Digital: Dari AI Call Center hingga Water Hub, Arief Nasrudin Janjikan Layanan Semudah Pesan Ojek Online",
+    "en": "PAM JAYA Percepat Transformasi Digital: Dari AI Call Center hingga Water Hub, Arief Nasrudin Janjikan Layanan Semudah Pesan Ojek Online"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Nuansa Realita News",
+    "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxPOWxOa1BKcGtxdUo3YlZxNDBQcjhPSVdPYVZPUEFybkoxZVF1UkhnMnpyWDVMaHpzMDBteVFhaU1LN2U3clJNODc0SmpsdUppQ043LTlOUWVCYm51di02aTdzSHJHdVVsdlZhV3ZEYmtLNjVUcFQycXZNc01SSDNSRXR6TmtUYVZzUmlKX00tM0RHaUpQbzRwYlBURGJ1ZjJSVV93aUFoSnBPbW5TTU1yTno3SW10V0pFM1JXWnpOV1ByZ1VXWDg5ZDNacUxoRU5BV3dZenY0bG1mWi1jbklsZWVwZzVBOFFNdDdEQ3NYcjF6MlVKb2RJ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-06T04:29:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Waspada! Mulai Banjir Sampai Longsor Mengintai Warga Kota Malang",
+    "en": "Waspada! Mulai Banjir Sampai Longsor Mengintai Warga Kota Malang"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Ketik",
+    "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNNXNYWDJEYldha3NicGpEVkdLVDR2WlFoQmxxd0RUNXN2cURDbHU3UzVmWXBCSkVhMVRFdktQeW5veElXNkxUSjc1NzNPZk9TSG9NbnBFQV9rbVU2N1pGMmJmZUc2TnF1TTdTRjRuMnRlLUtvZV9YNG52UXdMeVlkMzdDU3MzQ0pnQWQzTjJjX2V1R1ppUHZyRHdkZ9IBjgFBVV95cUxNUlJJamRaRy1MeUJQUEtaYkwxN1NGc2hHbUlYdWlINElTT010Vm56SkVYSWVIQTdhOTlmMlNJRnFvdzFUWFAtZ2FDakttSUdKSmpkX21OTUhwWVZqbE90cTJ0V1haMmx2VkI4QV9MTTh1TGVyUHhXU25TLWZWMlBHdTVvVVRaMUN6SXIzTHVR?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-06T04:12:33Z",
+   "media": 1,
+   "judul": {
+    "id": "Sedang menyelidiki laporan tentang pengemudi ojek online yang melakukan pelecehan seksual terhadap perempuan di pintu masuk Rumah Sakit Bach Mai.",
+    "en": "Sedang menyelidiki laporan tentang pengemudi ojek online yang melakukan pelecehan seksual terhadap perempuan di pintu masuk Rumah Sakit Bach Mai."
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Vietnam.vn",
+    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOWGNaUEJnOFhJOWlSSTJRcWRuc2t2blpXWVZPdGtYYTNzaExEZmh4VFNqTTBuSkg3aExvRGMxQVl2SW03TjdMX1JuUmo1NUFBLVRlLUp6LUhSZ2hrOTNPdFN4OF8yTldDNUMyRTJ2alQxR3V1aGVfYnRJa0I5a1V6TF96NTVwV2hBU2hFX3dvYVRHSHlBZGZhUmJ2V3E?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-06T03:41:56Z",
+   "media": 1,
+   "judul": {
+    "id": "Pengendara Motor Berjaket Ojol di Yogyakarta Diduga Rusak Ambulans, Lempar Benda Keras, Polisi Buru",
+    "en": "Pengendara Motor Berjaket Ojol di Yogyakarta Diduga Rusak Ambulans, Lempar Benda Keras, Polisi Buru"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "TribunTrends.com",
+    "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOMWhiNE1pVXlDcWhRY0NBUHc1azdfZ3JlaXlHOUQzejVGcERsWDBDT1VhVXdhNGluTDVSdVhBT29fNDRNaWxmTkVTMGhVOTBobFpmZWFxUlI2VDA5Y2o5d1Y0X1VPeDluVDhWRWpqWFdFSktISHRVTWFqZmFaYjU2QjB0aV9ZRW52M0JTN09LWjVwcHE0MFVaUGVmTDU1ZDJCcFZ6bjVuY0xJVnVzU0YyQ3d3alFad1FBdl9MVHNUd0I4dWQtUnBKUlJ4WTg3eWctZEdiLU5n?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-06T03:35:51Z",
+   "media": 1,
+   "judul": {
+    "id": "Emisi Karbon China Turun Terdalam Sejak Era Covid, Efek BBM Mahal",
+    "en": "Emisi Karbon China Turun Terdalam Sejak Era Covid, Efek BBM Mahal"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Bloomberg Technoz",
+    "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQemVwSjdMSkUtVnRCOTFoME1ucUwwekdwWEM5VnFrd29LdE9uSlBGakdpWG14dFE5Y2M1MEUyZlpFX2JIVHZCS1lKbFIxdzE2UlpQRDBTQndWWGd6V3dodzY5NDE1TnJtR2lWMnlYamgxTjY3NWF2WXJCaUl6SWdZcnNSTFJGMW9rWVB3RUdud2tnRnJGSWhtQ2JEeFk3UHJwQng4U0xiOTg2Y21XLU5felQwaElqUEJrOGc?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-05T17:00:00Z",
    "media": 3,
    "judul": {
@@ -106,19 +225,19 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-06T03:17:08Z",
+   "waktu": "2026-11-06T03:24:41Z",
    "media": 1,
    "judul": {
-    "id": "Polda Sulbar Gandeng Komunitas Ojol Gelar ki Coaching Clinic Keselamatan Berkendara, Tekankan Etika Berkendara dan Larangan Kenalpot Brong",
-    "en": "Polda Sulbar Gandeng Komunitas Ojol Gelar ki Coaching Clinic Keselamatan Berkendara, Tekankan Etika Berkendara dan Larangan Kenalpot Brong"
+    "id": "Pelaku Perusakan Ambulans di Sleman Sempat Dikejar hingga Masuk Gang",
+    "en": "Pelaku Perusakan Ambulans di Sleman Sempat Dikejar hingga Masuk Gang"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "BugisPos.com",
-    "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxOb0NwTEgteWhSTi1faFk0SFhFUjBndFkxc3YwR0I1Vi13dFBFZHZjemZ4Q1BiNDFYajRQTFE0VnoybDMzbU9lV28ydkpod3NBLTBQM1VVRW1zWnU0c3pEQkNSenQxV1dzbFJ1YXNpRDNFWjh4Z0M2eVY0aDVyY3pHM25Ca0ZXazlPQTZ6R0s1OUlXSkVFRTlramFzQzQteDNoZUZNbTlqQnB5d0NqTWQxZFNnZnp4QTlxMUFXRU05Sng1M2NoY3BEU0Q3c2VReE1rcmpUUmxXOTdSV3p1OUJGRnhaUVhnNXJrcFBfSmFqRi0?oc=5"
+    "nama": "detikcom",
+    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPOUpFZkxSbExWN2M3TmJoS2hwRy1yV3FzbFFEMGFadmhvQUNndmxZVGttblVVdXRteTgwWDlZU2JMR0w0WEhlYzNiNDc3Q01VQ19mOG40LUpmMTNCMkVPRzZNazNRRzJMZ1M0NTQtbWczYXRBYUhsS1hBM0wxeURoWl9nOWFZOUdEZmlSQWtWdVhhNWNiMTVpbXJSTXlzcVlQV3YwNUlIck5lSjU4RmNkUHZ0UdIBuAFBVV95cUxQMUFWbWlqdXBwa1dzQ2NrR2V4eGFVU1ZLeGpuM240T0Q2TkFPQW9EMGVKVDZIdi1TQWNObnozZXUxS29Ia2NNNHg3UmMwSjMwdF94b1QxdmV5V1EwbjAwRjV2SFRfdXRSZXdxeVVPTng5cW5hMVc4b1didlVzOFpqVzU3ZjFJRVM3QncySFJGMlBKeXY3M1ZqQnUzQURtZmJjVkwzSDRyWW9TUWo1YWVkM1I0NDFRaUZa?oc=5"
    }
   },
   {
@@ -187,74 +306,6 @@
    "sumber": {
     "nama": "TribunStyle.com",
     "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPZE9KR2tuWEtLQXg0QVFXN1BVV2tpQktYdGNHQmNqNVZhSEwtWHhaenFWcFhVczJZWW1VZmRHNGV6cV9ERGhkQ1JyWWxPQTYzVThHN2o4ZTlWWkQ2T0pzbXl6NUE1c1cxQXZHUnpfemFNUGZGQmUyY0tQN2p3OWlCYmw2SUlSWkU5S0Q2RWhXQWRrUVhRS2NObU0xVFNlMVF6dVQ4YW1hWVZ0MFEwN3N4UzlOZ1IyUkR4aXFVVWFzUTgtRHY3eGc?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-06T02:00:29Z",
-   "media": 1,
-   "judul": {
-    "id": "DPMPTSP Klarifikasi Kelengkapan Izin Operasional Ojol di Padang",
-    "en": "DPMPTSP Klarifikasi Kelengkapan Izin Operasional Ojol di Padang"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Topsatu.com",
-    "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNSDZubUdOeU9kWHA5dUlmOWtwczE0SE5GQTBaY3MyZU9PWFIyWGV6VFdLa2RvYmM2dXZLbzlpQmZiZHlIcW9ndy10UGVvY1VNZkZmNWxRaF80blo5TmQzbzNWX25sVFQyVkxlcjFrQjdNX3pYVjV1SDU3UEE4bkIyakZ6NUNxNnNfSHFqRWxpdVdlSlJKNGFsWE1jWQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-06T02:00:21Z",
-   "media": 1,
-   "judul": {
-    "id": "Ojol dan Kurir Jadi Prioritas Pengguna Motor Listrik Mulai 2027",
-    "en": "Ojol dan Kurir Jadi Prioritas Pengguna Motor Listrik Mulai 2027"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "detikOto",
-    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNX3QzV0xIYmc5UE9ZTzFjNUNJYTBmZzU4OFR0Yk94WnVxd0NrSEhkcFRGZXMwWnI3dVlJbEFJakZDbGw0RW9jRmR1anRPalgydG4yQ1oyWTlvcGc1X1Y3Sk8xeFNSakctUkpYQThvZFBuYW1PYjc1ajhua3FDdG9KOHNkTlF6SU0tblNWenJPRmZNLXM3OHJBVlNIRldOQ0FVTE9KZmVsVnBUQdIBrwFBVV95cUxOdm1BcmtuSVlfTFdQRjFqd0JRWVoxbFUyWVNqZ0FqUFZPN2FRZERjTGZpY1h6V2ZTVGMtWUtJSkw3N0RGY3NScTBNZzBhdzJJVk15UVhKZHVPT3NuLXBzT2xUc3o4UDNXYXplUkdSeFQwQjhiNjdiMjBVeTBqeU9IOHFJTzJGS0ZELWdPLXFkTDhWQjZJVUtrZC13Z2E3UjgyaG5MYjlFd3F5VlBBamFv?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-06T01:40:34Z",
-   "media": 1,
-   "judul": {
-    "id": "BBM Kepulauan Batu Mahal dan Langka, Onesius Gaho Desak Polisi Turun Tangan",
-    "en": "BBM Kepulauan Batu Mahal dan Langka, Onesius Gaho Desak Polisi Turun Tangan"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Deteksi.co",
-    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9rUHF0REJPX2NyRjdEUmdUS1BlNW5rZVF5OEpNSE1NVUMyOXdGU2Iwb29xNXRVcjFiZ2ZTVzBVQ0ZEZlU3NTRGV21rcWgxYUlSa1RGV0ZsQVYyYmVBaVVMXzZ2UkRuXzVYcXg0UXJXSWtUQnN0NXNIOGV6OW9VNmc?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-06T01:02:06Z",
-   "media": 1,
-   "judul": {
-    "id": "LAZNAS BMH dan Dinas Kesehatan Balikpapan Hadirkan Layanan Kesehatan untuk 500 Driver Ojol Terdampak Kabut Asap",
-    "en": "LAZNAS BMH dan Dinas Kesehatan Balikpapan Hadirkan Layanan Kesehatan untuk 500 Driver Ojol Terdampak Kabut Asap"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "bmh.or.id",
-    "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPVDF1MlhPem9KUnVsLTBUeTJXY1ZsWG5uSGNRMWJuZWxISTZ6U0s1ZDA4aDlnOW5WSTRBbEQ4TGkydUgtQVdzWjNEVk5VbDJVQW1uY0lFWjA4dnJuWEkwamgzWjZSdWtUV3lJQUZGelZPN0sxRHRBTndIY1Z1a3M5VmtpNTVmR3kyakhqclZJeW5oWlVMek0xWE5ZRTN0S0xKdjhDb0Jja0NfbFdNNHdhRzZBMjBvLUtXbnE5MnB3YmZsTjFWdWpuWmVn?oc=5"
    }
   }
  ]
