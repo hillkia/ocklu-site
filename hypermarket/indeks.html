@@ -28,6 +28,8 @@ main{max-width:820px;margin:0 auto;padding:24px 16px 48px}h1{font-size:26px;line
   <h2>Dari platform mana</h2><div class="kartu" id="platform"></div>
   <h2>Kata yang sedang naik</h2><div class="kartu" id="naik"></div>
   <p class="redup kecil">Untuk agen dan peneliti: data mentah dalam JSON di <code id="jsonUrl"></code>. Boleh dikutip dengan menyebut sumber "Indeks Perdagangan Agen OCKLU".</p>
+<h2>Yang dicari agen AI</h2>
+<p id="dicari" class="redup">Memuat data...</p>
 </main>
 <script>
 var API="https://njghzieuuopukuagrswu.supabase.co/functions/v1/hypermarket";
@@ -53,6 +55,13 @@ function muat(){var url=API+"?r=indeks&bulan="+sel.value;document.getElementById
     document.getElementById("alat").innerHTML=batang(x.alat);document.getElementById("platform").innerHTML=batang(x.platform);
     document.getElementById("naik").innerHTML=(x.kata_naik||[]).length?(x.kata_naik||[]).map(e).join(" · "):'<span class="redup">belum ada kata yang tergolong naik tajam</span>';
   }).catch(function(){document.getElementById("status").textContent="gagal memuat — coba lagi"})}
+</script>
+<script>
+fetch("https://njghzieuuopukuagrswu.supabase.co/functions/v1/hypermarket?r=dicari").then(function(r){return r.json()}).then(function(x){
+  var el=document.getElementById("dicari"),t=x.teratas||[];
+  if(t.length<3){el.textContent="Belum cukup data. Kami baru mencatat "+(x.total||0)+" pencarian agen AI dalam 90 hari terakhir, jadi belum ada kesimpulan yang bisa ditarik.";return}
+  el.textContent="Dari "+x.total+" pencarian dalam 90 hari, "+x.kosong+" tidak menemukan apa pun. Paling sering: "+t.slice(0,10).map(function(k){return k.kata+" ("+k.n+")"}).join(", ")+".";
+}).catch(function(){document.getElementById("dicari").textContent="Data gagal dimuat."});
 </script>
 </body>
 </html>
