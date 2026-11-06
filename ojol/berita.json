@@ -1,11 +1,11 @@
 {
- "w": "2026-11-06T05:20:14Z",
+ "w": "2026-11-06T06:25:51Z",
  "dari": "Kroog",
  "berita": [
   {
    "jenis": "berita",
-   "waktu": "2026-11-06T04:47:08Z",
-   "media": 16,
+   "waktu": "2026-11-06T05:39:52Z",
+   "media": 18,
    "judul": {
     "id": "KPK Periksa Dirut KAI Bobby Rasyidin, Uang Rp2 Miliar Terkait Korupsi SPBU Disita",
     "en": "KPK Periksa Dirut KAI Bobby Rasyidin, Uang Rp2 Miliar Terkait Korupsi SPBU Disita"
@@ -15,8 +15,8 @@
     "en": "The KPK seized Rp2 billion from KAI CEO Bobby Rasyidin in connection with the SPBU digitalisation case, as reported by most outlets. However, Kontan.co.id reported the seizure was from the former Len Industri CEO."
    },
    "sumber": {
-    "nama": "kontan.co.id",
-    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPTWxiWnFMRmJyU3NURF9RMFZabWlTYzg1QTN3WFRQdXNGN2V2Wnk0OUN5ek5TYlptTlBLZGpjLTdFWVZnR1BGVDlNWGhMTmxQQ3NPR0g1dnVfeW1PZnQ0WlNFUWdqTktjTm1Wb05uQmNHbTJXODlYNzdYcFA1VkZxSnM5MTRwaHo2bEtZdUhTeHBnWHp5a3FHM1RuMGtYZTljNWFNX2FGRDM1QXctSXB0X0xORkFLTkpJYW1Zc9IBtgFBVV95cUxNekk5VXFmTFlrNVFLdGhqYUlqb1dPZmJNZU93UGhIc2g0VXY1Uk14NmMyOWV4dzhCZzlaMFY3aE1mYlBoRUYxQTlic3hvN09Xb0sxRllrVmhjczRZZlBrZHhKQk9fU2dKampmeFlXOTlPVXo3eFVpbGwwSU9aU3h1RTZzM1l3bGE0YVlzSnlCcWtLN3czOXUzUFdLNnpTVFBCZ2sxSUsyN3ExVDI2X3FJbW9fbVBBZw?oc=5"
+    "nama": "cek&ricek",
+    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPWlZJSnhmVWVMdF9xb3BadUp0MjNLMmx2bnRxbkhFS2xVZFNOQ190bzBEU0gtUUhpWm5GVHdxVVB1eGtRcTFsUzdnRF9lRDRTaml2TmdFRDBRYTg4bjRKbHJfdTQtX1Z2NDhlNHRHa1oyRFBzLWY2dlotcXFlcHZZeWp5dEVla2ktZGtwU2JBTDdjdk1YNlQzN01Zcl9EcndCWWszX0RiN0dxTjN5Q2dWQw?oc=5"
    }
   },
   {
@@ -38,6 +38,40 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-06T04:58:12Z",
+   "media": 3,
+   "judul": {
+    "id": "Polda Sulbar Gandeng Komunitas Ojol Gelar Coaching Clinic",
+    "en": "Polda Sulbar Gandeng Komunitas Ojol Gelar Coaching Clinic"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "liputan4.com",
+    "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNVHp2dHg5THRNb3pKVmpMaE9jUjJ4NjhMTzE1TEZJOHB1VS11SzU4TEMzZ2pIMkQzMlF4dVVvdENQZUNYNWdfdkU5Qlp3MDlZTzZvLWRBcV9CdlIxTFpzbGZ3VE9CUjRjZVVXaFdYd2VEQ3VENFJMelJtVjJxbVY3Yk1DMzF2QQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-06T05:40:34Z",
+   "media": 2,
+   "judul": {
+    "id": "Pemko Padang Klarifikasi Perizinan Tiga Aplikator Ojol",
+    "en": "Pemko Padang Klarifikasi Perizinan Tiga Aplikator Ojol"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "RRI.co.id",
+    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOOVU1eEZXTjNldVBNbFRycURpV2tMX05SaUxreUliaUhXUnl2NS1IQ0tGNlBnWXBWNERwN3Q4WjFXaW03NnFMeElYQjBPMGpWQTlWa3loSDVlZXpadDBpbF9FV1kzNE52cUxFSmJZMG52d2duQ2R1OXBTcVUwYjVJZXpwRmNCRXVlMzhXVVN6QVVSQjV0RWtZaTRBMzk?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-06T03:53:00Z",
    "media": 2,
    "judul": {
@@ -51,23 +85,6 @@
    "sumber": {
     "nama": "InfoPublik",
     "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPb3Z1M1J1SVliVXhNY29ZelAtd2k3bmRhMzZia0JLazRXcnNURmlCQlpOaUxZaXhVUENhVjdpLXk5b3BWNzRjLXlEY0VKSTdwemF1QnZ1X0o2eTJ6V1RtRGJKWjdMSTdUTG5YVnJFZVVHNXlQTnN5d1BPVmV2a0N6ZzZFT1djTjdidmE3LVppSXg5UGlhbTRFd3ZiVlI3a3hheC1fem9KRzlJX0tnTTlOU3ItbkdTa0JnRTk0LWhDaEJsR3J3Zl9KY0RB?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-06T03:17:08Z",
-   "media": 2,
-   "judul": {
-    "id": "Polda Sulbar Gandeng Komunitas Ojol Gelar Coaching Clinic Keselamatan Berkendara, Tekankan Etika Berkendara",
-    "en": "Polda Sulbar Gandeng Komunitas Ojol Gelar Coaching Clinic Keselamatan Berkendara, Tekankan Etika Berkendara"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "BugisPos.com",
-    "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxOb0NwTEgteWhSTi1faFk0SFhFUjBndFkxc3YwR0I1Vi13dFBFZHZjemZ4Q1BiNDFYajRQTFE0VnoybDMzbU9lV28ydkpod3NBLTBQM1VVRW1zWnU0c3pEQkNSenQxV1dzbFJ1YXNpRDNFWjh4Z0M2eVY0aDVyY3pHM25Ca0ZXazlPQTZ6R0s1OUlXSkVFRTlramFzQzQteDNoZUZNbTlqQnB5d0NqTWQxZFNnZnp4QTlxMUFXRU05Sng1M2NoY3BEU0Q3c2VReE1rcmpUUmxXOTdSV3p1OUJGRnhaUVhnNXJrcFBfSmFqRi0?oc=5"
    }
   },
   {
@@ -106,6 +123,57 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-06T06:07:43Z",
+   "media": 1,
+   "judul": {
+    "id": "Duduk Satu Meja dengan Ojol, Kapolres Wonogiri Serap Aspirasi Masyarakat",
+    "en": "Duduk Satu Meja dengan Ojol, Kapolres Wonogiri Serap Aspirasi Masyarakat"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Suara Merdeka Jakarta",
+    "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQc2Nvb09WSEtlVkFnb3lzWTJwUjEybms2N1ZYRC04NWVUS0I4c3lfN0xUZ2JKcDhjT2JCLXZmQXJZQU5WRHdteHlpdlZaLU9ybmd5Y0NNLTFfd2dPbHdpVlhTX1hYVGhnRGgyT2VXdWhJWlMxNlhPQlNKZUVpTGVaRnlmY0VmQ3pWeUNuanpUOVdmZzdESzBKMFNhRFRfS3BOUlFXM3pmRU45aTlYMEoxY1ZaTW84ekllZnF6MC1YT1ViSjDSAcgBQVVfeXFMT0FtZTlac21SUjZYMTFMWGNBR25FNTZ0NUQ4Uk5tR092cXpGUzRFUkp0UHNZWjRCRkJPbk5wZUNpd01qMFhyZDNjWUVsVE5lVXFMdXgxT1BEaWlHak5KZVp4ZDNRMUszRWdoamt6dENha1llTXMtc255eHVuVHFKV1o3NVhoVURUTkhoSGp0YVJGMEdJYlUtci10VGJtZl9idGYwZ2tOc3laemdtLTNOUDF3NzdaWTBfUkFTTGxZa1B0Skdpck4yU20?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-06T05:49:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Pemotor Berjaket Ojol Melempar Ambulans, Polisi Buru Pelaku",
+    "en": "Pemotor Berjaket Ojol Melempar Ambulans, Polisi Buru Pelaku"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "JPNN.com",
+    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNVXhzMmZDZXpPcEIzM0l6U3MwMmFnTGtnd2k5T0Q2d0l0ck1VbG1xd1ZOVDhQVFZPaTRncGxYV1I3S3Ezd0RaZENJTV9MYzBmTmJfcXI3dkpWdEE3ZEdmNnM5Z1pwS1FWTjc2RnJOMllZWDA2M0xDcEFrRGRMeHNKdGhKcUU5LU1aTng3Z1ZqU0JJV09XN2YxWmRWOGhkbTdzWXdr?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-06T05:44:50Z",
+   "media": 1,
+   "judul": {
+    "id": "Konferensi Iklim PBB di Tengah Kekeringan, Banjir Dahsyat, Gelombang Panas dan El Niño Sangat Kuat",
+    "en": "Konferensi Iklim PBB di Tengah Kekeringan, Banjir Dahsyat, Gelombang Panas dan El Niño Sangat Kuat"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Darilaut.id",
+    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPOU9MM25BODhZZ09xN09DR3FBMUM5VjRlNk9MOTJ3MjdjQkw2NTRwdEtBMnNYdUhvRTZlek40ekJCNkFwSWxyX1V0Y0ZrcmRvcFdnY1k3UjYySGVEMVFrV0h1UWVhZEp2aFNXTFB3TGpjV1MxYV9idjE3NlpTZjFFY3dNcGVneENVVV9NVnF6ZUFpbkd6bzE5VWVxY1VUcXE5TjdJUld2YjE2Wk9paGx2aFZoWnQ2UTJ2emZBM1lEU0nSAcYBQVVfeXFMTkJ6dVJJUkQ5MjJWVnA1RkdjQkdWRXFhcS1yaWdsZkVlRG1EX3ZxRE5raXhFM0I0N3dYMDc1bUJDcVh1WnBXaE5oZHZqZVNLOC0tcm9pU09fZEpDRFVlaThqLTlERlhzX1NmTzBSQmRXOTZJbTNuWVlWUWFoQVlQNEFsbmxzUjRGaGlXekRzejZLSGt6dVFmS25aU3JINXd3dGxVMEc4aDRJdC1SX0tSVGFBVjNYZ3plckJVd1BIUDdxUng4OWxR?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-05T23:14:21Z",
    "media": 2,
    "judul": {
@@ -119,6 +187,23 @@
    "sumber": {
     "nama": "newposkomanado.id",
     "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNbVZ0dDNiRl85M1FUd2xNWTgzdXgweTJOT0tpQnFRUUZ0ekF0bUV5UXQwc1U5VjJBanAwZHhWR3I2d1FaSkVNWHpiMTF5WWV1b0ZlblFhYV9tMERPYW44VXI5dXpzLTRFU3VuYUw5QklrbzhYeFJyb2JhVlZ6ZUpES3lna2hUbWx3aEd3amx1dm1JQVdEZEh2RUNSejhlam40SllrSENvWUxuUGtfRVlwLWtjWmZCekhKRmtHRzZLc3N1ZmM4?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-06T05:00:29Z",
+   "media": 1,
+   "judul": {
+    "id": "Vietnam Pangkas Tarif Listrik dan Pajak Bensin, Apa Dampaknya bagi Masyarakat?",
+    "en": "Vietnam Pangkas Tarif Listrik dan Pajak Bensin, Apa Dampaknya bagi Masyarakat?"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Sumut Pos",
+    "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQNlhTMzhRUmFrY0x6VnQyVGpGZ1dMaE85WVduemxYUmFqQmZnN01XYjNPV051MjR6X3plQ2NNTFREdzBSLVdnbU40YWFxREluRW9BYkVxY3dGT2FpUlBuMlBZbC1IUUJoSVVlQUdxaVk4dlRGWm9kV28yekwtMHNKRnVjVE5LVzJBN3FhWVphOHh2ZGF6TThIYXRVLTBFV1NQalBhYk9ZLWMyRkhtMlZ4OGhEZEwwa2haVkhVYzRTWEhHYllVSHVrVHdB0gHPAUFVX3lxTE5vZjRmNTA2RThGRWhQSUdScVRPYk9qbWlXdmUwVWdKcE9VQU9DR1FKQ0x4a2xnZHFtY0lQQmRaaXUwUkE0WTkwelM0QXN4MzVZSFdpeW1aX1Fja0Fsc0pGdXd6SGxkLVZaRklXVDdiWmRoYldJUENfejJkREtydDd3WW1rT1RQZl9wdVlmaS1zTERkREdBQ19qOXVKT1JpUHBqLVNlWVRoTjM1RFFYVzZzNXpFTEM1NGE5Tko5MXRpWm54czZVeXdSc25mTFgwQQ?oc=5"
    }
   },
   {
@@ -187,108 +272,6 @@
    "sumber": {
     "nama": "Vietnam.vn",
     "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOWGNaUEJnOFhJOWlSSTJRcWRuc2t2blpXWVZPdGtYYTNzaExEZmh4VFNqTTBuSkg3aExvRGMxQVl2SW03TjdMX1JuUmo1NUFBLVRlLUp6LUhSZ2hrOTNPdFN4OF8yTldDNUMyRTJ2alQxR3V1aGVfYnRJa0I5a1V6TF96NTVwV2hBU2hFX3dvYVRHSHlBZGZhUmJ2V3E?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-06T03:41:56Z",
-   "media": 1,
-   "judul": {
-    "id": "Pengendara Motor Berjaket Ojol di Yogyakarta Diduga Rusak Ambulans, Lempar Benda Keras, Polisi Buru",
-    "en": "Pengendara Motor Berjaket Ojol di Yogyakarta Diduga Rusak Ambulans, Lempar Benda Keras, Polisi Buru"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "TribunTrends.com",
-    "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOMWhiNE1pVXlDcWhRY0NBUHc1azdfZ3JlaXlHOUQzejVGcERsWDBDT1VhVXdhNGluTDVSdVhBT29fNDRNaWxmTkVTMGhVOTBobFpmZWFxUlI2VDA5Y2o5d1Y0X1VPeDluVDhWRWpqWFdFSktISHRVTWFqZmFaYjU2QjB0aV9ZRW52M0JTN09LWjVwcHE0MFVaUGVmTDU1ZDJCcFZ6bjVuY0xJVnVzU0YyQ3d3alFad1FBdl9MVHNUd0I4dWQtUnBKUlJ4WTg3eWctZEdiLU5n?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-06T03:35:51Z",
-   "media": 1,
-   "judul": {
-    "id": "Emisi Karbon China Turun Terdalam Sejak Era Covid, Efek BBM Mahal",
-    "en": "Emisi Karbon China Turun Terdalam Sejak Era Covid, Efek BBM Mahal"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Bloomberg Technoz",
-    "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQemVwSjdMSkUtVnRCOTFoME1ucUwwekdwWEM5VnFrd29LdE9uSlBGakdpWG14dFE5Y2M1MEUyZlpFX2JIVHZCS1lKbFIxdzE2UlpQRDBTQndWWGd6V3dodzY5NDE1TnJtR2lWMnlYamgxTjY3NWF2WXJCaUl6SWdZcnNSTFJGMW9rWVB3RUdud2tnRnJGSWhtQ2JEeFk3UHJwQng4U0xiOTg2Y21XLU5felQwaElqUEJrOGc?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-05T17:00:00Z",
-   "media": 3,
-   "judul": {
-    "id": "Kunto Aji Kena Teror Buzzer, Rumahnya Dikirimi Orderan Ojol Fiktif Ratusan Ribu Rupiah",
-    "en": "Kunto Aji Targeted by Buzzers, His House Received Fake Ojek Orders Worth Hundreds of Thousands of Rupiah"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Epaper Media Indonesia",
-    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE4tMEdXYTYzeDA0Wm9CeU1uUEs4X3lWVGZ0d2kyOFFYQTJFTnRHb1JQSHc3QmMxZ253emhoLVluaVJiODhBMUJWYjhuMU91ZjVZcUk0U2xiODk0ZG56clNBZEQ4djVXb0FxVHJuRW9LZEhvd2lCRWZ3T0lkZGt6cEE?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-06T03:24:41Z",
-   "media": 1,
-   "judul": {
-    "id": "Pelaku Perusakan Ambulans di Sleman Sempat Dikejar hingga Masuk Gang",
-    "en": "Pelaku Perusakan Ambulans di Sleman Sempat Dikejar hingga Masuk Gang"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "detikcom",
-    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPOUpFZkxSbExWN2M3TmJoS2hwRy1yV3FzbFFEMGFadmhvQUNndmxZVGttblVVdXRteTgwWDlZU2JMR0w0WEhlYzNiNDc3Q01VQ19mOG40LUpmMTNCMkVPRzZNazNRRzJMZ1M0NTQtbWczYXRBYUhsS1hBM0wxeURoWl9nOWFZOUdEZmlSQWtWdVhhNWNiMTVpbXJSTXlzcVlQV3YwNUlIck5lSjU4RmNkUHZ0UdIBuAFBVV95cUxQMUFWbWlqdXBwa1dzQ2NrR2V4eGFVU1ZLeGpuM240T0Q2TkFPQW9EMGVKVDZIdi1TQWNObnozZXUxS29Ia2NNNHg3UmMwSjMwdF94b1QxdmV5V1EwbjAwRjV2SFRfdXRSZXdxeVVPTng5cW5hMVc4b1didlVzOFpqVzU3ZjFJRVM3QncySFJGMlBKeXY3M1ZqQnUzQURtZmJjVkwzSDRyWW9TUWo1YWVkM1I0NDFRaUZa?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-06T03:16:52Z",
-   "media": 1,
-   "judul": {
-    "id": "IDEAS Ingatkan Risiko Kebijakan Ojol Jadi UMKM",
-    "en": "IDEAS Ingatkan Risiko Kebijakan Ojol Jadi UMKM"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "republika.co.id",
-    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOM0lpVmZhd1hKbzZKTGhwMmYwSWpsTHRLblFxTUJERU5lX3BKNkNDWUVzbGR5SVUzWl9TWWpIZFlUcTduREFWeFR1S0U0eF9vRXdwbWJjTFVfcDdSclEzaTJ1WGpReklOekh0bEUtSDdhLXZYMWQ5ejNacVM3Q1N4THk1eS1qQVRxX3p1Nk9wZDB6OXZPWFZV?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-06T02:50:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Berita Video - Satarudin Janjikan Bantuan Operasional Ojol KSB Awal 2027",
-    "en": "Berita Video - Satarudin Janjikan Bantuan Operasional Ojol KSB Awal 2027"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "RRI.co.id",
-    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQZVZDVFNlNXV1QXhpbHhjekRFRnp6M290V2VpWEZxSVd5MUFnN1RZSWRJeWRRVUFHMzZRQTg4OWc5Y0p2b0w1Z0daWFdvSXdJRmMtSzNoMlh1QmlQNnB5SjFtMWNya2I0WkVnZDZJUjdqbDN5dFZ1a1ZnY2NQWUVPVzRBb0pwNjRtOFNJemQwSWVPUU83V2lWdE9CempwLUc5U3BhYjZmcw?oc=5"
    }
   }
  ]
