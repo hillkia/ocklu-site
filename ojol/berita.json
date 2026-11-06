@@ -1,11 +1,11 @@
 {
- "w": "2026-11-06T05:03:58Z",
+ "w": "2026-11-06T05:20:14Z",
  "dari": "Kroog",
  "berita": [
   {
    "jenis": "berita",
    "waktu": "2026-11-06T04:47:08Z",
-   "media": 11,
+   "media": 16,
    "judul": {
     "id": "KPK Periksa Dirut KAI Bobby Rasyidin, Uang Rp2 Miliar Terkait Korupsi SPBU Disita",
     "en": "KPK Periksa Dirut KAI Bobby Rasyidin, Uang Rp2 Miliar Terkait Korupsi SPBU Disita"
@@ -119,6 +119,23 @@
    "sumber": {
     "nama": "newposkomanado.id",
     "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNbVZ0dDNiRl85M1FUd2xNWTgzdXgweTJOT0tpQnFRUUZ0ekF0bUV5UXQwc1U5VjJBanAwZHhWR3I2d1FaSkVNWHpiMTF5WWV1b0ZlblFhYV9tMERPYW44VXI5dXpzLTRFU3VuYUw5QklrbzhYeFJyb2JhVlZ6ZUpES3lna2hUbWx3aEd3amx1dm1JQVdEZEh2RUNSejhlam40SllrSENvWUxuUGtfRVlwLWtjWmZCekhKRmtHRzZLc3N1ZmM4?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-06T04:58:16Z",
+   "media": 1,
+   "judul": {
+    "id": "Uang Rp2 Miliar Bobby Rasyidin Disita KPK, Penyidik Telusuri Dugaan Aliran Dana Korupsi SPBU",
+    "en": "Uang Rp2 Miliar Bobby Rasyidin Disita KPK, Penyidik Telusuri Dugaan Aliran Dana Korupsi SPBU"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Kabar6.com",
+    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxONThISHZkYWR5RGtLbGxhcmt5UlhLY1NRb2VWcjM1ZWJMRHQ2Z1Yxd1dmLW9YUk56a185OHBCUVBiemVQSGlmcHpuYzNpM0pBUi0zWHIyeEd1RFZDdHkyWFQtaVJEdFFqTmp6WkJaN0t2X1EwQUE1c0F0UW9QN0VyWkI0bjV4Q0pmNy10cHQtVFZuY0xLTFlHSEc5MlpYQXBvNjNiellNZmxhY0VJODJTLQ?oc=5"
    }
   },
   {
@@ -272,40 +289,6 @@
    "sumber": {
     "nama": "RRI.co.id",
     "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQZVZDVFNlNXV1QXhpbHhjekRFRnp6M290V2VpWEZxSVd5MUFnN1RZSWRJeWRRVUFHMzZRQTg4OWc5Y0p2b0w1Z0daWFdvSXdJRmMtSzNoMlh1QmlQNnB5SjFtMWNya2I0WkVnZDZJUjdqbDN5dFZ1a1ZnY2NQWUVPVzRBb0pwNjRtOFNJemQwSWVPUU83V2lWdE9CempwLUc5U3BhYjZmcw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-06T02:22:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Kuliah Sambil Cari Uang, Mahasiswa Pilih Jadi Driver Ojol",
-    "en": "Kuliah Sambil Cari Uang, Mahasiswa Pilih Jadi Driver Ojol"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "tangselpos.id",
-    "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNcFBiODNSNGZ1U2lMN05JMVhqUmN1OXBpM1l5VTlCQXhHd2w5WFZIVjRzdnlWYUVWWHpIMi1Hd3RveEd2NDVrOUhMc2tVSjAxSkJ0RFl4NE8wVXUzUEJ3dkVSNVVzSWVIRWpGcnVYZVJUR2g3NFZPTjY1bmkyZS1vS1RVWUlVQndzUnJQVG5PdjZkTzZKMUE?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-06T02:16:26Z",
-   "media": 1,
-   "judul": {
-    "id": "Harga BBM 6 November 2026, Tanggapan Ojek Online di Solo Mengenai Harga Bensin Saat Ini",
-    "en": "Harga BBM 6 November 2026, Tanggapan Ojek Online di Solo Mengenai Harga Bensin Saat Ini"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "TribunStyle.com",
-    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPZE9KR2tuWEtLQXg0QVFXN1BVV2tpQktYdGNHQmNqNVZhSEwtWHhaenFWcFhVczJZWW1VZmRHNGV6cV9ERGhkQ1JyWWxPQTYzVThHN2o4ZTlWWkQ2T0pzbXl6NUE1c1cxQXZHUnpfemFNUGZGQmUyY0tQN2p3OWlCYmw2SUlSWkU5S0Q2RWhXQWRrUVhRS2NObU0xVFNlMVF6dVQ4YW1hWVZ0MFEwN3N4UzlOZ1IyUkR4aXFVVWFzUTgtRHY3eGc?oc=5"
    }
   }
  ]
