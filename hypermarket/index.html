@@ -518,7 +518,7 @@ fetch("https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-110m.json").then
   ARCS=t.arcs.map(function(a){var x=0,y=0;return a.map(function(p){x+=p[0];y+=p[1];return[(x*k.scale[0]+k.translate[0])*D,(y*k.scale[1]+k.translate[1])*D]})});
   (t.objects.countries.geometries||[]).forEach(function(g){var f=g.arcs;while(Array.isArray(f))f=f[0];var A=ARCS[f<0?~f:f];if(!A||!g.properties)return;var m=A[Math.floor(A.length/2)];NAMA.push({n:g.properties.name,l:m[0],f:m[1]})})}).catch(function(){});
 var gPilih=null,tegas=0,petaC=null;
-var ROT=0;function FOTO(){return window.innerWidth>1000}function RG(){return (FOTO()?H*.48:Math.min(W*.44,H*.4))*ZOOM}function CY(){return FOTO()?H*.5:H*.35}function proy(l,f){var R=RG(),lon=l+ROT+GESER,cl=Math.cos(f);return{x:W/2+R*cl*Math.sin(lon),y:CY()-R*Math.sin(f),z:cl*Math.cos(lon)}}
+var ROT=0;function FOTO(){return window.innerWidth>759}function RG(){return (FOTO()?H*.48:Math.min(W*.44,H*.4))*ZOOM}function CY(){return FOTO()?H*.5:H*.35}function proy(l,f){var R=RG(),lon=l+ROT+GESER,cl=Math.cos(f);return{x:W/2+R*cl*Math.sin(lon),y:CY()-R*Math.sin(f),z:cl*Math.cos(lon)}}
 function geo(c,r){return proy(c*.01745,r*.01745)}
 function petakan(){var hit={};GUGUS.forEach(function(g){hit[g.id]=0});PLANET.forEach(function(p){var s=(p.id+" "+p.nama).toLowerCase(),g=GUGUS.filter(function(x){return x.cocok.test(s)})[0];p._g=g;p._k=hit[g.id]++})}
 function posPlanet(i,t){var p=PLANET[i%PLANET.length];if(!p._g)petakan();var o=geo(p._g.c,p._g.r),a=p._k*2.4+t*.00012,d=Math.min(W,H)*.024*Math.sqrt(p._k+1);return{x:o.x+Math.cos(a)*d,y:o.y+Math.sin(a)*d*.75}}
