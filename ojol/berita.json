@@ -1,11 +1,11 @@
 {
- "w": "2026-11-06T13:01:26Z",
+ "w": "2026-11-06T15:03:43Z",
  "dari": "Kroog",
  "berita": [
   {
    "jenis": "berita",
-   "waktu": "2026-11-06T12:34:00Z",
-   "media": 39,
+   "waktu": "2026-11-06T13:04:00Z",
+   "media": 41,
    "judul": {
     "id": "KPK Periksa Dirut KAI Bobby Rasyidin, Uang Rp2 Miliar Terkait Korupsi SPBU Disita",
     "en": "KPK Periksa Dirut KAI Bobby Rasyidin, Uang Rp2 Miliar Terkait Korupsi SPBU Disita"
@@ -15,8 +15,8 @@
     "en": "The KPK seized Rp2 billion from Bobby Rasyidin, identified as the CEO of KAI in five outlets, in connection with the SPBU digitalisation case. kontan.co.id reports the seizure as involving the former CEO of Len Industri, differing from the other reports."
    },
    "sumber": {
-    "nama": "Kompas.tv",
-    "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPMzVza3ZreEFjVkNYLURoSWozU1d6STdNdUJLVGZFeFE2VENPUEpsaVVxekhTNzFFcEZ0SHVJemRmYTY2UTVWazZxcW1rY3VBQVhTLUpzMmdEZjNpbWQ3aGVaNm4wN2drMzV5X2hPbXhyN1Z3dE9pb29jcGRYYk9ON1h0bVAxM0pjaHBmVTdaZXZqbHNBRmdzUTduc0phTDFkWFVMWjFzZm1WY3RGaWhBcmlrSVRBSnFoaXlSNGtvOHc3T0lk0gHKAUFVX3lxTE9yS2JqenZla2RMN3JYWVZMQ01EY1ZpckJfb2lNVFNsck5naTAwMUk5Y0E4YWk3ZW1CVGZQZFM3TlNoM2VEZzNDS2o5RC12ck9Rc3J1el90cWdILW1tdEJEaUdBbU93bmNyZUNuRXMzNzJjSm9FTVhscktQeVFNTWVJeFl2SDdaNDh2MzhXZHdMcTNJMUdnaWpjWnIwMzlTRDhFeE5jNWw5cmttQVJuSEs3ZWloZW9fNUZha0hxQWlGMmViVkYwVU1JN1E?oc=5"
+    "nama": "Kupas Tuntas",
+    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNY3JEM3dkcnoyWVczejQteFItZWl0VDR0N3dXWFdIMGMtdnVRdjkwRDNMa3NoTk5ERWl6REd6blhwbGd5SFNkbThHU0lBNTBzN2xTZHVHRzdUbzJDSHhuN2tJeEVKYVZudUJ1RlI0cEJBam94aUdZZnNsSzdKUmMycFk3a0h5N2JVWHE5ODl1WHpYeWdNUWJUV2dRNHVBaUNkd0lHbmpVUDJBUFhBb24wR1R1QUo4Mm0xdmpKNFozT2M?oc=5"
    }
   },
   {
@@ -51,6 +51,23 @@
    "sumber": {
     "nama": "iNews.ID",
     "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQZm1OOUpfcmlXUVA1cy1CekpGUTRndGpzZ2NPYkdpU0NxNHNLcm4tN1ZHbnFkektOWmtwc0ZTcG5kVEd1N2N5NXpGNXR3Tnd2TUhiU213ZDdWYVFDSmg0NVVsNjhBYmx4ZUlqZ1hYeFc5c2stbnJxVmU5ZGhrSjZFbFh1eFpKZVU1S0dfQWFMcmdSajVUbEJ3Vzd3WGpOY1F2aERwdzVRUlFCWE9BQ2lRMnlMVnN3ODBTT2400gHAAUFVX3lxTE1uNk1KRTFEZlJqTWlLamQyYml6WlFOcGFZUUU5YVJUQmRTM3hKZ0ZuVDQ5andzWVpBN2JsTjQxRWpmU1hXdlVad19GZkJscFl1WFl3WXQtNW8wY1hteE54NlJZTlZVNE9xbFBweTlRV2FTaDZOVGY5TUpmRUNJcTVJeU0zdmo5blZKcmhCemNWb0lsMjMtdGRuN0lLU1laQnh3YXdrTG1kS1RPQzI2UmNGOEY3LUhpUFNuSkRVV3RtTQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-06T13:01:57Z",
+   "media": 2,
+   "judul": {
+    "id": "KPK : Bobby Rasyidin Kooperatif Kembalikan Uang Terkait Digitalisasi SPBU",
+    "en": "KPK : Bobby Rasyidin Kooperatif Kembalikan Uang Terkait Digitalisasi SPBU"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "MerahPutih",
+    "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPZkNrR25qcENrWWl0UjBCcDNWOXF6LWtuMHp3b3FHbHJhX0FnSV96enNZRlk3OXVNTE9NaUd2Rl9iakJnTUIwWlBLbDgwS1hxS1BCdmlKZVVlZjBzNXpSQzExZVVFRjBIZGRhYjZBdFVYcDhzSWIwUEluaHVOc3ZOV00wbTdUNzhkYk9mWkV4Y3UwdDhNbFdhQ2YzcFFKSEnSAZ4BQVVfeXFMT1N6OUQ0eGY2S0NmUC03NFI3WlFtZ2dIcTFSenljdjRhQ3FzT05KSmIzTXZrTDB0UXhMR0VyZktzNkVqcHFJcFdyUnZjdVpvcHlrX1hjNGdGLWt0Yi11UmswS0J1aGxEMXIzVzVUaGRvRWlfZ0YxN0NuRzBvZjdEdURXZE1kQzZOakFjSDk3OUczSFdDNmRwWDNISmprOXc?oc=5"
    }
   },
   {
@@ -191,6 +208,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-06T11:40:26Z",
+   "media": 1,
+   "judul": {
+    "id": "KPK: Duit Rp 2 M Dibalikin Bos KAI Pemberian Tersangka Kasus Digitalisasi SPBU",
+    "en": "KPK: Duit Rp 2 M Dibalikin Bos KAI Pemberian Tersangka Kasus Digitalisasi SPBU"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "detikNews",
+    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQUG1mOC1YQTFqTTl1dmFPN3Q5MDVOcUduSkxlaU9iRlZBTlh1V3B5cy1oR0NrTDk0VkdvVDg1QlJ0TmlLcTR3UTVUanJ2Q2pNVGRQMmVudkVmSDBNcGhKRG9IcU83R0dXZXM4SkJRNG5SR3YtVG8tODZSV1I0anBEcFhYdkpScFl2UGF3bFFKV3JSeTYwM0lmOE9oeDJsVGxOR0lwRktfcFhUZF9vZG1pVWotUXN4eFdi0gG-AUFVX3lxTE5wNGR6eGhweC01b1Q4V2hoc2FNWkZFR0txOWQ4ZGJncHJiOGRVNFB0bzVMVXplOF9GZVBza3pVS2RHdmhxakM5SUVGNzZWcEtLM3pOalAySDBlTEtnM0E0MHFwdThBWWNKRjNOU0tLWjhyZkhrOHhDWko1NHhkaWR1WUgxR25xUWZqQ2JEaWJiaW1mN0ZXNGNXb1VRMGVNVlVUckE4NjJuVkwtZVA0Q1dyQl9lRDlYbVNEN3A4RGc?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-06T11:18:54Z",
    "media": 1,
    "judul": {
@@ -204,108 +238,6 @@
    "sumber": {
     "nama": "rmoljabar.id",
     "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxObThPaXozYll6VTFZbk8zM3hPN1BGZWNnSE9HRkQ0SlBzNy1mV3FqdHJXTEpYNjZSaFBxb2RYdGF2U19hdEtweFpiY1JKS2hsTjRoZURjenZvbmZmbVBGM2dPaWh6TUV1NTE2MEZKalZqb0JnZm1tR1VWZDgtUm10cGVGRzBaVFphY2VjTXE0cHktbnRxZENNYw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-06T10:11:15Z",
-   "media": 1,
-   "judul": {
-    "id": "Kapolres Wonogiri Sarapan Bersama Ojol dan Dengarkan Aspirasi",
-    "en": "Kapolres Wonogiri Sarapan Bersama Ojol dan Dengarkan Aspirasi"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Mitrapol",
-    "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxON0NzSVdwTjBkLTJEZmt5UWhlbklINGg4ZHRta3Zsd2RZRjFNdkExcWx0azZjSkJwNkZKTlZUYjJzRDJBYkRYMzZjX2RkcVRuX2Yyci1OMmU5ZEpsNnpwcHg3ZlUtSFlBSmQ3Q2hDdWZHa2VyN1BLYm9rV25KZ3gzQVkxdzFVNlgtd1p2eUlSVlhwQVVGRlNtbjhR?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-06T09:57:22Z",
-   "media": 1,
-   "judul": {
-    "id": "Inilah Bandit Curanmor yang Nyamar Pakai Jaket Ojol, Gasak Motor Karyawan RS Siti Khadijah Palembang",
-    "en": "Inilah Bandit Curanmor yang Nyamar Pakai Jaket Ojol, Gasak Motor Karyawan RS Siti Khadijah Palembang"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Sripoku.com",
-    "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPZmQ4Y0xtWW0tZHFNRzJEUW9ueVY0clhsSllsOE1fcU40M3REa3FiVHpOR0lUWjFLUlNPR3dyXzcxVkVBQm5tS1RCbGFwcEpyOFd6ODB1V0pmQmVXbkxKQkZQNU9IZHN1WExhRGtER3lUMHNHdTI1YlYybTMyOEZQSE81Z3JUbXpKWTMxeFlCSmg3V1piTzI1NUM3UUwxZU90eXAxT0hudEctWGtPak1LUURWSVBpWThYQlV1QVM5aXR4eUhqT0tjYkhFS3REcWdldDZxRTM3OXZ4dzhZY0NZ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-06T03:53:00Z",
-   "media": 2,
-   "judul": {
-    "id": "Pemko Padang Evaluasi Izin Aplikator Ojol, Soroti KBLI hingga Potensi Pajak Atribut",
-    "en": "Pemko Padang Evaluasi Izin Aplikator Ojol, Soroti KBLI hingga Potensi Pajak Atribut"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "InfoPublik",
-    "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPb3Z1M1J1SVliVXhNY29ZelAtd2k3bmRhMzZia0JLazRXcnNURmlCQlpOaUxZaXhVUENhVjdpLXk5b3BWNzRjLXlEY0VKSTdwemF1QnZ1X0o2eTJ6V1RtRGJKWjdMSTdUTG5YVnJFZVVHNXlQTnN5d1BPVmV2a0N6ZzZFT1djTjdidmE3LVppSXg5UGlhbTRFd3ZiVlI3a3hheC1fem9KRzlJX0tnTTlOU3ItbkdTa0JnRTk0LWhDaEJsR3J3Zl9KY0RB?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-06T09:32:22Z",
-   "media": 1,
-   "judul": {
-    "id": "Tampang Pria Berjaket Ojol Viral Curi Motor Karyawan RS Siti Khadijah Palembang, Ditangkap Polisi",
-    "en": "Tampang Pria Berjaket Ojol Viral Curi Motor Karyawan RS Siti Khadijah Palembang, Ditangkap Polisi"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Tribunsumsel.com",
-    "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNc05za09HZDgzWWRCdTUtc2hsNnFnSWcxUzdrbTZGdF9MZlJDTjdHenh4aEdNM1lkM3Q3MDJQMDVENzJhTVpFeUo4d2FvbmpGbXE3RGo3WGM0ck9HbDZGT0hSUmwyczg1OGlhUWl0NXlUbmVZVVlobzdVZVRTYlkwcHNYSURqWmloaVhiVGJycGhJaE1SdGhpS1FEbGpka1hMTW5Tb3dzU3FnaUZxeHNrMHNZUk4tNnZxbDRKdnhRRUNjb1ZTdE1naGtxZWpWQlBJNzRWdGlLQUJ1ZUo0?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-06T09:25:34Z",
-   "media": 1,
-   "judul": {
-    "id": "Komisi Ojol Turun Jadi 8 Persen, Tapi Penghasilan Driver Tertekan Pengurangan Subsidi",
-    "en": "Komisi Ojol Turun Jadi 8 Persen, Tapi Penghasilan Driver Tertekan Pengurangan Subsidi"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "iNews.ID",
-    "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQXzhSWEtvU21IaTQ5RXBQNUZkMURYS1Rzb05nV3NZdGhDMFpqM3pIMU80SHFWZWdGODJ1OFFqQ05FTlNwckZpNjQ2WWhKdTlidmFwbEZ4NWpseFJVOUJBM3MxdG5xT2NxT2MtbmJ1Z2FTVzdRdlI3MUxuSmdOQzd0Y3lXOERHVElCYmpUbE91UEpHYko4bFEybjhIMlpVeTNwMDZITEhhcFppaHMzSFNxazVkak5RbkZoTnNVZzJB0gG8AUFVX3lxTE9kRkh6a2ltcUJSNHpnUkI4NWx5ZC1mb3YtLWtRa1N2RmU0dk5MZjRIblNJN09CMFJQSnVoZ1dvNzNySG0wRHR5T29fdzJLblVGUFFQZGFfUnN6UDJTc0hOQnZNZURxS1ZweXBBYV9iRTdadGhnRUZOdDJiZjI4d2VZWVVUckwycG5ManUzZV9ncGFKS0FrSUU3aG5wU1NMQThST0JsXzI4Vy1DWF9hLVAxcmFTR3FyWkJaZ3hi?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-06T09:22:34Z",
-   "media": 1,
-   "judul": {
-    "id": "PNM Perkuat Kemandirian Pengemudi Ojol Disabilitas Lewat Sosialisasi Literasi Keuangan & Safety Riding",
-    "en": "PNM Perkuat Kemandirian Pengemudi Ojol Disabilitas Lewat Sosialisasi Literasi Keuangan & Safety Riding"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "JPNN.com",
-    "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOX21zN1pXRm5ITFVGM3dPSmFyTEs3dGREbU9jVElkNFBMZG90bElqOS1XNGpoRXA4Q082ZktqeE10TjlwaVB2cGM0S0piTkhYSHFGc2N0SUZsNURlYWo3alNyTUwwNWJqVnBUNWR6N2ZKT2hrd18yeTduMDZVcUd1NmdINTFUdE1IaUtFRUVLM2VyTjY2UEFGNFpzNnBfSWwtUkhkR2hON1hQcFJwejRkQ1JMb012cGlQZW80S1R5VDJGcDBt0gHHAUFVX3lxTE5IV3RFQVFNeUIwUUNQOHRBN19IZzFzRVRDNVhNaVZrZ2dTalJZZVhwRGF5S1RDQjNOcVFOakJXdFkxZkpiWERfOWowMmlBa3cwd0pXTkRzZ2hOWURGblV6VnBsOE91ZnRXS2FxSW1YWlJZM2ZOdFFGUTF5bE5GMFF4WVlZREpsZEhqMUhWV09aaTRNX2hLcFBHMm1SSVVJbEFuY2ttSnhWM3ZBbnA3aXMxSUREa2VRNFlHdlZtbHNPSGdMbEd2MEk?oc=5"
    }
   }
  ]
