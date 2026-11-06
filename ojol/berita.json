@@ -1,11 +1,11 @@
 {
- "w": "2026-11-06T11:53:58Z",
+ "w": "2026-11-06T13:01:26Z",
  "dari": "Kroog",
  "berita": [
   {
    "jenis": "berita",
-   "waktu": "2026-11-06T09:50:10Z",
-   "media": 37,
+   "waktu": "2026-11-06T12:34:00Z",
+   "media": 39,
    "judul": {
     "id": "KPK Periksa Dirut KAI Bobby Rasyidin, Uang Rp2 Miliar Terkait Korupsi SPBU Disita",
     "en": "KPK Periksa Dirut KAI Bobby Rasyidin, Uang Rp2 Miliar Terkait Korupsi SPBU Disita"
@@ -15,8 +15,8 @@
     "en": "The KPK seized Rp2 billion from Bobby Rasyidin, identified as the CEO of KAI in five outlets, in connection with the SPBU digitalisation case. kontan.co.id reports the seizure as involving the former CEO of Len Industri, differing from the other reports."
    },
    "sumber": {
-    "nama": "Kompas.id",
-    "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOSmpDVUFacHhkdVY1eDJ5bFZ3elpIMks4a2RUNGcxSmJiMEhCVUVtX0lyakxzcEtjU0hnekRoYk5ZdUxwRFh2a0xnTkI5Y1VyM18xcU9yMm9fT2l2dXA4c3VjWHhOeDJQeWdKeFJTdlVQemxHSnUwYXM2dFhrOXZuWVhuWF94ZTRjV2hCN1dIc3NHc2RvM1FQMWxwQnowdG1ib3Rpd1YtWVJqRm1sRGNnOHQ4bHpBaW1pUTV3aFg0R05yNmt1R2xmbmRCWUlFUy1wbXRLbnVjdw?oc=5"
+    "nama": "Kompas.tv",
+    "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPMzVza3ZreEFjVkNYLURoSWozU1d6STdNdUJLVGZFeFE2VENPUEpsaVVxekhTNzFFcEZ0SHVJemRmYTY2UTVWazZxcW1rY3VBQVhTLUpzMmdEZjNpbWQ3aGVaNm4wN2drMzV5X2hPbXhyN1Z3dE9pb29jcGRYYk9ON1h0bVAxM0pjaHBmVTdaZXZqbHNBRmdzUTduc0phTDFkWFVMWjFzZm1WY3RGaWhBcmlrSVRBSnFoaXlSNGtvOHc3T0lk0gHKAUFVX3lxTE9yS2JqenZla2RMN3JYWVZMQ01EY1ZpckJfb2lNVFNsck5naTAwMUk5Y0E4YWk3ZW1CVGZQZFM3TlNoM2VEZzNDS2o5RC12ck9Rc3J1el90cWdILW1tdEJEaUdBbU93bmNyZUNuRXMzNzJjSm9FTVhscktQeVFNTWVJeFl2SDdaNDh2MzhXZHdMcTNJMUdnaWpjWnIwMzlTRDhFeE5jNWw5cmttQVJuSEs3ZWloZW9fNUZha0hxQWlGMmViVkYwVU1JN1E?oc=5"
    }
   },
   {
@@ -157,6 +157,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-06T11:46:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Tunangan Pengemudi Xenia Jadi Tersangka Penabrak Dua Polisi di Tol Serang-Panimbang",
+    "en": "Tunangan Pengemudi Xenia Jadi Tersangka Penabrak Dua Polisi di Tol Serang-Panimbang"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Kompas.com",
+    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOc2tLdWplTXNCUmp6NThZaDNBQ2pydnBBNHNjUU9XdXh0RElPZTJyS1F5OGdTNWhVOWNGbkpxc2h0bWphN3AtaXBsQ0NRa2dxYmRhdEs5M2RVWFljMEFGZUtiRjNxX3ZLNlNFbnNNa0wyYW1NR0Z1aDZDQVFIRHpYWUxYNHUwM1VEM2pnZEV5N2NMR1ZSX1A1NDd1QVNLYkV0Mkp4M1lqZ2ZXdTEzZGxIWWtMWGNtZVpkOElHT0ttQUNQWW9hTnc?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-06T05:40:34Z",
    "media": 2,
    "judul": {
@@ -289,23 +306,6 @@
    "sumber": {
     "nama": "JPNN.com",
     "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOX21zN1pXRm5ITFVGM3dPSmFyTEs3dGREbU9jVElkNFBMZG90bElqOS1XNGpoRXA4Q082ZktqeE10TjlwaVB2cGM0S0piTkhYSHFGc2N0SUZsNURlYWo3alNyTUwwNWJqVnBUNWR6N2ZKT2hrd18yeTduMDZVcUd1NmdINTFUdE1IaUtFRUVLM2VyTjY2UEFGNFpzNnBfSWwtUkhkR2hON1hQcFJwejRkQ1JMb012cGlQZW80S1R5VDJGcDBt0gHHAUFVX3lxTE5IV3RFQVFNeUIwUUNQOHRBN19IZzFzRVRDNVhNaVZrZ2dTalJZZVhwRGF5S1RDQjNOcVFOakJXdFkxZkpiWERfOWowMmlBa3cwd0pXTkRzZ2hOWURGblV6VnBsOE91ZnRXS2FxSW1YWlJZM2ZOdFFGUTF5bE5GMFF4WVlZREpsZEhqMUhWV09aaTRNX2hLcFBHMm1SSVVJbEFuY2ttSnhWM3ZBbnA3aXMxSUREa2VRNFlHdlZtbHNPSGdMbEd2MEk?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-06T09:11:41Z",
-   "media": 1,
-   "judul": {
-    "id": "Siaga Hadapi Ancaman Banjir hingga Longsor, Polres Kediri Siagakan 500 Personel",
-    "en": "Siaga Hadapi Ancaman Banjir hingga Longsor, Polres Kediri Siagakan 500 Personel"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Radar Kediri",
-    "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQcWNvZnJ1NkFmanc3U05ScUF5QmhEWHNET1RVRmpoc3hZUTVKRHAyYU01TmRXUzJrWl81ZmxPTU5mVS15NjU3R0VWQTd0V0VRMmRRS1RZQWhnWk82Qk1mdFJzakx2Y3lRMjhURFBYblppYmEyeklfWHI5VWVOTEQtdnl2OVBjZVJDVnkyS2x2OWtZNU5PZnNkNUNXWmlhdVZpQXBFdWJMZlBUQmdxSXRINnI2TjM4bmpFeWVOWUx1eElTdGJ6VzFPLUwwWE1RQdIB0wFBVV95cUxNMVpkNHc3OGo1U1RQYkw2eENwQVNEejJLQmd1VU4zRmRfUDJBOGxtRWhMcjRyVnZVUjBVVGV1TjJwN0Z6S0RvUklOT2EydzlPYXNQcVU1TEoyWG5GYUhIbEd4b0pxU1c4bXlyczI0bDUtbUtPVmszMWdvY1REYmtjb0IxRm1WeV9LMFU1LTFpU1k2THBpQnhkN3llU0FFWW43VV9FVFVBR1dLZGsxa1p0WXF6X1pQR0lfUm1UUXhEb1pHeXVJS3B2WmFvYVp3dWZwb1ZR?oc=5"
    }
   }
  ]
