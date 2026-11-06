@@ -112,6 +112,15 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
 /* 18/10: tombol di atas kanvas harus bisa diklik; atribut hidden harus menang dari .btn */
 .judul button,.judul input,.judul textarea,.judul .edit-baris,#editJudul,#ubahJudul{pointer-events:auto!important;position:relative;z-index:5}
 [hidden],#masukOwner[hidden]{display:none!important}
+.kgerak{display:none}
+@media(min-width:1001px){.kgerak{display:block;position:absolute;z-index:4;padding:0;border:0;border-radius:40%;cursor:pointer;background:url(komando-latar.jpg?v=4) no-repeat;-webkit-mask-image:radial-gradient(ellipse 50% 50% at 50% 50%,#000 62%,transparent 100%);mask-image:radial-gradient(ellipse 50% 50% at 50% 50%,#000 62%,transparent 100%)}
+.korang{left:40%;top:58%;width:20%;height:42%;background-size:500% 238.095%;background-position:50% 100%;transform-origin:50% 100%}.korang.gerak{animation:korangGerak .9s ease-in-out}
+.kjarvis{left:87.5%;top:64%;width:12%;height:28%;background-size:833.333% 357.143%;background-position:99.43% 88.89%;animation:kjarvisMelayang 4s ease-in-out infinite;filter:drop-shadow(0 0 6px rgba(80,190,255,.45))}.kjarvis.gerak{animation:kjarvisSapa .8s ease-in-out}
+.kgerak:focus-visible{outline:2px solid #6fd3ff;outline-offset:2px}
+@keyframes korangGerak{0%,100%{transform:none}25%{transform:translateY(-1.2%) rotate(-1.2deg)}60%{transform:translateY(-.5%) rotate(1deg)}}
+@keyframes kjarvisMelayang{0%,100%{transform:translateY(0)}50%{transform:translateY(-4%)}}
+@keyframes kjarvisSapa{0%,100%{transform:none}35%{transform:translateY(-7%) scale(1.06) rotate(-3deg)}70%{transform:translateY(-3%) scale(1.03) rotate(3deg)}}
+@media(prefers-reduced-motion:reduce){.kjarvis{animation:none}}}
 </style>
 </head>
 <body>
@@ -125,7 +134,7 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
 <div id="cariPanel" class="panel" hidden style="position:sticky;top:0;z-index:20;margin:6px 0"><input id="cariIsi" type="search" placeholder="Cari tab, klien, pos Komunitas, kerja agen… (mis. Roy, jas hujan, buru)" style="width:100%"><ul class="feed" id="cariHasil" style="margin-top:6px;max-height:50vh;overflow:auto"></ul></div>
 <div id="notifPanel" class="panel" hidden style="position:sticky;top:0;z-index:20;margin:6px 0"><div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><b>🔔 Notifikasi · 7 hari</b><button class="btn mini" type="button" id="notifBaca">Tandai semua dibaca</button></div><ul class="feed" id="notifDaftar" style="margin-top:6px;max-height:55vh;overflow:auto"><li class="kosong">memuat…</li></ul></div>
 
-<div class="kc" id="komando"><div class="kctop"><div class="kclogo">∞ OCKLU<small>AI Agent Universe</small></div><nav class="kcnav" aria-label="Pusat komando"><a href="#komando">Pusat Komando</a><a href="#radar">Radar Dunia</a><a href="#tebar">Tebar Jala</a><a href="#makelar">Pasar</a><a href="#agenKita">Jaringan Agen</a><a href="#klien">Klien</a><a href="#uang">Kas</a><a href="#penjaga">Keamanan</a><a href="#angka">Angka</a><a href="#sinyal">Sinyal beli</a><a href="#jemput">Laporan MARKUS</a><a href="#bukti">Bukti</a><a href="#komunitas">Komunitas</a><a href="#saranIklan">Saran iklan</a><a href="#tabbar">Semua tab ↓</a></nav><div class="kcjam" id="kcJam"></div></div>
+<div class="kc" id="komando"><button class="kgerak korang" type="button" aria-label="Sapa operator Pusat Komando"></button><button class="kgerak kjarvis" type="button" aria-label="Sapa Jarvis"></button><div class="kctop"><div class="kclogo">∞ OCKLU<small>AI Agent Universe</small></div><nav class="kcnav" aria-label="Pusat komando"><a href="#komando">Pusat Komando</a><a href="#radar">Radar Dunia</a><a href="#tebar">Tebar Jala</a><a href="#makelar">Pasar</a><a href="#agenKita">Jaringan Agen</a><a href="#klien">Klien</a><a href="#uang">Kas</a><a href="#penjaga">Keamanan</a><a href="#angka">Angka</a><a href="#sinyal">Sinyal beli</a><a href="#jemput">Laporan MARKUS</a><a href="#bukti">Bukti</a><a href="#komunitas">Komunitas</a><a href="#saranIklan">Saran iklan</a><a href="#tabbar">Semua tab ↓</a></nav><div class="kcjam" id="kcJam"></div></div>
 <div class="kcg"><div class="kcc"><div class="kp kp1"><h3>Denyut Global</h3><b class="be" id="kcA">–</b><p class="ke">kunjungan agen 30 hari</p><b class="be" id="kcB">–</b><p class="ke">agen berbeda bulan ini</p><b class="be" id="kcC">–</b><p class="ke">pendapatan tercatat bulan ini</p><div id="kcSpark"></div></div><div class="kp kp2"><h3>Negara Teratas · sinyal 30 hari</h3><ul id="kcWil"></ul></div></div>
 <div class="kcc"><section class="kosmos" aria-label="Peta pasar antar-agen">
   <canvas id="kanvas" aria-hidden="true"></canvas>
@@ -1115,6 +1124,7 @@ var t=setInterval(function(){if(!(window.HM&&window.HM.owner()))return;clearInte
 [].forEach.call(f.elements,function(x){if(x.name)b[x.name]=x.type==="checkbox"?x.checked:x.value.trim()});k.textContent="mendaftar…";
 fetch(API+"?r=daftar_turnamen",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(b)}).then(function(r){return r.json()}).then(function(d){k.textContent=d.ok?"Terdaftar! "+d.langkah_berikut:(d.galat||"gagal");if(d.ok){f.reset();if(window.muatUlang)window.muatUlang()}}).catch(function(){k.textContent="gagal, coba lagi"})}})();
 </script>
+<script>document.querySelectorAll(".kgerak").forEach(function(b){b.addEventListener("click",function(){b.classList.remove("gerak");void b.offsetWidth;b.classList.add("gerak")});b.addEventListener("animationend",function(e){if(e.animationName!=="kjarvisMelayang")b.classList.remove("gerak")})});</script>
 </body>
 </html>
 
