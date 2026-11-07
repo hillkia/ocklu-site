@@ -1,5 +1,5 @@
 {
- "w": "2026-11-07T05:03:53Z",
+ "w": "2026-11-07T05:43:56Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -72,6 +72,40 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-07T05:35:21Z",
+   "media": 2,
+   "judul": {
+    "id": "Kapolda Metro Jaya Dekat dengan Ojol, Kesehatan dan Keselamatan Jadi Perhatian",
+    "en": "Kapolda Metro Jaya Dekat dengan Ojol, Kesehatan dan Keselamatan Jadi Perhatian"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "radarjakarta.id",
+    "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOcFNuZUc0WmtBYmJpbS1TRzFhVDRYaDQ2TU9qUnZjbW92Y05zRVB1dTEydXRuMjlnQjVickhJTExseExXX052M01WODFYOF9aS3FVdTk0NjRvX2txdnRQdXhkSk5oTVEtbVg3REtqazNIVHRjY1N2cm9ielhLVEFHR1JB?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-07T04:37:00Z",
+   "media": 2,
+   "judul": {
+    "id": "Pemotor Berjaket Ojol yang Melempar Batu ke Mobil Ambulans di Sleman Ditangkap",
+    "en": "Pemotor Berjaket Ojol yang Melempar Batu ke Mobil Ambulans di Sleman Ditangkap"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Kompas.com",
+    "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNMmFBaVAwUzFFZ0ZrSU5MYTVrSG5vQmE4b0RvNFYxeUpfZy1ZRGpOUFZUSUtFcHN2UUtQUEdXdVBRbU05RGFYeUtPZXdfVWlrLWxmUGxXMEs3WEQ3TEZ3VUNjTm5zSkstenNOS3AzODNBemRvTFQxQlhJdWNDNFV1Z1B5RlVQRG1GNUtGWDNGcUtST2FfWUlhRk9TQ2VtN2F2d0dlbkM3ZFVyTmVkUHAxazMxaHRJc1V3U19OY3NEWTVQZ0dCSnRjSlFWeVpyTDdUZHBxRXFDdzhOZGVZ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-07T04:07:46Z",
    "media": 2,
    "judul": {
@@ -123,23 +157,6 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-07T00:30:43Z",
-   "media": 2,
-   "judul": {
-    "id": "Pemotor Berjaket Ojol yang Melempar Batu ke Mobil Ambulans di Sleman Ditangkap",
-    "en": "Pemotor Berjaket Ojol yang Melempar Batu ke Mobil Ambulans di Sleman Ditangkap"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "detikcom",
-    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPN1FJOEtyV2p3SmVUSUFFamF3UjltZ1B2ZUJ3Zk1aY3BUMUluM1g1VjcxMmRaMm50bWl2bTVlNklTbWxmY1pWZWdndjRqblJQbHdaZU1tcmZyRndTYXpWTGdzVHdTM2dMcV9VczVDbkMyOXZRZ0RGU2xXSklOTklENU8yRnN4Yi1ad0lXMVRIcU9FLUpHMzdDaktVNjR5ZFpOX25mNS1QVERoVWFfOW5BLUJPVnpkZ9IBuwFBVV95cUxOSkx5eHpGaktlaHFBZVFBc3U3VWVuR3RWcjF0eVRHUHktMEcwZm0tbGJmRGFSVzBNbGNRU3I4Mk5lVzFQVXNnMXhmMnNCbmMwank3aERQTW4zUXdHeDZHYjF5RzFKTDBIRlpRNUtoSFluOEtEdEJoUHpVcmpSWldFdE9kcFJOT2w1OWdMZkZpQjJIZEFIYTVBbkJCQUc5SFVkcWZRQlczT3dTSjVtd1M3MTh5VmNfSXRCbXVz?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
    "waktu": "2026-11-06T23:39:00Z",
    "media": 2,
    "judul": {
@@ -157,6 +174,108 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-07T05:37:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Sabtu Bahagia Bersama Ojol, Polda Metro Jaya Gelar Bakti Kesehatan Ojol Sehat, Pelayanan Hebat",
+    "en": "Sabtu Bahagia Bersama Ojol, Polda Metro Jaya Gelar Bakti Kesehatan Ojol Sehat, Pelayanan Hebat"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Media Budaya Indonesia",
+    "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOSnpJSmJveGdidjFiLUFrQUpWaUNkUTZZcERzLTJsdXFHRHI0T3lja1ZHSGQxN2JIWXU5Nk9lMHdjTHJ1TjJuZDUwNEZCOHZwdjZKd0tvTk0xaDdSbVVVRkMtZnBfVFRJLWxnaFEzSW51YUh3VXJTOVdtdmpCNkMxandWZUhSNXIxT0NXNlBud19MekpKc3ZJeXp4Z0FpQ01Oa0VCUmVrV2RkdTJGU2l2RzhWMEZ3UkF5ZjFMRzUzaFNjNk5pcnhqUTJBUmUyY0JoR29vM0UwUWFuMWtKeDlz?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-07T05:03:32Z",
+   "media": 1,
+   "judul": {
+    "id": "Ironi Transportasi Online: Komisi Aplikator Turun Jadi 8 Persen, Mengapa Pendapatan Driver Masih Seret?",
+    "en": "Ironi Transportasi Online: Komisi Aplikator Turun Jadi 8 Persen, Mengapa Pendapatan Driver Masih Seret?"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Poskota",
+    "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQYkpxV1R4SWVveG93SlRCNzI4ZmNSdkxPZ1J3cDhUdFVoUnVuR3l6S1l0ajM2XzRPOVEtWDBtS29tbWN2TVBXeFZlUGZHMzFiSll4X2NMY0F3cmxXaFJIcVNqVWg0bVM2cGNKWkxLX0ltbEEtbnRSU3kyMUd6eHhmUnZmQTU1Nm9mc0NkZlZDczR1R0k0dlpsOWxuWjlVM0NBQzVob0ZDcUtOWGNsTHJTNkRTTWZIUXF3b3JuS08wbkNsdVpUdF9WNnpKU0dTemota3dN?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-07T04:40:38Z",
+   "media": 1,
+   "judul": {
+    "id": "Breaking News: DPO Pembakar Warung Mi Babi Sukoharjo Tertangkap di Taman Bermain Anak di Solo, Pakai Jaket Ojol Lagi Berduaan dengan Istri",
+    "en": "Breaking News: DPO Pembakar Warung Mi Babi Sukoharjo Tertangkap di Taman Bermain Anak di Solo, Pakai Jaket Ojol Lagi Berduaan dengan Istri"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "rmol jateng",
+    "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxPU2tWNlEzV2x2QThmZnpDdGpkbWVWMUxBMUNYR2JsSjhvYURCMUUybzRpbV84SldlTWpxdGtrNm4wZXZ5Qk0zOUQwd1hXYTJweEE1bEs4dEl5TXlBVkRJcWh3UEIwaG5vVThLbGk4VlV0TVpsZG94STdFSXdfWUx0WU4zYmZXX2RoeS1kWXI3MWFoRnlaREdTV2pQaXV0RDMtYjFtNkkwYTl0d0FMRXFfYUlsS09Va01yV2RSSWdRaUVUaENrOXlNM0ZMaWpVOFBuZUhSX2hJdXp3OFR0SkRkUmlESG1COHVfYmNnUXhNeHdhbDhKTFFtdmRB?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-07T04:39:20Z",
+   "media": 1,
+   "judul": {
+    "id": "Sekolah apresiasi PLN Sumut tingkatkan kompetensi pelajar dan guru konversi motor listrik",
+    "en": "Sekolah apresiasi PLN Sumut tingkatkan kompetensi pelajar dan guru konversi motor listrik"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "ANTARA News Sumatera Utara",
+    "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxObGp6U0szYzBqU1FHWEQ3MXNobnFtSW80WEJxSWxHeW91U0dlS1ZKWklmZlZQUGtNeGp5NnJiSFVsaERZN3RvZDM3OWk2WWdzOE8tY0JVUVpEQmFwa3MwSG4zc0xtaWhvWE1BdlY1alpFYnhaOXo0blRSLXpIUDhYTWNSck5vMlhoRjQ4ODdURDF2V3NadU1jSGZJYVFZRDhXODk4WTd5a3RjZ055Zk9iQXFDY3cydHNSbU4wVWhaZGlXZUpZX1pYalVtOUvSAdIBQVVfeXFMUHM5N0UzUU92Y3hkN2pqeUt4WDl4eFljWFJUSXF1NHhaYnZLSUxCMF9wRzZNdDJkdzRaamtHWmVUR3R6QV9pV2todVJHaWpaODV1MjcycExiQzFIMkVuQ3RyZjJYNmhrUXY5MGVXMDNxUy1FTEhpZUx0QUpYWlZqZXVPWGFobnFoZXdQVDFpd1RUQUNzOFZYM1ZKZzlFLVJQX3l6MDNSSUE1cU5SRnVsZjR5M1kyWkdPTk9hb3M5bVAxTUx0cTVPbmhvY21iU1lOQXdn?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-07T04:30:02Z",
+   "media": 1,
+   "judul": {
+    "id": "Penumpang Ojol di NTB Punya Hak, Begini Cara Mengadu Saat Layanan Mengecewakan",
+    "en": "Penumpang Ojol di NTB Punya Hak, Begini Cara Mengadu Saat Layanan Mengecewakan"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Warta Lombok",
+    "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOQ2w5RUFBd0twTDBWXzlUeWc2eXktVkxKc1hRejROREpMX2ZQRmtMRktQU2d1NUdDU2wwLVdJNEI0OHpNZE9lNjdPaXVvZEo0U0VRTXNURmo1eU5fR05FUF9KMXh1akxsOGdSUVBKbEFfczNaX3NhTkthYlVkcnRqcWduWm9sVUR0TnplOGRhMWdVeEw4U1BrV1g5LUQ3NklkU29OQXZVb081U3RuS193c09MV0UxWTVpOE5lUkZlOEc4aTN4cGRUeC1YQmlhcWFGLUFlN3NB0gHbAUFVX3lxTFBJNXM4Z00xUExPQnkwN2VGU2djY2VNUUN4OTlTcGctT3BYUGtfN1NoM2lJUnFYdno0Rmp1TzYzWnZfYl9fcUZBY3lnTzhJdk1XUVdlWURwZDZINXVKY2ZNb2ROX0tzdUpwMUxIcnFOXzRfYWtWczJPTlVpVkRaTXZqZzVRM2FKa25LYmtoNjlSd19yLWRXTm10elJTcDF0dXFUR3BsNjd4eEotTEhuOWkwU3l1cFFraGhVZXNPWkFxZWhVQnB4TTNrem9tRHEwdWZNellYcGhzQ3RxWQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-07T04:22:51Z",
+   "media": 1,
+   "judul": {
+    "id": "Viral Video Wanita Jadi Korban Jambret di Angkot Kota Bogor, Pelaku Kabur Naik Mobil Dikejar Ojol",
+    "en": "Viral Video Wanita Jadi Korban Jambret di Angkot Kota Bogor, Pelaku Kabur Naik Mobil Dikejar Ojol"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Tribunnewsbogor.com",
+    "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQekUxMzdpRHEzdmhDYUhNU3JST1ZJVE9ydWgzN1daWDh4X0w5NHY5dzJqVW0tUllRazBXZGx5VWYtd1NGZk4ydFhtMjNJY3UwOGxPX0xRXy1ZeXFDdF82Q1RlZldhYUJldmlTbmVSeGpFVWNqVHlJMzlyYkI0MU1kcVQ5cHh5aFFhb0RQV2F0SFZ5MzNjalZtaDMwODQ0cy1UamtHQnV6TnhkNm43dFZ3S1M0NklsaVZIQmR4ZzlQMUdjejdTclIzZUF2TGY0aGdFcEFGVldtS2J1ckVEZVVSNA?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-07T04:00:00Z",
    "media": 1,
    "judul": {
@@ -170,40 +289,6 @@
    "sumber": {
     "nama": "AFU.id",
     "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPdE9ySnBVS1BMc2FnWDlwVlRWVWdtdHh2LXJHU3hfd043MzRoRDZpenBzUzlsajJodzRnSk9JSUt3TU44QWlFRG83OG52eEVVZDZHX0FxbHRyUGhXRTBlTjhpSUhFUDBPS0lpSUVKVnV2aWRPMEQxVkp1WXRjRXRWYTJ5U1FyNzJKVENEbUtqOTBPbWN2RFEya01TbndiejFZaHJHQXNqOF8xM2RUMmJyYk5abnRiTXRrWU1HVzBpLTFCUQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-07T03:45:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Polres Bondowoso Rangkul Driver Ojol, Sediakan Ruang Dialog Kamtibmas Lewat Semangat Polisi Bersama Masyarakat",
-    "en": "Polres Bondowoso Rangkul Driver Ojol, Sediakan Ruang Dialog Kamtibmas Lewat Semangat Polisi Bersama Masyarakat"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Website Resmi Polri",
-    "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQT2VIRkVRTHNsRlJKdEhuaER5QndtWE4wN2hBQ0pGV3NRZmhiY212M3RpcmJEcFRYdE9fSFBhdkwwY2RBdkE0cFJwYXpuY0RJcUlvejlTUnFIdjF5cGpTWi1GRWdrSmJrS01DZnprbzFoVjdJWWR3MTlEN29SVEQyT3NiTVhTbmpuQVd5cnpqX2JWcm42amtUSm9GSE1mVkdCM0NkR29vTm9FdjRTRHl5OXRvRzNtN1NrYWlUNTl5MDc3LW5uZzFVdDdOV2c4RFVTVXNJMlE4SVFxcGxaSTJ6UzRR?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-07T03:14:43Z",
-   "media": 1,
-   "judul": {
-    "id": "PLN Sumut tingkatkan kompetensi siswa melalui pelatihan motor listrik",
-    "en": "PLN Sumut tingkatkan kompetensi siswa melalui pelatihan motor listrik"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "ANTARA News Sumatera Utara",
-    "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOeWhBXzhoLWx1ZTUtaEwwRll4ZTBVekVkMjZnQ3U1cTVtekQ0XzNYUy1BRENvU3ZiRkZmNVE4T0FKRWJoWmlrUWxNY2pBekNISFVEQ0NqTjVVRmtNSTNtZmZBUk9SVDdIVUtPYTZaUU5vQUtYb0xJa2JiVDZiNGxnQlIyWTdxZGVQdzhhb3ZUQjJSQ3BIZWtYSUlGOFJNdkpNMmpKQ2JrZWxYRmk5MHBZWjJB0gG3AUFVX3lxTE15NU9lc2NvUVg5X19XYXdveC1nalZqZ3pDU2lMWEJBRERFZmpjUHJsZWZjMjMzclpZYzhDWnUydDBiMXBWZ0FaTFpuZUlUOFlWVlJkcnpNTjhHOUFNZnBMMlFDOWNKbWpscUF3TVBvWC1ISUVtOE9NTWZ4ejBfWG40N0lhSHhwYkNIZ2xfX1FKNWczUTVYSGlOTmU0TWNYUEJEZGxNd0k3UFB2Z3JVQnYxT1RkNlNERQ?oc=5"
    }
   }
  ]
