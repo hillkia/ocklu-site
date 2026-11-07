@@ -1,5 +1,5 @@
 {
- "w": "2026-11-07T11:00:05Z",
+ "w": "2026-11-07T12:05:13Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -242,19 +242,87 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-07T04:07:46Z",
-   "media": 2,
+   "waktu": "2026-11-07T11:28:09Z",
+   "media": 1,
    "judul": {
-    "id": "Solidaritas Ojol Desak Kapolri Usut Dugaan Penyadapan Presiden Prabowo",
-    "en": "Solidaritas Ojol Desak Kapolri Usut Dugaan Penyadapan Presiden Prabowo"
+    "id": "Kapolres Wonogiri: Melalui Safari Subuh, Silaturahmi Semakin Erat",
+    "en": "Kapolres Wonogiri: Melalui Safari Subuh, Silaturahmi Semakin Erat"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "Nusantaraterkini.co",
-    "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPdVZqZjktanZnRk9kY2k4SDNHUk5SR04zb1lzWW1yQ0szZmFsWUM5Ni1NYVBDMHYzdHZsa1E4aHlkSzBRVjB3UDlyNUwwaFFXM1dJbDZ5X0VGQ08xUkp3TVZya0xIcmxKZnE3aHZ5WW5NdlRTQXFhNkhPc3UzQ1pkWkR5SlVNU3BKYWN3a3gwYmJpdHd4RjV2Y09HT214TE0?oc=5"
+    "nama": "Suara Merdeka Jakarta",
+    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOU05Kb1lFRjU4Q3ZGeWdJX3A0SlVSN0w2VEU3YV9rNDZMSUFpZ0ZtRS1fbmxoWDRENHVOd2xtVkZMRE0tVWU5WmttdEt4Vi05T0FhZ216UlRnd1VHTF9ta1NZd3hMZjdITUJ2OElpQ3hCSU80ZDZ5Z09feDBfMUxpYVlkaWdWblI3Snh2bWRtT3JGZ2dtZWh5SXRWWEMxYWlWb2JIVjduRXBuSzI0NEhtdlVtSWM5SlI50gG-AUFVX3lxTE9YNGdHZVBXRU0yTGhpTGljTElNeW1lTGlrdGdhUzhwVmgxS1FxVVFLVnVPUWhIbnlVSGplM0JOSnh5X29MbWZlTktFVFQ1WkRUUEJzR0o2RzNVVEN1enJiNTRPQURUOERLWGRXNmh6R0VjTkhMbEE1NEdaQ1h6dVpOa2F2ZU03eEg2cHZHRm9aVWhPZUFVMWFhakFSWkhGeGFVZkZLaW50amFMRE1KMS1YUGFQN0dTYWYtaDJwdXc?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-07T11:19:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Ojol Mengaji di Masjid Al Hijrah Gorontalo, Perkuat Tawakal Menjemput Rezeki",
+    "en": "Ojol Mengaji di Masjid Al Hijrah Gorontalo, Perkuat Tawakal Menjemput Rezeki"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "RRI.co.id",
+    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPS0hvSHIyLTlmejBHMTVYaDZrMzJLQnUzUWdXeWlaMy1DUUwwTFJ6UXdVRWE3WEEzOXFDYm1qYWpyaHZaRFBJejhvSTJUWFJMbGVCc3pqRi1lUU5HTWhfRnJYY0E5alhFeTFNZlpJajVxazBmXzJwMGt1UUZIdGk1d2dsMFZiZHViTi14dk56R183TmN2bHVvenMyYW5fY2lkMUVqNC1qTjZ1X0k1SmFFT3d2b01obE5LVTB4X3JWUko?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-07T11:07:00Z",
+   "media": 1,
+   "judul": {
+    "id": "5 HP untuk Ojek Online, Samsung Galaxy A15 Unggulkan Layar AMOLED dan Pembaruan Panjang",
+    "en": "5 HP untuk Ojek Online, Samsung Galaxy A15 Unggulkan Layar AMOLED dan Pembaruan Panjang"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "gadget.qoo10.co.id",
+    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1GSXR1S0ZobVh2QmpBaUFYX3NONWZtN3NhSjg2MXF4a3dWSXdCdHozUzNva1NMS1lUdGNSWXZNeEROemJVNk5obXJCVllyOUFUcjljVHJhdk9HUW5QSUZxQmJQRnRQelBIMnVUNThqTzhpQ1BxS2pLVUlZclI1Q3c?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-07T10:57:29Z",
+   "media": 1,
+   "judul": {
+    "id": "Selama Pelarian Terduga Pelaku Perusakan dan Pembakaran Warung Mie Babi di Sukoharjo Diduga Jadi Ojol",
+    "en": "Selama Pelarian Terduga Pelaku Perusakan dan Pembakaran Warung Mie Babi di Sukoharjo Diduga Jadi Ojol"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Suara Merdeka",
+    "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOS3pQWjdwWXJSa00xRi1TOWJTOTVrUUVtTGg5eDRfb2tCUnNQTkVoT241SGZTVVBsSlFleGVYempkNWFRRkNwLWdvSG9WTkgyMjlJYzdIRVFPVE1DaVlNTmp4N2hIYzBXU0lVNk55VFE3V21HOEtrWElUUEdHVVdvUkM2cDlJaVZJVVdtR1U3YkVydWxUVnRpc2NZcFVWVU9vZTItTG45RzNsVzBqTWU1eHZ5UXRzMEdnLVd6anJiYjVPSjM0c0diQjhYZXF1U0xRS1ZRSjg2Skl2S1JocmxDeE1QZmvSAeoBQVVfeXFMUE94ekwzNU5DMlpnNjduSzJ5U3pfSXFRcl85aEtMRC1aSWl1eEh5YXgwVi1FX19JSDlDWWpDZ0FfbmFuWkcwSUZoVl9rR0d2YzlNdGJhemNlUXZqTDl6TkdqTHlpNXZoUDJIMVlucnFTT3ZUNFpiVXZQMjVOTy1CTTNEa0Myc0VBY2tVcVAzSm9ZbVczSzdXUTlaOEVBc0dVS1RTSmQ5ZFFXTFpNX2lJWmNWVng2V2hvbDltSTQ4UG0wOTh4T0k1OUhCVHR4WnZsWktQVUpsZnBISGl1UWxuVmlVUHd1M3QwWDFR?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-07T10:56:51Z",
+   "media": 1,
+   "judul": {
+    "id": "Tertangkap Basah Pakai Atribut Ojol, Eks Napiter Dalang Pembakaran Warung Mi Babi Sukoharjo Dibekuk",
+    "en": "Tertangkap Basah Pakai Atribut Ojol, Eks Napiter Dalang Pembakaran Warung Mi Babi Sukoharjo Dibekuk"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Suara Merdeka",
+    "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNRE91RTJuVkNvTnFXX29pc091bFBYcFpaQ3k3YndTaWFQMHVlQUJMZWFHemN0S25BRVNJZGdvTzRhbk1HbUFaLUZobHFveG44akhTLTQzTnVkRDRFZURSNVZzdkFPOThtUDRNZE0xNzZJS3hqWkZiMXJNakNpeW9sc2VKUk12NEFMY2VLUzVJZHFFMEdFeDBJTnBicF8xcVNndWtoUTdyN3VBTDVRRnFBQ2EwUERaVGo5b3pMZWFRVDFCckcwTkFxU1R0SjUxcVg5N1VLMmRISklMb1FRaFBmRNIB5gFBVV95cUxQVERDNk9Cb3dvLUo5UUxzRFNsSnhCd0xqb3RuWVJWamFGcjhielN5X0JNeWNBWTNpb3pWck1xdnlDaVQ3c054aFFlSlRJRzY2RWcyMWZhSnUyOWF2NFVQeXhLSGF0N0Fqd2VEOUlHNFFvcVgxaFE5MTBoLTVFNS1yQXJLNUdjT29jVUpLalJZakszVmxVUlU2SVJGdmZFRTV5Z19HTk52eUVIU1pEVlFheHRDUHNyR1Y4VVhBZG16d1F2b2Zla0JZanZXQkxNeG9zSmlNZ0lnT1RZdmlfS2o1Nk5ROEJ2dw?oc=5"
    }
   }
  ]
