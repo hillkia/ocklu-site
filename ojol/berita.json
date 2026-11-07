@@ -1,5 +1,5 @@
 {
- "w": "2026-11-07T03:36:18Z",
+ "w": "2026-11-07T04:41:11Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -21,8 +21,8 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-06T23:17:02Z",
-   "media": 8,
+   "waktu": "2026-11-07T03:06:56Z",
+   "media": 9,
    "judul": {
     "id": "KPK Sita Uang Rp 2 Miliar dari Bobby Rasyidin Terkait Korupsi Digitalisasi SPBU",
     "en": "KPK Sita Uang Rp 2 Miliar dari Bobby Rasyidin Terkait Korupsi Digitalisasi SPBU"
@@ -32,8 +32,59 @@
     "en": ""
    },
    "sumber": {
-    "nama": "Elshinta",
-    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNZEtGX21ZT1ltZkRLQTlfRUMyQzZJX3VBM2kzS0FaQ2tRWE4xckkxNTVBZ1hCSFBNMk9yNVZVXzdsLW8tZzExYk45THJPRXZBVUFwNWpiUnFjRU1KM3N5R2Vvb2NrVUdZNC1LVVo0Tld3b0t4eHBCTXFVNmQwZFNaMnRQb1V6c3BlYllHcU01TkNIRzJOVkZMdUl1bU1NQ1lTUENJLUNGUjhnTEt3aFg0RmlXNXhSQnhuWE5R?oc=5"
+    "nama": "Publicanews",
+    "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNZTByUVVCSHJTV2FWc3hjZktSVVdHc2Z2Nkk0dmV2LU9uQTdSRkoya29MbVFwYWkzY3N5ZjRReVF6Mk1aY1p5SGZ1RHROVWNBdkRNS3pYYXlOeVhHRWtRQzdhOUJfcjBTMk9YR0dqVDNwQ3ZYamhtbjF5eXM2V0cwTGFEazFTX0g0MV91U0o1Z1ItZFNtdDRyZTNoNW40Y2FQc3BHSlc5U3YyOWtBQ25sMnlZZWZyQTY3Q1pnWWY4dw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-07T03:40:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Banjir hingga Longsor Jadi Ancaman di Garut Saat Musim Hujan",
+    "en": "Banjir hingga Longsor Jadi Ancaman di Garut Saat Musim Hujan"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "detikcom",
+    "url": "https://www.detik.com/jabar/berita/d-8737677/banjir-hingga-longsor-jadi-ancaman-di-garut-saat-musim-hujan"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-07T03:16:00Z",
+   "media": 3,
+   "judul": {
+    "id": "Kapolda Sulut Fasilitasi Kemudahan Pengurusan SIM Bagi Pengemudi Ojol Serta Bagikan Helm",
+    "en": "Kapolda Sulut Fasilitasi Kemudahan Pengurusan SIM Bagi Pengemudi Ojol Serta Bagikan Helm"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "RRI.co.id",
+    "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNUnVTTlgyTXEtVVdEQkZoT21YaUk4TXBTNEo2RWxfNzRuYnVZSUU1MWdkazRTc3lFQ0NHVlZOLTBTcDEzZnNFc1EtTE5HSTY1dUVQWlNCWTQ1MUVmeFZreGZQSzFlQmlQd3hIc3BVOEViQnFNX3g0dnFvNkVfbmJtQjhySkVlNWNrZ1lobEpHeTI5dVhx?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-07T04:07:46Z",
+   "media": 2,
+   "judul": {
+    "id": "Solidaritas Ojol Desak Kapolri Usut Dugaan Penyadapan Presiden Prabowo",
+    "en": "Solidaritas Ojol Desak Kapolri Usut Dugaan Penyadapan Presiden Prabowo"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Nusantaraterkini.co",
+    "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPdVZqZjktanZnRk9kY2k4SDNHUk5SR04zb1lzWW1yQ0szZmFsWUM5Ni1NYVBDMHYzdHZsa1E4aHlkSzBRVjB3UDlyNUwwaFFXM1dJbDZ5X0VGQ08xUkp3TVZya0xIcmxKZnE3aHZ5WW5NdlRTQXFhNkhPc3UzQ1pkWkR5SlVNU3BKYWN3a3gwYmJpdHd4RjV2Y09HT214TE0?oc=5"
    }
   },
   {
@@ -51,6 +102,23 @@
    "sumber": {
     "nama": "Lingkaran ID",
     "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOZXV2UU9QcklULUJwb0VkVkNrWE14UUlidnJNRlZ2YXNYbHBSNjFYdWJUeUNtY2kxZnZPUWtzS2xPXzhjOUpRUTVnTlZ4LVM1N0lPMW5ibGk5RlpYLVBJaXc1V3JWVFJ0ZzNxaDRJbkxHOTRud21SWi1MWlAyYzNMN0xOT2pXeWxROWN6YnBHVWtYODhhVnBYOHR1bDJETGYydzM5WGJCd0hjYkYz?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-06T17:03:07Z",
+   "media": 4,
+   "judul": {
+    "id": "BPBD Kota Malang Petakan Empat Potensi Bencana, Kelurahan Klojen Rawan Banjir",
+    "en": "BPBD Kota Malang Petakan Empat Potensi Bencana, Kelurahan Klojen Rawan Banjir"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Memontum",
+    "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOMUZXWW1GdDlsY2gweHB0T1BKQTAyNTFxZ09UNVFwTkRkZGEwMlpGVFhJSHp1MEdhYlBTUHVUbHZLQlVCekVqNEJFMHNfcW1FYlpETV95aFAwZmNaekZKdk9vd21JaXlYdldiUGx2RkRONUV0c25zM3o5aXV6RE1CbnB1RG1IZjBJNGRIWXlfcDBSWEVxenUwblNqNFBHRmdOdXZMcVZ2bHRJaE5O?oc=5"
    }
   },
   {
@@ -89,70 +157,53 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-06T17:03:07Z",
-   "media": 3,
+   "waktu": "2026-11-07T04:00:00Z",
+   "media": 1,
    "judul": {
-    "id": "BPBD Kota Malang Petakan Empat Potensi Bencana, Kelurahan Klojen Rawan Banjir",
-    "en": "BPBD Kota Malang Petakan Empat Potensi Bencana, Kelurahan Klojen Rawan Banjir"
+    "id": "Panik Karena Mesum di Jalan Tol, Guru Ngaji Ini Kabur hingga Tabrak Polisi yang Hendak Mengecek",
+    "en": "Panik Karena Mesum di Jalan Tol, Guru Ngaji Ini Kabur hingga Tabrak Polisi yang Hendak Mengecek"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "Memontum",
-    "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOMUZXWW1GdDlsY2gweHB0T1BKQTAyNTFxZ09UNVFwTkRkZGEwMlpGVFhJSHp1MEdhYlBTUHVUbHZLQlVCekVqNEJFMHNfcW1FYlpETV95aFAwZmNaekZKdk9vd21JaXlYdldiUGx2RkRONUV0c25zM3o5aXV6RE1CbnB1RG1IZjBJNGRIWXlfcDBSWEVxenUwblNqNFBHRmdOdXZMcVZ2bHRJaE5O?oc=5"
+    "nama": "AFU.id",
+    "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPdE9ySnBVS1BMc2FnWDlwVlRWVWdtdHh2LXJHU3hfd043MzRoRDZpenBzUzlsajJodzRnSk9JSUt3TU44QWlFRG83OG52eEVVZDZHX0FxbHRyUGhXRTBlTjhpSUhFUDBPS0lpSUVKVnV2aWRPMEQxVkp1WXRjRXRWYTJ5U1FyNzJKVENEbUtqOTBPbWN2RFEya01TbndiejFZaHJHQXNqOF8xM2RUMmJyYk5abnRiTXRrWU1HVzBpLTFCUQ?oc=5"
    }
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-07T02:32:00Z",
+   "waktu": "2026-11-07T03:45:00Z",
    "media": 1,
    "judul": {
-    "id": "Mengaku Banyak Pikiran, Viral Pria Berjaket Ojol Lempar Batu ke Ambulans, Berakhir Damai",
-    "en": "Mengaku Banyak Pikiran, Viral Pria Berjaket Ojol Lempar Batu ke Ambulans, Berakhir Damai"
+    "id": "Polres Bondowoso Rangkul Driver Ojol, Sediakan Ruang Dialog Kamtibmas Lewat Semangat Polisi Bersama Masyarakat",
+    "en": "Polres Bondowoso Rangkul Driver Ojol, Sediakan Ruang Dialog Kamtibmas Lewat Semangat Polisi Bersama Masyarakat"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "Herald.ID",
-    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOWVNrNldKUGF1NnFxOW5vMkNlMkpVYk1fMWk2S2VvSUstbG1NY2lUa0Z5b3JJd0RHM2NJUWlwQmpCcXF3ZzNBa1UzaFFhZmNkSHdBWkRReXFQQXFnWmNrcUxhV2pLbUpHclUzaDlwa0hlallKdFRHVWdkQ0s0TG5GUkROTC10RXhRVS1IR2k3VS1mY3RMVUpyQ2dZTW5Ua0s4UTNHQnNHQkt4OF92LVJtUEs0dnhWT2M?oc=5"
+    "nama": "Website Resmi Polri",
+    "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQT2VIRkVRTHNsRlJKdEhuaER5QndtWE4wN2hBQ0pGV3NRZmhiY212M3RpcmJEcFRYdE9fSFBhdkwwY2RBdkE0cFJwYXpuY0RJcUlvejlTUnFIdjF5cGpTWi1GRWdrSmJrS01DZnprbzFoVjdJWWR3MTlEN29SVEQyT3NiTVhTbmpuQVd5cnpqX2JWcm42amtUSm9GSE1mVkdCM0NkR29vTm9FdjRTRHl5OXRvRzNtN1NrYWlUNTl5MDc3LW5uZzFVdDdOV2c4RFVTVXNJMlE4SVFxcGxaSTJ6UzRR?oc=5"
    }
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-07T01:18:26Z",
+   "waktu": "2026-11-07T03:14:43Z",
    "media": 1,
    "judul": {
-    "id": "BPBD Bandung Petakan Wilayah Rawan Bencana, Longsor dan Banjir Mengintai Saat Hujan Deras",
-    "en": "BPBD Bandung Petakan Wilayah Rawan Bencana, Longsor dan Banjir Mengintai Saat Hujan Deras"
+    "id": "PLN Sumut tingkatkan kompetensi siswa melalui pelatihan motor listrik",
+    "en": "PLN Sumut tingkatkan kompetensi siswa melalui pelatihan motor listrik"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "digo.id",
-    "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNaWVpWHJVcFFGOG9IaURadjZsTGpoSmpKVFNIQ0tUZXVIcDRKWnU2TDFYTXFrWEVqY0FjY3hZRHZOLU1XN05relZ1NUpVUDUwNm5TX1FFMmJqSXlaUVluRlBHWHNEeXh6WFJqVXQxQnhjdFhxX0xrZWVoZFNFUmRCbjItMW41NXNuUW5NMUhCMkVaN0k?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-07T01:12:00Z",
-   "media": 1,
-   "judul": {
-    "id": "BBM Mahal, Perjuangan Vita Menjangkau Sekolah Naik Kuda Halaman 1",
-    "en": "BBM Mahal, Perjuangan Vita Menjangkau Sekolah Naik Kuda Halaman 1"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Kompasiana.com",
-    "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQREJQcmxOTTQzN0JoNWM1bU12MUJYWG5idC1OV19GX1dWVjhHbmhwa05oVzRmaEI2ZGc2VXV4ZHlITVE5clA1TmZNZUZvTEg1WlpUbDg0U2xBNWlfWXYyZ3FrdHNvU09zTVd1bnpuaE9UTHh5MUl0a3k2aGxQYkVNVjBmcDRfVm90ZEcyWUJJb19URkVGTmVXYmhpYm5pM2t6V2xwNnN3eEtWSnBoMUFVbWVySVBYTkJEZWd5dFB3?oc=5"
+    "nama": "ANTARA News Sumatera Utara",
+    "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOeWhBXzhoLWx1ZTUtaEwwRll4ZTBVekVkMjZnQ3U1cTVtekQ0XzNYUy1BRENvU3ZiRkZmNVE4T0FKRWJoWmlrUWxNY2pBekNISFVEQ0NqTjVVRmtNSTNtZmZBUk9SVDdIVUtPYTZaUU5vQUtYb0xJa2JiVDZiNGxnQlIyWTdxZGVQdzhhb3ZUQjJSQ3BIZWtYSUlGOFJNdkpNMmpKQ2JrZWxYRmk5MHBZWjJB0gG3AUFVX3lxTE15NU9lc2NvUVg5X19XYXdveC1nalZqZ3pDU2lMWEJBRERFZmpjUHJsZWZjMjMzclpZYzhDWnUydDBiMXBWZ0FaTFpuZUlUOFlWVlJkcnpNTjhHOUFNZnBMMlFDOWNKbWpscUF3TVBvWC1ISUVtOE9NTWZ4ejBfWG40N0lhSHhwYkNIZ2xfX1FKNWczUTVYSGlOTmU0TWNYUEJEZGxNd0k3UFB2Z3JVQnYxT1RkNlNERQ?oc=5"
    }
   }
  ]
