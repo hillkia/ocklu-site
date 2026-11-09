@@ -1,7 +1,24 @@
 {
- "w": "2026-11-09T01:49:17Z",
+ "w": "2026-11-09T03:28:09Z",
  "dari": "Kroog",
  "berita": [
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-08T21:02:06Z",
+   "media": 7,
+   "judul": {
+    "id": "UU Pelindungan Ketenagakerjaan dan Perpres Ojol, Era Baru Kesejahteraan Pekerja",
+    "en": "UU Pelindungan Ketenagakerjaan dan Perpres Ojol, Era Baru Kesejahteraan Pekerja"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Universitas Komputama Cilacap",
+    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPb084VGI4OVFRbk1tVndOa2MtUUVJZHhnVHNzR1ZSUXByV0kzb0hpRkNfcmtnVm9vQkpuOFV4XzBReWJrbmRkbG5yLUF6X3huWThsTExMeDFXYUhXZWNsWTdvcEU2NGtsS1psZnMwaUJnSnF3SHg0am5zV1BXeFN4aGw0T3duS2pKUkNnLVNzcmZFQ2c2U3gxV0F2RXJpelJMWjJkUjE0M0dhcFZTT3FvcA?oc=5"
+   }
+  },
   {
    "jenis": "berita",
    "waktu": "2026-11-07T10:00:13Z",
@@ -38,19 +55,172 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-08T11:05:02Z",
-   "media": 6,
+   "waktu": "2026-11-09T01:41:57Z",
+   "media": 2,
    "judul": {
-    "id": "UU Pelindungan Ketenagakerjaan Perkuat Hak Pekerja dan Kurir Ojol",
-    "en": "UU Pelindungan Ketenagakerjaan Perkuat Hak Pekerja dan Kurir Ojol"
+    "id": "Kapolres Metro Jakbar Rangkul Komunitas Ojol, Perkuat Persaudaraan dan Kepedulian Jaga Jakarta",
+    "en": "Kapolres Metro Jakbar Rangkul Komunitas Ojol, Perkuat Persaudaraan dan Kepedulian Jaga Jakarta"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "cwibc.co.id",
-    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5fWFE3TmdhbDFHN3ltTWNNNloxbl9OaHQ4R3FxUDJxUXBFWGV6b3FqV3c5ZDMxb3djeWxQaFBNYmFPQzVNNS1qcU5zMy1Xd0tkWFpuUzRVY2UzRGhDSHpjVg?oc=5"
+    "nama": "Target Berita",
+    "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOUzVEaTRJRWctSHJUNnc4eE5YZ1ZJbjhpTV84cWZDd0xJNFJudl9TenVhV2dFaGZhU3B5aklwU2FrMzYwNklNeGhab3VSNmkxanJVZmg5OFlvQUt2TzVzeWFlRndocWNXa1NxRjVLcF92X3lmRmw1MnhsZHlwUmZGWE96QWFUVkFNemZESEd1VjBwbkpPLWtxTnJnM0lxZ094S2lMNkdSZGVCZ1NDdkJ1ZHdWQWtOTmRBOEthbzR3?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-09T01:15:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Terpopuler: MPV Suzuki Rp150 Jutaan, Motor Listrik Ojol, dan Mobil Rakyat",
+    "en": "Terpopuler: MPV Suzuki Rp150 Jutaan, Motor Listrik Ojol, dan Mobil Rakyat"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "VIVA.co.id",
+    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOMXEtbjYxYzEyM08xbGxfajl0U0ZkU0xfS0RGM1JMaVVtRFRSMVhaY3lJZlI5OEtvdzF4ZWw0cjhEaXdIUVhKU3dXWWo3SGs5S2J1RFJsSjh6aTI5V3RueF9xQlpVNDZoc0tEeEtOUVl2NS1KQ09vbUVMa3ZtTllfb1RIZFJCZzAxV3EzWGpkSmI0bVctWHE3LXlUbkN6bnZhS3BsMW4tWGtNYUlaSEhz0gG0AUFVX3lxTE5yX0hlSU9vUi0yekZKQlpXWEdNUGRJRDM1RGN0Y29aeFIyU0ZKY09ySk1XdkhnUnlGNTNHN1ZTZ1pucVRvdFBFVjFaQVVrNFFtSklIN3JGY2E3cDc5a2hObDZROENFRGlydkhLLWlvUWp0ekFMSTlvb0NTdy1aN3YzX3NROThONFRSTGIybUh4RTFLeUY2WmFaMU1WQlhoXzlWVXpYdl9VV09DSlVRMHpCeGpDcQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-09T00:55:21Z",
+   "media": 1,
+   "judul": {
+    "id": "BPBD Garut Petakan 9 Kecamatan Rawan Banjir dan Longsor, Warga Diminta Waspada",
+    "en": "BPBD Garut Petakan 9 Kecamatan Rawan Banjir dan Longsor, Warga Diminta Waspada"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Radar Garut",
+    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNbzNQUEotZU5yWV82eFV1SGNsTEFRYV9NUUxCZVVNY3o3Uk1iMW94WWxuNVVVNGxZMEZHM0paaWNVekdDcXE1WERFeTNVUzM3LXlLNzVHdzlCTHEwdndDLTFndFhvdzlLYnd0MS01MWdSa0tWZmo0NTU0ZldleHdUaERuYXF3MDZSYjRWeUJ1Wm95RnNsc0xiZ0MwckFFVjR3QnF3OUZENnJJQVFkMW9CZQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-09T00:32:00Z",
+   "media": 1,
+   "judul": {
+    "id": "NasDem Bugar Berbagi: Sahroni Bantu 300 Ojol dan Disabilitas",
+    "en": "NasDem Bugar Berbagi: Sahroni Bantu 300 Ojol dan Disabilitas"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "jurnas.com",
+    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNc1pScFc0U2syZmh2SjhqbmhXMVFqVG8tRWNpTzROZGd4bXJJUnUtYS10dEhFeDBlNUlzSEpBdmVqd3JmZHpEdFBCYW9fQ0RGR1I1VU9heThvbUxiUkV2WjlBWkthNmZVNHMxSjBBOFlJZ3RacHZEVzhuRjZTaEtybk9lTnF5NmNTdE5yMk1NMDBwTzhQMTdLRFFrY0c4MVFpazVOQ3RnRQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-08T14:43:44Z",
+   "media": 2,
+   "judul": {
+    "id": "Perkuat Kamtibmas, Polres Metro Depok Gandeng Ojol Jaga Keamanan Kota",
+    "en": "Perkuat Kamtibmas, Polres Metro Depok Gandeng Ojol Jaga Keamanan Kota"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Ruzka Indonesia",
+    "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1xVzNlMWkzLVBXcmRVakdlV1pwMHpUWTV1R0h0djM5SjdzVzRjanpLMVhBWGs1cnZmcjRoMmdXYVhuX2F3a3hsN3NjNXBFR2JXX21zLW5fdVJVTUtBblA3MERFMGJMUlNUUHJEUWFqNW0xaEQ2R0xDU0Jn?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-08T14:28:05Z",
+   "media": 2,
+   "judul": {
+    "id": "Polisi Bersama Masyarakat, Kapolres Tangsel Pererat Silaturahmi dengan Komunitas Ojol dan Go-Graber Indonesia",
+    "en": "Polisi Bersama Masyarakat, Kapolres Tangsel Pererat Silaturahmi dengan Komunitas Ojol dan Go-Graber Indonesia"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Berita Jurnalis",
+    "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOXy12U2tyajctMkF2TjFEN1c1M1UtMmpaaFFpMy1FajhCNU8tOGJfaUJST3h1QUFVY1VJSjIwbDVMcDJsT3Y1T2hxOTl6V29Ub3RoV3RhbkNheHlneGNzTDNMVmVqdDJjcGRid0plUVlkMU43em9XV0N1c0kyMWM0VFFHVGhRaUNFOHhKdTVyRUxEdXJkQy1sU2tNNU9xUzBKQUcwMnl4TWZsTUlSTGJrUS03Sm1TOGVlOUJ3UjI2MkZGS09LaTFVS3c4RHdMSU5kbGREa0JB?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-08T18:23:06Z",
+   "media": 1,
+   "judul": {
+    "id": "NasDem Bugar Berbagi, Sahroni: Perayaan Ini Harus Dirasakan oleh Semua Kalangan",
+    "en": "NasDem Bugar Berbagi, Sahroni: Perayaan Ini Harus Dirasakan oleh Semua Kalangan"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "MetroTVNews.com",
+    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQSmt6N0hqblR1N2s4Z0E1WVJVWFZFR2czTVZURGt6NHIxS2tObjZ4aDdHM1djUUV4aTRSNGw5RGlodUtOTUJMWDRBTDVEX0F0QmVMQ1FYRXIzM0d6ekp5LVVLRE01X29fNnRFamNfcWtWcl8wVVhmZjZybzZSM3o3OWkzVzBGYXo0UXFzb2J6UnJrVm1HSnU5V0N1TUsxejZpMlVvcTh5cUpHMEJhRjJwWjRQOU5VQmVUejJJ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-08T18:11:52Z",
+   "media": 1,
+   "judul": {
+    "id": "Robinsar bersama Forkopimda Kota Cilegon turut hadir dalam Doa dan Tabur Bunga bersama Ojol",
+    "en": "Robinsar bersama Forkopimda Kota Cilegon turut hadir dalam Doa dan Tabur Bunga bersama Ojol"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Berita Cilegon",
+    "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPVmhfemhqVTBUSldaMk1udURKcnZlWWFfOGh2Wi01dXJEbHAwVGlvT0VMNVhkd0YtSTg5eWFQMTlzUGxZbi1uc3RhSzRKRmxZSzQtc3hoT21memZsTFBuaGJVa19raG8yUnNWU292MlBSZWZpdFRCUmc5WXFFUmU5ZTBzalVaN2duWDdfZWZ6YnViY2EwSEMtR21IeXF3U2hFbTBONmVfYkxGZ3RYcjMwUGMwQ2p3OTZySEVGb0lTQzRLbFpwRDBvRi1lZHBtV0pacEVhMGZYQ1dNc1U?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-08T11:41:44Z",
+   "media": 2,
+   "judul": {
+    "id": "UU Pelindungan Ketenagakerjaan Atur Upah Pesangon dan Ojol",
+    "en": "UU Pelindungan Ketenagakerjaan Atur Upah Pesangon dan Ojol"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Cirebon Times",
+    "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1aMmRNa2N1UTNzclJpQURCY1cwZ2FTeVQ1RjFYcTJmSnVXc2dUZks2SWllTmVYWDVwTW9UcXhKWUxuNC12WVVGVzM1T05EdEdVQlVoMjlZUWE2QlBjam96TWVlZ1hEYzZ0NE5yX2t4MWt4eGNya1l5Vlh0TEE?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-08T17:10:10Z",
+   "media": 1,
+   "judul": {
+    "id": "Polisi telusuri keributan pengendara motor di MOI Kelapa Gading",
+    "en": "Polisi telusuri keributan pengendara motor di MOI Kelapa Gading"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Elshinta",
+    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOckdKNHBkV2FIRlIwUWx5UmRtbC1lcE8yeXFVOTlNU2k3UExWVndGR2J3VDRZUnZkWTRxYnlLNVc4NnFZUGI2U2NDTlYtcDY5OXRtUHpnR0JPMFdZaTRLdnRoVmxtTmoyNjhaaFkzd2d1SngteFVVcDgyLTZILXJNQWU5d0VZRXdxem5mZ3BTSjVlNlZwT1FJYW00WTdGUDdsaDl6dHV5UFBXWEFwYUtEY2lfUWltNTdz?oc=5"
    }
   },
   {
@@ -72,6 +242,57 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-08T16:06:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Tak Terima Ditegur Merokok di Jalan, Pemotor Ngamuk dan Rendahkan Ojol",
+    "en": "Tak Terima Ditegur Merokok di Jalan, Pemotor Ngamuk dan Rendahkan Ojol"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "jurnas.com",
+    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOamVELTJQRUZtbUNVaHdFTVdZb1Z1N0ljZ1daTEp2emdzck4yN1VWYmFVOVVsS0Y5NkJUaFF3TmxST3NxOWs1NzV2bjZFTEpJb0c3bEZyVkVGdXFNelZ1OWVSRkVpa2lxdTBwb2dxRU56MDFZbnJNUWEwQTVJUklIbmFZV1VZUDY3elE0TlJodUdxZnZMMWFOaWhnU2FtVFdHbFcweHNkYU1ZdzZ3d0FZc2ZKQU8?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-08T16:05:41Z",
+   "media": 1,
+   "judul": {
+    "id": "Jelang HUT ke-15 NasDem, Sahroni Ingin Partai Bermanfaat Bagi Disabilitas hingga Ojol",
+    "en": "Jelang HUT ke-15 NasDem, Sahroni Ingin Partai Bermanfaat Bagi Disabilitas hingga Ojol"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Jawa Pos",
+    "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOdlZqc1pJc1cyTkxoMnZyT3FRRTAtVm5iVUJxNWIyMU1OdFExeU9ON0hSc1c3RHVpeGZGLTN2MFFMcksxRjJCbHpFdV9VR2ZQUnNvcUp0ei1nTFdVUXpVRDlfTkk4cWxlczB5eWdNUHNiMmE0RC1manl6ejZHdWlzTFIzZ0FZMTRwYkVtX00zZTZBMWRWeW5VQndCazZkTVJtVjNIcWctNjBLRmhvd1FXS2lVcHhUS04zSjZFdWV6WU5zU1g3cF9pQWttLS1yamVncUE?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-08T16:00:20Z",
+   "media": 1,
+   "judul": {
+    "id": "Banjir Bandang Kembali Terjang Aceh: Gayo Lues dan Pidie Jaya Terdampak",
+    "en": "Banjir Bandang Kembali Terjang Aceh: Gayo Lues dan Pidie Jaya Terdampak"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "NU Online",
+    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPRGgtQzdCdnhvVlZ1YlpLUkVmc19jS1pyNHJuOHRESlBOSjlUbjlybHFUbGNMZUIzU1JDVnRxNnQ0SGNNMVM1N3dkanh0Zi0yV05hY1VSRHdvNkh1dk9EZ0k2RnY0Q3QxWVNGR1UxVDQ5cEFDMUtkMVY0WVE1bl9fTWtULVJpSmhrU3lnNkh5bFNZVjhUT3VoTndPdmZnb2trd1RkV0Q2QdIBrAFBVV95cUxQZHJvSV9ZenZNTHgxUDBwYk14cFVQTkcyX3NjbWM2ZndmcjFDb0VXS20td25ZaDh5LVpiZ1NZMWNzaVMwMVAyaDV5b2VRZnUzeDNXWDZySUJWZm9WODN1a1VGT21JRmhrOEdOTHM2ZzgwLWpoNUY1ZjlvbGFfeGZ5S3B2djdMZ1lsTzR4VUlabWFyVm5CSTAzeFdSOU14blRCb1dwX0NxSVRQd2FI?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-08T15:29:11Z",
    "media": 1,
    "judul": {
@@ -89,410 +310,19 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-08T01:11:52Z",
-   "media": 3,
-   "judul": {
-    "id": "Ojol dan Kurir Kini Masuk UU Pelindungan Ketenagakerjaan, Ini Hak yang Dijamin",
-    "en": "Ojol dan Kurir Kini Masuk UU Pelindungan Ketenagakerjaan, Ini Hak yang Dijamin"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Waspada.id",
-    "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNX0xvU2w2R2diRE5fd2xvS0RxdEFUZnIzLUgtMWxzY0ZUQ0E1N1g2eUVqSnRUdHZiaWdudTVHZElaWEVRRXYwdUZ3QU1VWVRmczRodkE1cUZrSmtCY2ZRNHE3OTI0Tk84cGNibDNBYkJUMjAzQ3hFcFFRMDRRbDBGY1pXYWpFWHBZZVRLY2ozeEdFTHRYVlhQX2NqbjNFY1U2LXJZQnVFc0NXSDQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-08T11:16:26Z",
+   "waktu": "2026-11-08T14:41:22Z",
    "media": 1,
    "judul": {
-    "id": "Aliyah Apresiasi Kebersamaan Komunitas Ojol di OJOL Day",
-    "en": "Aliyah Apresiasi Kebersamaan Komunitas Ojol di OJOL Day"
+    "id": "Kapolres Metro Bekasi Sarapan Pagi Bersama Komunitas Ojol",
+    "en": "Kapolres Metro Bekasi Sarapan Pagi Bersama Komunitas Ojol"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "harian fajar",
-    "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPVXR2dUIxeGw1TjNVRDVrMERXdFZ2NGNWR0NfeFVZVExINlZScVZYankzcUZPSEN1dUdpeHhhSUtXUFNrLTZXMDA2cjJtV1VGVmx5dnNsYTdGc3p1dGd2MHNXSF8xaGtaTzRGVjR0cjJZOTFjUjY0M0RNZTUyTlJBZkd4ejR3dXpUT2UxaGcxdjM4ekN6Uy1rM0FB?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-08T11:02:09Z",
-   "media": 1,
-   "judul": {
-    "id": "UU Pelindungan Ketenagakerjaan Atur Upah Pesangon dan Ojol",
-    "en": "UU Pelindungan Ketenagakerjaan Atur Upah Pesangon dan Ojol"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Limapagi",
-    "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE15cHh1c1dic0l2YTh0d0NYelpNbVJUQzJkamRrM21iSWp6czJ3QXo1SmM1M1J3VEhxM3N3UF9Tem1pYklCbEhvUm9EMmpLTmRMOTNTb1pDOGFrWGxpZFUwdkJjYnhtOFZvaTNMZ05LRWNuRHBq?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-08T10:55:15Z",
-   "media": 1,
-   "judul": {
-    "id": "Kapolres Pelabuhan Tanjung Priok Pererat Komunitas Ojol Jakarta Utara : Jaga Kamtibmas Tetap Aman Dan Kondusif",
-    "en": "Kapolres Pelabuhan Tanjung Priok Pererat Komunitas Ojol Jakarta Utara : Jaga Kamtibmas Tetap Aman Dan Kondusif"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Purnamanews.com",
-    "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQU1VpRFBQdWE5NEprWC0wWTVZZFd0X3h5WU1tNXVrQ2xZa09Gb1pDSE1ZTHVnRUtud3JoWU1mLTViZlcwU251SVRHVm5CRWJzZXItOFo1ZVVROXZ5Q0pOdlR4SUtxMkN1bU04RUdEREVkMXVvY1RBeHV6WXFCbFUyS1BLX2FLR0kwWjRHZ1Y5TGRaay1xQS15MVgwbldaaC1yMDNHak81RXFlVlRKQUItR1hPT0pOeFpIOHZObVduRV9Kb0VQUm5Ua0hhUGkxX3U4cmN2YWctNGpmVzJocXJSbHl3?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-08T10:40:20Z",
-   "media": 1,
-   "judul": {
-    "id": "Ojol Keluhkan Balap Liar Nyaris Tutup Jalan Veteran Makassar",
-    "en": "Ojol Keluhkan Balap Liar Nyaris Tutup Jalan Veteran Makassar"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "detikcom",
-    "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNRnhpU2c5RWY1anpLUUxGel9CMDlpc2M5OWxabVdQSFdyMlQzQ0p0YlRBeWd0clVoTVByTkZocmxPbFVlMFZfRVFmMUxPcVdrRlkxNGtXYnN6cFB6SjZjdnRoMVlDRXI3RjY4aE9YdFFJYmkwRzVYUm9BZjdSajNQWl9mMTA4ZVJJc3FvUG9vM2w4ZDRQTUV2MlV2U2poWm9MQWxGdFlkV1I4ODB20gGyAUFVX3lxTE8xd0RkNi0zNVdweXFCZ1l5Qk5MX0xuOC1ERnMxckQ1b1V0c1VyOUZVenVKVVdtR2Fva1JIbHVIazVxN1NMSm1QN2VvT29ORUN5U1lvSVNPT2JCajVWNktQS2JJWGNQYV8zU2hzWHFxdVdhYVY0ODV6OFpDaUotQ29ralkydG9UOHRES0RrUUEyZ3hycTl2RGdVV0tZaDNPZVpDdjJEbUs2LVdqZG02ejNiTWc?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-08T10:20:51Z",
-   "media": 1,
-   "judul": {
-    "id": "Sorotan Warganet Atas Insiden Women's March: Dukung Aksi Penurunan Atribut Pelangi demi Adat dan Budaya",
-    "en": "Sorotan Warganet Atas Insiden Women's March: Dukung Aksi Penurunan Atribut Pelangi demi Adat dan Budaya"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Banten Raya",
-    "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPU19mSjVGVVpQY1pyZ2dLN2JLWXpPRnRQWjdVQy04T1NkN1k3Y1VRV3U4OGFacUVnVnhvN2ZRaG1wSnQwcDRZXzVYeFBSQVVwZUJ2Mng2ZDhCaXo2UTFGM09SUGRmTmN0U3d3VlNRQ2Z4clJTb3VTaVU2RmhDdzZzN0ZUc3NFOTRySjJRUjFpYlFJa1I3UzVhQkplMUd5c2R3cHhXaWkzRjBTNl9FY0dtNGRkMU5Ob082QnppdXZ1djBtYThUbFRqZ2pMNXgzc1lUNGFIUV8xOTBiMVQwV3pr?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-08T10:14:53Z",
-   "media": 1,
-   "judul": {
-    "id": "5 HP untuk Driver Ojol dengan Baterai dan Fitur Unggulan",
-    "en": "5 HP untuk Driver Ojol dengan Baterai dan Fitur Unggulan"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Cirebon Times",
-    "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBMTGpMR1FxTE4xT0F2dzIyMnhHS25vRE9rLVlQaUM0aDN1c251TFFOel9sZE1DLXJHRFN3OWhyZEJIRDhIWDRBZGdVVDFreWlJelIyLU90Z3pBQTJuR3RVd0IxV1pkVV90?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-08T09:57:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Perkuat Kamtibmas, Polres Metro Depok Gandeng Ojol Jaga Keamanan Kota",
-    "en": "Perkuat Kamtibmas, Polres Metro Depok Gandeng Ojol Jaga Keamanan Kota"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Pemerintah Kota Depok",
-    "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNVTJJWGZRTXBJSGZTdUdzbTFJeDl5UHY0MVo0X01OYnhySVJPdTJ6VXlKWWlQUjlDMHBERmpNMm9pQU02MDlFVUo2d1YtdGNIM1dKcmJ2UDJDQU5mUlRDaTI4Wlc4d0NQWHl1M0pyVlg1OWMtR0VnWndrZ21NcmhyYlA0TUhPc3FQTFBtVjVtbXl3UHBQQmFXT1JBOA?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-08T03:43:58Z",
-   "media": 2,
-   "judul": {
-    "id": "Waspada calo, Pangdam HSN gandeng ormas dan ojol sosialisasikan rekruitmen TNI",
-    "en": "Waspada calo, Pangdam HSN gandeng ormas dan ojol sosialisasikan rekruitmen TNI"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Suarasulsel.id",
-    "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNMFpHMnpaaU1rUExKMS1oTERseE9pTl80MFVzQnNSVE9Mc3pJZjA4REQzN2hTcG5Lc0djbGk3LUxIRkJlakQ1ZmZQSWF3dHk5ck05dTVYdW9IeE5fby1xZ3NhbDdrMm1KbDRDdTRNa1dyV0EwbjdyT0tycElKWVlfcENSWVNMdUlIaW5RVEo0Q3dsQkhUVGdia24waGkydkJma0hBUzd2RDRuTkdH0gGyAUFVX3lxTE03cTduakkzZjRDdmVneF9HdF8xa1lpOTVqVWNRU1pzMDNyU0tEbEdySE9HSGtOUUhMLTFiaW9JaXRvU3JkTEpnTFZNQk0zOEZGbUtpaFU3OVluYWhLeHU3ajlHemdVUkhqX05DY0lpQjhHLUJIVWRpLWlDazVQcDVmWFljSVlwNFU0WjBrdVNqb0RGV3poeWhDUDB0dHlyTDl6eTNRVGdCS25kMzRrdXZ1aEE?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-08T09:44:00Z",
-   "media": 1,
-   "judul": {
-    "id": "5 HP Murah untuk Driver Ojol, Baterai Jumbo dan Tahan Hujan Mulai Rp2 Jutaan",
-    "en": "5 HP Murah untuk Driver Ojol, Baterai Jumbo dan Tahan Hujan Mulai Rp2 Jutaan"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Medcom.id",
-    "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNR2JLMF8zTDFjbzYwQkxJbDN2OW52LXVUYkQ5MGFUNjJQYTQ3NERzdWtZd1JFN25MQTlKY3FDR0hoOFY1ZUNuME9QY1lfd0IwUHQxUlc4YnNodzNybEpTMzBQTnBZQ0dYbkpOSUNjbTVYMjZoS1JScTNZU0NhVVlQalhDWkNFblVoaThNTW5CNmZnVHRwdVFyaGd6cUZNeXdRMjN3QXlLNG9YSEVGeExRc0VsQ0lDcVI1bW9rSUFrTW0tejl3M0hTQThJcw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-08T09:26:20Z",
-   "media": 1,
-   "judul": {
-    "id": "Polisi Bersama Masyarakat, Kapolres Tangsel Pererat Silaturahmi dengan Komunitas Ojol dan Go-Graber Indonesia",
-    "en": "Polisi Bersama Masyarakat, Kapolres Tangsel Pererat Silaturahmi dengan Komunitas Ojol dan Go-Graber Indonesia"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Kicaunews",
-    "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQUEhRc1dYWlI2MVEzT185RklWQVJKSk16Qm9BVVJEbG5qSHFoek9wQXpHWm5oMlNINGlzSnJWOWhmS0JiOG91eE1mY3N6ZHhhME9wOUJIMTUzRFNUb243ZERhSDFQUW1lcXJxX0dFVFBvMk84eWtfeDNEUk84V3ZBd1Jrc2ZxeTkyMko5RVFCUTIxUUxHZW5jb0lnbml1ZlFCRkpFUTd0RkttOW9uUUVtTGdvbHRzOUZpMUVocnNqVUlNMUNFNEdHd1dTOXFMaDkzMGNhdVBqbkFYZw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-08T08:20:14Z",
-   "media": 1,
-   "judul": {
-    "id": "Legalisasi Ojol, Menata Transportasi atau Menambah Risiko?",
-    "en": "Legalisasi Ojol, Menata Transportasi atau Menambah Risiko?"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Kompas.id",
-    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPUjBaZEU1TmJ5VktYeUVBMkl2bWRBUGE0a2RmNGxtdUVsdXhzUEJ3VnJ3Q2hkOGxMQ180N1EyQkNSRnJkRFhQSnVTbm1aVzRuWk9xSnowU3ZlandvYUF1a0MtOWtMb294dnNjWERyWUhNMVdiWGVqVTU4OGdUczNWeWVaLThhN0FzOXBDUThaYzBELVhEazRYT19mZGpHTmduRVhwa3dsd3dfZw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-08T07:32:32Z",
-   "media": 1,
-   "judul": {
-    "id": "Pengemudi Ojol Desak Perusahaan Aplikasi Bertanggung Jawab",
-    "en": "Pengemudi Ojol Desak Perusahaan Aplikasi Bertanggung Jawab"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Kontan TV",
-    "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5qMXNNWDlWOXJjNHkxbDRNYVZpRk4xTlFGeHRlTGtoSWMzZ1h6VVFZX1hHa3FIVC13alRMVUhSRzJ1bU9FX1E0REg1aEVfbHBheDUw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-08T06:59:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Badai Terjadi di Gaza, 70 Ribu Tenda Pengungsi Perang Terendam Banjir",
-    "en": "Badai Terjadi di Gaza, 70 Ribu Tenda Pengungsi Perang Terendam Banjir"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "detikNews",
-    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOZjBpNm1mTlcyNHNnQno5dFB6TWJsUUZIVXZPVGc3ZkR3dkg5cGNSQ1JxanpSSVVvYWRXUG1sdmtCcTZZU2U2QS05aDBhVVFoWV95dWVBSWgwZFBsbzJGR2NrU1p4MTRVNHRQTnUtQVluWDZqTFlGMVRNd1pjbXBXSWFkYVBWc3FFWTU2UjRmQTU3Tzh2TFM4SGZ5UUVtNk56U19DeXoyZHFjZVlrd05qSENNWmU3d9IBuwFBVV95cUxOc0huOEZ2M2tlWmxjQk52RkJ4bTlWWWVTQlk5dDNiMG4tOVJOSkdOZEc4V2NTTUh2dldZbHpVa1hlc3BWTXlUTjdsNVZiODdwY3M0bkhDbHVud29oS3ZIOFA3dEFnVWFnSklkeklZWl84cV8zNHJLSllld2dQRnBMOG1CNGpPQ0d0UVVwZVRUZXBLT2ZJdkVGQm1peGVDbW5UTVVnWFB0b1FyYldDX05VaVN5b3cyMklwV3Qw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-08T06:18:36Z",
-   "media": 1,
-   "judul": {
-    "id": "Kapolres Jakarta Utara Perkuat Sinergitas Dengan Komunitas Ojol Dan Bagikan Sembako",
-    "en": "Kapolres Jakarta Utara Perkuat Sinergitas Dengan Komunitas Ojol Dan Bagikan Sembako"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Purnamanews.com",
-    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQeXNyRDNDUkJuUmdXYUlhcFhMOFlrU1VUQVNOYUdrU0dzaTYzUVdVdVlYZDBlS1lGOE82ME9lcGJXQ3ZhNFYtV0ZheGcwYzZpUGptUEVTUFJ4S1ZnNG5MNmZXVTRmR2NTbmxLaUNEZkdNZEM0UjhRZ3g2a0FaOXR1aWpFN0hKTl9EUVdVMXdBN2tJZTl2TXhpdEV5NkpMVEJJSkxZSmdnMnpHMUsyTVhkWE1LT2cya0JNa3UtSmZWcnc?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-08T06:01:32Z",
-   "media": 1,
-   "judul": {
-    "id": "Rangkul Komunitas Ojol di Cikarang Utara, Kapolres Metro Bekasi Kombes Pol Andi Oddang Ingatkan Safety Riding",
-    "en": "Rangkul Komunitas Ojol di Cikarang Utara, Kapolres Metro Bekasi Kombes Pol Andi Oddang Ingatkan Safety Riding"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Pojok Bekasi",
-    "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOdWJWNXBLLXlSaEZJWmJsaWhHTE1COHRmV1FucS1CQTFsUUVFQS1SaVRvbURkdG9PUFY5TnVkV1d4TE5zSkxmc2V1RE5uTi1HZzlZTHBXUjFDOU95UWozN1Boc3V5M2JBWVM1WnJmelNIWnM2dlRCQnh2Q2pMVUtBQ3R5V3dCSHBpRFdhV1VFWlJxY1F4OVN2YkpxSWFWN21fZl9DaUNUZ2EwNjAyR1J3RzZ2dS12Ukg2MFp6YUhFMkhab3dmcUwyaHFhTXUwTWtqLVluWnZqS0VHa21Xb2xHb3Z3c05ZSVJl?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-08T06:00:10Z",
-   "media": 1,
-   "judul": {
-    "id": "Pangdam Hasanuddin Gandeng Ojol dan Ormas Perangi Mafia Werving, Tegaskan Masuk TNI Gratis",
-    "en": "Pangdam Hasanuddin Gandeng Ojol dan Ormas Perangi Mafia Werving, Tegaskan Masuk TNI Gratis"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Journalist Independent",
-    "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOblJ0UEpHdkdteWVIQU1hS1daMnY1Z3pEeVRmSng0SlhENElNX2VHWGxOQ05IVDVkQU1OT3FlWl9WNU54UDl4QWxtLUNuMTZQcmoyZFVKc2pOTTdjY1BrMnhXcEhwX1pCRGNLWnFpTkRENFJ4M21QclI5RVh4V3M4allsT3ByM2hxSk54TURteWU3NHptSjFkeEU2cWlrT1Z0OVBMajF5NmpqaVpoMUpqeFVXMVpUNmdrdDhRM0pjaHpDM3RNRGlNSmtMQ29qdDQ4?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-07T15:32:10Z",
-   "media": 4,
-   "judul": {
-    "id": "Polda Metro Jaya Gelar Bakti Kesehatan dan Bagikan Sembako untuk Pengemudi Ojol",
-    "en": "Polda Metro Jaya Gelar Bakti Kesehatan dan Bagikan Sembako untuk Pengemudi Ojol"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "news.fin.co.id",
-    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQaDlqSW9Ga1l1M0RNQTFvb1F0VzAwVjkzQlVvN1VkLTVDV0JNbjBfcE9od3lweHhOc3ZPdFJfajZVa1F6bnZNRWF0MExQdVkxUDlpai0tNTBIc0NQOWpFOW5VTnVnS01uTEIxZ1BnMGdXVnVVQ3I0LTVnWk1xcjNIeWZfNE85TFQ5MVBZYUNXaU9Ob1hDbUhMeEplLXprLWtpYmJUY0QxbmVGSkQ5bG5neTVqVQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-08T05:21:21Z",
-   "media": 1,
-   "judul": {
-    "id": "Garda Indonesia Minta Pemerintah Perjelas Status Kemitraan Ojol",
-    "en": "Garda Indonesia Minta Pemerintah Perjelas Status Kemitraan Ojol"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Cirebon Times",
-    "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5CWHVuUXF0eDJLS0RRbHk2ZFJqRUU3czJ4OVV5bVFodTZqU0VSV3czQUVPZ255bFFZMWxHdmh0QTVPSElDeXlHRk8ycFplTkxXeEtHNGlNRVotQ0M4N0RBZW1PZDNEaElpM2Z1UUl4VGJXeDBn?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-08T05:19:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Golkar Bengkulu Berbagi, 1.000 Paket Sembako untuk Warga dan Ojol",
-    "en": "Golkar Bengkulu Berbagi, 1.000 Paket Sembako untuk Warga dan Ojol"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "RRI.co.id",
-    "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNSXJLYXJWaEVQOFBvOE9UaDhidFZRMG5qNFVMaFRqOVIzRDlNWWZhZjgtVzBsaElaa1FKWU5ZeUpVdlRXY3oySXB3ZlJuY2JGV3E5VzJWUUVjZzJtT3dBek9mcjQ4VHUwbGgzWHI5T3pFd2Z2T0FKdXVDZGZvVllaUHNQdWpoVkFGTENucE50N2pjdnZ3RXdoRzlrekdCNzl5RW81THZrVUJUMEU?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-08T05:13:03Z",
-   "media": 1,
-   "judul": {
-    "id": "Soroti Aturan Kemitraan di UU Pelindungan Ketenagakerjaan, Asosiasi Ojol Tekankan Ini",
-    "en": "Soroti Aturan Kemitraan di UU Pelindungan Ketenagakerjaan, Asosiasi Ojol Tekankan Ini"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "kontan.co.id",
-    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPUkFBQlppdjg3cUNTbjNnMGgxcjZ3RVBCTm4zUEZkbktnNHVTTFFrUEVLZ1RpbDkxdkRFZWpWMXpjTllQUmlRYjZhUjVOaGxpVDJMd0s5UVBIUWNycVpHMWI5b3A4TW5GN3BzSG4tTE1XTTdxbV9HRUVJX1pZV1RkTEFpT21aMlFEM3htQi1VQW1TdW80djhjUFh5bXBJMllEZmM1WGhzTTJabjh4LXFSRlVlS1hxUURxT1dv0gG0AUFVX3lxTFBodGk3eE91X1g2QWNjLU0yd3Bab0o3ZkJrMUpYMlRlSVJsUmYtM1duVDlyejlnRndVUk9qY3dsU0tIS2xJRnRIaGRhWVFtUnI2eDRMV2FNLS15UUl3SEVjY2w4RUxweUc2RzhYRnV3Z1E0bXltMmQ3cklxbFBKRWFGMlAwblI1REgtWEtqOEF4THh0TGpZTlV1aXNsdnJKWVUweDdzMXdTZDE0eFNPcGU3c0F6Ng?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-07T03:06:56Z",
-   "media": 9,
-   "judul": {
-    "id": "KPK Sita Uang Rp 2 Miliar dari Bobby Rasyidin Terkait Korupsi Digitalisasi SPBU",
-    "en": "KPK Sita Uang Rp 2 Miliar dari Bobby Rasyidin Terkait Korupsi Digitalisasi SPBU"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Publicanews",
-    "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNZTByUVVCSHJTV2FWc3hjZktSVVdHc2Z2Nkk0dmV2LU9uQTdSRkoya29MbVFwYWkzY3N5ZjRReVF6Mk1aY1p5SGZ1RHROVWNBdkRNS3pYYXlOeVhHRWtRQzdhOUJfcjBTMk9YR0dqVDNwQ3ZYamhtbjF5eXM2V0cwTGFEazFTX0g0MV91U0o1Z1ItZFNtdDRyZTNoNW40Y2FQc3BHSlc5U3YyOWtBQ25sMnlZZWZyQTY3Q1pnWWY4dw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-08T04:34:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Polres Jakarta Utara Ungkap Video Pemukulan Ojol Kelapa Gading Rekaman Lebih Dari Sebulan Lalu",
-    "en": "Polres Jakarta Utara Ungkap Video Pemukulan Ojol Kelapa Gading Rekaman Lebih Dari Sebulan Lalu"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "gadget.qoo10.co.id",
-    "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQNUxQTXNmTjg2MzFZNjRvMjVMVkpsM0hOb1ViNVludm91YWJOQjFvQU1jaURWY3VvMGpPWDFwZDNIN29oMVR4UUl4d3UxUE1idy05Z2I5Z3pQTEJjNjFreEQ0YWlsWk00bExlQUVMRF9qaHY4ZGRPUnp1ME90V01Geg?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-08T03:40:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Dekat Tanpa Sekat! Ngariung Kamtibmas Minggu ke-7, Polres Purwakarta Bangun Komunikasi Humanis Bersama Komunitas Ojol",
-    "en": "Dekat Tanpa Sekat! Ngariung Kamtibmas Minggu ke-7, Polres Purwakarta Bangun Komunikasi Humanis Bersama Komunitas Ojol"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Tribratanews Polres Purwakarta",
-    "url": "https://news.google.com/rss/articles/CBMijAJBVV95cUxPZzdWVGJzRlBLblAzUElSUm5Ib2JJNzFFTm9EY1FtLS1udU0xYzVGNWNGQThfR0NKMGZlM0RvVW1kUXd3aEFsV1lkTHl5bV8wRjQyVUpnQjkzdmN1Z19DaWFYRF9YamdrajhabHRrOG1malpkM1Y4VFBWM21KV3dFSllYVExlMUFGV253VDZtOFZnNS1OLXlCUkk1MWw0UEdnUU5UUUdRTzlfUVFZbEpaeFYwNk9CcUdDazI2OFNVbUYtRzJPTWl0MGFIVG8xc1lsam1VTEg1OWJpZ1lSRTBNb1E5WFdpbnhxVWYxU0RNckFhRlJZZkpWQ3pDVy1HTFEtdjh6elRWU0FRSUM4?oc=5"
+    "nama": "Bekasi Newsroom",
+    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNQW9rY3BNa29RcTNhM3ZJdXM5VEdLTmhqM1dkcVV0dDBLT2RheUxScTNjckRYUldnS3RDVXc1Z01DNWFoU3NzVkV0TDF3RnNzczkzN0xCT2JXcTRsMFVncEdxWXdXM3RZZjZzRnlKQXZ1cWczQ2x0WmtRb2JYcDFZNzk4ZnY3akF1TEh6MF91S1ZBSTZJWHlwcWxmVHFjQWJRM1E?oc=5"
    }
   }
  ]
