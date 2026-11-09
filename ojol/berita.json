@@ -1,5 +1,5 @@
 {
- "w": "2026-11-09T14:48:16Z",
+ "w": "2026-11-09T16:49:35Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -38,8 +38,8 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-09T13:00:31Z",
-   "media": 5,
+   "waktu": "2026-11-09T14:42:47Z",
+   "media": 6,
    "judul": {
     "id": "Pertamina Gelar Promo Bright Gas di Ojol Day Makassar, Ada E-Voucher Rp50 Ribu",
     "en": "Pertamina Gelar Promo Bright Gas di Ojol Day Makassar, Ada E-Voucher Rp50 Ribu"
@@ -49,8 +49,8 @@
     "en": ""
    },
    "sumber": {
-    "nama": "gopos.id",
-    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE05OGhTeUQzRndWZGZxdVRmTm1wTi1mQjFTNnRORzJtb2JSSkFYWjNzVjJFenJpWGlHWXpsdnJrTmxkcGNVOTVURVgzenI3MWItSFEzeHp2UklPXzE0QjlzcVZYd1hRR3RsRWhJVTF4ZVNGZUEyb1ZFc2t1MzJvQkU?oc=5"
+    "nama": "SINDOmakassar",
+    "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQQ0tzUW8xc24zNTlRVDBtZHRIY3JyRk1QVkVmbl9Vbk1uSU9USWs1dV9zTkZSQVFoM0Y3ZEFTbmI4ZGlOTG9ZQWFWQ05kbU5MZ1VaNWNIYkhzYmNiQnZ1T3F0QlVEWmxUZWVvT1FfSnlfeElxOF9wRVR6QldZUHVXWHBIYzU5Z1ZiMHhNZHlVY3Z6VzhYRVdnTmoxTlJXODloWUFXY2VHbGgxekNYTWo1LVAwQndDNDlNa2fSAcABQVVfeXFMTTllN2J6LXhOTHJmaUtPVEZKMU9GV2dSNlVabkVOTkhPcE1YQm1hSDVlaEhYcUNpVXNYb3lzUG1FejdLaDhSbjMtNldoU1psNnNvSkdmdGNERlFqOG9VSWk2QmZESVA2UWhMWXZ2blZEcWN3WkJERkJxNUswaG5MOVdkNDVWbWFnYURQanZzRG1DZ1g3VEpuYTNnZ3I1dV9UamFCTkdTOUNVTDI3Z0trbEUyRUJkcWtNMVNsdFg3bkth?oc=5"
    }
   },
   {
@@ -68,6 +68,23 @@
    "sumber": {
     "nama": "Kompas.com",
     "url": "https://regional.kompas.com/read/2026/11/09/130537578/banjir-bandang-terjang-gayo-lues-aceh-rusak-115-rumah-dan-jembatan-19-warga"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-09T16:33:03Z",
+   "media": 3,
+   "judul": {
+    "id": "Rangkul Komunitas Ojol, Kapolres Jakbar Perkuat Persaudaraan dan Jaga Jakarta",
+    "en": "Rangkul Komunitas Ojol, Kapolres Jakbar Perkuat Persaudaraan dan Jaga Jakarta"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "revolusinews.com",
+    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQR19sckJyY0FIbVJIQWl3cFhvZEhFT3l0cC1KMlJvRnBDUTRhcHFFSUJVU1NaWGpYdWZ0UWRjdHJQZTg2M1k5MHRfN2puOWU0TmNaWjAxa3pLdUNGaHpCTk1abUVXVjNCdzVlcjhUeEpZYTNEdk92X0Y5ZHRKdkpjcnc0Z2hQSkMxcjlpWGY5UWVNRVhYOU4wSlBLbGdpZVNRSG8wRA?oc=5"
    }
   },
   {
@@ -119,6 +136,40 @@
    "sumber": {
     "nama": "kakinews.id",
     "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOSk4yMHctOHg3ek1sREJkZWNVUWxGT2o1dmlFZTBFX001T0RDclVKRFZhd0FmQkVPSEEwMU9zS2toQjVWd0RGZ3lCUW0wRkZsS1F6S3FEYzRySnZDRlU1TmgzdkZxNU5lWVNiOEI3VGZBSkZLLWxLeHRnd2YtOVY3cVh0SDJWeUdiRGg4RFkwR1RvbnY2ZFQ2eUJjdw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-09T15:54:17Z",
+   "media": 2,
+   "judul": {
+    "id": "Banjir Bandang Kembali Terjang Aceh: Gayo Lues dan Pidie Jaya Terdampak",
+    "en": "Banjir Bandang Kembali Terjang Aceh: Gayo Lues dan Pidie Jaya Terdampak"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "NU Online",
+    "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNZ25iT0dUcWNWSVZIbG9ieHo3Zy0xR0FDQ0YxeDNIaVB2NE0xRzFtTHBDUnBIQlZ0dG5nNEt4a3lMaUp1R3pSWkdmSmh5SHdRYUNiZnA2ZDhvWmp2ZlpFc2tYLUNxa09pWWFhd0dGNXFhZ1RXV1ZNU3ZCZ05lMlVuX3pIUVoxWDZlUnBkemM4WndiUC1nR1VVVmJjRdIBoAFBVV95cUxOaGgtSnA5UEhsdDdBVXRVdEpGSjVzZU9ZTXJEWkFReS1pMXdMeGhvWmszR0xmQjBNU3NnOHpHcTNJZEVrYk1MMEh0Qzh5bHlyTGRBVjRmZWlCSEJGUDliQVBnNzFybHRlNXF4RmQtUnl2dnBhRUswUExHYmxqeFFDQ2QyN25BUFVSeGJpamtBRmZTZzVtaWlxUjZMbS1Oc1hB?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-09T15:22:59Z",
+   "media": 2,
+   "judul": {
+    "id": "Pengemudi Ojol Kendari Diduga Diintimidasi 3 Pria Usai Jemput Penumpang di Pelabuhan Wanci",
+    "en": "Pengemudi Ojol Kendari Diduga Diintimidasi 3 Pria Usai Jemput Penumpang di Pelabuhan Wanci"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Kendariinfo",
+    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPVXhYZ0dKQmlhUkxtLS1EaFlVR3NQZjhjdmZzLWxnRWVLMW9kemg2TjlZVXpQcnJnNE9PUEVhYjFadDlTZFBVQmlaejFlLVBidHd3aGF4aHhLelBMT2ZtaGVOd1NOVEx0aGhMRDVMak9TTDFJM1l6YmtwNUg2ZW1vaW43TXByejF0eml2MHp5TEJUN3lZRVlQN21SRjlvVFUyTDZ1MDE5NzRiTlNhMDNBQThlMTNnQdIBuwFBVV95cUxOUktTYnMzUUQybmdfc3BmMDQtYjJMc1VySTktQk1aTEZoZHZPSms1S28zMmZMUE1LRmNSZDB0MW9wQ1l4T2RRV2VsWWF1bVpoTDNDdTZkMFpUeGRkQWNsMnJaMlByQkJJVGZJNUc2V0xvNnVVQjZxZ1JTY1Nna29USDJFUTRLbVVlbExfY3FoQ2MtUjh3cVh0NmJDS3ZGVTBOLXZrZk9OVm9mSlFURjUtTjByTEhnc3JfcVdj?oc=5"
    }
   },
   {
@@ -191,6 +242,40 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-09T15:58:54Z",
+   "media": 1,
+   "judul": {
+    "id": "BMKG Siapkan Antisipasi Banjir dan Longsor pada Puncak Musim Hujan",
+    "en": "BMKG Siapkan Antisipasi Banjir dan Longsor pada Puncak Musim Hujan"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "شبكة تواصل الإخبارية",
+    "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9wWFdUYXJBbldYMkx5bzh4V1BXb3dMcXdIUkM4YXY1YjNxOGNYTHFXd0xwRVBKWWZHZm5tZUJxVHlQOFR5OVRzRHNsbEk1d2RGb21F?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-09T15:17:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Pertamina Gandeng Komunitas Ojol dalam Kegiatan Ojol Day",
+    "en": "Pertamina Gandeng Komunitas Ojol dalam Kegiatan Ojol Day"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "RRI.co.id",
+    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQWFVzdUJZclVlVE1obnVyWTV4MTFOMTQyQjhsNWtfcXo2c25acVRIYTg5MjVJb3ZjRS1VUVBFcDdhSVNTWEUwcGZkZGtZekQyeTlTTmdlb1F5bm9vTVhvYmx0eEQ5aFFLamM1Umt5anZtTjd5b3lOSU4wUExkWG5RTGl5MnFBNFZBc2NabXdMaTVJWUdzbUdPYVVwYUNoSmhrQmo3LXVWUnhKdw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-09T08:21:31Z",
    "media": 2,
    "judul": {
@@ -208,11 +293,28 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-09T13:30:00Z",
+   "media": 1,
+   "judul": {
+    "id": "5.000 Ojol Resmi Dilindungi BPJS Ketenagakerjaan Selama 3 Tahun",
+    "en": "5.000 Ojol Resmi Dilindungi BPJS Ketenagakerjaan Selama 3 Tahun"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "VIVA.co.id",
+    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPcDZlalZwazBqcFl3SDZ5M2h1Mm5vb3RnSE16YXlRdjJhTDJjOTBHOERNTTZoZExQNjhWczV4UG5EZk9oVXhkb3RjZkpOelNJUGJmY3JoRkpwSjZsR3E4LThFZmxvalNYUnc4MXg3b3drcXJzVWpOVEVIMFFxeEt6b05rb2lvTnVpWENIVmxkQzZnMVdPUzZiSk1WLWU0UnpMZFYtb1FTNlh2MmRIX200WEtJTdIBswFBVV95cUxPcDZlalZwazBqcFl3SDZ5M2h1Mm5vb3RnSE16YXlRdjJhTDJjOTBHOERNTTZoZExQNjhWczV4UG5EZk9oVXhkb3RjZkpOelNJUGJmY3JoRkpwSjZsR3E4LThFZmxvalNYUnc4MXg3b3drcXJzVWpOVEVIMFFxeEt6b05rb2lvTnVpWENIVmxkQzZnMVdPUzZiSk1WLWU0UnpMZFYtb1FTNlh2MmRIX200WEtJTQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-09T02:23:04Z",
    "media": 3,
    "judul": {
-    "id": "Deretan Motor Listrik yang Dipakai Ojol di Indonesia, Ada yang Tempuh 140 Km",
-    "en": "Deretan Motor Listrik yang Dipakai Ojol di Indonesia, Ada yang Tempuh 140 Km"
+    "id": "Foto Deretan Motor Listrik yang Dipakai Ojol di Indonesia, Ada yang Tempuh 140 Km",
+    "en": "Foto Deretan Motor Listrik yang Dipakai Ojol di Indonesia, Ada yang Tempuh 140 Km"
    },
    "isi": {
     "id": "",
@@ -238,40 +340,6 @@
    "sumber": {
     "nama": "Tribratanews Polda Metro Jaya",
     "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQcWNiZmFOZzdKZVdoWWVsbWxkVmhIYlRkM1dVY1lNTVc5SWZKY051UXhHQVJzODNrNldrVjlkTFA2X0RvZm01TXZ3YmV0SVR1X2xzei1LbGh0d3A4WVRicWNRb0pXMVR4aDc1eVk1SU4yRW92YzFOQ2RtVDM3OVprdWpUVEppZEFrdnkxX2JYU0xGajljVHA3ZTd5NUc2ZGozQWhwY3owZzZRLTFhVmRDRHo5LVIzX1R2TU9BWElCNzBMZ0dSVGZkMmJxbEU1b3l3NXJKQmFsSThpQ1htNkxZLS1nVm9aQQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-09T12:03:42Z",
-   "media": 1,
-   "judul": {
-    "id": "KPK dalami aliran uang proyek jalur kereta di Sumsel ke pihak Kemenhub",
-    "en": "KPK dalami aliran uang proyek jalur kereta di Sumsel ke pihak Kemenhub"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "ANTARA News",
-    "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOMWJ5SUx6Y2VTVUs1OExWMThINnNMYTJKRWlmRWNvSjdOakRtSTctbTFCN283TFVmUHBNOW1nY2F2eDk5QVVGd3VYcjM0ckNKTVVHMTY0bnRIQWxqYXNWU3hEcHNOaUFuS29wWjdjeWY5djlNRFMwTnltNnNDVTRYcllSTG45b3RJLTJrLUxkSmxMbVltMmdISWFhem5rSDBVSTFBVXZwZ0o0Z2Q4c2t1Ulln0gG0AUFVX3lxTE1nWGp1YXFERmNGNDZKWlZzVHpKR1NTc01MRVA0NWhfMndjSTFBTmxrLUxXMFNtSnlaUjJBSnNKWU9CWW5tSVlTUVduMDJJNUxKaERieFJ3TGxrYktxMXQyeUlSa3JNakpuVnY0dHh1MlpjbkNSNEFsY0dJeHFPOUl0dTVjS2d2WGlHb29zWUxZX2RvXy1FVnVnbDl6YkV0VF9qdDNWczZUYXdTSl9Ya0FMZEl0Sg?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-09T12:00:43Z",
-   "media": 1,
-   "judul": {
-    "id": "Bedah Isi Perpres Ojol: Aturan Tarif, Nasib Driver, dan Kewajiban Grab-Gojek Cs",
-    "en": "Bedah Isi Perpres Ojol: Aturan Tarif, Nasib Driver, dan Kewajiban Grab-Gojek Cs"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Bisnis Tekno",
-    "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOMndNbnBFb0w0RHQtZWlVeEZadGlBZVl5RG5iRFIzTGpSbDZGaEt4Y2x2QWlpaklWN1BFd2pKV3doTDB5UkxrbWRvcW1UN1RBNzZudG51Tk9mLWdNeEFnZFR6WHlqVDQ5RENBcy0wa0xnaDBsbmJHQkFSelVabUFscjF6eHd4RktFQW5zT3RaVzNsWnNHNWEwUWptb0RRU0NwZ1dxZ3pVRW1DaVhWcHMwSmVLQ0lHTG1ncWNPWFVYM3hCdGRSSGx2ZFl3?oc=5"
    }
   }
  ]
