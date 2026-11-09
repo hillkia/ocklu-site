@@ -1,5 +1,5 @@
 {
- "w": "2026-11-09T09:00:07Z",
+ "w": "2026-11-09T10:38:53Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -17,6 +17,23 @@
    "sumber": {
     "nama": "law-justice.co",
     "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOZmZfaEczNnUyV3p5Qlg2Mk83R0ZXc0luOFFOV2lmRWJzand6aUtwNGlFZjFnTmRmUXNKcmMzMWhXZVJsZ3BGRHJkMkhma283b01mTTVONU05ZjFOdVhVdVZTYlM3MVdwRDFFWGZVZm5jamJyZ2JfampJWFJZTGlPb1Z0aW0wQzFmVTZhSGpuM25rWVh4OVpqRkR0OGJJQW5NRWc1UDdFY0t2UQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-09T08:52:54Z",
+   "media": 4,
+   "judul": {
+    "id": "KPK periksa mantan Direktur PT LEN Railway Systems terkait kasus DJKA Kemenhub",
+    "en": "KPK periksa mantan Direktur PT LEN Railway Systems terkait kasus DJKA Kemenhub"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "kakinews.id",
+    "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOSk4yMHctOHg3ek1sREJkZWNVUWxGT2o1dmlFZTBFX001T0RDclVKRFZhd0FmQkVPSEEwMU9zS2toQjVWd0RGZ3lCUW0wRkZsS1F6S3FEYzRySnZDRlU1TmgzdkZxNU5lWVNiOEI3VGZBSkZLLWxLeHRnd2YtOVY3cVh0SDJWeUdiRGg4RFkwR1RvbnY2ZFQ2eUJjdw?oc=5"
    }
   },
   {
@@ -204,74 +221,6 @@
    "sumber": {
     "nama": "Listrik Indonesia",
     "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNel94U3kzWU4yZTdOU1M2M1hld1dSNUNsQU05WmpDcDRYMWo0Z3lNb2dZWGtfNjJHWFhueXdHY3h4UmZJRDRxbDk5a2VxSFQ3UU0xcXVjWUkwMmM1ZmhOWkI0OEpxeVlGbVBJOEhLSzJEOVRxVmFQUzE3VWFtVFFHWGlwTUZ2VTZlZy1kQURXYkU5Q0VQTjV2ckxFTTR1NXZOOS1SeFgtRGtPQ1FmczIyNg?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-09T06:45:18Z",
-   "media": 1,
-   "judul": {
-    "id": "Usut Korupsi Digitalisasi SPBU, KPK Periksa 2 Eks Karyawan BUMN",
-    "en": "Usut Korupsi Digitalisasi SPBU, KPK Periksa 2 Eks Karyawan BUMN"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "JPNN.com",
-    "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQWkJnenNwZmlCbldUR2gzUHJkcWRVQ3g2emJVc08wTFA0cHVaZGtURF9qbXhxV2ttWTdYVnU4MTc3QVpkWDVVelcxcU80aEVTM0J5Nk1zeElVRE11WUpyM016WWg2M1QxY1lvVW1sU1JtYS1oVjd5aF92U2tBcmhrR3AyMHdZSVhoQ0lhMXBKS3lvUdIBlAFBVV95cUxORFB3QjdsNTNVWHZxOWIwekJ6bTBjbzFZbDZ6WUhtd0dDTTVFbjJzbzN4RGt6NkJfVXRnU2NreVBiZ3FSZy1jMDB1NkEzSDJwOTdjc3diS1RJRDhOWnJ0d2RpTVM0ZFZSVmFwVFN3cm1WaXFER0pQa0JVUlRRVDIxMkUtOXpFT3BVclpKWXQyRm1DUmtp?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-09T06:27:34Z",
-   "media": 1,
-   "judul": {
-    "id": "Secara proaktif izinkan siswa untuk tinggal di rumah dan tidak masuk sekolah untuk memastikan keselamatan mereka sebelum banjir.",
-    "en": "Secara proaktif izinkan siswa untuk tinggal di rumah dan tidak masuk sekolah untuk memastikan keselamatan mereka sebelum banjir."
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Vietnam.vn",
-    "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQbUI1dmN0UnpncnNjT0pwbEsxOXZxaTRUNElIdC1wZzRPZ0RzR3g1c3pDMDdnVFR4V3ZobjRLNWl4dWNXUDM4dWVrUWhLMHhQNlRWNGM0d2dqVDhoVkhMaFRLWE9HemM3Y2xUZUdieEVuSml4NVdHY0IzOGJYSVo2UnN6Zm81N2FEdkNVa1IzaFA2UQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-09T00:21:17Z",
-   "media": 2,
-   "judul": {
-    "id": "Pangdam Hasanuddin Gandeng Ojol dan Ormas Perangi Mafia Werving, Tegaskan Masuk TNI Gratis",
-    "en": "Pangdam Hasanuddin Gandeng Ojol dan Ormas Perangi Mafia Werving, Tegaskan Masuk TNI Gratis"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "PPID TNI AD",
-    "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPdW1XaG9scXBGN0FKZlhLWEZNb1ZSZnE1MUhBMUFIUTJMc3VJVlBLQUNPMUhmVFZhV2Y4RXFqSXFsbVVacDc1RWtRejNmR29kNXVhRXhEaFluUkwxUzBkNzhLb3BmRFBFSG5UOEhfQmNmcHExdVN6VEJHcDhfOUxFS25lT0lfRWtlNEtlLUx0ek5CeE43X2k4d2N5UWREdlZXbjlpcGVOazFoTEpndW90azNQOThtWWE5YWpJcGgycl9zQjZrcGdhNUhCdF9kMm5mZmFyREtpSFV1WVRJcW9Gc2p1bGdmeFl3MFlj?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-09T06:19:00Z",
-   "media": 1,
-   "judul": {
-    "id": "AI Dashcam Orin Pantau Sopir dan Jalan, Bisa Beri Peringatan Saat Pengemudi Tak Fokus",
-    "en": "AI Dashcam Orin Pantau Sopir dan Jalan, Bisa Beri Peringatan Saat Pengemudi Tak Fokus"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "surabayapagi.com",
-    "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNU3Nia3o0NnVxekllbWhCcXp4b01nM0diUkY5NE84NHFURlV1NGluVENSVGZBaHVIOVJOTEdSNHR5d0tMbUM2S2pqTVMzTTFKdFNvcjlWRlNXV2JwcEpZYjRzNmYtLUU4UDFLa3cwcFhqbUxBWFNsd21SRWpiUUJ0NWZxSy1TVUVHRXlRMWNxdlp5dTV3YjJJSU5zaWg5R25DenJqNzdnQnJRN1dlMUNNbm9NVlFOb0lvTklZNWtB0gHDAUFVX3lxTE5vaF9yUmFXd3ZBenVBb1VRZVlNOUhSNkU3ZzB6SThIdzN6V0pkZDBxcnNvMWNBVlhNSGMyV0ZLalpHVDNIem1MalItRS1pNnJXWmY4aHZkeDdlMWZfdGlScjlQYnd1NW5WN0hZNWNzdGZRWWhmQVJ3aEFlQjFsYjlwS3ZWaGpHNXRqZ2FGTmpEdnR2ckpieFczMVp1cmFXTEdfU25YNFdXOENPcnpIWFhqd3RIU3hHdkhxWXFYZS1wWVdaUQ?oc=5"
    }
   }
  ]
