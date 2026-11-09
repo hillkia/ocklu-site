@@ -1,5 +1,5 @@
 {
- "w": "2026-11-09T13:40:40Z",
+ "w": "2026-11-09T14:48:16Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -157,6 +157,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-09T12:28:38Z",
+   "media": 2,
+   "judul": {
+    "id": "KPK dalami pengadaan terkait digitalisasi SPBU Pertamina",
+    "en": "KPK dalami pengadaan terkait digitalisasi SPBU Pertamina"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Media Indonesia",
+    "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQUEFUSlhzQURpUEpyRUJCLTg2ZFpGcGh3MndPUGRHaWlxWXU4c2QyX2xsNlVYN3QzR0Qzc2I4cE1waWh2RVF1Nnd3RnljX2VTUjZEUzk2YmxxMV9BX19zM0pVa0F0T3lPdXZFRWo4MV9JUnNIaHEzSnBQX1FCLWV3QnQ5MVpZRXRhN0xnRlZ5MXRWSl9FLVBvLXJ5XzFXaEk?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-09T06:49:30Z",
    "media": 3,
    "judul": {
@@ -170,6 +187,23 @@
    "sumber": {
     "nama": "Iconomics",
     "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNWmZjMFJSVE8xc2pSYjhDd1pHakdSSEFZelhIeHppc1lfX1VCcjlGei1NQm9FUjZpdDlzZkQ2Q1FjbE5udnhfbV9mYWQ2Nmt1WlY3NE14TVFuajBkbzJKZmVaQzhGampXcS1KclEwbUFZRUtOQzlPRFB5c2JHYTU3d3VBVU56cXBKRWpEV3dRT0U2R29sb2h1SjFPSTFHdkY3QmMzMmNmT2tOOWtfV21yNEhIZHg4S0l0d2xr?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-09T08:21:31Z",
+   "media": 2,
+   "judul": {
+    "id": "Raksasa Migas BP Lepas Bisnis SPBU di Indonesia!",
+    "en": "Raksasa Migas BP Lepas Bisnis SPBU di Indonesia!"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "detikFinance",
+    "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQdk5OeEt5SnJkT0lXNGw1eEhmM1NaNEVGbGZmVThEUWZidG9nSkdIaVFEWTljMkVnMzl5MF95MUxhM282VlJmejFJMVVJejh2a2RQeWRJdXcydUpXSlpabW5mU01ybUlUOVFyODNUaEtzd3Y4dEdPQzZhMk9jOXJZdWo1OEVIVEd5ejVlM3cwRmZwWUFI0gGaAUFVX3lxTE5jLU9URGF1elNja3lDSDBYUEFpYlFzOHQzQU9kYjRIWWFVNzAyMjJzWmVlbXM5NWFJbEpwRmFvWjRZZjZZQi1KU3FjNjhHVUR6MTdhUjl2WXFTbkFOams0Y3h5LXhKWVVXZXdWOHdFRmlVX3JwNjJRdUlLdzVNcjF0WjZCMHVpQk1KRHpIN3R0cmt1UWRwN25EWlE?oc=5"
    }
   },
   {
@@ -238,23 +272,6 @@
    "sumber": {
     "nama": "Bisnis Tekno",
     "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOMndNbnBFb0w0RHQtZWlVeEZadGlBZVl5RG5iRFIzTGpSbDZGaEt4Y2x2QWlpaklWN1BFd2pKV3doTDB5UkxrbWRvcW1UN1RBNzZudG51Tk9mLWdNeEFnZFR6WHlqVDQ5RENBcy0wa0xnaDBsbmJHQkFSelVabUFscjF6eHd4RktFQW5zT3RaVzNsWnNHNWEwUWptb0RRU0NwZ1dxZ3pVRW1DaVhWcHMwSmVLQ0lHTG1ncWNPWFVYM3hCdGRSSGx2ZFl3?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-09T11:50:23Z",
-   "media": 1,
-   "judul": {
-    "id": "KPK dalami pengadaan terkait digitalisasi SPBU Pertamina",
-    "en": "KPK dalami pengadaan terkait digitalisasi SPBU Pertamina"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "ANTARA News",
-    "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxNTG9CMWhvc2hPUElmZTBEQVpBbEJOZmlhQW9NTTlrNUJkQmtZNzFoeE9sWDNfWVU1UUdNWEJiQ0RTRzdmdmpWaE5lalY2S3g4d1ZQc0t1ZnRORlVDRlhScFhlc25MOVJRY2t1UWhJQWJ4U2FXdkhBREZveTRPOFBYclZnNTZ1dEdyTkQ4b05uWFpNRHhXbDRBelJCc3BrV0t4RVhuanRUeF9SZEhKb2lseldvVVRURXk0ZVhuc1NQbEs2bU5OQWFiaWlJZXhDdEg3WHRtdHJ4Uzg4WVNSRGxRcTlCckNENTdlVllVdFctbnVqN1h0eHQ4NVVn0gGiAUFVX3lxTE95Tkd2N2F4cXQ1OEM1bGFnd0pXa0h4SGNYMHpPZU5GMVI4TUM0dVhtYVhPMTVKRHZYVDJGZ2hzTy04SnllNnRGT1ZKWGhHTF9tSWdnVjJiV3VVQ0JhYUhMbGpaVUtMbG96MHlxdzM2SW5wajBFcUtLWFgwdEtmeExPbDl1aEhqWlI2emNUREQwUENkdWE3Rm40S0FBZ3B4elZpUQ?oc=5"
    }
   }
  ]
