@@ -1,7 +1,24 @@
 {
- "w": "2026-11-09T03:28:09Z",
+ "w": "2026-11-09T04:28:38Z",
  "dari": "Kroog",
  "berita": [
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-08T02:48:00Z",
+   "media": 50,
+   "judul": {
+    "id": "KPK Periksa Dirut KAI Bobby Rasyidin, Uang Rp2 Miliar Terkait Korupsi SPBU Disita",
+    "en": "KPK Periksa Dirut KAI Bobby Rasyidin, Uang Rp2 Miliar Terkait Korupsi SPBU Disita"
+   },
+   "isi": {
+    "id": "KPK menyita Rp2 miliar dari Bobby Rasyidin, Dirut PT KAI, terkait dugaan korupsi digitalisasi SPBU. Beberapa media melaporkan ia mengembalikan dana tersebut, sementara media lain menyatakan ia diduga menerima dana itu.",
+    "en": "The KPK seized Rp2 billion from Bobby Rasyidin, CEO of PT KAI, in connection with alleged corruption in SPBU digitalisation. Some outlets report he returned the money, while others say he is alleged to have received it."
+   },
+   "sumber": {
+    "nama": "realita.co",
+    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPZ1N2bDZOcUlIcHdjWHVQNFB2bWptRnA1eWRST084OGFXY3JKaW5MQ2ZrU1VfWjJuakthUTB3aDdfTHpHSXl6NUtZQ04xQl9fUkdLejZ4Qms3WEdnX3JzbnhZR0VsZzNpSmxGUHc5YS1DcnB0a1JvdFc5c2RZWS1JcWVlZjJvQktmTjhZdW9JeFNpdHhmd3B1RTFHcDN1TDItQ1c5QnZTTndvanNwaUZBdGJqWkxqRDVJRXBzaXc0dDbSAcYBQVVfeXFMTjB1UElfUnVWN1gwM2tjTFUxRzZkVnc0U01BbktEVDY0MnZUQl8yZWcyVjhhUHhDX25WbFB2MURBU09ZSXVZQm9IQk9iakg4dkc1ZjVrcm5JZTdQNjgwdkNPXzE4bHFPZTVNZWxPR3NYaTVnWlRLNm95aTFPT0NPVU1waEVJVGk1Ynp0cGlBdE1wLXEzeXEwU3dPQ2pEcWY3ZlZKTUljZDNBREZBeXpKbThwbzQ5TnZtaWdBc196QWstZUxIX3R3?oc=5"
+   }
+  },
   {
    "jenis": "berita",
    "waktu": "2026-11-08T21:02:06Z",
@@ -17,23 +34,6 @@
    "sumber": {
     "nama": "Universitas Komputama Cilacap",
     "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPb084VGI4OVFRbk1tVndOa2MtUUVJZHhnVHNzR1ZSUXByV0kzb0hpRkNfcmtnVm9vQkpuOFV4XzBReWJrbmRkbG5yLUF6X3huWThsTExMeDFXYUhXZWNsWTdvcEU2NGtsS1psZnMwaUJnSnF3SHg0am5zV1BXeFN4aGw0T3duS2pKUkNnLVNzcmZFQ2c2U3gxV0F2RXJpelJMWjJkUjE0M0dhcFZTT3FvcA?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-07T10:00:13Z",
-   "media": 49,
-   "judul": {
-    "id": "KPK Periksa Dirut KAI Bobby Rasyidin, Uang Rp2 Miliar Terkait Korupsi SPBU Disita",
-    "en": "KPK Periksa Dirut KAI Bobby Rasyidin, Uang Rp2 Miliar Terkait Korupsi SPBU Disita"
-   },
-   "isi": {
-    "id": "KPK menyita Rp2 miliar dari Bobby Rasyidin, Dirut PT KAI, terkait dugaan korupsi digitalisasi SPBU. Beberapa media melaporkan ia mengembalikan dana tersebut, sementara media lain menyatakan ia diduga menerima dana itu.",
-    "en": "The KPK seized Rp2 billion from Bobby Rasyidin, CEO of PT KAI, in connection with alleged corruption in SPBU digitalisation. Some outlets report he returned the money, while others say he is alleged to have received it."
-   },
-   "sumber": {
-    "nama": "Mitrapost",
-    "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPT0Fsam1EbFV3ZWdQSkU2U0N6Zjh0cU9WYUQ4dHVmSGVzR0U2a3BkYUZJeXBKLVlQVFJIVi1FTUdmSFlmQ0Q1aTVveDdvRnNsTlBDNWFYVWxDcnpKampCNHZUNXpNYkNwaHo4THE2TENnd0JtZE9xSG9ZU2JISjliYVpyQmNUZVRteHJpVXdLWWNmZE9MLW1XeUNsQWZlNVNSZ2pLMVJRc1U2enlIRzhnbzhOenhWVXZ0bWtjTmdfVXQ3SUJSQ1dMWA?oc=5"
    }
   },
   {
@@ -153,176 +153,6 @@
    "sumber": {
     "nama": "Berita Jurnalis",
     "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOXy12U2tyajctMkF2TjFEN1c1M1UtMmpaaFFpMy1FajhCNU8tOGJfaUJST3h1QUFVY1VJSjIwbDVMcDJsT3Y1T2hxOTl6V29Ub3RoV3RhbkNheHlneGNzTDNMVmVqdDJjcGRid0plUVlkMU43em9XV0N1c0kyMWM0VFFHVGhRaUNFOHhKdTVyRUxEdXJkQy1sU2tNNU9xUzBKQUcwMnl4TWZsTUlSTGJrUS03Sm1TOGVlOUJ3UjI2MkZGS09LaTFVS3c4RHdMSU5kbGREa0JB?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-08T18:23:06Z",
-   "media": 1,
-   "judul": {
-    "id": "NasDem Bugar Berbagi, Sahroni: Perayaan Ini Harus Dirasakan oleh Semua Kalangan",
-    "en": "NasDem Bugar Berbagi, Sahroni: Perayaan Ini Harus Dirasakan oleh Semua Kalangan"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "MetroTVNews.com",
-    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQSmt6N0hqblR1N2s4Z0E1WVJVWFZFR2czTVZURGt6NHIxS2tObjZ4aDdHM1djUUV4aTRSNGw5RGlodUtOTUJMWDRBTDVEX0F0QmVMQ1FYRXIzM0d6ekp5LVVLRE01X29fNnRFamNfcWtWcl8wVVhmZjZybzZSM3o3OWkzVzBGYXo0UXFzb2J6UnJrVm1HSnU5V0N1TUsxejZpMlVvcTh5cUpHMEJhRjJwWjRQOU5VQmVUejJJ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-08T18:11:52Z",
-   "media": 1,
-   "judul": {
-    "id": "Robinsar bersama Forkopimda Kota Cilegon turut hadir dalam Doa dan Tabur Bunga bersama Ojol",
-    "en": "Robinsar bersama Forkopimda Kota Cilegon turut hadir dalam Doa dan Tabur Bunga bersama Ojol"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Berita Cilegon",
-    "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPVmhfemhqVTBUSldaMk1udURKcnZlWWFfOGh2Wi01dXJEbHAwVGlvT0VMNVhkd0YtSTg5eWFQMTlzUGxZbi1uc3RhSzRKRmxZSzQtc3hoT21memZsTFBuaGJVa19raG8yUnNWU292MlBSZWZpdFRCUmc5WXFFUmU5ZTBzalVaN2duWDdfZWZ6YnViY2EwSEMtR21IeXF3U2hFbTBONmVfYkxGZ3RYcjMwUGMwQ2p3OTZySEVGb0lTQzRLbFpwRDBvRi1lZHBtV0pacEVhMGZYQ1dNc1U?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-08T11:41:44Z",
-   "media": 2,
-   "judul": {
-    "id": "UU Pelindungan Ketenagakerjaan Atur Upah Pesangon dan Ojol",
-    "en": "UU Pelindungan Ketenagakerjaan Atur Upah Pesangon dan Ojol"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Cirebon Times",
-    "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1aMmRNa2N1UTNzclJpQURCY1cwZ2FTeVQ1RjFYcTJmSnVXc2dUZks2SWllTmVYWDVwTW9UcXhKWUxuNC12WVVGVzM1T05EdEdVQlVoMjlZUWE2QlBjam96TWVlZ1hEYzZ0NE5yX2t4MWt4eGNya1l5Vlh0TEE?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-08T17:10:10Z",
-   "media": 1,
-   "judul": {
-    "id": "Polisi telusuri keributan pengendara motor di MOI Kelapa Gading",
-    "en": "Polisi telusuri keributan pengendara motor di MOI Kelapa Gading"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Elshinta",
-    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOckdKNHBkV2FIRlIwUWx5UmRtbC1lcE8yeXFVOTlNU2k3UExWVndGR2J3VDRZUnZkWTRxYnlLNVc4NnFZUGI2U2NDTlYtcDY5OXRtUHpnR0JPMFdZaTRLdnRoVmxtTmoyNjhaaFkzd2d1SngteFVVcDgyLTZILXJNQWU5d0VZRXdxem5mZ3BTSjVlNlZwT1FJYW00WTdGUDdsaDl6dHV5UFBXWEFwYUtEY2lfUWltNTdz?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-08T11:00:00Z",
-   "media": 2,
-   "judul": {
-    "id": "Aliyah Mustika Hadiri Jalan Santai OJOL Day, Apresiasi Kebersamaan Komunitas OJOL",
-    "en": "Aliyah Mustika Hadiri Jalan Santai OJOL Day, Apresiasi Kebersamaan Komunitas OJOL"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "RRI.co.id",
-    "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNY3ZNcE5kNmg5SG4talVxOEhTRmM5NktiZmt4eVhJOTlXdG5oa3YzM3lvcHJwTGY1Uk9XQk5PeUlDaWpLLVVIMnVqVmNWQ3RnX3loamtSRWxEdmI1Qk9sdVVpa0NPc0NLcG84a0dkSUJ3cFg0bHFQc1hDa0Vhd0xHMG1wb0pkNjJUUmdOdUVwTkw2Xy1wTTNOdEZMT21vdlVfRjZaYkJPdmMtSkd3UWhGSzJka2FTUHdTb0h5MlhHLWhqdw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-08T16:06:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Tak Terima Ditegur Merokok di Jalan, Pemotor Ngamuk dan Rendahkan Ojol",
-    "en": "Tak Terima Ditegur Merokok di Jalan, Pemotor Ngamuk dan Rendahkan Ojol"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "jurnas.com",
-    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOamVELTJQRUZtbUNVaHdFTVdZb1Z1N0ljZ1daTEp2emdzck4yN1VWYmFVOVVsS0Y5NkJUaFF3TmxST3NxOWs1NzV2bjZFTEpJb0c3bEZyVkVGdXFNelZ1OWVSRkVpa2lxdTBwb2dxRU56MDFZbnJNUWEwQTVJUklIbmFZV1VZUDY3elE0TlJodUdxZnZMMWFOaWhnU2FtVFdHbFcweHNkYU1ZdzZ3d0FZc2ZKQU8?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-08T16:05:41Z",
-   "media": 1,
-   "judul": {
-    "id": "Jelang HUT ke-15 NasDem, Sahroni Ingin Partai Bermanfaat Bagi Disabilitas hingga Ojol",
-    "en": "Jelang HUT ke-15 NasDem, Sahroni Ingin Partai Bermanfaat Bagi Disabilitas hingga Ojol"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Jawa Pos",
-    "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOdlZqc1pJc1cyTkxoMnZyT3FRRTAtVm5iVUJxNWIyMU1OdFExeU9ON0hSc1c3RHVpeGZGLTN2MFFMcksxRjJCbHpFdV9VR2ZQUnNvcUp0ei1nTFdVUXpVRDlfTkk4cWxlczB5eWdNUHNiMmE0RC1manl6ejZHdWlzTFIzZ0FZMTRwYkVtX00zZTZBMWRWeW5VQndCazZkTVJtVjNIcWctNjBLRmhvd1FXS2lVcHhUS04zSjZFdWV6WU5zU1g3cF9pQWttLS1yamVncUE?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-08T16:00:20Z",
-   "media": 1,
-   "judul": {
-    "id": "Banjir Bandang Kembali Terjang Aceh: Gayo Lues dan Pidie Jaya Terdampak",
-    "en": "Banjir Bandang Kembali Terjang Aceh: Gayo Lues dan Pidie Jaya Terdampak"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "NU Online",
-    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPRGgtQzdCdnhvVlZ1YlpLUkVmc19jS1pyNHJuOHRESlBOSjlUbjlybHFUbGNMZUIzU1JDVnRxNnQ0SGNNMVM1N3dkanh0Zi0yV05hY1VSRHdvNkh1dk9EZ0k2RnY0Q3QxWVNGR1UxVDQ5cEFDMUtkMVY0WVE1bl9fTWtULVJpSmhrU3lnNkh5bFNZVjhUT3VoTndPdmZnb2trd1RkV0Q2QdIBrAFBVV95cUxQZHJvSV9ZenZNTHgxUDBwYk14cFVQTkcyX3NjbWM2ZndmcjFDb0VXS20td25ZaDh5LVpiZ1NZMWNzaVMwMVAyaDV5b2VRZnUzeDNXWDZySUJWZm9WODN1a1VGT21JRmhrOEdOTHM2ZzgwLWpoNUY1ZjlvbGFfeGZ5S3B2djdMZ1lsTzR4VUlabWFyVm5CSTAzeFdSOU14blRCb1dwX0NxSVRQd2FI?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-08T15:29:11Z",
-   "media": 1,
-   "judul": {
-    "id": "SPAI Tolak Penggunaan Atribut Ojol untuk Intimidasi dan Represi",
-    "en": "SPAI Tolak Penggunaan Atribut Ojol untuk Intimidasi dan Represi"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "NU Online Jakarta",
-    "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNd2tVSzZzS2h1eThVN1R3dERqNU03c0lCUktvV2k5ZnJtRDNpSnh4Z1EwOFEtNThabFlVR2o4czRIWmdDbjR1RnRIT0otU00tMzBUenFDTjFjVDVxN3Q2UDFoOVI3RnJzNTYtTk9RXzlNYUFCOWtqTEM2U3RGeFZneGowdG9yVUdJZDJ5OTdJTHZKZkVjZDFTQllFQWduZFdua01WNkVhZUEtU0nSAasBQVVfeXFMTXdrVUs2c0todXk4VTdUd3REajVNN3NJQlJLb1dpOWZybUQzaUp4eGdRMDhRLTU4WmxZVUdqOHM0SFpnQ240dUZ0SE9KLVNNLTMwVHpxQ04xY1Q1cTd0NlAxaDlSN0ZyczU2LU5PUV85TWFBQjlrakxDNlN0RnhWZ3hqMHRvclVHSWQyeTk3SUx2SmZFY2QxU0JZRUFnbmRXbmtNVjZFYWVBLVNJ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-08T14:41:22Z",
-   "media": 1,
-   "judul": {
-    "id": "Kapolres Metro Bekasi Sarapan Pagi Bersama Komunitas Ojol",
-    "en": "Kapolres Metro Bekasi Sarapan Pagi Bersama Komunitas Ojol"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Bekasi Newsroom",
-    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNQW9rY3BNa29RcTNhM3ZJdXM5VEdLTmhqM1dkcVV0dDBLT2RheUxScTNjckRYUldnS3RDVXc1Z01DNWFoU3NzVkV0TDF3RnNzczkzN0xCT2JXcTRsMFVncEdxWXdXM3RZZjZzRnlKQXZ1cWczQ2x0WmtRb2JYcDFZNzk4ZnY3akF1TEh6MF91S1ZBSTZJWHlwcWxmVHFjQWJRM1E?oc=5"
    }
   }
  ]
