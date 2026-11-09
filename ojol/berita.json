@@ -1,5 +1,5 @@
 {
- "w": "2026-11-09T06:52:10Z",
+ "w": "2026-11-09T07:52:27Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -72,6 +72,40 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-09T06:54:24Z",
+   "media": 2,
+   "judul": {
+    "id": "Kapolres Metro Bekasi Sarapan Pagi Bersama Komunitas Ojol",
+    "en": "Kapolres Metro Bekasi Sarapan Pagi Bersama Komunitas Ojol"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Tribratanews Polda Metro Jaya",
+    "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQcWNiZmFOZzdKZVdoWWVsbWxkVmhIYlRkM1dVY1lNTVc5SWZKY051UXhHQVJzODNrNldrVjlkTFA2X0RvZm01TXZ3YmV0SVR1X2xzei1LbGh0d3A4WVRicWNRb0pXMVR4aDc1eVk1SU4yRW92YzFOQ2RtVDM3OVprdWpUVEppZEFrdnkxX2JYU0xGajljVHA3ZTd5NUc2ZGozQWhwY3owZzZRLTFhVmRDRHo5LVIzX1R2TU9BWElCNzBMZ0dSVGZkMmJxbEU1b3l3NXJKQmFsSThpQ1htNkxZLS1nVm9aQQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-09T06:49:30Z",
+   "media": 2,
+   "judul": {
+    "id": "Korupsi Digitalisasi SPBU Pertamina, KPK Periksa Mantan Staf Anak Usaha Telkom",
+    "en": "Korupsi Digitalisasi SPBU Pertamina, KPK Periksa Mantan Staf Anak Usaha Telkom"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Iconomics",
+    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNWmZjMFJSVE8xc2pSYjhDd1pHakdSSEFZelhIeHppc1lfX1VCcjlGei1NQm9FUjZpdDlzZkQ2Q1FjbE5udnhfbV9mYWQ2Nmt1WlY3NE14TVFuajBkbzJKZmVaQzhGampXcS1KclEwbUFZRUtOQzlPRFB5c2JHYTU3d3VBVU56cXBKRWpEV3dRT0U2R29sb2h1SjFPSTFHdkY3QmMzMmNmT2tOOWtfV21yNEhIZHg4S0l0d2xr?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-09T02:20:56Z",
    "media": 2,
    "judul": {
@@ -106,6 +140,40 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-09T06:45:18Z",
+   "media": 1,
+   "judul": {
+    "id": "Usut Korupsi Digitalisasi SPBU, KPK Periksa 2 Eks Karyawan BUMN",
+    "en": "Usut Korupsi Digitalisasi SPBU, KPK Periksa 2 Eks Karyawan BUMN"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "JPNN.com",
+    "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQWkJnenNwZmlCbldUR2gzUHJkcWRVQ3g2emJVc08wTFA0cHVaZGtURF9qbXhxV2ttWTdYVnU4MTc3QVpkWDVVelcxcU80aEVTM0J5Nk1zeElVRE11WUpyM016WWg2M1QxY1lvVW1sU1JtYS1oVjd5aF92U2tBcmhrR3AyMHdZSVhoQ0lhMXBKS3lvUdIBlAFBVV95cUxORFB3QjdsNTNVWHZxOWIwekJ6bTBjbzFZbDZ6WUhtd0dDTTVFbjJzbzN4RGt6NkJfVXRnU2NreVBiZ3FSZy1jMDB1NkEzSDJwOTdjc3diS1RJRDhOWnJ0d2RpTVM0ZFZSVmFwVFN3cm1WaXFER0pQa0JVUlRRVDIxMkUtOXpFT3BVclpKWXQyRm1DUmtp?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-09T06:27:34Z",
+   "media": 1,
+   "judul": {
+    "id": "Secara proaktif izinkan siswa untuk tinggal di rumah dan tidak masuk sekolah untuk memastikan keselamatan mereka sebelum banjir.",
+    "en": "Secara proaktif izinkan siswa untuk tinggal di rumah dan tidak masuk sekolah untuk memastikan keselamatan mereka sebelum banjir."
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Vietnam.vn",
+    "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQbUI1dmN0UnpncnNjT0pwbEsxOXZxaTRUNElIdC1wZzRPZ0RzR3g1c3pDMDdnVFR4V3ZobjRLNWl4dWNXUDM4dWVrUWhLMHhQNlRWNGM0d2dqVDhoVkhMaFRLWE9HemM3Y2xUZUdieEVuSml4NVdHY0IzOGJYSVo2UnN6Zm81N2FEdkNVa1IzaFA2UQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-09T00:21:17Z",
    "media": 2,
    "judul": {
@@ -123,19 +191,19 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-09T03:35:47Z",
+   "waktu": "2026-11-09T05:08:23Z",
    "media": 1,
    "judul": {
-    "id": "BP Cabut dari Bisnis SPBU di RI, Sahamnya Dicaplok AKR (AKRA)",
-    "en": "BP Cabut dari Bisnis SPBU di RI, Sahamnya Dicaplok AKR (AKRA)"
+    "id": "Polisi Beberkan Kronologi Penangkapan Penyalahgunaan BBM di Subulussalam",
+    "en": "Polisi Beberkan Kronologi Penangkapan Penyalahgunaan BBM di Subulussalam"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "CNBC Indonesia",
-    "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOeXhnNXU0dHJCUW5NZHhqM216QjdpYjk0ckFqSk1uZnhQSk4zZDRib3FISk9PWTZCN3I0RDZIY3pBaHBhM25zaVdFbU1CUndFdHc5a0Fpa0RHNi1tb2NmVWdBNW5PQ0tRMWJIVFJxa1llNEJtd1dLcjBhanh3UXByZVJwQk1mRlJjWEkySWdNMmFMU2g0c09pdWhaME9jSWVGS0gyTDFmZjg1WkJjbFpwblVsOHRWRnp1WDFnaGpPQdIBxAFBVV95cUxNTWxtb1dDTjdzeVZtMHJDLThnMnRuX1VUaTd5eVJVMWdVMmdUNjYtNnRVaWNEUmNDUlUySC1DWWw1ZURwQzhLa29fbXZScVZVWko2MUFlRjY4S2NLbGJEcE1HS3JzUEVmYmdJNFJRcW90SjRoaWg0RnoxMmJhWDdHN1VVcGcxYXZ2MHUwZ0RDdlZ4QVdIbHNrRjk4LTAzV2lmS0x0Y0E5a0FQYW16dFRIX1FVNnhvTVVLOThvWHhXNXhjd2dY?oc=5"
+    "nama": "Linearcoid",
+    "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPSUdaOUtUcTV0eTc4TlVpUlJreGZTaFMyTy1tcXQ2MTRWVVZCQzV3eDREcEMycy1GSXVieFd0Y1NaMmxWSDdiRHhIdlhBbFU3c1FmSGNTYTF5R1o4aTAweUJ2MzhRdXFBRVg2Q011cndWT2FJdXVHQzRnNURPNDNRNDJKa2Y1SHB5ZlB2a1VYUjhqeDlqUTZGaURB?oc=5"
    }
   }
  ]
