@@ -1,5 +1,5 @@
 {
- "w": "2026-11-09T04:28:38Z",
+ "w": "2026-11-09T05:01:28Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -55,6 +55,40 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-09T02:23:04Z",
+   "media": 3,
+   "judul": {
+    "id": "Deretan Motor Listrik yang Dipakai Ojol di Indonesia, Ada yang Tempuh 140 Km",
+    "en": "Deretan Motor Listrik yang Dipakai Ojol di Indonesia, Ada yang Tempuh 140 Km"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "ChatNews.id",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE11Y1A1RFVSbFRIVm9yZVM5c1U5UHdCOUJ4c3Y0WEltMnhVYm9QcnJvSXpSV2ZBaWRpRE9DS3JwdmRxQU84YnI3d3JaTGRQZjlTTzN3V1Q3SnQycnNGdFA0WQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-09T02:20:56Z",
+   "media": 2,
+   "judul": {
+    "id": "5 HP untuk Driver Ojol dengan Baterai dan Fitur Unggulan",
+    "en": "5 HP untuk Driver Ojol dengan Baterai dan Fitur Unggulan"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Lampost.co",
+    "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBqV0xUSGItajBST1pZWjRGVzhzUEQ2ampST25USmNrMG1vSHcyS0lCLUI4OHZkSTVwdmpVRzJtV3F2VEZfTnZhM2dFZlNFQmNjQ2RiM0M1bFJHd0FiTmhyVnpYclo3WU1fY015S3JLZGdqN0xTdWlPd0dLMVA?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-09T01:41:57Z",
    "media": 2,
    "judul": {
@@ -72,6 +106,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-09T00:21:17Z",
+   "media": 2,
+   "judul": {
+    "id": "Pangdam Hasanuddin Gandeng Ojol dan Ormas Perangi Mafia Werving, Tegaskan Masuk TNI Gratis",
+    "en": "Pangdam Hasanuddin Gandeng Ojol dan Ormas Perangi Mafia Werving, Tegaskan Masuk TNI Gratis"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "PPID TNI AD",
+    "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPdW1XaG9scXBGN0FKZlhLWEZNb1ZSZnE1MUhBMUFIUTJMc3VJVlBLQUNPMUhmVFZhV2Y4RXFqSXFsbVVacDc1RWtRejNmR29kNXVhRXhEaFluUkwxUzBkNzhLb3BmRFBFSG5UOEhfQmNmcHExdVN6VEJHcDhfOUxFS25lT0lfRWtlNEtlLUx0ek5CeE43X2k4d2N5UWREdlZXbjlpcGVOazFoTEpndW90azNQOThtWWE5YWpJcGgycl9zQjZrcGdhNUhCdF9kMm5mZmFyREtpSFV1WVRJcW9Gc2p1bGdmeFl3MFlj?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-09T01:15:00Z",
    "media": 1,
    "judul": {
@@ -85,6 +136,23 @@
    "sumber": {
     "nama": "VIVA.co.id",
     "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOMXEtbjYxYzEyM08xbGxfajl0U0ZkU0xfS0RGM1JMaVVtRFRSMVhaY3lJZlI5OEtvdzF4ZWw0cjhEaXdIUVhKU3dXWWo3SGs5S2J1RFJsSjh6aTI5V3RueF9xQlpVNDZoc0tEeEtOUVl2NS1KQ09vbUVMa3ZtTllfb1RIZFJCZzAxV3EzWGpkSmI0bVctWHE3LXlUbkN6bnZhS3BsMW4tWGtNYUlaSEhz0gG0AUFVX3lxTE5yX0hlSU9vUi0yekZKQlpXWEdNUGRJRDM1RGN0Y29aeFIyU0ZKY09ySk1XdkhnUnlGNTNHN1ZTZ1pucVRvdFBFVjFaQVVrNFFtSklIN3JGY2E3cDc5a2hObDZROENFRGlydkhLLWlvUWp0ekFMSTlvb0NTdy1aN3YzX3NROThONFRSTGIybUh4RTFLeUY2WmFaMU1WQlhoXzlWVXpYdl9VV09DSlVRMHpCeGpDcQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-08T07:52:01Z",
+   "media": 5,
+   "judul": {
+    "id": "Polda Metro Gelar Bakti Kesehatan Bareng Ojol: Berangkat Sehat, Pulang Selamat",
+    "en": "Polda Metro Gelar Bakti Kesehatan Bareng Ojol: Berangkat Sehat, Pulang Selamat"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Jejak Profil",
+    "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPOElFT21wOWs0UlNGU0RvcWUzSERlcXVGaDFKMFZ6bi1SbE44SmhsZEFjNTdmdEl0UHFhRjVvNXhXVklUVzFJcG5EdU1YOTJJUDZRMHB5U09SSGt6eFc5YjltT3lHTE8tY1BvMUtyUnpVX3Y3MENvZzh1c0dJZXRWWDlBLXplY1ZfZUlLOWNlZy1XNDQwb1JGYkg3SXU0bFZZdlU4U08zVVBXeHlTTE5nZ1N5c1diaE5PNkE4SnFIeHpIelpPLTFv?oc=5"
    }
   },
   {
@@ -119,40 +187,6 @@
    "sumber": {
     "nama": "jurnas.com",
     "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNc1pScFc0U2syZmh2SjhqbmhXMVFqVG8tRWNpTzROZGd4bXJJUnUtYS10dEhFeDBlNUlzSEpBdmVqd3JmZHpEdFBCYW9fQ0RGR1I1VU9heThvbUxiUkV2WjlBWkthNmZVNHMxSjBBOFlJZ3RacHZEVzhuRjZTaEtybk9lTnF5NmNTdE5yMk1NMDBwTzhQMTdLRFFrY0c4MVFpazVOQ3RnRQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-08T14:43:44Z",
-   "media": 2,
-   "judul": {
-    "id": "Perkuat Kamtibmas, Polres Metro Depok Gandeng Ojol Jaga Keamanan Kota",
-    "en": "Perkuat Kamtibmas, Polres Metro Depok Gandeng Ojol Jaga Keamanan Kota"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Ruzka Indonesia",
-    "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1xVzNlMWkzLVBXcmRVakdlV1pwMHpUWTV1R0h0djM5SjdzVzRjanpLMVhBWGs1cnZmcjRoMmdXYVhuX2F3a3hsN3NjNXBFR2JXX21zLW5fdVJVTUtBblA3MERFMGJMUlNUUHJEUWFqNW0xaEQ2R0xDU0Jn?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-08T14:28:05Z",
-   "media": 2,
-   "judul": {
-    "id": "Polisi Bersama Masyarakat, Kapolres Tangsel Pererat Silaturahmi dengan Komunitas Ojol dan Go-Graber Indonesia",
-    "en": "Polisi Bersama Masyarakat, Kapolres Tangsel Pererat Silaturahmi dengan Komunitas Ojol dan Go-Graber Indonesia"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Berita Jurnalis",
-    "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOXy12U2tyajctMkF2TjFEN1c1M1UtMmpaaFFpMy1FajhCNU8tOGJfaUJST3h1QUFVY1VJSjIwbDVMcDJsT3Y1T2hxOTl6V29Ub3RoV3RhbkNheHlneGNzTDNMVmVqdDJjcGRid0plUVlkMU43em9XV0N1c0kyMWM0VFFHVGhRaUNFOHhKdTVyRUxEdXJkQy1sU2tNNU9xUzBKQUcwMnl4TWZsTUlSTGJrUS03Sm1TOGVlOUJ3UjI2MkZGS09LaTFVS3c4RHdMSU5kbGREa0JB?oc=5"
    }
   }
  ]
