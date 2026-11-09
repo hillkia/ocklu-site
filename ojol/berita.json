@@ -1,5 +1,5 @@
 {
- "w": "2026-11-09T07:52:27Z",
+ "w": "2026-11-09T08:54:34Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -106,6 +106,40 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-09T08:35:36Z",
+   "media": 1,
+   "judul": {
+    "id": "Women's March Jakarta Berujung Kericuhan, Pria Beratribut Ojol Diduga Jadi Pemicu",
+    "en": "Women's March Jakarta Berujung Kericuhan, Pria Beratribut Ojol Diduga Jadi Pemicu"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Radar Malang",
+    "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOQ3ByMHR2UW9wcGZlRmN0NGNKZVhxZWpGMDlGWjY1VVpicGhIUkJfb3lrbGJYOGQtWXY0dDM4RU5yeG5ROFQyR2psV25TbWE2LUFZSDRJODN5UUJDR1UxTHlXMkpyNXlobTFGTFdyeTI2NFhaNENCdG4ySEszWDdyeUlURzJwcGoxLXNtODJyWTJnTU1aZWFhUjRuY0JTM2ktRF9vRU5LV1JhdEd1dXZYR0pYYjQ3ZWZlbkJvR1FFOThjSGY0VXA5MEVUYUjSAdIBQVVfeXFMTUFDSDZoYy1hb2J6NWJCeVc2ZnZ6aVgwcWM4WUcxSEM2eXBCMlFvUGZpTXZqTFlCLXZUQXJPdV9ObHRhUndNUU1Jd1kyQzBERHR6Qk1USFFtYXRRTE5jYjBvaGZIWEZXTjNENEdBcTBxZmZPczFZTG01bGhRVDlycWJVanZBdzlJRDBrZEN4bWVXNFhHcjBkaUJYcDluNF96RVBRZ0JHX0Fab1NPNlk4MUJjTV9ueXBKS3RIaFFHaEdkZXNCd2t2Ull0d1FhY3pHLU53?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-09T08:29:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Menakar Aspek Keamanan & Keselamatan Sepeda Motor sebagai Angkutan Umum",
+    "en": "Menakar Aspek Keamanan & Keselamatan Sepeda Motor sebagai Angkutan Umum"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Tribunnews.com",
+    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQNXUwTElLQUl4NVpuZnVRZ0s4cFJuckpLd1daZkNEQkhRZ3ZrMklhRW5NTXNTQ3BPM2dFdUdjSkhick1HUnRsY20yaklEdk5GWDQwczVKdnpjbUZxSWNzVHhHRU1yTzA1Zm1DMnNxWVpwRDNBYXQ5TkFMN2VxZkp6UkJNN1ZaMEt4QVZ6RGZGaF9pQXVISDN1X1F3dUo4LUpnR1dDbGNLaW9RYmtzM1JSZEs3YkpvZw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-09T02:20:56Z",
    "media": 2,
    "judul": {
@@ -123,6 +157,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-09T08:22:10Z",
+   "media": 1,
+   "judul": {
+    "id": "Daftar Lengkap Tarif Listrik PLN November 2026 untuk Semua Golongan",
+    "en": "Daftar Lengkap Tarif Listrik PLN November 2026 untuk Semua Golongan"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "MetroTVNews.com",
+    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOeGtONzk3X2p6OHQzeUZxSDlyUTVyMTZHNXkyUmpPTlpiNjk1Q2lrUmFNRG9iY1gtVTBpdll3TkVRLWJfRHo4OVh1ZkRlMmV0TE1TZm9PbmJ5US1rbTZ1dVRWNlBmU0IzX0ZDaDB4VWxiNVptdlYtZlFjeER5d1FMMkRzQ2NhNnF6eDI4ejgySS1fWjJub0RyV2lxZHpURWtQc0VMQU55NWMyNkx5QVE?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-09T01:41:57Z",
    "media": 2,
    "judul": {
@@ -136,6 +187,23 @@
    "sumber": {
     "nama": "Target Berita",
     "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOUzVEaTRJRWctSHJUNnc4eE5YZ1ZJbjhpTV84cWZDd0xJNFJudl9TenVhV2dFaGZhU3B5aklwU2FrMzYwNklNeGhab3VSNmkxanJVZmg5OFlvQUt2TzVzeWFlRndocWNXa1NxRjVLcF92X3lmRmw1MnhsZHlwUmZGWE96QWFUVkFNemZESEd1VjBwbkpPLWtxTnJnM0lxZ094S2lMNkdSZGVCZ1NDdkJ1ZHdWQWtOTmRBOEthbzR3?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-09T07:35:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Harga Asli BBM Hari Ini Tembus Rp20.000 per Liter, Pertalite Bakal Naik?",
+    "en": "Harga Asli BBM Hari Ini Tembus Rp20.000 per Liter, Pertalite Bakal Naik?"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Listrik Indonesia",
+    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNel94U3kzWU4yZTdOU1M2M1hld1dSNUNsQU05WmpDcDRYMWo0Z3lNb2dZWGtfNjJHWFhueXdHY3h4UmZJRDRxbDk5a2VxSFQ3UU0xcXVjWUkwMmM1ZmhOWkI0OEpxeVlGbVBJOEhLSzJEOVRxVmFQUzE3VWFtVFFHWGlwTUZ2VTZlZy1kQURXYkU5Q0VQTjV2ckxFTTR1NXZOOS1SeFgtRGtPQ1FmczIyNg?oc=5"
    }
   },
   {
@@ -191,19 +259,19 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-09T05:08:23Z",
+   "waktu": "2026-11-09T06:19:00Z",
    "media": 1,
    "judul": {
-    "id": "Polisi Beberkan Kronologi Penangkapan Penyalahgunaan BBM di Subulussalam",
-    "en": "Polisi Beberkan Kronologi Penangkapan Penyalahgunaan BBM di Subulussalam"
+    "id": "AI Dashcam Orin Pantau Sopir dan Jalan, Bisa Beri Peringatan Saat Pengemudi Tak Fokus",
+    "en": "AI Dashcam Orin Pantau Sopir dan Jalan, Bisa Beri Peringatan Saat Pengemudi Tak Fokus"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "Linearcoid",
-    "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPSUdaOUtUcTV0eTc4TlVpUlJreGZTaFMyTy1tcXQ2MTRWVVZCQzV3eDREcEMycy1GSXVieFd0Y1NaMmxWSDdiRHhIdlhBbFU3c1FmSGNTYTF5R1o4aTAweUJ2MzhRdXFBRVg2Q011cndWT2FJdXVHQzRnNURPNDNRNDJKa2Y1SHB5ZlB2a1VYUjhqeDlqUTZGaURB?oc=5"
+    "nama": "surabayapagi.com",
+    "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNU3Nia3o0NnVxekllbWhCcXp4b01nM0diUkY5NE84NHFURlV1NGluVENSVGZBaHVIOVJOTEdSNHR5d0tMbUM2S2pqTVMzTTFKdFNvcjlWRlNXV2JwcEpZYjRzNmYtLUU4UDFLa3cwcFhqbUxBWFNsd21SRWpiUUJ0NWZxSy1TVUVHRXlRMWNxdlp5dTV3YjJJSU5zaWg5R25DenJqNzdnQnJRN1dlMUNNbm9NVlFOb0lvTklZNWtB0gHDAUFVX3lxTE5vaF9yUmFXd3ZBenVBb1VRZVlNOUhSNkU3ZzB6SThIdzN6V0pkZDBxcnNvMWNBVlhNSGMyV0ZLalpHVDNIem1MalItRS1pNnJXWmY4aHZkeDdlMWZfdGlScjlQYnd1NW5WN0hZNWNzdGZRWWhmQVJ3aEFlQjFsYjlwS3ZWaGpHNXRqZ2FGTmpEdnR2ckpieFczMVp1cmFXTEdfU25YNFdXOENPcnpIWFhqd3RIU3hHdkhxWXFYZS1wWVdaUQ?oc=5"
    }
   }
  ]
