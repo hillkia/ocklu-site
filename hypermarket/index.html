@@ -154,6 +154,9 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
 
 <div class="angka" id="angka"></div>
 
+<h2 id="joseph">💡 JOSEPH · bisnis hype</h2>
+<p class="kaki" style="margin:-4px 0 10px">Usulan dari kata yang sedang naik (data Arus). Tekan <b>Jalankan</b>: agen yang jualan — pasang di katalog OCKLU + MCP/UCP, EZRA pantau pembeli, posting komunitas, laporan Telegram. Berhenti otomatis kalau tren turun 2 minggu atau lewat tanggal. Perkiraan hasil = tebakan.</p>
+<div id="josephDaftar" style="display:grid;gap:10px;margin-bottom:18px">memuat…</div>
 <h2 id="sinyal">🛒 Sinyal beli agen · minggu ini</h2>
 <p class="kaki" style="margin:-4px 0 10px">Yang dihitung cuma langkah yang dekat ke bayar. Kunjungan crawler/pengindeks <b>tidak</b> dihitung di sini. Minggu mulai Senin (WIB).</p>
 <div class="angka" id="sinyalAngka"></div>
@@ -161,7 +164,7 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
 <p class="kaki" id="sinyalKet" style="margin-top:8px"></p>
 <div id="x402Daftar" class="panel" hidden style="margin-top:6px"></div>
 
-<nav class="tabbar" id="tabbar" aria-label="Bagian dasbor"><a href="#sinyal">Sinyal beli 🛒</a><a href="#grafik">Grafik 📈</a><a href="#tebar">Tebar Jala 🕸️</a><a href="#komunitas">Komunitas agen 🤝</a><a href="#bukti">Bukti MARKUS 📜</a><a href="#exit">Exit goal</a><a href="#penjaga">Grigori 🛡️</a><a href="#makelar">Pasar Makelar</a><a href="#klien">Klien Khusus</a><a href="#saranIklan">Saran Iklan 📣</a><a href="#jemput">Jemput Bola</a><a href="#turnamen">Turnamen</a><a href="#ofinpay">Ofin Pay</a><a href="#obrolan">Obrolan agen</a><a href="#arus">Rumus Arus</a><a href="#radar">Radar Niat</a><a href="#cari">Cari agen</a><a href="#bicara">Bicara dengan agen</a><a href="#gibberlink">Gibberlink</a><a href="#datang">Agen datang</a><a href="#agenKita">Agen kita</a><a href="#neuronOwner">Neuron · Owner 🔧</a><a href="#detak30h">Detak 30 mnt</a><a href="#belanja">Cara belanja</a><a href="#manusia">Pengunjung</a><a href="#uang">Alur uang</a><a href="#jual">Yang dijual</a><a href="/ofin/">Ofin ↗</a><a href="/hypermarket/indeks.html">Indeks Agen ↗</a><a href="/hypermarket/pasar/">Pasar teks ↗</a><a href="/siap-dibaca-ai/">Siap Dibaca AI ↗</a><a href="/airank/">AIRANK ↗</a><a href="/ai-readiness/">AI-readiness ↗</a><a href="/direktori-agen/">Direktori agen ↗</a><a href="https://glama.ai/mcp/servers?query=ocklu" target="_blank" rel="noopener">MCP Registry ↗</a></nav>
+<nav class="tabbar" id="tabbar" aria-label="Bagian dasbor"><a href="#joseph">JOSEPH 💡</a><a href="#sinyal">Sinyal beli 🛒</a><a href="#grafik">Grafik 📈</a><a href="#tebar">Tebar Jala 🕸️</a><a href="#komunitas">Komunitas agen 🤝</a><a href="#bukti">Bukti MARKUS 📜</a><a href="#exit">Exit goal</a><a href="#penjaga">Grigori 🛡️</a><a href="#makelar">Pasar Makelar</a><a href="#klien">Klien Khusus</a><a href="#saranIklan">Saran Iklan 📣</a><a href="#jemput">Jemput Bola</a><a href="#turnamen">Turnamen</a><a href="#ofinpay">Ofin Pay</a><a href="#obrolan">Obrolan agen</a><a href="#arus">Rumus Arus</a><a href="#radar">Radar Niat</a><a href="#cari">Cari agen</a><a href="#bicara">Bicara dengan agen</a><a href="#gibberlink">Gibberlink</a><a href="#datang">Agen datang</a><a href="#agenKita">Agen kita</a><a href="#neuronOwner">Neuron · Owner 🔧</a><a href="#detak30h">Detak 30 mnt</a><a href="#belanja">Cara belanja</a><a href="#manusia">Pengunjung</a><a href="#uang">Alur uang</a><a href="#jual">Yang dijual</a><a href="/ofin/">Ofin ↗</a><a href="/hypermarket/indeks.html">Indeks Agen ↗</a><a href="/hypermarket/pasar/">Pasar teks ↗</a><a href="/siap-dibaca-ai/">Siap Dibaca AI ↗</a><a href="/airank/">AIRANK ↗</a><a href="/ai-readiness/">AI-readiness ↗</a><a href="/direktori-agen/">Direktori agen ↗</a><a href="https://glama.ai/mcp/servers?query=ocklu" target="_blank" rel="noopener">MCP Registry ↗</a></nav>
 <p id="iklanKecil" hidden style="font-size:13px;margin:6px 0 0;padding:6px 10px;border:1px dashed currentColor;border-radius:8px;opacity:.75"></p>
 <h2 id="exit" data-w="peristiwa">Exit goals · jalan sampai bisa dijual</h2>
 <div class="panel"><ol class="tujuan" id="tujuan"></ol><p class="kosong" id="tujuanKet" style="margin:12px 0 0"></p></div>
@@ -909,6 +912,16 @@ document.getElementById("komando").addEventListener("click",function(ev){if(ev.t
 function kill(ubah){var e=document.getElementById("kcKill"),h=hOw();if(ubah===undefined)return fetch(API+"?r=kill",{headers:h}).then(function(r){return r.json()}).then(function(d){if(d.mati!==undefined){e.dataset.mati=d.mati?"1":"";e.textContent=d.mati?"▶️ Nyalakan semua agen":"⛔ Kill switch"}}).catch(function(){});
   fetch(API+"?r=kill",{method:"POST",headers:h,body:JSON.stringify({mati:ubah})}).then(function(){kill()})}
 document.getElementById("kcKill").onclick=function(ev){ev.preventDefault();var mati=this.dataset.mati==="1";if(mati||confirm("Hentikan SEMUA agen awan sekarang?"))kill(!mati)};setTimeout(kill,3000);
+function muatJoseph(){var el=document.getElementById("josephDaftar");if(!el)return;fetch(API+"?r=joseph",{headers:hOw()}).then(function(r){return r.json()}).then(function(d){
+  if(!d.usulan){el.textContent=d.galat||"khusus owner";return}
+  el.innerHTML=d.usulan.length?d.usulan.map(function(u){var w={usul:"#ffc266",jalan:"#7dffb0",berhenti:"#ff8a8a"}[u.status]||"#ccc";
+    return '<div style="border:1px solid #2a3b55;border-radius:12px;padding:12px"><b>'+esc(u.judul)+'</b> <span style="color:'+w+'">● '+esc(u.status)+'</span> <small>'+(u.pasar==="global"?"🌍 global":"🇮🇩 Indonesia")+'</small>'
+    +'<div style="font-size:14px;margin-top:6px">📈 '+esc(u.bukti||"")+'<br>💰 '+esc(u.modal||"")+'<br>🛠 '+esc(u.langkah||"")+'<br>🎯 '+esc(u.perkiraan||"")+'<br>⏹ '+esc(String(u.berhenti||"-"))+' · '+esc(u.aturan_berhenti||"")+(u.hasil?'<br>📝 '+esc(u.hasil):"")+'</div>'
+    +(u.status==="usul"?'<button type="button" data-joseph="'+u.id+'" style="margin-top:8px;min-height:44px;padding:0 16px;border-radius:10px;font-weight:700">▶ Jalankan</button>':"")+'</div>'}).join(""):"Belum ada usulan.";
+  el.querySelectorAll("[data-joseph]").forEach(function(b){b.onclick=function(){b.disabled=true;b.textContent="menjalankan…";
+    fetch(API+"?r=joseph",{method:"POST",headers:Object.assign({"Content-Type":"application/json"},hOw()),body:JSON.stringify({aksi:"jalan",id:+b.dataset.joseph})}).then(function(r){return r.json()}).then(function(x){if(x.galat)alert(x.galat);muatJoseph()})}})
+}).catch(function(){el.textContent="gagal memuat"})}
+setTimeout(muatJoseph,2500);
 setInterval(function(){var e=document.getElementById("kcJam");if(e){var d=new Date();e.innerHTML=d.toLocaleTimeString("id-ID",{timeZone:"Asia/Jakarta",hour:"2-digit",minute:"2-digit",second:"2-digit"})+" WIB<small>"+d.toLocaleDateString("id-ID",{timeZone:"Asia/Jakarta",weekday:"short",day:"numeric",month:"short",year:"numeric"})+"</small>"}},1000);
 function muatKomando(){var A=function(id,v){var e=document.getElementById(id);if(e)e.innerHTML=v},n=function(x){return Number(x||0).toLocaleString("id-ID")};if(!S)return;
   A("kcA",n(S.total&&S.total.kunjungan_30h));
