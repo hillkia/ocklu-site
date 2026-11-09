@@ -1,5 +1,5 @@
 {
- "w": "2026-11-09T12:39:54Z",
+ "w": "2026-11-09T13:01:57Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -225,6 +225,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-09T11:02:34Z",
+   "media": 1,
+   "judul": {
+    "id": "Bug Driver AMD Bikin SSD Menulis Terus, Umur SSD Terancam",
+    "en": "Bug Driver AMD Bikin SSD Menulis Terus, Umur SSD Terancam"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Telset.id",
+    "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPUGJoR2wxZXB5NWkwQjJhZ2l0aXZTWk1SdlVRWkRCUVRRZVFMdzJHTjBMOU8taHlCbEYyYm5zaVU4V3RxQ1ZMQzNIak9jXzA2QjQ5WGEwNFdiMmEyYkU5VG1kdDAxMmdqTVBIWEh6SFRELXpWVlVOZ21pdXhDbC1YT2RGOFpkbzQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-09T11:02:26Z",
    "media": 1,
    "judul": {
@@ -255,23 +272,6 @@
    "sumber": {
     "nama": "BeritaSatu.com",
     "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQZThaZWw4NUQtM1FnVUFCTXVka1hXYUs0QjR5X0xRclJZRXFIQmRaeENkbWo0dktoWXZiVWVEbWxJQlU3T25NVjMwZXhnMm4xeWI3QUVoSHFYLU1UekhoR0J6RDhTNHYzYjlQT0VVRHhsejlwZ1ZCTnhCbkRnb2tFOHBreU1LamxCT2NXUmQ3NFNLWUtXVUlISktJZGlPM0RwZ2ZIUndfUjdwRXltSGN3?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-09T09:32:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Potongan Ojol 8 Persen Ternyata Semu, Driver Justru Makin Tercekik?",
-    "en": "Potongan Ojol 8 Persen Ternyata Semu, Driver Justru Makin Tercekik?"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Inilah.com",
-    "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPTXlYcWtodUhwUV90SzV5bjhrZlhfX0phZ1dqUHdGZ2FZZ0NGUURyejZnbnJzU1dIbEM4U21vdnhsb0R5TnBLeXV6VGRBTnNQSzEtekhjcXRHNWNyRzFHdTVuc1pTeEhSdFR0dVhSMFRnaWdGRllHcjZPUmtkZFphanAyV2F3QXRMTUVCQ2dEbU1mUQ?oc=5"
    }
   }
  ]
