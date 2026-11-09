@@ -1,5 +1,5 @@
 {
- "w": "2026-11-09T13:01:57Z",
+ "w": "2026-11-09T13:40:40Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -34,6 +34,23 @@
    "sumber": {
     "nama": "Tajuk Nasional",
     "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQZF84RzgyRXZqYnAxMnB4NXZLNURfRWdTNjNpQmFwZlNCWjBPZi1vd1U5dWtNbFh3SUowa1RHVjZnT0pla1JxUDdBMmphTVhablRHcTdZODI0T2J6Ynppb0w0WExaMDJMekJpSHNRM25NOVFoRHhUMGxzY3lvUG9CRmhBczN3VGN6SzllcUktcExOVER4Ny1GeDBSdlNOZi1mNDhndG4xSnBpYVBocThJTQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-09T13:00:31Z",
+   "media": 5,
+   "judul": {
+    "id": "Pertamina Gelar Promo Bright Gas di Ojol Day Makassar, Ada E-Voucher Rp50 Ribu",
+    "en": "Pertamina Gelar Promo Bright Gas di Ojol Day Makassar, Ada E-Voucher Rp50 Ribu"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "gopos.id",
+    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE05OGhTeUQzRndWZGZxdVRmTm1wTi1mQjFTNnRORzJtb2JSSkFYWjNzVjJFenJpWGlHWXpsdnJrTmxkcGNVOTVURVgzenI3MWItSFEzeHp2UklPXzE0QjlzcVZYd1hRR3RsRWhJVTF4ZVNGZUEyb1ZFc2t1MzJvQkU?oc=5"
    }
   },
   {
@@ -123,6 +140,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-09T12:42:00Z",
+   "media": 2,
+   "judul": {
+    "id": "Korupsi Belanja BBM Subsidi, Eks Kadis LH Tebingtinggi Dituntut 7,5 Tahun Penjara",
+    "en": "Korupsi Belanja BBM Subsidi, Eks Kadis LH Tebingtinggi Dituntut 7,5 Tahun Penjara"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Kompas.com",
+    "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPNFJvc05lLVNGQ0JDX1RkZF81U1FlTDJpcE1LbTRQNTRRbmJCbEpvY0R4YVI5blA0dG96WU9sYUVDODV5emhqVHZSM1VadlFqdXBEVTJtUXhnbUVpaWNvdWR6NUxKVGY0VGtoaThzWGVTZHdZQ280aU83OXVBcHBkQWR2RG45dkVnRWRpUVdpQUNURl9LWWFUeV9tQzduZ2xxUXktVGdyVGxUZmp3LV9CYzZSNS01QXJ6YTIxcXJ6dXpvZnVmemVr?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-09T06:49:30Z",
    "media": 3,
    "judul": {
@@ -191,6 +225,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-09T12:00:43Z",
+   "media": 1,
+   "judul": {
+    "id": "Bedah Isi Perpres Ojol: Aturan Tarif, Nasib Driver, dan Kewajiban Grab-Gojek Cs",
+    "en": "Bedah Isi Perpres Ojol: Aturan Tarif, Nasib Driver, dan Kewajiban Grab-Gojek Cs"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Bisnis Tekno",
+    "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOMndNbnBFb0w0RHQtZWlVeEZadGlBZVl5RG5iRFIzTGpSbDZGaEt4Y2x2QWlpaklWN1BFd2pKV3doTDB5UkxrbWRvcW1UN1RBNzZudG51Tk9mLWdNeEFnZFR6WHlqVDQ5RENBcy0wa0xnaDBsbmJHQkFSelVabUFscjF6eHd4RktFQW5zT3RaVzNsWnNHNWEwUWptb0RRU0NwZ1dxZ3pVRW1DaVhWcHMwSmVLQ0lHTG1ncWNPWFVYM3hCdGRSSGx2ZFl3?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-09T11:50:23Z",
    "media": 1,
    "judul": {
@@ -204,74 +255,6 @@
    "sumber": {
     "nama": "ANTARA News",
     "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxNTG9CMWhvc2hPUElmZTBEQVpBbEJOZmlhQW9NTTlrNUJkQmtZNzFoeE9sWDNfWVU1UUdNWEJiQ0RTRzdmdmpWaE5lalY2S3g4d1ZQc0t1ZnRORlVDRlhScFhlc25MOVJRY2t1UWhJQWJ4U2FXdkhBREZveTRPOFBYclZnNTZ1dEdyTkQ4b05uWFpNRHhXbDRBelJCc3BrV0t4RVhuanRUeF9SZEhKb2lseldvVVRURXk0ZVhuc1NQbEs2bU5OQWFiaWlJZXhDdEg3WHRtdHJ4Uzg4WVNSRGxRcTlCckNENTdlVllVdFctbnVqN1h0eHQ4NVVn0gGiAUFVX3lxTE95Tkd2N2F4cXQ1OEM1bGFnd0pXa0h4SGNYMHpPZU5GMVI4TUM0dVhtYVhPMTVKRHZYVDJGZ2hzTy04SnllNnRGT1ZKWGhHTF9tSWdnVjJiV3VVQ0JhYUhMbGpaVUtMbG96MHlxdzM2SW5wajBFcUtLWFgwdEtmeExPbDl1aEhqWlI2emNUREQwUENkdWE3Rm40S0FBZ3B4elZpUQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-09T11:14:29Z",
-   "media": 1,
-   "judul": {
-    "id": "Jemput Penumpang di Pelabuhan Wanci, Driver Ojol di Kendari Diadang dan Dipukul 3 OTK, Lapor Polisi",
-    "en": "Jemput Penumpang di Pelabuhan Wanci, Driver Ojol di Kendari Diadang dan Dipukul 3 OTK, Lapor Polisi"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Tribunnewssultra.com",
-    "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPelhTOFN4X0hPMFltUXVBY05RRENUdVNoVHdnRjRSMG1FRlYweXRjUGFSQTVOWkwtNU1xdVdnYXRzU1RLNzFISXpmYk9RbzN2WmpDVEJMUW5fZU1kOFl0aV9ndGREZTRaUGxhWElXWDhIS0g0bUh3Y1dnZFVVTjdVRXBfb0xQOWJ0VTlDMFFEdExrRXBSRG9oYnhDZ21HN1M0LTI4QTZCWnlabmMyNENoSjI5WkdTb2NobzFPMW9vLWdUTE45RlRxUnlfeXlCX0tsZk11b3I0V1o?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-09T11:02:34Z",
-   "media": 1,
-   "judul": {
-    "id": "Bug Driver AMD Bikin SSD Menulis Terus, Umur SSD Terancam",
-    "en": "Bug Driver AMD Bikin SSD Menulis Terus, Umur SSD Terancam"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Telset.id",
-    "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPUGJoR2wxZXB5NWkwQjJhZ2l0aXZTWk1SdlVRWkRCUVRRZVFMdzJHTjBMOU8taHlCbEYyYm5zaVU4V3RxQ1ZMQzNIak9jXzA2QjQ5WGEwNFdiMmEyYkU5VG1kdDAxMmdqTVBIWEh6SFRELXpWVlVOZ21pdXhDbC1YT2RGOFpkbzQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-09T11:02:26Z",
-   "media": 1,
-   "judul": {
-    "id": "Perpres Ojol 2026 dan Celah Perlindungan Pengemudi",
-    "en": "Perpres Ojol 2026 dan Celah Perlindungan Pengemudi"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Magdalene.co",
-    "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPUm1tRzdaaU9EV0pGd0xwc01lMmVzOWpWSGZrak03QXFwS25Lc29zS1dXVm9fSERDeS1ySUQyRE5NUUdUZDNIUnpwQ0JVcmV6THNSVzYxMWwwLTl2Yk9TdjVCcFRhdXlGU2toREYtQl9ZWnJnTElQcHVobWpWNm4xTQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-09T10:44:46Z",
-   "media": 1,
-   "judul": {
-    "id": "Surabaya dan Purwokerto Gelar Demo Mahasiswa pada 10 November 2026",
-    "en": "Surabaya dan Purwokerto Gelar Demo Mahasiswa pada 10 November 2026"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "BeritaSatu.com",
-    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQZThaZWw4NUQtM1FnVUFCTXVka1hXYUs0QjR5X0xRclJZRXFIQmRaeENkbWo0dktoWXZiVWVEbWxJQlU3T25NVjMwZXhnMm4xeWI3QUVoSHFYLU1UekhoR0J6RDhTNHYzYjlQT0VVRHhsejlwZ1ZCTnhCbkRnb2tFOHBreU1LamxCT2NXUmQ3NFNLWUtXVUlISktJZGlPM0RwZ2ZIUndfUjdwRXltSGN3?oc=5"
    }
   }
  ]
