@@ -1,5 +1,5 @@
 {
- "w": "2026-11-09T11:39:02Z",
+ "w": "2026-11-09T12:39:54Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -38,6 +38,57 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-09T10:30:00Z",
+   "media": 3,
+   "judul": {
+    "id": "Banjir Bandang Terjang Gayo Lues Aceh Rusak 115 Rumah dan Jembatan, 19 Warga Mengungsi",
+    "en": "Banjir Bandang Terjang Gayo Lues Aceh Rusak 115 Rumah dan Jembatan, 19 Warga Mengungsi"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Kompas.com",
+    "url": "https://regional.kompas.com/read/2026/11/09/130537578/banjir-bandang-terjang-gayo-lues-aceh-rusak-115-rumah-dan-jembatan-19-warga"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-09T10:30:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Banjir Melanda Kabupaten Gayo Lues, Sejumlah Rumah dan Fasilitas Umum Mengalami Kerusakan",
+    "en": "Banjir Melanda Kabupaten Gayo Lues, Sejumlah Rumah dan Fasilitas Umum Mengalami Kerusakan"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "BADAN PENANGGULANGAN BENCANA ACEH",
+    "url": "https://bpba.acehprov.go.id/berita/kategori/bencana/banjir-melanda-kabupaten-gayo-lues-sejumlah-rumah-dan-fasilitas-umum-mengalami-kerusakan"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-09T10:30:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Pemkab Gayo Lues Aceh berhasil buka akses ke lokasi banjir bandang",
+    "en": "Pemkab Gayo Lues Aceh berhasil buka akses ke lokasi banjir bandang"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "ANTARA News",
+    "url": "https://aceh.antaranews.com/berita/414187/pemkab-gayo-lues-aceh-berhasil-buka-akses-ke-lokasi-banjir-bandang"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-09T08:52:54Z",
    "media": 4,
    "judul": {
@@ -68,6 +119,23 @@
    "sumber": {
     "nama": "Universitas Komputama Cilacap",
     "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPb084VGI4OVFRbk1tVndOa2MtUUVJZHhnVHNzR1ZSUXByV0kzb0hpRkNfcmtnVm9vQkpuOFV4XzBReWJrbmRkbG5yLUF6X3huWThsTExMeDFXYUhXZWNsWTdvcEU2NGtsS1psZnMwaUJnSnF3SHg0am5zV1BXeFN4aGw0T3duS2pKUkNnLVNzcmZFQ2c2U3gxV0F2RXJpelJMWjJkUjE0M0dhcFZTT3FvcA?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-09T06:49:30Z",
+   "media": 3,
+   "judul": {
+    "id": "Korupsi Digitalisasi SPBU Pertamina, KPK Periksa Mantan Staf Anak Usaha Telkom",
+    "en": "Korupsi Digitalisasi SPBU Pertamina, KPK Periksa Mantan Staf Anak Usaha Telkom"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Iconomics",
+    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNWmZjMFJSVE8xc2pSYjhDd1pHakdSSEFZelhIeHppc1lfX1VCcjlGei1NQm9FUjZpdDlzZkQ2Q1FjbE5udnhfbV9mYWQ2Nmt1WlY3NE14TVFuajBkbzJKZmVaQzhGampXcS1KclEwbUFZRUtOQzlPRFB5c2JHYTU3d3VBVU56cXBKRWpEV3dRT0U2R29sb2h1SjFPSTFHdkY3QmMzMmNmT2tOOWtfV21yNEhIZHg4S0l0d2xr?oc=5"
    }
   },
   {
@@ -106,19 +174,36 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-09T06:49:30Z",
-   "media": 2,
+   "waktu": "2026-11-09T12:03:42Z",
+   "media": 1,
    "judul": {
-    "id": "Korupsi Digitalisasi SPBU Pertamina, KPK Periksa Mantan Staf Anak Usaha Telkom",
-    "en": "Korupsi Digitalisasi SPBU Pertamina, KPK Periksa Mantan Staf Anak Usaha Telkom"
+    "id": "KPK dalami aliran uang proyek jalur kereta di Sumsel ke pihak Kemenhub",
+    "en": "KPK dalami aliran uang proyek jalur kereta di Sumsel ke pihak Kemenhub"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "Iconomics",
-    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNWmZjMFJSVE8xc2pSYjhDd1pHakdSSEFZelhIeHppc1lfX1VCcjlGei1NQm9FUjZpdDlzZkQ2Q1FjbE5udnhfbV9mYWQ2Nmt1WlY3NE14TVFuajBkbzJKZmVaQzhGampXcS1KclEwbUFZRUtOQzlPRFB5c2JHYTU3d3VBVU56cXBKRWpEV3dRT0U2R29sb2h1SjFPSTFHdkY3QmMzMmNmT2tOOWtfV21yNEhIZHg4S0l0d2xr?oc=5"
+    "nama": "ANTARA News",
+    "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOMWJ5SUx6Y2VTVUs1OExWMThINnNMYTJKRWlmRWNvSjdOakRtSTctbTFCN283TFVmUHBNOW1nY2F2eDk5QVVGd3VYcjM0ckNKTVVHMTY0bnRIQWxqYXNWU3hEcHNOaUFuS29wWjdjeWY5djlNRFMwTnltNnNDVTRYcllSTG45b3RJLTJrLUxkSmxMbVltMmdISWFhem5rSDBVSTFBVXZwZ0o0Z2Q4c2t1Ulln0gG0AUFVX3lxTE1nWGp1YXFERmNGNDZKWlZzVHpKR1NTc01MRVA0NWhfMndjSTFBTmxrLUxXMFNtSnlaUjJBSnNKWU9CWW5tSVlTUVduMDJJNUxKaERieFJ3TGxrYktxMXQyeUlSa3JNakpuVnY0dHh1MlpjbkNSNEFsY0dJeHFPOUl0dTVjS2d2WGlHb29zWUxZX2RvXy1FVnVnbDl6YkV0VF9qdDNWczZUYXdTSl9Ya0FMZEl0Sg?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-09T11:50:23Z",
+   "media": 1,
+   "judul": {
+    "id": "KPK dalami pengadaan terkait digitalisasi SPBU Pertamina",
+    "en": "KPK dalami pengadaan terkait digitalisasi SPBU Pertamina"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "ANTARA News",
+    "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxNTG9CMWhvc2hPUElmZTBEQVpBbEJOZmlhQW9NTTlrNUJkQmtZNzFoeE9sWDNfWVU1UUdNWEJiQ0RTRzdmdmpWaE5lalY2S3g4d1ZQc0t1ZnRORlVDRlhScFhlc25MOVJRY2t1UWhJQWJ4U2FXdkhBREZveTRPOFBYclZnNTZ1dEdyTkQ4b05uWFpNRHhXbDRBelJCc3BrV0t4RVhuanRUeF9SZEhKb2lseldvVVRURXk0ZVhuc1NQbEs2bU5OQWFiaWlJZXhDdEg3WHRtdHJ4Uzg4WVNSRGxRcTlCckNENTdlVllVdFctbnVqN1h0eHQ4NVVn0gGiAUFVX3lxTE95Tkd2N2F4cXQ1OEM1bGFnd0pXa0h4SGNYMHpPZU5GMVI4TUM0dVhtYVhPMTVKRHZYVDJGZ2hzTy04SnllNnRGT1ZKWGhHTF9tSWdnVjJiV3VVQ0JhYUhMbGpaVUtMbG96MHlxdzM2SW5wajBFcUtLWFgwdEtmeExPbDl1aEhqWlI2emNUREQwUENkdWE3Rm40S0FBZ3B4elZpUQ?oc=5"
    }
   },
   {
@@ -136,23 +221,6 @@
    "sumber": {
     "nama": "Tribunnewssultra.com",
     "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPelhTOFN4X0hPMFltUXVBY05RRENUdVNoVHdnRjRSMG1FRlYweXRjUGFSQTVOWkwtNU1xdVdnYXRzU1RLNzFISXpmYk9RbzN2WmpDVEJMUW5fZU1kOFl0aV9ndGREZTRaUGxhWElXWDhIS0g0bUh3Y1dnZFVVTjdVRXBfb0xQOWJ0VTlDMFFEdExrRXBSRG9oYnhDZ21HN1M0LTI4QTZCWnlabmMyNENoSjI5WkdTb2NobzFPMW9vLWdUTE45RlRxUnlfeXlCX0tsZk11b3I0V1o?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-09T05:06:17Z",
-   "media": 2,
-   "judul": {
-    "id": "Banjir bandang rusak seratusan rumah di dua desa di Gayo Lues Aceh",
-    "en": "Banjir bandang rusak seratusan rumah di dua desa di Gayo Lues Aceh"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "ANTARA News",
-    "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNZmMzU2NBWERGTUZtc1BVbm1ZbmNiR2hJejZ2VlJlZlkzcnlNMmRmMWhTSWxLVkVaNXdqdFp5V2pRQ3E5TXo5d0hKYVJzNUxHMEJGN2MzTmc4YzUtOWRFRlNUUjljcmdQLVJlUHZYWHNoZ0RUbmV0aHBuLTZEamNvYnJPMDZ6aXlRYWowdk1Del83V2MyNk8yTTNFSkZHX3Z6S0IxQ1pXUDB2UW5W0gGyAUFVX3lxTFBYSUYtZzJaVG0zZkd5UmtSSzlRYjJEcVZxazBtQ0pfcTYwLTFMSEUxNjJLV1l1OUJVSDRBajBTOVluRkFwTVh2N2JvNkpRUUxnWHI3ZkdzUW1lenFaY2I4YV81VDhYTE93VmVMR0RnOEFCV0ZkWllrLW1uWU9kMnd4ZlA0cVdiUFRaR1lmZWVIcThRcWJDMWtrRF9jek5RUzF2RDljUU8zQ3hIZmFNTDF1V3c?oc=5"
    }
   },
   {
@@ -204,23 +272,6 @@
    "sumber": {
     "nama": "Inilah.com",
     "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPTXlYcWtodUhwUV90SzV5bjhrZlhfX0phZ1dqUHdGZ2FZZ0NGUURyejZnbnJzU1dIbEM4U21vdnhsb0R5TnBLeXV6VGRBTnNQSzEtekhjcXRHNWNyRzFHdTVuc1pTeEhSdFR0dVhSMFRnaWdGRllHcjZPUmtkZFphanAyV2F3QXRMTUVCQ2dEbU1mUQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-09T08:35:36Z",
-   "media": 1,
-   "judul": {
-    "id": "Women's March Jakarta Berujung Kericuhan, Pria Beratribut Ojol Diduga Jadi Pemicu",
-    "en": "Women's March Jakarta Berujung Kericuhan, Pria Beratribut Ojol Diduga Jadi Pemicu"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Radar Malang",
-    "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOQ3ByMHR2UW9wcGZlRmN0NGNKZVhxZWpGMDlGWjY1VVpicGhIUkJfb3lrbGJYOGQtWXY0dDM4RU5yeG5ROFQyR2psV25TbWE2LUFZSDRJODN5UUJDR1UxTHlXMkpyNXlobTFGTFdyeTI2NFhaNENCdG4ySEszWDdyeUlURzJwcGoxLXNtODJyWTJnTU1aZWFhUjRuY0JTM2ktRF9vRU5LV1JhdEd1dXZYR0pYYjQ3ZWZlbkJvR1FFOThjSGY0VXA5MEVUYUjSAdIBQVVfeXFMTUFDSDZoYy1hb2J6NWJCeVc2ZnZ6aVgwcWM4WUcxSEM2eXBCMlFvUGZpTXZqTFlCLXZUQXJPdV9ObHRhUndNUU1Jd1kyQzBERHR6Qk1USFFtYXRRTE5jYjBvaGZIWEZXTjNENEdBcTBxZmZPczFZTG01bGhRVDlycWJVanZBdzlJRDBrZEN4bWVXNFhHcjBkaUJYcDluNF96RVBRZ0JHX0Fab1NPNlk4MUJjTV9ueXBKS3RIaFFHaEdkZXNCd2t2Ull0d1FhY3pHLU53?oc=5"
    }
   }
  ]
