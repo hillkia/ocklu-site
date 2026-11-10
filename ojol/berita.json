@@ -1,5 +1,5 @@
 {
- "w": "2026-11-10T03:17:39Z",
+ "w": "2026-11-10T05:36:23Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -51,6 +51,23 @@
    "sumber": {
     "nama": "Tajuk Nasional",
     "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQZF84RzgyRXZqYnAxMnB4NXZLNURfRWdTNjNpQmFwZlNCWjBPZi1vd1U5dWtNbFh3SUowa1RHVjZnT0pla1JxUDdBMmphTVhablRHcTdZODI0T2J6Ynppb0w0WExaMDJMekJpSHNRM25NOVFoRHhUMGxzY3lvUG9CRmhBczN3VGN6SzllcUktcExOVER4Ny1GeDBSdlNOZi1mNDhndG4xSnBpYVBocThJTQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-10T03:00:00Z",
+   "media": 3,
+   "judul": {
+    "id": "KPK Dalami Eks Pejabat Anak Usaha Telkom Terkait Pengadaan Digitalisasi SPBU",
+    "en": "KPK Dalami Eks Pejabat Anak Usaha Telkom Terkait Pengadaan Digitalisasi SPBU"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "RRI.co.id",
+    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNNmZ4Rl9BdTZIdkx4VkxSR242RTdpZVN6YTNjTFdXZjF5cDVrLTFBY3lWM3hSbFpndWxVckk1cHNRcUZBRWVuT2VGQUE3UzdTT1RCLU1ZcU13U1ZZdE9wa2NKYWpUalpVMVV5b1RRandidll3WXdhNGpIYlJCVk10ZVlZZFBFV1FPN180UGtYWmVhcHRnNHU5T1VScDJybFpRNWxFaC10OGpOWTMwU1JlWGRGaFQ?oc=5"
    }
   },
   {
@@ -119,6 +136,23 @@
    "sumber": {
     "nama": "Kompas.com",
     "url": "https://regional.kompas.com/read/2026/11/09/130537578/banjir-bandang-terjang-gayo-lues-aceh-rusak-115-rumah-dan-jembatan-19-warga"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-09T22:49:25Z",
+   "media": 2,
+   "judul": {
+    "id": "Mendagri Ungkap Perintah Prabowo: Normalisasi Sungai Jadi Prioritas Cegah Banjir",
+    "en": "Mendagri Ungkap Perintah Prabowo: Normalisasi Sungai Jadi Prioritas Cegah Banjir"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Menit Indonesia",
+    "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQMlFmckcxY3VEcGd3M25HUm9QNHlkT09iQk1WR0Rua2NaLWc0ZzM2aklyYWp5SU9NSTEzVHB2VGRWVHRTSHhnQ080YVhhQ0xrRG5qbVpic2FjaVRkSFVFQm5vcHJ3azRxYUprTHV5OUMxT3lNdmJPVU05TmZHbzYtdWVlNHlja1pMcUREQ3hiMEJBNF92Rnl0N0dwLTgzY0FKQUJzTGlPQlBmeF9Pd2U0VXJ5d3hJOTBEeGc?oc=5"
    }
   },
   {
@@ -204,74 +238,6 @@
    "sumber": {
     "nama": "Medcom.id",
     "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPT01oSU9kSVB4cEJzaU8xSDhuZWlZT0N0R3hlNHVHei1aaXJxa1ZMUWoyYjFydnVOX1E0VG5OV1I1RU1IMFpUclh0MTJXNHBFdEdMMjRaMm1WYWdUcHdCXzBYYVAtTHJSNW1Nb0dyTGF3ejQwRV9DNXdYRW5WZ1pRTWVMS0ItVUhqWlRSNWtra05ENV81amZPUml3RlRSMGlkU3A5aEVjRVI4VGxoQ1FITEhiNDFDRC0wNHgyeENLWWU0WktiVGc?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-09T10:30:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Banjir Melanda Kabupaten Gayo Lues, Sejumlah Rumah dan Fasilitas Umum Mengalami Kerusakan",
-    "en": "Banjir Melanda Kabupaten Gayo Lues, Sejumlah Rumah dan Fasilitas Umum Mengalami Kerusakan"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "BADAN PENANGGULANGAN BENCANA ACEH",
-    "url": "https://bpba.acehprov.go.id/berita/kategori/bencana/banjir-melanda-kabupaten-gayo-lues-sejumlah-rumah-dan-fasilitas-umum-mengalami-kerusakan"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-09T10:30:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Pemkab Gayo Lues Aceh berhasil buka akses ke lokasi banjir bandang",
-    "en": "Pemkab Gayo Lues Aceh berhasil buka akses ke lokasi banjir bandang"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "ANTARA News",
-    "url": "https://aceh.antaranews.com/berita/414187/pemkab-gayo-lues-aceh-berhasil-buka-akses-ke-lokasi-banjir-bandang"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-09T23:25:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Prabowo Minta BNPB Tambah Stok Tenda hingga Perahu Karet untuk Antisipasi Banjir",
-    "en": "Prabowo Minta BNPB Tambah Stok Tenda hingga Perahu Karet untuk Antisipasi Banjir"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Berita Nasional - Media Pencerah Bangsa",
-    "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNMWEzUEJFTlVBN1U5T19seGxsZHhLTlZiNFBhTlo5c3ZzVlZoVzRnRFJKekczVUlTYXd2S1dmM3RqZ0I4ejZWRHpNNjF2VlZQZWpndzVpdUFnUkpJT3dORGlzRjhuMnZsWXNKa1FpV2JMXzdSSDNQSkFyc055VGl1WUJZWVZ2ZGpNNFJnSzBuNzhKWHN4T2VWV28yalJBc09POE1jR0FUX195Zm0zMDhIWXp0Q2dxNl83bmxqUk53?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-09T08:52:54Z",
-   "media": 4,
-   "judul": {
-    "id": "KPK periksa mantan Direktur PT LEN Railway Systems terkait kasus DJKA Kemenhub",
-    "en": "KPK periksa mantan Direktur PT LEN Railway Systems terkait kasus DJKA Kemenhub"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "kakinews.id",
-    "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOSk4yMHctOHg3ek1sREJkZWNVUWxGT2o1dmlFZTBFX001T0RDclVKRFZhd0FmQkVPSEEwMU9zS2toQjVWd0RGZ3lCUW0wRkZsS1F6S3FEYzRySnZDRlU1TmgzdkZxNU5lWVNiOEI3VGZBSkZLLWxLeHRnd2YtOVY3cVh0SDJWeUdiRGg4RFkwR1RvbnY2ZFQ2eUJjdw?oc=5"
    }
   }
  ]
