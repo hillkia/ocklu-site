@@ -1,7 +1,24 @@
 {
- "w": "2026-11-10T01:16:42Z",
+ "w": "2026-11-10T02:17:26Z",
  "dari": "Kroog",
  "berita": [
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-10T00:12:32Z",
+   "media": 8,
+   "judul": {
+    "id": "Pertamina Gelar Promo Bright Gas di Ojol Day Makassar, Ada E-Voucher Rp50 Ribu",
+    "en": "Pertamina Gelar Promo Bright Gas di Ojol Day Makassar, Ada E-Voucher Rp50 Ribu"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Herald Sulsel",
+    "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNN0J0aWdKSGhQVHMweTRZTTN2SHlaWFVEdERKSjdRYkZqMThIWi1JR0todUhhY3o0NzEyWDdBQW1VaTc5VE5pcko4YzdiUG9pSmJ3dXlqRTZsazYyWklRYkNuQTBJUW1CYmJ4emx6eGctQll5YXRrT1ZEWVVKeWVuSmR1VEp1a3QzUnlLWWcxbmpOb1YxNlZ6LW5aUDQ2dmZXeEk4bU1BaWhtZE95dlQwVkZEa2c3ejlQZjdxVTRzQTJteEpjakxyaHJRSEhuSWxkOF9HbFhEWjB6UEhF?oc=5"
+   }
+  },
   {
    "jenis": "berita",
    "waktu": "2026-11-08T07:37:00Z",
@@ -38,19 +55,36 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-09T14:42:47Z",
-   "media": 6,
+   "waktu": "2026-11-10T01:19:04Z",
+   "media": 3,
    "judul": {
-    "id": "Pertamina Gelar Promo Bright Gas di Ojol Day Makassar, Ada E-Voucher Rp50 Ribu",
-    "en": "Pertamina Gelar Promo Bright Gas di Ojol Day Makassar, Ada E-Voucher Rp50 Ribu"
+    "id": "Bantuan HDCI Disalurkan, 5.000 Ojol Resmi Dilindungi BPJS Ketenagakerjaan!",
+    "en": "Bantuan HDCI Disalurkan, 5.000 Ojol Resmi Dilindungi BPJS Ketenagakerjaan!"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "SINDOmakassar",
-    "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQQ0tzUW8xc24zNTlRVDBtZHRIY3JyRk1QVkVmbl9Vbk1uSU9USWs1dV9zTkZSQVFoM0Y3ZEFTbmI4ZGlOTG9ZQWFWQ05kbU5MZ1VaNWNIYkhzYmNiQnZ1T3F0QlVEWmxUZWVvT1FfSnlfeElxOF9wRVR6QldZUHVXWHBIYzU5Z1ZiMHhNZHlVY3Z6VzhYRVdnTmoxTlJXODloWUFXY2VHbGgxekNYTWo1LVAwQndDNDlNa2fSAcABQVVfeXFMTTllN2J6LXhOTHJmaUtPVEZKMU9GV2dSNlVabkVOTkhPcE1YQm1hSDVlaEhYcUNpVXNYb3lzUG1FejdLaDhSbjMtNldoU1psNnNvSkdmdGNERlFqOG9VSWk2QmZESVA2UWhMWXZ2blZEcWN3WkJERkJxNUswaG5MOVdkNDVWbWFnYURQanZzRG1DZ1g3VEpuYTNnZ3I1dV9UamFCTkdTOUNVTDI3Z0trbEUyRUJkcWtNMVNsdFg3bkth?oc=5"
+    "nama": "Jawa Pos",
+    "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQb2pscWhPcDVyMDBRS2pLOEswRVl6U2p5VTI1WklkdWxPMm83dEdES3E3V3F2ZTJnaHhQd0p6Ukl6S3JjRzdPSlhzMmU0VkdIODVxNURzNlg4X25TeEJOOEY2clpuVFRsV2xxcVRsUDk2RUEydUxsUGdJb1dmcXhVaVVudlU4NzdDYzN5Q2Uta0NKZ3JuR3lCSXdtRGI5YkR3ZDNWUDNxNjJBNTVjVVRGcnhnYmpVekNfUG15ekNlbTNHdXk0TmlnX1pCNTB3ZFRZemFZ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-09T23:53:43Z",
+   "media": 3,
+   "judul": {
+    "id": "BMKG Prediksi Puncak Musim Hujan Desember hingga Februari, Waspadai Banjir dan Longsor",
+    "en": "BMKG Prediksi Puncak Musim Hujan Desember hingga Februari, Waspadai Banjir dan Longsor"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "BeritaSatu.com",
+    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPSFFwcjZoOXhWa0wxSUtIdjFiVDEwdWdsbmFEN2IyaEs5dWVuVkRxb2U3dTEtczhyY1VQbzd1THNhN1kxLTJQM29fdlY1Y2JYeXF4MHBmaXZPTkpxNjVHMmp3N0xWbnVad1VvcVF6QnJrR0w5T3FURy1WMmZHNkJrZldkWExwM1ZZZ1Y1NXNPeF85TFBJVHpia1VIdVJENUxpbUxF?oc=5"
    }
   },
   {
@@ -89,6 +123,40 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-10T01:29:01Z",
+   "media": 1,
+   "judul": {
+    "id": "Lima Kali Dipukul, Driver Ojol Kendari Mengaku Dihadang 3 Pria di Bawah Jembatan Teluk Kendari",
+    "en": "Lima Kali Dipukul, Driver Ojol Kendari Mengaku Dihadang 3 Pria di Bawah Jembatan Teluk Kendari"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "IndoSultra.com",
+    "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOb3dwQld4NjAzZGRxMzRBb2x2OW40d0Ewa0NQdk82VE11RkFRcHo5OXhWUWJyWE41NThMNktQZ1ZDTXJBN3VRemk3RDNYalpBOE9hWmlZMTRRdlZMTFpIWHR6a0tKc2JyWnhmWUhxQm5nYnZvM3hhTmxrTU5DSVFpMjhkTzU3b29rZGw1QnRwMFN5ZDY1cTRvQVhEdHdXakl0bjBCYzBDaktLMFY4ZHEtS3NCeWdxaG83R1JlMHZn?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-10T01:14:17Z",
+   "media": 1,
+   "judul": {
+    "id": "Pulihkan Akses Warga Sikundo, Pemkab Aceh Barat Perbaiki Jalan Tergerus Banjir",
+    "en": "Pulihkan Akses Warga Sikundo, Pemkab Aceh Barat Perbaiki Jalan Tergerus Banjir"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Medcom.id",
+    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPT01oSU9kSVB4cEJzaU8xSDhuZWlZT0N0R3hlNHVHei1aaXJxa1ZMUWoyYjFydnVOX1E0VG5OV1I1RU1IMFpUclh0MTJXNHBFdEdMMjRaMm1WYWdUcHdCXzBYYVAtTHJSNW1Nb0dyTGF3ejQwRV9DNXdYRW5WZ1pRTWVMS0ItVUhqWlRSNWtra05ENV81amZPUml3RlRSMGlkU3A5aEVjRVI4VGxoQ1FITEhiNDFDRC0wNHgyeENLWWU0WktiVGc?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-09T10:30:00Z",
    "media": 1,
    "judul": {
@@ -123,6 +191,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-09T23:25:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Prabowo Minta BNPB Tambah Stok Tenda hingga Perahu Karet untuk Antisipasi Banjir",
+    "en": "Prabowo Minta BNPB Tambah Stok Tenda hingga Perahu Karet untuk Antisipasi Banjir"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Berita Nasional - Media Pencerah Bangsa",
+    "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNMWEzUEJFTlVBN1U5T19seGxsZHhLTlZiNFBhTlo5c3ZzVlZoVzRnRFJKekczVUlTYXd2S1dmM3RqZ0I4ejZWRHpNNjF2VlZQZWpndzVpdUFnUkpJT3dORGlzRjhuMnZsWXNKa1FpV2JMXzdSSDNQSkFyc055VGl1WUJZWVZ2ZGpNNFJnSzBuNzhKWHN4T2VWV28yalJBc09POE1jR0FUX195Zm0zMDhIWXp0Q2dxNl83bmxqUk53?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-09T08:52:54Z",
    "media": 4,
    "judul": {
@@ -153,6 +238,23 @@
    "sumber": {
     "nama": "detikFinance",
     "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOMlJNeEtlZGJlNjM0TENiZEM1UWtOOE5SS0FnX0tHVmxrcmV0THVjRjh1WnpzSUxWM184eVFXajBpQ1FrSGZJYjAzaEotRVQzMVhubndZU09QQU1ZMWxHc29IMGFweUZVWS1NSFB4bFRBWUJEcnZSMTJPNXhtTURIeURSLVBEN3ZQS1VuNNIBkgFBVV95cUxQNXVOZU9tcmNJSENQYWNsenpxaklBRGZIWTdaSUJmNC1XcERyaGlhMEhsSzVfVFo3OG1sVkdqN09IYWlhWFFOVzhJN0JSRXVSbVZaa2ZzQmxWQk9oSk1MZW1XRXdobVItQV9aOG1tZHBKMGx5Y3ZjSEl4ZkEyT05ZcWQ2eDUwZF9aRTZmNmY4Y2VFdw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-09T22:49:25Z",
+   "media": 1,
+   "judul": {
+    "id": "Mendagri Ungkap Perintah Prabowo: Normalisasi Sungai Jadi Prioritas Cegah Banjir",
+    "en": "Mendagri Ungkap Perintah Prabowo: Normalisasi Sungai Jadi Prioritas Cegah Banjir"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Menit Indonesia",
+    "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQMlFmckcxY3VEcGd3M25HUm9QNHlkT09iQk1WR0Rua2NaLWc0ZzM2aklyYWp5SU9NSTEzVHB2VGRWVHRTSHhnQ080YVhhQ0xrRG5qbVpic2FjaVRkSFVFQm5vcHJ3azRxYUprTHV5OUMxT3lNdmJPVU05TmZHbzYtdWVlNHlja1pMcUREQ3hiMEJBNF92Rnl0N0dwLTgzY0FKQUJzTGlPQlBmeF9Pd2U0VXJ5d3hJOTBEeGc?oc=5"
    }
   },
   {
@@ -204,91 +306,6 @@
    "sumber": {
     "nama": "Kendariinfo",
     "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPVXhYZ0dKQmlhUkxtLS1EaFlVR3NQZjhjdmZzLWxnRWVLMW9kemg2TjlZVXpQcnJnNE9PUEVhYjFadDlTZFBVQmlaejFlLVBidHd3aGF4aHhLelBMT2ZtaGVOd1NOVEx0aGhMRDVMak9TTDFJM1l6YmtwNUg2ZW1vaW43TXByejF0eml2MHp5TEJUN3lZRVlQN21SRjlvVFUyTDZ1MDE5NzRiTlNhMDNBQThlMTNnQdIBuwFBVV95cUxOUktTYnMzUUQybmdfc3BmMDQtYjJMc1VySTktQk1aTEZoZHZPSms1S28zMmZMUE1LRmNSZDB0MW9wQ1l4T2RRV2VsWWF1bVpoTDNDdTZkMFpUeGRkQWNsMnJaMlByQkJJVGZJNUc2V0xvNnVVQjZxZ1JTY1Nna29USDJFUTRLbVVlbExfY3FoQ2MtUjh3cVh0NmJDS3ZGVTBOLXZrZk9OVm9mSlFURjUtTjByTEhnc3JfcVdj?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-08T21:02:06Z",
-   "media": 7,
-   "judul": {
-    "id": "UU Pelindungan Ketenagakerjaan dan Perpres Ojol, Era Baru Kesejahteraan Pekerja",
-    "en": "UU Pelindungan Ketenagakerjaan dan Perpres Ojol, Era Baru Kesejahteraan Pekerja"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Universitas Komputama Cilacap",
-    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPb084VGI4OVFRbk1tVndOa2MtUUVJZHhnVHNzR1ZSUXByV0kzb0hpRkNfcmtnVm9vQkpuOFV4XzBReWJrbmRkbG5yLUF6X3huWThsTExMeDFXYUhXZWNsWTdvcEU2NGtsS1psZnMwaUJnSnF3SHg0am5zV1BXeFN4aGw0T3duS2pKUkNnLVNzcmZFQ2c2U3gxV0F2RXJpelJMWjJkUjE0M0dhcFZTT3FvcA?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-09T12:42:00Z",
-   "media": 2,
-   "judul": {
-    "id": "Korupsi Belanja BBM Subsidi, Eks Kadis LH Tebingtinggi Dituntut 7,5 Tahun Penjara",
-    "en": "Korupsi Belanja BBM Subsidi, Eks Kadis LH Tebingtinggi Dituntut 7,5 Tahun Penjara"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Kompas.com",
-    "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPNFJvc05lLVNGQ0JDX1RkZF81U1FlTDJpcE1LbTRQNTRRbmJCbEpvY0R4YVI5blA0dG96WU9sYUVDODV5emhqVHZSM1VadlFqdXBEVTJtUXhnbUVpaWNvdWR6NUxKVGY0VGtoaThzWGVTZHdZQ280aU83OXVBcHBkQWR2RG45dkVnRWRpUVdpQUNURl9LWWFUeV9tQzduZ2xxUXktVGdyVGxUZmp3LV9CYzZSNS01QXJ6YTIxcXJ6dXpvZnVmemVr?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-09T12:28:38Z",
-   "media": 2,
-   "judul": {
-    "id": "KPK dalami pengadaan terkait digitalisasi SPBU Pertamina",
-    "en": "KPK dalami pengadaan terkait digitalisasi SPBU Pertamina"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Media Indonesia",
-    "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQUEFUSlhzQURpUEpyRUJCLTg2ZFpGcGh3MndPUGRHaWlxWXU4c2QyX2xsNlVYN3QzR0Qzc2I4cE1waWh2RVF1Nnd3RnljX2VTUjZEUzk2YmxxMV9BX19zM0pVa0F0T3lPdXZFRWo4MV9JUnNIaHEzSnBQX1FCLWV3QnQ5MVpZRXRhN0xnRlZ5MXRWSl9FLVBvLXJ5XzFXaEk?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-09T06:49:30Z",
-   "media": 3,
-   "judul": {
-    "id": "Korupsi Digitalisasi SPBU Pertamina, KPK Periksa Mantan Staf Anak Usaha Telkom",
-    "en": "Korupsi Digitalisasi SPBU Pertamina, KPK Periksa Mantan Staf Anak Usaha Telkom"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Iconomics",
-    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNWmZjMFJSVE8xc2pSYjhDd1pHakdSSEFZelhIeHppc1lfX1VCcjlGei1NQm9FUjZpdDlzZkQ2Q1FjbE5udnhfbV9mYWQ2Nmt1WlY3NE14TVFuajBkbzJKZmVaQzhGampXcS1KclEwbUFZRUtOQzlPRFB5c2JHYTU3d3VBVU56cXBKRWpEV3dRT0U2R29sb2h1SjFPSTFHdkY3QmMzMmNmT2tOOWtfV21yNEhIZHg4S0l0d2xr?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-09T15:58:54Z",
-   "media": 1,
-   "judul": {
-    "id": "BMKG Siapkan Antisipasi Banjir dan Longsor pada Puncak Musim Hujan",
-    "en": "BMKG Siapkan Antisipasi Banjir dan Longsor pada Puncak Musim Hujan"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "شبكة تواصل الإخبارية",
-    "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9wWFdUYXJBbldYMkx5bzh4V1BXb3dMcXdIUkM4YXY1YjNxOGNYTHFXd0xwRVBKWWZHZm5tZUJxVHlQOFR5OVRzRHNsbEk1d2RGb21F?oc=5"
    }
   }
  ]
