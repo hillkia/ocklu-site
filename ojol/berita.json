@@ -1,5 +1,5 @@
 {
- "w": "2026-11-10T02:17:26Z",
+ "w": "2026-11-10T03:17:39Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -89,6 +89,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-10T02:06:04Z",
+   "media": 2,
+   "judul": {
+    "id": "Menakar Aspek Keamanan & Keselamatan Sepeda Motor sebagai Angkutan Umum",
+    "en": "Menakar Aspek Keamanan & Keselamatan Sepeda Motor sebagai Angkutan Umum"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "RRI.co.id",
+    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNYjY2ZXk2aXRCUmRSbG05UnBQeVBCNkd3OG81MU0ycFZndDRCbUJEMDZQNzZwemRrdzkzd3JIMnNLUlBtTmpaWXhHZ05hMmhKUW9HUEt1YjcycmNjSWhGWk5aOGhGSjVjWi04eEY3VEJKeXhURnE1Z0NpcmNOZ3J2ZlpBOEJiZTVia3phRTAtOUR0ZzhXaHdpbHdTNUIwWjVfb0FTTVdycmZmYkxHdXRF?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-09T10:30:00Z",
    "media": 3,
    "judul": {
@@ -119,6 +136,40 @@
    "sumber": {
     "nama": "revolusinews.com",
     "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQR19sckJyY0FIbVJIQWl3cFhvZEhFT3l0cC1KMlJvRnBDUTRhcHFFSUJVU1NaWGpYdWZ0UWRjdHJQZTg2M1k5MHRfN2puOWU0TmNaWjAxa3pLdUNGaHpCTk1abUVXVjNCdzVlcjhUeEpZYTNEdk92X0Y5ZHRKdkpjcnc0Z2hQSkMxcjlpWGY5UWVNRVhYOU4wSlBLbGdpZVNRSG8wRA?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-10T02:37:17Z",
+   "media": 1,
+   "judul": {
+    "id": "Baru Antar Penumpang, Ojol Usia 60 Tahun Ini Jadi Pendonor Pertama di Mal Panakkukang Makassar",
+    "en": "Baru Antar Penumpang, Ojol Usia 60 Tahun Ini Jadi Pendonor Pertama di Mal Panakkukang Makassar"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Tribun-timur.com",
+    "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPUWRpTEFTRVhLUTBOYnZQNURLUU1TVzJ0NGpFUEZxRE9kbnd4bEhzNkVNRW1RWkVkZElfUUNsNzd0LTRDNEVhRVlSVy1lNHpkTVNTbTJKRXU3R2poVmdJNXJJZGV3UkhHQ2lEM2tBS2RIZjNiSE9mWDRJNUxVU2UxVWp1ZmpqdlU5UXhmem5GUDVzQjZfdHA2bkFxLTN6SFlDLWNJb1NJTER5ckd5eGhwT0V1T0ZONV90RDdqLV9KWUlaWU1ra1RQczEweFpHZ3NnTlQzVE4zMVVqdw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-10T02:30:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Polsek Bungursari Sambangi Pengemudi Ojek Online, Ajak Bersama Jaga Kamtibmas dan Waspadai Curanmor",
+    "en": "Polsek Bungursari Sambangi Pengemudi Ojek Online, Ajak Bersama Jaga Kamtibmas dan Waspadai Curanmor"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Tribratanews Polres Purwakarta",
+    "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxOd1RvRWpTenN4X1M3Q3pTNUVYZFJKOFdjWHF0S2JESHRUbUhkMmprdHREZG1ZU21ZWlhYTzluR0NaWU1vYXRqOWkzWURJQjI3V3JRWVdEb2kzaEhjNUtCWVdDR3VXcVZzUG9HSUxNVW42WlZJYmhxWmpJZTQ3bC1ya29mdDI2QlJyd1EyLVF0dUUxVTFSYW45aGQyWHRSRFZDS1hDLUxzQ3hsQ19pVkNsQUwwam13SWtiT1JJM1ZoMzJiZUVZRHV2VUFZMnZNSDQ5ZllDcFAzVTJhb1p4V0VTTFdkb2hKRlN6b3laSERtR1VNUm8ybmc?oc=5"
    }
   },
   {
@@ -221,91 +272,6 @@
    "sumber": {
     "nama": "kakinews.id",
     "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOSk4yMHctOHg3ek1sREJkZWNVUWxGT2o1dmlFZTBFX001T0RDclVKRFZhd0FmQkVPSEEwMU9zS2toQjVWd0RGZ3lCUW0wRkZsS1F6S3FEYzRySnZDRlU1TmgzdkZxNU5lWVNiOEI3VGZBSkZLLWxLeHRnd2YtOVY3cVh0SDJWeUdiRGg4RFkwR1RvbnY2ZFQ2eUJjdw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-09T22:55:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Alasan BP Hengkang dari Bisnis SPBU di RI",
-    "en": "Alasan BP Hengkang dari Bisnis SPBU di RI"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "detikFinance",
-    "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOMlJNeEtlZGJlNjM0TENiZEM1UWtOOE5SS0FnX0tHVmxrcmV0THVjRjh1WnpzSUxWM184eVFXajBpQ1FrSGZJYjAzaEotRVQzMVhubndZU09QQU1ZMWxHc29IMGFweUZVWS1NSFB4bFRBWUJEcnZSMTJPNXhtTURIeURSLVBEN3ZQS1VuNNIBkgFBVV95cUxQNXVOZU9tcmNJSENQYWNsenpxaklBRGZIWTdaSUJmNC1XcERyaGlhMEhsSzVfVFo3OG1sVkdqN09IYWlhWFFOVzhJN0JSRXVSbVZaa2ZzQmxWQk9oSk1MZW1XRXdobVItQV9aOG1tZHBKMGx5Y3ZjSEl4ZkEyT05ZcWQ2eDUwZF9aRTZmNmY4Y2VFdw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-09T22:49:25Z",
-   "media": 1,
-   "judul": {
-    "id": "Mendagri Ungkap Perintah Prabowo: Normalisasi Sungai Jadi Prioritas Cegah Banjir",
-    "en": "Mendagri Ungkap Perintah Prabowo: Normalisasi Sungai Jadi Prioritas Cegah Banjir"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Menit Indonesia",
-    "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQMlFmckcxY3VEcGd3M25HUm9QNHlkT09iQk1WR0Rua2NaLWc0ZzM2aklyYWp5SU9NSTEzVHB2VGRWVHRTSHhnQ080YVhhQ0xrRG5qbVpic2FjaVRkSFVFQm5vcHJ3azRxYUprTHV5OUMxT3lNdmJPVU05TmZHbzYtdWVlNHlja1pMcUREQ3hiMEJBNF92Rnl0N0dwLTgzY0FKQUJzTGlPQlBmeF9Pd2U0VXJ5d3hJOTBEeGc?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-09T22:45:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Jakarta Siaga Demo Hari Ini, Cek Titik Macet-Lokasi Parkir Alternatif",
-    "en": "Jakarta Siaga Demo Hari Ini, Cek Titik Macet-Lokasi Parkir Alternatif"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "CNBC Indonesia",
-    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPZ29rVGUyYzRIUGJ0SFhPSjBtU2RXcmszRGFXUG9LZVVvTmtRMkdoczdEZUtxY0EtbjJtdmFaTzdaaExLdHlkdHlKb0ZWVnZZZkQyZnA1XzNiYkloaDhwbkFCZUJVeTRkYWxCWHFReTlVbDRIaTBLcmIzd0tEaWNiYmNvb1JFcjhEN1R6aUhVVlhEQkk4aEFhZ0lmdWNhVlN3STF1T3BFeDBrb1ZPUkN5cVdXbi1STm5RRm9OeFQyaXlfajZEd1HSAcsBQVVfeXFMUGpXQlJlWGJzVTFVS0ltX3dIeGtVRENTQXFrMl95V1BxbHFuRHpZdWhGendEUTRrM3dQYUxxQVVfSll4MHNyaUczd1UyRzQ0RkJHYllqUEJ2SXNaMGFVSEV0eEF1aTlHT000dkJaenM5VWFOSDQwYUVDZEd2TTlzZ1ZHc0E1bEI2c253WjdOVkhvYzJuZnYtVExOc25lWVhnMEYycEhMWVRhS0RMYzVhRHFoYW80LUk2U2gySjVIYWcxcV9jRjl4VGhMQ1k?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-09T15:54:17Z",
-   "media": 2,
-   "judul": {
-    "id": "Banjir Bandang Kembali Terjang Aceh: Gayo Lues dan Pidie Jaya Terdampak",
-    "en": "Banjir Bandang Kembali Terjang Aceh: Gayo Lues dan Pidie Jaya Terdampak"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "NU Online",
-    "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNZ25iT0dUcWNWSVZIbG9ieHo3Zy0xR0FDQ0YxeDNIaVB2NE0xRzFtTHBDUnBIQlZ0dG5nNEt4a3lMaUp1R3pSWkdmSmh5SHdRYUNiZnA2ZDhvWmp2ZlpFc2tYLUNxa09pWWFhd0dGNXFhZ1RXV1ZNU3ZCZ05lMlVuX3pIUVoxWDZlUnBkemM4WndiUC1nR1VVVmJjRdIBoAFBVV95cUxOaGgtSnA5UEhsdDdBVXRVdEpGSjVzZU9ZTXJEWkFReS1pMXdMeGhvWmszR0xmQjBNU3NnOHpHcTNJZEVrYk1MMEh0Qzh5bHlyTGRBVjRmZWlCSEJGUDliQVBnNzFybHRlNXF4RmQtUnl2dnBhRUswUExHYmxqeFFDQ2QyN25BUFVSeGJpamtBRmZTZzVtaWlxUjZMbS1Oc1hB?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-09T15:22:59Z",
-   "media": 2,
-   "judul": {
-    "id": "Pengemudi Ojol Kendari Diduga Diintimidasi 3 Pria Usai Jemput Penumpang di Pelabuhan Wanci",
-    "en": "Pengemudi Ojol Kendari Diduga Diintimidasi 3 Pria Usai Jemput Penumpang di Pelabuhan Wanci"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Kendariinfo",
-    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPVXhYZ0dKQmlhUkxtLS1EaFlVR3NQZjhjdmZzLWxnRWVLMW9kemg2TjlZVXpQcnJnNE9PUEVhYjFadDlTZFBVQmlaejFlLVBidHd3aGF4aHhLelBMT2ZtaGVOd1NOVEx0aGhMRDVMak9TTDFJM1l6YmtwNUg2ZW1vaW43TXByejF0eml2MHp5TEJUN3lZRVlQN21SRjlvVFUyTDZ1MDE5NzRiTlNhMDNBQThlMTNnQdIBuwFBVV95cUxOUktTYnMzUUQybmdfc3BmMDQtYjJMc1VySTktQk1aTEZoZHZPSms1S28zMmZMUE1LRmNSZDB0MW9wQ1l4T2RRV2VsWWF1bVpoTDNDdTZkMFpUeGRkQWNsMnJaMlByQkJJVGZJNUc2V0xvNnVVQjZxZ1JTY1Nna29USDJFUTRLbVVlbExfY3FoQ2MtUjh3cVh0NmJDS3ZGVTBOLXZrZk9OVm9mSlFURjUtTjByTEhnc3JfcVdj?oc=5"
    }
   }
  ]
