@@ -1,5 +1,5 @@
 {
- "w": "2026-11-13T22:45:27Z",
+ "w": "2026-11-13T23:07:19Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -425,91 +425,6 @@
    "sumber": {
     "nama": "harianradar.com",
     "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNbWlVN0tGa0JGRXpIcmlLbWhia2ttbDY3d2tvX3hFU2lsUHB1X2g0bEpfQjd3Y3l6R29fMk5jdktKOFQ4TllUMURMeHhDczM5bU1Ob3pTak54R19MY0NjVGdzdGxmYTA0NmgwTWZhd25sb2t0N0hQdGNFN3FNQ04wYlJpeUExTjlfMUFhWXA4UDlRbWx4QkppMlJobENJalVRa09IMEtvRkpjbjR0NHktSW9GTG9HaGx3ZFJiejhaNjZZSlU?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-13T13:10:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Ribuan Ojol Geruduk Terminal Tawangalun, Diduga Klaim Wilayah Oknum Kelompok",
-    "en": "Ribuan Ojol Geruduk Terminal Tawangalun, Diduga Klaim Wilayah Oknum Kelompok"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "KlikJatim",
-    "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQbDg2R2JfNFdQUW4ySml5aUdBMDJPdnNheEpGU1Q5Z0lXNy1rdW1CZVZmUTdNMFB2WjVOazNsbGVMdzM1T0xmWl9neldPc0hvUjk2OUNuNUtXV3pXT1hPaTQtazlSTk1peVlWeEpCVzFLcWphSU51ZV8zdGJCb0Q1LXdqd25xdXYtMHMzM0ZUNDdFVnNUVGRHTEVXTVVCQ3c0eWNqQm1penZTWWFv0gGyAUFVX3lxTE1GY29HOU11NkR1c2NDWjk0Mlc3Uk1DTGJiVHB6bTdSOVlYb3RnbFRaRTR3dWdrbm9Za21TWG5yYlRuUmZveDA3WTFWRm40WFJwUGhlZzBsYm4teUstU2JTbGdUd2E0NTctck9WRWs2anhEcWVBNmZMMFpKaC1ZdTgwWWdYQm5lV0k0Zzl6bzNoRkQyMUxUTGJEQjFRa18yRWZHa3p2VC1VU3d1NGdWb3Z6REE?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-13T13:06:13Z",
-   "media": 1,
-   "judul": {
-    "id": "Jumat Berkah Ditreskrimsus Polda Kepri: Sebungkus Nasi, Sejuta Kepedulian",
-    "en": "Jumat Berkah Ditreskrimsus Polda Kepri: Sebungkus Nasi, Sejuta Kepedulian"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Batamline.com",
-    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPYXAydWI5U2pmWS1JUS1NZlFtMWxMMWlPd3VFMDhYNThlNlZKcFk1SXdLaWZRQV9xTzF5U1Y1NngtVmNlLURYcTFOMUNfYTNaNF82WXpCcWRhSE5nWlJ4N2RBMEpTWlYxUUUxRUo4MVJiWWcyX09rNUdxcXJUMk02elRGZXdfc1dUZHhfd1Fnek1OT2RtcTgwM250cmJKM3FnckNOMW5NM0g?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-13T06:34:10Z",
-   "media": 2,
-   "judul": {
-    "id": "Satlantas Pasuruan Kota Edukasi Pengemudi Ojol soal Keselamatan",
-    "en": "Satlantas Pasuruan Kota Edukasi Pengemudi Ojol soal Keselamatan"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Lensa Hukum",
-    "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5NQ3ZTMTNvQU0td3BhM2l5a3VQbHBzYVFnV1hPN2RPdWJMZW9LWkh4WmtSSTJYUFNScXJyT0ZlUVBEMFdDenlqMVVIU2ttNzJ5RXhhWDF0cFBPRkhrbnZaMGxqN1p6R1k?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-13T12:20:46Z",
-   "media": 1,
-   "judul": {
-    "id": "Ojol Diakui sebagai Arsip",
-    "en": "Ojol Diakui sebagai Arsip"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "SUARANTB.com",
-    "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE01VlJuZDlPdWMxcVVoeEotTWdraTNRRW9NUHRsTmF6UF92bUtXM0tPV19uWE0xWDFEcUlhRWVjcGtJeWdmSnRKTkc3ZjBjMXBQaE9vMlc1UFY?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-13T12:16:15Z",
-   "media": 1,
-   "judul": {
-    "id": "Curhatan Rasa Syukur Ojol Dapat Motor dari Pertamina: Alhamdulillah untuk Bekal Ngojek Online",
-    "en": "Curhatan Rasa Syukur Ojol Dapat Motor dari Pertamina: Alhamdulillah untuk Bekal Ngojek Online"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "VIVA.co.id",
-    "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQd2tiUUZBR1NhdGhvVnQ0Njc5YlBmM1BBT252eXQtbkpxMEtnLS1SX0RCY052SnVXM1EtdlAyV2N5OVY5SVJIUm80Y3pOcnI5dnhxZWJJRzdseDVuM0d2YW9ud0FXN3NPMDVBLVVLdnpLUng4RGNaMDBCT19HdEVYa2xBd3BzYzY3MDdkalp0SW9DUmFGNks3LXI5ck45LWhUZUQzOWhDeVc5dko1V1BRSVRGTFQ0YTlDellZRjc2TUk1WFZINUtyVnpqdzhKUkdOdVh4SmR30gHbAUFVX3lxTFBRSjBIT3NGQ3pQQUFhMWcxV2l0T3pIV2J4d1RJdWM5ZDhpdnZFb3hiN05BbUptbjB4b0pRLUFnZVlYNGVlV2ZHOVo0bDlpc3NnQy1lYnJRclRabEVKNVlJcWl6YVh0ODhQZmozeTNxTFpoRHo5QnFjSlBHdzg5bTZQaWNpaTVzaE5SQXhBVkdqYWwyZFllSkFSTGJ6ZXNUcGxPTnozaGpnRWxIRGp2YXdIalE3RmVDdnFxOGQweXRHeWVnQWVxQnZaVVotS3prRDFrU2psM2dMSzNwSQ?oc=5"
    }
   }
  ]
