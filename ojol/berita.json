@@ -1,5 +1,5 @@
 {
- "w": "2026-11-13T21:11:20Z",
+ "w": "2026-11-13T22:45:27Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -22,10 +22,10 @@
   {
    "jenis": "berita",
    "waktu": "2026-11-13T11:18:45Z",
-   "media": 4,
+   "media": 5,
    "judul": {
-    "id": "Polda Jatim Bagikan Sembako ke Ratusan Ojol dalam Jumat Berkah",
-    "en": "Polda Jatim Bagikan Sembako ke Ratusan Ojol dalam Jumat Berkah"
+    "id": "Gelar Jumat Berkah, Polda Jatim Bagikan Ratusan Paket Sembako untuk Pengemudi Ojol di Surabaya",
+    "en": "Gelar Jumat Berkah, Polda Jatim Bagikan Ratusan Paket Sembako untuk Pengemudi Ojol di Surabaya"
    },
    "isi": {
     "id": "",
@@ -55,6 +55,40 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-13T14:16:21Z",
+   "media": 2,
+   "judul": {
+    "id": "Pertamina Patra Niaga Perkuat Loyalitas Mitra Ojol lewat Program BOOM",
+    "en": "Pertamina Patra Niaga Perkuat Loyalitas Mitra Ojol lewat Program BOOM"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "https://www.suaralandak.co.id/",
+    "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOaHVxaU1XSmY1ZGJpS2Q2cF9wYXdGU1RzcDF6d2FuMU43V09QNGZnSU1tYnZKd3k3RDBwUzl0aXFFcl9NRkdGTm5pejQ0djFlY3pRM2c2MkFJRTA2MERGOGEtX3B3clhERmVBRjgwYjQwcmNoZ0dCbVRwTVNJZlA2eGl5S1VmQk1lZWJ1dkgtVTc5UQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-13T13:48:19Z",
+   "media": 2,
+   "judul": {
+    "id": "Ojol Ketiban Rezeki, Pertamina Patra Niaga Tebar 25 Unit Honda Vario",
+    "en": "Ojol Ketiban Rezeki, Pertamina Patra Niaga Tebar 25 Unit Honda Vario"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Kabar Cirebon",
+    "url": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxPeVk0djdfU1NkSUFkYU9CbGIyNXpTVEhYVXpUdldmWFZRX0R4ZXBDcmRmZHp1ZGo3T0lSTWVHNm9KMV9ZbXE3MFJtME9uNjdQLWFZbDFIZ1RQVXhJME9qX3V0OVVQTnNKRmJvazNvXzZucTdibG42dnBGR1hHOEgtU3BpS3JuYnpyQV84QUZvM0U4b21JYVlLakszelpqZmVvdGVVRVFmOUVvWkd1eS1vVnpHeVpUNWNEbE5Dd0E0VV9OQnY3ZFUyU3BxMTNuVV90ZERhVnBUclo3cmR3Z0dXdTBDTmhmTEJKU0hwV1hFSDk5X2ZvOGM2djYyOU50QdIBgwJBVV95cUxNa3N1OEdrd3dJNFp4QW5oSWxUdWtMWUc1U2lPMTJ1bDJSOGFaaE9laUpRYnZZZHNZNFRTa0xBQU1DQXlSRXFSWU1DVEU4SG95NUdJOHVXRDgyZUdEQXlVeEdyWHFMc3BIcUtlbWprV3JPWTJUTXh1M29LTE9wZ0VURHBnS0VaVldKa3M2c0hTZGJTTkl0YjlSRzBaeFhQYlUxXzZISkVvQzEyTzk5LWpfUkxlQTc0RmJRMEdCX1FvTVB0RjZoLS1Eb0taa25nRmhCblBicXJiSXpMLW5YcjJBM2ZvaFRwSjFhWVlodDVOeHZTdEJ0d1pYcFpKX3VRQWJKTDJZ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-13T19:18:25Z",
    "media": 1,
    "judul": {
@@ -72,6 +106,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-13T18:55:11Z",
+   "media": 1,
+   "judul": {
+    "id": "Jumat Berkah Valhalla Spectaclub Eratkan Persaudaraan Surabaya",
+    "en": "Jumat Berkah Valhalla Spectaclub Eratkan Persaudaraan Surabaya"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Berita Keadilan",
+    "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNMHJhMFF0QmVoTG5OaDRvT0FmVjYzbnNtdmhNdmxqQ2M3RFk2U1JjdUoxTjVyN1gwN3BHWFJIRld4d3lOTjdkaHVPUHktU3dfTGZ1amRpVDNWU3FwVnFVUWN3eVEtaFQxQUJ3MXBTRjdzNG8tY2xMaExncjdmeTRYemJteU53OHRrSEZ5TXlqSzlHZmx6?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-13T12:36:45Z",
    "media": 2,
    "judul": {
@@ -85,6 +136,40 @@
    "sumber": {
     "nama": "Beritabali.com",
     "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNX3FkdHZDSHByQXpEcWNtTGYzbGdsQXJZN19VekdKSHRZaFdPb0NvTDdQaWx4X1FKeHM3encya20ya25LdmZ6Q3hVVGNmYW1ZLVdZMDRiWmJ5enZFWHRRdGNOT0VWd1NtdzlVdlo3a3hTUlBfQldQa20tSWg1TDNnSDFZYl81ZmZMa3hXNFhiTWpDcXdtaU1RRw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-13T12:08:09Z",
+   "media": 2,
+   "judul": {
+    "id": "Wakapolda Jatim Bagikan Ratusan Paket Sembako kepada Ojol, Perkuat Kemitraan Jaga Kamtibmas",
+    "en": "Wakapolda Jatim Bagikan Ratusan Paket Sembako kepada Ojol, Perkuat Kemitraan Jaga Kamtibmas"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Analisa Publik",
+    "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPS0VmV1VUVWxRZmZwa2N1OTRHaVoyVzNRNk50Ynk4WHZTVGlaR0tjWW1LNVlsOXpkeWhabGo4ekNkTzlSNVNOaGxVX3kzNEFGWC1FWEJpWXppcnFYcWR0YzZBRG5Tbi1Ldm5RV3Fzb0RjdHZiaUxRZFdudF91Q2Jsc29RNWptWkNGMml2bWNWMGl1MnE3dHAxSGdtanNLMGdPeThESFNCdnJTc0djYTEyMVJ6cmFocU1MbG9yeDlJQQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-13T17:42:19Z",
+   "media": 1,
+   "judul": {
+    "id": "Robinsar bersama Forkopimda Kota Cilegon turut hadir dalam Doa dan Tabur Bunga bersama Ojol",
+    "en": "Robinsar bersama Forkopimda Kota Cilegon turut hadir dalam Doa dan Tabur Bunga bersama Ojol"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Berita Cilegon",
+    "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNMWNXbXlYMVBNTGU1OW5GYW5PdTY0R2R2TEQ2bnVuRVJBb0FvNEdUUXVHS241aHVkOEJGTHRlejhPelhBZjgwTHVCRHNOd3FNOS1vV05qMU9zUENKZ3BXWnJuYjdmRFMwQ0JkNVVJV1N6UERkWkxaM2o0SzdRUXJoMGZuRDlkaTQ3em1hcTBlSGcwejFnNWc0bm5ocVowUjlzcUdIbWFMeFg3c1JmNGlmOV9QLUxkV0c0YmtHT1B5cFRMdU8zLW1XNlcwM1JQdGJYWjQtb19EWnpxS2M?oc=5"
    }
   },
   {
@@ -140,6 +225,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-13T16:47:34Z",
+   "media": 1,
+   "judul": {
+    "id": "Polda Jatim Gandeng Pengemudi Ojol Perkuat Deteksi Dini Gangguan Kamtibmas",
+    "en": "Polda Jatim Gandeng Pengemudi Ojol Perkuat Deteksi Dini Gangguan Kamtibmas"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "KPK-Sigap.com",
+    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOc0JJU1FWZjFSUTVHNEthVmJlblI3MVlhdmxqVlp2OThyal9hNmRXamNZNTlEYTZEcEp6UXFQR25EeExDbFNNWkpVV2lfSFNDTlVwOEZXNHNjeTNCM1ppUGN0MTdzS3JsNEN1RU42cFpEV3c1SzJJQmpNRGxHd0pMS0VyRWZVRVpHaE9kYTBaMDB0UUptcmdLaklZSVJzbnBuLXc?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-13T16:18:55Z",
    "media": 1,
    "judul": {
@@ -153,6 +255,23 @@
    "sumber": {
     "nama": "شبكة تواصل الإخبارية",
     "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9FU01LaWFqQS1sR2JIU1ZFSGtaMWxrVkU3bFB1Sy1hMnlYc0dDbUFrYWZrNlVNREFFRzNvOTJCMVdZeUQ0QXBNOXBwcmt2WVZDOUVB?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-13T15:55:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Ribuan Ojol di Jember Sepakati Hapus Klaim Wilayah Penjemputan",
+    "en": "Ribuan Ojol di Jember Sepakati Hapus Klaim Wilayah Penjemputan"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Tirto.id",
+    "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNZl8tQmQ4VEFsU2xpVExkcTN1TjVZQzlfM2ZoSVB3YktwaUltR2xPa005NkVwc1BVUjdMbG5NS0kxNnczZW5ZNXc0cUFsQXBhTVVIbm4wM0JYcXlNSmNINUtJQWxuWVdocTNBb3hTUFlkYWc4eDRmbDFhQS1sTkllRVV6VHVqdjFqZ1dubA?oc=5"
    }
   },
   {
@@ -187,6 +306,74 @@
    "sumber": {
     "nama": "Pekanbaru Pos",
     "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPUEt0X1MycC1vdE56RWVYZ25KUFVFY3pBWVRJSXJtTjdKNUdIUDJmY3dWWXBHNHYtaHhnb1NBWGtzOFdQNHlaZ2lLMlM4R1gteDJKZFZjekhQUDF3MkE3UzVkbU1WOFhpR1B4Z29nbmtlT2NuY29LVF9mZFpjMWFLaTNZZDFpYTBQOVRyZzZrWGtUSERnSGpQZkdXTTdfWWRkZnNIUktPejNVNWJESjltSV91TWdtSmRMU3Vrc3I3UWd0cmhxeUE?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-13T14:31:38Z",
+   "media": 1,
+   "judul": {
+    "id": "Gunakan Produk Pertamina Nonsubsidi, 25 Pengemudi Ojol Menang Undian BOOM Periode 2",
+    "en": "Gunakan Produk Pertamina Nonsubsidi, 25 Pengemudi Ojol Menang Undian BOOM Periode 2"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "JPNN.com",
+    "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPUG9tM0V0QnN6UTVWN3pYcGZ6ZlRCeEVEaGx1MzBPUnc2Nzcxc2pCWERrMVV4b2RIODNHbHlrOWtOZHMwN3FvbWtaYV9GN3ZnZkRYdWlWUmlvNmZVX1JlcEh6MkUxQjhtMmVfN1RGMFUzbnBtSWxYWWdpbG1BSjZxdVlJSEFSNnprNmtRU3FzLWFQbE1ZQVVoZXQ3Szcxb3BjOExoY3p4NENCb1hZ0gGvAUFVX3lxTE9CeWFHTDJFTi1NSFI5YjVJSjJwRWRac2JWSmV0eElXNFZtQmZCdWY4Wm5hejFPdlVBQ1ZKeVBGUUhzWlZST2syamxGS1RVeVpackxvVmNRZEdHV0M0Q05IZzRObEoyM0x0VDFfM2w1M0hiY1ozVWZVWC13U0Z4ajl6R0MtTTJSQkY5dnZGVVU5YTF2T2FpMTdlQXN6dW5Mb1hXWlFXRkFfTWE5cktPNGM?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-13T14:18:20Z",
+   "media": 1,
+   "judul": {
+    "id": "Pertamina Bagikan 25 Motor kepada Mitra Pengemudi Ojol",
+    "en": "Pertamina Bagikan 25 Motor kepada Mitra Pengemudi Ojol"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "ChatNews.id",
+    "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFAzQUhSa1Utcnd0akdnczh0LUp1UUVXMC0wZTlNdmxuZG85YjAyOEgxc0o5S2lROVNiQkZGZHFOLVBveWpYWExiZy0zeDR0NE5XLUZpX2ZTNkRpV3hkczFjaDI4aVU?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-13T14:17:31Z",
+   "media": 1,
+   "judul": {
+    "id": "Pertamina Serahkan 25 Motor kepada Pemenang Program BOOM",
+    "en": "Pertamina Serahkan 25 Motor kepada Pemenang Program BOOM"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Demokratis.co.id",
+    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBONS1UdUZxX2ktNjNaTEJJS3hka1ZpOHBjQUlySmZ2SktFUzlXOVVodURWc3R1MFJQcXJNYlNJbzFOZDBLb0tpLWNKdXlHVEdJck9zU0lGdGlDUmNhdHBDMXV5NXd1RTBlRkhWeF9B?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-13T14:14:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Apresiasi bagi Konsumen BBM Nonsubsidi",
+    "en": "Apresiasi bagi Konsumen BBM Nonsubsidi"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "investor.id",
+    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE91UzZlRGZRV25ERFFfNTBUWTVhbjcyR2E3MnRBVDZXendXWEZCUWpqbndKLS1KU2lSQ2dxRTZFUmZuUG9BcmVieTlrbTZBQmlqQ0c4WVdfWkZyWUNIS1JqVDZ5VmpsdjY4OEpGRU0yZVBTMFVMOHQ5M0JIbVoxZGs?oc=5"
    }
   },
   {
@@ -293,6 +480,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-13T12:20:46Z",
+   "media": 1,
+   "judul": {
+    "id": "Ojol Diakui sebagai Arsip",
+    "en": "Ojol Diakui sebagai Arsip"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "SUARANTB.com",
+    "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE01VlJuZDlPdWMxcVVoeEotTWdraTNRRW9NUHRsTmF6UF92bUtXM0tPV19uWE0xWDFEcUlhRWVjcGtJeWdmSnRKTkc3ZjBjMXBQaE9vMlc1UFY?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-13T12:16:15Z",
    "media": 1,
    "judul": {
@@ -306,40 +510,6 @@
    "sumber": {
     "nama": "VIVA.co.id",
     "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQd2tiUUZBR1NhdGhvVnQ0Njc5YlBmM1BBT252eXQtbkpxMEtnLS1SX0RCY052SnVXM1EtdlAyV2N5OVY5SVJIUm80Y3pOcnI5dnhxZWJJRzdseDVuM0d2YW9ud0FXN3NPMDVBLVVLdnpLUng4RGNaMDBCT19HdEVYa2xBd3BzYzY3MDdkalp0SW9DUmFGNks3LXI5ck45LWhUZUQzOWhDeVc5dko1V1BRSVRGTFQ0YTlDellZRjc2TUk1WFZINUtyVnpqdzhKUkdOdVh4SmR30gHbAUFVX3lxTFBRSjBIT3NGQ3pQQUFhMWcxV2l0T3pIV2J4d1RJdWM5ZDhpdnZFb3hiN05BbUptbjB4b0pRLUFnZVlYNGVlV2ZHOVo0bDlpc3NnQy1lYnJRclRabEVKNVlJcWl6YVh0ODhQZmozeTNxTFpoRHo5QnFjSlBHdzg5bTZQaWNpaTVzaE5SQXhBVkdqYWwyZFllSkFSTGJ6ZXNUcGxPTnozaGpnRWxIRGp2YXdIalE3RmVDdnFxOGQweXRHeWVnQWVxQnZaVVotS3prRDFrU2psM2dMSzNwSQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-13T06:04:51Z",
-   "media": 2,
-   "judul": {
-    "id": "Keluhkan Data Desil dan BPJS PBI, Ojol Cirebon Dapat Janji Pengawalan dari Wabup",
-    "en": "Keluhkan Data Desil dan BPJS PBI, Ojol Cirebon Dapat Janji Pengawalan dari Wabup"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Radar Cirebon Televisi",
-    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPQnFlSkZrVmcyMlItOU9Kd1h2dzdKZEs4bVNzQzlsY09jaVdiTlhJWWRBT0pWTmFXNk82YmhRUlRFelltWC1mMENJejVjbmlfSGdpRUhucTEwM0l1aUZyMHNfRGd4VkpiY0FBUEFQcmYwME5hRDcydm9iZGRxdy1uc0l0VlliNUFIT3Nibk90ZUNITmR6R1lZa0JTb1NRUFFtTTNxNUJJejZ3SmtYaFR2Y0dJUUZ6Zw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-13T06:01:23Z",
-   "media": 2,
-   "judul": {
-    "id": "8 Rekomendasi Mobil Keluarga Mulai Rp50 Jutaan dan Hemat BBM",
-    "en": "8 Rekomendasi Mobil Keluarga Mulai Rp50 Jutaan dan Hemat BBM"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Bisnis.com - Otomotif",
-    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPajNaOFdDS010RmFQLURwY2NfRGdHX09lek40eksxMF91NWhDRjBNZTM2QXRrRTljSGVKcUdiY1pDc25ET2N3V01NQmRrRDQ1Ml9vNWxqSFdTdzNIQVhIdWFtenZjSHN3eHNxUlpRWWVuRXpyc3hKVjBLTVZRMlNHUXRSbFRaY2lBUVFzeGVDa1FydlJYX2JPUkQ2YnppbmFlWW1xSlhOeHJhUnhDSDFsYmd3SQ?oc=5"
    }
   }
  ]
