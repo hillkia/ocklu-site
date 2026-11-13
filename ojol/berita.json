@@ -1,5 +1,5 @@
 {
- "w": "2026-11-13T05:00:05Z",
+ "w": "2026-11-13T05:30:05Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -72,6 +72,74 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-13T05:22:39Z",
+   "media": 1,
+   "judul": {
+    "id": "Bisnis Ojol ASEAN Berpotensi Tembus Rp722 Triliun, Perang AI dan Efisiensi Kian Sengit",
+    "en": "Bisnis Ojol ASEAN Berpotensi Tembus Rp722 Triliun, Perang AI dan Efisiensi Kian Sengit"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "kabarbisnis.com",
+    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQRmNKZGFONGg5LTQ3dldRTjlzbjEtYm1PMlFpYjZ0SmpMeWJ1WkoxSU5NRDRyUktKTkxiNU5mVE1EdUdNbW9OZmNJSVZhZERWZ0xEcTNtemNONkk0S3JWNnlEVEZuaExqTDJPR3ZBVmViVmVXU1VIMjJ6QUJLaGVZYmVFdjNXVE1oZGNDZWFlX2poUnprbTQyaTQ0Wmg5Wks4blJkU3J2WjBBS0RDSVg4N2d0OE4xU0pGRl94cUFoOW4xMzQwbkE?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-13T04:27:50Z",
+   "media": 1,
+   "judul": {
+    "id": "Ojol Maling Laptop di Jimbaran Kabur ke Wonosobo Usai Videonya Viral, Kini Digelandang di Polresta",
+    "en": "Ojol Maling Laptop di Jimbaran Kabur ke Wonosobo Usai Videonya Viral, Kini Digelandang di Polresta"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Tribun-bali.com",
+    "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxORHF6VS1QWU5JTVgxOEpMN2c3bzZoOVVxb3F4Ync0b2dhYjlLamhIcHZETE5icnd6dHcwS1R4a0tTbThueTI1QXhCSUZkNXpYWkxLZHpPWG81LWFrY2ZsUWRlWWZUZFp2NkZLSnFWMW1fMFVHSUl1WGpndWszSjFVRjJOS2Y4VnVXSk9DNGVZY3I3VzBaMXV5SjZLak5aMm92VG9rMm5yWlBfeVhzdnJ4eTJ0M1VaNXpSX1hKSi1DVTlXbmpianFaRVJJdEtteE9XdnFF?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-13T04:18:47Z",
+   "media": 1,
+   "judul": {
+    "id": "Ojol Kamtibmas Terima Bansos serta Apresiasi Polisi di Tarogong Kaler Garut",
+    "en": "Ojol Kamtibmas Terima Bansos serta Apresiasi Polisi di Tarogong Kaler Garut"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Infogarut",
+    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQd1U5WXhWN0FERE5abjFQVExsRklCcmhjYTZXVUtiNzFhODBCNGZHbGxUZC14ZkdGYklVNVVPcWRnNmZkT2w0X2tlRWItUWZ3bDRaZkVmMUVmYnkxUmJ1VjN4aEQxTkxBZWZEYm4xNXdtU1psaGJzd0ljNTczNTZ3Q3l2SW0xYjAwS1JCVTQ1OFZBNXJzRFMwZktJMmtVWUNvRlBMSQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-13T04:14:37Z",
+   "media": 1,
+   "judul": {
+    "id": "Realisasi Subsidi & Kompensasi BBM-Listrik Tembus Rp 415,8 T",
+    "en": "Realisasi Subsidi & Kompensasi BBM-Listrik Tembus Rp 415,8 T"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "detikFinance",
+    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQb0NqQ3RKUG10bW5XS19YSDQ1Qm5scDFZcE9DdkI1dlRlN2VvZC1kOERwWUlOc1lHUG5GeUxDYlNMeVEtT0lycG1IWVVkdndYNjVRd2JSUXVCUS1Wbm9EUzhRUTZmRkVPTUsyUnBKVUN6UTk1cU1EbDlob0lncHRsdnNVb21ocW9nWFAyR2xoc056SE9pOU5yTnRhc01xSFBkaDQw0gGoAUFVX3lxTE9INXlsMDNadGVNZ2JCUmpBUHVNaUJ1WUIwMEd0Y09uWThNVmlJd3FFQlFRV2kzTjFmU3J5WEx4VENmczlyYUltcFk0U3lhMGtydEFHWDYyaTdHam1ETVFGQUQ3WEYtb2E0cFNoVUVoaEh4QVlWZ2E3X25CWl9FYzJKTnBKM0FVbjNRZS11OUFNa2M2SUVSbG9oQU9EMHdpRDN4VFZiZ2dIdg?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-13T03:57:09Z",
    "media": 1,
    "judul": {
@@ -136,6 +204,23 @@
    "sumber": {
     "nama": "RM.ID",
     "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQM1FiaDVxSHlvN3ctb3VDSTdZMGM4VHc2cHZnaU1NU2RfekVudFNPUFZSUWtwMDVyOGljX2s3eDFrRUFVRHg0emFyb2dDYmNmNVdsYjNZNUVGcmducWh5QmhJSjl6bTROXzhPVjhhNVhZV0ZmcG11ZFhtVV9WMnpOWlhuQzF6N1BqZzVqckktOERGZ1VDNXI4TGhzR1dnZWZaOVVrQWVnb3pha2dYS1NWQjdEUQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-13T02:57:08Z",
+   "media": 1,
+   "judul": {
+    "id": "Peduli Banjir Sumatera",
+    "en": "Peduli Banjir Sumatera"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Rumah Zakat",
+    "url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxQaGNGU0FhbThkQ3JBSnQyN3MxNVFMOE9KUlR1MDlTV3ZXLVMyS24ybjFkcENPSG9rY09uVjcwbzZhOTREQVRSeC1WZ01rR1FYa0xZRDZPUFpRNXRDZ1YxQTIta3BnUjdCLVhZRGdMZEVpUm5CcVVUc2Y0YVBvRk4xcjJYUElqNWNxOEM4TlNGX2NSZEVsQ28zMzQ4eWYyc25BdHJYdGpzblV6dEd0MjFaSWtUUUNMcWVKTGhpbmExUS1saHVxREI5M1N4NHpGWk5VUE5iUG9Dbmk4NTJManFGMFdWOGU0UE1CRFdlcVNJbG1BeEVEbHNsT01CQkd6cGZx?oc=5"
    }
   },
   {
@@ -221,74 +306,6 @@
    "sumber": {
     "nama": "detikFinance",
     "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQOFJQeXl1bG0td0JaS2dNMXd5eG5md2ZLX1lVdjFWOVpEWlh5eHBnWU1jYm1VbVctb0w1RERiMTVKU0xTcUxmU1JBOC1tSEZNTmFsN1lyTTJpT0pucTJHQVU0RnZ5cXprb1A5aE9RZURjT2JjelV4d2s5emFjLXdsaGNOYnBGS3hJcFJPYTZ0N3FlQll3dGM5aHlqSXFSVm5UaUhhNE1Pdzg1aUg2X3JHddIBtgFBVV95cUxQT1owWUliRGFmQUl2cHQ0Z0xZN1pNN3IwbWM0TzYyS191dUh5WWVXbTZxQjAzazhBaUpkYkF5N2ZxWHpmZjNjX09TVlRoUGQyWjBYWk81WW85eWdmTi0zU0dFMjdDd2xQYkRhbVM1dmMxXzVHMEtiTTBaSUY1ZV9WSm81OVhTYUVhYUNKaGYtR2drV3l2NENtM3Ztam5Kc1VvZWQzUVh2WVAwalRwTGVic083UTViUQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-12T23:22:23Z",
-   "media": 1,
-   "judul": {
-    "id": "Petani hingga Ojol Bakal Dapat BPJS Ketenagakerjaan, Pemkab Buleleng Siapkan 2 Ribu Kuota",
-    "en": "Petani hingga Ojol Bakal Dapat BPJS Ketenagakerjaan, Pemkab Buleleng Siapkan 2 Ribu Kuota"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Tribun-bali.com",
-    "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOTXNQc3RCcl80aGVXYnkxUDMxNGMwOWdZMEczcElGcld6UGZxeDIxa1J1cnYyMHhHaEg1S3FpbVNSV3ZnbUpVMHRtTHNZRUZXaFQxbEpEbFpKd3FZb0RkZ054UFB5SUJlalBsVWFxd1VGMVVGaUcwYXJXV010UGROX01od3Fia3VDMWNnM0NzM3ZFRnVzTUtEQUNjYTJiVEIwQWVzYnQwVG5tZFdwSDk2SmdSbWtaemN5Z1dYb2pCWXRFTEdpeTFlaDVRZW8?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-12T12:37:00Z",
-   "media": 3,
-   "judul": {
-    "id": "Begal yang Rampas Motor Ojol di Pati Akhirnya Ditangkap, Pelaku Dibekuk di dalam Bus",
-    "en": "Begal yang Rampas Motor Ojol di Pati Akhirnya Ditangkap, Pelaku Dibekuk di dalam Bus"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Kompas.com",
-    "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOZ2huWjNnbzMyb04zMEctSUNUbjg5bkVJb1Y1RXpSRzVIb1hhejJULVlxQU1VcUxjbHpiUlVzeUVkeHh2R0hhbWN5MGlwQmFQR2ZBQzg5MkZsM3B0MXI5a3FsRzgwd0U4cUVETHlsSE1pMUtNdGxYeGZRVHNmM1Zva3g1bWxzazkydGxzT3g2WW9NM0tQX2JwUE1wQmhXQUl0eEF5WWpXZHdVNXdXSnhxWU1JWFhEeW1tR1JpenpHLTdXU2hoTmtZc3BHNzJtOGdZS1dDNmJfVWJrdUI3T2tRcGRaNzQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-12T22:24:07Z",
-   "media": 1,
-   "judul": {
-    "id": "Cegah Kriminalitas dan Penyalahgunaan BBM Bersubsidi, Sat Samapta Polres Prabumulih Intensifkan Patroli Tantura",
-    "en": "Cegah Kriminalitas dan Penyalahgunaan BBM Bersubsidi, Sat Samapta Polres Prabumulih Intensifkan Patroli Tantura"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Tribratanews Polda Sumsel",
-    "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxQOERNZ0RGMF9hLWdkMDBPNUllVkx1a3Z4OXd5cWhtdmZ5dUpmTURtQ1I4ck5qd1hSUE9KY1hNOWkweEtaYWN6VWJ0bVFfSk04YUtRc2tCSFNVcE1zVEhZZDBNb3JHYlpLMi1vZ29FQ1hYMXlrZWNEeDlRcVlNMzByOGJPOVk4cHJXWEZCY21mUFQxRk4tVUExZ3QwdUsyeW12Zm9maFpsYXJkT0hyTEVTQ05INC0tNGZrSFhBZlpqLVBFNU8xYzVZTmJHOFQ1azlGMHl0R0NIVDBDUERobzBqMFlkSHpQRHN1WjhWR0tR?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-12T22:11:03Z",
-   "media": 1,
-   "judul": {
-    "id": "Maxim Indonesia Jawab Tuntutan Ojol Jayapura Soal Tarif Komisi Transparan dan Program Fokus Sukarela",
-    "en": "Maxim Indonesia Jawab Tuntutan Ojol Jayapura Soal Tarif Komisi Transparan dan Program Fokus Sukarela"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Tribunpapuatengah.com",
-    "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxObFg2QWFINUFmdUc3emgzSW9OZ0hDN3ZhWC05VXRIVVBRWmwxaFlYR05RcVBaM1YtWjRzOFB5dFdsbVJlY0xyV25sdFR6Z0EzYWkzLUZaVGNyLTl6UnNBVWdOVUNzUUFLSlFNbnVwRUN2VmlPb2FPY2RrZjZoVEVzLW1FSzJZcHF6UWVYWHMzNVRvcFBWZ1c0T1k5cTc5SVV6dS1UZnFncG5yWXU1eGxPUmJKZk1hT24zOEdVRU5Iai0yNi00OGExTTBpd2wwalIyZWdiSzNkYjk2NzNWU0E4?oc=5"
    }
   }
  ]
