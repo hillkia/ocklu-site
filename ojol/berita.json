@@ -1,7 +1,41 @@
 {
- "w": "2026-11-13T09:10:57Z",
+ "w": "2026-11-13T10:57:23Z",
  "dari": "Kroog",
  "berita": [
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-13T06:21:55Z",
+   "media": 3,
+   "judul": {
+    "id": "Realisasi Anggaran Subsidi dan Kompensasi BBM-Listrik Rp415,8 Triliun hingga Oktober 2026",
+    "en": "Realisasi Anggaran Subsidi dan Kompensasi BBM-Listrik Rp415,8 Triliun hingga Oktober 2026"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "economy.okezone.com",
+    "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPUHhRZGhlWENoLVlJZWppQ3lUc18waDJZWjRPUklEc3pXQ3UzM3Rwclo1bmt4NnNqa2NRQ3hiNlA1cFpOX1RzTEhzZkxYN1EzeVZ5M3d5MEpGdGJqb19LM0dNU0tNX0RTZkJPR0gtWmwycFAyZHZsNWYzZi1vSV9lODA4Qzdac05ORWtkVk9VcWQwQmdMbWRPUHhwLS1XRGt3cDdsNHMxTF9mT21Gc3NHNUU4MmM0bktRNEcyXzRiaWd3ZkNFTVpuMDZBSG1BaTZoMFU0Vkg3MjZ1T2RwRnfSAdwBQVVfeXFMUC1OWjlNbF91S19PZUY1eEgwdDFPM3dyaUVhZHVVUlNTaTBfWURYUHpsVWRVVzRQT1F0YlhqbFBoVWo0cjNtRVRvNU9sbWtja3ZPYzNhaHFTUjQtSmEyakJsUDBsYk5LUHA3dTg4TnQzM3VRTnV2YTRlX3lxTGlDaC1JcnRENmx3Q3F1N0V3a3k3RHg5NVpscGd5SlJhWlZvUk1qSGF3ejBUV3BXaTh5WUdaRERmbHh6UDdpTFc0ZGE1QzBIOXZTdnNKSm90VUhxd0x3c1lCZG1VbDdYag?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-13T06:19:25Z",
+   "media": 3,
+   "judul": {
+    "id": "Pemkab dan DPRD Cirebon Kawal Keluhan Ojol soal BPJS PBI dan Data Desil",
+    "en": "Pemkab dan DPRD Cirebon Kawal Keluhan Ojol soal BPJS PBI dan Data Desil"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Jabar Publisher",
+    "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxORDE3aFdaTTZoa24ya0YzMFk5dWZVWE53UkZDZUFPR3lMbC1UMWl3elhLSWdIU1BsSWxodFpibmZKM0ZsZ1NjbzRwbTV5dlgzRHlseGxCc0FDaS1XeGphdGJyaEJUbjRwQ1BnOU5RRzJXNU1Ub2hldXJwaTVIQTRKRXpsT0pNYjBsbTZSQzk1SjQyZkFQU3Fkc3ZCNFdpM1ZaN3V4b3FlenhNbVJDYnE0U1ZkVmJCdWFLQXM5T0gxUEc2aG1CRDNKNnFxU3VDb25u?oc=5"
+   }
+  },
   {
    "jenis": "berita",
    "waktu": "2026-11-13T01:20:54Z",
@@ -21,6 +55,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-13T09:13:41Z",
+   "media": 2,
+   "judul": {
+    "id": "BPJS Ketenagakerjaan Dorong Pengemudi Ojek Online Manfaatkan Perlindungan Program Jamsostek",
+    "en": "BPJS Ketenagakerjaan Dorong Pengemudi Ojek Online Manfaatkan Perlindungan Program Jamsostek"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Pekanbaru Pos",
+    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPUEt0X1MycC1vdE56RWVYZ25KUFVFY3pBWVRJSXJtTjdKNUdIUDJmY3dWWXBHNHYtaHhnb1NBWGtzOFdQNHlaZ2lLMlM4R1gteDJKZFZjekhQUDF3MkE3UzVkbU1WOFhpR1B4Z29nbmtlT2NuY29LVF9mZFpjMWFLaTNZZDFpYTBQOVRyZzZrWGtUSERnSGpQZkdXTTdfWWRkZnNIUktPejNVNWJESjltSV91TWdtSmRMU3Vrc3I3UWd0cmhxeUE?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-13T03:26:05Z",
    "media": 3,
    "judul": {
@@ -34,6 +85,40 @@
    "sumber": {
     "nama": "detik suara rakyat",
     "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPMW5fNXoyblQwekt1WWk5MUhXeDhnTFFUNlFwUWl6QzdidndCcnZJS2lYRllKcWRvM2dTTkpyUFFKUHlSOWlIRjJMUzd4cHd5ZHhPV0JqbWFZR01BeDJNMl9hU1FsSExPWUJkUEhLTzU5X3RyV2FPYlFnZ2JfRkJPclZobnlhQXJDc0gxZEpGbnNoMEZ0V2dYanJDWWZxQ3hBcXNhaHljUE5CTXFhUktKbTg3QQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-13T06:34:10Z",
+   "media": 2,
+   "judul": {
+    "id": "Satlantas Pasuruan Kota Edukasi Pengemudi Ojol soal Keselamatan",
+    "en": "Satlantas Pasuruan Kota Edukasi Pengemudi Ojol soal Keselamatan"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Lensa Hukum",
+    "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5NQ3ZTMTNvQU0td3BhM2l5a3VQbHBzYVFnV1hPN2RPdWJMZW9LWkh4WmtSSTJYUFNScXJyT0ZlUVBEMFdDenlqMVVIU2ttNzJ5RXhhWDF0cFBPRkhrbnZaMGxqN1p6R1k?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-13T06:04:51Z",
+   "media": 2,
+   "judul": {
+    "id": "Keluhkan Data Desil dan BPJS PBI, Ojol Cirebon Dapat Janji Pengawalan dari Wabup",
+    "en": "Keluhkan Data Desil dan BPJS PBI, Ojol Cirebon Dapat Janji Pengawalan dari Wabup"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Radar Cirebon Televisi",
+    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPQnFlSkZrVmcyMlItOU9Kd1h2dzdKZEs4bVNzQzlsY09jaVdiTlhJWWRBT0pWTmFXNk82YmhRUlRFelltWC1mMENJejVjbmlfSGdpRUhucTEwM0l1aUZyMHNfRGd4VkpiY0FBUEFQcmYwME5hRDcydm9iZGRxdy1uc0l0VlliNUFIT3Nibk90ZUNITmR6R1lZa0JTb1NRUFFtTTNxNUJJejZ3SmtYaFR2Y0dJUUZ6Zw?oc=5"
    }
   },
   {
@@ -72,6 +157,108 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-13T08:15:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Polda Jatim Gelar Jumat Berkah, Ratusan Ojol Sumringah",
+    "en": "Polda Jatim Gelar Jumat Berkah, Ratusan Ojol Sumringah"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Website Resmi Polri",
+    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNeXNwdjd6eFNmcElUYVByUTRBM0plemFDb0o0bnVpQmZ4VUxQSHY0X1FwOF9kWi1JMDNXT1M2OXVEN1paMFBqVHUwUm0xdEd6TFRCY0Vhc2p6QU9IOHR4Qkl5SVhiOUZ0dDFUaWZMT2syNWl4MXRVRUk1N1YzSFdRRE9lZGxZQW1EMFNOSFFvWXlNbHRlN3Zj?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-13T08:00:54Z",
+   "media": 1,
+   "judul": {
+    "id": "Pesanan Bakso Samrat Ditukar, Pelanggan Bongkar Akal-akalan Ojol!",
+    "en": "Pesanan Bakso Samrat Ditukar, Pelanggan Bongkar Akal-akalan Ojol!"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "detikFood",
+    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQb1c5NFVjejh4bXRCYm15eUlPQ3ZYdzRVSEhtQ3BzOHY2RGplbDhOR0RLaTlIVExoVFh2d1g1VXJZZDQwU0ZWLVcyeVNpdVpob0xwMDhHMG9PcW5aanJ1S0poODUtZEF1TWwzTEJUVFJuOWhCQVFMdzY2dTBQX2tPZ19fZGVXNnRGb2daNTY0S255OXN5c1U0Y3NiYy1rMHY2V0hpTGxMYVlIMTB1X0HSAbMBQVVfeXFMT2FHVGZrYWJFMGJ2UjdKS2drUUN4N3p0a19fQ2Y4TXlMaWFHVFJYS1d1Z2ZsTFRZaXFZa1lVS1ZLa2pwNHJwV2wtQkRYOWVNSDlYYVMyeElYbHlBXzYzZ2F0YU53SEhYaG1uQlduT2drMGNJX3luNU9HNEwtM2s2bXVFbmxSZllhbUVncnZHeXBrMHhkS3JvTzcyTUx2Yl9zdHUtT2c5WVc5VUVYV1I1RFdZcjQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-13T07:41:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Warga Huntara 3 Hokeng Jaya Bangun Talut untuk Antisipasi Banjir dan Longsor",
+    "en": "Warga Huntara 3 Hokeng Jaya Bangun Talut untuk Antisipasi Banjir dan Longsor"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "RRI.co.id",
+    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPQUdmblZ0d2hMQVRfRG5WNXJWdTRqd19LSDZMTlJoSl81dXFFWWdaelNKbGhJR21kS1hmbjRTTWJzMHpXT2prRjVUQU1ybGlJN19HRklGM1pOTjJBSF96OWNRN0dYWnBGT3FXTGZEZURjSEdOdGROSmlpWXdyS1AtUWhBamlhRU44aUkyNWJxZjJNN2Rqa2hPZkt3LXh4NUE4QnlOckZXN1RiNGZVUkVVS1hpSXlmSlVG?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-13T06:55:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Gibran Dikerumuni Warga Usai Jumatan di Jaksel, Ojol Menangis, Bocah Minta Tanda Tangan",
+    "en": "Gibran Dikerumuni Warga Usai Jumatan di Jaksel, Ojol Menangis, Bocah Minta Tanda Tangan"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Kompas.com",
+    "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOcDJVMU5fQUd4ZW54dGFrcGR1VUo4a19IRmxKdHlYbnluWTlMZDVBOVI3NEU3cnhPY256VnZjQUkySXRIVEpYSTVzMDREYUI3bWtNMnVvd2V6dTlPU1dRcXFWeTNZQ2djR19zMmhKVFktaGp1aHdGT0VDSkM2Q1J3SUNOWXYxUmhDZzFsSkFCLUd1THQtZWVKMmNhd2xHSnU0eVJoS0FGeTBwMDZ6TFRzYlhDbTF4cXd1eWpCeU9BWXpDeDl1VnZzcVdMSHk5ejl5dUJIMmppRnBnNWk5QnF6TU5n?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-13T06:41:54Z",
+   "media": 1,
+   "judul": {
+    "id": "Viral Maling Curi Tas Mahasiswa di Warung Makan Jimbaran Bali, Kurir Ojol Ditangkap di Wonosobo",
+    "en": "Viral Maling Curi Tas Mahasiswa di Warung Makan Jimbaran Bali, Kurir Ojol Ditangkap di Wonosobo"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "TribunTrends.com",
+    "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOb1BZVnB0c3dsZEdjR3VkeHVXaTlHNjZoNjRaS0o1YkZLbm9TcDZnX19YdFVucGIzMFdXTGdCZ3pJZl9iaTJqamlhSHFvRUl2OGM0MDk5SmJvSWZtc0Y3V09tRWh1YlhjT01mN0ZMSk81OFJIR0ZDek1MMThiWEYxRVNLalZFZDlGbWVvbHNvNXBKTnVkYWphaXAxeTFxY21sNXh2ZVA0bXpxeElrYkpVejVGY0RQa1dSNTRuQlNZRWFFQmZwVFB5akFUaS15NUc0Q1E?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-13T06:37:47Z",
+   "media": 1,
+   "judul": {
+    "id": "Upayakan 7.502 Ojol Terdaftar BPJamsostek, Pembayaran Iuran Pengemudi Diambil dari DBHCHT",
+    "en": "Upayakan 7.502 Ojol Terdaftar BPJamsostek, Pembayaran Iuran Pengemudi Diambil dari DBHCHT"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Radar Malang",
+    "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQR3lkenlLOEZLQVd3dHhfY1o3eFBPNDNuRThYcFc0OS02cHEtaXhFdFBUR3pUd3lQcVVCX0MxblRTTUtUT1dBa1RlZjVpM2Y2d3VpV0dUWDA5czU3SkFSLVZEYmtWR0E0NTBJcHl3bHIxNTBXVUhKMG42S0dicHpqUlNLNV9FbkdBcVFXQWl0MjJCYWsxN3NzdkRvRU1USkxRZ2h0MVlfb1NuSGJnR1poZ3ZHc0wtTTh0VDBaZXFDcUNqNEdPcG90Uzh4ZXM3T0NyRFZsZHdwUkxVMlpLMFRiYk53Z3fSAeQBQVVfeXFMUEd5ZHp5SzhGS0FXd3R4X2NaN3hQTzQzbkU4WHBXNDktNnBxLWl4RXRQVEd6VHd5UHFVQl9DMW5UU01LVE9XQWtUZWY1aTNmNnd1aVdHVFgwOXM1N0pBUi1WRGJrVkdBNDUwSXB5d2xyMTUwV1VISjBuNktHYnB6alJTSzVfRW5HQXFRV0FpdDIyQmFrMTdzc3ZEb0VNVEpMUWdodDFZX29TbkhiZ0daaGd2R3NMLU04dFQwWmVxQ3FDajRHT3BvdFM4eGVzN09DckRWbGR3cFJMVTJaSzBUYmJOd2d3?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-13T06:21:00Z",
    "media": 1,
    "judul": {
@@ -102,193 +289,6 @@
    "sumber": {
     "nama": "kabarbisnis.com",
     "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQRmNKZGFONGg5LTQ3dldRTjlzbjEtYm1PMlFpYjZ0SmpMeWJ1WkoxSU5NRDRyUktKTkxiNU5mVE1EdUdNbW9OZmNJSVZhZERWZ0xEcTNtemNONkk0S3JWNnlEVEZuaExqTDJPR3ZBVmViVmVXU1VIMjJ6QUJLaGVZYmVFdjNXVE1oZGNDZWFlX2poUnprbTQyaTQ0Wmg5Wks4blJkU3J2WjBBS0RDSVg4N2d0OE4xU0pGRl94cUFoOW4xMzQwbkE?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-13T04:27:50Z",
-   "media": 1,
-   "judul": {
-    "id": "Ojol Maling Laptop di Jimbaran Kabur ke Wonosobo Usai Videonya Viral, Kini Digelandang di Polresta",
-    "en": "Ojol Maling Laptop di Jimbaran Kabur ke Wonosobo Usai Videonya Viral, Kini Digelandang di Polresta"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Tribun-bali.com",
-    "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxORHF6VS1QWU5JTVgxOEpMN2c3bzZoOVVxb3F4Ync0b2dhYjlLamhIcHZETE5icnd6dHcwS1R4a0tTbThueTI1QXhCSUZkNXpYWkxLZHpPWG81LWFrY2ZsUWRlWWZUZFp2NkZLSnFWMW1fMFVHSUl1WGpndWszSjFVRjJOS2Y4VnVXSk9DNGVZY3I3VzBaMXV5SjZLak5aMm92VG9rMm5yWlBfeVhzdnJ4eTJ0M1VaNXpSX1hKSi1DVTlXbmpianFaRVJJdEtteE9XdnFF?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-13T04:18:47Z",
-   "media": 1,
-   "judul": {
-    "id": "Ojol Kamtibmas Terima Bansos serta Apresiasi Polisi di Tarogong Kaler Garut",
-    "en": "Ojol Kamtibmas Terima Bansos serta Apresiasi Polisi di Tarogong Kaler Garut"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Infogarut",
-    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQd1U5WXhWN0FERE5abjFQVExsRklCcmhjYTZXVUtiNzFhODBCNGZHbGxUZC14ZkdGYklVNVVPcWRnNmZkT2w0X2tlRWItUWZ3bDRaZkVmMUVmYnkxUmJ1VjN4aEQxTkxBZWZEYm4xNXdtU1psaGJzd0ljNTczNTZ3Q3l2SW0xYjAwS1JCVTQ1OFZBNXJzRFMwZktJMmtVWUNvRlBMSQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-13T04:14:37Z",
-   "media": 1,
-   "judul": {
-    "id": "Realisasi Subsidi & Kompensasi BBM-Listrik Tembus Rp 415,8 T",
-    "en": "Realisasi Subsidi & Kompensasi BBM-Listrik Tembus Rp 415,8 T"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "detikFinance",
-    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQb0NqQ3RKUG10bW5XS19YSDQ1Qm5scDFZcE9DdkI1dlRlN2VvZC1kOERwWUlOc1lHUG5GeUxDYlNMeVEtT0lycG1IWVVkdndYNjVRd2JSUXVCUS1Wbm9EUzhRUTZmRkVPTUsyUnBKVUN6UTk1cU1EbDlob0lncHRsdnNVb21ocW9nWFAyR2xoc056SE9pOU5yTnRhc01xSFBkaDQw0gGoAUFVX3lxTE9INXlsMDNadGVNZ2JCUmpBUHVNaUJ1WUIwMEd0Y09uWThNVmlJd3FFQlFRV2kzTjFmU3J5WEx4VENmczlyYUltcFk0U3lhMGtydEFHWDYyaTdHam1ETVFGQUQ3WEYtb2E0cFNoVUVoaEh4QVlWZ2E3X25CWl9FYzJKTnBKM0FVbjNRZS11OUFNa2M2SUVSbG9oQU9EMHdpRDN4VFZiZ2dIdg?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-13T03:57:09Z",
-   "media": 1,
-   "judul": {
-    "id": "Dugaan Korupsi Tarif Jasa Konsultan di Garut Masuk Babak Baru, Kejari Siapkan Pemanggilan",
-    "en": "Dugaan Korupsi Tarif Jasa Konsultan di Garut Masuk Babak Baru, Kejari Siapkan Pemanggilan"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Antarwaktu.com",
-    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOcnRTRXQzVWJnLUFKd3FIcXo2YU1Wd29jbXR6ZU1PaF9FZ2RlZlkzRVhwZ2ozbFRRLVZ5R2dQMGJ3N3dNQVVjeTdOOEMteS1wcHphWEMtQ3J6SDJ2cnQ2Y0dyMTZPQUhTWEhnbXZWNk00bUVPeENuSUtlUkJvcy1Jc0NycE1nUThCRjZzckVvMXRsZU11RnIzLWlSVHZfdVFKUnlOM0lIaTg0TWdGcEVVN1pTdkdvaUtFSzdkcE9BX1M?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-13T03:54:10Z",
-   "media": 1,
-   "judul": {
-    "id": "BPJS Ketenagakerjaan Dorong Pengemudi Ojek Online Manfaatkan Perlindungan Program Jamsostek",
-    "en": "BPJS Ketenagakerjaan Dorong Pengemudi Ojek Online Manfaatkan Perlindungan Program Jamsostek"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "SIBERONE.COM",
-    "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPYk83cDZfbXZnc3N1cXBrR0FQUkQyNDVmYk9hZEp0d2ZQeS1iazBxN200N19HcXF1a1JsTWZxckVLcmNWZ0kwOG5Vdkd3ZlVBN0VmYU5TZG9JeUhPYVNld2dNa01GWVAtNTlXUzhwZE01X283R2FRVjZacENPaGxxYk04MUs2eV9zZk5obHY5RGxxcW5jWmJXclNLNDE0YXlaMlNsSFpQQXpMSGswWVZlRFVFNE5SNEQweEJoV0dyRXBrMC1SOS13clpR?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-13T03:30:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Keluhkan Data Desil dan BPJS PBI, Ojol Cirebon Dapat Janji Pengawalan dari Wabup",
-    "en": "Keluhkan Data Desil dan BPJS PBI, Ojol Cirebon Dapat Janji Pengawalan dari Wabup"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Radar Cirebon",
-    "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQWkdXYWQ1LUdhcTZDbE9SZG5nVmNDTmVWd2Z2RWhwejJLVW5aOWQxb1hrNzNLNUxMV2ZjbnlFd3VNY0F6dzBYOWV5QV92TmlsX3B2NU9uQVBTNUdISnFqZ05sZkIxNjNKeGxJQUZCOUc3WklGbEdnbHl2SzMyd0hUdUtiT3pBaFVCcXdNdnoyUDVZMUNhZ2dacC04RGp3QXRuR0pCalVfenBhZVh1QTR5ZmttaDVrVmZFbGNVMUR2OUlvM2t6VVBHRWxfQVZLQjhaTlJBZWZCQdIBvgFBVV95cUxQUDJSZE1fV0d2a1NpOS1oUWhBYU1pVS1ocUpvelNyUV9ld3hqdTJ3SE5vMFhnd0ZENWwyWC1hTWNnY2pDWHR6RjRfZnhFZjZkOWh6Rnc5RDc1SUxmeVMzc3N6TTFXZTZfczN5TFhvX25tRUd2YkVMbXlzQmlManRQREloYmxscmxta1gyMWV0WmlpY0R1V3ZxdjZiU0tiSGZ5Ukp2TVJqalVMeXlPbU5ZQk9YSDd1TjRJRHRKbEJB?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-13T03:22:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Modantara: Regulasi Ojol Jangan Sampai Picu Kenaikan Biaya Layanan",
-    "en": "Modantara: Regulasi Ojol Jangan Sampai Picu Kenaikan Biaya Layanan"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "RM.ID",
-    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQM1FiaDVxSHlvN3ctb3VDSTdZMGM4VHc2cHZnaU1NU2RfekVudFNPUFZSUWtwMDVyOGljX2s3eDFrRUFVRHg0emFyb2dDYmNmNVdsYjNZNUVGcmducWh5QmhJSjl6bTROXzhPVjhhNVhZV0ZmcG11ZFhtVV9WMnpOWlhuQzF6N1BqZzVqckktOERGZ1VDNXI4TGhzR1dnZWZaOVVrQWVnb3pha2dYS1NWQjdEUQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-13T02:57:08Z",
-   "media": 1,
-   "judul": {
-    "id": "Peduli Banjir Sumatera",
-    "en": "Peduli Banjir Sumatera"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Rumah Zakat",
-    "url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxQaGNGU0FhbThkQ3JBSnQyN3MxNVFMOE9KUlR1MDlTV3ZXLVMyS24ybjFkcENPSG9rY09uVjcwbzZhOTREQVRSeC1WZ01rR1FYa0xZRDZPUFpRNXRDZ1YxQTIta3BnUjdCLVhZRGdMZEVpUm5CcVVUc2Y0YVBvRk4xcjJYUElqNWNxOEM4TlNGX2NSZEVsQ28zMzQ4eWYyc25BdHJYdGpzblV6dEd0MjFaSWtUUUNMcWVKTGhpbmExUS1saHVxREI5M1N4NHpGWk5VUE5iUG9Dbmk4NTJManFGMFdWOGU0UE1CRFdlcVNJbG1BeEVEbHNsT01CQkd6cGZx?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-13T02:00:45Z",
-   "media": 1,
-   "judul": {
-    "id": "Sarjana Banyak Jadi Ojol, Apakah Indonesia Kekurangan Lapangan Kerja?",
-    "en": "Sarjana Banyak Jadi Ojol, Apakah Indonesia Kekurangan Lapangan Kerja?"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Keuangan News",
-    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQRmJQVTg0aEx6VnNwbmRXWGhQZFRwTUJHcWVfbVFiREtFeXE2cllxaW04aDlvYXdTcXc5MGJmVV91NF90UVNweGk5c1RENDBVUmx3ckcxd2hsMEI1ZG1WeXFaNUdXNzJfQ0E5ei1YbDluRllVclhiRGxDLVZiQXV5MXdjUWI0WUhkZXlTSjVHWjZLZ0lvaDFZ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-13T01:51:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Kuliah dan Narik Ojol, Dua Jalan Ike Meraih Cita-Cita",
-    "en": "Kuliah dan Narik Ojol, Dua Jalan Ike Meraih Cita-Cita"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "RRI.co.id",
-    "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQSmNvdjFYN0tHZTNObXJENzE1LWpPekdRT0J0WjVzQlZNNWNHajJzQ3BGMDFUS3pkYTVUWHNUR0p3LUhWQXUzR0h3X1Z1NVJieTFKNmh6d2ROZlNTZnFMSThDcUh5cTlOWG1oWEIzZ0V5d0dISC1EMmdzeV9BUDA0ZUxfcHMzRnJ6QS15NkoyeUk3OWpHWEp3VFl3?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-13T01:08:49Z",
-   "media": 1,
-   "judul": {
-    "id": "Pemkab dan DPRD Cirebon Kawal Aspirasi Pengemudi Ojol Terkait BPJS PBI",
-    "en": "Pemkab dan DPRD Cirebon Kawal Aspirasi Pengemudi Ojol Terkait BPJS PBI"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "RRI.co.id",
-    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNblJ3OFF5LUxyeEs2bnZ3V2JzUTkzUFVxaW5wWlJnRzNrMjVySmpGdlotWVk4cW8zX00yZlRYM2pIQklnVXVxVENsSTJudmtSUTlHLUdiVkpNUkE4VWZTem90X2hxTGg0cFcyNXV5WUs3VUFwU2lYRzMzLUdwMU1RMEg0UmZhUlJDWTJxVFJhejRHbUlpUVUzUm9EellkTXUwU2p0QW9yZ1BzOUdxYWxsX2FLZGtGZw?oc=5"
    }
   }
  ]
