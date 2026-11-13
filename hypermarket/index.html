@@ -176,6 +176,7 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
 <h2 id="agenKita">Agen ber-DNA yang bekerja</h2>
 <div class="neuron" id="neuron"></div>
 <div class="panel" id="agenLapor" style="margin-top:12px"><h3 style="margin:0 0 6px">📋 Laporan tiap agen <span class="kosong">· siapa bekerja, siapa menganggur, siapa galat</span></h3><p id="alRingkas" class="kosong" style="margin:0 0 8px">memuat…</p>
+<details style="margin:0 0 8px"><summary style="cursor:pointer">📘 Buku Pelajaran terbaru <span class="kosong" id="alPelWaktu"></span></summary><pre id="alPel" style="white-space:pre-wrap;font:inherit;font-size:13px;margin:6px 0 0">belum ada</pre></details>
 <div style="overflow-x:auto"><table><thead><tr><th>Agen</th><th>Status</th><th>Tersambung YOSUA</th><th>24 jam</th><th>7 hari</th><th>Terakhir kerja</th><th>Tugasnya</th></tr></thead><tbody id="alDaftar"></tbody></table></div></div>
 <details class="panel" id="neuronOwner" style="margin-top:12px"><summary style="cursor:pointer;font-weight:600">🔧 Owner · sambungkan, buat, lepas neuron <span class="kosong">(khusus perangkat owner)</span></summary>
   <p class="kaki">Tersambung = neuron tampil di dasbor dan bisa diajak ngobrol memakai DNA-nya. Tugas kerja otomatis tiap 30 menit hanya dimiliki neuron yang sudah diprogram (⚙️); neuron yang baru disambung atau dibuat belum punya tugas otomatis. Lepas = disembunyikan dari dasbor, DNA tetap disimpan dan bisa disambung lagi.</p>
@@ -920,6 +921,7 @@ function kill(ubah){var e=document.getElementById("kcKill"),h=hOw();if(ubah===un
 document.getElementById("kcKill").onclick=function(ev){ev.preventDefault();var mati=this.dataset.mati==="1";if(mati||confirm("Hentikan SEMUA agen awan sekarang?"))kill(!mati)};setTimeout(kill,3000);
 function muatAgenLapor(){var tb=document.getElementById("alDaftar"),rk=document.getElementById("alRingkas");if(!tb)return;fetch(API+"?r=agen_lapor",{cache:"no-store"}).then(function(r){return r.json()}).then(function(d){
   if(d.galat){rk.textContent="gagal memuat: "+d.galat;return}
+  if(d.pelajaran){document.getElementById("alPel").textContent=d.pelajaran.pelajaran;document.getElementById("alPelWaktu").textContent="· ditulis DANIEL "+lalu(d.pelajaran.pada)}
   var A=d.agen||[],kerja=[],nganggur=[],diam=[],mati=[],galat=[];
   A.forEach(function(x){x.st=!x.aktif?"mati":x.n7>0?"kerja":x.tugas?"diam":"nganggur";({mati:mati,kerja:kerja,diam:diam,nganggur:nganggur})[x.st].push(x.nama);if(x.g7>0)galat.push(x.nama+" ("+x.g7+"x)")});
   rk.innerHTML="<b>"+kerja.length+" bekerja</b> minggu ini · <b style=\"color:#ffd27d\">"+nganggur.length+" belum punya tugas</b>"+(nganggur.length?": "+esc(nganggur.join(", ")):"")+(diam.length?" · <b style=\"color:#ff8a8a\">"+diam.length+" punya tugas tapi diam 7 hari</b>: "+esc(diam.join(", ")):"")+" · "+mati.length+" dimatikan"+(mati.length?": "+esc(mati.join(", ")):"")+(galat.length?" · <b style=\"color:#ff8a8a\">galat 7 hari</b>: "+esc(galat.join(", ")):" · tidak ada galat 7 hari");
