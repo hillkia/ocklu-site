@@ -1,7 +1,75 @@
 {
- "w": "2026-11-13T12:14:40Z",
+ "w": "2026-11-13T13:01:03Z",
  "dari": "Kroog",
  "berita": [
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-13T11:41:00Z",
+   "media": 5,
+   "judul": {
+    "id": "Rezeki Mitra Ojol, Pertamina Patra Niaga Bagikan 25 Motor untuk Pemenang BOOM",
+    "en": "Rezeki Mitra Ojol, Pertamina Patra Niaga Bagikan 25 Motor untuk Pemenang BOOM"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Head Topics",
+    "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOVUxaeVA3cVpzbVFtN0x0LXFudUc4STk1UjhrbHQ1azZQNUNiRV9wUEliN280amUyNEpabUZ3N0t5cXdjY3ZFNjhxRHhCUXAxSDJBTjFMaXZvZmRScHhKTmdZZm5oVlJweGJDZnJQZnltUWFuRUpXMThmbnVJSFZiV0tpRzhtRmRkc1BhX2tOckd6d09wQ2otdg?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-13T11:18:45Z",
+   "media": 4,
+   "judul": {
+    "id": "Polda Jatim Bagikan Sembako ke Ratusan Ojol dalam Jumat Berkah",
+    "en": "Polda Jatim Bagikan Sembako ke Ratusan Ojol dalam Jumat Berkah"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Website Resmi Polri",
+    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQT1dOaGtQMXZQMVdjRFQzN2tjSGVnV1Rqa3QtemI2NERwcFViLXowVU5JNkF1c1FwYWpXZWNLYzRpeTJoOXdsSnp3WEhER1Q0Uk5mNTczeHFJdm1iTnU1cHNoZEVQNF9mdXZnVFRJMTAwWl8wYlNLME1BNHpfU19yWGRIX2Y1MklNS29qS1RPOTVBVk1QdF9oWjExcWJMTmRSYmtyOWZOMA?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-13T10:34:53Z",
+   "media": 3,
+   "judul": {
+    "id": "Polda Jatim Bagikan Sembako kepada Ratusan Pengemudi Ojol",
+    "en": "Polda Jatim Bagikan Sembako kepada Ratusan Pengemudi Ojol"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "شبكة تواصل الإخبارية",
+    "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBObHpMbUFrYUlmalJKQUtPWjdxdDlfa2t2QmxiZ1lSQS0xRm5UTktZSURqZk5CYV91cmQ4VUJuZS1GLWZSTV9nWG1wN3lmTFQzd1cw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-13T12:36:45Z",
+   "media": 2,
+   "judul": {
+    "id": "Ojol Maling Laptop di Jimbaran Kabur ke Wonosobo Usai Videonya Viral, Kini Digelandang di Polresta",
+    "en": "Ojol Maling Laptop di Jimbaran Kabur ke Wonosobo Usai Videonya Viral, Kini Digelandang di Polresta"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Beritabali.com",
+    "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNX3FkdHZDSHByQXpEcWNtTGYzbGdsQXJZN19VekdKSHRZaFdPb0NvTDdQaWx4X1FKeHM3encya20ya25LdmZ6Q3hVVGNmYW1ZLVdZMDRiWmJ5enZFWHRRdGNOT0VWd1NtdzlVdlo3a3hTUlBfQldQa20tSWg1TDNnSDFZYl81ZmZMa3hXNFhiTWpDcXdtaU1RRw?oc=5"
+   }
+  },
   {
    "jenis": "berita",
    "waktu": "2026-11-13T06:21:55Z",
@@ -106,6 +174,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-13T12:16:15Z",
+   "media": 1,
+   "judul": {
+    "id": "Curhatan Rasa Syukur Ojol Dapat Motor dari Pertamina: Alhamdulillah untuk Bekal Ngojek Online",
+    "en": "Curhatan Rasa Syukur Ojol Dapat Motor dari Pertamina: Alhamdulillah untuk Bekal Ngojek Online"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "VIVA.co.id",
+    "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQd2tiUUZBR1NhdGhvVnQ0Njc5YlBmM1BBT252eXQtbkpxMEtnLS1SX0RCY052SnVXM1EtdlAyV2N5OVY5SVJIUm80Y3pOcnI5dnhxZWJJRzdseDVuM0d2YW9ud0FXN3NPMDVBLVVLdnpLUng4RGNaMDBCT19HdEVYa2xBd3BzYzY3MDdkalp0SW9DUmFGNks3LXI5ck45LWhUZUQzOWhDeVc5dko1V1BRSVRGTFQ0YTlDellZRjc2TUk1WFZINUtyVnpqdzhKUkdOdVh4SmR30gHbAUFVX3lxTFBRSjBIT3NGQ3pQQUFhMWcxV2l0T3pIV2J4d1RJdWM5ZDhpdnZFb3hiN05BbUptbjB4b0pRLUFnZVlYNGVlV2ZHOVo0bDlpc3NnQy1lYnJRclRabEVKNVlJcWl6YVh0ODhQZmozeTNxTFpoRHo5QnFjSlBHdzg5bTZQaWNpaTVzaE5SQXhBVkdqYWwyZFllSkFSTGJ6ZXNUcGxPTnozaGpnRWxIRGp2YXdIalE3RmVDdnFxOGQweXRHeWVnQWVxQnZaVVotS3prRDFrU2psM2dMSzNwSQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-13T06:04:51Z",
    "media": 2,
    "judul": {
@@ -140,6 +225,210 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-13T11:48:49Z",
+   "media": 1,
+   "judul": {
+    "id": "BBM Subsidi Ditimbun, Dua Tersangka di HSS Ditangkap",
+    "en": "BBM Subsidi Ditimbun, Dua Tersangka di HSS Ditangkap"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Berita Borneo",
+    "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNelFuSTRJZU5ldEgwNHMwZnJEY2dHa1g3azFlVHdmVE5CZGR0Q0p4V2wwQUhlVFVfVzNOVGVna0pSTk9IM2YxMHlEVFVpOE9ydmRpTHFfNGU5Uy1GSThTM0t6LUpvTzZtUjdBLUVrOGw0ODNpZDdJRFVTS01rYjc2VHNpTQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-13T11:46:29Z",
+   "media": 1,
+   "judul": {
+    "id": "Nekat Oplos BBM Subsidi Lalu Dijual Mahal, Pria Blora Diciduk Polisi",
+    "en": "Nekat Oplos BBM Subsidi Lalu Dijual Mahal, Pria Blora Diciduk Polisi"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "detikcom",
+    "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQdTZpbEVvZUxKMkJjNjM4Y1lxZ2RTZ0JtOUFvN3d6THR5b050YWE4bHZ0WlZBMXlMWVdOdnd3eGstY2VVZnBTekk1UER1ci1fVG04dHgteEFqSmdrX29zUWplOWRHMmRyVkNOSktxZWJtbWZNMTRieUp6TENjU3lBU2J3RDBqXzdRSzhaMzFsSHJzMVY2UEYxbm1nczAyQXZUUTczS29xbURzbU8wRjk1dzg1VjJSNmRJdXhVa0xVVVZsSmPSAcgBQVVfeXFMT0ljbHJHdVkzU1BnNTdlT0V3bWJ1c1RMaHk3eW0wb2FSbzZsQ1M2ZjZSZllJREJKR090eTl6OHpuQnJSNWhtd3Z4ejRPclF3cEVONWZBRE5qVXh6YWZFS2tTVldWeTVva05tTF9ZNU5iVjdwazNkSl93dG1MaFcyeTR2NG56Z1NRY1VQd2oxdndNbDF5SU56RV93TFkzTk41N2FHTVdjUnV5NEcyN2I2blhaTXgwa1gzQjlGWVZCNUZoTnVsQTJGXzM?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-13T11:45:16Z",
+   "media": 1,
+   "judul": {
+    "id": "Kawasan Pemukiman di Kuala Simpang Terendam Banjir, Sejumlah Warga Terdampak",
+    "en": "Kawasan Pemukiman di Kuala Simpang Terendam Banjir, Sejumlah Warga Terdampak"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "RMOLAceh",
+    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPNV9pYkJISFZ2bXNtQnhKV01Pd3lIbEt3Vi1jbzNQaXhKTEJKNS1iUEdQa2l2MzJGaWx4YlNnSUsxNHFTeUpfUmtzaGVjNjJWY0diOTUwMVhPVGVDNWdqUVNFMjViSlY2eS1ZUUNCcGhXVkI2a2hRYW5zU0VGQTlCaC1vVXFOOHBDblNkYWNpczQ2NERrOHUtclFPaWJKM2lq?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-13T11:32:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Kisah Neneng, Driver Ojol Perempuan yang Jadi Tulang Punggung Keluarga demi Masa Depan Anak",
+    "en": "Kisah Neneng, Driver Ojol Perempuan yang Jadi Tulang Punggung Keluarga demi Masa Depan Anak"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Industry.co.id",
+    "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPMERtakt5N3RMYlFGNkljLVNOT1FKVVFJeU9laENsN1MwbWd5ekRoOU5VQnp0ZDZBRk5zREEzemRDTElmTVJmeHBqYnBsVzI0by1pVV9BeDBUQlpUc3hPMzV1OUY1bTNadmRGRm96Wkd0U2FIdG5rcXhxX3N1ZjJkWGRaOVhmaUR4X1psaVhhenBUelNCZkI4TzNRRjJpSzdsWnRENExaNVBiSURPaUhFWVdKbWRPZU9nMWtCX3FlcG1NNGFpLUlnZg?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-13T11:30:05Z",
+   "media": 1,
+   "judul": {
+    "id": "Kadis DLH Pohuwato Korupsi Honor Non-ASN dan BBM Rp 1 Miliar",
+    "en": "Kadis DLH Pohuwato Korupsi Honor Non-ASN dan BBM Rp 1 Miliar"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "detikcom",
+    "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNTHZraTZGZVc5eDlfZVROUk84QWdXMlF2aFBpVHZ5aERQMFgyZFcyWVRjd1pYRXVUVDhtSWdyanY3TU1RMm4wcXpKZlBneWxneFhsUXJfcUpVb1FCWWRmeFllYU50OUQ3OVpjc1FaUU9CUzNJMm96TGhkRWZhdHc5UW5tOUlMd0F1cDh5Ui10dGtEQVBFMHZMdEw1NFBtSDZmMXZoZUZwMy1oMXRxTUNzaHZhNU9ReThsbEHSAb8BQVVfeXFMT25OZXZkRWNnc283LTh2eEs2ZU1obHdQcGJHWFBnX3dmaXhfbkxPSDBTZ1VZOVZrWlZZZFdzQklnT0J3OENwV040TVZIbFhOZTJOZ0RCaHJrVzF2VmxyYVRHem92ZkJGWWpMbTJ3em9jNGp6WDVraWxvdGxmRUtIVG95OWkzVXE2dU8zS3lMd1ZfMlZjaDlDWGY0MDJ6N3ZzajVmdnRxUzFDS21TaUtoWGQ5WlhiZUVTTFAyaDJPcEE?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-13T11:09:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Wakapolda Jatim Bagikan Ratusan Paket Sembako kepada Ojol, Perkuat Kemitraan Jaga Kamtibmas",
+    "en": "Wakapolda Jatim Bagikan Ratusan Paket Sembako kepada Ojol, Perkuat Kemitraan Jaga Kamtibmas"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Memorandum.co.id",
+    "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNQXVGQkMwQTdHRHl3dVVJczR5c3pPQ2JyemhfclhMMFp2YUtiSVRyb2ZFOWNORUYxMTNDSTNVU2tYaGp1TVZkSDYzSmMtRUhpYkVsN1lJb3VKUklBMmZwdkhJdGpYZ25aOTYwZ2dmXzgwUHg4VC1VcDRZazJXZngySENzZWxSM3F2X0NNcmxJVjB3YzkxLXcyaXpaVnVXUUxlMWJQbG5XcjBnZ2hsUVFGS1FjZm4tZF8tZmx0QUhrWVI1YlJjZDdCa3BEMXUtLWg3ZVpkMFNINGV3OUXSAcoBQVVfeXFMUHJmYzF4Vlkzcy1xOEhsOG1Gb0pXdmpQa0JQWDhsV3p1Z0o5UkJzU1p4dlU3TlZ2bVNmMmJVMWdYQ2VBd3dkQXRxOWNzNDlhSUFsX2xkZzRRSWVDcGdkUWdmV2dBR3lIdFJ0cDhlWkU5eEliZFJPMmlvRDAyY3hOTk9KelQ2ZVJMQlJ3UGgzenV3T0FFOUZvdkNWYXZCR2N4VncxMkU5TnpBblFkdHBvNWNCRC1yUmY1NThHS0E3NGYxR25NYUpvaEl4QQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-13T10:39:52Z",
+   "media": 1,
+   "judul": {
+    "id": "Gibran Dikerumuni Warga Usai Jumatan di Jaksel, Ojol Menangis, Bocah Minta Tanda Tangan",
+    "en": "Gibran Dikerumuni Warga Usai Jumatan di Jaksel, Ojol Menangis, Bocah Minta Tanda Tangan"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Kompas.com",
+    "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQVUt2Z1FrYnVsT3c3cmdhTFBIbnFBdGw4cTB4bHF5d1J2Vll3ZVBqTDlrelFsQkVMODYyaVZmUzd6LUNhYUZMWlc0ZTVObzFZSW1ScHNualhXdWl5bHQ5QXduTTJuUENseXFBZDdNWXo3SEZyd0l1Sng4dXVWcnpkdFFOanYtQ1pXMDc4azNFa1NQSUtOZXJSR2puZE9ZSVllMHVkQWpZMm05V1NIVzYwOUhLem15aG9zRHg2YmlLVnZUZWlpWDVIYUtrakNXdw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-13T10:19:51Z",
+   "media": 1,
+   "judul": {
+    "id": "Driver Ojol di Surabaya Membagikan Cerita Kemenangan Mahjong Ways saat Istirahat, Fenomena Scatter yang Menjadi Perbincangan Rekan Kerja",
+    "en": "Driver Ojol di Surabaya Membagikan Cerita Kemenangan Mahjong Ways saat Istirahat, Fenomena Scatter yang Menjadi Perbincangan Rekan Kerja"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Habangkalan Penyang Karuhei Tatau",
+    "url": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxOS2ViWklXU3NiazVTd3NDX1IycnhXQ1ZDRXpndmZDY2hqRDViZW5INFNITFJTcV9TN2F2VE94bjloaWpCRmlPejM1OG1PWjlTWG1XeWFiSmU4c2ZPTlozaXYxNUQ5LXd6OWQxRDdnRk1kOERTN2pLbFNOXy1BUzFLWlVOLWlUMHVGRC1UYUxLRWtfMjRNMTlVMVJDWVRCaVh4aXloNEhvdFVnOVZnVUdDOEhXbERyeTFFWGZGUk5ZdHRhVnU0bjI1Rnhwb044QkphY25zNXQ2R1VqeDRndnhMWTJNX21XeHNpSl9kYWVEcjJWd1JkQ1E1ck5zYzFGa281SHZRYTdhcDQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-13T10:15:24Z",
+   "media": 1,
+   "judul": {
+    "id": "Pertamina Patra Niaga Perkuat Loyalitas Mitra Ojol lewat Program BOOM",
+    "en": "Pertamina Patra Niaga Perkuat Loyalitas Mitra Ojol lewat Program BOOM"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "SINDOnews Ekbis",
+    "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOam5fRVlubjBYc1VJc2hBMEkwOU9MeTZNd1NTRVE3Ni0tTFdQcXhCd0dxUEROd040V2d1S0xRcFd5bTN6N2tLREZ2VTRlS0pjUl9vUm95dTRONEhmZF9sZTBTaEptemtreVZiS2xsTE9udXEwNlQ0amdmamFjbWlxTzJTN2ltZlF3aC1uOWluZGtOMWIwUmk0V1ZGYmltUnhTclRmQjBQVmlXOUZoUGpfTlc0cHJNY29MRjlMSFZ0NEstZ9IBxwFBVV95cUxQbXRsenBHa1JUZ1pPMl9lTG1wTkFPXzBnUHd5bWN4UUh5aFl1R1huQnJncF9NdFlqYVBoSmVLVHU2Y09LUDhRNU1wc2lJRGJlYTFnZUdUamstY0NMaUlaZGtjRm5IYmxraGJqMURlVTJndEdnZTF2VUszbHJjcXlZbmtfbUJOZUJjREQ1OUk4SGpoNXhNTU85OUdKeVdkeWk3cWNGajBISkxFa1lfc1VEWXFGTHdqakxsVldiM2NTbVRPazBTS3hJ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-13T10:15:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Ojol Ketiban Rezeki, Pertamina Patra Niaga Tebar 25 Unit Honda Vario",
+    "en": "Ojol Ketiban Rezeki, Pertamina Patra Niaga Tebar 25 Unit Honda Vario"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "SWA.co.id",
+    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPRWJKaGx5aGIyaVpDdE1EdDdzWk5LckJxTjlXX1ZzbUJRcDdnOWJudFJTTmZfeUdZaE56NWJxd043SHlWeDN1MTJRZTJXc2F4UlNYdkRBRU9ycmVQTkl3SHhPRGdjeXlyUkZoSE45Y2xOR0JaamFrWlRnY01GM0k1N3lWOHlKNEVEWWtIR1NPVDBOemg3Zl9ZS0RlSDZnZw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-13T10:12:09Z",
+   "media": 1,
+   "judul": {
+    "id": "Polres HSS Ungkap Empat Kasus, Sita 1.075 Liter Pertalite dan Tangkap Dua Pelaku Judol",
+    "en": "Polres HSS Ungkap Empat Kasus, Sita 1.075 Liter Pertalite dan Tangkap Dua Pelaku Judol"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Jurnal Kalimantan",
+    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPVnkyTWppbUJud3NTQWtfanc0NHI4RXkxVnZsdDRWQ0UwOUQzSWNGMWRacDNmRUFfZ1JIVGlXTnJLVXlpMmdMdkFVX3ctdUVIcUZ2OW1CZ3VIaFhGTkV0OWRROER0R0ZDeUJOdXdpNzFqcnFESjhMLVlNeS1fdTl0RHoyNkhVdjZ2NXFzRkpTZFJTQVQ0U21QRW82ak82WEVnaFBQcTFFb0F6d0ZlT2R6T3lLVTZwUQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-13T10:09:44Z",
+   "media": 1,
+   "judul": {
+    "id": "Curi Tas, Pengemudi Ojol Diringkus di Jateng",
+    "en": "Curi Tas, Pengemudi Ojol Diringkus di Jateng"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "BALIPOST.com",
+    "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOQ25sSzM4ZGthOVQydGxMcjJmSnBfbEg2R0FhQkVxOTR0X1VTUFVsdmhQYV8wTkhiemVRR1BEd2NkT1JiNHhRaXcxUnhxN0c5VTltU3dXVmdkVlhTMUxCT1pqUkowbkg3Y0ZFMmI4R2gtQ3hZaFhkYjIzY0syZVV5dXVjLU92MUFHanEtQkRjUjF4Zw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-13T03:26:55Z",
    "media": 2,
    "judul": {
@@ -153,159 +442,6 @@
    "sumber": {
     "nama": "www.suaralandak.co.id",
     "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPcmM3dEYtSFNkREd4ZzhzVUxCOE5DaEVOOUE0Y2R3c1RCQ3p3X3ZBMDFObHhPUFp1djFPY2Z5eTRBZFhYS1ZXcFZ3MUp4SU02b3BpZDljemVWM0E4NjhmaFRJZnVkRkhOdk9mYURDSUZ2ZDdKUHJDQV9kN0lEZ1BaVnNta3h0MHFTSUkwcEtpV1BhdW5YeEd6SUUzUW1yRXlfS1BSdkln?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-13T03:26:07Z",
-   "media": 2,
-   "judul": {
-    "id": "BOOM Pertamina Patra Niaga Bawa Berkah! 25 Pengemudi Ojol Bawa Pulang Motor Vario 160",
-    "en": "BOOM Pertamina Patra Niaga Bawa Berkah! 25 Pengemudi Ojol Bawa Pulang Motor Vario 160"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "republika.co.id",
-    "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPQmxINWxPbnZKTjhtTVB6ajFRR0xHQzE3NTJiR3NybEplNVVVQVVLelNmWTlRSDl3ak9SNFhQXzhpclZWS3F5RWpENnBSNExhN3oyS093RjJULVNnaktDUDgzZy01SDQzMF83RTllN2J0VkczenB5a2ZpbVlsSWhEaGNOOWVEYlZKdm9LUmdFTzVMaUFCbFp1ODVXdG1NWVhWQ0p6ZlVfVUF0REZTQ2tEam9nS0NIcDNFdk5DbG5Dc0lfVWstTXBsVWlUT1pEeG00Z3c?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-13T08:15:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Polda Jatim Gelar Jumat Berkah, Ratusan Ojol Sumringah",
-    "en": "Polda Jatim Gelar Jumat Berkah, Ratusan Ojol Sumringah"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Website Resmi Polri",
-    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNeXNwdjd6eFNmcElUYVByUTRBM0plemFDb0o0bnVpQmZ4VUxQSHY0X1FwOF9kWi1JMDNXT1M2OXVEN1paMFBqVHUwUm0xdEd6TFRCY0Vhc2p6QU9IOHR4Qkl5SVhiOUZ0dDFUaWZMT2syNWl4MXRVRUk1N1YzSFdRRE9lZGxZQW1EMFNOSFFvWXlNbHRlN3Zj?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-13T08:00:54Z",
-   "media": 1,
-   "judul": {
-    "id": "Pesanan Bakso Samrat Ditukar, Pelanggan Bongkar Akal-akalan Ojol!",
-    "en": "Pesanan Bakso Samrat Ditukar, Pelanggan Bongkar Akal-akalan Ojol!"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "detikFood",
-    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQb1c5NFVjejh4bXRCYm15eUlPQ3ZYdzRVSEhtQ3BzOHY2RGplbDhOR0RLaTlIVExoVFh2d1g1VXJZZDQwU0ZWLVcyeVNpdVpob0xwMDhHMG9PcW5aanJ1S0poODUtZEF1TWwzTEJUVFJuOWhCQVFMdzY2dTBQX2tPZ19fZGVXNnRGb2daNTY0S255OXN5c1U0Y3NiYy1rMHY2V0hpTGxMYVlIMTB1X0HSAbMBQVVfeXFMT2FHVGZrYWJFMGJ2UjdKS2drUUN4N3p0a19fQ2Y4TXlMaWFHVFJYS1d1Z2ZsTFRZaXFZa1lVS1ZLa2pwNHJwV2wtQkRYOWVNSDlYYVMyeElYbHlBXzYzZ2F0YU53SEhYaG1uQlduT2drMGNJX3luNU9HNEwtM2s2bXVFbmxSZllhbUVncnZHeXBrMHhkS3JvTzcyTUx2Yl9zdHUtT2c5WVc5VUVYV1I1RFdZcjQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-13T07:41:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Warga Huntara 3 Hokeng Jaya Bangun Talut untuk Antisipasi Banjir dan Longsor",
-    "en": "Warga Huntara 3 Hokeng Jaya Bangun Talut untuk Antisipasi Banjir dan Longsor"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "RRI.co.id",
-    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPQUdmblZ0d2hMQVRfRG5WNXJWdTRqd19LSDZMTlJoSl81dXFFWWdaelNKbGhJR21kS1hmbjRTTWJzMHpXT2prRjVUQU1ybGlJN19HRklGM1pOTjJBSF96OWNRN0dYWnBGT3FXTGZEZURjSEdOdGROSmlpWXdyS1AtUWhBamlhRU44aUkyNWJxZjJNN2Rqa2hPZkt3LXh4NUE4QnlOckZXN1RiNGZVUkVVS1hpSXlmSlVG?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-13T07:33:58Z",
-   "media": 1,
-   "judul": {
-    "id": "SPBU Shell Sudah Jual Bensin Lagi",
-    "en": "SPBU Shell Sudah Jual Bensin Lagi"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "detikOto",
-    "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5nT2RxaDVfbkk3eG52aXJmX1pmQTRmcXNid1ZOUXVFSTFWcWl0RWdBU3JyUnN3NjFRRFhJYVZTRGFnbmIyM3kwTWRVQnNPcVk0NUxuemxLbVV6MnFRN085dDZENjBBeGFmNUNGWnpCcXZ0ekxwZ24zMUlVVjjSAYIBQVVfeXFMTmxiOVcxRWRta3kyeXBVSUt5WV9xSmZ0RmNzcnlzUDc1OVItLUhhUGxHbHNUZS1YMnlTUFZUbW1fTVRiU3ctcVplQmt3WTdyX3hOYjNyM0ZMMERMbWduV0w1Q0tWWEZLVWtKcVRMM3BoQThZTWdaWHZLMXJHcnVVLU1LQQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-13T06:55:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Gibran Dikerumuni Warga Usai Jumatan di Jaksel, Ojol Menangis, Bocah Minta Tanda Tangan",
-    "en": "Gibran Dikerumuni Warga Usai Jumatan di Jaksel, Ojol Menangis, Bocah Minta Tanda Tangan"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Kompas.com",
-    "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOcDJVMU5fQUd4ZW54dGFrcGR1VUo4a19IRmxKdHlYbnluWTlMZDVBOVI3NEU3cnhPY256VnZjQUkySXRIVEpYSTVzMDREYUI3bWtNMnVvd2V6dTlPU1dRcXFWeTNZQ2djR19zMmhKVFktaGp1aHdGT0VDSkM2Q1J3SUNOWXYxUmhDZzFsSkFCLUd1THQtZWVKMmNhd2xHSnU0eVJoS0FGeTBwMDZ6TFRzYlhDbTF4cXd1eWpCeU9BWXpDeDl1VnZzcVdMSHk5ejl5dUJIMmppRnBnNWk5QnF6TU5n?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-13T06:41:54Z",
-   "media": 1,
-   "judul": {
-    "id": "Viral Maling Curi Tas Mahasiswa di Warung Makan Jimbaran Bali, Kurir Ojol Ditangkap di Wonosobo",
-    "en": "Viral Maling Curi Tas Mahasiswa di Warung Makan Jimbaran Bali, Kurir Ojol Ditangkap di Wonosobo"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "TribunTrends.com",
-    "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOb1BZVnB0c3dsZEdjR3VkeHVXaTlHNjZoNjRaS0o1YkZLbm9TcDZnX19YdFVucGIzMFdXTGdCZ3pJZl9iaTJqamlhSHFvRUl2OGM0MDk5SmJvSWZtc0Y3V09tRWh1YlhjT01mN0ZMSk81OFJIR0ZDek1MMThiWEYxRVNLalZFZDlGbWVvbHNvNXBKTnVkYWphaXAxeTFxY21sNXh2ZVA0bXpxeElrYkpVejVGY0RQa1dSNTRuQlNZRWFFQmZwVFB5akFUaS15NUc0Q1E?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-13T06:37:47Z",
-   "media": 1,
-   "judul": {
-    "id": "Upayakan 7.502 Ojol Terdaftar BPJamsostek, Pembayaran Iuran Pengemudi Diambil dari DBHCHT",
-    "en": "Upayakan 7.502 Ojol Terdaftar BPJamsostek, Pembayaran Iuran Pengemudi Diambil dari DBHCHT"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Radar Malang",
-    "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQR3lkenlLOEZLQVd3dHhfY1o3eFBPNDNuRThYcFc0OS02cHEtaXhFdFBUR3pUd3lQcVVCX0MxblRTTUtUT1dBa1RlZjVpM2Y2d3VpV0dUWDA5czU3SkFSLVZEYmtWR0E0NTBJcHl3bHIxNTBXVUhKMG42S0dicHpqUlNLNV9FbkdBcVFXQWl0MjJCYWsxN3NzdkRvRU1USkxRZ2h0MVlfb1NuSGJnR1poZ3ZHc0wtTTh0VDBaZXFDcUNqNEdPcG90Uzh4ZXM3T0NyRFZsZHdwUkxVMlpLMFRiYk53Z3fSAeQBQVVfeXFMUEd5ZHp5SzhGS0FXd3R4X2NaN3hQTzQzbkU4WHBXNDktNnBxLWl4RXRQVEd6VHd5UHFVQl9DMW5UU01LVE9XQWtUZWY1aTNmNnd1aVdHVFgwOXM1N0pBUi1WRGJrVkdBNDUwSXB5d2xyMTUwV1VISjBuNktHYnB6alJTSzVfRW5HQXFRV0FpdDIyQmFrMTdzc3ZEb0VNVEpMUWdodDFZX29TbkhiZ0daaGd2R3NMLU04dFQwWmVxQ3FDajRHT3BvdFM4eGVzN09DckRWbGR3cFJMVTJaSzBUYmJOd2d3?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-13T06:21:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Direktur BUMD Tulang Bawang Ditahan, Diduga Hilangkan Bukti dan Pengaruhi Saksi Korupsi SPBU",
-    "en": "Direktur BUMD Tulang Bawang Ditahan, Diduga Hilangkan Bukti dan Pengaruhi Saksi Korupsi SPBU"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Kompas.com",
-    "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOQnc4LTI5NklpWUIwV0VwbWptdmw2aTlQMllZU2syUmpra0oyMjFpTGFHZEZVd2N2aHQxNHVYQU5JakxCVnJoR2hGOW5SQ3ROX2l0bUNhWGZJSThjaHY5SEVsNVhMcDlnYWhEd0RjTmZBZTJEeGdJRThoTnlyRURyZTNKaUJyTFRzUkFqUzQ4bC0xN01ZREF3ZWhjN1ZwVDEwRnVJcDV6NjlYUTdvSDJsXzA0Yk8yc0xRTGthOWc2dE5XMU9u?oc=5"
    }
   }
  ]
