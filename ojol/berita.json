@@ -1,5 +1,5 @@
 {
- "w": "2026-11-13T10:57:23Z",
+ "w": "2026-11-13T12:14:40Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -123,6 +123,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-13T06:01:23Z",
+   "media": 2,
+   "judul": {
+    "id": "8 Rekomendasi Mobil Keluarga Mulai Rp50 Jutaan dan Hemat BBM",
+    "en": "8 Rekomendasi Mobil Keluarga Mulai Rp50 Jutaan dan Hemat BBM"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Bisnis.com - Otomotif",
+    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPajNaOFdDS010RmFQLURwY2NfRGdHX09lek40eksxMF91NWhDRjBNZTM2QXRrRTljSGVKcUdiY1pDc25ET2N3V01NQmRrRDQ1Ml9vNWxqSFdTdzNIQVhIdWFtenZjSHN3eHNxUlpRWWVuRXpyc3hKVjBLTVZRMlNHUXRSbFRaY2lBUVFzeGVDa1FydlJYX2JPUkQ2YnppbmFlWW1xSlhOeHJhUnhDSDFsYmd3SQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-13T03:26:55Z",
    "media": 2,
    "judul": {
@@ -208,6 +225,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-13T07:33:58Z",
+   "media": 1,
+   "judul": {
+    "id": "SPBU Shell Sudah Jual Bensin Lagi",
+    "en": "SPBU Shell Sudah Jual Bensin Lagi"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "detikOto",
+    "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5nT2RxaDVfbkk3eG52aXJmX1pmQTRmcXNid1ZOUXVFSTFWcWl0RWdBU3JyUnN3NjFRRFhJYVZTRGFnbmIyM3kwTWRVQnNPcVk0NUxuemxLbVV6MnFRN085dDZENjBBeGFmNUNGWnpCcXZ0ekxwZ24zMUlVVjjSAYIBQVVfeXFMTmxiOVcxRWRta3kyeXBVSUt5WV9xSmZ0RmNzcnlzUDc1OVItLUhhUGxHbHNUZS1YMnlTUFZUbW1fTVRiU3ctcVplQmt3WTdyX3hOYjNyM0ZMMERMbWduV0w1Q0tWWEZLVWtKcVRMM3BoQThZTWdaWHZLMXJHcnVVLU1LQQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-13T06:55:00Z",
    "media": 1,
    "judul": {
@@ -272,23 +306,6 @@
    "sumber": {
     "nama": "Kompas.com",
     "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOQnc4LTI5NklpWUIwV0VwbWptdmw2aTlQMllZU2syUmpra0oyMjFpTGFHZEZVd2N2aHQxNHVYQU5JakxCVnJoR2hGOW5SQ3ROX2l0bUNhWGZJSThjaHY5SEVsNVhMcDlnYWhEd0RjTmZBZTJEeGdJRThoTnlyRURyZTNKaUJyTFRzUkFqUzQ4bC0xN01ZREF3ZWhjN1ZwVDEwRnVJcDV6NjlYUTdvSDJsXzA0Yk8yc0xRTGthOWc2dE5XMU9u?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-13T05:22:39Z",
-   "media": 1,
-   "judul": {
-    "id": "Bisnis Ojol ASEAN Berpotensi Tembus Rp722 Triliun, Perang AI dan Efisiensi Kian Sengit",
-    "en": "Bisnis Ojol ASEAN Berpotensi Tembus Rp722 Triliun, Perang AI dan Efisiensi Kian Sengit"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "kabarbisnis.com",
-    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQRmNKZGFONGg5LTQ3dldRTjlzbjEtYm1PMlFpYjZ0SmpMeWJ1WkoxSU5NRDRyUktKTkxiNU5mVE1EdUdNbW9OZmNJSVZhZERWZ0xEcTNtemNONkk0S3JWNnlEVEZuaExqTDJPR3ZBVmViVmVXU1VIMjJ6QUJLaGVZYmVFdjNXVE1oZGNDZWFlX2poUnprbTQyaTQ0Wmg5Wks4blJkU3J2WjBBS0RDSVg4N2d0OE4xU0pGRl94cUFoOW4xMzQwbkE?oc=5"
    }
   }
  ]
