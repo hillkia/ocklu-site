@@ -175,6 +175,11 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
 
 <h2 id="agenKita">Agen ber-DNA yang bekerja</h2>
 <div class="neuron" id="neuron"></div>
+<div class="panel" id="kebutuhan" style="margin-top:12px"><h3 style="margin:0 0 6px">🧭 Kebutuhan & calon pemasok <span class="kosong">· kita makelar: kebutuhan dicarikan pemasoknya</span></h3>
+<p id="kbRingkas" class="kosong" style="margin:0 0 8px">memuat…</p>
+<p class="kaki" style="margin:0 0 8px">Aturan owner: tender BUMN, BUMD, dan instansi pemerintah Indonesia <b>tidak dimasuki</b>. Tender pemerintah luar negeri <b>ditahan</b> sampai owner menekan Setujui. Papan publik: <a href="https://ocklu.com/hypermarket/kebutuhan/" target="_blank" rel="noopener">ocklu.com/hypermarket/kebutuhan</a></p>
+<details open><summary style="cursor:pointer;font-weight:600">Sudah dicarikan pemasok</summary><div style="overflow-x:auto"><table><thead><tr><th>Tanggal</th><th>Kebutuhan</th><th>Calon pemasok (dari daftar layanan agen)</th></tr></thead><tbody id="kbCari"></tbody></table></div></details>
+<details style="margin-top:8px"><summary style="cursor:pointer;font-weight:600">Tender luar negeri menunggu persetujuan owner <span id="kbTahanN"></span></summary><div style="overflow-x:auto"><table><thead><tr><th>Tanggal</th><th>Tender</th><th>Negara</th><th></th></tr></thead><tbody id="kbTahan"></tbody></table></div></details></div>
 <div class="panel" id="meter" style="margin-top:12px"><h3 style="margin:0 0 6px">🧮 Meteran kutipan per agen <span class="kosong">· tarif sekarang Rp0 (gratis dulu), dihitung dari sekarang</span></h3>
 <p id="mtRingkas" class="kosong" style="margin:0 0 8px">memuat…</p>
 <div style="overflow-x:auto"><table><thead><tr><th>Hari (WIB)</th><th>Semua panggilan</th><th>Pemindai direktori</th><th>Agen sungguhan</th><th>Agen berbeda</th><th>Pakai alat</th><th>Kalau $0,001</th><th>Kalau $0,01</th></tr></thead><tbody id="mtHari"></tbody></table></div>
@@ -926,6 +931,16 @@ document.getElementById("komando").addEventListener("click",function(ev){if(ev.t
 function kill(ubah){var e=document.getElementById("kcKill"),h=hOw();if(ubah===undefined)return fetch(API+"?r=kill",{headers:h}).then(function(r){return r.json()}).then(function(d){if(d.mati!==undefined){e.dataset.mati=d.mati?"1":"";e.textContent=d.mati?"▶️ Nyalakan semua agen":"⛔ Kill switch"}}).catch(function(){});
   fetch(API+"?r=kill",{method:"POST",headers:h,body:JSON.stringify({mati:ubah})}).then(function(){kill()})}
 document.getElementById("kcKill").onclick=function(ev){ev.preventDefault();var mati=this.dataset.mati==="1";if(mati||confirm("Hentikan SEMUA agen awan sekarang?"))kill(!mati)};setTimeout(kill,3000);
+function muatKebutuhan(){var rk=document.getElementById("kbRingkas");if(!rk)return;fetch(API+"?r=kebutuhan_owner",{cache:"no-store",headers:hOw()}).then(function(r){return r.json()}).then(function(d){
+  if(d.galat){rk.textContent="🔒 "+d.galat;return}
+  var R=d.ringkas||{};rk.innerHTML=Object.keys(R).map(function(k){return"<b>"+R[k]+"</b> "+esc(k.replace("tender_asing","tender luar negeri").replace("tender_ri","tender pemerintah Indonesia (tidak dimasuki)").replace("swasta","kebutuhan swasta"))}).join(" · ")||"belum ada kebutuhan";
+  document.getElementById("kbCari").innerHTML=(d.dicarikan||[]).map(function(x){return"<tr><td>"+esc(x.tanggal)+"</td><td><b>"+esc(x.judul)+"</b><br><small>"+esc(x.sumber||"")+(x.url?' · <a href="'+esc(x.url)+'" target="_blank" rel="noopener">sumber</a>':'')+"</small></td><td>"+(x.pemasok||[]).map(function(p){return(p.alamat&&/^https?:/.test(p.alamat)?'<a href="'+esc(p.alamat)+'" target="_blank" rel="noopener">'+esc(p.nama)+"</a>":esc(p.nama))+" <small>("+p.cocok+" kata cocok)</small>"}).join("<br>")+"</td></tr>"}).join("")||'<tr><td colspan="3" class="kosong">belum ada</td></tr>';
+  var T=d.ditahan||[];document.getElementById("kbTahanN").textContent="("+(R["tender_asing · tahan"]||T.length)+", tampil "+T.length+" terbaru)";
+  document.getElementById("kbTahan").innerHTML=T.map(function(x){return"<tr><td>"+esc(x.tanggal)+"</td><td>"+esc(x.judul)+(x.url?' <a href="'+esc(x.url)+'" target="_blank" rel="noopener">sumber</a>':'')+"</td><td>"+esc(x.negara||"")+'</td><td style="white-space:nowrap"><button type="button" data-kb="setuju" data-id="'+esc(x.id)+'">Setujui</button> <button type="button" data-kb="tolak" data-id="'+esc(x.id)+'">Tolak</button></td></tr>'}).join("")||'<tr><td colspan="4" class="kosong">tidak ada yang menunggu</td></tr>';
+}).catch(function(){rk.textContent="gagal memuat, coba muat ulang"})}
+document.addEventListener("click",function(e){var b=e.target;if(!b||!b.dataset||!b.dataset.kb)return;b.disabled=true;
+  fetch(API+"?r=kebutuhan_owner",{method:"POST",headers:hOw(),body:JSON.stringify({aksi:b.dataset.kb,id:b.dataset.id})}).then(function(r){return r.json()}).then(function(x){if(x.ok){b.closest("tr").remove()}else{b.disabled=false;alert(x.galat||"gagal")}}).catch(function(){b.disabled=false})});
+setTimeout(muatKebutuhan,4000);
 function muatMeter(){var rk=document.getElementById("mtRingkas");if(!rk)return;fetch(API+"?r=meter",{cache:"no-store",headers:hOw()}).then(function(r){return r.json()}).then(function(d){
   if(d.galat){rk.textContent="🔒 "+d.galat;return}
   var T=d.total_14hari||{},u=function(n,t){return"$"+(n*t).toFixed(2)};
