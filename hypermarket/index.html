@@ -283,6 +283,7 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
         <input name="url" type="url" placeholder="Link produk (opsional)" aria-label="Link"><input name="foto" type="url" placeholder="Link foto produk (opsional, https://…)" aria-label="Link foto produk">
         <div class="baris"><input name="siapa_kamu" maxlength="80" placeholder="Nama usaha" aria-label="Nama usaha"><input name="kontak" required maxlength="200" placeholder="Kontak bisnis (email/WA bisnis)" aria-label="Kontak bisnis"></div>
         <p style="margin:0;font-size:14px;font-weight:600">Gratis 30 hari, setelah itu Rp49.000/bulan + 7% kalau laku lewat OCKLU.</p>
+        <p style="margin:0;font-size:14px">Kamu baru bergabung setelah kamu yakin kamu suka.</p>
         <label style="display:flex;gap:8px;align-items:flex-start;font-size:14px"><input type="checkbox" name="setuju_syarat" required style="width:auto;min-height:auto;margin-top:3px"> Saya setuju komisi 7% untuk OCKLU kalau transaksi terjadi lewat perjodohan OCKLU. Kontak saya hanya dibuka ke pembeli yang saya setujui.</label>
         <button class="btn isi" type="submit">Pasang</button>
       </form><div id="mkHasil" class="kosong" style="margin-top:8px"></div></div>
@@ -514,7 +515,7 @@ document.addEventListener("click",function(e){var g=e.target.closest("[data-grup
   var h=document.getElementById("mkHasil");if(h)h.textContent="Klaim layanan "+k+": lengkapi deskripsi dan kontak bisnis, centang setuju syarat, lalu pasang. Gratis; komisi 7% hanya kalau transaksi terjadi.";
   setTimeout(function(){f.scrollIntoView({behavior:"smooth",block:"center"})},600)})();
 // Semua kartu angka bisa diklik: kartu tanpa aksi khusus membuka dan menyorot daftar rincian di panel yang sama.
-document.addEventListener("click",function(e){var c=e.target.closest(".angka .a");if(!c||c.closest("#pjAngka")||c.hasAttribute("data-grup-pilih"))return;
+document.addEventListener("click",function(e){var c=e.target.closest(".angka .a");if(!c||c.closest("#pjAngka")||c.closest("#sinyalAngka")||c.hasAttribute("data-grup-pilih"))return;
   var p=c.closest(".panel")||c.parentNode.parentNode,t=p&&p.querySelector("details,table,ul.feed,ol");if(!t){var n=c.closest(".angka");t=n&&n.nextElementSibling}if(!t)return;
   if(t.tagName==="DETAILS")t.open=true;t.scrollIntoView({behavior:"smooth",block:"start"});t.style.outline="2px solid var(--aksen,#7cf5d4)";setTimeout(function(){t.style.outline=""},1600)});
 document.addEventListener("mouseover",function(e){var c=e.target.closest(".angka .a");if(c)c.style.cursor="pointer"});
@@ -985,7 +986,8 @@ function muatMintaLink(){var el=document.getElementById("mintaLink");if(!el)retu
     var h=x.hasil||(x.alat==="ucp_permalink"?"klik tombol beli UCP (diarahkan ke toko)":"belum dicatat (sebelum 13 Nov)"),ok=/^link terkirim/.test(h),m=h.match(/https?:\/\/\S+/);
     return'<tr><td>'+lalu(x.pada)+'</td><td><b>'+esc(x.agen||"?")+'</b><br><small>'+esc((x.ua||"").slice(0,70))+'</small></td><td><code>'+esc(x.ip||"belum dicatat")+'</code></td><td>'+esc(x.saluran||"")+'</td><td>'+esc(x.produk||"(tidak disebut)")+'</td><td>'+(x.hasil?(ok?"✅ ":"❌ "):"")+esc(h.replace(/https?:\/\/\S+/,"").slice(0,90))+(m?' <a href="'+esc(m[0])+'" target="_blank" rel="noopener">buka link</a>':'')+(x.rinci?'<br><small>'+esc(x.rinci.slice(0,160))+'</small>':'')+'</td></tr>'}).join("")+'</tbody></table></div>';
 }).catch(function(){el.innerHTML='<p class="kosong">gagal memuat, coba lagi</p>'})}
-document.addEventListener("click",function(e){var t=e.target;if(t&&(t.id==="mlBtn"||(t.closest&&t.closest("#sinyalAngka .a:first-child"))))muatMintaLink()});
+document.addEventListener("click",function(e){var t=e.target;if(!t||!t.closest)return;var a=t.closest("#sinyalAngka .a");if(t.id!=="mlBtn"&&!a)return;muatMintaLink();var d=document.querySelector("#sinyalAngka").parentNode.querySelector("details");if(d)d.open=true;var m=document.getElementById("mintaLink");if(m)m.scrollIntoView({behavior:"smooth",block:"start"})});
+document.addEventListener("mouseover",function(e){var a=e.target.closest&&e.target.closest("#sinyalAngka .a");if(a)a.style.cursor="pointer"});
 function muatJoseph(){var el=document.getElementById("josephDaftar");if(!el)return;fetch(API+"?r=joseph",{headers:hOw()}).then(function(r){return r.json()}).then(function(d){
   if(!d.usulan){el.textContent=d.galat||"khusus owner";return}
   el.innerHTML=d.usulan.length?d.usulan.map(function(u){var w={usul:"#ffc266",jalan:"#7dffb0",berhenti:"#ff8a8a"}[u.status]||"#ccc";
