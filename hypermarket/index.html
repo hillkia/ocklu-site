@@ -926,16 +926,16 @@ document.getElementById("komando").addEventListener("click",function(ev){if(ev.t
 function kill(ubah){var e=document.getElementById("kcKill"),h=hOw();if(ubah===undefined)return fetch(API+"?r=kill",{headers:h}).then(function(r){return r.json()}).then(function(d){if(d.mati!==undefined){e.dataset.mati=d.mati?"1":"";e.textContent=d.mati?"▶️ Nyalakan semua agen":"⛔ Kill switch"}}).catch(function(){});
   fetch(API+"?r=kill",{method:"POST",headers:h,body:JSON.stringify({mati:ubah})}).then(function(){kill()})}
 document.getElementById("kcKill").onclick=function(ev){ev.preventDefault();var mati=this.dataset.mati==="1";if(mati||confirm("Hentikan SEMUA agen awan sekarang?"))kill(!mati)};setTimeout(kill,3000);
-function muatMeter(){var rk=document.getElementById("mtRingkas");if(!rk)return;fetch(API+"?r=meter",{cache:"no-store"}).then(function(r){return r.json()}).then(function(d){
-  if(d.galat){rk.textContent="gagal memuat: "+d.galat;return}
+function muatMeter(){var rk=document.getElementById("mtRingkas");if(!rk)return;fetch(API+"?r=meter",{cache:"no-store",headers:hOw()}).then(function(r){return r.json()}).then(function(d){
+  if(d.galat){rk.textContent="🔒 "+d.galat;return}
   var T=d.total_14hari||{},u=function(n,t){return"$"+(n*t).toFixed(2)};
   rk.innerHTML="14 hari terakhir: <b>"+(T.panggilan||0)+" panggilan</b> = "+(T.pemindai||0)+" pemindai direktori + "+(T.rutin_sendiri||0)+" rutin kita sendiri + <b>"+(T.agen_sungguhan||0)+" agen sungguhan</b> ("+(T.pakai_alat||0)+" di antaranya memakai alat). Seandainya agen sungguhan dikutip: "+u(T.agen_sungguhan||0,0.001)+" (tarif $0,001) atau "+u(T.agen_sungguhan||0,0.01)+" (tarif $0,01).";
   document.getElementById("mtHari").innerHTML=(d.harian||[]).map(function(h){return"<tr><td>"+esc(h.hari)+"</td><td>"+h.panggilan+"</td><td>"+h.pemindai+"</td><td><b>"+h.agen_sungguhan+"</b></td><td>"+h.agen_unik+"</td><td>"+h.pakai_alat+"</td><td>"+u(h.agen_sungguhan,0.001)+"</td><td>"+u(h.agen_sungguhan,0.01)+"</td></tr>"}).join("");
   document.getElementById("mtAgen").innerHTML=(d.agen_7hari||[]).map(function(a){return"<tr><td>"+esc(a.agen)+"</td><td>"+(a.pemindai?"pemindai":"agen")+"</td><td>"+a.panggilan+"</td><td>"+a.pakai_alat+"</td><td>"+a.hari_datang+"</td></tr>"}).join("");
 }).catch(function(){rk.textContent="gagal memuat meteran, coba muat ulang"})}
 setTimeout(muatMeter,3500);
-function muatAgenLapor(){var tb=document.getElementById("alDaftar"),rk=document.getElementById("alRingkas");if(!tb)return;fetch(API+"?r=agen_lapor",{cache:"no-store"}).then(function(r){return r.json()}).then(function(d){
-  if(d.galat){rk.textContent="gagal memuat: "+d.galat;return}
+function muatAgenLapor(){var tb=document.getElementById("alDaftar"),rk=document.getElementById("alRingkas");if(!tb)return;fetch(API+"?r=agen_lapor",{cache:"no-store",headers:hOw()}).then(function(r){return r.json()}).then(function(d){
+  if(d.galat){rk.textContent="🔒 "+d.galat;return}
   if(d.pelajaran){document.getElementById("alPel").textContent=d.pelajaran.pelajaran;document.getElementById("alPelWaktu").textContent="· ditulis DANIEL "+lalu(d.pelajaran.pada)}
   var A=d.agen||[],kerja=[],nganggur=[],diam=[],mati=[],galat=[];
   A.forEach(function(x){x.st=!x.aktif?"mati":x.n7>0?"kerja":x.tugas?"diam":"nganggur";({mati:mati,kerja:kerja,diam:diam,nganggur:nganggur})[x.st].push(x.nama);if(x.g7>0)galat.push(x.nama+" ("+x.g7+"x)")});
