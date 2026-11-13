@@ -211,7 +211,9 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
       <div id="ruang">
         <div class="baris"><select id="pilih" aria-label="Pilih agen"></select><button class="btn" id="kerja" type="button">Kerja sekarang</button></div>
         <div class="pesan" id="pesan" aria-live="polite"></div>
-        <form class="baris" id="fobrol"><input id="tanya" autocomplete="off" placeholder="Tanya agenmu…" aria-label="Pesan"><button class="btn isi" type="submit">Kirim</button></form>
+        <form class="baris" id="fobrol"><input id="tanya" autocomplete="off" placeholder="Tanya atau suruh agenmu…" aria-label="Pesan"><label class="btn" for="lampir" title="Lampirkan gambar, PDF, video pendek, atau file teks" style="cursor:pointer">📎</label><input type="file" id="lampir" accept="image/png,image/jpeg,image/webp,image/gif,application/pdf,video/mp4,video/webm,video/quicktime,.txt,.csv,.md,.json" style="display:none"><button class="btn isi" type="submit">Kirim</button></form>
+        <div id="lampirInfo" class="kosong" style="font-size:12.5px;margin-top:4px"></div>
+        <p class="kaki" style="margin:4px 0 0">Dari perangkat owner, agen bisa disuruh: cek kesehatan, siapa nganggur, siapa minta link beli, jalankan putaran kerja, suruh MARKUS ke …, cari agen …, kirim rapor. Perintah lain dicatat ke antrean kerja Claude. Lampiran maksimal sekitar 5 MB.</p>
       </div>
     </div>
 
@@ -1039,10 +1041,17 @@ document.querySelectorAll("[data-salin]").forEach(function(b){b.onclick=function
 var riwayat=[];
 function tambah(dari,isi,kecil){var d=document.createElement("div");d.className="m "+(dari==="owner"?"o":"a");d.textContent=isi;if(kecil){var s=document.createElement("small");s.textContent=kecil;d.appendChild(s)}
   var box=document.getElementById("pesan");box.appendChild(d);box.scrollTop=box.scrollHeight}
-document.getElementById("fobrol").onsubmit=function(e){e.preventDefault();var i=document.getElementById("tanya"),t=i.value.trim();if(!t)return;i.value="";
-  var n=document.getElementById("pilih").value;tambah("owner",t);riwayat.push({dari:"owner",isi:t});
+var LAMP=null;document.getElementById("lampir").onchange=function(){var f=this.files[0],info=document.getElementById("lampirInfo");LAMP=null;if(!f){info.textContent="";return}
+  if(f.size>5*1024*1024){info.textContent="⚠ "+f.name+" terlalu besar ("+(f.size/1048576).toFixed(1)+" MB). Batas 5 MB.";this.value="";return}
+  var teks=/\.(txt|csv|md|json)$/i.test(f.name)||/^text\//.test(f.type),rd=new FileReader();
+  rd.onload=function(){if(teks)LAMP={nama:f.name,teks:String(rd.result).slice(0,6000)};else LAMP={nama:f.name,mime:f.type,data:String(rd.result).split(",")[1]||""};info.textContent="📎 "+f.name+" siap dikirim bersama pesan berikutnya"};
+  rd.onerror=function(){info.textContent="⚠ file gagal dibaca"};if(teks)rd.readAsText(f);else rd.readAsDataURL(f)};
+document.getElementById("fobrol").onsubmit=function(e){e.preventDefault();var i=document.getElementById("tanya"),t=i.value.trim();if(!t&&LAMP)t="Tolong baca lampiran ini.";if(!t)return;i.value="";
+  var lp=LAMP,kirim=t;LAMP=null;document.getElementById("lampir").value="";document.getElementById("lampirInfo").textContent="";
+  if(lp&&lp.teks){kirim=t+"\n[LAMPIRAN "+lp.nama+"]\n"+lp.teks;lp=null}
+  var n=document.getElementById("pilih").value;tambah("owner",t+(lp?" 📎 "+lp.nama:kirim!==t?" 📎 file teks":""));riwayat.push({dari:"owner",isi:t});
   var ho={"content-type":"application/json"};try{ho["x-perangkat"]=localStorage.getItem("pj_kunci")||"";if(window.HM&&window.HM.owner&&window.HM.owner())ho["x-owner"]=window.HM.pin()}catch(e){}
-  fetch(API+"?r=obrol",{method:"POST",headers:ho,body:JSON.stringify({neuron:n,pesan:t,riwayat:riwayat.slice(-8)})})
+  fetch(API+"?r=obrol",{method:"POST",headers:ho,body:JSON.stringify({neuron:n,pesan:kirim,riwayat:riwayat.slice(-8),lampiran:lp||undefined})})
   .then(function(r){return r.json()}).then(function(d){if(d.aksi)tambah("agen","⚙️ Dijalankan: "+d.aksi.nama+"\n"+d.aksi.hasil,"hasil mesin · bukan karangan agen");if(d.jawab){tambah("agen",d.jawab,(d.agen?d.agen+" · ":"")+d.otak);riwayat.push({dari:n,isi:d.jawab})}else tambah("agen","⚠ "+(d.galat||"tidak ada jawaban"))})
   .catch(function(){tambah("agen","⚠ awan tak terjangkau")})};
 document.getElementById("kerja").onclick=function(){var b=this;b.disabled=true;b.textContent="bekerja…";
