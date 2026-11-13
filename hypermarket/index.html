@@ -175,6 +175,8 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
 
 <h2 id="agenKita">Agen ber-DNA yang bekerja</h2>
 <div class="neuron" id="neuron"></div>
+<div class="panel" id="agenLapor" style="margin-top:12px"><h3 style="margin:0 0 6px">📋 Laporan tiap agen <span class="kosong">· siapa bekerja, siapa menganggur, siapa galat</span></h3><p id="alRingkas" class="kosong" style="margin:0 0 8px">memuat…</p>
+<div style="overflow-x:auto"><table><thead><tr><th>Agen</th><th>Status</th><th>Tersambung YOSUA</th><th>24 jam</th><th>7 hari</th><th>Terakhir kerja</th><th>Tugasnya</th></tr></thead><tbody id="alDaftar"></tbody></table></div></div>
 <details class="panel" id="neuronOwner" style="margin-top:12px"><summary style="cursor:pointer;font-weight:600">🔧 Owner · sambungkan, buat, lepas neuron <span class="kosong">(khusus perangkat owner)</span></summary>
   <p class="kaki">Tersambung = neuron tampil di dasbor dan bisa diajak ngobrol memakai DNA-nya. Tugas kerja otomatis tiap 30 menit hanya dimiliki neuron yang sudah diprogram (⚙️); neuron yang baru disambung atau dibuat belum punya tugas otomatis. Lepas = disembunyikan dari dasbor, DNA tetap disimpan dan bisa disambung lagi.</p>
   <div style="overflow-x:auto"><table><thead><tr><th>Neuron</th><th>Peran</th><th>Tugas otomatis</th><th>Status</th><th></th></tr></thead><tbody id="nwDaftar"><tr><td colspan="5" class="kosong">buka dari perangkat owner untuk memuat…</td></tr></tbody></table></div>
@@ -916,6 +918,15 @@ document.getElementById("komando").addEventListener("click",function(ev){if(ev.t
 function kill(ubah){var e=document.getElementById("kcKill"),h=hOw();if(ubah===undefined)return fetch(API+"?r=kill",{headers:h}).then(function(r){return r.json()}).then(function(d){if(d.mati!==undefined){e.dataset.mati=d.mati?"1":"";e.textContent=d.mati?"▶️ Nyalakan semua agen":"⛔ Kill switch"}}).catch(function(){});
   fetch(API+"?r=kill",{method:"POST",headers:h,body:JSON.stringify({mati:ubah})}).then(function(){kill()})}
 document.getElementById("kcKill").onclick=function(ev){ev.preventDefault();var mati=this.dataset.mati==="1";if(mati||confirm("Hentikan SEMUA agen awan sekarang?"))kill(!mati)};setTimeout(kill,3000);
+function muatAgenLapor(){var tb=document.getElementById("alDaftar"),rk=document.getElementById("alRingkas");if(!tb)return;fetch(API+"?r=agen_lapor",{cache:"no-store"}).then(function(r){return r.json()}).then(function(d){
+  if(d.galat){rk.textContent="gagal memuat: "+d.galat;return}
+  var A=d.agen||[],kerja=[],nganggur=[],diam=[],mati=[],galat=[];
+  A.forEach(function(x){x.st=!x.aktif?"mati":x.n7>0?"kerja":x.tugas?"diam":"nganggur";({mati:mati,kerja:kerja,diam:diam,nganggur:nganggur})[x.st].push(x.nama);if(x.g7>0)galat.push(x.nama+" ("+x.g7+"x)")});
+  rk.innerHTML="<b>"+kerja.length+" bekerja</b> minggu ini · <b style=\"color:#ffd27d\">"+nganggur.length+" belum punya tugas</b>"+(nganggur.length?": "+esc(nganggur.join(", ")):"")+(diam.length?" · <b style=\"color:#ff8a8a\">"+diam.length+" punya tugas tapi diam 7 hari</b>: "+esc(diam.join(", ")):"")+" · "+mati.length+" dimatikan"+(mati.length?": "+esc(mati.join(", ")):"")+(galat.length?" · <b style=\"color:#ff8a8a\">galat 7 hari</b>: "+esc(galat.join(", ")):" · tidak ada galat 7 hari");
+  var L={kerja:"✅ bekerja",nganggur:"💤 belum punya tugas",diam:"⚠️ punya tugas tapi diam",mati:"⛔ dimatikan"};
+  tb.innerHTML=A.map(function(x){return"<tr><td><b>"+esc(x.nama)+"</b><br><small>"+esc(x.peran||"")+"</small></td><td>"+L[x.st]+(x.g7>0?"<br><small style=\"color:#ff8a8a\">"+x.g7+" galat</small>":"")+"</td><td>"+(x.yosua?"ya":"belum")+"</td><td>"+x.j24+"</td><td>"+x.n7+"</td><td>"+(x.terakhir?lalu(x.terakhir):"belum pernah")+"</td><td><small>"+esc((x.tugas||"belum ada tugas otomatis").slice(0,150))+"</small></td></tr>"}).join("");
+}).catch(function(){rk.textContent="gagal memuat laporan agen, coba muat ulang"})}
+setTimeout(muatAgenLapor,3000);
 function muatMintaLink(){var el=document.getElementById("mintaLink");if(!el)return;el.innerHTML='<p class="kosong">memuat…</p>';fetch(API+"?r=mintalink",{headers:hOw()}).then(function(r){return r.json()}).then(function(d){
   if(d.galat){el.innerHTML='<p class="kosong">'+esc(d.galat)+'</p>';return}
   var L=d.daftar||[];if(!L.length){el.innerHTML='<p class="kosong">Belum ada agen yang minta link beli.</p>';return}
