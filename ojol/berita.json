@@ -1,5 +1,329 @@
 {
- "w": "2026-11-12T23:06:36Z",
+ "w": "2026-11-13T00:10:19Z",
  "dari": "Kroog",
- "berita": []
+ "berita": [
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-12T22:09:18Z",
+   "media": 2,
+   "judul": {
+    "id": "Kapolres Lubuk Linggau Ajak Komunitas Ojol Bersinergi Jaga Kamtibmas",
+    "en": "Kapolres Lubuk Linggau Ajak Komunitas Ojol Bersinergi Jaga Kamtibmas"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Tribratanews Polda Sumsel",
+    "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNQ2RTYUxFUS1zQkNFaUl3N01DcGxnWWdYVDFHdUZjQmRoRDZDOWluNndBOHZCa0FBT0RsOExQbjBUdFdsbldvVzllZ01zNE9EdFBidE9xUzZWai1UMm9GMHdqSnFGWUZFcjNFMWR5dUJmNGJXXzVaemtHQzk2MC1WT2t5Um9HZTl2SVVWT01rblZiTEhRclcyQS02VUt3V1hHR24wQnVMcWc2VENtQ0V1eVN5RlFZc0h3WXFHQXNydXpHN1N3UVVaSTgweHJVakxsN0NJQlUzc3diTTIza2pxWHQxTHZEMXc?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-12T23:22:23Z",
+   "media": 1,
+   "judul": {
+    "id": "Petani hingga Ojol Bakal Dapat BPJS Ketenagakerjaan, Pemkab Buleleng Siapkan 2 Ribu Kuota",
+    "en": "Petani hingga Ojol Bakal Dapat BPJS Ketenagakerjaan, Pemkab Buleleng Siapkan 2 Ribu Kuota"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Tribun-bali.com",
+    "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOTXNQc3RCcl80aGVXYnkxUDMxNGMwOWdZMEczcElGcld6UGZxeDIxa1J1cnYyMHhHaEg1S3FpbVNSV3ZnbUpVMHRtTHNZRUZXaFQxbEpEbFpKd3FZb0RkZ054UFB5SUJlalBsVWFxd1VGMVVGaUcwYXJXV010UGROX01od3Fia3VDMWNnM0NzM3ZFRnVzTUtEQUNjYTJiVEIwQWVzYnQwVG5tZFdwSDk2SmdSbWtaemN5Z1dYb2pCWXRFTEdpeTFlaDVRZW8?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-12T12:37:00Z",
+   "media": 3,
+   "judul": {
+    "id": "Begal yang Rampas Motor Ojol di Pati Akhirnya Ditangkap, Pelaku Dibekuk di dalam Bus",
+    "en": "Begal yang Rampas Motor Ojol di Pati Akhirnya Ditangkap, Pelaku Dibekuk di dalam Bus"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Kompas.com",
+    "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOZ2huWjNnbzMyb04zMEctSUNUbjg5bkVJb1Y1RXpSRzVIb1hhejJULVlxQU1VcUxjbHpiUlVzeUVkeHh2R0hhbWN5MGlwQmFQR2ZBQzg5MkZsM3B0MXI5a3FsRzgwd0U4cUVETHlsSE1pMUtNdGxYeGZRVHNmM1Zva3g1bWxzazkydGxzT3g2WW9NM0tQX2JwUE1wQmhXQUl0eEF5WWpXZHdVNXdXSnhxWU1JWFhEeW1tR1JpenpHLTdXU2hoTmtZc3BHNzJtOGdZS1dDNmJfVWJrdUI3T2tRcGRaNzQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-12T22:24:07Z",
+   "media": 1,
+   "judul": {
+    "id": "Cegah Kriminalitas dan Penyalahgunaan BBM Bersubsidi, Sat Samapta Polres Prabumulih Intensifkan Patroli Tantura",
+    "en": "Cegah Kriminalitas dan Penyalahgunaan BBM Bersubsidi, Sat Samapta Polres Prabumulih Intensifkan Patroli Tantura"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Tribratanews Polda Sumsel",
+    "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxQOERNZ0RGMF9hLWdkMDBPNUllVkx1a3Z4OXd5cWhtdmZ5dUpmTURtQ1I4ck5qd1hSUE9KY1hNOWkweEtaYWN6VWJ0bVFfSk04YUtRc2tCSFNVcE1zVEhZZDBNb3JHYlpLMi1vZ29FQ1hYMXlrZWNEeDlRcVlNMzByOGJPOVk4cHJXWEZCY21mUFQxRk4tVUExZ3QwdUsyeW12Zm9maFpsYXJkT0hyTEVTQ05INC0tNGZrSFhBZlpqLVBFNU8xYzVZTmJHOFQ1azlGMHl0R0NIVDBDUERobzBqMFlkSHpQRHN1WjhWR0tR?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-12T22:11:03Z",
+   "media": 1,
+   "judul": {
+    "id": "Maxim Indonesia Jawab Tuntutan Ojol Jayapura Soal Tarif Komisi Transparan dan Program Fokus Sukarela",
+    "en": "Maxim Indonesia Jawab Tuntutan Ojol Jayapura Soal Tarif Komisi Transparan dan Program Fokus Sukarela"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Tribunpapuatengah.com",
+    "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxObFg2QWFINUFmdUc3emgzSW9OZ0hDN3ZhWC05VXRIVVBRWmwxaFlYR05RcVBaM1YtWjRzOFB5dFdsbVJlY0xyV25sdFR6Z0EzYWkzLUZaVGNyLTl6UnNBVWdOVUNzUUFLSlFNbnVwRUN2VmlPb2FPY2RrZjZoVEVzLW1FSzJZcHF6UWVYWHMzNVRvcFBWZ1c0T1k5cTc5SVV6dS1UZnFncG5yWXU1eGxPUmJKZk1hT24zOEdVRU5Iai0yNi00OGExTTBpd2wwalIyZWdiSzNkYjk2NzNWU0E4?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-12T14:10:48Z",
+   "media": 2,
+   "judul": {
+    "id": "Tingkatkan Kesadaran Tertib Lalu Lintas, Satlantas Pasuruan Kota Sambangi Komunitas Ojol",
+    "en": "Tingkatkan Kesadaran Tertib Lalu Lintas, Satlantas Pasuruan Kota Sambangi Komunitas Ojol"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Korlantas Polri",
+    "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPck9oZnNubzJHZkxpNjgtcVo4TDFFb0ZidDZKbFV6a1R3OTdBX0dSV2FZWmNhcU9ORkh0eTA1YnZuNzVkSFlMR2FuOUUzUlQyczJuTlZTbExNdE5pUUg1Nk9PajE0cEdKYVk5LVRfaGdPNU15bm5Jd3p4Uy1sS0c2eTE0azNEdU1TSWdXd3ZNekd3MEV0TExLc2NRcFQxamVONXdLZm9MVHg5dWk0STJuOWRONmF4YkJPcmNGa0dpWXc5cHMwSzUyeg?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-12T18:30:44Z",
+   "media": 1,
+   "judul": {
+    "id": "Media Hub",
+    "en": "Media Hub"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Media Hub | POLRI",
+    "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQSjBsZGJSNFUyUElzZ1h1a0dZWnA2ek5Id3hqUks3UXktdEtXVmxqR1gzVUxMeFEwOVdZYWFVVVQxdXE1azJNR05pVVlxQTZMcDRGTmNEUmxSQU5CMmRvTzdBWVNMd0g0RTFkSjV0cUN6UlBrSUpKY2Y3enNrX21wZVFDd2ZSLVVqcV91b2gxbDR5OVE2b2wxTDFDM3dnTXJ2LU1EcnZqWWlkaTNnYnJnczltcmVzbzZXZFlrVnF3WXVFZXk0UU9xd3Z4M2pEVlBMQmV0bVFR?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-12T11:22:00Z",
+   "media": 2,
+   "judul": {
+    "id": "Drama Pencarian Berakhir! Terduga Begal Driver Ojol Kaligua Ditangkap Warga",
+    "en": "Drama Pencarian Berakhir! Terduga Begal Driver Ojol Kaligua Ditangkap Warga"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "puskapik",
+    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPVUE5anYzNXFuMDVDYWlGSWEwdV9QSHJXQk1MdXZKalpwSENzTGlDcGtJcEtjOC16Nzd6UVg3bUFqTF9OZFFXUk50UVpXcndnRjJjR3NxV20zZkdDQnBMenp5cWVUMHd6a29yVmV1dHVNand5SkVvZk1wb1hHYm9FdVJud20wd1Z3YzZuRHNZRGJwUFRfUXdaMFJZdFNlYU1jR1Zab3pwZ3R6N0dhN0thaU1YSQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-12T17:05:09Z",
+   "media": 1,
+   "judul": {
+    "id": "Robinsar bersama Forkopimda Kota Cilegon turut hadir dalam Doa dan Tabur Bunga bersama Ojol",
+    "en": "Robinsar bersama Forkopimda Kota Cilegon turut hadir dalam Doa dan Tabur Bunga bersama Ojol"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Berita Cilegon",
+    "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNZTJmdS0tSTM2UU5qX1NpM1F4Q0pZS2lOM3lQZnJ3UEs4V0U3a1dpQlZaTVk1TUs2RGZaR194UnQwdmk3dEZQN2U4OVVyWEtpQzljemJmOVcwdXY4Y1NWWm9Tcy04ZzMtVjI3LXZqb1IzT0lVb3l1QXRYa19kMDBFWXgxTk5vUUxpVFVDVEdPZ2JIV20ySDNTdmdSUXJRSUJ2YjAta2U0RDg3V0ZOMzFPY3M5QTV2djdLeUVPM3dDbnliTThxbUNwTWExQ0dueFJzeURlYkxTS19sNEk?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-12T09:40:00Z",
+   "media": 2,
+   "judul": {
+    "id": "Gojek, Grab hingga Maxim Hadapi Aturan Baru Prabowo, Transaksi Ojol Makin Jumbo",
+    "en": "Gojek, Grab hingga Maxim Hadapi Aturan Baru Prabowo, Transaksi Ojol Makin Jumbo"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Warta Ekonomi",
+    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOYi03ZENsY2NrcF9NVE1yRnJNNGNqN2ZNTTVvTkwtc0lZamtDc1lSN1hUV3k2U0pmb0RpRW5hQmNzNzdibnVzaVltQVhSRHdUOEljelpVdUZoOUhzMWRpUy1QdW9pLVlLVk9zTkNFN05QaEMyUGJEaG1IQ1A1WWItUURfU3ZwdzRaak83a1g0STk3RHI4VVBYN1I5RU9qSWFrQ0gwd1dBVzZGMDVFVWpXV0RYNHNrUdIBuwFBVV95cUxOQVdMYm9meFF1QmI0dzk4NThrWGt3eDgyQy1oRlBFdlFCT2tHV2F1cUV2VExmX04zS0QtelBRWk80ZUx5dnJuMWZBVUtyMks2aGhpWEtIaExVQ2VaR0FFVU1UU2NITHA5eGs1aHplVGZpY2pHQ0FRUnpzMmg5djkybWNkejJFWTA2d2kzdlktOHZXalJxQjktdUFIc3VXUDN1dk1CazJaQVduSm11a1BzY3pJaHNCRlFCbE1r?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-12T15:17:19Z",
+   "media": 1,
+   "judul": {
+    "id": "Cerita Driver Ojol Salatiga Jadi Korban Order Fiktif, Uang Talangan Tak Kembali Utuh",
+    "en": "Cerita Driver Ojol Salatiga Jadi Korban Order Fiktif, Uang Talangan Tak Kembali Utuh"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Beritajateng.tv",
+    "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNb0M3MGE3TDJ1VjNlVjVrZUM1ZTl3bkRJQ25CdE9TUVhCM2NRVy1Ka01Qb1lJb0VlVkdnSF8yaEZTU2VTam9wV0ktZXdsTy0xWU9xamhONTZGX3FlWThLVUxwbkI5NUQtQ3VRQnJoeFZjcHRaejhST1FJVnd3d1o3cGc2Mm8xVUpIdU5yRzF0Y3JSSzF3SnRybzVjWXp5bEJfQ3VvUkxYZ3hvZ25G?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-12T14:29:00Z",
+   "media": 1,
+   "judul": {
+    "id": "MK Kabulkan Pencabutan Gugatan Pengemudi Ojol Eduwin Purba Terkait UU HAM dan Kebebasan Beribadah",
+    "en": "MK Kabulkan Pencabutan Gugatan Pengemudi Ojol Eduwin Purba Terkait UU HAM dan Kebebasan Beribadah"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "pantau.com",
+    "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPYUdoUDRPclRzektacVFuVEt2ZXhFQk9jdTItRXFQcmthMlVBTHhnbHNnYWRIdTV2a1ZkQnpyNUxOQXRpNzk4eFZDU0p4WUhtMEh4SGpMYl9OWFRSWnQ2RFRTNFVqNkozUW1ZVjhYaHdQZHBDdVE3Z3ZiUGROQ2xKLUlUb1R3SzR2bEhLRk9KUEFGLXNnSDFBclJuRjYza2pGNURRc0EzNWowQTgwVHlpejZfRm5xOFdveEYzcFR3WGR0dUYzVjdMNU92ZWF3cjBSVmc?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-12T14:28:04Z",
+   "media": 1,
+   "judul": {
+    "id": "Reses Bersama Komunitas Ojol, Budiono Tampung Keluhan Rambu Jalan hingga Layanan Air Bersih",
+    "en": "Reses Bersama Komunitas Ojol, Budiono Tampung Keluhan Rambu Jalan hingga Layanan Air Bersih"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Tribunkaltim.co",
+    "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPR3lTVTZzRXo2S0lpTGR4Y09sclR2QnZVdjNkcEVvWXdKZ0RTNk5YZjhOZXNaZFpNYmRpdGFXUmJMYy1FTXdzYl9ublBHRnR0VThDRFFwZDMydWdaSnoyYlk2bF9ILUxKTU9HdnFMQWtRWTc3dzh1UU1BdFdQc1R4RnU1WXdaems5SzR6cGpRRGJaQjh4RVM0Q0ViQUJoV1ltaFJ2d3pteDdLSzJaVVVtc2ZCMzctTUZ3ZXJzelVpNW1OV1QyOEVxWWJQTDRLMGh5Y1UtMkh2bWY?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-12T13:47:45Z",
+   "media": 1,
+   "judul": {
+    "id": "Kapolres Lubuk Linggau Polda Sumatera Selatan AKBP Catur Erwin Setiawan Turun Langsung Bersilaturahmi Dan Menggelar Pertemuan Bersama Masyarakat Serta Komunitas Ojek Online",
+    "en": "Kapolres Lubuk Linggau Polda Sumatera Selatan AKBP Catur Erwin Setiawan Turun Langsung Bersilaturahmi Dan Menggelar Pertemuan Bersama Masyarakat Serta Komunitas Ojek Online"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Media Purna Polri",
+    "url": "https://news.google.com/rss/articles/CBMitwJBVV95cUxQek5hcVFrbW1IVDYwRFI1NnVRT2FoT2kwcjB3VUtON0Y3NjI5RTZvWkpzV2VfUDN3YzloMzVOMmJncmJVRldfa1dXa3dGV3FoTkxnbVcyZXFJeGRZbXByRVQ3ZFJIbjZRUXRwNm1CRDBsMWtVOTFEOE5TY3BTZ0RyVzFOaTJ4eTlidkFIcE9xOTczMTR1OWh4MjRuRFRSNFFOQ0ZsQ1JkeS03WlB5QWRXVTI4eHJQVTAwSmUyM3RSSFd2QnFwZkNxWFZNYk0tM1RraGpOM3FEUmMtMXpPMWtYUWpKVENQQ1U0dGdZVkktUU5CaXdzYWFSN1JYLXkwZmpZWE4yMVBseVFuTm10bUlZdXN0bnBOTHd0Y19LUEp1YTZudHF6YUhoUE5vUHFOZFB6YmhDTlpXQQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-12T13:09:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Ojol Okel Sebar Brosur di Pasir Kuda",
+    "en": "Ojol Okel Sebar Brosur di Pasir Kuda"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "wwb.co.id",
+    "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9xc0V0ZXJoZm9lam9kckYwMFVZX05Zc29zUVdvdW1BUnNhNXZSd0lyYmhoSjdMR0ZOV0c5aWNscVNiSmdWZ1dQMjJTam5MS0N0U0JqZ1JqaFg0MW5IUmIxOUVtRGs?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-12T06:49:00Z",
+   "media": 2,
+   "judul": {
+    "id": "Begal Ojol di Jakenan Pati Berhasil Ditangkap saat Naik Bus di Jepara",
+    "en": "Begal Ojol di Jakenan Pati Berhasil Ditangkap saat Naik Bus di Jepara"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "murianews.com",
+    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNS29NUmVLaXo1UHZOajZIOS1wNlU1NTJaSVdTb25fY1E4djVBejk4c2lhZmlEbE85OWNsa0RWZmhDS1F5LVNEaUFvdVhOMmJnMndJV0VDdTVVTHhJU3Blc2VwYnpmWjlBR1NMN0pzNm9zUHVMazJSVHdWeEdTWEpreWhfc1ZtTXp6U0lhMGU2NHhvZWJVU1BHWHM5cFE4MUZmSks5REtvYklxMlF5SWNBLWFSd1NZbTlh?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-12T11:34:30Z",
+   "media": 1,
+   "judul": {
+    "id": "Bos Pertamina Janji Sanksi SPBU yang Toiletnya Bayar",
+    "en": "Bos Pertamina Janji Sanksi SPBU yang Toiletnya Bayar"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "detikFinance",
+    "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPTXMzNHdudDNubVhLOEQ4VDlUbDNfZXJSNFplZXUzdHBCX3hsLW9WanhXeTRxa1hKZmx6Znl0NXJrYXNMN0RHcWhHU3BZZy1MSlZEckpDX1ZfYnBPVUdwTGtFVTZjMC1jTW5LQkNfRlhKM1hqVWVIYkJyZmswai1MTEc1MGdhSWtTemFBVjYyVURnZ25xNTliWjBzd9IBoAFBVV95cUxPYlZtVzRUOExKNTVkdFd3NDQ3RUVVT2JuckU4OWVXTjdmWjZWYUt4bTZHdWl0bUNLTmd1SVhWcGdkS05yT3prYXU5cFNLUlpwQlpaRzhKMzdNamVaTGkwMUVIX0ltWDBjeldaWE5xMUhEYlJVd2FtdHZwa01ZR3RKdlBKWlJ4V2VKQ0tta2pfbkxOS0pIck1Pa3owYXNZS0s3?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-12T11:10:13Z",
+   "media": 1,
+   "judul": {
+    "id": "Viral Tren #Pengentinggicore, Pebasket Ojol Gandeng Zee Biscuit Luncurkan STIBAN",
+    "en": "Viral Tren #Pengentinggicore, Pebasket Ojol Gandeng Zee Biscuit Luncurkan STIBAN"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Radar Solo",
+    "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPNXFMbUdNN0UyMU1ER0QtNXZ3Si1tRDF6ODVrQXJBbXp4Q2MtYy15Um0tS0lkSEFwNVlWNlRfblpwUEE1dkVsdFRiY1NKMmg2eUYxQzl2UDNZNE1fZjFWRDZSMEotSTdERW9VTHZpb3FIUm1qVmxUMlpCX2h1Z3N2Skhnblk5OGE4WHhXQWlFbUJwdm84enVqWG16Z2FfYlgwdl9sRUVwSk5GUTdsMnNJMXRJTjN1S3BqaHJvc0xHM0E2VGtGdHpiZXZTbnZPUdIB0wFBVV95cUxQWmJXUXkzRFBNNlVDcFVrdDVpY0JXeVl2U0xVMDQ0aS1aOG9yLUtvclo2ZjBlNGRDMVB6dVprV2wySy1SaVlUM3FBdXd2cEhjYS1HZ3ZpQlNDRElOQTFtQ0E2eVE3WEY2dTFEZEIxa1FKVUpiWVRzZFZaUDB5dkZOZkx4WW52S2IzZklvVnBYcUZtOHRQeVZLd3B4ek5qTWZ0WVZXODdiQjRFY096UGMwS3hzeGdqTXc2ck5GWVlHYndlMldtdHVUZzBiQnJNdG1WMW1j?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-12T10:47:41Z",
+   "media": 1,
+   "judul": {
+    "id": "Siang Jadi Buruh, Malam Narik Ojol: Potret Pekerja di Jateng Siasati Upah Rendah",
+    "en": "Siang Jadi Buruh, Malam Narik Ojol: Potret Pekerja di Jateng Siasati Upah Rendah"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "republika.co.id",
+    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQOWd1MEp4dlNxc3hsSUVBbDU1Nm91RlJrRHl3aUtLYTQxRFVTUGhCZTNVS25MaWtpai1fMWVGenN5YVJEenUzQWs1NWg0bExMVE9nNDViT3ZoX3l6cWpfaGl4TlIyMjg1QUVOdkk3UjBmMXEtSlBWTms1LXluR0lpZy1nX01wa0ZVQ1RiR0pqX24wQzlsaldvVTZfODUzam9tLU9TdlJyeXcybzZzN3ZpaEFKSTg4RjVONDdWT1Z1MFNpaWx3b0E?oc=5"
+   }
+  }
+ ]
 }
