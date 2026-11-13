@@ -1,5 +1,5 @@
 {
- "w": "2026-11-13T01:14:57Z",
+ "w": "2026-11-13T02:19:43Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -51,6 +51,23 @@
    "sumber": {
     "nama": "BertuahPos",
     "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOZGdIYVh3d3JPb2RkT3prYVFEOXVBMFhUWDJUWklpLUxhdzh5cU53MGh2UUhLZ1BKdTNUeExzV3E5ckxZNE5EV2ZaeFVtSmRmZk1Bd3haR2pwQ0ZhMm9JZDVadnRtQjNVLWZaLVVJTlh0Vm53ckFZUGMwM1NkYlJMRjlVWEk5V01TTEd0ZGw2bEpSRnNIMXNnbnh4bEJFd0RLNl9COXZLR21SUDhVRkZoWUhTNA?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-13T00:25:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Pertamina Ungkap Nasib Harga Pertamax yang Tak Berubah Sejak Agustus",
+    "en": "Pertamina Ungkap Nasib Harga Pertamax yang Tak Berubah Sejak Agustus"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "detikFinance",
+    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQOFJQeXl1bG0td0JaS2dNMXd5eG5md2ZLX1lVdjFWOVpEWlh5eHBnWU1jYm1VbVctb0w1RERiMTVKU0xTcUxmU1JBOC1tSEZNTmFsN1lyTTJpT0pucTJHQVU0RnZ5cXprb1A5aE9RZURjT2JjelV4d2s5emFjLXdsaGNOYnBGS3hJcFJPYTZ0N3FlQll3dGM5aHlqSXFSVm5UaUhhNE1Pdzg1aUg2X3JHddIBtgFBVV95cUxQT1owWUliRGFmQUl2cHQ0Z0xZN1pNN3IwbWM0TzYyS191dUh5WWVXbTZxQjAzazhBaUpkYkF5N2ZxWHpmZjNjX09TVlRoUGQyWjBYWk81WW85eWdmTi0zU0dFMjdDd2xQYkRhbVM1dmMxXzVHMEtiTTBaSUY1ZV9WSm81OVhTYUVhYUNKaGYtR2drV3l2NENtM3Ztam5Kc1VvZWQzUVh2WVAwalRwTGVic083UTViUQ?oc=5"
    }
   },
   {
@@ -289,23 +306,6 @@
    "sumber": {
     "nama": "wwb.co.id",
     "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9xc0V0ZXJoZm9lam9kckYwMFVZX05Zc29zUVdvdW1BUnNhNXZSd0lyYmhoSjdMR0ZOV0c5aWNscVNiSmdWZ1dQMjJTam5MS0N0U0JqZ1JqaFg0MW5IUmIxOUVtRGs?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-12T06:49:00Z",
-   "media": 2,
-   "judul": {
-    "id": "Begal Ojol di Jakenan Pati Berhasil Ditangkap saat Naik Bus di Jepara",
-    "en": "Begal Ojol di Jakenan Pati Berhasil Ditangkap saat Naik Bus di Jepara"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "murianews.com",
-    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNS29NUmVLaXo1UHZOajZIOS1wNlU1NTJaSVdTb25fY1E4djVBejk4c2lhZmlEbE85OWNsa0RWZmhDS1F5LVNEaUFvdVhOMmJnMndJV0VDdTVVTHhJU3Blc2VwYnpmWjlBR1NMN0pzNm9zUHVMazJSVHdWeEdTWEpreWhfc1ZtTXp6U0lhMGU2NHhvZWJVU1BHWHM5cFE4MUZmSks5REtvYklxMlF5SWNBLWFSd1NZbTlh?oc=5"
    }
   }
  ]
