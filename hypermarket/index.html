@@ -1043,7 +1043,7 @@ document.getElementById("fobrol").onsubmit=function(e){e.preventDefault();var i=
   var n=document.getElementById("pilih").value;tambah("owner",t);riwayat.push({dari:"owner",isi:t});
   var ho={"content-type":"application/json"};try{ho["x-perangkat"]=localStorage.getItem("pj_kunci")||"";if(window.HM&&window.HM.owner&&window.HM.owner())ho["x-owner"]=window.HM.pin()}catch(e){}
   fetch(API+"?r=obrol",{method:"POST",headers:ho,body:JSON.stringify({neuron:n,pesan:t,riwayat:riwayat.slice(-8)})})
-  .then(function(r){return r.json()}).then(function(d){if(d.jawab){tambah("agen",d.jawab,(d.agen?d.agen+" · ":"")+d.otak);riwayat.push({dari:n,isi:d.jawab})}else tambah("agen","⚠ "+(d.galat||"tidak ada jawaban"))})
+  .then(function(r){return r.json()}).then(function(d){if(d.aksi)tambah("agen","⚙️ Dijalankan: "+d.aksi.nama+"\n"+d.aksi.hasil,"hasil mesin · bukan karangan agen");if(d.jawab){tambah("agen",d.jawab,(d.agen?d.agen+" · ":"")+d.otak);riwayat.push({dari:n,isi:d.jawab})}else tambah("agen","⚠ "+(d.galat||"tidak ada jawaban"))})
   .catch(function(){tambah("agen","⚠ awan tak terjangkau")})};
 document.getElementById("kerja").onclick=function(){var b=this;b.disabled=true;b.textContent="bekerja…";
   fetch(API+"?r=kerja",{method:"POST"}).then(function(r){return r.json()}).then(function(d){tambah("agen","Hasil kerja: "+Object.keys(d).map(function(k){return k+": "+d[k]}).join(" · "));muat()})
