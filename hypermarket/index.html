@@ -498,6 +498,13 @@ document.addEventListener("click",function(e){var g=e.target.closest("[data-grup
   var a=e.target.closest("[data-asal]");if(a){var box=document.getElementById("asalRinci");box.hidden=false;box.innerHTML='<span class="kosong">memuat…</span>';
     fetch(API+"?r=rinci&jenis=asal&nilai="+encodeURIComponent(a.getAttribute("data-asal"))).then(function(r){return r.json()}).then(function(xs){box.innerHTML='<b>Kunjungan dari '+esc(a.getAttribute("data-asal"))+'</b> (30 hari, maks 50)'+(xs.length?xs.map(function(x){return'<br><span class="kosong">'+lalu(x.pada)+'</span> · '+esc(x.a||"-")+(x.b?' · kata: '+esc(x.b):'')+(x.c?' · '+esc(x.c):'')}).join(""):'<br><span class="kosong">Kosong.</span>')})}});
 // Klaim dari ocklu.com/direktori-agen: isi otomatis formulir pasang jualan (pembuat tetap melengkapi kontak & menyetujui syarat sendiri).
+// Dari Papan Kebutuhan Terbuka (?kebutuhan=<id>): formulir tahu kebutuhan mana yang dijawab pemasok
+(function(){var q=new URLSearchParams(location.search),kb=q.get("kebutuhan");if(!kb)return;var f=document.getElementById("fPasang");if(!f)return;
+  fetch(API+"?r=kebutuhan").then(function(r){return r.json()}).then(function(d){var x=(d.kebutuhan||[]).filter(function(k){return k.id===kb})[0];if(!x)return;
+    if(f.deskripsi&&!f.deskripsi.value)f.deskripsi.value="Menjawab kebutuhan: "+x.judul+". ";
+    var h=document.getElementById("mkHasil");if(h)h.textContent="Anda menjawab kebutuhan: \""+x.judul+"\". Tulis apa yang Anda tawarkan, harga, dan kontak bisnis, centang setuju syarat, lalu pasang. Gratis 30 hari; komisi 7% hanya kalau transaksi jadi lewat perkenalan OCKLU.";
+    try{f.scrollIntoView({block:"center"})}catch(e){}
+  }).catch(function(){})})();
 (function(){var q=new URLSearchParams(location.search),k=q.get("klaim");if(!k)return;var f=document.getElementById("fPasang");if(!f)return;
   if(f.judul)f.judul.value=k.slice(0,160);if(f.url&&/^https:\/\//.test(q.get("situs")||""))f.url.value=q.get("situs");if(f.jenis)f.jenis.value="agen";
   var h=document.getElementById("mkHasil");if(h)h.textContent="Klaim layanan "+k+": lengkapi deskripsi dan kontak bisnis, centang setuju syarat, lalu pasang. Gratis; komisi 7% hanya kalau transaksi terjadi.";
