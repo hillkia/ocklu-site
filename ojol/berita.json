@@ -1,5 +1,5 @@
 {
- "w": "2026-11-13T19:09:30Z",
+ "w": "2026-11-13T21:11:20Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -55,6 +55,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-13T19:18:25Z",
+   "media": 1,
+   "judul": {
+    "id": "Peduli Banjir Sumatera",
+    "en": "Peduli Banjir Sumatera"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Rumah Zakat",
+    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNdm1OeC1QZlk1amtySXFzbUtmZi1OdXhUeTBfTlRfeG5mc2xaSElfRklBZXJRWGoyMzJvZUE5dzk2cmhvc0l0Z055eW50TVB4ZUFDU05fdHEyTzdGYzlsWWI2YU5Wb3Q4SzBFanAzTVlrUDJrWVFsemFXYzBfWDlXamJGd204MWt2aVhkeWQydnBoV1Y0MDhCeVZuQ1c4Yi1zYnN4bzN4ajZpdHFnZjVWV0VaMEw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-13T12:36:45Z",
    "media": 2,
    "judul": {
@@ -68,6 +85,23 @@
    "sumber": {
     "nama": "Beritabali.com",
     "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNX3FkdHZDSHByQXpEcWNtTGYzbGdsQXJZN19VekdKSHRZaFdPb0NvTDdQaWx4X1FKeHM3encya20ya25LdmZ6Q3hVVGNmYW1ZLVdZMDRiWmJ5enZFWHRRdGNOT0VWd1NtdzlVdlo3a3hTUlBfQldQa20tSWg1TDNnSDFZYl81ZmZMa3hXNFhiTWpDcXdtaU1RRw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-13T17:40:10Z",
+   "media": 1,
+   "judul": {
+    "id": "Pemerintah Kaji Penghematan BBM dan Listrik, Subsidi APBN Tembus Rp415,8 Triliun",
+    "en": "Pemerintah Kaji Penghematan BBM dan Listrik, Subsidi APBN Tembus Rp415,8 Triliun"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Kontan TV",
+    "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1sSFpsWFRzaVdjWGdGcGlELW5Cak5RZjREVjViTDdFRWdYWkJRWW9icW9jaTVKNm5iMnI0ZzJQLUk4WFA2Yy0yOEZ0bFdJUFhVQWFmX3pHVXdsT0JqSmhoTXE3cDBYRkE?oc=5"
    }
   },
   {
@@ -102,6 +136,23 @@
    "sumber": {
     "nama": "Jabar Publisher",
     "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxORDE3aFdaTTZoa24ya0YzMFk5dWZVWE53UkZDZUFPR3lMbC1UMWl3elhLSWdIU1BsSWxodFpibmZKM0ZsZ1NjbzRwbTV5dlgzRHlseGxCc0FDaS1XeGphdGJyaEJUbjRwQ1BnOU5RRzJXNU1Ub2hldXJwaTVIQTRKRXpsT0pNYjBsbTZSQzk1SjQyZkFQU3Fkc3ZCNFdpM1ZaN3V4b3FlenhNbVJDYnE0U1ZkVmJCdWFLQXM5T0gxUEc2aG1CRDNKNnFxU3VDb25u?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-13T16:18:55Z",
+   "media": 1,
+   "judul": {
+    "id": "Padang Bangun 138 Rumah Tetap untuk Korban Banjir Bandang",
+    "en": "Padang Bangun 138 Rumah Tetap untuk Korban Banjir Bandang"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "شبكة تواصل الإخبارية",
+    "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9FU01LaWFqQS1sR2JIU1ZFSGtaMWxrVkU3bFB1Sy1hMnlYc0dDbUFrYWZrNlVNREFFRzNvOTJCMVdZeUQ0QXBNOXBwcmt2WVZDOUVB?oc=5"
    }
   },
   {
@@ -289,91 +340,6 @@
    "sumber": {
     "nama": "Bisnis.com - Otomotif",
     "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPajNaOFdDS010RmFQLURwY2NfRGdHX09lek40eksxMF91NWhDRjBNZTM2QXRrRTljSGVKcUdiY1pDc25ET2N3V01NQmRrRDQ1Ml9vNWxqSFdTdzNIQVhIdWFtenZjSHN3eHNxUlpRWWVuRXpyc3hKVjBLTVZRMlNHUXRSbFRaY2lBUVFzeGVDa1FydlJYX2JPUkQ2YnppbmFlWW1xSlhOeHJhUnhDSDFsYmd3SQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-13T11:48:49Z",
-   "media": 1,
-   "judul": {
-    "id": "BBM Subsidi Ditimbun, Dua Tersangka di HSS Ditangkap",
-    "en": "BBM Subsidi Ditimbun, Dua Tersangka di HSS Ditangkap"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Berita Borneo",
-    "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNelFuSTRJZU5ldEgwNHMwZnJEY2dHa1g3azFlVHdmVE5CZGR0Q0p4V2wwQUhlVFVfVzNOVGVna0pSTk9IM2YxMHlEVFVpOE9ydmRpTHFfNGU5Uy1GSThTM0t6LUpvTzZtUjdBLUVrOGw0ODNpZDdJRFVTS01rYjc2VHNpTQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-13T11:46:29Z",
-   "media": 1,
-   "judul": {
-    "id": "Nekat Oplos BBM Subsidi Lalu Dijual Mahal, Pria Blora Diciduk Polisi",
-    "en": "Nekat Oplos BBM Subsidi Lalu Dijual Mahal, Pria Blora Diciduk Polisi"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "detikcom",
-    "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQdTZpbEVvZUxKMkJjNjM4Y1lxZ2RTZ0JtOUFvN3d6THR5b050YWE4bHZ0WlZBMXlMWVdOdnd3eGstY2VVZnBTekk1UER1ci1fVG04dHgteEFqSmdrX29zUWplOWRHMmRyVkNOSktxZWJtbWZNMTRieUp6TENjU3lBU2J3RDBqXzdRSzhaMzFsSHJzMVY2UEYxbm1nczAyQXZUUTczS29xbURzbU8wRjk1dzg1VjJSNmRJdXhVa0xVVVZsSmPSAcgBQVVfeXFMT0ljbHJHdVkzU1BnNTdlT0V3bWJ1c1RMaHk3eW0wb2FSbzZsQ1M2ZjZSZllJREJKR090eTl6OHpuQnJSNWhtd3Z4ejRPclF3cEVONWZBRE5qVXh6YWZFS2tTVldWeTVva05tTF9ZNU5iVjdwazNkSl93dG1MaFcyeTR2NG56Z1NRY1VQd2oxdndNbDF5SU56RV93TFkzTk41N2FHTVdjUnV5NEcyN2I2blhaTXgwa1gzQjlGWVZCNUZoTnVsQTJGXzM?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-13T11:45:16Z",
-   "media": 1,
-   "judul": {
-    "id": "Kawasan Pemukiman di Kuala Simpang Terendam Banjir, Sejumlah Warga Terdampak",
-    "en": "Kawasan Pemukiman di Kuala Simpang Terendam Banjir, Sejumlah Warga Terdampak"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "RMOLAceh",
-    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPNV9pYkJISFZ2bXNtQnhKV01Pd3lIbEt3Vi1jbzNQaXhKTEJKNS1iUEdQa2l2MzJGaWx4YlNnSUsxNHFTeUpfUmtzaGVjNjJWY0diOTUwMVhPVGVDNWdqUVNFMjViSlY2eS1ZUUNCcGhXVkI2a2hRYW5zU0VGQTlCaC1vVXFOOHBDblNkYWNpczQ2NERrOHUtclFPaWJKM2lq?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-13T11:32:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Kisah Neneng, Driver Ojol Perempuan yang Jadi Tulang Punggung Keluarga demi Masa Depan Anak",
-    "en": "Kisah Neneng, Driver Ojol Perempuan yang Jadi Tulang Punggung Keluarga demi Masa Depan Anak"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Industry.co.id",
-    "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPMERtakt5N3RMYlFGNkljLVNOT1FKVVFJeU9laENsN1MwbWd5ekRoOU5VQnp0ZDZBRk5zREEzemRDTElmTVJmeHBqYnBsVzI0by1pVV9BeDBUQlpUc3hPMzV1OUY1bTNadmRGRm96Wkd0U2FIdG5rcXhxX3N1ZjJkWGRaOVhmaUR4X1psaVhhenBUelNCZkI4TzNRRjJpSzdsWnRENExaNVBiSURPaUhFWVdKbWRPZU9nMWtCX3FlcG1NNGFpLUlnZg?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-13T11:30:05Z",
-   "media": 1,
-   "judul": {
-    "id": "Kadis DLH Pohuwato Korupsi Honor Non-ASN dan BBM Rp 1 Miliar",
-    "en": "Kadis DLH Pohuwato Korupsi Honor Non-ASN dan BBM Rp 1 Miliar"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "detikcom",
-    "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNTHZraTZGZVc5eDlfZVROUk84QWdXMlF2aFBpVHZ5aERQMFgyZFcyWVRjd1pYRXVUVDhtSWdyanY3TU1RMm4wcXpKZlBneWxneFhsUXJfcUpVb1FCWWRmeFllYU50OUQ3OVpjc1FaUU9CUzNJMm96TGhkRWZhdHc5UW5tOUlMd0F1cDh5Ui10dGtEQVBFMHZMdEw1NFBtSDZmMXZoZUZwMy1oMXRxTUNzaHZhNU9ReThsbEHSAb8BQVVfeXFMT25OZXZkRWNnc283LTh2eEs2ZU1obHdQcGJHWFBnX3dmaXhfbkxPSDBTZ1VZOVZrWlZZZFdzQklnT0J3OENwV040TVZIbFhOZTJOZ0RCaHJrVzF2VmxyYVRHem92ZkJGWWpMbTJ3em9jNGp6WDVraWxvdGxmRUtIVG95OWkzVXE2dU8zS3lMd1ZfMlZjaDlDWGY0MDJ6N3ZzajVmdnRxUzFDS21TaUtoWGQ5WlhiZUVTTFAyaDJPcEE?oc=5"
    }
   }
  ]
