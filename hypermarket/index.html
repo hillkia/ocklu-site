@@ -175,6 +175,10 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
 
 <h2 id="agenKita">Agen ber-DNA yang bekerja</h2>
 <div class="neuron" id="neuron"></div>
+<div class="panel" id="iklanRev" style="margin-top:12px"><h3 style="margin:0 0 6px">📣 Iklan Revolusioner <span class="kosong">· barang ditawarkan agen ke agen, server, dan manusia (berpihak ke pengiklan)</span></h3>
+<p id="ikRingkas" class="kosong" style="margin:0 0 8px">memuat…</p>
+<div style="overflow-x:auto"><table><thead><tr><th>Barang</th><th>Ditawarkan ke agen</th><th>Ditawarkan ke manusia</th><th>Minta link / klik beli</th><th>Dipertemukan</th><th>Laku</th></tr></thead><tbody id="ikDaftar"></tbody></table></div>
+<p class="kaki">Angka mulai dihitung sejak 14 Nov 2026. "Ditawarkan ke agen" = barang muncul di katalog, hasil cari, atau UCP untuk agen. "Ke manusia" = muncul di kotak obrolan Tanya OCKLU. Pengiklan melihat angka barangnya sendiri di halaman laporan kliennya.</p></div>
 <div class="panel" id="kebutuhan" style="margin-top:12px"><h3 style="margin:0 0 6px">🧭 Kebutuhan & calon pemasok <span class="kosong">· kita makelar: kebutuhan dicarikan pemasoknya</span></h3>
 <p id="kbRingkas" class="kosong" style="margin:0 0 8px">memuat…</p>
 <p class="kaki" style="margin:0 0 8px">Aturan owner: tender BUMN, BUMD, dan instansi pemerintah Indonesia <b>tidak dimasuki</b>. Tender pemerintah luar negeri <b>ditahan</b> sampai owner menekan Setujui. Papan publik: <a href="https://ocklu.com/hypermarket/kebutuhan/" target="_blank" rel="noopener">ocklu.com/hypermarket/kebutuhan</a></p>
@@ -938,6 +942,14 @@ document.getElementById("komando").addEventListener("click",function(ev){if(ev.t
 function kill(ubah){var e=document.getElementById("kcKill"),h=hOw();if(ubah===undefined)return fetch(API+"?r=kill",{headers:h}).then(function(r){return r.json()}).then(function(d){if(d.mati!==undefined){e.dataset.mati=d.mati?"1":"";e.textContent=d.mati?"▶️ Nyalakan semua agen":"⛔ Kill switch"}}).catch(function(){});
   fetch(API+"?r=kill",{method:"POST",headers:h,body:JSON.stringify({mati:ubah})}).then(function(){kill()})}
 document.getElementById("kcKill").onclick=function(ev){ev.preventDefault();var mati=this.dataset.mati==="1";if(mati||confirm("Hentikan SEMUA agen awan sekarang?"))kill(!mati)};setTimeout(kill,3000);
+function muatIklan(){var rk=document.getElementById("ikRingkas");if(!rk)return;fetch(API+"?r=iklan",{cache:"no-store",headers:hOw()}).then(function(r){return r.json()}).then(function(d){
+  if(d.galat){rk.textContent="🔒 "+d.galat;return}
+  var B=d.barang||[],ta=0,tm=0,tl=0;B.forEach(function(b){ta+=b.ke_agen;tm+=b.ke_manusia;tl+=b.minta_link});
+  rk.innerHTML=B.length+" barang aktif · "+d.hari+" hari: ditawarkan <b>"+ta+"×</b> ke agen, <b>"+tm+"×</b> ke manusia, <b>"+tl+"</b> minta link"+(d.dihitung_sejak?" · dihitung sejak "+esc(d.dihitung_sejak):" · belum ada catatan");
+  B.sort(function(a,b){return(b.ke_agen+b.ke_manusia+b.minta_link*10)-(a.ke_agen+a.ke_manusia+a.minta_link*10)});
+  document.getElementById("ikDaftar").innerHTML=B.map(function(b){return"<tr><td><b>#"+b.id+"</b> "+esc(String(b.judul).slice(0,60))+"<br><small>"+esc(b.penjual||"")+(b.klien?" · klien":"")+"</small></td><td>"+b.ke_agen+"</td><td>"+b.ke_manusia+"</td><td>"+b.minta_link+"</td><td>"+b.dipertemukan+"</td><td>"+b.lunas+"</td></tr>"}).join("");
+}).catch(function(){rk.textContent="gagal memuat, coba muat ulang"})}
+setTimeout(muatIklan,4200);
 function muatKebutuhan(){var rk=document.getElementById("kbRingkas");if(!rk)return;fetch(API+"?r=kebutuhan_owner",{cache:"no-store",headers:hOw()}).then(function(r){return r.json()}).then(function(d){
   if(d.galat){rk.textContent="🔒 "+d.galat;return}
   var R=d.ringkas||{};rk.innerHTML=Object.keys(R).map(function(k){return"<b>"+R[k]+"</b> "+esc(k.replace("tender_asing","tender luar negeri").replace("tender_ri","tender pemerintah Indonesia (tidak dimasuki)").replace("swasta","kebutuhan swasta"))}).join(" · ")||"belum ada kebutuhan";
