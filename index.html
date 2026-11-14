@@ -421,7 +421,7 @@ h1.wm{font-weight:700}
       var k=document.createElement("div");k.className="etlk";
       var b=document.createElement("b");b.textContent=p.name;k.appendChild(b);
       if(p.description){var s=document.createElement("small");s.textContent=String(p.description).slice(0,120)+(String(p.description).length>120?"…":"");k.appendChild(s)}
-      var h=document.createElement("span");h.className="hrg";h.textContent="US$"+p.price_usd;k.appendChild(h);
+      var h=document.createElement("span");h.className="hrg";h.textContent="US$"+p.price_usd;if(p.promo){var c=document.createElement("s");c.style.cssText="opacity:.6;font-weight:400;margin-left:8px;font-size:15px";c.textContent="US$"+p.promo.harga_normal;h.appendChild(c);var bd=document.createElement("small");bd.textContent=(id?"⚡ Diskon kilat ":"⚡ Flash sale ")+p.promo.persen+"%";k.insertBefore(bd,h)}k.appendChild(h);
       var a=document.createElement("a");a.className="beli";a.href=p.checkout||p.order;a.target="_blank";a.rel="noopener";a.textContent=id?"Beli sekarang":"Buy now";k.appendChild(a);
       g.appendChild(k);
     });
