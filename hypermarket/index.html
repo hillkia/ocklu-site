@@ -164,6 +164,9 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
 <div class="angka" id="sinyalAngka"></div>
 <p style="margin:8px 0 4px"><button type="button" id="mlBtn" style="cursor:pointer">🔎 Lihat siapa yang minta link beli</button></p>
 <div id="mintaLink"></div>
+<details class="panel" id="jejakPanel" style="margin-top:10px"><summary style="cursor:pointer;font-weight:600">🔎 Jejak per pengunjung <span class="kosong">(klik IP di tabel, atau ketik IP)</span></summary>
+<form id="jejakForm" class="baris" style="margin:8px 0"><input id="jejakIp" placeholder="contoh 118.218.127.13" aria-label="Alamat IP"><button class="btn isi" type="submit">Lacak</button></form>
+<div id="jejakHasil" class="kosong">belum ada yang dilacak</div></details>
 <details class="panel" style="overflow-x:auto;margin-top:10px"><summary style="cursor:pointer;font-weight:600">8 minggu terakhir</summary><table><thead><tr><th>Minggu</th><th>Minta link</th><th>Kasir TerTau dibuka</th><th>Tagihan x402</th><th>Minta dipertemukan</th><th>Lunas</th></tr></thead><tbody id="sinyalTabel"></tbody></table></details>
 <p class="kaki" id="sinyalKet" style="margin-top:8px"></p>
 <div id="x402Daftar" class="panel" hidden style="margin-top:6px"></div>
@@ -985,12 +988,21 @@ function muatAgenLapor(){var tb=document.getElementById("alDaftar"),rk=document.
   tb.innerHTML=A.map(function(x){return"<tr><td><b>"+esc(x.nama)+"</b><br><small>"+esc(x.peran||"")+"</small></td><td>"+L[x.st]+(x.g7>0?"<br><small style=\"color:#ff8a8a\">"+x.g7+" galat</small>":"")+"</td><td>"+(x.yosua?"ya":"belum")+"</td><td>"+x.j24+"</td><td>"+x.n7+"</td><td>"+(x.terakhir?lalu(x.terakhir):"belum pernah")+"</td><td><small>"+esc((x.tugas||"belum ada tugas otomatis").slice(0,150))+"</small>"+(x.tugas?'<br><button type="button" data-pb="agen" data-nm="'+esc(x.id)+'">▶ Kerjakan sekarang</button>':"")+"</td></tr>"}).join("");
 }).catch(function(){rk.textContent="gagal memuat laporan agen, coba muat ulang"})}
 setTimeout(muatAgenLapor,3000);
+function lacakIp(ip){var P=document.getElementById("jejakPanel"),H=document.getElementById("jejakHasil");if(!P)return;P.open=true;document.getElementById("jejakIp").value=ip;H.textContent="memuat…";
+  fetch(API+"?r=jejak_ip&ip="+encodeURIComponent(ip),{headers:hOw(),cache:"no-store"}).then(function(r){return r.json()}).then(function(d){
+    if(d.galat){H.textContent="🔒 "+d.galat;return}var R=d.ringkas||{},L=d.langkah||[];
+    H.innerHTML='<p style="margin:6px 0"><b>Tebakan: '+esc(R.tebakan||"-")+'</b></p><p class="kaki" style="margin:0 0 6px">'+esc(R.agen||"?")+' · '+esc((R.aplikasi||"").slice(0,80))+' · '+(R.kunjungan||0)+' langkah dalam '+(R.hari_datang||0)+' hari · jeda tengah '+(R.jeda_median_detik==null?"-":R.jeda_median_detik+" detik")+' · lihat barang '+(R.lihat_barang||0)+' · minta link '+(R.minta_link||0)+'</p>'+
+      '<div style="overflow-x:auto"><table><thead><tr><th>Jam (WIB)</th><th>Jeda</th><th>Yang dilakukan</th><th>Produk / isi</th><th>Hasil</th></tr></thead><tbody>'+L.map(function(x){return'<tr><td>'+new Date(x.pada).toLocaleString("id-ID",{day:"2-digit",month:"short",hour:"2-digit",minute:"2-digit",second:"2-digit"})+'</td><td>'+(x.jeda_detik==null?"-":x.jeda_detik+" dtk")+'</td><td>'+esc(x.alat||"membuka")+'</td><td>'+esc(x.produk||"")+(x.rinci?'<br><small>'+esc(x.rinci)+'</small>':'')+'</td><td><small>'+esc((x.hasil||"").replace(/https?:\/\/\S+/,"(link)").slice(0,80))+'</small></td></tr>'}).join("")+'</tbody></table></div>';
+    try{P.scrollIntoView({behavior:"smooth",block:"start"})}catch(e){}
+  }).catch(function(){H.textContent="gagal memuat, coba lagi"})}
+document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("[data-jejak]");if(!a)return;e.preventDefault();lacakIp(a.dataset.jejak)});
+document.addEventListener("submit",function(e){if(e.target.id!=="jejakForm")return;e.preventDefault();var v=document.getElementById("jejakIp").value.trim();if(v)lacakIp(v)});
 function muatMintaLink(){var el=document.getElementById("mintaLink");if(!el)return;el.innerHTML='<p class="kosong">memuat…</p>';fetch(API+"?r=mintalink",{headers:hOw()}).then(function(r){return r.json()}).then(function(d){
   if(d.galat){el.innerHTML='<p class="kosong">'+esc(d.galat)+'</p>';return}
   var L=d.daftar||[];if(!L.length){el.innerHTML='<p class="kosong">Belum ada agen yang minta link beli.</p>';return}
   el.innerHTML='<div style="overflow-x:auto"><table><thead><tr><th>Kapan</th><th>Agen</th><th>IP</th><th>Lewat</th><th>Produk</th><th>Hasil</th></tr></thead><tbody>'+L.map(function(x){
     var h=x.hasil||(x.alat==="ucp_permalink"?"klik tombol beli UCP (diarahkan ke toko)":"belum dicatat (sebelum 13 Nov)"),ok=/^link terkirim/.test(h),m=h.match(/https?:\/\/\S+/);
-    return'<tr><td>'+lalu(x.pada)+'</td><td><b>'+esc(x.agen||"?")+'</b><br><small>'+esc((x.ua||"").slice(0,70))+'</small></td><td><code>'+esc(x.ip||"belum dicatat")+'</code></td><td>'+esc(x.saluran||"")+'</td><td>'+esc(x.produk||"(tidak disebut)")+'</td><td>'+(x.hasil?(ok?"✅ ":"❌ "):"")+esc(h.replace(/https?:\/\/\S+/,"").slice(0,90))+(m?' <a href="'+esc(m[0])+'" target="_blank" rel="noopener">buka link</a>':'')+(x.rinci?'<br><small>'+esc(x.rinci.slice(0,160))+'</small>':'')+'</td></tr>'}).join("")+'</tbody></table></div>';
+    return'<tr><td>'+lalu(x.pada)+'</td><td><b>'+esc(x.agen||"?")+'</b><br><small>'+esc((x.ua||"").slice(0,70))+'</small></td><td>'+(x.ip?'<a href="#" data-jejak="'+esc(x.ip)+'"><code>'+esc(x.ip)+'</code></a>':'<code>belum dicatat</code>')+'</td><td>'+esc(x.saluran||"")+'</td><td>'+esc(x.produk||"(tidak disebut)")+'</td><td>'+(x.hasil?(ok?"✅ ":"❌ "):"")+esc(h.replace(/https?:\/\/\S+/,"").slice(0,90))+(m?' <a href="'+esc(m[0])+'" target="_blank" rel="noopener">buka link</a>':'')+(x.rinci?'<br><small>'+esc(x.rinci.slice(0,160))+'</small>':'')+'</td></tr>'}).join("")+'</tbody></table></div>';
 }).catch(function(){el.innerHTML='<p class="kosong">gagal memuat, coba lagi</p>'})}
 document.addEventListener("click",function(e){var t=e.target;if(!t||!t.closest)return;var a=t.closest("#sinyalAngka .a");if(t.id!=="mlBtn"&&!a)return;muatMintaLink();var d=document.querySelector("#sinyalAngka").parentNode.querySelector("details");if(d)d.open=true;var m=document.getElementById("mintaLink");if(m)m.scrollIntoView({behavior:"smooth",block:"start"})});
 document.addEventListener("mouseover",function(e){var a=e.target.closest&&e.target.closest("#sinyalAngka .a");if(a)a.style.cursor="pointer"});
