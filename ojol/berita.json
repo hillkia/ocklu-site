@@ -1,7 +1,109 @@
 {
- "w": "2026-11-14T01:01:11Z",
+ "w": "2026-11-14T01:59:42Z",
  "dari": "Kroog",
  "berita": [
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-14T00:40:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Pertamina Ungkap Nasib Harga Pertamax yang Tak Berubah Sejak Agustus",
+    "en": "Pertamina Ungkap Nasib Harga Pertamax yang Tak Berubah Sejak Agustus"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "detikFinance",
+    "url": "https://finance.detik.com/energi/d-8750179/pertamina-buka-bukaan-nasib-harga-pertamax-bulan-ini"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-14T00:40:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Airlangga Pastikan Harga BBM Subsidi Tak Naik Meski Rupiah Rp18.200",
+    "en": "Airlangga Pastikan Harga BBM Subsidi Tak Naik Meski Rupiah Rp18.200"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "CNN Indonesia",
+    "url": "https://www.cnnindonesia.com/ekonomi/20261113153845-532-1426891/airlangga-pastikan-harga-bbm-subsidi-tak-naik-meski-rupiah-rp18200"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-14T00:40:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Daftar Lengkap Harga BBM Pertamina, BP, Vivo dan Shell 12 November 2026",
+    "en": "Daftar Lengkap Harga BBM Pertamina, BP, Vivo dan Shell 12 November 2026"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Bisnis.com - Ekonomi",
+    "url": "https://ekonomi.bisnis.com/read/20261112/44/2020755/daftar-lengkap-harga-bbm-pertamina-bp-vivo-dan-shell-12-november-2026"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-14T01:26:59Z",
+   "media": 3,
+   "judul": {
+    "id": "Pertamina Patra Niaga Bagikan 25 Motor kepada Mitra Ojol Lewat Program BOOM",
+    "en": "Pertamina Patra Niaga Bagikan 25 Motor kepada Mitra Ojol Lewat Program BOOM"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Baca kabar",
+    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQUHJxNEJWVkJtX21fdXUxTmlaM0g4YUdnSWRhVnJ3a1l4VERzMVBCRVlVN3RUTzJCZHZhSDJ2bTM0TFoxdGFJajFvblNtOTJnN3NPc1AydG44Z1dKMkVEZzZOLWNCaXh1WE10dE1Rb1F1anVtSGdEUXJpRXlCaGd3WlBwYVJPOExWTlZQWlJDRzVBRlRyU000T3AxaDYxdw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-14T01:25:12Z",
+   "media": 3,
+   "judul": {
+    "id": "Terduga Begal Driver Ojol Perempuan di Kaligua Brebes Diamankan Warga dan Polisi",
+    "en": "Terduga Begal Driver Ojol Perempuan di Kaligua Brebes Diamankan Warga dan Polisi"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Suara Pantura",
+    "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPbGpzUElkV2RsVllfZWFYcjk4dUx1OWFKOTlZdHhRYjlBYnI0Tmc4bGNINW1LV3M5LXFBUEtsTG00RU05ZWN1NVozNGp0Yktzak5PVVh5TDZKSTByRElGdHdSZk9USGpFWmMzV3l3a1FDQVQyWXVVQVdTTk5iUzBTbU56VkFCZHRYRE9RNWlRdFNMYjJjaHdRYlJGbUhTMWdlZkk2Vm4yY21ZUFJPbmRsbm80R3NDcURrUlh3czd4UFhnTEdG?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-14T01:27:28Z",
+   "media": 2,
+   "judul": {
+    "id": "ITL Trisakti Beri Pandangan Akademis Terkait Ojol Untuk Revisi UU No.22 Tahun 2009 Tentang LLAJ",
+    "en": "ITL Trisakti Beri Pandangan Akademis Terkait Ojol Untuk Revisi UU No.22 Tahun 2009 Tentang LLAJ"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "KilasJatim.com",
+    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNaXF2NmJaYjJubGlpZ19sTF84ZWVtRm8zY0d1UXpqZnVON0w2d3RDNTE2M01kN2VzUDU4WUdRSThxNmtTV1FJMHZXRTRRc0NxV2ZTOFQyZ3pXME1TeHM3T21zOGNWS3BfSmFKdHJKTXVYV0xiQmtkVDJHYkF5OEszOXRkcF9Kc3hxUmlEaDhISDltZ1IyUlFkeWFVcS1SekFGNVE?oc=5"
+   }
+  },
   {
    "jenis": "berita",
    "waktu": "2026-11-13T23:30:17Z",
@@ -102,23 +204,6 @@
    "sumber": {
     "nama": "شبكة تواصل الإخبارية",
     "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBObHpMbUFrYUlmalJKQUtPWjdxdDlfa2t2QmxiZ1lSQS0xRm5UTktZSURqZk5CYV91cmQ4VUJuZS1GLWZSTV9nWG1wN3lmTFQzd1cw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-13T14:16:21Z",
-   "media": 2,
-   "judul": {
-    "id": "Pertamina Patra Niaga Perkuat Loyalitas Mitra Ojol lewat Program BOOM",
-    "en": "Pertamina Patra Niaga Perkuat Loyalitas Mitra Ojol lewat Program BOOM"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "https://www.suaralandak.co.id/",
-    "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOaHVxaU1XSmY1ZGJpS2Q2cF9wYXdGU1RzcDF6d2FuMU43V09QNGZnSU1tYnZKd3k3RDBwUzl0aXFFcl9NRkdGTm5pejQ0djFlY3pRM2c2MkFJRTA2MERGOGEtX3B3clhERmVBRjgwYjQwcmNoZ0dCbVRwTVNJZlA2eGl5S1VmQk1lZWJ1dkgtVTc5UQ?oc=5"
    }
   },
   {
@@ -272,74 +357,6 @@
    "sumber": {
     "nama": "Jabar Publisher",
     "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxORDE3aFdaTTZoa24ya0YzMFk5dWZVWE53UkZDZUFPR3lMbC1UMWl3elhLSWdIU1BsSWxodFpibmZKM0ZsZ1NjbzRwbTV5dlgzRHlseGxCc0FDaS1XeGphdGJyaEJUbjRwQ1BnOU5RRzJXNU1Ub2hldXJwaTVIQTRKRXpsT0pNYjBsbTZSQzk1SjQyZkFQU3Fkc3ZCNFdpM1ZaN3V4b3FlenhNbVJDYnE0U1ZkVmJCdWFLQXM5T0gxUEc2aG1CRDNKNnFxU3VDb25u?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-13T16:47:34Z",
-   "media": 1,
-   "judul": {
-    "id": "Polda Jatim Gandeng Pengemudi Ojol Perkuat Deteksi Dini Gangguan Kamtibmas",
-    "en": "Polda Jatim Gandeng Pengemudi Ojol Perkuat Deteksi Dini Gangguan Kamtibmas"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "KPK-Sigap.com",
-    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOc0JJU1FWZjFSUTVHNEthVmJlblI3MVlhdmxqVlp2OThyal9hNmRXamNZNTlEYTZEcEp6UXFQR25EeExDbFNNWkpVV2lfSFNDTlVwOEZXNHNjeTNCM1ppUGN0MTdzS3JsNEN1RU42cFpEV3c1SzJJQmpNRGxHd0pMS0VyRWZVRVpHaE9kYTBaMDB0UUptcmdLaklZSVJzbnBuLXc?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-13T15:55:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Ribuan Ojol di Jember Sepakati Hapus Klaim Wilayah Penjemputan",
-    "en": "Ribuan Ojol di Jember Sepakati Hapus Klaim Wilayah Penjemputan"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Tirto.id",
-    "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNZl8tQmQ4VEFsU2xpVExkcTN1TjVZQzlfM2ZoSVB3YktwaUltR2xPa005NkVwc1BVUjdMbG5NS0kxNnczZW5ZNXc0cUFsQXBhTVVIbm4wM0JYcXlNSmNINUtJQWxuWVdocTNBb3hTUFlkYWc4eDRmbDFhQS1sTkllRVV6VHVqdjFqZ1dubA?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-13T01:20:54Z",
-   "media": 4,
-   "judul": {
-    "id": "Dukung Ojol Jadi Angkutan Umum, Mori Hanafi: Keselamatan Kendaraan Harus Diatur",
-    "en": "Dukung Ojol Jadi Angkutan Umum, Mori Hanafi: Keselamatan Kendaraan Harus Diatur"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "SUARANTB.com",
-    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQZGtxYW9FeVhPa25LZWxNcVBPWk4tTTJIek5TblQwOVBPb3QzVk8zdjVycGZ3dFJITVY5WUJhVUZPOVhIek16bFBZZUNzTHRsZkNUdi1HWDZwSXJkZjVTaU5jNEt1bkJZLWtjWXJtWnRTZ3pIXzJ1TWtoTHA4ZnRIS2RkS1pISzRhd0lIYVRCcWpJcVJSOC1PSGxod3JHUQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-13T09:13:41Z",
-   "media": 2,
-   "judul": {
-    "id": "BPJS Ketenagakerjaan Dorong Pengemudi Ojek Online Manfaatkan Perlindungan Program Jamsostek",
-    "en": "BPJS Ketenagakerjaan Dorong Pengemudi Ojek Online Manfaatkan Perlindungan Program Jamsostek"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Pekanbaru Pos",
-    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPUEt0X1MycC1vdE56RWVYZ25KUFVFY3pBWVRJSXJtTjdKNUdIUDJmY3dWWXBHNHYtaHhnb1NBWGtzOFdQNHlaZ2lLMlM4R1gteDJKZFZjekhQUDF3MkE3UzVkbU1WOFhpR1B4Z29nbmtlT2NuY29LVF9mZFpjMWFLaTNZZDFpYTBQOVRyZzZrWGtUSERnSGpQZkdXTTdfWWRkZnNIUktPejNVNWJESjltSV91TWdtSmRMU3Vrc3I3UWd0cmhxeUE?oc=5"
    }
   }
  ]
