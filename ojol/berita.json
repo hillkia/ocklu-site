@@ -1,11 +1,11 @@
 {
- "w": "2026-11-14T05:09:55Z",
+ "w": "2026-11-14T06:13:11Z",
  "dari": "Kroog",
  "berita": [
   {
    "jenis": "berita",
-   "waktu": "2026-11-14T02:44:50Z",
-   "media": 6,
+   "waktu": "2026-11-14T02:51:37Z",
+   "media": 7,
    "judul": {
     "id": "Pakar Nilai UU Pelindungan Ketenagakerjaan Belum Lindungi Ojol",
     "en": "Pakar Nilai UU Pelindungan Ketenagakerjaan Belum Lindungi Ojol"
@@ -15,8 +15,8 @@
     "en": ""
    },
    "sumber": {
-    "nama": "شبكة تواصل الإخبارية",
-    "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE84c3YwUVJOc1o3aVRaVUVfUVNqYUFTTXQtTU5KTmd4WlFJa2NfUmRuOFBOM09iN0h2RGdTLUdmSmVid0xoQ0VLNkU3dnBidURMT2VB?oc=5"
+    "nama": "bsinews.id",
+    "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9QMDI0TTM0OUNCYlgyOWRsWFVmaE9BUHRjWkJXSXk0MGZIU1lQS0h1blk3bmFncVVjbmpKUHM1MkZXSTJvOEwyNUowMWhPNEo2S21OUlQ0OWRLQU01amc?oc=5"
    }
   },
   {
@@ -106,6 +106,40 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-14T05:28:38Z",
+   "media": 2,
+   "judul": {
+    "id": "Kapolda Metro Bagikan Sembako dan Layanan Kesehatan untuk Ojol",
+    "en": "Kapolda Metro Bagikan Sembako dan Layanan Kesehatan untuk Ojol"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "bsinews.id",
+    "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9VUDExbThjdmJ6REJfUFZGRlRaTUwxWnJ4cWtSb0pidXNncDhSSDR2QkZmVFZmWWVlRFBXWU42OExScUhWeHhIR0JaaFRBOUxIYWJCV3B1UnRiS0I3YWdsZldkNA?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-14T05:19:00Z",
+   "media": 2,
+   "judul": {
+    "id": "Prabowo Bahas Ekonomi Nasional, Minta Efisiensi BBM dan Percepatan Pasokan Pangan",
+    "en": "Prabowo Bahas Ekonomi Nasional, Minta Efisiensi BBM dan Percepatan Pasokan Pangan"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Kumparan.com",
+    "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPbmNMSnBZeGF2VnV3TUlKeE9raTlnSEJNRmVvZ3lQaXRTVlI2Rkpqd1lMeG0wRmU1M3JKV2JOSkNXY09hclNTdWhBbzFpWGhBOG1hMHZfT1JZdEpEekRjY1l5b2l1ZWZIMHhNa09UYjl1WE5kMGRQSkhuNmU3bG9EaTFTcjVnbl9GWGZvT3hVeUFVa1pTQ3lHdjFwbFM0RmdOaTJTMmhKMVZuOEw4MC1BU0d2dlIwd01oMWJqOGE0UXdqcTNPNm9lOXZ30gHSAUFVX3lxTE5nQllBZ1VRanZjM0FrNk5PRzBmZGI0d2QzdFBPUlhtRUg2QXA4YjNPVW4yY3RES2lZQ1hhV2ttLXg2bWtVNHplVUR4c21POHR6SjVaUWZLV2drOS1iaWZSWVU4dm1lM3UwOFJkRGoyeGtNQmpQMTJLZFk4OG1kQ2Ftbkt0eG5MaTJST2s5RUxEYmtLOHpva25OUkk4a0dRbjZ3cHJhdE1kcGZENlMxb0ZXYnd2c0l1WjB1eXhyemFnTjh0X1phWTJhT18tdTVsM3NoUQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-14T01:27:28Z",
    "media": 2,
    "judul": {
@@ -123,6 +157,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-14T05:41:53Z",
+   "media": 1,
+   "judul": {
+    "id": "Klaim Asuransi Kecelakaan Driver Shopee Food Tak Kunjung Diproses, Keluarga Terpaksa Pinjam Uang untuk Bertahan Hidup",
+    "en": "Klaim Asuransi Kecelakaan Driver Shopee Food Tak Kunjung Diproses, Keluarga Terpaksa Pinjam Uang untuk Bertahan Hidup"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Media Konsumen",
+    "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxPaFp3dG5ZcXNYVDQ1ejFPQUR0Z3FUU1RZUDhoRUtiZFpTSzF2ZmZXTnlncmVZMlc1SHVvT1lBMHpLVmVkR3lOSFVRR28tLW9GcGZWM2lDMEdaV1V5TllHM1F6OHMyZVJYSXgxcm5STzVQeTV5RnFkSnhqQmJoc3V1NlFGZU1haTVmOTRLcTFTeXFHMEVoeWxTcjM4NGtjSWNCWFhnTVlrcVJNQUUzdS1OcndXVTZ5SFhSRTVFazZ5OUE1MU9RQ0dyS3Z2WjhucDBJNWozRTcxWDg0U2hUOUdlZVRfdk9DeFNIQXZYUG5DZkNTWEJlOG5VclJHYw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-13T23:30:17Z",
    "media": 2,
    "judul": {
@@ -136,6 +187,57 @@
    "sumber": {
     "nama": "JournalArta",
     "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOT2V2bXBTYWJVQWZ5VXZEUnJmaFQ2UGVuS2hXOUdsZ1ZMNVBnMDFWN2hjQzVHeVppdTFGUFFCRTdsQXVlOEp3dkxIZmktS0tvLUhmTE1mQnN1NWRMOWM3Q1RlWWxBbk4xV3VXSHZ3czN1elJkQjRHdWh2TXZ6N0ZNQWxuNWY3UnF5OHZR?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-14T05:30:00Z",
+   "media": 1,
+   "judul": {
+    "id": "HUT ke-62, Golkar Gresik Gelar Bazar Sembako Murah untuk Ojol dan Warga Kurang Beruntung",
+    "en": "HUT ke-62, Golkar Gresik Gelar Bazar Sembako Murah untuk Ojol dan Warga Kurang Beruntung"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "BANGSAONLINE.com",
+    "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPcXlpeTVvT3JsSy1WNm55X21WTktVWW1VcEsxS0RSbkthUElsWEJZSEZtNVZ6a1VVcjVmUm5iTDFEdzlGOTNOTE1JTzF5cWl4TEpteHVMRXNVZDkzT3pEZnZzLTlxLUgxZHFsSXZ3Skw2MjJONG5ybjFMRkxvaGIyTkI4VTcyem1ONGpJM0sydE9fSnZlYXk1TnoyYmxvNVU5SE16cG5sSmJXUlZQUXJrS0R1LVVkLUUta2I4MVJCNkNSODliZl9QUVN3?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-14T05:26:53Z",
+   "media": 1,
+   "judul": {
+    "id": "Curi Tas, Pengemudi Ojol Diringkus Di Jateng 1",
+    "en": "Curi Tas, Pengemudi Ojol Diringkus Di Jateng 1"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "BALIPOST.com",
+    "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPNGRrc2NfS0FmN211c01zeUxLMFZRUFZfQkQ5TTV4dld5OTltTXBKY2xnOVI1UFZRc2tldmsyRTB1NVJicmFuZ2UzUXJjSF9GbmJCTmMyYWxidkJXWnIyQW5EVm9ESzRrUm9SU3JtdjNXTFNXbXp0N1lYYmlzVTBkMGpsWGlRZEl1T09OcUtoYmhmR3lNeGFKOG10ZGJQWjRpcDJXdTh0TmtmemhncVJlMmRTcnZLd25NcnJyWGFmM2d5RDRDUmFNMEJRV19Ia01q?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-14T05:19:49Z",
+   "media": 1,
+   "judul": {
+    "id": "Kapolda Metro Berbagi ke Ojol Lewat 'Sabtu Bahagia', Pesan Jaga Keselamatan",
+    "en": "Kapolda Metro Berbagi ke Ojol Lewat 'Sabtu Bahagia', Pesan Jaga Keselamatan"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "detikNews",
+    "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNY2JWVWpfNTFqRTI5b2NRUGlxQzhaUjdVQ0FnbHdnYVlPZWswZDlKTFFQMDNTSlc3cFpvMmZiUnduNlJuUXVtbEFJanlna3g4QmpNQnFyRnpOeGJFbkZZbjNJdk1rUHpQQ2Nia25JbWM1X0lHV2JqcjAwYWRyY3hpU1d2TWJSRWZoWmI0OER0YjhRVGVNbEhjeVlpSThuTVRSTDkwNFl4ZGZvdjNZb1hEbk9B0gG3AUFVX3lxTFB0U2ZSOG8wLURJdjR5bW10emNpVW1DQzIzeFcyeU11MTRheUc1SF95aTJadmtlbDNVUzRxUjdJQWFCRDFCQWxFdWF0cEJROUxmRW1HNmZuVzZ2cVBSS2RkVWwyMERkTDZOLThLTDNsTF9xZ0ZucFJjTVYyakZVclFta0o4bUpESzhQbVYwaXJ2bXNYRlRQbDNUZUwzcmxEZ2JxRVRiUGZwa01FRXlpbEJ3WnV5Zm5CTQ?oc=5"
    }
   },
   {
@@ -170,6 +272,23 @@
    "sumber": {
     "nama": "Head Topics",
     "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOVUxaeVA3cVpzbVFtN0x0LXFudUc4STk1UjhrbHQ1azZQNUNiRV9wUEliN280amUyNEpabUZ3N0t5cXdjY3ZFNjhxRHhCUXAxSDJBTjFMaXZvZmRScHhKTmdZZm5oVlJweGJDZnJQZnltUWFuRUpXMThmbnVJSFZiV0tpRzhtRmRkc1BhX2tOckd6d09wQ2otdg?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-14T04:36:47Z",
+   "media": 1,
+   "judul": {
+    "id": "Cegah Geng Motor dan Kejahatan Jalanan, Polisi Sisir Pusat Keramaian Cisaga hingga SPBU",
+    "en": "Cegah Geng Motor dan Kejahatan Jalanan, Polisi Sisir Pusat Keramaian Cisaga hingga SPBU"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "MIN.CO.ID",
+    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQR2w1LXlGSjRUdnJ6bU9YTVU5ZE1MODdodmhoNzdyX3IyTERKSTBudE5oaEZ5RGhmSmZrZTBqY1o1TEktU0luSmJkNDBhRzhWazlCWkxsaDBOUEF1RlNOdE11S1g4VnoyOHg3b3Q5Wk54UFRuRWszMThKSnNhMkRqNzFsdDBmdlhOMzZWQ1cyNUo4ZWZscUo1dkVMQ0tHQk1kRkt3?oc=5"
    }
   },
   {
@@ -238,23 +357,6 @@
    "sumber": {
     "nama": "Pos-kupang.com",
     "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNNFlaeWNRb3djTWEzV2Z4N01OaWNmY1hNdWl5UlUtQkVKVzVWR2F0UW1MNHR2a1dzUnB2bUJ1b3ZLbFY4RXVPZm1jOWhCcnhkOVJTX2p5ampxdllVb0ZEc1JXSzR5djZmaVBNdVpwTldUa1VjRlhKMldkc3lsLUlUaVhHWnVqUU1HbFlDQmoyS0VraFY1SVNYRG41dDZ1VnJiclRhNjRXd2sxQndVOHVpSHM3b05VdWRTM0E?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-14T01:30:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Demi Biaya Persalinan Anak, Ojol di Thailand Kerja 31 Hari dan Raup Rp 37 juta",
-    "en": "Demi Biaya Persalinan Anak, Ojol di Thailand Kerja 31 Hari dan Raup Rp 37 juta"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Kompas.com",
-    "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNb0MzSTVrcFRGSVpKRm1yc1VucTNsLTR1TE81YV9VYXhQamRab3VaX3RIN1Q4VjU5N3VBd19jYVctU0JTV21xaW9SdlBWQm45VjBjbGo2bGZnV1k1bm1DYzNKX0JsUVl6S0lwaXg3UlRWZ1BmNl93ejZLWWs3ckhJaUl6QzZTcFU1Q1J2LWNmQmZzbHBQSlNnQWE4Sm5GNTUtQnpPaDNtLUZjTDc2dWFxVlI4QmpERElrbkZkOUVMUGRmbm9z0gHEAUFVX3lxTE12QU53aWYzUTNPSW0wbUxqZVNCaUktS09ncWtieWlfZUZyUnhEdmJ1b1Z6aDBmWXZrV3BkWVU0b2ZJVjZDYjdILUNiMVVyNnhlS181Zzd6R2d5a0ZEcU5kcVlaaWdmRURzcXI0RXlEWFMwcHZvQlhrN09oRHN2czh4WmctUnhPUEVISlFSQTdMNncyaks1a3Y4b1FEVENTcnl2TVVuWUhLY3YxN1FiS3RGYlBDaGpjUjg3X3EzV1hpcXpjSUI?oc=5"
    }
   }
  ]
