@@ -1,5 +1,5 @@
 {
- "w": "2026-11-14T08:20:31Z",
+ "w": "2026-11-14T09:04:46Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -38,6 +38,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-14T08:15:00Z",
+   "media": 3,
+   "judul": {
+    "id": "Temui Pengemudi Ojol, Kapolda Metro Jaya Tekankan Pentingnya Keselamatan",
+    "en": "Temui Pengemudi Ojol, Kapolda Metro Jaya Tekankan Pentingnya Keselamatan"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Todaynews.id",
+    "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNbHNIUm9NX21jMmNwaDNjV1VsdE40Qi01bldvaFBUUGpYTE5sZE5zR1g3UHdXYmpWUVlfVXVGQUxNZDVYeXpad2ZJLVp2NmlUb01NRHFlaVdPMHNKcnhzLTVIbmFxTzlfcW1rcWpVM0hqN05iTUs2X0hlVVdMZFlPSUI3NTFvNElEUFlqSjZaUkRtZWhQU0VsLQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-14T06:40:00Z",
    "media": 1,
    "judul": {
@@ -51,6 +68,74 @@
    "sumber": {
     "nama": "Akurat Jatim",
     "url": "https://jatim.akurat.co/news/906410/bmkg-ingatkan-jatim-dilanda-cuaca-ekstrem-potensi-banjir-bandang-hingga-hujan-es"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-14T07:36:58Z",
+   "media": 2,
+   "judul": {
+    "id": "HUT ke-62, Golkar Gresik Gelar Bazar Sembako Murah untuk Ojol dan Warga Kurang Beruntung",
+    "en": "HUT ke-62, Golkar Gresik Gelar Bazar Sembako Murah untuk Ojol dan Warga Kurang Beruntung"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "TagarJatim.id",
+    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQM05VRVo5S2V6cnRWcnZlbV9iZW9TY29NNVJzQVZuSzRIbTlRczdqbUdRMmJKY3A3akV2TzRmUVlWREZxZjE5SGpYcW9NSDE3bC0tcFBlQi1vLTc0WGVSQnpfUmtaQWtQeW5lbHk4U0FJTW1xLUZ2ZFVhaE1NYzk1a1Z4YmdsNFRXNnFMT0NIRThLdEdTUU5mQ01PMzRncnVTSlE?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-14T07:15:00Z",
+   "media": 2,
+   "judul": {
+    "id": "Prabowo Soroti Harga Pangan dan Minta Penghematan BBM-Listrik",
+    "en": "Prabowo Soroti Harga Pangan dan Minta Penghematan BBM-Listrik"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Warta Ekonomi",
+    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQLVZXaXZLWTVwaGlHU0RyUURZVEVWankwUWFQcG4wTjBMRGk2OHFBNTBveXVXdGJlOTBidzhGcy1RZGg4X0ZxUDBTaXdLcDMwbVk1T1pScjRSeC1RdkRfeDNOOUNmczRZYk1QcmQxTldGTlQ2NFM4Sm1zYlFFTDFMc25rU2ZkOEJ3RTd3YjMtcGZyZXlMT3VuRlQxSUgzSjI40gGmAUFVX3lxTE5vSlpLX1VpbmVydkxVTlR6V0dKZnRnQWVhSDdKNzh1a2x0T2Y5ZTBBX242aDNMcTlDMWNIYXUtRFFiRmNHT0NoRXAtb2paZ3QzeUg3c0hCbWxGd3ZSRUxYRHNwMFRMYWljbDBvRTE2dXZ1SmVfYWhNMXUzYnBpdzRWRndZQ05aU0VUb2M0ZEFSaHVONG9LM0dJbXoyVThCSFVuV2NueVE?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-14T07:13:41Z",
+   "media": 2,
+   "judul": {
+    "id": "Ribuan Ojol Geruduk Terminal Tawang Alun Jember, Klaim Wilayah Penjemputan Sepakat Dihapus",
+    "en": "Ribuan Ojol Geruduk Terminal Tawang Alun Jember, Klaim Wilayah Penjemputan Sepakat Dihapus"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "LINGKAR.news",
+    "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPUGhoZWtRcE1Dc3VKeEtXblptZVpQdGVzTmZ4cVV3M0dQU3dXWGVSYWdjSlYydXJyZ2dVUm4tQzdISExjNVk4cUJLQlQxZ3VudmNSd20zZm5yX0tOU1dVaV83TmlwSG1GT3R3SWx3QUhkencyU0ZTYW5YcjhCNDlYRkxCWGlla2J3SjFNWC1pOUxoYWc3TFFGMWVTRmJ5NXc4RWNzZi1pTVBMZS1XWnZNT1kwaGJodEtKN2c?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-14T06:40:22Z",
+   "media": 2,
+   "judul": {
+    "id": "Sabtu Bahagia Bersama Ojol, Kapolda Ingatkan Pentingnya Selamat dan Sehat di Jalan",
+    "en": "Sabtu Bahagia Bersama Ojol, Kapolda Ingatkan Pentingnya Selamat dan Sehat di Jalan"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "senanews.id",
+    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPQXB1QjA5SElxN0pWSThQZ2tTWFJyZVVLZ1k5Vy1UcndEZXByZkt6bDJ3YVQ3c1Zuc3NneDlJVDA2ampnc3I2VkhzNWJidm9UYm1jZHVjSWd2N1g1Q21oMFFoYTJzT1VxR2k0aHhTWTNuTnNfWVRQWXpERm1WZlJlbGswTXJxTjZsVHBHVHFXaDFHb1VNWF9hWkNfRHppUW1kNURnTg?oc=5"
    }
   },
   {
@@ -191,6 +276,74 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-14T08:36:38Z",
+   "media": 1,
+   "judul": {
+    "id": "Delapan Drum Pertalite Diamankan Polisi, Begini Modus Penjualan BBM Subsidi di Karanganyar",
+    "en": "Delapan Drum Pertalite Diamankan Polisi, Begini Modus Penjualan BBM Subsidi di Karanganyar"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Tribunjateng.com",
+    "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPdlNpYjlocEQ5ZlRmbDN3YWdUOFl3cXhDOG5PbUNTb2gyR0d2eC1uZUhDblgtUFZ0Zndjd09IRkhCbzYybEtqTm1IaFN1VnNZTTctOG1aRjQ5OWZNWm1ZUlkxU3BqNWtCZ19SU1hoSWlrM3NkVllJR2tUX05YSThfQ2xjV1pRd3JGQnZIalJCMDJ6bjZyQW91SlpXT1ZXTWtIWHVNVzg4ajg3Z2dWalhnLXR4V0gwM1gzdmRXSUJ3S1p5UFY1NkwxNFJ6cXFkb1QxWlcyQkln?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-14T08:31:51Z",
+   "media": 1,
+   "judul": {
+    "id": "Bukan Sekadar Berbagi Sembako, Kapolda Metro Jaya Bangun Kedekatan",
+    "en": "Bukan Sekadar Berbagi Sembako, Kapolda Metro Jaya Bangun Kedekatan"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Poskota TV",
+    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNc1ZRV3BROXZhWXRENEVTeUZFNU15N1dNMGpoaUlGaE9zUFVuLU52Q0tUTzFoU0g1LVpkRFdHVDNjSWZuNTRPMGtJRV9xT2Vuc2tKLXQ1Um1rekFkejdPZ1JWX2d0VDloaFFQaWhlU2tfODl4TFFya3NRQVlNenBzMjBoakhoVjlPdkszeDRHNXFzTWdBVjBsSkIzRkxxT1ZKamc?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-14T08:10:14Z",
+   "media": 1,
+   "judul": {
+    "id": "Prabowo Minta Jajaran Kaji Efisiensi BBM dan Listrik",
+    "en": "Prabowo Minta Jajaran Kaji Efisiensi BBM dan Listrik"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "MetroTVNews.com",
+    "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPa2N1U1AyS25sZzJLRHpybGRlS2o5eTB0Vm9TVEs0d2EtX2FkN3VfZE9zMDlibElDSHFKTW5TRFpPTlRUVHVFN2ZfOW85dXJtdy03UzItdW9jOWR5dGdrOUtUZE9WdC1wai1fVFkzQjFvNVhTSEhqQTBYMlpuUXluZ3E1bTVYTm1UUF9aLUw5eUE3bUh6bFc4Yk13?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-14T07:35:21Z",
+   "media": 1,
+   "judul": {
+    "id": "Sabtu Bahagia dan Ceria Pengemudi Ojol Bersama Kapolda Metro Jaya Komjen Prof. Dadang",
+    "en": "Sabtu Bahagia dan Ceria Pengemudi Ojol Bersama Kapolda Metro Jaya Komjen Prof. Dadang"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Poskotaonline",
+    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNOWNGVE1MSkx1R0s0d0ZiYm5ZVFcxY0JEOHVOTXBXd0xMLTQ4d1dMU0NCZ2x5b0RFZEVac19VY0VBdVp5WXZoXzdkVDhreXNydTNCbzQ3SXRwNTI1LTVQWlFES3cwNktSeHh2SkFWS2M3aHlQSlpnRXdGSEEzX3JFNzV0WHZrYjdYWTBDZ2VJWjNqVjNLbHhJSmRhb3VuMjFFMWdBNUh6TjdSRkxkYUwwYVFCZlF4dTA?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-14T01:27:28Z",
    "media": 2,
    "judul": {
@@ -204,6 +357,40 @@
    "sumber": {
     "nama": "KilasJatim.com",
     "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNaXF2NmJaYjJubGlpZ19sTF84ZWVtRm8zY0d1UXpqZnVON0w2d3RDNTE2M01kN2VzUDU4WUdRSThxNmtTV1FJMHZXRTRRc0NxV2ZTOFQyZ3pXME1TeHM3T21zOGNWS3BfSmFKdHJKTXVYV0xiQmtkVDJHYkF5OEszOXRkcF9Kc3hxUmlEaDhISDltZ1IyUlFkeWFVcS1SekFGNVE?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-14T07:30:06Z",
+   "media": 1,
+   "judul": {
+    "id": "HP Baterai 6.000 mAh untuk Ojol dan Pedagang Online",
+    "en": "HP Baterai 6.000 mAh untuk Ojol dan Pedagang Online"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "JournalArta",
+    "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxONU90Nm84NlZnSXlfRGtGVFdTTEZMa3JxNUFqdjB5Zy0xQmRZc1UyUlFtdzNPM05OZGpTeWZWQjRITldxWU1XMTZRRExVUnhkS0dvM0s2bnY3UzZSeXV3eVpiNVVVV2lUTmJaNnV3WDdBTWRRWnV0R1VBMF9QQ29rUUZ5aEtTQmVK?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-14T07:19:47Z",
+   "media": 1,
+   "judul": {
+    "id": "Arogansi Alphard vs Ojol di Bintaro: Potret Lunturnya Nilai Pancasila",
+    "en": "Arogansi Alphard vs Ojol di Bintaro: Potret Lunturnya Nilai Pancasila"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Kompasiana.com",
+    "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNUHlKaW8xX2RQdkQ0MEZ2RUtsT1pTOWZVWGxBNTIzNWs0bkJQMU5hZUItUHJLUko4cjZ5YjdaZ2JGcVNqS05Pb3lwcTFyNFR1MExZOTY4YksyNnBaQjVHYi1DU0JGcmxXTnl0V19qdlhMckdzQ1BBMERJTWFuOExuemtsdy16cmlBeklkZXprUUNRVU5PbEZhRHhCNi1GS2lGWlllXzlJd0JEazlFcHlzZWVHVjlIRGhPMEU0UkY5YzVzRnJaRXdWUGJtT2ZpQTA?oc=5"
    }
   },
   {
@@ -238,40 +425,6 @@
    "sumber": {
     "nama": "VIVA.co.id",
     "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxObFFqVW95Mk9BZHhMSENJTUVDTHp4eWlLMjF0QWFFZUJkUXU5cTNXdWlRRG5DZk9mdS03dnRqMTBLdVlrMFRIcjRqRHptQXZRTXVPZFhUZHlORi1CZTE2bjF2VFZpWDR3WVhaaXd1MGRoYVNsRzFOT0JkMGJUMDFNbEE5cDFqQXU2UFIzbWRhc1pfOTAxTmowa3cyUDRTX0pPS0dkdElGcnB6NzI3WGYzSWhyb3FnRnVpT0FvcnpXWW56ZEpkemlWYnoxMjdxOGNx0gHWAUFVX3lxTE5WNE94ZDRJcFZqQmR1QWFaYUZZUndYYTRYMk5kMksyZGtfRU50amw1bnVtaFFiNmZwUjlKR3B4QUJOQzJTeW9uOThnN1ZMSFFEZjVmSnFxTDVKR2JGbkxCcGNQdHozLU5pd2RabWxRYktwTC1SMzN1blE4eEUxZmlSNDJIVXZOVnk5N2JjWjhBVFNveXlSNjdPY0ZMT1hQTkY2dGVzZnNXLU40dE1zMVRVeVFpSFlidFVWQWJDY1VJajVSb2Vqa3pXQXJja2s1RlhackJ6T2c?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-14T06:40:22Z",
-   "media": 1,
-   "judul": {
-    "id": "Sabtu Bahagia Bersama Ojol, Kapolda Ingatkan Pentingnya Selamat dan Sehat di Jalan",
-    "en": "Sabtu Bahagia Bersama Ojol, Kapolda Ingatkan Pentingnya Selamat dan Sehat di Jalan"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "senanews.id",
-    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPQXB1QjA5SElxN0pWSThQZ2tTWFJyZVVLZ1k5Vy1UcndEZXByZkt6bDJ3YVQ3c1Zuc3NneDlJVDA2ampnc3I2VkhzNWJidm9UYm1jZHVjSWd2N1g1Q21oMFFoYTJzT1VxR2k0aHhTWTNuTnNfWVRQWXpERm1WZlJlbGswTXJxTjZsVHBHVHFXaDFHb1VNWF9hWkNfRHppUW1kNURnTg?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-14T06:31:52Z",
-   "media": 1,
-   "judul": {
-    "id": "Kapolda Metro ingatkan pengemudi ojol utamakan keselamatan di jalan",
-    "en": "Kapolda Metro ingatkan pengemudi ojol utamakan keselamatan di jalan"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "ANTARA News",
-    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNSXBYcC1vOEtGeW1pOXdOWkNGOVIyTFh1cUJidTItWVlmYjVlMGtRSUg2R2gtZU1zMTdaZGx0dWpkeHo0R3czQkRzN3JfLVYwcUFUUm1DYTFrcVQ5MXk4bU5Ka0tOaTAySTVoRFZFeTBodUw0dGNtMzlxVkdpZDRod3NfdE0wNk0xTjBpeUtRc3JjZENYQThGdEsxYmxZUlAtbTlCdWdua1VvYjlxdHfSAbABQVVfeXFMUEFQOWJfZDB0bGR2STQ5RjY0OC1LaEZqSVRPa1Y4X1R2NUE5M2diLWZaN3JndjFSZ3hNdzhWRjNNSUFMTmtsTGRRMWE3NzJnNmEyR0hTT3Eta2N0OGFiRTJpNXdQYkhFYnd1YTdKSHFPcEhPc3NFcmNTTURpRVFIaVYtN1M1N3E5LXlBOGxyM1J0QTlmNVBubDgwdmtTVHZIQXJvalZIR1g2OGlQTUVYNTE?oc=5"
    }
   },
   {
@@ -340,142 +493,6 @@
    "sumber": {
     "nama": "JournalArta",
     "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOT2V2bXBTYWJVQWZ5VXZEUnJmaFQ2UGVuS2hXOUdsZ1ZMNVBnMDFWN2hjQzVHeVppdTFGUFFCRTdsQXVlOEp3dkxIZmktS0tvLUhmTE1mQnN1NWRMOWM3Q1RlWWxBbk4xV3VXSHZ3czN1elJkQjRHdWh2TXZ6N0ZNQWxuNWY3UnF5OHZR?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-14T05:30:00Z",
-   "media": 1,
-   "judul": {
-    "id": "HUT ke-62, Golkar Gresik Gelar Bazar Sembako Murah untuk Ojol dan Warga Kurang Beruntung",
-    "en": "HUT ke-62, Golkar Gresik Gelar Bazar Sembako Murah untuk Ojol dan Warga Kurang Beruntung"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "BANGSAONLINE.com",
-    "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPcXlpeTVvT3JsSy1WNm55X21WTktVWW1VcEsxS0RSbkthUElsWEJZSEZtNVZ6a1VVcjVmUm5iTDFEdzlGOTNOTE1JTzF5cWl4TEpteHVMRXNVZDkzT3pEZnZzLTlxLUgxZHFsSXZ3Skw2MjJONG5ybjFMRkxvaGIyTkI4VTcyem1ONGpJM0sydE9fSnZlYXk1TnoyYmxvNVU5SE16cG5sSmJXUlZQUXJrS0R1LVVkLUUta2I4MVJCNkNSODliZl9QUVN3?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-14T05:26:53Z",
-   "media": 1,
-   "judul": {
-    "id": "Curi Tas, Pengemudi Ojol Diringkus Di Jateng 1",
-    "en": "Curi Tas, Pengemudi Ojol Diringkus Di Jateng 1"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "BALIPOST.com",
-    "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPNGRrc2NfS0FmN211c01zeUxLMFZRUFZfQkQ5TTV4dld5OTltTXBKY2xnOVI1UFZRc2tldmsyRTB1NVJicmFuZ2UzUXJjSF9GbmJCTmMyYWxidkJXWnIyQW5EVm9ESzRrUm9SU3JtdjNXTFNXbXp0N1lYYmlzVTBkMGpsWGlRZEl1T09OcUtoYmhmR3lNeGFKOG10ZGJQWjRpcDJXdTh0TmtmemhncVJlMmRTcnZLd25NcnJyWGFmM2d5RDRDUmFNMEJRV19Ia01q?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-14T05:19:49Z",
-   "media": 1,
-   "judul": {
-    "id": "Kapolda Metro Berbagi ke Ojol Lewat 'Sabtu Bahagia', Pesan Jaga Keselamatan",
-    "en": "Kapolda Metro Berbagi ke Ojol Lewat 'Sabtu Bahagia', Pesan Jaga Keselamatan"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "detikNews",
-    "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNY2JWVWpfNTFqRTI5b2NRUGlxQzhaUjdVQ0FnbHdnYVlPZWswZDlKTFFQMDNTSlc3cFpvMmZiUnduNlJuUXVtbEFJanlna3g4QmpNQnFyRnpOeGJFbkZZbjNJdk1rUHpQQ2Nia25JbWM1X0lHV2JqcjAwYWRyY3hpU1d2TWJSRWZoWmI0OER0YjhRVGVNbEhjeVlpSThuTVRSTDkwNFl4ZGZvdjNZb1hEbk9B0gG3AUFVX3lxTFB0U2ZSOG8wLURJdjR5bW10emNpVW1DQzIzeFcyeU11MTRheUc1SF95aTJadmtlbDNVUzRxUjdJQWFCRDFCQWxFdWF0cEJROUxmRW1HNmZuVzZ2cVBSS2RkVWwyMERkTDZOLThLTDNsTF9xZ0ZucFJjTVYyakZVclFta0o4bUpESzhQbVYwaXJ2bXNYRlRQbDNUZUwzcmxEZ2JxRVRiUGZwa01FRXlpbEJ3WnV5Zm5CTQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-13T23:09:00Z",
-   "media": 2,
-   "judul": {
-    "id": "Pertamina Serahkan 25 Motor kepada Pemenang Program BOOM",
-    "en": "Pertamina Serahkan 25 Motor kepada Pemenang Program BOOM"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "ChatNews.id",
-    "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9wODNvVDBrbl9NTXUyNHFobnpMRjhGdVpfMVVNYmk3azFNdWdscTJESlZORnczMlhBZ1RLcHhISVU4cnlzVF9OOWxxTVprZzVPVWJRSTh6NHRyYjdHd1BLdGtMWQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-14T04:53:10Z",
-   "media": 1,
-   "judul": {
-    "id": "Demi Biaya Persalinan Anak, Ojol di Thailand Kerja 31 Hari dan Raup Rp 37 juta",
-    "en": "Demi Biaya Persalinan Anak, Ojol di Thailand Kerja 31 Hari dan Raup Rp 37 juta"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Kompas.com",
-    "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQOXlJRndWbW1BeDJmVERkM2lmX0NhUE42MXRNbVRGMUpEakxMNU5oY3JnU0hUQXB6ZTNEMEJsXzl2RDJIUDM4RWZBV0dISTdXR280TUtocGs5MklNM1FFLXZVSlYyMUFZVjR2NVNxVGx1V0diMDQ0bHNFdng3M2JGengxQnF1VFJjbGw2a3VZVktlZnFHc25xQXZLczF5UEFCV0VvS1VKT29kX3ZUVURtTXFGTWJCVGNGaV8zaS01REw0UkVMeFZiNDBqNHZMeTA?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-13T11:41:00Z",
-   "media": 5,
-   "judul": {
-    "id": "Rezeki Mitra Ojol, Pertamina Patra Niaga Bagikan 25 Motor untuk Pemenang BOOM",
-    "en": "Rezeki Mitra Ojol, Pertamina Patra Niaga Bagikan 25 Motor untuk Pemenang BOOM"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Head Topics",
-    "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOVUxaeVA3cVpzbVFtN0x0LXFudUc4STk1UjhrbHQ1azZQNUNiRV9wUEliN280amUyNEpabUZ3N0t5cXdjY3ZFNjhxRHhCUXAxSDJBTjFMaXZvZmRScHhKTmdZZm5oVlJweGJDZnJQZnltUWFuRUpXMThmbnVJSFZiV0tpRzhtRmRkc1BhX2tOckd6d09wQ2otdg?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-14T04:36:47Z",
-   "media": 1,
-   "judul": {
-    "id": "Cegah Geng Motor dan Kejahatan Jalanan, Polisi Sisir Pusat Keramaian Cisaga hingga SPBU",
-    "en": "Cegah Geng Motor dan Kejahatan Jalanan, Polisi Sisir Pusat Keramaian Cisaga hingga SPBU"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "MIN.CO.ID",
-    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQR2w1LXlGSjRUdnJ6bU9YTVU5ZE1MODdodmhoNzdyX3IyTERKSTBudE5oaEZ5RGhmSmZrZTBqY1o1TEktU0luSmJkNDBhRzhWazlCWkxsaDBOUEF1RlNOdE11S1g4VnoyOHg3b3Q5Wk54UFRuRWszMThKSnNhMkRqNzFsdDBmdlhOMzZWQ1cyNUo4ZWZscUo1dkVMQ0tHQk1kRkt3?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-13T11:18:45Z",
-   "media": 5,
-   "judul": {
-    "id": "Gelar Jumat Berkah, Polda Jatim Bagikan Ratusan Paket Sembako untuk Pengemudi Ojol di Surabaya",
-    "en": "Gelar Jumat Berkah, Polda Jatim Bagikan Ratusan Paket Sembako untuk Pengemudi Ojol di Surabaya"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Website Resmi Polri",
-    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQT1dOaGtQMXZQMVdjRFQzN2tjSGVnV1Rqa3QtemI2NERwcFViLXowVU5JNkF1c1FwYWpXZWNLYzRpeTJoOXdsSnp3WEhER1Q0Uk5mNTczeHFJdm1iTnU1cHNoZEVQNF9mdXZnVFRJMTAwWl8wYlNLME1BNHpfU19yWGRIX2Y1MklNS29qS1RPOTVBVk1QdF9oWjExcWJMTmRSYmtyOWZOMA?oc=5"
    }
   }
  ]
