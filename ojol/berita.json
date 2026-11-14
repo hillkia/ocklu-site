@@ -1,11 +1,28 @@
 {
- "w": "2026-11-14T13:56:11Z",
+ "w": "2026-11-14T15:27:00Z",
  "dari": "Kroog",
  "berita": [
   {
    "jenis": "berita",
-   "waktu": "2026-11-14T11:00:00Z",
+   "waktu": "2026-11-14T14:53:07Z",
    "media": 4,
+   "judul": {
+    "id": "Sabtu Bahagia Bersama Ojol, Kapolda Ingatkan Pentingnya Selamat dan Sehat di Jalan",
+    "en": "Sabtu Bahagia Bersama Ojol, Kapolda Ingatkan Pentingnya Selamat dan Sehat di Jalan"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Rakyat Merdeka News",
+    "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOaXFKdVM3QklnaGVmMVh3NVpWNUpPeG00ZjJzTnI2S3pTV21nYUpTMC1EWmpmaTJPU0xOV1JuNUp3eHk5Nko5WkYwSnp0WnlsSWRHazZwWlM3Qi1HUjlaRHgtZGpTU1dwQTBOa3hESS1Uc3NMRXRrdnVLdmVkeEJTMS03VDkzbkJ5eWVaMEd2VkVRaTRXWjluY2w1aXhncDRJczdYcHZn?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-14T11:00:00Z",
+   "media": 5,
    "judul": {
     "id": "Temui Pengemudi Ojol, Kapolda Metro Jaya Tekankan Pentingnya Keselamatan",
     "en": "Temui Pengemudi Ojol, Kapolda Metro Jaya Tekankan Pentingnya Keselamatan"
@@ -17,6 +34,23 @@
    "sumber": {
     "nama": "Tribratanews",
     "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOUlN4M2hNbW9NcklIUXlnZGtvWG5aYkp5NEVJMVd6Nzc0bk81MXJSTEZqZFp4QjRvWW9RbDV4dS1Zck4zOTlQc3lwbERaWUFjVUhXb2NXemZhcWlwZnZ3QVZtdGlRNGR2eEFYQU4yaEVCUzFLOElyUEFFY2RhMHVDbXVfLXZXMUFFVDVRLVh2bmJBT08tNTRObjk4cUtfN083UHc?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-14T10:55:00Z",
+   "media": 5,
+   "judul": {
+    "id": "HUT ke-62 Golkar, Sembako Murah Disubsidi Rp30 Ribu untuk Ojol dan Warga Gresik",
+    "en": "HUT ke-62 Golkar, Sembako Murah Disubsidi Rp30 Ribu untuk Ojol dan Warga Gresik"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Afederasi",
+    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxONThYRldnWDJtc2Eza29oU2dBallKV3lZanBLZWNteFhmdGF4OGNRbzU5OGlqOGxpRzNXSWtlbVVhNEs2TlRjMU9qV1pQWl90N3RqUFI5VEVlbnFUOFpYZDUtTXphaWh4amoyZHdDUklJZDBhMzRGVDVLaENZbTkwZXl0akRydnRaWHRWV1BhT2FTTlUwb3Q4cm9VcFdCMWxOU2xmeDN0NUlSUks0b3F5Uk5IazZRRUF1UGxUZUFyb1NBckNXbEE?oc=5"
    }
   },
   {
@@ -51,23 +85,6 @@
    "sumber": {
     "nama": "HARIAN MISTAR",
     "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOdERUaG5ZeEFta0NHQnVNUXppeUJHMHZvUTZPN2FNZmJOOVNZcmNOTV9TNHpoNjZ1V25odDBPRU9WLWxWLVJDblNWVmFQRDlRRmItZVpGaGhBTUJGWXIzNFlXYzhaUUVHTDBpVmIzZmh1V1I2eVE1WUQtVWd3UlVVTjVwSkhvS0pSSVhobXE4QUNOOVRWLTJuY1Bn?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-14T09:54:54Z",
-   "media": 4,
-   "judul": {
-    "id": "HUT ke-62 Golkar, Sembako Murah Disubsidi Rp30 Ribu untuk Ojol dan Warga Gresik",
-    "en": "HUT ke-62 Golkar, Sembako Murah Disubsidi Rp30 Ribu untuk Ojol dan Warga Gresik"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Kabar Jawa Timur",
-    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQNUNCOFQyM0FHeDVROGJWLVVya2NOcS1qbWw5bHl1d2tIaW5hQ0FrRUdQa3RtVkdHdTg2SVVia1pNTlUtMURRT1hpZUV0S1BxZU5jcVpvUzB4WENva1hBYjdUSVJXZmhoT2RmOEl4dlNXcHJ3YUtsaWhoMlBkWnhpQ2dWR0djeUpHTzJTaG9iSU9uWVhJbFlnZzNOVnNodnVOaDdJNl9nc3ExbEpBMzU1eXhpMFg?oc=5"
    }
   },
   {
@@ -123,23 +140,6 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-14T08:39:26Z",
-   "media": 3,
-   "judul": {
-    "id": "Sabtu Bahagia Bersama Ojol, Kapolda Ingatkan Pentingnya Selamat dan Sehat di Jalan",
-    "en": "Sabtu Bahagia Bersama Ojol, Kapolda Ingatkan Pentingnya Selamat dan Sehat di Jalan"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "KPK-Sigap.com",
-    "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOal9sQlpRU2ZFRkE1MGQ3NWZnZUlQMFpVRElfUEo4Um5YS0prWllFWWJ6V09aN3hRTV9wMTl2NlRrcUJrNmROSXQtVXN0dm1WTTFoVHdZLThEVk9NVVFpNUQwaFE4YjdKTXFpUldVSnF4SGE0ck93cmdZN0oxRGlqaVE0WFRCeWt6blNYYWswaFFxUHNyUS1PNEwtNXFNLTVsMV8yVGNnNkQ5dWpYTVZfdzY4NW5qSnpzZnl3Z0ZZUzZOMnpo?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
    "waktu": "2026-11-14T06:40:00Z",
    "media": 1,
    "judul": {
@@ -153,6 +153,40 @@
    "sumber": {
     "nama": "Akurat Jatim",
     "url": "https://jatim.akurat.co/news/906410/bmkg-ingatkan-jatim-dilanda-cuaca-ekstrem-potensi-banjir-bandang-hingga-hujan-es"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-14T14:51:24Z",
+   "media": 1,
+   "judul": {
+    "id": "Ketua DPRD Tanah Bumbu Serap Aspirasi Pekerja Ojek Online",
+    "en": "Ketua DPRD Tanah Bumbu Serap Aspirasi Pekerja Ojek Online"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Lugas Nusantara",
+    "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNMDNnV1pua1l5emFGOTR5T2lfNV91a19hc0d6cEpWRUY4cVBHSU5vbVV4OGtLZlFHanBMc0RZTnpBNkt3cFpESFBRRnlieHp0QjdkSmhwWnpMMEhPemVLNE5BckF1cFJKdW10bVZWejBSTTQ0SXRURTlZNUlJRmpfVW5KWFBISTlPVUVwTGo4U1RqcDVMRHdqUTQ5c0RVUWs?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-14T13:37:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Bentuk Kepedulian Sosial, Kapolda Jatim Bagikan 500 Paket Sembako kepada Ojol hingga Tukang Becak di Situbondo",
+    "en": "Bentuk Kepedulian Sosial, Kapolda Jatim Bagikan 500 Paket Sembako kepada Ojol hingga Tukang Becak di Situbondo"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Memorandum.co.id",
+    "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPTGx0cHJzd1Z3Vk5oS094V2RiSnEzT2dYbWVYUkp6d0JKVVZSSHRfc2F2NzlYYzBhWXVjMS1lZ3pVMXpRTXVUOGxrZks5QlhiaEEwNVlqSEVWeGdXT2JMZ0dveExOcTZISFN0anBqWXJkS2FtYnVvT09pQmFaVXVrZHh6TTVnOGJzUjl1SkVxWXR4aERFUlg4azFQMjR1LTlBVi1KdjVBZFBuME5jOVJvVDI5SVNrb29udVV3Y1lUWUo5VEJjR2VXeDFUQlRVd1B6WV9yOU5CQTJ2bnptelp6bVY0UUJXVXRHWE5IejRHdGZKd9IB4wFBVV95cUxNRlI0NlczM1Vyc0VteUNVdGt4V2gzMmZULVNHa1pMZm1HOWpyQURuRDN2TGlWUUdoNUdLbEN4T3RrUW5CVFZaYzVVWWJPWFhfT0tyR0NHYUw5ZzhOR2hneG5GZU5TQTk0VGhVUnVPVzZ2X3lzNTNxZU9rYS14VUlOS2txTm9YNHNEbTQ1NkowQzJhNU1VTDhOU1BCVnYzRlYtUk5nLWRMR1FfWTl4LVc3MDNUaFRKMGlGU0xKdXJ1bjNlODM4WFZNT2hQeldkVDdseWowSjlTZmdFVm52SnhaeGVlQQ?oc=5"
    }
   },
   {
@@ -187,6 +221,23 @@
    "sumber": {
     "nama": "LINGKAR.news",
     "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPUGhoZWtRcE1Dc3VKeEtXblptZVpQdGVzTmZ4cVV3M0dQU3dXWGVSYWdjSlYydXJyZ2dVUm4tQzdISExjNVk4cUJLQlQxZ3VudmNSd20zZm5yX0tOU1dVaV83TmlwSG1GT3R3SWx3QUhkencyU0ZTYW5YcjhCNDlYRkxCWGlla2J3SjFNWC1pOUxoYWc3TFFGMWVTRmJ5NXc4RWNzZi1pTVBMZS1XWnZNT1kwaGJodEtKN2c?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-14T12:58:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Pemerintah Targetkan Ojol Beralih ke Motor Listrik pada 2027",
+    "en": "Pemerintah Targetkan Ojol Beralih ke Motor Listrik pada 2027"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "RM.ID",
+    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQMFdXcWptWDlZLTcyRjBFX2sxdXlfM21NSS13cHZGejZHeGh6NnluVFU1RXRLdUpvWDdoVS0tWUhaS2phVTc4TUVaSmU0dGNfWHRWRVljblNlZHVfcVgyZGJfamJkdVlvTTlpa2hPVmhSblk3MWUtOExhN05RdlNUalR4UHZHbl9DemVFZnlESkpRa1Y3NzZhZkk2VVFQQ3pKRThZSVlsYTBERHg4RTg4?oc=5"
    }
   },
   {
@@ -238,6 +289,23 @@
    "sumber": {
     "nama": "Bisnis.com - Ekonomi",
     "url": "https://ekonomi.bisnis.com/read/20261112/44/2020755/daftar-lengkap-harga-bbm-pertamina-bp-vivo-dan-shell-12-november-2026"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-14T12:06:48Z",
+   "media": 1,
+   "judul": {
+    "id": "Anggota DPR dorong perlindungan dan kesejahteraan pengemudi ojol di Kalteng",
+    "en": "Anggota DPR dorong perlindungan dan kesejahteraan pengemudi ojol di Kalteng"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "ANTARA News Kalteng",
+    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxObnZBLUdXR19FekJMZmNQU2NCVUsxVGFkbTJXVFJUeWV0QVU0QlFBbEFjOVlqRlptWVNJVkF1VGdXZmtjMmZXUlU4T1UxakxIY0hwQzhia1hGWHBHV2F2R0NFaVNUZHhaejc3ZWs4RVNGOTluMzVzLU5tYU5EZHItemRoUWtvQmhSVDRWZXlRYzNaS3hiWnRlQXFsSHhHSVpxSUt4eUQwYWJMSFlWckdUdmN6cFVZSHpjMGktaQ?oc=5"
    }
   },
   {
@@ -327,6 +395,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-14T11:24:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Rawat Alam dan Jaga Sumber Mata Air, PDI Perjuangan Kabupaten Kediri Gelar Aksi Merawat Pertiwi",
+    "en": "Rawat Alam dan Jaga Sumber Mata Air, PDI Perjuangan Kabupaten Kediri Gelar Aksi Merawat Pertiwi"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Ngopibareng.id",
+    "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPdDROd29lWEtvZFI2V1R2cFM1QmpzY3Utd25KSlp5a2lUczA5T3hfMjlnd0JHQ3huZlJUYjhyazItSVZ1aUd5Um5IX1NRZlJNcUlMWlREZVdtRDVQeTN6SlJTT20tWEJCR1p4cVJTMC05Q2R0eVp2NHl0WE9CTGYwei1GUFRSdEt1ekpvcUpnRUJwMVJ4YTFPT3RDbUNRNFZsLUN1NzNoODhnN3R3aV9GMjFZZmxsbDEtUE5fMEN3dkdFaWRC?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-14T05:19:00Z",
    "media": 2,
    "judul": {
@@ -340,57 +425,6 @@
    "sumber": {
     "nama": "Kumparan.com",
     "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPbmNMSnBZeGF2VnV3TUlKeE9raTlnSEJNRmVvZ3lQaXRTVlI2Rkpqd1lMeG0wRmU1M3JKV2JOSkNXY09hclNTdWhBbzFpWGhBOG1hMHZfT1JZdEpEekRjY1l5b2l1ZWZIMHhNa09UYjl1WE5kMGRQSkhuNmU3bG9EaTFTcjVnbl9GWGZvT3hVeUFVa1pTQ3lHdjFwbFM0RmdOaTJTMmhKMVZuOEw4MC1BU0d2dlIwd01oMWJqOGE0UXdqcTNPNm9lOXZ30gHSAUFVX3lxTE5nQllBZ1VRanZjM0FrNk5PRzBmZGI0d2QzdFBPUlhtRUg2QXA4YjNPVW4yY3RES2lZQ1hhV2ttLXg2bWtVNHplVUR4c21POHR6SjVaUWZLV2drOS1iaWZSWVU4dm1lM3UwOFJkRGoyeGtNQmpQMTJLZFk4OG1kQ2Ftbkt0eG5MaTJST2s5RUxEYmtLOHpva25OUkk4a0dRbjZ3cHJhdE1kcGZENlMxb0ZXYnd2c0l1WjB1eXhyemFnTjh0X1phWTJhT18tdTVsM3NoUQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-14T11:10:58Z",
-   "media": 1,
-   "judul": {
-    "id": "Komdigi: Kehadiran Layanan Hantaran Barang dan Ojol Ubah Pola Persaingan Usaha",
-    "en": "Komdigi: Kehadiran Layanan Hantaran Barang dan Ojol Ubah Pola Persaingan Usaha"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Bisnis Tekno",
-    "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNYm5jTkhiRUdwYnNBSml5ZGJSWG9JWXFuZnVQR2pDUUdFUG1KX2FHWnNOQ0MyYzRmdEdQM253YzlMMkUwbW9Xa0JHam8zQWY3MzFqWXRUZG5Bcm9XSERQSmxVZHI1eTFrZHkyYkc4aXlHRWQ1VzdaNVVuVngxcFNCa1E1dFZ2NUVZMmRKd3JmakxhendFUGpFbmNOdlJ2MmY1THZ0Vk1vWjRjeTFZdGV2RlFqMWREU3NyTWM5SjF5OEcwSjZKRUtKS05MZUo?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-14T10:43:56Z",
-   "media": 1,
-   "judul": {
-    "id": "Kejari Pekanbaru Tambah Jam Layanan, Pengambilan Barang Bukti Tilang Bisa Pakai Ojek Online",
-    "en": "Kejari Pekanbaru Tambah Jam Layanan, Pengambilan Barang Bukti Tilang Bisa Pakai Ojek Online"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Tribunpekanbaru.com",
-    "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPSUxvNEQyMFZEYWc0Rl9UczhSeGhqSjBadTBVZEtfcG5lRnNWNWdMd0NOOFdSaTZZT19JaWhCQk1UMkFHSHRDNk1haTJXRE5vMFpydTNYZnhOUFJfaGVxbjQxMGs5VjZOV1g5OTdFbklYSW1hVGZTWFh3NXFKNWJuMEtQZzJqTnl3R2NjR1lxalhkdzZNY2FfU2F0aEhhaVVwQ3J2cDNSeDFjNVJkMnZmeEcxUjBhMHY4VndLVC1SUUpqNWVQdFluNWdlZ3I0SkxvUVlQNlQ0d0ZsTDg?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-14T09:38:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Tergerus Ojek Online, Begini Kisah Pilu Pengemudi Bentor di Palembang Kejar Setoran Sebelum Tengah Hari",
-    "en": "Tergerus Ojek Online, Begini Kisah Pilu Pengemudi Bentor di Palembang Kejar Setoran Sebelum Tengah Hari"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "PALPRES.COM",
-    "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxONDhhbkltYnk0ZC1BNzdUZDZDU1VxSGdjNk1lWExwTVNzdkkwU05SVkNnU3VHLWRDMmJCZW1qRTZjLWNyNzBqc1AxTEdJRkx0eUp6dTllUkEyRWo1dFU5VEFibkJrWV8xRkM5U1N4R0ZfaklkbjJNZlRFbzM5dHhKRGN5dkpnSm9USG1Tdjd4NzRZR09meUQ4NVc2cndjemJRTHM3bjdYdGx0QU9qTWN6MWU3VDd5bmFMRjlVT3h3NTJTTXB0T2VPNjFFeTdLTm8tNlZjYXBZeG0wWW1iUWFNOFdR0gHWAUFVX3lxTE9MTzJVLXlabVY5bW5SWks2SkJxQXFLb0RvZ05sbm9JNTNmeXU0eU9rWW8wMHFyTHVyWG0tcUxPSTI1MnBRM0Z2TlRDMGdpZkQ2aTMySjJaR3I3NlpnSFFaZDBFbzhKWklNdFZlamgwbGpNWEhXV09XV1NHUWF6eWtmbWpFU05rTDZnTTdNZVR5VUR5U1Y5ZFpaZVZEcS00ZGc1VHNVQXVyVU5CSnkwV0lSSHlkR3o4TGkxYzhhVzlBcmpsZVlnYlMxd2ZwQ0VKZjliYjFaMHc?oc=5"
    }
   }
  ]
