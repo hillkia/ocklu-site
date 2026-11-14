@@ -46,3 +46,5 @@ User-agent: meta-externalagent
 Allow: /
 
 Sitemap: https://ocklu.com/sitemap.xml
+
+Sitemap: https://ocklu.com/hypermarket/kebutuhan/sitemap.xml
