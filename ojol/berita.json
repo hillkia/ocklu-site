@@ -1,5 +1,5 @@
 {
- "w": "2026-11-14T10:22:12Z",
+ "w": "2026-11-14T11:23:53Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -310,6 +310,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-14T08:45:56Z",
+   "media": 1,
+   "judul": {
+    "id": "Harga Asli Pertalite Rp 18 Ribu, Selisih Ditanggung Pembayar Pajak",
+    "en": "Harga Asli Pertalite Rp 18 Ribu, Selisih Ditanggung Pembayar Pajak"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "detikOto",
+    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNQVlMRUYtU3JrOXF1RzVRR2xzZnVLYm1nc0FnZmtRWnhvMzhXZURmR3pHN1RTZ2hGRTFhUkFfMmdaX1BtYUE4V3FCb3VWT2tHeThVVlV0NXV2RVJNQ3pkaHhleFBnUmwzQ1dNSkxKYzd5WlNpRldKcXRxUDhPUU52bEVPZy1BTkNfNWFlYVF6TmZ3WmROcVVLNmE5RWpZOURqTVczTndYQdIBrAFBVV95cUxOR2J4YmtpLV9GcG85RTdkX2VPajlUQTYzV0xQQUlqYUJubVI4QzFHdDIzQW9sTnlOUkx2T3RDTnB3RE5ZSVNWTGUtWTdxWVlGUTNEN04tVGE5UlNLb2ljT2QyMnpaSXFydTNHYkxWNUJCSXc0N3FfWUdha0VrTWdZUWNMMjdrakhubFdHNEJNYVJFY3hRVlF5c3Itc19fX2Q5SWlvc29OODNaSUZy?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-14T08:36:38Z",
    "media": 1,
    "judul": {
@@ -340,108 +357,6 @@
    "sumber": {
     "nama": "Poskota TV",
     "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNc1ZRV3BROXZhWXRENEVTeUZFNU15N1dNMGpoaUlGaE9zUFVuLU52Q0tUTzFoU0g1LVpkRFdHVDNjSWZuNTRPMGtJRV9xT2Vuc2tKLXQ1Um1rekFkejdPZ1JWX2d0VDloaFFQaWhlU2tfODl4TFFya3NRQVlNenBzMjBoakhoVjlPdkszeDRHNXFzTWdBVjBsSkIzRkxxT1ZKamc?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-14T07:35:21Z",
-   "media": 1,
-   "judul": {
-    "id": "Sabtu Bahagia dan Ceria Pengemudi Ojol Bersama Kapolda Metro Jaya Komjen Prof. Dadang",
-    "en": "Sabtu Bahagia dan Ceria Pengemudi Ojol Bersama Kapolda Metro Jaya Komjen Prof. Dadang"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Poskotaonline",
-    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNOWNGVE1MSkx1R0s0d0ZiYm5ZVFcxY0JEOHVOTXBXd0xMLTQ4d1dMU0NCZ2x5b0RFZEVac19VY0VBdVp5WXZoXzdkVDhreXNydTNCbzQ3SXRwNTI1LTVQWlFES3cwNktSeHh2SkFWS2M3aHlQSlpnRXdGSEEzX3JFNzV0WHZrYjdYWTBDZ2VJWjNqVjNLbHhJSmRhb3VuMjFFMWdBNUh6TjdSRkxkYUwwYVFCZlF4dTA?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-14T01:27:28Z",
-   "media": 2,
-   "judul": {
-    "id": "ITL Trisakti Beri Pandangan Akademis Terkait Ojol Untuk Revisi UU No.22 Tahun 2009 Tentang LLAJ",
-    "en": "ITL Trisakti Beri Pandangan Akademis Terkait Ojol Untuk Revisi UU No.22 Tahun 2009 Tentang LLAJ"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "KilasJatim.com",
-    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNaXF2NmJaYjJubGlpZ19sTF84ZWVtRm8zY0d1UXpqZnVON0w2d3RDNTE2M01kN2VzUDU4WUdRSThxNmtTV1FJMHZXRTRRc0NxV2ZTOFQyZ3pXME1TeHM3T21zOGNWS3BfSmFKdHJKTXVYV0xiQmtkVDJHYkF5OEszOXRkcF9Kc3hxUmlEaDhISDltZ1IyUlFkeWFVcS1SekFGNVE?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-14T07:30:06Z",
-   "media": 1,
-   "judul": {
-    "id": "HP Baterai 6.000 mAh untuk Ojol dan Pedagang Online",
-    "en": "HP Baterai 6.000 mAh untuk Ojol dan Pedagang Online"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "JournalArta",
-    "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxONU90Nm84NlZnSXlfRGtGVFdTTEZMa3JxNUFqdjB5Zy0xQmRZc1UyUlFtdzNPM05OZGpTeWZWQjRITldxWU1XMTZRRExVUnhkS0dvM0s2bnY3UzZSeXV3eVpiNVVVV2lUTmJaNnV3WDdBTWRRWnV0R1VBMF9QQ29rUUZ5aEtTQmVK?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-14T07:19:47Z",
-   "media": 1,
-   "judul": {
-    "id": "Arogansi Alphard vs Ojol di Bintaro: Potret Lunturnya Nilai Pancasila",
-    "en": "Arogansi Alphard vs Ojol di Bintaro: Potret Lunturnya Nilai Pancasila"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Kompasiana.com",
-    "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNUHlKaW8xX2RQdkQ0MEZ2RUtsT1pTOWZVWGxBNTIzNWs0bkJQMU5hZUItUHJLUko4cjZ5YjdaZ2JGcVNqS05Pb3lwcTFyNFR1MExZOTY4YksyNnBaQjVHYi1DU0JGcmxXTnl0V19qdlhMckdzQ1BBMERJTWFuOExuemtsdy16cmlBeklkZXprUUNRVU5PbEZhRHhCNi1GS2lGWlllXzlJd0JEazlFcHlzZWVHVjlIRGhPMEU0UkY5YzVzRnJaRXdWUGJtT2ZpQTA?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-14T07:08:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Polisi Bekuk 8 Tersangka Penimbun BBM dan LPG Bersubsidi di Solo Raya, Kerugian 1,3 M",
-    "en": "Polisi Bekuk 8 Tersangka Penimbun BBM dan LPG Bersubsidi di Solo Raya, Kerugian 1,3 M"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "RRI.co.id",
-    "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNZVREdGpNWHJOanNZLXNoSVl1U3Axd01VcU41WlZzVUpqbHJ1bnZvVFdvUzVDcVBOUzJsa1NuelNRWWhlcXJ1cWlIek56NktRMDF3bTNyWlB6SjFmcHlvcm9zZFRweWhhRDVINFVTbllCMi1sWWt4cVMzcGVvX3pFNEdCN2dSU25QN1VUQ1NCNXlFWWRJVmNMeFIzaE8xSUtMdHJ6ck1LSkRsQkw1U2hEY3lvUFBfNFVVb2xhaGRkbWpVVzlLbWFZVEpBazhSeVVjWUVETA?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-14T07:02:00Z",
-   "media": 1,
-   "judul": {
-    "id": "7 HP Murah Baterai Jumbo untuk Ojol hingga Pedagang Online, Jangan Lewatkan Fitur Ini!",
-    "en": "7 HP Murah Baterai Jumbo untuk Ojol hingga Pedagang Online, Jangan Lewatkan Fitur Ini!"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "VIVA.co.id",
-    "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxObFFqVW95Mk9BZHhMSENJTUVDTHp4eWlLMjF0QWFFZUJkUXU5cTNXdWlRRG5DZk9mdS03dnRqMTBLdVlrMFRIcjRqRHptQXZRTXVPZFhUZHlORi1CZTE2bjF2VFZpWDR3WVhaaXd1MGRoYVNsRzFOT0JkMGJUMDFNbEE5cDFqQXU2UFIzbWRhc1pfOTAxTmowa3cyUDRTX0pPS0dkdElGcnB6NzI3WGYzSWhyb3FnRnVpT0FvcnpXWW56ZEpkemlWYnoxMjdxOGNx0gHWAUFVX3lxTE5WNE94ZDRJcFZqQmR1QWFaYUZZUndYYTRYMk5kMksyZGtfRU50amw1bnVtaFFiNmZwUjlKR3B4QUJOQzJTeW9uOThnN1ZMSFFEZjVmSnFxTDVKR2JGbkxCcGNQdHozLU5pd2RabWxRYktwTC1SMzN1blE4eEUxZmlSNDJIVXZOVnk5N2JjWjhBVFNveXlSNjdPY0ZMT1hQTkY2dGVzZnNXLU40dE1zMVRVeVFpSFlidFVWQWJDY1VJajVSb2Vqa3pXQXJja2s1RlhackJ6T2c?oc=5"
    }
   }
  ]
