@@ -1,38 +1,67 @@
 {
- "dibuat": "2026-11-06T09:41:44+07:00",
+ "dibuat": "2026-11-13T09:46:35+07:00",
  "peluang": {
-  "total": 14690,
-  "hidup": 6744,
-  "mati": 485,
-  "duplikat": 1583,
-  "risiko_tinggi": 20,
-  "layak_terbit": 1201,
-  "masuk_24j": 477,
+  "total": 18151,
+  "hidup": 8743,
+  "mati": 542,
+  "duplikat": 2226,
+  "risiko_tinggi": 22,
+  "layak_terbit": 1440,
+  "masuk_24j": 549,
   "per_kategori": {
-   "alat": 1182,
-   "freelance": 603,
-   "hibah": 208,
-   "kerja": 10619,
-   "promo": 193,
-   "reseller": 181,
-   "tender": 1704
+   "alat": 1506,
+   "beli_id": 7,
+   "freelance": 751,
+   "hibah": 209,
+   "kerja": 12887,
+   "promo": 284,
+   "reseller": 280,
+   "tender": 2227
   },
   "per_sumber": {
-   "Arbeitnow": 9411,
-   "TED Uni Eropa": 1704,
-   "Himalayas": 972,
-   "Product Hunt": 836,
-   "WeWorkRemotely": 589,
-   "GitHub": 346,
-   "Tavily": 212,
-   "Grants.gov": 208,
-   "RemoteOK": 206,
-   "Remotive": 30,
-   "Shopify": 17,
-   "Hacker News": 14
+   "Arbeitnow": 11489,
+   "TED Uni Eropa": 2219,
+   "Himalayas": 1132,
+   "Product Hunt": 1054,
+   "WeWorkRemotely": 736,
+   "GitHub": 452,
+   "Tavily": 284,
+   "RemoteOK": 233,
+   "Grants.gov": 209,
+   "Remotive": 33,
+   "Shopify": 24,
+   "Hacker News": 15
   }
  },
  "edisi": [
+  {
+   "tanggal": "2026-11-13",
+   "jumlah": 25
+  },
+  {
+   "tanggal": "2026-11-12",
+   "jumlah": 25
+  },
+  {
+   "tanggal": "2026-11-11",
+   "jumlah": 25
+  },
+  {
+   "tanggal": "2026-11-10",
+   "jumlah": 25
+  },
+  {
+   "tanggal": "2026-11-09",
+   "jumlah": 25
+  },
+  {
+   "tanggal": "2026-11-08",
+   "jumlah": 25
+  },
+  {
+   "tanggal": "2026-11-07",
+   "jumlah": 25
+  },
   {
    "tanggal": "2026-11-06",
    "jumlah": 25
@@ -60,37 +89,9 @@
   {
    "tanggal": "2026-10-13",
    "jumlah": 25
-  },
-  {
-   "tanggal": "2026-10-12",
-   "jumlah": 25
-  },
-  {
-   "tanggal": "2026-10-11",
-   "jumlah": 25
-  },
-  {
-   "tanggal": "2026-10-10",
-   "jumlah": 25
-  },
-  {
-   "tanggal": "2026-10-09",
-   "jumlah": 25
-  },
-  {
-   "tanggal": "2026-10-08",
-   "jumlah": 25
-  },
-  {
-   "tanggal": "2026-10-07",
-   "jumlah": 25
-  },
-  {
-   "tanggal": "2026-10-06",
-   "jumlah": 25
   }
  ],
- "pekerja_terdaftar": 23,
- "pekerja_sehat": 21,
+ "pekerja_terdaftar": 25,
+ "pekerja_sehat": 23,
  "janji": "Setiap peluang menyimpan tautan sumbernya dan tautan itu dibuka mesin sebelum diterbitkan. Angka di berkas ini dihitung dari gudang data, tidak diketik tangan."
 }

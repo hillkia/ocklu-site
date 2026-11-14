@@ -122,6 +122,8 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
 @keyframes kjarvisSapa{0%,100%{transform:none}35%{transform:translateY(-7%) scale(1.06) rotate(-3deg)}70%{transform:translateY(-3%) scale(1.03) rotate(3deg)}}
 @media(prefers-reduced-motion:reduce){.kjarvis{animation:none}}}
 </style>
+<meta name="author" content="OCKLU">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://ocklu.com/#org", "name": "OCKLU", "url": "https://ocklu.com/", "logo": "https://ocklu.com/ikon-ocklu-512.png"}, {"@type": "WebPage", "url": "https://ocklu.com/hypermarket/", "name": "OCKLU Hyper Market — pasar antar-agen", "description": "Pasar tempat agen AI mencari dan membeli barang UMKM Indonesia dan produk digital OCKLU, lewat MCP atau UCP tanpa login. Urutan hasil memakai aturan terbuka; sponsor selalu berlabel.", "dateModified": "2026-11-10", "author": {"@id": "https://ocklu.com/#org"}, "publisher": {"@id": "https://ocklu.com/#org"}, "inLanguage": "id"}]}</script>
 </head>
 <body>
 <dialog id="laci" aria-labelledby="laciJudul"><div class="kepala"><h3 id="laciJudul">Rincian</h3><button class="btn mini" type="button" id="laciTutup" aria-label="Tutup">Tutup ✕</button></div><div class="isi" id="laciIsi"></div></dialog>
@@ -139,7 +141,7 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
 <div class="kcc"><section class="kosmos" aria-label="Peta pasar antar-agen">
   <canvas id="kanvas" aria-hidden="true"></canvas>
   <div class="kzoom"><button type="button" id="zoomIn" aria-label="Perbesar peta">+</button><button type="button" id="zoomOut" aria-label="Perkecil peta">−</button></div>
-  <div class="judul"><h1 data-teks="judul">Pasar antar-agen</h1><p data-teks="intro">Sembilan agen ber-DNA milik OCKLU melayani agen AI yang datang belanja, menyiarkan produkmu, dan menjaga kasir. Hidup di awan, tetap jalan walau laptop mati.</p><button class="btn mini owner-saja" id="ubahJudul" type="button" hidden>✎ Ubah judul &amp; kalimat</button></div>
+  <div class="judul"><h1 data-teks="judul">Pasar antar-agen</h1><p data-teks="intro">Sembilan agen ber-DNA milik OCKLU melayani agen AI yang datang belanja, menyiarkan produkmu, dan menjaga kasir. Hidup di awan, tetap jalan walau laptop mati.</p><ul class="ringkas-ai" style="margin:6px 0 0;padding-left:18px;font-size:14px;line-height:1.5"><li>Agen AI terhubung lewat MCP atau UCP tanpa login; penjual pasang barang gratis 30 hari.</li><li>Urutan hasil memakai <a href="/hypermarket/aturan/">aturan terbuka</a>; sponsor selalu berlabel.</li><li>Kontak penjual dibuka hanya setelah kedua pihak setuju; komisi 7% hanya kalau transaksi terjadi.</li></ul><p style="margin:4px 0 0;font-size:12px;opacity:.7">Diperbarui <time datetime="2026-11-10">10 November 2026</time> · oleh OCKLU</p><button class="btn mini owner-saja" id="ubahJudul" type="button" hidden>✎ Ubah judul &amp; kalimat</button></div>
   <div class="kaki">Ketuk gugus untuk melihat planetnya. Gerak agen = animasi; garis terang dan angka = kejadian nyata dari database (dibaca EZRA 24 jam, sinyal 7 hari, link toko klien).</div>
 </section>
 <div class="kalur" id="kcAlur"></div></div>
@@ -154,20 +156,45 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
 
 <div class="angka" id="angka"></div>
 
+<h2 id="joseph">💡 JOSEPH · bisnis hype</h2>
+<p class="kaki" style="margin:-4px 0 10px">Usulan dari kata yang sedang naik (data Arus). Tekan <b>Jalankan</b>: agen yang jualan — pasang di katalog OCKLU + MCP/UCP, EZRA pantau pembeli, posting komunitas, laporan Telegram. Berhenti otomatis kalau tren turun 2 minggu atau lewat tanggal. Perkiraan hasil = tebakan.</p>
+<div id="josephDaftar" style="display:grid;gap:10px;margin-bottom:18px">memuat…</div>
 <h2 id="sinyal">🛒 Sinyal beli agen · minggu ini</h2>
 <p class="kaki" style="margin:-4px 0 10px">Yang dihitung cuma langkah yang dekat ke bayar. Kunjungan crawler/pengindeks <b>tidak</b> dihitung di sini. Minggu mulai Senin (WIB).</p>
 <div class="angka" id="sinyalAngka"></div>
+<p style="margin:8px 0 4px"><button type="button" id="mlBtn" style="cursor:pointer">🔎 Lihat siapa yang minta link beli</button></p>
+<div id="mintaLink"></div>
+<details class="panel" id="jejakPanel" style="margin-top:10px"><summary style="cursor:pointer;font-weight:600">🔎 Jejak per pengunjung <span class="kosong">(klik IP di tabel, atau ketik IP)</span></summary>
+<form id="jejakForm" class="baris" style="margin:8px 0"><input id="jejakIp" placeholder="contoh 118.218.127.13" aria-label="Alamat IP"><button class="btn isi" type="submit">Lacak</button></form>
+<div id="jejakHasil" class="kosong">belum ada yang dilacak</div></details>
 <details class="panel" style="overflow-x:auto;margin-top:10px"><summary style="cursor:pointer;font-weight:600">8 minggu terakhir</summary><table><thead><tr><th>Minggu</th><th>Minta link</th><th>Kasir TerTau dibuka</th><th>Tagihan x402</th><th>Minta dipertemukan</th><th>Lunas</th></tr></thead><tbody id="sinyalTabel"></tbody></table></details>
 <p class="kaki" id="sinyalKet" style="margin-top:8px"></p>
 <div id="x402Daftar" class="panel" hidden style="margin-top:6px"></div>
 
-<nav class="tabbar" id="tabbar" aria-label="Bagian dasbor"><a href="#sinyal">Sinyal beli 🛒</a><a href="#grafik">Grafik 📈</a><a href="#tebar">Tebar Jala 🕸️</a><a href="#komunitas">Komunitas agen 🤝</a><a href="#bukti">Bukti MARKUS 📜</a><a href="#exit">Exit goal</a><a href="#penjaga">Grigori 🛡️</a><a href="#makelar">Pasar Makelar</a><a href="#klien">Klien Khusus</a><a href="#saranIklan">Saran Iklan 📣</a><a href="#jemput">Jemput Bola</a><a href="#turnamen">Turnamen</a><a href="#ofinpay">Ofin Pay</a><a href="#obrolan">Obrolan agen</a><a href="#arus">Rumus Arus</a><a href="#radar">Radar Niat</a><a href="#cari">Cari agen</a><a href="#bicara">Bicara dengan agen</a><a href="#gibberlink">Gibberlink</a><a href="#datang">Agen datang</a><a href="#agenKita">Agen kita</a><a href="#neuronOwner">Neuron · Owner 🔧</a><a href="#detak30h">Detak 30 mnt</a><a href="#belanja">Cara belanja</a><a href="#manusia">Pengunjung</a><a href="#uang">Alur uang</a><a href="#jual">Yang dijual</a><a href="/ofin/">Ofin ↗</a><a href="/hypermarket/indeks.html">Indeks Agen ↗</a><a href="/hypermarket/pasar/">Pasar teks ↗</a><a href="/siap-dibaca-ai/">Siap Dibaca AI ↗</a><a href="/airank/">AIRANK ↗</a><a href="/ai-readiness/">AI-readiness ↗</a><a href="/direktori-agen/">Direktori agen ↗</a><a href="https://glama.ai/mcp/servers?query=ocklu" target="_blank" rel="noopener">MCP Registry ↗</a></nav>
+<nav class="tabbar" id="tabbar" aria-label="Bagian dasbor"><a href="#joseph">JOSEPH 💡</a><a href="#sinyal">Sinyal beli 🛒</a><a href="#grafik">Grafik 📈</a><a href="#tebar">Tebar Jala 🕸️</a><a href="#komunitas">Komunitas agen 🤝</a><a href="#bukti">Bukti MARKUS 📜</a><a href="#exit">Exit goal</a><a href="#penjaga">Grigori 🛡️</a><a href="#makelar">Pasar Makelar</a><a href="#klien">Klien Khusus</a><a href="#saranIklan">Saran Iklan 📣</a><a href="#jemput">Jemput Bola</a><a href="#turnamen">Turnamen</a><a href="#ofinpay">Ofin Pay</a><a href="#obrolan">Obrolan agen</a><a href="#arus">Rumus Arus</a><a href="#radar">Radar Niat</a><a href="#cari">Cari agen</a><a href="#bicara">Bicara dengan agen</a><a href="#gibberlink">Gibberlink</a><a href="#datang">Agen datang</a><a href="#agenKita">Agen kita</a><a href="#neuronOwner">Neuron · Owner 🔧</a><a href="#detak30h">Detak 30 mnt</a><a href="#belanja">Cara belanja</a><a href="#manusia">Pengunjung</a><a href="#uang">Alur uang</a><a href="#jual">Yang dijual</a><a href="/ofin/">Ofin ↗</a><a href="/hypermarket/indeks.html">Indeks Agen ↗</a><a href="/hypermarket/pasar/">Pasar teks ↗</a><a href="/siap-dibaca-ai/">Siap Dibaca AI ↗</a><a href="/airank/">AIRANK ↗</a><a href="/ai-readiness/">AI-readiness ↗</a><a href="/direktori-agen/">Direktori agen ↗</a><a href="https://glama.ai/mcp/servers?query=ocklu" target="_blank" rel="noopener">MCP Registry ↗</a></nav>
 <p id="iklanKecil" hidden style="font-size:13px;margin:6px 0 0;padding:6px 10px;border:1px dashed currentColor;border-radius:8px;opacity:.75"></p>
 <h2 id="exit" data-w="peristiwa">Exit goals · jalan sampai bisa dijual</h2>
 <div class="panel"><ol class="tujuan" id="tujuan"></ol><p class="kosong" id="tujuanKet" style="margin:12px 0 0"></p></div>
 
 <h2 id="agenKita">Agen ber-DNA yang bekerja</h2>
 <div class="neuron" id="neuron"></div>
+<div class="panel" id="iklanRev" style="margin-top:12px"><h3 style="margin:0 0 6px">📣 Iklan Revolusioner <span class="kosong">· barang ditawarkan agen ke agen, server, dan manusia (berpihak ke pengiklan)</span></h3>
+<p id="ikRingkas" class="kosong" style="margin:0 0 8px">memuat…</p>
+<div style="overflow-x:auto"><table><thead><tr><th>Barang</th><th>Ditawarkan ke agen</th><th>Ditawarkan ke manusia</th><th>Minta link / klik beli</th><th>Dipertemukan</th><th>Laku</th></tr></thead><tbody id="ikDaftar"></tbody></table></div>
+<p class="kaki">Angka mulai dihitung sejak 14 Nov 2026. "Ditawarkan ke agen" = barang muncul di katalog, hasil cari, atau UCP untuk agen. "Ke manusia" = muncul di kotak obrolan Tanya OCKLU. Pengiklan melihat angka barangnya sendiri di halaman laporan kliennya.</p></div>
+<div class="panel" id="kebutuhan" style="margin-top:12px"><h3 style="margin:0 0 6px">🧭 Kebutuhan & calon pemasok <span class="kosong">· kita makelar: kebutuhan dicarikan pemasoknya</span></h3>
+<p id="kbRingkas" class="kosong" style="margin:0 0 8px">memuat…</p>
+<p class="kaki" style="margin:0 0 8px">Aturan owner: tender BUMN, BUMD, dan instansi pemerintah Indonesia <b>tidak dimasuki</b>. Tender pemerintah luar negeri <b>ditahan</b> sampai owner menekan Setujui. Papan publik: <a href="https://ocklu.com/hypermarket/kebutuhan/" target="_blank" rel="noopener">ocklu.com/hypermarket/kebutuhan</a></p>
+<details open><summary style="cursor:pointer;font-weight:600">Sudah dicarikan pemasok</summary><div style="overflow-x:auto"><table><thead><tr><th>Tanggal</th><th>Kebutuhan</th><th>Calon pemasok (dari daftar layanan agen)</th></tr></thead><tbody id="kbCari"></tbody></table></div></details>
+<details style="margin-top:8px"><summary style="cursor:pointer;font-weight:600">Tender luar negeri menunggu persetujuan owner <span id="kbTahanN"></span></summary><div style="overflow-x:auto"><table><thead><tr><th>Tanggal</th><th>Tender</th><th>Negara</th><th></th></tr></thead><tbody id="kbTahan"></tbody></table></div></details></div>
+<div class="panel" id="meter" style="margin-top:12px"><h3 style="margin:0 0 6px">🧮 Meteran kutipan per agen <span class="kosong">· tarif sekarang Rp0 (gratis dulu), dihitung dari sekarang</span></h3>
+<p id="mtRingkas" class="kosong" style="margin:0 0 8px">memuat…</p>
+<div style="overflow-x:auto"><table><thead><tr><th>Hari (WIB)</th><th>Semua panggilan</th><th>Pemindai direktori</th><th>Agen sungguhan</th><th>Agen berbeda</th><th>Pakai alat</th><th>Kalau $0,001</th><th>Kalau $0,01</th></tr></thead><tbody id="mtHari"></tbody></table></div>
+<details style="margin-top:8px"><summary style="cursor:pointer">Agen paling sering datang · 7 hari</summary><div style="overflow-x:auto"><table><thead><tr><th>Agen</th><th>Jenis</th><th>Panggilan</th><th>Pakai alat</th><th>Hari datang</th></tr></thead><tbody id="mtAgen"></tbody></table></div></details>
+<p class="kaki">Pemindai direktori = robot yang hanya mengecek server hidup dan mendata alat (bukan pembeli). Angka "kalau" dihitung dari panggilan agen sungguhan saja, seandainya tiap panggilan dikutip. Belum ada yang ditagih dan belum terbukti agen mau bayar. Sebagian "agen sungguhan" masih bisa robot yang tidak menyebut namanya.</p></div>
+<div class="panel" id="agenLapor" style="margin-top:12px"><h3 style="margin:0 0 6px">📋 Laporan tiap agen <span class="kosong">· siapa bekerja, siapa menganggur, siapa galat</span></h3><p id="alRingkas" class="kosong" style="margin:0 0 8px">memuat…</p>
+<details style="margin:0 0 8px"><summary style="cursor:pointer">📘 Buku Pelajaran terbaru <span class="kosong" id="alPelWaktu"></span></summary><pre id="alPel" style="white-space:pre-wrap;font:inherit;font-size:13px;margin:6px 0 0">belum ada</pre></details>
+<div style="overflow-x:auto"><table><thead><tr><th>Agen</th><th>Status</th><th>Tersambung YOSUA</th><th>24 jam</th><th>7 hari</th><th>Terakhir kerja</th><th>Tugasnya</th></tr></thead><tbody id="alDaftar"></tbody></table></div></div>
 <details class="panel" id="neuronOwner" style="margin-top:12px"><summary style="cursor:pointer;font-weight:600">🔧 Owner · sambungkan, buat, lepas neuron <span class="kosong">(khusus perangkat owner)</span></summary>
   <p class="kaki">Tersambung = neuron tampil di dasbor dan bisa diajak ngobrol memakai DNA-nya. Tugas kerja otomatis tiap 30 menit hanya dimiliki neuron yang sudah diprogram (⚙️); neuron yang baru disambung atau dibuat belum punya tugas otomatis. Lepas = disembunyikan dari dasbor, DNA tetap disimpan dan bisa disambung lagi.</p>
   <div style="overflow-x:auto"><table><thead><tr><th>Neuron</th><th>Peran</th><th>Tugas otomatis</th><th>Status</th><th></th></tr></thead><tbody id="nwDaftar"><tr><td colspan="5" class="kosong">buka dari perangkat owner untuk memuat…</td></tr></tbody></table></div>
@@ -196,7 +223,9 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
       <div id="ruang">
         <div class="baris"><select id="pilih" aria-label="Pilih agen"></select><button class="btn" id="kerja" type="button">Kerja sekarang</button></div>
         <div class="pesan" id="pesan" aria-live="polite"></div>
-        <form class="baris" id="fobrol"><input id="tanya" autocomplete="off" placeholder="Tanya agenmu…" aria-label="Pesan"><button class="btn isi" type="submit">Kirim</button></form>
+        <form class="baris" id="fobrol"><input id="tanya" autocomplete="off" placeholder="Tanya atau suruh agenmu…" aria-label="Pesan"><label class="btn" for="lampir" title="Lampirkan gambar, PDF, video pendek, atau file teks" style="cursor:pointer">📎</label><input type="file" id="lampir" accept="image/png,image/jpeg,image/webp,image/gif,application/pdf,video/mp4,video/webm,video/quicktime,.txt,.csv,.md,.json" style="display:none"><button class="btn isi" type="submit">Kirim</button></form>
+        <div id="lampirInfo" class="kosong" style="font-size:12.5px;margin-top:4px"></div>
+        <p class="kaki" style="margin:4px 0 0">Dari perangkat owner, agen bisa disuruh: cek kesehatan, siapa nganggur, siapa minta link beli, jalankan putaran kerja, suruh MARKUS ke …, cari agen …, kirim rapor. Perintah lain dicatat ke antrean kerja Claude. Lampiran maksimal sekitar 5 MB.</p>
       </div>
     </div>
 
@@ -254,8 +283,11 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
         <textarea name="deskripsi" rows="3" maxlength="1500" placeholder="Jelaskan barang/jasa/agen-mu" aria-label="Deskripsi"></textarea>
         <div class="baris"><select name="industri" id="mkSelInd" aria-label="Industri"></select><select name="jenis" aria-label="Jenis"><option value="produk">produk</option><option value="jasa">jasa</option><option value="agen">agen AI</option><option value="data">data</option></select></div>
         <div class="baris"><input name="harga" type="number" min="0" step="any" placeholder="Harga" aria-label="Harga"><input name="mata_uang" value="USD" maxlength="6" aria-label="Mata uang" style="max-width:90px"><input name="wilayah" maxlength="60" placeholder="Wilayah (opsional)" aria-label="Wilayah"></div>
-        <input name="url" type="url" placeholder="Link produk (opsional)" aria-label="Link">
+        <input name="url" type="url" placeholder="Link produk (opsional)" aria-label="Link"><input name="foto" type="url" placeholder="Link foto produk (opsional, https://…)" aria-label="Link foto produk">
         <div class="baris"><input name="siapa_kamu" maxlength="80" placeholder="Nama usaha" aria-label="Nama usaha"><input name="kontak" required maxlength="200" placeholder="Kontak bisnis (email/WA bisnis)" aria-label="Kontak bisnis"></div>
+        <p style="margin:0;font-size:14px;font-weight:600">Gratis 30 hari, setelah itu Rp49.000/bulan + 7% kalau laku lewat OCKLU.</p>
+        <p style="margin:0;font-size:14px;color:var(--aksen,#0f7b6c)" id="promoTrial">🎁 Promo: 20 penjual pertama gratis 60 hari.</p>
+        <p style="margin:0;font-size:14px">Kamu baru bergabung setelah kamu yakin kamu suka.</p>
         <label style="display:flex;gap:8px;align-items:flex-start;font-size:14px"><input type="checkbox" name="setuju_syarat" required style="width:auto;min-height:auto;margin-top:3px"> Saya setuju komisi 7% untuk OCKLU kalau transaksi terjadi lewat perjodohan OCKLU. Kontak saya hanya dibuka ke pembeli yang saya setujui.</label>
         <button class="btn isi" type="submit">Pasang</button>
       </form><div id="mkHasil" class="kosong" style="margin-top:8px"></div></div>
@@ -475,12 +507,19 @@ document.addEventListener("click",function(e){var g=e.target.closest("[data-grup
   var a=e.target.closest("[data-asal]");if(a){var box=document.getElementById("asalRinci");box.hidden=false;box.innerHTML='<span class="kosong">memuat…</span>';
     fetch(API+"?r=rinci&jenis=asal&nilai="+encodeURIComponent(a.getAttribute("data-asal"))).then(function(r){return r.json()}).then(function(xs){box.innerHTML='<b>Kunjungan dari '+esc(a.getAttribute("data-asal"))+'</b> (30 hari, maks 50)'+(xs.length?xs.map(function(x){return'<br><span class="kosong">'+lalu(x.pada)+'</span> · '+esc(x.a||"-")+(x.b?' · kata: '+esc(x.b):'')+(x.c?' · '+esc(x.c):'')}).join(""):'<br><span class="kosong">Kosong.</span>')})}});
 // Klaim dari ocklu.com/direktori-agen: isi otomatis formulir pasang jualan (pembuat tetap melengkapi kontak & menyetujui syarat sendiri).
+// Dari Papan Kebutuhan Terbuka (?kebutuhan=<id>): formulir tahu kebutuhan mana yang dijawab pemasok
+(function(){var q=new URLSearchParams(location.search),kb=q.get("kebutuhan");if(!kb)return;var f=document.getElementById("fPasang");if(!f)return;
+  fetch(API+"?r=kebutuhan").then(function(r){return r.json()}).then(function(d){var x=(d.kebutuhan||[]).filter(function(k){return k.id===kb})[0];if(!x)return;
+    if(f.deskripsi&&!f.deskripsi.value)f.deskripsi.value="Menjawab kebutuhan: "+x.judul+". ";
+    var h=document.getElementById("mkHasil");if(h)h.textContent="Anda menjawab kebutuhan: \""+x.judul+"\". Tulis apa yang Anda tawarkan, harga, dan kontak bisnis, centang setuju syarat, lalu pasang. Gratis 30 hari; komisi 7% hanya kalau transaksi jadi lewat perkenalan OCKLU.";
+    try{f.scrollIntoView({block:"center"})}catch(e){}
+  }).catch(function(){})})();
 (function(){var q=new URLSearchParams(location.search),k=q.get("klaim");if(!k)return;var f=document.getElementById("fPasang");if(!f)return;
   if(f.judul)f.judul.value=k.slice(0,160);if(f.url&&/^https:\/\//.test(q.get("situs")||""))f.url.value=q.get("situs");if(f.jenis)f.jenis.value="agen";
   var h=document.getElementById("mkHasil");if(h)h.textContent="Klaim layanan "+k+": lengkapi deskripsi dan kontak bisnis, centang setuju syarat, lalu pasang. Gratis; komisi 7% hanya kalau transaksi terjadi.";
   setTimeout(function(){f.scrollIntoView({behavior:"smooth",block:"center"})},600)})();
 // Semua kartu angka bisa diklik: kartu tanpa aksi khusus membuka dan menyorot daftar rincian di panel yang sama.
-document.addEventListener("click",function(e){var c=e.target.closest(".angka .a");if(!c||c.closest("#pjAngka")||c.hasAttribute("data-grup-pilih"))return;
+document.addEventListener("click",function(e){var c=e.target.closest(".angka .a");if(!c||c.closest("#pjAngka")||c.closest("#sinyalAngka")||c.hasAttribute("data-grup-pilih"))return;
   var p=c.closest(".panel")||c.parentNode.parentNode,t=p&&p.querySelector("details,table,ul.feed,ol");if(!t){var n=c.closest(".angka");t=n&&n.nextElementSibling}if(!t)return;
   if(t.tagName==="DETAILS")t.open=true;t.scrollIntoView({behavior:"smooth",block:"start"});t.style.outline="2px solid var(--aksen,#7cf5d4)";setTimeout(function(){t.style.outline=""},1600)});
 document.addEventListener("mouseover",function(e){var c=e.target.closest(".angka .a");if(c)c.style.cursor="pointer"});
@@ -908,6 +947,77 @@ document.getElementById("komando").addEventListener("click",function(ev){if(ev.t
 function kill(ubah){var e=document.getElementById("kcKill"),h=hOw();if(ubah===undefined)return fetch(API+"?r=kill",{headers:h}).then(function(r){return r.json()}).then(function(d){if(d.mati!==undefined){e.dataset.mati=d.mati?"1":"";e.textContent=d.mati?"▶️ Nyalakan semua agen":"⛔ Kill switch"}}).catch(function(){});
   fetch(API+"?r=kill",{method:"POST",headers:h,body:JSON.stringify({mati:ubah})}).then(function(){kill()})}
 document.getElementById("kcKill").onclick=function(ev){ev.preventDefault();var mati=this.dataset.mati==="1";if(mati||confirm("Hentikan SEMUA agen awan sekarang?"))kill(!mati)};setTimeout(kill,3000);
+function muatIklan(){var rk=document.getElementById("ikRingkas");if(!rk)return;fetch(API+"?r=iklan",{cache:"no-store",headers:hOw()}).then(function(r){return r.json()}).then(function(d){
+  if(d.galat){rk.textContent="🔒 "+d.galat;return}
+  var B=d.barang||[],ta=0,tm=0,tl=0;B.forEach(function(b){ta+=b.ke_agen;tm+=b.ke_manusia;tl+=b.minta_link});
+  rk.innerHTML=B.length+" barang aktif · "+d.hari+" hari: ditawarkan <b>"+ta+"×</b> ke agen, <b>"+tm+"×</b> ke manusia, <b>"+tl+"</b> minta link"+(d.dihitung_sejak?" · dihitung sejak "+esc(d.dihitung_sejak):" · belum ada catatan");
+  B.sort(function(a,b){return(b.ke_agen+b.ke_manusia+b.minta_link*10)-(a.ke_agen+a.ke_manusia+a.minta_link*10)});
+  document.getElementById("ikDaftar").innerHTML=B.map(function(b){return"<tr><td><b>#"+b.id+"</b> "+esc(String(b.judul).slice(0,60))+"<br><small>"+esc(b.penjual||"")+(b.klien?" · klien":"")+"</small></td><td>"+b.ke_agen+"</td><td>"+b.ke_manusia+"</td><td>"+b.minta_link+"</td><td>"+b.dipertemukan+"</td><td>"+b.lunas+"</td></tr>"}).join("");
+}).catch(function(){rk.textContent="gagal memuat, coba muat ulang"})}
+setTimeout(muatIklan,4200);
+function muatKebutuhan(){var rk=document.getElementById("kbRingkas");if(!rk)return;fetch(API+"?r=kebutuhan_owner",{cache:"no-store",headers:hOw()}).then(function(r){return r.json()}).then(function(d){
+  if(d.galat){rk.textContent="🔒 "+d.galat;return}
+  var R=d.ringkas||{};rk.innerHTML=Object.keys(R).map(function(k){return"<b>"+R[k]+"</b> "+esc(k.replace("tender_asing","tender luar negeri").replace("tender_ri","tender pemerintah Indonesia (tidak dimasuki)").replace("swasta","kebutuhan swasta"))}).join(" · ")||"belum ada kebutuhan";
+  document.getElementById("kbCari").innerHTML=(d.dicarikan||[]).map(function(x){return"<tr><td>"+esc(x.tanggal)+"</td><td><b>"+esc(x.judul)+"</b><br><small>"+esc(x.sumber||"")+(x.url?' · <a href="'+esc(x.url)+'" target="_blank" rel="noopener">sumber</a>':'')+"</small></td><td>"+(x.pemasok||[]).map(function(p){return(p.alamat&&/^https?:/.test(p.alamat)?'<a href="'+esc(p.alamat)+'" target="_blank" rel="noopener">'+esc(p.nama)+"</a>":esc(p.nama))+" <small>("+p.cocok+" kata cocok)</small>"}).join("<br>")+"</td></tr>"}).join("")||'<tr><td colspan="3" class="kosong">belum ada</td></tr>';
+  var T=d.ditahan||[];document.getElementById("kbTahanN").textContent="("+(R["tender_asing · tahan"]||T.length)+", tampil "+T.length+" terbaru)";
+  document.getElementById("kbTahan").innerHTML=T.map(function(x){return"<tr><td>"+esc(x.tanggal)+"</td><td>"+esc(x.judul)+(x.url?' <a href="'+esc(x.url)+'" target="_blank" rel="noopener">sumber</a>':'')+"</td><td>"+esc(x.negara||"")+'</td><td style="white-space:nowrap"><button type="button" data-kb="setuju" data-id="'+esc(x.id)+'">Setujui</button> <button type="button" data-kb="tolak" data-id="'+esc(x.id)+'">Tolak</button></td></tr>'}).join("")||'<tr><td colspan="4" class="kosong">tidak ada yang menunggu</td></tr>';
+}).catch(function(){rk.textContent="gagal memuat, coba muat ulang"})}
+document.addEventListener("click",function(e){var b=e.target;if(!b||!b.dataset||!b.dataset.kb)return;b.disabled=true;
+  fetch(API+"?r=kebutuhan_owner",{method:"POST",headers:hOw(),body:JSON.stringify({aksi:b.dataset.kb,id:b.dataset.id})}).then(function(r){return r.json()}).then(function(x){if(x.ok){b.closest("tr").remove()}else{b.disabled=false;alert(x.galat||"gagal")}}).catch(function(){b.disabled=false})});
+setTimeout(muatKebutuhan,4000);
+function muatMeter(){var rk=document.getElementById("mtRingkas");if(!rk)return;fetch(API+"?r=meter",{cache:"no-store",headers:hOw()}).then(function(r){return r.json()}).then(function(d){
+  if(d.galat){rk.textContent="🔒 "+d.galat;return}
+  var T=d.total_14hari||{},u=function(n,t){return"$"+(n*t).toFixed(2)};
+  rk.innerHTML="14 hari terakhir: <b>"+(T.panggilan||0)+" panggilan</b> = "+(T.pemindai||0)+" pemindai direktori + "+(T.rutin_sendiri||0)+" rutin kita sendiri + <b>"+(T.agen_sungguhan||0)+" agen sungguhan</b> ("+(T.pakai_alat||0)+" di antaranya memakai alat). Seandainya agen sungguhan dikutip: "+u(T.agen_sungguhan||0,0.001)+" (tarif $0,001) atau "+u(T.agen_sungguhan||0,0.01)+" (tarif $0,01).";
+  document.getElementById("mtHari").innerHTML=(d.harian||[]).map(function(h){return"<tr><td>"+esc(h.hari)+"</td><td>"+h.panggilan+"</td><td>"+h.pemindai+"</td><td><b>"+h.agen_sungguhan+"</b></td><td>"+h.agen_unik+"</td><td>"+h.pakai_alat+"</td><td>"+u(h.agen_sungguhan,0.001)+"</td><td>"+u(h.agen_sungguhan,0.01)+"</td></tr>"}).join("");
+  document.getElementById("mtAgen").innerHTML=(d.agen_7hari||[]).map(function(a){return"<tr><td>"+esc(a.agen)+"</td><td>"+(a.pemindai?"pemindai":"agen")+"</td><td>"+a.panggilan+"</td><td>"+a.pakai_alat+"</td><td>"+a.hari_datang+"</td></tr>"}).join("");
+}).catch(function(){rk.textContent="gagal memuat meteran, coba muat ulang"})}
+setTimeout(muatMeter,3500);
+document.addEventListener("click",function(e){var b=e.target;if(!b||!b.dataset||!b.dataset.pb)return;
+  var j=b.dataset.pb,n=b.dataset.nm;if(!confirm((j==="tabib"?"Serahkan ke Tabib (Claude): ":j==="jadwal"?"Jalankan ulang jadwal: ":"Suruh kerja sekarang: ")+n+"?"))return;
+  b.disabled=true;var asal=b.textContent;b.textContent="…";
+  fetch(API+"?r=perbaiki",{method:"POST",headers:hOw(),body:JSON.stringify({jenis:j,nama:n,galat:b.dataset.gl||""})}).then(function(r){return r.json()}).then(function(d){
+    b.textContent=d.galat?"⚠ "+d.galat:(d.ok?"✓ ":"⚠ ")+String((d.hasil||[]).join(" · ")).slice(0,120);
+  }).catch(function(){b.textContent="⚠ gagal, coba lagi";b.disabled=false})});
+function muatAgenLapor(){var tb=document.getElementById("alDaftar"),rk=document.getElementById("alRingkas");if(!tb)return;fetch(API+"?r=agen_lapor",{cache:"no-store",headers:hOw()}).then(function(r){return r.json()}).then(function(d){
+  if(d.galat){rk.textContent="🔒 "+d.galat;return}
+  if(d.pelajaran){document.getElementById("alPel").textContent=d.pelajaran.pelajaran;document.getElementById("alPelWaktu").textContent="· ditulis DANIEL "+lalu(d.pelajaran.pada)}
+  var A=d.agen||[],kerja=[],nganggur=[],diam=[],mati=[],galat=[];
+  A.forEach(function(x){x.st=!x.aktif?"mati":x.n7>0?"kerja":x.tugas?"diam":"nganggur";({mati:mati,kerja:kerja,diam:diam,nganggur:nganggur})[x.st].push(x.nama);if(x.g7>0)galat.push(x.nama+" ("+x.g7+"x)")});
+  rk.innerHTML="<b>"+kerja.length+" bekerja</b> minggu ini · <b style=\"color:#ffd27d\">"+nganggur.length+" belum punya tugas</b>"+(nganggur.length?": "+esc(nganggur.join(", ")):"")+(diam.length?" · <b style=\"color:#ff8a8a\">"+diam.length+" punya tugas tapi diam 7 hari</b>: "+esc(diam.join(", ")):"")+" · "+mati.length+" dimatikan"+(mati.length?": "+esc(mati.join(", ")):"")+(galat.length?" · <b style=\"color:#ff8a8a\">galat 7 hari</b>: "+esc(galat.join(", ")):" · tidak ada galat 7 hari");
+  var L={kerja:"✅ bekerja",nganggur:"💤 belum punya tugas",diam:"⚠️ punya tugas tapi diam",mati:"⛔ dimatikan"};
+  tb.innerHTML=A.map(function(x){return"<tr><td><b>"+esc(x.nama)+"</b><br><small>"+esc(x.peran||"")+"</small></td><td>"+L[x.st]+(x.g7>0?"<br><small style=\"color:#ff8a8a\">"+x.g7+" galat</small>":"")+"</td><td>"+(x.yosua?"ya":"belum")+"</td><td>"+x.j24+"</td><td>"+x.n7+"</td><td>"+(x.terakhir?lalu(x.terakhir):"belum pernah")+"</td><td><small>"+esc((x.tugas||"belum ada tugas otomatis").slice(0,150))+"</small>"+(x.tugas?'<br><button type="button" data-pb="agen" data-nm="'+esc(x.id)+'">▶ Kerjakan sekarang</button>':"")+"</td></tr>"}).join("");
+}).catch(function(){rk.textContent="gagal memuat laporan agen, coba muat ulang"})}
+setTimeout(muatAgenLapor,3000);
+function lacakIp(ip){var P=document.getElementById("jejakPanel"),H=document.getElementById("jejakHasil");if(!P)return;P.open=true;document.getElementById("jejakIp").value=ip;H.textContent="memuat…";
+  fetch(API+"?r=jejak_ip&ip="+encodeURIComponent(ip),{headers:hOw(),cache:"no-store"}).then(function(r){return r.json()}).then(function(d){
+    if(d.galat){H.textContent="🔒 "+d.galat;return}var R=d.ringkas||{},L=d.langkah||[];
+    H.innerHTML='<p style="margin:6px 0"><b>Tebakan: '+esc(R.tebakan||"-")+'</b></p><p class="kaki" style="margin:0 0 6px">'+esc(R.agen||"?")+' · '+esc((R.aplikasi||"").slice(0,80))+' · '+(R.kunjungan||0)+' langkah dalam '+(R.hari_datang||0)+' hari · jeda tengah '+(R.jeda_median_detik==null?"-":R.jeda_median_detik+" detik")+' · lihat barang '+(R.lihat_barang||0)+' · minta link '+(R.minta_link||0)+'</p>'+
+      '<div style="overflow-x:auto"><table><thead><tr><th>Jam (WIB)</th><th>Jeda</th><th>Yang dilakukan</th><th>Produk / isi</th><th>Hasil</th></tr></thead><tbody>'+L.map(function(x){return'<tr><td>'+new Date(x.pada).toLocaleString("id-ID",{day:"2-digit",month:"short",hour:"2-digit",minute:"2-digit",second:"2-digit"})+'</td><td>'+(x.jeda_detik==null?"-":x.jeda_detik+" dtk")+'</td><td>'+esc(x.alat||"membuka")+'</td><td>'+esc(x.produk||"")+(x.rinci?'<br><small>'+esc(x.rinci)+'</small>':'')+'</td><td><small>'+esc((x.hasil||"").replace(/https?:\/\/\S+/,"(link)").slice(0,80))+'</small></td></tr>'}).join("")+'</tbody></table></div>';
+    try{P.scrollIntoView({behavior:"smooth",block:"start"})}catch(e){}
+  }).catch(function(){H.textContent="gagal memuat, coba lagi"})}
+document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("[data-jejak]");if(!a)return;e.preventDefault();lacakIp(a.dataset.jejak)});
+document.addEventListener("submit",function(e){if(e.target.id!=="jejakForm")return;e.preventDefault();var v=document.getElementById("jejakIp").value.trim();if(v)lacakIp(v)});
+fetch(API+"?r=promo").then(function(r){return r.json()}).then(function(d){var n=d.sisa_trial_60;var e=document.getElementById("promoTrial");if(e&&typeof n==="number")e.textContent=n>0?"🎁 Promo: 20 penjual pertama gratis 60 hari · sisa "+n+" tempat.":"Promo 60 hari sudah habis; gratis 30 hari tetap berlaku."}).catch(function(){});
+function muatMintaLink(){var el=document.getElementById("mintaLink");if(!el)return;el.innerHTML='<p class="kosong">memuat…</p>';fetch(API+"?r=mintalink",{headers:hOw()}).then(function(r){return r.json()}).then(function(d){
+  if(d.galat){el.innerHTML='<p class="kosong">'+esc(d.galat)+'</p>';return}
+  var L=d.daftar||[];if(!L.length){el.innerHTML='<p class="kosong">Belum ada agen yang minta link beli.</p>';return}
+  el.innerHTML='<div style="overflow-x:auto"><table><thead><tr><th>Kapan</th><th>Agen</th><th>IP</th><th>Lewat</th><th>Produk</th><th>Hasil</th></tr></thead><tbody>'+L.map(function(x){
+    var h=x.hasil||(x.alat==="ucp_permalink"?"klik tombol beli UCP (diarahkan ke toko)":"belum dicatat (sebelum 13 Nov)"),ok=/^link terkirim/.test(h),m=h.match(/https?:\/\/\S+/);
+    return'<tr><td>'+lalu(x.pada)+'</td><td><b>'+esc(x.agen||"?")+'</b><br><small>'+esc((x.ua||"").slice(0,70))+'</small></td><td>'+(x.ip?'<a href="#" data-jejak="'+esc(x.ip)+'"><code>'+esc(x.ip)+'</code></a>':'<code>belum dicatat</code>')+'</td><td>'+esc(x.saluran||"")+'</td><td>'+esc(x.produk||"(tidak disebut)")+'</td><td>'+(x.hasil?(ok?"✅ ":"❌ "):"")+esc(h.replace(/https?:\/\/\S+/,"").slice(0,90))+(m?' <a href="'+esc(m[0])+'" target="_blank" rel="noopener">buka link</a>':'')+(x.rinci?'<br><small>'+esc(x.rinci.slice(0,160))+'</small>':'')+'</td></tr>'}).join("")+'</tbody></table></div>';
+}).catch(function(){el.innerHTML='<p class="kosong">gagal memuat, coba lagi</p>'})}
+document.addEventListener("click",function(e){var t=e.target;if(!t||!t.closest)return;var a=t.closest("#sinyalAngka .a");if(t.id!=="mlBtn"&&!a)return;muatMintaLink();var d=document.querySelector("#sinyalAngka").parentNode.querySelector("details");if(d)d.open=true;var m=document.getElementById("mintaLink");if(m)m.scrollIntoView({behavior:"smooth",block:"start"})});
+document.addEventListener("mouseover",function(e){var a=e.target.closest&&e.target.closest("#sinyalAngka .a");if(a)a.style.cursor="pointer"});
+function muatJoseph(){var el=document.getElementById("josephDaftar");if(!el)return;fetch(API+"?r=joseph",{headers:hOw()}).then(function(r){return r.json()}).then(function(d){
+  if(!d.usulan){el.textContent=d.galat||"khusus owner";return}
+  el.innerHTML=d.usulan.length?d.usulan.map(function(u){var w={usul:"#ffc266",jalan:"#7dffb0",berhenti:"#ff8a8a"}[u.status]||"#ccc";
+    return '<div style="border:1px solid #2a3b55;border-radius:12px;padding:12px"><b>'+esc(u.judul)+'</b> <span style="color:'+w+'">● '+esc(u.status)+'</span> <small>'+(u.pasar==="global"?"🌍 global":"🇮🇩 Indonesia")+'</small>'
+    +'<div style="font-size:14px;margin-top:6px">📈 '+esc(u.bukti||"")+'<br>💰 '+esc(u.modal||"")+'<br>🛠 '+esc(u.langkah||"")+'<br>🎯 '+esc(u.perkiraan||"")+'<br>⏹ '+esc(String(u.berhenti||"-"))+' · '+esc(u.aturan_berhenti||"")+(u.hasil?'<br>📝 '+esc(u.hasil):"")+'</div>'
+    +(u.link?'<a href="'+esc(u.link)+'" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;margin:8px 8px 0 0;min-height:44px;padding:0 16px;border-radius:10px;border:1px solid #7dffb0;color:#7dffb0;font-weight:700;text-decoration:none">🔗 Lihat produk</a>':"")+(u.status==="usul"?'<button type="button" data-joseph="'+u.id+'" style="margin-top:8px;min-height:44px;padding:0 16px;border-radius:10px;font-weight:700">▶ Jalankan</button>':"")+'</div>'}).join(""):"Belum ada usulan.";
+  el.querySelectorAll("[data-joseph]").forEach(function(b){b.onclick=function(){b.disabled=true;b.textContent="menjalankan…";
+    fetch(API+"?r=joseph",{method:"POST",headers:Object.assign({"Content-Type":"application/json"},hOw()),body:JSON.stringify({aksi:"jalan",id:+b.dataset.joseph})}).then(function(r){return r.json()}).then(function(x){if(x.galat)alert(x.galat);muatJoseph()})}})
+}).catch(function(){el.textContent="gagal memuat"})}
+setTimeout(muatJoseph,2500);
 setInterval(function(){var e=document.getElementById("kcJam");if(e){var d=new Date();e.innerHTML=d.toLocaleTimeString("id-ID",{timeZone:"Asia/Jakarta",hour:"2-digit",minute:"2-digit",second:"2-digit"})+" WIB<small>"+d.toLocaleDateString("id-ID",{timeZone:"Asia/Jakarta",weekday:"short",day:"numeric",month:"short",year:"numeric"})+"</small>"}},1000);
 function muatKomando(){var A=function(id,v){var e=document.getElementById(id);if(e)e.innerHTML=v},n=function(x){return Number(x||0).toLocaleString("id-ID")};if(!S)return;
   A("kcA",n(S.total&&S.total.kunjungan_30h));
@@ -923,7 +1033,7 @@ function muatKomando(){var A=function(id,v){var e=document.getElementById(id);if
   fetch(API+"?r=indeks").then(function(r){return r.json()}).then(function(x){A("kcB",n(x.agen_unik));A("kcCapai",x.transaksi_lunas?n(x.transaksi_lunas)+" transaksi lunas bulan ini":"Menuju transaksi lunas pertama");
     A("kcAlur",[["Pindai",x.sinyal_pembeli,"sinyal"],["Cocokkan",x.jodoh,"perjodohan"],["Siapkan",x.jodoh-x.dikenalkan,"perlu ditanggapi"],["Setujui",x.dikenalkan,"dikenalkan"],["Lunas",x.transaksi_lunas,"transaksi"]].map(function(a,i){return"<div"+(i===2?' class="ini"':"")+"><i>"+(i+1)+" · "+a[0]+"</i><b>"+n(a[1])+"</b>"+a[2]+"</div>"}).join(""))}).catch(function(){});
   fetch(API+"?r=grafik").then(function(r){return r.json()}).then(function(g){var d=g.seri||[];A("kcSpark",garis(d.map(function(x){return x.datang}),220,44));A("kcKin",d.length?n(d[d.length-1].unik):"–");A("kcKinS",garis(d.map(function(x){return x.unik}),220,44))}).catch(function(){});
-  fetch(API+"?r=sehat").then(function(r){return r.json()}).then(function(h){var C=h.cek||[],k=C.filter(function(x){return x.sehat}).length;A("kcSehat",C.length?Math.round(k/C.length*100)+"%":"–");A("kcCek",C.slice(0,5).map(function(x){return"<li><span>"+(x.sehat?"✓ ":"✗ ")+esc(x.nama.slice(0,30))+"</span></li>"}).join(""));A("kcSis",h.sehat?'<b style="color:#7dffb0">Semua sistem jalan</b>':'<b style="color:#ff8a8a">Ada mesin bermasalah</b>')}).catch(function(){A("kcSis","gagal diperiksa")});
+  fetch(API+"?r=sehat").then(function(r){return r.json()}).then(function(h){var C=h.cek||[],k=C.filter(function(x){return x.sehat}).length;A("kcSehat",C.length?Math.round(k/C.length*100)+"%":"–");C.sort(function(p,q){return (p.sehat?1:0)-(q.sehat?1:0)});A("kcCek",C.slice(0,7).map(function(x){return"<li><span"+(x.sehat?"":' style="color:#ff8a8a"')+">"+(x.sehat?"✓ ":"✗ ")+esc(x.nama.slice(0,30))+(x.sehat?"":": "+esc(x.masalah||""))+"</span></li>"}).join(""));var Ms=h.masalah||[],brt=Ms.filter(function(x){return x.berat}).length;A("kcSis",(h.sehat?'<b style="color:#7dffb0">Semua mesin inti jalan</b>':'<b style="color:#ff8a8a">'+brt+' mesin bermasalah</b>')+(Ms.length?'<ul style="margin:6px 0 0;padding-left:16px;font-size:12.5px;line-height:1.45;text-align:left">'+Ms.map(function(x){return'<li style="color:'+(x.berat?"#ff8a8a":"#ffd27d")+'"><b>'+esc(x.siapa)+'</b>: '+esc(x.apa)+(x.sejak?' · sejak '+lalu(x.sejak):'')+'<br><span style="color:#8ea9cf">Obat: '+esc(x.perbaikan||"-")+'</span><br>'+(/^jadwal /.test(x.siapa)?'<button type="button" data-pb="jadwal" data-nm="'+esc(x.siapa.slice(7))+'">▶ Jalankan ulang</button> ':'')+'<button type="button" data-pb="tabib" data-nm="'+esc(x.siapa)+'" data-gl="'+esc(x.apa)+'">🩺 Serahkan ke Tabib</button></li>'}).join("")+'</ul>':'<div style="font-size:12.5px;color:#8ea9cf">tidak ada catatan masalah 24 jam</div>'))}).catch(function(){A("kcSis","gagal diperiksa: server kesehatan tidak menjawab")});
   setTimeout(function(){if(window.HM&&HM.owner&&HM.owner())fetch(API.replace(/\/hypermarket$/,"/makelar")+"?r=klien",{method:"POST",headers:{"Content-Type":"application/json","x-owner":HM.pin()},body:'{"aksi":"pendapatan"}'}).then(function(r){return r.json()}).then(function(d){A("kcC",d.galat?"tertutup":"Rp"+n(d.bulan_ini))}).catch(function(){});else A("kcC","tertutup")},3000)}
 // ---- 2 Nov: 🔍 cari di seluruh dasbor & 🔔 notifikasi owner
 function lompat(el){if(!el)return;var d=el.closest&&el.closest("details");if(d)d.open=true;el.scrollIntoView({behavior:"smooth",block:"center"});var o=el.style.outline;el.style.outline="2px solid var(--emas)";setTimeout(function(){el.style.outline=o},2500)}
@@ -987,11 +1097,18 @@ document.querySelectorAll("[data-salin]").forEach(function(b){b.onclick=function
 var riwayat=[];
 function tambah(dari,isi,kecil){var d=document.createElement("div");d.className="m "+(dari==="owner"?"o":"a");d.textContent=isi;if(kecil){var s=document.createElement("small");s.textContent=kecil;d.appendChild(s)}
   var box=document.getElementById("pesan");box.appendChild(d);box.scrollTop=box.scrollHeight}
-document.getElementById("fobrol").onsubmit=function(e){e.preventDefault();var i=document.getElementById("tanya"),t=i.value.trim();if(!t)return;i.value="";
-  var n=document.getElementById("pilih").value;tambah("owner",t);riwayat.push({dari:"owner",isi:t});
+var LAMP=null;document.getElementById("lampir").onchange=function(){var f=this.files[0],info=document.getElementById("lampirInfo");LAMP=null;if(!f){info.textContent="";return}
+  if(f.size>5*1024*1024){info.textContent="⚠ "+f.name+" terlalu besar ("+(f.size/1048576).toFixed(1)+" MB). Batas 5 MB.";this.value="";return}
+  var teks=/\.(txt|csv|md|json)$/i.test(f.name)||/^text\//.test(f.type),rd=new FileReader();
+  rd.onload=function(){if(teks)LAMP={nama:f.name,teks:String(rd.result).slice(0,6000)};else LAMP={nama:f.name,mime:f.type,data:String(rd.result).split(",")[1]||""};info.textContent="📎 "+f.name+" siap dikirim bersama pesan berikutnya"};
+  rd.onerror=function(){info.textContent="⚠ file gagal dibaca"};if(teks)rd.readAsText(f);else rd.readAsDataURL(f)};
+document.getElementById("fobrol").onsubmit=function(e){e.preventDefault();var i=document.getElementById("tanya"),t=i.value.trim();if(!t&&LAMP)t="Tolong baca lampiran ini.";if(!t)return;i.value="";
+  var lp=LAMP,kirim=t;LAMP=null;document.getElementById("lampir").value="";document.getElementById("lampirInfo").textContent="";
+  if(lp&&lp.teks){kirim=t+"\n[LAMPIRAN "+lp.nama+"]\n"+lp.teks;lp=null}
+  var n=document.getElementById("pilih").value;tambah("owner",t+(lp?" 📎 "+lp.nama:kirim!==t?" 📎 file teks":""));riwayat.push({dari:"owner",isi:t});
   var ho={"content-type":"application/json"};try{ho["x-perangkat"]=localStorage.getItem("pj_kunci")||"";if(window.HM&&window.HM.owner&&window.HM.owner())ho["x-owner"]=window.HM.pin()}catch(e){}
-  fetch(API+"?r=obrol",{method:"POST",headers:ho,body:JSON.stringify({neuron:n,pesan:t,riwayat:riwayat.slice(-8)})})
-  .then(function(r){return r.json()}).then(function(d){if(d.jawab){tambah("agen",d.jawab,(d.agen?d.agen+" · ":"")+d.otak);riwayat.push({dari:n,isi:d.jawab})}else tambah("agen","⚠ "+(d.galat||"tidak ada jawaban"))})
+  fetch(API+"?r=obrol",{method:"POST",headers:ho,body:JSON.stringify({neuron:n,pesan:kirim,riwayat:riwayat.slice(-8),lampiran:lp||undefined})})
+  .then(function(r){return r.json()}).then(function(d){if(d.aksi)tambah("agen","⚙️ Dijalankan: "+d.aksi.nama+"\n"+d.aksi.hasil,"hasil mesin · bukan karangan agen");if(d.jawab){tambah("agen",d.jawab,(d.agen?d.agen+" · ":"")+d.otak);riwayat.push({dari:n,isi:d.jawab})}else tambah("agen","⚠ "+(d.galat||"tidak ada jawaban"))})
   .catch(function(){tambah("agen","⚠ awan tak terjangkau")})};
 document.getElementById("kerja").onclick=function(){var b=this;b.disabled=true;b.textContent="bekerja…";
   fetch(API+"?r=kerja",{method:"POST"}).then(function(r){return r.json()}).then(function(d){tambah("agen","Hasil kerja: "+Object.keys(d).map(function(k){return k+": "+d[k]}).join(" · "));muat()})

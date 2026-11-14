@@ -1,124 +1,447 @@
 {
- "w": "2026-11-07T00:30:14Z",
+ "w": "2026-11-14T10:22:12Z",
  "dari": "Kroog",
  "berita": [
   {
    "jenis": "berita",
-   "waktu": "2026-11-06T14:36:53Z",
-   "media": 46,
-   "judul": {
-    "id": "KPK Periksa Dirut KAI Bobby Rasyidin, Uang Rp2 Miliar Terkait Korupsi SPBU Disita",
-    "en": "KPK Periksa Dirut KAI Bobby Rasyidin, Uang Rp2 Miliar Terkait Korupsi SPBU Disita"
-   },
-   "isi": {
-    "id": "KPK menyita Rp2 miliar dari Bobby Rasyidin, Dirut PT KAI, terkait dugaan korupsi digitalisasi SPBU. Beberapa media melaporkan ia mengembalikan dana tersebut, sementara media lain menyatakan ia diduga menerima dana itu.",
-    "en": "The KPK seized Rp2 billion from Bobby Rasyidin, CEO of PT KAI, in connection with alleged corruption in SPBU digitalisation. Some outlets report he returned the money, while others say he is alleged to have received it."
-   },
-   "sumber": {
-    "nama": "Lentera.co",
-    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPclNIMEQ4YmRHT2w5QUZDZTBtNnJQMDgxU0dJb3c4cmplT01lNkpYSXVNcUJhYXRLbUMtcHU3aUVhM2ZUNVNTZ2JvM2J2ZWFFOE9xUDhSNUFiOXdST1BEWEVMeXFHMUpmcnZtYUtVZ3dzWnAyUkh2dDNfRkVBbFZnclpERkp6ZXN2OVZWUjAyNmJLcDFXZmFyYlZIUTRtZw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-06T13:51:42Z",
+   "waktu": "2026-11-14T02:51:37Z",
    "media": 7,
    "judul": {
-    "id": "KPK Sita Uang Rp 2 Miliar dari Bobby Rasyidin Terkait Korupsi Digitalisasi SPBU",
-    "en": "KPK Sita Uang Rp 2 Miliar dari Bobby Rasyidin Terkait Korupsi Digitalisasi SPBU"
+    "id": "Pakar Nilai UU Pelindungan Ketenagakerjaan Belum Lindungi Ojol",
+    "en": "Pakar Nilai UU Pelindungan Ketenagakerjaan Belum Lindungi Ojol"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "jurnas.com",
-    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPUFI0TkRrMHdvckRSaHF1UmlySFZXd1N4TjcwWmY3Wl9TNEtpdC1mVkFEUTY2NE5Ld3U2ZTYydHFjVUdzbk9zSHplOFhoNUdYWGQtczRnR21MdHh3X1FETTBnczF0ZWVfNHZkQ1hQTVhYM1Zlc2NabnRtNTVOX2JiOW1uWjF5aDBoZzZabERwTkxTMnBrZGVlZXhFM05zMzdoTWlVM2dYS05UQQ?oc=5"
+    "nama": "bsinews.id",
+    "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9QMDI0TTM0OUNCYlgyOWRsWFVmaE9BUHRjWkJXSXk0MGZIU1lQS0h1blk3bmFncVVjbmpKUHM1MkZXSTJvOEwyNUowMWhPNEo2S21OUlQ0OWRLQU01amc?oc=5"
    }
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-06T23:39:00Z",
-   "media": 2,
+   "waktu": "2026-11-14T09:54:54Z",
+   "media": 4,
    "judul": {
-    "id": "Coffee Morning Bersama Ojol, Polres Tangsel Bangun Sinergi untuk Lingkungan Aman",
-    "en": "Coffee Morning Bersama Ojol, Polres Tangsel Bangun Sinergi untuk Lingkungan Aman"
+    "id": "HUT ke-62 Golkar, Sembako Murah Disubsidi Rp30 Ribu untuk Ojol dan Warga Gresik",
+    "en": "HUT ke-62 Golkar, Sembako Murah Disubsidi Rp30 Ribu untuk Ojol dan Warga Gresik"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "Berita Jurnalis",
-    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOczRiUF9JdjFqeEtORnVkaUFGNmZxUmk0ekFVMU5hTEdjek01bjc0VHo5aUZiOVg1dHhXRDdCX1lfR19ZSkx6ZzhuczZRYzVuWHhHTVRoUjM0RDl3Z1VlZEYxUHpxTDVPSURrSF93UnFKV3oyUEstNElUN1ZLOGdUZEpIdWsyaDVQaGdhemVrZEltQU45dlVxTkN3RGJyeUl3aWphZi1qWFJqVDFaN01v?oc=5"
+    "nama": "Kabar Jawa Timur",
+    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQNUNCOFQyM0FHeDVROGJWLVVya2NOcS1qbWw5bHl1d2tIaW5hQ0FrRUdQa3RtVkdHdTg2SVVia1pNTlUtMURRT1hpZUV0S1BxZU5jcVpvUzB4WENva1hBYjdUSVJXZmhoT2RmOEl4dlNXcHJ3YUtsaWhoMlBkWnhpQ2dWR0djeUpHTzJTaG9iSU9uWVhJbFlnZzNOVnNodnVOaDdJNl9nc3ExbEpBMzU1eXhpMFg?oc=5"
    }
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-06T17:03:07Z",
+   "waktu": "2026-11-14T06:27:31Z",
+   "media": 4,
+   "judul": {
+    "id": "Begal Ojol \"Bersenjata\" Merica Bubuk di Jakenan Pati Ditangkap Dalam Bus di Jepara",
+    "en": "Begal Ojol \"Bersenjata\" Merica Bubuk di Jakenan Pati Ditangkap Dalam Bus di Jepara"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Tribunjateng.com",
+    "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPV2V2X2dmSzNuZTNnUGpBVW9RTzFXOVhaNjdrc3BHdV90ejZhWmNEUjJBek54dWNVQ1FpSDJBUXdHV3VZZzFGVDZfQUtxWUtGNEItZ1A2ZXdKLXlNRE1ORkJMUFl2NmxVbm9XTXpLWnJxU1BwbTE2SmpSeEQ0VkdHSlZ4eUNGWF9UV3MyNnZKa0ZjaGVHblY0clZMUkhGa2J5TVpNZTE3WlpreUVCMUR4VHFLMy1zOWpCTGNPN19xVFpxNl9PdmREeU13?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-14T09:55:30Z",
    "media": 3,
    "judul": {
-    "id": "BPBD Kota Malang Petakan Empat Potensi Bencana, Kelurahan Klojen Rawan Banjir",
-    "en": "BPBD Kota Malang Petakan Empat Potensi Bencana, Kelurahan Klojen Rawan Banjir"
+    "id": "Prabowo Minta Penghematan BBM dan Listrik, Pemerintah Siapkan Kajian Kebijakan Efisiensi Energi",
+    "en": "Prabowo Minta Penghematan BBM dan Listrik, Pemerintah Siapkan Kajian Kebijakan Efisiensi Energi"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "Memontum",
-    "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOMUZXWW1GdDlsY2gweHB0T1BKQTAyNTFxZ09UNVFwTkRkZGEwMlpGVFhJSHp1MEdhYlBTUHVUbHZLQlVCekVqNEJFMHNfcW1FYlpETV95aFAwZmNaekZKdk9vd21JaXlYdldiUGx2RkRONUV0c25zM3o5aXV6RE1CbnB1RG1IZjBJNGRIWXlfcDBSWEVxenUwblNqNFBHRmdOdXZMcVZ2bHRJaE5O?oc=5"
+    "nama": "detikFinance",
+    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOenY4VXZxVEZPWkhNLWNaS2lRSmwtRVduN2w0R1phTENleC1BNEV3VG5jTVpLMFkwcy1nRkpsN3A1bVNQZWZ1SVVDdEEwNkxiZ2pZWlhjWmtLUXZjaUE1Y2xYbURldVpOU2dXQlZCM0ZBaFhpd1FBMS1UaVp4NVNwdUFvMkhOV3ZVZGRPWWJ1NG03MGxFak1LUUJXOGswd0hFczlKSkpFdUjSAa4BQVVfeXFMTUlRR0FnMFQ3VEtyNGw5RGhWNG1saFRaTTVHMHk0dDFINmJlOFJsT3NTTGhCUGVHQXNkVWY1UkpnRlVrWnhieE9fSXVyaTJmLVdJZ0t3OXZqUGR5SWY4YlhzeFRKeGkxVlZfbjZUQXU5QUdnMjczSXN4VGxMaGQ4UVNYekU2UFhKb1psNG1mMXNqU1hiSnFzNGYyMnhwQ0xmR3lhUURwN05LeUcxejJn?oc=5"
    }
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-06T06:22:57Z",
-   "media": 5,
+   "waktu": "2026-11-14T08:39:26Z",
+   "media": 3,
    "judul": {
-    "id": "KPK Sita Rp 2 Miliar dari Eks Dirut Len Industri dalam Kasus Digitalisasi SPBU",
-    "en": "KPK Sita Rp 2 Miliar dari Eks Dirut Len Industri dalam Kasus Digitalisasi SPBU"
+    "id": "Sabtu Bahagia Bersama Ojol, Kapolda Ingatkan Pentingnya Selamat dan Sehat di Jalan",
+    "en": "Sabtu Bahagia Bersama Ojol, Kapolda Ingatkan Pentingnya Selamat dan Sehat di Jalan"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "kontan.co.id",
-    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPX0o3N1h2U2dBakk4WHRReW1uSzJLSHlabG9SckcwZW9fd19GTkpETDlzMW1vRXFRUjZDVTJqQzFZLW5sMHlReE9Tc1cwQnUtTmdDUzlESlR3MjVoSml3bFZLbmVISlRkZmNVZ2YxbFFvRFRiOTFESllKeG5JcFU3bVdKVDQyTlFkdUVnZjE3MS1sc1R0ZWxnWXg2bDhjLXM1a3l1ak1LYVJYV0dhajhFadIBqgFBVV95cUxNdGhwR2dEZjNOVldwWkM0di1lYWtKSXNUa25qQmlYcGs3Nm0tNnhoRllsR2w1ZHk2M2xQWWQtQnUtUW9ReHdTMkJ1eC1SYlFwTURHUEVEUm9WU2hERXpSU0xMNS1kZHVQWi1RYzhRczZqVWNmdXNCYV94WmVBY3Z1aUxxYkF2X0RxdXhWYjJhMW5MSFYtZTNhbzk5LTdxdXR0Wmtzc3hFaWgtUQ?oc=5"
+    "nama": "KPK-Sigap.com",
+    "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOal9sQlpRU2ZFRkE1MGQ3NWZnZUlQMFpVRElfUEo4Um5YS0prWllFWWJ6V09aN3hRTV9wMTl2NlRrcUJrNmROSXQtVXN0dm1WTTFoVHdZLThEVk9NVVFpNUQwaFE4YjdKTXFpUldVSnF4SGE0ck93cmdZN0oxRGlqaVE0WFRCeWt6blNYYWswaFFxUHNyUS1PNEwtNXFNLTVsMV8yVGNnNkQ5dWpYTVZfdzY4NW5qSnpzZnl3Z0ZZUzZOMnpo?oc=5"
    }
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-06T03:36:00Z",
-   "media": 5,
+   "waktu": "2026-11-14T08:15:00Z",
+   "media": 3,
    "judul": {
-    "id": "Ojol Keluhkan Potongan Aplikator 8 Persen: Tak Dapat Bonus hingga Pendapatan Turun",
-    "en": "Ojol Keluhkan Potongan Aplikator 8 Persen: Tak Dapat Bonus hingga Pendapatan Turun"
+    "id": "Temui Pengemudi Ojol, Kapolda Metro Jaya Tekankan Pentingnya Keselamatan",
+    "en": "Temui Pengemudi Ojol, Kapolda Metro Jaya Tekankan Pentingnya Keselamatan"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "iNews.ID",
-    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQZm1OOUpfcmlXUVA1cy1CekpGUTRndGpzZ2NPYkdpU0NxNHNLcm4tN1ZHbnFkektOWmtwc0ZTcG5kVEd1N2N5NXpGNXR3Tnd2TUhiU213ZDdWYVFDSmg0NVVsNjhBYmx4ZUlqZ1hYeFc5c2stbnJxVmU5ZGhrSjZFbFh1eFpKZVU1S0dfQWFMcmdSajVUbEJ3Vzd3WGpOY1F2aERwdzVRUlFCWE9BQ2lRMnlMVnN3ODBTT2400gHAAUFVX3lxTE1uNk1KRTFEZlJqTWlLamQyYml6WlFOcGFZUUU5YVJUQmRTM3hKZ0ZuVDQ5andzWVpBN2JsTjQxRWpmU1hXdlVad19GZkJscFl1WFl3WXQtNW8wY1hteE54NlJZTlZVNE9xbFBweTlRV2FTaDZOVGY5TUpmRUNJcTVJeU0zdmo5blZKcmhCemNWb0lsMjMtdGRuN0lLU1laQnh3YXdrTG1kS1RPQzI2UmNGOEY3LUhpUFNuSkRVV3RtTQ?oc=5"
+    "nama": "Todaynews.id",
+    "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNbHNIUm9NX21jMmNwaDNjV1VsdE40Qi01bldvaFBUUGpYTE5sZE5zR1g3UHdXYmpWUVlfVXVGQUxNZDVYeXpad2ZJLVp2NmlUb01NRHFlaVdPMHNKcnhzLTVIbmFxTzlfcW1rcWpVM0hqN05iTUs2X0hlVVdMZFlPSUI3NTFvNElEUFlqSjZaUkRtZWhQU0VsLQ?oc=5"
    }
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-06T13:16:42Z",
+   "waktu": "2026-11-14T06:40:00Z",
+   "media": 1,
+   "judul": {
+    "id": "BMKG Ingatkan Jatim Dilanda Cuaca Ekstrem, Potensi Banjir Bandang hingga Hujan Es",
+    "en": "BMKG Ingatkan Jatim Dilanda Cuaca Ekstrem, Potensi Banjir Bandang hingga Hujan Es"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Akurat Jatim",
+    "url": "https://jatim.akurat.co/news/906410/bmkg-ingatkan-jatim-dilanda-cuaca-ekstrem-potensi-banjir-bandang-hingga-hujan-es"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-14T09:13:46Z",
    "media": 2,
    "judul": {
-    "id": "‘Sabetan’ Pejabat dan Kusir Delman: Belajar dari Driver Ojol",
-    "en": "‘Sabetan’ Pejabat dan Kusir Delman: Belajar dari Driver Ojol"
+    "id": "Jum’at Berbagi, Kapolres Tangerang Selatan Tebar Kepedulian kepada Pengendara, Ojol dan Masyarakat",
+    "en": "Jum’at Berbagi, Kapolres Tangerang Selatan Tebar Kepedulian kepada Pengendara, Ojol dan Masyarakat"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "masakini.co",
-    "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPMFVnMk50Y1dyNm9fb0lZWkVnQUF6cXhJeTVRQ21aUmRTTDAzMjhib1pjU1dqcWZ3SzBKc2lqYTBRUDhvU2hfSEV4Y1NEWkl3NkpqVFlUbTM0d3NLcGtTNWNrM2h2eWw5U09Mb3RwRENpb3JYZ2pwbEdhTmZGYUxDODBtUi1OVDBiVTNTcmNEcEhUMTQ?oc=5"
+    "nama": "Rakyat Merdeka News",
+    "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOMF8tSjNIS3JZeWhtakUyekgxS1VjdjRGRUNBQkhXaVA0WEVoSGV6bkdJRmR1Z0xRcWJucTdhdXhuTWV4MXlmQ1djTG44RDdyaGpuWU1jUzFzaTc5RXNkcVZGYTlWOUY2OXEtc1JZLThoTGJwU1piUnU2Z1dPWlktaXV4TWtNU3pRdWNkclg0YThOWmx0RmV2TTdhd3VjYm9SU1VVOHVyZkZ5N0o2UEM0Y2NqbG0yTEtuNEl6RzNub0o1RlJlOHZN?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-14T07:15:00Z",
+   "media": 2,
+   "judul": {
+    "id": "Prabowo Soroti Harga Pangan dan Minta Penghematan BBM-Listrik",
+    "en": "Prabowo Soroti Harga Pangan dan Minta Penghematan BBM-Listrik"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Warta Ekonomi",
+    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQLVZXaXZLWTVwaGlHU0RyUURZVEVWankwUWFQcG4wTjBMRGk2OHFBNTBveXVXdGJlOTBidzhGcy1RZGg4X0ZxUDBTaXdLcDMwbVk1T1pScjRSeC1RdkRfeDNOOUNmczRZYk1QcmQxTldGTlQ2NFM4Sm1zYlFFTDFMc25rU2ZkOEJ3RTd3YjMtcGZyZXlMT3VuRlQxSUgzSjI40gGmAUFVX3lxTE5vSlpLX1VpbmVydkxVTlR6V0dKZnRnQWVhSDdKNzh1a2x0T2Y5ZTBBX242aDNMcTlDMWNIYXUtRFFiRmNHT0NoRXAtb2paZ3QzeUg3c0hCbWxGd3ZSRUxYRHNwMFRMYWljbDBvRTE2dXZ1SmVfYWhNMXUzYnBpdzRWRndZQ05aU0VUb2M0ZEFSaHVONG9LM0dJbXoyVThCSFVuV2NueVE?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-14T07:13:41Z",
+   "media": 2,
+   "judul": {
+    "id": "Ribuan Ojol Geruduk Terminal Tawang Alun Jember, Klaim Wilayah Penjemputan Sepakat Dihapus",
+    "en": "Ribuan Ojol Geruduk Terminal Tawang Alun Jember, Klaim Wilayah Penjemputan Sepakat Dihapus"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "LINGKAR.news",
+    "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPUGhoZWtRcE1Dc3VKeEtXblptZVpQdGVzTmZ4cVV3M0dQU3dXWGVSYWdjSlYydXJyZ2dVUm4tQzdISExjNVk4cUJLQlQxZ3VudmNSd20zZm5yX0tOU1dVaV83TmlwSG1GT3R3SWx3QUhkencyU0ZTYW5YcjhCNDlYRkxCWGlla2J3SjFNWC1pOUxoYWc3TFFGMWVTRmJ5NXc4RWNzZi1pTVBMZS1XWnZNT1kwaGJodEtKN2c?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-14T00:40:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Pertamina Ungkap Nasib Harga Pertamax yang Tak Berubah Sejak Agustus",
+    "en": "Pertamina Ungkap Nasib Harga Pertamax yang Tak Berubah Sejak Agustus"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "detikFinance",
+    "url": "https://finance.detik.com/energi/d-8750179/pertamina-buka-bukaan-nasib-harga-pertamax-bulan-ini"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-14T00:40:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Airlangga Pastikan Harga BBM Subsidi Tak Naik Meski Rupiah Rp18.200",
+    "en": "Airlangga Pastikan Harga BBM Subsidi Tak Naik Meski Rupiah Rp18.200"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "CNN Indonesia",
+    "url": "https://www.cnnindonesia.com/ekonomi/20261113153845-532-1426891/airlangga-pastikan-harga-bbm-subsidi-tak-naik-meski-rupiah-rp18200"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-14T00:40:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Daftar Lengkap Harga BBM Pertamina, BP, Vivo dan Shell 12 November 2026",
+    "en": "Daftar Lengkap Harga BBM Pertamina, BP, Vivo dan Shell 12 November 2026"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Bisnis.com - Ekonomi",
+    "url": "https://ekonomi.bisnis.com/read/20261112/44/2020755/daftar-lengkap-harga-bbm-pertamina-bp-vivo-dan-shell-12-november-2026"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-14T01:26:59Z",
+   "media": 3,
+   "judul": {
+    "id": "Pertamina Patra Niaga Bagikan 25 Motor kepada Mitra Ojol Lewat Program BOOM",
+    "en": "Pertamina Patra Niaga Bagikan 25 Motor kepada Mitra Ojol Lewat Program BOOM"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Baca kabar",
+    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQUHJxNEJWVkJtX21fdXUxTmlaM0g4YUdnSWRhVnJ3a1l4VERzMVBCRVlVN3RUTzJCZHZhSDJ2bTM0TFoxdGFJajFvblNtOTJnN3NPc1AydG44Z1dKMkVEZzZOLWNCaXh1WE10dE1Rb1F1anVtSGdEUXJpRXlCaGd3WlBwYVJPOExWTlZQWlJDRzVBRlRyU000T3AxaDYxdw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-14T01:25:12Z",
+   "media": 3,
+   "judul": {
+    "id": "Terduga Begal Driver Ojol Perempuan di Kaligua Brebes Diamankan Warga dan Polisi",
+    "en": "Terduga Begal Driver Ojol Perempuan di Kaligua Brebes Diamankan Warga dan Polisi"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Suara Pantura",
+    "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPbGpzUElkV2RsVllfZWFYcjk4dUx1OWFKOTlZdHhRYjlBYnI0Tmc4bGNINW1LV3M5LXFBUEtsTG00RU05ZWN1NVozNGp0Yktzak5PVVh5TDZKSTByRElGdHdSZk9USGpFWmMzV3l3a1FDQVQyWXVVQVdTTk5iUzBTbU56VkFCZHRYRE9RNWlRdFNMYjJjaHdRYlJGbUhTMWdlZkk2Vm4yY21ZUFJPbmRsbm80R3NDcURrUlh3czd4UFhnTEdG?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-14T05:43:57Z",
+   "media": 2,
+   "judul": {
+    "id": "Prabowo Minta Efisiensi BBM dan Listrik, Produksi Pakan serta Peternakan Ayam Dipercepat",
+    "en": "Prabowo Minta Efisiensi BBM dan Listrik, Produksi Pakan serta Peternakan Ayam Dipercepat"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "IniBalikpapan.Com",
+    "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxObS1LaHVNN2I3SzFMZ2phZVQ3X0ZwdzNLZXFlclM3X0dQY0JQd3hnaDVNa2ZHWGNNS3J0THBoTHRRV1NJU0pXMnlJU0pKUDNKUXdKQWZVUkVUUzIxMm84VFlYazJueWxSSExKLVhNaURyekQ5ZnNGc0VBVWNKQmhBb0xaemdycHFJeEhYYjA5bXNKaGRJMUs1akNzLXlYa3ZlUUJDSlBBQW5uOThkdWFsRzZGYjZPeUdla3c?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-14T05:28:38Z",
+   "media": 2,
+   "judul": {
+    "id": "Kapolda Metro Bagikan Sembako dan Layanan Kesehatan untuk Ojol",
+    "en": "Kapolda Metro Bagikan Sembako dan Layanan Kesehatan untuk Ojol"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "bsinews.id",
+    "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9VUDExbThjdmJ6REJfUFZGRlRaTUwxWnJ4cWtSb0pidXNncDhSSDR2QkZmVFZmWWVlRFBXWU42OExScUhWeHhIR0JaaFRBOUxIYWJCV3B1UnRiS0I3YWdsZldkNA?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-14T05:19:00Z",
+   "media": 2,
+   "judul": {
+    "id": "Prabowo Bahas Ekonomi Nasional, Minta Efisiensi BBM dan Percepatan Pasokan Pangan",
+    "en": "Prabowo Bahas Ekonomi Nasional, Minta Efisiensi BBM dan Percepatan Pasokan Pangan"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Kumparan.com",
+    "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPbmNMSnBZeGF2VnV3TUlKeE9raTlnSEJNRmVvZ3lQaXRTVlI2Rkpqd1lMeG0wRmU1M3JKV2JOSkNXY09hclNTdWhBbzFpWGhBOG1hMHZfT1JZdEpEekRjY1l5b2l1ZWZIMHhNa09UYjl1WE5kMGRQSkhuNmU3bG9EaTFTcjVnbl9GWGZvT3hVeUFVa1pTQ3lHdjFwbFM0RmdOaTJTMmhKMVZuOEw4MC1BU0d2dlIwd01oMWJqOGE0UXdqcTNPNm9lOXZ30gHSAUFVX3lxTE5nQllBZ1VRanZjM0FrNk5PRzBmZGI0d2QzdFBPUlhtRUg2QXA4YjNPVW4yY3RES2lZQ1hhV2ttLXg2bWtVNHplVUR4c21POHR6SjVaUWZLV2drOS1iaWZSWVU4dm1lM3UwOFJkRGoyeGtNQmpQMTJLZFk4OG1kQ2Ftbkt0eG5MaTJST2s5RUxEYmtLOHpva25OUkk4a0dRbjZ3cHJhdE1kcGZENlMxb0ZXYnd2c0l1WjB1eXhyemFnTjh0X1phWTJhT18tdTVsM3NoUQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-14T08:36:38Z",
+   "media": 1,
+   "judul": {
+    "id": "Delapan Drum Pertalite Diamankan Polisi, Begini Modus Penjualan BBM Subsidi di Karanganyar",
+    "en": "Delapan Drum Pertalite Diamankan Polisi, Begini Modus Penjualan BBM Subsidi di Karanganyar"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Tribunjateng.com",
+    "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPdlNpYjlocEQ5ZlRmbDN3YWdUOFl3cXhDOG5PbUNTb2gyR0d2eC1uZUhDblgtUFZ0Zndjd09IRkhCbzYybEtqTm1IaFN1VnNZTTctOG1aRjQ5OWZNWm1ZUlkxU3BqNWtCZ19SU1hoSWlrM3NkVllJR2tUX05YSThfQ2xjV1pRd3JGQnZIalJCMDJ6bjZyQW91SlpXT1ZXTWtIWHVNVzg4ajg3Z2dWalhnLXR4V0gwM1gzdmRXSUJ3S1p5UFY1NkwxNFJ6cXFkb1QxWlcyQkln?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-14T08:31:51Z",
+   "media": 1,
+   "judul": {
+    "id": "Bukan Sekadar Berbagi Sembako, Kapolda Metro Jaya Bangun Kedekatan",
+    "en": "Bukan Sekadar Berbagi Sembako, Kapolda Metro Jaya Bangun Kedekatan"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Poskota TV",
+    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNc1ZRV3BROXZhWXRENEVTeUZFNU15N1dNMGpoaUlGaE9zUFVuLU52Q0tUTzFoU0g1LVpkRFdHVDNjSWZuNTRPMGtJRV9xT2Vuc2tKLXQ1Um1rekFkejdPZ1JWX2d0VDloaFFQaWhlU2tfODl4TFFya3NRQVlNenBzMjBoakhoVjlPdkszeDRHNXFzTWdBVjBsSkIzRkxxT1ZKamc?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-14T07:35:21Z",
+   "media": 1,
+   "judul": {
+    "id": "Sabtu Bahagia dan Ceria Pengemudi Ojol Bersama Kapolda Metro Jaya Komjen Prof. Dadang",
+    "en": "Sabtu Bahagia dan Ceria Pengemudi Ojol Bersama Kapolda Metro Jaya Komjen Prof. Dadang"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Poskotaonline",
+    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNOWNGVE1MSkx1R0s0d0ZiYm5ZVFcxY0JEOHVOTXBXd0xMLTQ4d1dMU0NCZ2x5b0RFZEVac19VY0VBdVp5WXZoXzdkVDhreXNydTNCbzQ3SXRwNTI1LTVQWlFES3cwNktSeHh2SkFWS2M3aHlQSlpnRXdGSEEzX3JFNzV0WHZrYjdYWTBDZ2VJWjNqVjNLbHhJSmRhb3VuMjFFMWdBNUh6TjdSRkxkYUwwYVFCZlF4dTA?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-14T01:27:28Z",
+   "media": 2,
+   "judul": {
+    "id": "ITL Trisakti Beri Pandangan Akademis Terkait Ojol Untuk Revisi UU No.22 Tahun 2009 Tentang LLAJ",
+    "en": "ITL Trisakti Beri Pandangan Akademis Terkait Ojol Untuk Revisi UU No.22 Tahun 2009 Tentang LLAJ"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "KilasJatim.com",
+    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNaXF2NmJaYjJubGlpZ19sTF84ZWVtRm8zY0d1UXpqZnVON0w2d3RDNTE2M01kN2VzUDU4WUdRSThxNmtTV1FJMHZXRTRRc0NxV2ZTOFQyZ3pXME1TeHM3T21zOGNWS3BfSmFKdHJKTXVYV0xiQmtkVDJHYkF5OEszOXRkcF9Kc3hxUmlEaDhISDltZ1IyUlFkeWFVcS1SekFGNVE?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-14T07:30:06Z",
+   "media": 1,
+   "judul": {
+    "id": "HP Baterai 6.000 mAh untuk Ojol dan Pedagang Online",
+    "en": "HP Baterai 6.000 mAh untuk Ojol dan Pedagang Online"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "JournalArta",
+    "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxONU90Nm84NlZnSXlfRGtGVFdTTEZMa3JxNUFqdjB5Zy0xQmRZc1UyUlFtdzNPM05OZGpTeWZWQjRITldxWU1XMTZRRExVUnhkS0dvM0s2bnY3UzZSeXV3eVpiNVVVV2lUTmJaNnV3WDdBTWRRWnV0R1VBMF9QQ29rUUZ5aEtTQmVK?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-14T07:19:47Z",
+   "media": 1,
+   "judul": {
+    "id": "Arogansi Alphard vs Ojol di Bintaro: Potret Lunturnya Nilai Pancasila",
+    "en": "Arogansi Alphard vs Ojol di Bintaro: Potret Lunturnya Nilai Pancasila"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Kompasiana.com",
+    "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNUHlKaW8xX2RQdkQ0MEZ2RUtsT1pTOWZVWGxBNTIzNWs0bkJQMU5hZUItUHJLUko4cjZ5YjdaZ2JGcVNqS05Pb3lwcTFyNFR1MExZOTY4YksyNnBaQjVHYi1DU0JGcmxXTnl0V19qdlhMckdzQ1BBMERJTWFuOExuemtsdy16cmlBeklkZXprUUNRVU5PbEZhRHhCNi1GS2lGWlllXzlJd0JEazlFcHlzZWVHVjlIRGhPMEU0UkY5YzVzRnJaRXdWUGJtT2ZpQTA?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-14T07:08:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Polisi Bekuk 8 Tersangka Penimbun BBM dan LPG Bersubsidi di Solo Raya, Kerugian 1,3 M",
+    "en": "Polisi Bekuk 8 Tersangka Penimbun BBM dan LPG Bersubsidi di Solo Raya, Kerugian 1,3 M"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "RRI.co.id",
+    "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNZVREdGpNWHJOanNZLXNoSVl1U3Axd01VcU41WlZzVUpqbHJ1bnZvVFdvUzVDcVBOUzJsa1NuelNRWWhlcXJ1cWlIek56NktRMDF3bTNyWlB6SjFmcHlvcm9zZFRweWhhRDVINFVTbllCMi1sWWt4cVMzcGVvX3pFNEdCN2dSU25QN1VUQ1NCNXlFWWRJVmNMeFIzaE8xSUtMdHJ6ck1LSkRsQkw1U2hEY3lvUFBfNFVVb2xhaGRkbWpVVzlLbWFZVEpBazhSeVVjWUVETA?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-14T07:02:00Z",
+   "media": 1,
+   "judul": {
+    "id": "7 HP Murah Baterai Jumbo untuk Ojol hingga Pedagang Online, Jangan Lewatkan Fitur Ini!",
+    "en": "7 HP Murah Baterai Jumbo untuk Ojol hingga Pedagang Online, Jangan Lewatkan Fitur Ini!"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "VIVA.co.id",
+    "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxObFFqVW95Mk9BZHhMSENJTUVDTHp4eWlLMjF0QWFFZUJkUXU5cTNXdWlRRG5DZk9mdS03dnRqMTBLdVlrMFRIcjRqRHptQXZRTXVPZFhUZHlORi1CZTE2bjF2VFZpWDR3WVhaaXd1MGRoYVNsRzFOT0JkMGJUMDFNbEE5cDFqQXU2UFIzbWRhc1pfOTAxTmowa3cyUDRTX0pPS0dkdElGcnB6NzI3WGYzSWhyb3FnRnVpT0FvcnpXWW56ZEpkemlWYnoxMjdxOGNx0gHWAUFVX3lxTE5WNE94ZDRJcFZqQmR1QWFaYUZZUndYYTRYMk5kMksyZGtfRU50amw1bnVtaFFiNmZwUjlKR3B4QUJOQzJTeW9uOThnN1ZMSFFEZjVmSnFxTDVKR2JGbkxCcGNQdHozLU5pd2RabWxRYktwTC1SMzN1blE4eEUxZmlSNDJIVXZOVnk5N2JjWjhBVFNveXlSNjdPY0ZMT1hQTkY2dGVzZnNXLU40dE1zMVRVeVFpSFlidFVWQWJDY1VJajVSb2Vqa3pXQXJja2s1RlhackJ6T2c?oc=5"
    }
   }
  ]
