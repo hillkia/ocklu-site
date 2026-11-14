@@ -1,5 +1,5 @@
 {
- "w": "2026-11-14T19:13:53Z",
+ "w": "2026-11-14T21:15:41Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -340,91 +340,6 @@
    "sumber": {
     "nama": "Suara Pantura",
     "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPbGpzUElkV2RsVllfZWFYcjk4dUx1OWFKOTlZdHhRYjlBYnI0Tmc4bGNINW1LV3M5LXFBUEtsTG00RU05ZWN1NVozNGp0Yktzak5PVVh5TDZKSTByRElGdHdSZk9USGpFWmMzV3l3a1FDQVQyWXVVQVdTTk5iUzBTbU56VkFCZHRYRE9RNWlRdFNMYjJjaHdRYlJGbUhTMWdlZkk2Vm4yY21ZUFJPbmRsbm80R3NDcURrUlh3czd4UFhnTEdG?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-14T05:43:57Z",
-   "media": 2,
-   "judul": {
-    "id": "Prabowo Minta Efisiensi BBM dan Listrik, Produksi Pakan serta Peternakan Ayam Dipercepat",
-    "en": "Prabowo Minta Efisiensi BBM dan Listrik, Produksi Pakan serta Peternakan Ayam Dipercepat"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "IniBalikpapan.Com",
-    "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxObS1LaHVNN2I3SzFMZ2phZVQ3X0ZwdzNLZXFlclM3X0dQY0JQd3hnaDVNa2ZHWGNNS3J0THBoTHRRV1NJU0pXMnlJU0pKUDNKUXdKQWZVUkVUUzIxMm84VFlYazJueWxSSExKLVhNaURyekQ5ZnNGc0VBVWNKQmhBb0xaemdycHFJeEhYYjA5bXNKaGRJMUs1akNzLXlYa3ZlUUJDSlBBQW5uOThkdWFsRzZGYjZPeUdla3c?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-14T11:32:46Z",
-   "media": 1,
-   "judul": {
-    "id": "Jumlah Mitra Ojol Perempuan Capai 182.500, Banyak yang Jadi Penopang Keluarga",
-    "en": "Jumlah Mitra Ojol Perempuan Capai 182.500, Banyak yang Jadi Penopang Keluarga"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Media Indonesia",
-    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOdEkwV0loU01tRmI2eDhJcTRubUplMWprTkhfaEpnQWZLdlpzUU1RX2hOdDBRZy1PSjJSLXdlZnBGRzhITG5KTHk1WjdyWFdQNzc0R0p4TExYMTlWYWlBbVNfXzBkZ3FWbkc0OFk2cWFSRmZ6enJyTFdueTlPMEtOcS1xVG4xN1A0RDE2ZVdrNkZfNHZqT1NQY01EZmtCdUJYNmktZy05bFBOU2RGdXpRdjBlQk9kTFJzSkRz?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-14T05:28:38Z",
-   "media": 2,
-   "judul": {
-    "id": "Kapolda Metro Bagikan Sembako dan Layanan Kesehatan untuk Ojol",
-    "en": "Kapolda Metro Bagikan Sembako dan Layanan Kesehatan untuk Ojol"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "bsinews.id",
-    "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9VUDExbThjdmJ6REJfUFZGRlRaTUwxWnJ4cWtSb0pidXNncDhSSDR2QkZmVFZmWWVlRFBXWU42OExScUhWeHhIR0JaaFRBOUxIYWJCV3B1UnRiS0I3YWdsZldkNA?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-14T11:24:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Rawat Alam dan Jaga Sumber Mata Air, PDI Perjuangan Kabupaten Kediri Gelar Aksi Merawat Pertiwi",
-    "en": "Rawat Alam dan Jaga Sumber Mata Air, PDI Perjuangan Kabupaten Kediri Gelar Aksi Merawat Pertiwi"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Ngopibareng.id",
-    "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPdDROd29lWEtvZFI2V1R2cFM1QmpzY3Utd25KSlp5a2lUczA5T3hfMjlnd0JHQ3huZlJUYjhyazItSVZ1aUd5Um5IX1NRZlJNcUlMWlREZVdtRDVQeTN6SlJTT20tWEJCR1p4cVJTMC05Q2R0eVp2NHl0WE9CTGYwei1GUFRSdEt1ekpvcUpnRUJwMVJ4YTFPT3RDbUNRNFZsLUN1NzNoODhnN3R3aV9GMjFZZmxsbDEtUE5fMEN3dkdFaWRC?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-14T05:19:00Z",
-   "media": 2,
-   "judul": {
-    "id": "Prabowo Bahas Ekonomi Nasional, Minta Efisiensi BBM dan Percepatan Pasokan Pangan",
-    "en": "Prabowo Bahas Ekonomi Nasional, Minta Efisiensi BBM dan Percepatan Pasokan Pangan"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Kumparan.com",
-    "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPbmNMSnBZeGF2VnV3TUlKeE9raTlnSEJNRmVvZ3lQaXRTVlI2Rkpqd1lMeG0wRmU1M3JKV2JOSkNXY09hclNTdWhBbzFpWGhBOG1hMHZfT1JZdEpEekRjY1l5b2l1ZWZIMHhNa09UYjl1WE5kMGRQSkhuNmU3bG9EaTFTcjVnbl9GWGZvT3hVeUFVa1pTQ3lHdjFwbFM0RmdOaTJTMmhKMVZuOEw4MC1BU0d2dlIwd01oMWJqOGE0UXdqcTNPNm9lOXZ30gHSAUFVX3lxTE5nQllBZ1VRanZjM0FrNk5PRzBmZGI0d2QzdFBPUlhtRUg2QXA4YjNPVW4yY3RES2lZQ1hhV2ttLXg2bWtVNHplVUR4c21POHR6SjVaUWZLV2drOS1iaWZSWVU4dm1lM3UwOFJkRGoyeGtNQmpQMTJLZFk4OG1kQ2Ftbkt0eG5MaTJST2s5RUxEYmtLOHpva25OUkk4a0dRbjZ3cHJhdE1kcGZENlMxb0ZXYnd2c0l1WjB1eXhyemFnTjh0X1phWTJhT18tdTVsM3NoUQ?oc=5"
    }
   }
  ]
