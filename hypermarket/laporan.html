@@ -25,6 +25,7 @@ a{color:var(--aksen)}button{font:inherit;padding:8px 14px;border-radius:10px;bor
   <div class="angka" id="angka"></div>
   <div class="kartu" id="kanalKartu" hidden><b>Toko & medsos Anda yang ikut kami tunjukkan ke agen AI</b><ul id="kanal"></ul></div>
   <div class="kartu"><b>Temuan terbaru</b> <span class="kecil">(postingan publik yang masih berlaku)</span><ul id="contoh"><li class="kecil">memuat…</li></ul></div>
+  <div class="kartu" id="buktiKartu" hidden><b>🧾 Bukti kerja agen OCKLU untuk Anda</b> <span class="kecil">(periode yang dipilih; jam WIB)</span><div id="bukti" class="kecil"></div></div>
   <div class="kartu" id="iklanRevKartu" hidden><b>📣 Barang Anda ditawarkan agen OCKLU</b> <span class="kecil">(periode yang dipilih)</span><div id="iklanRev" class="kecil"></div></div>
   <div class="kartu" id="iklanKartu"><b>📣 Saran iklan minggu ini</b> <span class="kecil">(pakai untuk judul produk, video, dan iklan berbayar)</span><div id="iklanIsi" class="kecil">memuat…</div></div>
   <div class="kartu" id="buruKartu"><b>🎯 Riwayat perburuan agen</b> <span class="kecil">(tanggal &amp; jam WIB · apa yang dibaca dan ditemukan agen untuk barang Anda)</span><div id="buruIsi" class="kecil">memuat…</div></div>
@@ -66,6 +67,10 @@ function muatLaporan(){if(!t)return;document.getElementById("diperbarui").textCo
 fetch(API+"?r=kpi_klien&hari="+HARI+"&t="+encodeURIComponent(t),{cache:"no-store"}).then(function(r){return r.json()}).then(function(k){
   document.getElementById("diperbarui").textContent="diperbarui "+new Date().toLocaleTimeString("id-ID",{hour:"2-digit",minute:"2-digit"})+" WIB";
   if(k.galat)throw new Error(k.galat);
+  try{var BK=k.bukti||{},el2=document.getElementById("bukti"),T=BK.tayangan_terakhir||[],U=BK.uji_ai||[];if(T.length||U.length||BK.klik_ke_toko||BK.kode_promo){document.getElementById("buktiKartu").hidden=false;el2.textContent="";
+    var p0=document.createElement("p");p0.textContent="Klik dari agen/pengunjung OCKLU ke toko Anda: "+(BK.klik_ke_toko||0)+(BK.kode_promo?" · kode promo Anda: "+BK.kode_promo+" (cek penjualan dengan kode ini di toko Anda)":"");el2.appendChild(p0);
+    U.slice(0,3).forEach(function(u){var p=document.createElement("p");p.textContent=new Date(u.pada).toLocaleDateString("id-ID")+" · uji "+u.mesin+" \""+u.dicari+"\": "+(u.muncul?"✅ toko Anda DISEBUT":"belum disebut");el2.appendChild(p)});
+    if(T.length){var ul=document.createElement("ul");ul.style.margin="6px 0";T.slice(0,15).forEach(function(t){var li=document.createElement("li");li.textContent=new Date(t.pada).toLocaleString("id-ID",{day:"2-digit",month:"short",hour:"2-digit",minute:"2-digit"})+" · "+(t.lewat==="manusia_obrolan"?"pengunjung manusia":t.lewat==="ucp"?"agen belanja (UCP)":"agen AI")+(t.dicari?" mencari \""+t.dicari+"\"":"")+" → barang Anda ditawarkan";ul.appendChild(li)});el2.appendChild(ul)}}}catch(e){}
   try{var IB=(k.iklan&&k.iklan.barang)||[];if(IB.length){document.getElementById("iklanRevKartu").hidden=false;var el=document.getElementById("iklanRev");el.textContent="";IB.forEach(function(b){var p=document.createElement("p");p.style.margin="6px 0";p.textContent=b.judul+": ditawarkan "+b.ke_agen+"× ke agen AI, "+b.ke_manusia+"× ke pengunjung manusia, "+b.minta_link+" minta link atau klik beli, "+b.dipertemukan+" dipertemukan, "+b.lunas+" laku.";el.appendChild(p)});var c=document.createElement("p");c.style.opacity=".7";c.textContent="Mulai dihitung 14 Nov 2026. Angka ini jumlah penawaran, bukan jaminan pembelian.";el.appendChild(c)}}catch(e){}
   var j=k.jodoh||{},nj=0;for(var x in j)if(!/^(usul|usul_sinyal|bukan_pembeli|batal)$/.test(x))nj+=j[x];var m=k.markus||{};
   document.title="Laporan OCKLU · "+k.nama;
