@@ -1,7 +1,24 @@
 {
- "w": "2026-11-14T11:23:53Z",
+ "w": "2026-11-14T12:17:26Z",
  "dari": "Kroog",
  "berita": [
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-14T11:00:00Z",
+   "media": 4,
+   "judul": {
+    "id": "Temui Pengemudi Ojol, Kapolda Metro Jaya Tekankan Pentingnya Keselamatan",
+    "en": "Temui Pengemudi Ojol, Kapolda Metro Jaya Tekankan Pentingnya Keselamatan"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Tribratanews",
+    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOUlN4M2hNbW9NcklIUXlnZGtvWG5aYkp5NEVJMVd6Nzc0bk81MXJSTEZqZFp4QjRvWW9RbDV4dS1Zck4zOTlQc3lwbERaWUFjVUhXb2NXemZhcWlwZnZ3QVZtdGlRNGR2eEFYQU4yaEVCUzFLOElyUEFFY2RhMHVDbXVfLXZXMUFFVDVRLVh2bmJBT08tNTRObjk4cUtfN083UHc?oc=5"
+   }
+  },
   {
    "jenis": "berita",
    "waktu": "2026-11-14T02:51:37Z",
@@ -17,6 +34,23 @@
    "sumber": {
     "nama": "bsinews.id",
     "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9QMDI0TTM0OUNCYlgyOWRsWFVmaE9BUHRjWkJXSXk0MGZIU1lQS0h1blk3bmFncVVjbmpKUHM1MkZXSTJvOEwyNUowMWhPNEo2S21OUlQ0OWRLQU01amc?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-14T10:29:55Z",
+   "media": 4,
+   "judul": {
+    "id": "Prabowo Minta Penghematan BBM dan Listrik, Pemerintah Siapkan Kajian Kebijakan Efisiensi Energi",
+    "en": "Prabowo Minta Penghematan BBM dan Listrik, Pemerintah Siapkan Kajian Kebijakan Efisiensi Energi"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "HARIAN MISTAR",
+    "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOdERUaG5ZeEFta0NHQnVNUXppeUJHMHZvUTZPN2FNZmJOOVNZcmNOTV9TNHpoNjZ1V25odDBPRU9WLWxWLVJDblNWVmFQRDlRRmItZVpGaGhBTUJGWXIzNFlXYzhaUUVHTDBpVmIzZmh1V1I2eVE1WUQtVWd3UlVVTjVwSkhvS0pSSVhobXE4QUNOOVRWLTJuY1Bn?oc=5"
    }
   },
   {
@@ -38,6 +72,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-14T01:30:00Z",
+   "media": 6,
+   "judul": {
+    "id": "Rezeki Mitra Ojol, Pertamina Patra Niaga Bagikan 25 Motor untuk Pemenang BOOM",
+    "en": "Rezeki Mitra Ojol, Pertamina Patra Niaga Bagikan 25 Motor untuk Pemenang BOOM"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Koran Jakarta ®",
+    "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOcy1iWHNMZ2NWcW9Tdm53UmIzLVF1MjdYTXNJNUI2RGhqWWcxQjVfc1QzN0p2cm45Mlg2My1aZnU5ZHZnNlZ5bENxQ093eHk2Y2R2eFk0U2k0dFVZWThfdk1HZTRSOHhsQ2U3cjhnVkRyVFBsSFludmFfUkpiRUFPb2pTQUFhb0lHNk5zczF4QVJUNU9ONTRwVHNHOXVWOE03c2NReC1MejBuSzBqSk1FM1UxUWV0b0ZWY0NLanhRcEpaUG_SAcMBQVVfeXFMTnMtYlhzTGdjVnFvU3Zud1JiMy1RdTI3WE1zSTVCNkRoallnMUI1X3NUMzdKdnJuOTJYNjMtWmZ1OWR2ZzZWeWxDcUNPd3h5NmNkdnhZNFNpNHRVWVk4X3ZNR2U0Ujh4bENlN3I4Z1ZEclRQbEhZbnZhX1JKYkVBT29qU0FBYW9JRzZOc3MxeEFSVDVPTjU0cFRzRzl1VjhNN3NjUXgtTHowbkswakpNRTNVMVFldG9GVmNDS2p4UXBKWlBv?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-14T06:27:31Z",
    "media": 4,
    "judul": {
@@ -55,19 +106,19 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-14T09:55:30Z",
+   "waktu": "2026-11-14T09:14:03Z",
    "media": 3,
    "judul": {
-    "id": "Prabowo Minta Penghematan BBM dan Listrik, Pemerintah Siapkan Kajian Kebijakan Efisiensi Energi",
-    "en": "Prabowo Minta Penghematan BBM dan Listrik, Pemerintah Siapkan Kajian Kebijakan Efisiensi Energi"
+    "id": "Jum’at Berbagi, Kapolres Tangerang Selatan Tebar Kepedulian kepada Pengendara, Ojol dan Masyarakat",
+    "en": "Jum’at Berbagi, Kapolres Tangerang Selatan Tebar Kepedulian kepada Pengendara, Ojol dan Masyarakat"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "detikFinance",
-    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOenY4VXZxVEZPWkhNLWNaS2lRSmwtRVduN2w0R1phTENleC1BNEV3VG5jTVpLMFkwcy1nRkpsN3A1bVNQZWZ1SVVDdEEwNkxiZ2pZWlhjWmtLUXZjaUE1Y2xYbURldVpOU2dXQlZCM0ZBaFhpd1FBMS1UaVp4NVNwdUFvMkhOV3ZVZGRPWWJ1NG03MGxFak1LUUJXOGswd0hFczlKSkpFdUjSAa4BQVVfeXFMTUlRR0FnMFQ3VEtyNGw5RGhWNG1saFRaTTVHMHk0dDFINmJlOFJsT3NTTGhCUGVHQXNkVWY1UkpnRlVrWnhieE9fSXVyaTJmLVdJZ0t3OXZqUGR5SWY4YlhzeFRKeGkxVlZfbjZUQXU5QUdnMjczSXN4VGxMaGQ4UVNYekU2UFhKb1psNG1mMXNqU1hiSnFzNGYyMnhwQ0xmR3lhUURwN05LeUcxejJn?oc=5"
+    "nama": "Kicaunews",
+    "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNaTliSW5qOHBIUllHbHg0NlRFcE94MmM2Qm80THgycWtVZG1BZ2VsRDZNTzB3YUtncmppWlFWWjNEYjBlbGdMYkxsMlVEWEFnVUpkU29FQmFmN2k0Uk9uVTdYY1g1N3otejFLS19LdVp4UkFSc2tIMzhGbjd2MGkxSXVxZllDdi0tY1hhVDBxNkw1b0NQdzE0c1FUYnZTaFF2a19oWnY2V1lOcWdqdVd1SWRXbnVmTUFtUDhMNW9vV2VkVEE4V0RrZQ?oc=5"
    }
   },
   {
@@ -89,23 +140,6 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-14T08:15:00Z",
-   "media": 3,
-   "judul": {
-    "id": "Temui Pengemudi Ojol, Kapolda Metro Jaya Tekankan Pentingnya Keselamatan",
-    "en": "Temui Pengemudi Ojol, Kapolda Metro Jaya Tekankan Pentingnya Keselamatan"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Todaynews.id",
-    "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNbHNIUm9NX21jMmNwaDNjV1VsdE40Qi01bldvaFBUUGpYTE5sZE5zR1g3UHdXYmpWUVlfVXVGQUxNZDVYeXpad2ZJLVp2NmlUb01NRHFlaVdPMHNKcnhzLTVIbmFxTzlfcW1rcWpVM0hqN05iTUs2X0hlVVdMZFlPSUI3NTFvNElEUFlqSjZaUkRtZWhQU0VsLQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
    "waktu": "2026-11-14T06:40:00Z",
    "media": 1,
    "judul": {
@@ -119,23 +153,6 @@
    "sumber": {
     "nama": "Akurat Jatim",
     "url": "https://jatim.akurat.co/news/906410/bmkg-ingatkan-jatim-dilanda-cuaca-ekstrem-potensi-banjir-bandang-hingga-hujan-es"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-14T09:13:46Z",
-   "media": 2,
-   "judul": {
-    "id": "Jum’at Berbagi, Kapolres Tangerang Selatan Tebar Kepedulian kepada Pengendara, Ojol dan Masyarakat",
-    "en": "Jum’at Berbagi, Kapolres Tangerang Selatan Tebar Kepedulian kepada Pengendara, Ojol dan Masyarakat"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Rakyat Merdeka News",
-    "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOMF8tSjNIS3JZeWhtakUyekgxS1VjdjRGRUNBQkhXaVA0WEVoSGV6bkdJRmR1Z0xRcWJucTdhdXhuTWV4MXlmQ1djTG44RDdyaGpuWU1jUzFzaTc5RXNkcVZGYTlWOUY2OXEtc1JZLThoTGJwU1piUnU2Z1dPWlktaXV4TWtNU3pRdWNkclg0YThOWmx0RmV2TTdhd3VjYm9SU1VVOHVyZkZ5N0o2UEM0Y2NqbG0yTEtuNEl6RzNub0o1RlJlOHZN?oc=5"
    }
   },
   {
@@ -276,6 +293,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-14T11:32:46Z",
+   "media": 1,
+   "judul": {
+    "id": "Jumlah Mitra Ojol Perempuan Capai 182.500, Banyak yang Jadi Penopang Keluarga",
+    "en": "Jumlah Mitra Ojol Perempuan Capai 182.500, Banyak yang Jadi Penopang Keluarga"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Media Indonesia",
+    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOdEkwV0loU01tRmI2eDhJcTRubUplMWprTkhfaEpnQWZLdlpzUU1RX2hOdDBRZy1PSjJSLXdlZnBGRzhITG5KTHk1WjdyWFdQNzc0R0p4TExYMTlWYWlBbVNfXzBkZ3FWbkc0OFk2cWFSRmZ6enJyTFdueTlPMEtOcS1xVG4xN1A0RDE2ZVdrNkZfNHZqT1NQY01EZmtCdUJYNmktZy05bFBOU2RGdXpRdjBlQk9kTFJzSkRz?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-14T05:28:38Z",
    "media": 2,
    "judul": {
@@ -310,53 +344,53 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-14T08:45:56Z",
+   "waktu": "2026-11-14T11:10:58Z",
    "media": 1,
    "judul": {
-    "id": "Harga Asli Pertalite Rp 18 Ribu, Selisih Ditanggung Pembayar Pajak",
-    "en": "Harga Asli Pertalite Rp 18 Ribu, Selisih Ditanggung Pembayar Pajak"
+    "id": "Komdigi: Kehadiran Layanan Hantaran Barang dan Ojol Ubah Pola Persaingan Usaha",
+    "en": "Komdigi: Kehadiran Layanan Hantaran Barang dan Ojol Ubah Pola Persaingan Usaha"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "detikOto",
-    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNQVlMRUYtU3JrOXF1RzVRR2xzZnVLYm1nc0FnZmtRWnhvMzhXZURmR3pHN1RTZ2hGRTFhUkFfMmdaX1BtYUE4V3FCb3VWT2tHeThVVlV0NXV2RVJNQ3pkaHhleFBnUmwzQ1dNSkxKYzd5WlNpRldKcXRxUDhPUU52bEVPZy1BTkNfNWFlYVF6TmZ3WmROcVVLNmE5RWpZOURqTVczTndYQdIBrAFBVV95cUxOR2J4YmtpLV9GcG85RTdkX2VPajlUQTYzV0xQQUlqYUJubVI4QzFHdDIzQW9sTnlOUkx2T3RDTnB3RE5ZSVNWTGUtWTdxWVlGUTNEN04tVGE5UlNLb2ljT2QyMnpaSXFydTNHYkxWNUJCSXc0N3FfWUdha0VrTWdZUWNMMjdrakhubFdHNEJNYVJFY3hRVlF5c3Itc19fX2Q5SWlvc29OODNaSUZy?oc=5"
+    "nama": "Bisnis Tekno",
+    "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNYm5jTkhiRUdwYnNBSml5ZGJSWG9JWXFuZnVQR2pDUUdFUG1KX2FHWnNOQ0MyYzRmdEdQM253YzlMMkUwbW9Xa0JHam8zQWY3MzFqWXRUZG5Bcm9XSERQSmxVZHI1eTFrZHkyYkc4aXlHRWQ1VzdaNVVuVngxcFNCa1E1dFZ2NUVZMmRKd3JmakxhendFUGpFbmNOdlJ2MmY1THZ0Vk1vWjRjeTFZdGV2RlFqMWREU3NyTWM5SjF5OEcwSjZKRUtKS05MZUo?oc=5"
    }
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-14T08:36:38Z",
+   "waktu": "2026-11-14T10:43:56Z",
    "media": 1,
    "judul": {
-    "id": "Delapan Drum Pertalite Diamankan Polisi, Begini Modus Penjualan BBM Subsidi di Karanganyar",
-    "en": "Delapan Drum Pertalite Diamankan Polisi, Begini Modus Penjualan BBM Subsidi di Karanganyar"
+    "id": "Kejari Pekanbaru Tambah Jam Layanan, Pengambilan Barang Bukti Tilang Bisa Pakai Ojek Online",
+    "en": "Kejari Pekanbaru Tambah Jam Layanan, Pengambilan Barang Bukti Tilang Bisa Pakai Ojek Online"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "Tribunjateng.com",
-    "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPdlNpYjlocEQ5ZlRmbDN3YWdUOFl3cXhDOG5PbUNTb2gyR0d2eC1uZUhDblgtUFZ0Zndjd09IRkhCbzYybEtqTm1IaFN1VnNZTTctOG1aRjQ5OWZNWm1ZUlkxU3BqNWtCZ19SU1hoSWlrM3NkVllJR2tUX05YSThfQ2xjV1pRd3JGQnZIalJCMDJ6bjZyQW91SlpXT1ZXTWtIWHVNVzg4ajg3Z2dWalhnLXR4V0gwM1gzdmRXSUJ3S1p5UFY1NkwxNFJ6cXFkb1QxWlcyQkln?oc=5"
+    "nama": "Tribunpekanbaru.com",
+    "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPSUxvNEQyMFZEYWc0Rl9UczhSeGhqSjBadTBVZEtfcG5lRnNWNWdMd0NOOFdSaTZZT19JaWhCQk1UMkFHSHRDNk1haTJXRE5vMFpydTNYZnhOUFJfaGVxbjQxMGs5VjZOV1g5OTdFbklYSW1hVGZTWFh3NXFKNWJuMEtQZzJqTnl3R2NjR1lxalhkdzZNY2FfU2F0aEhhaVVwQ3J2cDNSeDFjNVJkMnZmeEcxUjBhMHY4VndLVC1SUUpqNWVQdFluNWdlZ3I0SkxvUVlQNlQ0d0ZsTDg?oc=5"
    }
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-14T08:31:51Z",
+   "waktu": "2026-11-14T09:38:00Z",
    "media": 1,
    "judul": {
-    "id": "Bukan Sekadar Berbagi Sembako, Kapolda Metro Jaya Bangun Kedekatan",
-    "en": "Bukan Sekadar Berbagi Sembako, Kapolda Metro Jaya Bangun Kedekatan"
+    "id": "Tergerus Ojek Online, Begini Kisah Pilu Pengemudi Bentor di Palembang Kejar Setoran Sebelum Tengah Hari",
+    "en": "Tergerus Ojek Online, Begini Kisah Pilu Pengemudi Bentor di Palembang Kejar Setoran Sebelum Tengah Hari"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "Poskota TV",
-    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNc1ZRV3BROXZhWXRENEVTeUZFNU15N1dNMGpoaUlGaE9zUFVuLU52Q0tUTzFoU0g1LVpkRFdHVDNjSWZuNTRPMGtJRV9xT2Vuc2tKLXQ1Um1rekFkejdPZ1JWX2d0VDloaFFQaWhlU2tfODl4TFFya3NRQVlNenBzMjBoakhoVjlPdkszeDRHNXFzTWdBVjBsSkIzRkxxT1ZKamc?oc=5"
+    "nama": "PALPRES.COM",
+    "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxONDhhbkltYnk0ZC1BNzdUZDZDU1VxSGdjNk1lWExwTVNzdkkwU05SVkNnU3VHLWRDMmJCZW1qRTZjLWNyNzBqc1AxTEdJRkx0eUp6dTllUkEyRWo1dFU5VEFibkJrWV8xRkM5U1N4R0ZfaklkbjJNZlRFbzM5dHhKRGN5dkpnSm9USG1Tdjd4NzRZR09meUQ4NVc2cndjemJRTHM3bjdYdGx0QU9qTWN6MWU3VDd5bmFMRjlVT3h3NTJTTXB0T2VPNjFFeTdLTm8tNlZjYXBZeG0wWW1iUWFNOFdR0gHWAUFVX3lxTE9MTzJVLXlabVY5bW5SWks2SkJxQXFLb0RvZ05sbm9JNTNmeXU0eU9rWW8wMHFyTHVyWG0tcUxPSTI1MnBRM0Z2TlRDMGdpZkQ2aTMySjJaR3I3NlpnSFFaZDBFbzhKWklNdFZlamgwbGpNWEhXV09XV1NHUWF6eWtmbWpFU05rTDZnTTdNZVR5VUR5U1Y5ZFpaZVZEcS00ZGc1VHNVQXVyVU5CSnkwV0lSSHlkR3o4TGkxYzhhVzlBcmpsZVlnYlMxd2ZwQ0VKZjliYjFaMHc?oc=5"
    }
   }
  ]
