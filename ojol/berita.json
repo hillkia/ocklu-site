@@ -1,7 +1,24 @@
 {
- "w": "2026-11-14T01:59:42Z",
+ "w": "2026-11-14T03:00:22Z",
  "dari": "Kroog",
  "berita": [
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-14T02:42:27Z",
+   "media": 3,
+   "judul": {
+    "id": "Pakar Nilai UU Pelindungan Ketenagakerjaan Belum Lindungi Ojol",
+    "en": "Pakar Nilai UU Pelindungan Ketenagakerjaan Belum Lindungi Ojol"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "SuaraGarut.ID",
+    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE45ZU5kbkFjSXVpX2tpZDVQTlltcTFacHZEOW51VkFMQ0hKZzJTSUhZWGxCSVJVSUV2LUZwNE9LNWIyWGN5WUZFNkV1bFppTUtlcVFEalU4RFIzQVlNMlBkWmVRNDZIeEJ4RDM2ZQ?oc=5"
+   }
+  },
   {
    "jenis": "berita",
    "waktu": "2026-11-14T00:40:00Z",
@@ -174,6 +191,57 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-14T02:28:10Z",
+   "media": 1,
+   "judul": {
+    "id": "Ojol Liliba Turun ke Alun-Alun Kupang, Ajak Warga Jaga Kebersihan Kota",
+    "en": "Ojol Liliba Turun ke Alun-Alun Kupang, Ajak Warga Jaga Kebersihan Kota"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Pos-kupang.com",
+    "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNNFlaeWNRb3djTWEzV2Z4N01OaWNmY1hNdWl5UlUtQkVKVzVWR2F0UW1MNHR2a1dzUnB2bUJ1b3ZLbFY4RXVPZm1jOWhCcnhkOVJTX2p5ampxdllVb0ZEc1JXSzR5djZmaVBNdVpwTldUa1VjRlhKMldkc3lsLUlUaVhHWnVqUU1HbFlDQmoyS0VraFY1SVNYRG41dDZ1VnJiclRhNjRXd2sxQndVOHVpSHM3b05VdWRTM0E?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-14T01:30:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Demi Biaya Persalinan Anak, Ojol di Thailand Kerja 31 Hari dan Raup Rp 37 juta",
+    "en": "Demi Biaya Persalinan Anak, Ojol di Thailand Kerja 31 Hari dan Raup Rp 37 juta"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Kompas.com",
+    "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNb0MzSTVrcFRGSVpKRm1yc1VucTNsLTR1TE81YV9VYXhQamRab3VaX3RIN1Q4VjU5N3VBd19jYVctU0JTV21xaW9SdlBWQm45VjBjbGo2bGZnV1k1bm1DYzNKX0JsUVl6S0lwaXg3UlRWZ1BmNl93ejZLWWs3ckhJaUl6QzZTcFU1Q1J2LWNmQmZzbHBQSlNnQWE4Sm5GNTUtQnpPaDNtLUZjTDc2dWFxVlI4QmpERElrbkZkOUVMUGRmbm9z0gHEAUFVX3lxTE12QU53aWYzUTNPSW0wbUxqZVNCaUktS09ncWtieWlfZUZyUnhEdmJ1b1Z6aDBmWXZrV3BkWVU0b2ZJVjZDYjdILUNiMVVyNnhlS181Zzd6R2d5a0ZEcU5kcVlaaWdmRURzcXI0RXlEWFMwcHZvQlhrN09oRHN2czh4WmctUnhPUEVISlFSQTdMNncyaks1a3Y4b1FEVENTcnl2TVVuWUhLY3YxN1FiS3RGYlBDaGpjUjg3X3EzV1hpcXpjSUI?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-13T23:49:07Z",
+   "media": 1,
+   "judul": {
+    "id": "Peduli Banjir Sumatera",
+    "en": "Peduli Banjir Sumatera"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Rumah Zakat",
+    "url": "https://news.google.com/rss/articles/CBMi2wNBVV95cUxPVW1lNWhYU29LYjFPbDhLb1doQmw4RmxFX0NKMzVkZW03d2FUd0V1UU1QZHNoQnZwVEE0SGZhQ1Y2N0lyQUduemZHZlpXMzR2ZmRGV2gyeFI3d2NNV1ZmbXMyZ2lOeEdGMHo3UFV2VFZkbXVleFg5R1NvSGJqcHNrd1J4N1h5bWNFbGZtZnpzYnhXU2JNbjlMclNPNURuNkx6YnRZcWxCdjBILWJiT3h1Ny1hVjFOTUNna0VPbVcxYndObTllalcxdTFvUnFuUXpVSkh6d195RTc2amV2MjF4LUQyU1FFUUQ0MUxWWTd5SzlmT3NqY3NYZllnYmotdGhRM1BzSXNJNDhEa2lhM2dLN3daa2xkeTREWS1FVjBtd2dtU3RWeUJwaTg2RkFYOEVUZzJrMU5JNmtUVFFuNjZIaFJadDVlRThwOWQxYjEwSXdJQTMyNnJIM1ZJSk9DSlYzeThYMUZVSXcwdk1TaWloNjJvSHhHeUp3bTdtRnBUYW1kZFhZdkR0WW40SG96TDJpOWpkQlhXaWJ3bGlGM2hPeDh1M19jeE5VRXhjM1BHZzVqdU40RXp4QWt5Z2tUVXdJNVJGNUVoMXExdjhudkxhZzNqZ2dON1dXazg0?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-13T16:18:55Z",
    "media": 2,
    "judul": {
@@ -225,19 +293,19 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-13T19:18:25Z",
-   "media": 1,
+   "waktu": "2026-11-13T13:41:00Z",
+   "media": 2,
    "judul": {
-    "id": "Peduli Banjir Sumatera",
-    "en": "Peduli Banjir Sumatera"
+    "id": "Dapat Motor Baru dari Pertamina, Puluhan Driver Ojol Makin Semangat Cari Orderan",
+    "en": "Dapat Motor Baru dari Pertamina, Puluhan Driver Ojol Makin Semangat Cari Orderan"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "Rumah Zakat",
-    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNdm1OeC1QZlk1amtySXFzbUtmZi1OdXhUeTBfTlRfeG5mc2xaSElfRklBZXJRWGoyMzJvZUE5dzk2cmhvc0l0Z055eW50TVB4ZUFDU05fdHEyTzdGYzlsWWI2YU5Wb3Q4SzBFanAzTVlrUDJrWVFsemFXYzBfWDlXamJGd204MWt2aVhkeWQydnBoV1Y0MDhCeVZuQ1c4Yi1zYnN4bzN4ajZpdHFnZjVWV0VaMEw?oc=5"
+    "nama": "tvOneNews",
+    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOSWRCNEJzQUZUc084TE1qZGk4SHRqbWp2UjktTEktMGFQQ1U1X1pTTXJyQjdnM2kyMkcyWTk3UmZUMUtVQ2h2bUppTUFUMXYyc1NobjFTeG1aenJlVmU1NTNJUEo4ZnV6UDZ3bXRrVXZnOW1WQ3p4RDZJcXc5Sm45ejV4bWswQkpWT2picmZyTk1OY0NRUHg1bVotdEtCVVJtdGFhZE1Ja3kyVzRZRDFoYWtNSWJYODhfSDQ3bdIBwgFBVV95cUxOb25yOWdqLXUyLWIydmtMNHRqMG9XNXc0MlZDNk4tb3htcFVTMGU4LThtWTRJVTZiZDNGZVhMR1JtUjhVeVpLZV9fVTlGRThaTVhhQ1NqWG4wd0pKaFRlWXpWOHFpOGNRV3MwbExRd29PQUpnRkZLVmVpUThpcEdra0NNN3ppZEhXVllGOEt6QmJGSnBhYklzR3FsR05wYW4xOTh4VEpKSFVhSjhUZHREYktpcno2QWJ2YmQ5cVFGT2hCQQ?oc=5"
    }
   },
   {
@@ -272,91 +340,6 @@
    "sumber": {
     "nama": "Beritabali.com",
     "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNX3FkdHZDSHByQXpEcWNtTGYzbGdsQXJZN19VekdKSHRZaFdPb0NvTDdQaWx4X1FKeHM3encya20ya25LdmZ6Q3hVVGNmYW1ZLVdZMDRiWmJ5enZFWHRRdGNOT0VWd1NtdzlVdlo3a3hTUlBfQldQa20tSWg1TDNnSDFZYl81ZmZMa3hXNFhiTWpDcXdtaU1RRw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-13T12:08:09Z",
-   "media": 2,
-   "judul": {
-    "id": "Wakapolda Jatim Bagikan Ratusan Paket Sembako kepada Ojol, Perkuat Kemitraan Jaga Kamtibmas",
-    "en": "Wakapolda Jatim Bagikan Ratusan Paket Sembako kepada Ojol, Perkuat Kemitraan Jaga Kamtibmas"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Analisa Publik",
-    "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPS0VmV1VUVWxRZmZwa2N1OTRHaVoyVzNRNk50Ynk4WHZTVGlaR0tjWW1LNVlsOXpkeWhabGo4ekNkTzlSNVNOaGxVX3kzNEFGWC1FWEJpWXppcnFYcWR0YzZBRG5Tbi1Ldm5RV3Fzb0RjdHZiaUxRZFdudF91Q2Jsc29RNWptWkNGMml2bWNWMGl1MnE3dHAxSGdtanNLMGdPeThESFNCdnJTc0djYTEyMVJ6cmFocU1MbG9yeDlJQQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-13T17:42:19Z",
-   "media": 1,
-   "judul": {
-    "id": "Robinsar bersama Forkopimda Kota Cilegon turut hadir dalam Doa dan Tabur Bunga bersama Ojol",
-    "en": "Robinsar bersama Forkopimda Kota Cilegon turut hadir dalam Doa dan Tabur Bunga bersama Ojol"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Berita Cilegon",
-    "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNMWNXbXlYMVBNTGU1OW5GYW5PdTY0R2R2TEQ2bnVuRVJBb0FvNEdUUXVHS241aHVkOEJGTHRlejhPelhBZjgwTHVCRHNOd3FNOS1vV05qMU9zUENKZ3BXWnJuYjdmRFMwQ0JkNVVJV1N6UERkWkxaM2o0SzdRUXJoMGZuRDlkaTQ3em1hcTBlSGcwejFnNWc0bm5ocVowUjlzcUdIbWFMeFg3c1JmNGlmOV9QLUxkV0c0YmtHT1B5cFRMdU8zLW1XNlcwM1JQdGJYWjQtb19EWnpxS2M?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-13T17:40:10Z",
-   "media": 1,
-   "judul": {
-    "id": "Pemerintah Kaji Penghematan BBM dan Listrik, Subsidi APBN Tembus Rp415,8 Triliun",
-    "en": "Pemerintah Kaji Penghematan BBM dan Listrik, Subsidi APBN Tembus Rp415,8 Triliun"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Kontan TV",
-    "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1sSFpsWFRzaVdjWGdGcGlELW5Cak5RZjREVjViTDdFRWdYWkJRWW9icW9jaTVKNm5iMnI0ZzJQLUk4WFA2Yy0yOEZ0bFdJUFhVQWFmX3pHVXdsT0JqSmhoTXE3cDBYRkE?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-13T06:21:55Z",
-   "media": 3,
-   "judul": {
-    "id": "Realisasi Anggaran Subsidi dan Kompensasi BBM-Listrik Rp415,8 Triliun hingga Oktober 2026",
-    "en": "Realisasi Anggaran Subsidi dan Kompensasi BBM-Listrik Rp415,8 Triliun hingga Oktober 2026"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "economy.okezone.com",
-    "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPUHhRZGhlWENoLVlJZWppQ3lUc18waDJZWjRPUklEc3pXQ3UzM3Rwclo1bmt4NnNqa2NRQ3hiNlA1cFpOX1RzTEhzZkxYN1EzeVZ5M3d5MEpGdGJqb19LM0dNU0tNX0RTZkJPR0gtWmwycFAyZHZsNWYzZi1vSV9lODA4Qzdac05ORWtkVk9VcWQwQmdMbWRPUHhwLS1XRGt3cDdsNHMxTF9mT21Gc3NHNUU4MmM0bktRNEcyXzRiaWd3ZkNFTVpuMDZBSG1BaTZoMFU0Vkg3MjZ1T2RwRnfSAdwBQVVfeXFMUC1OWjlNbF91S19PZUY1eEgwdDFPM3dyaUVhZHVVUlNTaTBfWURYUHpsVWRVVzRQT1F0YlhqbFBoVWo0cjNtRVRvNU9sbWtja3ZPYzNhaHFTUjQtSmEyakJsUDBsYk5LUHA3dTg4TnQzM3VRTnV2YTRlX3lxTGlDaC1JcnRENmx3Q3F1N0V3a3k3RHg5NVpscGd5SlJhWlZvUk1qSGF3ejBUV3BXaTh5WUdaRERmbHh6UDdpTFc0ZGE1QzBIOXZTdnNKSm90VUhxd0x3c1lCZG1VbDdYag?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-13T06:19:25Z",
-   "media": 3,
-   "judul": {
-    "id": "Pemkab dan DPRD Cirebon Kawal Keluhan Ojol soal BPJS PBI dan Data Desil",
-    "en": "Pemkab dan DPRD Cirebon Kawal Keluhan Ojol soal BPJS PBI dan Data Desil"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Jabar Publisher",
-    "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxORDE3aFdaTTZoa24ya0YzMFk5dWZVWE53UkZDZUFPR3lMbC1UMWl3elhLSWdIU1BsSWxodFpibmZKM0ZsZ1NjbzRwbTV5dlgzRHlseGxCc0FDaS1XeGphdGJyaEJUbjRwQ1BnOU5RRzJXNU1Ub2hldXJwaTVIQTRKRXpsT0pNYjBsbTZSQzk1SjQyZkFQU3Fkc3ZCNFdpM1ZaN3V4b3FlenhNbVJDYnE0U1ZkVmJCdWFLQXM5T0gxUEc2aG1CRDNKNnFxU3VDb25u?oc=5"
    }
   }
  ]
