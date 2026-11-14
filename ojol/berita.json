@@ -1,7 +1,41 @@
 {
- "w": "2026-11-13T23:50:46Z",
+ "w": "2026-11-14T00:55:47Z",
  "dari": "Kroog",
  "berita": [
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-13T23:30:17Z",
+   "media": 2,
+   "judul": {
+    "id": "Pertamina Patra Niaga Bagikan 25 Motor kepada Pengemudi Ojol",
+    "en": "Pertamina Patra Niaga Bagikan 25 Motor kepada Pengemudi Ojol"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "JournalArta",
+    "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOT2V2bXBTYWJVQWZ5VXZEUnJmaFQ2UGVuS2hXOUdsZ1ZMNVBnMDFWN2hjQzVHeVppdTFGUFFCRTdsQXVlOEp3dkxIZmktS0tvLUhmTE1mQnN1NWRMOWM3Q1RlWWxBbk4xV3VXSHZ3czN1elJkQjRHdWh2TXZ6N0ZNQWxuNWY3UnF5OHZR?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-13T23:09:00Z",
+   "media": 2,
+   "judul": {
+    "id": "Pertamina Serahkan 25 Motor kepada Pemenang Program BOOM",
+    "en": "Pertamina Serahkan 25 Motor kepada Pemenang Program BOOM"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "ChatNews.id",
+    "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9wODNvVDBrbl9NTXUyNHFobnpMRjhGdVpfMVVNYmk3azFNdWdscTJESlZORnczMlhBZ1RLcHhISVU4cnlzVF9OOWxxTVprZzVPVWJRSTh6NHRyYjdHd1BLdGtMWQ?oc=5"
+   }
+  },
   {
    "jenis": "berita",
    "waktu": "2026-11-13T11:41:00Z",
@@ -34,6 +68,23 @@
    "sumber": {
     "nama": "Website Resmi Polri",
     "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQT1dOaGtQMXZQMVdjRFQzN2tjSGVnV1Rqa3QtemI2NERwcFViLXowVU5JNkF1c1FwYWpXZWNLYzRpeTJoOXdsSnp3WEhER1Q0Uk5mNTczeHFJdm1iTnU1cHNoZEVQNF9mdXZnVFRJMTAwWl8wYlNLME1BNHpfU19yWGRIX2Y1MklNS29qS1RPOTVBVk1QdF9oWjExcWJMTmRSYmtyOWZOMA?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-13T16:18:55Z",
+   "media": 2,
+   "judul": {
+    "id": "Padang Bangun 138 Rumah Tetap untuk Korban Banjir Bandang",
+    "en": "Padang Bangun 138 Rumah Tetap untuk Korban Banjir Bandang"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "شبكة تواصل الإخبارية",
+    "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9FU01LaWFqQS1sR2JIU1ZFSGtaMWxrVkU3bFB1Sy1hMnlYc0dDbUFrYWZrNlVNREFFRzNvOTJCMVdZeUQ0QXBNOXBwcmt2WVZDOUVB?oc=5"
    }
   },
   {
@@ -242,23 +293,6 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-13T16:18:55Z",
-   "media": 1,
-   "judul": {
-    "id": "Padang Bangun 138 Rumah Tetap untuk Korban Banjir Bandang",
-    "en": "Padang Bangun 138 Rumah Tetap untuk Korban Banjir Bandang"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "شبكة تواصل الإخبارية",
-    "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9FU01LaWFqQS1sR2JIU1ZFSGtaMWxrVkU3bFB1Sy1hMnlYc0dDbUFrYWZrNlVNREFFRzNvOTJCMVdZeUQ0QXBNOXBwcmt2WVZDOUVB?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
    "waktu": "2026-11-13T15:55:00Z",
    "media": 1,
    "judul": {
@@ -306,91 +340,6 @@
    "sumber": {
     "nama": "Pekanbaru Pos",
     "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPUEt0X1MycC1vdE56RWVYZ25KUFVFY3pBWVRJSXJtTjdKNUdIUDJmY3dWWXBHNHYtaHhnb1NBWGtzOFdQNHlaZ2lLMlM4R1gteDJKZFZjekhQUDF3MkE3UzVkbU1WOFhpR1B4Z29nbmtlT2NuY29LVF9mZFpjMWFLaTNZZDFpYTBQOVRyZzZrWGtUSERnSGpQZkdXTTdfWWRkZnNIUktPejNVNWJESjltSV91TWdtSmRMU3Vrc3I3UWd0cmhxeUE?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-13T14:31:38Z",
-   "media": 1,
-   "judul": {
-    "id": "Gunakan Produk Pertamina Nonsubsidi, 25 Pengemudi Ojol Menang Undian BOOM Periode 2",
-    "en": "Gunakan Produk Pertamina Nonsubsidi, 25 Pengemudi Ojol Menang Undian BOOM Periode 2"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "JPNN.com",
-    "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPUG9tM0V0QnN6UTVWN3pYcGZ6ZlRCeEVEaGx1MzBPUnc2Nzcxc2pCWERrMVV4b2RIODNHbHlrOWtOZHMwN3FvbWtaYV9GN3ZnZkRYdWlWUmlvNmZVX1JlcEh6MkUxQjhtMmVfN1RGMFUzbnBtSWxYWWdpbG1BSjZxdVlJSEFSNnprNmtRU3FzLWFQbE1ZQVVoZXQ3Szcxb3BjOExoY3p4NENCb1hZ0gGvAUFVX3lxTE9CeWFHTDJFTi1NSFI5YjVJSjJwRWRac2JWSmV0eElXNFZtQmZCdWY4Wm5hejFPdlVBQ1ZKeVBGUUhzWlZST2syamxGS1RVeVpackxvVmNRZEdHV0M0Q05IZzRObEoyM0x0VDFfM2w1M0hiY1ozVWZVWC13U0Z4ajl6R0MtTTJSQkY5dnZGVVU5YTF2T2FpMTdlQXN6dW5Mb1hXWlFXRkFfTWE5cktPNGM?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-13T14:18:20Z",
-   "media": 1,
-   "judul": {
-    "id": "Pertamina Bagikan 25 Motor kepada Mitra Pengemudi Ojol",
-    "en": "Pertamina Bagikan 25 Motor kepada Mitra Pengemudi Ojol"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "ChatNews.id",
-    "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFAzQUhSa1Utcnd0akdnczh0LUp1UUVXMC0wZTlNdmxuZG85YjAyOEgxc0o5S2lROVNiQkZGZHFOLVBveWpYWExiZy0zeDR0NE5XLUZpX2ZTNkRpV3hkczFjaDI4aVU?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-13T14:17:31Z",
-   "media": 1,
-   "judul": {
-    "id": "Pertamina Serahkan 25 Motor kepada Pemenang Program BOOM",
-    "en": "Pertamina Serahkan 25 Motor kepada Pemenang Program BOOM"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Demokratis.co.id",
-    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBONS1UdUZxX2ktNjNaTEJJS3hka1ZpOHBjQUlySmZ2SktFUzlXOVVodURWc3R1MFJQcXJNYlNJbzFOZDBLb0tpLWNKdXlHVEdJck9zU0lGdGlDUmNhdHBDMXV5NXd1RTBlRkhWeF9B?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-13T14:14:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Apresiasi bagi Konsumen BBM Nonsubsidi",
-    "en": "Apresiasi bagi Konsumen BBM Nonsubsidi"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "investor.id",
-    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE91UzZlRGZRV25ERFFfNTBUWTVhbjcyR2E3MnRBVDZXendXWEZCUWpqbndKLS1KU2lSQ2dxRTZFUmZuUG9BcmVieTlrbTZBQmlqQ0c4WVdfWkZyWUNIS1JqVDZ5VmpsdjY4OEpGRU0yZVBTMFVMOHQ5M0JIbVoxZGs?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-13T03:26:05Z",
-   "media": 3,
-   "judul": {
-    "id": "Kapolres Lubuk Linggau Silaturahmi dengan Komunitas Ojol, Ajak Bersama Jaga Kamtibmas",
-    "en": "Kapolres Lubuk Linggau Silaturahmi dengan Komunitas Ojol, Ajak Bersama Jaga Kamtibmas"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "detik suara rakyat",
-    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPMW5fNXoyblQwekt1WWk5MUhXeDhnTFFUNlFwUWl6QzdidndCcnZJS2lYRllKcWRvM2dTTkpyUFFKUHlSOWlIRjJMUzd4cHd5ZHhPV0JqbWFZR01BeDJNMl9hU1FsSExPWUJkUEhLTzU5X3RyV2FPYlFnZ2JfRkJPclZobnlhQXJDc0gxZEpGbnNoMEZ0V2dYanJDWWZxQ3hBcXNhaHljUE5CTXFhUktKbTg3QQ?oc=5"
    }
   }
  ]
