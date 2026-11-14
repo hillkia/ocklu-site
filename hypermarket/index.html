@@ -286,6 +286,7 @@ footer{color:var(--redup);font-size:12px;padding:40px 0 56px}
         <input name="url" type="url" placeholder="Link produk (opsional)" aria-label="Link"><input name="foto" type="url" placeholder="Link foto produk (opsional, https://…)" aria-label="Link foto produk">
         <div class="baris"><input name="siapa_kamu" maxlength="80" placeholder="Nama usaha" aria-label="Nama usaha"><input name="kontak" required maxlength="200" placeholder="Kontak bisnis (email/WA bisnis)" aria-label="Kontak bisnis"></div>
         <p style="margin:0;font-size:14px;font-weight:600">Gratis 30 hari, setelah itu Rp49.000/bulan + 7% kalau laku lewat OCKLU.</p>
+        <p style="margin:0;font-size:14px;color:var(--aksen,#0f7b6c)" id="promoTrial">🎁 Promo: 20 penjual pertama gratis 60 hari.</p>
         <p style="margin:0;font-size:14px">Kamu baru bergabung setelah kamu yakin kamu suka.</p>
         <label style="display:flex;gap:8px;align-items:flex-start;font-size:14px"><input type="checkbox" name="setuju_syarat" required style="width:auto;min-height:auto;margin-top:3px"> Saya setuju komisi 7% untuk OCKLU kalau transaksi terjadi lewat perjodohan OCKLU. Kontak saya hanya dibuka ke pembeli yang saya setujui.</label>
         <button class="btn isi" type="submit">Pasang</button>
@@ -997,6 +998,7 @@ function lacakIp(ip){var P=document.getElementById("jejakPanel"),H=document.getE
   }).catch(function(){H.textContent="gagal memuat, coba lagi"})}
 document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("[data-jejak]");if(!a)return;e.preventDefault();lacakIp(a.dataset.jejak)});
 document.addEventListener("submit",function(e){if(e.target.id!=="jejakForm")return;e.preventDefault();var v=document.getElementById("jejakIp").value.trim();if(v)lacakIp(v)});
+fetch(API+"?r=promo").then(function(r){return r.json()}).then(function(d){var n=d.sisa_trial_60;var e=document.getElementById("promoTrial");if(e&&typeof n==="number")e.textContent=n>0?"🎁 Promo: 20 penjual pertama gratis 60 hari · sisa "+n+" tempat.":"Promo 60 hari sudah habis; gratis 30 hari tetap berlaku."}).catch(function(){});
 function muatMintaLink(){var el=document.getElementById("mintaLink");if(!el)return;el.innerHTML='<p class="kosong">memuat…</p>';fetch(API+"?r=mintalink",{headers:hOw()}).then(function(r){return r.json()}).then(function(d){
   if(d.galat){el.innerHTML='<p class="kosong">'+esc(d.galat)+'</p>';return}
   var L=d.daftar||[];if(!L.length){el.innerHTML='<p class="kosong">Belum ada agen yang minta link beli.</p>';return}
