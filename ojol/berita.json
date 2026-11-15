@@ -1,5 +1,5 @@
 {
- "w": "2026-11-15T07:25:41Z",
+ "w": "2026-11-15T12:14:46Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -272,6 +272,23 @@
    "sumber": {
     "nama": "CNN Indonesia",
     "url": "https://www.cnnindonesia.com/ekonomi/20261113153845-532-1426891/airlangga-pastikan-harga-bbm-subsidi-tak-naik-meski-rupiah-rp18200"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-14T00:40:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Daftar Lengkap Harga BBM Pertamina, BP, Vivo dan Shell 12 November 2026",
+    "en": "Daftar Lengkap Harga BBM Pertamina, BP, Vivo dan Shell 12 November 2026"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Bisnis.com - Ekonomi",
+    "url": "https://ekonomi.bisnis.com/read/20261112/44/2020755/daftar-lengkap-harga-bbm-pertamina-bp-vivo-dan-shell-12-november-2026"
    }
   }
  ]
