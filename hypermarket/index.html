@@ -629,7 +629,7 @@ function render(){
   var AT=S.aksiTerakhir||{},periksa=AT.periksa||(S.peristiwa||[]).find(function(p){return p.aksi==="periksa"});
   var siar=AT.indexnow||(S.peristiwa||[]).find(function(p){return p.aksi==="indexnow"});
   document.getElementById("angka").innerHTML=[
-    [tot,"kunjungan agen · "+lbl30],[h24,"kunjungan agen · 24 jam"],[nama.length,"jenis agen berbeda"],
+    [(S.total&&S.total.kunjungan_semua!=null)?S.total.kunjungan_semua:tot,(S.total&&S.total.kunjungan_semua!=null)?"total kunjungan agen · sejak 13 Okt 2026":"kunjungan agen · "+lbl30],[h24,"kunjungan agen · 24 jam"],[nama.length,"jenis agen berbeda"],
     [mcp,"panggilan MCP terakhir"],[periksa?esc(periksa.hasil):"—","link kasir ("+lalu(periksa&&periksa.pada)+")"],[siar?esc(siar.hasil):"—","siaran IndexNow ("+lalu(siar&&siar.pada)+")"]
   ].map(function(a){return'<div class="a"><b>'+a[0]+'</b><span>'+a[1]+'</span></div>'}).join("");
   var SB=S.sinyal_beli,mg=(SB&&SB.minggu)||[],ini=mg[0]||{};
