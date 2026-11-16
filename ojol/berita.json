@@ -1,5 +1,5 @@
 {
- "w": "2026-11-16T06:36:51Z",
+ "w": "2026-11-16T07:41:29Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -72,6 +72,40 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-16T06:35:55Z",
+   "media": 1,
+   "judul": {
+    "id": "Driver Ojol Cirebon Protes Data Desil Tak Sesuai Kondisi Ekonomi yang Sebenarnya",
+    "en": "Driver Ojol Cirebon Protes Data Desil Tak Sesuai Kondisi Ekonomi yang Sebenarnya"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Bisnis.com",
+    "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQV2pPNHVNWnBkLUpJY3lmTEo2MWFLaGxrd09yZ3ptT3A1NzJXc0dTRFZmaDg5V2E4ME12LVRXOFpjZWloc2NlVmFneWhrbmxuYWVFdG41Rkh3Q2VBTW01SnZxU05TclhHWU5lUGlMalpBWndfWWFYOExBRVctRklFcDljbVNPRk1IaW5YXzNjTXZ4SlUyY0xfS1RHekJvN2VJaHJHenRjOWtORzFJVENyY3ZQU0c5YzlKbGpBdVNudEtQWmdGWE0waFhsVGRrQQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-16T06:13:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Driver Ojol Ditemukan Tewas di Jalan Jatiwaringin",
+    "en": "Driver Ojol Ditemukan Tewas di Jalan Jatiwaringin"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "NTVNews.id",
+    "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQbjdiaGwzTXdCQkd6M3VnWTFIbFNNLTFyX1ZRaG9aMkRwV010UjBabkxUX1hPNjVSRldjQ09qZVowYlRpeUhoaWlsSi13YTYzRXJZV2pEMXVHd2hNbzZRT1BlU2ZPZUNhWDNvMXRVbnpNXzJHdFVmUVFuNGl2SjJENlJRV2ZYUU1SdHpDek0ycw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-16T04:22:00Z",
    "media": 1,
    "judul": {
@@ -85,6 +119,23 @@
    "sumber": {
     "nama": "Kompas.com",
     "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQRy1jTG4xdmR0M2xaOGxKLTNrUU9tbXlhN3UzcFlUdDdzaEd1d2VkbGR2ZE1iN29GX3VmRjQ3WG90MnE3WFdNTmdMbW4xZHhTOV9Wei1iUXFDRDhMZHAtc1hiZlBBeHIzejhHWnhZeHVsTkZLalE4cV9MRnBBblB3VTdjUXZMZjNzTzZ5RDk1UkpDOEhoUjlVa0dYeS10by16Y2J6Nzl1VWRudGNJZF8zWGNQRnZMb1NRVEE?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-16T03:49:38Z",
+   "media": 1,
+   "judul": {
+    "id": "Langkah PLN Mobile Ajak Masyarakat Peduli Pentingnya Energi dalam Kehidupan",
+    "en": "Langkah PLN Mobile Ajak Masyarakat Peduli Pentingnya Energi dalam Kehidupan"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Jawa Pos",
+    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxORTgwY1h5a085UDFhNXNwOWZPVGg0UnAwaWVZQnZGMXFEUnMtWHFyS1FmZkcwZWxrYWhSTTU0OGg4aWI3bnBjMW9SSmpXYzNLQWJTR2tGTXRBV3ZkdUtxVGp0Y2tFUkhlTGFPT1p6bi0zNF9jS3otYnBXdzJNcG9OeE5nOFczN0xlUGZzc0hwQ1psMFhyakc4cnNMREFEX2pjVzFyU3N1ckJjai1aeko5dUpfd3BYODJ0?oc=5"
    }
   },
   {
@@ -106,19 +157,19 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-16T00:28:27Z",
+   "waktu": "2026-11-16T02:59:56Z",
    "media": 1,
    "judul": {
-    "id": "Ojol, Nelayan hingga Guru Mengaji Masuk Sasaran Ranperda Jamsostek Makassar",
-    "en": "Ojol, Nelayan hingga Guru Mengaji Masuk Sasaran Ranperda Jamsostek Makassar"
+    "id": "Spesifikasi Motor Listrik Electrum H3, Pilihan Favorit Ojol dan Harganya",
+    "en": "Spesifikasi Motor Listrik Electrum H3, Pilihan Favorit Ojol dan Harganya"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "Tribun-timur.com",
-    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQOEtEOVFDU094anhLNk5rYk5McWlvMHVpaFZpanFPMDZOQm9aaTVyc0taNDVUYTcxOW0xWEpyZC0teWp3amxxSmNVUkR5NG5aVWlpQmJPRmd2MFpyWHVKYXBtUzhLZThwekNSS2pWOGxCeVpfdklEUktib1Q2aXRVeDVwMUxyd29mdmd2Ym1NT0FYS0tKa0FFVFN1aHk0MVVOQVN6dmV6NjRGYTZlUERhcDlRMlhLWGpFTEtsUlpSdzc?oc=5"
+    "nama": "BertuahPos",
+    "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQU25jTkRrWHNway1yQ1VDMXJKaEtEMHZyV3VocWxkRnhtRVRtSUFmY0tSNE5PdmhicHloQWRCbFk4TnZBV2UxNGt4ZGZpaXo2cVNTMXEyLVB2V0JmdlRKQ2ZaUzRTS0FwSTJUVUItMHpEUmdJTEVnaU9tS2gxUG5NLWFUV1RMY3N6WUVFa2ZfVm9TSWo5LUdpWjBlcENrUncwclNCS2dWZmF1aTk2?oc=5"
    }
   }
  ]
