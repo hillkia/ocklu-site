@@ -1,7 +1,58 @@
 {
- "w": "2026-11-16T01:29:24Z",
+ "w": "2026-11-16T04:33:33Z",
  "dari": "Kroog",
  "berita": [
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-16T00:30:00Z",
+   "media": 2,
+   "judul": {
+    "id": "Cek Harga BBM Hari Ini 16 November 2026 di SPBU Pertamina Se-Indonesia",
+    "en": "Cek Harga BBM Hari Ini 16 November 2026 di SPBU Pertamina Se-Indonesia"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Kompas.com",
+    "url": "https://money.kompas.com/read/2026/11/16/081209726/cek-harga-bbm-hari-ini-16-november-2026-di-spbu-pertamina-se-indonesia"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-16T00:30:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Harga BBM 15 November 2026 di Pertamina, Shell, Vivo, BP-AKR",
+    "en": "Harga BBM 15 November 2026 di Pertamina, Shell, Vivo, BP-AKR"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Harian Jogja",
+    "url": "https://ekbis.harianjogja.com/r-1278968/harga-bbm-15-november-2026-di-pertamina-shell-vivo-bp-akr"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-16T00:30:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Harga Pertamax Jauh dari Pertalite, Selisih Rp5.950 Picu Migrasi Konsumen?",
+    "en": "Harga Pertamax Jauh dari Pertalite, Selisih Rp5.950 Picu Migrasi Konsumen?"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Bisnis.com - Ekonomi",
+    "url": "https://ekonomi.bisnis.com/read/20261113/44/2021068/harga-pertamax-jauh-dari-pertalite-selisih-rp5950-picu-migrasi-konsumen"
+   }
+  },
   {
    "jenis": "berita",
    "waktu": "2026-11-16T00:28:27Z",
@@ -204,57 +255,6 @@
    "sumber": {
     "nama": "Kompas.com",
     "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOWDFVRHBKSXpfdE5LUXZYVHV5ZjhwbU9DZXMtUXpJb3FhNHpNZnU4VzVYQW5PbEx6VHowamxTYTNMU2hObXhMSmpIZnJIOFlmMlJhY3BDc1ZqemFUemZyX2hPZ193OEhiYUxyQndBSE9RQThZanFzeGVYZ0J3SmR0SHhmYS1rS29nOUx2MHZNdl81TzNxdlJWdzlGR0Q0ZldBTXVreTZtTkZvY1RVaVktejk1Y0hOajlwR1pHdHdYaWNRbGh3WlYyTmN3T2RoZjdYOWc?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-15T06:57:17Z",
-   "media": 2,
-   "judul": {
-    "id": "Meriah! HUT ke-2 HDCI Mojokerto Raya Gandeng UMKM hingga Berbagi ke 100 Pengemudi Ojol",
-    "en": "Meriah! HUT ke-2 HDCI Mojokerto Raya Gandeng UMKM hingga Berbagi ke 100 Pengemudi Ojol"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Radar Mojokerto",
-    "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPY3dtQ181R19FSVdWY1BpZTRkMTFaOWFxSFhURTZjM3cwM0pVT2Z4MzNPcGFFVVZ1QlZaby1Eck1kbjN5cG1sZW5MektNNUo2aHE2dmt4cmVBWmcxTHRfdzJ5amNPc0JrazhwOWF4Y2Z1UU9PVl9fcGFQVGxKSWRDZlBsZmtVVDBpLUl6LTd3bk8wYTVkYnd3RXBkdUJWZ0pzemZ0WDR0aXhPdlBpMHY3WFhsMVNvX1ltM1RaME9TTXRlUdIBxwFBVV95cUxOc0tXZ0w0ZUUzNkhlZi05NnNjSWF6eWVZelVTNXVEQk54cGRCWS1vUlpReElaWEVQZXFhOHJnWWdZSUx6QnUwOFIwdzhteEpkeU9wUFZtNXpWRVQzczNVQnhRUEo1dEpZQjZadFNXbUhrclc4VFo1OWFha0FuT3k5akk3dmEzZkNVd0FOR1ZJSEowb2lMOEY3a3JEYmdUSllKUVhFdEthRF84OHVHamNrNDBEbEwxclo4ejhQZ29lLVZESVJkblZr?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-15T12:54:33Z",
-   "media": 1,
-   "judul": {
-    "id": "Sehari Tembus 100 Km Lebih, Ini Waktu Ideal Ganti Oli Mesin Motor Matic Ojek Online",
-    "en": "Sehari Tembus 100 Km Lebih, Ini Waktu Ideal Ganti Oli Mesin Motor Matic Ojek Online"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Gridoto",
-    "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxObDg1QXdfa0JTRWVvRmtka1gxVmVYNWJNeFRLWjQtV0x3cklHNWtJNHhUQ0JSamdja2lmQktsUmNiRVRCRWViajVLVkhCaGQ3dWpLUzRiT29sWXpFRUI1TFBTMzdmWDZyUmxqdjQwOFRwSjJHUVBybE1sWFc5b3hMam9SSVRTZ3gxMzZlY2xOTWJLYWRZMWhta1EwcXBYdU16c285Rm42MEFKaUROWThYWmxOaEFOT3FfRDNLZGp30gG8AUFVX3lxTE1mYWJKRTdfaFJ1ZlNyZTV0RXZYOGxBdlhpemNianhwY09VdlZXMzl4b1g4QS1MOFpVcVVSMGRWdHpDVXpzTkFSUXdQRzBkRl9hZ1h0dU8zcnh0ZlpWSDZ4T2VISEZlNmd5RGFOZkJMOG9qSEU1MV9IcktQOTFFZjBWdm1UWmVBMlhXaFVfR3lFSEVPRWNHbHhiRElSRm5SV05TVUJyZTNWbzVsbl9UdFZFaE5lOXBPT2hjak1C?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-15T12:25:02Z",
-   "media": 1,
-   "judul": {
-    "id": "Timbun Pertalite Subsidi, Pria di Kendal Ditangkap Polisi",
-    "en": "Timbun Pertalite Subsidi, Pria di Kendal Ditangkap Polisi"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Radar Bangsa",
-    "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQem1sR1VuOS0tTk44aWlXaVBPaTRLUll2Yk5Ta2stdG4tRmRMM1Rablp2YkZGbTZEekNKN2JPUU1uY2tsUnRNRk16QzZSZVl0eVJKbUp3U1JJdWtscTA3ZmhORlZYVFFvNGZTMGtDWmx1TmJQdGlBblRqem5OYklBZW1WUlh6eU5qMTZn?oc=5"
    }
   }
  ]
