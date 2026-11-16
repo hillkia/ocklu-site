@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Ludlud OCKLU</title>
+<style>
+:root{--bg:#f6f5f1;--kartu:#fff;--teks:#1d1f24;--redup:#6b6f78;--garis:#e3e1da;--aksen:#0f7b6c;--merah:#b3372f;--kuning:#a86a00}
+@media (prefers-color-scheme:dark){:root{--bg:#121417;--kartu:#1b1e23;--teks:#e9e7e2;--redup:#9aa0a8;--garis:#2c3038;--aksen:#4cc4ae;--merah:#e0776f;--kuning:#e0b04c}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--teks);font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+main{max-width:860px;margin:0 auto;padding:20px 16px 60px}
+h1{font-size:24px;margin:0 0 2px}h2{font-size:17px;margin:0 0 10px}
+.redup{color:var(--redup)}small{font-size:13px}
+.kartu{background:var(--kartu);border:1px solid var(--garis);border-radius:12px;padding:16px;margin:14px 0}
+textarea,input,select{width:100%;font:inherit;color:var(--teks);background:var(--bg);border:1px solid var(--garis);border-radius:8px;padding:9px 10px}
+textarea{min-height:84px;resize:vertical}
+label{display:block;margin:10px 0 4px;font-weight:600;font-size:14px}
+.pilih{display:flex;flex-wrap:wrap;gap:8px}
+.pilih label{font-weight:400;margin:0;display:flex;gap:6px;align-items:center;border:1px solid var(--garis);border-radius:8px;padding:6px 10px;cursor:pointer}
+.pilih label.mati{opacity:.45;cursor:not-allowed}
+.pilih input{width:auto}
+button{font:inherit;border:1px solid var(--garis);background:var(--kartu);color:var(--teks);border-radius:8px;padding:8px 14px;cursor:pointer}
+button.utama{background:var(--aksen);border-color:var(--aksen);color:#fff;font-weight:600}
+button.bahaya{color:var(--merah)}
+button:disabled{opacity:.5;cursor:wait}
+.bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:10px}
+.lencana{display:inline-block;font-size:12px;font-weight:700;border-radius:99px;padding:2px 9px;border:1px solid currentColor}
+.s-antre,.s-dikerjakan,.s-revisi{color:var(--kuning)}.s-siap_cek{color:var(--aksen)}.s-disetujui,.s-tayang{color:var(--aksen)}.s-gagal,.s-ditolak{color:var(--merah)}
+.isi{display:grid;grid-template-columns:200px 1fr;gap:14px;margin-top:10px}
+@media (max-width:620px){.isi{grid-template-columns:1fr}}
+video{width:100%;max-height:360px;border-radius:10px;background:#000}
+.kecil{font-size:13px;color:var(--redup);white-space:pre-wrap}
+#kunci .bar input{width:180px;text-transform:uppercase}
+</style>
+</head>
+<body>
+<main>
+<h1>Ludlud 🎬</h1>
+<div class="redup">Dasbor konten OCKLU untuk YouTube dan Instagram. Lu kasih perintah, pekerja di laptop yang bikin video, judul, caption, dan jadwal. Lu yang cek dan Setujui.</div>
+<div class="kartu kecil" style="padding:10px 14px">Tahap 1: belum ada posting otomatis. Setelah lu Setujui, video diunduh lalu diposting manual, terus tandai "sudah tayang". Pekerja laptop cek antrean tiap 5 menit dan cuma jalan kalau laptop nyala.</div>
+
+<section id="kunci" class="kartu" hidden></section>
+
+<section id="ruang" hidden>
+  <form id="formPerintah" class="kartu">
+    <h2>Perintah baru</h2>
+    <textarea id="perintah" placeholder="Contoh: reel 30 detik soal Laporan Saran Iklan, gaya ngobrol santai, ajak orang cek ocklu.com/hypermarket" required></textarea>
+    <label>Bahan</label>
+    <div class="pilih">
+      <label><input type="radio" name="bahan" value="rekaman" checked> Rekaman HP</label>
+      <label><input type="radio" name="bahan" value="gambar"> Gambar + teks bergerak</label>
+      <label class="mati" title="Tahap 3"><input type="radio" name="bahan" value="flow" disabled> Klip Google Flow (Tahap 3)</label>
+      <label class="mati" title="Tahap 3"><input type="radio" name="bahan" value="pihak_ketiga" disabled> Pihak ketiga (Tahap 3)</label>
+    </div>
+    <label>Platform</label>
+    <div class="pilih">
+      <label><input type="checkbox" name="platform" value="youtube" checked> YouTube Shorts</label>
+      <label><input type="checkbox" name="platform" value="instagram" checked> Instagram Reels</label>
+    </div>
+    <label for="otak">Otak</label>
+    <select id="otak"><option value="fable">Fable 5.2 (bawaan, makan kuota mingguan)</option><option value="opus">Opus 5.5</option></select>
+    <label for="berkas">Berkas (rekaman, foto, musik; maks 50 MB per berkas)</label>
+    <input id="berkas" type="file" multiple accept="video/*,image/*,audio/*">
+    <div class="kecil">Rekaman lebih dari 50 MB: AirDrop ke laptop, taruh di folder <b>ocklu-ludlud/masuk</b> (di folder rumah), lalu kirim perintah tanpa berkas.</div>
+    <div class="bar"><button class="utama" id="kirim" type="submit">Kirim perintah</button><small id="pesanKirim" class="redup"></small></div>
+  </form>
+  <h2 style="margin-top:22px">Konten</h2>
+  <div id="daftar" class="redup">memuat…</div>
+</section>
+</main>
+<script>
+var API="https://njghzieuuopukuagrswu.supabase.co/functions/v1/ludlud",TT="https://njghzieuuopukuagrswu.supabase.co/functions/v1/tertau",PK="",DATA=[],JAM=null;
+try{PK=localStorage.getItem("pj_kunci")||""}catch(_){}
+function $(i){return document.getElementById(i)}
+function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
+function HK(){var h={"content-type":"application/json"};if(PK)h["x-perangkat"]=PK;return h}
+function api(r,b){return fetch(API+"?r="+r,b?{method:"POST",headers:HK(),body:JSON.stringify(b)}:{headers:HK(),cache:"no-store"}).then(function(x){return x.json()}).catch(function(e){return{galat:String(e)}})}
+function wib(iso){if(!iso)return"-";return new Date(iso).toLocaleString("id-ID",{timeZone:"Asia/Jakarta",weekday:"short",day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"})+" WIB"}
+function keInput(iso){if(!iso)return"";var d=new Date(new Date(iso).getTime()+7*3600e3);return d.toISOString().slice(0,16)}
+function dariInput(v){return v?v+":00+07:00":""}
+var LABEL={antre:"menunggu pekerja",dikerjakan:"sedang dibuat",siap_cek:"siap dicek",revisi:"menunggu revisi",disetujui:"disetujui",tayang:"sudah tayang",ditolak:"ditolak",gagal:"gagal"};
+
+function mulai(){api("saya").then(function(d){if(d.pemilik){$("kunci").hidden=true;$("ruang").hidden=false;muat()}else kunciPanel(d.galat)})}
+function kunciPanel(g){var k=$("kunci");k.hidden=false;$("ruang").hidden=true;
+  k.innerHTML='🔒 <b>Perangkat ini belum dikenali Grigori, penjaga OCKLU.</b> Ludlud cuma terbuka di perangkat owner. Tekan tombol di bawah, kode dikirim ke Telegram owner.'+(g?'<div class="kecil">'+esc(g)+'</div>':'')
+  +'<div class="bar"><button class="utama" id="pjKenali">Kenali perangkat ini</button><input id="pjKode" placeholder="kode dari Telegram" autocomplete="one-time-code" aria-label="Kode dari Telegram"><button id="pjMasuk">Masukkan kode</button> <small id="pjPesan"></small></div>';
+  $("pjKenali").onclick=function(){this.disabled=true;$("pjPesan").textContent="mengirim kode…";fetch(TT+"?r=kenali",{method:"POST",headers:HK(),body:"{}"}).then(function(r){return r.json()}).then(function(d){$("pjPesan").textContent=d.galat||"kode terkirim ke Telegram owner"}).catch(function(){$("pjPesan").textContent="gagal terhubung"})};
+  $("pjMasuk").onclick=function(){var kode=$("pjKode").value.trim().toUpperCase();if(!kode)return;$("pjPesan").textContent="memeriksa kode…";
+    fetch(TT+"?r=pasang",{method:"POST",headers:HK(),body:JSON.stringify({kode:kode})}).then(function(r){return r.json()}).then(function(d){if(!d.ok){$("pjPesan").textContent=d.galat||"kode ditolak";return}PK=d.kunci;try{localStorage.setItem("pj_kunci",PK)}catch(_){}mulai()}).catch(function(){$("pjPesan").textContent="gagal terhubung"})}}
+
+function muat(){api("daftar").then(function(d){if(d.galat){if(/dikenali/.test(d.galat))return kunciPanel(d.galat);$("daftar").textContent=d.galat;return}DATA=d.isi||[];gambar();
+  clearTimeout(JAM);if(DATA.some(function(x){return/antre|dikerjakan|revisi/.test(x.status)}))JAM=setTimeout(muat,30000)})}
+
+function gambar(){var L=$("daftar");if(!DATA.length){L.innerHTML='<div class="kartu redup">Belum ada konten. Kirim perintah pertama di atas.</div>';return}
+  L.innerHTML=DATA.map(function(x){var siap=x.status==="siap_cek",ubah=siap||x.status==="disetujui";
+    var h='<article class="kartu" data-id="'+x.id+'"><div class="bar" style="margin:0;justify-content:space-between"><b>#'+x.id+' · '+esc(x.bahan)+' · '+esc((x.platform||[]).join(" + "))+'</b><span class="lencana s-'+x.status+'">'+(LABEL[x.status]||x.status)+(x.versi?' · v'+x.versi:'')+'</span></div>'
+    +'<div class="kecil">'+esc(x.perintah)+'</div>';
+    if(x.url_video)h+='<div class="isi"><div><video controls playsinline preload="metadata" src="'+esc(x.url_video)+'"'+(x.url_sampul?' poster="'+esc(x.url_sampul)+'"':'')+'></video>'
+      +'<div class="bar"><a href="'+esc(x.url_video+"&download=ludlud-"+x.id+"-v"+x.versi+".mp4")+'">⬇ Unduh video</a></div></div><div>'
+      +'<label>Judul (YouTube)</label><input data-f="judul" value="'+esc(x.judul)+'"'+(ubah?'':' readonly')+'>'
+      +'<label>Caption (Instagram)</label><textarea data-f="caption"'+(ubah?'':' readonly')+'>'+esc(x.caption)+'</textarea>'
+      +'<label>Hashtag</label><input data-f="hashtag" value="'+esc(x.hashtag)+'"'+(ubah?'':' readonly')+'>'
+      +'<label>Jadwal tayang (WIB)</label><input type="datetime-local" data-f="jadwal" value="'+keInput(x.jadwal)+'"'+(ubah?'':' readonly')+'>'
+      +'</div></div>';
+    if(x.catatan_pekerja)h+='<div class="kecil" style="margin-top:8px">📝 '+esc(x.catatan_pekerja)+'</div>';
+    h+='<div class="kecil">Otak: '+esc(x.otak||x.otak_pilih)+' · dibuat '+wib(x.dibuat)+(x.disetujui_pada?' · disetujui '+wib(x.disetujui_pada):'')+(x.tayang_pada?' · tayang '+wib(x.tayang_pada):'')+'</div>';
+    if(x.link_yt||x.link_ig)h+='<div class="bar">'+(x.link_yt?'<a href="'+esc(x.link_yt)+'" target="_blank" rel="noopener">YouTube ↗</a>':'')+(x.link_ig?'<a href="'+esc(x.link_ig)+'" target="_blank" rel="noopener">Instagram ↗</a>':'')+'</div>';
+    if(siap)h+='<div class="bar"><button class="utama" data-a="setujui">✅ Setujui</button><button data-a="simpan">Simpan teks</button><button data-a="revisi">✏️ Revisi</button><button class="bahaya" data-a="tolak">Tolak</button></div>';
+    if(x.status==="disetujui")h+='<div class="bar"><button data-a="salin">Salin caption + hashtag</button><button data-a="simpan">Simpan teks</button><button data-a="revisi">✏️ Revisi</button></div>'
+      +'<div class="bar"><input data-f="link_yt" placeholder="link YouTube setelah tayang" style="flex:1;min-width:200px"><input data-f="link_ig" placeholder="link Instagram setelah tayang" style="flex:1;min-width:200px"><button class="utama" data-a="tayang">Tandai sudah tayang</button></div>';
+    if(x.status==="gagal")h+='<div class="bar"><button class="utama" data-a="ulang">Ulangi</button><button data-a="revisi">✏️ Revisi dengan catatan</button><button class="bahaya" data-a="tolak">Tolak</button></div>';
+    if(/antre|dikerjakan|revisi/.test(x.status))h+='<div class="kecil" style="margin-top:6px">⏳ Menunggu pekerja laptop (cek tiap 5 menit). Halaman ini menyegarkan sendiri.</div>';
+    return h+'<div class="bar"><small data-pesan class="redup"></small></div></article>'}).join("")}
+
+$("daftar").addEventListener("click",function(e){var t=e.target.closest("button[data-a]");if(!t)return;var k=t.closest("article"),id=+k.dataset.id,a=t.dataset.a,p=k.querySelector("[data-pesan]");
+  function f(n){var el=k.querySelector('[data-f="'+n+'"]');return el?el.value:undefined}
+  if(a==="salin"){var x=DATA.filter(function(d){return d.id===id})[0];navigator.clipboard.writeText((f("caption")||"")+"\n\n"+(f("hashtag")||"")).then(function(){p.textContent="caption tersalin"},function(){p.textContent="gagal menyalin; blok teksnya manual"});return}
+  var b={id:id,aksi:a};
+  if(f("judul")!==undefined&&a!=="tolak"&&a!=="ulang"){b.judul=f("judul");b.caption=f("caption");b.hashtag=f("hashtag");b.jadwal=dariInput(f("jadwal"))}
+  if(a==="revisi"){var c=prompt("Apa yang mau diubah? (contoh: caption lebih pendek, potong 3 detik awal, musik lebih pelan)");if(!c)return;b.catatan=c}
+  if(a==="tolak"&&!confirm("Tolak konten #"+id+"?"))return;
+  if(a==="tayang"){b.link_yt=f("link_yt");b.link_ig=f("link_ig")}
+  t.disabled=true;p.textContent="menyimpan…";api("putuskan",b).then(function(d){t.disabled=false;if(d.galat){p.textContent=d.galat;return}p.textContent="tersimpan";muat()})});
+
+function unggahSatu(file,info){return api("unggah",{nama:file.name}).then(function(s){if(s.galat)throw new Error(s.galat);
+  return new Promise(function(ok,gagal){var x=new XMLHttpRequest();x.open("PUT",s.url);x.setRequestHeader("content-type",file.type||"application/octet-stream");x.setRequestHeader("x-upsert","false");
+    x.upload.onprogress=function(ev){if(ev.lengthComputable)info(Math.round(ev.loaded/ev.total*100))};
+    x.onload=function(){x.status<300?ok(s.path):gagal(new Error("unggah gagal ("+x.status+"): "+x.responseText.slice(0,160)))};x.onerror=function(){gagal(new Error("koneksi putus saat unggah"))};x.send(file)})})}
+
+$("formPerintah").addEventListener("submit",function(e){e.preventDefault();var m=$("pesanKirim"),btn=$("kirim"),files=[].slice.call($("berkas").files);
+  var besar=files.filter(function(f){return f.size>50*1024*1024});if(besar.length){m.textContent="Lebih dari 50 MB: "+besar.map(function(f){return f.name}).join(", ")+". AirDrop ke laptop (folder ocklu-ludlud/masuk), lalu kirim tanpa berkas.";return}
+  var plat=[].slice.call(document.querySelectorAll('input[name=platform]:checked')).map(function(i){return i.value});if(!plat.length){m.textContent="Pilih minimal satu platform.";return}
+  btn.disabled=true;var paths=[],i=0;
+  function lanjut(){if(i>=files.length)return api("perintah",{perintah:$("perintah").value,bahan:document.querySelector('input[name=bahan]:checked').value,platform:plat,otak:$("otak").value,berkas:paths});
+    var f=files[i];return unggahSatu(f,function(pc){m.textContent="mengunggah "+f.name+" "+pc+"%"}).then(function(p){paths.push(p);i++;return lanjut()})}
+  lanjut().then(function(d){btn.disabled=false;if(d.galat){m.textContent=d.galat;return}m.textContent="Perintah #"+d.id+" masuk antrean.";$("formPerintah").reset();muat()}).catch(function(err){btn.disabled=false;m.textContent=String(err.message||err)})});
+
+mulai();
+</script>
+</body>
+</html>
