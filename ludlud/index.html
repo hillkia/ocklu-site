@@ -33,6 +33,16 @@ button:disabled{opacity:.5;cursor:wait}
 video{width:100%;max-height:360px;border-radius:10px;background:#000}
 .kecil{font-size:13px;color:var(--redup);white-space:pre-wrap}
 #kunci .bar input{width:180px;text-transform:uppercase}
+#obrolTombol{position:fixed;right:16px;bottom:16px;z-index:20;border-radius:99px;padding:12px 16px;background:var(--aksen);border-color:var(--aksen);color:#fff;font-weight:700;box-shadow:0 4px 14px rgba(0,0,0,.25)}
+#obrol{position:fixed;right:16px;bottom:72px;z-index:20;width:min(420px,calc(100vw - 32px));height:min(560px,calc(100vh - 100px));display:flex;flex-direction:column;background:var(--kartu);border:1px solid var(--garis);border-radius:14px;box-shadow:0 8px 30px rgba(0,0,0,.3)}
+#obrol[hidden]{display:none}
+#obrolIsi{flex:1;overflow-y:auto;padding:12px;display:flex;flex-direction:column;gap:8px}
+.gel{max-width:85%;padding:8px 11px;border-radius:12px;white-space:pre-wrap;word-wrap:break-word;font-size:14px}
+.gel.owner{align-self:flex-end;background:var(--aksen);color:#fff}
+.gel.asisten{align-self:flex-start;background:var(--bg);border:1px solid var(--garis)}
+.gel .usul{margin-top:8px;padding:8px;border:1px dashed var(--aksen);border-radius:8px;font-size:13px}
+#obrolForm{display:flex;gap:8px;padding:10px;border-top:1px solid var(--garis)}
+#obrolForm textarea{min-height:42px;height:42px;flex:1}
 </style>
 </head>
 <body>
@@ -75,6 +85,12 @@ video{width:100%;max-height:360px;border-radius:10px;background:#000}
   <div id="daftar" class="redup">memuat…</div>
 </section>
 </main>
+<button id="obrolTombol" hidden aria-expanded="false" aria-controls="obrol">💬 Asisten</button>
+<section id="obrol" hidden aria-label="Obrolan dengan asisten Ludlud">
+  <div class="bar" style="margin:0;padding:10px 12px;border-bottom:1px solid var(--garis);justify-content:space-between"><b>Asisten Ludlud</b><small class="redup">otak gratis Groq/Gemini · aksi lewat tombol</small></div>
+  <div id="obrolIsi"><div class="kecil">Ketik perintah biasa, misalnya "bikin reel gambar 20 detik soal Laporan Saran Iklan", "#3 udah tayang belum?", atau "captionnya #3 pendekin".</div></div>
+  <form id="obrolForm"><textarea id="obrolTeks" placeholder="Tulis ke asisten…" aria-label="Pesan untuk asisten"></textarea><button class="utama" type="submit">Kirim</button></form>
+</section>
 <script>
 var API="https://njghzieuuopukuagrswu.supabase.co/functions/v1/ludlud",TT="https://njghzieuuopukuagrswu.supabase.co/functions/v1/tertau",PK="",DATA=[],JAM=null;
 try{PK=localStorage.getItem("pj_kunci")||""}catch(_){}
@@ -87,7 +103,34 @@ function keInput(iso){if(!iso)return"";var d=new Date(new Date(iso).getTime()+7*
 function dariInput(v){return v?v+":00+07:00":""}
 var LABEL={antre:"menunggu pekerja",dikerjakan:"sedang dibuat",siap_cek:"siap dicek",revisi:"menunggu revisi",disetujui:"disetujui",tayang:"sudah tayang",ditolak:"ditolak",gagal:"gagal"};
 
-function mulai(){api("saya").then(function(d){if(d.pemilik){$("kunci").hidden=true;$("ruang").hidden=false;muat();muatSambung()}else kunciPanel(d.galat)})}
+function mulai(){api("saya").then(function(d){if(d.pemilik){$("kunci").hidden=true;$("ruang").hidden=false;$("obrolTombol").hidden=false;muat();muatSambung()}else kunciPanel(d.galat)})}
+
+// ---- Asisten Ludlud: bot hanya mengusulkan aksi; owner menekan Jalankan, lalu rute biasa yang dipanggil.
+var OBROL_DIMUAT=false,USUL={};
+var NAMA_AKSI={perintah:"Buat perintah baru",revisi:"Minta revisi",setujui:"Setujui",tolak:"Tolak",hapus:"Hapus",terbit_sekarang:"Terbitkan sekarang",ubah_teks:"Ubah teks"};
+function gelembung(peran,isi,aksi,id){var d=document.createElement("div");d.className="gel "+(peran==="owner"?"owner":"asisten");d.textContent=isi;
+  if(aksi&&peran!=="owner"){var u=document.createElement("div");u.className="usul";var k=id||("u"+Date.now());USUL[k]=aksi;
+    u.innerHTML='<b>Usulan: '+esc(NAMA_AKSI[aksi.jenis]||aksi.jenis)+(aksi.id?' #'+esc(aksi.id):'')+'</b>'+(aksi.perintah?'<div>'+esc(aksi.perintah)+'</div><div class="redup">'+esc(aksi.bahan||"rekaman")+' → '+esc((aksi.platform||["youtube","instagram"]).join(" + "))+'</div>':'')
+      +(aksi.catatan?'<div>'+esc(aksi.catatan)+'</div>':'')+(aksi.judul||aksi.caption||aksi.hashtag||aksi.jadwal?'<div>'+esc([aksi.judul,aksi.caption,aksi.hashtag,aksi.jadwal].filter(Boolean).join(" · "))+'</div>':'')
+      +'<div class="bar"><button class="utama" data-jalan="'+k+'">Jalankan</button><button data-batal="'+k+'">Batal</button> <small></small></div>';d.appendChild(u)}
+  $("obrolIsi").appendChild(d);$("obrolIsi").scrollTop=1e9}
+function bukaObrol(){var p=$("obrol"),buka=p.hidden;p.hidden=!buka;$("obrolTombol").setAttribute("aria-expanded",String(buka));if(!buka)return;$("obrolTeks").focus();
+  if(OBROL_DIMUAT)return;OBROL_DIMUAT=true;api("obrol").then(function(d){(d.riwayat||[]).forEach(function(m){gelembung(m.peran,m.isi,m.aksi,"r"+m.id)})})}
+$("obrolTombol").onclick=bukaObrol;
+$("obrolTeks").addEventListener("keydown",function(e){if(e.key==="Enter"&&!e.shiftKey){e.preventDefault();$("obrolForm").requestSubmit()}});
+$("obrolForm").addEventListener("submit",function(e){e.preventDefault();var t=$("obrolTeks").value.trim();if(!t)return;$("obrolTeks").value="";gelembung("owner",t);
+  var tunggu=document.createElement("div");tunggu.className="gel asisten redup";tunggu.textContent="mikir…";$("obrolIsi").appendChild(tunggu);
+  api("obrol",{pesan:t}).then(function(d){tunggu.remove();gelembung("asisten",d.galat||d.balas,d.aksi)})});
+$("obrolIsi").addEventListener("click",function(e){var j=e.target.closest("[data-jalan]"),b=e.target.closest("[data-batal]");
+  if(b){b.closest(".usul").innerHTML='<span class="redup">Dibatalkan.</span>';return}
+  if(!j)return;var a=USUL[j.dataset.jalan],ket=j.parentNode.querySelector("small"),jalan;if(!a)return;
+  if(a.jenis==="hapus"&&!confirm("Hapus konten #"+a.id+" beserta semua videonya? Tidak bisa dibatalkan."))return;
+  if(a.jenis==="perintah")jalan=api("perintah",{perintah:a.perintah,bahan:a.bahan==="gambar"?"gambar":"rekaman",platform:a.platform||["youtube","instagram"],otak:"fable"});
+  else if(a.jenis==="hapus")jalan=api("hapus",{id:a.id});
+  else if(a.jenis==="ubah_teks"){var bb={id:a.id,aksi:"simpan"};["judul","caption","hashtag","jadwal"].forEach(function(f){if(a[f])bb[f]=a[f]});jalan=api("putuskan",bb)}
+  else jalan=api("putuskan",{id:a.id,aksi:a.jenis,catatan:a.catatan});
+  j.disabled=true;ket.textContent="menjalankan…";jalan.then(function(d){if(d.galat){ket.textContent=d.galat;j.disabled=false;return}
+    j.closest(".usul").innerHTML='<span>✅ Dijalankan'+(d.id?' (konten #'+d.id+')':'')+'.</span>';delete USUL[j.dataset.jalan];muat()})});
 function kunciPanel(g){var k=$("kunci");k.hidden=false;$("ruang").hidden=true;
   k.innerHTML='🔒 <b>Perangkat ini belum dikenali Grigori, penjaga OCKLU.</b> Ludlud cuma terbuka di perangkat owner. Tekan tombol di bawah, kode dikirim ke Telegram owner.'+(g?'<div class="kecil">'+esc(g)+'</div>':'')
   +'<div class="bar"><button class="utama" id="pjKenali">Kenali perangkat ini</button><input id="pjKode" placeholder="kode dari Telegram" autocomplete="one-time-code" aria-label="Kode dari Telegram"><button id="pjMasuk">Masukkan kode</button> <small id="pjPesan"></small></div>';
