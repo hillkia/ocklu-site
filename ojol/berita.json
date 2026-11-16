@@ -1,7 +1,24 @@
 {
- "w": "2026-11-16T07:41:29Z",
+ "w": "2026-11-16T08:42:11Z",
  "dari": "Kroog",
  "berita": [
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-16T07:58:05Z",
+   "media": 6,
+   "judul": {
+    "id": "Sabtu Bahagia Bersama Ojol, Kapolda Ingatkan Pentingnya Selamat dan Sehat di Jalan",
+    "en": "Happy Saturday with Ojek Riders, Police Chief Reminds of the Importance of Staying Safe and Healthy on the Road"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "DIVISI HUMAS POLRI",
+    "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPR182SmpkZDA2TlRRaXV1UzJ0MjdIVU83dFlKN0pnTDlIS1o0UDNlUncwY0lHY1Y4VGNNc1JJMWk5M28zdXRLVHhTNXJBVFg3RHRqRXFoOTNUU1dvZmZZU0tXNUllM28xQjd6U2lNUzVJLTE2azl4UW9tTWJZbmtvT0VRMzF6Ymt2c21YX3gyODlRVFZwb0QzZl9td085M3Mzb3lKT19GOXFFTG40cVU4MVIxdnZUUjJ6eTk5ajFzaVZSc0JWbnAxRU1YYVRuS3N6MW4yb0JKWQ?oc=5"
+   }
+  },
   {
    "jenis": "berita",
    "waktu": "2026-11-16T03:40:00Z",
@@ -34,6 +51,23 @@
    "sumber": {
     "nama": "Kompas.com",
     "url": "https://money.kompas.com/read/2026/11/16/081209726/cek-harga-bbm-hari-ini-16-november-2026-di-spbu-pertamina-se-indonesia"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-15T15:56:00Z",
+   "media": 7,
+   "judul": {
+    "id": "Temui Pengemudi Ojol, Kapolda Metro Jaya Tekankan Pentingnya Keselamatan",
+    "en": "Meeting Ojek Drivers, Metro Jaya Police Chief Emphasizes the Importance of Safety"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Media Hub | POLRI",
+    "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQWkZERUpYZmtDTEJJM19mTnNWLWM5NDBubzI5NkVheHZGdDNtM1NFamFobjZxOGctaGh6V29QSFBBczBZaWo1Z013LXYweUNZTHB3eEZjUHhIZW5CY3JTRXVqTUM0U2h0RlhnSzZ4MWJtWkgzckxWTlVCOXJQX0JGeURqWmYtaHRJYy1yaUlMbEdCYTJPWm9zX0M2VkxQdVNDRldQQktZT1d4djlnVlpaQWV1eGNyVEx4dy1DQThUTEMzMGZNeFZTXw?oc=5"
    }
   },
   {
@@ -72,6 +106,108 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-16T07:13:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Driver AMD Software: Adrenalin Edition 26.11.1 Resmi Rilis, Atasi Bug Bikin SSD Cepat Aus",
+    "en": "Driver AMD Software: Adrenalin Edition 26.11.1 Resmi Rilis, Atasi Bug Bikin SSD Cepat Aus"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Laptophia",
+    "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOMEtuWFJIV0ZQc2lCVXJHc2Y3Zy1OS0EtRE1NQVFXQ0l2S0ZLVThDN1ZDTXdiajJtN3pLbnJUdFMtNjEzWHNwUlh5b3BQcmRMRTNNcjlrVnlrVnpuekhTdXl1WFRnRHp4ZWNQcnF0MG5uXzRCWjdDcEI5LV9SREVpa3JR?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-16T07:03:40Z",
+   "media": 1,
+   "judul": {
+    "id": "Ojol Cirebon Merasa Miskin, Data Pemerintah Justru Bilang Lain",
+    "en": "Ojol Cirebon Merasa Miskin, Data Pemerintah Justru Bilang Lain"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "IDN Times Jabar",
+    "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPN01JRUhXZ091VjRyRk5nV2NQNmJfRnpUcTkxZTBrazdWZnBPQ0JmSkM2bzBVOTdHOWhUY2o1TndrU3Vpd2FpTDFIbVpsdzFNdFk1bkZqanU2S1VyZGZ2bkp6Znh6bnNnOTlVN3lsN0M5dzJpWkVCRW1LdTRZU1JRMnZ0RnloTEo1QldoVzUxejNUMDdQXzk5Z0drcFRMRUkzN0tzREFSTUFzdEpYYk1PakJWeFZDczBMXzlCNkZzSERBd9IBwgFBVV95cUxPN01JRUhXZ091VjRyRk5nV2NQNmJfRnpUcTkxZTBrazdWZnBPQ0JmSkM2bzBVOTdHOWhUY2o1TndrU3Vpd2FpTDFIbVpsdzFNdFk1bkZqanU2S1VyZGZ2bkp6Znh6bnNnOTlVN3lsN0M5dzJpWkVCRW1LdTRZU1JRMnZ0RnloTEo1QldoVzUxejNUMDdQXzk5Z0drcFRMRUkzN0tzREFSTUFzdEpYYk1PakJWeFZDczBMXzlCNkZzSERBdw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-16T06:50:49Z",
+   "media": 1,
+   "judul": {
+    "id": "Jangan Korbankan Nyawa Demi Kejar Pesanan: Cara Polres Malang Merangkul Komunitas Ojol Jadi Pelopor Keselamatan di Jalan",
+    "en": "Jangan Korbankan Nyawa Demi Kejar Pesanan: Cara Polres Malang Merangkul Komunitas Ojol Jadi Pelopor Keselamatan di Jalan"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "malang-post.com",
+    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNMU1JbTRUYlZtTGFYR0dCdEk0NHYtQzZ0NHZpRDlFRzZnV2xzWmxTRkVjTklXWVdkUEVCLXpTZEJKU0lON0szQXZVWVAxZnE5VDhNa2tYR3FoRUdUX3lQandfd0dGU09HNjR5XzJ1TjU4S3NubExXRVRIc0swZFhDNHhZZE9oVThDR1M2X2xXdWxOTTN3SWFBSllzWTN3T09XTGduZUJmejh6elF2OHluNnFjYw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-16T06:50:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Libatkan Pengemudi Ojol, Polres Malang Gencarkan Edukasi Safety Riding",
+    "en": "Libatkan Pengemudi Ojol, Polres Malang Gencarkan Edukasi Safety Riding"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Tribratanews Polres Malang",
+    "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNSTFvWU44VGFLbkFDRjNCRUpsaVBqeTNTMzRkM1didEE4Q3lnSkNwbFlQdzdPYVlwTUhGOFZOaFF2OTA3WmhKd3U5c3JiQXNRU1gyUjF2emZwQzczMmFUeVNoV25kNDZjeWR6S2lzY0ZuUmthWEZMLXBLdW0zMlJBdzNZanlrblBWQUFBZHpVcHNjMC0xQnZ0aDBpdmNERkxpMV92T2dvaFhZNDNidEFOT0JBZ09mZGJuQ3c?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-16T06:44:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Polres Malang Gandeng Pengemudi Ojol Kampanyekan Tertib Berlalu Lintas",
+    "en": "Polres Malang Gandeng Pengemudi Ojol Kampanyekan Tertib Berlalu Lintas"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "RRI.co.id",
+    "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNakw3SmR4b2xwaXdYMTc4MGQtei1Jd2VSNFZzaDNSUHRSNXhiQXp4bTdKUGp2YlliVlhhb0xYWkFublMxZThaOEk5S09PeG1JaWZSYkpYYlJpOUZNYXBBM3NPSlNSbERYOExUdTA1NElkclRYQTZQT2x1Q2p1enpNeUVhbE9RMlhYQUx3NUZtbUJNWUVzdWV0OGdMQ18tT3BnMldYeGE5YVF5LTctZ0pkM2dR?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-16T06:43:41Z",
+   "media": 1,
+   "judul": {
+    "id": "Korea Luncurkan Jalan Tol AI untuk Layanan Kesehatan Publik",
+    "en": "Korea Luncurkan Jalan Tol AI untuk Layanan Kesehatan Publik"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Korea.net",
+    "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1PeDdGNkxJUk95MFRadDRHTzRLNVRYSHY4Tk9RRk5mNkRyUG5qeTd3dldsbDVlWWcxYU5ReHNJVjdIa0IxZDV6VXB0eFZ0TUg0SUV4ZmZwNzg1WHhjOGJyanNkTUl1RGR1eWRyRkkxRFV4cHprdWZKZg?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-16T06:35:55Z",
    "media": 1,
    "judul": {
@@ -106,70 +242,19 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-16T04:22:00Z",
+   "waktu": "2026-11-16T05:38:52Z",
    "media": 1,
    "judul": {
-    "id": "Kemenkeu Beberkan Harga Asli Pertalite dan Solar Sebelum Subsidi",
-    "en": "Kemenkeu Beberkan Harga Asli Pertalite dan Solar Sebelum Subsidi"
+    "id": "Kamari Peluk Ojol, Pola Asuh Jennifer Coppen Dipuji Netizen",
+    "en": "Kamari Peluk Ojol, Pola Asuh Jennifer Coppen Dipuji Netizen"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "Kompas.com",
-    "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQRy1jTG4xdmR0M2xaOGxKLTNrUU9tbXlhN3UzcFlUdDdzaEd1d2VkbGR2ZE1iN29GX3VmRjQ3WG90MnE3WFdNTmdMbW4xZHhTOV9Wei1iUXFDRDhMZHAtc1hiZlBBeHIzejhHWnhZeHVsTkZLalE4cV9MRnBBblB3VTdjUXZMZjNzTzZ5RDk1UkpDOEhoUjlVa0dYeS10by16Y2J6Nzl1VWRudGNJZF8zWGNQRnZMb1NRVEE?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-16T03:49:38Z",
-   "media": 1,
-   "judul": {
-    "id": "Langkah PLN Mobile Ajak Masyarakat Peduli Pentingnya Energi dalam Kehidupan",
-    "en": "Langkah PLN Mobile Ajak Masyarakat Peduli Pentingnya Energi dalam Kehidupan"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Jawa Pos",
-    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxORTgwY1h5a085UDFhNXNwOWZPVGg0UnAwaWVZQnZGMXFEUnMtWHFyS1FmZkcwZWxrYWhSTTU0OGg4aWI3bnBjMW9SSmpXYzNLQWJTR2tGTXRBV3ZkdUtxVGp0Y2tFUkhlTGFPT1p6bi0zNF9jS3otYnBXdzJNcG9OeE5nOFczN0xlUGZzc0hwQ1psMFhyakc4cnNMREFEX2pjVzFyU3N1ckJjai1aeko5dUpfd3BYODJ0?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-16T03:40:27Z",
-   "media": 1,
-   "judul": {
-    "id": "Nasabah Mulai Sulit Bayar Cicilan, Kredit Macet 5 Leasing Bengkak",
-    "en": "Nasabah Mulai Sulit Bayar Cicilan, Kredit Macet 5 Leasing Bengkak"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "CNBC Indonesia",
-    "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQX1R2cndUUjhfS2lwSnZITEpMOGtjWmJOQkZOWlpNTmlkSFNPSGkycTZxRURmXzUwY0NjTTlxbzBjMG5acjJRMi1jaURaampsUE9BWUJKcThLd2MxRl9sZUZqSzg0b2hqbmJ6SWd0UVp2MUFfWHMwY0J2Vk9ON0QyaF9TTXBQX2FqMnNpNmdleDJaX1BHYlk0NU1CbGxUVElZV0dPanp3SUNGd1dYai1kYjhHYlhKT0dLVDJSMlFWYnlGQTli0gHKAUFVX3lxTFBjM1BITDVxQmJER2xQOVlTSXo3b0NQU1lwUk5mdGF5eFNKcVh6UWhrTDkxNmNhaG40Q3lYa1ZjMUQ5RVoyRzdJMUJITGdvT2M5SUVIQUZLSDFCVHBxbjhod25iZ2t3TTdEUFhOd0ZIMjRJSHNCenVNLWVrcDk3NUF4X1VSQWpEOU90ejJ6S09FbVU1X0lyRWJ4bWNHd2IyRy1zOFIzaGRuUHU0cE1uaHJ4UnhpcTFBXy1JNjlid19PdUxaVWMwTGROWlE?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-16T02:59:56Z",
-   "media": 1,
-   "judul": {
-    "id": "Spesifikasi Motor Listrik Electrum H3, Pilihan Favorit Ojol dan Harganya",
-    "en": "Spesifikasi Motor Listrik Electrum H3, Pilihan Favorit Ojol dan Harganya"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "BertuahPos",
-    "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQU25jTkRrWHNway1yQ1VDMXJKaEtEMHZyV3VocWxkRnhtRVRtSUFmY0tSNE5PdmhicHloQWRCbFk4TnZBV2UxNGt4ZGZpaXo2cVNTMXEyLVB2V0JmdlRKQ2ZaUzRTS0FwSTJUVUItMHpEUmdJTEVnaU9tS2gxUG5NLWFUV1RMY3N6WUVFa2ZfVm9TSWo5LUdpWjBlcENrUncwclNCS2dWZmF1aTk2?oc=5"
+    "nama": "Popmama.com",
+    "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPVlB6MFhqZjI1aGRjc2x1cFFabURFUDJXOTFyWThyWUlQek5LbmZhYUE4ancyeGR2Y0xBdXU2SDE1Z1h4ZnlybzFlMW9ZYVh6OTJ0elJXVUFMNGl1NVpNbkN4bXRTb2FMU3lGd01SVFN6dDhod0FQQnRnUFNNYXotd0VwZHlNcE9WSkcyMUxnMU1tUm1FZHRGUjZyQTlNbkFjTXF4TXhXQ0hYZ093RlNDWFZlaDZTX0RZak9TUXFIY1RjS0Ewelo40gHMAUFVX3lxTE5SV1pqMFZoOGxjYWNRSmt5R2xpMTFtSkRnOXZuSzBLM1FyVzRRdVl5Mk9PRVJwN2d2TUlZRzFqMTQ1SFZDLXBvUk16MTFlWW1Rd3F4bEF0RGR5SllPMHJMWU03MjhCd0t4R1V0YXFXVXhKZ0VSRlZPckM2Zm5tQkh6WDk5SzdyN1VxRmFlaldERG5YTXk2bG1JdDcyV2ItSTROeXhwRm10WW92anBhWW5tZ0ZBNjVpWE0xbUlrTHhCSnZXb2FlaFJUdkdDSg?oc=5"
    }
   }
  ]
