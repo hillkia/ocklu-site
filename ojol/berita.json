@@ -1,5 +1,5 @@
 {
- "w": "2026-11-15T23:25:49Z",
+ "w": "2026-11-16T00:29:07Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -208,6 +208,40 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-15T12:25:02Z",
+   "media": 1,
+   "judul": {
+    "id": "Timbun Pertalite Subsidi, Pria di Kendal Ditangkap Polisi",
+    "en": "Timbun Pertalite Subsidi, Pria di Kendal Ditangkap Polisi"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Radar Bangsa",
+    "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQem1sR1VuOS0tTk44aWlXaVBPaTRLUll2Yk5Ta2stdG4tRmRMM1Rablp2YkZGbTZEekNKN2JPUU1uY2tsUnRNRk16QzZSZVl0eVJKbUp3U1JJdWtscTA3ZmhORlZYVFFvNGZTMGtDWmx1TmJQdGlBblRqem5OYklBZW1WUlh6eU5qMTZn?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-15T12:01:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Polisi Ungkap 9 Kasus Penyalahgunaan BBM Subsidi di Eks Karesidenan Pekalongan",
+    "en": "Polisi Ungkap 9 Kasus Penyalahgunaan BBM Subsidi di Eks Karesidenan Pekalongan"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Inilahjateng",
+    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQZ01VV3VSVEJUU0V0SWFkOVlEZW5ONTVNQWsxcTdvYzFZU3Jlc19iVnlZWmVwdHI2eERfdjJSOURJY1dEdjZsaWpNQWZtS2lZRGg4Q1hiMWlyR1FwNWFRdm5MdG82QzdtaDJXenNBWGtCWWwweV9ZRDBVNjVUemZwa1dZUFNhcHpnbkk5el9BZExjeGpJbl8xa2FhMzdFN2tQbnI5SzBRdw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-15T10:06:00Z",
    "media": 1,
    "judul": {
@@ -340,57 +374,6 @@
    "sumber": {
     "nama": "Waspada.id",
     "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNdVBzelliMFhfTTlJYi1CeDZoYUZPQ2J2bS1DVXp1MHFTMGtaVmx2eGdnRDlwWlB0MktFYklua0hhTHdNLTA2THZua0NSSnlOamFGZlRvTzc2dzN6U0hBck5qRWdNVFFOT0dZQmRnaTRlQkY5S2lzSWRHOHZFOVlETlJKNDN0alNEcGlvLVpwdndxYUR4R0xuVkkwMmlHU1h6NWpXNUpXX2hYblFlSUNzUXNNdFctR0gtUTV2WTR2RFFZX2ZtS0RtNnFRUzJxSGw1MEp5U2tOSXAtVWZObEtwUTN3?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-15T06:46:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Tekan Dampak Inflasi Pangan, Pemerintah Dorong Efisiensi BBM-Listrik dan Akselerasi Peternakan BUMN",
-    "en": "Tekan Dampak Inflasi Pangan, Pemerintah Dorong Efisiensi BBM-Listrik dan Akselerasi Peternakan BUMN"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "PALPRES.COM",
-    "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOTjBOME1xTV83Mm80ZVRaa0h5ODlJaDkyYml0ekJIZlJ5c0hnNFk5NTN1TW9YRmNGaW82QXRDcEdoNnZpTWVRTGpVcTJscHdnUGNkZ3g0WVUzcmFHMXdTT3NXNVpkTEo1RzlqTmRhal96NEtDM1R3allVUGJpYlFVSUxUUUNibXdRbkJyNHJVb3lCLXA3cllnUWc3WHUtVXhzS3Jjcm5MSUllanBjUE1MRHpEc2JscjlWYlFlUzgyc3BqcmNrdFBXMjB6MDBHWDlO0gHQAUFVX3lxTE5OME4wTXFNXzcybzRlVFprSHk4OUloOTJiaXR6QkhmUnlzSGc0WTk1M3VNb1hGY0ZpbzZBdENwR2g2dmlNZVFMalVxMmxwd2dQY2RneDRZVTNyYUcxd1NPc1c1WmRMSjVHOWpOZGFqX3o0S0MzVHdqWVVQYmliUVVJTFRRQ2Jtd1FuQnI0clVveUItcDdyWWdRZzdYdS1VeHNLcmNybkxJSWVqcGNQTUxEekRzYmxyOVZiUWVTODJzcGpyY2t0UFcyMHowMEdYOU4?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-15T04:52:16Z",
-   "media": 1,
-   "judul": {
-    "id": "Driver Ojol Narik Orderan Ditemani Anak Balita Terlelap Tidur Jadi Sorotan Warganet",
-    "en": "Driver Ojol Narik Orderan Ditemani Anak Balita Terlelap Tidur Jadi Sorotan Warganet"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Info Bekasi",
-    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNbEpadlo4T0FLaUJOLUtIZDhocWszQ05oeFQyTVg0eTQ1OEVfT1dsTlZoRE5mSGFyQVZlMHJHd2VTajB1aXFvTUlVX1RQNjdTMXFrMnc1WHlnaU12RlhTdnVxeERRUmVRYnNfTDRNQmZ1cU16THN4Q1VfSTQ5aFV6SVh0eGtMTmFoSFo0dHJVdVAtSG1HODB2UVpwa3dFZHRocHlzM2dzUWc5Yk41RGJjeWNXTVp6cS1rcno2OA?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-15T04:44:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Kisah Sukses Khoiruddin dari Sopir Ojek Online Menjadi Pemilik Jaringan Agen BRILink",
-    "en": "Kisah Sukses Khoiruddin dari Sopir Ojek Online Menjadi Pemilik Jaringan Agen BRILink"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Head Topics",
-    "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQOTVDR29vZW1YR0VKQ3RNaDVEczU4cXNYVWJaMjBZX3VEN0NqMVhoSHhoYndtM2E4Tm5MUDJZRDZ0MVY4b3ZuNUpLWlU2QUJZR20tWXpMS1c4UWJhSjF4YXVpdVUzTkYxR1FYc0o2NmhpSFVtZnBNTTNxbTFLV0F3ZmF4aWhFQ1NMVVFSSVh2SDQ2X0xKQkRIODBB?oc=5"
    }
   }
  ]
