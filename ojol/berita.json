@@ -1,5 +1,5 @@
 {
- "w": "2026-11-16T23:10:27Z",
+ "w": "2026-11-16T23:48:28Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -21,6 +21,40 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-16T15:24:00Z",
+   "media": 2,
+   "judul": {
+    "id": "Kapolda Sulut Ngopi Bareng Ojol di Kedai Sedjak, Sapa dan Serap Aspirasi Masyarakat Manado",
+    "en": "Kapolda Sulut Ngopi Bareng Ojol di Kedai Sedjak, Sapa dan Serap Aspirasi Masyarakat Manado"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "RRI.co.id",
+    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQZFRZc1lyOTNfQS1GYTZDODNBaUZaTnE3cWZqLXY1VFF3ZFFwMUtFQVVVT3ZVZFRRdHc0VmNnZk1yVkNLQ192cVZ0UmVtN0hCdG1lRzJtbzVWc21tSlh6UEtDc3VvVmY4cFp1Q1FVODY5dkNxbWlXTFFXNElFZk9CbkxVckhjUFJHbGprU0xRYld0UnRJZ003b25fWTNMOWZjWG04?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-16T13:30:21Z",
+   "media": 2,
+   "judul": {
+    "id": "Usai Apel Operasi Zebra LK 2026, Kasat Lantas Polres Inhu Bagikan Helm ke Ojol",
+    "en": "Usai Apel Operasi Zebra LK 2026, Kasat Lantas Polres Inhu Bagikan Helm ke Ojol"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "KiblatRiau.Com",
+    "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNRS1FWWd1ZTREU2dvOXBaNEpiekNJYzd3RzdJdHRfUE55RFg3SVBHME0yVkdNYWU4aTJiWGhVd0lvcExTVE5TVkNfeU1adF9hdUtFRi0ya0pDOEVOT3phNmpjZ2VSdnJwYWdTMWpURGVhUWtEVnBQSXRfQ3BxaHIwbW9vODJ3LTFibGh2dkdVS1RBSGJTc2dJd0NIMS1JYV9hR21xS2xfandCaWNjY1JOVEtRa20tWUdUMlFWSlBPaF83RVIwRWpyZ2xhcUE?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-16T03:40:00Z",
    "media": 1,
    "judul": {
@@ -34,6 +68,23 @@
    "sumber": {
     "nama": "Kompas.com",
     "url": "https://megapolitan.kompas.com/read/2026/11/15/18054931/memang-sudah-waktunya-sering-kecelakaan-warga-tak-protes-perbaikan"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-16T17:27:19Z",
+   "media": 1,
+   "judul": {
+    "id": "Robinsar bersama Forkopimda Kota Cilegon turut hadir dalam Doa dan Tabur Bunga bersama Ojol",
+    "en": "Robinsar bersama Forkopimda Kota Cilegon turut hadir dalam Doa dan Tabur Bunga bersama Ojol"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Berita Cilegon",
+    "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNMXcxR1U1Q0FHRWMzQjMzQmVTQmQ1UFluT0RuWno5OGFLalZjelhJWW4tSzBLN2ZnSEkxeFM3SFNIV0RrcWdtUkkwRGZ6bW95Y3BtTXd6Vk40UGtScFdVS1NWS19pVVBNR3BXSGF2QjdDZ29QcEdJd2JrS25qc21fRkotSWI0TFp2LURSMzRSc0U1bDdqVW56bWJacmJERFZpaktrTW00T2JWX0FCN29ya1k0SFJlN1pYMGpGcWg2OGQxQk5FYzRHaVQ2MDEyajJha2dvM0t0TTdxbmc?oc=5"
    }
   },
   {
@@ -72,70 +123,19 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-16T00:30:00Z",
+   "waktu": "2026-11-16T15:11:00Z",
    "media": 1,
    "judul": {
-    "id": "Harga BBM 15 November 2026 di Pertamina, Shell, Vivo, BP-AKR",
-    "en": "Harga BBM 15 November 2026 di Pertamina, Shell, Vivo, BP-AKR"
+    "id": "Viral di Threads, Driver Ojol ShopeeFood Hilang Usai Antar Ibu ke Pasar",
+    "en": "Viral di Threads, Driver Ojol ShopeeFood Hilang Usai Antar Ibu ke Pasar"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "Harian Jogja",
-    "url": "https://ekbis.harianjogja.com/r-1278968/harga-bbm-15-november-2026-di-pertamina-shell-vivo-bp-akr"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-16T00:30:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Harga Pertamax Jauh dari Pertalite, Selisih Rp5.950 Picu Migrasi Konsumen?",
-    "en": "Harga Pertamax Jauh dari Pertalite, Selisih Rp5.950 Picu Migrasi Konsumen?"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Bisnis.com - Ekonomi",
-    "url": "https://ekonomi.bisnis.com/read/20261113/44/2021068/harga-pertamax-jauh-dari-pertalite-selisih-rp5950-picu-migrasi-konsumen"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-16T13:19:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Usai Apel Operasi Zebra LK 2026, Kasat Lantas Polres Inhu Bagikan Helm ke Ojol",
-    "en": "Usai Apel Operasi Zebra LK 2026, Kasat Lantas Polres Inhu Bagikan Helm ke Ojol"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "klikmx.com",
-    "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPM2x5MmVwT1ZNdnRFZGlhNzZoTHMtZ0FaNnBsekVOSmpiakVobTV5bWlHSy1jM0syWHd2WUw0OXEwOXpCWUtVZFVBUHFLUGx3U3hKcVVERkZPMzRQTXBkSVZ0SmVUckgxMHVyNWEzdWIyQUNFaWpGanJTVVBhSnJRQzNjSWgyTGxnYUdfSVVPZlo3S0QxMzZkM044SldoR2xLOEwtVmlBSUp5MUw5VHlBMTUxRGN3WHRVNzUzVjVlNGdUX1VCRWN3?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-16T13:00:00Z",
-   "media": 1,
-   "judul": {
-    "id": "5 Rekomendasi Motor Listrik untuk Ojol 2026, Irit dan Cocok Dipakai Narik Seharian",
-    "en": "5 Rekomendasi Motor Listrik untuk Ojol 2026, Irit dan Cocok Dipakai Narik Seharian"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Disway",
-    "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOYnlud2dNRS04czBHXzJfd29Yc3NfVG1Wam10dGJscmpETlE0TjhmSWZOalhWbHc1T09UUXVxVDQ5UmNKR3Rtc2RMMW81VGZwX1AzN1FIQ2xYelpRakpCSkU1MGtoZVFILTNfUTU4eWVJQkM4UWU1Z0NlNHdqVTBXMDNJV2pHb0VxQV9INVluZi1HX1lrcHc1U2J1T3h3MVNMa0hLdDEwQ3cyQ2NuXzhqVnc2d2VWckwzQmJCM1ZB0gG-AUFVX3lxTE5ieW53Z01FLThzMEdfMl93b1hzc19UbVZqbXR0YmxyakROUTROOGZJZk5qWFZsdzVPT1RRdXFUNDlSY0pHdG1zZEwxbzVUZnBfUDM3UUhDbFh6WlFqSkJKRTUwa2hlUUgtM19RNTh5ZUlCQzhRZTVnQ2U0d2pVMFcwM0lXakdvRXFBX0g1WW5mLUdfWWtwdzVTYnVPeHcxU0xrSEt0MTBDdzJDY25fOGpWdzZ3ZVZyTDNCYkIzVkE?oc=5"
+    "nama": "tvOneNews",
+    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOWHZtZHo2S0pRbDlLRXRSM0RqalFzVE5SOU1ucHRKcVlGT25BeG5BLWpfVzF5elhIdVRKNVZCbm84YTc2YjRwVjd0aGdhZ01OWE1QVE41Vk1pczVaRUdWTmc3empOZGNpb1Y0NUl0VGg5NjFqcllsakt1b1ZEdF9zRVFGUkU5eU1oT0dPODVQMnNCZHIzcnB6ZDdIZ2ZxbTh5cEFaRE9NZWFpVjdCc1dz0gG0AUFVX3lxTFBPbzBRWE9BU1REd3ZTbEFtT04weXlqaFBSUjJMU2RPRnhVdGUtNm5udEtaZVcySGJMdHVhdFEzS0gzcTJJNHJENFBDMWVtZVFtZmhDaW5mVFE3OExhY2E2OWg3RVhsbWkzaHBkTnRCVjVCQlNKaHpjbzdILXNvWHJjZ3ptQWxBS1ZwTVYwaVFMb3pvUWpnRUVuOHJEZzZQTzdyZnlPbk9wQjlRSWttaHVqTFBldQ?oc=5"
    }
   }
  ]
