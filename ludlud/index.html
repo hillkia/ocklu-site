@@ -39,11 +39,13 @@ video{width:100%;max-height:360px;border-radius:10px;background:#000}
 <main>
 <h1>Ludlud 🎬</h1>
 <div class="redup">Dasbor konten OCKLU untuk YouTube dan Instagram. Lu kasih perintah, pekerja di laptop yang bikin video, judul, caption, dan jadwal. Lu yang cek dan Setujui.</div>
-<div class="kartu kecil" style="padding:10px 14px">Tahap 1: belum ada posting otomatis. Setelah lu Setujui, video diunduh lalu diposting manual, terus tandai "sudah tayang". Pekerja laptop cek antrean tiap 5 menit dan cuma jalan kalau laptop nyala.</div>
+<div class="kartu kecil" style="padding:10px 14px">Setelah lu Setujui, video tayang sendiri di jam jadwal (dicek tiap 5 menit), asal akunnya sudah disambung di bagian "Sambungan akun". Kalau belum disambung, unduh videonya, posting manual, lalu tandai "sudah tayang". Pembuat video jalan di laptop tiap 5 menit, jadi laptop harus nyala.</div>
 
 <section id="kunci" class="kartu" hidden></section>
 
 <section id="ruang" hidden>
+  <div id="pesanSambung" class="kartu" hidden></div>
+  <details id="sambungan" class="kartu"><summary><b>Sambungan akun YouTube & Instagram</b> <small id="ringkasSambung" class="redup"></small></summary><div id="isiSambung" class="kecil" style="margin-top:8px">memuat…</div></details>
   <form id="formPerintah" class="kartu">
     <h2>Perintah baru</h2>
     <textarea id="perintah" placeholder="Contoh: reel 30 detik soal Laporan Saran Iklan, gaya ngobrol santai, ajak orang cek ocklu.com/hypermarket" required></textarea>
@@ -85,7 +87,7 @@ function keInput(iso){if(!iso)return"";var d=new Date(new Date(iso).getTime()+7*
 function dariInput(v){return v?v+":00+07:00":""}
 var LABEL={antre:"menunggu pekerja",dikerjakan:"sedang dibuat",siap_cek:"siap dicek",revisi:"menunggu revisi",disetujui:"disetujui",tayang:"sudah tayang",ditolak:"ditolak",gagal:"gagal"};
 
-function mulai(){api("saya").then(function(d){if(d.pemilik){$("kunci").hidden=true;$("ruang").hidden=false;muat()}else kunciPanel(d.galat)})}
+function mulai(){api("saya").then(function(d){if(d.pemilik){$("kunci").hidden=true;$("ruang").hidden=false;muat();muatSambung()}else kunciPanel(d.galat)})}
 function kunciPanel(g){var k=$("kunci");k.hidden=false;$("ruang").hidden=true;
   k.innerHTML='🔒 <b>Perangkat ini belum dikenali Grigori, penjaga OCKLU.</b> Ludlud cuma terbuka di perangkat owner. Tekan tombol di bawah, kode dikirim ke Telegram owner.'+(g?'<div class="kecil">'+esc(g)+'</div>':'')
   +'<div class="bar"><button class="utama" id="pjKenali">Kenali perangkat ini</button><input id="pjKode" placeholder="kode dari Telegram" autocomplete="one-time-code" aria-label="Kode dari Telegram"><button id="pjMasuk">Masukkan kode</button> <small id="pjPesan"></small></div>';
@@ -109,9 +111,12 @@ function gambar(){var L=$("daftar");if(!DATA.length){L.innerHTML='<div class="ka
       +'</div></div>';
     if(x.catatan_pekerja)h+='<div class="kecil" style="margin-top:8px">📝 '+esc(x.catatan_pekerja)+'</div>';
     h+='<div class="kecil">Latar: '+(x.latar==="blur"?"buram":x.latar?"diganti ("+esc(x.latar.split("/").pop())+")":"asli")+' · Otak: '+esc(x.otak||x.otak_pilih)+' · dibuat '+wib(x.dibuat)+(x.disetujui_pada?' · disetujui '+wib(x.disetujui_pada):'')+(x.tayang_pada?' · tayang '+wib(x.tayang_pada):'')+'</div>';
+    var pl=x.platform||[];
+    if(/disetujui|tayang/.test(x.status))h+='<div class="kecil">'+(pl.indexOf("youtube")>=0?'YouTube: '+esc(x.yt_status||"menunggu jadwal")+'<br>':'')+(pl.indexOf("instagram")>=0?'Instagram: '+esc(x.ig_status||"menunggu jadwal"):'')+'</div>';
+    if(pl.indexOf("instagram")>=0&&!x.link_ig&&ubah)h+='<label class="kecil" style="font-weight:400;display:flex;gap:6px;align-items:center"><input type="checkbox" data-f="ig_trial" style="width:auto"'+(x.ig_trial!==false?' checked':'')+'> Instagram sebagai trial reel (cuma tampil ke yang belum follow)</label>';
     if(x.link_yt||x.link_ig)h+='<div class="bar">'+(x.link_yt?'<a href="'+esc(x.link_yt)+'" target="_blank" rel="noopener">YouTube ↗</a>':'')+(x.link_ig?'<a href="'+esc(x.link_ig)+'" target="_blank" rel="noopener">Instagram ↗</a>':'')+'</div>';
     if(siap)h+='<div class="bar"><button class="utama" data-a="setujui">✅ Setujui</button><button data-a="simpan">Simpan teks</button><button data-a="revisi">✏️ Edit video (revisi)</button><button class="bahaya" data-a="tolak">Tolak</button></div>';
-    if(x.status==="disetujui")h+='<div class="bar"><button data-a="salin">Salin caption + hashtag</button><button data-a="simpan">Simpan teks</button><button data-a="revisi">✏️ Edit video (revisi)</button></div>'
+    if(x.status==="disetujui")h+='<div class="bar"><button class="utama" data-a="terbit_sekarang">🚀 Terbitkan sekarang</button>'+(/gagal|proses/.test((x.yt_status||"")+(x.ig_status||""))?'<button data-a="terbit_lagi">↻ Coba terbitkan lagi</button>':'')+'<button data-a="salin">Salin caption + hashtag</button><button data-a="simpan">Simpan teks</button><button data-a="revisi">✏️ Edit video (revisi)</button></div>'
       +'<div class="bar"><input data-f="link_yt" placeholder="link YouTube setelah tayang" style="flex:1;min-width:200px"><input data-f="link_ig" placeholder="link Instagram setelah tayang" style="flex:1;min-width:200px"><button class="utama" data-a="tayang">Tandai sudah tayang</button></div>';
     if(x.status==="gagal")h+='<div class="bar"><button class="utama" data-a="ulang">Ulangi</button><button data-a="revisi">✏️ Revisi dengan catatan</button><button class="bahaya" data-a="tolak">Tolak</button></div>';
     if(/antre|dikerjakan|revisi/.test(x.status))h+='<div class="kecil" style="margin-top:6px">⏳ Menunggu pekerja laptop (cek tiap 5 menit). Halaman ini menyegarkan sendiri.</div>';
@@ -131,6 +136,8 @@ $("daftar").addEventListener("click",function(e){var t=e.target.closest("button[
   if(a==="revisi"){var c=prompt("Apa yang mau diubah? (contoh: caption lebih pendek, potong 3 detik awal, musik lebih pelan)");if(!c)return;b.catatan=c}
   if(a==="tolak"&&!confirm("Tolak konten #"+id+"?"))return;
   if(a==="tayang"){b.link_yt=f("link_yt");b.link_ig=f("link_ig")}
+  var tr=k.querySelector('[data-f="ig_trial"]');if(tr)b.ig_trial=tr.checked;
+  if(a==="terbit_sekarang"&&!confirm("Terbitkan #"+id+" sekarang ke "+(x.platform||[]).join(" + ")+"? Diproses dalam ±5 menit."))return;
   t.disabled=true;p.textContent="menyimpan…";api("putuskan",b).then(function(d){t.disabled=false;if(d.galat){p.textContent=d.galat;return}p.textContent="tersimpan";muat()})});
 
 function unggahSatu(file,info){return api("unggah",{nama:file.name}).then(function(s){if(s.galat)throw new Error(s.galat);
@@ -151,6 +158,26 @@ $("formPerintah").addEventListener("submit",function(e){e.preventDefault();var m
   lanjut().then(function(d){btn.disabled=false;if(d.galat){m.textContent=d.galat;return}m.textContent="Perintah #"+d.id+" masuk antrean.";$("formPerintah").reset();muat()}).catch(function(err){btn.disabled=false;m.textContent=String(err.message||err)})});
 
 $("latar").addEventListener("change",function(){$("latarBerkas").hidden=this.value!=="file"});
+
+var PLAT={youtube:{nama:"YouTube",k:[["yt_client_id","Client ID Google","text"],["yt_client_secret","Client Secret Google","password"]],
+  catatan:"Video dari proyek Google yang belum diaudit akan terkunci private sampai lolos audit. Ubah ke publik di YouTube Studio."},
+  instagram:{nama:"Instagram",k:[["ig_app_id","App ID Instagram","text"],["ig_app_secret","App Secret Instagram","password"]],
+  catatan:"Akunnya harus Bisnis atau Kreator. Pakai produk 'Instagram API with Instagram Login' di Meta for Developers."}};
+function muatSambung(){api("sambungan").then(function(d){if(d.galat){$("isiSambung").textContent=d.galat;return}
+  var ring=[];$("isiSambung").innerHTML=Object.keys(PLAT).map(function(p){var s=d[p]||{},P=PLAT[p];ring.push(P.nama+(s.akun?" ✅":" ✖"));
+    return '<div style="border-top:1px solid var(--garis);padding-top:10px;margin-top:10px" data-p="'+p+'"><b>'+P.nama+'</b>: '+(s.akun?'✅ tersambung sebagai <b>'+esc(s.akun.nama)+'</b> sejak '+wib(s.akun.disambung):s.kunci_app?'kunci aplikasi terisi, belum disambung':'belum ada kunci aplikasi')
+    +'<div>Alamat kembali (redirect URI) untuk didaftarkan di aplikasi: <code style="word-break:break-all">'+esc(s.kembali)+'</code></div>'
+    +P.k.map(function(f){return '<label>'+f[1]+(s.kunci_app?' (terisi; isi lagi kalau mau ganti)':'')+'</label><input data-k="'+f[0]+'" type="'+f[2]+'" autocomplete="off">'}).join("")
+    +'<div class="bar"><button data-s="atur">Simpan kunci</button>'+(s.kunci_app?'<button class="utama" data-s="sambung">'+(s.akun?'Sambung ulang':'Sambungkan '+P.nama)+'</button>':'')+(s.akun?'<button class="bahaya" data-s="putus">Putus</button>':'')+' <small data-ps></small></div>'
+    +'<div>'+esc(P.catatan)+'</div></div>'}).join("");$("ringkasSambung").textContent=ring.join(" · ")})}
+$("isiSambung").addEventListener("click",function(e){var t=e.target.closest("button[data-s]");if(!t)return;var box=t.closest("[data-p]"),p=box.dataset.p,ps=box.querySelector("[data-ps]"),s=t.dataset.s;
+  if(s==="atur"){var b={};box.querySelectorAll("[data-k]").forEach(function(i){if(i.value.trim())b[i.dataset.k]=i.value.trim()});ps.textContent="menyimpan…";
+    return api("atur",b).then(function(d){ps.textContent=d.galat||"tersimpan";if(!d.galat)muatSambung()})}
+  if(s==="putus"&&!confirm("Putus sambungan "+PLAT[p].nama+"? Posting otomatis ke sana berhenti."))return;
+  ps.textContent="memproses…";api(s,{platform:p}).then(function(d){if(d.galat){ps.textContent=d.galat;return}if(d.url)location.href=d.url;else muatSambung()})});
+(function(){var q=new URLSearchParams(location.search);if(!q.get("sambung"))return;var m=$("pesanSambung");m.hidden=false;
+  m.innerHTML=(q.get("hasil")==="ok"?"✅ "+esc(PLAT[q.get("sambung")]?PLAT[q.get("sambung")].nama:q.get("sambung"))+" berhasil disambung.":"✖ Gagal menyambung "+esc(q.get("sambung"))+": "+esc(q.get("hasil")));
+  try{history.replaceState(null,"",location.pathname)}catch(_){}})();
 mulai();
 </script>
 </body>
