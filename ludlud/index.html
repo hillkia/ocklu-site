@@ -54,6 +54,7 @@ video{width:100%;max-height:360px;border-radius:10px;background:#000}
 <section id="kunci" class="kartu" hidden></section>
 
 <section id="ruang" hidden>
+  <div id="kota" class="kartu" style="padding:0;overflow:hidden" aria-label="Kota Ludlud" hidden></div>
   <div id="pesanSambung" class="kartu" hidden></div>
   <details id="sambungan" class="kartu"><summary><b>Sambungan akun YouTube & Instagram</b> <small id="ringkasSambung" class="redup"></small></summary><div id="isiSambung" class="kecil" style="margin-top:8px">memuat…</div></details>
   <form id="formPerintah" class="kartu">
@@ -91,6 +92,7 @@ video{width:100%;max-height:360px;border-radius:10px;background:#000}
   <div id="obrolIsi"><div class="kecil">Ketik perintah biasa, misalnya "bikin reel gambar 20 detik soal Laporan Saran Iklan", "#3 udah tayang belum?", atau "captionnya #3 pendekin".</div></div>
   <form id="obrolForm"><textarea id="obrolTeks" placeholder="Tulis ke asisten…" aria-label="Pesan untuk asisten"></textarea><button class="utama" type="submit">Kirim</button></form>
 </section>
+<script src="kota.js"></script>
 <script>
 var API="https://njghzieuuopukuagrswu.supabase.co/functions/v1/ludlud",TT="https://njghzieuuopukuagrswu.supabase.co/functions/v1/tertau",PK="",DATA=[],JAM=null;
 try{PK=localStorage.getItem("pj_kunci")||""}catch(_){}
@@ -138,7 +140,7 @@ function kunciPanel(g){var k=$("kunci");k.hidden=false;$("ruang").hidden=true;
   $("pjMasuk").onclick=function(){var kode=$("pjKode").value.trim().toUpperCase();if(!kode)return;$("pjPesan").textContent="memeriksa kode…";
     fetch(TT+"?r=pasang",{method:"POST",headers:HK(),body:JSON.stringify({kode:kode})}).then(function(r){return r.json()}).then(function(d){if(!d.ok){$("pjPesan").textContent=d.galat||"kode ditolak";return}PK=d.kunci;try{localStorage.setItem("pj_kunci",PK)}catch(_){}mulai()}).catch(function(){$("pjPesan").textContent="gagal terhubung"})}}
 
-function muat(){api("daftar").then(function(d){if(d.galat){if(/dikenali/.test(d.galat))return kunciPanel(d.galat);$("daftar").textContent=d.galat;return}DATA=d.isi||[];gambar();
+function muat(){api("daftar").then(function(d){if(d.galat){if(/dikenali/.test(d.galat))return kunciPanel(d.galat);$("daftar").textContent=d.galat;return}DATA=d.isi||[];gambar();gambarKota();
   clearTimeout(JAM);if(DATA.some(function(x){return/antre|dikerjakan|revisi/.test(x.status)}))JAM=setTimeout(muat,30000)})}
 
 function gambar(){var L=$("daftar");if(!DATA.length){L.innerHTML='<div class="kartu redup">Belum ada konten. Kirim perintah pertama di atas.</div>';return}
@@ -202,11 +204,31 @@ $("formPerintah").addEventListener("submit",function(e){e.preventDefault();var m
 
 $("latar").addEventListener("change",function(){$("latarBerkas").hidden=this.value!=="file"});
 
+// ---- Kota balok mainan (kota.js dari Fable): tiap rumah = platform, agen OCKLU sebagai tokoh.
+var SB=null,LAIN=[["tiktok","TikTok","#111111"],["facebook","Facebook","#1877f2"],["threads","Threads","#333333"],["shopee","Shopee","#ee4d2d"],["tokopedia","Tokopedia","#03ac0e"],
+  ["lazada","Lazada","#0f146d"],["x","X","#000000"],["linkedin","LinkedIn","#0a66c2"],["pinterest","Pinterest","#e60023"]];
+function hitungPl(p){var j={siap_cek:0,disetujui:0,tayang:0};DATA.forEach(function(x){if((x.platform||[]).indexOf(p)>=0&&j[x.status]!=null)j[x.status]++});return j}
+function statusPl(p){var s=SB&&SB[p];return !s?"belum":s.akun?"tersambung":s.kunci_app?"kunci":"belum"}
+function gambarKota(){if(!window.LudludKota)return;var keg=[];
+  DATA.forEach(function(x){var ke=(x.platform||[])[0]||"youtube";if(x.status==="dikerjakan")keg.push({agen:"MARKUS",dari:"studio",ke:ke,label:"#"+x.id+" dibuat"});
+    else if(x.status==="disetujui"&&(!x.jadwal||Date.parse(x.jadwal)<=Date.now()))keg.push({agen:"MARKUS",dari:"studio",ke:ke,label:"#"+x.id+" menuju tayang"})});
+  try{$("kota").hidden=false;LudludKota.render($("kota"),{
+    rumah:[{id:"studio",nama:"Studio",jenis:"studio",sibuk:DATA.some(function(x){return x.status==="dikerjakan"}),antre:DATA.filter(function(x){return/antre|revisi/.test(x.status)}).length},
+      {id:"youtube",nama:"YouTube",warna:"#e62117",status:statusPl("youtube"),jumlah:hitungPl("youtube")},{id:"instagram",nama:"Instagram",warna:"#d62976",status:statusPl("instagram"),jumlah:hitungPl("instagram")}]
+      .concat(LAIN.map(function(l){return{id:l[0],nama:l[1],warna:l[2],status:"segera"}})),
+    agen:[{nama:"GRIGORI",peran:"penjaga gerbang",warna:"#5b4b8a",posisi:"gerbang"},{nama:"MARKUS",peran:"pengantar konten",warna:"#0f7b6c",posisi:"studio"},
+      {nama:"SKOUT",peran:"pencari tren",warna:"#a86a00",posisi:"menara"},{nama:"YOSUA",peran:"koordinator",warna:"#b3372f",posisi:"balai"}],
+    kegiatan:keg.slice(0,3),
+    onRumah:function(id){if(id==="studio"){$("formPerintah").scrollIntoView({behavior:"smooth"});$("perintah").focus();return}
+      if(id==="youtube"||id==="instagram"){$("sambungan").open=true;$("sambungan").scrollIntoView({behavior:"smooth"});return}
+      alert("Rumah ini belum bisa dipakai. Sambungannya nyusul: butuh aplikasi developer/akun penjual dari owner.")},
+    onAgen:function(n){if($("obrol").hidden)bukaObrol()}})}catch(e){$("kota").hidden=true}}
+
 var PLAT={youtube:{nama:"YouTube",k:[["yt_client_id","Client ID Google","text"],["yt_client_secret","Client Secret Google","password"]],
   catatan:"Video dari proyek Google yang belum diaudit akan terkunci private sampai lolos audit. Ubah ke publik di YouTube Studio."},
   instagram:{nama:"Instagram",k:[["ig_app_id","App ID Instagram","text"],["ig_app_secret","App Secret Instagram","password"]],
   catatan:"Akunnya harus Bisnis atau Kreator. Pakai produk 'Instagram API with Instagram Login' di Meta for Developers."}};
-function muatSambung(){api("sambungan").then(function(d){if(d.galat){$("isiSambung").textContent=d.galat;return}
+function muatSambung(){api("sambungan").then(function(d){if(d.galat){$("isiSambung").textContent=d.galat;return}SB=d;gambarKota();
   var ring=[];$("isiSambung").innerHTML=Object.keys(PLAT).map(function(p){var s=d[p]||{},P=PLAT[p];ring.push(P.nama+(s.akun?" ✅":" ✖"));
     return '<div style="border-top:1px solid var(--garis);padding-top:10px;margin-top:10px" data-p="'+p+'"><b>'+P.nama+'</b>: '+(s.akun?'✅ tersambung sebagai <b>'+esc(s.akun.nama)+'</b> sejak '+wib(s.akun.disambung):s.kunci_app?'kunci aplikasi terisi, belum disambung':'belum ada kunci aplikasi')
     +'<div>Alamat kembali (redirect URI) untuk didaftarkan di aplikasi: <code style="word-break:break-all">'+esc(s.kembali)+'</code></div>'
