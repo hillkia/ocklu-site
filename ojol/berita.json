@@ -1,7 +1,24 @@
 {
- "w": "2026-11-16T05:06:16Z",
+ "w": "2026-11-16T05:34:22Z",
  "dari": "Kroog",
  "berita": [
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-16T03:40:00Z",
+   "media": 1,
+   "judul": {
+    "id": "\"Memang Sudah Waktunya, Sering Kecelakaan\", Warga Tak Protes Perbaikan Flyover Pesing Bikin Jalan Macet",
+    "en": "\"Memang Sudah Waktunya, Sering Kecelakaan\", Warga Tak Protes Perbaikan Flyover Pesing Bikin Jalan Macet"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Kompas.com",
+    "url": "https://megapolitan.kompas.com/read/2026/11/15/18054931/memang-sudah-waktunya-sering-kecelakaan-warga-tak-protes-perbaikan"
+   }
+  },
   {
    "jenis": "berita",
    "waktu": "2026-11-16T00:30:00Z",
@@ -102,57 +119,6 @@
    "sumber": {
     "nama": "Tribunnewsbogor.com",
     "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPRDU5dkNMM2hnNTM5cFY2RU93Y1h1WUxEb3d1RXgyWEJPdmo2bHdiU0VIUkdxZlBTRUFMdGFMZ28wVHoxd1B4Q3o4Z2k4ZGRjVUpFcUZDYlp4MnZ5ejREcFRCTzBYaVFyY0JMN2xfV1d5YVlFYTVXeHZnbUtmNjM5cHZfeXpOamJpcGhMbGlBeFI4TllmQlJJVkZONFRkNmJ5MUYtRjhvZ3R0QmtXelUtbXFQMkUtZW52VjcyMjlfTmtzMXE3bmJIUDB3?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-15T18:48:43Z",
-   "media": 1,
-   "judul": {
-    "id": "Robinsar bersama Forkopimda Kota Cilegon turut hadir dalam Doa dan Tabur Bunga bersama Ojol",
-    "en": "Robinsar bersama Forkopimda Kota Cilegon turut hadir dalam Doa dan Tabur Bunga bersama Ojol"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Berita Cilegon",
-    "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNNnpQSmp0SEYzVTZIdHFteFFJVElMQjFCSmI1ZTRRTWMwTE9IeHBqZHVqem5keEZBcmtzeGhhUGpUenZIdF85STBHXzAzOC12ZGgxLTFuWkJLQTk4Y1ZqcjBRTDBMa0ZydjJaWGM2YVcxZVRzZ3NzdWJLM19jdjRXc016RGc4V2wteUl4WjNFZzk4MVlTQ005d2RrZlRHSGU1QUh2azcxMmlXOVkxZWQ2bHNmdE5yTVdIdHRSOGNHaW5PVFY0cHBOUFRvUkdlR2pHdUNBR2xLZXRGeW8?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-15T11:15:54Z",
-   "media": 2,
-   "judul": {
-    "id": "Gunung Karangetang Kembali Mengancam! Warga Siau Diminta Waspada Banjir Lahar",
-    "en": "Gunung Karangetang Kembali Mengancam! Warga Siau Diminta Waspada Banjir Lahar"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "berita prioritas",
-    "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE15MkdBQnhNeERNODdYMlRkSkl1aWE2b1JpNU9CSTRZaVRlNFFrRV9BT3JKYVRxVmdIQ3JEcFRMT3psQzd1bGM3aFNjdUdlbXQ5eDZJQ2VkaC1pR3R0MldrWkREYlFkdE93cjdGWXR5UllzYzNkYnprRFNXekhfUQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-15T16:17:26Z",
-   "media": 1,
-   "judul": {
-    "id": "Danrem 082/CPYJ Buka Layanan 24 Jam, Ajak Ojol Jaga Mojokerto",
-    "en": "Danrem 082/CPYJ Buka Layanan 24 Jam, Ajak Ojol Jaga Mojokerto"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Kabar Terdepan",
-    "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9iVTE4SUJ2a01wdnlTSUE2UW52eFljZDJFTjQ2bS1ScHRuejFYOWJ5VE1nR09xeFZ0a1Z3RVBXeVA4eWpmdkg4SkNTU0Z4R3ZKZ0hXNnZzemU0QXFJUHFWNldLb0F2OWo0a0xxSnlVWWhmdzFaTlE?oc=5"
    }
   }
  ]
