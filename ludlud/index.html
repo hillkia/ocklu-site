@@ -61,6 +61,9 @@ video{width:100%;max-height:360px;border-radius:10px;background:#000}
     </div>
     <label for="otak">Otak</label>
     <select id="otak"><option value="fable">Fable 5.2 (bawaan, makan kuota mingguan)</option><option value="opus">Opus 5.5</option></select>
+    <label for="latar">Latar belakang di belakang orang</label>
+    <select id="latar"><option value="">Asli, tidak diubah</option><option value="blur">Buramkan latar asli</option><option value="file">Ganti dengan video/gambar latar…</option></select>
+    <input id="latarBerkas" type="file" accept="video/*,image/*" hidden style="margin-top:6px">
     <label for="berkas">Berkas (rekaman, foto, musik; maks 50 MB per berkas)</label>
     <input id="berkas" type="file" multiple accept="video/*,image/*,audio/*">
     <div class="kecil">Rekaman lebih dari 50 MB: AirDrop ke laptop, taruh di folder <b>ocklu-ludlud/masuk</b> (di folder rumah), lalu kirim perintah tanpa berkas.</div>
@@ -105,18 +108,24 @@ function gambar(){var L=$("daftar");if(!DATA.length){L.innerHTML='<div class="ka
       +'<label>Jadwal tayang (WIB)</label><input type="datetime-local" data-f="jadwal" value="'+keInput(x.jadwal)+'"'+(ubah?'':' readonly')+'>'
       +'</div></div>';
     if(x.catatan_pekerja)h+='<div class="kecil" style="margin-top:8px">📝 '+esc(x.catatan_pekerja)+'</div>';
-    h+='<div class="kecil">Otak: '+esc(x.otak||x.otak_pilih)+' · dibuat '+wib(x.dibuat)+(x.disetujui_pada?' · disetujui '+wib(x.disetujui_pada):'')+(x.tayang_pada?' · tayang '+wib(x.tayang_pada):'')+'</div>';
+    h+='<div class="kecil">Latar: '+(x.latar==="blur"?"buram":x.latar?"diganti ("+esc(x.latar.split("/").pop())+")":"asli")+' · Otak: '+esc(x.otak||x.otak_pilih)+' · dibuat '+wib(x.dibuat)+(x.disetujui_pada?' · disetujui '+wib(x.disetujui_pada):'')+(x.tayang_pada?' · tayang '+wib(x.tayang_pada):'')+'</div>';
     if(x.link_yt||x.link_ig)h+='<div class="bar">'+(x.link_yt?'<a href="'+esc(x.link_yt)+'" target="_blank" rel="noopener">YouTube ↗</a>':'')+(x.link_ig?'<a href="'+esc(x.link_ig)+'" target="_blank" rel="noopener">Instagram ↗</a>':'')+'</div>';
-    if(siap)h+='<div class="bar"><button class="utama" data-a="setujui">✅ Setujui</button><button data-a="simpan">Simpan teks</button><button data-a="revisi">✏️ Revisi</button><button class="bahaya" data-a="tolak">Tolak</button></div>';
-    if(x.status==="disetujui")h+='<div class="bar"><button data-a="salin">Salin caption + hashtag</button><button data-a="simpan">Simpan teks</button><button data-a="revisi">✏️ Revisi</button></div>'
+    if(siap)h+='<div class="bar"><button class="utama" data-a="setujui">✅ Setujui</button><button data-a="simpan">Simpan teks</button><button data-a="revisi">✏️ Edit video (revisi)</button><button class="bahaya" data-a="tolak">Tolak</button></div>';
+    if(x.status==="disetujui")h+='<div class="bar"><button data-a="salin">Salin caption + hashtag</button><button data-a="simpan">Simpan teks</button><button data-a="revisi">✏️ Edit video (revisi)</button></div>'
       +'<div class="bar"><input data-f="link_yt" placeholder="link YouTube setelah tayang" style="flex:1;min-width:200px"><input data-f="link_ig" placeholder="link Instagram setelah tayang" style="flex:1;min-width:200px"><button class="utama" data-a="tayang">Tandai sudah tayang</button></div>';
     if(x.status==="gagal")h+='<div class="bar"><button class="utama" data-a="ulang">Ulangi</button><button data-a="revisi">✏️ Revisi dengan catatan</button><button class="bahaya" data-a="tolak">Tolak</button></div>';
     if(/antre|dikerjakan|revisi/.test(x.status))h+='<div class="kecil" style="margin-top:6px">⏳ Menunggu pekerja laptop (cek tiap 5 menit). Halaman ini menyegarkan sendiri.</div>';
-    return h+'<div class="bar"><small data-pesan class="redup"></small></div></article>'}).join("")}
+    var bawah=(/antre|gagal|ditolak/.test(x.status)?'<button data-a="ubah">📝 Ubah perintah</button>':'')+(x.status!=="dikerjakan"?'<button class="bahaya" data-a="hapus">🗑 Hapus</button>':'');
+    return h+'<div class="bar">'+bawah+'<small data-pesan class="redup"></small></div></article>'}).join("")}
 
 $("daftar").addEventListener("click",function(e){var t=e.target.closest("button[data-a]");if(!t)return;var k=t.closest("article"),id=+k.dataset.id,a=t.dataset.a,p=k.querySelector("[data-pesan]");
   function f(n){var el=k.querySelector('[data-f="'+n+'"]');return el?el.value:undefined}
-  if(a==="salin"){var x=DATA.filter(function(d){return d.id===id})[0];navigator.clipboard.writeText((f("caption")||"")+"\n\n"+(f("hashtag")||"")).then(function(){p.textContent="caption tersalin"},function(){p.textContent="gagal menyalin; blok teksnya manual"});return}
+  var x=DATA.filter(function(d){return d.id===id})[0]||{};
+  if(a==="ubah"||a==="hapus"){var bb={id:id};
+    if(a==="ubah"){var pr=prompt("Ubah perintah #"+id+":",x.perintah||"");if(!pr||pr===x.perintah)return;bb.perintah=pr}
+    else if(!confirm("Hapus konten #"+id+" beserta rekaman dan semua versi videonya? Tidak bisa dibatalkan."))return;
+    t.disabled=true;p.textContent="memproses…";api(a,bb).then(function(d){t.disabled=false;if(d.galat){p.textContent=d.galat;return}muat()});return}
+  if(a==="salin"){navigator.clipboard.writeText((f("caption")||"")+"\n\n"+(f("hashtag")||"")).then(function(){p.textContent="caption tersalin"},function(){p.textContent="gagal menyalin; blok teksnya manual"});return}
   var b={id:id,aksi:a};
   if(f("judul")!==undefined&&a!=="tolak"&&a!=="ulang"){b.judul=f("judul");b.caption=f("caption");b.hashtag=f("hashtag");b.jadwal=dariInput(f("jadwal"))}
   if(a==="revisi"){var c=prompt("Apa yang mau diubah? (contoh: caption lebih pendek, potong 3 detik awal, musik lebih pelan)");if(!c)return;b.catatan=c}
@@ -132,11 +141,16 @@ function unggahSatu(file,info){return api("unggah",{nama:file.name}).then(functi
 $("formPerintah").addEventListener("submit",function(e){e.preventDefault();var m=$("pesanKirim"),btn=$("kirim"),files=[].slice.call($("berkas").files);
   var besar=files.filter(function(f){return f.size>50*1024*1024});if(besar.length){m.textContent="Lebih dari 50 MB: "+besar.map(function(f){return f.name}).join(", ")+". AirDrop ke laptop (folder ocklu-ludlud/masuk), lalu kirim tanpa berkas.";return}
   var plat=[].slice.call(document.querySelectorAll('input[name=platform]:checked')).map(function(i){return i.value});if(!plat.length){m.textContent="Pilih minimal satu platform.";return}
+  var pl=$("latar").value,lf=$("latarBerkas").files[0],latar=pl==="blur"?"blur":null;
+  if(pl==="file"&&!lf){m.textContent="Pilih dulu video/gambar latarnya.";return}
+  if(lf&&pl==="file"&&lf.size>50*1024*1024){m.textContent="Latar lebih dari 50 MB, kecilkan dulu.";return}
   btn.disabled=true;var paths=[],i=0;
-  function lanjut(){if(i>=files.length)return api("perintah",{perintah:$("perintah").value,bahan:document.querySelector('input[name=bahan]:checked').value,platform:plat,otak:$("otak").value,berkas:paths});
+  function kirimPerintah(){return api("perintah",{perintah:$("perintah").value,bahan:document.querySelector('input[name=bahan]:checked').value,platform:plat,otak:$("otak").value,berkas:paths,latar:latar})}
+  function lanjut(){if(i>=files.length){if(pl==="file")return unggahSatu(lf,function(pc){m.textContent="mengunggah latar "+pc+"%"}).then(function(p){latar=p;return kirimPerintah()});return kirimPerintah()}
     var f=files[i];return unggahSatu(f,function(pc){m.textContent="mengunggah "+f.name+" "+pc+"%"}).then(function(p){paths.push(p);i++;return lanjut()})}
   lanjut().then(function(d){btn.disabled=false;if(d.galat){m.textContent=d.galat;return}m.textContent="Perintah #"+d.id+" masuk antrean.";$("formPerintah").reset();muat()}).catch(function(err){btn.disabled=false;m.textContent=String(err.message||err)})});
 
+$("latar").addEventListener("change",function(){$("latarBerkas").hidden=this.value!=="file"});
 mulai();
 </script>
 </body>
