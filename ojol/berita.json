@@ -1,7 +1,41 @@
 {
- "w": "2026-11-16T01:02:12Z",
+ "w": "2026-11-16T01:29:24Z",
  "dari": "Kroog",
  "berita": [
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-16T00:28:27Z",
+   "media": 1,
+   "judul": {
+    "id": "Ojol, Nelayan hingga Guru Mengaji Masuk Sasaran Ranperda Jamsostek Makassar",
+    "en": "Ojol, Nelayan hingga Guru Mengaji Masuk Sasaran Ranperda Jamsostek Makassar"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Tribun-timur.com",
+    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQOEtEOVFDU094anhLNk5rYk5McWlvMHVpaFZpanFPMDZOQm9aaTVyc0taNDVUYTcxOW0xWEpyZC0teWp3amxxSmNVUkR5NG5aVWlpQmJPRmd2MFpyWHVKYXBtUzhLZThwekNSS2pWOGxCeVpfdklEUktib1Q2aXRVeDVwMUxyd29mdmd2Ym1NT0FYS0tKa0FFVFN1aHk0MVVOQVN6dmV6NjRGYTZlUERhcDlRMlhLWGpFTEtsUlpSdzc?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-15T22:09:38Z",
+   "media": 1,
+   "judul": {
+    "id": "Disperindag Provinsi Banten Gelar Pasar Murah untuk Komunitas Ojek Online",
+    "en": "Disperindag Provinsi Banten Gelar Pasar Murah untuk Komunitas Ojek Online"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Pemerintah Provinsi Banten",
+    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQQ1M4d20tR2F2N1Zab2tXNXRSaFV2QjhOWE53NzdtRGpRekQxUnQ5QjZtamtxQXUzM19sX1FkcDRGZ2M3ZUlqM3RSa0RuYzV3QktyOFZvdWdBWmJnR1pzb3JkYTk0Z3lyVXFIQldJTHQxdFJhc2VOaTUteUY3V2F3TFZNczVsaEFxR0pmdXMweFBKMHlQb3ROWVNjMGtDQjhBNUlxU0FDQQ?oc=5"
+   }
+  },
   {
    "jenis": "berita",
    "waktu": "2026-11-15T16:03:35Z",
@@ -221,23 +255,6 @@
    "sumber": {
     "nama": "Radar Bangsa",
     "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQem1sR1VuOS0tTk44aWlXaVBPaTRLUll2Yk5Ta2stdG4tRmRMM1Rablp2YkZGbTZEekNKN2JPUU1uY2tsUnRNRk16QzZSZVl0eVJKbUp3U1JJdWtscTA3ZmhORlZYVFFvNGZTMGtDWmx1TmJQdGlBblRqem5OYklBZW1WUlh6eU5qMTZn?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-15T12:01:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Polisi Ungkap 9 Kasus Penyalahgunaan BBM Subsidi di Eks Karesidenan Pekalongan",
-    "en": "Polisi Ungkap 9 Kasus Penyalahgunaan BBM Subsidi di Eks Karesidenan Pekalongan"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Inilahjateng",
-    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQZ01VV3VSVEJUU0V0SWFkOVlEZW5ONTVNQWsxcTdvYzFZU3Jlc19iVnlZWmVwdHI2eERfdjJSOURJY1dEdjZsaWpNQWZtS2lZRGg4Q1hiMWlyR1FwNWFRdm5MdG82QzdtaDJXenNBWGtCWWwweV9ZRDBVNjVUemZwa1dZUFNhcHpnbkk5el9BZExjeGpJbl8xa2FhMzdFN2tQbnI5SzBRdw?oc=5"
    }
   }
  ]
