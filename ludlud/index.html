@@ -56,6 +56,7 @@ video{width:100%;max-height:360px;border-radius:10px;background:#000}
 <section id="ruang" hidden>
   <div id="kota" class="kartu" style="padding:0;overflow:hidden" aria-label="Kota Ludlud" hidden></div>
   <div id="pesanSambung" class="kartu" hidden></div>
+  <div id="rumahPanel" class="kartu" hidden></div>
   <details id="sambungan" class="kartu"><summary><b>Sambungan akun YouTube & Instagram</b> <small id="ringkasSambung" class="redup"></small></summary><div id="isiSambung" class="kecil" style="margin-top:8px">memuat…</div></details>
   <form id="formPerintah" class="kartu">
     <h2>Perintah baru</h2>
@@ -105,15 +106,15 @@ function keInput(iso){if(!iso)return"";var d=new Date(new Date(iso).getTime()+7*
 function dariInput(v){return v?v+":00+07:00":""}
 var LABEL={antre:"menunggu pekerja",dikerjakan:"sedang dibuat",siap_cek:"siap dicek",revisi:"menunggu revisi",disetujui:"disetujui",tayang:"sudah tayang",ditolak:"ditolak",gagal:"gagal"};
 
-function mulai(){api("saya").then(function(d){if(d.pemilik){$("kunci").hidden=true;$("ruang").hidden=false;$("obrolTombol").hidden=false;muat();muatSambung()}else kunciPanel(d.galat)})}
+function mulai(){api("saya").then(function(d){if(d.pemilik){$("kunci").hidden=true;$("ruang").hidden=false;$("obrolTombol").hidden=false;muat();muatSambung();muatRumah()}else kunciPanel(d.galat)})}
 
 // ---- Asisten Ludlud: bot hanya mengusulkan aksi; owner menekan Jalankan, lalu rute biasa yang dipanggil.
 var OBROL_DIMUAT=false,USUL={};
-var NAMA_AKSI={perintah:"Buat perintah baru",revisi:"Minta revisi",setujui:"Setujui",tolak:"Tolak",hapus:"Hapus",terbit_sekarang:"Terbitkan sekarang",ubah_teks:"Ubah teks"};
+var NAMA_AKSI={perintah:"Buat perintah baru",revisi:"Minta revisi",setujui:"Setujui",tolak:"Tolak",hapus:"Hapus",terbit_sekarang:"Terbitkan sekarang",ubah_teks:"Ubah teks",bangun_rumah:"Bangun rumah"};
 function gelembung(peran,isi,aksi,id){var d=document.createElement("div");d.className="gel "+(peran==="owner"?"owner":"asisten");d.textContent=isi;
   if(aksi&&peran!=="owner"){var u=document.createElement("div");u.className="usul";var k=id||("u"+Date.now());USUL[k]=aksi;
     u.innerHTML='<b>Usulan: '+esc(NAMA_AKSI[aksi.jenis]||aksi.jenis)+(aksi.id?' #'+esc(aksi.id):'')+'</b>'+(aksi.perintah?'<div>'+esc(aksi.perintah)+'</div><div class="redup">'+esc(aksi.bahan||"rekaman")+' → '+esc((aksi.platform||["youtube","instagram"]).join(" + "))+'</div>':'')
-      +(aksi.catatan?'<div>'+esc(aksi.catatan)+'</div>':'')+(aksi.judul||aksi.caption||aksi.hashtag||aksi.jadwal?'<div>'+esc([aksi.judul,aksi.caption,aksi.hashtag,aksi.jadwal].filter(Boolean).join(" · "))+'</div>':'')
+      +(aksi.jenis==='bangun_rumah'?'<div>'+esc(aksi.nama||aksi.jenis_rumah)+' di lahan kosong</div>':'')+(aksi.catatan?'<div>'+esc(aksi.catatan)+'</div>':'')+(aksi.judul||aksi.caption||aksi.hashtag||aksi.jadwal?'<div>'+esc([aksi.judul,aksi.caption,aksi.hashtag,aksi.jadwal].filter(Boolean).join(" · "))+'</div>':'')
       +'<div class="bar"><button class="utama" data-jalan="'+k+'">Jalankan</button><button data-batal="'+k+'">Batal</button> <small></small></div>';d.appendChild(u)}
   $("obrolIsi").appendChild(d);$("obrolIsi").scrollTop=1e9}
 function bukaObrol(){var p=$("obrol"),buka=p.hidden;p.hidden=!buka;$("obrolTombol").setAttribute("aria-expanded",String(buka));if(!buka)return;$("obrolTeks").focus();
@@ -129,6 +130,7 @@ $("obrolIsi").addEventListener("click",function(e){var j=e.target.closest("[data
   if(a.jenis==="hapus"&&!confirm("Hapus konten #"+a.id+" beserta semua videonya? Tidak bisa dibatalkan."))return;
   if(a.jenis==="perintah")jalan=api("perintah",{perintah:a.perintah,bahan:a.bahan==="gambar"?"gambar":"rekaman",platform:a.platform||["youtube","instagram"],otak:"fable"});
   else if(a.jenis==="hapus")jalan=api("hapus",{id:a.id});
+  else if(a.jenis==="bangun_rumah"){var no=lahanPertama();jalan=no?api("bangun",{kavling:no,jenis:a.jenis_rumah,nama:a.nama}).then(function(d){if(!d.galat)muatRumah();return d}):Promise.resolve({galat:"Lahan penuh, bongkar rumah dulu."})}
   else if(a.jenis==="ubah_teks"){var bb={id:a.id,aksi:"simpan"};["judul","caption","hashtag","jadwal"].forEach(function(f){if(a[f])bb[f]=a[f]});jalan=api("putuskan",bb)}
   else jalan=api("putuskan",{id:a.id,aksi:a.jenis,catatan:a.catatan});
   j.disabled=true;ket.textContent="menjalankan…";jalan.then(function(d){if(d.galat){ket.textContent=d.galat;j.disabled=false;return}
@@ -204,25 +206,52 @@ $("formPerintah").addEventListener("submit",function(e){e.preventDefault();var m
 
 $("latar").addEventListener("change",function(){$("latarBerkas").hidden=this.value!=="file"});
 
-// ---- Kota balok mainan (kota.js dari Fable): tiap rumah = platform, agen OCKLU sebagai tokoh.
-var SB=null,LAIN=[["tiktok","TikTok","#111111"],["facebook","Facebook","#1877f2"],["threads","Threads","#333333"],["shopee","Shopee","#ee4d2d"],["tokopedia","Tokopedia","#03ac0e"],
-  ["lazada","Lazada","#0f146d"],["x","X","#000000"],["linkedin","LinkedIn","#0a66c2"],["pinterest","Pinterest","#e60023"]];
+// ---- Kota isometrik 12 kavling (kota.js dari Fable). Rumah hanya di lahan kosong; agen boleh usul, owner yang bangun/bongkar.
+var SB=null,RUMAH=[],KAV=12,PLATFORM_JENIS=["youtube","instagram","tiktok","facebook","threads","x","shopee","tokopedia","lazada","linkedin","pinterest"];
+var PILIH_RUMAH=[["tiktok","TikTok"],["facebook","Facebook"],["threads","Threads"],["x","X"],["shopee","Shopee"],["tokopedia","Tokopedia"],["lazada","Lazada"],
+  ["linkedin","LinkedIn"],["pinterest","Pinterest"],["gudang","Gudang"],["kantor","Kantor"],["toko","Toko"],["lain","Lainnya…"]];
+function muatRumah(){api("rumah").then(function(d){if(d.galat)return;RUMAH=d.rumah||[];KAV=d.kavling||12;gambarKota()})}
+function lahanPertama(){for(var i=1;i<=KAV;i++)if(!RUMAH.some(function(r){return r.kavling===i}))return i;return 0}
+function rumahDi(no){return RUMAH.filter(function(r){return r.kavling===no})[0]}
+function noJenis(j){var r=RUMAH.filter(function(x){return x.jenis===j&&x.keadaan==="berdiri"})[0];return r?r.kavling:0}
 function hitungPl(p){var j={siap_cek:0,disetujui:0,tayang:0};DATA.forEach(function(x){if((x.platform||[]).indexOf(p)>=0&&j[x.status]!=null)j[x.status]++});return j}
 function statusPl(p){var s=SB&&SB[p];return !s?"belum":s.akun?"tersambung":s.kunci_app?"kunci":"belum"}
-function gambarKota(){if(!window.LudludKota)return;var keg=[];
-  DATA.forEach(function(x){var ke=(x.platform||[])[0]||"youtube";if(x.status==="dikerjakan")keg.push({agen:"MARKUS",dari:"studio",ke:ke,label:"#"+x.id+" dibuat"});
-    else if(x.status==="disetujui"&&(!x.jadwal||Date.parse(x.jadwal)<=Date.now()))keg.push({agen:"MARKUS",dari:"studio",ke:ke,label:"#"+x.id+" menuju tayang"})});
+function keadaan(r){if(r.keadaan==="usul")return"usul";if(r.jenis==="youtube"||r.jenis==="instagram")return statusPl(r.jenis)==="tersambung"?"buka":"dibangun";
+  return PLATFORM_JENIS.indexOf(r.jenis)>=0?"dibangun":"buka"}
+function gambarKota(){if(!window.LudludKota)return;var keg=[],st=noJenis("studio")||1,sibuk=DATA.some(function(x){return x.status==="dikerjakan"});
+  DATA.forEach(function(x){var ke=noJenis((x.platform||[])[0]||"youtube");if(!ke)return;
+    if(x.status==="dikerjakan")keg.push({agen:"MARKUS",dari:noJenis("mesin")||st,ke:st,label:"#"+x.id+" dibuat"});
+    else if(x.status==="disetujui"&&(!x.jadwal||Date.parse(x.jadwal)<=Date.now()))keg.push({agen:"MARKUS",dari:st,ke:ke,label:"#"+x.id+" menuju tayang"})});
+  RUMAH.forEach(function(r){if(r.keadaan==="usul")keg.push({agen:r.oleh,dari:st,ke:r.kavling,label:"usul "+r.nama})});
   try{$("kota").hidden=false;LudludKota.render($("kota"),{
-    rumah:[{id:"studio",nama:"Studio",jenis:"studio",sibuk:DATA.some(function(x){return x.status==="dikerjakan"}),antre:DATA.filter(function(x){return/antre|revisi/.test(x.status)}).length},
-      {id:"youtube",nama:"YouTube",warna:"#e62117",status:statusPl("youtube"),jumlah:hitungPl("youtube")},{id:"instagram",nama:"Instagram",warna:"#d62976",status:statusPl("instagram"),jumlah:hitungPl("instagram")}]
-      .concat(LAIN.map(function(l){return{id:l[0],nama:l[1],warna:l[2],status:"segera"}})),
-    agen:[{nama:"GRIGORI",peran:"penjaga gerbang",warna:"#5b4b8a",posisi:"gerbang"},{nama:"MARKUS",peran:"pengantar konten",warna:"#0f7b6c",posisi:"studio"},
-      {nama:"SKOUT",peran:"pencari tren",warna:"#a86a00",posisi:"menara"},{nama:"YOSUA",peran:"koordinator",warna:"#b3372f",posisi:"balai"}],
-    kegiatan:keg.slice(0,3),
-    onRumah:function(id){if(id==="studio"){$("formPerintah").scrollIntoView({behavior:"smooth"});$("perintah").focus();return}
-      if(id==="youtube"||id==="instagram"){$("sambungan").open=true;$("sambungan").scrollIntoView({behavior:"smooth"});return}
-      alert("Rumah ini belum bisa dipakai. Sambungannya nyusul: butuh aplikasi developer/akun penjual dari owner.")},
-    onAgen:function(n){if($("obrol").hidden)bukaObrol()}})}catch(e){$("kota").hidden=true}}
+    kavling:RUMAH.map(function(r){var o={jenis:r.jenis,nama:r.nama,keadaan:keadaan(r),inti:r.jenis==="studio"||r.jenis==="mesin",oleh:r.oleh,alasan:r.alasan};
+      if(r.warna)o.warna=r.warna;if(r.jenis==="youtube"||r.jenis==="instagram")o.jumlah=hitungPl(r.jenis);
+      if(r.jenis==="studio"){o.sibuk=sibuk;o.antre=DATA.filter(function(x){return/antre|revisi/.test(x.status)}).length}
+      if(r.jenis==="mesin")o.sibuk=sibuk;return{no:r.kavling,rumah:o}}),
+    agen:[{nama:"GRIGORI",peran:"penjaga gerbang",warna:"#5b4b8a"},{nama:"MARKUS",peran:"pengantar konten",warna:"#0f7b6c"},
+      {nama:"SKOUT",peran:"pencari tren",warna:"#a86a00"},{nama:"YOSUA",peran:"koordinator",warna:"#b3372f"}],
+    kegiatan:keg.slice(0,4),onLahan:panelLahan,onRumah:panelRumah,onAgen:function(){if($("obrol").hidden)bukaObrol()}})}catch(e){$("kota").hidden=true}}
+function panel(h){var p=$("rumahPanel");p.innerHTML=h+'<div class="bar"><button data-r="tutup">Tutup</button></div>';p.hidden=false;p.scrollIntoView({behavior:"smooth",block:"nearest"})}
+function panelLahan(no){panel('<b>🌱 Kavling '+no+' · lahan kosong</b><div class="kecil redup">Bangun rumah apa di sini?</div>'
+  +'<label>Jenis<select id="rjJenis">'+PILIH_RUMAH.filter(function(p){return p[0]==="lain"||!RUMAH.some(function(r){return r.jenis===p[0]})}).map(function(p){return'<option value="'+p[0]+'">'+p[1]+'</option>'}).join("")+'</select></label>'
+  +'<label>Nama papan (boleh kosong)<input id="rjNama" maxlength="24" placeholder="mis. Toko Kaos"></label>'
+  +'<div class="bar"><button class="utama" data-r="bangun" data-no="'+no+'">🏗 Bangun</button> <small id="rjPesan"></small></div>')}
+function panelRumah(no){var r=rumahDi(no);if(!r)return panelLahan(no);var kd=keadaan(r),h='<b>Kavling '+no+' · '+esc(r.nama)+'</b> ';
+  if(kd==="usul"){h+='<div>Diusulkan <b>'+esc(r.oleh)+'</b>'+(r.alasan?': '+esc(r.alasan):'')+'</div><div class="bar"><button class="utama" data-r="setujui" data-no="'+no+'">🏗 Bangun</button><button data-r="bongkar" data-no="'+no+'">Tolak usulan</button> <small id="rjPesan"></small></div>';return panel(h)}
+  if(r.jenis==="studio"){$("formPerintah").scrollIntoView({behavior:"smooth"});$("perintah").focus();return}
+  if(r.jenis==="youtube"||r.jenis==="instagram")h+='<div>'+(kd==="buka"?'✅ Akun tersambung. Posting otomatis jalan setelah lu Setujui.':'🏗 Masih dibangun: akun belum disambung.')+'</div><div class="bar"><button class="utama" data-r="sambungan">Atur sambungan</button>';
+  else if(r.jenis==="mesin")h+='<div>Pekerja di laptop yang bikin video (cek tiap 5 menit, laptop harus nyala).</div><div class="bar">';
+  else if(kd==="dibangun")h+='<div>🏗 Rumah sudah berdiri, sambungan akun '+esc(r.nama)+' nyusul (butuh aplikasi developer/akun penjual dari owner).</div><div class="bar">';
+  else h+='<div>Rumah '+esc(r.nama)+' siap dipakai.</div><div class="bar">';
+  if(r.jenis!=="studio"&&r.jenis!=="mesin")h+='<button data-r="bongkar" data-no="'+no+'">🔨 Bongkar</button>';
+  panel(h+' <small id="rjPesan"></small></div>')}
+$("rumahPanel").addEventListener("click",function(e){var t=e.target.closest("[data-r]");if(!t)return;var a=t.dataset.r,no=+t.dataset.no,ps=$("rjPesan"),jalan;
+  if(a==="tutup"){$("rumahPanel").hidden=true;return}
+  if(a==="sambungan"){$("rumahPanel").hidden=true;$("sambungan").open=true;$("sambungan").scrollIntoView({behavior:"smooth"});return}
+  if(a==="bongkar"){var r=rumahDi(no);if(!confirm((r&&r.keadaan==="usul"?"Tolak usulan ":"Bongkar rumah ")+(r?r.nama:"")+"? Lahannya jadi kosong lagi."))return;jalan=api("bongkar",{kavling:no})}
+  else if(a==="setujui")jalan=api("bangun",{kavling:no});
+  else if(a==="bangun"){var j=$("rjJenis").value,n=$("rjNama").value.trim();if(j==="lain"&&!n){ps.textContent="Isi nama papannya dulu.";return}jalan=api("bangun",{kavling:no,jenis:j,nama:n})}
+  if(!jalan)return;t.disabled=true;ps.textContent="memproses…";jalan.then(function(d){if(d.galat){ps.textContent=d.galat;t.disabled=false;return}$("rumahPanel").hidden=true;muatRumah()})});
 
 var PLAT={youtube:{nama:"YouTube",k:[["yt_client_id","Client ID Google","text"],["yt_client_secret","Client Secret Google","password"]],
   catatan:"Video dari proyek Google yang belum diaudit akan terkunci private sampai lolos audit. Ubah ke publik di YouTube Studio."},
