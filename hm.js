@@ -1,6 +1,5 @@
-/* OCKLU Hyper Market · toko pintar. Tanpa cookie, tanpa data pribadi. IP tercatat di server sejak 16 Nov (permintaan owner).
-   Mengirim: halaman, situs asal (referrer), utm, bahasa, HP/laptop, jam, ukuran layar, dan model HP + versi sistem
-   kalau browser memberikannya (Chrome/Edge/Samsung; iPhone tidak pernah memberi). Penawaran hanya kalau
+/* OCKLU Hyper Market · toko pintar. Tanpa cookie, tanpa menyimpan IP, tanpa data pribadi.
+   Mengirim: halaman, situs asal (referrer), utm, bahasa, HP/laptop, jam. Penawaran hanya kalau
    tag <script> membawa data-tawar, dan paling banyak sekali per sesi tab. */
 (function () {
   "use strict";
@@ -13,21 +12,8 @@
   ["utm_source", "utm_medium", "utm_campaign", "utm_term"].forEach(function (k) { if (q.get(k)) utm.push(k.slice(4) + "=" + q.get(k)); });
   var badan = { h: location.pathname, a: document.referrer || "", u: utm.join("&"), l: navigator.language || "",
     m: window.matchMedia && matchMedia("(max-width: 700px)").matches ? 1 : 0, j: new Date().getHours(), t: tawar ? 1 : 0 };
-  try { badan.s = screen.width + "x" + screen.height; } catch (e) {}
-  function kirim() {
-    fetch(API + "?r=jejak", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(badan), keepalive: true })
-      .then(function (r) { return r.json(); }).then(function (d) { if (d && d.tawaran) tampil(d.tawaran, d.id); }).catch(function () {});
-  }
-  var uad = navigator.userAgentData, sudah = false;
-  function sekali() { if (!sudah) { sudah = true; kirim(); } }
-  if (uad && uad.getHighEntropyValues) {
-    uad.getHighEntropyValues(["model", "platformVersion"]).then(function (v) {
-      if (v && v.model) badan.md = String(v.model).slice(0, 60);
-      if (v && v.platformVersion) badan.pv = String(v.platformVersion).slice(0, 20);
-      sekali();
-    }, sekali);
-    setTimeout(sekali, 600);
-  } else sekali();
+  fetch(API + "?r=jejak", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(badan), keepalive: true })
+    .then(function (r) { return r.json(); }).then(function (d) { if (d && d.tawaran) tampil(d.tawaran, d.id); }).catch(function () {});
 
   function tampil(t, id) {
     ss("hm_tawar", "1");
