@@ -1,5 +1,5 @@
 {
- "w": "2026-11-17T02:10:26Z",
+ "w": "2026-11-17T02:33:23Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -17,6 +17,23 @@
    "sumber": {
     "nama": "DIVISI HUMAS POLRI",
     "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPR182SmpkZDA2TlRRaXV1UzJ0MjdIVU83dFlKN0pnTDlIS1o0UDNlUncwY0lHY1Y4VGNNc1JJMWk5M28zdXRLVHhTNXJBVFg3RHRqRXFoOTNUU1dvZmZZU0tXNUllM28xQjd6U2lNUzVJLTE2azl4UW9tTWJZbmtvT0VRMzF6Ymt2c21YX3gyODlRVFZwb0QzZl9td085M3Mzb3lKT19GOXFFTG40cVU4MVIxdnZUUjJ6eTk5ajFzaVZSc0JWbnAxRU1YYVRuS3N6MW4yb0JKWQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-17T01:00:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Dari Tiga ke 3: Kisah Ojol Hindari Koneksi Lalod",
+    "en": "Dari Tiga ke 3: Kisah Ojol Hindari Koneksi Lalod"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Manadoku",
+    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPVXBEclBXZ19uc3lEUXpfdGFoSEo4V0kwamFCZXpuZFBYNUhXcFNtaXlvcEgyZ1BCSTN2d1hpN1gwNTdNQU5WTTgydWFCUmFOSFRMVk4wWjA0UUpicWJJNXVUMmlnbU5OYzZTWXBIWlVVM3p5UFp6bW4tMXhISUhRd3JmN2U1am8tQnlOaUZfU3F1emVvVVJPMjNsV1dGajdTUDE0Yg?oc=5"
    }
   },
   {
@@ -51,23 +68,6 @@
    "sumber": {
     "nama": "KiblatRiau.Com",
     "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNRS1FWWd1ZTREU2dvOXBaNEpiekNJYzd3RzdJdHRfUE55RFg3SVBHME0yVkdNYWU4aTJiWGhVd0lvcExTVE5TVkNfeU1adF9hdUtFRi0ya0pDOEVOT3phNmpjZ2VSdnJwYWdTMWpURGVhUWtEVnBQSXRfQ3BxaHIwbW9vODJ3LTFibGh2dkdVS1RBSGJTc2dJd0NIMS1JYV9hR21xS2xfandCaWNjY1JOVEtRa20tWUdUMlFWSlBPaF83RVIwRWpyZ2xhcUE?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-16T03:40:00Z",
-   "media": 1,
-   "judul": {
-    "id": "\"Memang Sudah Waktunya, Sering Kecelakaan\", Warga Tak Protes Perbaikan Flyover Pesing Bikin Jalan Macet",
-    "en": "\"Memang Sudah Waktunya, Sering Kecelakaan\", Warga Tak Protes Perbaikan Flyover Pesing Bikin Jalan Macet"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Kompas.com",
-    "url": "https://megapolitan.kompas.com/read/2026/11/15/18054931/memang-sudah-waktunya-sering-kecelakaan-warga-tak-protes-perbaikan"
    }
   }
  ]
