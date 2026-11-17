@@ -222,7 +222,7 @@ function gambarKota(){if(!window.LudludKota)return;var keg=[],st=noJenis("studio
   DATA.forEach(function(x){var ke=noJenis((x.platform||[])[0]||"youtube");if(!ke)return;
     if(x.status==="dikerjakan")keg.push({agen:"MARKUS",dari:noJenis("mesin")||st,ke:st,label:"#"+x.id+" dibuat"});
     else if(x.status==="disetujui"&&(!x.jadwal||Date.parse(x.jadwal)<=Date.now()))keg.push({agen:"MARKUS",dari:st,ke:ke,label:"#"+x.id+" menuju tayang"})});
-  RUMAH.forEach(function(r){if(r.keadaan==="usul")keg.push({agen:r.oleh,dari:st,ke:r.kavling,label:"usul "+r.nama})});
+  RUMAH.forEach(function(r){if(r.keadaan==="usul")keg.push({agen:r.oleh,dari:st,ke:r.kavling,label:""})});
   try{$("kota").hidden=false;LudludKota.render($("kota"),{
     kavling:RUMAH.map(function(r){var o={jenis:r.jenis,nama:r.nama,keadaan:keadaan(r),inti:r.jenis==="studio"||r.jenis==="mesin",oleh:r.oleh,alasan:r.alasan};
       if(r.warna)o.warna=r.warna;if(r.jenis==="youtube"||r.jenis==="instagram")o.jumlah=hitungPl(r.jenis);

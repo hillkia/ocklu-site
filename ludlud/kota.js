@@ -423,6 +423,7 @@
     }
     kota.className = 'lk-kota' + (data.tema === 'gelap' ? ' lk-gelap' : data.tema === 'terang' ? ' lk-terang' : '');
     u = ukur(kota); K = st.k = u.k; KT = st.kt = u.kt;
+    var sempit = K > 1.45;  // layar HP: label dikurangi supaya tidak berdempet (nama agen & teks lahan via aria-label/title)
 
     var peta = {}, kav = data.kavling || [], fsU = 9.5 * K, fsK = 8 * K, bawah = '', atas = '', kunci = [];
     for (i = 0; i < kav.length; i++) {
@@ -437,7 +438,7 @@
       var maksHuruf = Math.max(8, Math.floor(138 / (fsU * 0.6)) + 2), tip = ty + A - 1;
       if (!r) {
         isi = lahanKosong();
-        atas += '<text class="lk-tp" x="' + tx + '" y="' + f1(ty + A - 6 - fsK * 0.2) + '" text-anchor="middle" font-size="' + f1(fsK) + '" stroke-width="' + f1(fsK * 0.3) + '">Lahan kosong</text>';
+        if (!sempit) atas += '<text class="lk-tp" x="' + tx + '" y="' + f1(ty + A - 6 - fsK * 0.2) + '" text-anchor="middle" font-size="' + f1(fsK) + '" stroke-width="' + f1(fsK * 0.3) + '">Lahan kosong</text>';
       } else if (r.keadaan === 'usul') {
         isi = lahanUsul();
         var brs = lebarTeks('Usulan: ' + nm, fsU) <= 138 ? [['Usulan: ' + nm, fsU]] : [['Usulan', fsK], [potong(nm, maksHuruf), fsU]];
@@ -506,7 +507,8 @@
         '<g transform="scale(' + f1(KA * 10) / 10 + ')"><g class="lk-hd">' + orang(wa, !!g) + '</g></g>' +
         '<rect class="lk-kena" x="' + f1(-hit / 2) + '" y="' + f1(-16 * KA - hit / 2) + '" width="' + f1(hit) + '" height="' + f1(hit) + '" rx="6"/></g>';
       var yl = -33 * KA - 2, fn = 8 * K, nmA = potong(a.nama || '', 12), lw = lebarTeks(nmA, fn) + fn * 0.8;
-      atas += '<g class="lk-al">' + (kata ? plat(0, yl - fn * 1.45, [[kata, 7.5 * K]], { bg: '#fff', fg: '#1d2433', grs: '#1d2433', tebal: 1, maks: 170 }) : '') +
+      if (sempit) atas += '<g class="lk-al">' + (kata ? plat(0, yl - fn * 0.6, [[kata, 7.5 * K]], { bg: '#fff', fg: '#1d2433', grs: '#1d2433', tebal: 1, maks: 170 }) : '') + '</g>';
+      else atas += '<g class="lk-al">' + (kata ? plat(0, yl - fn * 1.45, [[kata, 7.5 * K]], { bg: '#fff', fg: '#1d2433', grs: '#1d2433', tebal: 1, maks: 170 }) : '') +
         '<rect x="' + f1(-lw / 2) + '" y="' + f1(yl - fn * 1.3) + '" width="' + f1(lw) + '" height="' + f1(fn * 1.3) + '" rx="' + f1(fn * 0.5) + '" fill="' + wa + '" stroke="#fff" stroke-width="1.2"/>' +
         '<text x="0" y="' + f1(yl - fn * 0.33) + '" text-anchor="middle" font-size="' + f1(fn) + '" fill="#fff">' + esc(nmA) + '</text></g>';
       ag.push({ w: w, ts: ts, geser: i * 2.3, k: null, op: -1, jl: null, hd: 0 });
