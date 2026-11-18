@@ -1,7 +1,24 @@
 {
- "w": "2026-11-18T06:02:41Z",
+ "w": "2026-11-18T07:09:30Z",
  "dari": "Kroog",
  "berita": [
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-18T06:44:25Z",
+   "media": 2,
+   "judul": {
+    "id": "Polisi Bersama Masyarakat, Kapolda Jambi Rajut Kebersamaan dengan Komunitas Ojol",
+    "en": "Polisi Bersama Masyarakat, Kapolda Jambi Rajut Kebersamaan dengan Komunitas Ojol"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Sekato Jambi",
+    "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQV2NocGJGUlpDSjgzZlc3U3l2LUF6X0NQY2RvVGQyVnNYRi01WVZmR28tRXlxOGMxQUlfSGtBVXl6ZTF5MHR1YUhLb3lSZTdnRmNiRnlId0EwdVlHRzFwd2wyaDNpMGRUQlBnMFRsejN1MWRYU1M5VVlVNHpUMk1aUnQtWlptcnpEZmRBSnpqbkE2WVV6dGlYb2lwb1V6azJOX2FpVTlzdU5NRnVwRGY3ZVd4cWdwSENpcXQ4SktVSHd1bWQ1?oc=5"
+   }
+  },
   {
    "jenis": "berita",
    "waktu": "2026-11-18T04:35:33Z",
@@ -55,19 +72,70 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-18T05:26:00Z",
+   "waktu": "2026-11-18T06:39:00Z",
    "media": 1,
    "judul": {
-    "id": "Polisi Bersama Masyarakat, Kapolda Jambi Rajut Kebersamaan dengan Komunitas Ojol",
-    "en": "Polisi Bersama Masyarakat, Kapolda Jambi Rajut Kebersamaan dengan Komunitas Ojol"
+    "id": "Sopir Ojol Diduga Jadi Korban Begal di Cikampek saat Subuh",
+    "en": "Sopir Ojol Diduga Jadi Korban Begal di Cikampek saat Subuh"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "bidikindonesianews",
-    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNZDBiSndWM2h3TG9fOTVRQnIwQTZFY3hfWFQyNm1kMGZkR3cwQTlVclhXaDAwc3p3TkZuUUlLTzZ5ZThjZWhaa2FBNHJIajVCUU8xTmdrenhZY3BMdWpmMWNKN0ZrOE9UTkJXaHF4OXZPb2NCRnRFTWRLRkF6Nm80NWFtSGVIYXdOZ0p5SnJVcE5jaHlpTmdrTG51ZFVlU3lhX0p5aDFJTnhOSE9rTEx2YkF1cw?oc=5"
+    "nama": "NTVNews.id",
+    "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNVm40SlY3Wmc3Nmo3M0NPQWhzMHNEUmZBQms2djNoOHBPQVpHY1NxbS1QS0hyekNST09XcjRrSTUxZW9kMGdwOVdLMzVtS1VTb0pxYmhrMWxhcTJIbElQNUdJaWJYOHMtQWIwZU0wbWJLNVFlWThqZ2NJOGtkV2dnRnNLZDBYYnBLNE5MZVVHMWtyeEVRNDVQcko5cw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-18T06:37:28Z",
+   "media": 1,
+   "judul": {
+    "id": "Kapolres Metro Jakarta Utara Berbagi Sembako dengan Komunitas Ojol Koja, Pererat Kemitraan Jaga Kamtibmas",
+    "en": "Kapolres Metro Jakarta Utara Berbagi Sembako dengan Komunitas Ojol Koja, Pererat Kemitraan Jaga Kamtibmas"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Tribratanews Polda Metro Jaya",
+    "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNOHNJTHZsMVJpMTNRSk9yMm5LUURpZHVlS3BsOXBWMnh3V0lCeHRES3h0YlExYVBZNFBUVXZ4LWlFaEZUdVJ2V29SQWZhYTlmRzhIYmQ3bW9SUEJyTzFMVDVpYlk1aXJlb2pBWUNzVEw2ajJMaThkb1lJMGp1eVM4OEd1WlRPdktFRkFGYTh0SXdaQWtaTU5vMkdEYWQwTnhxNTBRT0IwUWtnWnRUMnR4NDBKbTJpUUVIWS0zN1dFN2l6QXRJUWpuY216NEdodUZ1LXdLVk54dUc5aGhR?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-18T06:11:07Z",
+   "media": 1,
+   "judul": {
+    "id": "Madura Terpopuler: Sosok Bripda Avriliza hingga Adistiyan Sempat Order Ojol ke Terminal Bungurasih",
+    "en": "Madura Terpopuler: Sosok Bripda Avriliza hingga Adistiyan Sempat Order Ojol ke Terminal Bungurasih"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Tribunmadura.com",
+    "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPYW02NmtwQzJlc3V3c2twZ3RCc3F4U3QwcHVmd1lKUWtJRDNTb1lsNk9JelhuNGp3UDM1MDJ2Q0g3dDMwR0ltVU1wQ09yREdZZzl6VWc2M1Jwei1pd2liVE9mdDlYcllsNThpa0xqTmpFZnJRTnlUOUxqSDVuNnE3TkxrblFtWHBwcE9aSkFkb1N2SXNhYXhjRWZFN1FielExbGhOLXNkV1UwZ0tqQmhUbUZRTzFwdGxzRS1lM0liaE9aQUtDRzhxM0xBeTFJRTd2a21OR0c5YU0?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-18T05:40:14Z",
+   "media": 1,
+   "judul": {
+    "id": "Potongan 8 Persen Hilangkan Subsidi Promo, Ekonom sebut Pendapatan Ojol Bisa Tergerus",
+    "en": "Potongan 8 Persen Hilangkan Subsidi Promo, Ekonom sebut Pendapatan Ojol Bisa Tergerus"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Jawa Pos",
+    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOZEx5NnlDLWswam5wMWRwLTN3b0V5d240UVdvOVJLbVdOVEg4UDFJcm42enBKcTVKQzhaN2hnTjg0VzJXYTFscXVMRGtIMko5MHNpUktKekZtZUhRVWdORTBLdUFEZHFDemU0cXo2VTBrMGdfeDFQbG5Vb2tpU3I2S2dXMDVZcUhKWDJDMVlXQVpCRXJZOUdpSzE0cWZZYmFiOFpXRy14ZGlNcWRuVTdyRXlQemxnOTVtRU5UcFloRmtIVTJrc1E?oc=5"
    }
   },
   {
@@ -157,121 +225,19 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-18T03:35:07Z",
+   "waktu": "2026-11-18T04:13:04Z",
    "media": 1,
    "judul": {
-    "id": "Sambangi Komunitas Ojol, Satlantas Polres Kukar Ajak Pengemudi Wujudkan Lalu Lintas Aman dan Tertib",
-    "en": "Sambangi Komunitas Ojol, Satlantas Polres Kukar Ajak Pengemudi Wujudkan Lalu Lintas Aman dan Tertib"
+    "id": "Krisis Iklim Gerus Pendapatan Ojol Jabodetabek, Siapa Bertanggung Jawab?",
+    "en": "Krisis Iklim Gerus Pendapatan Ojol Jabodetabek, Siapa Bertanggung Jawab?"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "Halo Terkini",
-    "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQUllHZlAzQ2lYLTBpMzVWel9NSU81eG9HYllPVWpaT2cxVkZPWlBJaHBYVTNhaHVSdVFOeDJCZWRKOURmZ04xN0lxa19sdkpMVWRjLWlFWFBGTWgtcHNHYklDT2E5WmF5QzR1amdSUHE1dW9OSUpDM3h6UTlMM1JidURHSEFLMGFWTkZabGVtd3NSeVRPX21HQmJIX0xYVW9VWkNfMVdQbHZnVlZIa090b1pCakhJVk1zNm1vdWV3Vld6UFhCWFFSX19oVnl0SWJHNENpRQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-18T03:22:50Z",
-   "media": 1,
-   "judul": {
-    "id": "Ojol Mesum Terekam CCTV Memegang Pantat Cewek di Surabaya, Diviralkan Dulu Sebelum Lapor Polisi",
-    "en": "Ojol Mesum Terekam CCTV Memegang Pantat Cewek di Surabaya, Diviralkan Dulu Sebelum Lapor Polisi"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Suryamalang.com",
-    "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPaXRtcXh6dThmRlQtcThUcFJlcDBoSFJVenA1bWdhU2FIT0JFZV9MLWxRXzlMZTN2UDdKR0lhakFpc0ZkcWt6YlhiVlNRSmJCTWw0RDM3a2JPZGR3MWIyWlhONmZnOEdzVU14OWtMUEtSTS1ZRm1hYWYzckZUWFFORFJsZlR0V25mbHc4eV8wSDdpd0NwaDhDMUhlUXVvbmhBd2JucnhUVjF2TVhyeFpmOFpySzBRWWc4QkJNTzdqME9NZTVzY2ZYYV9mX29HR1hzMkswY3VLVWVVY1RIZVJaOQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-18T03:18:43Z",
-   "media": 1,
-   "judul": {
-    "id": "Jum’at Berbagi, Kapolres Tangerang Selatan Tebar Kepedulian kepada Pengendara, Ojol dan Masyarakat",
-    "en": "Jum’at Berbagi, Kapolres Tangerang Selatan Tebar Kepedulian kepada Pengendara, Ojol dan Masyarakat"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Tribratanews Polda Metro Jaya",
-    "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPSUJqRkJjaUxJSXFyb3RudnMxb3hHRDJXbzlDR016WndPUi1RdTBxc0h3V1Z0OTNUSHRXXzFPY1lvTXpSTEIyRkRfZVpmeEFTVmctRjRaR3N1Q1NKVGNXcDBiNTRMLTBxREVQZENYTnpvTGJkZFFmX2NNQVJUSmEtWnNNdHpBNENPRmxaSGc4NUV4aXRoQlVFUFhFaU90TUxqbU83S00wcHVUYXBWRnlOZHJJd1VGTWhyS3ZIWi1xUTRZZGtlYVljd1RZOTI2TUJH?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-18T03:08:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Rudi Zulham Hasibuan Nakhodai Organisasi Ojol, Bunda Yin Serukan Semangat Saling Membantu dan Melindungi Sesama Ojol",
-    "en": "Rudi Zulham Hasibuan Nakhodai Organisasi Ojol, Bunda Yin Serukan Semangat Saling Membantu dan Melindungi Sesama Ojol"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Media Online Jurnal X",
-    "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNUkk0TFV6RS1XRnRwOVFSZXZoNVZfYjZ0YmZtV3FtRVFZZUg5eWpEZ05RUEZ2TWJMb3k3OUVWQ1FSekFYV0hobXBXTmptWmp3Nl9GRlh3eEJrSEs0dm96R2FnXzFpZndVVjBNVnlvaGNrZVFmcGE3OUM3ZzBwc1dxcUxoclA3TVAtbnRWWExja1M0ZzlCMTl5ei1aeGtpSmxVQmFEbEV0d2lVTGllZEJoSHhTa0dWaTdIZU1LSVpONVE1azRfS1A1Vmtqa3ZVYVlLM2VPdw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-18T02:58:11Z",
-   "media": 1,
-   "judul": {
-    "id": "Rumah Zakat sukseskan kolaborasi Kemenag, MUI, FOZ, Honda Layani Ojol Jatim",
-    "en": "Rumah Zakat sukseskan kolaborasi Kemenag, MUI, FOZ, Honda Layani Ojol Jatim"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Kompasiana.com",
-    "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQMGVYRGhBSTJGaU1Na2ItYzRWdElmQXl6ajNhOXVURTNsWl84VDNaODA4c3IwNWdmZEZucEx6amVsek1qcnF3a3lZTE9pMlp4QVFFT2QyZUZLOW1UWmgzSm5RODlKMWhqWjZuSzlNQzM2MWlyVEdJckhYbjJPZTdseDZwOTB3dHVMUTJwM2xOM3NMVVpIMXlEUzRDUmlROEo0N1MzY2JEazI5Sno1cEJ5WmJSYlZUbzRyMmhtVHduQUhLNXZ1Vlk1a1h4MkdvUQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-18T02:51:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Kapolda Sumut Rangkul KOJIRA Sumut, Perkuat Sinergi Jaga Kamtibmas dan Berantas Narkoba",
-    "en": "Kapolda Sumut Rangkul KOJIRA Sumut, Perkuat Sinergi Jaga Kamtibmas dan Berantas Narkoba"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Media Online Jurnal X",
-    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPQmxFRnBnQTQxWU41VDNVczhvbE1DTHlxbEROUkVGX1pCel9UM29IeUJqa05fUHM4QTZYWURoN2o2N3pIdnlJWExrWi1sMFpnMnkzXzlGRmlUbWUzSzM4cWctMXB5YzMteTdpSVR0TGZXbmZfSkdYUUNJR2xnRlB2LXJselU5REd0MHEtVmZZSXFaUXhIZ2tBRVlHclg1UXBDTmxwOVF3aGVtRTVOSWc?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-18T02:25:39Z",
-   "media": 1,
-   "judul": {
-    "id": "Perempuan di Surabaya Dilecehkan Pengendara Beratribut Ojol saat Rujakan di Depan Rumah",
-    "en": "Perempuan di Surabaya Dilecehkan Pengendara Beratribut Ojol saat Rujakan di Depan Rumah"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Tribunjatim.com",
-    "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNRjE2ZWRwWjhGV1lGTWpkY2FjNTdxczFsV3RWMUg4N0luS2FRanJkQUNwd2Q1S0VYc3BUb3QyaWNkMFo5OTI4clBtZkwwWU5jWlJ0MVF4QUx3by1xNDFHbjlNeWk2YllWUkpiYy10dWJwYW5KZmk5a2YwdTIzdjI0UmI1SXhrdlctZlhWbG0zWUhXeUgwdXA2RkpSRG9fSU4wTHZfdFo1OE41LUlJb28zTWlnNzhBQzBlclBJeFYtckY4dENpejF6THAwMzc?oc=5"
+    "nama": "Yoursay.id",
+    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQaXRQeFBGUUZHR1lTX3R6STMzdlBuYklxdlpiUDM5a1NiLUM2TmY4YW1ZWF9mejFpcHoyOFBlWjlFM2tUTXo5OFNRWFEtSzRBY1NPSFQ3X1FrWHdBc1hFRERQUUVYSXg1cHBmOVFGS1FCU3lJREU3NlR6M2cyNlR3Ujd5WnFkZlRXYjFxYnBQdWZ0RHIzRldLMUlhUjdFeDFHbm1pRDBlWVE0Slgza093VnlNX1VXTkxaQnlN0gHAAUFVX3lxTE9MSUg5QmVtb0w0d1pxU00xUy1YVW84aGxGZFdJVVhxcUVHdmZUQWh4SHd2RE5WOWt1R3F0SVVJX2pjNDYxSXg0dlJ1dWtuNTRlQWlKMmRwQ2VXeVpOMHA2dzlqaWNoZ0JLUFJlYmUtYjRzWEQ4aW1tUkJEXzJPbV9SVlhsdW5RYXF4TjlnQmhBT05UcWJNbTduNTRqZkV2T0lEcFBWSGVsZmdlTkV1azBMRkl0MlZaNTAyOWV5a1VTNA?oc=5"
    }
   }
  ]
