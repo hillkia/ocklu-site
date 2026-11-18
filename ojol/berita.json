@@ -1,7 +1,24 @@
 {
- "w": "2026-11-17T23:10:59Z",
+ "w": "2026-11-17T23:58:48Z",
  "dari": "Kroog",
  "berita": [
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-17T16:57:11Z",
+   "media": 4,
+   "judul": {
+    "id": "Kapolda Sulut Ngopi Bareng Ojol di Kedai Sedjak, Sapa dan Serap Aspirasi Masyarakat Manado",
+    "en": "Kapolda Sulut Ngopi Bareng Ojol di Kedai Sedjak, Sapa dan Serap Aspirasi Masyarakat Manado"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Cahaya Siang",
+    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQdzl3bFV1dDk5aE9MdzJWUVpob2o0Nm9abHZkN2syYXJZbGFiUlE4QllfbkN4T1gxd0V6ZlVtNGJuSi11U3RNQXhsTGtKVlBCV0ltaFVjRk4zNlJob1RQal9pNWJadDJPVmpsdzNRaVBRTFE1Y3JBRjBaTkhSX0dvMmpDaDkwa1ppbWxzendvUjh1MnJpeTF6bVJLV2NDaHJpMDFrVDVXUmdzLXNrd1pVRHFEc9IBuAFBVV95cUxQay1fQXlPQ0VlM2FBN19GV0g2OV9LTkhjZ29QOVNHQTRlZ1N6WkNqNmlaN1I4Q2pPM1FzOExNZmZGMm93Qmp4X1pyb2dhZnp2YjVHeHUtcjMxQnlneGNnMDZMX0FfWXRmc1BlYU9NTnpIUGozcmxYY1BmTXNjRTBRQlJWNXNJNHJ2NjZreEJFVWhKc2VPVV8yUEJVZ1hHblE3YmhYWnNHRTBWWk5lRzU4cG5QRXVOcjRy?oc=5"
+   }
+  },
   {
    "jenis": "berita",
    "waktu": "2026-11-17T09:28:00Z",
@@ -17,6 +34,40 @@
    "sumber": {
     "nama": "Tribratanews",
     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPWUdkN2JqNmRPVW1XdjVjRVE1QmJHNkNXRVdWZFhyN0hRN3lHQ1c5cUdUSGFSWEZmaFNBaGV3cHc4enYzZDgwcGJsbDJ6SjRQMTdacmpiLTg4dm5zX2dqaV9LVUN2MWwzcXVJakllai05bUhnWmFqR3ZETnNhdzAwdWpUd1dRUWZSWEtmaDlEODBDZlBKdnJXMWVEU3d1UGN0WXpxTElNWWJPMGRyM3g3TnVuQkw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-17T15:13:30Z",
+   "media": 2,
+   "judul": {
+    "id": "Batas komisi ojol 8 persen picu risiko penurunan pendapatan pengemudi di Indonesia",
+    "en": "Batas komisi ojol 8 persen picu risiko penurunan pendapatan pengemudi di Indonesia"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Traders Union",
+    "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxONkVzTDk0Qm82RDJfTkh0TFdrSTZkcFR6ajRYalZRZmJkUkpKZFA1RlBaTEdZdmQ2UGdsVnhHd1pWRlpfQUtraExPWE94TlpYWDdTdEgyenJmdDhWYUxVZGNVLWd4azFjWE5IdVlNMmpwMFpkVHdGQS0wemp5Unc5U2tfaVlOM1BsMUlVV2JwdjNhM0ZmTUJnMGdtNA?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-17T14:01:59Z",
+   "media": 2,
+   "judul": {
+    "id": "Satlantas Polres Blitar Edukasi Pengemudi Ojol dalam Operasi Zebra Semeru 2026",
+    "en": "Satlantas Polres Blitar Edukasi Pengemudi Ojol dalam Operasi Zebra Semeru 2026"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "SMNNews.co.id",
+    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNVlg5d0MwOTlTTXBVaGxTZE1XXzhpRW0xZmxDTUpmY1JsVEtDSjBfWEdHQ3JTUWtKNmM4UHIxTDhlckNXb24yZ0Q0UVhjQVBobkpFWlhQbWUwMndlNjhHNGgtcG9pZnNkNk03VS12ZUNtenlLZVZWZDlQanlWS3RibEE1ZmRMcm9rRjlYSi1LV1RoR2l1TmxJaGhVamxIcGdCWWo4?oc=5"
    }
   },
   {
@@ -55,36 +106,104 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-17T13:17:12Z",
+   "waktu": "2026-11-17T17:08:09Z",
    "media": 1,
    "judul": {
-    "id": "Truk Tangki Minyak Goreng Tabrak Pedagang Sayur & Ojol di Semarang, 1 Meninggal",
-    "en": "Oil Tanker Truck Hits Vegetable Vendor and Motorcycle Taxi Driver in Semarang, 1 Dead"
+    "id": "Kapolda Sumut Ajak Komunitas Ojol KOJIRA Bersinergi Jaga Kamtibmas dan Tertib Berlalu Lintas",
+    "en": "Kapolda Sumut Ajak Komunitas Ojol KOJIRA Bersinergi Jaga Kamtibmas dan Tertib Berlalu Lintas"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "Espos Indonesia",
-    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOQTEwZjVITDhCLUYtR0xjeEdlQVFZbFdPVXFxUGVRYzVyeUFleC1zYmNMNlVnMUEwTVBtTl9WZkdzWTZzQ1hOOUNGQmFWZnhUY3M5VVl5QUMyNkF5Zi1KQTBsaFlpamFWaGdRUDF6cjA5WW9vaC1SQ2llNE1LYWVSS0x0ZjUzSmFEQXFQZWZJdjRwN0xjdDRqbFZnOWp5dTQyYkszbThQdkFkWEFsakNv0gG0AUFVX3lxTE5LMm5nXzRiVjlUZnd2aWVJNkZfUmVvSjFVQV9kZWVvTVZJYlhmeXVmSlJoMGdmdW1yNWFyMXoyYUxCZFZ4M3NydEFjVFBVTExNWjdDTnk1YXcwQWVnaDNuOGc1U2h3elI2WlhHSFJrWmUwM2t4cmtJYkFJM0gtNE5mWnUtSUFCOVQ4TjJURGV5a2NsY1hHbTI5anFrQm54dVBxdTdxN2lGLS1PUTVoaDBaRmk0WA?oc=5"
+    "nama": "Website Resmi Polri",
+    "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQX1h2ZVF2Vmp6YmhTT21tdHRTVDgzWnhKd2FYajlDMjRtRWhfbTNDdzNWTWktQ2hEc09mS3lQLWpQZlR4MDRhUHk3SFFteG9yaTdGak9EdnR1aTQ2LVNTTTExY1FaZDROOUtqeUozanVFRzY0LWJzYmlkRnd5OXhXb0ZSY1dfeldvczk4cXhBRi00QlFLVWdXcTV1X1JROTF2Y3Qtb01wcjZ5dzkwWC1CclB5UDBXQzdvMkJ0b3dfQnlidjdWdXZMbElsUF8?oc=5"
    }
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-17T12:11:33Z",
+   "waktu": "2026-11-17T15:52:00Z",
    "media": 1,
    "judul": {
-    "id": "Kesaksian Ojol Selamat dari Kecelakaan Maut di Ungaran: Saya Lihat Truk Seperti Terbang",
-    "en": "Testimony of a Motorcycle Taxi Driver Who Survived a Fatal Accident in Ungaran: I Saw the Truck Like It Was Flying"
+    "id": "Ojol Jadi Mitra Polisi, Garis Depan Tertib Lalu – Lintas",
+    "en": "Ojol Jadi Mitra Polisi, Garis Depan Tertib Lalu – Lintas"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "Kompas.com",
-    "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQR2lrOVZYV2d4NlBuVlk2MERkWnFKbzRTZlBlUm9xZUpaems3UGpxTzloNnVWbjFfZlljLWU5THBkejVrVVpONV9kdW9uWnZwYjR1ODlqZlZvNW1zRzZDTFBuVmdkVXl4U3RPNkZfNXh6LUZrWE1qVmhqNmtBZE90clZWYTktaVFuUTFJVzA3Wk45ejdDaFU1clZGclhZaWkzdmV2dUhjdDVDT0huR3pFdHJCamxwNE9xaVFRR3J2VkZXcTQ0T0M2MkcwRHI?oc=5"
+    "nama": "BACAMALANG.COM -",
+    "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNVXY3REMtTW1HdUhSSnl1aFJCRGRUSFBBRDlIVExaUmJIRFVVQUFVSjd3M0FLX0FOeGVZQ2ZvbzVILUNpTUFHLUJKLVVBMlhXNzF6WUhOOTh3OTNfYjl4LVRKR2NpV3V0dUNGclhLVGlac0NrV1lYb0cxMUQyOHRiZm9MQQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-17T15:29:43Z",
+   "media": 1,
+   "judul": {
+    "id": "Hilangnya Subsidi Promo Penumpang, Pendapatan Jutaan Pelanggan Ojol Terancam Stagnan",
+    "en": "Hilangnya Subsidi Promo Penumpang, Pendapatan Jutaan Pelanggan Ojol Terancam Stagnan"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Koma.id",
+    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQMXRsWXJINjgtV3FxV0NNWWJXLUJHRHlMdVMzVkMxZy1HR2c1WmhzcE9raFdCcVkzTlF1WjZlVkFDLVJQWnY5SF9iSF9keUc5ZUhSZW1kOV9STUxEdzhqVW5mQVMyc0JpcEt4dk5XRWZHX0VtUTJSUzEzMS1SZDJmcUJ3Mi1USHBYbEF4WFdCbWFBZFdTbWc1VmV5eGR2bTRoZ2c?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-17T14:55:05Z",
+   "media": 1,
+   "judul": {
+    "id": "Ekonom Unair Ingatkan Efek Bumerang Aturan Komisi Ojol 8 Persen, Pendapatan Driver Bisa Tergerus",
+    "en": "Ekonom Unair Ingatkan Efek Bumerang Aturan Komisi Ojol 8 Persen, Pendapatan Driver Bisa Tergerus"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "VIVA.co.id",
+    "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOVndmekNwanZiNnlXRUlnUnlUU05GNUppTnJ3SEtGeDRKVjMyQjRSNXFZU2s1S1pYUVB4bE5RQklSWDFrVER2ZF9fYzVoOWZwSUhxRWgtZXdHLTY5ZXB0eWJ3WmpwNTVPeldBTjViWGVQM3I0NnpfYXY3V0d6NWFXczdjUERLUWFNaDRkOWZGRHU2VE91SXZfTUYtUnpFTzJWSF9ESEFzdGtrTU1UcXAyMnBFd3lILXBNS3VvU2h2MmNCRks4T1A5cFJKOTl6d9IB0wFBVV95cUxNNlZKeGt0cVczUmdfcFhMdkE4Z3lCTVk0cnNDdE02aFhScUtVM0R2VGtsMWFRcS1Uc2NNR01oYjU0QUxrUDlHcGxtN0VRay1oS3BKanFkb1BXaXR1emlEQ0lVN1UtNERRRklza0drRHltdnlraGcyRTJoTmdkemxDWW9MNElVN3RlbGNrTklBOFhBMkE0UHdnbjZFWFJOVlJlclNXOTF4Skd5UWRRY2JzT0RYNEtaUUVXdGRielVub01uOXlKTmR1amVsX180MWJ1QWtv?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-17T14:46:57Z",
+   "media": 1,
+   "judul": {
+    "id": "1.500 Sembako Walubi - Kojiran Diserahkan Kapoldasu pada Ojol di Medan",
+    "en": "1.500 Sembako Walubi - Kojiran Diserahkan Kapoldasu pada Ojol di Medan"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Waspada.id",
+    "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQZXppUTdaVVFqNDRDbm4yQVBWX1NfdDZhMzFhemFTbnVCYXFmN2NEV2lFOEQ2VkN2bTlLTHN0NTZxYV9vWUs3Wk0wcEZSdU5xQm1OWlE1SnRkNnhaenM1azdROHY0X20zZ0NxN2h4RlJZbXdEWWpaX2Q2UGQzeVB0M2h3TkZwQVVhNDdmb2NEMGxicDRQRmM4VEgtNkx3MVk?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-17T14:12:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Driver Ojol Yogyakarta Berangkat ke Jakarta, Rencana Ikut Unjuk Rasa di DPR RI",
+    "en": "Driver Ojol Yogyakarta Berangkat ke Jakarta, Rencana Ikut Unjuk Rasa di DPR RI"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "tvOneNews",
+    "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPWldDdHJGeVFyZi1vTXV1d2xhcmNKQ2tGTnFUaTRISTBqeG16d2k5QkNsRmlrUU9VeERnX0x4cklQVXJ2Y1J0V2JUT3BkTlE0REV5VEJCU2hHMFctdy1BaFpNemF5ME1jN2pWOEFQal90cmFlXzJRdnZHSnQzY1NHQlVvSFcxbm56dVFEcDdmUDZ4OE83T3Vvb1hFTGRIMmtsSlRmVXFGM1ZwSzVZUHFzOG9mMUhCaDBrYTNDeUt0c2kyZkVtb0dN0gHMAUFVX3lxTE42clI5c3ZoNVEzc1VGTldCaGZkQVgzcGNwUjV4OUx0ZHRMaHl2TDBDc0ZQMjVRbndSeV9QWm5GT25oTHlJQTFnaGJBcTNkeV9seTFOZnRLTkVBeWM4SHRjc3liQXpoMHE5eFZDbHJKZWZ6MmFhbGlrSjZvQU13UEJfdVV2MjFYQ2J0MmlhTGVfUGtUd2FkV2U1Q3BDOXlEYmtLV1o1NXdiLWVsdkNYRWw3aDg2dWVoQnZHVmFmYmVfRnhKRWhsSGZlb0o1Qg?oc=5"
    }
   }
  ]
