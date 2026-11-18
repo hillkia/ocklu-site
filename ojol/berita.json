@@ -1,5 +1,5 @@
 {
- "w": "2026-11-18T02:10:54Z",
+ "w": "2026-11-18T03:00:56Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -21,6 +21,57 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-18T01:54:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Pro Kontra Aturan Potongan Komisi Ojol, Dosen Unair Ungkap Risiko bagi Konsumen dan Driver",
+    "en": "Pro Kontra Aturan Potongan Komisi Ojol, Dosen Unair Ungkap Risiko bagi Konsumen dan Driver"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Tribunnews.com",
+    "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOZDBCb3lDMVc5SllPdENtMWpjc1diMWp1Y0I2dzBSRGF2LUQtOWdoU0J0dzNVM0xJUFJfU2Y2cWRtSVM3VWxON1NaTGFiWmhhanE2QkYxNHAwTndKS0szdFFqLWFQeldMd2k5VFpmd0NkVEVwZXV4UWsxcGxjWWNsYUY0R1hBeXJlTFZ6ZndSZFNKQXpwOGo2ZDVJWFd6bmNKMmRIdDRmaFZzX25DV2N5UDBDaU1yNHZqOUhLbE14OHZMQnUtN3hCbTB3ejZaUQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-18T01:36:35Z",
+   "media": 1,
+   "judul": {
+    "id": "SDN 133 dan SMPN 20 Mataram Terendam Banjir",
+    "en": "SDN 133 dan SMPN 20 Mataram Terendam Banjir"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "SUARANTB.com",
+    "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNMVZrQlNIVW1jeS1pNzV6Yzg2WDczZ3pOVGE2cTJsVFEyTTExSHpFQXVHblZkTUh0dU0zdzd0c3AzOWoydVhza0o0VzJGUlRIZW5PUnVUQ1c3UUk5b2dSYzdPN3AwbkVmNnlsd1QtV29DUmV1bWxrRjJ2d1ZKYTlsTm9n?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-18T01:32:45Z",
+   "media": 1,
+   "judul": {
+    "id": "Blak-blakan Supa’ad Hadianto Saat Reses Undang Ojol, Kuota BPJS Pemprov Menyusut",
+    "en": "Blak-blakan Supa’ad Hadianto Saat Reses Undang Ojol, Kuota BPJS Pemprov Menyusut"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Fokus Borneo",
+    "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOTzhmRVh1YndPOVB4MjVIOTdaZk1pVnpHQzRqYkhiSEVyakZsV2JoVWw2WE1tdDF5eWV4WXppVzhNUlRVbHh4bEhXNUZKRUdIY2plQi1jc1U1RFFXZFJzMEZqZVhlT0Z5UkR0a3U4RU1MWXZEamFlU0UyR3ZiNmFmLWVaNWlTMHl5YmNQZjR4eFdhamdLSlVReTA2dkJ6Mzc1NldnUUdVNFJfdnpSVG5vc2NqTi1fUzNfY0ppTExkdw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-18T00:40:07Z",
    "media": 1,
    "judul": {
@@ -34,6 +85,74 @@
    "sumber": {
     "nama": "detikOto",
     "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPM3VseFNJbFBnV1FheVpZanVvc0dILW9ack8zbDgweFUwMWdFdm9HV2ZObFY4UEhsQXc0RkF4b2dFakt3VGFKcFlpa1RWd3pMUDhXTkNIZ1hGbnQ4N29XYnU5Z3VBbDJVb0VDRXNtX1RyWm5adG15V1FnVGtScTEtQjZUdk1Qd9IBiwFBVV95cUxQaXpIWnBmZlIxZHZ2TkJ6QjZsVG41MmZSZnA2UlVMRmhJNkdwU1Q3QlZZN0F3eHk0VmRENXRYY1JCTG9QQnN0THBTREVfb0ExREMzTW1WR0hNZ1hoajcxS1QtTW5sUWdVZzQ4Y0oxdFpvLVFSTnhlMFFjUFdFSVlMREhfQXIxWGtLb3dV?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-18T00:31:11Z",
+   "media": 1,
+   "judul": {
+    "id": "DT Peduli Depok dan Federasi Speed Indonesia Salurkan Fidyah untuk Pengemudi Ojek Online Perempuan",
+    "en": "DT Peduli Depok dan Federasi Speed Indonesia Salurkan Fidyah untuk Pengemudi Ojek Online Perempuan"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "DT Peduli",
+    "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQLWhReU81ek1HMzZQTFVZaEdqcFNCbmduSS1RWkZhVjVMUEtFWVhiLXp0RlBWeWFtdnRiaFRsWnNIMFFSSm1BMzNUQzM3dTk2UVItMFRVUmllUi1kUEVCcEQzU0RHWWZNUkpTTjZLRVFtTjVjbTU3ekhZbTBEX2xqU3l6cmxvZ0VaaFVheW0yYm5wdk9SQXNxTHpDbEJJZ0M4ZFFWWDVNUWtiWmNkRTdNdUdUazlBbHQ4dWhmdlFEaXRTTWE3cno4b3A0bmhMTVU2TlJtcVF3b3pDYjNoN2c?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-18T00:24:39Z",
+   "media": 1,
+   "judul": {
+    "id": "Wakil Wali Kota Kendari Terima Audiensi ARMI, Ajak Ojol Bersinergi Jaga Kota Kendari.",
+    "en": "Wakil Wali Kota Kendari Terima Audiensi ARMI, Ajak Ojol Bersinergi Jaga Kota Kendari."
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Kendarikota.go.id",
+    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQV0FLemdTX2h2cWtQd2FfVkpqa3VzNENOWV9qdUR4d19TVGYzMDZFd0JpbUZ4ZU56YTk4RWV4SlFoRzRpNk5RekREVVJ6bDUzODF6RnNhZ2k1Z21sTloxTjJlOXBFWWhua2dudEstM0lQR3JKekhpd2dGeU1kNld6X2pxSlRTZl9tM0RmVEFYakN5TFNUX3YwMWM2NWg2UTB3cFdaZ3l3aEdlZjdNeG5yWXB0Rm1IaGdx?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-18T00:08:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Modus Serempet Berujung Bui, Ojol di Ciputat Timur Ditangkap Polisi",
+    "en": "Modus Serempet Berujung Bui, Ojol di Ciputat Timur Ditangkap Polisi"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Satelit News",
+    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOS1ZCYTduQUlISXdpQzlpN3VFcWtSMGg4M3c0MmxnMWhxaUNzR2lvQjRDZmtlU2JZa0xkYlY5OWY5UE5wTGRJSzJYWkE5Q1pJdnU3SVFobC1XU3BtdFlfYVNDUEhZcmFCLWlrTm1QLWNWZXZSR2pmUDRwdFFrSS1pYktwaHJIYl9NYks2bHotZHZweXQyRDgxX3U4ZVgzX0hNUzh4SA?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-17T23:58:25Z",
+   "media": 1,
+   "judul": {
+    "id": "Tak Pakai Cara Kaku, Satlantas Polres Trenggalek Edukasi Kelompok Rentan Lewat Konsep Cangkrukan",
+    "en": "Tak Pakai Cara Kaku, Satlantas Polres Trenggalek Edukasi Kelompok Rentan Lewat Konsep Cangkrukan"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Suara Trenggalek",
+    "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9FSjhRTVBCMGx5U25hWG1GOVFFNUFKZjlGeFJnSTJWNndGZ1p5RThhTk9mWGhsUUVjTHBlOFpWVUdpUW9vdGFwX1k1dm85Wncyc1ZSdHVRR0ZSM2VWNVdDMUlQWG5UYTBWbWxCTHZlQXFCSFRhSHVJNTVDZmg?oc=5"
    }
   },
   {
@@ -55,6 +174,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-17T21:54:36Z",
+   "media": 1,
+   "judul": {
+    "id": "Peduli Banjir Sumatera",
+    "en": "Peduli Banjir Sumatera"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Rumah Zakat",
+    "url": "https://news.google.com/rss/articles/CBMirgJBVV95cUxPRlBqOUZ5Z3lsblRKRl92MkJQVnFNTi0xcXpwc0d1UHVyUEozRE1LNU5zSzRjLXd6NmVlanZ2cjNOREthTWtoSGZ0ek5QTXZIV1ZVa29mVF8yalBJcWNLblB2alh1b05YUU9oc3NHQkcyN2JKa2ZkOFAxWmxrU09kV3ZDTWdOTzBNY0toM1JrSzVBZkx1VHdZemVBclRKX1A1UEd3dlZ2b1FlNWtwRnNOOEZleld2NHowaU9oYTdXQ0pHYmdibXFfa2s3UkdQcG0zaWROcE9tV1NsaEsyY211QmtGQTJfU2FDQjI0VmxZVU5WVFh5bHNzaUVJWU1IdlNSWnU1TjJkS1FENWxXc0ZnbEJ4VUZnYkpGQkV2Vy1tU1lpTC1fUnVLekRWbmtWZw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-17T15:13:30Z",
    "media": 2,
    "judul": {
@@ -68,74 +204,6 @@
    "sumber": {
     "nama": "Traders Union",
     "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxONkVzTDk0Qm82RDJfTkh0TFdrSTZkcFR6ajRYalZRZmJkUkpKZFA1RlBaTEdZdmQ2UGdsVnhHd1pWRlpfQUtraExPWE94TlpYWDdTdEgyenJmdDhWYUxVZGNVLWd4azFjWE5IdVlNMmpwMFpkVHdGQS0wemp5Unc5U2tfaVlOM1BsMUlVV2JwdjNhM0ZmTUJnMGdtNA?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-17T14:01:59Z",
-   "media": 2,
-   "judul": {
-    "id": "Satlantas Polres Blitar Edukasi Pengemudi Ojol dalam Operasi Zebra Semeru 2026",
-    "en": "Satlantas Polres Blitar Edukasi Pengemudi Ojol dalam Operasi Zebra Semeru 2026"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "SMNNews.co.id",
-    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNVlg5d0MwOTlTTXBVaGxTZE1XXzhpRW0xZmxDTUpmY1JsVEtDSjBfWEdHQ3JTUWtKNmM4UHIxTDhlckNXb24yZ0Q0UVhjQVBobkpFWlhQbWUwMndlNjhHNGgtcG9pZnNkNk03VS12ZUNtenlLZVZWZDlQanlWS3RibEE1ZmRMcm9rRjlYSi1LV1RoR2l1TmxJaGhVamxIcGdCWWo4?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-17T14:00:23Z",
-   "media": 2,
-   "judul": {
-    "id": "Penyalahgunaan BBM Subsidi di Aceh, Polisi Tetapkan 45 Orang sebagai Tersangka",
-    "en": "Abuse of Subsidized Fuel in Aceh, Police Name 45 People as Suspects"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "RMOLAceh",
-    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOQV9FMUtlbDVXLTF3blJ2dGhteFJaQ0ZiN2VoQlpFcE8wX29sc056cWFSdTVmLXhWSlY5V2wweWFSUU9ENVNHRDh3enI4N09ZNFVUaUZQdFhCMDhVaGVZMzhvbUtQSFRhaW1FOUhtVFlndUhHMmI3eDFPX213c0ZKWGc4cU9zSkpNanU3RDRLSjB1Q3VFMl9yV0EyZUtpcEczbEFR?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-17T13:11:11Z",
-   "media": 2,
-   "judul": {
-    "id": "Keberadaan Adistiyan Bangkalan Masih Misteri, Order Ojol ke Terminal Bungurasih usai Salat Jumat",
-    "en": "The Existence of Adistiyan Bangkalan Remains a Mystery, Order a Motorcycle Taxi to Bungurasih Terminal After Friday Prayer"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Tribunjatim.com",
-    "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPazYwZHBlb3VhbVl2bjlNcFNPQ1d1Q1JIaEh5SE9iYXUtUEdkeGZ4dXIzaTRzcFluM3AxZkwtMXB6a05lYW9LMy13SkMzZHZrSG1EUzk2Y3BDYzNINVJjTEkyVTd5WEZ2UUQ4UUxTSnI1WnpYSzl1WnZZdWUxZ1JSbUtvdVVJMTlvdnFOU2FTaExaaHZ6NzdiX3lObDRXWW5ueUtRSUtDZDNrcWdFMnVuNThHMl9GY3d3bmgyN19mRjFpbDh6LWNkbzJ6TFFsdnllSlExS3FkV3U?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-17T17:08:09Z",
-   "media": 1,
-   "judul": {
-    "id": "Kapolda Sumut Ajak Komunitas Ojol KOJIRA Bersinergi Jaga Kamtibmas dan Tertib Berlalu Lintas",
-    "en": "Kapolda Sumut Ajak Komunitas Ojol KOJIRA Bersinergi Jaga Kamtibmas dan Tertib Berlalu Lintas"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Website Resmi Polri",
-    "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQX1h2ZVF2Vmp6YmhTT21tdHRTVDgzWnhKd2FYajlDMjRtRWhfbTNDdzNWTWktQ2hEc09mS3lQLWpQZlR4MDRhUHk3SFFteG9yaTdGak9EdnR1aTQ2LVNTTTExY1FaZDROOUtqeUozanVFRzY0LWJzYmlkRnd5OXhXb0ZSY1dfeldvczk4cXhBRi00QlFLVWdXcTV1X1JROTF2Y3Qtb01wcjZ5dzkwWC1CclB5UDBXQzdvMkJ0b3dfQnlidjdWdXZMbElsUF8?oc=5"
    }
   }
  ]
