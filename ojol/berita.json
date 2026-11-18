@@ -1,11 +1,11 @@
 {
- "w": "2026-11-18T16:16:54Z",
+ "w": "2026-11-18T16:33:34Z",
  "dari": "Kroog",
  "berita": [
   {
    "jenis": "berita",
-   "waktu": "2026-11-18T13:49:00Z",
-   "media": 5,
+   "waktu": "2026-11-18T15:46:25Z",
+   "media": 6,
    "judul": {
     "id": "Kapolda Jambi Ajak Komunitas Ojol Bersinergi Jaga Kamtibmas dan Keselamatan Berlalu Lintas",
     "en": "Kapolda Jambi Ajak Komunitas Ojol Bersinergi Jaga Kamtibmas dan Keselamatan Berlalu Lintas"
@@ -15,8 +15,8 @@
     "en": ""
    },
    "sumber": {
-    "nama": "Media Online Jurnal X",
-    "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPbTRvTGMzeTRkSV9YaTIwR2xSNVlOQzFKSXBfczhyRjVDUGU1WDNEb3daSTRMOTY4NF9zQTNkRU5PUWdWcGFSZDVnZy0xdTJvTXZScEoyaTZGTjZfUXBnVkxUQkVjbzA4b19aeFRkM2ZZQTNnXy1TS2Y4Q0piVklUTk1GQ011NDFjSE1RdzZsUk1UMWJEb09MeGw4Ylk5bVRaVkszVzAyRmZueC16N0w3aUVxYk41U3dmQndpSFA4WQ?oc=5"
+    "nama": "ANTARA News Jambi",
+    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOOWxXcVR6ZlBPVHI3b19NTThPR3VuQklmVjlUaUFmTVdkZmg1QmtXS2Y2OWZyMk10NS1KYUJUbWdLNW5HQ19nVExUS3FXUVpNbjh3ZDNtNFpnVTRlOE9seF9KR096MjFqX0t5aDJsY2NXOGNBOUFWLU43ckhaWi12b0JGVHdYWGpkMlEyUnFLbzRIbHh1T2tGQ25DODZtdHJHQ0g2SNIBqgFBVV95cUxONU1ZcTNjZTh1a1JMWjdSdHFacWVVbjBFLS1xYTl6T1VFSHhJUEFYQVpId2d5b1d5S3NleDlQV3NlVktrYWhiRzQxbnVsU2J0X1NsQUVPdXY1cTI2LVV1VFk3b09YVkhLMFhXUTM5OUNWTmt4VVlGMWF5bGVJX2djSVQ1andoX3hDdGFGREVxeW9fRkpPX1hOSHNGOS16Zi02R1hJblIzVGJWdw?oc=5"
    }
   },
   {
@@ -34,6 +34,23 @@
    "sumber": {
     "nama": "MakalamNews",
     "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPMldET05iS1h6RGdUN2Z5OHZ5a2JPelpMdGJOVXFSM3NlQnF5Vld4dEdWVlRHTktNV1k3YmRzdnB6eFFvNGd2M3pwTDlNYXpCbU1XSmVWX3hZcF82Y2RUUWZuRi1aZEswcjFzUEYtdjFaTW1YOG5tSDZXSkJrMXB1M2VMX1JVU09vU3VqUmMzOXozZFV3M2RPQUhzM2xXajBJR1VwenFvWkYtUzlHYS1OaGdnV0pyaXpaVGhMaXZNQmlseG9kWXN3?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-18T11:37:21Z",
+   "media": 4,
+   "judul": {
+    "id": "Kemenag Jatim Didukung FOZ dan AHM Beri Layanan Gratis untuk 100 Pengemudi Ojol",
+    "en": "Kemenag Jatim Didukung FOZ dan AHM Beri Layanan Gratis untuk 100 Pengemudi Ojol"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Lentera.co",
+    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQT1BWQ0E1eS1LVTNTWGhhOGtQOHpvRm5uSk9YZ25URFFaWUFjSXlaN2dBX2xPNzVOUWNhMkYxclYwTUhpbVdSNW9iX2xrQnllYnYtZHcwV1dabkJ4VVRSc1lZRjBDWXFXb1NkYVNLVmVOZExfSndNc0RrTGNmWkJwOHA5ZlQ5QUdxTmc1cnNQbXVOc0hueTlHMmp4U0kxUTVvWTRyM0NVbC01Nk5rb1BhWmFmVXlDZw?oc=5"
    }
   },
   {
@@ -157,23 +174,6 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-18T11:37:21Z",
-   "media": 2,
-   "judul": {
-    "id": "Kemenag Jatim Didukung FOZ dan AHM Beri Layanan Gratis untuk 100 Pengemudi Ojol",
-    "en": "Kemenag Jatim Didukung FOZ dan AHM Beri Layanan Gratis untuk 100 Pengemudi Ojol"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Lentera.co",
-    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQT1BWQ0E1eS1LVTNTWGhhOGtQOHpvRm5uSk9YZ25URFFaWUFjSXlaN2dBX2xPNzVOUWNhMkYxclYwTUhpbVdSNW9iX2xrQnllYnYtZHcwV1dabkJ4VVRSc1lZRjBDWXFXb1NkYVNLVmVOZExfSndNc0RrTGNmWkJwOHA5ZlQ5QUdxTmc1cnNQbXVOc0hueTlHMmp4U0kxUTVvWTRyM0NVbC01Nk5rb1BhWmFmVXlDZw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
    "waktu": "2026-11-18T09:48:00Z",
    "media": 2,
    "judul": {
@@ -221,6 +221,23 @@
    "sumber": {
     "nama": "Target Hukum",
     "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQR3RXcTJTWmI0cUxRNG5PSWpqSGpPeUhPYlZNUXg0Njhfc0NZRHpUX3V5RWMzUnhJV3JmMjQ0OXktVUs0QU1EM19XeTlnQkZXLVZReWZQNzlxS0FMRzA4c1N0aGZucFF6V3dEdFVPWnV1Sk5HOFctM2xpMHBmWVFjYjhaR0FZTC1EdEJ4ZlhOR0hLSTd2eElnR2RBUkZlN2NLQl9jdGZOVno2NXY0V1JSOUNyNUFpMERYMXJmTFpMQ3k?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-18T14:23:26Z",
+   "media": 1,
+   "judul": {
+    "id": "Menghadapi Banjir, Gempa, dan Tsunami melalui Kearifan Lokal Indonesia",
+    "en": "Menghadapi Banjir, Gempa, dan Tsunami melalui Kearifan Lokal Indonesia"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Kompasiana.com",
+    "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQLW42Zk9Zd0Q5dC05WHJNMWc0d01pandMdGtGWFRkQUFZVkRmZmtaWGRNRks5SjN3NTFOS2VVclppenhZbGVNcEFUWFVjY1A5VVpOc1dXZUtSME5RWVNmcDI4djJqZXFqZjBrSXk2QVBURjNXbXctWVBYWDlfbkxnb2tBNVlvQjhIS3g5NGoxZXZVanVKd1hLN1ZCT3JpR2VNM0pTaGE3ZWJidExMWW8wS1BYWk5qTVE0SUVMX2lXZzlkTWRkMVdKZUVSaEFYVmc?oc=5"
    }
   },
   {
