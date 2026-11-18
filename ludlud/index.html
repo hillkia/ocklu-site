@@ -55,6 +55,7 @@ video{width:100%;max-height:360px;border-radius:10px;background:#000}
 
 <section id="ruang" hidden>
   <div id="kota" class="kartu" style="padding:0;overflow:hidden" aria-label="Kota Ludlud" hidden></div>
+  <div id="kota3d" class="kartu" style="padding:0;overflow:hidden" hidden></div>
   <div id="pesanSambung" class="kartu" hidden></div>
   <div id="rumahPanel" class="kartu" hidden></div>
   <details id="sambungan" class="kartu"><summary><b>Sambungan akun YouTube & Instagram</b> <small id="ringkasSambung" class="redup"></small></summary><div id="isiSambung" class="kecil" style="margin-top:8px">memuat…</div></details>
@@ -93,7 +94,7 @@ video{width:100%;max-height:360px;border-radius:10px;background:#000}
   <div id="obrolIsi"><div class="kecil">Ketik perintah biasa, misalnya "bikin reel gambar 20 detik soal Laporan Saran Iklan", "#3 udah tayang belum?", atau "captionnya #3 pendekin".</div></div>
   <form id="obrolForm"><textarea id="obrolTeks" placeholder="Tulis ke asisten…" aria-label="Pesan untuk asisten"></textarea><button class="utama" type="submit">Kirim</button></form>
 </section>
-<script src="kota.js"></script>
+<script src="kota.js"></script><script type="module" src="kota3d.js"></script>
 <script>
 var API="https://njghzieuuopukuagrswu.supabase.co/functions/v1/ludlud",TT="https://njghzieuuopukuagrswu.supabase.co/functions/v1/tertau",PK="",DATA=[],JAM=null;
 try{PK=localStorage.getItem("pj_kunci")||""}catch(_){}
@@ -218,19 +219,21 @@ function hitungPl(p){var j={siap_cek:0,disetujui:0,tayang:0};DATA.forEach(functi
 function statusPl(p){var s=SB&&SB[p];return !s?"belum":s.akun?"tersambung":s.kunci_app?"kunci":"belum"}
 function keadaan(r){if(r.keadaan==="usul")return"usul";if(r.jenis==="youtube"||r.jenis==="instagram")return statusPl(r.jenis)==="tersambung"?"buka":"dibangun";
   return PLATFORM_JENIS.indexOf(r.jenis)>=0?"dibangun":"buka"}
-function gambarKota(){if(!window.LudludKota)return;var keg=[],st=noJenis("studio")||1,sibuk=DATA.some(function(x){return x.status==="dikerjakan"});
+window.addEventListener("ludlud-kota3d",function(){if(RUMAH.length)gambarKota()});
+function gambarKota(){var KOTA=window.LudludKota3D||window.LudludKota;if(!KOTA)return;var keg=[],st=noJenis("studio")||1,sibuk=DATA.some(function(x){return x.status==="dikerjakan"});
   DATA.forEach(function(x){var ke=noJenis((x.platform||[])[0]||"youtube");if(!ke)return;
     if(x.status==="dikerjakan")keg.push({agen:"MARKUS",dari:noJenis("mesin")||st,ke:st,label:"#"+x.id+" dibuat"});
     else if(x.status==="disetujui"&&(!x.jadwal||Date.parse(x.jadwal)<=Date.now()))keg.push({agen:"MARKUS",dari:st,ke:ke,label:"#"+x.id+" menuju tayang"})});
   RUMAH.forEach(function(r){if(r.keadaan==="usul")keg.push({agen:r.oleh,dari:st,ke:r.kavling,label:""})});
-  try{$("kota").hidden=false;LudludKota.render($("kota"),{
+  var wadah=window.LudludKota3D?$("kota3d"):$("kota");$("kota").hidden=wadah!==$("kota");
+  try{wadah.hidden=false;KOTA.render(wadah,{
     kavling:RUMAH.map(function(r){var o={jenis:r.jenis,nama:r.nama,keadaan:keadaan(r),inti:r.jenis==="studio"||r.jenis==="mesin",oleh:r.oleh,alasan:r.alasan};
       if(r.warna)o.warna=r.warna;if(r.jenis==="youtube"||r.jenis==="instagram")o.jumlah=hitungPl(r.jenis);
       if(r.jenis==="studio"){o.sibuk=sibuk;o.antre=DATA.filter(function(x){return/antre|revisi/.test(x.status)}).length}
       if(r.jenis==="mesin")o.sibuk=sibuk;return{no:r.kavling,rumah:o}}),
     agen:[{nama:"GRIGORI",peran:"penjaga gerbang",warna:"#5b4b8a"},{nama:"MARKUS",peran:"pengantar konten",warna:"#0f7b6c"},
       {nama:"SKOUT",peran:"pencari tren",warna:"#a86a00"},{nama:"YOSUA",peran:"koordinator",warna:"#b3372f"}],
-    kegiatan:keg.slice(0,4),onLahan:panelLahan,onRumah:panelRumah,onAgen:function(){if($("obrol").hidden)bukaObrol()}})}catch(e){$("kota").hidden=true}}
+    kegiatan:keg.slice(0,4),onLahan:panelLahan,onRumah:panelRumah,onAgen:function(){if($("obrol").hidden)bukaObrol()}})}catch(e){wadah.hidden=true}}
 function panel(h){var p=$("rumahPanel");p.innerHTML=h+'<div class="bar"><button data-r="tutup">Tutup</button></div>';p.hidden=false;p.scrollIntoView({behavior:"smooth",block:"nearest"})}
 function panelLahan(no){panel('<b>🌱 Kavling '+no+' · lahan kosong</b><div class="kecil redup">Bangun rumah apa di sini?</div>'
   +'<label>Jenis<select id="rjJenis">'+PILIH_RUMAH.filter(function(p){return p[0]==="lain"||!RUMAH.some(function(r){return r.jenis===p[0]})}).map(function(p){return'<option value="'+p[0]+'">'+p[1]+'</option>'}).join("")+'</select></label>'
