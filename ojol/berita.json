@@ -1,7 +1,24 @@
 {
- "w": "2026-11-18T10:32:42Z",
+ "w": "2026-11-18T11:32:35Z",
  "dari": "Kroog",
  "berita": [
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-18T09:30:00Z",
+   "media": 1,
+   "judul": {
+    "id": "BPBD Kaltim ingatkan warga waspada banjir pada peralihan musim",
+    "en": "BPBD Kaltim ingatkan warga waspada banjir pada peralihan musim"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "ANTARA News Kalimantan Timur - Berita Terkini Kalimantan Timur",
+    "url": "https://kaltim.antaranews.com/berita/271611/bpbd-kaltim-ingatkan-warga-waspada-banjir-pada-peralihan-musim"
+   }
+  },
   {
    "jenis": "berita",
    "waktu": "2026-11-18T06:44:25Z",
@@ -51,193 +68,6 @@
    "sumber": {
     "nama": "Radar Sumbar",
     "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOcnVxQ09jSjlITWdCY2hqc2ZaNTVWWm1JMzlaRFA5dkFZakktSDVVQ005ejFQc1N6RHJEMTlwdjFPX0wwX0FhaEtWdm9ST1J2RmtFbUVtMW1NdjBBTk5xUGZPX1FVZkZJU2hQZHFBbEc0TVFaaUdpQzlEMnFfb1h2eFF2bEZ5ekZlOFkzSTRDSWQ1RFpXVDY5bXpabTBzYVVwZEZvVXd5UFdybE9xUTNFYjNaLXVvY0F2QXdEMQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-17T16:57:11Z",
-   "media": 4,
-   "judul": {
-    "id": "Kapolda Sulut Ngopi Bareng Ojol di Kedai Sedjak, Sapa dan Serap Aspirasi Masyarakat Manado",
-    "en": "Kapolda Sulut Ngopi Bareng Ojol di Kedai Sedjak, Sapa dan Serap Aspirasi Masyarakat Manado"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Cahaya Siang",
-    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQdzl3bFV1dDk5aE9MdzJWUVpob2o0Nm9abHZkN2syYXJZbGFiUlE4QllfbkN4T1gxd0V6ZlVtNGJuSi11U3RNQXhsTGtKVlBCV0ltaFVjRk4zNlJob1RQal9pNWJadDJPVmpsdzNRaVBRTFE1Y3JBRjBaTkhSX0dvMmpDaDkwa1ppbWxzendvUjh1MnJpeTF6bVJLV2NDaHJpMDFrVDVXUmdzLXNrd1pVRHFEc9IBuAFBVV95cUxQay1fQXlPQ0VlM2FBN19GV0g2OV9LTkhjZ29QOVNHQTRlZ1N6WkNqNmlaN1I4Q2pPM1FzOExNZmZGMm93Qmp4X1pyb2dhZnp2YjVHeHUtcjMxQnlneGNnMDZMX0FfWXRmc1BlYU9NTnpIUGozcmxYY1BmTXNjRTBRQlJWNXNJNHJ2NjZreEJFVWhKc2VPVV8yUEJVZ1hHblE3YmhYWnNHRTBWWk5lRzU4cG5QRXVOcjRy?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-18T06:39:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Sopir Ojol Diduga Jadi Korban Begal di Cikampek saat Subuh",
-    "en": "Sopir Ojol Diduga Jadi Korban Begal di Cikampek saat Subuh"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "NTVNews.id",
-    "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNVm40SlY3Wmc3Nmo3M0NPQWhzMHNEUmZBQms2djNoOHBPQVpHY1NxbS1QS0hyekNST09XcjRrSTUxZW9kMGdwOVdLMzVtS1VTb0pxYmhrMWxhcTJIbElQNUdJaWJYOHMtQWIwZU0wbWJLNVFlWThqZ2NJOGtkV2dnRnNLZDBYYnBLNE5MZVVHMWtyeEVRNDVQcko5cw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-18T06:37:28Z",
-   "media": 1,
-   "judul": {
-    "id": "Kapolres Metro Jakarta Utara Berbagi Sembako dengan Komunitas Ojol Koja, Pererat Kemitraan Jaga Kamtibmas",
-    "en": "Kapolres Metro Jakarta Utara Berbagi Sembako dengan Komunitas Ojol Koja, Pererat Kemitraan Jaga Kamtibmas"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Tribratanews Polda Metro Jaya",
-    "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNOHNJTHZsMVJpMTNRSk9yMm5LUURpZHVlS3BsOXBWMnh3V0lCeHRES3h0YlExYVBZNFBUVXZ4LWlFaEZUdVJ2V29SQWZhYTlmRzhIYmQ3bW9SUEJyTzFMVDVpYlk1aXJlb2pBWUNzVEw2ajJMaThkb1lJMGp1eVM4OEd1WlRPdktFRkFGYTh0SXdaQWtaTU5vMkdEYWQwTnhxNTBRT0IwUWtnWnRUMnR4NDBKbTJpUUVIWS0zN1dFN2l6QXRJUWpuY216NEdodUZ1LXdLVk54dUc5aGhR?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-18T06:11:07Z",
-   "media": 1,
-   "judul": {
-    "id": "Madura Terpopuler: Sosok Bripda Avriliza hingga Adistiyan Sempat Order Ojol ke Terminal Bungurasih",
-    "en": "Madura Terpopuler: Sosok Bripda Avriliza hingga Adistiyan Sempat Order Ojol ke Terminal Bungurasih"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Tribunmadura.com",
-    "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPYW02NmtwQzJlc3V3c2twZ3RCc3F4U3QwcHVmd1lKUWtJRDNTb1lsNk9JelhuNGp3UDM1MDJ2Q0g3dDMwR0ltVU1wQ09yREdZZzl6VWc2M1Jwei1pd2liVE9mdDlYcllsNThpa0xqTmpFZnJRTnlUOUxqSDVuNnE3TkxrblFtWHBwcE9aSkFkb1N2SXNhYXhjRWZFN1FielExbGhOLXNkV1UwZ0tqQmhUbUZRTzFwdGxzRS1lM0liaE9aQUtDRzhxM0xBeTFJRTd2a21OR0c5YU0?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-18T05:40:14Z",
-   "media": 1,
-   "judul": {
-    "id": "Potongan 8 Persen Hilangkan Subsidi Promo, Ekonom sebut Pendapatan Ojol Bisa Tergerus",
-    "en": "Potongan 8 Persen Hilangkan Subsidi Promo, Ekonom sebut Pendapatan Ojol Bisa Tergerus"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Jawa Pos",
-    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOZEx5NnlDLWswam5wMWRwLTN3b0V5d240UVdvOVJLbVdOVEg4UDFJcm42enBKcTVKQzhaN2hnTjg0VzJXYTFscXVMRGtIMko5MHNpUktKekZtZUhRVWdORTBLdUFEZHFDemU0cXo2VTBrMGdfeDFQbG5Vb2tpU3I2S2dXMDVZcUhKWDJDMVlXQVpCRXJZOUdpSzE0cWZZYmFiOFpXRy14ZGlNcWRuVTdyRXlQemxnOTVtRU5UcFloRmtIVTJrc1E?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-18T05:22:02Z",
-   "media": 1,
-   "judul": {
-    "id": "Audiensi dengan GoTo, Kakorlantas Polri Dorong Kemitraan Strategis dengan Ojol",
-    "en": "Audiensi dengan GoTo, Kakorlantas Polri Dorong Kemitraan Strategis dengan Ojol"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Korlantas Polri",
-    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPRGJ1QWpoX2ZESzdMcTJ1TEVpSnhQREJ0VTJodE5YWG5kY2ppSWlwSFJXdWZZNWIzaHJwXy1LRlZkLXFEYkY0bHhwcEgtSFFPYmJvNnJZb0pyYkh3bXlRN1AxTVNyUzFZa2o3bmhQVnlJMng4RXp4TE5BTHZrNzFyVWFIZXlYS2RQVExqeHctZTlhZ1NLZTdQSlRrRnNhUVVfY0dYMkxUc3B0QXhab2JhT0lUNGVNVTI5LXhv?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-18T04:37:26Z",
-   "media": 1,
-   "judul": {
-    "id": "Rehabilitasi Taman Bangkatan Capai 95 Persen, Siap Jadi Ruang Publik Ramah Warga dan Pengemudi Ojol",
-    "en": "Rehabilitasi Taman Bangkatan Capai 95 Persen, Siap Jadi Ruang Publik Ramah Warga dan Pengemudi Ojol"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Waspada.id",
-    "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPU3NOMHNrdUhWa1BGMHlnaGVSdWJQcFNfSnhyMFlPY1dxN2hEeXNVOHoxN2hZOVN4OFVCOXBCbHZlNzNuTWh6TVhvZ3QxUVdyaUdiQkFla1RYa0ZUZklTOHlER2Y5aTN5bjViWGE4aWtTcUxsZjVlS2VMSjFzOXhya1BXaWNYb0lVTlQ3MUJkUWZBcU1UVmlSbXBDR1dXWHhtZU1OLTh3QnRFOXhiTnkyMktQZy1BXzZSVDVXTUFXd0Z0Y25mTkNR?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-18T04:21:08Z",
-   "media": 1,
-   "judul": {
-    "id": "Edi Purwanto Soroti Potongan Aplikator dalam Skema Bagi Hasil Ojol 8 Persen",
-    "en": "Edi Purwanto Soroti Potongan Aplikator dalam Skema Bagi Hasil Ojol 8 Persen"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "VISI.NEWS",
-    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQeGx1VHNWM21yNEx3bzBodEI5NHFwZXByeW9oUW5zX1NYbm1VWnNnaHl3elJQNXAxREg1UllLRUtYQTAzQ3NWbnpWSkY2dUdHV2hZNXFTVU5VTGpTMU1mYmtBOC1CSXFETkRXalZHX3Y2OC1ycVdqd3JFRHVxVWhvWXNDd2hFZUNGLUhBMUxORzJVdW9NdWtJQkdMazkyQQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-18T04:20:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Pengemudi Ojol Peras Pengendara Lain dengan Modus Pura-Pura Ditabrak",
-    "en": "Pengemudi Ojol Peras Pengendara Lain dengan Modus Pura-Pura Ditabrak"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Kompas.tv",
-    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQSkpiYUdxV0JvVWdGNkhXcFhTM0pZMEtMbDhSREdZd29PM0FXb0s3cTBqZEZYX0FzUkJrYXIyUzJEZUJHdTZ1a3BPQlZwNVNINk1mUFBwRTlFdFYzelN6MUpSbEo3UmZab2JraW1GNHQ0MFFKNldFOTNSOFd4RmNRXzRDZ1BCaHhHVVFoaFJ0VmJnTjBJVTNVUllaTkxHUVZjM3g3RFpraDN2MU1MSlduMzFDd3lEUXPSAbwBQVVfeXFMUDY5dzY5R3B3OWxrTkFIaURxZ3pIaFRmMGw2ajVrM0dCVDU2enBNMTVkQ3BwUWh6a0ZKUUdmUWtjTkh5N3pmTGw1VEhJM19JVmZnZmdBWUpuemx4dk0zNkxCMHR4cXpkamRidFZnbk1Xa0wzbDRXYzI1MjluQkNIVy16WTU3UUpHZmR3VjA5U1RRc2gtQjdrNEg2Y3E5Wkp6MnpfdVFYdmJXTk1wcDRvdlJLeDROUDNHaS1vWnM?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-18T04:17:34Z",
-   "media": 1,
-   "judul": {
-    "id": "Ojol hingga Pedagang Dapat Diskon 50% Iuran BPJS Ketenagakerjaan",
-    "en": "Ojol hingga Pedagang Dapat Diskon 50% Iuran BPJS Ketenagakerjaan"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Metro Pekalongan",
-    "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOUXRhRXhuanJzb3FJc1Z5YlFZczByUS1MMmhaU01oVk83RGVxYWFMWTlpV2twZjZOSTNZNjd3emk4XzJsZm90dzZHLWRxSTJnWEZyOUNTeTBtNGJFZ19OSkpwN20tOG1Ma2RkeE5nU0tOUXJMWFJkLUR6TkJBeEVSUDNWb2NVU0tuVzE2dWdKaUsyUkdPcER0TWdzdGNvdTdTdlBRN1BGbWlxTklCN3BJcHlVMjVscU1BXy1NNVNHWXQ3R3dhbWZ3U9IByAFBVV95cUxOUXRhRXhuanJzb3FJc1Z5YlFZczByUS1MMmhaU01oVk83RGVxYWFMWTlpV2twZjZOSTNZNjd3emk4XzJsZm90dzZHLWRxSTJnWEZyOUNTeTBtNGJFZ19OSkpwN20tOG1Ma2RkeE5nU0tOUXJMWFJkLUR6TkJBeEVSUDNWb2NVU0tuVzE2dWdKaUsyUkdPcER0TWdzdGNvdTdTdlBRN1BGbWlxTklCN3BJcHlVMjVscU1BXy1NNVNHWXQ3R3dhbWZ3Uw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-18T04:13:04Z",
-   "media": 1,
-   "judul": {
-    "id": "Krisis Iklim Gerus Pendapatan Ojol Jabodetabek, Siapa Bertanggung Jawab?",
-    "en": "Krisis Iklim Gerus Pendapatan Ojol Jabodetabek, Siapa Bertanggung Jawab?"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Yoursay.id",
-    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQaXRQeFBGUUZHR1lTX3R6STMzdlBuYklxdlpiUDM5a1NiLUM2TmY4YW1ZWF9mejFpcHoyOFBlWjlFM2tUTXo5OFNRWFEtSzRBY1NPSFQ3X1FrWHdBc1hFRERQUUVYSXg1cHBmOVFGS1FCU3lJREU3NlR6M2cyNlR3Ujd5WnFkZlRXYjFxYnBQdWZ0RHIzRldLMUlhUjdFeDFHbm1pRDBlWVE0Slgza093VnlNX1VXTkxaQnlN0gHAAUFVX3lxTE9MSUg5QmVtb0w0d1pxU00xUy1YVW84aGxGZFdJVVhxcUVHdmZUQWh4SHd2RE5WOWt1R3F0SVVJX2pjNDYxSXg0dlJ1dWtuNTRlQWlKMmRwQ2VXeVpOMHA2dzlqaWNoZ0JLUFJlYmUtYjRzWEQ4aW1tUkJEXzJPbV9SVlhsdW5RYXF4TjlnQmhBT05UcWJNbTduNTRqZkV2T0lEcFBWSGVsZmdlTkV1azBMRkl0MlZaNTAyOWV5a1VTNA?oc=5"
    }
   }
  ]
