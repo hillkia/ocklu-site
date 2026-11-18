@@ -1,5 +1,5 @@
 {
- "w": "2026-11-18T01:48:48Z",
+ "w": "2026-11-18T01:59:50Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -17,6 +17,23 @@
    "sumber": {
     "nama": "Cahaya Siang",
     "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQdzl3bFV1dDk5aE9MdzJWUVpob2o0Nm9abHZkN2syYXJZbGFiUlE4QllfbkN4T1gxd0V6ZlVtNGJuSi11U3RNQXhsTGtKVlBCV0ltaFVjRk4zNlJob1RQal9pNWJadDJPVmpsdzNRaVBRTFE1Y3JBRjBaTkhSX0dvMmpDaDkwa1ppbWxzendvUjh1MnJpeTF6bVJLV2NDaHJpMDFrVDVXUmdzLXNrd1pVRHFEc9IBuAFBVV95cUxQay1fQXlPQ0VlM2FBN19GV0g2OV9LTkhjZ29QOVNHQTRlZ1N6WkNqNmlaN1I4Q2pPM1FzOExNZmZGMm93Qmp4X1pyb2dhZnp2YjVHeHUtcjMxQnlneGNnMDZMX0FfWXRmc1BlYU9NTnpIUGozcmxYY1BmTXNjRTBRQlJWNXNJNHJ2NjZreEJFVWhKc2VPVV8yUEJVZ1hHblE3YmhYWnNHRTBWWk5lRzU4cG5QRXVOcjRy?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-18T00:40:07Z",
+   "media": 1,
+   "judul": {
+    "id": "Daftar SPBU Shell yang Sudah Jual Bensin",
+    "en": "Daftar SPBU Shell yang Sudah Jual Bensin"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "detikOto",
+    "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPM3VseFNJbFBnV1FheVpZanVvc0dILW9ack8zbDgweFUwMWdFdm9HV2ZObFY4UEhsQXc0RkF4b2dFakt3VGFKcFlpa1RWd3pMUDhXTkNIZ1hGbnQ4N29XYnU5Z3VBbDJVb0VDRXNtX1RyWm5adG15V1FnVGtScTEtQjZUdk1Qd9IBiwFBVV95cUxQaXpIWnBmZlIxZHZ2TkJ6QjZsVG41MmZSZnA2UlVMRmhJNkdwU1Q3QlZZN0F3eHk0VmRENXRYY1JCTG9QQnN0THBTREVfb0ExREMzTW1WR0hNZ1hoajcxS1QtTW5sUWdVZzQ4Y0oxdFpvLVFSTnhlMFFjUFdFSVlMREhfQXIxWGtLb3dV?oc=5"
    }
   },
   {
@@ -119,40 +136,6 @@
    "sumber": {
     "nama": "Website Resmi Polri",
     "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQX1h2ZVF2Vmp6YmhTT21tdHRTVDgzWnhKd2FYajlDMjRtRWhfbTNDdzNWTWktQ2hEc09mS3lQLWpQZlR4MDRhUHk3SFFteG9yaTdGak9EdnR1aTQ2LVNTTTExY1FaZDROOUtqeUozanVFRzY0LWJzYmlkRnd5OXhXb0ZSY1dfeldvczk4cXhBRi00QlFLVWdXcTV1X1JROTF2Y3Qtb01wcjZ5dzkwWC1CclB5UDBXQzdvMkJ0b3dfQnlidjdWdXZMbElsUF8?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-17T15:52:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Ojol Jadi Mitra Polisi, Garis Depan Tertib Lalu – Lintas",
-    "en": "Ojol Jadi Mitra Polisi, Garis Depan Tertib Lalu – Lintas"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "BACAMALANG.COM -",
-    "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNVXY3REMtTW1HdUhSSnl1aFJCRGRUSFBBRDlIVExaUmJIRFVVQUFVSjd3M0FLX0FOeGVZQ2ZvbzVILUNpTUFHLUJKLVVBMlhXNzF6WUhOOTh3OTNfYjl4LVRKR2NpV3V0dUNGclhLVGlac0NrV1lYb0cxMUQyOHRiZm9MQQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-17T15:29:43Z",
-   "media": 1,
-   "judul": {
-    "id": "Hilangnya Subsidi Promo Penumpang, Pendapatan Jutaan Pelanggan Ojol Terancam Stagnan",
-    "en": "Hilangnya Subsidi Promo Penumpang, Pendapatan Jutaan Pelanggan Ojol Terancam Stagnan"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Koma.id",
-    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQMXRsWXJINjgtV3FxV0NNWWJXLUJHRHlMdVMzVkMxZy1HR2c1WmhzcE9raFdCcVkzTlF1WjZlVkFDLVJQWnY5SF9iSF9keUc5ZUhSZW1kOV9STUxEdzhqVW5mQVMyc0JpcEt4dk5XRWZHX0VtUTJSUzEzMS1SZDJmcUJ3Mi1USHBYbEF4WFdCbWFBZFdTbWc1VmV5eGR2bTRoZ2c?oc=5"
    }
   }
  ]
