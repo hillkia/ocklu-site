@@ -1,5 +1,5 @@
 {
- "w": "2026-11-18T11:38:09Z",
+ "w": "2026-11-18T11:54:47Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -21,8 +21,59 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-18T06:44:25Z",
+   "waktu": "2026-11-18T09:18:06Z",
+   "media": 3,
+   "judul": {
+    "id": "Kapolda Sumut Ajak Komunitas Ojol KOJIRA Bersinergi Jaga Kamtibmas dan Tertib Berlalu Lintas",
+    "en": "Kapolda Sumut Ajak Komunitas Ojol KOJIRA Bersinergi Jaga Kamtibmas dan Tertib Berlalu Lintas"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Kabar Reskrim",
+    "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxQZGFLdjhpMk1OTUh2QTVLa05FQ3E4ZXZ1U1BuRVQ1elBMcl9ORElfXy1JLVV6TVBEdWpsU1Fwdldrc2xwSXg4ZWN6ZElWMmxMMlJ4ZmxRUmZjajRXbTdydEFVTFVZanJfdk1uR1FkQlNKcnBLSFBMNkRYek5rUEpMQVhnNnZrMnNkR0J0TDRqcGh6OGtYMDVHTzMxcmU0YkM1cFRXdkY4cnJSaFJfMEh2TzF1R0lna2V4TEM1aFVIclJqZV9fMGQtQlNmSVU4ZTJDQkE1bzFVckdfX21ZR2FrTWtKMl8zU2cyZVE?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-18T08:20:08Z",
+   "media": 3,
+   "judul": {
+    "id": "Batas komisi ojol 8 persen picu risiko penurunan pendapatan pengemudi di Indonesia",
+    "en": "Batas komisi ojol 8 persen picu risiko penurunan pendapatan pengemudi di Indonesia"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "BeritaSatu.com",
+    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOZWQxLURmZkZiSndVUC12NVUyc0x5NGNqR1pvS05XM2NodFRUVmRiX0ttNzc3d3JLN3RiWHNLWWxNWDVLREV1M0lFZjA3VjlRenl3YmhTWHJMeWE3Zy1JRGRPYWhoLVJBSHhTTmVvVXUtNXRsT1BjbGl5RFFpT3F6X2d2TVNfTXI5OGJsRDRSZWdhZmF3ZmxFc3RjaWY2U1VkalZheQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-18T11:37:21Z",
    "media": 2,
+   "judul": {
+    "id": "Kemenag Jatim Didukung FOZ dan AHM Beri Layanan Gratis untuk 100 Pengemudi Ojol",
+    "en": "Kemenag Jatim Didukung FOZ dan AHM Beri Layanan Gratis untuk 100 Pengemudi Ojol"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Lentera.co",
+    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQT1BWQ0E1eS1LVTNTWGhhOGtQOHpvRm5uSk9YZ25URFFaWUFjSXlaN2dBX2xPNzVOUWNhMkYxclYwTUhpbVdSNW9iX2xrQnllYnYtZHcwV1dabkJ4VVRSc1lZRjBDWXFXb1NkYVNLVmVOZExfSndNc0RrTGNmWkJwOHA5ZlQ5QUdxTmc1cnNQbXVOc0hueTlHMmp4U0kxUTVvWTRyM0NVbC01Nk5rb1BhWmFmVXlDZw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-18T06:44:25Z",
+   "media": 3,
    "judul": {
     "id": "Polisi Bersama Masyarakat, Kapolda Jambi Rajut Kebersamaan dengan Komunitas Ojol",
     "en": "Polisi Bersama Masyarakat, Kapolda Jambi Rajut Kebersamaan dengan Komunitas Ojol"
@@ -34,6 +85,193 @@
    "sumber": {
     "nama": "Sekato Jambi",
     "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQV2NocGJGUlpDSjgzZlc3U3l2LUF6X0NQY2RvVGQyVnNYRi01WVZmR28tRXlxOGMxQUlfSGtBVXl6ZTF5MHR1YUhLb3lSZTdnRmNiRnlId0EwdVlHRzFwd2wyaDNpMGRUQlBnMFRsejN1MWRYU1M5VVlVNHpUMk1aUnQtWlptcnpEZmRBSnpqbkE2WVV6dGlYb2lwb1V6azJOX2FpVTlzdU5NRnVwRGY3ZVd4cWdwSENpcXQ4SktVSHd1bWQ1?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-18T09:48:00Z",
+   "media": 2,
+   "judul": {
+    "id": "Audiensi dengan GoTo, Kakorlantas Polri Dorong Kemitraan Strategis dengan Ojol",
+    "en": "Audiensi dengan GoTo, Kakorlantas Polri Dorong Kemitraan Strategis dengan Ojol"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "RRI.co.id",
+    "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQUlZQSVRkdnVDbUFXbnZwYUxqRzhlbnpicU9xZmlfRzB3dEJ5LXZITU4yS1ZPeG9yN2ktUjRLd09SQy1QOHR1b3JIMjI5TXB1OXo1YVhaZFNraV8wVVE0RUpBLXN0QnlWQWV2b2MyTkhkQXZOeTNTcmJac2tLY29ndExUWFlhZHF2bXY1U2prNUxMSGVQNzZhSVZ5NGFlSFVPbkVvZVQta0hGMWZrZzJscnFR?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-18T08:47:16Z",
+   "media": 2,
+   "judul": {
+    "id": "Edi Purwanto Soroti Potongan Aplikator dalam Skema Bagi Hasil Ojol 8 Persen",
+    "en": "Edi Purwanto Soroti Potongan Aplikator dalam Skema Bagi Hasil Ojol 8 Persen"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Telusur",
+    "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNdDFCelRQaXRycUd3aHlxdlJiQ1l2NkdQSkJ3aVhPdlJ2OWNUakptZFc3aEZhcnlWVDVTcGNSZUU4UWd3T3h5ZnRMNHc1c01jTXM4ZktPaXdQWWI2bGxFTF8yV3NzWkRhSE8wQkVTcWtqZE5nUkk0RzFWZU5SQTJ6OGNNYlBzOXFUN044MzZRVWE1dHYyZU9wd0lvTDRlUTc4WUx2ZUlKaXpEU2pzd3htQWVvaV9ieFBDNklBbkxFbWdwQzZfeS05ZnUxN1NURGc?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-18T08:28:08Z",
+   "media": 2,
+   "judul": {
+    "id": "Sambangi Komunitas Ojol, Satlantas Polres Kukar Ajak Pengemudi Wujudkan Lalu Lintas Aman dan Tertib",
+    "en": "Sambangi Komunitas Ojol, Satlantas Polres Kukar Ajak Pengemudi Wujudkan Lalu Lintas Aman dan Tertib"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Target Hukum",
+    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQR3RXcTJTWmI0cUxRNG5PSWpqSGpPeUhPYlZNUXg0Njhfc0NZRHpUX3V5RWMzUnhJV3JmMjQ0OXktVUs0QU1EM19XeTlnQkZXLVZReWZQNzlxS0FMRzA4c1N0aGZucFF6V3dEdFVPWnV1Sk5HOFctM2xpMHBmWVFjYjhaR0FZTC1EdEJ4ZlhOR0hLSTd2eElnR2RBUkZlN2NLQl9jdGZOVno2NXY0V1JSOUNyNUFpMERYMXJmTFpMQ3k?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-18T07:59:00Z",
+   "media": 2,
+   "judul": {
+    "id": "Pengemudi Ojol Peras Pengendara Lain dengan Modus Pura-Pura Ditabrak",
+    "en": "Pengemudi Ojol Peras Pengendara Lain dengan Modus Pura-Pura Ditabrak"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "SinPo.id",
+    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1xUkw0OHByUHFhRjN4dHVKOXlWLWJXNGwtQWR4amtsVXZEX0hJOU1ic2NrbEJLWUNYdWZSMm5QX2lIOC1rVnJENXBvODVaVmNfcFdiZVhGakNCZFlibHhIVDE4TUYxX1RGczhaQXJqNTh6VjhSMWREY1lvbF9tVXc?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-18T11:41:50Z",
+   "media": 1,
+   "judul": {
+    "id": "Pertamina Serahkan Dua Unit Motor kepada Ojol pada Program berkah MyPertamina",
+    "en": "Pertamina Serahkan Dua Unit Motor kepada Ojol pada Program berkah MyPertamina"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Kalbar Time",
+    "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPeG1PVnBCdkhXdXNydjctemlWUG10Nm5XcEZ2RVV0SjNlemotUzlaZTd5VWdyM2V4UGQ5clZYcm5CQ3JCRDZHdW1IY1VRMDhTeUhYZllhS2NKT0pHdE50V1M0Y2w5cUVWaDRrWkc0QzRvNWVrdm1aTjQ0QlNWUEVudmFPQlFDLW0yQVlib2w2OVVhb3pGRlBJNW9odUhFOWx1Q3hYbHE5U2s4dkkxU2d4dmczeElzZU9qM3JNMUxBZGwyQVlkaHp4T1ROMA?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-18T11:38:57Z",
+   "media": 1,
+   "judul": {
+    "id": "Mori Hanafi Dorong Kejelasan Aturan Hukum Skema Pembagian 8 Persen Ojol",
+    "en": "Mori Hanafi Dorong Kejelasan Aturan Hukum Skema Pembagian 8 Persen Ojol"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Telusur",
+    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQZHJQenBSYVd0SmpMc0p4OEpfbXl4U2lWUmlGZHBtZWdLdURSdi1ScWJXbjdFWmRHR21INGpPYVM4QlZSdVdSMFFZYTNJOWtLcTdzeE5GYzcxWHFoalJhMTNXTEhzSll6TEpWU25Sajg2Y1BjLS1CQ3hBYW52dXZiM0h6aHlRdUk2QnFzVFlKLXJ0MUljQWI3REVtVDc1cWFHSjVYQg?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-18T11:37:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Catat Rekor live TikTok 700 ribu, Elly Arsy Gelar Berbagi untuk Ojol",
+    "en": "Catat Rekor live TikTok 700 ribu, Elly Arsy Gelar Berbagi untuk Ojol"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Kompasiana.com",
+    "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPU3NwVjg2Ty1XeS1IWG5GampvRy1JaC1peWE1bDJuRGxzSmJiRXlaYXJoM3FYQkg0SUtBcEZwVDN1UVVfSjhaMUtHYXNxWk5EbDdoWGJybXBsN2d4ZXY3ODRQME04aTZMUmpqQ0UxSU81QWcwYzlXQ2RSaldBV2E4eTBlY05wby1YVk5rWnFqRHdXNFRGRGh6QUZfY0UyUFk3ZXJMOThpN2VRMG1hLXRkalo4eTV1bWFoYWxiNFh4aFVmMWhSOXln?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-18T11:31:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Kapolsek Pamanukan Sambut Rombongan Ojol Jateng Menuju Jakarta",
+    "en": "Kapolsek Pamanukan Sambut Rombongan Ojol Jateng Menuju Jakarta"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Sambar.id",
+    "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9CQ0U1ZGF1emhNVkRLaWtFOEd0OTRrM3dRY0VTMW9XLWw0eVpSSDhRbzFZT0FRSW5SeE4wdU9tRDlWYnVFSHpzQjVHcHg0RU80NHo5bG1RZVZsc3VtTERlaThULUtsWnFIUDU2Nm1yazMyd1MzU2FEM2Nn?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-18T11:24:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Polsek Gayungan Kawal Keberangkatan 80 Massa Ojol Surabaya ke Jakarta",
+    "en": "Polsek Gayungan Kawal Keberangkatan 80 Massa Ojol Surabaya ke Jakarta"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Memorandum.co.id",
+    "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQVDNySkpvbktaTkdKNE9Id3V3Q1M1QkZTajc5cEJzUnF4alZvRkxpT3N3R3pSWU5haVNNYVQyVjh5aUJlVkRIOExHMlFnTWdjZTcyUUt4YlVKYmJDZm5lR2ttNURLRk1Ba2NwcTVENVhQMWlwUkR3T0lOMmJFU3p2UzJDRUhLc2ZsNVQwWnZmT2tpN2xVYVN4SGg4ZUVZa3JqR0J0TVBwRTBGN0c3NFM5YkMzMWw2NXdTaTQ1dFhPSTJkUE10MFhMdjB4Y9IBrgFBVV95cUxNckd3THhvQWVwZzZtakdSU2RITU16RTBEaXc2WXVfc3E4b29mY3hJZHJLTHh2QzdfQjVYZGs3N1A4REE4M25hUjNmT3RtN2tfLWxKSmVINkxjdnYtREF6bmdRUmRJaGQ4NGx4VG13VldibVNjQlhCT3NnaDBnOHVnNzRJUlJYRUhpOGx6YndfMUFiR0l5ZUFQb0pITTRBVWYtcDBuY0NyRlRJOVJOWUE?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-18T11:04:10Z",
+   "media": 1,
+   "judul": {
+    "id": "Ratusan Ojol Surabaya Manfaatkan Program Pemutihan Pajak Pemprov Jatim hingga November",
+    "en": "Ratusan Ojol Surabaya Manfaatkan Program Pemutihan Pajak Pemprov Jatim hingga November"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Surya.co.id",
+    "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQdF9wZnlmZFh1a0dpWDlndGNMSUZzREJrUWxtVUg5QXFkV1pWZkRrQ1l1YUU3WnJnaFJORWVSU0RraDBXUWpQV09ZdFhJdWk2UzJZUHNRdXVBWHN4VlJaQlBTbFI4Slk1eF9sR09Cd3o1WmxaU2xfRjI2ZjRXMUZudzV6RVpnOXdlV3o2VXVpb1lleVNXTjl5R3lyaVQ1LXJ4anhfUnpmbHk4amZ2U3dhX3piRXFtUHZHVzlJam96NWt6T0drdHVrUmMwN1lCVWZTc0xEQzZING4?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-18T10:50:12Z",
+   "media": 1,
+   "judul": {
+    "id": "Operasi Zebra Toba 2026, Polres Tapteng Bagi Helm dan Beras",
+    "en": "Operasi Zebra Toba 2026, Polres Tapteng Bagi Helm dan Beras"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "RRI.co.id",
+    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNR1dmVDlRODNSM2RoMldsOUgtZTNqcHVQU2RhQVFyTEdzOEoxcEVBWkplNlJVdDdlaUtIcnVsNXlza1hQem9xUm1DRUhzSlUzWTY0cnRhOE9lMVAtSUtGd0xMT1YzVXJZVzhDNDVoVzBCaU9fcjU1b0tNdlZuaUR4eGtKbnVYcHdFZnRXVWdOdmdXQnlaaV95eEFvVGFWRkVTZG5n?oc=5"
    }
   },
   {
@@ -55,6 +293,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-18T10:27:39Z",
+   "media": 1,
+   "judul": {
+    "id": "Ringankan Beban Pengemudi Ojol, Kemenag Jatim dan Honda Gratiskan Servis Motor hingga Ganti Oli",
+    "en": "Ringankan Beban Pengemudi Ojol, Kemenag Jatim dan Honda Gratiskan Servis Motor hingga Ganti Oli"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "SURYAKABAR.com",
+    "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNaHZEenlVMnduVVNjaGI2dVF6NmIyWS1Xc2EtZUUwTFlFMXMwOEFCYk4yWjVjQktRbGFVSFlfSG8xSVd3cXpxRGNRNlNqa08wTFJTcTRydmxkWTIzV09uel9Rb1Vqc3FzLUNQVjZqMzVBS3E0a0UyV3IzQUM3eTJlTHRMb2tmRFBVN0RXM0c1VFB3dlBLU3JxSkZaU19ZYmhoREpVcjBhMFpHd1pKdlkzY0pCdmF4eHM0dTFFTlNaUDJLMm1RaUU3Rg?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-18T04:01:59Z",
    "media": 2,
    "judul": {
@@ -68,6 +323,74 @@
    "sumber": {
     "nama": "Radar Sumbar",
     "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOcnVxQ09jSjlITWdCY2hqc2ZaNTVWWm1JMzlaRFA5dkFZakktSDVVQ005ejFQc1N6RHJEMTlwdjFPX0wwX0FhaEtWdm9ST1J2RmtFbUVtMW1NdjBBTk5xUGZPX1FVZkZJU2hQZHFBbEc0TVFaaUdpQzlEMnFfb1h2eFF2bEZ5ekZlOFkzSTRDSWQ1RFpXVDY5bXpabTBzYVVwZEZvVXd5UFdybE9xUTNFYjNaLXVvY0F2QXdEMQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-18T09:58:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Viral Video Pria Ngaku PNS Diduga Lecehkan Driver Ojol, Aksinya Jadi Sorotan",
+    "en": "Viral Video Pria Ngaku PNS Diduga Lecehkan Driver Ojol, Aksinya Jadi Sorotan"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "tvOneNews",
+    "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOV0dUMDctVW9pZlBOWjhJRTBpMW1OYkg1YU5LbC03bUdWOFpiSEhPWkQ1YU1XaEY4YkNxLTMwXzNWN1h0UlhqYmpzb3ZxM3dmdHNnSUxjN001RzlfWGxNeWx4UmRFblM3UVN3X0ZvZHplT2ZrX1RhV0pVNzhOTkRvNnY5bGRsSS1HdUpRdW5fdXZKUEV6U0JYTkpXV1NyY2NEaFJ1dVNLaDg0V1VINWFwR1hySUNnT3lyYkxjdjdCMzh1dVJCSmJn0gHHAUFVX3lxTE5XR1QwNy1Vb2lmUE5aOElFMGkxbU5iSDVhTktsLTdtR1Y4WmJISE9aRDVhTVdoRjhiQ3EtMzBfM1Y3WHRSWGpianNvdnEzd2Z0c2dJTGM3TTVHOV9YbE15bHhSZEVuUzdRU3dfRm9kemVPZmtfVGFXSlU3OE5ORG82djlsZGxJLUd1SlF1bl91dkpQRXpTQlhOSldXU3JjY0RoUnV1U0toODRXVUg1YXBHWHJJQ2dPeXJiTGN2N0IzOHV1UkJKYmc?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-18T09:53:22Z",
+   "media": 1,
+   "judul": {
+    "id": "Sederhana tetapi Bermakna, SM Rayakan Milad 114 Muhammadiyah Bersama Driver Ojol",
+    "en": "Sederhana tetapi Bermakna, SM Rayakan Milad 114 Muhammadiyah Bersama Driver Ojol"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Suara Muhammadiyah",
+    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPcFJsX0NnWE9pekFlc0ZETjRwMG9DY3hWcklmZFR3dWFRaFh1QzFsX0MyOEJJcDA1SW9HdXEzQzExUGZycjhCVEJtTmEwTDBIT3hvMlJkZWFjLVhkQ2poXzc1MFg0ZFFfUjVpMlVwT3BDSWMwM1hjVURNX2lBQzhIZXViZkI3RVN6M1B2czFzeUg0aUNqZGNHUkczZWVZQ0NBTUdWMHRHT1J0dFVTd1gzcnpoWQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-18T09:53:04Z",
+   "media": 1,
+   "judul": {
+    "id": "Korlantas Gandeng Ojol untuk Tingkatkan Keselamatan Berkendara",
+    "en": "Korlantas Gandeng Ojol untuk Tingkatkan Keselamatan Berkendara"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "ChatNews.id",
+    "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9mN0JvT2h2b0xxeDRKOTFkSXBhN1ZBakRBaEk1R1l6UWhmVkpnUGRwWWdkLV9zd1FnQUFLeUN5RGNnRjJaVkV3ajZidUd1TkRwRFU2ckNJMzN4ZEFkVzFlcnU4ZVlWTHM?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-18T09:42:46Z",
+   "media": 1,
+   "judul": {
+    "id": "Ojol di Surabaya Antusias Manfaatkan Pembebasan Pajak Kendaraan, Tunggakan Dibebaskan 100 Persen",
+    "en": "Ojol di Surabaya Antusias Manfaatkan Pembebasan Pajak Kendaraan, Tunggakan Dibebaskan 100 Persen"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Tribunjatim.com",
+    "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNNmwxU3lwT1ladW0ybHRmR3lsNGVQQk5pRkxVMkdaSEJkQW9WeEtjaUhiN2dGN0tuUXhlb01iNTNnMDZNQTFTTkVmTjlESzNNUzNMYmtIVUtnVFRKNGxXOHBZNkRiR1p1QXNQVTBsaWJ5TEx5ZXJWc2Z6aVFlQVh6bF9zYXluSU1Vakt3QUd3YWF0RVNCTzNUSW1VOElKc2FTRzJVbk9aa0tYcGdKclpWdVFVR0Zxb3NydkVnYm9ZdGFoSUJOdzRoUUhFaVh2VnJjVnRta3p2WQ?oc=5"
    }
   }
  ]
