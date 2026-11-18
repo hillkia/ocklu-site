@@ -1,5 +1,5 @@
 {
- "w": "2026-11-18T12:45:12Z",
+ "w": "2026-11-18T12:56:16Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -51,6 +51,23 @@
    "sumber": {
     "nama": "BeritaSatu.com",
     "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOZWQxLURmZkZiSndVUC12NVUyc0x5NGNqR1pvS05XM2NodFRUVmRiX0ttNzc3d3JLN3RiWHNLWWxNWDVLREV1M0lFZjA3VjlRenl3YmhTWHJMeWE3Zy1JRGRPYWhoLVJBSHhTTmVvVXUtNXRsT1BjbGl5RFFpT3F6X2d2TVNfTXI5OGJsRDRSZWdhZmF3ZmxFc3RjaWY2U1VkalZheQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-18T12:14:07Z",
+   "media": 2,
+   "judul": {
+    "id": "KPK Dalami Dugaan Permainan Tarif Cukai PT Djarum, Perusahaan Afiliasi Ikut Diperiksa",
+    "en": "KPK Dalami Dugaan Permainan Tarif Cukai PT Djarum, Perusahaan Afiliasi Ikut Diperiksa"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "mantranews",
+    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNaGVLQkdfZjlFUmdKaUotc1JkRVhEeko3OGZrWk5xWGFMU1BFUERDQ3dzeFRvX0J5MEs5eE1HN2t5bTFBY25ieUdMcDRGOGFoSXd3cmdEcjNrZTdiRV9UOENfZDV6dndLNXBNOEw0SjFZcXNtU1BHU3lsU0FRN25VN3dPUjJ5TnAwOHRNanFnWV9lYlBidnk2M0hFNWxtZ050R2hhOFUxZ3JQWEdmdHNWc0EzYktndw?oc=5"
    }
   },
   {
@@ -208,6 +225,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-18T11:36:44Z",
+   "media": 1,
+   "judul": {
+    "id": "Usai Caplok BP, APR Kini Ambil Alih SPBU VIVO",
+    "en": "Usai Caplok BP, APR Kini Ambil Alih SPBU VIVO"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "detikFinance",
+    "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPQnhwbUVtSFAxLXVvVVNsMUpuOWl4d29SRVBKbUJiNHJ6M2JXN2F3eTloZUIwNGg0b2RCZjlhbjFSY25VcFkwZG53Y21iWWtMX2d4encxV00zcFFXQ3JKQ01oUGY2cUNta1hUblhwN1g3YXJXZkxxaDBLNTEtVDRLQURVNy1oSkZ2NVl1U011bnrSAZYBQVVfeXFMT2FZMmFGallpUjc1SW1ueV8zVmV2dDRpRGZIZzA2ckdkeG1MMTFZNVc4bHhlcUViVWxmLXNLeDB1MnRGR0Rfb21KZURZemJiVlhNaE1OaXBhRGxsWXdhOFNYS2lpQk9WSHNLZlRtZXhfVGFHUElZa0IyT1lkTzNPNE1LX2FvOFBRakFTR2wtazRYX3BFejVB?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-18T11:31:00Z",
    "media": 1,
    "judul": {
@@ -306,23 +340,6 @@
    "sumber": {
     "nama": "SURYAKABAR.com",
     "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNaHZEenlVMnduVVNjaGI2dVF6NmIyWS1Xc2EtZUUwTFlFMXMwOEFCYk4yWjVjQktRbGFVSFlfSG8xSVd3cXpxRGNRNlNqa08wTFJTcTRydmxkWTIzV09uel9Rb1Vqc3FzLUNQVjZqMzVBS3E0a0UyV3IzQUM3eTJlTHRMb2tmRFBVN0RXM0c1VFB3dlBLU3JxSkZaU19ZYmhoREpVcjBhMFpHd1pKdlkzY0pCdmF4eHM0dTFFTlNaUDJLMm1RaUU3Rg?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-18T04:01:59Z",
-   "media": 2,
-   "judul": {
-    "id": "Driver Ojol di Padang Ditangkap, Diduga Curi Motor Mahasiswa di Parkiran Kampus",
-    "en": "Driver Ojol di Padang Ditangkap, Diduga Curi Motor Mahasiswa di Parkiran Kampus"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Radar Sumbar",
-    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOcnVxQ09jSjlITWdCY2hqc2ZaNTVWWm1JMzlaRFA5dkFZakktSDVVQ005ejFQc1N6RHJEMTlwdjFPX0wwX0FhaEtWdm9ST1J2RmtFbUVtMW1NdjBBTk5xUGZPX1FVZkZJU2hQZHFBbEc0TVFaaUdpQzlEMnFfb1h2eFF2bEZ5ekZlOFkzSTRDSWQ1RFpXVDY5bXpabTBzYVVwZEZvVXd5UFdybE9xUTNFYjNaLXVvY0F2QXdEMQ?oc=5"
    }
   }
  ]
