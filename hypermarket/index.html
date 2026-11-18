@@ -1328,8 +1328,10 @@ fetch(API+"?r=daftar_turnamen",{method:"POST",headers:{"Content-Type":"applicati
 <script>document.querySelectorAll(".kgerak").forEach(function(b){b.addEventListener("click",function(){b.classList.remove("gerak");void b.offsetWidth;b.classList.add("gerak")});b.addEventListener("animationend",function(e){if(e.animationName!=="kjarvisMelayang")b.classList.remove("gerak")})});</script>
 <script>
 // TAB AGEN JUAL (owner 18 Nov, pilihan A: lihat saja, data lengkap)
+var AJ_API="https://njghzieuuopukuagrswu.supabase.co/functions/v1/hypermarket";
+function ajH(){var h={"content-type":"application/json"};try{var k=localStorage.getItem("pj_kunci");if(k)h["x-perangkat"]=k;if(window.HM&&window.HM.owner&&window.HM.owner())h["x-owner"]=window.HM.pin()}catch(e){}return h}
 function muatAgenJual(){var I=document.getElementById("ajIsi");if(!I)return;
-  fetch(API+"?r=agen_jual",{headers:hOw(),cache:"no-store"}).then(function(r){return r.json()}).then(function(d){
+  fetch(AJ_API+"?r=agen_jual",{headers:ajH(),cache:"no-store"}).then(function(r){return r.json()}).then(function(d){
     if(d.galat){I.textContent=d.galat;return}
     var rp=function(n){return n==null?"—":"Rp"+Math.round(+n).toLocaleString("id-ID")},us=function(n){return n==null?"—":"US$"+(+n).toFixed(2)},
         tg=function(t){return t?new Date(t).toLocaleString("id-ID",{day:"2-digit",month:"short",hour:"2-digit",minute:"2-digit"}):"—"},
