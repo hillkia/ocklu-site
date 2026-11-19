@@ -48,3 +48,4 @@ Allow: /
 Sitemap: https://ocklu.com/sitemap.xml
 
 Sitemap: https://ocklu.com/hypermarket/kebutuhan/sitemap.xml
+Sitemap: https://ocklu.com/niat/sitemap.xml
