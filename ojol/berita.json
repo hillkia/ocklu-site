@@ -1,5 +1,5 @@
 {
- "w": "2026-11-19T11:30:26Z",
+ "w": "2026-11-19T11:35:59Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -21,6 +21,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-19T11:14:00Z",
+   "media": 3,
+   "judul": {
+    "id": "Pimpinan DPR Terima Keluhan Ojol soal Tarif, Langsung Telepon Menkomdigi",
+    "en": "Pimpinan DPR Terima Keluhan Ojol soal Tarif, Langsung Telepon Menkomdigi"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "SinPo.id",
+    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQYzk1c3hJaGNUTlZRc2l1RUtjdDktNFJnWkhaTXE2c1U5T2E0UmVFX0stTWh0Y2R6b0s1eVN1cV9sWkhWTXdMekJXWXFMVU1TNzJCUXBLdWVMX3R3dHR5QWVUcWN3V0NBNWpkYVpGcEZQZGI0aWtLQUhMRmktTG1pRXU5VWoxbk4xX1RuNHExc1RNUFVsMDRZ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-19T02:02:00Z",
    "media": 6,
    "judul": {
@@ -34,6 +51,23 @@
    "sumber": {
     "nama": "Tribratanews",
     "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNRUJQT2VZeDcyWi1ENWwzem1EOWt1ZGh5cEk5TWhWVzhoRDBoSEZ4d2pROURyMFRVRVZoZjNLZzV1M2xjWklSdW9GUkZXYzNuUHFVOUNCT2lLOVRvR01Mb0lqUFlZb25GMVdYQ19OVGhtbWdJWThFWmVKekI1UUlqX2VjSUpfbnppNzVURnBDUHl3R3FWMG1pQXc2NG85REk4eUJnYkZPM0x6TlFzdU1oZFBmTlJRVkk3ZVJ5ZW4tdm4wT3JJT05QZ3NRdTc2TEpaV2E5UDRMbklrQQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-19T10:18:39Z",
+   "media": 3,
+   "judul": {
+    "id": "Palembang Belajar dari Bandung, Kampung Siaga Bencana Disiapkan Hadapi Karhutla dan Banjir",
+    "en": "Palembang Belajar dari Bandung, Kampung Siaga Bencana Disiapkan Hadapi Karhutla dan Banjir"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "katanda.id",
+    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQRVFYSkdlNHhLbDV0dHZwN3Y3cUpZd2pybGhHSkxPTkdSeExMRzIzWUtDQ3NuampTX0R0QlJUVDBKVXlNaC1xSmowVHlHRDFlQXFpMlBFLUxpLUhWQXRsSk5FeEdrcmpNeS1tbEVFWWZxTVpvcU4wV1A5aUFFalNvYVZ1QnBoNVVubGJWZFFzdnJmSXZ4aERnSFd5d1lwUlZFY3k1Y1U0djZiTnE0UWZ0SVZtNA?oc=5"
    }
   },
   {
@@ -242,23 +276,6 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-19T05:40:00Z",
-   "media": 2,
-   "judul": {
-    "id": "Pimpinan DPR Terima Keluhan Ojol soal Tarif, Langsung Telepon Menkomdigi",
-    "en": "Pimpinan DPR Terima Keluhan Ojol soal Tarif, Langsung Telepon Menkomdigi"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Kompas.com",
-    "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQaFR1ZjF2UjZrXzFpM3BnZHhXaWlramJwdk1SaDdNNzdhRDhORzdNQVRSQ0REWEJRaFQ4aFdVcG0tbFkyRENhY18wbjV0ZFN4MmRacXYtXzNqdjRBYlh3VHVWbG1Oc3ZRaGVSek93OFZZQU1uZVlITzV0OV9QWjVVRmFOLS1MaXRwSFpieVEtWHhNbG9VVURycGU4dXk2UmhLUVB6MEZoYmZuRHRWQXdFdWNTMDFaYnk1TDV3WGVBU3A0Zw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
    "waktu": "2026-11-18T15:46:25Z",
    "media": 6,
    "judul": {
@@ -289,6 +306,40 @@
    "sumber": {
     "nama": "netizenku.com",
     "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOUWlrS3I5YllRVk5lRDBDSENsNXM3SHc5YmpkdGc3c2FYSk1DVnVrR0hBWk0yZnRwWEtWblEwMjY5TnVvR2RRNXNReU92MVNscXNiNC1ueDctOVdHaGNiZzVzd01iVkxlaWMxUHdXdmlMb2w1emNfbFlBc2FqazlYZlNPRXRVLU1pelM0WGhoOGxsNGFXbVpiOWw4czFFVTRERzdKNW0tOVktUQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-19T10:37:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Pakar: Komisi 8 Persen Ojol Berpotensi Timbulkan Masalah Baru",
+    "en": "Pakar: Komisi 8 Persen Ojol Berpotensi Timbulkan Masalah Baru"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "tvOneNews",
+    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNQW1JTUpLbzlIdVRNVURlM0l4RHBhNHNtd0xjVF96ZlAzTHlRWEVxYVJ3azFtYmxvTDk0TF9STnNVcHNSUjEzRi1MRlBzcmZxZEpSbzV4ZFZBN25xeTNuS0VGaXBXMTlKclVWUXFpVlRxOTBrUlNGZWJINWttSC13NUNqdUYyNXNvdmhrYXlvTE5rbG5ncWd0anNCWllLa2VMNTU00gGoAUFVX3lxTE8wR3l0RlowbkNqaFlMZnR3NE9DV0xGaGpJTnE1R3JWMnFBYzZiNTZkNW96UHkwalNoc3FlS3lOSEw3bWVOQkd5NnN2cE1qMkZQalBZMFpvYkRUbW5zMXFYYkhNbkhzZUlLeF9VQTMyM1VyVEx5OTFGTzV3UW0zT0E4d25ocmxQQ01VM0FYeGlSNnF4TDhZNGhKdHRBRS1udGdBVExxWjViTg?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-19T10:10:52Z",
+   "media": 1,
+   "judul": {
+    "id": "Sejumlah Ojol Melakukan Demo Tuntut Perlindungan dan Kesejahteraan",
+    "en": "Sejumlah Ojol Melakukan Demo Tuntut Perlindungan dan Kesejahteraan"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Lingkar",
+    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxORGhkeTd4bndjYWtCRmFLNGMtV08zbzNlMU1PZjUyTFpVcDZvbEZsVkpuME1RWFI3WVpWMTEtd1JWSWRKZDlaekx3Z1pTWEQtQmZQdlpZYllzMXZ4VzJqampQeENnMno4RnhkT1NIZlhZTmlhSE5nVEs0dzRUWmVaZkgyMEFzdUNsdkpzMnV5U3J1T1piMTRj?oc=5"
    }
   },
   {
@@ -442,57 +493,6 @@
    "sumber": {
     "nama": "Liputan6.com",
     "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNNllyVEpxdGs3eEJDUGltOUdFNmVIdGdVU240RTdVb3ZCTHVNNFlYSjQ3ZHJQUTg2MHRoS0lOTjF1dk0xYVhIM1RucllFQVUzN1g4TFhkN2o0RTRoR2xGaDd6NHZzd240YV93Z20yR2RQaTBBSzRYS3JDM0tzVEdHV19xYm9iVTFhcFhSaVAtVVk1a09Rbk5DUVY2QXc4OURyVVhDeGZJa9IBnwFBVV95cUxQdjIxbE5IOE1JeF96SjV2Mk9QazR6OUZXLUc0R3VuNWdYT2ItbF9DaUU4bVNVcEhKRlk4TV8yWGNQYVVGMnhHdGJRT0lucWFLcVI4OWRCZWRYN2ZMYXM1c3dOdWNqZEhWdXhhTXRPamVWVXYyR1NJOHBLLUtXc2VVMjFweE5LbWN1TVJCLXRNRnJjMG12Zk9GN3NrTHJQaXM?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-19T08:32:02Z",
-   "media": 1,
-   "judul": {
-    "id": "DPR Tampung Keluhan Ojol soal Potongan 8 Persen dan Tarif Layanan",
-    "en": "DPR Tampung Keluhan Ojol soal Potongan 8 Persen dan Tarif Layanan"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "SuaraGarut.ID",
-    "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBXRTVxOU1GOE4taEVNNGQ1RDZMRlhJOGV2Uk04eTJsN1pQMkI4RDJjVG13YjB0aWw2VENURHQwS0pwM0ZtbDVfZXR1SVlqc3cxN3pPSzRPc25ydUtNODVFNS1qOA?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-19T08:27:27Z",
-   "media": 1,
-   "judul": {
-    "id": "Afrika Hadapi Fenomena Tak Biasa: Gurun Menghijau, Banjir Mengintai",
-    "en": "Afrika Hadapi Fenomena Tak Biasa: Gurun Menghijau, Banjir Mengintai"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "CNBC Indonesia",
-    "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOa25sRVpGYjZJVkx6QjdNU1lJLWtIS3FUUlhWbE5SQWJuaHFtSkVQcHdULWpxWTEzR2Y0RjJWWXNSTkc5c1BRdWV3LUhJYzE5MXE0ZHpiM3hJbW5JZmthc1U1Q2c2NzU5ejhCODZyX3pNdkZmSEpvLWRXR1c5X2FOUjJoRFFramNlWkFJRF9EODVydjdIa2FyRkczRXFZS05jUTdKdTE4V3hRV1JDcHBaMUxWb0xPallkUUMzeUtjX0VxblhXSnFJbHp3?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-19T08:21:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Perahu Listrik Tenaga Surya Jadi Alternatif Nelayan Kurangi Ketergantungan BBM",
-    "en": "Perahu Listrik Tenaga Surya Jadi Alternatif Nelayan Kurangi Ketergantungan BBM"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "RRI.co.id",
-    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQVnFCN0JPLXZaQlRhVDRBOGZkVFlWdEF5SzZrZENHR2hEZThlOWNoUGQ4Q0xUbzdSRDdnVHlYLWxEOGlfZEplYldjUG1ONFhETk9PSk1vcms2ZTZLWEJXVThqMGcwbWM4eGdNRlctbGxCLUpSZTRnbHpndWpwcDhDU0JvcEotSExqQTB3eFl2c0xzSGR5UkM5a0VPUDRVOUpHMFlENzFOLUt1YWtVN2tCQ05Yc2FtSXE3c05Leg?oc=5"
    }
   }
  ]
