@@ -1,5 +1,5 @@
 {
- "w": "2026-11-19T11:35:59Z",
+ "w": "2026-11-19T11:52:18Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -327,6 +327,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-19T10:14:26Z",
+   "media": 1,
+   "judul": {
+    "id": "Toyota Vios Jadi Alat Penyelewengan Pertalite, Sopir Ditangkap Polisi",
+    "en": "Toyota Vios Jadi Alat Penyelewengan Pertalite, Sopir Ditangkap Polisi"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Batam Pos",
+    "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxONFBZOUdENmtlejdIck1SZUdXV2NTbXNtbTBHS0RHZXBjeVRaUUczczNmUVZnQXJwX3dCU2F4dWl1YUpYemNhZkxhdGVId3YtTXJxRk15a3ZiQ0J0UTlPZE9CdVZTMUVtNzJ4UXBaTnliOFpUQTVGQm9aWTVDbjZUbWY3R0tiU2dzN1gzYjhicmUxN0Q4OXBfLXpTbGVwMzRNT01XWFpn?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-19T10:10:52Z",
    "media": 1,
    "judul": {
@@ -374,125 +391,6 @@
    "sumber": {
     "nama": "Khazminang.id",
     "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQT3JDbUdRekdBWHRIV1ZJMXZubFJpanlaeERjR2lJLWk5ZU5tTUdVYmhqTHJyZmFNZHdDQVkzVHFSR0dXZVEyMl9oYmdGM1BzVU82VmtHM3dtYVBldEZULWM2cGdjLXZlTmVTcXZoc3BNMDZrZy1RN2NJNGd6dmRxMDVzOExrUklNaHBROHJuUnR0SEd1bU13QVh5R3VLUW16Zl9CTUU1QUdUU2s?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-19T09:22:48Z",
-   "media": 1,
-   "judul": {
-    "id": "Pimpinan DPR Terima Sejumlah Aspirasi Pengemudi Ojol",
-    "en": "Pimpinan DPR Terima Sejumlah Aspirasi Pengemudi Ojol"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "jurnas.com",
-    "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNY2NXeXpFckZIVXM5TF80Tm0yVGZhOGkyN2JtNTg4QW9yX3lGOTNWUm5acEs2YU5Qb3NXX0JaZVB5OFNwUHZ0S2lVc1Y3ODJOdVMyakJyNmxWVVpiaEJ4MUthNXJKeWxRTF8xQ2dSM0ZlTTVKc2E0YmdMdUFLOXlmTnJfRVJ1dUNaOXJkVkRwTWpNbGc?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-19T09:14:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Komdigi Siapkan Aturan Tarif Ojol Antar Makanan dan Barang, DPR Turun Tangan",
-    "en": "Komdigi Siapkan Aturan Tarif Ojol Antar Makanan dan Barang, DPR Turun Tangan"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Katadata.co.id",
-    "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNbXNhUXZXeGpsTmV4bHhVTDBfcXg1ekxLU1dzNmlwdUI5SlIzcW4ycEtuOTljTFdIUkZMLWtlTVZrQlhObnp6REY2VmFYU1plNnBzWFlSbzBLTE5iN090MXFkb0FuRVJXSllSQW1UNWZZWlhtaTJ4ODVSMWhqa1QyTHQ1dzJQVkU1TnlZeDJEZ3g0cHZETl9mTTF6X192LXRXaVBTTW9CdjlCeEwyVlNWOVNFYUpRLXJfXzhIWXQwdTN3bXc3dzlJ0gHMAUFVX3lxTE1SREFzTGd4cl90aU53a2FmUENydDg4eFFmbzljQXN5eHUzSGNNNnNMUThJbzlCcjNsNXM4aUdvUjhXTlgzT1hwcThsWFNZOEFzV3lUUDRmaXAxQ3hoWTAwbW83Wm85Tk5tM3F6YV94X3c2MGREQ1hMNHJkcTg2NDFUX0NfQ1l4VW90cjBGeGY1anRJN0plR2J4WmN0Y2pyeWQ4aEFWNDFGRnl1MHNNeTN5QnhXcGt1Uk1LWC1NWWs0MFdveGZKellDVFVWTg?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-19T09:10:06Z",
-   "media": 1,
-   "judul": {
-    "id": "Momen Dasco Telepon Menkomdigi Bahas Aduan Ojol",
-    "en": "Momen Dasco Telepon Menkomdigi Bahas Aduan Ojol"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Liputan6.com",
-    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNOGdmeWN2SmlNakdvMzBRS3VkY2N2czNzZVFsb19vcHdfdnE0dC1lQ1ZubklaZ0R5YU1wS1lISE5YOS1mc213SHVXMkIyaEhMM3lIcXJXOHRSM0FLeEhHbWkyU3JxSTBTQTdZQTVHSXBiMUFGRU9DbHFKdWxFQXl2bVVUMU9PTk11Qnp1SnEtUm15V3pOR1lzX1d4enLSAZABQVVfeXFMUHZGVXFSdXNPY1V0SzlDaTdWLU5HSG0tZzZtMXNILWRIeEVKa2VGeWthRVJQbE9pT0F1X2pnVHViWXBXek1fb24xQ0FwWjIxRXdNbmh1Qng5a2VwRmR4bWxJdWx6LVJ2UEl0T1NsRzBaUzJ2QUpwSkxCQm9SeFRwazRkUGlTbHdqNGV2Z1NzOTNN?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-19T09:09:55Z",
-   "media": 1,
-   "judul": {
-    "id": "Kakorlantas Gandeng GoTo, Ojol Akan Dapat Shelter Istirahat hingga Servis Murah",
-    "en": "Kakorlantas Gandeng GoTo, Ojol Akan Dapat Shelter Istirahat hingga Servis Murah"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "transportasimedia.com",
-    "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNbHM2MHRyeXJ2d1phc2RJRExyVFQ3anp2bGVYU3NlLXRPWkVlbDhCZV8xTEkwZFVpTkF3VlVtUG5LYzg1dGtqOXNJcGNaZFhFWkJmNXZDWGh5cS1rR2hpT3BPQlZyNTQwUUxIa2lvcnlXT1FMejhlOW1iX2tlOGZic0p3cC1ydzJmZjdiYUFNbHpHMlZ3UWhraGgxc2Fvc2ZTamNPMThIdEl6NlBJOEpEZ0tOQjZFT0F1ODZjUEFR?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-19T09:02:20Z",
-   "media": 1,
-   "judul": {
-    "id": "Polresta Barelang Ungkap Modus Penyalahgunaan BBM Pertalite Satu Tersangka Diamankan",
-    "en": "Polresta Barelang Ungkap Modus Penyalahgunaan BBM Pertalite Satu Tersangka Diamankan"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "jurnalpolisi.co.id",
-    "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNa2t4SUNpakN5aHFxeHU3R1pPdldvSmhmV2xJZWpRZkZvZDliOWhhUWhkZXVTa2VMM2liN0ctdjN3TkV6WGg5MkNXbFk3RGsxNVM4eEJLdGVqSnE0aFgtMVQzOWVndnJ3aEVKdDlnZXB5Z3VCRV82aWdZWHF3LWR4enN3bVNiY2JRS0x3MjhlM0syc0hscS1obXVZSmFMZWxHcThaYVZDdVJLTC1KLVVOVV93?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-19T09:00:42Z",
-   "media": 1,
-   "judul": {
-    "id": "Oknum Ojol Diduga Lecehkan Wanita di Simokerto Surabaya",
-    "en": "Oknum Ojol Diduga Lecehkan Wanita di Simokerto Surabaya"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "detikcom",
-    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPNGY4eVFyNFV4UHVWUWpVWDAzMUZZVS1DLWJfNWx2YlNtRVlxbEROUlNtU0tXWFk1SFRuVnBRQXZ6YWt6ckJXTTZRdXBxVjVxVXhUNm0wVHZ2NTNlYlliN19JMG9BYnJDbDh5SS15d3p5N0szTmlReDBPU1BWdUw1Ri1GNlRvZzlLcE9ETnpCWW1kVk9aRE1wRXFpWHUzMm5yZUHSAacBQVVfeXFMT2hreGkzX3B0U2x5MDAyWEN3SllIT2Q2aFZWWTdEVEFoWTdtX3prWEZUZ3ZsWWw1T2U3YTlpSWFEYkJVZ2VUMWtTRUM4bFpRNElaNEU1WlhQaVFrdlB0eGtaay15NEpmMnVOaFVvVFJzdTNxajNFTGhsVkFzSjVBdnZHanE3UndJTzlaRmFQOU5nTVRmdkIxM2psNUpEbXFhV3dnZkV1Vjg?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-19T08:59:08Z",
-   "media": 1,
-   "judul": {
-    "id": "Tarif Ojol Mandek 4 Tahun, Pemerintah Didesak Terbitkan Aturan",
-    "en": "Tarif Ojol Mandek 4 Tahun, Pemerintah Didesak Terbitkan Aturan"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Liputan6.com",
-    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNNllyVEpxdGs3eEJDUGltOUdFNmVIdGdVU240RTdVb3ZCTHVNNFlYSjQ3ZHJQUTg2MHRoS0lOTjF1dk0xYVhIM1RucllFQVUzN1g4TFhkN2o0RTRoR2xGaDd6NHZzd240YV93Z20yR2RQaTBBSzRYS3JDM0tzVEdHV19xYm9iVTFhcFhSaVAtVVk1a09Rbk5DUVY2QXc4OURyVVhDeGZJa9IBnwFBVV95cUxQdjIxbE5IOE1JeF96SjV2Mk9QazR6OUZXLUc0R3VuNWdYT2ItbF9DaUU4bVNVcEhKRlk4TV8yWGNQYVVGMnhHdGJRT0lucWFLcVI4OWRCZWRYN2ZMYXM1c3dOdWNqZEhWdXhhTXRPamVWVXYyR1NJOHBLLUtXc2VVMjFweE5LbWN1TVJCLXRNRnJjMG12Zk9GN3NrTHJQaXM?oc=5"
    }
   }
  ]
