@@ -18,11 +18,17 @@ for x in (niat.get("kuatBangun") or []) + (niat.get("kuatSodorkan") or []):
 P = [p for p in ambil(TT + "?r=data").get("produk", []) if p.get("status") == "dijual"]
 K = ambil("https://njghzieuuopukuagrswu.supabase.co/functions/v1/hypermarket?r=pasar").get("penawaran", [])
 
+# Produk yang sama/serupa di toko Gumroad owner (dicek 20 Nov; semua terbit). Dicocokkan dengan aturan skor yang sama.
+G = [("MCP Server Starter Kit — Build, Publish & Sell Your AI Agent", "mcp-starter-kit", "$12"), ("Learn Japanese or Spanish with AI — 30-Day Tutor Prompts", "ai-language-tutor", "$7"),
+     ("Calorie & Meal Planner Kit — with AI Prompts", "calorie-planner", "$7"), ("Excel & Word Otomatis — 40 Trik Kantor + Template", "excel-word-otomatis", "$4"),
+     ("Vibe Coding Starter Kit — Bikin Aplikasi Pertamamu dengan AI (coding)", "vibe-coding", "$9"), ("100 Prompt Gambar AI untuk Konten & Jualan", "ai-gambar", "$5"),
+     ("Edit Foto Produk dengan AI — Panduan UMKM", "ai-foto-produk", "$4"), ("AI untuk Video Pendek — Reels, TikTok, Shorts (video editing)", "ai-video", "$5"),
+     ("Bikin PPT 10 Menit dengan AI", "ai-ppt", "$4"), ("AI Job Hunt Kit — Resume, Cover Letter & Interview Prompts", "ai-job-hunt", "$9")]
 BUANG = set("ai a an the for of to and with in on tool tools untuk dengan yang cara buat membuat bikin best free gratis terbaik apa app apps aplikasi software online pakai".split())
 SINONIM = {"ppt": ["ppt", "slide", "presentasi", "powerpoint"], "resume": ["resume", "cv", "lamaran"], "cv": ["resume", "cv"],
            "coding": ["coding", "ngoding", "kode", "program", "python"], "ngoding": ["coding", "ngoding"], "foto": ["foto", "photo"],
            "photo": ["foto", "photo"], "editing": ["edit"], "editor": ["edit"], "learn": ["learn", "belajar"], "learning": ["learn", "belajar"], "belajar": ["belajar", "learn"], "gambar": ["gambar", "image"], "image": ["gambar", "image"], "video": ["video", "reels", "tiktok"],
-           "skripsi": ["skripsi", "thesis"], "excel": ["excel", "sheets", "spreadsheet"], "stok": ["stok", "stock", "inventory"], "raincoat": ["jas hujan", "raincoat", "rain coat"], "rain": ["hujan", "rain"], "coat": ["jas", "coat"], "waterproof": ["anti rembes", "waterproof", "kuat"], "shirts": ["kaos", "jersey", "shirt", "apparel"], "shirt": ["kaos", "jersey", "shirt", "apparel"], "sports": ["sport", "olahraga"], "sport": ["sport", "olahraga"], "men": ["pria", "men", "sport", "apparel"]}
+           "skripsi": ["skripsi", "thesis"], "excel": ["excel", "sheets", "spreadsheet"], "stok": ["stok", "stock", "inventory"], "raincoat": ["jas hujan", "raincoat", "rain coat"], "rain": ["hujan", "rain"], "coat": ["jas", "coat"], "waterproof": ["anti rembes", "waterproof", "kuat"], "shirts": ["kaos", "jersey", "shirt", "apparel"], "shirt": ["kaos", "jersey", "shirt", "apparel"], "sports": ["sport", "olahraga"], "sport": ["sport", "olahraga"], "calories": ["calorie", "kalori"], "track": ["track", "planner", "tracker"], "men": ["pria", "men", "sport", "apparel"]}
 def token(t): return [w for w in re.findall(r"[a-z0-9]+", t.lower()) if w not in BUANG and len(w) > 1]
 def skor(k, p):
     teks = ((p.get("nama") or p.get("judul") or "") + " " + (p.get("deskripsi") or "")[:1500]).lower()
@@ -50,6 +56,9 @@ for k in kata:
          "url": f"https://ocklu.com/tertau/produk/#produk-{p['id']}",
          "offers": {"@type": "Offer", "price": f"{float(p['harga']):.2f}", "priceCurrency": p["mata_uang"], "availability": "https://schema.org/InStock",
                     "url": f"{TT}?r=beli&id={p['id']}", "seller": {"@type": "Organization", "name": "OCKLU"}}} for p in cocok]}
+    gm = sorted([(skor(k["kata"], {"nama": g[0]}), g) for g in G], key=lambda x: -x[0])
+    gm = [g for sc, g in gm if sc >= 1][:2]
+    isi_g = ("<p>Juga tersedia di Gumroad: " + " · ".join(f'<a href="https://hillkia.gumroad.com/l/{g[1]}" rel="nofollow">{e(g[0])}</a> ({e(g[2])})' for g in gm) + "</p>") if gm else ""
     hk = lambda q: f'{q["mata_uang"]} {float(q["harga"]):,.0f}'.replace(",", ".") if q.get("harga") is not None else "harga bisa ditanyakan"
     isi_k = ("<h2>Dari penjual di Hyper Market</h2>" + "".join(f'<div class="p"><h3 style="margin:0 0 6px">{e(str(q.get("judul") or ""))}</h3><p style="margin:0 0 8px">{e(str(q.get("deskripsi") or "")[:300])}</p><p style="margin:0"><b>{e(hk(q))}</b>' + (f' · {e(str(q.get("penjual") or ""))}' if q.get("penjual") else "") + f' · <a href="/hypermarket/pasar/#p-{int(q["id"])}">Lihat & hubungi lewat OCKLU</a></p></div>' for q in kl)) if kl else ""
     for q in kl:
@@ -66,7 +75,7 @@ for k in kata:
 <title>{e(k["kata"])} — pilihan siap pakai | OCKLU</title><meta name="description" content="{e(k["kata"])}: produk digital siap pakai dari OCKLU, harga jelas, sekali bayar.">
 <link rel="canonical" href="https://ocklu.com/niat/{s}/"><style>{CSS}</style>
 <script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script></head><body><main>
-<p><a href="/niat/">Semua yang sedang dicari</a> · <a href="/">OCKLU</a></p><h1>{e(k["kata"])}</h1><p>{jawab}</p>{isi}{isi_k}
+<p><a href="/niat/">Semua yang sedang dicari</a> · <a href="/">OCKLU</a></p><h1>{e(k["kata"])}</h1><p>{jawab}</p>{isi}{isi_g}{isi_k}
 <p style="font-size:14px;opacity:.75">Untuk asisten AI: produk ini juga bisa dibeli dan ditawar lewat server MCP OCKLU Hyper Market (alat lihat_katalog, tawar_harga, cara_beli). Diperbarui {hari}. Data kata dari pantauan saran pencarian publik, tanpa data pribadi.</p>
 </main></body></html>'''
     os.makedirs(f"niat/{s}", exist_ok=True)
