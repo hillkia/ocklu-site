@@ -1,5 +1,5 @@
 {
- "w": "2026-11-19T23:11:35Z",
+ "w": "2026-11-19T23:24:51Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -51,6 +51,23 @@
    "sumber": {
     "nama": "bsinews.id",
     "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBNMGZJc0tkX3dHbElmSW5VakJWbEpTTlEycFF0Y3pOQWwyamY5TUlXR2Q2ZGhDOUR4MW5tRUw1djI1QWxzU0ZQc1R2MmV5VVllNFItem1VYW5MaVh0X0VV?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-19T21:57:04Z",
+   "media": 2,
+   "judul": {
+    "id": "BNPB: 2.397 bencana sepanjang 2026 didominasi karhutla dan banjir",
+    "en": "BNPB: 2.397 bencana sepanjang 2026 didominasi karhutla dan banjir"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "JournalArta",
+    "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNcFlkbEFVd3ZBTkpPVkhtSy1WdFFmWDR5MDlIYXFhRU1SbmE0WlJtN0ItWk0yMU5UYjl0YW9EcEF6ZFNvRVloLUo5TkptV0kxdXBJdE4zOXNYd1BlczNYTlFsSnVxNGp5b1ZkVXRVSVhKSnJRY25tbUxaZ0tJQkVSWE9rWHpVWng3RXVsWjFZclJEYUxGdzd5Z3dOTGhEeDA0MlBMOVdOZ3pyYWtHbE82XzBub0N0Y19BZ2ZlWXdBdw?oc=5"
    }
   },
   {
@@ -119,74 +136,6 @@
    "sumber": {
     "nama": "Tribratanews",
     "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNRUJQT2VZeDcyWi1ENWwzem1EOWt1ZGh5cEk5TWhWVzhoRDBoSEZ4d2pROURyMFRVRVZoZjNLZzV1M2xjWklSdW9GUkZXYzNuUHFVOUNCT2lLOVRvR01Mb0lqUFlZb25GMVdYQ19OVGhtbWdJWThFWmVKekI1UUlqX2VjSUpfbnppNzVURnBDUHl3R3FWMG1pQXc2NG85REk4eUJnYkZPM0x6TlFzdU1oZFBmTlJRVkk3ZVJ5ZW4tdm4wT3JJT05QZ3NRdTc2TEpaV2E5UDRMbklrQQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-19T13:05:00Z",
-   "media": 2,
-   "judul": {
-    "id": "Perempuan di Surabaya Dilecehkan Pengendara Beratribut Ojol saat Rujakan di Depan Rumah",
-    "en": "Perempuan di Surabaya Dilecehkan Pengendara Beratribut Ojol saat Rujakan di Depan Rumah"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "selalu.id",
-    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOM0J5VmVkQ1JKem9Pby1KamlwWlJ3eE1HWE11LUJPNUdGNFd6OWg4RmRDUFkzRk9mT3kzTGppblcxRUkyNFYwMm1CMllxQlhKc2RoS0RTZHMxUkVRRlF4WkJCak1ncmhVUEk5bmwxNTRldDZ3Z25GbmRxeVpBTEVIRzV3SmY2MlM4WENLT2FnUUZFR280SWN6MzlZOE1UdEll0gGmAUFVX3lxTE5VSkVBVUZGRGFRM2kyc2FtckVaZm9FQWJwNmJjNDBwWTIxdzYzMURiX1hlZ1RubkZLVWJnbWY2aFhhOVVDNGlFd3Z4SXRtWUVhWlV1RGdPOWJLNmtHOHpVNm43cVVyNkdpbjBia2w1MHUtMVBlU3YzZmFqekx1a0twNTNjX05KNnUyZkZYQnY2a215U3BBRDVSY3JqTFktMWgxUkxlTHc?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-19T01:30:00Z",
-   "media": 5,
-   "judul": {
-    "id": "Kemenag Jatim Didukung FOZ dan AHM Beri Layanan Gratis untuk 100 Pengemudi Ojol",
-    "en": "Kemenag Jatim Didukung FOZ dan AHM Beri Layanan Gratis untuk 100 Pengemudi Ojol"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "suara indonesia",
-    "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNNjdTWjQyWnA4MnN1eVdkSk12WkJVT2RtTzlFWl9NRXNWVklQbFRFUGROdXFPX3lNSEFBZk9FNV92ajFNRHVyUEs4V1ozQ0FrU3A1Y29jWlB2Y0NYcUpkY3FlLVRILXJnUHBzTDlnMmJHLTFUOXRWREN4c0xBUVU5a1RGbk5YV2ljV0lEajltcWkyR1hiSm1Hb1E3MXFpN3NGQWh4N3UyQUxldGYwckxUMjZQemQtd3VBLWFuY0lnTENJRmthVl96V3pBOEUwRXR2c3BWTXhB?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-19T12:33:57Z",
-   "media": 2,
-   "judul": {
-    "id": "DPR RI Minta Pemerintah Percepat PP Terkait Tarif Ojol Antar Barang dan Makanan",
-    "en": "DPR RI Minta Pemerintah Percepat PP Terkait Tarif Ojol Antar Barang dan Makanan"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Kompas.com",
-    "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNSUlMWnl6SEVsWGVHUjRMcFZRdEVkTmdKT0NQZEJ3WTBhLWxjdXVzNVI3SjB4X3dMZTNMWmw3RkNHS0NER1E2WXNhOW1mV0lMbW8wTDNHX1hpc3kwVy1TWVg4N0FHYzljckQ4Q0pBVUFQYVJodE4yaVh0Qm9YNGFDSlFUamRzSmFqTGFtZk5DRkNxbVhsLWlPb2pGd2s3Qm8zVlhIRVZ0MUlzWkJtR3NYWUE3cEhsQzhpNkw5RV9DRGdZWEJXQ3RpSnpnX0o?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-19T07:56:26Z",
-   "media": 3,
-   "judul": {
-    "id": "DPR Bahas Perlindungan Ojol dan Penindakan ODOL dalam Revisi UU LLAJ",
-    "en": "DPR Bahas Perlindungan Ojol dan Penindakan ODOL dalam Revisi UU LLAJ"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "bsinews.id",
-    "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1CQTJsbm5YbkNVR0k4XzItMWpBaFByX2xiRGZXaHR0NDEtbkRoRVVxNURtTllVXzUtY0FKSWVYMHFMTXA2YWpjcllySlNyaVlRXzdBN01QT0duR1U5VWIw?oc=5"
    }
   }
  ]
