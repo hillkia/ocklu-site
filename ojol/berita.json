@@ -1,5 +1,5 @@
 {
- "w": "2026-11-19T15:22:32Z",
+ "w": "2026-11-19T16:23:57Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -17,6 +17,23 @@
    "sumber": {
     "nama": "MetroTVNews.com",
     "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNNUk0N0xnbmdMMERudl91bURSN2VZYWZMYmRhbks4cjVmQ3k2T0pnZ2IzamVFTDBMYW9JdHcxdFlkbjlKbk5GOURPQUcxdVY2T1FEX3g5Z2JmRjBIdHNtYWI2VjBGRTVacWpPMUdLWnRnV1E5Vmkyc09vM3lfVHRlWUJYdGlYRFlIWGZvX2xJYUE3VTFTdlVzbnhCc2RsbS01ZjBsY2QwdjFQQkNpcGVWTlRxam1vVl9Q?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-19T15:41:56Z",
+   "media": 4,
+   "judul": {
+    "id": "Palembang Belajar dari Bandung, Kampung Siaga Bencana Disiapkan Hadapi Karhutla dan Banjir",
+    "en": "Palembang Belajar dari Bandung, Kampung Siaga Bencana Disiapkan Hadapi Karhutla dan Banjir"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "bsinews.id",
+    "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBNMGZJc0tkX3dHbElmSW5VakJWbEpTTlEycFF0Y3pOQWwyamY5TUlXR2Q2ZGhDOUR4MW5tRUw1djI1QWxzU0ZQc1R2MmV5VVllNFItem1VYW5MaVh0X0VV?oc=5"
    }
   },
   {
@@ -89,23 +106,6 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-19T10:18:39Z",
-   "media": 3,
-   "judul": {
-    "id": "Palembang Belajar dari Bandung, Kampung Siaga Bencana Disiapkan Hadapi Karhutla dan Banjir",
-    "en": "Palembang Belajar dari Bandung, Kampung Siaga Bencana Disiapkan Hadapi Karhutla dan Banjir"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "katanda.id",
-    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQRVFYSkdlNHhLbDV0dHZwN3Y3cUpZd2pybGhHSkxPTkdSeExMRzIzWUtDQ3NuampTX0R0QlJUVDBKVXlNaC1xSmowVHlHRDFlQXFpMlBFLUxpLUhWQXRsSk5FeEdrcmpNeS1tbEVFWWZxTVpvcU4wV1A5aUFFalNvYVZ1QnBoNVVubGJWZFFzdnJmSXZ4aERnSFd5d1lwUlZFY3k1Y1U0djZiTnE0UWZ0SVZtNA?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
    "waktu": "2026-11-19T13:05:00Z",
    "media": 2,
    "judul": {
@@ -119,6 +119,23 @@
    "sumber": {
     "nama": "selalu.id",
     "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOM0J5VmVkQ1JKem9Pby1KamlwWlJ3eE1HWE11LUJPNUdGNFd6OWg4RmRDUFkzRk9mT3kzTGppblcxRUkyNFYwMm1CMllxQlhKc2RoS0RTZHMxUkVRRlF4WkJCak1ncmhVUEk5bmwxNTRldDZ3Z25GbmRxeVpBTEVIRzV3SmY2MlM4WENLT2FnUUZFR280SWN6MzlZOE1UdEll0gGmAUFVX3lxTE5VSkVBVUZGRGFRM2kyc2FtckVaZm9FQWJwNmJjNDBwWTIxdzYzMURiX1hlZ1RubkZLVWJnbWY2aFhhOVVDNGlFd3Z4SXRtWUVhWlV1RGdPOWJLNmtHOHpVNm43cVVyNkdpbjBia2w1MHUtMVBlU3YzZmFqekx1a0twNTNjX05KNnUyZkZYQnY2a215U3BBRDVSY3JqTFktMWgxUkxlTHc?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-19T12:49:00Z",
+   "media": 2,
+   "judul": {
+    "id": "DPR Terima Aduan Ojol, Dasco: Pekan Depan Mereka Temui Kementerian Terkait | Liputan 6",
+    "en": "DPR Terima Aduan Ojol, Dasco: Pekan Depan Mereka Temui Kementerian Terkait | Liputan 6"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Warta Ekonomi",
+    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOcDVCUnluNk9Kc0QzVzR6S0VoTHBrZktpZXZLSjlvTWxkSlFIQ252X0h2X1gtNTRUeHl4TDNYdVVhUzM3NFh3ZkxWQU5CZ3hVR1RtclJSeUt5cGVQUktiSDgwRC1OOWlLaVVaMXhSMDJPUGNiV01yRFFrRER5RkdZbDdqbkhuVTByeWJPbEpaYWNRemRidDRLUS0xb1BOOGo0LVkzSDZGejl5NHBIOFlSR1RfMFBVMzBreDlxUVA3cljSAcYBQVVfeXFMT1ZZbE5ZQzBQVTFwcmVpMVNfQWxfWlB2LWpJVFBqdWVTeUZYV1dnMjUzRVdjRlREc0pnQ2JqTDQ3TzI3ZnlOR195N2xETGZ5VnU1cDhELUlVUjl0TlMtVWdxTHZZcmh3aU1UZEhGN0VXRV8yNGdVeW0wS3V0UFZabnNqQXN3bjZubnFlZXNTQzN2VFZGdGlJR29ybGZvVHQwNlU5UFc2YkQ5ODlCNThBbFJVQndvbjdMN1BTaWlkN2Vsajd0cWx3?oc=5"
    }
   },
   {
@@ -140,6 +157,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-19T12:33:57Z",
+   "media": 2,
+   "judul": {
+    "id": "DPR RI Minta Pemerintah Percepat PP Terkait Tarif Ojol Antar Barang dan Makanan",
+    "en": "DPR RI Minta Pemerintah Percepat PP Terkait Tarif Ojol Antar Barang dan Makanan"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Kompas.com",
+    "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNSUlMWnl6SEVsWGVHUjRMcFZRdEVkTmdKT0NQZEJ3WTBhLWxjdXVzNVI3SjB4X3dMZTNMWmw3RkNHS0NER1E2WXNhOW1mV0lMbW8wTDNHX1hpc3kwVy1TWVg4N0FHYzljckQ4Q0pBVUFQYVJodE4yaVh0Qm9YNGFDSlFUamRzSmFqTGFtZk5DRkNxbVhsLWlPb2pGd2s3Qm8zVlhIRVZ0MUlzWkJtR3NYWUE3cEhsQzhpNkw5RV9DRGdZWEJXQ3RpSnpnX0o?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-19T07:56:26Z",
    "media": 3,
    "judul": {
@@ -157,23 +191,6 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-19T12:22:00Z",
-   "media": 2,
-   "judul": {
-    "id": "DPR RI Minta Pemerintah Percepat PP Terkait Tarif Ojol Antar Barang dan Makanan",
-    "en": "DPR RI Minta Pemerintah Percepat PP Terkait Tarif Ojol Antar Barang dan Makanan"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Kompas.com",
-    "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQSDNWVXczd1NCc0NlbkhydHRTcHdBU28wYmxhSzh6UHc3SHo2Mk15ZVkycDJKXzJYYzAzR2VxQm5iNjliUC1VZ1dyUDdpUkRzSVRzZ2N0ODloYkdhbHRXc0x6dS1qZGdzRndySUluSWNJOVBSQ09iYVJKVHM5d0lxUHhhQkRCbUVLb0ZUWGpSbS1JT3NCVmlndktFeGxIc2x6RUFEaHF1NUlUd1NXT2o5d0FmZlpPQnFiUk45LVBNVnJNdw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
    "waktu": "2026-11-19T03:41:40Z",
    "media": 4,
    "judul": {
@@ -187,6 +204,23 @@
    "sumber": {
     "nama": "SINDOnews.com",
     "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOLW95NllrWjFhX09wTUhxRko0QkhYLXBXcDRlangwQ0FrTXd3c1pDc0RnYTBlQWo4RGdPOWRmMEhGbno4VVhZeWlfZFRybEV2c0ZYdnNycTA3WU4xdTl5Nzhjd0tLeU8tRnFIdVlLTF8xRjdjZUdlRjJCRGp5eEs0YnFfRTVrYzY5amVyODd5czFtbTZCT3pZRk5kSEtraFFQdVlDdWhzaHRlc2IyOVJXUVpKVWtBUjA3eUFKcThhMHFrTm1zMXg2SXozcVk0NDR1cGfSAdYBQVVfeXFMTjJVTm9Fc2xHRFZjdEhxcXIwMUE3NVlrWndYbThRZG1BUFJZUFZyZUpnaktZdDZFV0VPU29OTGJ3ODNHLWRmWFVQV3UzNUlHYnFGTVdjbjRsS0hCSm8yUUF3MEV2eVpMWmhvc1BnSWl2RlFZSkNaTUxuUV8yOTVrZjYwVzJUMU5tdklGWHZZTVIwSC1GNlhOemctdDZDSF9WVEdMaVFFUC1RWDdyODdLSUJueVJLaHkxZFlTUWNVSF9oOVlpQV9NbHFhTmhVRy1MZnNuTVlIdw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-19T15:56:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Bukan Sekadar Siaga Bencana, Wali Kota Aminuddin Ingin Probolinggo Tak Banjir Lagi Tahun Depan",
+    "en": "Bukan Sekadar Siaga Bencana, Wali Kota Aminuddin Ingin Probolinggo Tak Banjir Lagi Tahun Depan"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "VIVA Banyuwangi",
+    "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNUlVXcFNMa280WHY3S2VJdXhVelJPZUZ0aWNXLThIR1dicnNNREtQcVlRZzBxN3dWOXlFaEZIYk1HVWlzU0tOc2NHUGFxTUxMSUFnV3VEbFhTRGg4UmJpWEJfOUhkOTVBYmZKcWpNWDZvRjBMVi1SNWg1bGhIZUN2NE95NndJcDlIWElKUVRObnBQSVNKRGJBdDJxYTl3eE1VMWZBRW1PTWR3VTJOVmQwZHZHeExodkxtdWh3SERlNEVpSWdMaU5KNzB1ZXBQQkh4X1lfSHJn0gHbAUFVX3lxTE13NVhTOFhsWkJlTEotN2kzVDgtUzRxZXBRWXNpbTBuZ2xaamhaVVhaZ3RUM3FnY3gxQjY3cmxCV3d6S0dtaEp5VEpFYkF0VlJlbWVvdVl0V2VKYi1uQlFHYk1zeUh2VmZiM29PTWc2M3lqRGk3dXhQMU9wa2tsS3JwcXJ5SHdDRXNRUkFzU0g1OVQxajJRVmhPQVVPOFpFWnNGRDB0c3JpSjhHZHhQWnRTRnVOTzdFNUtfek10REo3bDE2bWZhT2VyOG9mMVBkM0x4Ui1yb1hHYUhCVQ?oc=5"
    }
   },
   {
@@ -221,6 +255,23 @@
    "sumber": {
     "nama": "Posmetro Padang",
     "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNczgxS3k3Z1h4M2NmTmFtQ1hBUklmU1hrb0dhMzRiM2UxV1BCS3lzSXpTSTd1ODFaLXBfUXdBcWYxeFg4bzM3blowclFadUR5cVZ0WkVFbXhxMWU5eXgtRVV2bE15MlJtS2JqVXhVWkI3N2had1ZOZ0F6dTRBVWRjMVotQS1HbzFpSjl6N1g5TjZLUld5U0E?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-19T15:20:01Z",
+   "media": 1,
+   "judul": {
+    "id": "Antar Pesanan Livin' Food, Ojol di Bandung Bisa Mendapat Insentif di Luar Ongkos Kirim",
+    "en": "Antar Pesanan Livin' Food, Ojol di Bandung Bisa Mendapat Insentif di Luar Ongkos Kirim"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Tribunjabar.id",
+    "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQMmZUV2EwbkctdVhyUkFsdWhlSkY3Vl9UVFh2WUdfaFF2SHR0X19WNXFZTndDT3dSSlBZZlEyOFY3X0RBMk5IVldVMGcyak1TMnMwcDY3b2NiX3JQOXhnN3NWeTdkUmd5ZXA4OFR4a2tYclpyTnNSVC1WaklJTmVjVWF2RlNHLXRha01sbEtrZHhDZkVUeFVtSWVhOER6MEc4dXBxdlAxd2VtVTNqa2lxbVZYRTRoVkFYQmxHN05PSUpWcXdqMThQQ0k4d3BtUQ?oc=5"
    }
   },
   {
@@ -306,57 +357,6 @@
    "sumber": {
     "nama": "RRI.co.id",
     "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQclBaU2VONllCdTN2UWtSRFJTLWdYU3FkaEczVFNZV0FKSHFVdTYwUUlqVk83YzFTM0g4NDFHRHZTUDNVSjRqNDdqVUtETHFPMEJrS081eE8weVIyMkowWVg2cUx6QllicTdqVDlsQWUtSE9obWpaS0MtOV9CMGpNdm9RbF9vZFpKTHRKSTdFTXdoRFJjamlnenRnd3JKYTVKV3NCZWVyaGYyZw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-19T07:00:55Z",
-   "media": 2,
-   "judul": {
-    "id": "Driver Ojol Minta DPR Evaluasi Potongan Komisi 8 Persen",
-    "en": "Driver Ojol Minta DPR Evaluasi Potongan Komisi 8 Persen"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Lensa Hukum",
-    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5wMkpmWENGc0ZzUlBDUkItSy1zTXRxanNqRUR3VjhOdzl2TzJqYnhpdmNGVjJMS0hYVUdEWFhDVXZ1YTJpY3RUUFNWWEhDbXowcGQ1WG1IQ0NFMGRnRHU4QWFiNjlqVlJ6cjd4RmFn?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-19T13:00:32Z",
-   "media": 1,
-   "judul": {
-    "id": "Driver Ojol Demo di DPR, Desak RUU Perlindungan Segera Dibahas",
-    "en": "Driver Ojol Demo di DPR, Desak RUU Perlindungan Segera Dibahas"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "VISI.NEWS",
-    "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxORkdhOVh4bFhTOGJXaGtvWEd5TXdOZmVmVzV2d2R3ckpmN1FINzdGTFR6bzJUcmRLX3ZPaGpreVZfbFdPRzU2TkNUQlVTR1d3ZGFlUUMyS1k3NVphZktBTlBVQmhaMFdhbFV3MFJsQ3ZHaW1ZZ0pobU9Ja2pjQ2NmZHkySk9YQ3hDVFNZ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-19T12:58:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Driver Ojol Curhat ke DPR soal Potongan Aplikator 8%: Promo Hilang, Orderan Jadi Sepi",
-    "en": "Driver Ojol Curhat ke DPR soal Potongan Aplikator 8%: Promo Hilang, Orderan Jadi Sepi"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "kumparan",
-    "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQYzFEUTdXOVFudWo2NHI1LVphSncwQ0NCd1NhZG1RTHUwQy14QUFUVlZSUUprRVppYWIzd3RjTmZUTEtjT0ppbzhyY184LVB4eG5GeUROSWstZjh2bzdacEFtdjU4YmxHMjhQYnJuSTJoWXJMSXY5WndCYTh3ZVpEei1SRHYzb0tzVUtlbDNZUkJrU2dIVm9ta1JZZjRKZmM1Q09DSDZtaWY4QW5QUS13eW5QN2pBVVYyZXF3OUpiTW93ZWdTRTF30gHPAUFVX3lxTE5BdzBKY2hPN2RvWjVyQm1LSjdJZVhaYndBbDhDZFNmTVkzb0RPZllfVXRiWEl4a3EtZ2MyVzV2Nk90X3c0YUFXQ2c4clNSLXRJZXhLRnItcHBac001UXNYLXhWR1JzUjJEa1JuM3VDZHRnd3E5ZnU0Nm5BS1NQU2NoUi1kTWJVZWxPWVAzX1RoR0JseVdoZ2Nud2M1aFlsVHlwdXI4YnZnandvak1zbVJ1b0FWUEU4RlpNZEZOWlZGWEVqd1lPUWNkMVB1R2dqWQ?oc=5"
    }
   }
  ]
