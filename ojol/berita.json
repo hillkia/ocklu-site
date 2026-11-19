@@ -1,7 +1,24 @@
 {
- "w": "2026-11-19T14:18:39Z",
+ "w": "2026-11-19T15:22:32Z",
  "dari": "Kroog",
  "berita": [
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-19T14:10:12Z",
+   "media": 5,
+   "judul": {
+    "id": "Dasco Minta Komdigi Bukan Ruang Diskusi Bahas Tarif Makanan dan Barang Ojol",
+    "en": "Dasco Minta Komdigi Bukan Ruang Diskusi Bahas Tarif Makanan dan Barang Ojol"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "MetroTVNews.com",
+    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNNUk0N0xnbmdMMERudl91bURSN2VZYWZMYmRhbks4cjVmQ3k2T0pnZ2IzamVFTDBMYW9JdHcxdFlkbjlKbk5GOURPQUcxdVY2T1FEX3g5Z2JmRjBIdHNtYWI2VjBGRTVacWpPMUdLWnRnV1E5Vmkyc09vM3lfVHRlWUJYdGlYRFlIWGZvX2xJYUE3VTFTdlVzbnhCc2RsbS01ZjBsY2QwdjFQQkNpcGVWTlRxam1vVl9Q?oc=5"
+   }
+  },
   {
    "jenis": "berita",
    "waktu": "2026-11-19T07:58:38Z",
@@ -17,6 +34,23 @@
    "sumber": {
     "nama": "Limapagi",
     "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE4wYlJqbDU4Z2FwbUZjenNYY01DenlTU2c3bEN6THF5TWlvU3FRcDJUM1Q0TDVEemlZVDM5d2duQ2x1bzRXbVhWRU5UcVU4akFoSGhNOFdLVGFkRDk3cHpWRk5R?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-19T14:16:20Z",
+   "media": 3,
+   "judul": {
+    "id": "Banjir Mulai Surut, Pemerintah Ingatkan Aceh Lebih Siap Hadapi Ancaman Perubahan Iklim",
+    "en": "Banjir Mulai Surut, Pemerintah Ingatkan Aceh Lebih Siap Hadapi Ancaman Perubahan Iklim"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "news.okezone.com",
+    "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPQkdCaFRTRWdHQlZYZkFmaFFpUFVTTjBxLVZDZUhOV0tPU1JoYk1scGFfSFoxOVNGd1ZFTXp3RVpBQndhMnR2Y2E1UkN4MnhTUGotQXUxWWJENnFuZzdiczBieF9uYkRvWjJBS2tEc29OT0pIbmpxR1NkR05pMFBRTldFX2xubVlpeHRPak41RTVmX0E2YjNIRnFMMTdJY2JDLTVRY3BTRE1qQUhYRDFLT3ZZWjMxX1d0a1NfZU9qZkxtWkZXVU9sa2RCSmV6YmVwS1dDc9IB0wFBVV95cUxONzFoaU5rRFU0clZTalktNHRDS0RKMmM3bzg2WkZFcEpQS3A4V0J2Q01WM013YmRELU1aN29wMW1rbEgybHZIX0psUVdyVTlsSmhMR1M1dWpveTM0bkJWdHNKaVotSEZlc3FTMEZmU1FRd2xRbDVXMnI4MFVZb1pPV0UtZndsVW1jTjdadHRKNkNES1BvOUo5azRCbTduR1ZuYlh3YXVDb0dHTEt6T1FHSEpqZDR0NjY1SlQ2MWlTOEs4QjUyYUxYTVZpN251eVBQVDNZ?oc=5"
    }
   },
   {
@@ -72,6 +106,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-19T13:05:00Z",
+   "media": 2,
+   "judul": {
+    "id": "Perempuan di Surabaya Dilecehkan Pengendara Beratribut Ojol saat Rujakan di Depan Rumah",
+    "en": "Perempuan di Surabaya Dilecehkan Pengendara Beratribut Ojol saat Rujakan di Depan Rumah"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "selalu.id",
+    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOM0J5VmVkQ1JKem9Pby1KamlwWlJ3eE1HWE11LUJPNUdGNFd6OWg4RmRDUFkzRk9mT3kzTGppblcxRUkyNFYwMm1CMllxQlhKc2RoS0RTZHMxUkVRRlF4WkJCak1ncmhVUEk5bmwxNTRldDZ3Z25GbmRxeVpBTEVIRzV3SmY2MlM4WENLT2FnUUZFR280SWN6MzlZOE1UdEll0gGmAUFVX3lxTE5VSkVBVUZGRGFRM2kyc2FtckVaZm9FQWJwNmJjNDBwWTIxdzYzMURiX1hlZ1RubkZLVWJnbWY2aFhhOVVDNGlFd3Z4SXRtWUVhWlV1RGdPOWJLNmtHOHpVNm43cVVyNkdpbjBia2w1MHUtMVBlU3YzZmFqekx1a0twNTNjX05KNnUyZkZYQnY2a215U3BBRDVSY3JqTFktMWgxUkxlTHc?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-19T01:30:00Z",
    "media": 5,
    "judul": {
@@ -119,23 +170,6 @@
    "sumber": {
     "nama": "Kompas.com",
     "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQSDNWVXczd1NCc0NlbkhydHRTcHdBU28wYmxhSzh6UHc3SHo2Mk15ZVkycDJKXzJYYzAzR2VxQm5iNjliUC1VZ1dyUDdpUkRzSVRzZ2N0ODloYkdhbHRXc0x6dS1qZGdzRndySUluSWNJOVBSQ09iYVJKVHM5d0lxUHhhQkRCbUVLb0ZUWGpSbS1JT3NCVmlndktFeGxIc2x6RUFEaHF1NUlUd1NXT2o5d0FmZlpPQnFiUk45LVBNVnJNdw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-19T07:18:46Z",
-   "media": 3,
-   "judul": {
-    "id": "Dasco Minta Komdigi Buka Ruang Dialog dengan Driver Ojol",
-    "en": "Dasco Minta Komdigi Buka Ruang Dialog dengan Driver Ojol"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "jurnas.com",
-    "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOZkgtZ2tMMXhMeVRQeFFUREZNYWpXMkFpalR3b3hlTHltRGxwdVY0Z3UtREc4OGtPaHp1emdhWDBZT25qVWl2WjE2a3dIOGhvOHdYVHFVdFFfcHUzYzQ5TUhwbVVwcGg3Z1JsUXFIbEZVTy1oYkpKc0xjbnA1S2EtczNFVzY4VnA0SHdpZTFsRGM5aUVzT1lfSg?oc=5"
    }
   },
   {
@@ -259,6 +293,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-19T14:20:40Z",
+   "media": 1,
+   "judul": {
+    "id": "Targetkan Kota Bebas Banjir, Titik Rawan Diminta Segera Dipetakan",
+    "en": "Targetkan Kota Bebas Banjir, Titik Rawan Diminta Segera Dipetakan"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "RRI.co.id",
+    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQclBaU2VONllCdTN2UWtSRFJTLWdYU3FkaEczVFNZV0FKSHFVdTYwUUlqVk83YzFTM0g4NDFHRHZTUDNVSjRqNDdqVUtETHFPMEJrS081eE8weVIyMkowWVg2cUx6QllicTdqVDlsQWUtSE9obWpaS0MtOV9CMGpNdm9RbF9vZFpKTHRKSTdFTXdoRFJjamlnenRnd3JKYTVKV3NCZWVyaGYyZw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-19T07:00:55Z",
    "media": 2,
    "judul": {
@@ -276,6 +327,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-19T13:00:32Z",
+   "media": 1,
+   "judul": {
+    "id": "Driver Ojol Demo di DPR, Desak RUU Perlindungan Segera Dibahas",
+    "en": "Driver Ojol Demo di DPR, Desak RUU Perlindungan Segera Dibahas"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "VISI.NEWS",
+    "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxORkdhOVh4bFhTOGJXaGtvWEd5TXdOZmVmVzV2d2R3ckpmN1FINzdGTFR6bzJUcmRLX3ZPaGpreVZfbFdPRzU2TkNUQlVTR1d3ZGFlUUMyS1k3NVphZktBTlBVQmhaMFdhbFV3MFJsQ3ZHaW1ZZ0pobU9Ja2pjQ2NmZHkySk9YQ3hDVFNZ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-19T12:58:00Z",
    "media": 1,
    "judul": {
@@ -289,74 +357,6 @@
    "sumber": {
     "nama": "kumparan",
     "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQYzFEUTdXOVFudWo2NHI1LVphSncwQ0NCd1NhZG1RTHUwQy14QUFUVlZSUUprRVppYWIzd3RjTmZUTEtjT0ppbzhyY184LVB4eG5GeUROSWstZjh2bzdacEFtdjU4YmxHMjhQYnJuSTJoWXJMSXY5WndCYTh3ZVpEei1SRHYzb0tzVUtlbDNZUkJrU2dIVm9ta1JZZjRKZmM1Q09DSDZtaWY4QW5QUS13eW5QN2pBVVYyZXF3OUpiTW93ZWdTRTF30gHPAUFVX3lxTE5BdzBKY2hPN2RvWjVyQm1LSjdJZVhaYndBbDhDZFNmTVkzb0RPZllfVXRiWEl4a3EtZ2MyVzV2Nk90X3c0YUFXQ2c4clNSLXRJZXhLRnItcHBac001UXNYLXhWR1JzUjJEa1JuM3VDZHRnd3E5ZnU0Nm5BS1NQU2NoUi1kTWJVZWxPWVAzX1RoR0JseVdoZ2Nud2M1aFlsVHlwdXI4YnZnandvak1zbVJ1b0FWUEU4RlpNZEZOWlZGWEVqd1lPUWNkMVB1R2dqWQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-19T12:49:00Z",
-   "media": 1,
-   "judul": {
-    "id": "DPR Terima Aduan Ojol soal Tarif Tak Naik 4 Tahun, Dasco: Pekan Depan Temui Kementerian",
-    "en": "DPR Terima Aduan Ojol soal Tarif Tak Naik 4 Tahun, Dasco: Pekan Depan Temui Kementerian"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Warta Ekonomi",
-    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOcDVCUnluNk9Kc0QzVzR6S0VoTHBrZktpZXZLSjlvTWxkSlFIQ252X0h2X1gtNTRUeHl4TDNYdVVhUzM3NFh3ZkxWQU5CZ3hVR1RtclJSeUt5cGVQUktiSDgwRC1OOWlLaVVaMXhSMDJPUGNiV01yRFFrRER5RkdZbDdqbkhuVTByeWJPbEpaYWNRemRidDRLUS0xb1BOOGo0LVkzSDZGejl5NHBIOFlSR1RfMFBVMzBreDlxUVA3cljSAcYBQVVfeXFMT1ZZbE5ZQzBQVTFwcmVpMVNfQWxfWlB2LWpJVFBqdWVTeUZYV1dnMjUzRVdjRlREc0pnQ2JqTDQ3TzI3ZnlOR195N2xETGZ5VnU1cDhELUlVUjl0TlMtVWdxTHZZcmh3aU1UZEhGN0VXRV8yNGdVeW0wS3V0UFZabnNqQXN3bjZubnFlZXNTQzN2VFZGdGlJR29ybGZvVHQwNlU5UFc2YkQ5ODlCNThBbFJVQndvbjdMN1BTaWlkN2Vsajd0cWx3?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-19T06:09:58Z",
-   "media": 2,
-   "judul": {
-    "id": "Viral Video Pria Ngaku PNS Diduga Lecehkan Driver Ojol, Aksinya Jadi Sorotan",
-    "en": "Viral Video Pria Ngaku PNS Diduga Lecehkan Driver Ojol, Aksinya Jadi Sorotan"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Radar Semarang",
-    "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQeVdFb2FOS3U2WHRVNkxnQnNCLUkwTnRUTGJlWnY5STdTeEpPakVYand1SEpoUkFva09qMkRsa0VEMU5mRnZGaWZUTWJZQnh5ekEyekF4ZVluYzNmWk8ybjdrMnVFYVlNam5ndG1fQmlhZ1FuYVVXWWUxM0ZZSDY0UF9weXRJRm9vdjN4MEg0dGhnVjJUTUZ3ZWIwMWlYZ1BWRDhvcHg2SFBvZmdIMWdNN0thdzVXN3VlUEpkV1Q0cXBPUdIBxwFBVV95cUxOQzR5SnNjUTl1WjZBZVZnV28zdnpqLW1Kb0JqeTVlazdtQmRBR1FRMHlfVnJHZUUwN1U1OTA0MnJsLWpMMWJ6dlhMWXRWRFZVV3BNZGY4YnBQUE1lUUlDZjBCVkVZaGJ1VERBX3ViYzZDdkJ4QUY4ZVhVcGNzRWprRVR3V0E4b2JndU1tQXZpbEZBZW1VdFFRTkdCOGFGVVdsOXN5dWJQWDZRaWhyNjJFa3hhUEFXRXdySXlLNWFLU3ZRX19mQzZF?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-19T12:11:47Z",
-   "media": 1,
-   "judul": {
-    "id": "Pengemudi Ojol Dilibatkan dalam Reses, Supaad Bahas Perlindungan Kerja",
-    "en": "Pengemudi Ojol Dilibatkan dalam Reses, Supaad Bahas Perlindungan Kerja"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Headlinews.id",
-    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOQk5VXzc0NGZtem9FNm9vWjZqOWw2MmtyakppV3NQQWg4LUdqbTlyN1JwcTVWZmp6RkNrYXJoR2Q0U18tV2ptaWU0akRKajRWZ3hQbjJRRWF5WVgwZUVodXQ5Nmw5eF9wa1A1YThVNHBIVFBVMmVrUkh1Z2ZFMUIzbDBweHdRZ0gwQWtWODFZQmFrcmNTdk9z?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-19T12:08:25Z",
-   "media": 1,
-   "judul": {
-    "id": "Sardi Ojol Semarang Sumringah Dapat Pakaian Hingga Sayur Gratis di Tengah Himpitan Ekonomi",
-    "en": "Sardi Ojol Semarang Sumringah Dapat Pakaian Hingga Sayur Gratis di Tengah Himpitan Ekonomi"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Tribunjateng.com",
-    "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNWXRvWmZxVF9XMUVQR3lMdU9ZYy03bjkwY1V4YVVqcGFLbGVfY1VUY21hX28tUHpzMWlXN21lZkluR1Q1ZTRja3pOdUJLMnAxdjh4aGh1TGNNTFlkWV9CVkZkR01Sa19TQ3hYMkxRMUlNUUVrVmJpX1g3MmpUSThmQWVfNzh2Q0ZOMTZMWGQxcTRvSEtBSGVZazh0dHFEbEYwNWZsUi1aREFGTDVLYW8xVmNqT0FHVGNwQjNhNTRDUldZZmo5WDVmUXpPSlNoRUkwbzJkUXlfTQ?oc=5"
    }
   }
  ]
