@@ -1,5 +1,5 @@
 {
- "w": "2026-11-19T13:03:12Z",
+ "w": "2026-11-19T13:08:42Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -102,6 +102,23 @@
    "sumber": {
     "nama": "bsinews.id",
     "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1CQTJsbm5YbkNVR0k4XzItMWpBaFByX2xiRGZXaHR0NDEtbkRoRVVxNURtTllVXzUtY0FKSWVYMHFMTXA2YWpjcllySlNyaVlRXzdBN01QT0duR1U5VWIw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-19T12:22:00Z",
+   "media": 2,
+   "judul": {
+    "id": "DPR RI Minta Pemerintah Percepat PP Terkait Tarif Ojol Antar Barang dan Makanan",
+    "en": "DPR RI Minta Pemerintah Percepat PP Terkait Tarif Ojol Antar Barang dan Makanan"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Kompas.com",
+    "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQSDNWVXczd1NCc0NlbkhydHRTcHdBU28wYmxhSzh6UHc3SHo2Mk15ZVkycDJKXzJYYzAzR2VxQm5iNjliUC1VZ1dyUDdpUkRzSVRzZ2N0ODloYkdhbHRXc0x6dS1qZGdzRndySUluSWNJOVBSQ09iYVJKVHM5d0lxUHhhQkRCbUVLb0ZUWGpSbS1JT3NCVmlndktFeGxIc2x6RUFEaHF1NUlUd1NXT2o5d0FmZlpPQnFiUk45LVBNVnJNdw?oc=5"
    }
   },
   {
@@ -259,6 +276,40 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-19T12:58:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Driver Ojol Curhat ke DPR soal Potongan Aplikator 8%: Promo Hilang, Orderan Jadi Sepi",
+    "en": "Driver Ojol Curhat ke DPR soal Potongan Aplikator 8%: Promo Hilang, Orderan Jadi Sepi"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "kumparan",
+    "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQYzFEUTdXOVFudWo2NHI1LVphSncwQ0NCd1NhZG1RTHUwQy14QUFUVlZSUUprRVppYWIzd3RjTmZUTEtjT0ppbzhyY184LVB4eG5GeUROSWstZjh2bzdacEFtdjU4YmxHMjhQYnJuSTJoWXJMSXY5WndCYTh3ZVpEei1SRHYzb0tzVUtlbDNZUkJrU2dIVm9ta1JZZjRKZmM1Q09DSDZtaWY4QW5QUS13eW5QN2pBVVYyZXF3OUpiTW93ZWdTRTF30gHPAUFVX3lxTE5BdzBKY2hPN2RvWjVyQm1LSjdJZVhaYndBbDhDZFNmTVkzb0RPZllfVXRiWEl4a3EtZ2MyVzV2Nk90X3c0YUFXQ2c4clNSLXRJZXhLRnItcHBac001UXNYLXhWR1JzUjJEa1JuM3VDZHRnd3E5ZnU0Nm5BS1NQU2NoUi1kTWJVZWxPWVAzX1RoR0JseVdoZ2Nud2M1aFlsVHlwdXI4YnZnandvak1zbVJ1b0FWUEU4RlpNZEZOWlZGWEVqd1lPUWNkMVB1R2dqWQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-19T12:49:00Z",
+   "media": 1,
+   "judul": {
+    "id": "DPR Terima Aduan Ojol soal Tarif Tak Naik 4 Tahun, Dasco: Pekan Depan Temui Kementerian",
+    "en": "DPR Terima Aduan Ojol soal Tarif Tak Naik 4 Tahun, Dasco: Pekan Depan Temui Kementerian"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Warta Ekonomi",
+    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOcDVCUnluNk9Kc0QzVzR6S0VoTHBrZktpZXZLSjlvTWxkSlFIQ252X0h2X1gtNTRUeHl4TDNYdVVhUzM3NFh3ZkxWQU5CZ3hVR1RtclJSeUt5cGVQUktiSDgwRC1OOWlLaVVaMXhSMDJPUGNiV01yRFFrRER5RkdZbDdqbkhuVTByeWJPbEpaYWNRemRidDRLUS0xb1BOOGo0LVkzSDZGejl5NHBIOFlSR1RfMFBVMzBreDlxUVA3cljSAcYBQVVfeXFMT1ZZbE5ZQzBQVTFwcmVpMVNfQWxfWlB2LWpJVFBqdWVTeUZYV1dnMjUzRVdjRlREc0pnQ2JqTDQ3TzI3ZnlOR195N2xETGZ5VnU1cDhELUlVUjl0TlMtVWdxTHZZcmh3aU1UZEhGN0VXRV8yNGdVeW0wS3V0UFZabnNqQXN3bjZubnFlZXNTQzN2VFZGdGlJR29ybGZvVHQwNlU5UFc2YkQ5ODlCNThBbFJVQndvbjdMN1BTaWlkN2Vsajd0cWx3?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-19T06:09:58Z",
    "media": 2,
    "judul": {
@@ -272,6 +323,40 @@
    "sumber": {
     "nama": "Radar Semarang",
     "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQeVdFb2FOS3U2WHRVNkxnQnNCLUkwTnRUTGJlWnY5STdTeEpPakVYand1SEpoUkFva09qMkRsa0VEMU5mRnZGaWZUTWJZQnh5ekEyekF4ZVluYzNmWk8ybjdrMnVFYVlNam5ndG1fQmlhZ1FuYVVXWWUxM0ZZSDY0UF9weXRJRm9vdjN4MEg0dGhnVjJUTUZ3ZWIwMWlYZ1BWRDhvcHg2SFBvZmdIMWdNN0thdzVXN3VlUEpkV1Q0cXBPUdIBxwFBVV95cUxOQzR5SnNjUTl1WjZBZVZnV28zdnpqLW1Kb0JqeTVlazdtQmRBR1FRMHlfVnJHZUUwN1U1OTA0MnJsLWpMMWJ6dlhMWXRWRFZVV3BNZGY4YnBQUE1lUUlDZjBCVkVZaGJ1VERBX3ViYzZDdkJ4QUY4ZVhVcGNzRWprRVR3V0E4b2JndU1tQXZpbEZBZW1VdFFRTkdCOGFGVVdsOXN5dWJQWDZRaWhyNjJFa3hhUEFXRXdySXlLNWFLU3ZRX19mQzZF?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-19T12:11:47Z",
+   "media": 1,
+   "judul": {
+    "id": "Pengemudi Ojol Dilibatkan dalam Reses, Supaad Bahas Perlindungan Kerja",
+    "en": "Pengemudi Ojol Dilibatkan dalam Reses, Supaad Bahas Perlindungan Kerja"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Headlinews.id",
+    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOQk5VXzc0NGZtem9FNm9vWjZqOWw2MmtyakppV3NQQWg4LUdqbTlyN1JwcTVWZmp6RkNrYXJoR2Q0U18tV2ptaWU0akRKajRWZ3hQbjJRRWF5WVgwZUVodXQ5Nmw5eF9wa1A1YThVNHBIVFBVMmVrUkh1Z2ZFMUIzbDBweHdRZ0gwQWtWODFZQmFrcmNTdk9z?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-19T12:08:25Z",
+   "media": 1,
+   "judul": {
+    "id": "Sardi Ojol Semarang Sumringah Dapat Pakaian Hingga Sayur Gratis di Tengah Himpitan Ekonomi",
+    "en": "Sardi Ojol Semarang Sumringah Dapat Pakaian Hingga Sayur Gratis di Tengah Himpitan Ekonomi"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Tribunjateng.com",
+    "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNWXRvWmZxVF9XMUVQR3lMdU9ZYy03bjkwY1V4YVVqcGFLbGVfY1VUY21hX28tUHpzMWlXN21lZkluR1Q1ZTRja3pOdUJLMnAxdjh4aGh1TGNNTFlkWV9CVkZkR01Sa19TQ3hYMkxRMUlNUUVrVmJpX1g3MmpUSThmQWVfNzh2Q0ZOMTZMWGQxcTRvSEtBSGVZazh0dHFEbEYwNWZsUi1aREFGTDVLYW8xVmNqT0FHVGNwQjNhNTRDUldZZmo5WDVmUXpPSlNoRUkwbzJkUXlfTQ?oc=5"
    }
   },
   {
@@ -323,40 +408,6 @@
    "sumber": {
     "nama": "tvOneNews",
     "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNQW1JTUpLbzlIdVRNVURlM0l4RHBhNHNtd0xjVF96ZlAzTHlRWEVxYVJ3azFtYmxvTDk0TF9STnNVcHNSUjEzRi1MRlBzcmZxZEpSbzV4ZFZBN25xeTNuS0VGaXBXMTlKclVWUXFpVlRxOTBrUlNGZWJINWttSC13NUNqdUYyNXNvdmhrYXlvTE5rbG5ncWd0anNCWllLa2VMNTU00gGoAUFVX3lxTE8wR3l0RlowbkNqaFlMZnR3NE9DV0xGaGpJTnE1R3JWMnFBYzZiNTZkNW96UHkwalNoc3FlS3lOSEw3bWVOQkd5NnN2cE1qMkZQalBZMFpvYkRUbW5zMXFYYkhNbkhzZUlLeF9VQTMyM1VyVEx5OTFGTzV3UW0zT0E4d25ocmxQQ01VM0FYeGlSNnF4TDhZNGhKdHRBRS1udGdBVExxWjViTg?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-19T10:14:26Z",
-   "media": 1,
-   "judul": {
-    "id": "Toyota Vios Jadi Alat Penyelewengan Pertalite, Sopir Ditangkap Polisi",
-    "en": "Toyota Vios Jadi Alat Penyelewengan Pertalite, Sopir Ditangkap Polisi"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Batam Pos",
-    "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxONFBZOUdENmtlejdIck1SZUdXV2NTbXNtbTBHS0RHZXBjeVRaUUczczNmUVZnQXJwX3dCU2F4dWl1YUpYemNhZkxhdGVId3YtTXJxRk15a3ZiQ0J0UTlPZE9CdVZTMUVtNzJ4UXBaTnliOFpUQTVGQm9aWTVDbjZUbWY3R0tiU2dzN1gzYjhicmUxN0Q4OXBfLXpTbGVwMzRNT01XWFpn?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-19T10:10:52Z",
-   "media": 1,
-   "judul": {
-    "id": "Sejumlah Ojol Melakukan Demo Tuntut Perlindungan dan Kesejahteraan",
-    "en": "Sejumlah Ojol Melakukan Demo Tuntut Perlindungan dan Kesejahteraan"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Lingkar",
-    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxORGhkeTd4bndjYWtCRmFLNGMtV08zbzNlMU1PZjUyTFpVcDZvbEZsVkpuME1RWFI3WVpWMTEtd1JWSWRKZDlaekx3Z1pTWEQtQmZQdlpZYllzMXZ4VzJqampQeENnMno4RnhkT1NIZlhZTmlhSE5nVEs0dzRUWmVaZkgyMEFzdUNsdkpzMnV5U3J1T1piMTRj?oc=5"
    }
   }
  ]
