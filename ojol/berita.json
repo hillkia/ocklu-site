@@ -1,5 +1,5 @@
 {
- "w": "2026-11-19T10:12:22Z",
+ "w": "2026-11-19T10:23:22Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -378,6 +378,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-19T09:02:20Z",
+   "media": 1,
+   "judul": {
+    "id": "Polresta Barelang Ungkap Modus Penyalahgunaan BBM Pertalite Satu Tersangka Diamankan",
+    "en": "Polresta Barelang Ungkap Modus Penyalahgunaan BBM Pertalite Satu Tersangka Diamankan"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "jurnalpolisi.co.id",
+    "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNa2t4SUNpakN5aHFxeHU3R1pPdldvSmhmV2xJZWpRZkZvZDliOWhhUWhkZXVTa2VMM2liN0ctdjN3TkV6WGg5MkNXbFk3RGsxNVM4eEJLdGVqSnE0aFgtMVQzOWVndnJ3aEVKdDlnZXB5Z3VCRV82aWdZWHF3LWR4enN3bVNiY2JRS0x3MjhlM0syc0hscS1obXVZSmFMZWxHcThaYVZDdVJLTC1KLVVOVV93?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-19T09:00:42Z",
    "media": 1,
    "judul": {
@@ -493,23 +510,6 @@
    "sumber": {
     "nama": "Poskota",
     "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNWGpHa2tqeWNmWHVDRXQ0SnM1SHZkWlRYdUotTWpuYU5YVlFqNi1XUnZqb3AyczQ1QTRkNERxQ0s3Y09xaXRJQ1paS3hhemEybjVIcG5pOEtzb3dBb2V4ajRJZWFrb0UycDMyWjJSMUNjREtKUHY1Z1VrTG9uYVpfMUpDeEd0NS1kaTE2a0NnTGo0c21WNm9Va2FLUWhydXhhTXZkWS1TZVl1Zm1FdUcwSUxpV09JTnZWR3c?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-19T02:05:00Z",
-   "media": 2,
-   "judul": {
-    "id": "Ojol hingga Buruh Lepas di Pekalongan Dapat Diskon 50 Persen Iuran BPJS Ketenagakerjaan",
-    "en": "Ojol hingga Buruh Lepas di Pekalongan Dapat Diskon 50 Persen Iuran BPJS Ketenagakerjaan"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Kompas.com",
-    "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQckdNazBCUjFIVHBjWFhwNWh0Tzh3MndBckVBZGZjaFdocm5wSEo4MDN5SV9ScGxFYVFYMWFwZWFYVTZRS0lXOTlucHdJYk1obVpVWWdXcGtUc2ZxSVN6MDVXU0tJMTJzUVV2a1FSNzNwMXhOOFRaeldaeHVCcUVIQlNuTGVkZWJwa0RqRVRSS1E4V2FzUjN2ZHZwNXdsWUJUbDNLSzRvZm95U3laRnJFNURyMTI4SF8zb1FTTmR6TXB1LTQ?oc=5"
    }
   }
  ]
