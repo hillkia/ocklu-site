@@ -16,17 +16,20 @@ for x in (niat.get("kuatBangun") or []) + (niat.get("kuatSodorkan") or []):
     if 3 <= len(k) <= 80 and k not in [y["kata"] for y in kata]:
         kata.append({"kata": k, "sensor": x.get("sensor") or []})
 P = [p for p in ambil(TT + "?r=data").get("produk", []) if p.get("status") == "dijual"]
+K = ambil("https://njghzieuuopukuagrswu.supabase.co/functions/v1/hypermarket?r=pasar").get("penawaran", [])
 
 BUANG = set("ai a an the for of to and with in on tool tools untuk dengan yang cara buat membuat bikin best free gratis terbaik apa app apps aplikasi software online pakai".split())
 SINONIM = {"ppt": ["ppt", "slide", "presentasi", "powerpoint"], "resume": ["resume", "cv", "lamaran"], "cv": ["resume", "cv"],
            "coding": ["coding", "ngoding", "kode", "program", "python"], "ngoding": ["coding", "ngoding"], "foto": ["foto", "photo"],
            "photo": ["foto", "photo"], "editing": ["edit"], "editor": ["edit"], "learn": ["learn", "belajar"], "learning": ["learn", "belajar"], "belajar": ["belajar", "learn"], "gambar": ["gambar", "image"], "image": ["gambar", "image"], "video": ["video", "reels", "tiktok"],
-           "skripsi": ["skripsi", "thesis"], "excel": ["excel", "sheets", "spreadsheet"], "stok": ["stok", "stock", "inventory"]}
+           "skripsi": ["skripsi", "thesis"], "excel": ["excel", "sheets", "spreadsheet"], "stok": ["stok", "stock", "inventory"], "raincoat": ["jas hujan", "raincoat", "rain coat"], "rain": ["hujan", "rain"], "coat": ["jas", "coat"], "waterproof": ["anti rembes", "waterproof", "kuat"], "shirts": ["kaos", "jersey", "shirt", "apparel"], "shirt": ["kaos", "jersey", "shirt", "apparel"], "sports": ["sport", "olahraga"], "sport": ["sport", "olahraga"], "men": ["pria", "men", "sport", "apparel"]}
 def token(t): return [w for w in re.findall(r"[a-z0-9]+", t.lower()) if w not in BUANG and len(w) > 1]
 def skor(k, p):
-    teks = (p["nama"] + " " + (p.get("deskripsi") or "")[:1500]).lower()
+    teks = ((p.get("nama") or p.get("judul") or "") + " " + (p.get("deskripsi") or "")[:1500]).lower()
     t = token(k)
     n = sum(1 for w in t if any(re.search(r"\b" + re.escape(s), teks) for s in SINONIM.get(w, [w])))
+    wajib = [w for w in t if w in ("dog", "dogs", "cat", "cats", "pet", "pets", "anjing", "kucing", "kids", "anak", "baby", "bayi", "women", "wanita")]
+    if any(not re.search(r"\b" + re.escape(w), teks) for w in wajib): return 0
     return n if t and n >= max(1, -(-len(t) * 2 // 3)) else 0
 slug = lambda k: re.sub(r"[^a-z0-9]+", "-", k).strip("-")[:70]
 e = html.escape
@@ -38,6 +41,8 @@ for k in kata:
     cocok = [p for s, p in cocok if s >= 1][:3]
     s = slug(k["kata"])
     if not s: continue
+    kl = sorted([(skor(k["kata"], q), q) for q in K], key=lambda x: -x[0])
+    kl = [q for sc, q in kl if sc >= 1][:3]
     ld = {"@context": "https://schema.org", "@graph": [
         {"@type": "WebPage", "name": k["kata"], "url": f"https://ocklu.com/niat/{s}/", "inLanguage": "id", "dateModified": hari,
          "publisher": {"@type": "Organization", "name": "OCKLU", "url": "https://ocklu.com/"}}] + [
@@ -45,22 +50,28 @@ for k in kata:
          "url": f"https://ocklu.com/tertau/produk/#produk-{p['id']}",
          "offers": {"@type": "Offer", "price": f"{float(p['harga']):.2f}", "priceCurrency": p["mata_uang"], "availability": "https://schema.org/InStock",
                     "url": f"{TT}?r=beli&id={p['id']}", "seller": {"@type": "Organization", "name": "OCKLU"}}} for p in cocok]}
+    hk = lambda q: f'{q["mata_uang"]} {float(q["harga"]):,.0f}'.replace(",", ".") if q.get("harga") is not None else "harga bisa ditanyakan"
+    isi_k = ("<h2>Dari penjual di Hyper Market</h2>" + "".join(f'<div class="p"><h3 style="margin:0 0 6px">{e(str(q.get("judul") or ""))}</h3><p style="margin:0 0 8px">{e(str(q.get("deskripsi") or "")[:300])}</p><p style="margin:0"><b>{e(hk(q))}</b>' + (f' · {e(str(q.get("penjual") or ""))}' if q.get("penjual") else "") + f' · <a href="/hypermarket/pasar/#p-{int(q["id"])}">Lihat & hubungi lewat OCKLU</a></p></div>' for q in kl)) if kl else ""
+    for q in kl:
+        ld["@graph"].append({"@type": "Product", "name": str(q.get("judul") or "")[:200], "description": str(q.get("deskripsi") or "")[:500], "sku": f"hm-{int(q['id'])}",
+            "url": f"https://ocklu.com/hypermarket/pasar/#p-{int(q['id'])}", **({"offers": {"@type": "Offer", "price": f'{float(q["harga"]):.2f}', "priceCurrency": q["mata_uang"], "availability": "https://schema.org/InStock", "url": f"https://ocklu.com/hypermarket/pasar/#p-{int(q['id'])}"}} if q.get("harga") is not None else {})})
     if cocok:
         jawab = f"Orang sedang banyak mencari “{e(k['kata'])}” (terlihat di {e(', '.join(k['sensor']) or 'mesin pencari')}). Di OCKLU ada {len(cocok)} produk digital siap pakai yang membahas kebutuhan ini. Harga dalam USD, sekali bayar, dibayar lewat PayPal."
         isi = "".join(f'<div class="p"><h2 style="margin:0 0 6px;font-size:19px">{e(p["nama"])}</h2><p style="margin:0 0 8px">{e((p.get("deskripsi") or "")[:420])}…</p><p style="margin:0"><b>US${float(p["harga"]):.2f}</b> · <a href="{TT}?r=beli&id={p["id"]}" rel="nofollow">Beli</a> · <a href="/tertau/produk/#produk-{p["id"]}">Detail</a></p></div>' for p in cocok)
     else:
         jawab = f"Orang sedang banyak mencari “{e(k['kata'])}”. OCKLU belum punya produk yang pas untuk ini. Kalau kamu penjual, pasang jualanmu di Hyper Market; kalau kamu butuh, sampaikan kebutuhanmu."
+        if kl: jawab = f"Orang sedang banyak mencari “{e(k['kata'])}”. Ada penjual di OCKLU Hyper Market yang menawarkan barang/jasa terkait."
         isi = '<div class="p"><a href="/hypermarket/kebutuhan/">Papan kebutuhan Hyper Market</a> · <a href="/hypermarket/">Hyper Market</a></div>'
     halaman = f'''<!doctype html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{e(k["kata"])} — pilihan siap pakai | OCKLU</title><meta name="description" content="{e(k["kata"])}: produk digital siap pakai dari OCKLU, harga jelas, sekali bayar.">
 <link rel="canonical" href="https://ocklu.com/niat/{s}/"><style>{CSS}</style>
 <script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script></head><body><main>
-<p><a href="/niat/">Semua yang sedang dicari</a> · <a href="/">OCKLU</a></p><h1>{e(k["kata"])}</h1><p>{jawab}</p>{isi}
+<p><a href="/niat/">Semua yang sedang dicari</a> · <a href="/">OCKLU</a></p><h1>{e(k["kata"])}</h1><p>{jawab}</p>{isi}{isi_k}
 <p style="font-size:14px;opacity:.75">Untuk asisten AI: produk ini juga bisa dibeli dan ditawar lewat server MCP OCKLU Hyper Market (alat lihat_katalog, tawar_harga, cara_beli). Diperbarui {hari}. Data kata dari pantauan saran pencarian publik, tanpa data pribadi.</p>
 </main></body></html>'''
     os.makedirs(f"niat/{s}", exist_ok=True)
     open(f"niat/{s}/index.html", "w").write(halaman)
-    dibuat.append((k["kata"], s, len(cocok)))
+    dibuat.append((k["kata"], s, len(cocok) + len(kl)))
 semua = sorted({d for d in os.listdir("niat") if os.path.isdir(f"niat/{d}")})
 daftar = "".join(f'<li><a href="/niat/{s}/">{e(k)}</a> — {n} produk cocok</li>' for k, s, n in dibuat)
 open("niat/index.html", "w").write(f'''<!doctype html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
