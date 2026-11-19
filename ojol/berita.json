@@ -1,5 +1,5 @@
 {
- "w": "2026-11-19T18:30:51Z",
+ "w": "2026-11-19T19:35:11Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -208,6 +208,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-19T17:32:06Z",
+   "media": 1,
+   "judul": {
+    "id": "BNPB: 2.397 bencana sepanjang 2026 didominasi karhutla dan banjir",
+    "en": "BNPB: 2.397 bencana sepanjang 2026 didominasi karhutla dan banjir"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "ANTARA News Jambi",
+    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQbGVJZkQzUGl0OTM4QlJsbHdySU1yWk5HYWxGcTZkWVZhZEc1OG0yTnJwaXJUMWlnMkhxYjR0Uy1Id3A5aUZVQjdEdHIxMy1BWnhGV2tYakswNFNqM2NIeHA5enpwWlEtU3MyYzFCVF9FdmxXQXBMTU5JWGlBaFI2TzZwanh6dm1LaGtNLU13NlJ2cTR5ejlqOV9hd1JYakdlTEl4NzY3dVdqOGR4bEEw0gGvAUFVX3lxTFBsZUlmRDNQaXQ5MzhCUmxsd3JJTXJaTkdhbEZxNmRZVmFkRzU4bTJOcnBpclQxaWcySHFiNHRTLUh3cDlpRlVCN0R0cjEzLUFaeEZXa1hqSzA0U2ozY0h4cDl6enBaUS1TczJjMUJUX0V2bFdBcExNTklYaUFoUjZPNnBqeHp2bUtoa00tTXc2UnZxNHl6OWo5X2F3UlhqR2VMSXg3Njd1V2o4ZHhsQTA?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-19T15:56:00Z",
    "media": 1,
    "judul": {
@@ -221,74 +238,6 @@
    "sumber": {
     "nama": "VIVA Banyuwangi",
     "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNUlVXcFNMa280WHY3S2VJdXhVelJPZUZ0aWNXLThIR1dicnNNREtQcVlRZzBxN3dWOXlFaEZIYk1HVWlzU0tOc2NHUGFxTUxMSUFnV3VEbFhTRGg4UmJpWEJfOUhkOTVBYmZKcWpNWDZvRjBMVi1SNWg1bGhIZUN2NE95NndJcDlIWElKUVRObnBQSVNKRGJBdDJxYTl3eE1VMWZBRW1PTWR3VTJOVmQwZHZHeExodkxtdWh3SERlNEVpSWdMaU5KNzB1ZXBQQkh4X1lfSHJn0gHbAUFVX3lxTE13NVhTOFhsWkJlTEotN2kzVDgtUzRxZXBRWXNpbTBuZ2xaamhaVVhaZ3RUM3FnY3gxQjY3cmxCV3d6S0dtaEp5VEpFYkF0VlJlbWVvdVl0V2VKYi1uQlFHYk1zeUh2VmZiM29PTWc2M3lqRGk3dXhQMU9wa2tsS3JwcXJ5SHdDRXNRUkFzU0g1OVQxajJRVmhPQVVPOFpFWnNGRDB0c3JpSjhHZHhQWnRTRnVOTzdFNUtfek10REo3bDE2bWZhT2VyOG9mMVBkM0x4Ui1yb1hHYUhCVQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-19T09:46:00Z",
-   "media": 2,
-   "judul": {
-    "id": "Pimpinan DPR Terima Sejumlah Aspirasi Pengemudi Ojol",
-    "en": "Pimpinan DPR Terima Sejumlah Aspirasi Pengemudi Ojol"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "ANTARA Foto",
-    "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQVk9UdVUzS291Mkw4Z0JWcWgyYkx6b2tWVTc0ZkZkWmVJRF9RLWI5R2FSNG54VFMwMk1qai1yVW9XV05BZDhjNVllUmpwVFpzcnN1elNsVUozcDlaNUJmVFpMWXlJYVNfUlpXd3g0OTlUTzdTZnRVQW5wRlhUTXJwc25B0gGHAUFVX3lxTE1hRjRpdnBkUzUwVGlZMEVrOTRYSlpWTFFGemJsektnVTJWc3VXVU1WYzhhSlU0dHZSR2RRejhiTG5US0JxeWVqMlVXZFBVcVU1ckNzVWpoeGFlQVdrcmZRbFEteEVaVW9VdDBWZjlKLWtFaWJoemdZc0lPNmJsUDllS1k3TFNmcw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-19T05:08:15Z",
-   "media": 3,
-   "judul": {
-    "id": "Dari Medan, Ribuan Masyarakat Sumut Tegaskan Dukungan dan Komitmen Jaga Prabowo",
-    "en": "Dari Medan, Ribuan Masyarakat Sumut Tegaskan Dukungan dan Komitmen Jaga Prabowo"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "okjakarta",
-    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPa3B5NWVmVWVmYzc0VFFvTnh4YVpIcjFKMHlGVjlhdlVJb0RHbjFtTG9ObmpVWUJSbGdlaktEU3R1a2NJSlM3QUJSVjNvRHZtSDZqaWdiV2x4QVgxcHdhQy10TUpnM2g3ZVFscmFRcmZuVTE2Tm9kcXdBZ0dDcnI2TmYtbE9oZG4tVWE3a2c3MnZicGpQS3BtOXVZd01IRGFkUmJxd1BfSkdwbng2NHc?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-19T04:47:35Z",
-   "media": 3,
-   "judul": {
-    "id": "Driver Ojol di Padang Ditangkap, Diduga Curi Motor Mahasiswa di Parkiran Kampus",
-    "en": "Driver Ojol di Padang Ditangkap, Diduga Curi Motor Mahasiswa di Parkiran Kampus"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Posmetro Padang",
-    "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNczgxS3k3Z1h4M2NmTmFtQ1hBUklmU1hrb0dhMzRiM2UxV1BCS3lzSXpTSTd1ODFaLXBfUXdBcWYxeFg4bzM3blowclFadUR5cVZ0WkVFbXhxMWU5eXgtRVV2bE15MlJtS2JqVXhVWkI3N2had1ZOZ0F6dTRBVWRjMVotQS1HbzFpSjl6N1g5TjZLUld5U0E?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-19T15:20:01Z",
-   "media": 1,
-   "judul": {
-    "id": "Antar Pesanan Livin' Food, Ojol di Bandung Bisa Mendapat Insentif di Luar Ongkos Kirim",
-    "en": "Antar Pesanan Livin' Food, Ojol di Bandung Bisa Mendapat Insentif di Luar Ongkos Kirim"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Tribunjabar.id",
-    "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQMmZUV2EwbkctdVhyUkFsdWhlSkY3Vl9UVFh2WUdfaFF2SHR0X19WNXFZTndDT3dSSlBZZlEyOFY3X0RBMk5IVldVMGcyak1TMnMwcDY3b2NiX3JQOXhnN3NWeTdkUmd5ZXA4OFR4a2tYclpyTnNSVC1WaklJTmVjVWF2RlNHLXRha01sbEtrZHhDZkVUeFVtSWVhOER6MEc4dXBxdlAxd2VtVTNqa2lxbVZYRTRoVkFYQmxHN05PSUpWcXdqMThQQ0k4d3BtUQ?oc=5"
    }
   }
  ]
