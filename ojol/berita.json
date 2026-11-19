@@ -1,5 +1,5 @@
 {
- "w": "2026-11-19T11:19:14Z",
+ "w": "2026-11-19T11:30:26Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -276,6 +276,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-19T10:37:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Reses Andika Wibawa, Warga Waydadi Keluhkan Jalan Rusak, Banjir hingga Sengketa Tanah",
+    "en": "Reses Andika Wibawa, Warga Waydadi Keluhkan Jalan Rusak, Banjir hingga Sengketa Tanah"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "netizenku.com",
+    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOUWlrS3I5YllRVk5lRDBDSENsNXM3SHc5YmpkdGc3c2FYSk1DVnVrR0hBWk0yZnRwWEtWblEwMjY5TnVvR2RRNXNReU92MVNscXNiNC1ueDctOVdHaGNiZzVzd01iVkxlaWMxUHdXdmlMb2w1emNfbFlBc2FqazlYZlNPRXRVLU1pelM0WGhoOGxsNGFXbVpiOWw4czFFVTRERzdKNW0tOVktUQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-19T09:50:05Z",
    "media": 1,
    "judul": {
@@ -476,23 +493,6 @@
    "sumber": {
     "nama": "RRI.co.id",
     "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQVnFCN0JPLXZaQlRhVDRBOGZkVFlWdEF5SzZrZENHR2hEZThlOWNoUGQ4Q0xUbzdSRDdnVHlYLWxEOGlfZEplYldjUG1ONFhETk9PSk1vcms2ZTZLWEJXVThqMGcwbWM4eGdNRlctbGxCLUpSZTRnbHpndWpwcDhDU0JvcEotSExqQTB3eFl2c0xzSGR5UkM5a0VPUDRVOUpHMFlENzFOLUt1YWtVN2tCQ05Yc2FtSXE3c05Leg?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-19T08:15:57Z",
-   "media": 1,
-   "judul": {
-    "id": "Di RJ, 2 Pengemudi Ojol Sepakat Berdamai",
-    "en": "Di RJ, 2 Pengemudi Ojol Sepakat Berdamai"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "PortalSulawesi.ID",
-    "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1jdlp3c2oxRlFHTjVpVG5ONzI1R0NPc1BMbmNpQkVRQkxpbjJWaGoxS2tEU1g5TE4tUDF2dnVUbVlWcml0SGhXUGlXRG9tZFA2UTNEVWw0RVFFbExTd01uWmdtQlA1bE1IRURwMndEa3l2eFBy?oc=5"
    }
   }
  ]
