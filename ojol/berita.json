@@ -1,5 +1,5 @@
 {
- "w": "2026-11-19T17:26:03Z",
+ "w": "2026-11-19T18:30:51Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -21,6 +21,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-19T16:09:29Z",
+   "media": 4,
+   "judul": {
+    "id": "Dasco Langsung Hubungi Menkomdigi dan Menhub usai Terima Keluhan Ojol soal Tarif",
+    "en": "Dasco Langsung Hubungi Menkomdigi dan Menhub usai Terima Keluhan Ojol soal Tarif"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "MetroTVNews.com",
+    "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOeHNKaFA2RXJtUUM1eEhQZTBCMnRRWVZGZl9uSkpvM0NlWnphOUxIR0t0M3loVGgwRkZWQmJ3NjBHdkZzXzMxb0hqVVROWGJ2Qjk0a3hkU3c3cXdlOGdyZEtfNTJpbWhhMWd3ZnlxT3lFSDlndGNGdDJSVGM1c1JFNXQ4dnpMSUlKclhsRUVUMVM3bHhLNmlwaXQ0M1RqaFBHLTBBRHJhUVlodmV4V21hVU9oNjI4Tzd6Wkh3d2RnOA?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-19T15:41:56Z",
    "media": 4,
    "judul": {
@@ -34,6 +51,23 @@
    "sumber": {
     "nama": "bsinews.id",
     "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBNMGZJc0tkX3dHbElmSW5VakJWbEpTTlEycFF0Y3pOQWwyamY5TUlXR2Q2ZGhDOUR4MW5tRUw1djI1QWxzU0ZQc1R2MmV5VVllNFItem1VYW5MaVh0X0VV?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-19T16:00:00Z",
+   "media": 3,
+   "judul": {
+    "id": "Tarif ojol empat tahun tak naik, DPR fasilitasi pertemuan dengan kementerian",
+    "en": "Tarif ojol empat tahun tak naik, DPR fasilitasi pertemuan dengan kementerian"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Elshinta",
+    "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNOXUtOEhRMVFVbDN1UUdEbUEyMzB0aEtxZGRiQUVvXzZja2RQcWdvOGxRRUtYM3FiZ3lseXR6cWRzYnFrdDFXWlJKYkZEN1NiNmh6ZHlGcUpLZTRfN1pWYThoNENyWU00RnJYYWpJaTgtTk1PUTdqdWpkQ3g5WXlpUjBqZVZjdGdaT0lfSi1SaUpkN3k3S19XVE1ZYnZWc1kxNDNNTlJUaHg5SWlyWE0wZ2hHeGFFTDFrcEhsMlNIUQ?oc=5"
    }
   },
   {
@@ -72,23 +106,6 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-19T11:14:00Z",
-   "media": 3,
-   "judul": {
-    "id": "Pimpinan DPR Terima Keluhan Ojol soal Tarif, Langsung Telepon Menkomdigi",
-    "en": "Pimpinan DPR Terima Keluhan Ojol soal Tarif, Langsung Telepon Menkomdigi"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "SinPo.id",
-    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQYzk1c3hJaGNUTlZRc2l1RUtjdDktNFJnWkhaTXE2c1U5T2E0UmVFX0stTWh0Y2R6b0s1eVN1cV9sWkhWTXdMekJXWXFMVU1TNzJCUXBLdWVMX3R3dHR5QWVUcWN3V0NBNWpkYVpGcEZQZGI0aWtLQUhMRmktTG1pRXU5VWoxbk4xX1RuNHExc1RNUFVsMDRZ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
    "waktu": "2026-11-19T02:02:00Z",
    "media": 6,
    "judul": {
@@ -119,23 +136,6 @@
    "sumber": {
     "nama": "selalu.id",
     "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOM0J5VmVkQ1JKem9Pby1KamlwWlJ3eE1HWE11LUJPNUdGNFd6OWg4RmRDUFkzRk9mT3kzTGppblcxRUkyNFYwMm1CMllxQlhKc2RoS0RTZHMxUkVRRlF4WkJCak1ncmhVUEk5bmwxNTRldDZ3Z25GbmRxeVpBTEVIRzV3SmY2MlM4WENLT2FnUUZFR280SWN6MzlZOE1UdEll0gGmAUFVX3lxTE5VSkVBVUZGRGFRM2kyc2FtckVaZm9FQWJwNmJjNDBwWTIxdzYzMURiX1hlZ1RubkZLVWJnbWY2aFhhOVVDNGlFd3Z4SXRtWUVhWlV1RGdPOWJLNmtHOHpVNm43cVVyNkdpbjBia2w1MHUtMVBlU3YzZmFqekx1a0twNTNjX05KNnUyZkZYQnY2a215U3BBRDVSY3JqTFktMWgxUkxlTHc?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-19T12:49:00Z",
-   "media": 2,
-   "judul": {
-    "id": "DPR Terima Aduan Ojol, Dasco: Pekan Depan Mereka Temui Kementerian Terkait | Liputan 6",
-    "en": "DPR Terima Aduan Ojol, Dasco: Pekan Depan Mereka Temui Kementerian Terkait | Liputan 6"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Warta Ekonomi",
-    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOcDVCUnluNk9Kc0QzVzR6S0VoTHBrZktpZXZLSjlvTWxkSlFIQ252X0h2X1gtNTRUeHl4TDNYdVVhUzM3NFh3ZkxWQU5CZ3hVR1RtclJSeUt5cGVQUktiSDgwRC1OOWlLaVVaMXhSMDJPUGNiV01yRFFrRER5RkdZbDdqbkhuVTByeWJPbEpaYWNRemRidDRLUS0xb1BOOGo0LVkzSDZGejl5NHBIOFlSR1RfMFBVMzBreDlxUVA3cljSAcYBQVVfeXFMT1ZZbE5ZQzBQVTFwcmVpMVNfQWxfWlB2LWpJVFBqdWVTeUZYV1dnMjUzRVdjRlREc0pnQ2JqTDQ3TzI3ZnlOR195N2xETGZ5VnU1cDhELUlVUjl0TlMtVWdxTHZZcmh3aU1UZEhGN0VXRV8yNGdVeW0wS3V0UFZabnNqQXN3bjZubnFlZXNTQzN2VFZGdGlJR29ybGZvVHQwNlU5UFc2YkQ5ODlCNThBbFJVQndvbjdMN1BTaWlkN2Vsajd0cWx3?oc=5"
    }
   },
   {
@@ -225,6 +225,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-19T09:46:00Z",
+   "media": 2,
+   "judul": {
+    "id": "Pimpinan DPR Terima Sejumlah Aspirasi Pengemudi Ojol",
+    "en": "Pimpinan DPR Terima Sejumlah Aspirasi Pengemudi Ojol"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "ANTARA Foto",
+    "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQVk9UdVUzS291Mkw4Z0JWcWgyYkx6b2tWVTc0ZkZkWmVJRF9RLWI5R2FSNG54VFMwMk1qai1yVW9XV05BZDhjNVllUmpwVFpzcnN1elNsVUozcDlaNUJmVFpMWXlJYVNfUlpXd3g0OTlUTzdTZnRVQW5wRlhUTXJwc25B0gGHAUFVX3lxTE1hRjRpdnBkUzUwVGlZMEVrOTRYSlpWTFFGemJsektnVTJWc3VXVU1WYzhhSlU0dHZSR2RRejhiTG5US0JxeWVqMlVXZFBVcVU1ckNzVWpoeGFlQVdrcmZRbFEteEVaVW9VdDBWZjlKLWtFaWJoemdZc0lPNmJsUDllS1k3TFNmcw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-19T05:08:15Z",
    "media": 3,
    "judul": {
@@ -272,74 +289,6 @@
    "sumber": {
     "nama": "Tribunjabar.id",
     "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQMmZUV2EwbkctdVhyUkFsdWhlSkY3Vl9UVFh2WUdfaFF2SHR0X19WNXFZTndDT3dSSlBZZlEyOFY3X0RBMk5IVldVMGcyak1TMnMwcDY3b2NiX3JQOXhnN3NWeTdkUmd5ZXA4OFR4a2tYclpyTnNSVC1WaklJTmVjVWF2RlNHLXRha01sbEtrZHhDZkVUeFVtSWVhOER6MEc4dXBxdlAxd2VtVTNqa2lxbVZYRTRoVkFYQmxHN05PSUpWcXdqMThQQ0k4d3BtUQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-19T04:12:00Z",
-   "media": 3,
-   "judul": {
-    "id": "Satlantas Polres Blitar Edukasi Pengemudi Ojol dalam Operasi Zebra Semeru 2026",
-    "en": "Satlantas Polres Blitar Edukasi Pengemudi Ojol dalam Operasi Zebra Semeru 2026"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "BANGSAONLINE.com",
-    "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOWVI4Q0FEY1FTQmxQeFg3V0JvZURWbkVUUHZ1d1VJU0hKd1Eza2FQcTk3dndNd2JyM0tiWE1WQzZrcWJtcmJmeUoxQldFN2dWNkhoQ05EWWVSVTdsaE9sYTV2NDVaRDVoeU5JV2JRY21EQ1BmdU8ySlRTVGJEMnRYbjg2OFFwWlRsMkRKdGUyYmFmYVZCM3JlMnVuQ3ctbGV1LWNQNG9CTkFrZ3FwSV95V2lQVmJRZW4zNFg2WnYxM2UtcTQ0bU92eXRmcThldXc?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-19T08:39:52Z",
-   "media": 2,
-   "judul": {
-    "id": "Ratusan Ojol Surabaya Manfaatkan Program Pemutihan Pajak Pemprov Jatim hingga November",
-    "en": "Ratusan Ojol Surabaya Manfaatkan Program Pemutihan Pajak Pemprov Jatim hingga November"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Jawa Pos",
-    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNMS1tZGNCUkF3enBXNVRoNTRZS1pQVTlxUS00cWc5VlhnMHgtTjZxYms1Y25WTXJBc29VV1NWX0hGTzhZM2N2UlVnZ0VqS0ZHTE1SU2dac2RTYnExYzRHQTgxMWRSbW00Ml9fOW9wXzVYN1NoTHg3Z2djd0t5YWxrakJnU1VQd1g1SVlJOG1xXzhiR0VVVktzV2tmb3ptZ25TcmNFVVJ3REZlN0Z1VVE?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-19T08:29:03Z",
-   "media": 2,
-   "judul": {
-    "id": "Bukan Cuma Razia, Operasi Zebra Polres Pringsewu Sasar Mahasiswa dan Ojol",
-    "en": "Bukan Cuma Razia, Operasi Zebra Polres Pringsewu Sasar Mahasiswa dan Ojol"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Jempolindo.id",
-    "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQRmNHekE2aS1WaEJPNWl6VnU5NEk5dHZhYmNzcG1BTF9VZVZobGhLd014ZUJmdXJtM3YxbkpwZWFfTlk5WXlTT2k4dTk2TWFSQy1nSFpRamVPWW1JRENWakxVbVBXc3ZCcmh4LUlkTk9sMkotS3FweEFCNG1sU0NsdEN3b3g2Ullad2lJLTVuUjN2ajZMT3VGemFGZw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-19T08:24:00Z",
-   "media": 2,
-   "judul": {
-    "id": "Pimpinan DPR Minta PP Turunan Aturan Transportasi Online Segera Dipercepat",
-    "en": "Pimpinan DPR Minta PP Turunan Aturan Transportasi Online Segera Dipercepat"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "kumparan",
-    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQRGRBYmp3aWR0a3ctTW9zeVVqWXdpWk44UmEyUXBTdXJrVkFpVzFyU1Q0RFlSOHhEemM0clcxZ2FmbnB2ZWhQSDdOSEFLT0haanczMUI2aFFRZ2ZpR21mZXliUmVYTDFQY1pWQ1JwbnA2OFBEd0luU0tFd0RDVVlNbjFHck5ybTF3Mm9CSVRyWHBSUnE3SHlaM2NNQTFvdUs0VWhMUG8wYU42TjdPS0NnaGNlWnBNcGpkS3hvWtIBxAFBVV95cUxOTUpOeURUNk5KeUY4bHc2T1FaQUJ6NVB0bDFGLWM2Yml1dWJuei1LSW1zZ3VabVB3MGE2akJaYXlxNUJMb1B4aW1NWWhzc2hiYXRscUVZUkhmT3NqRzlQbE8yLU1jdE9ackdDWXp3X18zVVJIb1VkbUxabmpHRlMtZ054cGUtbEN1dzA1Z0pubFlNNmc5Sy1uMG9ocjhBdTBTYUtmWi1HN0RCd3VLc2RpQ0xTbjFrSGo3SUtyeDJxU194aVht?oc=5"
    }
   }
  ]
