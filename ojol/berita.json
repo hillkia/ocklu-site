@@ -1,7 +1,24 @@
 {
- "w": "2026-11-19T08:11:39Z",
+ "w": "2026-11-19T08:55:23Z",
  "dari": "Kroog",
  "berita": [
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-19T07:58:38Z",
+   "media": 5,
+   "judul": {
+    "id": "DPR Bahas Perlindungan Ojol dan Tanggung Jawab ODOL dalam Revisi UU LLAJ",
+    "en": "DPR Bahas Perlindungan Ojol dan Tanggung Jawab ODOL dalam Revisi UU LLAJ"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Limapagi",
+    "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE4wYlJqbDU4Z2FwbUZjenNYY01DenlTU2c3bEN6THF5TWlvU3FRcDJUM1Q0TDVEemlZVDM5d2duQ2x1bzRXbVhWRU5UcVU4akFoSGhNOFdLVGFkRDk3cHpWRk5R?oc=5"
+   }
+  },
   {
    "jenis": "berita",
    "waktu": "2026-11-19T02:02:00Z",
@@ -34,6 +51,23 @@
    "sumber": {
     "nama": "suara indonesia",
     "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNNjdTWjQyWnA4MnN1eVdkSk12WkJVT2RtTzlFWl9NRXNWVklQbFRFUGROdXFPX3lNSEFBZk9FNV92ajFNRHVyUEs4V1ozQ0FrU3A1Y29jWlB2Y0NYcUpkY3FlLVRILXJnUHBzTDlnMmJHLTFUOXRWREN4c0xBUVU5a1RGbk5YV2ljV0lEajltcWkyR1hiSm1Hb1E3MXFpN3NGQWh4N3UyQUxldGYwckxUMjZQemQtd3VBLWFuY0lnTENJRmthVl96V3pBOEUwRXR2c3BWTXhB?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-19T07:18:46Z",
+   "media": 3,
+   "judul": {
+    "id": "Dasco Minta Komdigi Buka Ruang Dialog dengan Driver Ojol",
+    "en": "Dasco Minta Komdigi Buka Ruang Dialog dengan Driver Ojol"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "jurnas.com",
+    "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOZkgtZ2tMMXhMeVRQeFFUREZNYWpXMkFpalR3b3hlTHltRGxwdVY0Z3UtREc4OGtPaHp1emdhWDBZT25qVWl2WjE2a3dIOGhvOHdYVHFVdFFfcHUzYzQ5TUhwbVVwcGg3Z1JsUXFIbEZVTy1oYkpKc0xjbnA1S2EtczNFVzY4VnA0SHdpZTFsRGM5aUVzT1lfSg?oc=5"
    }
   },
   {
@@ -106,6 +140,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-19T08:24:00Z",
+   "media": 2,
+   "judul": {
+    "id": "Pimpinan DPR Minta PP Turunan Aturan Transportasi Online Segera Dipercepat",
+    "en": "Pimpinan DPR Minta PP Turunan Aturan Transportasi Online Segera Dipercepat"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "kumparan",
+    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQRGRBYmp3aWR0a3ctTW9zeVVqWXdpWk44UmEyUXBTdXJrVkFpVzFyU1Q0RFlSOHhEemM0clcxZ2FmbnB2ZWhQSDdOSEFLT0haanczMUI2aFFRZ2ZpR21mZXliUmVYTDFQY1pWQ1JwbnA2OFBEd0luU0tFd0RDVVlNbjFHck5ybTF3Mm9CSVRyWHBSUnE3SHlaM2NNQTFvdUs0VWhMUG8wYU42TjdPS0NnaGNlWnBNcGpkS3hvWtIBxAFBVV95cUxOTUpOeURUNk5KeUY4bHc2T1FaQUJ6NVB0bDFGLWM2Yml1dWJuei1LSW1zZ3VabVB3MGE2akJaYXlxNUJMb1B4aW1NWWhzc2hiYXRscUVZUkhmT3NqRzlQbE8yLU1jdE9ackdDWXp3X18zVVJIb1VkbUxabmpHRlMtZ054cGUtbEN1dzA1Z0pubFlNNmc5Sy1uMG9ocjhBdTBTYUtmWi1HN0RCd3VLc2RpQ0xTbjFrSGo3SUtyeDJxU194aVht?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-19T07:00:55Z",
    "media": 2,
    "judul": {
@@ -119,6 +170,23 @@
    "sumber": {
     "nama": "Lensa Hukum",
     "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5wMkpmWENGc0ZzUlBDUkItSy1zTXRxanNqRUR3VjhOdzl2TzJqYnhpdmNGVjJMS0hYVUdEWFhDVXZ1YTJpY3RUUFNWWEhDbXowcGQ1WG1IQ0NFMGRnRHU4QWFiNjlqVlJ6cjd4RmFn?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-19T06:09:58Z",
+   "media": 2,
+   "judul": {
+    "id": "Viral Video Pria Ngaku PNS Diduga Lecehkan Driver Ojol, Aksinya Jadi Sorotan",
+    "en": "Viral Video Pria Ngaku PNS Diduga Lecehkan Driver Ojol, Aksinya Jadi Sorotan"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Radar Semarang",
+    "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQeVdFb2FOS3U2WHRVNkxnQnNCLUkwTnRUTGJlWnY5STdTeEpPakVYand1SEpoUkFva09qMkRsa0VEMU5mRnZGaWZUTWJZQnh5ekEyekF4ZVluYzNmWk8ybjdrMnVFYVlNam5ndG1fQmlhZ1FuYVVXWWUxM0ZZSDY0UF9weXRJRm9vdjN4MEg0dGhnVjJUTUZ3ZWIwMWlYZ1BWRDhvcHg2SFBvZmdIMWdNN0thdzVXN3VlUEpkV1Q0cXBPUdIBxwFBVV95cUxOQzR5SnNjUTl1WjZBZVZnV28zdnpqLW1Kb0JqeTVlazdtQmRBR1FRMHlfVnJHZUUwN1U1OTA0MnJsLWpMMWJ6dlhMWXRWRFZVV3BNZGY4YnBQUE1lUUlDZjBCVkVZaGJ1VERBX3ViYzZDdkJ4QUY4ZVhVcGNzRWprRVR3V0E4b2JndU1tQXZpbEZBZW1VdFFRTkdCOGFGVVdsOXN5dWJQWDZRaWhyNjJFa3hhUEFXRXdySXlLNWFLU3ZRX19mQzZF?oc=5"
    }
   },
   {
@@ -140,23 +208,6 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-19T05:35:37Z",
-   "media": 2,
-   "judul": {
-    "id": "Dasco Minta Menkomdigi Bahas Pengaturan Tarif Ojol",
-    "en": "Dasco Minta Menkomdigi Bahas Pengaturan Tarif Ojol"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "bsinews.id",
-    "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBtbmQweGs0R2czdzg1VjUxSkdYRGF4M010ZlViNXNnZHh6Y3FhV05UX1Y1Z2EtWVkyZ1ZDRmtpdWk5UGpzZWQzcVRDTUJjb1VEUFZwYUs5d1VUdw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
    "waktu": "2026-11-18T15:46:25Z",
    "media": 6,
    "judul": {
@@ -170,6 +221,91 @@
    "sumber": {
     "nama": "ANTARA News Jambi",
     "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOOWxXcVR6ZlBPVHI3b19NTThPR3VuQklmVjlUaUFmTVdkZmg1QmtXS2Y2OWZyMk10NS1KYUJUbWdLNW5HQ19nVExUS3FXUVpNbjh3ZDNtNFpnVTRlOE9seF9KR096MjFqX0t5aDJsY2NXOGNBOUFWLU43ckhaWi12b0JGVHdYWGpkMlEyUnFLbzRIbHh1T2tGQ25DODZtdHJHQ0g2SNIBqgFBVV95cUxONU1ZcTNjZTh1a1JMWjdSdHFacWVVbjBFLS1xYTl6T1VFSHhJUEFYQVpId2d5b1d5S3NleDlQV3NlVktrYWhiRzQxbnVsU2J0X1NsQUVPdXY1cTI2LVV1VFk3b09YVkhLMFhXUTM5OUNWTmt4VVlGMWF5bGVJX2djSVQ1andoX3hDdGFGREVxeW9fRkpPX1hOSHNGOS16Zi02R1hJblIzVGJWdw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-19T08:32:02Z",
+   "media": 1,
+   "judul": {
+    "id": "DPR Tampung Keluhan Ojol soal Potongan 8 Persen dan Tarif Layanan",
+    "en": "DPR Tampung Keluhan Ojol soal Potongan 8 Persen dan Tarif Layanan"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "SuaraGarut.ID",
+    "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBXRTVxOU1GOE4taEVNNGQ1RDZMRlhJOGV2Uk04eTJsN1pQMkI4RDJjVG13YjB0aWw2VENURHQwS0pwM0ZtbDVfZXR1SVlqc3cxN3pPSzRPc25ydUtNODVFNS1qOA?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-19T08:29:03Z",
+   "media": 1,
+   "judul": {
+    "id": "Bukan Cuma Razia, Operasi Zebra Polres Pringsewu Sasar Mahasiswa dan Ojol",
+    "en": "Bukan Cuma Razia, Operasi Zebra Polres Pringsewu Sasar Mahasiswa dan Ojol"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Jempolindo.id",
+    "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQRmNHekE2aS1WaEJPNWl6VnU5NEk5dHZhYmNzcG1BTF9VZVZobGhLd014ZUJmdXJtM3YxbkpwZWFfTlk5WXlTT2k4dTk2TWFSQy1nSFpRamVPWW1JRENWakxVbVBXc3ZCcmh4LUlkTk9sMkotS3FweEFCNG1sU0NsdEN3b3g2Ullad2lJLTVuUjN2ajZMT3VGemFGZw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-19T08:27:27Z",
+   "media": 1,
+   "judul": {
+    "id": "Afrika Hadapi Fenomena Tak Biasa: Gurun Menghijau, Banjir Mengintai",
+    "en": "Afrika Hadapi Fenomena Tak Biasa: Gurun Menghijau, Banjir Mengintai"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "CNBC Indonesia",
+    "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOa25sRVpGYjZJVkx6QjdNU1lJLWtIS3FUUlhWbE5SQWJuaHFtSkVQcHdULWpxWTEzR2Y0RjJWWXNSTkc5c1BRdWV3LUhJYzE5MXE0ZHpiM3hJbW5JZmthc1U1Q2c2NzU5ejhCODZyX3pNdkZmSEpvLWRXR1c5X2FOUjJoRFFramNlWkFJRF9EODVydjdIa2FyRkczRXFZS05jUTdKdTE4V3hRV1JDcHBaMUxWb0xPallkUUMzeUtjX0VxblhXSnFJbHp3?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-19T08:21:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Perahu Listrik Tenaga Surya Jadi Alternatif Nelayan Kurangi Ketergantungan BBM",
+    "en": "Perahu Listrik Tenaga Surya Jadi Alternatif Nelayan Kurangi Ketergantungan BBM"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "RRI.co.id",
+    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQVnFCN0JPLXZaQlRhVDRBOGZkVFlWdEF5SzZrZENHR2hEZThlOWNoUGQ4Q0xUbzdSRDdnVHlYLWxEOGlfZEplYldjUG1ONFhETk9PSk1vcms2ZTZLWEJXVThqMGcwbWM4eGdNRlctbGxCLUpSZTRnbHpndWpwcDhDU0JvcEotSExqQTB3eFl2c0xzSGR5UkM5a0VPUDRVOUpHMFlENzFOLUt1YWtVN2tCQ05Yc2FtSXE3c05Leg?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-19T08:09:28Z",
+   "media": 1,
+   "judul": {
+    "id": "Penumpang Diduga Lecehkan Driver Ojol di Harapan Indah, Sempat Mengaku sebagai PNS",
+    "en": "Penumpang Diduga Lecehkan Driver Ojol di Harapan Indah, Sempat Mengaku sebagai PNS"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Poskota",
+    "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNWGpHa2tqeWNmWHVDRXQ0SnM1SHZkWlRYdUotTWpuYU5YVlFqNi1XUnZqb3AyczQ1QTRkNERxQ0s3Y09xaXRJQ1paS3hhemEybjVIcG5pOEtzb3dBb2V4ajRJZWFrb0UycDMyWjJSMUNjREtKUHY1Z1VrTG9uYVpfMUpDeEd0NS1kaTE2a0NnTGo0c21WNm9Va2FLUWhydXhhTXZkWS1TZVl1Zm1FdUcwSUxpV09JTnZWR3c?oc=5"
    }
   },
   {
@@ -208,6 +344,74 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-19T08:01:31Z",
+   "media": 1,
+   "judul": {
+    "id": "Polresta Barelang Ungkap Dugaan Penyalahgunaan BBM, Ratusan Liter Diamankan dan Satu Pria Ditangkap",
+    "en": "Polresta Barelang Ungkap Dugaan Penyalahgunaan BBM, Ratusan Liter Diamankan dan Satu Pria Ditangkap"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "jurnalpolisi.co.id",
+    "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQNDJaMXp0NGpDWXRJanZnYjUzWlA4dEZMOG15UXN3MDlqZy1sTlNyQklVOVVzVFhNT3AyNzdtejM5d3gycWt3TGVTdEhwUlFCcmtCc0pNajdFd2N2Ukc2NVhYTUdQSl9nek9kcDEzOGl3TUM0XzIxMndMaktubUFnQkVFZ1h3Ui1NVWNDYWVNVXBYYWJLTkluMGtUVVk3eGJFVjhST1ZaRGJkNWdjTkgtaGxwb0NrSkNaWnk0Zzc2M3I0aEVO?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-19T07:56:37Z",
+   "media": 1,
+   "judul": {
+    "id": "Perkara Penganiayaan Sesama Ojol Berujung Damai, Firmansyah C. Rasyid Apresiasi Kejari Palu",
+    "en": "Perkara Penganiayaan Sesama Ojol Berujung Damai, Firmansyah C. Rasyid Apresiasi Kejari Palu"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Banggai Kece",
+    "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQbld6V3dCOTBOYURyZkdZN3dPMHBIc09wcDY5UUNISENOdnEyRThLeEstekxEeEtqVmZSREhUaU4zMDNoNmtfdXJlMVFMbGU3MzBJNzQ3U1NRdzV5VkdqZjNHVThHc3k4V3B2bUlQUE9MUzl0eWlsRnBZc0VKT2ZLSHh1MDlheTVHMGVsU0FxOUYwX2VZa3k5TEdfN1VMRmtDS1FKUGZnbHBFWlJUX1VFVnpoU3U1aHk2MFFGcGV0dXNyUQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-19T07:29:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Kapolres Mabar Ajak Pengemudi Ojol Jadi Mitra Deteksi Dini Gangguan Kamtibmas",
+    "en": "Kapolres Mabar Ajak Pengemudi Ojol Jadi Mitra Deteksi Dini Gangguan Kamtibmas"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "RRI.co.id",
+    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPMG9rWE4wM1U3d3FwRURsRkhvajRfMFE2blVFd0owMF9CTnR5Z1VRUi0ycmlmbWF5ZGZOdmRETlNhd0NXbW9MV2tUbkhNVm44VkpjZHVDUWZuUUxqRFZCNjhhaDloVnA5Nk9kVUktTzBZcUtoUzRWMk1kYlpWc3NFNUtKaGdNR1g4UjRvNDFFeUFsbFRlN0ZNWVZnaUdwQkJJVW1QMDZtRVQxWU9kOUVSREhiWVMwa0da?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-19T07:00:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Hamka B. Kady Minta Aturan Ojol Diselaraskan dengan Revisi UU LLAJ",
+    "en": "Hamka B. Kady Minta Aturan Ojol Diselaraskan dengan Revisi UU LLAJ"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Herald.ID",
+    "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNd28tcHN2ZkxtRkVVS285a3lZZkFvdkI0Zm1PNUs0QjR1SDFXczhZa1hVVFNacXJpLURzV0xLTll4blN1eWtCc2Rrc3FDQmY2cVlCcHJYZVJWWHFZbDFhbENzRWM0ZjBCSTNVMFpfWENQaGwyRzlPN21VTGpmQUFZVTQ4Sk5Pa1JRRmI1U3Y5NzZGMEFVdlpRQkMxVQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-19T06:55:45Z",
    "media": 1,
    "judul": {
@@ -221,23 +425,6 @@
    "sumber": {
     "nama": "detikNews",
     "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPOGw5M3dFN2JGallEbFdneVQwX2hUMkxBdm5NMy1LOTVmTmJnbzRaOTctZ2xBNTdLS2RzTWlQbkhZZW5CSERyMVlSaUFpaVhWTWo3N2o3dFFCZmtkb1NTWWdLa3BKcFV6dGNsNkdBeUR2VFpEY2YwemVoQlJ3VktjamlqWDk5V0o5VWJ2LXFEdm5MdF81UDRIZlR1M0N3U2tFU3pvb2JMcU92THdZak8w0gG0AUFVX3lxTE5sY2ZnWnhDWmlUTTZzUzBURmNrcG5YOG8tM2tTeU5ROS1QQnR1azE1RnQ5SXhDNV93bmNMQ0hYMUkwV0FoZFBqcjR3MzJGZldudXJIamxMV1R3cjI3YTlMNDAwT3h5eG5CNGdmY0FpUGdYUkwtYWVIanpZeG5lZDAzSHVIWGRlR0J3eDM0MGdEQlhKMjVoNC1LN0gtWEw1emRoNHFHamd2aTAzUmlvTjl6V2thWA?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-19T06:47:52Z",
-   "media": 1,
-   "judul": {
-    "id": "Pengemudi Ojol Minta DPR Perjelas Aturan Transportasi Online",
-    "en": "Pengemudi Ojol Minta DPR Perjelas Aturan Transportasi Online"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "MetroTVNews.com",
-    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNNklEaFNMS3hMUDdwV3pIYWVxRDAwVWU2R2lYSV8xMTB0dGRkam90TEhNQlZiQU9OWkpJai1Cb2FQRnkzdHdxT2NIamNOa0FJemFZalhIdzFaNy1VREQ3MHMxVklNX01rZF82aWNIeF9tT3B3ZFVpTWc3M1ZFUkRNNllRTGllLXY1SmJndFlKTXNoaE9BejZpV1dyNUJjTDdhamtCdw?oc=5"
    }
   },
   {
@@ -259,87 +446,19 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-19T05:51:50Z",
+   "waktu": "2026-11-19T06:22:00Z",
    "media": 1,
    "judul": {
-    "id": "LAZNAS BMH, Kemenag, MUI, FOZ, dan Honda Hadirkan Layanan Sosial untuk Pengemudi Ojol",
-    "en": "LAZNAS BMH, Kemenag, MUI, FOZ, dan Honda Hadirkan Layanan Sosial untuk Pengemudi Ojol"
+    "id": "Banjir Aceh Tamiang Berdampak pada 18.158 Warga, Ribuan Orang Mengungsi",
+    "en": "Banjir Aceh Tamiang Berdampak pada 18.158 Warga, Ribuan Orang Mengungsi"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "BMH",
-    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPX3pxMXFsbi1qZlE2RXM4WFBDQV9rUjZfcXZoSEd0S0I1emR0RXlILWtPRnhvNndDT0tlY2FFT2JSSGZnNVozaml4blZZWkRGYk8xSndyS3YxOEpacmdFMXF3TWJpS1RyUXVrejRLUzhHTlZwVGpBRDNKa25jQzRTQUo2ZWVOam1BM21RNG5fMVpoTHMzWGlSWEozQkV5LTBxX1E?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-19T05:22:49Z",
-   "media": 1,
-   "judul": {
-    "id": "Demo di DPR, Gerimis Tak Halangi Ojol Salat Zuhur Berjamaah",
-    "en": "Demo di DPR, Gerimis Tak Halangi Ojol Salat Zuhur Berjamaah"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "IDN Times",
-    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPcTZwS0lSeXl3VlFsaWM1MUVFclpZZ3hWRWlTWm1ZTG9MdFVuM18xMTM1Qm9oYVBFdzhteEh4NWp5dFdqX3lfN25rVm0yUnRXNmYzd2hlTnMyamZTd19uMURFaW85UkptbEhlRG5uOEQ2alN3ZWVYeVA2SUpkd0RzQVRPOElkeTZIMkx2WTlRSUFadHpRQUhFamh1MFd2amRJdU1wMGxhM3Z4ZnVEZzF5NWVTSmfSAboBQVVfeXFMUDZmTndzVHpYMHRzOVVyZGMyWXFQY1JzbG1xb0FNaTA1ZVpJZFptNFoxQzFOTG9ZaUh6aFIydlA1dUpVclBVU3FPWVQ4TF9IQWt1b0JrSFhhZEtva2dkQm0yMnV5UDU5bVNTeXg5MW1JYVpaS3g0dGxfeEFTTWlfNDd2STg3d2dyMUFRTkJWeXpRb1p4YktKWVZ0enV4d25QaVFpTFpuQUNPUFV4SHRpamtRY1QtZkNINjdR?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-19T05:22:23Z",
-   "media": 1,
-   "judul": {
-    "id": "Dasco Telepon Menkomdigi di Tengah Audiensi, Minta Ojol Diajak Diskusi",
-    "en": "Dasco Telepon Menkomdigi di Tengah Audiensi, Minta Ojol Diajak Diskusi"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "detikNews",
-    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPQlVhOF90SU0zeGNJQTZFSndkcEhTNjdWTS1HRURPZ090Vm12VWM0THdSUnlTTUJjUk5adEd0TFJENkQ2V3JESHoxSGtKVEhXTzlfWnpLN19oSFpxcW55V0FTQzhvLUxRR2hpT1dQNm0zUnFMekFyNXRORDVnek5FYVg4QzRzY09SUTZmRGc4TGJLRW56dkxGMlZ5aTN2VEtzZkF4TjBmMl9IelMzb3fSAbMBQVVfeXFMUEZCaEJ3SDBpQ3NXcnZOUVlSZGUycmpWcE1vaGJLUDFIZ05QQWZOaHY2YjJYcTJYemVSdUVuc1lJQ05Felptd1VLRW5VWERIT1VKQUJ2eTZWSlRZalFmd0sxekpzQjIxYWhzbkZLd2Z0Nkg5S3lOV1N0T0tnNUFScTVOYjZKRHlTTFR3dlhUOEV4MU5yYnNOYmFmUTZiT3NrbkkwalZaQmdWTGVOdnZSdXFfeVk?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-19T05:21:59Z",
-   "media": 1,
-   "judul": {
-    "id": "Di Balik Layar Ponsel Driver Ojol, Ada Cerita Panjang tentang Jerat Pinjol",
-    "en": "Di Balik Layar Ponsel Driver Ojol, Ada Cerita Panjang tentang Jerat Pinjol"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "rakyatpembaruan.com",
-    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQU2k0aEhRNXBRb3ZDd1c5LU14dzc4TDdISTB4OS1zbUdiUUw1MC1CTE9ERENWcmNzQnhXNWluU0p5MjR3MklYZFJBYmZ0WXRZaEJub3lmbU42SUhSVXUwamRNSUctZGdDQS1TTG1Lbmo0NHNmRlZaN2ZTQ05ZdDRjUFkxQTdHWTlaM1ZTRzFTa0tZWDY3cGxBLU1KTllWYUkyeTJ0dA?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-19T05:06:33Z",
-   "media": 1,
-   "judul": {
-    "id": "Viral! Warga Balikpapan Pesan Ojol Cuma untuk Menyeberang Jalan, Alasannya Bikin Driver Senyum",
-    "en": "Viral! Warga Balikpapan Pesan Ojol Cuma untuk Menyeberang Jalan, Alasannya Bikin Driver Senyum"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Tribunkaltim.co",
-    "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPd2lNSmxJYXVWNkUyMlYzS2J0SXYteHRJdUxtT0Q2cXdiRFRub3lzSkZQVEhqOG5zaURQd3F2WEVHU0NaNnlVX3dkbXBRNnVtM2htcmNCT3h6c3dicHMzcXlmMXJDZ3VVRW8zQ3hLd1lsY2EyeHVOUk5zcUZHRkVWcWpUZ3JwY1hMNEQ4enFISzVKZU9jQUVmNDJ5emt3cE9MVFBMelBLenBQdG44Z1hGYTJCNlJvZThjV2pUQlc2bFRKdmRSZTFvSHB6djVUaGZQeE9oUHExVVNkZw?oc=5"
+    "nama": "Inforadar.id",
+    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOMnBsbUxWRkVWWkZ5dHFfejN3elh5Vzg3azZmeUgwdWlMOFBFajBIOW0wamI2NlJhdThyb3lYUGJTRjhaUUJzMlN5eEY1NjJ0bThOTUlqWGVaZEMxckpsa01ZU1BnUkdCaXhmcmRmYU51X2ZNa0sxbGhMWEQ1WGx5bnlDbjVZMVctYWRON2hLRWYyR0hna1k2cnk2T0Y5SHRpelAzLVBlOEp1c1ZyRjRPeVJGWm4?oc=5"
    }
   }
  ]
