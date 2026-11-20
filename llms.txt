@@ -55,6 +55,3 @@ We are a broker and we have products. Let me help you — tell me what you need.
 
 ## Kartu Siap Dibaca AI — one AI-readable identity card per seller without a website (refreshed every 3 hours)
 - Sellers: https://ocklu.com/kartu/ — each card links all of the seller's social accounts (schema.org sameAs), catalog with IDR prices, WhatsApp order button.
-
-## Open numbers
-- Real monthly stats of OCKLU Hyper Market (agent visits, buyer signals, matches, paid transactions, zeros included), updated every 3 hours: https://ocklu.com/angka/
