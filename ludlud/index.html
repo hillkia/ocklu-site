@@ -45,6 +45,8 @@ video{width:100%;max-height:360px;border-radius:10px;background:#000}
 #obrolForm textarea{min-height:42px;height:42px;flex:1}
 #kota3d{position:fixed;inset:0;z-index:0}
 #jendela{height:56vh;display:flex;align-items:flex-end;pointer-events:none}
+#gantiKota{pointer-events:auto;margin-left:auto;border-radius:99px;padding:6px 12px;font:700 12px/1 -apple-system,sans-serif;background:rgba(8,10,26,.6);color:#fff;border:1px solid rgba(126,249,255,.6)}
+#jendela{gap:8px}
 #jendela span{font:600 12px/1 -apple-system,sans-serif;color:#fff;background:rgba(8,10,26,.6);padding:6px 10px;border-radius:99px}
 body.penuh{background:#0b0d1d;--kartu:rgba(14,16,40,.66);--bg:rgba(255,255,255,.07);--teks:#eef0ff;--redup:#b9bdd9;--garis:rgba(255,255,255,.17);--aksen:#3fe0c5;--merah:#ff7a85;--kuning:#ffcf6b}
 body.penuh main{position:relative;z-index:1;pointer-events:none}
@@ -65,7 +67,7 @@ body.penuh select option{color:#111;background:#fff}
 
 <section id="ruang" hidden>
   <div id="kota" class="kartu" style="padding:0;overflow:hidden" aria-label="Kota Ludlud" hidden></div>
-  <div id="jendela" hidden><span>👆 geser kota · ketuk gedung atau lahan kosong</span></div>
+  <div id="jendela" hidden><span>👆 ketuk layar platform · pad untuk geser kamera</span><button id="gantiKota" type="button"></button></div>
   <div id="kota3d" hidden></div>
   <div id="pesanSambung" class="kartu" hidden></div>
   <div id="rumahPanel" class="kartu" hidden></div>
@@ -105,7 +107,7 @@ body.penuh select option{color:#111;background:#fff}
   <div id="obrolIsi"><div class="kecil">Ketik perintah biasa, misalnya "bikin reel gambar 20 detik soal Laporan Saran Iklan", "#3 udah tayang belum?", atau "captionnya #3 pendekin".</div></div>
   <form id="obrolForm"><textarea id="obrolTeks" placeholder="Tulis ke asisten…" aria-label="Pesan untuk asisten"></textarea><button class="utama" type="submit">Kirim</button></form>
 </section>
-<script src="kota.js"></script><script type="module" src="kota3d.js"></script>
+<script src="kota.js"></script><script src="kotavideo.js"></script><script type="module" src="kota3d.js"></script>
 <script>
 var API="https://njghzieuuopukuagrswu.supabase.co/functions/v1/ludlud",TT="https://njghzieuuopukuagrswu.supabase.co/functions/v1/tertau",PK="",DATA=[],JAM=null;
 try{PK=localStorage.getItem("pj_kunci")||""}catch(_){}
@@ -231,12 +233,13 @@ function statusPl(p){var s=SB&&SB[p];return !s?"belum":s.akun?"tersambung":s.kun
 function keadaan(r){if(r.keadaan==="usul")return"usul";if(r.jenis==="youtube"||r.jenis==="instagram")return statusPl(r.jenis)==="tersambung"?"buka":"dibangun";
   return PLATFORM_JENIS.indexOf(r.jenis)>=0?"dibangun":"buka"}
 window.addEventListener("ludlud-kota3d",function(){if(RUMAH.length)gambarKota()});
+document.addEventListener("click",function(e){if(e.target.id!=="gantiKota")return;try{localStorage.setItem("ludlud_kota",e.target.textContent.indexOf("3D")>=0?"3d":"video")}catch(x){}location.reload()});
 function gambarKota(){var KOTA=window.LudludKota3D||window.LudludKota;if(!KOTA)return;var keg=[],st=noJenis("studio")||1,sibuk=DATA.some(function(x){return x.status==="dikerjakan"});
   DATA.forEach(function(x){var ke=noJenis((x.platform||[])[0]||"youtube");if(!ke)return;
     if(x.status==="dikerjakan")keg.push({agen:"MARKUS",dari:noJenis("mesin")||st,ke:st,label:"#"+x.id+" dibuat"});
     else if(x.status==="disetujui"&&(!x.jadwal||Date.parse(x.jadwal)<=Date.now()))keg.push({agen:"MARKUS",dari:st,ke:ke,label:"#"+x.id+" menuju tayang"})});
   RUMAH.forEach(function(r){if(r.keadaan==="usul")keg.push({agen:r.oleh,dari:st,ke:r.kavling,label:""})});
-  var wadah=window.LudludKota3D?$("kota3d"):$("kota");$("kota").hidden=wadah!==$("kota");var penuh=wadah===$("kota3d");document.body.classList.toggle("penuh",penuh);$("jendela").hidden=!penuh;
+  var modeKota="";try{modeKota=localStorage.getItem("ludlud_kota")||""}catch(e){}KOTA=modeKota==="3d"?(window.LudludKota3D||window.LudludKota):(window.LudludKotaVideo||window.LudludKota3D||window.LudludKota);$("gantiKota").textContent=KOTA===window.LudludKotaVideo?"🕹️ Kota 3D":"🎬 Kota video";var wadah=KOTA===window.LudludKota?$("kota"):$("kota3d");$("kota").hidden=wadah!==$("kota");var penuh=wadah===$("kota3d");document.body.classList.toggle("penuh",penuh);$("jendela").hidden=!penuh;
   try{wadah.hidden=false;KOTA.render(wadah,{
     kavling:RUMAH.map(function(r){var o={jenis:r.jenis,nama:r.nama,keadaan:keadaan(r),inti:r.jenis==="studio"||r.jenis==="mesin",oleh:r.oleh,alasan:r.alasan};
       if(r.warna)o.warna=r.warna;if(r.jenis==="youtube"||r.jenis==="instagram")o.jumlah=hitungPl(r.jenis);
