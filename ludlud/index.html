@@ -116,7 +116,7 @@ body.kokpit #obrol{bottom:80px}
   <div id="obrolIsi"><div class="kecil">Ketik perintah biasa, misalnya "bikin reel gambar 20 detik soal Laporan Saran Iklan", "#3 udah tayang belum?", atau "captionnya #3 pendekin".</div></div>
   <form id="obrolForm"><textarea id="obrolTeks" placeholder="Tulis ke asisten…" aria-label="Pesan untuk asisten"></textarea><button class="utama" type="submit">Kirim</button></form>
 </section>
-<script src="kota.js"></script><script src="kotavideo.js"></script><script type="module" src="kota3d.js"></script>
+<script src="kota.js"></script><script src="kotavideo.js"></script>
 <script>
 var API="https://njghzieuuopukuagrswu.supabase.co/functions/v1/ludlud",TT="https://njghzieuuopukuagrswu.supabase.co/functions/v1/tertau",PK="",DATA=[],JAM=null;
 try{PK=localStorage.getItem("pj_kunci")||""}catch(_){}
@@ -255,7 +255,7 @@ function gambarKota(){var KOTA=window.LudludKota3D||window.LudludKota;if(!KOTA)r
     if(x.status==="dikerjakan")keg.push({agen:"MARKUS",dari:noJenis("mesin")||st,ke:st,label:"#"+x.id+" dibuat"});
     else if(x.status==="disetujui"&&(!x.jadwal||Date.parse(x.jadwal)<=Date.now()))keg.push({agen:"MARKUS",dari:st,ke:ke,label:"#"+x.id+" menuju tayang"})});
   RUMAH.forEach(function(r){if(r.keadaan==="usul")keg.push({agen:r.oleh,dari:st,ke:r.kavling,label:""})});
-  var modeKota="";try{modeKota=localStorage.getItem("ludlud_kota")||""}catch(e){}KOTA=modeKota==="video"?(window.LudludKotaVideo||window.LudludKota):(window.LudludKota3D||window.LudludKota);MODE_KOTA=KOTA===window.LudludKotaVideo?"video":"kokpit";$("gantiKota").textContent=MODE_KOTA==="video"?"✈ Mode kokpit":"🎬 Mode video";var kokpit=KOTA===window.LudludKota3D;document.body.classList.toggle("kokpit",kokpit);if(kokpit&&$("kota3d").parentNode!==document.body)document.body.prepend($("kota3d"));var wadah=KOTA===window.LudludKota?$("kota"):$("kota3d");$("kota").hidden=wadah!==$("kota");var penuh=wadah===$("kota3d");document.body.classList.toggle("penuh",penuh);$("jendela").hidden=!penuh;
+  KOTA=window.LudludKotaVideo||window.LudludKota;MODE_KOTA="video";$("gantiKota").hidden=true;var kokpit=KOTA===window.LudludKotaVideo;/* 20 Nov: owner minta kota 3D dibuang, hanya kokpit video + panel */document.body.classList.toggle("kokpit",kokpit);if(kokpit&&$("kota3d").parentNode!==document.body)document.body.prepend($("kota3d"));var wadah=KOTA===window.LudludKota?$("kota"):$("kota3d");$("kota").hidden=wadah!==$("kota");var penuh=wadah===$("kota3d");document.body.classList.toggle("penuh",penuh);$("jendela").hidden=!penuh;
   try{wadah.hidden=false;KOTA.render(wadah,{
     kavling:RUMAH.map(function(r){var o={jenis:r.jenis,nama:r.nama,keadaan:keadaan(r),inti:r.jenis==="studio"||r.jenis==="mesin",oleh:r.oleh,alasan:r.alasan};
       if(r.warna)o.warna=r.warna;if(r.jenis==="youtube"||r.jenis==="instagram")o.jumlah=hitungPl(r.jenis);
