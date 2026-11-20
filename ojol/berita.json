@@ -1,11 +1,11 @@
 {
- "w": "2026-11-20T04:30:00Z",
+ "w": "2026-11-20T05:03:43Z",
  "dari": "Kroog",
  "berita": [
   {
    "jenis": "berita",
-   "waktu": "2026-11-20T01:21:08Z",
-   "media": 4,
+   "waktu": "2026-11-20T02:54:00Z",
+   "media": 5,
    "judul": {
     "id": "BNPB: 2.397 bencana sepanjang 2026 didominasi karhutla dan banjir",
     "en": "BNPB: 2.397 bencana sepanjang 2026 didominasi karhutla dan banjir"
@@ -15,8 +15,42 @@
     "en": ""
    },
    "sumber": {
-    "nama": "Media Indonesia",
-    "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNaUhmM2tGQTl1WkFvT1BNQllHbjdwN3d1SjZoVWUzNTRXRG5hVjVpX0gzbmRGNTJJN0N4d3oxRWhXREtVN0hkTTk3TVh0R3o1OUxJa1ItTEtNUjU1NTZZby1TenpLc1dqRzU4LVdEYkFHZG9KRnJKQTI0S00taG9uZ0lJbi1BTi03NUJvd2l2dzJud2Job1E?oc=5"
+    "nama": "Validnews",
+    "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNY3BIU2Z0cURuN2Q5Z29SeGRrdVFuQ0ZKNzBIeUhFeVVjZExCTDRDa1RNa2psN0ZSSTVTcnN0TmdWUmJfenRuTVpfVUdqSERQNHY1dHlvWWJmOVdGR25nendITGdoRW5CenAwaDc0MWltNl9yYkd0dGFmLXNfRHRHMDk2S3hqT2hyZjFBT2dtbW5ZY29nSzZsQnM2bUlXRUo2bFY3WG5xeUlEbGRI?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-20T03:04:40Z",
+   "media": 3,
+   "judul": {
+    "id": "Pimpinan DPR Minta PP Turunan Aturan Transportasi Online Segera Dipercepat",
+    "en": "Pimpinan DPR Minta PP Turunan Aturan Transportasi Online Segera Dipercepat"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "faktakalbar",
+    "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQLXJDS01iOGxULW9SS1lsWnlHbDNzVUt0anYxSmV5d3J2TW9yakFXU0t1V0Q3QmdxcVhRbWhLZ1QwenBNRk5rVTREd0pZUmZKTmxCa0xvY1BQZjY4MVg5eEdoWllMNEJJMHFCY3FGRUwxUDhJT3JReDhmWk1nTktMT29ENmEwcktOUkZNdHJaR2hVSGhOWXc?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-20T02:41:43Z",
+   "media": 2,
+   "judul": {
+    "id": "Dasco Telepon Menkomdigi di Tengah Audiensi, Minta Ojol Diajak Diskusi",
+    "en": "Dasco Telepon Menkomdigi di Tengah Audiensi, Minta Ojol Diajak Diskusi"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "JournalArta",
+    "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOamJsakVRTWlXM1BPbVpUUGNWU29kX0hKSGQzVzBxZm5TNmhPdHl5Q2Rfc2JPWlAxV29wUE5GWE90bmpzcGZBbExRS0lWQ0tXQ0pCTzBvbDkwQzJlZ3hrQTQwVUtFOTJDSEV5MVdpdnh5RGpZWXVnZGE5VTd6QXFtM3k4eFVNVTM0a0hCaDkyN0gwalU?oc=5"
    }
   },
   {
@@ -89,6 +123,91 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-20T04:11:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Driver Ojol Ditemukan Tewas di Cipete",
+    "en": "Driver Ojol Ditemukan Tewas di Cipete"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "NTVNews.id",
+    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE8xd1hrVWlFVkw1aEZoVzlNUDExdmVCRE5yaWFZVVl2WC1zVzhiSndNa1ByWU1VREw0TGMxS0xzWF84UTFkME1xYXVnVzNTeWhjWU5fa2ltMzdnYlh4RVEzeUxMSmFXRDk0anZvQ3g1dVdXUnA3X1pLZDFRcWhxN1k?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-20T03:44:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Hari ini Bashra BIP Bersama Polres Pamekasan Bagikan Helm untuk Ojol dan Pelajar, untuk Umum Tunggu Informasi di Media Sosial BIP OFFICIAL",
+    "en": "Hari ini Bashra BIP Bersama Polres Pamekasan Bagikan Helm untuk Ojol dan Pelajar, untuk Umum Tunggu Informasi di Media Sosial BIP OFFICIAL"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Cyber Jatim",
+    "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPMTM3YXpnYXc4ZEFJOC03Z2cwbDA0Q2lYZzJSY1IwYmlza2hiSHhfV19saU1JTThTODZ4eUFSZEg2OUdpdzk5RFFmMWMtT21MbE9hZ2xaV0UzWjlnMlZpMy1vUmZoT0U2aTlOVE13b25RSVBtTG03bnVuWV8yVGJVOUxjYl95cmNIa0xYOWViSlh1WEZmOUFfb1lWcTdIVDNpU21iTV9PYWh4Nm81ajRRdTRrWVR0ZUQ2c01uSVplYlNjTndRX3VhOHMzUkYtRnlTaWxDbzhBaDJ1SWlNY3N3UDRZTnVNdExXNFlndEdvVnVkUQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-20T03:29:13Z",
+   "media": 1,
+   "judul": {
+    "id": "Ardianto Aritonang Mundur dari Ketua Ojol Kamtibmas Presisi Polda Riau",
+    "en": "Ardianto Aritonang Mundur dari Ketua Ojol Kamtibmas Presisi Polda Riau"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "mitratoday",
+    "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQR2xIbGZPdFIwR2gyOGN0RERfSDF0OVRtMXlSTTRlUWhrX0liWTV0QkpVV2M0RDdtQ01fMVFLSDE1dUJnREhuaEkxbTJvVHBnZXFETkZHQUdNTjBvcmxSenlWVXRWdUE1dm44eldydk5sUXBoZzRvNTE2Y1RhbzBIbTBNMVQ5eW12d0ZDdWh4TnlBclRvTmZKUmhhTUlpbjg?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-20T03:13:30Z",
+   "media": 1,
+   "judul": {
+    "id": "DPR Minta Kementerian Percepat Aturan Turunan Perpres Ojol",
+    "en": "DPR Minta Kementerian Percepat Aturan Turunan Perpres Ojol"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "BeritaSatu.com",
+    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPenBjSUdpRXk5NkdXWE5vbjhudDBIMV9SNlpkeV80NzZwQmpwM2V4ajlENkFfSV9ObWtLOXVGcDlvWlMyd0Y0V0VqNUMtNEtzeTBvSE9kTldzX2w2QWJOYzZZVG9DbzRpUTRWSjZBV3NnZlFSTjl3UTBjcENjZ0xLOWYwT1ZEaHF1ZjR6NFNzbm1OYXMyWEdFbnVldlNRb0k0aDJ0MQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-20T02:35:33Z",
+   "media": 1,
+   "judul": {
+    "id": "Komisi Ojol Dipangkas Jadi 8 Persen, Driver Malah Mengeluh Order Sepi, Dasco Turun Tangan",
+    "en": "Komisi Ojol Dipangkas Jadi 8 Persen, Driver Malah Mengeluh Order Sepi, Dasco Turun Tangan"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Suara Pantura",
+    "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOYk9Peml1U0hrTDNjemhMOTgyLXQxT0JUUzM1b2JWQ1ZpX0RuaWlUSk5rNWFZUFp0Q0VyOURKMDRKaEprSWFWMTNUVzFkNTB6MnpYLVRrRlBqMkZhcjliT0JzSlkwRXREbkhIVnNidFJmdFpTb1NtUmFsaTZ4VjI5RktETTM4MnpxcWpIWTVNdnU?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-19T16:00:00Z",
    "media": 3,
    "judul": {
@@ -102,74 +221,6 @@
    "sumber": {
     "nama": "Elshinta",
     "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNOXUtOEhRMVFVbDN1UUdEbUEyMzB0aEtxZGRiQUVvXzZja2RQcWdvOGxRRUtYM3FiZ3lseXR6cWRzYnFrdDFXWlJKYkZEN1NiNmh6ZHlGcUpLZTRfN1pWYThoNENyWU00RnJYYWpJaTgtTk1PUTdqdWpkQ3g5WXlpUjBqZVZjdGdaT0lfSi1SaUpkN3k3S19XVE1ZYnZWc1kxNDNNTlJUaHg5SWlyWE0wZ2hHeGFFTDFrcEhsMlNIUQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-19T07:58:38Z",
-   "media": 5,
-   "judul": {
-    "id": "DPR Bahas Perlindungan Ojol dan Tanggung Jawab ODOL dalam Revisi UU LLAJ",
-    "en": "DPR Bahas Perlindungan Ojol dan Tanggung Jawab ODOL dalam Revisi UU LLAJ"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Limapagi",
-    "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE4wYlJqbDU4Z2FwbUZjenNYY01DenlTU2c3bEN6THF5TWlvU3FRcDJUM1Q0TDVEemlZVDM5d2duQ2x1bzRXbVhWRU5UcVU4akFoSGhNOFdLVGFkRDk3cHpWRk5R?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-19T14:16:20Z",
-   "media": 3,
-   "judul": {
-    "id": "Banjir Mulai Surut, Pemerintah Ingatkan Aceh Lebih Siap Hadapi Ancaman Perubahan Iklim",
-    "en": "Banjir Mulai Surut, Pemerintah Ingatkan Aceh Lebih Siap Hadapi Ancaman Perubahan Iklim"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "news.okezone.com",
-    "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPQkdCaFRTRWdHQlZYZkFmaFFpUFVTTjBxLVZDZUhOV0tPU1JoYk1scGFfSFoxOVNGd1ZFTXp3RVpBQndhMnR2Y2E1UkN4MnhTUGotQXUxWWJENnFuZzdiczBieF9uYkRvWjJBS2tEc29OT0pIbmpxR1NkR05pMFBRTldFX2xubVlpeHRPak41RTVmX0E2YjNIRnFMMTdJY2JDLTVRY3BTRE1qQUhYRDFLT3ZZWjMxX1d0a1NfZU9qZkxtWkZXVU9sa2RCSmV6YmVwS1dDc9IB0wFBVV95cUxONzFoaU5rRFU0clZTalktNHRDS0RKMmM3bzg2WkZFcEpQS3A4V0J2Q01WM013YmRELU1aN29wMW1rbEgybHZIX0psUVdyVTlsSmhMR1M1dWpveTM0bkJWdHNKaVotSEZlc3FTMEZmU1FRd2xRbDVXMnI4MFVZb1pPV0UtZndsVW1jTjdadHRKNkNES1BvOUo5azRCbTduR1ZuYlh3YXVDb0dHTEt6T1FHSEpqZDR0NjY1SlQ2MWlTOEs4QjUyYUxYTVZpN251eVBQVDNZ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-20T00:30:27Z",
-   "media": 1,
-   "judul": {
-    "id": "SPBU VIVO Bakal Ganti Nama Usai Diambil Alih APR",
-    "en": "SPBU VIVO Bakal Ganti Nama Usai Diambil Alih APR"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "detikFinance",
-    "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQcVNIY0VsZVNVUTMwUG5mTTRJQ0Ewa01mS3AtN0hYRi10VU90ZVJJd2NyVWJDOWVydlFHdU9WSmZ1ampWT2drRmt0MzN1dVFSOGtkbENvclFLZFRvWk5SSVZESlJlSlBRSUlEMnhSS3M2ZWZLejVTbk1jRU8tX0RianZHcmhNR2kwakFwRUZFLWktVzZfV3fSAZsBQVVfeXFMT3JsbEl6TTdfVVh4eUk2YnZ1aDFEX3pZUXFLZ0NVVWtpSTNxRWRwM1A2R0hoQWF3QXJrWjgwblJVVVRnRmFYYW9kVGhENDRnaDRtdGxRcUc3UUVHOVhlQVpnNUR2U3JfSm02YWxWVlhQMzZDcXBwWi05bXlOY0FyZDVhM2cwU2tHX1h0eWJBMGs5bk93ekFMdjVyNGc?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-20T00:03:33Z",
-   "media": 1,
-   "judul": {
-    "id": "Transportasi Daring: Sufmi Dasco Tindak Lanjuti Aspirasi Pengemudi Ojol",
-    "en": "Transportasi Daring: Sufmi Dasco Tindak Lanjuti Aspirasi Pengemudi Ojol"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "NETIZ.ID",
-    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPMnlWenJtaGtSWGo5LVVUUFcxbm5jWXhnMW1yWUl6aGM1R1NMSXZicWFyb0h0TjR0ckRZTDY3RXNJd2xDeVo0cUNNN1M2NnAxcm15S3Ixc1hQdzNPSS1vc0RUaDJka19wT1VsTC1EQnpQRlBEYlg2dHd0a25UUTBSYVk3ajV4ZjBtTXhqMG1GMjYtYzdGd1pmdGc5NjNYdnZoTzMyRw?oc=5"
    }
   }
  ]
