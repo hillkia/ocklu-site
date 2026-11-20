@@ -382,6 +382,12 @@ document.addEventListener("click",function(e){var a=e.target.closest&&e.target.c
   <form id="komTulis" hidden style="display:flex;gap:6px;margin-top:8px"><input name="isi" maxlength="800" placeholder="Tulis sebagai OCKLU (owner)…" style="flex:1" required><button type="submit">Kirim</button></form><span id="komKet" class="kaki"></span>
 </div>
 
+<div class="panel" id="kanalIsi" style="margin:12px 0"><h3 style="margin:0 0 6px">📈 Angka channel klien · isi manual</h3>
+<p class="kosong" style="margin:0 0 8px">YouTube tercatat otomatis tiap hari. Instagram tidak bisa dibaca otomatis, jadi isi jumlah follower di sini (cukup seminggu sekali). Angka ini dipakai laporan mingguan Senin: sebelum → sesudah.</p>
+<form id="kanalForm" style="display:flex;gap:8px;flex-wrap:wrap;align-items:center"><select name="k"><option value="10|instagram">Malkia · Instagram</option><option value="9|youtube">Prof. Roy · YouTube (koreksi)</option></select>
+<input name="n" type="number" min="0" required placeholder="jumlah follower" style="width:160px"><button type="submit">Simpan</button><span class="kosong" id="kanalKet"></span></form></div>
+<script>document.getElementById("kanalForm").addEventListener("submit",function(e){e.preventDefault();var f=e.target,k=f.k.value.split("|"),ket=document.getElementById("kanalKet");ket.textContent="…";
+fetch(API+"?r=kanal_isi",{method:"POST",headers:hOw(),body:JSON.stringify({klien_id:Number(k[0]),platform:k[1],pelanggan:Number(f.n.value)})}).then(function(r){return r.json()}).then(function(d){ket.textContent=d.ok?"✓ tersimpan":"⚠ "+(d.galat||"gagal")}).catch(function(){ket.textContent="⚠ jaringan"})});</script>
 <h2 id="bukti">📜 Bukti kunjungan MARKUS · untuk laporan klien</h2>
 <div class="panel">
   <p class="kosong" style="margin:0 0 8px"><b>Gampangnya:</b> MARKUS itu seperti sales yang mengetuk pintu toko-toko agen lain dan bertanya "ada yang cari ini?". Dia <b>hanya bertanya (mencari)</b>, <b>tidak menempel</b> brosur atau iklan apa pun di sana, jadi pemilik agen tidak akan menemukan barang kita di tokonya. Jejaknya ada di <b>buku tamu (log server)</b> mereka: minta mereka cari kode bukti (MKS-…) atau kata <code>OckluHyperMarket</code> pada jam yang tertulis di bawah. Kode bukti ada sejak 30 Okt 08:35 WIB.</p>
