@@ -112,11 +112,11 @@ body.kokpit #obrol{bottom:80px}
 </main>
 <button id="obrolTombol" hidden aria-expanded="false" aria-controls="obrol">💬 Asisten</button>
 <section id="obrol" hidden aria-label="Obrolan dengan asisten Ludlud">
-  <div class="bar" style="margin:0;padding:10px 12px;border-bottom:1px solid var(--garis);justify-content:space-between"><b>Asisten Ludlud</b><small class="redup">otak gratis Groq/Gemini · aksi lewat tombol</small></div>
+  <div class="bar" style="margin:0;padding:10px 12px;border-bottom:1px solid var(--garis);justify-content:space-between"><b>Asisten Ludlud</b><small class="redup">otak gratis Groq/Gemini · aksi lewat tombol</small><button type="button" onclick="document.getElementById('obrol').hidden=true" aria-label="Tutup asisten" style="padding:6px 10px">✕</button></div>
   <div id="obrolIsi"><div class="kecil">Ketik perintah biasa, misalnya "bikin reel gambar 20 detik soal Laporan Saran Iklan", "#3 udah tayang belum?", atau "captionnya #3 pendekin".</div></div>
   <form id="obrolForm"><textarea id="obrolTeks" placeholder="Tulis ke asisten…" aria-label="Pesan untuk asisten"></textarea><button class="utama" type="submit">Kirim</button></form>
 </section>
-<script src="kota.js?v=20nov2"></script><script src="kotavideo.js?v=20nov2"></script>
+<script src="kota.js?v=20nov2"></script><script src="kotavideo.js?v=20nov3"></script>
 <script>
 var API="https://njghzieuuopukuagrswu.supabase.co/functions/v1/ludlud",TT="https://njghzieuuopukuagrswu.supabase.co/functions/v1/tertau",PK="",DATA=[],JAM=null;
 try{PK=localStorage.getItem("pj_kunci")||""}catch(_){}
@@ -263,7 +263,7 @@ function gambarKota(){var KOTA=window.LudludKota3D||window.LudludKota;if(!KOTA)r
       if(r.jenis==="mesin")o.sibuk=sibuk;return{no:r.kavling,rumah:o}}),
     agen:[{nama:"GRIGORI",peran:"penjaga gerbang",warna:"#5b4b8a"},{nama:"MARKUS",peran:"pengantar konten",warna:"#0f7b6c"},
       {nama:"SKOUT",peran:"pencari tren",warna:"#a86a00"},{nama:"YOSUA",peran:"koordinator",warna:"#b3372f"}],
-    kegiatan:keg.slice(0,4),onTiba:bukaGedung,onBerangkat:function(){document.body.classList.remove("tiba")},onLahan:panelLahan,onRumah:panelRumah,onAgen:function(){if($("obrol").hidden)bukaObrol()}})}catch(e){wadah.hidden=true;document.body.classList.remove("penuh");$("jendela").hidden=true}}
+    kegiatan:keg.slice(0,4),onTiba:bukaGedung,onBerangkat:function(){document.body.classList.remove("tiba")},onLahan:panelLahan,onRumah:panelRumah,onAgen:function(){if($("obrol").hidden)bukaObrol();else $("obrol").hidden=true}})}catch(e){wadah.hidden=true;document.body.classList.remove("penuh");$("jendela").hidden=true}}
 function panel(h){var p=$("rumahPanel");p.innerHTML=h+'<div class="bar"><button data-r="tutup">Tutup</button></div>';p.hidden=false;p.scrollIntoView({behavior:"smooth",block:"nearest"})}
 function panelLahan(no){panel('<b>🌱 Kavling '+no+' · lahan kosong</b><div class="kecil redup">Bangun rumah apa di sini?</div>'
   +'<label>Jenis<select id="rjJenis">'+PILIH_RUMAH.filter(function(p){return p[0]==="lain"||!RUMAH.some(function(r){return r.jenis===p[0]})}).map(function(p){return'<option value="'+p[0]+'">'+p[1]+'</option>'}).join("")+'</select></label>'

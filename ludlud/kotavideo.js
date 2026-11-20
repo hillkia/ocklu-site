@@ -51,7 +51,9 @@
     + '#kendaliKota .kk-joy div{position:absolute;left:50%;top:50%;width:38px;height:38px;margin:-19px 0 0 -19px;border-radius:50%;background:#e9fdff;box-shadow:0 0 14px #7ef9ff}'
     + '#kendaliKota .kk-tombol{position:fixed;right:14px;bottom:' + (DASBOR + 16) + 'px;display:flex;flex-direction:column;gap:9px;z-index:15;transition:opacity .3s}'
     + '#kendaliKota button{width:44px;height:44px;border-radius:50%;border:2px solid rgba(126,249,255,.65);background:rgba(14,16,40,.6);color:#e9fdff;font:900 20px/1 system-ui;cursor:pointer;padding:0}'
-    + '#kendaliKota.sembunyi>*{opacity:0;pointer-events:none}';
+    + '#kendaliKota.sembunyi>*{opacity:0;pointer-events:none}'
+    /* 20 Nov: owner minta tanpa kokpit (biasa aja) — kaca & instrumen disembunyikan, tinggal tombol tujuan */
+    + '#kv svg.kv-kaca,#kv .kv-alat,#kv .kv-bidik{display:none}#kv .kv-dasbor{height:auto;border-radius:0;background:rgba(8,10,26,.72);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}';
 
   // bingkai kaca depan kokpit: rangka gelap di tepi, sudut tumpul, garis neon di bibir kaca
   var KACA = '<svg class="kv-kaca" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><defs>'
