@@ -1169,7 +1169,7 @@ function muat(){
     document.getElementById("detak").textContent="hidup · "+new Date(d.sekarang).toLocaleTimeString("id-ID",{hour:"2-digit",minute:"2-digit"})})
   .catch(function(e){document.getElementById("detak").textContent="awan tak terjangkau, mencoba lagi"});
 }
-window.muatUlang=muat;muat();setInterval(muat,30000);
+window.muatUlang=muat;muat();var muatTerakhir=Date.now();function muatJikaTampak(){if(!document.hidden&&Date.now()-muatTerakhir>20000){muatTerakhir=Date.now();muat()}}setInterval(muatJikaTampak,120000);document.addEventListener("visibilitychange",muatJikaTampak); // 20 Nov owner: hemat egress — status 71 KB dulu tiap 30 dtk walau tab di belakang
 document.addEventListener("click",function(e){var x=e.target.closest("[data-iklan]");if(x)try{navigator.sendBeacon(API+"?r=iklan_klik",new Blob([JSON.stringify({id:Number(x.dataset.iklan)})],{type:"application/json"}))}catch(_){}});
 
 // ---------------------------------------------------------------- salin
