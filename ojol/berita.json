@@ -1,150 +1,65 @@
 {
- "w": "2026-11-16T04:33:33Z",
+ "w": "2026-11-20T12:37:26Z",
  "dari": "Kroog",
  "berita": [
   {
    "jenis": "berita",
-   "waktu": "2026-11-16T00:30:00Z",
+   "waktu": "2026-11-20T08:59:47Z",
+   "media": 4,
+   "judul": {
+    "id": "Elly Arsy Rayakan Kesuksesan Live TikTok dengan Berbagi ke Pengemudi Ojol",
+    "en": "Elly Arsy Rayakan Kesuksesan Live TikTok dengan Berbagi ke Pengemudi Ojol"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "detikHOT",
+    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQcmg3UnJnTlJrc2lKVW5qTWtmaDJ0c09Zc2Q2Q2h3Zlczd2plRjdYTkF6dmRqQ3QtVFhucTNyaHhoQmJfUC12Q1U2dTA3U1I2YVZFeHdRZEYyNkR0eGV3VlI4NlZac3ctVm1EZGxOX0l2WDdwM0ZQLTgyZDR2MDJzRFVVdmZxRXRGMC1sY0lPZkVJaF9wMlFHTGt3UUU2MFJmMGNwWE1oLVnSAa4BQVVfeXFMTmdQQVdQdjUwWnZLajRXcXVMS2JraWJGaDY2R0tHMERPaTJwNlE0QlRFaHpBTEM0cGhvRXVxQ0RyVHE4eVZjYTE3QS04LTFhem11bHFONlZhenJVUlBseU5xM0tKRk1nZ1BFbTJzYWpNNXlVbHp1Skt0b2dHMUMyVEdad2xxN19ORzh6UVdMU085N3czanV3ZjR2SDVJZk5QQ2NEd3JIQk1xYjlXbTlB?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-20T07:45:43Z",
+   "media": 4,
+   "judul": {
+    "id": "Banjir Mulai Surut, Pemerintah Ingatkan Aceh Lebih Siap Hadapi Ancaman Perubahan Iklim",
+    "en": "Banjir Mulai Surut, Pemerintah Ingatkan Aceh Lebih Siap Hadapi Ancaman Perubahan Iklim"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Jurnal Aceh",
+    "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxNUmxGUDE5SUxvNGI4eVM1eXRZTXlwRGNFRE01X2tIVHRHOHh2eDV4OU1vNTgxSl82V3lKR1VjRmhDd0psalNWTTVYZ0ZTWjVZbDZkb3VsOGltUWhDSmR0VlNXSGd2TnZTUHpsZkxWUTVLaXFEVGo0MXUxME9oTEJmbGZ1djZKc2VKM1pIdmRQdXhoVUFrcjh0bXJrSWZHd2ZUMGFhN2hkU0Z2cGUzY1JwRzZhXzBld3FfbzlHWEtxWThIUEdydzdPOGFoa1UtcnFmZjktRmhUanY0d0xsRHl5T2NjM2EzdkpCQ1pka1V0VzJpRS1TWGJSV3pR?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-20T02:54:00Z",
+   "media": 5,
+   "judul": {
+    "id": "BNPB: 2.397 bencana sepanjang 2026 didominasi karhutla dan banjir",
+    "en": "BNPB: 2.397 bencana sepanjang 2026 didominasi karhutla dan banjir"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Validnews",
+    "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNY3BIU2Z0cURuN2Q5Z29SeGRrdVFuQ0ZKNzBIeUhFeVVjZExCTDRDa1RNa2psN0ZSSTVTcnN0TmdWUmJfenRuTVpfVUdqSERQNHY1dHlvWWJmOVdGR25nendITGdoRW5CenAwaDc0MWltNl9yYkd0dGFmLXNfRHRHMDk2S3hqT2hyZjFBT2dtbW5ZY29nSzZsQnM2bUlXRUo2bFY3WG5xeUlEbGRI?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-20T08:30:27Z",
    "media": 2,
    "judul": {
-    "id": "Cek Harga BBM Hari Ini 16 November 2026 di SPBU Pertamina Se-Indonesia",
-    "en": "Cek Harga BBM Hari Ini 16 November 2026 di SPBU Pertamina Se-Indonesia"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Kompas.com",
-    "url": "https://money.kompas.com/read/2026/11/16/081209726/cek-harga-bbm-hari-ini-16-november-2026-di-spbu-pertamina-se-indonesia"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-16T00:30:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Harga BBM 15 November 2026 di Pertamina, Shell, Vivo, BP-AKR",
-    "en": "Harga BBM 15 November 2026 di Pertamina, Shell, Vivo, BP-AKR"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Harian Jogja",
-    "url": "https://ekbis.harianjogja.com/r-1278968/harga-bbm-15-november-2026-di-pertamina-shell-vivo-bp-akr"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-16T00:30:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Harga Pertamax Jauh dari Pertalite, Selisih Rp5.950 Picu Migrasi Konsumen?",
-    "en": "Harga Pertamax Jauh dari Pertalite, Selisih Rp5.950 Picu Migrasi Konsumen?"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Bisnis.com - Ekonomi",
-    "url": "https://ekonomi.bisnis.com/read/20261113/44/2021068/harga-pertamax-jauh-dari-pertalite-selisih-rp5950-picu-migrasi-konsumen"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-16T00:28:27Z",
-   "media": 1,
-   "judul": {
-    "id": "Ojol, Nelayan hingga Guru Mengaji Masuk Sasaran Ranperda Jamsostek Makassar",
-    "en": "Ojol, Nelayan hingga Guru Mengaji Masuk Sasaran Ranperda Jamsostek Makassar"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Tribun-timur.com",
-    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQOEtEOVFDU094anhLNk5rYk5McWlvMHVpaFZpanFPMDZOQm9aaTVyc0taNDVUYTcxOW0xWEpyZC0teWp3amxxSmNVUkR5NG5aVWlpQmJPRmd2MFpyWHVKYXBtUzhLZThwekNSS2pWOGxCeVpfdklEUktib1Q2aXRVeDVwMUxyd29mdmd2Ym1NT0FYS0tKa0FFVFN1aHk0MVVOQVN6dmV6NjRGYTZlUERhcDlRMlhLWGpFTEtsUlpSdzc?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-15T22:09:38Z",
-   "media": 1,
-   "judul": {
-    "id": "Disperindag Provinsi Banten Gelar Pasar Murah untuk Komunitas Ojek Online",
-    "en": "Disperindag Provinsi Banten Gelar Pasar Murah untuk Komunitas Ojek Online"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Pemerintah Provinsi Banten",
-    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQQ1M4d20tR2F2N1Zab2tXNXRSaFV2QjhOWE53NzdtRGpRekQxUnQ5QjZtamtxQXUzM19sX1FkcDRGZ2M3ZUlqM3RSa0RuYzV3QktyOFZvdWdBWmJnR1pzb3JkYTk0Z3lyVXFIQldJTHQxdFJhc2VOaTUteUY3V2F3TFZNczVsaEFxR0pmdXMweFBKMHlQb3ROWVNjMGtDQjhBNUlxU0FDQQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-15T16:03:35Z",
-   "media": 2,
-   "judul": {
-    "id": "Tawuran Pecah di Petamburan, Motor Driver Ojol Ikut Dibakar, Pemilik: Mana Masih Kredit Lagi",
-    "en": "Tawuran Pecah di Petamburan, Motor Driver Ojol Ikut Dibakar, Pemilik: Mana Masih Kredit Lagi"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Tribunnewsbogor.com",
-    "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPRDU5dkNMM2hnNTM5cFY2RU93Y1h1WUxEb3d1RXgyWEJPdmo2bHdiU0VIUkdxZlBTRUFMdGFMZ28wVHoxd1B4Q3o4Z2k4ZGRjVUpFcUZDYlp4MnZ5ejREcFRCTzBYaVFyY0JMN2xfV1d5YVlFYTVXeHZnbUtmNjM5cHZfeXpOamJpcGhMbGlBeFI4TllmQlJJVkZONFRkNmJ5MUYtRjhvZ3R0QmtXelUtbXFQMkUtZW52VjcyMjlfTmtzMXE3bmJIUDB3?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-15T18:48:43Z",
-   "media": 1,
-   "judul": {
-    "id": "Robinsar bersama Forkopimda Kota Cilegon turut hadir dalam Doa dan Tabur Bunga bersama Ojol",
-    "en": "Robinsar bersama Forkopimda Kota Cilegon turut hadir dalam Doa dan Tabur Bunga bersama Ojol"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Berita Cilegon",
-    "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNNnpQSmp0SEYzVTZIdHFteFFJVElMQjFCSmI1ZTRRTWMwTE9IeHBqZHVqem5keEZBcmtzeGhhUGpUenZIdF85STBHXzAzOC12ZGgxLTFuWkJLQTk4Y1ZqcjBRTDBMa0ZydjJaWGM2YVcxZVRzZ3NzdWJLM19jdjRXc016RGc4V2wteUl4WjNFZzk4MVlTQ005d2RrZlRHSGU1QUh2azcxMmlXOVkxZWQ2bHNmdE5yTVdIdHRSOGNHaW5PVFY0cHBOUFRvUkdlR2pHdUNBR2xLZXRGeW8?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-15T11:15:54Z",
-   "media": 2,
-   "judul": {
-    "id": "Gunung Karangetang Kembali Mengancam! Warga Siau Diminta Waspada Banjir Lahar",
-    "en": "Gunung Karangetang Kembali Mengancam! Warga Siau Diminta Waspada Banjir Lahar"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "berita prioritas",
-    "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE15MkdBQnhNeERNODdYMlRkSkl1aWE2b1JpNU9CSTRZaVRlNFFrRV9BT3JKYVRxVmdIQ3JEcFRMT3psQzd1bGM3aFNjdUdlbXQ5eDZJQ2VkaC1pR3R0MldrWkREYlFkdE93cjdGWXR5UllzYzNkYnprRFNXekhfUQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-15T16:17:26Z",
-   "media": 1,
-   "judul": {
-    "id": "Danrem 082/CPYJ Buka Layanan 24 Jam, Ajak Ojol Jaga Mojokerto",
-    "en": "Danrem 082/CPYJ Buka Layanan 24 Jam, Ajak Ojol Jaga Mojokerto"
+    "id": "Jumat Berkah, Kapolres Batu Ajak Ojol Makan Bakso di Pos Polisi Lippo Plaza",
+    "en": "Jumat Berkah, Kapolres Batu Ajak Ojol Makan Bakso di Pos Polisi Lippo Plaza"
    },
    "isi": {
     "id": "",
@@ -152,109 +67,92 @@
    },
    "sumber": {
     "nama": "Kabar Terdepan",
-    "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9iVTE4SUJ2a01wdnlTSUE2UW52eFljZDJFTjQ2bS1ScHRuejFYOWJ5VE1nR09xeFZ0a1Z3RVBXeVA4eWpmdkg4SkNTU0Z4R3ZKZ0hXNnZzemU0QXFJUHFWNldLb0F2OWo0a0xxSnlVWWhmdzFaTlE?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQek8zcDZpTFdiN0VzbGZBQjVaOUhqY09UNTJXY1FkR3k3cnh2d0hDUy1GaUhjbU9qLTM0b0FKay0zdHFoQ2M5S2NKSDFqNmhmVDN3cXBabGk5ejJQVTIteGpRZGtFcmh6UEk3NlJMSlBUTGRrTmFYbWt5SnJfRTNsMw?oc=5"
    }
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-15T16:06:46Z",
-   "media": 1,
-   "judul": {
-    "id": "Nasib Apes Nyai Dewi, Ojol Wanita yang Motornya Dibakar Massa Tawuran di Tanah Abang",
-    "en": "Nasib Apes Nyai Dewi, Ojol Wanita yang Motornya Dibakar Massa Tawuran di Tanah Abang"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Tribunlampung.co.id",
-    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNMm00RVdqVWo2WmlJeWk4V1o5eEROUGM2M1hicHFtYW5OQ0tMZjNWRG9hWEZ6TnZfMXUyNE5lQWZoc3RTYUZnN3JtNEpacVFBeWlkMFNjODB6aFV4ZXh4SnFWNk95UTFRQ3lVVUIxSmxiTEhlT2Mxa0kzVXlZMWlUSWhtUzBlU0Nhc2V3Sk1VdnRjcW1JTTdOUW9kZ09mcmlaWEpCbnZLRWZNVGYyd3NWekFIUEFMbzktNDFFeGlpRDB3bkk1d1E?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-15T15:20:39Z",
-   "media": 1,
-   "judul": {
-    "id": "Mencari Makna Ikhlas dan Kejujuran dari Percakapan Singkat Bersama Pak Ojol",
-    "en": "Mencari Makna Ikhlas dan Kejujuran dari Percakapan Singkat Bersama Pak Ojol"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Kompasiana.com",
-    "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOcmo5S21TUzg1aFVBMkdIeE9jQ21tSE1qdklWLVJ1XzU2amlMZWNCaTlPM0lQQ0tSZ29ZTTdDWW5RREhPVlE0aHZlVHctbXYxS1VRMXZhZEoxMXJ4aFZGckwxSUhfa1ZCckVzMlVyUFB3anlzS2JnMWFoNTA3Q1RMZEhDYlBGcWU3bFctQVhCemVlV3FQdzZ0ZnNBZ0IyZXFNOV9MTkJrU2RjV2pwTmhJSnRxODVpd2RpM001QUtFZklxazJUS05mWDJPZ21iSkVNZzV4RzZfUVB0QQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-15T15:08:48Z",
-   "media": 1,
-   "judul": {
-    "id": "Banjir Banyumas Jebak 13 Orang di Antara Dua Sungai, BPBD Catat 11 Bencana",
-    "en": "Banjir Banyumas Jebak 13 Orang di Antara Dua Sungai, BPBD Catat 11 Bencana"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Indonesians.id",
-    "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQTGlrc29GSWIwRXJ5SWNNbG9jMVRFcnBFYy1FRWwtVnVKeDRITmE3UDNfaG5jdlBvYl9MRDAzRDJOdlVLSEN4ZnhPOVRGRGtsd0lZRnluSDR2MnJ0bFpyem5wMF9GNVNkRmlUdFZhOG9DMHk0cENlRUtuZEZnTV9ONVlneDBfLW8wbzNGLTNlYXozMWpFalNUREpVUXhRbmRKM3NSSW9uX1N2ckFXUXNpVlAzN1ZyNXlpR3dBNE5EN2dmZ9IBxwFBVV95cUxNWTlySVU4cnRUMThqY0txczA5RHlRMXZ0UnRsLV9NbmJJOXYyV2NURzNMOFJ5OFcwbmdzZzNHZHljbDJzSGdfaXNUNl9TdTIwYWU2MXAwRHJzTjJCVk1rZkpUdm9FdDdFWEhCRWlJMHFKLVV2dWgzY1pqWlpaX0xEa1JYVW1sSXhHRHAyZ05xaUZjNTljYXk5ejhBRUQ4dUtrbnJ0STF4ZnlNdlh6THhObVJUVVRiejVqY0V4UGExVDhfTS1VV0dB?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-15T08:30:35Z",
+   "waktu": "2026-11-20T07:51:38Z",
    "media": 2,
    "judul": {
-    "id": "Borobudur Marathon 2026 Dongkrak Pendapatan UMKM hingga Pengemudi Ojol",
-    "en": "Borobudur Marathon 2026 Dongkrak Pendapatan UMKM hingga Pengemudi Ojol"
+    "id": "Hamka B. Kady Dorong Pengakuan Hukum Ojek Online melalui Revisi UU LLAJ",
+    "en": "Hamka B. Kady Dorong Pengakuan Hukum Ojek Online melalui Revisi UU LLAJ"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "IDN Times",
-    "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQWDA3UThfOGVMeGFEVXRkWlktMFN3aE1QTXpfa0NQdjMwZVc2RUZwY0hfb2c1VGV1VmZUU3RQMkJ2b0NfaUlFeW1wRTZrWVEwUGJ6WlBwYnBXS2hLUThOMHJMYzhhVU56TGRwQVRESloybkY0R05vaDBKR0lJT09wckZHYnduc3lUeFJFQldZZ9IBlAFBVV95cUxQVDlacm1qZXFCQzQySDhlZ19tVHdsS0VxOGNyazFPUkptNG0yb2djU0ZnTHV4ejRjSTRxZXhEUlhtUjRwRWJqc2xMWEtfUTlEOEVEWGhoNjN4elpYZW5HR2hXSmdpbE5oSWxGSmtpMWQ4T3E5RzhKWHFyQTlRZnJBVzJwWVc4Z3hsaENQYXk1Zjk0c1pL?oc=5"
+    "nama": "MataKita",
+    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPNkhxNWpNVXFIV1BxZTFncVQzSWJweTd6alNDamd1MjVfUzhwcXZTdUMyRzc3anUyTWpCUnJHWUhHZzI0SS12ajBKLUh5aFNCZ3FfVlpvaGdkWW84UHZ4bFA2R3lMT1lHRGJLeEVJc09QazdnYzhLMmRldFdhVXFjbkVmVTBMSGdZeGV6TWRfQ2RIUU5sYXB5UE5uR0M3QklSak1nWg?oc=5"
    }
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-15T14:27:26Z",
-   "media": 1,
+   "waktu": "2026-11-20T03:04:40Z",
+   "media": 3,
    "judul": {
-    "id": "Dari Warung Buka 24 Jam hingga Ojol Raup Rp 300 Ribu, Ini Berkah Borobudur Marathon",
-    "en": "Dari Warung Buka 24 Jam hingga Ojol Raup Rp 300 Ribu, Ini Berkah Borobudur Marathon"
+    "id": "Pimpinan DPR Minta PP Turunan Aturan Transportasi Online Segera Dipercepat",
+    "en": "Pimpinan DPR Minta PP Turunan Aturan Transportasi Online Segera Dipercepat"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "Mettanews.id",
-    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNY2RjSThXbjEyUUcyMXBTdHlTMWg3Wl9vY2psNEs4eWdrVUhZUThZVFhQM0xTUTNrZmZJd1ktNmpDWUlCTldoT0cyb2xqS2ZvSm4xaW42blo5OXJRNG9CUEtNWmdUVEFNWjRjSHlMd2pfZDBRVENhcVg0N3NlZmZybVZSbmlmaVc4TUU0TTJMaFpjNm1sTkhpN012RnREM3hJRjdoYWlvNA?oc=5"
+    "nama": "faktakalbar",
+    "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQLXJDS01iOGxULW9SS1lsWnlHbDNzVUt0anYxSmV5d3J2TW9yakFXU0t1V0Q3QmdxcVhRbWhLZ1QwenBNRk5rVTREd0pZUmZKTmxCa0xvY1BQZjY4MVg5eEdoWllMNEJJMHFCY3FGRUwxUDhJT3JReDhmWk1nTktMT29ENmEwcktOUkZNdHJaR2hVSGhOWXc?oc=5"
    }
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-15T14:19:49Z",
-   "media": 1,
+   "waktu": "2026-11-20T06:23:16Z",
+   "media": 2,
    "judul": {
-    "id": "Motor Ojol Wanita Dibakar Saat Tawuran di Petamburan Jakpus: Masih Nyicil, Besok Kerja Pakai Apa?",
-    "en": "Motor Ojol Wanita Dibakar Saat Tawuran di Petamburan Jakpus: Masih Nyicil, Besok Kerja Pakai Apa?"
+    "id": "Tak Cukup Andalkan Gaji Bulanan, Buruh Jakarta Jadi Ojol hingga Berdagang",
+    "en": "Tak Cukup Andalkan Gaji Bulanan, Buruh Jakarta Jadi Ojol hingga Berdagang"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "Kompas.com",
-    "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOWDFVRHBKSXpfdE5LUXZYVHV5ZjhwbU9DZXMtUXpJb3FhNHpNZnU4VzVYQW5PbEx6VHowamxTYTNMU2hObXhMSmpIZnJIOFlmMlJhY3BDc1ZqemFUemZyX2hPZ193OEhiYUxyQndBSE9RQThZanFzeGVYZ0J3SmR0SHhmYS1rS29nOUx2MHZNdl81TzNxdlJWdzlGR0Q0ZldBTXVreTZtTkZvY1RVaVktejk1Y0hOajlwR1pHdHdYaWNRbGh3WlYyTmN3T2RoZjdYOWc?oc=5"
+    "nama": "Wartakotalive.com",
+    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNWDhjcWRrb1BHSXNwaTVPS1dDc3R0bUFoVFpfSjhHR2M3MUFRZktvWWZEMzUtVE1vTjE3V2d1UENlTExUdnJyT1Rlc3hmblNUWW5RUlh6Q1pUbWVwTkRKbi1IM3locjlYaUt3QnF0VjdsbFhBSS1EVERZZnV1aEFDYi0yUmFOSGpNbHdWejJlVWZUMUpuT0FVWndDMU9nMWNaT3pRenZzSWJudmdqTVpsdDdQd3VTUWxz?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-20T02:41:43Z",
+   "media": 2,
+   "judul": {
+    "id": "Dasco Telepon Menkomdigi di Tengah Audiensi, Minta Ojol Diajak Diskusi",
+    "en": "Dasco Telepon Menkomdigi di Tengah Audiensi, Minta Ojol Diajak Diskusi"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "JournalArta",
+    "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOamJsakVRTWlXM1BPbVpUUGNWU29kX0hKSGQzVzBxZm5TNmhPdHl5Q2Rfc2JPWlAxV29wUE5GWE90bmpzcGZBbExRS0lWQ0tXQ0pCTzBvbDkwQzJlZ3hrQTQwVUtFOTJDSEV5MVdpdnh5RGpZWXVnZGE5VTd6QXFtM3k4eFVNVTM0a0hCaDkyN0gwalU?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-20T08:29:14Z",
+   "media": 1,
+   "judul": {
+    "id": "Banjir jadi Pengingat, Sekolah di Aceh Perlu Siapkan Prosedur Evakuasi",
+    "en": "Banjir jadi Pengingat, Sekolah di Aceh Perlu Siapkan Prosedur Evakuasi"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "KBA.ONE",
+    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQUFhmQW5Cb2NiSTh2OHhkWi1ZLXVpcjVmM0ExTV9KaTZhSjFJQ05OU1A5NzhzRkJPYTN6RXdQUGJVaEg2Z2JseHlMQ2xNQ0FiMkZXMXlObENleTJ2UFRzM0Via1VidWhPcVY0VkdfTG9ZOFBnSlBsalllY09heV9OYXRTU2pncW96YW9fNnRVRkg2Zi1IcTYxcWJMZ1BHSTg0eXdWdWFtZEg?oc=5"
    }
   }
  ]

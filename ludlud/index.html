@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Ludlud OCKLU</title>
+<style>
+:root{--bg:#f6f5f1;--kartu:#fff;--teks:#1d1f24;--redup:#6b6f78;--garis:#e3e1da;--aksen:#0f7b6c;--merah:#b3372f;--kuning:#a86a00}
+@media (prefers-color-scheme:dark){:root{--bg:#121417;--kartu:#1b1e23;--teks:#e9e7e2;--redup:#9aa0a8;--garis:#2c3038;--aksen:#4cc4ae;--merah:#e0776f;--kuning:#e0b04c}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--teks);font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+main{max-width:860px;margin:0 auto;padding:20px 16px 60px}
+h1{font-size:24px;margin:0 0 2px}h2{font-size:17px;margin:0 0 10px}
+.redup{color:var(--redup)}small{font-size:13px}
+.kartu{background:var(--kartu);border:1px solid var(--garis);border-radius:12px;padding:16px;margin:14px 0}
+textarea,input,select{width:100%;font:inherit;color:var(--teks);background:var(--bg);border:1px solid var(--garis);border-radius:8px;padding:9px 10px}
+textarea{min-height:84px;resize:vertical}
+label{display:block;margin:10px 0 4px;font-weight:600;font-size:14px}
+.pilih{display:flex;flex-wrap:wrap;gap:8px}
+.pilih label{font-weight:400;margin:0;display:flex;gap:6px;align-items:center;border:1px solid var(--garis);border-radius:8px;padding:6px 10px;cursor:pointer}
+.pilih label.mati{opacity:.45;cursor:not-allowed}
+.pilih input{width:auto}
+button{font:inherit;border:1px solid var(--garis);background:var(--kartu);color:var(--teks);border-radius:8px;padding:8px 14px;cursor:pointer}
+button.utama{background:var(--aksen);border-color:var(--aksen);color:#fff;font-weight:600}
+button.bahaya{color:var(--merah)}
+button:disabled{opacity:.5;cursor:wait}
+.bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:10px}
+.lencana{display:inline-block;font-size:12px;font-weight:700;border-radius:99px;padding:2px 9px;border:1px solid currentColor}
+.s-antre,.s-dikerjakan,.s-revisi{color:var(--kuning)}.s-siap_cek{color:var(--aksen)}.s-disetujui,.s-tayang{color:var(--aksen)}.s-gagal,.s-ditolak{color:var(--merah)}
+.isi{display:grid;grid-template-columns:200px 1fr;gap:14px;margin-top:10px}
+@media (max-width:620px){.isi{grid-template-columns:1fr}}
+video{width:100%;max-height:360px;border-radius:10px;background:#000}
+.kecil{font-size:13px;color:var(--redup);white-space:pre-wrap}
+#kunci .bar input{width:180px;text-transform:uppercase}
+#obrolTombol{position:fixed;right:16px;bottom:16px;z-index:20;border-radius:99px;padding:12px 16px;background:var(--aksen);border-color:var(--aksen);color:#fff;font-weight:700;box-shadow:0 4px 14px rgba(0,0,0,.25)}
+#obrol{position:fixed;right:16px;bottom:72px;z-index:20;width:min(420px,calc(100vw - 32px));height:min(560px,calc(100vh - 100px));display:flex;flex-direction:column;background:var(--kartu);border:1px solid var(--garis);border-radius:14px;box-shadow:0 8px 30px rgba(0,0,0,.3)}
+#obrol[hidden]{display:none}
+#obrolIsi{flex:1;overflow-y:auto;padding:12px;display:flex;flex-direction:column;gap:8px}
+.gel{max-width:85%;padding:8px 11px;border-radius:12px;white-space:pre-wrap;word-wrap:break-word;font-size:14px}
+.gel.owner{align-self:flex-end;background:var(--aksen);color:#fff}
+.gel.asisten{align-self:flex-start;background:var(--bg);border:1px solid var(--garis)}
+.gel .usul{margin-top:8px;padding:8px;border:1px dashed var(--aksen);border-radius:8px;font-size:13px}
+#obrolForm{display:flex;gap:8px;padding:10px;border-top:1px solid var(--garis)}
+#obrolForm textarea{min-height:42px;height:42px;flex:1}
+#kota3d{position:fixed;inset:0;z-index:0}
+#jendela{height:56vh;display:flex;align-items:flex-end;pointer-events:none}
+#gantiKota{pointer-events:auto;margin-left:auto;border-radius:99px;padding:6px 12px;font:700 12px/1 -apple-system,sans-serif;background:rgba(8,10,26,.6);color:#fff;border:1px solid rgba(126,249,255,.6)}
+#jendela{gap:8px}
+#jendela span{font:600 12px/1 -apple-system,sans-serif;color:#fff;background:rgba(8,10,26,.6);padding:6px 10px;border-radius:99px}
+body.penuh{background:#0b0d1d;--kartu:rgba(14,16,40,.66);--bg:rgba(255,255,255,.07);--teks:#eef0ff;--redup:#b9bdd9;--garis:rgba(255,255,255,.17);--aksen:#3fe0c5;--merah:#ff7a85;--kuning:#ffcf6b}
+body.penuh main{position:relative;z-index:1;pointer-events:none}
+body.penuh main>:not(#ruang),body.penuh #ruang>:not(#jendela){pointer-events:auto}
+body.penuh .kartu,body.penuh #obrol{backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 8px 30px rgba(0,0,0,.35)}
+body.penuh h1,body.penuh main>.redup{text-shadow:0 2px 12px rgba(0,0,0,.8)}
+body.penuh button.utama,body.penuh .gel.owner,body.penuh #obrolTombol{color:#04201b}
+body.penuh select option{color:#111;background:#fff}
+body.kokpit main>h1,body.kokpit main>.redup,body.kokpit main>.kartu.kecil,body.kokpit #jendela,body.kokpit #obrolTombol{display:none!important}
+body.kokpit #ruang{position:fixed;z-index:13;left:50%;transform:translateX(-50%);width:min(720px,calc(100vw - 16px));bottom:74px;max-height:56vh;overflow-y:auto;display:none;background:rgba(10,12,32,.76);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1.5px solid rgba(126,249,255,.55);border-radius:16px;padding:0 12px 10px;box-shadow:0 0 26px rgba(126,249,255,.22);pointer-events:auto}
+body.kokpit.tiba #ruang:not([hidden]){display:block}
+body.kokpit #ruang>*{display:none}
+body.kokpit #ruang>#layarJudul{display:flex;position:sticky;top:0;z-index:1;justify-content:space-between;align-items:center;gap:8px;padding:10px 0;background:rgba(12,14,36,.96)}
+body.kokpit #ruang>#rumahPanel:not([hidden]),body.kokpit #ruang>#pesanSambung:not([hidden]),body.kokpit[data-gedung=studio] #formPerintah,body.kokpit[data-gedung=studio] #daftar,body.kokpit[data-gedung=platform] #daftar,body.kokpit[data-gedung=platform] #sambungan,body.kokpit[data-gedung=mesin] #daftar{display:block}
+body.kokpit #ruang .kartu{margin:8px 0}
+body.kokpit #obrol{bottom:80px}
+</style>
+</head>
+<body>
+<main>
+<h1>Ludlud 🎬</h1>
+<div class="redup">Dasbor konten OCKLU untuk YouTube dan Instagram. Lu kasih perintah, pekerja di laptop yang bikin video, judul, caption, dan jadwal. Lu yang cek dan Setujui.</div>
+<div class="kartu kecil" style="padding:10px 14px">Setelah lu Setujui, video tayang sendiri di jam jadwal (dicek tiap 5 menit), asal akunnya sudah disambung di bagian "Sambungan akun". Kalau belum disambung, unduh videonya, posting manual, lalu tandai "sudah tayang". Pembuat video jalan di laptop tiap 5 menit, jadi laptop harus nyala.</div>
+
+<section id="kunci" class="kartu" hidden></section>
+
+<section id="ruang" hidden>
+  <div id="layarJudul" hidden></div>
+  <div id="kota" class="kartu" style="padding:0;overflow:hidden" aria-label="Kota Ludlud" hidden></div>
+  <div id="jendela" hidden><span>👆 ketuk layar platform · pad untuk geser kamera</span><button id="gantiKota" type="button"></button></div>
+  <div id="kota3d" hidden></div>
+  <div id="pesanSambung" class="kartu" hidden></div>
+  <div id="rumahPanel" class="kartu" hidden></div>
+  <details id="sambungan" class="kartu"><summary><b>Sambungan akun YouTube & Instagram</b> <small id="ringkasSambung" class="redup"></small></summary><div id="isiSambung" class="kecil" style="margin-top:8px">memuat…</div></details>
+  <form id="formPerintah" class="kartu">
+    <h2>Perintah baru</h2>
+    <textarea id="perintah" placeholder="Contoh: reel 30 detik soal Laporan Saran Iklan, gaya ngobrol santai, ajak orang cek ocklu.com/hypermarket" required></textarea>
+    <label>Bahan</label>
+    <div class="pilih">
+      <label><input type="radio" name="bahan" value="rekaman" checked> Rekaman HP</label>
+      <label><input type="radio" name="bahan" value="gambar"> Gambar + teks bergerak</label>
+      <label class="mati" title="Tahap 3"><input type="radio" name="bahan" value="flow" disabled> Klip Google Flow (Tahap 3)</label>
+      <label class="mati" title="Tahap 3"><input type="radio" name="bahan" value="pihak_ketiga" disabled> Pihak ketiga (Tahap 3)</label>
+    </div>
+    <label>Platform</label>
+    <div class="pilih">
+      <label><input type="checkbox" name="platform" value="youtube" checked> YouTube Shorts</label>
+      <label><input type="checkbox" name="platform" value="instagram" checked> Instagram Reels</label>
+    </div>
+    <label for="otak">Otak</label>
+    <select id="otak"><option value="fable">Fable 5.2 (bawaan, makan kuota mingguan)</option><option value="opus">Opus 5.5</option></select>
+    <label for="latar">Latar belakang di belakang orang</label>
+    <select id="latar"><option value="">Asli, tidak diubah</option><option value="blur">Buramkan latar asli</option><option value="file">Ganti dengan video/gambar latar…</option></select>
+    <input id="latarBerkas" type="file" accept="video/*,image/*" hidden style="margin-top:6px">
+    <label for="berkas">Berkas (rekaman, foto, musik; maks 50 MB per berkas)</label>
+    <input id="berkas" type="file" multiple accept="video/*,image/*,audio/*">
+    <div class="kecil">Rekaman lebih dari 50 MB: AirDrop ke laptop, taruh di folder <b>ocklu-ludlud/masuk</b> (di folder rumah), lalu kirim perintah tanpa berkas.</div>
+    <div class="bar"><button class="utama" id="kirim" type="submit">Kirim perintah</button><small id="pesanKirim" class="redup"></small></div>
+  </form>
+  <h2 style="margin-top:22px">Konten</h2>
+  <div id="daftar" class="redup">memuat…</div>
+</section>
+</main>
+<button id="obrolTombol" hidden aria-expanded="false" aria-controls="obrol">💬 Asisten</button>
+<section id="obrol" hidden aria-label="Obrolan dengan asisten Ludlud">
+  <div class="bar" style="margin:0;padding:10px 12px;border-bottom:1px solid var(--garis);justify-content:space-between"><b>Asisten Ludlud</b><small class="redup">otak gratis Groq/Gemini · aksi lewat tombol</small><button type="button" onclick="document.getElementById('obrol').hidden=true" aria-label="Tutup asisten" style="padding:6px 10px">✕</button></div>
+  <div id="obrolIsi"><div class="kecil">Ketik perintah biasa, misalnya "bikin reel gambar 20 detik soal Laporan Saran Iklan", "#3 udah tayang belum?", atau "captionnya #3 pendekin".</div></div>
+  <form id="obrolForm"><textarea id="obrolTeks" placeholder="Tulis ke asisten…" aria-label="Pesan untuk asisten"></textarea><button class="utama" type="submit">Kirim</button></form>
+</section>
+<script src="kota.js?v=20nov2"></script><script src="kotavideo.js?v=20nov3"></script>
+<script>
+var API="https://njghzieuuopukuagrswu.supabase.co/functions/v1/ludlud",TT="https://njghzieuuopukuagrswu.supabase.co/functions/v1/tertau",PK="",DATA=[],JAM=null;
+try{PK=localStorage.getItem("pj_kunci")||""}catch(_){}
+function $(i){return document.getElementById(i)}
+function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
+function HK(){var h={"content-type":"application/json"};if(PK)h["x-perangkat"]=PK;return h}
+function api(r,b){return fetch(API+"?r="+r,b?{method:"POST",headers:HK(),body:JSON.stringify(b)}:{headers:HK(),cache:"no-store"}).then(function(x){return x.json()}).catch(function(e){return{galat:String(e)}})}
+function wib(iso){if(!iso)return"-";return new Date(iso).toLocaleString("id-ID",{timeZone:"Asia/Jakarta",weekday:"short",day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"})+" WIB"}
+function keInput(iso){if(!iso)return"";var d=new Date(new Date(iso).getTime()+7*3600e3);return d.toISOString().slice(0,16)}
+function dariInput(v){return v?v+":00+07:00":""}
+var LABEL={antre:"menunggu pekerja",dikerjakan:"sedang dibuat",siap_cek:"siap dicek",revisi:"menunggu revisi",disetujui:"disetujui",tayang:"sudah tayang",ditolak:"ditolak",gagal:"gagal"};
+
+function mulai(){api("saya").then(function(d){if(d.pemilik){$("kunci").hidden=true;$("ruang").hidden=false;$("obrolTombol").hidden=false;muat();muatSambung();muatRumah()}else kunciPanel(d.galat)})}
+
+// ---- Asisten Ludlud: bot hanya mengusulkan aksi; owner menekan Jalankan, lalu rute biasa yang dipanggil.
+var OBROL_DIMUAT=false,USUL={};
+var NAMA_AKSI={perintah:"Buat perintah baru",revisi:"Minta revisi",setujui:"Setujui",tolak:"Tolak",hapus:"Hapus",terbit_sekarang:"Terbitkan sekarang",ubah_teks:"Ubah teks",bangun_rumah:"Bangun rumah"};
+function gelembung(peran,isi,aksi,id){var d=document.createElement("div");d.className="gel "+(peran==="owner"?"owner":"asisten");d.textContent=isi;
+  if(aksi&&peran!=="owner"){var u=document.createElement("div");u.className="usul";var k=id||("u"+Date.now());USUL[k]=aksi;
+    u.innerHTML='<b>Usulan: '+esc(NAMA_AKSI[aksi.jenis]||aksi.jenis)+(aksi.id?' #'+esc(aksi.id):'')+'</b>'+(aksi.perintah?'<div>'+esc(aksi.perintah)+'</div><div class="redup">'+esc(aksi.bahan||"rekaman")+' → '+esc((aksi.platform||["youtube","instagram"]).join(" + "))+'</div>':'')
+      +(aksi.jenis==='bangun_rumah'?'<div>'+esc(aksi.nama||aksi.jenis_rumah)+' di lahan kosong</div>':'')+(aksi.catatan?'<div>'+esc(aksi.catatan)+'</div>':'')+(aksi.judul||aksi.caption||aksi.hashtag||aksi.jadwal?'<div>'+esc([aksi.judul,aksi.caption,aksi.hashtag,aksi.jadwal].filter(Boolean).join(" · "))+'</div>':'')
+      +'<div class="bar"><button class="utama" data-jalan="'+k+'">Jalankan</button><button data-batal="'+k+'">Batal</button> <small></small></div>';d.appendChild(u)}
+  $("obrolIsi").appendChild(d);$("obrolIsi").scrollTop=1e9}
+function bukaObrol(){var p=$("obrol"),buka=p.hidden;p.hidden=!buka;$("obrolTombol").setAttribute("aria-expanded",String(buka));if(!buka)return;$("obrolTeks").focus();
+  if(OBROL_DIMUAT)return;OBROL_DIMUAT=true;api("obrol").then(function(d){(d.riwayat||[]).forEach(function(m){gelembung(m.peran,m.isi,m.aksi,"r"+m.id)})})}
+$("obrolTombol").onclick=bukaObrol;
+$("obrolTeks").addEventListener("keydown",function(e){if(e.key==="Enter"&&!e.shiftKey){e.preventDefault();$("obrolForm").requestSubmit()}});
+$("obrolForm").addEventListener("submit",function(e){e.preventDefault();var t=$("obrolTeks").value.trim();if(!t)return;$("obrolTeks").value="";gelembung("owner",t);
+  var tunggu=document.createElement("div");tunggu.className="gel asisten redup";tunggu.textContent="mikir…";$("obrolIsi").appendChild(tunggu);
+  api("obrol",{pesan:t}).then(function(d){tunggu.remove();gelembung("asisten",d.galat||d.balas,d.aksi)})});
+$("obrolIsi").addEventListener("click",function(e){var j=e.target.closest("[data-jalan]"),b=e.target.closest("[data-batal]");
+  if(b){b.closest(".usul").innerHTML='<span class="redup">Dibatalkan.</span>';return}
+  if(!j)return;var a=USUL[j.dataset.jalan],ket=j.parentNode.querySelector("small"),jalan;if(!a)return;
+  if(a.jenis==="hapus"&&!confirm("Hapus konten #"+a.id+" beserta semua videonya? Tidak bisa dibatalkan."))return;
+  if(a.jenis==="perintah")jalan=api("perintah",{perintah:a.perintah,bahan:a.bahan==="gambar"?"gambar":"rekaman",platform:a.platform||["youtube","instagram"],otak:"fable"});
+  else if(a.jenis==="hapus")jalan=api("hapus",{id:a.id});
+  else if(a.jenis==="bangun_rumah"){var no=lahanPertama();jalan=no?api("bangun",{kavling:no,jenis:a.jenis_rumah,nama:a.nama}).then(function(d){if(!d.galat)muatRumah();return d}):Promise.resolve({galat:"Lahan penuh, bongkar rumah dulu."})}
+  else if(a.jenis==="ubah_teks"){var bb={id:a.id,aksi:"simpan"};["judul","caption","hashtag","jadwal"].forEach(function(f){if(a[f])bb[f]=a[f]});jalan=api("putuskan",bb)}
+  else jalan=api("putuskan",{id:a.id,aksi:a.jenis,catatan:a.catatan});
+  j.disabled=true;ket.textContent="menjalankan…";jalan.then(function(d){if(d.galat){ket.textContent=d.galat;j.disabled=false;return}
+    j.closest(".usul").innerHTML='<span>✅ Dijalankan'+(d.id?' (konten #'+d.id+')':'')+'.</span>';delete USUL[j.dataset.jalan];muat()})});
+function kunciPanel(g){var k=$("kunci");k.hidden=false;$("ruang").hidden=true;
+  k.innerHTML='🔒 <b>Perangkat ini belum dikenali Grigori, penjaga OCKLU.</b> Ludlud cuma terbuka di perangkat owner. Tekan tombol di bawah, kode dikirim ke Telegram owner.'+(g?'<div class="kecil">'+esc(g)+'</div>':'')
+  +'<div class="bar"><button class="utama" id="pjKenali">Kenali perangkat ini</button><input id="pjKode" placeholder="kode dari Telegram" autocomplete="one-time-code" aria-label="Kode dari Telegram"><button id="pjMasuk">Masukkan kode</button> <small id="pjPesan"></small></div>';
+  $("pjKenali").onclick=function(){this.disabled=true;$("pjPesan").textContent="mengirim kode…";fetch(TT+"?r=kenali",{method:"POST",headers:HK(),body:"{}"}).then(function(r){return r.json()}).then(function(d){$("pjPesan").textContent=d.galat||"kode terkirim ke Telegram owner"}).catch(function(){$("pjPesan").textContent="gagal terhubung"})};
+  $("pjMasuk").onclick=function(){var kode=$("pjKode").value.trim().toUpperCase();if(!kode)return;$("pjPesan").textContent="memeriksa kode…";
+    fetch(TT+"?r=pasang",{method:"POST",headers:HK(),body:JSON.stringify({kode:kode})}).then(function(r){return r.json()}).then(function(d){if(!d.ok){$("pjPesan").textContent=d.galat||"kode ditolak";return}PK=d.kunci;try{localStorage.setItem("pj_kunci",PK)}catch(_){}mulai()}).catch(function(){$("pjPesan").textContent="gagal terhubung"})}}
+
+function muat(){api("daftar").then(function(d){if(d.galat){if(/dikenali/.test(d.galat))return kunciPanel(d.galat);$("daftar").textContent=d.galat;return}DATA=d.isi||[];gambar();gambarKota();
+  clearTimeout(JAM);if(DATA.some(function(x){return/antre|dikerjakan|revisi/.test(x.status)}))JAM=setTimeout(muat,30000)})}
+
+function gambar(){var L=$("daftar"),D=saring(DATA);if(!D.length){L.innerHTML='<div class="kartu redup">'+(FILTER?"Belum ada konten di gedung ini.":"Belum ada konten. Kirim perintah pertama di atas.")+'</div>';return}
+  L.innerHTML=D.map(function(x){var siap=x.status==="siap_cek",ubah=siap||x.status==="disetujui";
+    var h='<article class="kartu" data-id="'+x.id+'"><div class="bar" style="margin:0;justify-content:space-between"><b>#'+x.id+' · '+esc(x.bahan)+' · '+esc((x.platform||[]).join(" + "))+'</b><span class="lencana s-'+x.status+'">'+(LABEL[x.status]||x.status)+(x.versi?' · v'+x.versi:'')+'</span></div>'
+    +'<div class="kecil">'+esc(x.perintah)+'</div>';
+    if(x.url_video)h+='<div class="isi"><div><video controls playsinline preload="metadata" src="'+esc(x.url_video)+'"'+(x.url_sampul?' poster="'+esc(x.url_sampul)+'"':'')+'></video>'
+      +'<div class="bar"><a href="'+esc(x.url_video+"&download=ludlud-"+x.id+"-v"+x.versi+".mp4")+'">⬇ Unduh video</a></div></div><div>'
+      +'<label>Judul (YouTube)</label><input data-f="judul" value="'+esc(x.judul)+'"'+(ubah?'':' readonly')+'>'
+      +'<label>Caption (Instagram)</label><textarea data-f="caption"'+(ubah?'':' readonly')+'>'+esc(x.caption)+'</textarea>'
+      +'<label>Hashtag</label><input data-f="hashtag" value="'+esc(x.hashtag)+'"'+(ubah?'':' readonly')+'>'
+      +'<label>Jadwal tayang (WIB)</label><input type="datetime-local" data-f="jadwal" value="'+keInput(x.jadwal)+'"'+(ubah?'':' readonly')+'>'
+      +'</div></div>';
+    if(x.catatan_pekerja)h+='<div class="kecil" style="margin-top:8px">📝 '+esc(x.catatan_pekerja)+'</div>';
+    h+='<div class="kecil">Latar: '+(x.latar==="blur"?"buram":x.latar?"diganti ("+esc(x.latar.split("/").pop())+")":"asli")+' · Otak: '+esc(x.otak||x.otak_pilih)+' · dibuat '+wib(x.dibuat)+(x.disetujui_pada?' · disetujui '+wib(x.disetujui_pada):'')+(x.tayang_pada?' · tayang '+wib(x.tayang_pada):'')+'</div>';
+    var pl=x.platform||[];
+    if(/disetujui|tayang/.test(x.status))h+='<div class="kecil">'+(pl.indexOf("youtube")>=0?'YouTube: '+esc(x.yt_status||"menunggu jadwal")+'<br>':'')+(pl.indexOf("instagram")>=0?'Instagram: '+esc(x.ig_status||"menunggu jadwal"):'')+'</div>';
+    if(pl.indexOf("instagram")>=0&&!x.link_ig&&ubah)h+='<label class="kecil" style="font-weight:400;display:flex;gap:6px;align-items:center"><input type="checkbox" data-f="ig_trial" style="width:auto"'+(x.ig_trial!==false?' checked':'')+'> Instagram sebagai trial reel (cuma tampil ke yang belum follow)</label>';
+    if(x.link_yt||x.link_ig)h+='<div class="bar">'+(x.link_yt?'<a href="'+esc(x.link_yt)+'" target="_blank" rel="noopener">YouTube ↗</a>':'')+(x.link_ig?'<a href="'+esc(x.link_ig)+'" target="_blank" rel="noopener">Instagram ↗</a>':'')+'</div>';
+    if(siap)h+='<div class="bar"><button class="utama" data-a="setujui">✅ Setujui</button><button data-a="simpan">Simpan teks</button><button data-a="revisi">✏️ Edit video (revisi)</button><button class="bahaya" data-a="tolak">Tolak</button></div>';
+    if(x.status==="disetujui")h+='<div class="bar"><button class="utama" data-a="terbit_sekarang">🚀 Terbitkan sekarang</button>'+(/gagal|proses/.test((x.yt_status||"")+(x.ig_status||""))?'<button data-a="terbit_lagi">↻ Coba terbitkan lagi</button>':'')+'<button data-a="salin">Salin caption + hashtag</button><button data-a="simpan">Simpan teks</button><button data-a="revisi">✏️ Edit video (revisi)</button></div>'
+      +'<div class="bar"><input data-f="link_yt" placeholder="link YouTube setelah tayang" style="flex:1;min-width:200px"><input data-f="link_ig" placeholder="link Instagram setelah tayang" style="flex:1;min-width:200px"><button class="utama" data-a="tayang">Tandai sudah tayang</button></div>';
+    if(x.status==="gagal")h+='<div class="bar"><button class="utama" data-a="ulang">Ulangi</button><button data-a="revisi">✏️ Revisi dengan catatan</button><button class="bahaya" data-a="tolak">Tolak</button></div>';
+    if(/antre|dikerjakan|revisi/.test(x.status))h+='<div class="kecil" style="margin-top:6px">⏳ Menunggu pekerja laptop (cek tiap 5 menit). Halaman ini menyegarkan sendiri.</div>';
+    var bawah=(/antre|gagal|ditolak/.test(x.status)?'<button data-a="ubah">📝 Ubah perintah</button>':'')+(x.status!=="dikerjakan"?'<button class="bahaya" data-a="hapus">🗑 Hapus</button>':'');
+    return h+'<div class="bar">'+bawah+'<small data-pesan class="redup"></small></div></article>'}).join("")}
+
+$("daftar").addEventListener("click",function(e){var t=e.target.closest("button[data-a]");if(!t)return;var k=t.closest("article"),id=+k.dataset.id,a=t.dataset.a,p=k.querySelector("[data-pesan]");
+  function f(n){var el=k.querySelector('[data-f="'+n+'"]');return el?el.value:undefined}
+  var x=DATA.filter(function(d){return d.id===id})[0]||{};
+  if(a==="ubah"||a==="hapus"){var bb={id:id};
+    if(a==="ubah"){var pr=prompt("Ubah perintah #"+id+":",x.perintah||"");if(!pr||pr===x.perintah)return;bb.perintah=pr}
+    else if(!confirm("Hapus konten #"+id+" beserta rekaman dan semua versi videonya? Tidak bisa dibatalkan."))return;
+    t.disabled=true;p.textContent="memproses…";api(a,bb).then(function(d){t.disabled=false;if(d.galat){p.textContent=d.galat;return}muat()});return}
+  if(a==="salin"){navigator.clipboard.writeText((f("caption")||"")+"\n\n"+(f("hashtag")||"")).then(function(){p.textContent="caption tersalin"},function(){p.textContent="gagal menyalin; blok teksnya manual"});return}
+  var b={id:id,aksi:a};
+  if(f("judul")!==undefined&&a!=="tolak"&&a!=="ulang"){b.judul=f("judul");b.caption=f("caption");b.hashtag=f("hashtag");b.jadwal=dariInput(f("jadwal"))}
+  if(a==="revisi"){var c=prompt("Apa yang mau diubah? (contoh: caption lebih pendek, potong 3 detik awal, musik lebih pelan)");if(!c)return;b.catatan=c}
+  if(a==="tolak"&&!confirm("Tolak konten #"+id+"?"))return;
+  if(a==="tayang"){b.link_yt=f("link_yt");b.link_ig=f("link_ig")}
+  var tr=k.querySelector('[data-f="ig_trial"]');if(tr)b.ig_trial=tr.checked;
+  if(a==="terbit_sekarang"&&!confirm("Terbitkan #"+id+" sekarang ke "+(x.platform||[]).join(" + ")+"? Diproses dalam ±5 menit."))return;
+  t.disabled=true;p.textContent="menyimpan…";api("putuskan",b).then(function(d){t.disabled=false;if(d.galat){p.textContent=d.galat;return}p.textContent="tersimpan";muat()})});
+
+function unggahSatu(file,info){return api("unggah",{nama:file.name}).then(function(s){if(s.galat)throw new Error(s.galat);
+  return new Promise(function(ok,gagal){var x=new XMLHttpRequest();x.open("PUT",s.url);x.setRequestHeader("content-type",file.type||"application/octet-stream");x.setRequestHeader("x-upsert","false");
+    x.upload.onprogress=function(ev){if(ev.lengthComputable)info(Math.round(ev.loaded/ev.total*100))};
+    x.onload=function(){x.status<300?ok(s.path):gagal(new Error("unggah gagal ("+x.status+"): "+x.responseText.slice(0,160)))};x.onerror=function(){gagal(new Error("koneksi putus saat unggah"))};x.send(file)})})}
+
+$("formPerintah").addEventListener("submit",function(e){e.preventDefault();var m=$("pesanKirim"),btn=$("kirim"),files=[].slice.call($("berkas").files);
+  var besar=files.filter(function(f){return f.size>50*1024*1024});if(besar.length){m.textContent="Lebih dari 50 MB: "+besar.map(function(f){return f.name}).join(", ")+". AirDrop ke laptop (folder ocklu-ludlud/masuk), lalu kirim tanpa berkas.";return}
+  var plat=[].slice.call(document.querySelectorAll('input[name=platform]:checked')).map(function(i){return i.value});if(!plat.length){m.textContent="Pilih minimal satu platform.";return}
+  var pl=$("latar").value,lf=$("latarBerkas").files[0],latar=pl==="blur"?"blur":null;
+  if(pl==="file"&&!lf){m.textContent="Pilih dulu video/gambar latarnya.";return}
+  if(lf&&pl==="file"&&lf.size>50*1024*1024){m.textContent="Latar lebih dari 50 MB, kecilkan dulu.";return}
+  btn.disabled=true;var paths=[],i=0;
+  function kirimPerintah(){return api("perintah",{perintah:$("perintah").value,bahan:document.querySelector('input[name=bahan]:checked').value,platform:plat,otak:$("otak").value,berkas:paths,latar:latar})}
+  function lanjut(){if(i>=files.length){if(pl==="file")return unggahSatu(lf,function(pc){m.textContent="mengunggah latar "+pc+"%"}).then(function(p){latar=p;return kirimPerintah()});return kirimPerintah()}
+    var f=files[i];return unggahSatu(f,function(pc){m.textContent="mengunggah "+f.name+" "+pc+"%"}).then(function(p){paths.push(p);i++;return lanjut()})}
+  lanjut().then(function(d){btn.disabled=false;if(d.galat){m.textContent=d.galat;return}m.textContent="Perintah #"+d.id+" masuk antrean.";$("formPerintah").reset();muat()}).catch(function(err){btn.disabled=false;m.textContent=String(err.message||err)})});
+
+$("latar").addEventListener("change",function(){$("latarBerkas").hidden=this.value!=="file"});
+
+// ---- Kota isometrik 12 kavling (kota.js dari Fable). Rumah hanya di lahan kosong; agen boleh usul, owner yang bangun/bongkar.
+var SB=null,RUMAH=[],KAV=12,PLATFORM_JENIS=["youtube","instagram","tiktok","facebook","threads","x","shopee","tokopedia","lazada","linkedin","pinterest"];
+var PILIH_RUMAH=[["tiktok","TikTok"],["facebook","Facebook"],["threads","Threads"],["x","X"],["shopee","Shopee"],["tokopedia","Tokopedia"],["lazada","Lazada"],
+  ["linkedin","LinkedIn"],["pinterest","Pinterest"],["gudang","Gudang"],["kantor","Kantor"],["toko","Toko"],["lain","Lainnya…"]];
+function muatRumah(){api("rumah").then(function(d){if(d.galat)return;RUMAH=d.rumah||[];KAV=d.kavling||12;gambarKota()})}
+function lahanPertama(){for(var i=1;i<=KAV;i++)if(!RUMAH.some(function(r){return r.kavling===i}))return i;return 0}
+function rumahDi(no){return RUMAH.filter(function(r){return r.kavling===no})[0]}
+function noJenis(j){var r=RUMAH.filter(function(x){return x.jenis===j&&x.keadaan==="berdiri"})[0];return r?r.kavling:0}
+function hitungPl(p){var j={siap_cek:0,disetujui:0,tayang:0};DATA.forEach(function(x){if((x.platform||[]).indexOf(p)>=0&&j[x.status]!=null)j[x.status]++});return j}
+function statusPl(p){var s=SB&&SB[p];return !s?"belum":s.akun?"tersambung":s.kunci_app?"kunci":"belum"}
+function keadaan(r){if(r.keadaan==="usul")return"usul";if(r.jenis==="youtube"||r.jenis==="instagram")return statusPl(r.jenis)==="tersambung"?"buka":"dibangun";
+  return PLATFORM_JENIS.indexOf(r.jenis)>=0?"dibangun":"buka"}
+window.addEventListener("ludlud-kota3d",function(){if(RUMAH.length)gambarKota()});
+var MODE_KOTA="",FILTER=null;
+document.addEventListener("click",function(e){var p=e.target.closest('[data-r="pangkalan"]');if(p){var h=document.querySelector('#hudKokpit [data-t=""]');if(h)h.click();else bukaGedung(null);return}var b=e.target.closest("#gantiKota,[data-ganti-kota]");if(!b)return;try{localStorage.setItem("ludlud_kota",MODE_KOTA==="video"?"kokpit":"video")}catch(x){}location.reload()});
+function saring(A){if(!FILTER)return A;return A.filter(function(x){if(FILTER==="studio")return/antre|dikerjakan|revisi|gagal/.test(x.status);if(FILTER==="mesin")return/antre|dikerjakan|gagal/.test(x.status);return(x.platform||[]).indexOf(FILTER)>=0})}
+function bukaGedung(no){var b=document.body;if(no==null){b.classList.remove("tiba");FILTER=null;gambar();return}
+  var r=rumahDi(no),g=!r?"lahan":r.keadaan==="usul"?"usul":r.jenis==="studio"?"studio":r.jenis==="mesin"?"mesin":PLATFORM_JENIS.indexOf(r.jenis)>=0?"platform":"lain";
+  b.dataset.gedung=g;FILTER=(g==="studio"||g==="mesin")?g:g==="platform"?r.jenis:null;gambar();
+  $("layarJudul").innerHTML='<b>📍 '+esc(r?r.nama:"Lahan kosong "+no)+'</b><button type="button" data-r="pangkalan">✕ Kembali</button>';
+  $("rumahPanel").hidden=true;if(g==="lahan")panelLahan(no);else if(g!=="studio")panelRumah(no);b.classList.add("tiba");$("ruang").scrollTop=0}
+function gambarKota(){var KOTA=window.LudludKota3D||window.LudludKota;if(!KOTA)return;var keg=[],st=noJenis("studio")||1,sibuk=DATA.some(function(x){return x.status==="dikerjakan"});
+  DATA.forEach(function(x){var ke=noJenis((x.platform||[])[0]||"youtube");if(!ke)return;
+    if(x.status==="dikerjakan")keg.push({agen:"MARKUS",dari:noJenis("mesin")||st,ke:st,label:"#"+x.id+" dibuat"});
+    else if(x.status==="disetujui"&&(!x.jadwal||Date.parse(x.jadwal)<=Date.now()))keg.push({agen:"MARKUS",dari:st,ke:ke,label:"#"+x.id+" menuju tayang"})});
+  RUMAH.forEach(function(r){if(r.keadaan==="usul")keg.push({agen:r.oleh,dari:st,ke:r.kavling,label:""})});
+  KOTA=window.LudludKotaVideo||window.LudludKota;MODE_KOTA="video";$("gantiKota").hidden=true;var kokpit=KOTA===window.LudludKotaVideo;/* 20 Nov: owner minta kota 3D dibuang, hanya kokpit video + panel */document.body.classList.toggle("kokpit",kokpit);if(kokpit&&$("kota3d").parentNode!==document.body)document.body.prepend($("kota3d"));var wadah=KOTA===window.LudludKota?$("kota"):$("kota3d");$("kota").hidden=wadah!==$("kota");var penuh=wadah===$("kota3d");document.body.classList.toggle("penuh",penuh);$("jendela").hidden=!penuh;
+  try{wadah.hidden=false;KOTA.render(wadah,{
+    kavling:RUMAH.map(function(r){var o={jenis:r.jenis,nama:r.nama,keadaan:keadaan(r),inti:r.jenis==="studio"||r.jenis==="mesin",oleh:r.oleh,alasan:r.alasan};
+      if(r.warna)o.warna=r.warna;if(r.jenis==="youtube"||r.jenis==="instagram")o.jumlah=hitungPl(r.jenis);
+      if(r.jenis==="studio"){o.sibuk=sibuk;o.antre=DATA.filter(function(x){return/antre|revisi/.test(x.status)}).length}
+      if(r.jenis==="mesin")o.sibuk=sibuk;return{no:r.kavling,rumah:o}}),
+    agen:[{nama:"GRIGORI",peran:"penjaga gerbang",warna:"#5b4b8a"},{nama:"MARKUS",peran:"pengantar konten",warna:"#0f7b6c"},
+      {nama:"SKOUT",peran:"pencari tren",warna:"#a86a00"},{nama:"YOSUA",peran:"koordinator",warna:"#b3372f"}],
+    kegiatan:keg.slice(0,4),onTiba:bukaGedung,onBerangkat:function(){document.body.classList.remove("tiba")},onLahan:panelLahan,onRumah:panelRumah,onAgen:function(){if($("obrol").hidden)bukaObrol();else $("obrol").hidden=true}})}catch(e){wadah.hidden=true;document.body.classList.remove("penuh");$("jendela").hidden=true}}
+function panel(h){var p=$("rumahPanel");p.innerHTML=h+'<div class="bar"><button data-r="tutup">Tutup</button></div>';p.hidden=false;p.scrollIntoView({behavior:"smooth",block:"nearest"})}
+function panelLahan(no){panel('<b>🌱 Kavling '+no+' · lahan kosong</b><div class="kecil redup">Bangun rumah apa di sini?</div>'
+  +'<label>Jenis<select id="rjJenis">'+PILIH_RUMAH.filter(function(p){return p[0]==="lain"||!RUMAH.some(function(r){return r.jenis===p[0]})}).map(function(p){return'<option value="'+p[0]+'">'+p[1]+'</option>'}).join("")+'</select></label>'
+  +'<label>Nama papan (boleh kosong)<input id="rjNama" maxlength="24" placeholder="mis. Toko Kaos"></label>'
+  +'<div class="bar"><button class="utama" data-r="bangun" data-no="'+no+'">🏗 Bangun</button> <small id="rjPesan"></small></div>')}
+function panelRumah(no){var r=rumahDi(no);if(!r)return panelLahan(no);var kd=keadaan(r),h='<b>Kavling '+no+' · '+esc(r.nama)+'</b> ';
+  if(kd==="usul"){h+='<div>Diusulkan <b>'+esc(r.oleh)+'</b>'+(r.alasan?': '+esc(r.alasan):'')+'</div><div class="bar"><button class="utama" data-r="setujui" data-no="'+no+'">🏗 Bangun</button><button data-r="bongkar" data-no="'+no+'">Tolak usulan</button> <small id="rjPesan"></small></div>';return panel(h)}
+  if(r.jenis==="studio"){$("formPerintah").scrollIntoView({behavior:"smooth"});$("perintah").focus();return}
+  if(r.jenis==="youtube"||r.jenis==="instagram")h+='<div>'+(kd==="buka"?'✅ Akun tersambung. Posting otomatis jalan setelah lu Setujui.':'🏗 Masih dibangun: akun belum disambung.')+'</div><div class="bar"><button class="utama" data-r="sambungan">Atur sambungan</button>';
+  else if(r.jenis==="mesin")h+='<div>Pekerja di laptop yang bikin video (cek tiap 5 menit, laptop harus nyala).</div><div class="bar">';
+  else if(kd==="dibangun")h+='<div>🏗 Rumah sudah berdiri, sambungan akun '+esc(r.nama)+' nyusul (butuh aplikasi developer/akun penjual dari owner).</div><div class="bar">';
+  else h+='<div>Rumah '+esc(r.nama)+' siap dipakai.</div><div class="bar">';
+  if(r.jenis!=="studio"&&r.jenis!=="mesin")h+='<button data-r="bongkar" data-no="'+no+'">🔨 Bongkar</button>';
+  panel(h+' <small id="rjPesan"></small></div>')}
+$("rumahPanel").addEventListener("click",function(e){var t=e.target.closest("[data-r]");if(!t)return;var a=t.dataset.r,no=+t.dataset.no,ps=$("rjPesan"),jalan;
+  if(a==="tutup"){$("rumahPanel").hidden=true;return}
+  if(a==="sambungan"){$("rumahPanel").hidden=true;$("sambungan").open=true;$("sambungan").scrollIntoView({behavior:"smooth"});return}
+  if(a==="bongkar"){var r=rumahDi(no);if(!confirm((r&&r.keadaan==="usul"?"Tolak usulan ":"Bongkar rumah ")+(r?r.nama:"")+"? Lahannya jadi kosong lagi."))return;jalan=api("bongkar",{kavling:no})}
+  else if(a==="setujui")jalan=api("bangun",{kavling:no});
+  else if(a==="bangun"){var j=$("rjJenis").value,n=$("rjNama").value.trim();if(j==="lain"&&!n){ps.textContent="Isi nama papannya dulu.";return}jalan=api("bangun",{kavling:no,jenis:j,nama:n})}
+  if(!jalan)return;t.disabled=true;ps.textContent="memproses…";jalan.then(function(d){if(d.galat){ps.textContent=d.galat;t.disabled=false;return}$("rumahPanel").hidden=true;muatRumah()})});
+
+var PLAT={youtube:{nama:"YouTube",k:[["yt_client_id","Client ID Google","text"],["yt_client_secret","Client Secret Google","password"]],
+  catatan:"Video dari proyek Google yang belum diaudit akan terkunci private sampai lolos audit. Ubah ke publik di YouTube Studio."},
+  instagram:{nama:"Instagram",k:[["ig_app_id","App ID Instagram","text"],["ig_app_secret","App Secret Instagram","password"]],
+  catatan:"Akunnya harus Bisnis atau Kreator. Pakai produk 'Instagram API with Instagram Login' di Meta for Developers."}};
+function muatSambung(){api("sambungan").then(function(d){if(d.galat){$("isiSambung").textContent=d.galat;return}SB=d;gambarKota();
+  var ring=[];$("isiSambung").innerHTML=Object.keys(PLAT).map(function(p){var s=d[p]||{},P=PLAT[p];ring.push(P.nama+(s.akun?" ✅":" ✖"));
+    return '<div style="border-top:1px solid var(--garis);padding-top:10px;margin-top:10px" data-p="'+p+'"><b>'+P.nama+'</b>: '+(s.akun?'✅ tersambung sebagai <b>'+esc(s.akun.nama)+'</b> sejak '+wib(s.akun.disambung):s.kunci_app?'kunci aplikasi terisi, belum disambung':'belum ada kunci aplikasi')
+    +'<div>Alamat kembali (redirect URI) untuk didaftarkan di aplikasi: <code style="word-break:break-all">'+esc(s.kembali)+'</code></div>'
+    +P.k.map(function(f){return '<label>'+f[1]+(s.kunci_app?' (terisi; isi lagi kalau mau ganti)':'')+'</label><input data-k="'+f[0]+'" type="'+f[2]+'" autocomplete="off">'}).join("")
+    +'<div class="bar"><button data-s="atur">Simpan kunci</button>'+(s.kunci_app?'<button class="utama" data-s="sambung">'+(s.akun?'Sambung ulang':'Sambungkan '+P.nama)+'</button>':'')+(s.akun?'<button class="bahaya" data-s="putus">Putus</button>':'')+' <small data-ps></small></div>'
+    +'<div>'+esc(P.catatan)+'</div></div>'}).join("");$("ringkasSambung").textContent=ring.join(" · ")})}
+$("isiSambung").addEventListener("click",function(e){var t=e.target.closest("button[data-s]");if(!t)return;var box=t.closest("[data-p]"),p=box.dataset.p,ps=box.querySelector("[data-ps]"),s=t.dataset.s;
+  if(s==="atur"){var b={};box.querySelectorAll("[data-k]").forEach(function(i){if(i.value.trim())b[i.dataset.k]=i.value.trim()});ps.textContent="menyimpan…";
+    return api("atur",b).then(function(d){ps.textContent=d.galat||"tersimpan";if(!d.galat)muatSambung()})}
+  if(s==="putus"&&!confirm("Putus sambungan "+PLAT[p].nama+"? Posting otomatis ke sana berhenti."))return;
+  ps.textContent="memproses…";api(s,{platform:p}).then(function(d){if(d.galat){ps.textContent=d.galat;return}if(d.url)location.href=d.url;else muatSambung()})});
+(function(){var q=new URLSearchParams(location.search);if(!q.get("sambung"))return;var m=$("pesanSambung");m.hidden=false;
+  m.innerHTML=(q.get("hasil")==="ok"?"✅ "+esc(PLAT[q.get("sambung")]?PLAT[q.get("sambung")].nama:q.get("sambung"))+" berhasil disambung.":"✖ Gagal menyambung "+esc(q.get("sambung"))+": "+esc(q.get("hasil")));
+  try{history.replaceState(null,"",location.pathname)}catch(_){}})();
+mulai();
+</script>
+</body>
+</html>
