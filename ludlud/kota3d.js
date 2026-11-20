@@ -270,6 +270,34 @@ function buatDunia(el) {
     if (u.agen) d.onAgen && d.onAgen(u.agen); else if (u.kosong) d.onLahan && d.onLahan(u.no); else d.onRumah && d.onRumah(u.no);
   };
   kanvas.addEventListener('pointerup', lepas); kanvas.addEventListener('pointercancel', () => { awal = null; });
+  // pad joystick + tombol ＋ － ⟳ (gaya Anak Gusti): jalan-jalan bebas di kota
+  st.joy = { x: 0, y: 0, id: null }; st.geser = new THREE.Vector3(); st.zoom = 1; st.zoomTuju = 1; st.yaw = 0; st.yawTuju = 0;
+  const kendali = document.createElement('div'); kendali.id = 'kendaliKota';
+  kendali.innerHTML = '<div class="kk-joy" title="Seret untuk jalan"><div></div></div><div class="kk-tombol"><button data-k="+" title="Dekatkan">＋</button><button data-k="-" title="Jauhkan">－</button><button data-k="r" title="Putar kamera">⟳</button><button data-k="0" title="Balik ke awal">⌂</button></div>';
+  const gaya = document.createElement('style');
+  gaya.textContent = '#kendaliKota .kk-joy{position:fixed;left:18px;bottom:40px;width:120px;height:120px;border-radius:50%;background:rgba(126,249,255,.14);border:2px solid rgba(126,249,255,.7);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);z-index:15;touch-action:none;cursor:grab;box-shadow:0 0 18px rgba(126,249,255,.35);transition:opacity .3s}'
+    + '#kendaliKota .kk-joy div{position:absolute;left:50%;top:50%;width:44px;height:44px;margin:-22px 0 0 -22px;border-radius:50%;background:#e9fdff;box-shadow:0 0 14px #7ef9ff}'
+    + '#kendaliKota .kk-tombol{position:fixed;right:16px;bottom:96px;display:flex;flex-direction:column;gap:10px;z-index:15;transition:opacity .3s}'
+    + '#kendaliKota button{width:48px;height:48px;border-radius:50%;border:2px solid rgba(126,249,255,.7);background:rgba(14,16,40,.6);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);color:#e9fdff;font:900 22px/1 system-ui;cursor:pointer;padding:0;box-shadow:0 0 12px rgba(126,249,255,.3)}'
+    + '#kendaliKota.sembunyi>*{opacity:0;pointer-events:none}';
+  document.head.append(gaya); document.body.append(kendali); st.kendali = kendali;
+  const joyEl = kendali.firstElementChild, bola = joyEl.firstElementChild;
+  const gerakJoy = (e) => { const r = joyEl.getBoundingClientRect(); let dx = (e.clientX - r.left - r.width / 2) / (r.width / 2), dy = (e.clientY - r.top - r.height / 2) / (r.height / 2);
+    const n = Math.hypot(dx, dy); if (n > 1) { dx /= n; dy /= n; } if (n < 0.15) dx = dy = 0;
+    st.joy.x = dx; st.joy.y = dy; bola.style.transform = `translate(${dx * 38}px,${dy * 38}px)`; };
+  joyEl.addEventListener('pointerdown', (e) => { e.preventDefault(); st.joy.id = e.pointerId; try { joyEl.setPointerCapture(e.pointerId); } catch (x) {} gerakJoy(e); });
+  joyEl.addEventListener('pointermove', (e) => { if (e.pointerId === st.joy.id) gerakJoy(e); });
+  const lepasJoy = () => { st.joy.id = null; st.joy.x = st.joy.y = 0; bola.style.transform = ''; };
+  joyEl.addEventListener('pointerup', lepasJoy); joyEl.addEventListener('pointercancel', lepasJoy);
+  kendali.lastElementChild.addEventListener('click', (e) => { const k = e.target.closest('button'); if (!k) return;
+    const a = k.dataset.k;
+    if (a === '+') st.zoomTuju = Math.max(0.35, st.zoomTuju * 0.75);
+    else if (a === '-') st.zoomTuju = Math.min(1.8, st.zoomTuju / 0.75);
+    else if (a === 'r') st.yawTuju += Math.PI / 4;
+    else { st.zoomTuju = 1; st.yawTuju = 0; st.geser.set(0, 0, 0); st.tujuanX = 0; } });
+  // WASD / panah di laptop
+  const tombol = {}; addEventListener('keydown', (e) => { if (/input|textarea|select/i.test(e.target.tagName)) return; tombol[e.key.toLowerCase()] = 1; });
+  addEventListener('keyup', (e) => { tombol[e.key.toLowerCase()] = 0; }); st.tombol = tombol;
   return st;
 }
 
@@ -315,15 +343,42 @@ function letakAgen(a, t) {
   a.o.position.y += Math.sin(t * 3) * 0.08; a.o.scale.setScalar(Math.max(0.001, skala));
 }
 
+const SUMBU_Y = new THREE.Vector3(0, 1, 0), kamPos = new THREE.Vector3(), kamLihat = new THREE.Vector3();
+function jalurKamera(st, p, pos, lihat) {
+  const z0 = st.jarak - 6;
+  if (!st.jalurK || st.jalurK.z0 !== z0) {
+    const v = (a) => a.map(([x, y, z]) => new THREE.Vector3(x, y, z));
+    st.jalurK = { z0,
+      pos: new THREE.CatmullRomCurve3(v([[0, st.tinggiKam, z0], [-10, 13, 24], [-26, 6, 5], [-25, 4.6, 0], [-8, 4.6, -0.6], [10, 4.7, 0], [26, 5.5, 0], [14, 14, 30]])),
+      lihat: new THREE.CatmullRomCurve3(v([[0, 6.5, -5], [-6, 6, -5], [-14, 5, -3], [-12, 5, -2.5], [6, 5.5, -3], [24, 6, -3], [40, 7, -3], [0, 7, -6]])) };
+  }
+  st.jalurK.pos.getPointAt(p, pos); st.jalurK.lihat.getPointAt(p, lihat);
+}
 function putar(st) {
   if (document.hidden) { st.raf = 0; return; }
   st.raf = requestAnimationFrame(() => putar(st));
   // saat halaman digulir jauh ke bawah (kota tertutup panel), hemat baterai: separuh bingkai
   if (scrollY > innerHeight * 0.7 && (st.bingkai++ & 1)) return;
   const t = performance.now() / 1000, dt = Math.min(0.05, t - (st.lalu_t || t)); st.lalu_t = t;
-  st.camX += (st.tujuanX - st.camX) * 0.1;
+  st.camX += (st.tujuanX * (1 - Math.min(1, (st.p || 0) * 3)) - st.camX) * 0.1;
+  // scroll = terbang: atas halaman pemandangan lebar, makin digulir makin turun menyusuri jalan layang di antara gedung
+  const tujuP = Math.min(1, scrollY / Math.max(innerHeight * 1.2, document.documentElement.scrollHeight - innerHeight));
+  st.p = (st.p || 0) + (tujuP - (st.p || 0)) * 0.08;
   const goyang = GERAK ? Math.sin(t * 0.15) * 0.8 : 0;
-  st.kamera.position.set(st.camX + goyang, st.tinggiKam, st.jarak - 6); st.kamera.lookAt(st.camX, 6.5, -5);
+  jalurKamera(st, st.p, kamPos, kamLihat);
+  const tb = st.tombol, jx = st.joy.x + ((tb.d || tb.arrowright) ? 1 : 0) - ((tb.a || tb.arrowleft) ? 1 : 0),
+    jy = st.joy.y + ((tb.s || tb.arrowdown) ? 1 : 0) - ((tb.w || tb.arrowup) ? 1 : 0);
+  st.zoom += (st.zoomTuju - st.zoom) * 0.08; st.yaw += (st.yawTuju - st.yaw) * 0.08;
+  kamLihat.x += st.camX; kamPos.x += st.camX + goyang;
+  const lengan = kamPos.clone().sub(kamLihat).applyAxisAngle(SUMBU_Y, st.yaw).multiplyScalar(st.zoom);
+  if (jx || jy) { // maju = arah pandang kamera di bidang datar
+    const maju = lengan.clone().setY(0).normalize().negate(), kanan = new THREE.Vector3(-maju.z, 0, maju.x), laju = 14 * dt;
+    st.geser.addScaledVector(maju, -jy * laju).addScaledVector(kanan, jx * laju);
+    st.geser.x = THREE.MathUtils.clamp(st.geser.x, -40, 40); st.geser.z = THREE.MathUtils.clamp(st.geser.z, -40, 30);
+  }
+  kamLihat.add(st.geser); kamPos.copy(kamLihat).add(lengan); kamPos.y = Math.max(1.6, kamPos.y);
+  st.kamera.position.copy(kamPos); st.kamera.lookAt(kamLihat);
+  st.kendali.classList.toggle('sembunyi', scrollY > innerHeight * 0.45);
   if (GERAK) {
     st.agen.forEach((a) => letakAgen(a, t + a.t));
     st.mobil.forEach((m) => { m.x += m.v * m.arah * dt; if (m.x > 45) m.x = -45; if (m.x < -45) m.x = 45; m.g.position.x = m.x; });
