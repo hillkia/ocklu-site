@@ -43,6 +43,16 @@ video{width:100%;max-height:360px;border-radius:10px;background:#000}
 .gel .usul{margin-top:8px;padding:8px;border:1px dashed var(--aksen);border-radius:8px;font-size:13px}
 #obrolForm{display:flex;gap:8px;padding:10px;border-top:1px solid var(--garis)}
 #obrolForm textarea{min-height:42px;height:42px;flex:1}
+#kota3d{position:fixed;inset:0;z-index:0}
+#jendela{height:56vh;display:flex;align-items:flex-end;pointer-events:none}
+#jendela span{font:600 12px/1 -apple-system,sans-serif;color:#fff;background:rgba(8,10,26,.6);padding:6px 10px;border-radius:99px}
+body.penuh{background:#0b0d1d;--kartu:rgba(14,16,40,.66);--bg:rgba(255,255,255,.07);--teks:#eef0ff;--redup:#b9bdd9;--garis:rgba(255,255,255,.17);--aksen:#3fe0c5;--merah:#ff7a85;--kuning:#ffcf6b}
+body.penuh main{position:relative;z-index:1;pointer-events:none}
+body.penuh main>:not(#ruang),body.penuh #ruang>:not(#jendela){pointer-events:auto}
+body.penuh .kartu,body.penuh #obrol{backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 8px 30px rgba(0,0,0,.35)}
+body.penuh h1,body.penuh main>.redup{text-shadow:0 2px 12px rgba(0,0,0,.8)}
+body.penuh button.utama,body.penuh .gel.owner,body.penuh #obrolTombol{color:#04201b}
+body.penuh select option{color:#111;background:#fff}
 </style>
 </head>
 <body>
@@ -55,7 +65,8 @@ video{width:100%;max-height:360px;border-radius:10px;background:#000}
 
 <section id="ruang" hidden>
   <div id="kota" class="kartu" style="padding:0;overflow:hidden" aria-label="Kota Ludlud" hidden></div>
-  <div id="kota3d" class="kartu" style="padding:0;overflow:hidden" hidden></div>
+  <div id="jendela" hidden><span>👆 geser kota · ketuk gedung atau lahan kosong</span></div>
+  <div id="kota3d" hidden></div>
   <div id="pesanSambung" class="kartu" hidden></div>
   <div id="rumahPanel" class="kartu" hidden></div>
   <details id="sambungan" class="kartu"><summary><b>Sambungan akun YouTube & Instagram</b> <small id="ringkasSambung" class="redup"></small></summary><div id="isiSambung" class="kecil" style="margin-top:8px">memuat…</div></details>
@@ -225,7 +236,7 @@ function gambarKota(){var KOTA=window.LudludKota3D||window.LudludKota;if(!KOTA)r
     if(x.status==="dikerjakan")keg.push({agen:"MARKUS",dari:noJenis("mesin")||st,ke:st,label:"#"+x.id+" dibuat"});
     else if(x.status==="disetujui"&&(!x.jadwal||Date.parse(x.jadwal)<=Date.now()))keg.push({agen:"MARKUS",dari:st,ke:ke,label:"#"+x.id+" menuju tayang"})});
   RUMAH.forEach(function(r){if(r.keadaan==="usul")keg.push({agen:r.oleh,dari:st,ke:r.kavling,label:""})});
-  var wadah=window.LudludKota3D?$("kota3d"):$("kota");$("kota").hidden=wadah!==$("kota");
+  var wadah=window.LudludKota3D?$("kota3d"):$("kota");$("kota").hidden=wadah!==$("kota");var penuh=wadah===$("kota3d");document.body.classList.toggle("penuh",penuh);$("jendela").hidden=!penuh;
   try{wadah.hidden=false;KOTA.render(wadah,{
     kavling:RUMAH.map(function(r){var o={jenis:r.jenis,nama:r.nama,keadaan:keadaan(r),inti:r.jenis==="studio"||r.jenis==="mesin",oleh:r.oleh,alasan:r.alasan};
       if(r.warna)o.warna=r.warna;if(r.jenis==="youtube"||r.jenis==="instagram")o.jumlah=hitungPl(r.jenis);
@@ -233,7 +244,7 @@ function gambarKota(){var KOTA=window.LudludKota3D||window.LudludKota;if(!KOTA)r
       if(r.jenis==="mesin")o.sibuk=sibuk;return{no:r.kavling,rumah:o}}),
     agen:[{nama:"GRIGORI",peran:"penjaga gerbang",warna:"#5b4b8a"},{nama:"MARKUS",peran:"pengantar konten",warna:"#0f7b6c"},
       {nama:"SKOUT",peran:"pencari tren",warna:"#a86a00"},{nama:"YOSUA",peran:"koordinator",warna:"#b3372f"}],
-    kegiatan:keg.slice(0,4),onLahan:panelLahan,onRumah:panelRumah,onAgen:function(){if($("obrol").hidden)bukaObrol()}})}catch(e){wadah.hidden=true}}
+    kegiatan:keg.slice(0,4),onLahan:panelLahan,onRumah:panelRumah,onAgen:function(){if($("obrol").hidden)bukaObrol()}})}catch(e){wadah.hidden=true;document.body.classList.remove("penuh");$("jendela").hidden=true}}
 function panel(h){var p=$("rumahPanel");p.innerHTML=h+'<div class="bar"><button data-r="tutup">Tutup</button></div>';p.hidden=false;p.scrollIntoView({behavior:"smooth",block:"nearest"})}
 function panelLahan(no){panel('<b>🌱 Kavling '+no+' · lahan kosong</b><div class="kecil redup">Bangun rumah apa di sini?</div>'
   +'<label>Jenis<select id="rjJenis">'+PILIH_RUMAH.filter(function(p){return p[0]==="lain"||!RUMAH.some(function(r){return r.jenis===p[0]})}).map(function(p){return'<option value="'+p[0]+'">'+p[1]+'</option>'}).join("")+'</select></label>'
