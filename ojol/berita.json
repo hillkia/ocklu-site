@@ -1,5 +1,5 @@
 {
- "w": "2026-11-20T05:32:00Z",
+ "w": "2026-11-20T06:37:26Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -106,6 +106,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-20T05:59:08Z",
+   "media": 1,
+   "judul": {
+    "id": "Upah Tak Cukup, Banyak Buruh di Jakarta Jadi Ojol hingga Berdagang demi Tambah Penghasilan",
+    "en": "Upah Tak Cukup, Banyak Buruh di Jakarta Jadi Ojol hingga Berdagang demi Tambah Penghasilan"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Tribunnews.com",
+    "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOUHhfaENtNDNkTU9VMG1aWmswRDhTNXh5QWVXczRSSXE0NldqUEpmb1NlTDVrQWl4TlJkRmNHeDRndDBrcjhmaWJvNGlmX0ZxZUkxa2lvT0tnOU5FcmZQOEZDUUZIQW1DbjNyanBGLVFJUWhsa1F4ZzlJUkNtOHg3LUl2T3pVZ0pneUJaN1Y5dC12ZV9fTng0ckxmbnBzU0EyZ2R4ODZjRjBlRlBmRUNmVElaOV9CTjhMZ1M0bFB2b0lwd0loeFROODlIVkIzSWlhV0JB?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-19T15:41:56Z",
    "media": 4,
    "judul": {
@@ -119,6 +136,23 @@
    "sumber": {
     "nama": "bsinews.id",
     "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBNMGZJc0tkX3dHbElmSW5VakJWbEpTTlEycFF0Y3pOQWwyamY5TUlXR2Q2ZGhDOUR4MW5tRUw1djI1QWxzU0ZQc1R2MmV5VVllNFItem1VYW5MaVh0X0VV?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-20T05:16:03Z",
+   "media": 1,
+   "judul": {
+    "id": "Viral Pengendara Ojol Tabrak Mobil di Surabaya, Bukannya Minta Maaf Malah Marah dan Kabur",
+    "en": "Viral Pengendara Ojol Tabrak Mobil di Surabaya, Bukannya Minta Maaf Malah Marah dan Kabur"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "TribunStyle.com",
+    "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNTmc1ei01NWhFS3A3QjF2T2hkcmVnYVlsZzlmMVJIazlzSWpHRlR1V0RlVERlVWMydW5DQ05xTE16Ukc4a0lfS0FBV2tsWTNyQlBNUG9UdjJUUWZwa0hVM3dBajJXOE9XbXljWDRXai1RZWRrUHhEcVBQVGc3M250bVA0WUtnMllMNVhhTExkcTh2S3h6YTVpTm1qUnlvSTlJd2h4c0xxWjlnTTNqem9QbXAyUTZCZTRzVjdBcWVZRFV4YnRzOUNQTg?oc=5"
    }
   },
   {
@@ -153,74 +187,6 @@
    "sumber": {
     "nama": "Cyber Jatim",
     "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPMTM3YXpnYXc4ZEFJOC03Z2cwbDA0Q2lYZzJSY1IwYmlza2hiSHhfV19saU1JTThTODZ4eUFSZEg2OUdpdzk5RFFmMWMtT21MbE9hZ2xaV0UzWjlnMlZpMy1vUmZoT0U2aTlOVE13b25RSVBtTG03bnVuWV8yVGJVOUxjYl95cmNIa0xYOWViSlh1WEZmOUFfb1lWcTdIVDNpU21iTV9PYWh4Nm81ajRRdTRrWVR0ZUQ2c01uSVplYlNjTndRX3VhOHMzUkYtRnlTaWxDbzhBaDJ1SWlNY3N3UDRZTnVNdExXNFlndEdvVnVkUQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-20T03:29:13Z",
-   "media": 1,
-   "judul": {
-    "id": "Ardianto Aritonang Mundur dari Ketua Ojol Kamtibmas Presisi Polda Riau",
-    "en": "Ardianto Aritonang Mundur dari Ketua Ojol Kamtibmas Presisi Polda Riau"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "mitratoday",
-    "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQR2xIbGZPdFIwR2gyOGN0RERfSDF0OVRtMXlSTTRlUWhrX0liWTV0QkpVV2M0RDdtQ01fMVFLSDE1dUJnREhuaEkxbTJvVHBnZXFETkZHQUdNTjBvcmxSenlWVXRWdUE1dm44eldydk5sUXBoZzRvNTE2Y1RhbzBIbTBNMVQ5eW12d0ZDdWh4TnlBclRvTmZKUmhhTUlpbjg?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-20T03:13:30Z",
-   "media": 1,
-   "judul": {
-    "id": "DPR Minta Kementerian Percepat Aturan Turunan Perpres Ojol",
-    "en": "DPR Minta Kementerian Percepat Aturan Turunan Perpres Ojol"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "BeritaSatu.com",
-    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPenBjSUdpRXk5NkdXWE5vbjhudDBIMV9SNlpkeV80NzZwQmpwM2V4ajlENkFfSV9ObWtLOXVGcDlvWlMyd0Y0V0VqNUMtNEtzeTBvSE9kTldzX2w2QWJOYzZZVG9DbzRpUTRWSjZBV3NnZlFSTjl3UTBjcENjZ0xLOWYwT1ZEaHF1ZjR6NFNzbm1OYXMyWEdFbnVldlNRb0k0aDJ0MQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-20T02:35:33Z",
-   "media": 1,
-   "judul": {
-    "id": "Komisi Ojol Dipangkas Jadi 8 Persen, Driver Malah Mengeluh Order Sepi, Dasco Turun Tangan",
-    "en": "Komisi Ojol Dipangkas Jadi 8 Persen, Driver Malah Mengeluh Order Sepi, Dasco Turun Tangan"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Suara Pantura",
-    "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOYk9Peml1U0hrTDNjemhMOTgyLXQxT0JUUzM1b2JWQ1ZpX0RuaWlUSk5rNWFZUFp0Q0VyOURKMDRKaEprSWFWMTNUVzFkNTB6MnpYLVRrRlBqMkZhcjliT0JzSlkwRXREbkhIVnNidFJmdFpTb1NtUmFsaTZ4VjI5RktETTM4MnpxcWpIWTVNdnU?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-19T16:00:00Z",
-   "media": 3,
-   "judul": {
-    "id": "Tarif ojol empat tahun tak naik, DPR fasilitasi pertemuan dengan kementerian",
-    "en": "Tarif ojol empat tahun tak naik, DPR fasilitasi pertemuan dengan kementerian"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Elshinta",
-    "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNOXUtOEhRMVFVbDN1UUdEbUEyMzB0aEtxZGRiQUVvXzZja2RQcWdvOGxRRUtYM3FiZ3lseXR6cWRzYnFrdDFXWlJKYkZEN1NiNmh6ZHlGcUpLZTRfN1pWYThoNENyWU00RnJYYWpJaTgtTk1PUTdqdWpkQ3g5WXlpUjBqZVZjdGdaT0lfSi1SaUpkN3k3S19XVE1ZYnZWc1kxNDNNTlJUaHg5SWlyWE0wZ2hHeGFFTDFrcEhsMlNIUQ?oc=5"
    }
   }
  ]
