@@ -177,12 +177,20 @@ function buatDunia(el) {
   kanvas.style.cssText = 'display:block;width:100%;height:100%;touch-action:pan-y;cursor:grab';
   kanvas.setAttribute('role', 'img');
   const bungkus = document.createElement('div'); bungkus.style.cssText = 'position:relative;width:100%;height:100%';
-  bungkus.append(kanvas); el.replaceChildren(bungkus);
-  const ren = new THREE.WebGLRenderer({ canvas: kanvas, antialias: !HP(), alpha: false, powerPreference: 'high-performance' });
+  const vid = document.createElement('video'); vid.muted = true; vid.loop = true; vid.autoplay = true; vid.playsInline = true;
+  vid.setAttribute('playsinline', ''); vid.setAttribute('aria-hidden', 'true');
+  vid.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:#140c26';
+  kanvas.style.position = 'absolute'; kanvas.style.inset = '0';
+  bungkus.append(vid, kanvas); el.replaceChildren(bungkus);
+  const pilihKlip = () => { const n = innerWidth / innerHeight < 1 ? 'kota-tegak' : 'kota-lebar'; if (vid.dataset.n === n) return;
+    vid.dataset.n = n; vid.poster = n + '.jpg'; vid.src = n + '.mp4'; const pr = vid.play(); pr && pr.catch(() => {}); };
+  pilihKlip(); addEventListener('resize', pilihKlip);
+  addEventListener('pointerdown', () => { if (vid.paused) vid.play().catch(() => {}); }, { once: true });
+  const ren = new THREE.WebGLRenderer({ canvas: kanvas, antialias: !HP(), alpha: true, powerPreference: 'high-performance' });
   ren.setPixelRatio(Math.min(devicePixelRatio, HP() ? 1.5 : 2)); ren.outputColorSpace = THREE.SRGBColorSpace;
   ren.toneMapping = THREE.ACESFilmicToneMapping; ren.toneMappingExposure = 1.05;
   const adegan = new THREE.Scene(), langit = langitTekstur();
-  adegan.background = langit; adegan.fog = new THREE.Fog('#7a3f72', 70, 190);
+  ren.setClearColor(0x000000, 0); adegan.fog = new THREE.Fog('#5a3466', 60, 170);
   // pantulan senja di kaca gedung
   const pmrem = new THREE.PMREMGenerator(ren), ruangEnv = new THREE.Scene();
   ruangEnv.add(new THREE.Mesh(new THREE.SphereGeometry(50, 32, 16), new THREE.MeshBasicMaterial({ map: langit, side: THREE.BackSide })));
@@ -195,11 +203,14 @@ function buatDunia(el) {
   const mt = new THREE.Sprite(new THREE.SpriteMaterial({ fog: false, depthWrite: false, map: kanvasTeks(256, 256, (g, w) => {
     const gr = g.createRadialGradient(w / 2, w / 2, 0, w / 2, w / 2, w / 2); gr.addColorStop(0, '#fff6d8'); gr.addColorStop(0.18, '#ffd08a'); gr.addColorStop(0.45, 'rgba(255,140,90,.35)'); gr.addColorStop(1, 'rgba(255,120,90,0)');
     g.fillStyle = gr; g.fillRect(0, 0, w, w); }) }));
-  mt.scale.set(60, 60, 1); mt.position.set(-8, 10, -150); adegan.add(mt);
+  mt.scale.set(60, 60, 1); mt.position.set(-8, 10, -150);
   // tanah gelap berkisi neon
   const kisi = kanvasTeks(128, 128, (g, w) => { g.fillStyle = '#000'; g.fillRect(0, 0, w, w); g.strokeStyle = '#6a4bff'; g.lineWidth = 2; g.strokeRect(0, 0, w, w); });
-  kisi.wrapS = kisi.wrapT = THREE.RepeatWrapping; kisi.repeat.set(160, 160);
-  const tanah = new THREE.Mesh(new THREE.PlaneGeometry(400, 400), new THREE.MeshStandardMaterial({ color: '#0b0c1c', emissive: '#ffffff', emissiveMap: kisi, emissiveIntensity: 0.2, metalness: 0.4, roughness: 0.45, envMap: env }));
+  kisi.wrapS = kisi.wrapT = THREE.RepeatWrapping; kisi.repeat.set(44, 28);
+  const pudar = kanvasTeks(128, 128, (g, w) => { const gr = g.createRadialGradient(w / 2, w / 2, w * 0.18, w / 2, w / 2, w / 2); gr.addColorStop(0, '#fff'); gr.addColorStop(1, '#000'); g.fillStyle = gr; g.fillRect(0, 0, w, w); });
+  const tanah = new THREE.Mesh(new THREE.PlaneGeometry(110, 70), new THREE.MeshStandardMaterial({ color: '#0b0c1c', emissive: '#ffffff', emissiveMap: kisi, emissiveIntensity: 0.25,
+    metalness: 0.4, roughness: 0.45, envMap: env, transparent: true, alphaMap: pudar, opacity: 0.94 }));
+  tanah.position.z = -2;
   tanah.rotation.x = -Math.PI / 2; adegan.add(tanah);
   // kaki langit: ratusan gedung di belakang (satu InstancedMesh, ringan)
   const jauh = HP() ? 70 : 120, latar = new THREE.InstancedMesh(new THREE.BoxGeometry(1, 1, 1),
@@ -210,7 +221,7 @@ function buatDunia(el) {
     const x = (Math.random() - 0.5) * 170, z = -36 - Math.random() * 80, w = 3 + Math.random() * 5, h = 6 + Math.random() * (z < -75 ? 34 : 15);
     m4.compose(new THREE.Vector3(x, h / 2, z), q, new THREE.Vector3(w, h, w)); latar.setMatrixAt(i, m4);
   }
-  adegan.add(latar);
+
   // jalan layang lurus di antara dua baris gedung + mobil
   const dek = new THREE.Mesh(new THREE.BoxGeometry(90, 0.3, 3.2), new THREE.MeshStandardMaterial({ color: '#161827', metalness: 0.5, roughness: 0.5 }));
   dek.position.set(0, 2.6, -2.2); adegan.add(dek);
@@ -228,9 +239,9 @@ function buatDunia(el) {
   // jalan layang melengkung di kejauhan (pita neon + titik-titik lampu mobil)
   const lengkung = (dz) => new THREE.CatmullRomCurve3([[-90, 6, -16], [-50, 9, -26], [-15, 7, -18], [20, 10, -28], [55, 7, -17], [90, 9, -24]].map(([x, y, z]) => new THREE.Vector3(x, y, z + dz)));
   const jalur = [lengkung(0), lengkung(1.6)];
-  jalur.forEach((c, i) => adegan.add(new THREE.Mesh(new THREE.TubeGeometry(c, 160, 0.09, 6, false), new THREE.MeshBasicMaterial({ color: i ? '#7ef9ff' : '#ff5fd2' }))));
+  jalur.forEach((c, i) => (new THREE.Mesh(new THREE.TubeGeometry(c, 160, 0.09, 6, false), new THREE.MeshBasicMaterial({ color: i ? '#7ef9ff' : '#ff5fd2' }))));
   const titik = [];
-  for (let i = 0; i < 26; i++) { const m = terang(0.5, 0.18, 0.3, i % 2 ? '#fff1c9' : '#ff3b5c'); adegan.add(m); titik.push({ m, c: jalur[i % 2], u: Math.random(), v: (0.012 + Math.random() * 0.01) * (i % 2 ? 1 : -1) }); }
+  for (let i = 0; i < 0; i++) { const m = terang(0.5, 0.18, 0.3, i % 2 ? '#fff1c9' : '#ff3b5c'); adegan.add(m); titik.push({ m, c: jalur[i % 2], u: Math.random(), v: (0.012 + Math.random() * 0.01) * (i % 2 ? 1 : -1) }); }
   // mobil terbang hiasan berputar di atas kota
   const lalu = [];
   for (let i = 0; i < (HP() ? 5 : 9); i++) {
@@ -267,7 +278,7 @@ function buatDunia(el) {
     ray.setFromCamera(ptr, kamera);
     const kena = ray.intersectObjects(isi.children, true).find((h) => h.object.userData.no || h.object.userData.agen);
     if (!kena) return; const u = kena.object.userData, d = st.data;
-    if (u.agen) d.onAgen && d.onAgen(u.agen); else if (u.kosong) d.onLahan && d.onLahan(u.no); else d.onRumah && d.onRumah(u.no);
+    if (u.agen) d.onAgen && d.onAgen(u.agen); else terbangKe(st, u.no);
   };
   kanvas.addEventListener('pointerup', lepas); kanvas.addEventListener('pointercancel', () => { awal = null; });
   // pad joystick + tombol ＋ － ⟳ (gaya Anak Gusti): jalan-jalan bebas di kota
@@ -275,9 +286,9 @@ function buatDunia(el) {
   const kendali = document.createElement('div'); kendali.id = 'kendaliKota';
   kendali.innerHTML = '<div class="kk-joy" title="Seret untuk jalan"><div></div></div><div class="kk-tombol"><button data-k="+" title="Dekatkan">＋</button><button data-k="-" title="Jauhkan">－</button><button data-k="r" title="Putar kamera">⟳</button><button data-k="0" title="Balik ke awal">⌂</button></div>';
   const gaya = document.createElement('style');
-  gaya.textContent = '#kendaliKota .kk-joy{position:fixed;left:18px;bottom:40px;width:120px;height:120px;border-radius:50%;background:rgba(126,249,255,.14);border:2px solid rgba(126,249,255,.7);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);z-index:15;touch-action:none;cursor:grab;box-shadow:0 0 18px rgba(126,249,255,.35);transition:opacity .3s}'
+  gaya.textContent = '#kendaliKota .kk-joy{position:fixed;left:18px;bottom:92px;width:112px;height:120px;border-radius:50%;background:rgba(126,249,255,.14);border:2px solid rgba(126,249,255,.7);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);z-index:15;touch-action:none;cursor:grab;box-shadow:0 0 18px rgba(126,249,255,.35);transition:opacity .3s}'
     + '#kendaliKota .kk-joy div{position:absolute;left:50%;top:50%;width:44px;height:44px;margin:-22px 0 0 -22px;border-radius:50%;background:#e9fdff;box-shadow:0 0 14px #7ef9ff}'
-    + '#kendaliKota .kk-tombol{position:fixed;right:16px;bottom:96px;display:flex;flex-direction:column;gap:10px;z-index:15;transition:opacity .3s}'
+    + '#kendaliKota .kk-tombol{position:fixed;right:16px;bottom:92px;display:flex;flex-direction:column;gap:10px;z-index:15;transition:opacity .3s}'
     + '#kendaliKota button{width:48px;height:48px;border-radius:50%;border:2px solid rgba(126,249,255,.7);background:rgba(14,16,40,.6);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);color:#e9fdff;font:900 22px/1 system-ui;cursor:pointer;padding:0;box-shadow:0 0 12px rgba(126,249,255,.3)}'
     + '#kendaliKota.sembunyi>*{opacity:0;pointer-events:none}';
   document.head.append(gaya); document.body.append(kendali); st.kendali = kendali;
@@ -294,7 +305,23 @@ function buatDunia(el) {
     if (a === '+') st.zoomTuju = Math.max(0.35, st.zoomTuju * 0.75);
     else if (a === '-') st.zoomTuju = Math.min(1.8, st.zoomTuju / 0.75);
     else if (a === 'r') st.yawTuju += Math.PI / 4;
-    else { st.zoomTuju = 1; st.yawTuju = 0; st.geser.set(0, 0, 0); st.tujuanX = 0; } });
+    else terbangKe(st, null); });
+  const hud = document.createElement('div'); hud.id = 'hudKokpit';
+  hud.innerHTML = '<i class="hk-s a"></i><i class="hk-s b"></i><i class="hk-s c"></i><i class="hk-s d"></i><div class="hk-atas"><b>✈ OCKLU-01</b> <span></span></div><nav class="hk-dok" aria-label="Tujuan terbang"></nav>';
+  const gayaHud = document.createElement('style');
+  gayaHud.textContent = '#hudKokpit .hk-s{position:fixed;width:30px;height:30px;border:2px solid rgba(126,249,255,.75);z-index:12;pointer-events:none;filter:drop-shadow(0 0 6px #7ef9ff)}'
+    + '#hudKokpit .a{top:10px;left:10px;border-right:0;border-bottom:0;border-radius:10px 0 0 0}#hudKokpit .b{top:10px;right:10px;border-left:0;border-bottom:0;border-radius:0 10px 0 0}'
+    + '#hudKokpit .c{bottom:74px;left:10px;border-right:0;border-top:0;border-radius:0 0 0 10px}#hudKokpit .d{bottom:74px;right:10px;border-left:0;border-top:0;border-radius:0 0 10px 0}'
+    + '#hudKokpit .hk-atas{position:fixed;top:12px;left:50%;transform:translateX(-50%);z-index:12;pointer-events:none;white-space:nowrap;font:700 11px/1 ui-monospace,Menlo,monospace;color:#bff9ff;background:rgba(6,10,26,.62);border:1px solid rgba(126,249,255,.45);border-radius:99px;padding:7px 12px;letter-spacing:.04em;max-width:calc(100vw - 90px);overflow:hidden;text-overflow:ellipsis}'
+    + '#hudKokpit .hk-atas b{color:#fff}'
+    + '#hudKokpit .hk-dok{position:fixed;left:0;right:0;bottom:0;z-index:12;display:flex;gap:8px;overflow-x:auto;padding:12px 12px calc(12px + env(safe-area-inset-bottom));background:linear-gradient(180deg,rgba(6,8,22,0),rgba(6,8,22,.88) 40%);scrollbar-width:none}'
+    + '#hudKokpit .hk-dok::-webkit-scrollbar{display:none}'
+    + '#hudKokpit .hk-dok button{flex:0 0 auto;font:700 13px/1 system-ui,-apple-system,sans-serif;color:#fff;background:rgba(14,16,40,.75);border:1.5px solid var(--w,#7ef9ff);border-radius:99px;padding:10px 13px;cursor:pointer;white-space:nowrap}'
+    + '#hudKokpit .hk-dok button.aktif{background:var(--w,#7ef9ff);color:#08101e;box-shadow:0 0 16px var(--w,#7ef9ff)}';
+  document.head.append(gayaHud); document.body.append(hud); st.hud = hud; st.lihatKini = new THREE.Vector3(0, 6.5, -5); st.lokasi = null;
+  hud.querySelector('.hk-dok').addEventListener('click', (e) => { const b = e.target.closest('button'); if (!b || b.hasAttribute('data-ganti-kota')) return;
+    if (b.dataset.a) { st.data && st.data.onAgen && st.data.onAgen(b.dataset.a); return; }
+    terbangKe(st, b.dataset.t ? +b.dataset.t : null); });
   // WASD / panah di laptop
   const tombol = {}; addEventListener('keydown', (e) => { if (/input|textarea|select/i.test(e.target.tagName)) return; tombol[e.key.toLowerCase()] = 1; });
   addEventListener('keyup', (e) => { tombol[e.key.toLowerCase()] = 0; }); st.tombol = tombol;
@@ -318,7 +345,7 @@ function susun(st, data) {
     const rute = k ? [k.dari, k.ke] : [ada[(i * 3) % ada.length] || 1, ada[(i * 3 + 2) % ada.length] || 6];
     st.agen.push({ o, rute: rute.map((n) => n >= 1 && n <= 12 ? n : 1), t: i * 2.7, cepat: k ? 5 : 3.5 });
   });
-  st.data = data;
+  st.peta = peta; st.data = data; gambarDok(st);
   if (!GERAK) st.agen.forEach((a) => a.o.position.copy(dok(a.rute[0])));
   if (!st.raf) putar(st);
 }
@@ -343,6 +370,32 @@ function letakAgen(a, t) {
   a.o.position.y += Math.sin(t * 3) * 0.08; a.o.scale.setScalar(Math.max(0.001, skala));
 }
 
+function sudutGedung(st, no) {
+  if (no == null) return { pos: new THREE.Vector3(0, st.tinggiKam, st.jarak - 6), lihat: new THREE.Vector3(0, 6.5, -5) };
+  const p = posKav(no), kosong = !(st.peta && st.peta[no]), y = kosong ? 2.2 : layarY(no), jauh = (st.kamera.aspect < 1 ? 9.5 : 11.5) * (kosong ? 1.15 : 1);
+  return { pos: new THREE.Vector3(p.x, y + 0.9, p.z + 2 + jauh), lihat: new THREE.Vector3(p.x, y, p.z + 2) };
+}
+function terbangKe(st, no) {
+  const ke = sudutGedung(st, no);
+  st.terbang = { dariPos: st.kamera.position.clone(), dariLihat: st.lihatKini.clone(), ke, t0: performance.now() / 1000, dur: GERAK ? 2.4 : 0.01, no };
+  st.basis = no == null ? null : ke; st.geser.set(0, 0, 0); st.zoom = st.zoomTuju = 1; st.yaw = st.yawTuju = 0; st.tujuanX = st.camX = 0; st.lokasi = no;
+  st.data && st.data.onBerangkat && st.data.onBerangkat(no); gambarDok(st);
+}
+function namaLokasi(st, no) {
+  if (no == null) return 'Pangkalan'; const r = st.peta && st.peta[no];
+  return r ? (r.nama || (GAYA[r.jenis] || GAYA.lain).label) : 'Lahan kosong ' + no;
+}
+function gambarDok(st) {
+  const dok = st.hud && st.hud.querySelector('.hk-dok'); if (!dok) return; const peta = st.peta || {};
+  const e = (x) => String(x).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  let h = '<button data-t="" class="' + (st.lokasi == null ? 'aktif' : '') + '">🏠 Pangkalan</button>', kosong = 0;
+  for (let no = 1; no <= 12; no++) { const r = peta[no]; if (!r) { kosong = kosong || no; continue; }
+    const g = GAYA[r.jenis] || GAYA.lain;
+    h += '<button data-t="' + no + '" style="--w:' + e(r.warna || g.neon) + '" class="' + (st.lokasi === no ? 'aktif' : '') + '">' + (r.keadaan === 'usul' ? '💡 ' : g.ikon + ' ') + e(r.nama || g.label) + '</button>'; }
+  if (kosong) h += '<button data-t="' + kosong + '" class="' + (st.lokasi === kosong ? 'aktif' : '') + '">＋ Lahan</button>';
+  h += '<button data-a="YOSUA" style="--w:#ffc94d">📻 Asisten</button><button data-ganti-kota="video" style="--w:#b892ff">🎬 Mode video</button>';
+  dok.innerHTML = h;
+}
 const SUMBU_Y = new THREE.Vector3(0, 1, 0), kamPos = new THREE.Vector3(), kamLihat = new THREE.Vector3();
 function jalurKamera(st, p, pos, lihat) {
   const z0 = st.jarak - 6;
@@ -360,16 +413,21 @@ function putar(st) {
   // saat halaman digulir jauh ke bawah (kota tertutup panel), hemat baterai: separuh bingkai
   if (scrollY > innerHeight * 0.7 && (st.bingkai++ & 1)) return;
   const t = performance.now() / 1000, dt = Math.min(0.05, t - (st.lalu_t || t)); st.lalu_t = t;
-  st.camX += (st.tujuanX * (1 - Math.min(1, (st.p || 0) * 3)) - st.camX) * 0.1;
+  st.camX += (st.tujuanX - st.camX) * 0.1;
   // scroll = terbang: atas halaman pemandangan lebar, makin digulir makin turun menyusuri jalan layang di antara gedung
   const tujuP = Math.min(1, scrollY / Math.max(innerHeight * 1.2, document.documentElement.scrollHeight - innerHeight));
   st.p = (st.p || 0) + (tujuP - (st.p || 0)) * 0.08;
-  const goyang = GERAK ? Math.sin(t * 0.15) * 0.8 : 0;
-  jalurKamera(st, st.p, kamPos, kamLihat);
+  const goyang = GERAK ? Math.sin(t * 0.5) * 0.12 : 0;
+  if (st.terbang) {
+    const f = st.terbang, u = Math.min(1, (t - f.t0) / f.dur), e = u * u * (3 - 2 * u);
+    kamPos.copy(f.dariPos).lerp(f.ke.pos, e); kamPos.y += Math.sin(Math.PI * e) * Math.min(7, f.dariPos.distanceTo(f.ke.pos) * 0.2);
+    kamLihat.copy(f.dariLihat).lerp(f.ke.lihat, e);
+    if (u >= 1) { st.terbang = null; const d = st.data; d && d.onTiba && d.onTiba(f.no); }
+  } else { const b = st.basis || sudutGedung(st, null); kamPos.copy(b.pos); kamLihat.copy(b.lihat); kamPos.y += goyang; }
   const tb = st.tombol, jx = st.joy.x + ((tb.d || tb.arrowright) ? 1 : 0) - ((tb.a || tb.arrowleft) ? 1 : 0),
     jy = st.joy.y + ((tb.s || tb.arrowdown) ? 1 : 0) - ((tb.w || tb.arrowup) ? 1 : 0);
   st.zoom += (st.zoomTuju - st.zoom) * 0.08; st.yaw += (st.yawTuju - st.yaw) * 0.08;
-  kamLihat.x += st.camX; kamPos.x += st.camX + goyang;
+  kamLihat.x += st.camX; kamPos.x += st.camX;
   const lengan = kamPos.clone().sub(kamLihat).applyAxisAngle(SUMBU_Y, st.yaw).multiplyScalar(st.zoom);
   if (jx || jy) { // maju = arah pandang kamera di bidang datar
     const maju = lengan.clone().setY(0).normalize().negate(), kanan = new THREE.Vector3(-maju.z, 0, maju.x), laju = 14 * dt;
@@ -377,8 +435,10 @@ function putar(st) {
     st.geser.x = THREE.MathUtils.clamp(st.geser.x, -40, 40); st.geser.z = THREE.MathUtils.clamp(st.geser.z, -40, 30);
   }
   kamLihat.add(st.geser); kamPos.copy(kamLihat).add(lengan); kamPos.y = Math.max(1.6, kamPos.y);
-  st.kamera.position.copy(kamPos); st.kamera.lookAt(kamLihat);
-  st.kendali.classList.toggle('sembunyi', scrollY > innerHeight * 0.45);
+  st.kamera.position.copy(kamPos); st.kamera.lookAt(kamLihat); st.lihatKini.copy(kamLihat);
+  if (!(st.bingkai++ % 12)) { const v = st.kamTadi ? kamPos.distanceTo(st.kamTadi) / Math.max(dt, 0.001) : 0; st.kamTadi = kamPos.clone();
+    st.hud.querySelector('.hk-atas span').textContent = '📍 ' + namaLokasi(st, st.terbang ? st.terbang.no : st.lokasi) + (st.terbang ? ' (terbang…)' : '') + ' · ALT ' + Math.round(kamPos.y * 3) + 'm · SPD ' + Math.round(v * 12) + 'km/j'; }
+  st.kendali.classList.toggle('sembunyi', document.body.classList.contains('tiba'));
   if (GERAK) {
     st.agen.forEach((a) => letakAgen(a, t + a.t));
     st.mobil.forEach((m) => { m.x += m.v * m.arah * dt; if (m.x > 45) m.x = -45; if (m.x < -45) m.x = 45; m.g.position.x = m.x; });

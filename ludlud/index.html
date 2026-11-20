@@ -55,6 +55,14 @@ body.penuh .kartu,body.penuh #obrol{backdrop-filter:blur(14px);-webkit-backdrop-
 body.penuh h1,body.penuh main>.redup{text-shadow:0 2px 12px rgba(0,0,0,.8)}
 body.penuh button.utama,body.penuh .gel.owner,body.penuh #obrolTombol{color:#04201b}
 body.penuh select option{color:#111;background:#fff}
+body.kokpit main>h1,body.kokpit main>.redup,body.kokpit main>.kartu.kecil,body.kokpit #jendela,body.kokpit #obrolTombol{display:none!important}
+body.kokpit #ruang{position:fixed;z-index:13;left:50%;transform:translateX(-50%);width:min(720px,calc(100vw - 16px));bottom:74px;max-height:56vh;overflow-y:auto;display:none;background:rgba(10,12,32,.76);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1.5px solid rgba(126,249,255,.55);border-radius:16px;padding:0 12px 10px;box-shadow:0 0 26px rgba(126,249,255,.22);pointer-events:auto}
+body.kokpit.tiba #ruang:not([hidden]){display:block}
+body.kokpit #ruang>*{display:none}
+body.kokpit #ruang>#layarJudul{display:flex;position:sticky;top:0;z-index:1;justify-content:space-between;align-items:center;gap:8px;padding:10px 0;background:rgba(12,14,36,.96)}
+body.kokpit #ruang>#rumahPanel:not([hidden]),body.kokpit #ruang>#pesanSambung:not([hidden]),body.kokpit[data-gedung=studio] #formPerintah,body.kokpit[data-gedung=studio] #daftar,body.kokpit[data-gedung=platform] #daftar,body.kokpit[data-gedung=platform] #sambungan,body.kokpit[data-gedung=mesin] #daftar{display:block}
+body.kokpit #ruang .kartu{margin:8px 0}
+body.kokpit #obrol{bottom:80px}
 </style>
 </head>
 <body>
@@ -66,6 +74,7 @@ body.penuh select option{color:#111;background:#fff}
 <section id="kunci" class="kartu" hidden></section>
 
 <section id="ruang" hidden>
+  <div id="layarJudul" hidden></div>
   <div id="kota" class="kartu" style="padding:0;overflow:hidden" aria-label="Kota Ludlud" hidden></div>
   <div id="jendela" hidden><span>👆 ketuk layar platform · pad untuk geser kamera</span><button id="gantiKota" type="button"></button></div>
   <div id="kota3d" hidden></div>
@@ -159,8 +168,8 @@ function kunciPanel(g){var k=$("kunci");k.hidden=false;$("ruang").hidden=true;
 function muat(){api("daftar").then(function(d){if(d.galat){if(/dikenali/.test(d.galat))return kunciPanel(d.galat);$("daftar").textContent=d.galat;return}DATA=d.isi||[];gambar();gambarKota();
   clearTimeout(JAM);if(DATA.some(function(x){return/antre|dikerjakan|revisi/.test(x.status)}))JAM=setTimeout(muat,30000)})}
 
-function gambar(){var L=$("daftar");if(!DATA.length){L.innerHTML='<div class="kartu redup">Belum ada konten. Kirim perintah pertama di atas.</div>';return}
-  L.innerHTML=DATA.map(function(x){var siap=x.status==="siap_cek",ubah=siap||x.status==="disetujui";
+function gambar(){var L=$("daftar"),D=saring(DATA);if(!D.length){L.innerHTML='<div class="kartu redup">'+(FILTER?"Belum ada konten di gedung ini.":"Belum ada konten. Kirim perintah pertama di atas.")+'</div>';return}
+  L.innerHTML=D.map(function(x){var siap=x.status==="siap_cek",ubah=siap||x.status==="disetujui";
     var h='<article class="kartu" data-id="'+x.id+'"><div class="bar" style="margin:0;justify-content:space-between"><b>#'+x.id+' · '+esc(x.bahan)+' · '+esc((x.platform||[]).join(" + "))+'</b><span class="lencana s-'+x.status+'">'+(LABEL[x.status]||x.status)+(x.versi?' · v'+x.versi:'')+'</span></div>'
     +'<div class="kecil">'+esc(x.perintah)+'</div>';
     if(x.url_video)h+='<div class="isi"><div><video controls playsinline preload="metadata" src="'+esc(x.url_video)+'"'+(x.url_sampul?' poster="'+esc(x.url_sampul)+'"':'')+'></video>'
@@ -233,13 +242,20 @@ function statusPl(p){var s=SB&&SB[p];return !s?"belum":s.akun?"tersambung":s.kun
 function keadaan(r){if(r.keadaan==="usul")return"usul";if(r.jenis==="youtube"||r.jenis==="instagram")return statusPl(r.jenis)==="tersambung"?"buka":"dibangun";
   return PLATFORM_JENIS.indexOf(r.jenis)>=0?"dibangun":"buka"}
 window.addEventListener("ludlud-kota3d",function(){if(RUMAH.length)gambarKota()});
-document.addEventListener("click",function(e){if(e.target.id!=="gantiKota")return;try{localStorage.setItem("ludlud_kota",e.target.textContent.indexOf("3D")>=0?"3d":"video")}catch(x){}location.reload()});
+var MODE_KOTA="",FILTER=null;
+document.addEventListener("click",function(e){var p=e.target.closest('[data-r="pangkalan"]');if(p){var h=document.querySelector('#hudKokpit [data-t=""]');if(h)h.click();else bukaGedung(null);return}var b=e.target.closest("#gantiKota,[data-ganti-kota]");if(!b)return;try{localStorage.setItem("ludlud_kota",MODE_KOTA==="video"?"kokpit":"video")}catch(x){}location.reload()});
+function saring(A){if(!FILTER)return A;return A.filter(function(x){if(FILTER==="studio")return/antre|dikerjakan|revisi|gagal/.test(x.status);if(FILTER==="mesin")return/antre|dikerjakan|gagal/.test(x.status);return(x.platform||[]).indexOf(FILTER)>=0})}
+function bukaGedung(no){var b=document.body;if(no==null){b.classList.remove("tiba");FILTER=null;gambar();return}
+  var r=rumahDi(no),g=!r?"lahan":r.keadaan==="usul"?"usul":r.jenis==="studio"?"studio":r.jenis==="mesin"?"mesin":PLATFORM_JENIS.indexOf(r.jenis)>=0?"platform":"lain";
+  b.dataset.gedung=g;FILTER=(g==="studio"||g==="mesin")?g:g==="platform"?r.jenis:null;gambar();
+  $("layarJudul").innerHTML='<b>📍 '+esc(r?r.nama:"Lahan kosong "+no)+'</b><button type="button" data-r="pangkalan">✕ Kembali</button>';
+  $("rumahPanel").hidden=true;if(g==="lahan")panelLahan(no);else if(g!=="studio")panelRumah(no);b.classList.add("tiba");$("ruang").scrollTop=0}
 function gambarKota(){var KOTA=window.LudludKota3D||window.LudludKota;if(!KOTA)return;var keg=[],st=noJenis("studio")||1,sibuk=DATA.some(function(x){return x.status==="dikerjakan"});
   DATA.forEach(function(x){var ke=noJenis((x.platform||[])[0]||"youtube");if(!ke)return;
     if(x.status==="dikerjakan")keg.push({agen:"MARKUS",dari:noJenis("mesin")||st,ke:st,label:"#"+x.id+" dibuat"});
     else if(x.status==="disetujui"&&(!x.jadwal||Date.parse(x.jadwal)<=Date.now()))keg.push({agen:"MARKUS",dari:st,ke:ke,label:"#"+x.id+" menuju tayang"})});
   RUMAH.forEach(function(r){if(r.keadaan==="usul")keg.push({agen:r.oleh,dari:st,ke:r.kavling,label:""})});
-  var modeKota="";try{modeKota=localStorage.getItem("ludlud_kota")||""}catch(e){}KOTA=modeKota==="3d"?(window.LudludKota3D||window.LudludKota):(window.LudludKotaVideo||window.LudludKota3D||window.LudludKota);$("gantiKota").textContent=KOTA===window.LudludKotaVideo?"🕹️ Kota 3D":"🎬 Kota video";var wadah=KOTA===window.LudludKota?$("kota"):$("kota3d");$("kota").hidden=wadah!==$("kota");var penuh=wadah===$("kota3d");document.body.classList.toggle("penuh",penuh);$("jendela").hidden=!penuh;
+  var modeKota="";try{modeKota=localStorage.getItem("ludlud_kota")||""}catch(e){}KOTA=modeKota==="video"?(window.LudludKotaVideo||window.LudludKota):(window.LudludKota3D||window.LudludKota);MODE_KOTA=KOTA===window.LudludKotaVideo?"video":"kokpit";$("gantiKota").textContent=MODE_KOTA==="video"?"✈ Mode kokpit":"🎬 Mode video";var kokpit=KOTA===window.LudludKota3D;document.body.classList.toggle("kokpit",kokpit);if(kokpit&&$("kota3d").parentNode!==document.body)document.body.prepend($("kota3d"));var wadah=KOTA===window.LudludKota?$("kota"):$("kota3d");$("kota").hidden=wadah!==$("kota");var penuh=wadah===$("kota3d");document.body.classList.toggle("penuh",penuh);$("jendela").hidden=!penuh;
   try{wadah.hidden=false;KOTA.render(wadah,{
     kavling:RUMAH.map(function(r){var o={jenis:r.jenis,nama:r.nama,keadaan:keadaan(r),inti:r.jenis==="studio"||r.jenis==="mesin",oleh:r.oleh,alasan:r.alasan};
       if(r.warna)o.warna=r.warna;if(r.jenis==="youtube"||r.jenis==="instagram")o.jumlah=hitungPl(r.jenis);
@@ -247,7 +263,7 @@ function gambarKota(){var KOTA=window.LudludKota3D||window.LudludKota;if(!KOTA)r
       if(r.jenis==="mesin")o.sibuk=sibuk;return{no:r.kavling,rumah:o}}),
     agen:[{nama:"GRIGORI",peran:"penjaga gerbang",warna:"#5b4b8a"},{nama:"MARKUS",peran:"pengantar konten",warna:"#0f7b6c"},
       {nama:"SKOUT",peran:"pencari tren",warna:"#a86a00"},{nama:"YOSUA",peran:"koordinator",warna:"#b3372f"}],
-    kegiatan:keg.slice(0,4),onLahan:panelLahan,onRumah:panelRumah,onAgen:function(){if($("obrol").hidden)bukaObrol()}})}catch(e){wadah.hidden=true;document.body.classList.remove("penuh");$("jendela").hidden=true}}
+    kegiatan:keg.slice(0,4),onTiba:bukaGedung,onBerangkat:function(){document.body.classList.remove("tiba")},onLahan:panelLahan,onRumah:panelRumah,onAgen:function(){if($("obrol").hidden)bukaObrol()}})}catch(e){wadah.hidden=true;document.body.classList.remove("penuh");$("jendela").hidden=true}}
 function panel(h){var p=$("rumahPanel");p.innerHTML=h+'<div class="bar"><button data-r="tutup">Tutup</button></div>';p.hidden=false;p.scrollIntoView({behavior:"smooth",block:"nearest"})}
 function panelLahan(no){panel('<b>🌱 Kavling '+no+' · lahan kosong</b><div class="kecil redup">Bangun rumah apa di sini?</div>'
   +'<label>Jenis<select id="rjJenis">'+PILIH_RUMAH.filter(function(p){return p[0]==="lain"||!RUMAH.some(function(r){return r.jenis===p[0]})}).map(function(p){return'<option value="'+p[0]+'">'+p[1]+'</option>'}).join("")+'</select></label>'
