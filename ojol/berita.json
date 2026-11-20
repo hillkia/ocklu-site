@@ -1,7 +1,41 @@
 {
- "w": "2026-11-20T12:37:26Z",
+ "w": "2026-11-20T12:52:02Z",
  "dari": "Kroog",
  "berita": [
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-20T11:32:31Z",
+   "media": 6,
+   "judul": {
+    "id": "Green SM Hentikan Layanan Ojol Motor Listrik di Indonesia",
+    "en": "Green SM Hentikan Layanan Ojol Motor Listrik di Indonesia"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "SuaraGarut.ID",
+    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5NaWR0QmtoalZSSFZacHdKNlUxQ2g1WHkxN0dNVDhyOWJHVjhLYUFqbWxBVVZVcmVocDRjOXNrQ05NbjFQRm9STWJKSjg1WkdnemN5X1FDVnZmcUFzemZrRTlSazJVYnBRdFRuNE9qdw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-20T10:12:40Z",
+   "media": 4,
+   "judul": {
+    "id": "Jumat Berkah, Kapolres Batu Ajak Ojol Makan Bakso di Pos Polisi Lippo Plaza",
+    "en": "Jumat Berkah, Kapolres Batu Ajak Ojol Makan Bakso di Pos Polisi Lippo Plaza"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "TagarJatim.id",
+    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQWGd0ZEtLdEs3OFVlUmhERVdGNmU1TTVvYjhoSjFHUGxjQVJyTWRWdU43akJTRUhta2k4eWlOUjZ3OEVNNzNjcEVFOEo4STRHZkNEWnRRWGRtN0ExYk95MUU1SGZoYTJ4dGxQczBPcF9QelJhRTFldmhuaU5yazNldVVXMlpGMlZ0Xzl2YjM4bjZjOW55LU50aEN2TEVrR2R3Mk5KX0x1Tjl5LWh5Ykg0Y3BPbw?oc=5"
+   }
+  },
   {
    "jenis": "berita",
    "waktu": "2026-11-20T08:59:47Z",
@@ -55,19 +89,53 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-20T08:30:27Z",
+   "waktu": "2026-11-20T11:49:36Z",
    "media": 2,
    "judul": {
-    "id": "Jumat Berkah, Kapolres Batu Ajak Ojol Makan Bakso di Pos Polisi Lippo Plaza",
-    "en": "Jumat Berkah, Kapolres Batu Ajak Ojol Makan Bakso di Pos Polisi Lippo Plaza"
+    "id": "Astra Motor Teuku Umar Kenalkan Program Ojol Hemat dan Pit Service Siaga Ojol",
+    "en": "Astra Motor Teuku Umar Kenalkan Program Ojol Hemat dan Pit Service Siaga Ojol"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "Kabar Terdepan",
-    "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQek8zcDZpTFdiN0VzbGZBQjVaOUhqY09UNTJXY1FkR3k3cnh2d0hDUy1GaUhjbU9qLTM0b0FKay0zdHFoQ2M5S2NKSDFqNmhmVDN3cXBabGk5ejJQVTIteGpRZGtFcmh6UEk3NlJMSlBUTGRrTmFYbWt5SnJfRTNsMw?oc=5"
+    "nama": "baliportalnews",
+    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOMHZ4bTBOQTJISnotM1ZBVmdQeU8wMTNZOGFUTV9qTTl5b1RPWkw1aWVYT3Z1YmVnczBFYWxLNDNkM3pEZTZjenlTRVFFMHhVZ1F4SDF3d255XzFaMmM0Yzg3YWJtOXkwb25ELVVlNHhxcFVYelZfQWlWaU8ydndjSHJiQnYxa0c1X09hNXV4bU43aG4xa3ZwXzljTjdTdkE5VzJST1R1T3NYYXp3VV9kbXRJUQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-20T10:52:00Z",
+   "media": 2,
+   "judul": {
+    "id": "Green SM Bike Setop Layanan Ojol di Indonesia Setelah Dua Bulan Beroperasi",
+    "en": "Green SM Bike Setop Layanan Ojol di Indonesia Setelah Dua Bulan Beroperasi"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Qoo Media",
+    "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOLTB3dHA1U2pPRGxGaWQxUnVYR05fTGFyT0ZVUkNVb25RVTlRRDdWWFFJQjRqVGJRMzhoLTR2MjNzaHNRaXpmVlJKS1dBMmctdnlGWlo5X2NKazlIWXlVbWZaRE9SNENiVjVyLXJzYVRadWZFWUNVaFFMYmp5WUl1WGVXQWFNQQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-20T10:25:52Z",
+   "media": 2,
+   "judul": {
+    "id": "Baru 2 Bulan Jalan, Ojol Vietnam Green SM Bike Berhenti Beroperasi di Indonesia",
+    "en": "Baru 2 Bulan Jalan, Ojol Vietnam Green SM Bike Berhenti Beroperasi di Indonesia"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "detikOto",
+    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPbWRHRmhzbHJpNE5DRjJQNHNrTk15dmxvNXgyWHpKbnhCN2JDdDk2SXYzdGZ1VTRsSy1yMWctMy1VaVoySE16QmVJeHVDbG5oSzgwcXgzQXlrX0JvTmNCTEtmbTV2YU9uS2g5WHctb2pFZDFqWUlMek50YWdxRVk1aHp4UXFLVll6QjY1TjN4c2tnVFpJMVRpMHA2Qm02THhhbDN1MUtpOHVhUy1EYlNuU2dhNlpIdjDSAbwBQVVfeXFMT2xkRlYwc3hDanVRTzQtTGFEbWU2N3dlemcyWW1IbHQ3Ym1kUG5zR181M3ZtV0g2WFZxLUY3dnBIUmtILUZIZVdPcVFBdHdCVHdyWlZrMEE1cmNraXlCUzlvcV9KeDFPZWo1ZFctamt3VDFEUUdkNzUwUzV6X0hXMDdSSWZtNklINkFQczcyMGV6UGJLVGJUNFRxUXlGQUlscUFzbWxFWWNxcWhDQ1BFT2VUaGNybDZHWENVMTM?oc=5"
    }
   },
   {
@@ -106,6 +174,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-20T12:39:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Polresta Surakarta Sengkuyung Komunitas Ojol Disabilitas dan Janda",
+    "en": "Polresta Surakarta Sengkuyung Komunitas Ojol Disabilitas dan Janda"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "RRI.co.id",
+    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOVWVRMW1TLUJJdEZGRFJabFk5TGkwNGl4Sk96dzRfZ0lvODRWd3U0SThwMk9BbEFDTzR3LVYzSEVkZUZ4NjF1ZUZZa3ZGcGhaNWRGNE8tREpSSTZtRFo0VVhweHJHTVY4cVNiclFvWkZfcy1JQkZGNk9fb203R2dLM2dESDJ3OHhGWFNoOE1KWE5rYlFVSnhmVlpVejI1emtFT0k5Z2EteHJKV0R1cEhjSA?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-20T06:23:16Z",
    "media": 2,
    "judul": {
@@ -123,36 +208,104 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-20T02:41:43Z",
-   "media": 2,
+   "waktu": "2026-11-20T12:23:00Z",
+   "media": 1,
    "judul": {
-    "id": "Dasco Telepon Menkomdigi di Tengah Audiensi, Minta Ojol Diajak Diskusi",
-    "en": "Dasco Telepon Menkomdigi di Tengah Audiensi, Minta Ojol Diajak Diskusi"
+    "id": "Banjir dan Longsor Sumatera Hingga Gempa Flores Jadi Pembelajaran Mitigasi Bencana",
+    "en": "Banjir dan Longsor Sumatera Hingga Gempa Flores Jadi Pembelajaran Mitigasi Bencana"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "JournalArta",
-    "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOamJsakVRTWlXM1BPbVpUUGNWU29kX0hKSGQzVzBxZm5TNmhPdHl5Q2Rfc2JPWlAxV29wUE5GWE90bmpzcGZBbExRS0lWQ0tXQ0pCTzBvbDkwQzJlZ3hrQTQwVUtFOTJDSEV5MVdpdnh5RGpZWXVnZGE5VTd6QXFtM3k4eFVNVTM0a0hCaDkyN0gwalU?oc=5"
+    "nama": "Tribunnews.com",
+    "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQdHNpLXpiOHVtZzdraXcwVUxCdVlzWldwYzhCLU0zMXpZczkwbi1JekREU3g1aGRtaTg4ZnFleEZpdTlMTVBWOE9CYXA1ZzJVVGs1RmZmVVVSdTlXZG03LUY4OFVwQUp3dWd1ZmtUTy1vSnZ1VWpvektFUy1YcS1BWUdiVVphcWdmRWIyb1p4S1FNS0tuT3NoalpVR1NYTUM5VU5fQkxFZE0tUHA1WmdJWnM3WW1YSGl4cjBWQVFOcTZsNzJI?oc=5"
    }
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-20T08:29:14Z",
+   "waktu": "2026-11-20T11:45:30Z",
    "media": 1,
    "judul": {
-    "id": "Banjir jadi Pengingat, Sekolah di Aceh Perlu Siapkan Prosedur Evakuasi",
-    "en": "Banjir jadi Pengingat, Sekolah di Aceh Perlu Siapkan Prosedur Evakuasi"
+    "id": "Gandeng Pebasket Ojol, Zee Ajak Remaja Kenali Pentingnya Aktivitas Fisik",
+    "en": "Gandeng Pebasket Ojol, Zee Ajak Remaja Kenali Pentingnya Aktivitas Fisik"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "KBA.ONE",
-    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQUFhmQW5Cb2NiSTh2OHhkWi1ZLXVpcjVmM0ExTV9KaTZhSjFJQ05OU1A5NzhzRkJPYTN6RXdQUGJVaEg2Z2JseHlMQ2xNQ0FiMkZXMXlObENleTJ2UFRzM0Via1VidWhPcVY0VkdfTG9ZOFBnSlBsalllY09heV9OYXRTU2pncW96YW9fNnRVRkg2Zi1IcTYxcWJMZ1BHSTg0eXdWdWFtZEg?oc=5"
+    "nama": "detikHealth",
+    "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPNkZZUGFlTW12N01JWGhyZjQ3NWpUa0stWmxuUS13a2dmcklPOGt2bnVwU19XaXMzaG00WVdYWlU2SjRaQW9wQ3pRZUhPNnViajludTNSVTFjc2F2WnFaNVRkeXdHc3MySkVJRXFkWHUzTFhNNExKa19mWlFFcE9QTGpweV83MXU1NV80VGNnaGlkZjgtYXFVbmMzOGM3b3JjYnYtOEcxNlN1RnY2OGRxM1FmMzVZNVBvRnI0V2VOaXFQSzjSAcgBQVVfeXFMTkhMTWVyQ3Zja1NhTDg4UVBmell4cGp0enQtakUzZmp5YkdwTm12SmN3SjhwdEJNeTJucE9KMk5rU2dLa0ZvUG9JTFBZNENYZXFiQlNEYW1KRFRIWndCWFZvT2NQSkwybDl5WUdzcVU0YzZQbDZoMkU1eXBoTnZDRmNuZGxJeWtRb0NEbFBXS0xEU3BvRDBHbXAxdHFJOWFBajRmNzVqazVhZmZrRGNJaFhtZWFvSXlxMEN2SFcwa2U0S2Y3U1VocGQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-20T11:41:06Z",
+   "media": 1,
+   "judul": {
+    "id": "Eky Rusydiy Tetap Jadi Ojol Meski Sudah Lulus Sarjana",
+    "en": "Eky Rusydiy Tetap Jadi Ojol Meski Sudah Lulus Sarjana"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "bsinews.id",
+    "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1OTFRKcUZMV2pVOTZOTUc2STRXRU9Ba3ZsSVV3ZFo2YktKNGdFQzlBdm9VWkdJYURNMU1IckU0ZUFMQk5OVDctemMtc3dOUWNEUFB2Y0hMb3J5UURRZXUw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-20T11:14:59Z",
+   "media": 1,
+   "judul": {
+    "id": "Tetap Mengaspal Demi Keluarga, Perjuangan Ojol Disabilitas dan Janda di Solo Dapat Perhatian Kapolresta",
+    "en": "Tetap Mengaspal Demi Keluarga, Perjuangan Ojol Disabilitas dan Janda di Solo Dapat Perhatian Kapolresta"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Polresta Surakarta",
+    "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNMDd6ZUhZQzVObFZJTFhXZXVZREJRRVFrZU9zSkJHUVMzN3lTdEJUY2d2Z3AtckpscmV2SlZmbndyVGtGTEhoRjVfUnlLdkNUX25SOUJEWi14NE9YUjZlcDdfX2d6RjlRS2ZzLXhoUk5BM19STks2cjhlSkg3dHRVQk9nbXJMVGEtX0JvQWFWTE5IempRVUhlMmtDM3I3QVVDYS1KYjlDeWN2R0VyYlFHNlJVRHlOTlV1WVhERUh3ZzRQNDFNSUVVeldUTlBIcG5NcXc?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-20T10:41:27Z",
+   "media": 1,
+   "judul": {
+    "id": "Jumat Berkah Polda Jatim, Ratusan Pengemudi Ojol Terima Bantuan Sembako",
+    "en": "Jumat Berkah Polda Jatim, Ratusan Pengemudi Ojol Terima Bantuan Sembako"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Media POLRI",
+    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQNlhtREFNc0NhTXVwbG9GaDBvQW1pemVVOXNBejZfeUJXSVRwQVlWTkVpWnFJQWh6RlVhdjUwZ3ZLR2VXM2J0dHNsdUgyeHhrSE8wbnRQSm9wTkxYSFhwYjkwVnJFbHFCZ3h3ZzFuZkZzMjJSdExNOUkyRTY3S0lKM2haMVJ3d2t5SHBhbWR2UTBsZ29mSHBhWnViSXc0QQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-20T10:05:52Z",
+   "media": 1,
+   "judul": {
+    "id": "Polisi Tangani Pencurian Uang Rp 10 Juta di SPBU Garut",
+    "en": "Polisi Tangani Pencurian Uang Rp 10 Juta di SPBU Garut"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "bsinews.id",
+    "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBOemRGdURrc044TWNfTFBTT2lFaGZ6Mjl3ck1nTFBzS2ZvRDd5clR6eEo1NkRaTkxIRDBhNzlLYjdjS3BjYUR3QUdfTEdnQTJNekRWZDhSdw?oc=5"
    }
   }
  ]
