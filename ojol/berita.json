@@ -1,7 +1,24 @@
 {
- "w": "2026-11-19T23:24:51Z",
+ "w": "2026-11-20T00:43:50Z",
  "dari": "Kroog",
  "berita": [
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-19T23:28:00Z",
+   "media": 3,
+   "judul": {
+    "id": "BNPB: 2.397 bencana sepanjang 2026 didominasi karhutla dan banjir",
+    "en": "BNPB: 2.397 bencana sepanjang 2026 didominasi karhutla dan banjir"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "RRI.co.id",
+    "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNbmJPcVNPV2tMaXpSWGtwdVBfVjREb0huT202QTY2RzR6aU5EdVNJTm5qTzRwcXdPb3ZScFZCbFA1ZmVGaml6aVRJd1RlT2ItemdfQ3lNLUowclp1bTJQa1Rualo0djdMSWowM2Nsek15eFVNeVZzUkZwaTQxYjBCU3VQYXprUkYtbDRlUWhhYkRJUXpBRE10ZQ?oc=5"
+   }
+  },
   {
    "jenis": "berita",
    "waktu": "2026-11-19T14:10:12Z",
@@ -51,23 +68,6 @@
    "sumber": {
     "nama": "bsinews.id",
     "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBNMGZJc0tkX3dHbElmSW5VakJWbEpTTlEycFF0Y3pOQWwyamY5TUlXR2Q2ZGhDOUR4MW5tRUw1djI1QWxzU0ZQc1R2MmV5VVllNFItem1VYW5MaVh0X0VV?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-19T21:57:04Z",
-   "media": 2,
-   "judul": {
-    "id": "BNPB: 2.397 bencana sepanjang 2026 didominasi karhutla dan banjir",
-    "en": "BNPB: 2.397 bencana sepanjang 2026 didominasi karhutla dan banjir"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "JournalArta",
-    "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNcFlkbEFVd3ZBTkpPVkhtSy1WdFFmWDR5MDlIYXFhRU1SbmE0WlJtN0ItWk0yMU5UYjl0YW9EcEF6ZFNvRVloLUo5TkptV0kxdXBJdE4zOXNYd1BlczNYTlFsSnVxNGp5b1ZkVXRVSVhKSnJRY25tbUxaZ0tJQkVSWE9rWHpVWng3RXVsWjFZclJEYUxGdzd5Z3dOTGhEeDA0MlBMOVdOZ3pyYWtHbE82XzBub0N0Y19BZ2ZlWXdBdw?oc=5"
    }
   },
   {
