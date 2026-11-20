@@ -1,22 +1,90 @@
 {
- "w": "2026-11-20T14:10:34Z",
+ "w": "2026-11-20T14:44:01Z",
  "dari": "Kroog",
  "berita": [
   {
    "jenis": "berita",
-   "waktu": "2026-11-20T11:32:31Z",
-   "media": 6,
+   "waktu": "2026-11-20T13:10:00Z",
+   "media": 8,
    "judul": {
-    "id": "Green SM Hentikan Layanan Ojol Motor Listrik di Indonesia",
-    "en": "Green SM Hentikan Layanan Ojol Motor Listrik di Indonesia"
+    "id": "2 Bulan Jalan, Layanan Ojol Listrik Green SM Bike Dihentikan",
+    "en": "2 Bulan Jalan, Layanan Ojol Listrik Green SM Bike Dihentikan"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "SuaraGarut.ID",
-    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5NaWR0QmtoalZSSFZacHdKNlUxQ2g1WHkxN0dNVDhyOWJHVjhLYUFqbWxBVVZVcmVocDRjOXNrQ05NbjFQRm9STWJKSjg1WkdnemN5X1FDVnZmcUFzemZrRTlSazJVYnBRdFRuNE9qdw?oc=5"
+    "nama": "Tirto.id",
+    "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNY29laFF3QjkxVzlNSnRWVnk3STQtY0RjUnRtdDJKMG05dlBJR2tmWmZrTFIwdWFIeGVJNjlTS19JSXplR1pqenpJamNxbHRad0F0WVQ3cUlzbGllT3NBUnFPRFhzSjNOOHdmbDVFbnFlalZ4U1RXa0wzY1gxNzVXT1ZiMjg3Z3Nt?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-20T13:59:55Z",
+   "media": 5,
+   "judul": {
+    "id": "Dasco Langsung Hubungi Menkomdigi dan Menhub usai Terima Keluhan Ojol soal Tarif",
+    "en": "Dasco Langsung Hubungi Menkomdigi dan Menhub usai Terima Keluhan Ojol soal Tarif"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "ANTARA News",
+    "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNdlpZZ2pWelZuWHRKTmxpUEUyZzdrOG5uaVl5R09JWlU3TVV1WlFvQ0g4d084U3BxamRKeW5TVXdJaU1pVl9lZ2NlN29jZndydklucE5VX0FtNEFYLTNzcDdkT3FpaERxakw1d3dHM2VGMFREcFFLZlZJZElGQmJ4c1FtbkVzN2NsQm1SSjI4YjRXTlloWlk3ZHZKMmIwMnhWa0lSaWJuWnZrajdv0gGvAUFVX3lxTE8yQldZV2JMcVREMEliZndjU1NGYTdUMWVpNlB6QTBncEdhb2dTeDZmb3IyUHFQcW91eUR2S2p5ajBZTGpwaGRNRko5ZURfM1ZCTzBINWZzR3RQdVZGdnBYZ1o2S2h1eG16aXlUWHJnMTlUQl8xX1doYlY2a3ZpQkR5TG9CVGFNNVVUX19LYXp5OWtIMXpPbS1pQ2RyVFFwdGhOenM2N2c3SkxEc2JJQXc?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-20T14:10:00Z",
+   "media": 2,
+   "judul": {
+    "id": "Baru 2 Bulan Jalan, Ojol Vietnam Green SM Bike Berhenti Beroperasi di Indonesia",
+    "en": "Baru 2 Bulan Jalan, Ojol Vietnam Green SM Bike Berhenti Beroperasi di Indonesia"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "CNBC Indonesia",
+    "url": "https://www.cnbcindonesia.com/tech/20261120164656-37-787049/ojol-green-sm-bike-resmi-berhenti-beroperasi-di-ri-mulai-hari-ini"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-20T13:05:00Z",
+   "media": 4,
+   "judul": {
+    "id": "Jumat Berkah, Polda Jatim Bagikan Sembako dan Rangkul Ratusan Driver Ojol",
+    "en": "Jumat Berkah, Polda Jatim Bagikan Sembako dan Rangkul Ratusan Driver Ojol"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Memorandum.co.id",
+    "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPZ3QzekFmWHphcFBRWUFZTXVrY2dSMGdjeHBybVJKTGZKZjlaOGxnc2hLLUNIRHctdVFrOW9MeXJDNWtMdWxHMDlFdGpCN3FObEdnRjNrVExmekNsdVhkZWJ1UlM1dm5DcWpjdHQ0cG1aUHBFOGtzMlh5Q0lBTXlqMjFmZlBRX2o0V1plT1ZDQ21Hem5XbTN3NmM2SE9TNXduWUE3dzhob3hEejlfcHhKbDhlUWFLdkQwa3U4cVR2dTBpcE3SAbIBQVVfeXFMTld0aGNqbjVmLTlqUmNabllXS2NNOHA4MmxGcXhlNXN6dm43al9UUThqTFJVQ3JzN0pRQUdsT0ZpX0taWUxMSDEtMHFOZXVwWFcyTlY3b3FMNlBSN0FvY3JaQUtoWFZlLW5DNDl2Z012Ni1fOEdmc2poR1Q0ZjJDZE1KYnJXUWFPVDE5TmhGcGhpT2VLemlkOUJmQlhnNDh2TnRfX1pZaVRQcm5Mc3BpaWM0dw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-20T14:10:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Ojek Green SM Setop Mengaspal per Hari Ini, 20 November 2026",
+    "en": "Ojek Green SM Setop Mengaspal per Hari Ini, 20 November 2026"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "CNN Indonesia",
+    "url": "https://www.cnnindonesia.com/ekonomi/20261120194735-92-1429671/ojek-green-sm-setop-mengaspal-per-hari-ini-20-november-2026"
    }
   },
   {
@@ -89,6 +157,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-20T13:01:44Z",
+   "media": 2,
+   "judul": {
+    "id": "Pengemudi ojol meninggal di Cilandak diduga akibat serangan jantung",
+    "en": "Pengemudi ojol meninggal di Cilandak diduga akibat serangan jantung"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "gebrak.id",
+    "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPUGNseUpId01zUkJJZlYwdUNEWHNzbU9rSEdzNEhZSk5MSnBtSlJ5ZVdlTExyalRBRmllZWJHRnF4STl5dHFibTFZNE1EakFzclFYQjlOUzFONXZVWDQ2SEJKc09jWFRNVEE5OGtTYVV1aFVlTDNnN2FjNzI5bmttUkcwUjlMcTRkVnZ5VDBZM1N4UmJlNjA2YTJuaWZ2Yi1iX252Xzl1cWpYajVubUo1b01DSGRka3RhOHoyUWxWTDVoOW5aOVBkVXpn?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-20T11:49:36Z",
    "media": 2,
    "judul": {
@@ -123,23 +208,6 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-20T10:25:52Z",
-   "media": 2,
-   "judul": {
-    "id": "Baru 2 Bulan Jalan, Ojol Vietnam Green SM Bike Berhenti Beroperasi di Indonesia",
-    "en": "Baru 2 Bulan Jalan, Ojol Vietnam Green SM Bike Berhenti Beroperasi di Indonesia"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "detikOto",
-    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPbWRHRmhzbHJpNE5DRjJQNHNrTk15dmxvNXgyWHpKbnhCN2JDdDk2SXYzdGZ1VTRsSy1yMWctMy1VaVoySE16QmVJeHVDbG5oSzgwcXgzQXlrX0JvTmNCTEtmbTV2YU9uS2g5WHctb2pFZDFqWUlMek50YWdxRVk1aHp4UXFLVll6QjY1TjN4c2tnVFpJMVRpMHA2Qm02THhhbDN1MUtpOHVhUy1EYlNuU2dhNlpIdjDSAbwBQVVfeXFMT2xkRlYwc3hDanVRTzQtTGFEbWU2N3dlemcyWW1IbHQ3Ym1kUG5zR181M3ZtV0g2WFZxLUY3dnBIUmtILUZIZVdPcVFBdHdCVHdyWlZrMEE1cmNraXlCUzlvcV9KeDFPZWo1ZFctamt3VDFEUUdkNzUwUzV6X0hXMDdSSWZtNklINkFQczcyMGV6UGJLVGJUNFRxUXlGQUlscUFzbWxFWWNxcWhDQ1BFT2VUaGNybDZHWENVMTM?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
    "waktu": "2026-11-20T07:51:38Z",
    "media": 2,
    "judul": {
@@ -157,6 +225,57 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-20T13:45:17Z",
+   "media": 1,
+   "judul": {
+    "id": "Ini Tarif Layanan Plus-plus Warung Pangku di Gresik yang Digerebek",
+    "en": "Ini Tarif Layanan Plus-plus Warung Pangku di Gresik yang Digerebek"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "detikcom",
+    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNanRXWVk3Ym5CdjV5UERuVXdqRVhFcjBBNDZ1U3VleTYzeWJYWHJLQXF4U0NGbG4xZFFXZ21mamdVS2FZVWNyOHZTUFk3Zk5EbUNUNHdsSmNkNDg1ZjNhcm84TmVXOWYyWnNWQWtHa2RWbXJXcEk4VE1kdnNnM3JZdUY3QVM0bkFJWWJacWgwSndrVkZYQmJ4Um83VzlJMXB4RFFtN0lMOEt3cFVzd1ZNY3h3NjZyc1licEk2NWsyN2fSAcYBQVVfeXFMT01VM0Y4TVM1MlZ4d2ExeFByakt0dzljcjRfdGxIMWVrOEQ0dm1QOFdHdzludkl1Yl9zM0l6V3ZkQXhrOUtjakdpZGVDNWtfM29rRDNiYktUMGZSc3J0eGpBVjItdzdaT0NrRTZDU3Q5b2hJYTF6eTMzTlFsTWp5Tk0zRnpUY0pLQkxleTZIYWVzQmpkdUx1WEhhWHhRd1NsOG10a1pIOXEzREEySUgzbTVCMHp0QUp5cm1CV3l1bDRvMWY0ZkdB?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-20T13:45:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Kejari Bengkalis Usut Dugaan Korupsi KUR BRI Rupat dan BBM PLN",
+    "en": "Kejari Bengkalis Usut Dugaan Korupsi KUR BRI Rupat dan BBM PLN"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "RiauAktual.com",
+    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPTEFVNnllRHIzaWw1Zy1Ndlh2VVdNcTJVX2dzVWp2WjcyVWc5WGlBYXZqNGQ5ZjFYTE9pMkZ1RUs5T0N4M0t1UXo2YTA0SHRKLW9zdXVmQWZPdnl5NUc5NHVNUHA0eTR1NDhoa2N1MmZXVDZQa002RWpHQW95Nms4YlBOTzFmNndsWWpGNUQxTzc0SjY5eGxoQno3M1dBMEtxUGxCOTc4b9IBpgFBVV95cUxPYl84Vi1CaXhqazd5OF80aFJQOXd1aVp3eXhhUVhjRFhWemI0WFd2bGY1M2I3SktvNzZLNmZOZmotbnFYQk5uZXY5X2JFaEd3RnAwVkFWUTNLUTZ1OFJqN1NxTkF1V2twalh5LTJsdlBhRnExVGw3RGRQWFNfUnd3RWhsY2JjMEF1MWpMVHRCS3FESTBGa0N0S0x4UW1sakJia0RMVHh3?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-20T13:40:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Miris Nasib Ojol: Harus Antar Kulkas-Kambing, Terancam Orderan Anyep",
+    "en": "Miris Nasib Ojol: Harus Antar Kulkas-Kambing, Terancam Orderan Anyep"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "CNBC Indonesia",
+    "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOUlJ2Zmp5TEpxcnhIZl9fUElSb1BqdmJLNEhRb0tBQmRhaEZGOVVicHVfeUdmRmI2R2JqY1Y2cnVJNGxlZTdfV2s1dU55ei1qNVB2bjdPWWNKbUgwandlRkpZcndNM0VEMWRkeU9VaG40a2gzLWtXUUwwMjJkZDBvRGZlTGRHcURIaGY1UG5GNGFfNDFvTTBOSGhwLWNneWdWM2p0b2J1Q09kZWozdXZBZG1fMmZuVi1QcUZGa1VQUnpkS3Rk?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-20T03:04:40Z",
    "media": 3,
    "judul": {
@@ -170,6 +289,40 @@
    "sumber": {
     "nama": "faktakalbar",
     "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQLXJDS01iOGxULW9SS1lsWnlHbDNzVUt0anYxSmV5d3J2TW9yakFXU0t1V0Q3QmdxcVhRbWhLZ1QwenBNRk5rVTREd0pZUmZKTmxCa0xvY1BQZjY4MVg5eEdoWllMNEJJMHFCY3FGRUwxUDhJT3JReDhmWk1nTktMT29ENmEwcktOUkZNdHJaR2hVSGhOWXc?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-20T13:39:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Garda Indonesia Dukung Sufmi Dasco Ahmad Jadi Cawapres, Ini Alasan Organisasi Ojol",
+    "en": "Garda Indonesia Dukung Sufmi Dasco Ahmad Jadi Cawapres, Ini Alasan Organisasi Ojol"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "MedanMerdeka.com",
+    "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNTF91VTFGRDNULV9OV2xiMklDSTJjbWw0ZEcxelR5anZpR01nTkNtZFNQejdiekszSVpWaWg3WEpBeVFxNTB0cXJBSVM0MG9ZaUtIczBmdnFlN29uOTJmaGh0b2VhaFVSeUFGSWFsNk9KT09jOGRPWE1xT2xWckJFVldB?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-20T13:05:05Z",
+   "media": 1,
+   "judul": {
+    "id": "Mau Ada Peraturan Baru, Menkomdigi Kumpulkan Pengemudi Ojol-Ucap Ini",
+    "en": "Mau Ada Peraturan Baru, Menkomdigi Kumpulkan Pengemudi Ojol-Ucap Ini"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "CNBC Indonesia",
+    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOMzQxNGM3bVpCZmw5ODA1anBaVFdKVTkyOExOUUhoWmlFcXdNR25XYnhCdG1mVXFRejRFOFJhYmptbDhfUkVzblhxcWpBT2dVM3FtZGdCYXdtbXpOX252SXR4enl5VzdlM3VkTFJwMDR5RW9keXpRQ1o0UzhxbkZ0VjBZUDlGdW1HaEJhdzNuN1VsQ0VJa21IZVhzbUVpSmZZYjB3aExlM0Etc1NEcFFNLTBfY0tTUlJZYWZWQWpnallTdHF2ZFE?oc=5"
    }
   },
   {
@@ -221,57 +374,6 @@
    "sumber": {
     "nama": "Tribunnews.com",
     "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQdHNpLXpiOHVtZzdraXcwVUxCdVlzWldwYzhCLU0zMXpZczkwbi1JekREU3g1aGRtaTg4ZnFleEZpdTlMTVBWOE9CYXA1ZzJVVGs1RmZmVVVSdTlXZG03LUY4OFVwQUp3dWd1ZmtUTy1vSnZ1VWpvektFUy1YcS1BWUdiVVphcWdmRWIyb1p4S1FNS0tuT3NoalpVR1NYTUM5VU5fQkxFZE0tUHA1WmdJWnM3WW1YSGl4cjBWQVFOcTZsNzJI?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-20T11:45:30Z",
-   "media": 1,
-   "judul": {
-    "id": "Gandeng Pebasket Ojol, Zee Ajak Remaja Kenali Pentingnya Aktivitas Fisik",
-    "en": "Gandeng Pebasket Ojol, Zee Ajak Remaja Kenali Pentingnya Aktivitas Fisik"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "detikHealth",
-    "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPNkZZUGFlTW12N01JWGhyZjQ3NWpUa0stWmxuUS13a2dmcklPOGt2bnVwU19XaXMzaG00WVdYWlU2SjRaQW9wQ3pRZUhPNnViajludTNSVTFjc2F2WnFaNVRkeXdHc3MySkVJRXFkWHUzTFhNNExKa19mWlFFcE9QTGpweV83MXU1NV80VGNnaGlkZjgtYXFVbmMzOGM3b3JjYnYtOEcxNlN1RnY2OGRxM1FmMzVZNVBvRnI0V2VOaXFQSzjSAcgBQVVfeXFMTkhMTWVyQ3Zja1NhTDg4UVBmell4cGp0enQtakUzZmp5YkdwTm12SmN3SjhwdEJNeTJucE9KMk5rU2dLa0ZvUG9JTFBZNENYZXFiQlNEYW1KRFRIWndCWFZvT2NQSkwybDl5WUdzcVU0YzZQbDZoMkU1eXBoTnZDRmNuZGxJeWtRb0NEbFBXS0xEU3BvRDBHbXAxdHFJOWFBajRmNzVqazVhZmZrRGNJaFhtZWFvSXlxMEN2SFcwa2U0S2Y3U1VocGQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-20T11:41:06Z",
-   "media": 1,
-   "judul": {
-    "id": "Eky Rusydiy Tetap Jadi Ojol Meski Sudah Lulus Sarjana",
-    "en": "Eky Rusydiy Tetap Jadi Ojol Meski Sudah Lulus Sarjana"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "bsinews.id",
-    "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1OTFRKcUZMV2pVOTZOTUc2STRXRU9Ba3ZsSVV3ZFo2YktKNGdFQzlBdm9VWkdJYURNMU1IckU0ZUFMQk5OVDctemMtc3dOUWNEUFB2Y0hMb3J5UURRZXUw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-20T11:14:59Z",
-   "media": 1,
-   "judul": {
-    "id": "Tetap Mengaspal Demi Keluarga, Perjuangan Ojol Disabilitas dan Janda di Solo Dapat Perhatian Kapolresta",
-    "en": "Tetap Mengaspal Demi Keluarga, Perjuangan Ojol Disabilitas dan Janda di Solo Dapat Perhatian Kapolresta"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Polresta Surakarta",
-    "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNMDd6ZUhZQzVObFZJTFhXZXVZREJRRVFrZU9zSkJHUVMzN3lTdEJUY2d2Z3AtckpscmV2SlZmbndyVGtGTEhoRjVfUnlLdkNUX25SOUJEWi14NE9YUjZlcDdfX2d6RjlRS2ZzLXhoUk5BM19STks2cjhlSkg3dHRVQk9nbXJMVGEtX0JvQWFWTE5IempRVUhlMmtDM3I3QVVDYS1KYjlDeWN2R0VyYlFHNlJVRHlOTlV1WVhERUh3ZzRQNDFNSUVVeldUTlBIcG5NcXc?oc=5"
    }
   }
  ]
