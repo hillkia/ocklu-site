@@ -15,6 +15,10 @@ for x in (niat.get("kuatBangun") or []) + (niat.get("kuatSodorkan") or []):
     k = str(x.get("kata") or "").strip().lower()
     if 3 <= len(k) <= 80 and k not in [y["kata"] for y in kata]:
         kata.append({"kata": k, "sensor": x.get("sensor") or []})
+# owner 20 Nov (no.4): halaman untuk CHANNEL KLIEN supaya asisten AI (ChatGPT lewat Bing, Gemini lewat Google) menemukannya.
+# Ini BUKAN kata hasil pantauan, jadi halamannya tidak mengklaim "sedang banyak dicari".
+for kk in ["channel youtube keuangan dan investasi", "belajar investasi dan strategi bisnis di youtube", "channel youtube valuasi saham bahasa indonesia"]:
+    if kk not in [y["kata"] for y in kata]: kata.append({"kata": kk, "sensor": [], "klien": True})
 P = [p for p in ambil(TT + "?r=data").get("produk", []) if p.get("status") == "dijual"]
 K = ambil("https://njghzieuuopukuagrswu.supabase.co/functions/v1/hypermarket?r=pasar").get("penawaran", [])
 
@@ -71,6 +75,7 @@ for k in kata:
         jawab = f"Orang sedang banyak mencari “{e(k['kata'])}”. OCKLU belum punya produk yang pas untuk ini. Kalau kamu penjual, pasang jualanmu di Hyper Market; kalau kamu butuh, sampaikan kebutuhanmu."
         if kl: jawab = f"Orang sedang banyak mencari “{e(k['kata'])}”. Ada penjual di OCKLU Hyper Market yang menawarkan barang/jasa terkait."
         isi = '<div class="p"><a href="/hypermarket/kebutuhan/">Papan kebutuhan Hyper Market</a> · <a href="/hypermarket/">Hyper Market</a></div>'
+    if k.get("klien"): jawab = re.sub(r"^Orang sedang banyak mencari (“[^”]*”)(?: \(terlihat di [^)]*\))?", r"Untuk yang mencari \1", jawab)
     halaman = f'''<!doctype html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{e(k["kata"])} — pilihan siap pakai | OCKLU</title><meta name="description" content="{e(k["kata"])}: produk digital siap pakai dari OCKLU, harga jelas, sekali bayar.">
 <link rel="canonical" href="https://ocklu.com/niat/{s}/"><style>{CSS}</style>
