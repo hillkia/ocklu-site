@@ -1,5 +1,5 @@
 {
- "w": "2026-11-21T04:42:39Z",
+ "w": "2026-11-21T05:04:57Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -123,6 +123,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-21T04:05:00Z",
+   "media": 2,
+   "judul": {
+    "id": "Viral Curhatan Sarjana ULM Jadi Ojol, Kenyang Dengar Komentar 'Sia-sia Kuliah'",
+    "en": "Viral Curhatan Sarjana ULM Jadi Ojol, Kenyang Dengar Komentar 'Sia-sia Kuliah'"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Suaratebo",
+    "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOQU8zYi1mMG5hTjBPTFJjTmxVSkN6OVFBVWlFZ0ZTZFpibHRKbDFYWEdDbWFjRXFDbWVhRXhCSkdzYld3d25zUFZWbEpLeWw0aG13Z1l2M0xIZVl6OGZISkR4TWxMRDN5dFUtcjVnYkJZalhXNnY5M0c2OGFpUjZLSjZRSGQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-20T13:05:00Z",
    "media": 6,
    "judul": {
@@ -191,6 +208,57 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-21T04:05:05Z",
+   "media": 1,
+   "judul": {
+    "id": "Ojol Berhenti Operasi, Green SM Jamin Hak Mitra dan Pelanggan",
+    "en": "Ojol Berhenti Operasi, Green SM Jamin Hak Mitra dan Pelanggan"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "CNN Indonesia",
+    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQcE5BZjcweXgtVEJvOGpfcWdTZ0pRbUhYallXX0U0eFpGdWFQUW5UaldlTnB2ZUNZVmtMaDBSNWRjWXdUSXVCb1FDOXZGTGpZS1dkdWdaOXJ3cmF6LUdBeEhWY25JcXJSVUJqUUVQRUhCZ1MwT1JLM0t6elZfYlYtTzVkUzVpc1JPU0xBSGNCT1FoSlRjY19RRHp2SjN2NlNvMC1VZ01yTnJ3NXMzVU9aM1pYbEJER29lRE84eng3elPSAcYBQVVfeXFMT212N19tbEhQOWFneWlBcEVONmRXajREX0R5TTMwemVZal9Ya3dzWFRib1V2TUxZVmJKREJIa3ExRWpOQm51d3ZNRU0yaXV1MHRnUVgzN2QzNEtxWk9iNE9Wdzc2Z1BZYm5VYjJRM3lOaUxJLUlJZ0ZwOHBVZldQUnBaYWJ4OU5YQzVFMHNNT3dHMWQwZnZBVExDSHp0UExZdnhCNldfdDRtbnp4VDdMNUVURUYwVkF1Q1Z6REVKRE9uYWZOUVlR?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-21T04:03:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Polisi Bersama Masyarakat, Polsek Kelapa Gading Berbagi Nasi Kotak kepada Ojol dan Warga",
+    "en": "Polisi Bersama Masyarakat, Polsek Kelapa Gading Berbagi Nasi Kotak kepada Ojol dan Warga"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Media Budaya Indonesia",
+    "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNOEYtUGJxQ19PMDltYWRaOFVuMS12ZjhGTnkwMGZQd0N0NDQ4ZTB0UHpTX0E1dVBvclV0ZVc4allsQVJIeW5ieHBNNzRzdjBEZUVfTHFRWEduZ193MGZWQ2hObEg4V0ZmdTVvQ2RCZ0ctS2NKOEZ6SHlIQXdRYjVqRkExaFBRd0xZeC14UklRVlhmTV8tdEtJTy1uNzJzNjJHTUVxUzNpQkI4WWlpTWxZbkVyMUs1enc5dnBGaWRCRHB5UGVDX1AzajBlSVliUTV4MXVDS3AtejQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-21T03:54:15Z",
+   "media": 1,
+   "judul": {
+    "id": "Viral Driver Ojol di Kendari Diduga Dilecehkan Penumpang Pria, Bagian Sensitif Diraba",
+    "en": "Viral Driver Ojol di Kendari Diduga Dilecehkan Penumpang Pria, Bagian Sensitif Diraba"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "TribunWow.com",
+    "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPX09OdDVRck40YVZhZU1jOHJUdXJuRmVyS3RrYS0xR3JNRUI4NnBkOUc2SU5HcnkyNTBNSFdzVkNuR01WX0VxNVZZX3pIN296My1rbExNRG1CUVhOMG1oNVZ0eGp6a3Fta216UDhVR2xhZzdWWk40R0p1dk1uSkpYY2xJWUdDQlEyS2c2d0dVWmk5SUhjYUR6NjdublFMMjdKUUwxS0llNncyOTFlRmwzUFpXcl9Yd3cyVGNlWU1wNnpkZw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-21T03:25:00Z",
    "media": 1,
    "judul": {
@@ -242,6 +310,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-21T02:52:15Z",
+   "media": 1,
+   "judul": {
+    "id": "Jejak Layanan Ojol yang Pernah Meramaikan Pasar Indonesia",
+    "en": "Jejak Layanan Ojol yang Pernah Meramaikan Pasar Indonesia"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "patrolihukumindonesia.com",
+    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPX0dycUxXbC1qZU9pQmVWYnd4cXBzSEpzb3cyeG0wbE8tUlNqclVOZHlnaWplTzB6Rk9pN0FLMkt1LVJTTTAyaTNpR2lORUg0WkNvNXFNQ2ZMWHBjZ2lUYnZIOUhoMkN6TElZUVZzRHB5UF9ReS1wV0dteE1zSWJQVHdFdFQ1R25KendhTEQtWFRoSDJJUkhJ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-21T02:13:08Z",
    "media": 1,
    "judul": {
@@ -289,40 +374,6 @@
    "sumber": {
     "nama": "kabarnusa.com",
     "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQU2pJZnJwcGdRSHpKOWx2UlFHeXpUbFgyeHBNTnFNcmhiRmw5Q2Z6N2VYM0JUWmh6MGk5THdobXpzMUp6anpZaGxacENvZlBJV2lkeUd0VTJJRHQ0bnBuaEszRE1WQzVCeS0xT0ZDaTdERFlXejdsMlExd0Z3NDJUTG52eHFBd3g1QXVNQmpIQlh4clFNcXVhM2NIRkkwR2dPVUFTelAtQUFKOUVIZ21Sa2RNdDJ4cHktZ1ZmM1RvX2ppV0E?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-20T23:35:57Z",
-   "media": 1,
-   "judul": {
-    "id": "Baru Dua Bulan, Ojol Vietnam Angkat Kaki dari Indonesia",
-    "en": "Baru Dua Bulan, Ojol Vietnam Angkat Kaki dari Indonesia"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "bataviapos.id",
-    "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQRlAtQU4yY1NLR0NjYVdQSm8zNUhuZmpwWUExQVdSRjA2OV9kc1h3SHlWUzJrWVRmWnVHUVRFSnpWYmlMWU9NajBIZy1yZkJsckY5dzh5R1ptdzA2US1TaWtOQWdmS3JSUElldmxianBBNkJjRlg1LXBNQzZDU1FlYy1scENXbDZMcEE0LTZGdkNucjZZ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-20T08:59:47Z",
-   "media": 4,
-   "judul": {
-    "id": "Elly Arsy Rayakan Kesuksesan Live TikTok dengan Berbagi ke Pengemudi Ojol",
-    "en": "Elly Arsy Celebrates TikTok Live Success by Sharing with Ojek Drivers"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "detikHOT",
-    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQcmg3UnJnTlJrc2lKVW5qTWtmaDJ0c09Zc2Q2Q2h3Zlczd2plRjdYTkF6dmRqQ3QtVFhucTNyaHhoQmJfUC12Q1U2dTA3U1I2YVZFeHdRZEYyNkR0eGV3VlI4NlZac3ctVm1EZGxOX0l2WDdwM0ZQLTgyZDR2MDJzRFVVdmZxRXRGMC1sY0lPZkVJaF9wMlFHTGt3UUU2MFJmMGNwWE1oLVnSAa4BQVVfeXFMTmdQQVdQdjUwWnZLajRXcXVMS2JraWJGaDY2R0tHMERPaTJwNlE0QlRFaHpBTEM0cGhvRXVxQ0RyVHE4eVZjYTE3QS04LTFhem11bHFONlZhenJVUlBseU5xM0tKRk1nZ1BFbTJzYWpNNXlVbHp1Skt0b2dHMUMyVEdad2xxN19ORzh6UVdMU085N3czanV3ZjR2SDVJZk5QQ2NEd3JIQk1xYjlXbTlB?oc=5"
    }
   }
  ]
