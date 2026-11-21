@@ -1,7 +1,24 @@
 {
- "w": "2026-11-21T02:39:02Z",
+ "w": "2026-11-21T03:41:14Z",
  "dari": "Kroog",
  "berita": [
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-21T03:04:34Z",
+   "media": 10,
+   "judul": {
+    "id": "Baru 2 Bulan Beroperasi, Green SM Setop Layanan Ojol Listrik di Indonesia",
+    "en": "Just Two Months After Starting, Green SM Halts Electric Ojek Service in Indonesia"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Jawa Pos",
+    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQbzIzNVpqLTE2QjVTLW9Vb3Vubzl2UGY0VHJHd253cG9ieDBIYmlkWVZzV3E4cEdOSGtIN3ZKNVd6dXpZQ0FadUZjV2ZpUTJrMlE5bTY2RXRHTmlNSE5SODlBNDlCMk1VaTBWNnVNaHZ4SlFxT3dyNGw2Ni1fdlBFQU5QWkc1SUI0NjFtcjhGa01TWU9WNFV6TlVBTUpSUHEzSk5LcF90ZEs4MlltSUtmM0hycEtPVDg?oc=5"
+   }
+  },
   {
    "jenis": "berita",
    "waktu": "2026-11-21T02:00:00Z",
@@ -17,23 +34,6 @@
    "sumber": {
     "nama": "OtoDream",
     "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNU0NSa2l2Umd4YVFiQTJmb0g4RGx5ME9aS3I1VHlzVmJDUXVnUkFpZTFzM3I1aFo1NEthMHRENVhPZjVfWnlCbW93WVBId2xDdHE5MFoxYUo0N0ZrdkZRYWNaV1pod2g2WVpkUlE1R0VINENzR2ktWkRJTE9nN1pUdFhxNzB1Q0Q2eHJMMDU5MkFnbnpubTgta09vbjMxdnFBVlBlY2VGb0p0Q3ByVzZOSFRsRFhuQmFUR1E?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-20T15:01:31Z",
-   "media": 9,
-   "judul": {
-    "id": "Baru 2 Bulan Beroperasi, Green SM Setop Layanan Ojol Listrik di Indonesia",
-    "en": "Just Two Months After Starting, Green SM Halts Electric Ojek Service in Indonesia"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Bisnis.com - Ekonomi",
-    "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNVFp5STZhX0VUX1BjUWZEYUh6WUtjZnFlNlJVMjRvX1ZNTlZnVjFuWk1SV1RsS2hBdk1uTnZzTzFxbXMycnloQTlpT200Rlc0VExwaTFpMUNVQURfengyT1pDbFBSTHpZMDFDbTVWSnZfUVhsSUktTUxhUkJ5RVJSekJMMGxEVkktLXZZb0hlWk5hTDk2aFVaVUZLTENqb2FJMXRtU1MzQktmQnRMZlhmNXg5T0FiTVFzTTZMcm1jbi1Kdw?oc=5"
    }
   },
   {
@@ -191,6 +191,40 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-21T03:25:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Ojol Dukung Dasco Jadi Wakil Presiden, Ini Alasannya",
+    "en": "Ojol Dukung Dasco Jadi Wakil Presiden, Ini Alasannya"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "VISI.NEWS",
+    "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5TNHRLM2U2cWJKM2MyVFc0RGw5LVdVSWpyYTRHVF94dGIwdlRqVmI2M0ZyendzWkZkOEd5RTNvLU9saEdsUGJNaUUxRDRoRWhmUzZZd0JkcURLV05PMnNxdGpZVF9PbHQxSTBZVFNueng4X2g3OVdKT2RJZGJ4Zw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-21T03:13:43Z",
+   "media": 1,
+   "judul": {
+    "id": "GoPay NEXT Bidik Gen Z, Ada Gratis Transfer hingga Voucher Ojol",
+    "en": "GoPay NEXT Bidik Gen Z, Ada Gratis Transfer hingga Voucher Ojol"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "IDN Times",
+    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOS2QwWGphTXFkaExETFBKdHpjdGtib3NYYWM3NEtxSS1BZkJBbHNRY19Ka09nZ2phMHdWQ0lsbm5UbVJCNFVEQmZvOE1HdzVUdXhxbHEtcUFFeDI0VUREV1BQakV2NVJnc3I5WEdEdmJaNTlqSjgxUlluYWp6cUVoampqcGszbGlNbnJIR01QNXg2a0FmZ3EybWVfcXdyMEU3ZVhnU1I0WG9EWU5ySkE4ZURmWm1aejJ3c2JUaNIBwgFBVV95cUxQSVFmaDJ1aWVKTTFwS3ZYRlNzM3JiNmRPSHI4MWtJNGgtMzl5RkZCOGhaNEVQb1NaNkR4bFA4MUhjV0pRNUhWcnFpS0FDVUNmbEFiQjNqNHFBUDJBMEtDMmVKY1ZOTG9hQTlkRlByTzdZQ1FqbGVocXRUV21OOGJrM0JPNDVHSGpHeDdudXE5RDFWM2c1SGtBRDVhN1dES0Z4RkdDVDhCbzFuSENUbVF0em4zbk5LQ1lZdW9tMVA5ODFMdw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-20T14:10:00Z",
    "media": 1,
    "judul": {
@@ -204,6 +238,23 @@
    "sumber": {
     "nama": "CNN Indonesia",
     "url": "https://www.cnnindonesia.com/ekonomi/20261120194735-92-1429671/ojek-green-sm-setop-mengaspal-per-hari-ini-20-november-2026"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-21T02:13:08Z",
+   "media": 1,
+   "judul": {
+    "id": "Bukan Sekadar Hujan Lebat, Ini Mekanisme Terjadinya Banjir Bandang dan Longsor di Aceh",
+    "en": "Bukan Sekadar Hujan Lebat, Ini Mekanisme Terjadinya Banjir Bandang dan Longsor di Aceh"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Jurnal Aceh",
+    "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOM2ljWUFKOEhQbExxS1BLRWJkWThLWlZ5alZzVU5YSzdmZk80dlZsS1JlaVN4eEdlLWFXYS1GcjFyeDJ1ZHZ1WDc5Y0ZMZVpodEFzeUZxVHdDVWJuWkhXSGZIM2FwQkptaHpjSk5LWEU1cG5SMkp6a2RwU29sSXpuaFJvODZJOTJ6TDZ1ellZTV9nUmZyUTNDUHkzbzRZNVBVdUE1OVAxQ0xvNHVNTmVNZDFvd3dMRzE2LWlEd25KRnRzMUtZb0VEdXhBNUI2ZGRpSmNBWTNTcFNTNXI5?oc=5"
    }
   },
   {
@@ -289,23 +340,6 @@
    "sumber": {
     "nama": "Jurnal Aceh",
     "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxNUmxGUDE5SUxvNGI4eVM1eXRZTXlwRGNFRE01X2tIVHRHOHh2eDV4OU1vNTgxSl82V3lKR1VjRmhDd0psalNWTTVYZ0ZTWjVZbDZkb3VsOGltUWhDSmR0VlNXSGd2TnZTUHpsZkxWUTVLaXFEVGo0MXUxME9oTEJmbGZ1djZKc2VKM1pIdmRQdXhoVUFrcjh0bXJrSWZHd2ZUMGFhN2hkU0Z2cGUzY1JwRzZhXzBld3FfbzlHWEtxWThIUEdydzdPOGFoa1UtcnFmZjktRmhUanY0d0xsRHl5T2NjM2EzdkpCQ1pka1V0VzJpRS1TWGJSV3pR?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-20T02:54:00Z",
-   "media": 5,
-   "judul": {
-    "id": "BNPB: 2.397 bencana sepanjang 2026 didominasi karhutla dan banjir",
-    "en": "BNPB: 2,397 Disasters in 2026 Dominated by Forest Fires and Floods"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Validnews",
-    "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNY3BIU2Z0cURuN2Q5Z29SeGRrdVFuQ0ZKNzBIeUhFeVVjZExCTDRDa1RNa2psN0ZSSTVTcnN0TmdWUmJfenRuTVpfVUdqSERQNHY1dHlvWWJmOVdGR25nendITGdoRW5CenAwaDc0MWltNl9yYkd0dGFmLXNfRHRHMDk2S3hqT2hyZjFBT2dtbW5ZY29nSzZsQnM2bUlXRUo2bFY3WG5xeUlEbGRI?oc=5"
    }
   }
  ]
