@@ -1,5 +1,5 @@
 {
- "w": "2026-11-21T16:07:22Z",
+ "w": "2026-11-21T17:03:03Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -21,6 +21,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-21T11:39:50Z",
+   "media": 6,
+   "judul": {
+    "id": "Sabtu Bareng Sahabat Ojol, Wakapolda Metro Ajak Utamakan Keselamatan",
+    "en": "Sabtu Bareng Sahabat Ojol, Wakapolda Metro Ajak Utamakan Keselamatan"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "KPK-Sigap.com",
+    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPSzZlUWtFamxTQjJPUDRBVHQ5RWJoUnBrWHk3Mm1WTUIxU1huYmFZb3BVS0JfS2duSnQ4ZnRVSGV4elFCQTMzRExKVTB5aW8yb0owNlJNR2xqMUMxZ2VRRXM2RWJMeFRJMzQ4cHhxQzhGYnREMWV4M0RMQTM3RmhmM2RmUWppVFlHbWRtbFNEcXl0blphNmtyRk1tWVNxV1NuT3pKd2pmaVNQNllDQjNldVBZemk0WkNHckFhVXQ1cGs?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-21T07:16:42Z",
    "media": 7,
    "judul": {
@@ -34,23 +51,6 @@
    "sumber": {
     "nama": "ChatNews.id",
     "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1iVEJhR0VkN2UxVWtHLWpSbGw1eVJZQVNvaWg0cFN2YnlNNE5TdVhIUnVGU0RtZlk1Vm9aZjZqaUxIaEx0ZkFlWkZfTDAzRm1ER2tUNVJoUzNUeWhOMU5fQnpaVlBodw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-21T11:36:36Z",
-   "media": 5,
-   "judul": {
-    "id": "Sabtu Bareng Sahabat Ojol, Wakapolda Metro Ajak Utamakan Keselamatan",
-    "en": "Sabtu Bareng Sahabat Ojol, Wakapolda Metro Ajak Utamakan Keselamatan"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Purnamanews.com",
-    "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQYkFzSXF3bXBpYkV4aEJoUmtXM05DZ3F3RGMza1NqLXNKajdZVm0tRkYzOHNUMkpIOGtJZG1VWFFNU2NPWDZfMWJ0OXFlRDJjb09OX3BBTFZ5MnAxNzExU0Z0Z21jSUFRcXplWHdfblZkaG5tRTVmZ0JuRjI3Rm1oUFNMMEFlc3JkN2pDN01KQXEyejN4dHlhVW1Xbmh5Y3RDbVR4cGo4N3lUNVpOdlRCdXBjUHdiRU5ucWVXUlFkRkZfaUxHc241aldlUHV1emFNS3Rj?oc=5"
    }
   },
   {
@@ -123,6 +123,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-21T15:29:25Z",
+   "media": 2,
+   "judul": {
+    "id": "Tak Mau Ojol Lama Menunggu di Bengkel, Astra Motor Teuku Umar Siapkan Jalur Servis Khusus",
+    "en": "Tak Mau Ojol Lama Menunggu di Bengkel, Astra Motor Teuku Umar Siapkan Jalur Servis Khusus"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "baliportalnews",
+    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPTTdQak9Sd3gwR1dXX0xRRGlPRldxRUNwZC1DV2xyNXNib3ZSX0tTQUNIenZMUzhRbVZMTC1vNGhkZ0hSNFFvakYyMzg5aFhKcVQ4UVc2bl9Ed2g5TmhZQzYxQlhxMjlxUmJkMlpISnl4MzJCZjNISjJNNFlfb1Z6X1VTN3k2YWZET1EwNzh3aGMyUnhuZlE1OXR3eDNEU2tEQ1Nub21rX3hpUQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-21T12:00:00Z",
    "media": 2,
    "judul": {
@@ -170,6 +187,23 @@
    "sumber": {
     "nama": "kakinews.id",
     "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOa2YwU2FQeW40SUxmelZMQ09sRjFyM3NqZzl6b19Uc25EdUJTSlhkekNReHY1RTVCVmVleDBpUE9qeG5lLV8wRWJXWTlrbHMta3VzSUw5NzE1MDdaLWVNS0F6cW5JZ1Myc214d2h1Q2RCRlFqdnVGQmQ0bnU4c016VE9QMk1jb19PZ0FsZnpPMERmUHVaMHpsZkJncmpJcHdyS2lGOEY0dG9aN3pMa3dqeTdJY3J0LV9n?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-21T16:34:56Z",
+   "media": 1,
+   "judul": {
+    "id": "Disdikbud Singkawang Imbau Sekolah Siaga Banjir, Aset Pendidikan Diminta Diamankan",
+    "en": "Disdikbud Singkawang Imbau Sekolah Siaga Banjir, Aset Pendidikan Diminta Diamankan"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Pontianak Post",
+    "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNTWE4cnJTLTRkQjZBeGN4aEVxaEFyYjlkdVdRWXhOWmJGSFdZSlhtZEVDQTRlTEhZaW1qRlI3TGFrZmVQN0ZyV3JQclZLbVZSUzlUa1Nnd3E2MTRDdlB2RWR0eXVUVTRxeFl2NGljR1lSZzZNcWdXZmJ4Ymp3ek9IeUd0eWwwX19UMHZydE4tMllENkZ3REJGY1RxbVN5QkJyaWxfVVpSVGNvRXVMRFg5VE9HV2JWS0xDWlRJSDNrQm9SS1hKTkZOSFp1dzBiRzlTYldR0gHYAUFVX3lxTE5Yd0FqQmh1Z0ZBV2pJVjlpb2ZkS2xJeldrTFFGVW05VEtlcjFXMjRfbjBrd0ZLN0tZQm9SVUViTzVIXzBHbkYwRV82NWxmaGZqX2ZkVnk0WUhHcVRsU1FSYTNhTnhBNWRVTExFVVllOS1KRkZSVkNtNUlFbklWZzNQTDIxUF9YVWg2XzN5M3ZEeGxQVXVHZnpkWnBfZWtBcVNtRmt1Z2V3YkpQbXdIYmFDTElxOVNNQWRTTktYY3Y4QnA0NGctdVVpeW1vUlo2a1hpekdCdVlLSQ?oc=5"
    }
   },
   {
@@ -374,57 +408,6 @@
    "sumber": {
     "nama": "Barito Post",
     "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNa29iZGxNYnRFQzRTNlQtMW9oMjl0QlNWNVJPWmo3ODVPWkhJa2lQXzZsSklmWVc1dFJTYkNRWjVJNDBCSkVla0lnTG0zVWh4bi1VdjVTcF9ZT0tzeDh5VVFZQmpuNWpLRDJfeUpwSHZENXp2cm1La18wNm91ZEV0LTFheV9WSkMzbVUyYWxiYmVBZk9CYzMzZVFsOVpwaDVCWW9jOUUtaWlobW9sdXJENS1va0FrelE?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-21T13:33:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Indonesia & Uni Eropa Teken IEU-CEPA, Tarif Bea Masuk 0% di Depan Mata",
-    "en": "Indonesia & Uni Eropa Teken IEU-CEPA, Tarif Bea Masuk 0% di Depan Mata"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "detikFinance",
-    "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOZ3BxanN4SHlmZkNHb3BVWWxUOFZtTWRQTDQ1UTdycy1oV29aSUlIUjBVbjhJUjhmVnlnUkZZYlRuNU1ISU1VbGNoOUdYQWpjcjVrRDJvVGxOMTB5RFVJbHRqV1dmYVFNdXE4R0VCcVVRMXJES29SbnpHOXBXZWRyVnhkXy02ZDBZb3IzT0lUN3RmLWlQYUV2SXFLVE43MnZfUUxYekQwMTJQeWJuWGlhb2N0QUI0V1doWURQYlhMX1ozQdIBxwFBVV95cUxNNklqTHJKbTFBY1dHN3FPUEt2OTV4eC1vRE5WQ2h2VHpmOHRTd3RKV0NqSWpxazlUcmNBX1pzbU5vMllqV0ZYX3V1aXlvVld4N19vLUdJbkZvTjdYd1Z0Z2NUS19YVU9vN0NhTmhkX2FxTUtRT1otaThmeHNMY0d2RGRSVDVEZlRFTXVGTTVuWkZoWFVxeXdIVGQwRE0wYWZBOVBac0xjdkR5RXVjajItVklPd0ltUUtseFQ1bk94c252ZUNWalhB?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-21T13:24:41Z",
-   "media": 1,
-   "judul": {
-    "id": "Servis Kilat di Sela Narik, Astra Motor Teuku Umar Hadirkan Pit Service Siaga Ojol",
-    "en": "Servis Kilat di Sela Narik, Astra Motor Teuku Umar Hadirkan Pit Service Siaga Ojol"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Fajar Bali",
-    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNOGF2U0xjWVFGWndKdmJNU0ZSWXdsNTdsQl94Z2lsbVE3SHdMTmtxZ1dxQXF6bXpxZzNNXzVYcklzaFlkNm1ubGdDRG82VHpHeU4wTXdtUTZpUTFwdzVlRWVVcjV1YW83MFVZMm9yZDhRMkJRYUpRZWdFMXpQV25Kb1FTM3ZySWdzNmVLSFF1UmFOSllwLUZQbDJqejNWYThrYWxJc0t6dw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-21T07:20:00Z",
-   "media": 2,
-   "judul": {
-    "id": "Polda Metro Jaya Ingatkan Pengemudi Ojol Tak Asal Berhenti saat Jemput Penumpang",
-    "en": "Polda Metro Jaya Ingatkan Pengemudi Ojol Tak Asal Berhenti saat Jemput Penumpang"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "pantau.com",
-    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOLVlDOFlGVVVndUlEcWZGeGlqNF80aHBfUzNaQTRGQkllM21sZmp4Q05mQ0FFcWJOTDN6amFuY0ZjdU1pTG1tU2tVS0VnUjJCVzg0LWN3Y0NjVGY0VTJINE5DTU1pQkR2azhTalpCSHVOVGhTMmFCSzI4b1Z4OVN5ZVNVeWFtQ2tqYW80NU43YVBiRWdhT2FEem5IUmpLeE42R2hzYjNRVW1BeVJ1ZWdoMzlNWGNvRFpsanVz?oc=5"
    }
   }
  ]
