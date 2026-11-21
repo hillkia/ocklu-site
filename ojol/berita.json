@@ -1,5 +1,5 @@
 {
- "w": "2026-11-21T14:01:01Z",
+ "w": "2026-11-21T15:02:03Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -378,6 +378,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-21T13:11:17Z",
+   "media": 1,
+   "judul": {
+    "id": "Supermoon 24 November Bulan Tampak Lebih Besar, Waspada Banjir Pesisir",
+    "en": "Supermoon 24 November Bulan Tampak Lebih Besar, Waspada Banjir Pesisir"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Darilaut.id",
+    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPS3NuaGNabVJPNWhYdzY4cGl4WHUzVnJQMXRNR0wwSF9PaDBBaC1WYndRS0M0TnBfZmNIMVNWSnlSOTVYMlFKYzBpb3ZDYmdGdVo1MER3ZXpPemJ1UjYySUhZTTJEdERZMC1wSXVZMVNNNGFLaVF0TVZ5R1F1eFIxQm92VjlQc2RTV21yWnJPb2dDei05a2l2d1o3Y3TSAaIBQVVfeXFMTWxZXzBJbWtLMXZNMzJaejNuaHE2RUtkSmpwbF9Dd1FJa0JTYzZnSTNFWkFQYXBWMXEwcVBUVm9oRzVQLVY4MFJnZGNFdHVVMEFUM1dWZHBPNVpCa0dqMURPb0V0T1VWTkgtSjhDQndndFk2eTJzOFhCUjBsRUNiSVdnZWY4NEZ4cE54YmMzMHVUQWFlSF91SnpRdjI3WFA3UExB?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-21T06:58:00Z",
    "media": 2,
    "judul": {
@@ -425,74 +442,6 @@
    "sumber": {
     "nama": "UPDATEBALI.com",
     "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOUFNpel94SFJBalBZLU03dUF3YXhoNmdNT2VEZFFKWGZLQl9ib0taandsQkwwTFZqcHJONmlYcGptSjJLVVBKeC1FSWdYYVBpZXJlbXlaWUN6dXJpTjRZQ1hUTUJxd3N1LVB3YXBDQUhZXzlxcW9qdHBIcU1pcnlqTUlGRDJFNEpubHM0M0MwR2g1U19pZ1d2aEI3cGVhQmprRjlnaEMwRS1yNkZvS1RTQ0RR?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-21T12:14:57Z",
-   "media": 1,
-   "judul": {
-    "id": "Pria Berseragam Sekolah Diduga Lecehkan Ojol di Kendari, Korban Ngaku Disentuh Bagian Sensitifnya",
-    "en": "Pria Berseragam Sekolah Diduga Lecehkan Ojol di Kendari, Korban Ngaku Disentuh Bagian Sensitifnya"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Kendariinfo",
-    "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOVV9DVXV6MXJmczJ1S2t1dExpYlROX3pkTWlRY0FVQ05DRkttemF0YkFWT3FxYkRFcERuZUJHTVEtdmRnREhsRXJWWnlUMVlqTDE4bFlhNlpURGExMjh2ZUp2eHY0Yl9KcGZVeFFOd1l3RGtPQnhhd1JtZXRfcHVCNUFMYVdWV2Q1YnNjNGgzVEV1STdCQk9nM19aaXBydi1nSVlfRE1uZUJfWHVFQ0FPOHJIcWVSVEtBejdZS1Z30gHDAUFVX3lxTE5zWlBYSDFOVU9MUDA1QlltaF81QWItUk9jdURzbEN3bHdhUHdNVVJEMHRsNU5udndWQnZhLWd1OEtHNW4zNnBsVXUyQ1V6OVd6blhFWk15WXBZbVBxMGFDcjVfZTd5a1k0S2JSMlBweHNCTUVEQ3lDRjJUTkVjaDFkMEd0ZjBtakx0OHZsWHU1VWhrR245d1otTmlRaUhyVXRIbE1aSjlVUU43YWhPY2dEYXVaLXhsVllETjNwWGM2Nm1xRQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-21T12:07:42Z",
-   "media": 1,
-   "judul": {
-    "id": "Banjir Mengintai Sidoarjo, Dedi Irwansa Dorong Gerakan Bank Sampah hingga Perbaikan Sekolah",
-    "en": "Banjir Mengintai Sidoarjo, Dedi Irwansa Dorong Gerakan Bank Sampah hingga Perbaikan Sekolah"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Kabar Jawa Timur",
-    "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPYTIxZ0pvUU9pNlhscnh1aUF4aEZjTE5EQVZWSFM4ZU5mbWJ4czBQZGpSblVFRjE3OFBFaUhLUWMwRng3MTZ1NmlFanA0bFd2eE5JeHkxSnhjTVJOS1JsVHloM2FWTTFSY2doWVFIdW5kUzFSZGY2UzQzV2tubHc2Si1rTldBZWFIRGhic3VPUlotTDVINVhzMXppaHVDSmhEbUpQVGNaTEl2UGpzN3YyQnBVa21TcmFGQndlcW9CS1M5dF9p?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-21T12:05:04Z",
-   "media": 1,
-   "judul": {
-    "id": "BPH Migas Gunakan AI untuk Awasi Stok dan Distribusi BBM",
-    "en": "BPH Migas Gunakan AI untuk Awasi Stok dan Distribusi BBM"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "cwibc.co.id",
-    "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5IVnFOYThHR2g1eWlqZjg4WGR5dk1RSkVnTE9KNkZTNThXRGF4akloRkJZLTNPejBRb2JVSjVtRHRwRVlOcHZteEx6MnMtWWRQWTdiV3VwMTZfZTg?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-21T11:57:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Jalur Puncak Bakal Dipantau AI Saat Libur Nataru, Polisi Bisa Prediksi Macet hingga 12 Jam",
-    "en": "Jalur Puncak Bakal Dipantau AI Saat Libur Nataru, Polisi Bisa Prediksi Macet hingga 12 Jam"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Kompas.com",
-    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPOEpYZ0tTdmxET1VweC1oWHFJMG05NUtwOGhVVkNfWm94enVad3NVbXZFdnJmdkE2Q09jOUJZQzNSSndtb2hqa24yV2JHSExleVh2WWdDWXRQQmFmVUItOERMSjNFUTNIeGJLUWV6MGNCTHNVREV4RjlUTlZWUE03VlVWcnc2QkM5QlQ2WWdtcGhVNFlBNjkzSG5FZnlFaU9VU0xFM0t1SE9TMlh4OUZRaGh6NllFUjhXeHRUY0l2YjVXMDdxV0E?oc=5"
    }
   }
  ]
