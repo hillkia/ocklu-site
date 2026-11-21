@@ -1,5 +1,5 @@
 {
- "w": "2026-11-21T11:55:04Z",
+ "w": "2026-11-21T12:12:03Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -123,6 +123,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-21T12:00:00Z",
+   "media": 2,
+   "judul": {
+    "id": "BPH Migas Manfaatkan AI untuk Awasi Stok dan Distribusi BBM hingga Wilayah 3T",
+    "en": "BPH Migas Manfaatkan AI untuk Awasi Stok dan Distribusi BBM hingga Wilayah 3T"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Kompas.com",
+    "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOSzQwckNPMWtXZnJxZ1JwN2kwQW90VWI4ekE1eDFUUHhPdU5iUV80MWpXWEtCWm93dHpiNkR2ZFg4b09wXy0tcWlaaDZxOGhIUnNmNklFajJ6NjRaZHkxaFlObDFxc1BLaGo2RFRXMGh1RGFYZWZUQWhsdWh6cHM4TlBtVEViTkFMT2JRbnZqaC1EUVFWX29iNjN2ZHkzMmpEUjU4TUtsdEM5LVc3UVpBXzljUHRCRFdxZGRFd2t0RmFjWkstel9n?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-21T01:50:02Z",
    "media": 4,
    "judul": {
@@ -221,6 +238,40 @@
    "sumber": {
     "nama": "ChatNews.id",
     "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBMdWFJdVRWeERoMmlFWEh0NGt0cEdmeU15dGRWTzBFN21DV2F2akhtblotdXZuWFFIZTNaa000RHNkb1FLa1ZNMVFBLUVFT3kxc284Yy1hOWI1SVdpOVE?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-21T12:05:04Z",
+   "media": 1,
+   "judul": {
+    "id": "BPH Migas Gunakan AI untuk Awasi Stok dan Distribusi BBM",
+    "en": "BPH Migas Gunakan AI untuk Awasi Stok dan Distribusi BBM"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "cwibc.co.id",
+    "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5IVnFOYThHR2g1eWlqZjg4WGR5dk1RSkVnTE9KNkZTNThXRGF4akloRkJZLTNPejBRb2JVSjVtRHRwRVlOcHZteEx6MnMtWWRQWTdiV3VwMTZfZTg?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-21T11:57:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Jalur Puncak Bakal Dipantau AI Saat Libur Nataru, Polisi Bisa Prediksi Macet hingga 12 Jam",
+    "en": "Jalur Puncak Bakal Dipantau AI Saat Libur Nataru, Polisi Bisa Prediksi Macet hingga 12 Jam"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Kompas.com",
+    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPOEpYZ0tTdmxET1VweC1oWHFJMG05NUtwOGhVVkNfWm94enVad3NVbXZFdnJmdkE2Q09jOUJZQzNSSndtb2hqa24yV2JHSExleVh2WWdDWXRQQmFmVUItOERMSjNFUTNIeGJLUWV6MGNCTHNVREV4RjlUTlZWUE03VlVWcnc2QkM5QlQ2WWdtcGhVNFlBNjkzSG5FZnlFaU9VU0xFM0t1SE9TMlh4OUZRaGh6NllFUjhXeHRUY0l2YjVXMDdxV0E?oc=5"
    }
   },
   {
