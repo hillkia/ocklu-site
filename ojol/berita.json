@@ -1,5 +1,5 @@
 {
- "w": "2026-11-21T10:53:36Z",
+ "w": "2026-11-21T11:16:04Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -38,6 +38,57 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-21T10:40:00Z",
+   "media": 5,
+   "judul": {
+    "id": "Green SM Bike Setop Layanan Ojol di Indonesia Setelah Dua Bulan Beroperasi",
+    "en": "Green SM Bike Ceases Ojek Service in Indonesia After Two Months of Operation"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Disway",
+    "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPT0hkWHZleFB1d2NlZDlvWU8yV1FsWHUxYU5LNWFhVS1QMjRTMDNSang5VDRTN29tREQtSFVNNWtDZWF5MGU3MkpEVHA3TkpqVUw5TEM3NThlMXFDLVpjMDBjZ2I5dWt6WkUycG13OW9RNTNHOWN5cmdyaWxhTlZGdXlTUG5iVjA0UV82OFQyWG5ObzRHYmlOSm5vWjlKeXZqX1lib0tsMlF6WTlQQms3VjhjV1ZmaFZPSnlJUmlCX3ZIRW5SYXBzRDZLNkvSAb4BQVVfeXFMTUJKLWM5T3ZOeEx0S3hOS29RZmVBRmRETUx5Zk5oeE9jVmh0eHlBOW1kOFBXT0tjZGFBVHQzaHFkNXVueTJyRFZWbzgxLTM3WlVrRERyX0dGM1l6UmlUVklnX1FUMHNkVzM4YllJbDRSZzBjSEE5My1nMVRZNlotYlRXdWZmVnZnMnZGaDlwZWdrclFYaTJpOHc4Qm03ZWE2bFVFVjlXR3M1YkRJLXJVbzg3Z1NFMEhUaTlEV0p3dw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-21T10:00:00Z",
+   "media": 1,
+   "judul": {
+    "id": "BNPB Ingatkan Potensi Banjir dan Longsor, 12 Provinsi Berstatus Siaga Hujan Lebat",
+    "en": "BNPB Ingatkan Potensi Banjir dan Longsor, 12 Provinsi Berstatus Siaga Hujan Lebat"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Kompas.com",
+    "url": "https://nasional.kompas.com/read/2026/11/20/20404831/bnpb-ingatkan-potensi-banjir-dan-longsor-12-provinsi-berstatus-siaga-hujan"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-21T10:54:10Z",
+   "media": 4,
+   "judul": {
+    "id": "Sabtu Bareng Sahabat Ojol, Wakapolda Metro Ajak Utamakan Keselamatan",
+    "en": "Sabtu Bareng Sahabat Ojol, Wakapolda Metro Ajak Utamakan Keselamatan"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Kicaunews",
+    "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNdFpPWlFtdVhYbUN5OXo1R3oxUE9EZll5OEw1Njl3Y1pDVFoyUFVsZlBuS0VyTXhuWjc4amI5UGc1bERJUFZQUzZfS0hJRWFQWUxWTjRJYWl4Wl82TmdsVlBQUHZuRks5bTN5dWhJb1ZQMHpvc2psd05IUEtGZnJEQmlXaDM2cDUzbEl4MjZLdnlvN2pwY1F3WDQtNE1YZDFzbHI3b3F1Y05xYU0tOGd4dEZWRVFqUHFIdlY3djFqNzNiZTctNmZPc0tKYw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-21T02:00:00Z",
    "media": 4,
    "judul": {
@@ -68,40 +119,6 @@
    "sumber": {
     "nama": "VOI.ID",
     "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNN0pvT011YlZyaVhLNjBuLVNFU1NoZmxwQkpsLUcxSGptTGhmcjFRTDZhSk80bEV1aDNWSS1iVzFfZlRLcTFTZmNrbmVNZURtWmU4WGxRamg3a1ZEVDZsMlEtZEhKV2JVa1d4M2Rxb1hKQjEyZDNSV1hkNWZuTzk5bFRJOEI3a092Nk03TTcta1BVeTh2cXBjRXFiMGJZUWFl?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-21T07:11:00Z",
-   "media": 4,
-   "judul": {
-    "id": "Green SM Bike Setop Layanan Ojol di Indonesia Setelah Dua Bulan Beroperasi",
-    "en": "Green SM Bike Ceases Ojek Service in Indonesia After Two Months of Operation"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "NTVNews.id",
-    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOcDNQb3QydnM3N3JKYkZPRFZRSFFSczRtbEJGdjlBMGc5WHRHU0ZVS0VFX3ROUVNoLUtmcS1hWHg1M2RFRS1ITXRSUlhXWVpxOURqcjNJZGJBZEpDOWtvMlRLMjVxemNvS25RQ0s5cHUtQVU3QjREYm14VEY1T1dWbW1HU3ZCeDU0UUxnZlVKOHktd3Yzcy10YlBnWVhxWVR0Z1RYZzhhOFlPbWtQdHc?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-21T09:20:49Z",
-   "media": 3,
-   "judul": {
-    "id": "Sabtu Bareng Sahabat Ojol, Wakapolda Metro Ajak Utamakan Keselamatan",
-    "en": "Sabtu Bareng Sahabat Ojol, Wakapolda Metro Ajak Utamakan Keselamatan"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "bsinews.id",
-    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9BTnh2Q1dOU3o0WG5FZ19GMVFlZ0p3T0pnLVJnRGRxNm5BOHQ5N0JKalZ4bzZDWGUzb1JQbk9uclBQVW5sSERrejk0MnBUd2NCdEZ2VHBzc2pfQWpzeUNDcUd6QThKSGxzOEl0M2Vn?oc=5"
    }
   },
   {
@@ -208,6 +225,57 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-21T10:31:00Z",
+   "media": 1,
+   "judul": {
+    "id": "8 Aplikasi Ojol yang Tutup di Indonesia, Green SM Terbaru",
+    "en": "8 Aplikasi Ojol yang Tutup di Indonesia, Green SM Terbaru"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "RuangOjoL.com",
+    "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQOW9kVjhZbHVTTlFLOHdYTnhNMWo4bm5SWDctMGdKMUxiOXFQUTN1Xy1HNkdveE1IWHRYTFpBVnFab21nTG42YVVaV01henNwZmR4UXlxM05jbFEtdm1YRUJGWjBrdENiMjRRZTA2eUtjbkJDX28wT3RFYTBNTzJWQUFURm0?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-21T10:26:48Z",
+   "media": 1,
+   "judul": {
+    "id": "Polisi Amankan Empat Matel yang Kejar Ojol di Ciputat",
+    "en": "Polisi Amankan Empat Matel yang Kejar Ojol di Ciputat"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "bsinews.id",
+    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9mZTlXRmcxQmhBaEtFNml0N1g4UU81UEZYMHN4YmlXei1acUdFVTJ2QmZvRWxwcTFRMkNiSGIxSlY0MEx3eWhEczR2dlhaUlRTbDRYTHpZWTUwQlRLc0diMkVfWWNhb0RYdEE?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-21T10:17:49Z",
+   "media": 1,
+   "judul": {
+    "id": "Kejagung Buka Opsi Tuntutan Mati untuk Riza Chalid, Kerugian Korupsi BBM Ratusan Triliun",
+    "en": "Kejagung Buka Opsi Tuntutan Mati untuk Riza Chalid, Kerugian Korupsi BBM Ratusan Triliun"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "indoposco.id",
+    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPYWF1X3RTSS1MVDgyOVFwMW1hNHByS2YzN1dBd0pET09SWVE2NEgtVlFUeUp3azJFM1gyTTR1dk5YZDZjQ0hXc3ZNenU2OHB4UUNUd0d4OUcyYUNWM2xhMFlmU3Bna2J5MkVJSndJbVUxYTFrYXRMb0pJUjVWVl9MNEs4X1NfVWZoOEJ2cnptQl9WVVRMNHFHVjFWTnBsZFlRRWtPNm02QnVCcGhfd05RYjcxTFRpQU5Xa3B1Rw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-21T04:05:00Z",
    "media": 2,
    "judul": {
@@ -306,74 +374,6 @@
    "sumber": {
     "nama": "Memorandum.co.id",
     "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPZ3QzekFmWHphcFBRWUFZTXVrY2dSMGdjeHBybVJKTGZKZjlaOGxnc2hLLUNIRHctdVFrOW9MeXJDNWtMdWxHMDlFdGpCN3FObEdnRjNrVExmekNsdVhkZWJ1UlM1dm5DcWpjdHQ0cG1aUHBFOGtzMlh5Q0lBTXlqMjFmZlBRX2o0V1plT1ZDQ21Hem5XbTN3NmM2SE9TNXduWUE3dzhob3hEejlfcHhKbDhlUWFLdkQwa3U4cVR2dTBpcE3SAbIBQVVfeXFMTld0aGNqbjVmLTlqUmNabllXS2NNOHA4MmxGcXhlNXN6dm43al9UUThqTFJVQ3JzN0pRQUdsT0ZpX0taWUxMSDEtMHFOZXVwWFcyTlY3b3FMNlBSN0FvY3JaQUtoWFZlLW5DNDl2Z012Ni1fOEdmc2poR1Q0ZjJDZE1KYnJXUWFPVDE5TmhGcGhpT2VLemlkOUJmQlhnNDh2TnRfX1pZaVRQcm5Mc3BpaWM0dw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-21T07:36:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Polres Subang Apresiasi Ojol Kamtibmas lewat Ganti Oli Gratis",
-    "en": "Polres Subang Apresiasi Ojol Kamtibmas lewat Ganti Oli Gratis"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "RRI.co.id",
-    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPQzJid0MxUG00d2RIWk9zYUJOSWJIX1BDbVFuSDFpcDg0SXVSZVRnZUdabnpBNk90X3NXUXVyR1E1eV9hbnlRTnJSdlRaQmgzNC15N2RvdWxLTVk2RG1RYkdWajdGd254cHFUS2RlbGJVUXktMDVySzBZNHBTMndZN04yMno1OV9JdnhJdXllM2syZjhBa1lmU2ZlNHFUdlNEMVpKbTBwSQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-21T01:30:00Z",
-   "media": 2,
-   "judul": {
-    "id": "8 Layanan Ojol Yang Setop Operasi di Indonesia dari Uber hingga Green SM Bike",
-    "en": "8 Layanan Ojol Yang Setop Operasi di Indonesia dari Uber hingga Green SM Bike"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Qoo Media",
-    "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQMDVPTXF3YjF6eEZNNGhPUnBKUWVsYVVwdXY2bUVSQjdjYUpoWXB4ZDc0WTd3VS0ta0pVcU9zRFdaNnBmVTZtRzFRMlhuU2F0dG9UYmlFc2g4elEyVFF3Y1NhQVR5aXlLVVFuSzMxRWlRcE95dG84ZERNaHlyNnR1MWtEd05tRGJEZHA5RUVUNXl6NTJGVU9QNEhTTQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-21T07:32:03Z",
-   "media": 1,
-   "judul": {
-    "id": "Teknologi AI Perkuat Distribusi BBM hingga Wilayah 3T",
-    "en": "Teknologi AI Perkuat Distribusi BBM hingga Wilayah 3T"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "cwibc.co.id",
-    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1XVmpkRG5ab0FaWXVMQ19WTDI4TExaWk1XUjdHMVF4STZsSDJXRkJ1aGw1czdkLXQ5WWdTUG1ZUVhrbl9ISnRSVzN1eVZhUUFTeTI1d2tRUXJjS2F4MU9Ddkt5T0xPOG5UWXc?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-21T07:31:15Z",
-   "media": 1,
-   "judul": {
-    "id": "Layanan Ojek Online yang Berhenti Beroperasi di Indonesia, dari Uber hingga Green SM Bike",
-    "en": "Layanan Ojek Online yang Berhenti Beroperasi di Indonesia, dari Uber hingga Green SM Bike"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "TOPIK.ID",
-    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPUW5SdERMVFV6dm83d29OZnQwblFZdDNGQWVuLXN4WW1VWkhGc1ExRnZkb0l0SFk0WXloYlJjZEtpU3FZb3lEOUloTmdzcTRmM1ZqWHZZQUg3NXZLLUM5bDZWNEJPRWdMbU0xT0JDQTg3YmJaN2ZkWjJjOEVtZk9yZGRadVRTOWdpMVFXOXhWR09PSmhyblA1aXNKUmdxM0xwN0tjTlBCSUxray1lSWc?oc=5"
    }
   }
  ]
