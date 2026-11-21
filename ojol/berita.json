@@ -1,11 +1,11 @@
 {
- "w": "2026-11-21T07:49:34Z",
+ "w": "2026-11-21T08:51:04Z",
  "dari": "Kroog",
  "berita": [
   {
    "jenis": "berita",
    "waktu": "2026-11-21T03:04:34Z",
-   "media": 10,
+   "media": 11,
    "judul": {
     "id": "Baru 2 Bulan Beroperasi, Green SM Setop Layanan Ojol Listrik di Indonesia",
     "en": "Just Two Months After Starting, Green SM Halts Electric Ojek Service in Indonesia"
@@ -17,6 +17,23 @@
    "sumber": {
     "nama": "Jawa Pos",
     "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQbzIzNVpqLTE2QjVTLW9Vb3Vubzl2UGY0VHJHd253cG9ieDBIYmlkWVZzV3E4cEdOSGtIN3ZKNVd6dXpZQ0FadUZjV2ZpUTJrMlE5bTY2RXRHTmlNSE5SODlBNDlCMk1VaTBWNnVNaHZ4SlFxT3dyNGw2Ni1fdlBFQU5QWkc1SUI0NjFtcjhGa01TWU9WNFV6TlVBTUpSUHEzSk5LcF90ZEs4MlltSUtmM0hycEtPVDg?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-21T07:16:42Z",
+   "media": 7,
+   "judul": {
+    "id": "Dasco Minta Komdigi Bukan Ruang Diskusi Bahas Tarif Makanan dan Barang Ojol",
+    "en": "Dasco Requests the Digital Economy Minister, Not a Discussion Forum, to Talk About Ojek Food and Goods Fares"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "ChatNews.id",
+    "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1iVEJhR0VkN2UxVWtHLWpSbGw1eVJZQVNvaWg0cFN2YnlNNE5TdVhIUnVGU0RtZlk1Vm9aZjZqaUxIaEx0ZkFlWkZfTDAzRm1ER2tUNVJoUzNUeWhOMU5fQnpaVlBodw?oc=5"
    }
   },
   {
@@ -38,8 +55,8 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-21T05:54:09Z",
-   "media": 3,
+   "waktu": "2026-11-21T07:11:00Z",
+   "media": 4,
    "judul": {
     "id": "Green SM Bike Setop Layanan Ojol di Indonesia Setelah Dua Bulan Beroperasi",
     "en": "Green SM Bike Ceases Ojek Service in Indonesia After Two Months of Operation"
@@ -49,8 +66,8 @@
     "en": ""
    },
    "sumber": {
-    "nama": "TOPIK.ID",
-    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNaWxHcHUzdFNDMWdBSDZkdFUtZF8zMVc5eHlxTm84OWxIVmJadXpuRkJvb2RZT3g0RVhzeXktNVFTeTFEVW9STEFDRldRWFBYQ3QzbURKM01xTzhkVVoyQnJ4X01fbUpodnJtYUpWbGgyc2U2Q1ZHTHcwX3B2b2NEZFBIZUNlTWltN1EtYlowMks1b1hSVlRCYVNrNkNISnEtMXc?oc=5"
+    "nama": "NTVNews.id",
+    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOcDNQb3QydnM3N3JKYkZPRFZRSFFSczRtbEJGdjlBMGc5WHRHU0ZVS0VFX3ROUVNoLUtmcS1hWHg1M2RFRS1ITXRSUlhXWVpxOURqcjNJZGJBZEpDOWtvMlRLMjVxemNvS25RQ0s5cHUtQVU3QjREYm14VEY1T1dWbW1HU3ZCeDU0UUxnZlVKOHktd3Yzcy10YlBnWVhxWVR0Z1RYZzhhOFlPbWtQdHc?oc=5"
    }
   },
   {
@@ -123,19 +140,19 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-20T15:05:00Z",
-   "media": 6,
+   "waktu": "2026-11-21T07:41:13Z",
+   "media": 2,
    "judul": {
-    "id": "Dasco Minta Komdigi Bukan Ruang Diskusi Bahas Tarif Makanan dan Barang Ojol",
-    "en": "Dasco Requests the Digital Economy Minister, Not a Discussion Forum, to Talk About Ojek Food and Goods Fares"
+    "id": "Jejak Layanan Ojol yang Pernah Meramaikan Pasar Indonesia",
+    "en": "Jejak Layanan Ojol yang Pernah Meramaikan Pasar Indonesia"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "Warta Ekonomi",
-    "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPM1hwUTNPWnFja3prVktpQ2JfVmhYRlFGc19pdXhyVEN5RC1Va1ZxbjFxUTBKZ1JlYmtyTU9jaEJpMllEY3BKMEtSNWJEOHU5MzFsVm5hZUZIOVNvNk1SYzVrS0pTaVI5eERiVDNmNWRwWng4eUJjRkpRWXJUaWhqcGlmdFBfWG1SWmxRM3dVcnh6eGkwZFhzWWhpZGMtZ1haYml0eFlxWk5ScW96MTZZSFVfR0JPUXFTR3VCdkowRXl6UdIBxwFBVV95cUxNNDNnVUctODJpZ0pta1B4UE1PZFk1V3phQk0tcEFGQmp3WWdKZ0RhRkRmSkVxWmFKbF9wdEoyZ3J1YmFJZE92T0dfekxiX1Q0bFk2MS1kdFpPWmZMYjVDdXBGR3YwZ3lXWXA1cDJYWGh3Skd0SmZQbnJzZlBTQjJ3dGZkdlFxdkVQblQ1SmxxakNQUHhJWUZvZ3hmeFQ3ZlhGRzR4Z2FrRDk0UFNaN0ZQcmZCNUN1ZXNOY09WWFBDYU1XbzBFN3Nn?oc=5"
+    "nama": "ChatNews.id",
+    "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBMdWFJdVRWeERoMmlFWEh0NGt0cEdmeU15dGRWTzBFN21DV2F2akhtblotdXZuWFFIZTNaa000RHNkb1FLa1ZNMVFBLUVFT3kxc284Yy1hOWI1SVdpOVE?oc=5"
    }
   },
   {
@@ -157,6 +174,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-20T14:15:00Z",
+   "media": 6,
+   "judul": {
+    "id": "Dasco Langsung Hubungi Menkomdigi dan Menhub usai Terima Keluhan Ojol soal Tarif",
+    "en": "Dasco Directly Contacts the Minister of Digital Economy and the Minister of Transportation After Receiving Ojek Drivers' Complaints About Fares"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Antara News jatim",
+    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOWVE3TEFLLTdfdzNoU2l0X28yTTFieDFpYVc3c1Vsb1hjWWVxdXVWbDNBOGx1UzNfNjAwbDRhMVNqNy03bVA3ZEVoX2FsaExzQm40ZnNEU1FtcHR0dk9VS21JZVdQel9ZeVAyZHVRUWtUUDUyeTNzT05ZNmZiU19TaXFmX2hjTVdLSzdSaW1veFVMdW1WOWNBTnJEbUVaaGs2ZXhUdnJaanlhb1V5MENxMjBQVWTSAbQBQVVfeXFMTllRN0xBSy03X3czaFNpdF9vMk0xYngxaWFXN3NVbG9YY1llcXV1VmwzQThsdVMzXzYwMGw0YTFTajctN21QN2RFaF9hbGhMc0JuNGZzRFNRbXB0dHZPVUttSWVXUHpfWXlQMmR1UVFrVFA1Mnkzc09OWTZmYlNfU2lxZl9oY01XS0s3Umltb3hVTHVtVjljQU5yRG1FWmhrNmV4VHZyWmp5YW9VeTBDcTIwUFVk?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-20T13:05:00Z",
    "media": 6,
    "judul": {
@@ -170,6 +204,23 @@
    "sumber": {
     "nama": "Memorandum.co.id",
     "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPZ3QzekFmWHphcFBRWUFZTXVrY2dSMGdjeHBybVJKTGZKZjlaOGxnc2hLLUNIRHctdVFrOW9MeXJDNWtMdWxHMDlFdGpCN3FObEdnRjNrVExmekNsdVhkZWJ1UlM1dm5DcWpjdHQ0cG1aUHBFOGtzMlh5Q0lBTXlqMjFmZlBRX2o0V1plT1ZDQ21Hem5XbTN3NmM2SE9TNXduWUE3dzhob3hEejlfcHhKbDhlUWFLdkQwa3U4cVR2dTBpcE3SAbIBQVVfeXFMTld0aGNqbjVmLTlqUmNabllXS2NNOHA4MmxGcXhlNXN6dm43al9UUThqTFJVQ3JzN0pRQUdsT0ZpX0taWUxMSDEtMHFOZXVwWFcyTlY3b3FMNlBSN0FvY3JaQUtoWFZlLW5DNDl2Z012Ni1fOEdmc2poR1Q0ZjJDZE1KYnJXUWFPVDE5TmhGcGhpT2VLemlkOUJmQlhnNDh2TnRfX1pZaVRQcm5Mc3BpaWM0dw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-21T07:36:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Polres Subang Apresiasi Ojol Kamtibmas lewat Ganti Oli Gratis",
+    "en": "Polres Subang Apresiasi Ojol Kamtibmas lewat Ganti Oli Gratis"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "RRI.co.id",
+    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPQzJid0MxUG00d2RIWk9zYUJOSWJIX1BDbVFuSDFpcDg0SXVSZVRnZUdabnpBNk90X3NXUXVyR1E1eV9hbnlRTnJSdlRaQmgzNC15N2RvdWxLTVk2RG1RYkdWajdGd254cHFUS2RlbGJVUXktMDVySzBZNHBTMndZN04yMno1OV9JdnhJdXllM2syZjhBa1lmU2ZlNHFUdlNEMVpKbTBwSQ?oc=5"
    }
   },
   {
@@ -208,19 +259,70 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-20T13:59:55Z",
-   "media": 5,
+   "waktu": "2026-11-21T07:31:15Z",
+   "media": 1,
    "judul": {
-    "id": "Dasco Langsung Hubungi Menkomdigi dan Menhub usai Terima Keluhan Ojol soal Tarif",
-    "en": "Dasco Directly Contacts the Minister of Digital Economy and the Minister of Transportation After Receiving Ojek Drivers' Complaints About Fares"
+    "id": "Layanan Ojek Online yang Berhenti Beroperasi di Indonesia, dari Uber hingga Green SM Bike",
+    "en": "Layanan Ojek Online yang Berhenti Beroperasi di Indonesia, dari Uber hingga Green SM Bike"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "ANTARA News",
-    "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNdlpZZ2pWelZuWHRKTmxpUEUyZzdrOG5uaVl5R09JWlU3TVV1WlFvQ0g4d084U3BxamRKeW5TVXdJaU1pVl9lZ2NlN29jZndydklucE5VX0FtNEFYLTNzcDdkT3FpaERxakw1d3dHM2VGMFREcFFLZlZJZElGQmJ4c1FtbkVzN2NsQm1SSjI4YjRXTlloWlk3ZHZKMmIwMnhWa0lSaWJuWnZrajdv0gGvAUFVX3lxTE8yQldZV2JMcVREMEliZndjU1NGYTdUMWVpNlB6QTBncEdhb2dTeDZmb3IyUHFQcW91eUR2S2p5ajBZTGpwaGRNRko5ZURfM1ZCTzBINWZzR3RQdVZGdnBYZ1o2S2h1eG16aXlUWHJnMTlUQl8xX1doYlY2a3ZpQkR5TG9CVGFNNVVUX19LYXp5OWtIMXpPbS1pQ2RyVFFwdGhOenM2N2c3SkxEc2JJQXc?oc=5"
+    "nama": "TOPIK.ID",
+    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPUW5SdERMVFV6dm83d29OZnQwblFZdDNGQWVuLXN4WW1VWkhGc1ExRnZkb0l0SFk0WXloYlJjZEtpU3FZb3lEOUloTmdzcTRmM1ZqWHZZQUg3NXZLLUM5bDZWNEJPRWdMbU0xT0JDQTg3YmJaN2ZkWjJjOEVtZk9yZGRadVRTOWdpMVFXOXhWR09PSmhyblA1aXNKUmdxM0xwN0tjTlBCSUxray1lSWc?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-21T07:14:01Z",
+   "media": 1,
+   "judul": {
+    "id": "5 HP untuk Ojol Tawarkan Baterai Besar dan GPS Stabil",
+    "en": "5 HP untuk Ojol Tawarkan Baterai Besar dan GPS Stabil"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "www.suaralandak.co.id",
+    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1TM2ZGOE1tNmM4OENaNHRzT0VSb3lOU2g5MWVmUGE4TWM1d3ZpUGpLdXhYNHRHTERnY2FHaWdMMWw1eUE0OUpFWjMyc1p6WFpDMHVYTTRxaXNJZ3BiM283Vml2MFpaSGRua05ZTUsyMW0?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-21T06:58:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Polisi Ingatkan Ojol Jangan Asal Berhenti Jemput Penumpang",
+    "en": "Polisi Ingatkan Ojol Jangan Asal Berhenti Jemput Penumpang"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Todaynews.id",
+    "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQNGJKZkdvMWtzNWM0NkVqbG5xM1BkLVllYmVDLU1nVFVOZDVCeHFQWDNmQTBxWWlDRmQ2dTU2WHc4ZjR3M0RwN2U1Y25TZHJ2SUpWWkRkaWxDT0E3d3ZxUlktSkE2SGN2NUxkbVVLR252bGtjV1B5RzJPWnBlX3Z1ZnhVUGotcWc?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-21T06:53:55Z",
+   "media": 1,
+   "judul": {
+    "id": "Kemkomdigi siapkan pedoman tarif adil dalam pengantaran makanan-barang",
+    "en": "Kemkomdigi siapkan pedoman tarif adil dalam pengantaran makanan-barang"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "ANTARA News Gorontalo",
+    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPT2dtb0NTMU9rMWhUMEZBMjRpTWNadjZISnVMVkRUa3c0YmZrQzg0LUpYM2t4MVNtb2JQOE9Ta0swVEN5aDNSdGVaNk43Ykx6NFVaQnVFZ21ORjluVzhTbGRQaEN6dHQwYVdHX1FVNkpmdEdSWDNJRGxHRkR3WnBUQm1Qa2JicWJINmVBV1FnMzdfMy1pZkdsWF9LSmZCTlkybS1WbWVXWEMzWERLMU9jT3RiQzhybE1J0gG-AUFVX3lxTE9zQmlkc0RZdTExakxqMjlsejRWcXRnQWJVNG5hZXBybXhsTm5ucnJ3eTMxcFNRVTk1QUxJRW5IMXo3bEFPQU1wWXNOOU1RUU1lRFQ5SE1HTDdselBrNTEyR3pXbTAzanlOYXFNOXFGZ0dicHpsWVRFLVEyT29yLXhYd0FzMDZpRV9ITml6MjNGeGpxOGpGZnBBOFE1YVZLUlJraUdqTmE2XzVUTkwwTkRnTzJVczl1dl80RUJ6dmc?oc=5"
    }
   },
   {
@@ -323,125 +425,6 @@
    "sumber": {
     "nama": "Validnews",
     "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQdFIxYVRjYUFtdXMwS0tMTklfX3RBM3YxeHNOM3Mwb0wxbElILWNQWU1ZdkRBNElhRnMyclV6R3BDcXBhcWl2cWNrbVBLVzRIMUIxR3hidHl5MjExSkVfYkdCRkhxeDI2WVhEc2dTMUo4Uk50aFdxX2paNEZzV0Z2R3Z4QW10NHZUN0FtY0ZEMy1Gb1RJLUl6TzJkQXVkeEZrMDdrX0lqSUU?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-21T04:05:05Z",
-   "media": 1,
-   "judul": {
-    "id": "Ojol Berhenti Operasi, Green SM Jamin Hak Mitra dan Pelanggan",
-    "en": "Ojol Berhenti Operasi, Green SM Jamin Hak Mitra dan Pelanggan"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "CNN Indonesia",
-    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQcE5BZjcweXgtVEJvOGpfcWdTZ0pRbUhYallXX0U0eFpGdWFQUW5UaldlTnB2ZUNZVmtMaDBSNWRjWXdUSXVCb1FDOXZGTGpZS1dkdWdaOXJ3cmF6LUdBeEhWY25JcXJSVUJqUUVQRUhCZ1MwT1JLM0t6elZfYlYtTzVkUzVpc1JPU0xBSGNCT1FoSlRjY19RRHp2SjN2NlNvMC1VZ01yTnJ3NXMzVU9aM1pYbEJER29lRE84eng3elPSAcYBQVVfeXFMT212N19tbEhQOWFneWlBcEVONmRXajREX0R5TTMwemVZal9Ya3dzWFRib1V2TUxZVmJKREJIa3ExRWpOQm51d3ZNRU0yaXV1MHRnUVgzN2QzNEtxWk9iNE9Wdzc2Z1BZYm5VYjJRM3lOaUxJLUlJZ0ZwOHBVZldQUnBaYWJ4OU5YQzVFMHNNT3dHMWQwZnZBVExDSHp0UExZdnhCNldfdDRtbnp4VDdMNUVURUYwVkF1Q1Z6REVKRE9uYWZOUVlR?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-21T04:03:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Polisi Bersama Masyarakat, Polsek Kelapa Gading Berbagi Nasi Kotak kepada Ojol dan Warga",
-    "en": "Polisi Bersama Masyarakat, Polsek Kelapa Gading Berbagi Nasi Kotak kepada Ojol dan Warga"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Media Budaya Indonesia",
-    "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNOEYtUGJxQ19PMDltYWRaOFVuMS12ZjhGTnkwMGZQd0N0NDQ4ZTB0UHpTX0E1dVBvclV0ZVc4allsQVJIeW5ieHBNNzRzdjBEZUVfTHFRWEduZ193MGZWQ2hObEg4V0ZmdTVvQ2RCZ0ctS2NKOEZ6SHlIQXdRYjVqRkExaFBRd0xZeC14UklRVlhmTV8tdEtJTy1uNzJzNjJHTUVxUzNpQkI4WWlpTWxZbkVyMUs1enc5dnBGaWRCRHB5UGVDX1AzajBlSVliUTV4MXVDS3AtejQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-21T03:54:15Z",
-   "media": 1,
-   "judul": {
-    "id": "Viral Driver Ojol di Kendari Diduga Dilecehkan Penumpang Pria, Bagian Sensitif Diraba",
-    "en": "Viral Driver Ojol di Kendari Diduga Dilecehkan Penumpang Pria, Bagian Sensitif Diraba"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "TribunWow.com",
-    "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPX09OdDVRck40YVZhZU1jOHJUdXJuRmVyS3RrYS0xR3JNRUI4NnBkOUc2SU5HcnkyNTBNSFdzVkNuR01WX0VxNVZZX3pIN296My1rbExNRG1CUVhOMG1oNVZ0eGp6a3Fta216UDhVR2xhZzdWWk40R0p1dk1uSkpYY2xJWUdDQlEyS2c2d0dVWmk5SUhjYUR6NjdublFMMjdKUUwxS0llNncyOTFlRmwzUFpXcl9Yd3cyVGNlWU1wNnpkZw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-21T03:25:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Ojol Dukung Dasco Jadi Wakil Presiden, Ini Alasannya",
-    "en": "Ojol Dukung Dasco Jadi Wakil Presiden, Ini Alasannya"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "VISI.NEWS",
-    "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5TNHRLM2U2cWJKM2MyVFc0RGw5LVdVSWpyYTRHVF94dGIwdlRqVmI2M0ZyendzWkZkOEd5RTNvLU9saEdsUGJNaUUxRDRoRWhmUzZZd0JkcURLV05PMnNxdGpZVF9PbHQxSTBZVFNueng4X2g3OVdKT2RJZGJ4Zw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-21T03:13:43Z",
-   "media": 1,
-   "judul": {
-    "id": "GoPay NEXT Bidik Gen Z, Ada Gratis Transfer hingga Voucher Ojol",
-    "en": "GoPay NEXT Bidik Gen Z, Ada Gratis Transfer hingga Voucher Ojol"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "IDN Times",
-    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOS2QwWGphTXFkaExETFBKdHpjdGtib3NYYWM3NEtxSS1BZkJBbHNRY19Ka09nZ2phMHdWQ0lsbm5UbVJCNFVEQmZvOE1HdzVUdXhxbHEtcUFFeDI0VUREV1BQakV2NVJnc3I5WEdEdmJaNTlqSjgxUlluYWp6cUVoampqcGszbGlNbnJIR01QNXg2a0FmZ3EybWVfcXdyMEU3ZVhnU1I0WG9EWU5ySkE4ZURmWm1aejJ3c2JUaNIBwgFBVV95cUxQSVFmaDJ1aWVKTTFwS3ZYRlNzM3JiNmRPSHI4MWtJNGgtMzl5RkZCOGhaNEVQb1NaNkR4bFA4MUhjV0pRNUhWcnFpS0FDVUNmbEFiQjNqNHFBUDJBMEtDMmVKY1ZOTG9hQTlkRlByTzdZQ1FqbGVocXRUV21OOGJrM0JPNDVHSGpHeDdudXE5RDFWM2c1SGtBRDVhN1dES0Z4RkdDVDhCbzFuSENUbVF0em4zbk5LQ1lZdW9tMVA5ODFMdw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-20T14:10:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Ojek Green SM Setop Mengaspal per Hari Ini, 20 November 2026",
-    "en": "Ojek Green SM Setop Mengaspal per Hari Ini, 20 November 2026"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "CNN Indonesia",
-    "url": "https://www.cnnindonesia.com/ekonomi/20261120194735-92-1429671/ojek-green-sm-setop-mengaspal-per-hari-ini-20-november-2026"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-21T02:52:15Z",
-   "media": 1,
-   "judul": {
-    "id": "Jejak Layanan Ojol yang Pernah Meramaikan Pasar Indonesia",
-    "en": "Jejak Layanan Ojol yang Pernah Meramaikan Pasar Indonesia"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "patrolihukumindonesia.com",
-    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPX0dycUxXbC1qZU9pQmVWYnd4cXBzSEpzb3cyeG0wbE8tUlNqclVOZHlnaWplTzB6Rk9pN0FLMkt1LVJTTTAyaTNpR2lORUg0WkNvNXFNQ2ZMWHBjZ2lUYnZIOUhoMkN6TElZUVZzRHB5UF9ReS1wV0dteE1zSWJQVHdFdFQ1R25KendhTEQtWFRoSDJJUkhJ?oc=5"
    }
   }
  ]
