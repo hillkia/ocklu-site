@@ -1,5 +1,5 @@
 {
- "w": "2026-11-21T09:23:43Z",
+ "w": "2026-11-21T09:40:27Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -55,6 +55,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-21T08:00:00Z",
+   "media": 4,
+   "judul": {
+    "id": "DPR RI Minta Pemerintah Percepat PP Terkait Tarif Ojol Antar Barang dan Makanan",
+    "en": "DPR RI Minta Pemerintah Percepat PP Terkait Tarif Ojol Antar Barang dan Makanan"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "VOI.ID",
+    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNN0pvT011YlZyaVhLNjBuLVNFU1NoZmxwQkpsLUcxSGptTGhmcjFRTDZhSk80bEV1aDNWSS1iVzFfZlRLcTFTZmNrbmVNZURtWmU4WGxRamg3a1ZEVDZsMlEtZEhKV2JVa1d4M2Rxb1hKQjEyZDNSV1hkNWZuTzk5bFRJOEI3a092Nk03TTcta1BVeTh2cXBjRXFiMGJZUWFl?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-21T07:11:00Z",
    "media": 4,
    "judul": {
@@ -68,6 +85,23 @@
    "sumber": {
     "nama": "NTVNews.id",
     "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOcDNQb3QydnM3N3JKYkZPRFZRSFFSczRtbEJGdjlBMGc5WHRHU0ZVS0VFX3ROUVNoLUtmcS1hWHg1M2RFRS1ITXRSUlhXWVpxOURqcjNJZGJBZEpDOWtvMlRLMjVxemNvS25RQ0s5cHUtQVU3QjREYm14VEY1T1dWbW1HU3ZCeDU0UUxnZlVKOHktd3Yzcy10YlBnWVhxWVR0Z1RYZzhhOFlPbWtQdHc?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-21T09:20:49Z",
+   "media": 3,
+   "judul": {
+    "id": "Sabtu Bareng Sahabat Ojol, Wakapolda Metro Ajak Utamakan Keselamatan",
+    "en": "Sabtu Bareng Sahabat Ojol, Wakapolda Metro Ajak Utamakan Keselamatan"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "bsinews.id",
+    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9BTnh2Q1dOU3o0WG5FZ19GMVFlZ0p3T0pnLVJnRGRxNm5BOHQ5N0JKalZ4bzZDWGUzb1JQbk9uclBQVW5sSERrejk0MnBUd2NCdEZ2VHBzc2pfQWpzeUNDcUd6QThKSGxzOEl0M2Vn?oc=5"
    }
   },
   {
@@ -140,6 +174,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-21T08:00:00Z",
+   "media": 2,
+   "judul": {
+    "id": "Baru Dua Bulan Meluncur, Ojol Listrik Green SM Bike Setop Operasi di Indonesia",
+    "en": "Baru Dua Bulan Meluncur, Ojol Listrik Green SM Bike Setop Operasi di Indonesia"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "VIVA.co.id",
+    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNZ1J0SzdjMUJwbnFST0xjWjhqZGhTYzdMZU1mV3JWLVBHSk4yV1AyVGJuVThRMUZ5blhxWEMxXzd1SE53NjZFeE45ZEwxbjFNU2RtaS1wMXV6RFlpY1Jrem5kTzk0SVFseUV4OURlRHdJblJycVNfd2phYm9Tbm9oYnpUdnFSOU1jU0JhZU9FMld6RlBMeTJBRHQzRDVYWkxKSzhOdWVBTGtiRUxFR2lhdnloZlBJUdIBuwFBVV95cUxOZmxoWVM2Zl9hR0FHY0RLcUdvb1gyNmVxd3BkRFpReUVucWFENmoyX1NpZkpDQktYOVFFRlpfRk5xTUVqWDZWS0FGNnVLTkdEdVl5TVNXOTE2UzBHdGxlNHBFUlhtQkp5S3lRc1Q3d1BybDd3S3NvT2Q0YXA5aUkwc2k4bWVDMXVubkcwSzZHNzdYU25LbTVCbF9VYi1oOXl2ZFlLamZ1MzhlbDF3M3djLThQR2RpY190MFVR?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-21T07:41:13Z",
    "media": 2,
    "judul": {
@@ -187,6 +238,57 @@
    "sumber": {
     "nama": "Antara News jatim",
     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOWVE3TEFLLTdfdzNoU2l0X28yTTFieDFpYVc3c1Vsb1hjWWVxdXVWbDNBOGx1UzNfNjAwbDRhMVNqNy03bVA3ZEVoX2FsaExzQm40ZnNEU1FtcHR0dk9VS21JZVdQel9ZeVAyZHVRUWtUUDUyeTNzT05ZNmZiU19TaXFmX2hjTVdLSzdSaW1veFVMdW1WOWNBTnJEbUVaaGs2ZXhUdnJaanlhb1V5MENxMjBQVWTSAbQBQVVfeXFMTllRN0xBSy03X3czaFNpdF9vMk0xYngxaWFXN3NVbG9YY1llcXV1VmwzQThsdVMzXzYwMGw0YTFTajctN21QN2RFaF9hbGhMc0JuNGZzRFNRbXB0dHZPVUttSWVXUHpfWXlQMmR1UVFrVFA1Mnkzc09OWTZmYlNfU2lxZl9oY01XS0s3Umltb3hVTHVtVjljQU5yRG1FWmhrNmV4VHZyWmp5YW9VeTBDcTIwUFVk?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-21T09:11:17Z",
+   "media": 1,
+   "judul": {
+    "id": "Saat Banyak Orang Bisa Memilih Pekerjaan, Ojol Disabilitas dan Janda Tetap Berjuang, Ini Respons Polres Solo",
+    "en": "Saat Banyak Orang Bisa Memilih Pekerjaan, Ojol Disabilitas dan Janda Tetap Berjuang, Ini Respons Polres Solo"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Radar Solo",
+    "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxOTUNXaXdrVlUyVXRacjl4N3FsTFpZSDNZejl5eGJYZl9FVDE4T3VrUnlfZEl5cGd6UE5FV0NfVkd1d09WTU03ZFdVYlo5VVFlck55SmZqaUh2Vm5JN0ppSnkwSndCWWsxSjVQUDJodUt2aFFtQV9WNkRvSHNWcVRCSEFEVUJVOERHY3FCa2VzeUVzd0dZa2J3MW9EaEN6YVEyakFlYXZiYUZtT0hTMWxyNjhabko5Z3RVelpuS0NfQU9fSmVyN0xwZFM1Uk92Z1hJeUVJVUhtTWlfbWRydzhXRnFiVG1VMDDSAewBQVVfeXFMTS1FRTBEUTV3OTVHU011U0lJZDB6QzJKZ2E1U0NXSmxQTEl0TjFnRmhsbTlxaExSb3lHV1gwVkRpeUdxaHRGekpnaVpvcnMtYU1qUDNRbDRPSk5iLXVrUTFUV0ZMZWdJT0ZpNVo3VWhTVDBUSTlJNDBYX1VhaF85VXIzQ1VqeXlzNVpKM3AzRlJ0XzFMS3htdGNieHhlSkpfYVVtT3hyX2UtamlUbU4tNlhWODJMNG8xRGQ5alJhYXVaNUVVNU1vVG1TcndkZ0toYTNvSHBpMjVIV0steXdFN0hzMzdJYmtuUUhBck0?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-21T09:09:25Z",
+   "media": 1,
+   "judul": {
+    "id": "Ojol Dikejar Matel Pilih Lapor ke Polsek Ciputat, Minta Tolong Mediasi",
+    "en": "Ojol Dikejar Matel Pilih Lapor ke Polsek Ciputat, Minta Tolong Mediasi"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "detikNews",
+    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQWWRxY0pXNzZVbm5BcUhVS0ZJS3JFc3N4a1ZHclFydnI0X0N2ZEhSNVZSTC1QRHllWVN0RFRCdEN4a21fY1d0bld4TUVHWkM2MXIxMHc4MTI2Ml9fSWRRdi1NSUxJX2VRZUcyNDFZNHRsUXJnRFhrTGVaUU52MXFSUkxVWTA0Z0VRTlZlT183dGN3bWk0cW5FU2lBYlc3SThnaUw5V2cxbmppTTIwOUHSAbMBQVVfeXFMT3ZKTGROeG1ua2pMdm1sdE9EdlFIOEhXeXdZX0NXN0hDLUk3LW1aWFBRY2hPcG43SEdoQnhCUHhybWc5U3lDMVdqMWc0TnA4TUV6b3lTMGZEcV9xbzg1TUdoa3ViczFOdnVPNUoxWUdUem1QU2ZKUHMwUVAtZF9CTGNiSGVqbzVlVDRvYXhjcUk4Z2w2elo5MV9TNEpOM0JETHBsLUZtM1FBUy16UFNyU3FkYm8?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-21T09:08:09Z",
+   "media": 1,
+   "judul": {
+    "id": "Bermula Duduk Mepet, Driver Ojol di Kendari Diduga Alami Pelecehan oleh Penumpang Remaja Lelaki",
+    "en": "Bermula Duduk Mepet, Driver Ojol di Kendari Diduga Alami Pelecehan oleh Penumpang Remaja Lelaki"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Tribunnewssultra.com",
+    "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNaV9IUGtKMTMtV2hKc3NKTWRzWnNPSXlBdEo2QThVcVRxT3pCUHJveld6NkNjUkN4MkxmSHRtSlZjelVGNEJsUWdwODRpaThFUkpDZ2NkQjBQNExZODV4cWVMNGl4XzI2QWlSdk1DUWZiSnJjTXMtSkhSMXRzQ3pueEtQaGtodVdiaktXc3NvT0RYeTM2S1JKbmg1NThVb1M5REJjOTBlZE1QUWVhbEFLRTFVQW45XzdKbkdUMkpKRGVUemxISE13UWt1bWQ3d3lHXzVkUg?oc=5"
    }
   },
   {
@@ -340,57 +442,6 @@
    "sumber": {
     "nama": "PELITA KARAWANG",
     "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxONUZVd1dGYUc3ampRM0hpcUQta2VrWWJJSEVCci1nY3VTNEt4S0dhRXZ0UUhCem9hQnc5bkozM2JVNnlhdzQxYjhURkFKMS12VEFQMzFSY0FIQU95SVZqQnZUYS1Vd0U0ZzV1WkZDLUJVWmF2R0laNGRTXzc0YmRCTw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-21T06:22:02Z",
-   "media": 1,
-   "judul": {
-    "id": "Daftar 8 Aplikasi Ojek Online yang Tutup di Indonesia",
-    "en": "Daftar 8 Aplikasi Ojek Online yang Tutup di Indonesia"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "CNN Indonesia",
-    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQTkNfa2c0V0xqNnNQR0lIdUMzTG9FbkZkVGUwX3hWaWRRQ25wWjA4UzJudXVHdXlvZzRBNkJ2aGRYUmp3aEdDY3ZoZlliZ0tOREE3YmdjMkFxSWx5SlZSZjFubV9jVDZadVZzNGQwcEk3MGhPeVZrWDZKWGFLXzZtb3RoRk4ydWtqSUJtMTl3cmRvTGFUWW5adXBfak05X1ltQnl4Q3ZEbXZzZnEwR29sUExwODZvQkXSAbwBQVVfeXFMUHh1bHNtVXlIQndKZDRodHRHWGJBdWZFb2hpRXZzRFJfU0Nna0xlTXB4VDBQVkZMWW1nLVJaUWtBSW84NzQ2NjhMR0RZTnI1ZlA5NjhrRk5vMllneno0dW04RDlXRXNMbmlYdnU1bVZqeU8yWGVwZmJXTG1CR0o4Z3dTNFVJNmswZmtXS19pV2pQZEtlNTd0MFRERWc2YWRQSE0xaGQtM2t2dzRYRS05QlBVaDdLUkx3MGp1OS0?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-21T06:18:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Wakapolda Metro Jaya Ingatkan Ojol Tidak Sembarangan Berhenti saat Menjemput Penumpang",
-    "en": "Wakapolda Metro Jaya Ingatkan Ojol Tidak Sembarangan Berhenti saat Menjemput Penumpang"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "TIMES Indonesia",
-    "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOeGljZzExQXpJLWhQN2JzTGMxV21JamtSV2pNUGZYWGNjWi1EOXc2X1JvRDluY2piWWw2YkhyV3FQT1pwRFJ3LTFMMVJqSkUyZFUwUGdGZk1VUEZpa1FRWVc0SnFhLUU5NzFRVEd6Y3pObkp4dE16ajVrOFBoN2VXaGpGbW41a3dncEp4Z0lFWmhidUZMYUM3V200RHVfM0s1VV9sOV9kNzlyUXpxLWp3Rm0xeVRRelBRdzAycG1paEF2UVloNGFRRThTTkdnOExUSGVBSDFn?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-21T06:01:18Z",
-   "media": 1,
-   "judul": {
-    "id": "Perkuat Kebersamaan, Polda Maluku Utara Ajak Mahasiswa hingga Ojol di Ternate Nonton Film Bareng",
-    "en": "Perkuat Kebersamaan, Polda Maluku Utara Ajak Mahasiswa hingga Ojol di Ternate Nonton Film Bareng"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Tribunternate.com",
-    "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQWXh6YTRVVk42eTNVYjdMMzk4aTNQWlVNM05ra0tYTnBiUEtCUWRuX0Z2RHVDTlJNQTZGNlhqaTM2NVlraHhkTmRGYm5rU3o2d1dDMVNsLUc2NVE5dmg5V0NQY09qV01wZDQ5OW1PbzV3NkR6a3ZzSjZMSEd5Qk0tUnIyV3JHNkxmRnRFdXhQel9BZmtXTE9qQWlJNmxzbkszLVRWRU9kcGlId2lYeW8zeGFrMnVBNm50TmNOb0ltUHFCU25rNXpHY3pBeUFTV2xucTlvR1hXN1kyeC1JOUJN?oc=5"
    }
   }
  ]
