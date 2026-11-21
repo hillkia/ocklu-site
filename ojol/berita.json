@@ -1,5 +1,5 @@
 {
- "w": "2026-11-21T06:48:45Z",
+ "w": "2026-11-21T07:49:34Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -187,6 +187,23 @@
    "sumber": {
     "nama": "Qoo Media",
     "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQMDVPTXF3YjF6eEZNNGhPUnBKUWVsYVVwdXY2bUVSQjdjYUpoWXB4ZDc0WTd3VS0ta0pVcU9zRFdaNnBmVTZtRzFRMlhuU2F0dG9UYmlFc2g4elEyVFF3Y1NhQVR5aXlLVVFuSzMxRWlRcE95dG84ZERNaHlyNnR1MWtEd05tRGJEZHA5RUVUNXl6NTJGVU9QNEhTTQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-21T07:32:03Z",
+   "media": 1,
+   "judul": {
+    "id": "Teknologi AI Perkuat Distribusi BBM hingga Wilayah 3T",
+    "en": "Teknologi AI Perkuat Distribusi BBM hingga Wilayah 3T"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "cwibc.co.id",
+    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1XVmpkRG5ab0FaWXVMQ19WTDI4TExaWk1XUjdHMVF4STZsSDJXRkJ1aGw1czdkLXQ5WWdTUG1ZUVhrbl9ISnRSVzN1eVZhUUFTeTI1d2tRUXJjS2F4MU9Ddkt5T0xPOG5UWXc?oc=5"
    }
   },
   {
@@ -425,23 +442,6 @@
    "sumber": {
     "nama": "patrolihukumindonesia.com",
     "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPX0dycUxXbC1qZU9pQmVWYnd4cXBzSEpzb3cyeG0wbE8tUlNqclVOZHlnaWplTzB6Rk9pN0FLMkt1LVJTTTAyaTNpR2lORUg0WkNvNXFNQ2ZMWHBjZ2lUYnZIOUhoMkN6TElZUVZzRHB5UF9ReS1wV0dteE1zSWJQVHdFdFQ1R25KendhTEQtWFRoSDJJUkhJ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-21T02:13:08Z",
-   "media": 1,
-   "judul": {
-    "id": "Bukan Sekadar Hujan Lebat, Ini Mekanisme Terjadinya Banjir Bandang dan Longsor di Aceh",
-    "en": "Bukan Sekadar Hujan Lebat, Ini Mekanisme Terjadinya Banjir Bandang dan Longsor di Aceh"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Jurnal Aceh",
-    "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOM2ljWUFKOEhQbExxS1BLRWJkWThLWlZ5alZzVU5YSzdmZk80dlZsS1JlaVN4eEdlLWFXYS1GcjFyeDJ1ZHZ1WDc5Y0ZMZVpodEFzeUZxVHdDVWJuWkhXSGZIM2FwQkptaHpjSk5LWEU1cG5SMkp6a2RwU29sSXpuaFJvODZJOTJ6TDZ1ellZTV9nUmZyUTNDUHkzbzRZNVBVdUE1OVAxQ0xvNHVNTmVNZDFvd3dMRzE2LWlEd25KRnRzMUtZb0VEdXhBNUI2ZGRpSmNBWTNTcFNTNXI5?oc=5"
    }
   }
  ]
