@@ -1,5 +1,5 @@
 {
- "w": "2026-11-21T15:02:03Z",
+ "w": "2026-11-21T16:07:22Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -276,6 +276,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-21T15:00:18Z",
+   "media": 1,
+   "judul": {
+    "id": "Wakapolda Metro Minta Ojol Cek Spion Sebelum Berhenti Angkut Penumpang",
+    "en": "Wakapolda Metro Minta Ojol Cek Spion Sebelum Berhenti Angkut Penumpang"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Tribunnews.com",
+    "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxObWxtaVRCREVFWTlScG91QVl4VVpRTk4yclNHQjNMbEV4bE9ZTVEweXdLc2RMT1BaZlFsT202d2h4WUhGNmFSWVpwdkFXU2ZPTjdZV0IydzNmaVZjYnVoWTVsUUZVdWNfekVZSC1yRHhVOGU3ekVCRzFkVTExOHh2UjhITXhaWHU5OFF6aFZ1czdFRUFuak9seTZMOGhGLTM0TkYtaDBlSjdfdUxkZXNwMTRldWZXaHl0ekE?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-21T08:00:00Z",
    "media": 2,
    "judul": {
@@ -289,6 +306,23 @@
    "sumber": {
     "nama": "VIVA.co.id",
     "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNZ1J0SzdjMUJwbnFST0xjWjhqZGhTYzdMZU1mV3JWLVBHSk4yV1AyVGJuVThRMUZ5blhxWEMxXzd1SE53NjZFeE45ZEwxbjFNU2RtaS1wMXV6RFlpY1Jrem5kTzk0SVFseUV4OURlRHdJblJycVNfd2phYm9Tbm9oYnpUdnFSOU1jU0JhZU9FMld6RlBMeTJBRHQzRDVYWkxKSzhOdWVBTGtiRUxFR2lhdnloZlBJUdIBuwFBVV95cUxOZmxoWVM2Zl9hR0FHY0RLcUdvb1gyNmVxd3BkRFpReUVucWFENmoyX1NpZkpDQktYOVFFRlpfRk5xTUVqWDZWS0FGNnVLTkdEdVl5TVNXOTE2UzBHdGxlNHBFUlhtQkp5S3lRc1Q3d1BybDd3S3NvT2Q0YXA5aUkwc2k4bWVDMXVubkcwSzZHNzdYU25LbTVCbF9VYi1oOXl2ZFlLamZ1MzhlbDF3M3djLThQR2RpY190MFVR?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-21T14:00:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Gelar Kegiatan 'Sabtu Bahagia', Polda Metro Jaya Edukasi Driver Ojol",
+    "en": "Gelar Kegiatan 'Sabtu Bahagia', Polda Metro Jaya Edukasi Driver Ojol"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "tvOneNews",
+    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPS3hoNWcwRGQtdVd4MGxveHVpVW5PeWMxWWMweV91VEhZa0xhWWFmQjF2UXZaRnFrNmd2R3M4UERKM1g1WEI4VVhwa1NBcUlJdHVQRFlOVzZuUEdueTBRdkZSenotcnY5WUx3YzJXSllQMEFMYkI3Zll4YnJXbng0X0RrU3l4bDlEZDBlc1hVTGlmcnpSc2pnLWZFTlV2WDM2Z1RQY3l1MG1vTzR5Nl9BSExpZHTSAboBQVVfeXFMUFdDWUc3ZVNYQjhRdkRYMXZmX1VKa3c0VnRwYVpfS0RRSFpKMTVaNWgzWnByV2ZfY1M1ZnBfLXAwS0tWSmNkUVZhTXRwRjZ4ZUFUbHJ4VTUybFc4R19uU3dPS2NqUVRlTnhuZDFXdEVXR0pNLTFBOHNVRVFCaGFGSnZWRGowZG1xaUtvYTNMOTFqdm51el94QXdsTnNPeld2dHBuN3N3SW9RbFloNkV6Sm8xVFNvS0draGZB?oc=5"
    }
   },
   {
@@ -344,6 +378,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-21T13:33:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Indonesia & Uni Eropa Teken IEU-CEPA, Tarif Bea Masuk 0% di Depan Mata",
+    "en": "Indonesia & Uni Eropa Teken IEU-CEPA, Tarif Bea Masuk 0% di Depan Mata"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "detikFinance",
+    "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOZ3BxanN4SHlmZkNHb3BVWWxUOFZtTWRQTDQ1UTdycy1oV29aSUlIUjBVbjhJUjhmVnlnUkZZYlRuNU1ISU1VbGNoOUdYQWpjcjVrRDJvVGxOMTB5RFVJbHRqV1dmYVFNdXE4R0VCcVVRMXJES29SbnpHOXBXZWRyVnhkXy02ZDBZb3IzT0lUN3RmLWlQYUV2SXFLVE43MnZfUUxYekQwMTJQeWJuWGlhb2N0QUI0V1doWURQYlhMX1ozQdIBxwFBVV95cUxNNklqTHJKbTFBY1dHN3FPUEt2OTV4eC1vRE5WQ2h2VHpmOHRTd3RKV0NqSWpxazlUcmNBX1pzbU5vMllqV0ZYX3V1aXlvVld4N19vLUdJbkZvTjdYd1Z0Z2NUS19YVU9vN0NhTmhkX2FxTUtRT1otaThmeHNMY0d2RGRSVDVEZlRFTXVGTTVuWkZoWFVxeXdIVGQwRE0wYWZBOVBac0xjdkR5RXVjajItVklPd0ltUUtseFQ1bk94c252ZUNWalhB?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-21T13:24:41Z",
    "media": 1,
    "judul": {
@@ -374,74 +425,6 @@
    "sumber": {
     "nama": "pantau.com",
     "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOLVlDOFlGVVVndUlEcWZGeGlqNF80aHBfUzNaQTRGQkllM21sZmp4Q05mQ0FFcWJOTDN6amFuY0ZjdU1pTG1tU2tVS0VnUjJCVzg0LWN3Y0NjVGY0VTJINE5DTU1pQkR2azhTalpCSHVOVGhTMmFCSzI4b1Z4OVN5ZVNVeWFtQ2tqYW80NU43YVBiRWdhT2FEem5IUmpLeE42R2hzYjNRVW1BeVJ1ZWdoMzlNWGNvRFpsanVz?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-21T13:11:17Z",
-   "media": 1,
-   "judul": {
-    "id": "Supermoon 24 November Bulan Tampak Lebih Besar, Waspada Banjir Pesisir",
-    "en": "Supermoon 24 November Bulan Tampak Lebih Besar, Waspada Banjir Pesisir"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Darilaut.id",
-    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPS3NuaGNabVJPNWhYdzY4cGl4WHUzVnJQMXRNR0wwSF9PaDBBaC1WYndRS0M0TnBfZmNIMVNWSnlSOTVYMlFKYzBpb3ZDYmdGdVo1MER3ZXpPemJ1UjYySUhZTTJEdERZMC1wSXVZMVNNNGFLaVF0TVZ5R1F1eFIxQm92VjlQc2RTV21yWnJPb2dDei05a2l2d1o3Y3TSAaIBQVVfeXFMTWxZXzBJbWtLMXZNMzJaejNuaHE2RUtkSmpwbF9Dd1FJa0JTYzZnSTNFWkFQYXBWMXEwcVBUVm9oRzVQLVY4MFJnZGNFdHVVMEFUM1dWZHBPNVpCa0dqMURPb0V0T1VWTkgtSjhDQndndFk2eTJzOFhCUjBsRUNiSVdnZWY4NEZ4cE54YmMzMHVUQWFlSF91SnpRdjI3WFA3UExB?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-21T06:58:00Z",
-   "media": 2,
-   "judul": {
-    "id": "Polisi Ingatkan Pengemudi Ojol Jangan Asal Berhenti Saat Jemput Penumpang",
-    "en": "Polisi Ingatkan Pengemudi Ojol Jangan Asal Berhenti Saat Jemput Penumpang"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Todaynews.id",
-    "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQNGJKZkdvMWtzNWM0NkVqbG5xM1BkLVllYmVDLU1nVFVOZDVCeHFQWDNmQTBxWWlDRmQ2dTU2WHc4ZjR3M0RwN2U1Y25TZHJ2SUpWWkRkaWxDT0E3d3ZxUlktSkE2SGN2NUxkbVVLR252bGtjV1B5RzJPWnBlX3Z1ZnhVUGotcWc?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-21T12:33:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Dirlantas Polda Sumbar Kombes Pol. Kukuh Priyo Taruno, Bersama PJU Silaturahmi dengan Komunitas Ojol dan Tuna Rungu",
-    "en": "Dirlantas Polda Sumbar Kombes Pol. Kukuh Priyo Taruno, Bersama PJU Silaturahmi dengan Komunitas Ojol dan Tuna Rungu"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "MitraRiau.com",
-    "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNVGp1QjF0NzRRTUc3aGprby1PVlpYR0x5UW5ZRHEtOHZudWp0bTlVcjU5ZTJHMmhaQ1Y3YnNRLXA1alp5eHdKSUJDNFVqa2VrVWdWV2dhZzZ3YjJTdEJxc3A4WGFybTFWaEFfWXhyV0pCX2RvNkR6VVVzcHlLdTU4V0tTRjhHeE1UNjlIWTFBX2ExOWRnWXdvQWdNWWZFLVVYQlJoTW1WX180NFRUSFV0Y2RaUHNMZGFvaHpPaUxqMmx1LWxERlNER3pJTWpXMHJKVnNXeUQtUXJONlFPLW5qTzFaZw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-21T12:32:57Z",
-   "media": 1,
-   "judul": {
-    "id": "Tak Mau Ojol Lama Menunggu di Bengkel, Astra Motor Teuku Umar Siapkan Jalur Servis Khusus",
-    "en": "Tak Mau Ojol Lama Menunggu di Bengkel, Astra Motor Teuku Umar Siapkan Jalur Servis Khusus"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "UPDATEBALI.com",
-    "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOUFNpel94SFJBalBZLU03dUF3YXhoNmdNT2VEZFFKWGZLQl9ib0taandsQkwwTFZqcHJONmlYcGptSjJLVVBKeC1FSWdYYVBpZXJlbXlaWUN6dXJpTjRZQ1hUTUJxd3N1LVB3YXBDQUhZXzlxcW9qdHBIcU1pcnlqTUlGRDJFNEpubHM0M0MwR2g1U19pZ1d2aEI3cGVhQmprRjlnaEMwRS1yNkZvS1RTQ0RR?oc=5"
    }
   }
  ]
