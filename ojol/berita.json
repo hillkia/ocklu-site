@@ -1,5 +1,5 @@
 {
- "w": "2026-11-22T16:17:15Z",
+ "w": "2026-11-22T18:19:08Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -85,6 +85,23 @@
    "sumber": {
     "nama": "NNC Netralnews",
     "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPdnVKMVBqMUh0TjQxNzhjUmpUbDZGUkF1bU5zbjZMWUhXSk5tV0lZT1R6dHczMUg2ZTdwem8wSkphbWZOSG9PVEFkSFJONjJjdlpzNklTQ2pmOHYtbkluREtQUWRLNjc4d2tQWGk2OVpvZThrNWREdS1TcmM2SVpXTTNhc2liZERabnRObVdFRUQyNzFwaHlDZWs3T2k3WmhjdmtmWTFUX3pJVVdfMUxtWDdTOV9VQTJWa2psOW5TQQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-22T14:53:22Z",
+   "media": 1,
+   "judul": {
+    "id": "Polres Inhu Amankan 5 Orang dalam Kasus Dugaan Penyelewengan BBM Subsidi di Riau",
+    "en": "Polres Inhu Amankan 5 Orang dalam Kasus Dugaan Penyelewengan BBM Subsidi di Riau"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Salingka Media",
+    "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOT09VU25yMlVaMFJjOUdzNzQzZWlOTDNkSVBXYXBVTmxUNUpkNFBIZTVPX3lFUDZjWjZ5THJfRF9nQWZxbHdIaWRxVXNVTERFamlDSHAySTZCUUdnV21vQWp5THlnV3NvWUcyM3BWOGhyQmRCZFVjenNmMmcta1paVmxpQi0zdFY3ZnB6dWNtYnF6ZkZ2aE9KYUlYZXMwTlRhSkUtMTJKLUdjYUU?oc=5"
    }
   },
   {
@@ -493,23 +510,6 @@
    "sumber": {
     "nama": "Ekorantt.com",
     "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNb2lhczRUYVBHYzc4cHgtLW1ycFUwalFCVkwzbWZndEgwMjUwVDVjNU1tZFg0dkVWRi1XNUp3Q1Y2U0p5cF9OMXhudVE2UDVxaDNWRC1ONWdiM2p5VS1CVFFHV09OMmhvamQ2aWFlSE5MWnpmOHgxN09HS2hFbmVMZ3FBanBSSV9DUGIzZWxxMVhVdw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-22T03:40:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Cuma 2 Bulan, Green SM Bike Stop Operasional di Indonesia",
-    "en": "Cuma 2 Bulan, Green SM Bike Stop Operasional di Indonesia"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Medcom.id",
-    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQR0duLU5YRzhEWWYxNnQyeVpPb3FzclhId2JkNTRlTHRoS2gxc2FJZzBUUlVKUXl3N2k5VkM3TzFKaU5VZmc5TkFKV3VrOTAwcm9PTVM2dk1qcG9aOHJnQXZHOGJRdzJJbEh6NnRqdUtmTFJ4OWhPSE1MU0hta2YtWG4xcm5LbTVnWmRRNjEtMEhnTGw2NFQ5UktTeFE1V0VUN1Yxcw?oc=5"
    }
   }
  ]
