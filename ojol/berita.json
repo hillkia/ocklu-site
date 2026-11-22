@@ -1,5 +1,5 @@
 {
- "w": "2026-11-22T10:12:44Z",
+ "w": "2026-11-22T12:14:37Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -136,6 +136,40 @@
    "sumber": {
     "nama": "baliportalnews",
     "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPTTdQak9Sd3gwR1dXX0xRRGlPRldxRUNwZC1DV2xyNXNib3ZSX0tTQUNIenZMUzhRbVZMTC1vNGhkZ0hSNFFvakYyMzg5aFhKcVQ4UVc2bl9Ed2g5TmhZQzYxQlhxMjlxUmJkMlpISnl4MzJCZjNISjJNNFlfb1Z6X1VTN3k2YWZET1EwNzh3aGMyUnhuZlE1OXR3eDNEU2tEQ1Nub21rX3hpUQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-21T12:00:00Z",
+   "media": 2,
+   "judul": {
+    "id": "BPH Migas Manfaatkan AI untuk Awasi Stok dan Distribusi BBM hingga Wilayah 3T",
+    "en": "BPH Migas Manfaatkan AI untuk Awasi Stok dan Distribusi BBM hingga Wilayah 3T"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Kompas.com",
+    "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOSzQwckNPMWtXZnJxZ1JwN2kwQW90VWI4ekE1eDFUUHhPdU5iUV80MWpXWEtCWm93dHpiNkR2ZFg4b09wXy0tcWlaaDZxOGhIUnNmNklFajJ6NjRaZHkxaFlObDFxc1BLaGo2RFRXMGh1RGFYZWZUQWhsdWh6cHM4TlBtVEViTkFMT2JRbnZqaC1EUVFWX29iNjN2ZHkzMmpEUjU4TUtsdEM5LVc3UVpBXzljUHRCRFdxZGRFd2t0RmFjWkstel9n?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-21T11:55:11Z",
+   "media": 2,
+   "judul": {
+    "id": "Pernah Beroperasi di Indonesia, Ini Aplikasi Ojol yang Kini Tutup",
+    "en": "Pernah Beroperasi di Indonesia, Ini Aplikasi Ojol yang Kini Tutup"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Kalangan Jambi",
+    "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQYVg0RmJnSkRfNjd5X1hFNWd5ODZyamZrMnFTOHN3ZnlZZkVJVVBYOFEyc3dXX0RtVUVqaDFrX3ZUM2pIUE45QnlKVmYzWjM5UFNyR0cwZzljVDJjclhPNGpYN1pEUFFVclZHNWIzLU5PeUg0U0U1YnduR0NMSUc1V1Q1TmVSY0J1WEs2Z20wOXY1cWZGVG1FTkp2NkUya1NvdGlxaWs3NWtYSkFXUENQOWQyM2tYWl83Y1NYZ2w1dHFZVmJpb1UySGE4cw?oc=5"
    }
   }
  ]
