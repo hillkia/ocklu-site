@@ -1,5 +1,5 @@
 {
- "w": "2026-11-23T07:50:29Z",
+ "w": "2026-11-23T07:56:08Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -51,6 +51,23 @@
    "sumber": {
     "nama": "kabarnusa.com",
     "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPeEtPYWE2V2M1LTFoY2lnVU5yM2tKcEVWVllUM2NEZnZhdjc2RXZvNDFERFpPQ2loLXNYakYwWmpUU1ZrVnl1Wk1qV0dmVHVvMzZab0lrNXBldmhoaktwSGp0Q3Z3Rl80NXduZXoxNnZPX0pkaGlLcFBlWGE3eEE0RFNvaE1ydnFoQXBFWVRTb3NUdXJRMnJPbXVYdEtKYkZBUWlISjA5VldYVkVVS3c?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-23T04:50:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Polres Bogor Hadirkan Situs AI Bantu Wisatawan Pantau Arus Puncak dan Hindari Macet",
+    "en": "Polres Bogor Hadirkan Situs AI Bantu Wisatawan Pantau Arus Puncak dan Hindari Macet"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Tribratanews",
+    "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNd0JYM25XVENlM19DbFVySXJSOG5Pb2tmYlBnelFCWUFRTzB6UVNxODZ2TU1kNW9ON1NCMkNSSDNSQVBFR0NBZmI5cVo4Q3pMMU9YOG9LOVZMWXlTMmdTdUVRc095TjYwck5ycDVjTV9FRnl5YVlpMElMeV9iQnpXWGpJdDR2LXlLQlZGNXJrTmJ0WXVPZkw1XzFTYTlFNFp5YWlPanVPWERIdXVsSGRsc0N2WG5GY01OazFfSFgwMnFkQQ?oc=5"
    }
   },
   {
@@ -340,40 +357,6 @@
    "sumber": {
     "nama": "Wolipop",
     "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNdm5SREtiWDI3NmVWMGRGUVV0b3hGSTJUcFFya3JJWVRRZjJsT1JRcHVBTTVEZ0hoVjEtSEN0eExFb3k3VEpULU5udkhGMkkycEFKUUNCUW8xckNtMFZIYUR5NDdMM0tGWDFZdFAxTFlOaTRTcW9XTV9QWV9NMlEwckdSQ0Y4MnBweTZRVmc3WWJ4MG8xRDgycUdteGtlZ1RuLWphVXVlUFhieFEwRmZmbU9IeDVyaF96WE5KWtIBwgFBVV95cUxPWUhza1U2SHFDZE5vNE5HcUxteVpVWU8xWWdFVUwya25jU2YxZzdqQmZURGxZQldmVU1DZFRiUVJNY2RETnhjTGlLQ2xmVGxVVlpTSENTVG9nQVRudGFibE82bWFMMUJFajhhOWxUWDN3VGFZcDVkM2hxN1BzLXBWT29pNEE5enZkWmxhRXFlcDh4b3daQXFzN2lqU0RFbWlmZjdqUURlYnJaMXkyQ3VDT1ZtNzNkRVJuS3JoOGtwY2YyQQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-22T09:05:42Z",
-   "media": 1,
-   "judul": {
-    "id": "8 Rekomendasi Motor yang Cocok Untuk Driver Ojol, Pastinya Irit dan Bikin Nyaman Penumpang",
-    "en": "8 Rekomendasi Motor yang Cocok Untuk Driver Ojol, Pastinya Irit dan Bikin Nyaman Penumpang"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Mojok.co",
-    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE13VlJoQXExT2RHRXB4U2daUjFOMEt3WHRCM3lHcEFJN0plT2VLbFYyV0ZTcGduTjlnVjNOc2pZVE5wNWtBaUc1TWFQbHByUnlhNTRqY0hua3p5eUM2MGpmTA?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-22T09:00:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Gempa, Banjir, hingga Longsor Melanda Indonesia, Ini 3 Doa saat Menghadapi Musibah dan Kesulitan",
-    "en": "Gempa, Banjir, hingga Longsor Melanda Indonesia, Ini 3 Doa saat Menghadapi Musibah dan Kesulitan"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Kabar Tasikmalaya",
-    "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxOblZlNGZ5dzI0STdFbm5KN1I0THF0TXJZbmZaOTdnTzNWMkpyN1g3akdlZU1pa1ZKcm9KUDRpdk1uV29UeEh2XzMtTzhzS0hxTkJWM3ZDenE0UzN4cDR2ZjNndk5uT0RnMmFYdVYwT3UtczlJYzhjekxubHFvM3VHWFJEOFQ5S1QtQjAyQTdLa1NEUGhENS1GWjRFRS1sNHlQeWJNcEhUVkQ3WGFnSGtiMG05TXRHWkVfb25DWGdoazFiakxmMEZ3MUEwX0lMTWlQMkdsY3c0bVU0bzdrdEFhR3ctcXVrbkNrRFNDS0JQY3lLN3M?oc=5"
    }
   }
  ]
