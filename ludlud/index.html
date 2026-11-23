@@ -116,7 +116,7 @@ body.kokpit #obrol{bottom:80px}
   <div id="obrolIsi"><div class="kecil">Ketik perintah biasa, misalnya "bikin reel gambar 20 detik soal Laporan Saran Iklan", "#3 udah tayang belum?", atau "captionnya #3 pendekin".</div></div>
   <form id="obrolForm"><textarea id="obrolTeks" placeholder="Tulis ke asisten…" aria-label="Pesan untuk asisten"></textarea><button class="utama" type="submit">Kirim</button></form>
 </section>
-<script src="kota.js?v=20nov2"></script><script src="kotavideo.js?v=20nov3"></script>
+<script src="kota.js?v=20nov2"></script><script src="kotavideo.js?v=20nov4"></script>
 <script>
 var API="https://njghzieuuopukuagrswu.supabase.co/functions/v1/ludlud",TT="https://njghzieuuopukuagrswu.supabase.co/functions/v1/tertau",PK="",DATA=[],JAM=null;
 try{PK=localStorage.getItem("pj_kunci")||""}catch(_){}
@@ -232,7 +232,7 @@ $("latar").addEventListener("change",function(){$("latarBerkas").hidden=this.val
 // ---- Kota isometrik 12 kavling (kota.js dari Fable). Rumah hanya di lahan kosong; agen boleh usul, owner yang bangun/bongkar.
 var SB=null,RUMAH=[],KAV=12,PLATFORM_JENIS=["youtube","instagram","tiktok","facebook","threads","x","shopee","tokopedia","lazada","linkedin","pinterest"];
 var PILIH_RUMAH=[["tiktok","TikTok"],["facebook","Facebook"],["threads","Threads"],["x","X"],["shopee","Shopee"],["tokopedia","Tokopedia"],["lazada","Lazada"],
-  ["linkedin","LinkedIn"],["pinterest","Pinterest"],["gudang","Gudang"],["kantor","Kantor"],["toko","Toko"],["lain","Lainnya…"]];
+  ["linkedin","LinkedIn"],["pinterest","Pinterest"],["gudang","Gudang"],["kantor","Kantor"],["toko","Toko"],["clipper","✂️ Clipper"],["hook","🪝 Judul & Hook"],["caption","💬 Caption"],["lain","Lainnya…"]];
 function muatRumah(){api("rumah").then(function(d){if(d.galat)return;RUMAH=d.rumah||[];KAV=d.kavling||12;gambarKota()})}
 function lahanPertama(){for(var i=1;i<=KAV;i++)if(!RUMAH.some(function(r){return r.kavling===i}))return i;return 0}
 function rumahDi(no){return RUMAH.filter(function(r){return r.kavling===no})[0]}
@@ -272,14 +272,37 @@ function panelLahan(no){panel('<b>🌱 Kavling '+no+' · lahan kosong</b><div cl
 function panelRumah(no){var r=rumahDi(no);if(!r)return panelLahan(no);var kd=keadaan(r),h='<b>Kavling '+no+' · '+esc(r.nama)+'</b> ';
   if(kd==="usul"){h+='<div>Diusulkan <b>'+esc(r.oleh)+'</b>'+(r.alasan?': '+esc(r.alasan):'')+'</div><div class="bar"><button class="utama" data-r="setujui" data-no="'+no+'">🏗 Bangun</button><button data-r="bongkar" data-no="'+no+'">Tolak usulan</button> <small id="rjPesan"></small></div>';return panel(h)}
   if(r.jenis==="studio"){$("formPerintah").scrollIntoView({behavior:"smooth"});$("perintah").focus();return}
+  if(r.jenis==="clipper"||r.jenis==="hook"||r.jenis==="caption")return panelTren(no,r);
   if(r.jenis==="youtube"||r.jenis==="instagram")h+='<div>'+(kd==="buka"?'✅ Akun tersambung. Posting otomatis jalan setelah lu Setujui.':'🏗 Masih dibangun: akun belum disambung.')+'</div><div class="bar"><button class="utama" data-r="sambungan">Atur sambungan</button>';
   else if(r.jenis==="mesin")h+='<div>Pekerja di laptop yang bikin video (cek tiap 5 menit, laptop harus nyala).</div><div class="bar">';
   else if(kd==="dibangun")h+='<div>🏗 Rumah sudah berdiri, sambungan akun '+esc(r.nama)+' nyusul (butuh aplikasi developer/akun penjual dari owner).</div><div class="bar">';
   else h+='<div>Rumah '+esc(r.nama)+' siap dipakai.</div><div class="bar">';
   if(r.jenis!=="studio"&&r.jenis!=="mesin")h+='<button data-r="bongkar" data-no="'+no+'">🔨 Bongkar</button>';
   panel(h+' <small id="rjPesan"></small></div>')}
+var TREN=[],LBL={boleh:"✅ boleh dipakai",buat_sendiri:"✍️ buat versi sendiri",jangan:"⛔ jangan"};
+function panelTren(no,r){var j=r.jenis;panel('<b>Kavling '+no+' · '+esc(r.nama)+'</b><div class="kecil redup">'+(j==="clipper"?"Cari video yang lagi rame + yang sah dipakai ulang (CC BY, milik lu, domain publik, program clipping resmi).":"Usulan "+(j==="hook"?"judul & hook":"caption")+" versi buatan sendiri dari video tren.")+' Mesin ini sengaja tidak punya fitur ngakalin deteksi hak cipta: risikonya strike/banned.</div>'
+  +'<div class="bar"><input id="trKata" placeholder="kata kunci CC (opsional), mis. masak, motivasi" style="flex:1"><button class="utama" data-r="trCari">🔎 Cari tren YouTube</button></div>'
+  +'<div class="bar"><input id="trUrl" placeholder="tempel link YouTube/TikTok/IG" style="flex:1"><select id="trLis"><option value="">lisensi: cek otomatis</option><option value="milik_sendiri">konten gw sendiri</option><option value="domain_publik">domain publik</option><option value="program_clipping">program clipping resmi</option></select><button data-r="trTempel">Tempel</button></div>'
+  +'<small id="rjPesan"></small><div id="trDaftar" class="kecil redup">memuat…</div>');muatTren()}
+function muatTren(){api("tren").then(function(d){var L=$("trDaftar");if(!L)return;if(d.galat){L.textContent=d.galat;return}TREN=d.isi||[];
+  if(!TREN.length){L.textContent="Belum ada tren. Tekan Cari tren YouTube atau tempel link.";return}
+  L.className="";L.innerHTML=TREN.map(function(x){var u=x.usulan||{};return'<div class="kartu" style="margin:6px 0"><b>'+LBL[x.status_pakai]+'</b> · '+esc(x.platform)+(x.tayang?' · '+Number(x.tayang).toLocaleString("id-ID")+' tayang':'')
+    +'<div><a href="'+esc(x.url)+'" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">'+esc(x.judul||x.url)+'</a>'+(x.kanal?' <span class="redup">— '+esc(x.kanal)+'</span>':'')+'</div><div class="kecil redup">'+esc(x.alasan||"")+'</div>'
+    +(u.hook?'<div class="kecil"><b>Hook:</b> '+esc(u.hook)+'<br><b>Judul:</b> '+esc(u.judul)+'<br><b>Caption:</b> '+esc(u.caption)+' '+esc(u.hashtag||"")+'<br><b>Sudut:</b> '+esc(u.sudut)+'<details><summary>Naskah</summary><pre style="white-space:pre-wrap">'+esc(u.naskah)+'</pre></details></div>':'')
+    +'<div class="bar"><button data-r="trUsul" data-id="'+x.id+'">'+(u.hook?"Usulan baru":"✍️ Usulkan versi sendiri")+'</button><button class="utama" data-r="trTugas" data-id="'+x.id+'">Jadikan tugas</button><button data-r="trHapus" data-id="'+x.id+'">✕</button></div></div>'}).join("")})}
+function perintahTren(x){var u=x.usulan||{},s;
+  if(x.status_pakai==="boleh")s="Klip dari video yang sah dipakai ulang ("+x.alasan+"): "+x.url+". Rekaman/file sumber gw unggah sendiri. Potong bagian paling menarik jadi reel 30-60 detik."+(x.lisensi==="creativeCommon"?" Caption WAJIB: Sumber: "+(x.kanal||"")+" ("+x.url+"), CC BY.":"");
+  else s="Buat versi SENDIRI terinspirasi tren "+x.url+" (jangan pakai cuplikan/suara/musik aslinya). Rekaman gw sendiri.";
+  if(u.hook)s+="\nHook: "+u.hook+"\nJudul: "+u.judul+"\nCaption: "+u.caption+" "+(u.hashtag||"")+"\nSudut: "+u.sudut+"\nNaskah:\n"+u.naskah;return s}
 $("rumahPanel").addEventListener("click",function(e){var t=e.target.closest("[data-r]");if(!t)return;var a=t.dataset.r,no=+t.dataset.no,ps=$("rjPesan"),jalan;
   if(a==="tutup"){$("rumahPanel").hidden=true;return}
+  if(/^tr/.test(a)){var x=TREN.filter(function(y){return y.id===+t.dataset.id})[0];
+    if(a==="trCari"){ps.textContent="mencari… (butuh YouTube tersambung)";jalan=api("tren_cari",{kata:$("trKata").value.trim()})}
+    else if(a==="trTempel"){ps.textContent="mengecek link…";jalan=api("tren_tempel",{url:$("trUrl").value.trim(),lisensi:$("trLis").value})}
+    else if(a==="trUsul"){ps.textContent="otak gratis lagi nulis…";jalan=api("tren_usul",{id:x.id})}
+    else if(a==="trHapus"){if(!confirm("Hapus tren ini dari daftar?"))return;jalan=api("tren_hapus",{id:x.id})}
+    else if(a==="trTugas"){$("perintah").value=perintahTren(x);var rb=document.querySelector('input[name=bahan][value=rekaman]');if(rb)rb.checked=true;$("rumahPanel").hidden=true;$("formPerintah").scrollIntoView({behavior:"smooth"});$("perintah").focus();return}
+    t.disabled=true;jalan.then(function(d){t.disabled=false;ps.textContent=d.galat||(d.jumlah!=null?d.jumlah+" video masuk ("+d.cc+" CC)":"beres");muatTren()});return}
   if(a==="sambungan"){$("rumahPanel").hidden=true;$("sambungan").open=true;$("sambungan").scrollIntoView({behavior:"smooth"});return}
   if(a==="bongkar"){var r=rumahDi(no);if(!confirm((r&&r.keadaan==="usul"?"Tolak usulan ":"Bongkar rumah ")+(r?r.nama:"")+"? Lahannya jadi kosong lagi."))return;jalan=api("bongkar",{kavling:no})}
   else if(a==="setujui")jalan=api("bangun",{kavling:no});
