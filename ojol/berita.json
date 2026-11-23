@@ -1,5 +1,5 @@
 {
- "w": "2026-11-23T13:22:44Z",
+ "w": "2026-11-23T13:58:49Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -38,6 +38,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-23T13:38:00Z",
+   "media": 4,
+   "judul": {
+    "id": "Tatap Muka dengan Ojol Disabilitas, Kapolda Sumut Serap Keluhan dan Beri Dukungan",
+    "en": "Tatap Muka dengan Ojol Disabilitas, Kapolda Sumut Serap Keluhan dan Beri Dukungan"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Mitra Mabes News",
+    "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOWkx1dHA5cF9uSzJkYzVseTQxcUxlejAwVDRJc1JGNXYyMm5DVGJNdUFwOGw5cHB1RmdBcmpCdTBaWXBWUkVESE5zVlpNelpLb3B2azU4djhwN2ZMVUdJOUIyOXUxeEQwWEF1QTZXTWZHZnlMM3NWQWdjQktqMmI3SXFPNA?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-23T11:49:35Z",
    "media": 3,
    "judul": {
@@ -51,23 +68,6 @@
    "sumber": {
     "nama": "lampuhijau.co.id",
     "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOYXRSUUhjdEw4NjFlcUQ5YXlsX0UyWFpCclVsaVh3MEFNeEtwZkh4SmE3cjUzeUpOUldmUE1VQ0xmU00yclB2Vml3a08zUnpiNHBkUHNFc2ZqbU5RMXlocjBoNjRmWDdvVHVsTTRkLVo3WGtwMlN4NXVHSVczSEwwaF9ZLS1odjRybTRSNEhMVU5nRHU5eGh2NjJBdjBrNkczY2hRdGlCTTJiWnd2TExpS2VjOFRJZWlKaHpDeXNIWG1jTFR3TUxjYWZlTGU2RzJRUzdUVQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-23T10:55:00Z",
-   "media": 3,
-   "judul": {
-    "id": "Tatap Muka dengan Ojol Disabilitas, Kapolda Sumut Serap Keluhan dan Beri Dukungan",
-    "en": "Tatap Muka dengan Ojol Disabilitas, Kapolda Sumut Serap Keluhan dan Beri Dukungan"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Nadaviral.com",
-    "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPMlVlNlBmQWlycWVUZW1pU1NudjV6clZTN082TFV5dGRUelJYSXVkd3B0RjMzT3RSckxaZXdfazRibk1oMm1sMGtleW01SWQ4RlQzRWExNDBTMEJkUFdzR3lueVhDVFpDUC1pSG0tSk5vdGxEbktQckZfOFNDQ0JpdmZjTEN1RldrR1dRbFdqMUFjeDFqUVZvVmdIN043d2hCb3BIUURR?oc=5"
    }
   },
   {
@@ -119,6 +119,91 @@
    "sumber": {
     "nama": "kontan.co.id",
     "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQVGVoekNxTDIxLWd3VS1WVGVObDg0dXRGY0tpYTFUZ3JzNXY0OGFKazczOHRCa01hRzJ1cGhLMVU4V0U0ekJPUDlrVVltdlJLclZHWXhlcHl0aUo2RjRSa3dzYXY1RG9jc08tUTMwUHoweFFWaTNDSEpwdWIzb0lXcHNzNTV6dmxpOWNXU1JmbG1WM2fSAYwBQVVfeXFMTWR0YUU3X1l2cXJWMVhTdkJFZlgxQzdKdEFZX2Z1VnRrSTlZTURmUjgyd21wajVoX3FmNWtnZ3BFVDdYY0xqemdVTGNLMFhEUXJ4bXVrV3NDdHR6Qy03WnZIUXFfV3Z6TVdrWkppWGg1a0EzMWhNMTZxUVJwdVB2a0tNeGRXYTdySjJJV0s?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-23T13:28:31Z",
+   "media": 1,
+   "judul": {
+    "id": "Sejumlah Driver Ojol di Kota Pekanbaru Pilih AHY Jadi Wakil Presiden",
+    "en": "Sejumlah Driver Ojol di Kota Pekanbaru Pilih AHY Jadi Wakil Presiden"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Tribunpekanbaru.com",
+    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOMjVKREt6cHRGNUwwc3NtbHVBMTJlWm9SYmQ4QTR1QUxwYmFTQlNLODNPYTFsTDVCYmVsWTJuS0hQc1laWS1peHNSTUxtS1p0WGRGdy12Yjk2Nm1EaHFlZXh0b0g0Qzh2TjlSZkViRDV0Smh2YmF1aU1YamU1Mjc5b1dwaEt3dzJOZ0dFXzJWY0FzZzNQOTA2VVFuWTVhMVBEcG1DNFFEV2ZtcmpNTHBQMWJzRkhzMF9TVU4tQQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-23T13:19:34Z",
+   "media": 1,
+   "judul": {
+    "id": "Banjir Rendam Bagansiapiapi Tiga Pekan dan Picu Pengungsian",
+    "en": "Banjir Rendam Bagansiapiapi Tiga Pekan dan Picu Pengungsian"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Demokratis.co.id",
+    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1fdWRUVGFaUE9vd1owaVNFa0NPalRZUTNLZmV6NnM4YlZnRTE3VEJpemlJaVFNZllZOXE4eWdxd0dBamc1UWlmOFJlM3BsMGU4cWZEUTVRV1pIdC02enNzQVQ5eUthaFJJN3VUUm1FWQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-23T13:17:22Z",
+   "media": 1,
+   "judul": {
+    "id": "Banjir Rendam Tiga Wilayah Riau, 18.600 Jiwa Terdampak",
+    "en": "Banjir Rendam Tiga Wilayah Riau, 18.600 Jiwa Terdampak"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "SuaraGarut.ID",
+    "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1WejRwbUdwbXpvVFZwb2dURnRxWDEwNnkwV3d3TGJ0WWZjNHhibnRfd2NlQVg0d2RNOURoWXM4bzVuVlJvSzJiS3dMWHhfdkd1b2lCY09Fb0h6al9LY1pCc096cVo?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-23T13:00:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Pernah Ramaikan Pasar Ojol Indonesia, 8 Aplikasi Ini Kini Tutup",
+    "en": "Pernah Ramaikan Pasar Ojol Indonesia, 8 Aplikasi Ini Kini Tutup"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "kayonews.co.id",
+    "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOWG5mZDlvWlN4cG9aWGs0RFB3OXZseGthbHJaaFlmSkxiemRHejFSZ3JVYi1rdmF5VUwzcnBkOTJHVG91RFR6RUVUT2tjc0NSNFR6UUVyOXVIY2pzRGpOeVRGd2V4QWZRQVF2YkVpSnZ3clJ4NGpacFJqcXlsQlNuaDFPWFRHdHZ5TEhTMkRTbw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-23T12:25:32Z",
+   "media": 1,
+   "judul": {
+    "id": "Pemkab Minta Waspada Potensi Longsor dan Banjir Lokal",
+    "en": "Pemkab Minta Waspada Potensi Longsor dan Banjir Lokal"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Radar Kediri",
+    "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNNVpDR2pYR1JUVUdXU1lWakhFcXpWOXFFRWFnNllSdXl5Z2dBVmhiY2RYVTFKSUNueFlRSi1UdnlDbE12bWIzeVVBUWpwUVBDZnAzQlVZeGkySTNNZ1JsYXVMVXVOZXpQMlpjY05HcTNpOTJzWWRpbE5YdzVIZ25Hd0NDb0ZnQ0ZKZVVVY0NWNEkwZXdGdm5YZjRhOWZQTmpQaVJYWldvNmN3OGhH0gGyAUFVX3lxTE4zZmFpUjh6UzdLRHg1OW12el8wbEhRUGRkSU9FRFRjaFduTjdRVS1ES08tNDhHQ3ZXdEYwMVBFckNKWFVtSDcwa281ZGxwd245NVBCR2UtTHE2a25aZFYxV0RwSW0yYWZpWkRCaHJYVEk3SFpaOEhESUoxYjlfay13eHgxU19BdjVFekYtdENCQzktU2sxZWloQk9DRmZlM2pxbHBQNUhqaEVkS05JQldxMnc?oc=5"
    }
   },
   {
@@ -187,57 +272,6 @@
    "sumber": {
     "nama": "rmollampung.id",
     "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQVkZyNklTZVNpcVlfWTZmU2UybG1oSHdFWmFabmhvMGRiWTV4T3VNeXQxa2FNX0lENGxUWF9odERHejhXdDBqOGhQeFBpajFXMkVmamdFT3kzenVwZzRrcUNzQlNQMUpncEg3MWVuUHhSV3ZIVjlwMzdXVGFyVHU2S1hUeFpYZmVBWUl2N0UyZFZlYjJpM0N1RHUyM2NjN1E?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-23T09:52:14Z",
-   "media": 1,
-   "judul": {
-    "id": "Banjir dan Longsor Melanda Sejumlah Daerah, BNPB Catat 14 Kejadian Bencana dalam Sehari",
-    "en": "Banjir dan Longsor Melanda Sejumlah Daerah, BNPB Catat 14 Kejadian Bencana dalam Sehari"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "www.vibizmedia.com",
-    "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNU3F1akRLZU82MHFObE56M0hLN29FT1ZwMDR2VlgzN0JxSkEtSWxzOVRtTDhvR3U1WGQ2ZW9XS3E2YnV2TDZMX1I0WWlXZ0lESTByc0JzTFE1Yl9Yd2tSd2RVMG94ZXdUb1RiYjRQMEk4Vm1OMk5oNUU3dVlrWUMycmZyMXRxMDI0dWRYV1U5MlNfbzZzYnVJcjlBQWRKVzZ6YVFmRXVoeC1nLTJpaGItcDhoTEt6NTBKcXBocGNDcnVDOEhrUEVqR0k4VEJ1eWd1?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-23T09:44:11Z",
-   "media": 1,
-   "judul": {
-    "id": "Bahlil Tetapkan Target Cadangan BBM dan Elektrifikasi Desa",
-    "en": "Bahlil Tetapkan Target Cadangan BBM dan Elektrifikasi Desa"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Lensa Hukum",
-    "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9yUHRQc0JCV3J0WFFEWGFSeW43X3ZVdE9UaVFHQW1WYkZLdlVsZ092SWpmWV94ampFWTNxTnJndGRZVTRvSjlxOVk2alJ1ekdyS3FFU2E4dXY0ZVNra2NVeGM5a0VoTmY3Y1hXODMydTdtZXNpOTRuV0p3?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-23T09:08:15Z",
-   "media": 1,
-   "judul": {
-    "id": "Strategi Iklan Brand Makin Kreatif, dari Jaket Ojol hingga Aplikasi",
-    "en": "Strategi Iklan Brand Makin Kreatif, dari Jaket Ojol hingga Aplikasi"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Marketing.co.id",
-    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9DbkdHcVdYcnJHR25wRnpmRHhUYkxPSlAyZ3I1OHktUjI3Zl85VUE0ajJHRzRZVlRsems2RHNsRlFMOUwwYWdfZFJKQV9QcHFzel9rbWhYbS1Wd005TkNCdW5QdjRzOEFQckE?oc=5"
    }
   }
  ]
