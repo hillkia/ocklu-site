@@ -1,5 +1,5 @@
 {
- "w": "2026-11-23T12:21:37Z",
+ "w": "2026-11-23T12:42:00Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -38,6 +38,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-23T11:49:35Z",
+   "media": 3,
+   "judul": {
+    "id": "Pelaku Pengeroyokan Dua Anggota Polisi di Jalan Tol Sedyatmo PIK Penjaringan Ditangkap",
+    "en": "Pelaku Pengeroyokan Dua Anggota Polisi di Jalan Tol Sedyatmo PIK Penjaringan Ditangkap"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "lampuhijau.co.id",
+    "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOYXRSUUhjdEw4NjFlcUQ5YXlsX0UyWFpCclVsaVh3MEFNeEtwZkh4SmE3cjUzeUpOUldmUE1VQ0xmU00yclB2Vml3a08zUnpiNHBkUHNFc2ZqbU5RMXlocjBoNjRmWDdvVHVsTTRkLVo3WGtwMlN4NXVHSVczSEwwaF9ZLS1odjRybTRSNEhMVU5nRHU5eGh2NjJBdjBrNkczY2hRdGlCTTJiWnd2TExpS2VjOFRJZWlKaHpDeXNIWG1jTFR3TUxjYWZlTGU2RzJRUzdUVQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-23T10:55:00Z",
    "media": 3,
    "judul": {
@@ -51,23 +68,6 @@
    "sumber": {
     "nama": "Nadaviral.com",
     "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPMlVlNlBmQWlycWVUZW1pU1NudjV6clZTN082TFV5dGRUelJYSXVkd3B0RjMzT3RSckxaZXdfazRibk1oMm1sMGtleW01SWQ4RlQzRWExNDBTMEJkUFdzR3lueVhDVFpDUC1pSG0tSk5vdGxEbktQckZfOFNDQ0JpdmZjTEN1RldrR1dRbFdqMUFjeDFqUVZvVmdIN043d2hCb3BIUURR?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-23T11:49:35Z",
-   "media": 2,
-   "judul": {
-    "id": "Pelaku Pengeroyokan Dua Anggota Polisi di Jalan Tol Sedyatmo PIK Penjaringan Ditangkap",
-    "en": "Pelaku Pengeroyokan Dua Anggota Polisi di Jalan Tol Sedyatmo PIK Penjaringan Ditangkap"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "lampuhijau.co.id",
-    "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOYXRSUUhjdEw4NjFlcUQ5YXlsX0UyWFpCclVsaVh3MEFNeEtwZkh4SmE3cjUzeUpOUldmUE1VQ0xmU00yclB2Vml3a08zUnpiNHBkUHNFc2ZqbU5RMXlocjBoNjRmWDdvVHVsTTRkLVo3WGtwMlN4NXVHSVczSEwwaF9ZLS1odjRybTRSNEhMVU5nRHU5eGh2NjJBdjBrNkczY2hRdGlCTTJiWnd2TExpS2VjOFRJZWlKaHpDeXNIWG1jTFR3TUxjYWZlTGU2RzJRUzdUVQ?oc=5"
    }
   },
   {
