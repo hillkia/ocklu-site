@@ -1,5 +1,5 @@
 {
- "w": "2026-11-23T09:39:47Z",
+ "w": "2026-11-23T09:45:26Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -140,6 +140,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-23T05:13:43Z",
+   "media": 1,
+   "judul": {
+    "id": "Benarkah Motor Listrik Nasional Cakra Rebadge dari Alva N3?",
+    "en": "Benarkah Motor Listrik Nasional Cakra Rebadge dari Alva N3?"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "detikOto",
+    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQdm91Q2tFY0ppNEdKaVYwSzY1TVlRNTF5X0Q4OVhoaUZJc0FsVzBmQXlERjJ2ZXlxTnh2cExDSEVrS3lMNkpjb2ZlNFNrdURadHRNcndycGQzT2FvRU1UY3BmYjFoN2ZLb29fME4wOUt2WlEzYy1CbmVFTk05OFViWEN1M28tT1NwUE5ZSWI0VlFLRTlTTWxWR2VJckl2Z3dnVzN6Qm5Hd9IBrAFBVV95cUxOSmNFaFRzMWt4cFExakVWQnUwZHNCNzNQWTh3UDRLbUlBdm5WaUFZUVZEMXVyVW5fUk9SRHM2UkVOMkNpb1JpMHNBZjNkd3JDOXRlR1dkdkIyUUdXMHliV3BjcjVENmI5bWE1cnItMF9xTXl2Tmk1RmtlM3hPZEFuc05oaXdBbXRGOEM2cjJNeWFtb2lJU3dwTmJSVXJHeHFnWGR6ajlqem5nMncx?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-23T04:57:00Z",
    "media": 1,
    "judul": {
@@ -204,23 +221,6 @@
    "sumber": {
     "nama": "Mudanews.com",
     "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPMkZnRDl2emtWTTBJZ2tBYlA5R3ZqaWpQY3pweXY4dTF1OVBaZmJGOVRVbUZjMWJ2dHlsUHNNNUpIWEFFaWM0UVFxZ2RaSVNva1RVZ3MwLVdJSm5nSWkxSUlpY1VIcHhzYWhWVUNrTG1JTXJwa3JzUkFWWFVsU1dYSFpSVks3QWZGUzRGa1VoX253LVVBd2NLVzliS0hfVHBwX1NvdU5Ca2t2V1hnX25VN1RQeGxUWDN2b1I3bTFWZ1VuYTBOb1ZUdEFkWml0TzNkVTVJR1drd3Y2YXVMNTdv?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-23T04:26:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Ringankan Beban Pekerja Jalanan, Muhammadiyah Kubu Raya Berbagi Sembako untuk Ojol",
-    "en": "Ringankan Beban Pekerja Jalanan, Muhammadiyah Kubu Raya Berbagi Sembako untuk Ojol"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "suarakalbar.co.id",
-    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQblBjdFc4NFlLcWU1aXVLTFNUbTJmZmpKb3lkaXBRWk12dnkzWFUtd0tVTjluSERVQWN0WUxYVjM0aFpSRF80ZnJKY29HM3R0WEVwQVFUUnlFRnJLejE1eWhFd2VMNGRIbkJKSzFNQUN3Z3RWTU0tOXZvUkNGdTVIa2N0Qy1FZ2pDQUFGYzlxeHJLekR4RE05ZVZNSENGNjF2Z3dVSG9Rc0FYbmN1ZU9abW1MVHpqWkdlMG1JUQ?oc=5"
    }
   }
  ]
