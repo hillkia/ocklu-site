@@ -1,7 +1,24 @@
 {
- "w": "2026-11-24T02:19:59Z",
+ "w": "2026-11-24T03:22:50Z",
  "dari": "Kroog",
  "berita": [
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-24T00:08:59Z",
+   "media": 7,
+   "judul": {
+    "id": "Diduga Mengantuk, Sopir Ojol Tewas Seusai Tabrak Pohon di Jalan AH Nasution Bandung",
+    "en": "Diduga Mengantuk, Sopir Ojol Tewas Seusai Tabrak Pohon di Jalan AH Nasution Bandung"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "MediaKompeten",
+    "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQSkpOQm9tc3JaNDJ2NHpzVkVtSVo4bWQyRk1XRUhaZHN6d2dkcFlOQnF3Q2haQUdUd2lTWGFhc3JYelk0UTAwNnhTOWw4d3NIUDVKazBYbVJwM0pIcmV3MDhaQUZBOWF4eTl6OHZaRnVYTEYtZzdySGJ6RUNBOHYzM3RyY2RVQWg1Z25wTWYwNE4ydjNzQlVLMkp3?oc=5"
+   }
+  },
   {
    "jenis": "berita",
    "waktu": "2026-11-23T08:47:59Z",
@@ -21,25 +38,42 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-23T08:54:00Z",
-   "media": 7,
+   "waktu": "2026-11-24T02:47:50Z",
+   "media": 3,
    "judul": {
-    "id": "Diduga Mengantuk, Sopir Ojol Tewas Seusai Tabrak Pohon di Jalan AH Nasution Bandung",
-    "en": "Diduga Mengantuk, Sopir Ojol Tewas Seusai Tabrak Pohon di Jalan AH Nasution Bandung"
+    "id": "Periksa Kepala Bea Cukai Semarang, KPK Dalami soal Pengenaan Tarif Cukai",
+    "en": "Periksa Kepala Bea Cukai Semarang, KPK Dalami soal Pengenaan Tarif Cukai"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "RRI.co.id",
-    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNLUpOLU9id1pxclNxakhMbG05UVQ0QlJqYTRhdXdveE1mbUJ0UFgxWWRsWVRWUzRTeTNPNzczTmRBYzdYRi05UmlGTmxJdlNzalpET25VRGJraVh2aTZyQTBOaWZHSEppTWFGWUtXXzFXdWlMOVZQSUp1blphemg2V09UWEstaXN1cTd2Wm5jS3lqZEJWRVdMc004Q08tbUlNNHNOWXBYVEtZeEE1aFc1U1hBWDg?oc=5"
+    "nama": "ANTARA News",
+    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPd3VTUHJuWVJhWFlxMmZNMEdvVFdPYzBWOWl4V0ZLWFJPZDN6MWx2RkJ2VTZsLUIybmJxYWZYSG43QjN1ZDlUYjU5VC1xd09LN294dzN6MGs5MUdfQ21Wc0V6ZjJtMHBXZl9KSENUNWpsYnB1cWhodW1uRG9VRmR4TjVlenRLSUl2bDc1ZzdJd3NqeGtqemNLTWt3bWhOX1NrRDBiYnltTdIBqgFBVV95cUxPbl9kVGRzUUM4b28zR2FKWTM4M1daaW9VRTJEd0E5RjZmMUdwOC1FOHlfeldBZkFVMkh4cXNYZWZHZ1JsMmNDNTRNaVJXZ2I4TVdnVWsxWWhKRXgzNDl4STRDVW1VbEVaT1R5aXhLQk0tVy1lLTNuNXNjTWVsbGdmdTF4V0t1NUlIT0hOaGxXWDdQVVI0MXl1LUNBMnFkSDYxYzZ1SVVTa1lxZw?oc=5"
    }
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-23T13:38:00Z",
-   "media": 4,
+   "waktu": "2026-11-24T02:00:00Z",
+   "media": 3,
+   "judul": {
+    "id": "Ojol Kubu Raya Terima Bantuan Sembako, Muhammadiyah Hadirkan Kepedulian Nyata",
+    "en": "Ojol Kubu Raya Terima Bantuan Sembako, Muhammadiyah Hadirkan Kepedulian Nyata"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "https://www.suaranusantara.co.id/",
+    "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPNEs3NXAwaU5rQjRtTlRBb2xaWUdwNUtGSmRrbWlyd1F2NjVqVmdURWFPVTI2YmRQOHR4dFBpUGFlRldTU0hXQUd3RktJd1V5UGRSNnA5cTNDUzNoQUxxaER1eXhteGlJdXVSdFFiZzByRUxLZFllUUhKcFlZeklYQUhjZ0huM1c3M0xr?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-23T17:54:58Z",
+   "media": 5,
    "judul": {
     "id": "Tatap Muka dengan Ojol Disabilitas, Kapolda Sumut Serap Keluhan dan Beri Dukungan",
     "en": "Tatap Muka dengan Ojol Disabilitas, Kapolda Sumut Serap Keluhan dan Beri Dukungan"
@@ -49,8 +83,93 @@
     "en": ""
    },
    "sumber": {
-    "nama": "Mitra Mabes News",
-    "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOWkx1dHA5cF9uSzJkYzVseTQxcUxlejAwVDRJc1JGNXYyMm5DVGJNdUFwOGw5cHB1RmdBcmpCdTBaWXBWUkVESE5zVlpNelpLb3B2azU4djhwN2ZMVUdJOUIyOXUxeEQwWEF1QTZXTWZHZnlMM3NWQWdjQktqMmI3SXFPNA?oc=5"
+    "nama": "Website Resmi Polri",
+    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPV1FpbGU4QllBdEdZWkI1UTBfRkRjVFBoNFhhSnBrWWgwVUhoVDNDUlR1TDBFR2lBUU9FbHFIM0p0ZzlXWGthb3Boa29LMHg3R2UwYzctdUZzekVKNHJja3F0dEg5WVNSMGpwMDZudER5R21zY2ZWUHdiNmxSQzBXeDZOOXF3UENyUFcxUm5ITS1sS0VRZThxWU0xYjRJYWZjcTR6T0JSRXA1emdGMGdsVXlsZUY5aDhWZXBSSw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-23T16:07:55Z",
+   "media": 4,
+   "judul": {
+    "id": "Komdigi Kaji Tarif Kurir Ojol Berdasarkan Berat dan Risiko Barang",
+    "en": "Komdigi Kaji Tarif Kurir Ojol Berdasarkan Berat dan Risiko Barang"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "شبكة تواصل الإخبارية",
+    "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5lODg0TE91aGVESWctWnlKdWdUcFd5QnZNX1ZOUmFiNklhbXNsYnBqV0RVelI5bWJ1VVVZWmdNVTJuTkNRZmFmanMwYkpIT1d4eWJj?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-23T14:37:28Z",
+   "media": 4,
+   "judul": {
+    "id": "Tarif Ojol Kurir Akan Hitung Berat Barang, Parkir hingga Waktu Tunggu",
+    "en": "Tarif Ojol Kurir Akan Hitung Berat Barang, Parkir hingga Waktu Tunggu"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Demokratis.co.id",
+    "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9JVC1DelhyeWZiWXZqT09KRzEySWNmMkRhMlJLVzgyMVQwbjNlOEFIU1doeXZxOE4yS2hDb0o3djYtS1JvRjFIRUliTXU4ZVZrR2MwZ1BSdnRtZ0c4VHRjaVZzamc?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-24T02:05:06Z",
+   "media": 1,
+   "judul": {
+    "id": "Banjir Bukan Hanya Menghilangkan Tempat Tinggal, tetapi Juga Masa Depan Anak Muda: Eco-Anxiety Perlu Mendapatkan Perhatian",
+    "en": "Banjir Bukan Hanya Menghilangkan Tempat Tinggal, tetapi Juga Masa Depan Anak Muda: Eco-Anxiety Perlu Mendapatkan Perhatian"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "JurnalPost",
+    "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPNERRempsOEVpWjRvRVQzZG8xdXh2SlhZVXdtMHJVRU5UMHlqM1k2VDF4QkFVUzNUa3M0cHlGZzdVTUhGcnJvNjVuMVNNRFdMdXZEeG9VQkZSc3VDLWRSUzkyTWZOalJLZEFCbzdzN0t4MEVWV25wakZxbmxRN2JidExzbUdqR2JObFZab2ZXeV9yVThOUkNjY3BzRG5uUElDUUVoUVozVFl4aEFQYWtQMDhOTG11Q0hWSVVKUWJUZl9KV0U1cDZOY0ZkY2JJSndxVmxjNmttMENxckpfUUIzRER6WE8?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-23T14:53:00Z",
+   "media": 3,
+   "judul": {
+    "id": "Keren! Polres Salatiga Gelar Servis Motor Gratis untuk Ojol Selama Operasi Zebra",
+    "en": "Keren! Polres Salatiga Gelar Servis Motor Gratis untuk Ojol Selama Operasi Zebra"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "HARIAN 7",
+    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPN21oY2MyMklIZDJwZGRQZnY5Ump2eFBrZ3hXMWZ2ZVVNYy1lNHZlOTN4Z0c1TGJNQkhTXzFMdDhjN3piUHdnMV9FVkdjM1NvdzJ1SUdqcS11eUQtNm5jd0dVWkFnYWs0VjJ2RFk3UWZqbHpzZDd4MHUtV3BnSHRuMnNLSklJaVh1UlB6YXJsbHg0WEd6ZkRXSmxUM0VPUU5JdWNnb1otZ3JhNXdndE1kNDhiZlJlX1F5Y2xTcA?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-24T00:42:28Z",
+   "media": 1,
+   "judul": {
+    "id": "Langganan Banjir, SMPN 20 Mataram Tunggu Bantuan Revitalisasi",
+    "en": "Langganan Banjir, SMPN 20 Mataram Tunggu Bantuan Revitalisasi"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "SUARANTB.com",
+    "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPTWFBVDhRbHR3RlB2clN3VEJ2LTdRZGcxem94NHdKRlZzUHJqZzFLM0lsWVFJVXNGN1RFY1lpd0RMZldVcUlIWVB2ZXRhTFdRQThueTFKNGc5aEZYYzVvaTNNdUEwczZZb2s0N3AxNmhPN2M4RWFmV3I4T0FFY3FtWmtDb2dtbVoxUGRDTmM1RVVZc21OTFRoQg?oc=5"
    }
   },
   {
@@ -72,6 +191,40 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-24T00:17:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Driver Ojol Harapkan Tarif Pengantaran Sesuai Biaya Operasional",
+    "en": "Driver Ojol Harapkan Tarif Pengantaran Sesuai Biaya Operasional"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "InfoPublik",
+    "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOWlR2U0RDZzJRSG04ck9GakRBdDA2NzVwaVZLaktaQWdoLThMZFNIdlhMdHhmWFhoMG1ZNXhvVFlROGhHeWRGTEV3b2RuLXJURDB5RlBpX3pDM0NBWTdJMlRLQzF0RWF6LV81aS1UZ1FHSmRMdUtCZ0FWNnNRbHFtWWU5VUxndmNSelJ6R3FqODlIMTYyY3hfWmVxOWRfaHdOZ3ZkdEFDSFdpSWgxbmk3UW9FRzFUUGhFZ0cxNERhUDJ6VWM?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-24T00:15:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Ojol Perempuan Bermotor Listrik, Potret Kedaulatan Energi Tanpa Berisik",
+    "en": "Ojol Perempuan Bermotor Listrik, Potret Kedaulatan Energi Tanpa Berisik"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Kompas.tv",
+    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQVkQ5QjdLbHphWnpBcFA4UXUwaklMeXR1YnctWEJvaHRLMW9hd1RkMDF0N012bUZGalU4Q0ZoU1hhUWZiejVvSGRUUTJUZTBSamxBUDhEX0FBVzlJQkV4Zmt4TV9fSVJkdFowOE45clZTcGd6SUUzZkt1V1d5Zy12RzRLb2hSS0prRWhpOTNscGRGRlZtU3RXbDVQM29vQnNDdGxMMXFjdnhIOWM0cEF6cEd6Y1l3bkVk?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-23T11:49:35Z",
    "media": 3,
    "judul": {
@@ -89,172 +242,19 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-22T15:30:00Z",
-   "media": 9,
-   "judul": {
-    "id": "Green SM Bike Setop Layanan Ojol di Indonesia Setelah Dua Bulan Beroperasi",
-    "en": "Green SM Bike Ceases Ojek Service in Indonesia After Two Months of Operation"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Warta Ekonomi",
-    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQRGVubi1mMTVWejZjTklpbUJCSHUtRWdyVm5TU3k5X2tiNnI1bFB2QWJJd2ROTURGRW9fUTZmRWJqSTA4bUtONGRFRnIwVUdlZ1dONnpUNEFaYVlvaXdQeDhTWThCa3FBQlF4U3h2NGVRVkVoNWxtX05MaWFnTDNXaEc2TDRxUTA5QWRxc3NxdjRMRUZCNGh2SGxyeEx1ajRxMDNuOTBoTlFmU2R3c2hhRNIBtgFBVV95cUxQaGI2X2tzOXhzdWtmSVEtUW5nZWpLMWFrcVdVZlpadkxPRnZnU2hMNnhxaGJUQmhUeU1WbGo5bnR4V3lOdnJRS2l5bkM4Y25PRFFzZFo5YnN5QUV1N2gtNXoxcEY1bDgzUFFKUXhNZmkwSHRyYW1mUE5Xd3dGMjRVLVZTMThJZ1FGMUhUeFBnTkZkMEZlRjVBeE1CMHpLRnU5UjVHZEN2N2hpOTFzcnUyRE5LTFlSZw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-23T10:38:40Z",
-   "media": 2,
-   "judul": {
-    "id": "Keren! Polres Salatiga Gelar Servis Motor Gratis untuk Ojol Selama Operasi Zebra",
-    "en": "Keren! Polres Salatiga Gelar Servis Motor Gratis untuk Ojol Selama Operasi Zebra"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "rmol jateng",
-    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPeGswRHloM0pUT0syOVg3bVIxSkhBYlFqRDZzeGpjako4SzY1RU5fckJhQ3NHOEhqcjlkd0NkTkhiR2pUakJTd3QybEtOQld6YlR6SVVudFlBSDRCYTk1XzNqMUMtclBPMmlFcGVja204TEVVY1FSanRLeG9fbUUxeWV3dHFPdnVCUEpPaHdNdHBKT2NRMHVVWjVsVDhDV1pjQ0xJTFhoTTBndGZqNWhNOUlBdFNYVFVwcXU3b2I5Wkg?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-23T09:00:14Z",
-   "media": 2,
-   "judul": {
-    "id": "Pemerintah Matangkan Proyek Kendaraan Nasional, Pindad Siapkan Mobil dan Motor Listrik",
-    "en": "Pemerintah Matangkan Proyek Kendaraan Nasional, Pindad Siapkan Mobil dan Motor Listrik"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "kontan.co.id",
-    "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQVGVoekNxTDIxLWd3VS1WVGVObDg0dXRGY0tpYTFUZ3JzNXY0OGFKazczOHRCa01hRzJ1cGhLMVU4V0U0ekJPUDlrVVltdlJLclZHWXhlcHl0aUo2RjRSa3dzYXY1RG9jc08tUTMwUHoweFFWaTNDSEpwdWIzb0lXcHNzNTV6dmxpOWNXU1JmbG1WM2fSAYwBQVVfeXFMTWR0YUU3X1l2cXJWMVhTdkJFZlgxQzdKdEFZX2Z1VnRrSTlZTURmUjgyd21wajVoX3FmNWtnZ3BFVDdYY0xqemdVTGNLMFhEUXJ4bXVrV3NDdHR6Qy03WnZIUXFfV3Z6TVdrWkppWGg1a0EzMWhNMTZxUVJwdVB2a0tNeGRXYTdySjJJV0s?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-23T13:28:31Z",
+   "waktu": "2026-11-23T21:52:50Z",
    "media": 1,
    "judul": {
-    "id": "Sejumlah Driver Ojol di Kota Pekanbaru Pilih AHY Jadi Wakil Presiden",
-    "en": "Sejumlah Driver Ojol di Kota Pekanbaru Pilih AHY Jadi Wakil Presiden"
+    "id": "Baleg DPR Dorong Perlindungan Pengemudi Ojol dengan UU",
+    "en": "Baleg DPR Dorong Perlindungan Pengemudi Ojol dengan UU"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "Tribunpekanbaru.com",
-    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOMjVKREt6cHRGNUwwc3NtbHVBMTJlWm9SYmQ4QTR1QUxwYmFTQlNLODNPYTFsTDVCYmVsWTJuS0hQc1laWS1peHNSTUxtS1p0WGRGdy12Yjk2Nm1EaHFlZXh0b0g0Qzh2TjlSZkViRDV0Smh2YmF1aU1YamU1Mjc5b1dwaEt3dzJOZ0dFXzJWY0FzZzNQOTA2VVFuWTVhMVBEcG1DNFFEV2ZtcmpNTHBQMWJzRkhzMF9TVU4tQQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-23T13:19:34Z",
-   "media": 1,
-   "judul": {
-    "id": "Banjir Rendam Bagansiapiapi Tiga Pekan dan Picu Pengungsian",
-    "en": "Banjir Rendam Bagansiapiapi Tiga Pekan dan Picu Pengungsian"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Demokratis.co.id",
-    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1fdWRUVGFaUE9vd1owaVNFa0NPalRZUTNLZmV6NnM4YlZnRTE3VEJpemlJaVFNZllZOXE4eWdxd0dBamc1UWlmOFJlM3BsMGU4cWZEUTVRV1pIdC02enNzQVQ5eUthaFJJN3VUUm1FWQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-23T13:17:22Z",
-   "media": 1,
-   "judul": {
-    "id": "Banjir Rendam Tiga Wilayah Riau, 18.600 Jiwa Terdampak",
-    "en": "Banjir Rendam Tiga Wilayah Riau, 18.600 Jiwa Terdampak"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "SuaraGarut.ID",
-    "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1WejRwbUdwbXpvVFZwb2dURnRxWDEwNnkwV3d3TGJ0WWZjNHhibnRfd2NlQVg0d2RNOURoWXM4bzVuVlJvSzJiS3dMWHhfdkd1b2lCY09Fb0h6al9LY1pCc096cVo?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-23T13:00:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Pernah Ramaikan Pasar Ojol Indonesia, 8 Aplikasi Ini Kini Tutup",
-    "en": "Pernah Ramaikan Pasar Ojol Indonesia, 8 Aplikasi Ini Kini Tutup"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "kayonews.co.id",
-    "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOWG5mZDlvWlN4cG9aWGs0RFB3OXZseGthbHJaaFlmSkxiemRHejFSZ3JVYi1rdmF5VUwzcnBkOTJHVG91RFR6RUVUT2tjc0NSNFR6UUVyOXVIY2pzRGpOeVRGd2V4QWZRQVF2YkVpSnZ3clJ4NGpacFJqcXlsQlNuaDFPWFRHdHZ5TEhTMkRTbw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-23T12:25:32Z",
-   "media": 1,
-   "judul": {
-    "id": "Pemkab Minta Waspada Potensi Longsor dan Banjir Lokal",
-    "en": "Pemkab Minta Waspada Potensi Longsor dan Banjir Lokal"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Radar Kediri",
-    "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNNVpDR2pYR1JUVUdXU1lWakhFcXpWOXFFRWFnNllSdXl5Z2dBVmhiY2RYVTFKSUNueFlRSi1UdnlDbE12bWIzeVVBUWpwUVBDZnAzQlVZeGkySTNNZ1JsYXVMVXVOZXpQMlpjY05HcTNpOTJzWWRpbE5YdzVIZ25Hd0NDb0ZnQ0ZKZVVVY0NWNEkwZXdGdm5YZjRhOWZQTmpQaVJYWldvNmN3OGhH0gGyAUFVX3lxTE4zZmFpUjh6UzdLRHg1OW12el8wbEhRUGRkSU9FRFRjaFduTjdRVS1ES08tNDhHQ3ZXdEYwMVBFckNKWFVtSDcwa281ZGxwd245NVBCR2UtTHE2a25aZFYxV0RwSW0yYWZpWkRCaHJYVEk3SFpaOEhESUoxYjlfay13eHgxU19BdjVFekYtdENCQzktU2sxZWloQk9DRmZlM2pxbHBQNUhqaEVkS05JQldxMnc?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-23T10:47:55Z",
-   "media": 1,
-   "judul": {
-    "id": "Kurir Ojol Tewas Tenggelam Terseret Arus Banjir di Bulak Barat Depok Halaman 1",
-    "en": "Kurir Ojol Tewas Tenggelam Terseret Arus Banjir di Bulak Barat Depok Halaman 1"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Kompas.com",
-    "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNX1J1SkptQzFTTEc3aHpzcWNuMnBHWEJsWlU4SFUxYmhJNUtlVmlob1RPU013WVNIbkVFOGlCVXFJNWRqbUlMa1FzRlRFZ0tSQTdWanY3N2JFMzE3VUZiSjh2MWd3d0RFVllrTk03WVFKdUREMWRkZHdWcEVQSUJ5WjRuZTNHdTRlZDhmTTNqWFJCMnNpazBDQVZNeFkxT3Fiay10d0I4QXdoUktkaUJ0YnZOZVFRZGhvUE43WHpBb1FPMmtyc1hlbnM4VXc?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-23T10:45:07Z",
-   "media": 1,
-   "judul": {
-    "id": "Berita Terkini Harian Kurir Ojol Tewas Tenggelam Di Depok Terbaru Hari Ini",
-    "en": "Berita Terkini Harian Kurir Ojol Tewas Tenggelam Di Depok Terbaru Hari Ini"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Kompas.com",
-    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE16X1ViYzBNTEZLVzdtTHVZRG9QZk5qVTFkTk9hR3BMbzBvZVJGeHJQelhkMzdYbWxVa0lYSUNiNjRWbTRXRzVrQ3g3a0l0TUo3Z1pGZl84UnlteUlZMk03ZmNMeWFhcjB0R1ljY2tibw?oc=5"
+    "nama": "Bela Rakyat",
+    "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNT3ZIS25SRzNhRlVHZEY2RDJ3TEZzU2ZIcjRVZENtRXhvYzhZTnJCWGcySzlHMzFldjl4bnN0VDRFQV9qVzg1WGxXQUhCTUQ4ekhQUTZsYVdmclM4bUZtSkhpTEk5NFF3NnN2R3g0b2JHYmU2N183NWhiakhuVlJ3MEtQa3U?oc=5"
    }
   }
  ]
