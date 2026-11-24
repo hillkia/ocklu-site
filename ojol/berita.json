@@ -1,5 +1,5 @@
 {
- "w": "2026-11-24T19:15:14Z",
+ "w": "2026-11-24T21:24:06Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -51,6 +51,23 @@
    "sumber": {
     "nama": "ANTARA News",
     "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPd3VTUHJuWVJhWFlxMmZNMEdvVFdPYzBWOWl4V0ZLWFJPZDN6MWx2RkJ2VTZsLUIybmJxYWZYSG43QjN1ZDlUYjU5VC1xd09LN294dzN6MGs5MUdfQ21Wc0V6ZjJtMHBXZl9KSENUNWpsYnB1cWhodW1uRG9VRmR4TjVlenRLSUl2bDc1ZzdJd3NqeGtqemNLTWt3bWhOX1NrRDBiYnltTdIBqgFBVV95cUxPbl9kVGRzUUM4b28zR2FKWTM4M1daaW9VRTJEd0E5RjZmMUdwOC1FOHlfeldBZkFVMkh4cXNYZWZHZ1JsMmNDNTRNaVJXZ2I4TVdnVWsxWWhKRXgzNDl4STRDVW1VbEVaT1R5aXhLQk0tVy1lLTNuNXNjTWVsbGdmdTF4V0t1NUlIT0hOaGxXWDdQVVI0MXl1LUNBMnFkSDYxYzZ1SVVTa1lxZw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-24T13:19:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Amerika Siapkan Tarif Baru untuk Cina. Akankah Bitcoin dan Saham Turun Lagi?",
+    "en": "Amerika Siapkan Tarif Baru untuk Cina. Akankah Bitcoin dan Saham Turun Lagi?"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "BeInCrypto",
+    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9DOXBuUkRnNEtLLTBaVmtKYWNQRGFwNjJ6V2dtMHdQRGFiWUQ5TFluQk9TamZWU09Ra0VvRHgzQmhyT29JUnJDYkdiY1pVbU1aYmFYczd1MVFieFFLRzNRNHJtZEItMDZYdGc?oc=5"
    }
   },
   {
@@ -119,40 +136,6 @@
    "sumber": {
     "nama": "Demokratis.co.id",
     "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9JVC1DelhyeWZiWXZqT09KRzEySWNmMkRhMlJLVzgyMVQwbjNlOEFIU1doeXZxOE4yS2hDb0o3djYtS1JvRjFIRUliTXU4ZVZrR2MwZ1BSdnRtZ0c4VHRjaVZzamc?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-24T02:05:06Z",
-   "media": 1,
-   "judul": {
-    "id": "Banjir Bukan Hanya Menghilangkan Tempat Tinggal, tetapi Juga Masa Depan Anak Muda: Eco-Anxiety Perlu Mendapatkan Perhatian",
-    "en": "Banjir Bukan Hanya Menghilangkan Tempat Tinggal, tetapi Juga Masa Depan Anak Muda: Eco-Anxiety Perlu Mendapatkan Perhatian"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "JurnalPost",
-    "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPNERRempsOEVpWjRvRVQzZG8xdXh2SlhZVXdtMHJVRU5UMHlqM1k2VDF4QkFVUzNUa3M0cHlGZzdVTUhGcnJvNjVuMVNNRFdMdXZEeG9VQkZSc3VDLWRSUzkyTWZOalJLZEFCbzdzN0t4MEVWV25wakZxbmxRN2JidExzbUdqR2JObFZab2ZXeV9yVThOUkNjY3BzRG5uUElDUUVoUVozVFl4aEFQYWtQMDhOTG11Q0hWSVVKUWJUZl9KV0U1cDZOY0ZkY2JJSndxVmxjNmttMENxckpfUUIzRER6WE8?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-23T14:53:00Z",
-   "media": 3,
-   "judul": {
-    "id": "Keren! Polres Salatiga Gelar Servis Motor Gratis untuk Ojol Selama Operasi Zebra",
-    "en": "Keren! Polres Salatiga Gelar Servis Motor Gratis untuk Ojol Selama Operasi Zebra"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "HARIAN 7",
-    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPN21oY2MyMklIZDJwZGRQZnY5Ump2eFBrZ3hXMWZ2ZVVNYy1lNHZlOTN4Z0c1TGJNQkhTXzFMdDhjN3piUHdnMV9FVkdjM1NvdzJ1SUdqcS11eUQtNm5jd0dVWkFnYWs0VjJ2RFk3UWZqbHpzZDd4MHUtV3BnSHRuMnNLSklJaVh1UlB6YXJsbHg0WEd6ZkRXSmxUM0VPUU5JdWNnb1otZ3JhNXdndE1kNDhiZlJlX1F5Y2xTcA?oc=5"
    }
   }
  ]
