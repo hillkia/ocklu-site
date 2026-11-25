@@ -1,5 +1,5 @@
 {
- "w": "2026-11-25T06:45:56Z",
+ "w": "2026-11-25T06:57:10Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -72,6 +72,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-25T03:33:53Z",
+   "media": 1,
+   "judul": {
+    "id": "Pakar Unand Soroti Perubahan Iklim dan Drainase Padang, Pemko Diminta Perkuat Mitigasi Banjir",
+    "en": "Pakar Unand Soroti Perubahan Iklim dan Drainase Padang, Pemko Diminta Perkuat Mitigasi Banjir"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Kongkrit.com",
+    "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPeEtfanVJY3pqenNXWFFkOTd1Nl8wYlZ3b04yakpUZE9fLUwzWVcybUo4WVZ3enFUU1F0Skc3eEtyVlk0dXh6N3hOYWFsWXE4TlpYdXVRY3g4Nm1DbVVTcE41RVhlcFdhVDNtNVVNd0FfeTNoZzdZRGxISHQ3WEpKZ0RGMllxcE9NRXJEYmw2MEVrQlh3X004TUtnbmtpdFlnb3V1QklIRkg3NkI0MWFadGhQTGItNDdTckxCN0hRUy05dUZTNWdLTE9odw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-25T00:55:00Z",
    "media": 1,
    "judul": {
@@ -140,6 +157,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-24T21:01:22Z",
+   "media": 1,
+   "judul": {
+    "id": "Prakiraan Harga Ethereum: ETH Jatuh di Bawah US$1.700 saat Kekhawatiran Tarif Membebani Kripto",
+    "en": "Prakiraan Harga Ethereum: ETH Jatuh di Bawah US$1.700 saat Kekhawatiran Tarif Membebani Kripto"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "FXStreet",
+    "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxQSUl0UkV2RjAxbS0ySElPNXgwWmNsbGpHcWhodzdCMXcyUXR3UC1HLWhnaS1Da3pwaU5DOENvSEhOdXpNdFFLLW1NNlU4M0Y3TWdPNW9xTnBIeENYdHFPcFYzZWtwZWs5bUc5anFZaHJ1SkY5YW81anNhcEM0QWRxSGstQXF1S3VoZ2d6NjM0VmFuSDN0VDE0ekpVLVBhdkRaRGVHSDFWclQtMUY4bTJnT0RQUUlWUktYakRVdnNuLTh5WFJrT1JsOENGTEdsYW52Z2I4azhCZjB3ZjctVDd0OHVnc3hvRFk5Wmc?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-24T14:01:47Z",
    "media": 2,
    "judul": {
@@ -153,23 +187,6 @@
    "sumber": {
     "nama": "Jakarta Review",
     "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQVlJxWXhMR0FDOHhabVp0YmdjcGFvc2FYaFJzWkJwVjh1LTduZnZ6MkJiTEdHQVlwTU8yeUw5aFQwV3ZWWng5TkNfMUxuVE5peEZ6dDhqVlVRR01lMFk0MGhBazZVR1V3QjFXOElfZ0RFMnFJRG9UY2ZQMWxnTV9kbWlMX0JmS0pWeFV3VmJoLVBlZC1wOWtkSlB0ZU8wbjhjNjN1SHdqNlc4cV9CZU15MjZfSU1oaWdOaHBkSjFLdThEVHctdTNF?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-24T18:24:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Pengemudi Ojol Desak Pemerintah Atur Tarif Pengantaran",
-    "en": "Pengemudi Ojol Desak Pemerintah Atur Tarif Pengantaran"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Lensa Hukum",
-    "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1sbHpYT1h3WnUyZEVvcmdiazkzaWJRUXB4aG1zOG1xXzVuWDh5VTdEUE1PTkRadkxjaXpGWDc3WEkwNVRNWDVaWDZCa1VBME9OX2xwN3NkNzBENjFfVWtXVi1kbzNhSnM?oc=5"
    }
   }
  ]
