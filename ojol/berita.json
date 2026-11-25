@@ -1,7 +1,92 @@
 {
- "w": "2026-11-25T12:40:58Z",
+ "w": "2026-11-25T14:47:59Z",
  "dari": "Kroog",
  "berita": [
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-25T08:47:32Z",
+   "media": 5,
+   "judul": {
+    "id": "Dua Bulan Beroperasi, Green SM Bike Tutup Layanan Ojol di Indonesia, Ini Nasib Mitra",
+    "en": "Dua Bulan Beroperasi, Green SM Bike Tutup Layanan Ojol di Indonesia, Ini Nasib Mitra"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "ChatNews.id",
+    "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5FQy05YnQzQVpQbWhoNFBMZGdzNmlXZlBhME5hX0J2cFVUVWZkUk5jeG5VcnVRWl93aHlMbldUeWt4a19GX3JwYUctWnVZbENhSUZxa1o2Q2ZnejRoMUlXUzg2M3hJWU0?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-25T09:38:00Z",
+   "media": 3,
+   "judul": {
+    "id": "Diduga Remas Pantat Perempuan di Simokerto Surabaya, Pengemudi Ojol Diringkus Polisi",
+    "en": "Allegedly Grabbed a Woman’s Buttocks in Simokerto, Surabaya, Ride‑hailing Driver Arrested by Police"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "TargetNews.ID",
+    "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPY3VRRU9JZGlHSWVpRi1MN3JDOUtFZmVKMXNmU1N2X0ZOeGV3S0VtVjZFOUVhNW9PT2Q5OFRRaUZvZEdMT2ZkTzdjbGxJUDJxMl8taWJqU2tSMTljNFBLV1dfUHVPc3JxRXZJejdQckwtUjdjYklPQkxINFBCNmlrODJvdENtQU9qN3ZZYU0zUDRsV1BwTnJGX29LWF9lUWRYaHRrSHNVU2cwbHBseVNkXzZNeHY4ekVlckhoV0V3?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-25T12:59:56Z",
+   "media": 2,
+   "judul": {
+    "id": "Pemkot Bengkulu Sosialisasikan Portal Perlinsos, Ojol Didorong Akses Perlindungan Sosial",
+    "en": "Pemkot Bengkulu Sosialisasikan Portal Perlinsos, Ojol Didorong Akses Perlindungan Sosial"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Teropong Publik",
+    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOZ1lHSVFtN2Q5U0FaOFg0TkowSDczdDNta3FvaG41eHRFYXhuY2tmWUMwMHhSbGYyM2pnQ0FkV2N0b2E4Y2NQZ0w3Mm9aNmc3SkZtSHk0OWRBc21nRkJLWjBPOWpvbmZiamxFT1BhV3ZIN0FUQWNyVkRZWmRaS29uMlBiM0Y5OWNyWTE1RHd2b2hQWnBfR3B1UGRrTVlEdlhJdm9qR0xza1hrby16UzEyOGxid1A3WnhiQlR4RQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-25T12:37:48Z",
+   "media": 2,
+   "judul": {
+    "id": "Kapolda Bali Tatap Muka dengan Komunitas Ojol dan Tomas",
+    "en": "Kapolda Bali Tatap Muka dengan Komunitas Ojol dan Tomas"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Bali Tribune",
+    "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxORFdRYmhzNjRNNjBrUlpHRUlxSF9OTU5FYmhVT1VSZG9aN2N6OUR3b2lxNFhINndkNXNZbGtjMnVSZWlQcTBsRzQ3SFdFWi1DVk1PeWs2S2lnYURveDBKWEtlbEZXdjlXdXFPWEpYYjJiSGlqVzBmOHl3OHJ5VUJsc0pYeGdrMk5Fdk5oLXA3cFp5SU0?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-25T11:36:16Z",
+   "media": 2,
+   "judul": {
+    "id": "Polres Purbalingga Gelar Sarasehan dan Deklarasi Ojol Kamtibmas, Sediakan Servis",
+    "en": "Polres Purbalingga Gelar Sarasehan dan Deklarasi Ojol Kamtibmas, Sediakan Servis"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Tabloid Elemen",
+    "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPMzNlSHhiSEJ6ZDhaUEs0Z2RmamJlWVZPN2M3T2tMNThLTU1FNi1PQkNab2dyYmExQkZsNDZPWkJNZGo1VUQ1M09JcS1PcFZuOURvUFVGWkZVbE1kZDFMbU5IdElpZWVHU3FwLUdkOVJYdlNWcUpjcU12cF9wclJkckdjSlVERXNidy1QYmF3VVJIb3J4MVpUR1kzRFp2TEFlWHNNVDRoSnJHdy11WFh4Z1dPNExocWw0NkE?oc=5"
+   }
+  },
   {
    "jenis": "berita",
    "waktu": "2026-11-24T06:36:00Z",
@@ -21,19 +106,87 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-25T06:32:00Z",
+   "waktu": "2026-11-25T08:28:00Z",
    "media": 2,
    "judul": {
-    "id": "Diduga Remas Pantat Perempuan di Simokerto Surabaya, Pengemudi Ojol Diringkus Polisi",
-    "en": "Allegedly Grabbed a Woman’s Buttocks in Simokerto, Surabaya, Ride‑hailing Driver Arrested by Police"
+    "id": "Pakar UNAND Nilai Penanganan Drainase dan Mitigasi Banjir Pemko Padang Sudah Baik",
+    "en": "Pakar UNAND Nilai Penanganan Drainase dan Mitigasi Banjir Pemko Padang Sudah Baik"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "JPNN.com Jatim",
-    "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNZE9lOHpYdzZyVXRfRGpVOUtmbjVNQlc3dk5LaVRweURxWGJQa1RFbWw3ejdLc2JjTk55OEktWHFPd3dBUHp2anc2LTEtdl9tUE8xU1JlZF9PU1ZtMlFtVzN2VVdvLVp0T0NSUjF2a282MmN4TUlFXzF1S2J1ODMxNXJJcGVmQ21yYXYzZVlSLVJkMDc4cVBEZ1hjR0h0UEEwNVhhSTZCaFZ0VDVHbjdYZUlTUHhzNWExNzAwRFlB?oc=5"
+    "nama": "Langgam.id",
+    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNVEdSR2h5ZUFHbXVDSENQSkFydXJTX2NKeFgtNHJxcGxPNWpQUDFRb2pERlpuNzJ5TjExMERVT2lvc2hPb2RJakxjUUtRb2VtWnlDUWlDaWtweHE0TWh4c25DU2l1MjVjdFN3bzk3SE9EdGFlX2lSOFhmbGxvMFdMaEtja0xiOGdXa1BvY2NGX1hZbzR5bmpuRnhPaVdadnB5NEpv?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-25T12:50:26Z",
+   "media": 1,
+   "judul": {
+    "id": "Sempat Ganti Kartu karena Jaringan, Ojol di Pekanbaru Kini Nyaman Pakai Tri",
+    "en": "Sempat Ganti Kartu karena Jaringan, Ojol di Pekanbaru Kini Nyaman Pakai Tri"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "RRI.co.id",
+    "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQS0xsVXBQTThvWUt2LUVyejlPUVotZEJOckhkc3g2VGJ6em1PRElxM1M0bXNYUzJYanVocXpTdnhjdi1tNEYyTGIzT3dtWUFNakFYTW9POG9iUGxwYkowTXMyUTZ5SmNsVVNkdmMteURrUmI3ZmdUV1lFWS1PQUZ6LVdlTHF2RTFCdDNYemJBaWJST2hOYVgwNXpSaWpBOC0ySWlrRUJlWFRQS2I3U2hEMnB0MFpfSEtndm9jYzRVNA?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-25T12:43:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Green SM Bike Cuma Umur Jagung, Rekor Baru Ojol Paling Cepat Tumbang",
+    "en": "Green SM Bike Cuma Umur Jagung, Rekor Baru Ojol Paling Cepat Tumbang"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Inilah.com",
+    "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQNExGeW1QVE5oQVl1b1lUd2liXzlKQk84bk0xbVRSbndpZEtmZ1pFaEgwZlNDWUlYU0JjRjNNbFBJYjhUWENuQlp0MmZvZUNhNHN0amYtUFl0eThLV2tQVDBSUGpTUnB2cjFnWl92SDVHN2xLdUNyNEZTMUZreXNCb24zZ2ZMRlFQYXZtVVZLbnZQaWly?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-25T12:20:00Z",
+   "media": 1,
+   "judul": {
+    "id": "8 Aplikasi Ojol yang Pernah Meramaikan Indonesia, Kini Tinggal Kenangan: Green SM Bike Terbaru",
+    "en": "8 Aplikasi Ojol yang Pernah Meramaikan Indonesia, Kini Tinggal Kenangan: Green SM Bike Terbaru"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Jatim TIMES",
+    "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNSHpwWVpteElIVkhIT0xGN2ZSbDZlN182REl1OUxlRU5qbGJkX0NnendtV0pBMjA0YzI0WjY5by1MZTNkWHBnVGluR2FWWWdVbk0wWi15dXRyVE5zd0tUd0k4bEtGLU5oeUVPLTZNUTY1aEpxQzhfNnhOZDNpRUpCOVFDdmhOOW1WbFN5U1JkX0NvWUsxUGNDSkJSU0JGUW8xVzZFZWt3b1dYR0V3WUxRYVNjQWU5RmliajJSQjhMOEVPN0szZGFZem42RkY2bWVkcUtqRnkwQnFSb1ZDb3U1bg?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-25T11:43:39Z",
+   "media": 1,
+   "judul": {
+    "id": "Kapolres Situbondo Rangkul Ojol Jaga Kamtibmas dan Keselamatan Berlalu Lintas, Bagikan Helm serta Jas Hujan",
+    "en": "Kapolres Situbondo Rangkul Ojol Jaga Kamtibmas dan Keselamatan Berlalu Lintas, Bagikan Helm serta Jas Hujan"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Jejak Kasus",
+    "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNcWJsYkpZbTVYSjV6d1hxUEhhNjgwNVpWRVdtOHRmbTVuOVl2TTdwcklZcE00R1pKaC1ENlg3NDN5OEhNczVyQm41N25zT3dLS1RIOHBNOVRRbG4tXzR2U1hUeTFGX292aGVMeEgtblNEenQzRUJLX0hMRnRtQ3l4OGN2SjIxanVybDlsVTRzcFVweTRvSzlpdmxXODQxUmh2UnNsNV96Z0pCQkNwbTVoN0JnTEMyamtlbHVETE1OWlRwX0I1aWJFNUowNA?oc=5"
    }
   },
   {
@@ -51,6 +204,57 @@
    "sumber": {
     "nama": "TINTAHIJAU.com",
     "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOVFRiQXYxOXdTM0xZdGJleVR1OTRDQjVBVVdmenFuZ21jck5GNFVLWXFEUnpyendQUVM0dWxHUEI1N1h4NkNpTW5PXy1uTEhWbk9xN0ZfODNMMnp2OG5wclVVcEFtQ2RoWFFXVm5VeDlzRmJlVUZZSG82TFZ0UDVlR2k1Y2hwNEs2bTR6aDFLektfZlkwU0VxdGpjekQyekJQaWFqeXAxRnVYMkFLQnc?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-25T10:41:02Z",
+   "media": 1,
+   "judul": {
+    "id": "Waspadai Longsor di Wilayah Selatan dan Banjir-Rob di Utara, Pemkab Tegal Perkuat Mitigasi Hulu",
+    "en": "Waspadai Longsor di Wilayah Selatan dan Banjir-Rob di Utara, Pemkab Tegal Perkuat Mitigasi Hulu"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Media Indonesia",
+    "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPbG16VWNJeTgyN0VCejdxT1BPUGZqVVdxbHVGbVFsWWJ5d1dDaHFWZ0VfTVJ1MHUtYjhRSzdRSm1jbzdGeXJxOGdNbkpMOGt1V1FEWTB6VVpHb2NoQXNOVnFLVHlwQnc5b3NSM3lLLU5ZVHFycXZvN3hGMkdmUkNmQlV3SXJJcmxXekxqYVJ1ZmFkZGQzUTBtRHdXS3NaeVlNR0g1QUJEUllMRkxzVThJeUJZWXdWdE5zcURCQkwxa3gtcnJCSno1NHI0VlZlR1FWZmVTOQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-25T10:30:15Z",
+   "media": 1,
+   "judul": {
+    "id": "Kejari Panggil Pemilik SPBU-Pegawai PPPK Terkait Dugaan Korupsi DLH Lubuklinggau",
+    "en": "Kejari Panggil Pemilik SPBU-Pegawai PPPK Terkait Dugaan Korupsi DLH Lubuklinggau"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "detikcom",
+    "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPVzVXNmhINkJXVUVLS1lXOUxZY3E0c0tRQnc4UW9scVN3RUlCUG5GeUp4QjdDbS0tNG9YN25tRkRUWmNRWUhKbzJ4TVpnZDQxZUw2c1hTcjlMSC1uZ05vTGdyZnFYVm51MjNnUUpJWTNUdkVsYmpPeGh6XzdQZUhTRHBLRnNWTlY2ZmI2RTFOVGJoWWl4bnBGU1FQbFZaM1h6QUFnZF9ubjFsVURQUE0xUGpHV21fYmwyQ3BHUFhCWWJmalZGN3ZaZWxBaUZ1RC0wTmRTSS10UXPSAd4BQVVfeXFMUENHQnByaEtvNzI4M3lFd0J5M0RieTFsVVFua2o3NjBkVWNaU2Fid05QYlh5OFF4R2VfSGpZeDVFWHE1empjVHZtd3lKdE1kNGNmckFuN21wbzRfOXZaUmZHN3VmQ3ZMS1Q0a19jUld0dzd5UExILVc1OVZhSWJSdDB1bGthRFVUWHNVdllkUDJrcFlHbk55V1JkSFdRQ2p0THlVb0E1R1lHTkFObnM1N21QblhGLUlhY3RLa2xCRE5VMHU3dXVYOXFQVmg2SWVhZFhpV1F1WXduZE5pWXV3?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-25T10:30:00Z",
+   "media": 1,
+   "judul": {
+    "id": "8 HP China Murah untuk Ojol di Tegal November 2026, Baterai Awet dan GPS Stabil",
+    "en": "8 HP China Murah untuk Ojol di Tegal November 2026, Baterai Awet dan GPS Stabil"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Radartegal.com",
+    "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOTDlpZllYbnRmTUJOR0l2VGJCY2Z1LTRudDVfcFV0bXFPTmxOTHE1ZzlvaV9TekZxZzk2a1I1RGtNUHJhTlBYX0RNbmFuTnZZblVGaF9MeVYyUlhLM0ZYY2otdmpQNllDYkk2NXdmaVZuOGJ6WmF1YVYtR1A2cTh5RFFGUzRoS0RrenVsQWpWMng1TWQxY1BRSmxDbk5Ba2RCb2lqa3lSd3hHOEdaOXlvS1VnY25JMmJUdlNWX052QjBMTVNUVUo2Q9IBugFBVV95cUxNbnZObWJOYUR4ajZLMTh5MGFCM21qR0tib09qb2h2S1BKckdOYjVTYnN4WVVLME5Bam1iUDJzaFNWbjlrMmh0VXg2bjBPdmdncHFwRm5WMExWaFJEeW12N3hsU0FDOFRZVlJaOGMtWUdMTnNNV0l2TzhzNURDcjk3TGF1RGxScTZYWGRVejd4RkJXQjV4NDU3R2VaeUxJZjVNTW42LV9KdXZrTDZrckV4ZnFld0lVT09mNmc?oc=5"
    }
   },
   {
@@ -89,6 +293,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-25T09:06:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Rekomendasi Motor Listrik Terbaik untuk Ojol, Hemat Baterai dan Andal di Jalan",
+    "en": "Rekomendasi Motor Listrik Terbaik untuk Ojol, Hemat Baterai dan Andal di Jalan"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Disway",
+    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNejM2VnRBU3d6UWt5eWs4anllRDdaczlCQTBSelM2QnJTdnBnaXdHSTZfaW5OVXpLMU4zRXdfdzhnSlRpT212MFU5ckNOczJIeWEyZU9NV2JndUpiUFNMSWJpUFZKMlJuQXNwYlNRUlJfZG00ZWppT0tVdkpTM3BQc29oUXVOTkVpaEppdUkxLUk5cVZjd0g2XzZMaDNrREV2SlJ3aTkyZWV4QUw2WmpPNkNIMzhhUUUz0gG4AUFVX3lxTE16MzZWdEFTd3pRa3l5azhqeWVEN1pzOUJBMFJ6UzZCclN2cGdpd0dJNl9pbk5VeksxTjNFd193OGdKVGlPbXYwVTlyQ05zMkh5YTJlT01XYmd1SmJQU0xJYmlQVkoyUm5Bc3BiU1FSUl9kbTRlamlPS1V2SlMzcFBzb2hRdU5ORWloSml1STEtSTlxVmN3SDZfNkxoM2tERXZKUndpOTJlZXhBTDZaak82Q0gzOGFRRTM?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-25T03:00:00Z",
    "media": 2,
    "judul": {
@@ -102,6 +323,57 @@
    "sumber": {
     "nama": "Uzone.id",
     "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxObnhpNm1paElpM05PS0tJSjVBeEEwQUpyMzRWTldtTFJBQVFuZlFuSVFEekEtT2VpOC1kSDBpVVcyRkJ0Vnozck1ZZjAwUDFudkpnOXFqVTZBS0dSSjVnSDBIaXE3aVlhNXhMQ0ZKOWozdERoT0tLOWFDZjI3QjhkN2pwbWd3Z0U?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-25T07:46:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Cerita Reza, Guru Honorer di Berau Kaltim Bergaji Rp 1,9 Juta, Pagi Mengajar Sore Jadi Ojol",
+    "en": "Cerita Reza, Guru Honorer di Berau Kaltim Bergaji Rp 1,9 Juta, Pagi Mengajar Sore Jadi Ojol"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Kompas.com",
+    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQQ05McXZ0Q2xpQlNVSkVtY3ZpNVhLT0x1RFhVZEJDbks1a3dZMmhEYV9MeURvTS1lbUZkQThfYXZBMHlkM2xXbGhKMWluNC1MQlJrclJLbS1YcHp4MjA4NjRVMGxGTnZkbXdnRjZkTWcxTkR3c0FNWU9uZ0pkQ3FWeEctdnhZcGsxdlZ3TUZvTks3YmZsWEJJd3hpVzVQdzdBYm80Y3ZWaUQ0cldsXzg3d0RaY3BkU0REay0xOHd0YTFYU0JLb2c?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-25T07:23:39Z",
+   "media": 1,
+   "judul": {
+    "id": "Kapolres Tabanan Ajak Ojol Jaga Kamtibmas dan Tertib Lalu Lintas",
+    "en": "Kapolres Tabanan Ajak Ojol Jaga Kamtibmas dan Tertib Lalu Lintas"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "bsinews.id",
+    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9BTTRUMnVVaE03bWpFLTNHNEpPNzM1TklZYkhvV3l4M3JLMDZqeERKbVFQRVM4V045aWtlc284VTMyS3RYMXFab0VmekNxR1RIRlJFWDJxOVdzMkhTdlRFU0NvOGpjcVY5VHc4dw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-25T07:16:06Z",
+   "media": 1,
+   "judul": {
+    "id": "Kapolres Tabanan Ajak Ojol Jadi Pelopor Keselamatan, Soroti Helm-Knalpot Brong",
+    "en": "Kapolres Tabanan Ajak Ojol Jadi Pelopor Keselamatan, Soroti Helm-Knalpot Brong"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "detikcom",
+    "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNRGZFdEhZdWdlRW5Md2I5X25QbUdCeHc4d01DZklkNko4NkhKVV8zamZVZGs0czRfb0I5a0xEOHRIZEw4ak43VDFNeHNQOEU5TWpWcW05Ti1KenBoemdkNTh6R1FIU2J3VnlicGFwQlZNWTlWWU1YWm8xMUxCdHpSZE5jcTY2aERFSUNNYmpqdzZ2Y2ROcloyOTBLRFhIdjRvaVNaSWhVVTBiM3ZIOTZib2Itemhocm8tYVc2TXl30gHDAUFVX3lxTE5YbjVDMFFMNEdrZEtsT0dCVDFhUFVRa3RqVnYxNjZEZE1GTG5udk1IN1JLVncyWWhlbUxfR2lNTDBuVWlUQk1EYk9zbmdaTzZUb3ZfaVdHQ3VQZWNGMTBKQXJ0ZnlCZ1IzemlfdmxQWml6d1p6QU9vQ292TjZJTjJoVEE2a2l2R0tvaHdjdFRxQ2Q5ZjdpNWxGM2o3RGI2Mnk0V0VKNFJobEhhRnRiY084X28zYWUyYldTSlg4MDJLakU3OA?oc=5"
    }
   },
   {
@@ -123,6 +395,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-25T06:51:35Z",
+   "media": 1,
+   "judul": {
+    "id": "Ojol Jayapura Konvoi dan Deklarasi Hari Guru, Serukan Dukungan Untuk Guru Papua",
+    "en": "Ojol Jayapura Konvoi dan Deklarasi Hari Guru, Serukan Dukungan Untuk Guru Papua"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Berita Papua",
+    "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNbkNxb1otTVJRY0tLMGxHOVRLeHl0SG9pWXVBOWREVmNmWGpQb1FCZ0d0cWJLVjd4ZU5hRjBkSmlGam5OT1h3Nlp4YXA2c2Z3TkdzMW5rcDg4Qm9wRFJ3TXREUU9lMkM0Z0hMVld0d3JjVkJqMmgzY1czX09YT0V0OHNCM24zaEs0b1Z2U0VtbUQwNVdINzV1MVEzaTdvRlNXb1kyTDlEMTRqNkRNdVN2MU9tejZFbUdRZ3RwLU96bVBZWGFTSklj?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-25T06:20:00Z",
    "media": 1,
    "judul": {
@@ -140,6 +429,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-25T05:59:55Z",
+   "media": 1,
+   "judul": {
+    "id": "Elisa Bunga Allo Soroti Ancaman Banjir, Tekankan Mitigasi Bencana di Sulteng",
+    "en": "Elisa Bunga Allo Soroti Ancaman Banjir, Tekankan Mitigasi Bencana di Sulteng"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "TrueStory",
+    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNVXVTUy01Q19SVlFtX2paS2xodXlvMi05UlFESzZRckRPTkNMUU1iYWJBclQzR25WVUItREtmYmdITXpZdlJUbTNsVzV2SUtNcGl1Z1Y2djNUM010MTgzTnUtZE9nUU9KVnp2aHhlS2lrUHltVXFCeVB0QTNMVjZlakFYYUtzbFZPa2dvcUhVNlRydkdCNm8tTEVRR2VhUQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-25T05:52:13Z",
    "media": 1,
    "judul": {
@@ -153,108 +459,6 @@
    "sumber": {
     "nama": "tribratanewspandeglang.com",
     "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNbWhNN25BNDR0N1ZxbGxHZTJsVUlrb1VqV1FJV21qNXlqNHJlNzhvMHhPcko0MU9NcDlhVEktakhKaUNVY2M1enhZYzctTGg5bjFyMzczRDlGMmQ5RU5YSUhOLURSb3B2bndmNzJOWUVBUGtVOFVlZ0daZFdhUkh3c0NiNTJVR0dMZTFvYTljdzRubHVhYXY1ek9wbnpQdUt5RF9NTTJRUzMxZmZoV3Z6UjJKVkd0Wjhjc0oyYXJneTZkSGtKMGxmRHRuazh2d0VSSmhtRWExRzJ1NEM2aGdZNw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-25T05:16:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Siswa SMAN 1 Bukittinggi Aniaya Sopir Ojek Online Pakai Palu, Pilih Mundur dari Sekolah",
-    "en": "Student of SMAN 1 Bukittinggi Assaults Online Motorcycle Taxi Driver with a Hammer, Chooses to Drop Out of School"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "NTVNews.id",
-    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNdFhGT01yUzIzVkZfR3NxSzNjY3Vqb09oQ21uYklEMVRHbzZzT2JLa3dsVkVhNmpFR0wtYk9MQmhMQWNUX0p0NDQySV9wcGJVdXcyQTlWZnhROFNyVUdQeURuZFVkRlpsRlljMi1xeDA1WE1iR3MwUFZYY1Q0VGE5eXRfZnZCNFQ3QWZwaGJ3Qk1fOWVYS3NSR0JnRmtKM1VLTm9zdkFKMUtTa056OWtpY1hUa3N0eVJkU2QwV2JmNzE?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-25T05:15:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Taxi Driver dan Black Knight Masuk 4 Drama Korea untuk Driver Ojol",
-    "en": "Taxi Driver and Black Knight Appear in Four Korean Dramas for Ride‑hailing Drivers"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Navigasi.co.id",
-    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPMVBkVG1NRHB0N2xIbkFRVHItZG9TbzRZVXh5VDUxVUZ0QU1qd3RNY2hqVUxsTGtlZU95MkxOaF9iRGowVVVhZ29zRUJDWWstRmxCYkI3SWZ0MEZZWFk2LVduS04yYU9CRkdzREhmTFc5X0hNV0laWDRxa1hiM0U2TzdlcC1pZy0xU0JJSGthRWs1clVMZlJyS05CSWs1Z0tPaUFJ0gGjAUFVX3lxTE8xUGRUbU1EcHQ3bEhuQVFUci1kb1NvNFlVeHlUNTFVRnRBTWp3dE1jaGpVTGxMa2VlT3kyTE5oX2JEajBVVWFnb3NFQkNZay1GbEJiQjdJZnQwRllYWTYtV25LTjJhT0JGR3NESGZMVzlfSE1XSVpYNHFrWGIzRTZPN2VwLWlnLTFTQklIa2FFazVyVUxmUnJLTkJJazVnS09pQUk?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-25T04:30:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Brimob Polda Metro Jaya Siagakan Tim SAR Antisipasi Banjir dan Cuaca Ekstrem",
-    "en": "Metro Jaya Police Mobile Brigade Deploys SAR Team to Anticipate Floods and Extreme Weather"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Tribratanews",
-    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPRGJNdlNhMlFtX2lWYUJ3YjdmT2JqS0I2QVJXenlNZjMtNjJtS3RhczJ1UV8yR3BfZEtRVzhBODBtS2gyeEc4THFEVkstaVhhOVBIaEI0ZWl4WGgtcDdkZUc2V19mbHR2bWNwYmc3U2xNX054VGI3Tm1ibEdVb0JYOHczS21LSW1aVzN5M3dCalpSM1lnNHNvZTczMjU2cFJUSVU4R1VCTXhXZWd6QkhHTTBmWmFWTVNN?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-25T04:27:04Z",
-   "media": 1,
-   "judul": {
-    "id": "Rekomendasi Drama Korea buat Driver Ojol, Kisahnya Relate Banget",
-    "en": "K‑Drama Recommendations for Ride‑hailing Drivers, the Stories Are Very Relatable"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "KapanLagi.com",
-    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPNFQ3cXJ0NlltNVQxTzVBa3FLWXNmWGNKUWp2RDdhZ3JKX2ttaVhYVUtDZmZSa2tXck9uMXBZWWxCRjNCaGNpY21fMjNLamxZWmNWdTA3dHJBYWVrWjc3Yll4T0I4bmRzTk0wNDM0bzZGTFUtNC1LSmdMTThUV0VpanllR1pnMzZWVnZPcGpteG5POHFwN0EtMElLOXhSWmZOQ1FtckZGeEVRQTFtdGNYMNIBtgFBVV95cUxPTlM5OVlMYW5VUkNkVkh6aWxHVFVlWDM0d2dja2N0cTRycTNENXl6OTJXN1loNVhDMkVybnVXNVZBak5VTFZNYkFUVDJSVTZPb3Z0eENpN1U5RUJOT0hvbUhSaWJyR1JXeTRHT2RmeGcySG1RWVhFaEl6ckk0ZDZhUVo4cFR1THNiOVVHbjIyQ3pxaF8wVUotVHctdTB1SThFX2FMUjJvZkJ1U1Y5OW5rd2hVTGI4UQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-25T04:18:41Z",
-   "media": 1,
-   "judul": {
-    "id": "Ini Pemicu Kebakaran SPBU di Kramat Jati Jaktim",
-    "en": "Ini Pemicu Kebakaran SPBU di Kramat Jati Jaktim"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "detikNews",
-    "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQMmVuVC1ZN2pwaWNnWjRNclJkTG5kR09DVU9Qd0t0QjBJajRmVnk4VC00TnlScTJLUzNwSnVndm5YTDZCNXBoVG5LMXVReUV0LWwyd1BjU2loem52SGlhODUtN1lJU25CM01jd05ucFM5ekZBbEd2Ym56cTNEOTRyVm05NEg4YkthcU5MbnZoRDTSAZYBQVVfeXFMUDEyVjl1eVRESUVPNUhrN21zaXdlQUlEN1VmMWZRR1hjOGNVdjUxbjdxQkh6eWZjdEZpcmhvenJkcjg5MVR2U3ZxQzRBSFkydHpCbkQyNXlfN2podjlIclQ3THYzbDRKRG54dUNua1dyc3R2MkNjZzZsMmtDWkRpMGR4YWVkaTlfVzJWSXk5b1BoaGJTb3VB?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-25T04:18:34Z",
-   "media": 1,
-   "judul": {
-    "id": "Hadapi Ancaman Banjir dan Longsor, BPBD Garut Siagakan Logistik hingga Alat Berat di Dinas Terkait",
-    "en": "Facing Flood and Landslide Threats, Garut Disaster Agency Prepares Logistics and Heavy Equipment in Relevant Agencies"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Kabar Tasikmalaya",
-    "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxPdldlYzFfczN0SHdqYXhiak9TcnJkNGFfN3NQQWhiOG9yZ0l5ajNfanBtNEFNX2FtZTRzNmFQa09nVXo5bDZ4V2hacGRpcldOYlhFNGUzWEJ0a0c5RlljZnAwOHFxeWtEZktqOHRuX1gxTlJyVnpRVmtZQnRCWUFSOGp5N2tld0tuTWlwZ1Q0NUdoOHI1M01XUEoyNlA2dDhmSXNlR0k4cGYtSFRLeVRZU09oQzRJeWhGZnp2VzZZRk81MjVXMTI5UTJ1OUZOdFdlNG9kRC10MDlsNUpmYkQ1bFprTDJGVG5qdnZsWTFrNUdHRVhvZTQwU2lEaw?oc=5"
    }
   }
  ]
