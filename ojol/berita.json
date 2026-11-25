@@ -1,5 +1,5 @@
 {
- "w": "2026-11-25T16:44:16Z",
+ "w": "2026-11-25T17:45:25Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -327,6 +327,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-25T08:36:43Z",
+   "media": 1,
+   "judul": {
+    "id": "Perintah Prabowo ke Kapolri-Panglima TNI: Tangkap Pencuri BBM",
+    "en": "Perintah Prabowo ke Kapolri-Panglima TNI: Tangkap Pencuri BBM"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "detikFinance",
+    "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPWmZGZ004NG43a0p3UFRUZExBakxUYUVkUnpxMko5d3BqS3VpR0pBTl9CT05SNWdETW91U2FxS0xuV0VSNkVGQ1NnTTNwUDJNV3dBWFVRRmZEUjJuQW9LLTdKMkdCSlVfMnBRZWFYRHdxX3ljS1liTEFqU2d2M25JbmFNa2Q1LWFIUzhJVDZ1UHB2c2M2RGUyaExoOXZzRGFMZ1JwQlFR0gGrAUFVX3lxTE05VGlQbnBpbE4wQmxrQTctb1ZKczJLMTQ2SHc4cURtY1B0Vm9ESDlCUXpneTFoLTgwZWdySzV5dzN2RURIdnB2aUlzZXdkTzVaLVhlRC1oSGpIa2ZuT1lzb1NkSy1EUVZNaF9rTGRkU1p5TFQ4Ql9adFlYblkydk5aYVYtRDRmZS1EMC0tM3RJUllpWGh5d2JKSHpHdERxQ1Zpb0FJUEhoMGZNSQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-25T07:46:00Z",
    "media": 1,
    "judul": {
@@ -408,57 +425,6 @@
    "sumber": {
     "nama": "Berita Papua",
     "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNbkNxb1otTVJRY0tLMGxHOVRLeHl0SG9pWXVBOWREVmNmWGpQb1FCZ0d0cWJLVjd4ZU5hRjBkSmlGam5OT1h3Nlp4YXA2c2Z3TkdzMW5rcDg4Qm9wRFJ3TXREUU9lMkM0Z0hMVld0d3JjVkJqMmgzY1czX09YT0V0OHNCM24zaEs0b1Z2U0VtbUQwNVdINzV1MVEzaTdvRlNXb1kyTDlEMTRqNkRNdVN2MU9tejZFbUdRZ3RwLU96bVBZWGFTSklj?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-25T06:20:00Z",
-   "media": 1,
-   "judul": {
-    "id": "5 HP 2 Jutaan Cocok untuk Ojol dengan Baterai Monster",
-    "en": "Five Phones Under 2 Million Rupiah Suitable for Ride‑hailing Drivers with Monster Batteries"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Yoursay.id",
-    "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPdHRONzhTMEp0aXFxREE2V18wLXU4eFpsWEsySUlmUHVDM2o3d3V3WExuM3RaWmh5TllwQkVNejhkaVkwOVZ1WU1LazFxZC1LNnQxNzh2TktIYm9uR3ZHRlQ3dXN4Q1gySWlyajJSNHprbV9GTUFWMEdSZy1RVVh4VFk4d2tZVl9sMmlMaFRTTDRfWjVlWi1BcGdNZTBaWmRfZm9CRVp6YUowN1HSAbABQVVfeXFMTXBpOUFFcFg1S1YyYXNXbGJUX0pzSUdqcEJkUXpFOHM0OE9IY1YwTlpIdDU3ZWpMekN4aDh4Z1pIVzFwUHlDdFBTY01xMDFiUWowczBKR2hjYjdhVjRITjd1ajRLWlBQZjlVWVVrWUdOTmZuN09ScXFqQVlIdVJQUmMzbTlDTVFScGlyTlhjVTc3OXJEd2ZSVkxOZlU0Q2FLLXh5dHJlM0ZaQUJ5M2p0SkQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-25T05:59:55Z",
-   "media": 1,
-   "judul": {
-    "id": "Elisa Bunga Allo Soroti Ancaman Banjir, Tekankan Mitigasi Bencana di Sulteng",
-    "en": "Elisa Bunga Allo Soroti Ancaman Banjir, Tekankan Mitigasi Bencana di Sulteng"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "TrueStory",
-    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNVXVTUy01Q19SVlFtX2paS2xodXlvMi05UlFESzZRckRPTkNMUU1iYWJBclQzR25WVUItREtmYmdITXpZdlJUbTNsVzV2SUtNcGl1Z1Y2djNUM010MTgzTnUtZE9nUU9KVnp2aHhlS2lrUHltVXFCeVB0QTNMVjZlakFYYUtzbFZPa2dvcUhVNlRydkdCNm8tTEVRR2VhUQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-25T05:52:13Z",
-   "media": 1,
-   "judul": {
-    "id": "Polri Hadir di Tengah Masyarakat, Wakapolres Pandeglang Jalin Silaturahmi dengan Komunitas Ojol Maxim",
-    "en": "Police Present in the Community, Pandeglang Deputy Police Chief Builds Ties with Maxim Ride‑hailing Community"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "tribratanewspandeglang.com",
-    "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNbWhNN25BNDR0N1ZxbGxHZTJsVUlrb1VqV1FJV21qNXlqNHJlNzhvMHhPcko0MU9NcDlhVEktakhKaUNVY2M1enhZYzctTGg5bjFyMzczRDlGMmQ5RU5YSUhOLURSb3B2bndmNzJOWUVBUGtVOFVlZ0daZFdhUkh3c0NiNTJVR0dMZTFvYTljdzRubHVhYXY1ek9wbnpQdUt5RF9NTTJRUzMxZmZoV3Z6UjJKVkd0Wjhjc0oyYXJneTZkSGtKMGxmRHRuazh2d0VSSmhtRWExRzJ1NEM2aGdZNw?oc=5"
    }
   }
  ]
