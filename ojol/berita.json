@@ -1,5 +1,5 @@
 {
- "w": "2026-11-25T06:34:40Z",
+ "w": "2026-11-25T06:40:20Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -106,6 +106,40 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-24T22:24:47Z",
+   "media": 1,
+   "judul": {
+    "id": "Semua Berawal dari Pertahanan: Tiga Pergantian Dini Mourinho Picu Banjir Gol Real Madrid",
+    "en": "Semua Berawal dari Pertahanan: Tiga Pergantian Dini Mourinho Picu Banjir Gol Real Madrid"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Goal.com",
+    "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQRUZnV18xMTBVdHJpUlEyVjBJMmVLY3hiWU9EZkhwd0FjZl9BU21QTHRkTTRBbnM1ZnNxT3djUnVSN2JyTjJnV2laYlY1UVRVRXdVdmV6QUUwT01pRXpPQUJPREEtM0FlZmJxT2ZYd2lnQXRacjZPTzk3UlVYZmxnLS1aZEhISWlXQVBvMl85OTI2ZWVhdGFvekhOTXIyQTFOd2pfSWNCMFdTOWxvRktKdXhQcXM3UTFBRTdGaGcwcV9JOW1leTQ3Y3k4bEhDWGFicHVRQw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-24T22:03:22Z",
+   "media": 1,
+   "judul": {
+    "id": "Sentimen AI & Ancaman Tarif Baru AS Tekan Wall Street",
+    "en": "Sentimen AI & Ancaman Tarif Baru AS Tekan Wall Street"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Bloomberg Technoz",
+    "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxONzg2R1R3dU1WUjR2SjZoaXBvMjdlXzU0cnY3RDREb2JiZ011a252Z2oxWFI3eW9hbjZvVGsxMmNDU1UtbDZCemlnMWZNNmxJZWNTU0dqZUt2QlFKdFBNMWd1RnNUN0xsWEVkcVktZVQ1cmlfRWFGMTN1Z19ueTJOOEh5R2JKbVJrQWhDaVN3SHplUElrbU5CR0JmRzdsU21qamY4dmRB?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-24T14:01:47Z",
    "media": 2,
    "judul": {
@@ -136,108 +170,6 @@
    "sumber": {
     "nama": "Lensa Hukum",
     "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1sbHpYT1h3WnUyZEVvcmdiazkzaWJRUXB4aG1zOG1xXzVuWDh5VTdEUE1PTkRadkxjaXpGWDc3WEkwNVRNWDVaWDZCa1VBME9OX2xwN3NkNzBENjFfVWtXVi1kbzNhSnM?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-24T16:41:28Z",
-   "media": 1,
-   "judul": {
-    "id": "Harga Nasi Bakar Unik di Surabaya, Jawa Timur Berapa? Cita Rasa Pedas Paling Dicari, Bisa Pesan Lewat Ojol, Lokasinya...",
-    "en": "Harga Nasi Bakar Unik di Surabaya, Jawa Timur Berapa? Cita Rasa Pedas Paling Dicari, Bisa Pesan Lewat Ojol, Lokasinya..."
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Jatim Network",
-    "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNWjMwWGloX0lCUDNhQUlscmVmWGh6VHdnUGhRLWxIbzFIdndOT2piNnpWU252eFhCem5HWHEwbW5ROS1PcDlhcExDcl9pLXVJNTZNZlhLUHdRclV4Szk2bzRHZjRlUDFoVW4xenZIVDhobFFaeHRCT0paeG9wSVFxM2wxc0JUNTV0WUNzdlExenNnMnVpQ2t4SkRRN0RIQ1BHTkhoRGRuSmVONVN4NmlGYTdXcHZzMHFabnBRZHNEZHdzc0h5ZTlmc2tBbXdWeWtBTzMwcWNzQnVTWTdHMmFTNDZaUU9rNkVwTnpHdTN5UVdnN03SAfgBQVVfeXFMTThERG54b1J2X09BUmJ0ZHJwaHExNG1TZjQ2dGZMOUZSVjk4eU1zSnBWWDZHWE94eWUxZ1JuTFhsU2Y4UHJQbVFHdnZmdFhuc3daQTFGZ3E1eVc4RFI5WDFfVXk0STJPX2NEd3FtcFdMUFQ1U3NqZkpfZFZfcDNESmlUS09rTjhyVWNWcy1HendZTlc2U0FOUFhhRnF4Mmw0QWhQcDJ4U0RNd3lwR25ack14RGxPSjdoRzNKOVotSGJ3ak1raHdza0JPRE5TQlFTTGdnNzJUX1ZSVHlyMFZWQ3Z1UWhLOWZzcXJNenREUm1FMVNDalhjeko?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-24T14:10:31Z",
-   "media": 1,
-   "judul": {
-    "id": "Tampang MAY, Pria Berjaket Ojol yang Melakukan Pelecehan Seksual Ke Wanita saat Makan Rujak",
-    "en": "Tampang MAY, Pria Berjaket Ojol yang Melakukan Pelecehan Seksual Ke Wanita saat Makan Rujak"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Tribunjateng.com",
-    "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPOUFPQTc4OWswZDVpeENZSVZ4cDdrVDQ4ekFFeWJxY0stY0xOR3hDMW93Z1RibUN1QTgzMHQ5c3BUZnpPRFJlRTZsM3RLN0d2TzM4WVgzYWJsQ1Zacmtpcy12VnJJb1JrT0lvRGQ1UVNURklKcWVRMl9TdjBRS0FiMnZpVG85NHByNzBMUlFFbER0d1A3c1NzSl9KSlBrRzhkZ3lLQk4zVzUzV2xXTHkyVk5ZNGdiMC1BLTJVWDZQT0ZfZW9nVlpYMTVRSXBiQQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-24T13:46:55Z",
-   "media": 1,
-   "judul": {
-    "id": "Ketika Sarjana Menjadi Pengemudi Ojol, Bonus Demografi Kita Sedang ke Mana? Halaman 1",
-    "en": "Ketika Sarjana Menjadi Pengemudi Ojol, Bonus Demografi Kita Sedang ke Mana? Halaman 1"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Kompasiana.com",
-    "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNRTFYaEY5eVNBWDEydjFOQmZXdE1RSnN3VngtWm90NFprdVJZOUs3N2hTWWQ1cWF6RE9MM08xekM5RnFhMjctdnM0cUs2MWRGc3I1clZvN1BSc0RPc0lWUjBVN1ZLS25DV2ZLeXc5TUJUM3UzTFUyUGFqT2I5d3pYbHFSVThfVmV3N01YWDNBZU9GckpaWVcxN1pmMXQxc2MzWDRmMzFwbzhXTUpmR2t4b3ZiU0dsalhJRWZFUmxacDlNNmU2MUR3NE1OYnQ1RDdUSVBsYlZpcFZMamlKamxUM0FRYTVoeEk?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-23T17:54:58Z",
-   "media": 6,
-   "judul": {
-    "id": "Tatap Muka dengan Ojol Disabilitas, Kapolda Sumut Serap Keluhan dan Beri Dukungan",
-    "en": "Face-to-Face with Disabled Ojek Drivers, North Sumatra Police Chief Listens to Complaints and Offers Support"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Website Resmi Polri",
-    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPV1FpbGU4QllBdEdZWkI1UTBfRkRjVFBoNFhhSnBrWWgwVUhoVDNDUlR1TDBFR2lBUU9FbHFIM0p0ZzlXWGthb3Boa29LMHg3R2UwYzctdUZzekVKNHJja3F0dEg5WVNSMGpwMDZudER5R21zY2ZWUHdiNmxSQzBXeDZOOXF3UENyUFcxUm5ITS1sS0VRZThxWU0xYjRJYWZjcTR6T0JSRXA1emdGMGdsVXlsZUY5aDhWZXBSSw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-24T02:47:50Z",
-   "media": 3,
-   "judul": {
-    "id": "Periksa Kepala Bea Cukai Semarang, KPK Dalami soal Pengenaan Tarif Cukai",
-    "en": "Investigate Head of Semarang Customs, KPK Probes Tariff Imposition"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "ANTARA News",
-    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPd3VTUHJuWVJhWFlxMmZNMEdvVFdPYzBWOWl4V0ZLWFJPZDN6MWx2RkJ2VTZsLUIybmJxYWZYSG43QjN1ZDlUYjU5VC1xd09LN294dzN6MGs5MUdfQ21Wc0V6ZjJtMHBXZl9KSENUNWpsYnB1cWhodW1uRG9VRmR4TjVlenRLSUl2bDc1ZzdJd3NqeGtqemNLTWt3bWhOX1NrRDBiYnltTdIBqgFBVV95cUxPbl9kVGRzUUM4b28zR2FKWTM4M1daaW9VRTJEd0E5RjZmMUdwOC1FOHlfeldBZkFVMkh4cXNYZWZHZ1JsMmNDNTRNaVJXZ2I4TVdnVWsxWWhKRXgzNDl4STRDVW1VbEVaT1R5aXhLQk0tVy1lLTNuNXNjTWVsbGdmdTF4V0t1NUlIT0hOaGxXWDdQVVI0MXl1LUNBMnFkSDYxYzZ1SVVTa1lxZw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-24T13:19:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Amerika Siapkan Tarif Baru untuk Cina. Akankah Bitcoin dan Saham Turun Lagi?",
-    "en": "America Prepares New Tariffs for China. Will Bitcoin and Stocks Drop Again?"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "BeInCrypto",
-    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9DOXBuUkRnNEtLLTBaVmtKYWNQRGFwNjJ6V2dtMHdQRGFiWUQ5TFluQk9TamZWU09Ra0VvRHgzQmhyT29JUnJDYkdiY1pVbU1aYmFYczd1MVFieFFLRzNRNHJtZEItMDZYdGc?oc=5"
    }
   }
  ]
