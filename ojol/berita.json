@@ -1,11 +1,11 @@
 {
- "w": "2026-11-26T05:46:47Z",
+ "w": "2026-11-26T06:31:42Z",
  "dari": "Kroog",
  "berita": [
   {
    "jenis": "berita",
-   "waktu": "2026-11-26T04:31:16Z",
-   "media": 3,
+   "waktu": "2026-11-26T06:23:25Z",
+   "media": 7,
    "judul": {
     "id": "Dishub DKI Laporkan Pengemudi Ojol yang Diduga Aniaya Petugas di Cakung ke Polisi",
     "en": "Dishub DKI Laporkan Pengemudi Ojol yang Diduga Aniaya Petugas di Cakung ke Polisi"
@@ -15,8 +15,42 @@
     "en": ""
    },
    "sumber": {
-    "nama": "Wartakotalive.com",
-    "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNZUVsV25mWG5kS0NyUEEta2tmOENkWl96Mm9kWm95Y1BNWTA1YS1TLWgzMFNwa0VkUDBOUEFrRm9XUEZLZFdHZVJ5dmRXeDlDY1VnUVZlMlp2Vi1aWWllbjVFUURxWmgwMktmb1Rac2V2ZkhYZXRueGtYYzdQZzFWN1A4aVRsWndEakcxcDZEZG41MHVQMXZWUFA1OFhNNkJpVVdNZk5ySW41bVpnaGNYcEJiSTFQaWI2V1A1Q0RoNkI4YWY5UUozRlJoQWlYNng3Yjg5T2N3SVB0VVJkRkF1ZlZR?oc=5"
+    "nama": "Tribunjakarta.com",
+    "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNcTh6WWRDTjV1ZnZ6U3VTaDFQLWhkbUZuTEktYTd1TmJCY3BvRFA3YVIzQU8tMURTQmw5blRwSkdQVDdOVXhGLWYybklqV3hyQ2hWZUhUR0RBVjc5c01NeVJGWFdVM1hYNDU0NXVaMXI4VWI4eUFCUVlxZnpkQS1IbTJYLW9iT2k0aWJPZnhtOTdwZWFud3B4MVR3ZEZpcTJqSGFPNzl3aXlPYzBxYWluNUtHSTBWRFFNVnBDSTM4Q1JmeWZRM1Zvcm51Z2JLNi05MFBJZ1RKZUQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-26T06:02:54Z",
+   "media": 3,
+   "judul": {
+    "id": "Viral Ojol Benturkan Kepala ke Petugas Dishub di Cakung, Kadishub Bakal Panggil Aplikator",
+    "en": "Viral Ojol Benturkan Kepala ke Petugas Dishub di Cakung, Kadishub Bakal Panggil Aplikator"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Suara.com",
+    "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNaklmZUs0Mm5KNDJGT2g0WkZaQTUtdlFvVlBjTkNwOERMdkxlT0VQV2wwbGpYMWRLb05RTWpmY3FtRTA4Nnl6Q2tCZkVZLU9uNk9TbVcyUEExSjA0VnFTMUlWMW9WekhRampFdXc2Z1JOU1drYV9ZQTlWNzJPQ0JhRlZ0OG0xVWZhYmFCLWw1NWZBSnZRVWdhRy05cGJJRVowMmx1TTBZWUhiemNmT2RVcXVxQ3pqM1pOemU3U1dzZ3h3TmlvcFNCcWdpUkZNanpm0gHQAUFVX3lxTFAyYm1wWUM3RHdKdDgySGF5cVJBSHhnNFBXX0FCQnpYODdzeFhPVzAtRE1NM0NobmE5emt4am9qY2VMMlcxQU1nWmMzUnVFRDd0QUVKMVhibExZQUxfclpPLVRWR3Z4aklTTlFsZlFoU1l1bmVRMzE5RXpLVUtxb1dtN2psby0tMlBsOTJkZU9KbGd1Z19rUHowTXpVTk9DX0NsSTdhQ3N3ZjNxdS1IR0t5NWRwOTJNaVJnbkt6TksxWlF0ZzNWd1otOHBiUVhsVDg?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-26T05:35:07Z",
+   "media": 3,
+   "judul": {
+    "id": "Viral Ojol Tanduk Petugas Dishub di Cakung Jaktim, Tak Terima Ditegur Lawan Arah",
+    "en": "Viral Ojol Tanduk Petugas Dishub di Cakung Jaktim, Tak Terima Ditegur Lawan Arah"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "detikNews",
+    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNQmlCTFRqcU5lUWJSM2JHS1BQaGZ6a2xEaFptY0hqUWlQUjBIajlWb1dwSzNjb3BGNFB1aWs5UzcyQnFaNFZGSy1fa0ZseTk3RVdyUEt6WTh6QWhVc3ZCTzdWcGV1WXY5dTdVZldJejRfUV9TNXBNdzVsVWoxWUpUNHBuVGxpSWdMZzl5MWJMZ2g1Zko4Z0w4V2dWY20zLV9iSnNqekVGTEJidlluV3hZ0gG0AUFVX3lxTE9KcEtfZ2l5VGxneUJ6N3dJc25PN3FfWjZhX3BpRExSQ3dRSnYxdy1Yek5yalJyNGxBaDloZGxxNkRkVGFKUGkzNm1HV0xGVW94SnM2SUJBRkV1ZjZKMF9GVE5yNVhGcHNYenZzNmdvTURHQy1aS3dvVWtaVE15QlJKMDBSNnJPTVBQZVdfU3ZOYzB3VVNEeTFpVGFMVXZnSENWNWsyRmNsbnFfMWQ3Y2luMHZ0bg?oc=5"
    }
   },
   {
@@ -38,36 +72,19 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-26T04:29:35Z",
-   "media": 2,
+   "waktu": "2026-11-26T05:57:27Z",
+   "media": 1,
    "judul": {
-    "id": "Viral Ojol Benturkan Kepala ke Petugas Dishub di Cakung, Kadishub Bakal Panggil Aplikator",
-    "en": "Viral Ojol Benturkan Kepala ke Petugas Dishub di Cakung, Kadishub Bakal Panggil Aplikator"
+    "id": "Nyaris Rugi Rp500 Ribu karena Orderan Fiktif Driver Ojol Ini Beruntung Diselamatkan Penjaga Toko yang Curiga",
+    "en": "Nyaris Rugi Rp500 Ribu karena Orderan Fiktif Driver Ojol Ini Beruntung Diselamatkan Penjaga Toko yang Curiga"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "CentralBatam",
-    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1ueEVOb3RZUXB1S2poMTNHa2tXVHFyRzdFWm9PVHJvc2tZQ3VaYTgybUVncUk2cXRrc05IeVZ3aWVGTGZNRmQ0aGhKYjZMYmpuM3ZvYndsTXZfdTd6dGNaT1cwN1lKb2ZacndN?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-26T04:12:05Z",
-   "media": 2,
-   "judul": {
-    "id": "Viral Ojol Tanduk Petugas Dishub di Cakung Jaktim, Tak Terima Ditegur Lawan Arah",
-    "en": "Viral Ojol Tanduk Petugas Dishub di Cakung Jaktim, Tak Terima Ditegur Lawan Arah"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Wartakotalive.com",
-    "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOdVNIdG5iMXpiUmtTOEpQZklSN2pYTy1Dd2xJalhKVGZySXJzSktRSGpmVVh5ZEl3NWVjcy1hdmswTU50WWlsNFVYLWM1LUV1aTlReUFUNE5icTNMUEpHNkZQcGZOS3hsYTE3UjRfSzN4aXAyWTgtaEN2blF4Rm9IR3QxdHVCdTZWbmVGSUE0MzlUQ0k0MjVmaUl5ekhsR1c2ZkpUdDFnMmRzbUdTWVhUUzdBSFhIMEQ2eVRfVU5TZDB2REdLVlFFMEl5SDQ5MUtDQlJYZWVFcE5yY2huenU4?oc=5"
+    "nama": "Pewarta Nusantara",
+    "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOTWpfSzBSZWJGbnpDWVNoYjJBdzlCUy1DdFlOX3hsTzJKN3BNZ3lLa2o4eld4YURSdnpMcS1UYmVUeThQQ0JKOXdGX3MxbEJPbUtDcXRFT0IydUR0Wmt2N3hJMTlqQ2w4WW9sSHdTak5QZ1JTdTN4R19uYVZEVDdZX0FsaXFLdW5YeXRCbDdJdkpsT3YtTnVuTnoteGF4ZzAyWHZCMFduWXBaUnZJUDBjUWxEZWI5NFl5ell6cE5TNDhfaUNvaVVXX1JQU0pQWkVSd3EwcGJvS0I3Njd5bGtBVndpTQ?oc=5"
    }
   },
   {
@@ -102,6 +119,23 @@
    "sumber": {
     "nama": "Liputan6.com",
     "url": "https://news.google.com/rss/articles/CBMinwJBVV95cUxQdmpXOEVEYXJrdTh2WkNoNVlqWGZSVUhjTFRhMnNUcHY5a1lVcnpiSHVEQkJzUWxJYUw4b3JMM0Y2V2xwWnFuU3ZtSGxjX0FEOE9lNVlxZHpMc1Y3azFpVDNtemdWYVBUVEJNRXY4d0VuMmxySzVnNmp0MDEtekpWX0VpdnZlRU1PeG8zVm5Kc2JTVFMycHFXanlxam1FbEFKem0wNjNwRjA3MThTUU9tTzktMTNEeEplM1Rwd1MyWlBRVm82LTl5cXpNdnJGRHJDcm5RbTgxelhabUFJSzlCWUNBbGE0clFiMnB4Q3dvRkVrV2FKUTlNeWNQMzliaVhPc0lNRkFMLTIwNFlmNzZNbzBjU0NqaEwzUGo4S2wtTdIBnwJBVV95cUxQdmpXOEVEYXJrdTh2WkNoNVlqWGZSVUhjTFRhMnNUcHY5a1lVcnpiSHVEQkJzUWxJYUw4b3JMM0Y2V2xwWnFuU3ZtSGxjX0FEOE9lNVlxZHpMc1Y3azFpVDNtemdWYVBUVEJNRXY4d0VuMmxySzVnNmp0MDEtekpWX0VpdnZlRU1PeG8zVm5Kc2JTVFMycHFXanlxam1FbEFKem0wNjNwRjA3MThTUU9tTzktMTNEeEplM1Rwd1MyWlBRVm82LTl5cXpNdnJGRHJDcm5RbTgxelhabUFJSzlCWUNBbGE0clFiMnB4Q3dvRkVrV2FKUTlNeWNQMzliaVhPc0lNRkFMLTIwNFlmNzZNbzBjU0NqaEwzUGo4S2wtTQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-26T04:00:00Z",
+   "media": 1,
+   "judul": {
+    "id": "KNMP Tawarkan Lima Hal guna Memutus Ketergantungan Nelayan pada BBM",
+    "en": "KNMP Tawarkan Lima Hal guna Memutus Ketergantungan Nelayan pada BBM"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Rmol.id",
+    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOcXQ1MWN2NDhFZVBIOFNuZG91R1c4YzROaUdHWlNmNXZ3VTdUQ1ZOeFRDYjM2YkE4Z3ZwR1htWnI1Q25QNmtVckZBYWtrYXhFaEMwV1Iyc2JHb2FsVWVnRm9xNnhaVGxqWDhrVnc5NVBaN2N4MUpoY05OV3ZuLUk4dk9ES1VXNnJfZE1yXzFXbWtGSkQxMXJCOGRwdUI1c1VKQUU5b2N1WklOQQ?oc=5"
    }
   },
   {
