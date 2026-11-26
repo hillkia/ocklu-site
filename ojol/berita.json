@@ -1,5 +1,5 @@
 {
- "w": "2026-11-26T06:31:42Z",
+ "w": "2026-11-26T06:43:09Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -102,6 +102,23 @@
    "sumber": {
     "nama": "Kompas.com",
     "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPX2xiYmdDcnZkQ1pHS0ZYRklLX2pUeU83Y1JXT1Nlei1CczdqRzlIOWViT2ZHR0ExREE2aVlGMFNxTkFGekFzd0FKdzV5c1dVb1V4WUxhUC1aS18wQ2hqRDJPVWlnUXNWOG1Cem5jZ2oxNldJbExGZm5vbXJYVFJGLWJGSjducDBqeUZnUTVtOHB0OS0zMVpmVTNRTkNKcS1haGFkcHIxYW51OXR2d0ZBTmExSHZweTlJNUw4WWV4UQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-26T04:39:07Z",
+   "media": 1,
+   "judul": {
+    "id": "Trump Usul Tarif Impor Baru, RI Kena 18%",
+    "en": "Trump Usul Tarif Impor Baru, RI Kena 18%"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "detikFinance",
+    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPWFdoVC1Qck80TTA1b004OV84dXJzVDFoUUNZY1lTRU5GWEprb0E0TlRZX3ZvVVR6WmFoT194VFk2VTFYV1hEdTdlOUhxcFY5d1N6V256eUtFdlNsU0N5Q1VRaEliSUl6X1pTNFBiX1UyNE9xLThvN1QwRTFkWVZ2MnVONEtCNjExcjR4SGhyaWlQd290cXR1Y1dVdzLSAaIBQVVfeXFMTmF6S2RqaUhCOXhfRnNYTURMZDJ5bUE3YTdLWFdrakNfZjNHN0w1U2ZWdkYwZ08wUXdMcHNISC1wWmdSWXlOQVdIeHZqdWtIVFlWMlFSZWd5bnd5X3RMbjNBUTBjQm9fQTh2NnE2Y1VvejlYaldhWHdRUmNieWg4NjdheFVweWctbklLaWo3WTI1b09JczFtVkJKZzFYaDFyOGt3?oc=5"
    }
   },
   {
@@ -221,23 +238,6 @@
    "sumber": {
     "nama": "Tribunjakarta.com",
     "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOR29PY2tVVEdMWWpmZDNCWXhnN25NM1VvdklRa25qMEZzVlFpMWZ4M0YyZDRhUVBPNHByX2tfMXRvLXd4UEN5Zk9ycHRyRXAtejhnamlMUXBkQWVfMFpvTl84Q0txeUhmamtUSDNSamNLemZISUlMQzVwNzRoUlhZd3EzbVFQQW5XaHFscHdTUkRkNlNUaHBWSXNwbFZNS0M1UmVLQTk3NGtYNnpmbjdqR0gwNEJYV05qZi1yVVZ1SEthSWFhaHBBRF9Tb1VQdUdaRFRmcmV4dWs?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-25T08:47:32Z",
-   "media": 5,
-   "judul": {
-    "id": "Dua Bulan Beroperasi, Green SM Bike Tutup Layanan Ojol di Indonesia, Ini Nasib Mitra",
-    "en": "Two Months Operating, Green SM Bike Shuts Down Ride-Hailing Service in Indonesia, This Is the Fate of Partners"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "ChatNews.id",
-    "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5FQy05YnQzQVpQbWhoNFBMZGdzNmlXZlBhME5hX0J2cFVUVWZkUk5jeG5VcnVRWl93aHlMbldUeWt4a19GX3JwYUctWnVZbENhSUZxa1o2Q2ZnejRoMUlXUzg2M3hJWU0?oc=5"
    }
   }
  ]
