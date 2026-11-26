@@ -1,5 +1,5 @@
 {
- "w": "2026-11-26T01:34:51Z",
+ "w": "2026-11-26T02:35:57Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -119,6 +119,23 @@
    "sumber": {
     "nama": "Langgam.id",
     "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNVEdSR2h5ZUFHbXVDSENQSkFydXJTX2NKeFgtNHJxcGxPNWpQUDFRb2pERlpuNzJ5TjExMERVT2lvc2hPb2RJakxjUUtRb2VtWnlDUWlDaWtweHE0TWh4c25DU2l1MjVjdFN3bzk3SE9EdGFlX2lSOFhmbGxvMFdMaEtja0xiOGdXa1BvY2NGX1hZbzR5bmpuRnhPaVdadnB5NEpv?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-25T13:53:59Z",
+   "media": 1,
+   "judul": {
+    "id": "KEKERASAN DAN INTIMIDASI JURNALIS TERJADI DI AREA SPBU 64.786.13 PAOH BENUA, SAAT KRISIS BBM MELANDA KABUPATEN SINTANG",
+    "en": "KEKERASAN DAN INTIMIDASI JURNALIS TERJADI DI AREA SPBU 64.786.13 PAOH BENUA, SAAT KRISIS BBM MELANDA KABUPATEN SINTANG"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "detiksatu.com",
+    "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE4zUzdsazJzUlI2bUFna1N6Yk1pdGJpNW5QaExIV0w4SmJZNVdxRWJDUTIwVlZXbTRiUzhXTURIUjJwcFFFdC0xZU40ZUI3VHZqcWFXWk9DZ0NsUEU5aVlDNlpuWGhRTGltZHBhQVZiUWN2VDJmNWktM3JxeWI?oc=5"
    }
   },
   {
@@ -340,40 +357,6 @@
    "sumber": {
     "nama": "detikFinance",
     "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPWmZGZ004NG43a0p3UFRUZExBakxUYUVkUnpxMko5d3BqS3VpR0pBTl9CT05SNWdETW91U2FxS0xuV0VSNkVGQ1NnTTNwUDJNV3dBWFVRRmZEUjJuQW9LLTdKMkdCSlVfMnBRZWFYRHdxX3ljS1liTEFqU2d2M25JbmFNa2Q1LWFIUzhJVDZ1UHB2c2M2RGUyaExoOXZzRGFMZ1JwQlFR0gGrAUFVX3lxTE05VGlQbnBpbE4wQmxrQTctb1ZKczJLMTQ2SHc4cURtY1B0Vm9ESDlCUXpneTFoLTgwZWdySzV5dzN2RURIdnB2aUlzZXdkTzVaLVhlRC1oSGpIa2ZuT1lzb1NkSy1EUVZNaF9rTGRkU1p5TFQ4Ql9adFlYblkydk5aYVYtRDRmZS1EMC0tM3RJUllpWGh5d2JKSHpHdERxQ1Zpb0FJUEhoMGZNSQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-25T07:46:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Cerita Reza, Guru Honorer di Berau Kaltim Bergaji Rp 1,9 Juta, Pagi Mengajar Sore Jadi Ojol",
-    "en": "Cerita Reza, Guru Honorer di Berau Kaltim Bergaji Rp 1,9 Juta, Pagi Mengajar Sore Jadi Ojol"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Kompas.com",
-    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQQ05McXZ0Q2xpQlNVSkVtY3ZpNVhLT0x1RFhVZEJDbks1a3dZMmhEYV9MeURvTS1lbUZkQThfYXZBMHlkM2xXbGhKMWluNC1MQlJrclJLbS1YcHp4MjA4NjRVMGxGTnZkbXdnRjZkTWcxTkR3c0FNWU9uZ0pkQ3FWeEctdnhZcGsxdlZ3TUZvTks3YmZsWEJJd3hpVzVQdzdBYm80Y3ZWaUQ0cldsXzg3d0RaY3BkU0REay0xOHd0YTFYU0JLb2c?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-25T07:23:39Z",
-   "media": 1,
-   "judul": {
-    "id": "Kapolres Tabanan Ajak Ojol Jaga Kamtibmas dan Tertib Lalu Lintas",
-    "en": "Tabanan Police Chief Calls Ride-Hailing Drivers to Guard Public Order and Traffic Discipline"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "bsinews.id",
-    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9BTTRUMnVVaE03bWpFLTNHNEpPNzM1TklZYkhvV3l4M3JLMDZqeERKbVFQRVM4V045aWtlc284VTMyS3RYMXFab0VmekNxR1RIRlJFWDJxOVdzMkhTdlRFU0NvOGpjcVY5VHc4dw?oc=5"
    }
   }
  ]
