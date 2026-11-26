@@ -1,7 +1,41 @@
 {
- "w": "2026-11-26T03:16:22Z",
+ "w": "2026-11-26T03:33:03Z",
  "dari": "Kroog",
  "berita": [
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-25T17:15:46Z",
+   "media": 3,
+   "judul": {
+    "id": "Polres Purbalingga Gelar Sarasehan dan Deklarasi Ojol Kamtibmas, Sediakan Servis",
+    "en": "Purbalingga Police Hold Forum and Ride-Hailing Public Order Declaration, Provide Services"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "infojateng.id",
+    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQcWxpQnNDRTNlVTFQMXRzX1hyandTUkdTNFpQcl9NUi1kcHRLWUtPdVRKbEl3cHhlYmVYYkZJdDJBU2cxVWU0ek5RWEE2YnBOOGkxaElja1RSd3F4MEJUTXZ2ckJVU3VRNmV3bzdkQWM2dTM0eEFMdmxfakctVzk2bHR3SW1qVlhrc3h5Y3ZUNU9mYnpuS3ZHdDcyWkc5NF9mZm9jdXctRkdybEhsWlE?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-26T03:11:36Z",
+   "media": 1,
+   "judul": {
+    "id": "Tidak Terima Ditegur Lawan Arah, Pria Beratribut Ojol Sundul Hidung Petugas Dishub Jakarta Timur",
+    "en": "Tidak Terima Ditegur Lawan Arah, Pria Beratribut Ojol Sundul Hidung Petugas Dishub Jakarta Timur"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Wartakotalive.com",
+    "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQanhZanFBc0lxcHJSVlNWRXBlcEo3VnYxd1pydlBQWXVRVk52VDJWZ2ZUSl9nNlBuWUlJd2oyc2NBZXkwanJvT2NCZkJaa0otNHdrMnpxVXUtbDh4ZlhMeU5KbFpESlB0QUw0UFFIMm40QVR3cVFicHhZampWZmZwZjE4MHYyNk5zQTFDZ1VCdk1OQnluWFlsNDlCQ0k2QUdEZDZwdWRvNFRQZGdETGRhNzlZelJtUVhKdnFCeG9VcUNvNzVOMm43eEQ0dXFHZnRsRmlkTm5pNExIdUE?oc=5"
+   }
+  },
   {
    "jenis": "berita",
    "waktu": "2026-11-25T08:47:32Z",
@@ -17,6 +51,108 @@
    "sumber": {
     "nama": "ChatNews.id",
     "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5FQy05YnQzQVpQbWhoNFBMZGdzNmlXZlBhME5hX0J2cFVUVWZkUk5jeG5VcnVRWl93aHlMbldUeWt4a19GX3JwYUctWnVZbENhSUZxa1o2Q2ZnejRoMUlXUzg2M3hJWU0?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-26T00:18:49Z",
+   "media": 1,
+   "judul": {
+    "id": "Tarif Listrik 2027 Apakah Naik? Simak Kepastian Pemerintah dan Rincian Subsidi APBN Terbaru!",
+    "en": "Tarif Listrik 2027 Apakah Naik? Simak Kepastian Pemerintah dan Rincian Subsidi APBN Terbaru!"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Kabar Pangandaran",
+    "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxOUmRQRm5XWUltTHZ5VnctUV9OYWFFak90YktRckNROHpSQ2dNM3dLVlVDQ2xuYl81R0RyMDhOSE1BRUJmRXhCZ1AzUFM3WUIwS05rMGtZcER1Z0pKOW4tRW1QWkt6cndHdkQ5WHl0X3ZnLWw2ckZwR2lyRVhTdkswaUczTldmbE84NHhBQ1E3MjItTDhYLS1yZmFCRTB2ajFUd09pQ3BQUXkwVDNpSEJYQ1hrMjZWYlpQZkExMHpHS2dhOVpERHhmdGhxVVJSc2FDUkRzZGZfRVhNZ3pjanN0UjFsSUZLcktIRVZ2clNvMA?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-26T00:04:26Z",
+   "media": 1,
+   "judul": {
+    "id": "Polres Situbondo Perkuat Sinergi dengan Ojol",
+    "en": "Polres Situbondo Perkuat Sinergi dengan Ojol"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "RRI.co.id",
+    "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPdmR5SWIzaEtYU2FYN3VQSFdMXy1vbWV4bVpoUElVb2MwU1Q4ekhXbVVvdklUTXZwX3lGdkVNdmxCeS1zSmRWTUN1WUpQYXhEWWNOdFYxLVkwQWxXb1VKQl84Q19wUUlmTjIxc0FEWUU0VTdST3B4S3pHZ0p2VEZ3U0s5V25SRnBSTTVoWDNSZw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-25T23:56:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Kapolda Bali Ajak Komunitas Ojol Perkuat Sinergi Kamtibmas",
+    "en": "Kapolda Bali Ajak Komunitas Ojol Perkuat Sinergi Kamtibmas"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "RRI.co.id",
+    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOSEl2cU1SX0szWVlITUxyX3djWi1rWS1EbnBuT29HNEh6SV83VFo3TFZ5QVpHNi1mNnFRTjNZc0dkbEdqY3RFR2k3b0NmQnRIYVJjOVNyZGg4UjdNYXhUdk9JTWItWE9YTG9BZGJSM0Y1Q3BJaFdYUlJ5Vk5RNGdTSEtfeW1yWklncWRWOHFrYk1aU1QtVGhDNzRXWUJLYjUxMTZ6eQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-25T22:31:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Pilihan 8 Motor Listrik untuk Ojol 2026, Harga Mulai Rp11 Jutaan dan Jarak Tempuh 200 Km!",
+    "en": "Pilihan 8 Motor Listrik untuk Ojol 2026, Harga Mulai Rp11 Jutaan dan Jarak Tempuh 200 Km!"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Radar Cirebon",
+    "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOR3NscTUyejNTVkVXYllCMlZwZDkwdDVLNEZySTFJSkl4eWFuZ2RsaU50M2t5SjFPdjhXTjMydjdIV01WTkRLS3hIMENnMFF2X1M3LVhwLTA4dElEWWhKSmY3NllOeW9weTlRVlpWb3RaZWtPR1F3Y3NUREVyU1VNQ2xidGRfNFlublVnM0pVdEh3YkcwZHIwOXJZU3VHb0xab1lGU1NWWGEyTm9palhNV0dXOFgtNDJiNGJhY3NsUW5DYUFXY0dPSNIByAFBVV95cUxOR3NscTUyejNTVkVXYllCMlZwZDkwdDVLNEZySTFJSkl4eWFuZ2RsaU50M2t5SjFPdjhXTjMydjdIV01WTkRLS3hIMENnMFF2X1M3LVhwLTA4dElEWWhKSmY3NllOeW9weTlRVlpWb3RaZWtPR1F3Y3NUREVyU1VNQ2xidGRfNFlublVnM0pVdEh3YkcwZHIwOXJZU3VHb0xab1lGU1NWWGEyTm9palhNV0dXOFgtNDJiNGJhY3NsUW5DYUFXY0dPSA?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-25T22:23:14Z",
+   "media": 1,
+   "judul": {
+    "id": "Green SM Bike Tutup setelah 2 Bulan, Ini 8 Perusahaan Ojol yang Gagal Bertahan di Indonesia",
+    "en": "Green SM Bike Tutup setelah 2 Bulan, Ini 8 Perusahaan Ojol yang Gagal Bertahan di Indonesia"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Bisnis.com - Ekonomi",
+    "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOay1TVUFpUzFBeURwVUhsZUlVeVNlUFh1aWFUUFE2ekVKOWlMdjZuN0h5Y250TUtLbkhOWnhIYUJjbXB2UXBPT3p1b2RVUlpQS29UMnhoeElyc3A2OXFCT1dpV0pFX0t2aThHT0tjZTVvVlJhdFZnUVFuYzByeUNMRTVJR3gwRlhteWF2VEk5Q3pXR0ZheGtibGFNV1pkRXI4WUVDclpZTnJvR1BvNXpqQ3pZYVV6aVFHLTZOa2dsT1JNZjlxbmpnUDFlV3BkSWFtWTctdllSdE9ldw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-25T14:47:19Z",
+   "media": 2,
+   "judul": {
+    "id": "Kapolres Tabanan Ajak Ojol Jaga Kamtibmas dan Tertib Lalu Lintas",
+    "en": "Tabanan Police Chief Calls Ride-Hailing Drivers to Guard Public Order and Traffic Discipline"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "infotoday.id",
+    "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFB2c1FpWEU0VzE2VzZEOE5wX3ZpTnZRY1YzdmRHbjk5UjdzclNmeVd3SGt1QmdNMnRQa3pWR1BMbG44WjYxS1dId29xN19RQmZxeUpmNmNBa2JJckU0Qm8xWkpUaE5aZFhBODIzSW0ySGw3QWNYeEE?oc=5"
    }
   },
   {
@@ -72,121 +208,19 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-25T11:36:16Z",
-   "media": 2,
-   "judul": {
-    "id": "Polres Purbalingga Gelar Sarasehan dan Deklarasi Ojol Kamtibmas, Sediakan Servis",
-    "en": "Purbalingga Police Hold Forum and Ride-Hailing Public Order Declaration, Provide Services"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Tabloid Elemen",
-    "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPMzNlSHhiSEJ6ZDhaUEs0Z2RmamJlWVZPN2M3T2tMNThLTU1FNi1PQkNab2dyYmExQkZsNDZPWkJNZGo1VUQ1M09JcS1PcFZuOURvUFVGWkZVbE1kZDFMbU5IdElpZWVHU3FwLUdkOVJYdlNWcUpjcU12cF9wclJkckdjSlVERXNidy1QYmF3VVJIb3J4MVpUR1kzRFp2TEFlWHNNVDRoSnJHdy11WFh4Z1dPNExocWw0NkE?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-24T06:36:00Z",
-   "media": 15,
-   "judul": {
-    "id": "Baru 2 Bulan Beroperasi, Green SM Setop Layanan Ojol Listrik di Indonesia",
-    "en": "Just Two Months After Starting, Green SM Halts Electric Ojek Service in Indonesia"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "IDX Channel",
-    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOaEU3QU44dVpxa21XZ2JRX1ROQXgyOG1WU1NlUkQ2VHBEcXV5YzBSMThTcHpfYm9kRzU1RTQ3VWxERkhkb0N1ZTFvcWtxT3pDaXUxTG9jR1hBM3hQVnYxanR1djV5c1hUazhOV2c5bnh2am5NaldUYU1Uc0xsV0hJYXdRWDdIRDZleVVucUF2QXFtWW1VUWR0djdkRXRabV9KRy1sV1JBVk1hQdIBrwFBVV95cUxPTDhUak1YTzJ1emhiekJiLVZETmtkUm1tb1NmaDFDZnh5YXFfV05GRnpwdXBVdmlfSWlDTlA2MWZJcXd0bk04QmpzWmlSaHhvQWlYLVUwWjlMMk10YlgxYmk4anV1TUljRUhpQW1UZ3ZqNjJOVkYzbzYtMlBJZGJNaU1iZlZpNzB6VUt4bHhWMFd3NmZZYTRVS1Z3aFFReFFDRVZXMU8zMG9ORnJoUTlj?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-25T08:28:00Z",
-   "media": 2,
-   "judul": {
-    "id": "Pakar UNAND Nilai Penanganan Drainase dan Mitigasi Banjir Pemko Padang Sudah Baik",
-    "en": "UNAND Expert Assesses Padang City Drainage Management and Flood Mitigation as Good"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Langgam.id",
-    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNVEdSR2h5ZUFHbXVDSENQSkFydXJTX2NKeFgtNHJxcGxPNWpQUDFRb2pERlpuNzJ5TjExMERVT2lvc2hPb2RJakxjUUtRb2VtWnlDUWlDaWtweHE0TWh4c25DU2l1MjVjdFN3bzk3SE9EdGFlX2lSOFhmbGxvMFdMaEtja0xiOGdXa1BvY2NGX1hZbzR5bmpuRnhPaVdadnB5NEpv?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-25T13:53:59Z",
+   "waktu": "2026-11-25T17:07:37Z",
    "media": 1,
    "judul": {
-    "id": "KEKERASAN DAN INTIMIDASI JURNALIS TERJADI DI AREA SPBU 64.786.13 PAOH BENUA, SAAT KRISIS BBM MELANDA KABUPATEN SINTANG",
-    "en": "KEKERASAN DAN INTIMIDASI JURNALIS TERJADI DI AREA SPBU 64.786.13 PAOH BENUA, SAAT KRISIS BBM MELANDA KABUPATEN SINTANG"
+    "id": "Robinsar bersama Forkopimda Kota Cilegon turut hadir dalam Doa dan Tabur Bunga bersama Ojol",
+    "en": "Robinsar bersama Forkopimda Kota Cilegon turut hadir dalam Doa dan Tabur Bunga bersama Ojol"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "detiksatu.com",
-    "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE4zUzdsazJzUlI2bUFna1N6Yk1pdGJpNW5QaExIV0w4SmJZNVdxRWJDUTIwVlZXbTRiUzhXTURIUjJwcFFFdC0xZU40ZUI3VHZqcWFXWk9DZ0NsUEU5aVlDNlpuWGhRTGltZHBhQVZiUWN2VDJmNWktM3JxeWI?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-25T12:50:26Z",
-   "media": 1,
-   "judul": {
-    "id": "Sempat Ganti Kartu karena Jaringan, Ojol di Pekanbaru Kini Nyaman Pakai Tri",
-    "en": "Sempat Ganti Kartu karena Jaringan, Ojol di Pekanbaru Kini Nyaman Pakai Tri"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "RRI.co.id",
-    "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQS0xsVXBQTThvWUt2LUVyejlPUVotZEJOckhkc3g2VGJ6em1PRElxM1M0bXNYUzJYanVocXpTdnhjdi1tNEYyTGIzT3dtWUFNakFYTW9POG9iUGxwYkowTXMyUTZ5SmNsVVNkdmMteURrUmI3ZmdUV1lFWS1PQUZ6LVdlTHF2RTFCdDNYemJBaWJST2hOYVgwNXpSaWpBOC0ySWlrRUJlWFRQS2I3U2hEMnB0MFpfSEtndm9jYzRVNA?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-25T12:43:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Green SM Bike Cuma Umur Jagung, Rekor Baru Ojol Paling Cepat Tumbang",
-    "en": "Green SM Bike Cuma Umur Jagung, Rekor Baru Ojol Paling Cepat Tumbang"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Inilah.com",
-    "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQNExGeW1QVE5oQVl1b1lUd2liXzlKQk84bk0xbVRSbndpZEtmZ1pFaEgwZlNDWUlYU0JjRjNNbFBJYjhUWENuQlp0MmZvZUNhNHN0amYtUFl0eThLV2tQVDBSUGpTUnB2cjFnWl92SDVHN2xLdUNyNEZTMUZreXNCb24zZ2ZMRlFQYXZtVVZLbnZQaWly?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-25T12:20:00Z",
-   "media": 1,
-   "judul": {
-    "id": "8 Aplikasi Ojol yang Pernah Meramaikan Indonesia, Kini Tinggal Kenangan: Green SM Bike Terbaru",
-    "en": "8 Aplikasi Ojol yang Pernah Meramaikan Indonesia, Kini Tinggal Kenangan: Green SM Bike Terbaru"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Jatim TIMES",
-    "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNSHpwWVpteElIVkhIT0xGN2ZSbDZlN182REl1OUxlRU5qbGJkX0NnendtV0pBMjA0YzI0WjY5by1MZTNkWHBnVGluR2FWWWdVbk0wWi15dXRyVE5zd0tUd0k4bEtGLU5oeUVPLTZNUTY1aEpxQzhfNnhOZDNpRUpCOVFDdmhOOW1WbFN5U1JkX0NvWUsxUGNDSkJSU0JGUW8xVzZFZWt3b1dYR0V3WUxRYVNjQWU5RmliajJSQjhMOEVPN0szZGFZem42RkY2bWVkcUtqRnkwQnFSb1ZDb3U1bg?oc=5"
+    "nama": "Berita Cilegon",
+    "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQZzY1Y0lSNXZ2dWQwMUhKMDYxcmY3OEJXMFVzd094ekljSUxXdmgzN1JWclFkMDU2Ni13aW45d3pac25NV1lycDVnSmF2S2g3NE5wT1cxbzF6X29wUHEyazRZcWdjUUprb3dCMl9GSUVxc0NWVHFuQjIyQ1pySHVoR2xSNlNDMFNsQ0Z6WFhfa3BqVFRUWWRrM1BsNi1lMmZKa3EyT0EyUTczdVB2bzFScEtpQjR6UEh0aS1pN3p4Mi1KSXNmZThuLXllQjhNdWhPSVJLbnE5ZVNTX2M?oc=5"
    }
   }
  ]
