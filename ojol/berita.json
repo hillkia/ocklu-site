@@ -1,7 +1,126 @@
 {
- "w": "2026-11-26T04:45:56Z",
+ "w": "2026-11-26T05:02:43Z",
  "dari": "Kroog",
  "berita": [
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-26T04:31:16Z",
+   "media": 3,
+   "judul": {
+    "id": "Dishub DKI Laporkan Pengemudi Ojol yang Diduga Aniaya Petugas di Cakung ke Polisi",
+    "en": "Dishub DKI Laporkan Pengemudi Ojol yang Diduga Aniaya Petugas di Cakung ke Polisi"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Wartakotalive.com",
+    "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNZUVsV25mWG5kS0NyUEEta2tmOENkWl96Mm9kWm95Y1BNWTA1YS1TLWgzMFNwa0VkUDBOUEFrRm9XUEZLZFdHZVJ5dmRXeDlDY1VnUVZlMlp2Vi1aWWllbjVFUURxWmgwMktmb1Rac2V2ZkhYZXRueGtYYzdQZzFWN1A4aVRsWndEakcxcDZEZG41MHVQMXZWUFA1OFhNNkJpVVdNZk5ySW41bVpnaGNYcEJiSTFQaWI2V1A1Q0RoNkI4YWY5UUozRlJoQWlYNng3Yjg5T2N3SVB0VVJkRkF1ZlZR?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-26T04:30:45Z",
+   "media": 2,
+   "judul": {
+    "id": "Dishub DKI Laporkan Ojol yang Tanduk Petugas di Cakung Jaktim ke Polisi",
+    "en": "Dishub DKI Laporkan Ojol yang Tanduk Petugas di Cakung Jaktim ke Polisi"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "MetroTVNews.com",
+    "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNQ3dBRUVEcnpfc2d4Tmd4cFlDRWx1RUVIWlRnSGppZE5nZkJhOTY4RWQyMF83Uk9ONVBvWmVBMF9WYndvRUFEX05iVHRpMDd4ak1NOVdnVkc5SEl2WHR6bFFlTEFXd1o3WG83dW45SVRwd2t4UnRTdExvM2ZXRlZwZE50MEE3WVc1M2VEYnlDdy1zUWk2?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-26T04:29:35Z",
+   "media": 2,
+   "judul": {
+    "id": "Viral Ojol Benturkan Kepala ke Petugas Dishub di Cakung, Kadishub Bakal Panggil Aplikator",
+    "en": "Viral Ojol Benturkan Kepala ke Petugas Dishub di Cakung, Kadishub Bakal Panggil Aplikator"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "CentralBatam",
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1ueEVOb3RZUXB1S2poMTNHa2tXVHFyRzdFWm9PVHJvc2tZQ3VaYTgybUVncUk2cXRrc05IeVZ3aWVGTGZNRmQ0aGhKYjZMYmpuM3ZvYndsTXZfdTd6dGNaT1cwN1lKb2ZacndN?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-26T04:12:05Z",
+   "media": 2,
+   "judul": {
+    "id": "Viral Ojol Tanduk Petugas Dishub di Cakung Jaktim, Tak Terima Ditegur Lawan Arah",
+    "en": "Viral Ojol Tanduk Petugas Dishub di Cakung Jaktim, Tak Terima Ditegur Lawan Arah"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Wartakotalive.com",
+    "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOdVNIdG5iMXpiUmtTOEpQZklSN2pYTy1Dd2xJalhKVGZySXJzSktRSGpmVVh5ZEl3NWVjcy1hdmswTU50WWlsNFVYLWM1LUV1aTlReUFUNE5icTNMUEpHNkZQcGZOS3hsYTE3UjRfSzN4aXAyWTgtaEN2blF4Rm9IR3QxdHVCdTZWbmVGSUE0MzlUQ0k0MjVmaUl5ekhsR1c2ZkpUdDFnMmRzbUdTWVhUUzdBSFhIMEQ2eVRfVU5TZDB2REdLVlFFMEl5SDQ5MUtDQlJYZWVFcE5yY2huenU4?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-26T04:44:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Tegur Pemotor Lawan Arah di JGC Cakung Jaktim, Petugas Dishub Malah Disundul Pengendara Berjaket Ojol",
+    "en": "Tegur Pemotor Lawan Arah di JGC Cakung Jaktim, Petugas Dishub Malah Disundul Pengendara Berjaket Ojol"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Kompas.com",
+    "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPX2xiYmdDcnZkQ1pHS0ZYRklLX2pUeU83Y1JXT1Nlei1CczdqRzlIOWViT2ZHR0ExREE2aVlGMFNxTkFGekFzd0FKdzV5c1dVb1V4WUxhUC1aS18wQ2hqRDJPVWlnUXNWOG1Cem5jZ2oxNldJbExGZm5vbXJYVFJGLWJGSjducDBqeUZnUTVtOHB0OS0zMVpmVTNRTkNKcS1haGFkcHIxYW51OXR2d0ZBTmExSHZweTlJNUw4WWV4UQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-26T04:21:30Z",
+   "media": 1,
+   "judul": {
+    "id": "Duduk Perkara Cekcok Sopir Ojol dan Petugas Dishub Sampai Anak Punk Turun Tangan",
+    "en": "Duduk Perkara Cekcok Sopir Ojol dan Petugas Dishub Sampai Anak Punk Turun Tangan"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Liputan6.com",
+    "url": "https://news.google.com/rss/articles/CBMinwJBVV95cUxQdmpXOEVEYXJrdTh2WkNoNVlqWGZSVUhjTFRhMnNUcHY5a1lVcnpiSHVEQkJzUWxJYUw4b3JMM0Y2V2xwWnFuU3ZtSGxjX0FEOE9lNVlxZHpMc1Y3azFpVDNtemdWYVBUVEJNRXY4d0VuMmxySzVnNmp0MDEtekpWX0VpdnZlRU1PeG8zVm5Kc2JTVFMycHFXanlxam1FbEFKem0wNjNwRjA3MThTUU9tTzktMTNEeEplM1Rwd1MyWlBRVm82LTl5cXpNdnJGRHJDcm5RbTgxelhabUFJSzlCWUNBbGE0clFiMnB4Q3dvRkVrV2FKUTlNeWNQMzliaVhPc0lNRkFMLTIwNFlmNzZNbzBjU0NqaEwzUGo4S2wtTdIBnwJBVV95cUxQdmpXOEVEYXJrdTh2WkNoNVlqWGZSVUhjTFRhMnNUcHY5a1lVcnpiSHVEQkJzUWxJYUw4b3JMM0Y2V2xwWnFuU3ZtSGxjX0FEOE9lNVlxZHpMc1Y3azFpVDNtemdWYVBUVEJNRXY4d0VuMmxySzVnNmp0MDEtekpWX0VpdnZlRU1PeG8zVm5Kc2JTVFMycHFXanlxam1FbEFKem0wNjNwRjA3MThTUU9tTzktMTNEeEplM1Rwd1MyWlBRVm82LTl5cXpNdnJGRHJDcm5RbTgxelhabUFJSzlCWUNBbGE0clFiMnB4Q3dvRkVrV2FKUTlNeWNQMzliaVhPc0lNRkFMLTIwNFlmNzZNbzBjU0NqaEwzUGo4S2wtTQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-26T03:51:00Z",
+   "media": 1,
+   "judul": {
+    "id": "BPBD Padang Aktifkan Tombol EWS Gempa Tsunami dan Banjir Setiap Tanggal 26, Warga Diminta Tak Panik",
+    "en": "BPBD Padang Aktifkan Tombol EWS Gempa Tsunami dan Banjir Setiap Tanggal 26, Warga Diminta Tak Panik"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Tribunpadang.com",
+    "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOak1fRDVMNnk4S0c3OUNnci05SG9iNVNSUEtBdzFfZ3NkZ1ZOS3RtN0dqMUhjb2dmMXFod3VUWTVHRkxNNU9rcHQtd0I1NF9tRzdyZHNNR3NUdDYzTHgzY3V5dERQck5EbzdZRG1CZTVJclhudkJPVFA4MmZ6bFM1VXRXdnBoZWtodkI3T2duVWdHTnJ3cldoTUNSUGtCeDRGTXhmQWhTc0pGZ0xVZXc0Um1lNlR1M1E0WVJiaE91VEUwOFFzM1RiZ1pEdEJhVXZuWWtyanp3QjJiQQ?oc=5"
+   }
+  },
   {
    "jenis": "berita",
    "waktu": "2026-11-25T17:15:46Z",
@@ -21,19 +140,53 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-26T03:11:36Z",
+   "waktu": "2026-11-26T03:47:16Z",
    "media": 1,
    "judul": {
-    "id": "Tidak Terima Ditegur Lawan Arah, Pria Beratribut Ojol Sundul Hidung Petugas Dishub Jakarta Timur",
-    "en": "Tidak Terima Ditegur Lawan Arah, Pria Beratribut Ojol Sundul Hidung Petugas Dishub Jakarta Timur"
+    "id": "Terekam Video! Driver Ojol Sundul Wajah Petugas Dishub di Cakung, Identitasnya Masih Misterius",
+    "en": "Terekam Video! Driver Ojol Sundul Wajah Petugas Dishub di Cakung, Identitasnya Masih Misterius"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "Wartakotalive.com",
-    "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQanhZanFBc0lxcHJSVlNWRXBlcEo3VnYxd1pydlBQWXVRVk52VDJWZ2ZUSl9nNlBuWUlJd2oyc2NBZXkwanJvT2NCZkJaa0otNHdrMnpxVXUtbDh4ZlhMeU5KbFpESlB0QUw0UFFIMm40QVR3cVFicHhZampWZmZwZjE4MHYyNk5zQTFDZ1VCdk1OQnluWFlsNDlCQ0k2QUdEZDZwdWRvNFRQZGdETGRhNzlZelJtUVhKdnFCeG9VcUNvNzVOMm43eEQ0dXFHZnRsRmlkTm5pNExIdUE?oc=5"
+    "nama": "Tribunjakarta.com",
+    "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPSzJ4b3llS202N3JHaFJsUHRucDZFX0h3SkZuUDJpUlNtQzUxRVF6VFhlLXoyMHBRMDM1a1hQem9nbFI1T1ktOS1rQXZPanZBZmgtSUdZYlF0MjBQZ1kzZ2s5SmwyWm1kdWdaVXQtMVZkanVENzQ2U1JHTjRJNGpmcFpSMDFqbGYxVDVMcTQwNXA2aHJFbjBvbm1rMG9tM0E3cFA2aHdNLTVEMFdOMnhFV0xzT2dRUmlINGs4bTU0SEU0dTlNQnVnWDZXNW5vbnJYbEFacw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-26T03:45:47Z",
+   "media": 1,
+   "judul": {
+    "id": "Polisi Bersama Masyarakat Polres Pemalang Menggelar Operasi Zebra Bareng Ojol Dan Angkot Pemalang",
+    "en": "Polisi Bersama Masyarakat Polres Pemalang Menggelar Operasi Zebra Bareng Ojol Dan Angkot Pemalang"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "DETIK PERISTIWA -",
+    "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOejd6czhNNWZsUktSSE1LUFJpRWl3eXI0MmQ0YXVKOVN3UlMtcm1Vek5RbE1wVGJaY2diTXRjdWlGa1NjSkJuNUh3cTNWR1RUcDhrME9vb0N0SHdpUnI0SzRndjF6dlhGR3ozTElDQm1XME5SZlcyWUl1U2lkSWd2WWdhVXdHb3Myam44bV96S3diZUhwMEc1VUg4b1RrT0kwOW9yVlpyQ2gzZTJWVXZWWmd5TjRhZEtMell1QXd6Y2oxeDZ5a1BZ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-26T03:34:07Z",
+   "media": 1,
+   "judul": {
+    "id": "Viral Cekcok Driver Ojol dan Petugas Dishub di Cakung Berujung Aksi Saling Sundul, Ini Pemicunya",
+    "en": "Viral Cekcok Driver Ojol dan Petugas Dishub di Cakung Berujung Aksi Saling Sundul, Ini Pemicunya"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Tribunjakarta.com",
+    "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOR29PY2tVVEdMWWpmZDNCWXhnN25NM1VvdklRa25qMEZzVlFpMWZ4M0YyZDRhUVBPNHByX2tfMXRvLXd4UEN5Zk9ycHRyRXAtejhnamlMUXBkQWVfMFpvTl84Q0txeUhmamtUSDNSamNLemZISUlMQzVwNzRoUlhZd3EzbVFQQW5XaHFscHdTUkRkNlNUaHBWSXNwbFZNS0M1UmVLQTk3NGtYNnpmbjdqR0gwNEJYV05qZi1yVVZ1SEthSWFhaHBBRF9Tb1VQdUdaRFRmcmV4dWs?oc=5"
    }
   },
   {
@@ -102,40 +255,6 @@
    "sumber": {
     "nama": "RRI.co.id",
     "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOSEl2cU1SX0szWVlITUxyX3djWi1rWS1EbnBuT29HNEh6SV83VFo3TFZ5QVpHNi1mNnFRTjNZc0dkbEdqY3RFR2k3b0NmQnRIYVJjOVNyZGg4UjdNYXhUdk9JTWItWE9YTG9BZGJSM0Y1Q3BJaFdYUlJ5Vk5RNGdTSEtfeW1yWklncWRWOHFrYk1aU1QtVGhDNzRXWUJLYjUxMTZ6eQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-25T22:31:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Pilihan 8 Motor Listrik untuk Ojol 2026, Harga Mulai Rp11 Jutaan dan Jarak Tempuh 200 Km!",
-    "en": "Pilihan 8 Motor Listrik untuk Ojol 2026, Harga Mulai Rp11 Jutaan dan Jarak Tempuh 200 Km!"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Radar Cirebon",
-    "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOR3NscTUyejNTVkVXYllCMlZwZDkwdDVLNEZySTFJSkl4eWFuZ2RsaU50M2t5SjFPdjhXTjMydjdIV01WTkRLS3hIMENnMFF2X1M3LVhwLTA4dElEWWhKSmY3NllOeW9weTlRVlpWb3RaZWtPR1F3Y3NUREVyU1VNQ2xidGRfNFlublVnM0pVdEh3YkcwZHIwOXJZU3VHb0xab1lGU1NWWGEyTm9palhNV0dXOFgtNDJiNGJhY3NsUW5DYUFXY0dPSNIByAFBVV95cUxOR3NscTUyejNTVkVXYllCMlZwZDkwdDVLNEZySTFJSkl4eWFuZ2RsaU50M2t5SjFPdjhXTjMydjdIV01WTkRLS3hIMENnMFF2X1M3LVhwLTA4dElEWWhKSmY3NllOeW9weTlRVlpWb3RaZWtPR1F3Y3NUREVyU1VNQ2xidGRfNFlublVnM0pVdEh3YkcwZHIwOXJZU3VHb0xab1lGU1NWWGEyTm9palhNV0dXOFgtNDJiNGJhY3NsUW5DYUFXY0dPSA?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-25T22:23:14Z",
-   "media": 1,
-   "judul": {
-    "id": "Green SM Bike Tutup setelah 2 Bulan, Ini 8 Perusahaan Ojol yang Gagal Bertahan di Indonesia",
-    "en": "Green SM Bike Tutup setelah 2 Bulan, Ini 8 Perusahaan Ojol yang Gagal Bertahan di Indonesia"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Bisnis.com - Ekonomi",
-    "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOay1TVUFpUzFBeURwVUhsZUlVeVNlUFh1aWFUUFE2ekVKOWlMdjZuN0h5Y250TUtLbkhOWnhIYUJjbXB2UXBPT3p1b2RVUlpQS29UMnhoeElyc3A2OXFCT1dpV0pFX0t2aThHT0tjZTVvVlJhdFZnUVFuYzByeUNMRTVJR3gwRlhteWF2VEk5Q3pXR0ZheGtibGFNV1pkRXI4WUVDclpZTnJvR1BvNXpqQ3pZYVV6aVFHLTZOa2dsT1JNZjlxbmpnUDFlV3BkSWFtWTctdllSdE9ldw?oc=5"
    }
   }
  ]
