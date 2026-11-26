@@ -1,11 +1,11 @@
 {
- "w": "2026-11-26T07:56:11Z",
+ "w": "2026-11-26T09:55:50Z",
  "dari": "Kroog",
  "berita": [
   {
    "jenis": "berita",
-   "waktu": "2026-11-26T06:23:25Z",
-   "media": 7,
+   "waktu": "2026-11-26T07:08:06Z",
+   "media": 13,
    "judul": {
     "id": "Dishub DKI Laporkan Pengemudi Ojol yang Diduga Aniaya Petugas di Cakung ke Polisi",
     "en": "Dishub DKI Laporkan Pengemudi Ojol yang Diduga Aniaya Petugas di Cakung ke Polisi"
@@ -15,13 +15,47 @@
     "en": ""
    },
    "sumber": {
-    "nama": "Tribunjakarta.com",
-    "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNcTh6WWRDTjV1ZnZ6U3VTaDFQLWhkbUZuTEktYTd1TmJCY3BvRFA3YVIzQU8tMURTQmw5blRwSkdQVDdOVXhGLWYybklqV3hyQ2hWZUhUR0RBVjc5c01NeVJGWFdVM1hYNDU0NXVaMXI4VWI4eUFCUVlxZnpkQS1IbTJYLW9iT2k0aWJPZnhtOTdwZWFud3B4MVR3ZEZpcTJqSGFPNzl3aXlPYzBxYWluNUtHSTBWRFFNVnBDSTM4Q1JmeWZRM1Zvcm51Z2JLNi05MFBJZ1RKZUQ?oc=5"
+    "nama": "Demokratis.co.id",
+    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9NWDRGS1d5eWdpalowd2lOZDRLazFTcWpZaWZrOS1PSHdUSHp4TXpBeEE0Z21NQnphYWw2S3dkNWV2Vmdjc3I5bGZNTTl4bEZ5M2IzdTg1d1RYcFRXY2VsWXlXV0hXeFhOWk1xaVRn?oc=5"
    }
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-26T06:02:54Z",
+   "waktu": "2026-11-26T08:00:00Z",
+   "media": 6,
+   "judul": {
+    "id": "Dua Bulan Beroperasi, Green SM Bike Tutup Layanan Ojol di Indonesia, Ini Nasib Mitra",
+    "en": "Two Months Operating, Green SM Bike Shuts Down Ride-Hailing Service in Indonesia, This Is the Fate of Partners"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "FORTUNE Indonesia",
+    "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNdzRiUGpiVHYzektlUWVjOXhlUjhnSV9ONmxvUnhpdW5NemZTSzMwS1dFemRQdVhvZVdPMGh6aWdobFdQT0FLTTllaGdMTzV4UFU5VlNvQTd1WXNLXzByNDV4X1RxMHFkMWVEZ2Y5Q3h6RVBiSzUtZDNhLTNKaXd0akNPUGpULTJtSGFLWnJLUWFUTExPbWFlTlFNa0dOcW5RbUhLbERjYW03ODV0YnkwcWpR?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-26T07:13:57Z",
+   "media": 4,
+   "judul": {
+    "id": "Viral Ojol Tanduk Petugas Dishub di Cakung Jaktim, Tak Terima Ditegur Lawan Arah",
+    "en": "Viral Ojol Tanduk Petugas Dishub di Cakung Jaktim, Tak Terima Ditegur Lawan Arah"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Pikiran-Rakyat.com",
+    "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQNjk1U3dTVGw0QkVFWEoxcFBGMTRLUzFuNklfT21nUTJzX0dXS1J1OFZVdFRRQ0pKVnV6NURRQWx6VXBQTjBHV2pTUjhMbU5xMXJEbFJqNGhSYldSRUJVN2o0TjhQdWszakViY21NUm9VR29sOGtyM2N6UWxnYS1tVnNFTm1LNzNNcnBxcFZIcW9XNkNKWFRGNEZvNTFFU0FFb3hPbFRjOXBzVWU4dExqdm41OHd2dDQ2bXVrY1RobjFwVDBkeTNBdzNIVE9tcDktSUtXbzNTYk5uYy1WM3pfX0dfLWZFQ0NJNXN3Y2hQY3g4YVh4?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-26T06:40:34Z",
    "media": 3,
    "judul": {
     "id": "Viral Ojol Benturkan Kepala ke Petugas Dishub di Cakung, Kadishub Bakal Panggil Aplikator",
@@ -32,42 +66,280 @@
     "en": ""
    },
    "sumber": {
-    "nama": "Suara.com",
-    "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNaklmZUs0Mm5KNDJGT2g0WkZaQTUtdlFvVlBjTkNwOERMdkxlT0VQV2wwbGpYMWRLb05RTWpmY3FtRTA4Nnl6Q2tCZkVZLU9uNk9TbVcyUEExSjA0VnFTMUlWMW9WekhRampFdXc2Z1JOU1drYV9ZQTlWNzJPQ0JhRlZ0OG0xVWZhYmFCLWw1NWZBSnZRVWdhRy05cGJJRVowMmx1TTBZWUhiemNmT2RVcXVxQ3pqM1pOemU3U1dzZ3h3TmlvcFNCcWdpUkZNanpm0gHQAUFVX3lxTFAyYm1wWUM3RHdKdDgySGF5cVJBSHhnNFBXX0FCQnpYODdzeFhPVzAtRE1NM0NobmE5emt4am9qY2VMMlcxQU1nWmMzUnVFRDd0QUVKMVhibExZQUxfclpPLVRWR3Z4aklTTlFsZlFoU1l1bmVRMzE5RXpLVUtxb1dtN2psby0tMlBsOTJkZU9KbGd1Z19rUHowTXpVTk9DX0NsSTdhQ3N3ZjNxdS1IR0t5NWRwOTJNaVJnbkt6TksxWlF0ZzNWd1otOHBiUVhsVDg?oc=5"
+    "nama": "CentralBatam",
+    "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9BbGNOUmgydVI5aXIySEpWY1hwSVhKcU9sVmQ5V0lXSHQwdnBqNWtNTzFkMklzVmxORENNcGJuWXpycl9QWUVIR3k3bkJtaDFzOW5VcXVFN09uNUFrcVZOZmZrcVk2Zw?oc=5"
    }
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-26T05:35:07Z",
-   "media": 3,
-   "judul": {
-    "id": "Viral Ojol Tanduk Petugas Dishub di Cakung Jaktim, Tak Terima Ditegur Lawan Arah",
-    "en": "Viral Ojol Tanduk Petugas Dishub di Cakung Jaktim, Tak Terima Ditegur Lawan Arah"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "detikNews",
-    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNQmlCTFRqcU5lUWJSM2JHS1BQaGZ6a2xEaFptY0hqUWlQUjBIajlWb1dwSzNjb3BGNFB1aWs5UzcyQnFaNFZGSy1fa0ZseTk3RVdyUEt6WTh6QWhVc3ZCTzdWcGV1WXY5dTdVZldJejRfUV9TNXBNdzVsVWoxWUpUNHBuVGxpSWdMZzl5MWJMZ2g1Zko4Z0w4V2dWY20zLV9iSnNqekVGTEJidlluV3hZ0gG0AUFVX3lxTE9KcEtfZ2l5VGxneUJ6N3dJc25PN3FfWjZhX3BpRExSQ3dRSnYxdy1Yek5yalJyNGxBaDloZGxxNkRkVGFKUGkzNm1HV0xGVW94SnM2SUJBRkV1ZjZKMF9GVE5yNVhGcHNYenZzNmdvTURHQy1aS3dvVWtaVE15QlJKMDBSNnJPTVBQZVdfU3ZOYzB3VVNEeTFpVGFMVXZnSENWNWsyRmNsbnFfMWQ3Y2luMHZ0bg?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-26T04:30:45Z",
+   "waktu": "2026-11-26T09:47:28Z",
    "media": 2,
    "judul": {
-    "id": "Dishub DKI Laporkan Ojol yang Tanduk Petugas di Cakung Jaktim ke Polisi",
-    "en": "Dishub DKI Laporkan Ojol yang Tanduk Petugas di Cakung Jaktim ke Polisi"
+    "id": "Duduk Perkara Cekcok Sopir Ojol dan Petugas Dishub Sampai Anak Punk Turun Tangan",
+    "en": "Duduk Perkara Cekcok Sopir Ojol dan Petugas Dishub Sampai Anak Punk Turun Tangan"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "MetroTVNews.com",
-    "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNQ3dBRUVEcnpfc2d4Tmd4cFlDRWx1RUVIWlRnSGppZE5nZkJhOTY4RWQyMF83Uk9ONVBvWmVBMF9WYndvRUFEX05iVHRpMDd4ak1NOVdnVkc5SEl2WHR6bFFlTEFXd1o3WG83dW45SVRwd2t4UnRTdExvM2ZXRlZwZE50MEE3WVc1M2VEYnlDdy1zUWk2?oc=5"
+    "nama": "MerahPutih",
+    "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQTVk0T3RSRkdfN0J0SjFEVFRlS2ZUWEtWRkhRc2Vpd29BUVNSTV9Eb09HYmw0UV9uNFhmWllOamJUT3AyM09Wa09peHdlWnkwNnR2MUJKdElOQmE0aTBwTk1jSHJpMjQwS2F0ZzZmdUlIRlo2WWZoV1BRMXVMZlZ6dTlYZUpQdElYOEx5UlRwMNIBjgFBVV95cUxOZFhrd0NyUlo0cVo0U28yRWFwdFFlTVZPYmFRRkE1eEFVazRyZTBudEFwTloxU3I5ZmhmeFFsdGhVelViV2dDbGFTVm5sZUNQQU14V1ZoRkhsXzJfRmk1U3h4YkR4QUFsLUlVX1c5WXpld3lmSmNyWGtjaDBxbWRLN1F2T3VOQjNVWnhlcXd3?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-26T08:59:00Z",
+   "media": 2,
+   "judul": {
+    "id": "Ojol Tanduk Kepala Petugas di Jaktim, Dishub DKI Akan Panggil Pihak Aplikator",
+    "en": "Ojol Tanduk Kepala Petugas di Jaktim, Dishub DKI Akan Panggil Pihak Aplikator"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Kompas.com",
+    "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPejh2bUhycnkydzM2TC13Nkg1VGtvSzBLMUZkS21XTlZjMUpDeEpGSXczWXlpQjlxeUw4UkVEVFZRSUJrQlVVcWJYMVdXRDEyNnpEcm1JczNJYmpXRUVSeldxdThub2JOMzdlak5PeXpjcnNVNjRYYldmZUhKRGpBN0FVY1Bsb1NSS1dmVXJ1eDd2TVJxNlZmb2lXUlRRMkZmdjZoeXV1LVAzdDYyMGt0NnRZeU4wVEIxN05Ja2t4UFRMYUtEYTNYNkEyOUhHVXJuSjVpZnFkS1JyY3RKTWJiVWktWTV2eEk?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-26T08:37:00Z",
+   "media": 2,
+   "judul": {
+    "id": "Petugas Dianiaya Ojol Saat Tegur Pengendara Lawan Arah, Dishub DKI Tempuh Jalur Hukum",
+    "en": "Petugas Dianiaya Ojol Saat Tegur Pengendara Lawan Arah, Dishub DKI Tempuh Jalur Hukum"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Tribunjakarta.com",
+    "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPSVJDTnRVOTBuSTZZRjZSWTRkd3JvUl94R3hEY2JsalZoOUZ5dzZOX2dySkRUTlZkeFpyMDJhNXdMb2VTVFotYUxDUW90RWVpaUk5cDgyT2NfVkY5ZUZ6MjNVc3lMdzlFWDJKSHdweW5DQ3J6NUItcUc1Y1lSeElaNXpEMmhtNzVmV250UzRSTkN2OF9PazAySWhzQ01BQ3hrVXQtNXU5MFVsdXVCSG56eEItOXNRSldwc3QydnJqcFlsX3FNVV9ZNXhB?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-26T06:56:12Z",
+   "media": 2,
+   "judul": {
+    "id": "Viral Ojol Ngamuk Lawan Arah, Sundul Petugas Dishub DKI di Cakung",
+    "en": "Viral Ojol Ngamuk Lawan Arah, Sundul Petugas Dishub DKI di Cakung"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "IDN Times",
+    "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQaXVNbVltcGhMTy0yWFZEREs2T2NFRG5hQXJjUTF5QWxDTkR0UG1wWW1sWmw4dmc2aHp6a3YxMDFZc0VBM0NKSV9vNEZCWktVR2hLMVpjNzBfRnBfSWxETHp5dTNGQzRyejZQUzZ6Z3NPVHdVOFBLTDVJdUdrYllnc0NZeXdfM2NNNENNUVlLV21XYkRJd2J5Y3JVdE44c2lfLUdEcFdlRHNEUV9mMl84VHZ1QU1hTExNRThhQmtR0gHDAUFVX3lxTE8wd1FfTDJIZnVQOE1UekFVVC1KRG9IaUlNZ0dzTmgwOFFjUl9xUUNWWlpoSFAtb01sZmRqZjhvVVlnMTN3ZDl1eHN1ZUVOY05VT2VMWVJBRXdwWkdJeENSS1dBbF82M1BjcW1sYzJDaGpRUmJKZU90Vm8zRDBHOEFmUVByaVFoVjZfbHBxaVJzd2Nwcjh0dmoyLXhzQlZKcXMyOEZQQVNuOUNIOFZsSTB1LUtQeTREZlZqLVFmNmdYQ1ZvRQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-26T06:32:38Z",
+   "media": 2,
+   "judul": {
+    "id": "BPBD Padang Uji Sirine Gempa, Tsunami dan Banjir Setiap Tanggal 26, Warga Diminta Tak Panik",
+    "en": "BPBD Padang Uji Sirine Gempa, Tsunami dan Banjir Setiap Tanggal 26, Warga Diminta Tak Panik"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Hantaran.co",
+    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQRVhUcVUyT2hVZVZDRlFsNEJudHF3VjVhUU1LWnR1LTBfMTZQT2hOR2xIZ1d3eklaQkMwc2ZtbEJUUUgwd2ItZlVldGMxSm11NUVtTjZ0dVJoNmV3bTJfc2tLdFNwSVQ1MEpNX0s1Ny11NTd4V0tkVGkzb3BsUnJtVENLdlFVa0c4c19TSFpMbTVUTzNrc1psaEp5V19fekRaSWdxdUpwRHVBVkZjdVFEVmVleE0xZw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-26T09:31:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Suka Duka Kaum Hawa Pengemudi Ojek Online di Pontianak",
+    "en": "Suka Duka Kaum Hawa Pengemudi Ojek Online di Pontianak"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "RRI.co.id",
+    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPY2xzMzhYaGRIQ0ZMeXpZNWoycmVnM1B4LTJ2djFHaTRzTU9EWjZvdXlXOUw0bklfejEzVjk2MHJMTXpTbWpCNzRQTzMtYkM5N2JnM3dJbThoQlkxWUxxdHBrb2tWZlN6RElqSjNCcHBkVXlIYVpWZkVOaHAyNGZMSzVYNHJnMXFNZXJWdG1SNHVMclJYMzlqbV9qaGZlWnBf?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-26T09:03:46Z",
+   "media": 1,
+   "judul": {
+    "id": "JAKARTA – Aksi penertiban pengendara yang melawan arah di kawasan TL JGC Cakung, Jakarta Timur, Kamis (26/11/2026), berujung keributan. Seorang petugas Dinas Perhubungan (Dishub) dilaporkan mengalami insiden dengan seorang pengendara oj",
+    "en": "JAKARTA – Aksi penertiban pengendara yang melawan arah di kawasan TL JGC Cakung, Jakarta Timur, Kamis (26/11/2026), berujung keributan. Seorang petugas Dinas Perhubungan (Dishub) dilaporkan mengalami insiden dengan seorang pengendara oj"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Facebook",
+    "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPRUZVVWhXcG45amRlRXk4YmRzUmpUc0FhMnJEQm5qa3NWTGNyV2wtUXVwRzVuTEU1SC1wRVpfaTRDSTdrYWpLVGMyZzR1RWUzbXhzZ0l5aHhqTWYta1NaN2c5VWJma3dBSU52MDkwMnQ3LW5CZ0E0QTRQUmF4bjdUTE5yWXczUUVTd1ZlMUszSWVRbml1WkV0SzBkSlVyRkNoUjJNdkRGN3RpZ3dIa3RGb2ZLSGhoNE9fR3RfNVFJSFBkUVljQ3lNNGJSLThqaWxHVmR6QVltOGFBVE05?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-26T08:58:44Z",
+   "media": 1,
+   "judul": {
+    "id": "Hamka B Kady Soroti Potongan Aplikator Ojol 8 Persen, Minta Aspirasi Pengemudi Diperjuangkan",
+    "en": "Hamka B Kady Soroti Potongan Aplikator Ojol 8 Persen, Minta Aspirasi Pengemudi Diperjuangkan"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Bela Rakyat",
+    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPOFZ1aXZNQXJnQU5ZWTU1eFBRZTYzM0I5VFpNLXBOcWFfWUtwTFMybnB3TlQ5UFFBWm9VTGE0NTFVb3NQQ1NOaTJ4NUlSZmFidWhydEhoWEpEdzZQNlFOcTVFQjNyVFhuQXk2UndMSnkxUm1pdGYzRlB1cGxXRkxtRDBhSm43YndnTmRBbTRqcWhyVlFyUUkwMlVuZ09PN3Q5WjhLNFpNeC16bXhqSzUtVGxPT1BrUQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-26T08:33:57Z",
+   "media": 1,
+   "judul": {
+    "id": "Banyak Aplikator Ojol Berguguran, Mengapa Pemain Baru Sulit Bertahan?",
+    "en": "Banyak Aplikator Ojol Berguguran, Mengapa Pemain Baru Sulit Bertahan?"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "kontan.co.id",
+    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQdXUzOVg1UTVWd1BfaGlYazhsSkRRVnpkczJnRDNzWlNqazdiM244Yl9FcFRwMlUwNW02UmF1WWJ6SXcxOEFEN3pNaFhMajFxRGN1Y01EMm9weW9WNVVZa2taSUxOY21ER2t5SG4tMEZWelFoR21TZjJVR1NzZlpFWUhMRlNCaTVYWktEcEpsNWpqb01SOVYzUTg4QUJPRmhQZUJSVNIBngFBVV95cUxPUzhzSTZqS09QcDdKRFpVdjdDODF6aE92alBIaWlfZVg5U3RhNk1tUGFVaTlqUXZaTGJ3U1B4Qy1xeUM2VUU2S1ZFSzlFUVRhZTc4akVzZElDWExiZXdiMHRCZ0gySU9oRzdTLURoaTlHWlNTVEIxbmtCNXRiYTRoOWMzeXhlWlFPTzVYY1ZYUldCRTY1UWZ5ZWtrZHJfUQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-26T08:33:47Z",
+   "media": 1,
+   "judul": {
+    "id": "Empat Tahun Putusan Gugatan Banjir, Palembang Masih Terendam, WALHI Desak Pemkot Bertindak",
+    "en": "Empat Tahun Putusan Gugatan Banjir, Palembang Masih Terendam, WALHI Desak Pemkot Bertindak"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Mattanews.co",
+    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQTzI3enVNcVYtUDA5cFFoNHEydmNBdVlaYWlmVmRMUEJNLVBCWTJXVXdkQzk0N2dta3hIUFB1SVB2cXRZN3EyaXlTSFhHdkpzSUdHNjZ2bnZ0UTZ1NXJKampXYVZuU1JXZTBvdXU4Yk9SSkFRdWx2ZGZHNGNKTGVTTFlBUndhb1BaU3QxRm1oa2wtaWZ1dVZiWXRER1B4bXhCeVNlUW1pQTB3eGVQV1Fj?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-26T08:31:04Z",
+   "media": 1,
+   "judul": {
+    "id": "Cadangan BBM Nasional Ditargetkan Naik dari 21 Jadi 60 Hari",
+    "en": "Cadangan BBM Nasional Ditargetkan Naik dari 21 Jadi 60 Hari"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Listrik Indonesia",
+    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNSHdQRGk2dUNfcmFBb3ZJWXp0bHNkVjVXU0NsOEc3Y2R4SFFoOEdrSlc5dU9fMVAxWm90RExTMUhuY3pUNC1iSjEtbUpRck42aC1TbmZTNGZtRmJrQWZRb2o5S1JvY1JXUV8xc3dNQWh2Y09fRFM2ck9kTmJyNHNmLTVlX1ZJemdjM2ZKeHIxUXdxSFU5VUNhREdTd0VrckJwN0pN?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-26T08:08:07Z",
+   "media": 1,
+   "judul": {
+    "id": "Asosiasi Driver Online Ungkap Kesulitan Pemain Baru Bersaing di Bisnis Ojol",
+    "en": "Asosiasi Driver Online Ungkap Kesulitan Pemain Baru Bersaing di Bisnis Ojol"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "kontan.co.id",
+    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNMWVFUmFFOXozYWxjM1FLRnk5T2FkZ2VfeWs1MHJJTEpTdGM5Zms5UmU4YjYwNHlKSXViZEpqRHpaMHZudjU0VmpUWG9QTnBWQzRvOERUejd4TXFfeTE2bV8ySjlTaVJhMjU2dTY3TVpnZUg0RXNOdFIzVWVzRXNPX0huWmhuM0lMTzFmYktEU3pPcF9Sd0xsWXRIZER0akJNaGE4a0wtMUl4Q3lOSlVn0gGoAUFVX3lxTFBVSHhueUtLSVhGUm5FODk1bW82X3luY1ZXVlo2bnVfQ2VWM2lYRDdjajE0N2JrSHVUcWlfS3JadE56UmZPbi13QlJUZVlsS3NQT1ZwbEEwbmx2d0J5UWF5Ynl5cWsyUU5zMmNhRUgxR1Fyb1QtWUY4SU1zVHYxc256ZDhXOFJUaGRqWUk0TEZPSlJBbGZaSTVRSUpzT0Y3MmY1TTdHV0tXNg?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-26T07:52:09Z",
+   "media": 1,
+   "judul": {
+    "id": "Hidung Memar Usai Disundul Ojol di Cakung, Petugas Dishub Fauzan Resmi Lapor Polisi",
+    "en": "Hidung Memar Usai Disundul Ojol di Cakung, Petugas Dishub Fauzan Resmi Lapor Polisi"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Tribunjakarta.com",
+    "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPUmV3bjM5VE1tOW0xb20zRDdFSXJfZ2RkVDhTbVVJdWExemtMM3pTVjRLOU0tVFBvLUdvX0Q5ZGRyNERlR1NQS0tlYnZhVWF3Tk1mWWo3d1VpZTRTUnJCeDUyR1MwbXlVNmF0TktNSmk2T0VtUi05MDNSYjlINko1WU1vbFVKY3RQbV94M1lJNDNhSnhCeHBKaENTYTI3dVdCNEpJMWR5d0VSaVhoNDhDU0U3aWM4aC1yZS1BcmRhYzV0Rms?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-26T07:44:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Komdigi Cari Formula Tarif Kurir agar Driver Ojol Untung, Konsumen Tak Terbebani",
+    "en": "Komdigi Cari Formula Tarif Kurir agar Driver Ojol Untung, Konsumen Tak Terbebani"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Katadata.co.id",
+    "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOSlhJWUNtLTJINC1kVTg3ZXJNZ3lVUUJjbmd4cmtLTENmVEk2Rnd6R1Rnd2lrREZoTS1BaFgtcV9IYi1hRlNXbXo2a19xZTRCNzJhMmoxVWQteFZxMEozVUtyTzZoSDJheU1XTnFrTURXOUVYaUY0UWNCRFRkcjR4UWF3UkJGWDRiSjdlSFNwZlJ5TElCTDhEZWRSNXZjRDMtbk5Tb29hbHVFcHJmVlVjWm9ybnlpZTQzTGhiWmNlY2RIVGVuODBlV3RGbUXSAdIBQVVfeXFMUDRLUEY4ZTBWWWNMMFFnNVBxS0t4TGJfYURLMHJmTXF0YlZ3cjdaUkJPT3BfeU9EWkZqXy1fbDhEYWktWFBKRWwzUFpaMmdCeDE4VmUwRDQwUmlyakZhSkJaa3c3Z1VGZ0VRdExxMk9oY0ZJREc1d3pQMUFKQXpCMHdrVk1jYVpoNlJvNmxaVVJ6YXowOGFwdGJfRWZKOG1RSXluRlJKdTB6anFPYVpncnZGWlpSWFlIYnM1NS1MUWN2ZzRyTTBWQUNLQjQtMWk1SjhB?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-26T07:08:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Pemandi Jenazah hingga Ojol di Cilegon Dibidik Masuk BPJS Ketenagakerjaan",
+    "en": "Pemandi Jenazah hingga Ojol di Cilegon Dibidik Masuk BPJS Ketenagakerjaan"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "BantenPro.co.id",
+    "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPYzF5U3BQclpzejFua0lic2pHMHNvLVdiNHdWbk5iLUxwOV9uM2pWWDNOTldZbTFfQnV5VU1NT21aNXdUc2VSYjVCT1owV2x1d2ZoV0E2TzdkekFHeHRSNlBJeXQ1eHNGT0hGNk1rSk5DbGY3aUVmT0tuQng4anN0Tzh3bm9LbnN0X3JtcUtBYkRzNi1SNVhMc1lweVZ6OUE?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-26T06:56:04Z",
+   "media": 1,
+   "judul": {
+    "id": "Petugas Sudinhub Jaktim diduga mengalami kekerasan saat bertugas",
+    "en": "Petugas Sudinhub Jaktim diduga mengalami kekerasan saat bertugas"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "ANTARA News",
+    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQdjVEaF9OYm5EdzR6c3RnUGRBOHpJTlhjLVdrUGFSMTBabmlBbUUxVkxUNmJJc2UxdzdQWXR1MDkwcko0RGU1bzBjcTdZVndGSkk5QzZGZTBhRFRCeU9reG1mMHVaT2ZWdEItM1l6TzhxN2tGTjhqNEFSWHdVNm9xSHFPNnI4eng5d0szLXVqWUNpSVRhTndSeU5uWmpQWHpNdWhRSXZQb19JZ9IBrAFBVV95cUxNQ2lSeEJhMl9oU25hOVc0S0h0X1FtOUJRVEFtWVVTdmRXN0FOWGY2MzktMkZDY3oxbnZuZFJrNjkwUWJvSlVTb0hUQkxOOExUcFI2UlFnTVZ0RmV1MjNVQnZ0WlFHQ0hkd0tvbjNrVWRyYWFHMGVIWDdJRE5oNjVIUnRyVHFKaGRtNlozaGhhWEdsbmJiQlhWNTNXbko4OWFUaUxyblNsdHFLTVl6?oc=5"
    }
   },
   {
@@ -89,6 +361,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-26T06:30:28Z",
+   "media": 1,
+   "judul": {
+    "id": "Niat Hati Cari Orderan Malah Cari Masalah, Driver Ojol di Simokerto Dibekuk Usai Remas Pantat Warga",
+    "en": "Niat Hati Cari Orderan Malah Cari Masalah, Driver Ojol di Simokerto Dibekuk Usai Remas Pantat Warga"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "rmoljatim.id",
+    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQSmNkMGhBOGp5UVI5QWNjWUZ3UlUzVVozdVlNTGFaZUxLYVNDSXNnQW5TaTFxaWVrbloxMFVrT1ZlRDA1UGZndEM3b0tPRnQ1MTBvUTJLWjBxR1k5eU1VNmZVaDhJSHhVMEFCYm15YmROLTdDbzFlVS1MamNnUGxfdHBWUUJNR2ZYeTZtM3dwcGVjSHN4amtfOWdvRDhCSVRxaUczU2pwXy1tQk84QVFtWmdDZ2VFRncxek94SHhoa3g?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-26T06:30:00Z",
    "media": 1,
    "judul": {
@@ -102,6 +391,23 @@
    "sumber": {
     "nama": "IDNFinancials",
     "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNdGtGSlFlNHN3RDZxbTN6eHhEc1pKSkUyNnh2amtXUkZNX05OSk9ka1NaU0F1YUlFWTNBN29jOWlES293MFF0Ny1jWVF6OXlLeGpoaEp6MTlIYjAxRmh6dFZNMV9RUHlwRFdaUlBoeGtIbXlyaEtkY2JsUUdwYWFKcU5WQ0N4TG45TlpnODJlUzdBcjkzc3dfLV9MSmRBWmJpQVozb2kwUU5xS0tv?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-26T06:25:31Z",
+   "media": 1,
+   "judul": {
+    "id": "Ojek Online sebagai Alternatif Pekerjaan: Peluang di Tengah Pengangguran",
+    "en": "Ojek Online sebagai Alternatif Pekerjaan: Peluang di Tengah Pengangguran"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Kompasiana.com",
+    "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQUmR6ODV1alBSR3RFMW42Q2swbTEzaGtuMmx0MVFzb3RSNW5zcGQ1WG1kMWlqQXZMeVpwbFRFYTFyYnhiZ1ZoWFRfTmNwUzlxLTBCdnRSdzNWcXlrY3k3YnNtWEFZbVN1VWVXWmhwdmc2SFc0a3IzUHpmZnNTRDJXckxseTAwRHV4ZEhJQ2VKZGk5aklfNzlrUTFRRWJYMXA3RDR6cUJDaWo0c2dSdmZPcjN1UVZUNDVqTjFUUEFHVVpvZ1V0UGkyWTZRd3hwa2dOZUpv?oc=5"
    }
   },
   {
@@ -123,6 +429,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-25T23:56:00Z",
+   "media": 2,
+   "judul": {
+    "id": "Kapolda Bali Temui Komunitas Ojol, Serap Aspirasi dan Perkuat Sinergi Jaga Kamtibmas",
+    "en": "Kapolda Bali Temui Komunitas Ojol, Serap Aspirasi dan Perkuat Sinergi Jaga Kamtibmas"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "RRI.co.id",
+    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOSEl2cU1SX0szWVlITUxyX3djWi1rWS1EbnBuT29HNEh6SV83VFo3TFZ5QVpHNi1mNnFRTjNZc0dkbEdqY3RFR2k3b0NmQnRIYVJjOVNyZGg4UjdNYXhUdk9JTWItWE9YTG9BZGJSM0Y1Q3BJaFdYUlJ5Vk5RNGdTSEtfeW1yWklncWRWOHFrYk1aU1QtVGhDNzRXWUJLYjUxMTZ6eQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-26T05:57:27Z",
    "media": 1,
    "judul": {
@@ -140,23 +463,6 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-26T04:44:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Tegur Pemotor Lawan Arah di JGC Cakung Jaktim, Petugas Dishub Malah Disundul Pengendara Berjaket Ojol",
-    "en": "Tegur Pemotor Lawan Arah di JGC Cakung Jaktim, Petugas Dishub Malah Disundul Pengendara Berjaket Ojol"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Kompas.com",
-    "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPX2xiYmdDcnZkQ1pHS0ZYRklLX2pUeU83Y1JXT1Nlei1CczdqRzlIOWViT2ZHR0ExREE2aVlGMFNxTkFGekFzd0FKdzV5c1dVb1V4WUxhUC1aS18wQ2hqRDJPVWlnUXNWOG1Cem5jZ2oxNldJbExGZm5vbXJYVFJGLWJGSjducDBqeUZnUTVtOHB0OS0zMVpmVTNRTkNKcS1haGFkcHIxYW51OXR2d0ZBTmExSHZweTlJNUw4WWV4UQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
    "waktu": "2026-11-26T04:39:07Z",
    "media": 1,
    "judul": {
@@ -170,125 +476,6 @@
    "sumber": {
     "nama": "detikFinance",
     "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPWFdoVC1Qck80TTA1b004OV84dXJzVDFoUUNZY1lTRU5GWEprb0E0TlRZX3ZvVVR6WmFoT194VFk2VTFYV1hEdTdlOUhxcFY5d1N6V256eUtFdlNsU0N5Q1VRaEliSUl6X1pTNFBiX1UyNE9xLThvN1QwRTFkWVZ2MnVONEtCNjExcjR4SGhyaWlQd290cXR1Y1dVdzLSAaIBQVVfeXFMTmF6S2RqaUhCOXhfRnNYTURMZDJ5bUE3YTdLWFdrakNfZjNHN0w1U2ZWdkYwZ08wUXdMcHNISC1wWmdSWXlOQVdIeHZqdWtIVFlWMlFSZWd5bnd5X3RMbjNBUTBjQm9fQTh2NnE2Y1VvejlYaldhWHdRUmNieWg4NjdheFVweWctbklLaWo3WTI1b09JczFtVkJKZzFYaDFyOGt3?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-26T04:21:30Z",
-   "media": 1,
-   "judul": {
-    "id": "Duduk Perkara Cekcok Sopir Ojol dan Petugas Dishub Sampai Anak Punk Turun Tangan",
-    "en": "Duduk Perkara Cekcok Sopir Ojol dan Petugas Dishub Sampai Anak Punk Turun Tangan"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Liputan6.com",
-    "url": "https://news.google.com/rss/articles/CBMinwJBVV95cUxQdmpXOEVEYXJrdTh2WkNoNVlqWGZSVUhjTFRhMnNUcHY5a1lVcnpiSHVEQkJzUWxJYUw4b3JMM0Y2V2xwWnFuU3ZtSGxjX0FEOE9lNVlxZHpMc1Y3azFpVDNtemdWYVBUVEJNRXY4d0VuMmxySzVnNmp0MDEtekpWX0VpdnZlRU1PeG8zVm5Kc2JTVFMycHFXanlxam1FbEFKem0wNjNwRjA3MThTUU9tTzktMTNEeEplM1Rwd1MyWlBRVm82LTl5cXpNdnJGRHJDcm5RbTgxelhabUFJSzlCWUNBbGE0clFiMnB4Q3dvRkVrV2FKUTlNeWNQMzliaVhPc0lNRkFMLTIwNFlmNzZNbzBjU0NqaEwzUGo4S2wtTdIBnwJBVV95cUxQdmpXOEVEYXJrdTh2WkNoNVlqWGZSVUhjTFRhMnNUcHY5a1lVcnpiSHVEQkJzUWxJYUw4b3JMM0Y2V2xwWnFuU3ZtSGxjX0FEOE9lNVlxZHpMc1Y3azFpVDNtemdWYVBUVEJNRXY4d0VuMmxySzVnNmp0MDEtekpWX0VpdnZlRU1PeG8zVm5Kc2JTVFMycHFXanlxam1FbEFKem0wNjNwRjA3MThTUU9tTzktMTNEeEplM1Rwd1MyWlBRVm82LTl5cXpNdnJGRHJDcm5RbTgxelhabUFJSzlCWUNBbGE0clFiMnB4Q3dvRkVrV2FKUTlNeWNQMzliaVhPc0lNRkFMLTIwNFlmNzZNbzBjU0NqaEwzUGo4S2wtTQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-26T04:00:00Z",
-   "media": 1,
-   "judul": {
-    "id": "KNMP Tawarkan Lima Hal guna Memutus Ketergantungan Nelayan pada BBM",
-    "en": "KNMP Tawarkan Lima Hal guna Memutus Ketergantungan Nelayan pada BBM"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Rmol.id",
-    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOcXQ1MWN2NDhFZVBIOFNuZG91R1c4YzROaUdHWlNmNXZ3VTdUQ1ZOeFRDYjM2YkE4Z3ZwR1htWnI1Q25QNmtVckZBYWtrYXhFaEMwV1Iyc2JHb2FsVWVnRm9xNnhaVGxqWDhrVnc5NVBaN2N4MUpoY05OV3ZuLUk4dk9ES1VXNnJfZE1yXzFXbWtGSkQxMXJCOGRwdUI1c1VKQUU5b2N1WklOQQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-26T03:51:00Z",
-   "media": 1,
-   "judul": {
-    "id": "BPBD Padang Aktifkan Tombol EWS Gempa Tsunami dan Banjir Setiap Tanggal 26, Warga Diminta Tak Panik",
-    "en": "BPBD Padang Aktifkan Tombol EWS Gempa Tsunami dan Banjir Setiap Tanggal 26, Warga Diminta Tak Panik"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Tribunpadang.com",
-    "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOak1fRDVMNnk4S0c3OUNnci05SG9iNVNSUEtBdzFfZ3NkZ1ZOS3RtN0dqMUhjb2dmMXFod3VUWTVHRkxNNU9rcHQtd0I1NF9tRzdyZHNNR3NUdDYzTHgzY3V5dERQck5EbzdZRG1CZTVJclhudkJPVFA4MmZ6bFM1VXRXdnBoZWtodkI3T2duVWdHTnJ3cldoTUNSUGtCeDRGTXhmQWhTc0pGZ0xVZXc0Um1lNlR1M1E0WVJiaE91VEUwOFFzM1RiZ1pEdEJhVXZuWWtyanp3QjJiQQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-25T17:15:46Z",
-   "media": 3,
-   "judul": {
-    "id": "Polres Purbalingga Gelar Sarasehan dan Deklarasi Ojol Kamtibmas, Sediakan Servis",
-    "en": "Purbalingga Police Hold Forum and Ride-Hailing Public Order Declaration, Provide Services"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "infojateng.id",
-    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQcWxpQnNDRTNlVTFQMXRzX1hyandTUkdTNFpQcl9NUi1kcHRLWUtPdVRKbEl3cHhlYmVYYkZJdDJBU2cxVWU0ek5RWEE2YnBOOGkxaElja1RSd3F4MEJUTXZ2ckJVU3VRNmV3bzdkQWM2dTM0eEFMdmxfakctVzk2bHR3SW1qVlhrc3h5Y3ZUNU9mYnpuS3ZHdDcyWkc5NF9mZm9jdXctRkdybEhsWlE?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-26T03:47:16Z",
-   "media": 1,
-   "judul": {
-    "id": "Terekam Video! Driver Ojol Sundul Wajah Petugas Dishub di Cakung, Identitasnya Masih Misterius",
-    "en": "Terekam Video! Driver Ojol Sundul Wajah Petugas Dishub di Cakung, Identitasnya Masih Misterius"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Tribunjakarta.com",
-    "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPSzJ4b3llS202N3JHaFJsUHRucDZFX0h3SkZuUDJpUlNtQzUxRVF6VFhlLXoyMHBRMDM1a1hQem9nbFI1T1ktOS1rQXZPanZBZmgtSUdZYlF0MjBQZ1kzZ2s5SmwyWm1kdWdaVXQtMVZkanVENzQ2U1JHTjRJNGpmcFpSMDFqbGYxVDVMcTQwNXA2aHJFbjBvbm1rMG9tM0E3cFA2aHdNLTVEMFdOMnhFV0xzT2dRUmlINGs4bTU0SEU0dTlNQnVnWDZXNW5vbnJYbEFacw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-26T03:45:47Z",
-   "media": 1,
-   "judul": {
-    "id": "Polisi Bersama Masyarakat Polres Pemalang Menggelar Operasi Zebra Bareng Ojol Dan Angkot Pemalang",
-    "en": "Polisi Bersama Masyarakat Polres Pemalang Menggelar Operasi Zebra Bareng Ojol Dan Angkot Pemalang"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "DETIK PERISTIWA -",
-    "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOejd6czhNNWZsUktSSE1LUFJpRWl3eXI0MmQ0YXVKOVN3UlMtcm1Vek5RbE1wVGJaY2diTXRjdWlGa1NjSkJuNUh3cTNWR1RUcDhrME9vb0N0SHdpUnI0SzRndjF6dlhGR3ozTElDQm1XME5SZlcyWUl1U2lkSWd2WWdhVXdHb3Myam44bV96S3diZUhwMEc1VUg4b1RrT0kwOW9yVlpyQ2gzZTJWVXZWWmd5TjRhZEtMell1QXd6Y2oxeDZ5a1BZ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-26T03:34:07Z",
-   "media": 1,
-   "judul": {
-    "id": "Viral Cekcok Driver Ojol dan Petugas Dishub di Cakung Berujung Aksi Saling Sundul, Ini Pemicunya",
-    "en": "Viral Cekcok Driver Ojol dan Petugas Dishub di Cakung Berujung Aksi Saling Sundul, Ini Pemicunya"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Tribunjakarta.com",
-    "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOR29PY2tVVEdMWWpmZDNCWXhnN25NM1VvdklRa25qMEZzVlFpMWZ4M0YyZDRhUVBPNHByX2tfMXRvLXd4UEN5Zk9ycHRyRXAtejhnamlMUXBkQWVfMFpvTl84Q0txeUhmamtUSDNSamNLemZISUlMQzVwNzRoUlhZd3EzbVFQQW5XaHFscHdTUkRkNlNUaHBWSXNwbFZNS0M1UmVLQTk3NGtYNnpmbjdqR0gwNEJYV05qZi1yVVZ1SEthSWFhaHBBRF9Tb1VQdUdaRFRmcmV4dWs?oc=5"
    }
   }
  ]
