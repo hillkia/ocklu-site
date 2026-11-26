@@ -1,5 +1,5 @@
 {
- "w": "2026-11-26T09:55:50Z",
+ "w": "2026-11-26T12:46:08Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -34,6 +34,23 @@
    "sumber": {
     "nama": "FORTUNE Indonesia",
     "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNdzRiUGpiVHYzektlUWVjOXhlUjhnSV9ONmxvUnhpdW5NemZTSzMwS1dFemRQdVhvZVdPMGh6aWdobFdQT0FLTTllaGdMTzV4UFU5VlNvQTd1WXNLXzByNDV4X1RxMHFkMWVEZ2Y5Q3h6RVBiSzUtZDNhLTNKaXd0akNPUGpULTJtSGFLWnJLUWFUTExPbWFlTlFNa0dOcW5RbUhLbERjYW03ODV0YnkwcWpR?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-26T11:50:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Kembaran Innova Zenix Meluncur: Bisa Minum BBM Etanol 85%, Harga Rp 300 Jutaan",
+    "en": "Kembaran Innova Zenix Meluncur: Bisa Minum BBM Etanol 85%, Harga Rp 300 Jutaan"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "detikoto",
+    "url": "https://oto.detik.com/mobil/d-8771138/kembaran-innova-zenix-meluncur-bisa-minum-bbm-etanol-85-harga-rp-300-jutaan"
    }
   },
   {
@@ -153,6 +170,23 @@
    "sumber": {
     "nama": "Hantaran.co",
     "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQRVhUcVUyT2hVZVZDRlFsNEJudHF3VjVhUU1LWnR1LTBfMTZQT2hOR2xIZ1d3eklaQkMwc2ZtbEJUUUgwd2ItZlVldGMxSm11NUVtTjZ0dVJoNmV3bTJfc2tLdFNwSVQ1MEpNX0s1Ny11NTd4V0tkVGkzb3BsUnJtVENLdlFVa0c4c19TSFpMbTVUTzNrc1psaEp5V19fekRaSWdxdUpwRHVBVkZjdVFEVmVleE0xZw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-26T11:11:07Z",
+   "media": 1,
+   "judul": {
+    "id": "Pasca Kebakaran BBM Ilegal Polisi Tahan Satu Tersangka",
+    "en": "Pasca Kebakaran BBM Ilegal Polisi Tahan Satu Tersangka"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Radarjambi.co.id",
+    "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPX1BVejM4T2xfeHpDSmFkZ24xMTl4aEVsRnlNcjlXbThtenctOHVuVVhfN1FGbVRtMHhXd3ZMYlNiZG5DY0hlbWJQZmZsT2FYS0d3NUQyUGZERHJLVzRMbFpRekR1MUtpNUpzRkZIOTljRU9ienZSQUVUOFo1ZURNUV9IRHlXTHZnakFuZ0tGdHROc2kzcjROSXNTNWlLNG1vZlJEbTJ3?oc=5"
    }
   },
   {
@@ -408,74 +442,6 @@
    "sumber": {
     "nama": "Kompasiana.com",
     "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQUmR6ODV1alBSR3RFMW42Q2swbTEzaGtuMmx0MVFzb3RSNW5zcGQ1WG1kMWlqQXZMeVpwbFRFYTFyYnhiZ1ZoWFRfTmNwUzlxLTBCdnRSdzNWcXlrY3k3YnNtWEFZbVN1VWVXWmhwdmc2SFc0a3IzUHpmZnNTRDJXckxseTAwRHV4ZEhJQ2VKZGk5aklfNzlrUTFRRWJYMXA3RDR6cUJDaWo0c2dSdmZPcjN1UVZUNDVqTjFUUEFHVVpvZ1V0UGkyWTZRd3hwa2dOZUpv?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-26T06:00:44Z",
-   "media": 1,
-   "judul": {
-    "id": "Bintang Basket Topless di Majalah Maxim, Pemuka Agama Protes",
-    "en": "Bintang Basket Topless di Majalah Maxim, Pemuka Agama Protes"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Wolipop",
-    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNdUZHTnhGOE9hVDhDNUlCOGxka3RvN0trNWJuLXhsUXYzdXZQMy1SUHdZOUtCcndGNFhXVTBZeDUwLXZsdUMyeldYa2J4S0dUR05vWUJlY0d6ajVDaWNyZm5rdk5sU25kMS0xdHBnUzMydkJuZzQ1OFg1Q3ROdkUwNjdzdGJsc0tFbTUwMzlGWjFyNFptS2RoTVBfOXBvYWlHOVlDWi0xd1h3bXVuQWlhUzlQcHnSAboBQVVfeXFMTUV2N0xZVVhDd1FMVUFGZDUtdzV1NEdBbEpJS3JfanNucENvQ21EUHVUR0pHT1RkMF9wcnBYNHpjT3pDZ1lwWUEtWXRKNWd5eWNsMEdkd0x0WF85ak94NEJCSk82V1dxaE5OZm4xTEZPRFNGdHkxcUNhajlrS2djOWV5cFI2aE9XQjNTTVEyQ2xYdDVITTFhZjZpNXY0UEszeHAyODUteDB5R2hFTmtUNEFmR3EwYk54WHJB?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-25T23:56:00Z",
-   "media": 2,
-   "judul": {
-    "id": "Kapolda Bali Temui Komunitas Ojol, Serap Aspirasi dan Perkuat Sinergi Jaga Kamtibmas",
-    "en": "Kapolda Bali Temui Komunitas Ojol, Serap Aspirasi dan Perkuat Sinergi Jaga Kamtibmas"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "RRI.co.id",
-    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOSEl2cU1SX0szWVlITUxyX3djWi1rWS1EbnBuT29HNEh6SV83VFo3TFZ5QVpHNi1mNnFRTjNZc0dkbEdqY3RFR2k3b0NmQnRIYVJjOVNyZGg4UjdNYXhUdk9JTWItWE9YTG9BZGJSM0Y1Q3BJaFdYUlJ5Vk5RNGdTSEtfeW1yWklncWRWOHFrYk1aU1QtVGhDNzRXWUJLYjUxMTZ6eQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-26T05:57:27Z",
-   "media": 1,
-   "judul": {
-    "id": "Nyaris Rugi Rp500 Ribu karena Orderan Fiktif Driver Ojol Ini Beruntung Diselamatkan Penjaga Toko yang Curiga",
-    "en": "Nyaris Rugi Rp500 Ribu karena Orderan Fiktif Driver Ojol Ini Beruntung Diselamatkan Penjaga Toko yang Curiga"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Pewarta Nusantara",
-    "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOTWpfSzBSZWJGbnpDWVNoYjJBdzlCUy1DdFlOX3hsTzJKN3BNZ3lLa2o4eld4YURSdnpMcS1UYmVUeThQQ0JKOXdGX3MxbEJPbUtDcXRFT0IydUR0Wmt2N3hJMTlqQ2w4WW9sSHdTak5QZ1JTdTN4R19uYVZEVDdZX0FsaXFLdW5YeXRCbDdJdkpsT3YtTnVuTnoteGF4ZzAyWHZCMFduWXBaUnZJUDBjUWxEZWI5NFl5ell6cE5TNDhfaUNvaVVXX1JQU0pQWkVSd3EwcGJvS0I3Njd5bGtBVndpTQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-26T04:39:07Z",
-   "media": 1,
-   "judul": {
-    "id": "Trump Usul Tarif Impor Baru, RI Kena 18%",
-    "en": "Trump Usul Tarif Impor Baru, RI Kena 18%"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "detikFinance",
-    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPWFdoVC1Qck80TTA1b004OV84dXJzVDFoUUNZY1lTRU5GWEprb0E0TlRZX3ZvVVR6WmFoT194VFk2VTFYV1hEdTdlOUhxcFY5d1N6V256eUtFdlNsU0N5Q1VRaEliSUl6X1pTNFBiX1UyNE9xLThvN1QwRTFkWVZ2MnVONEtCNjExcjR4SGhyaWlQd290cXR1Y1dVdzLSAaIBQVVfeXFMTmF6S2RqaUhCOXhfRnNYTURMZDJ5bUE3YTdLWFdrakNfZjNHN0w1U2ZWdkYwZ08wUXdMcHNISC1wWmdSWXlOQVdIeHZqdWtIVFlWMlFSZWd5bnd5X3RMbjNBUTBjQm9fQTh2NnE2Y1VvejlYaldhWHdRUmNieWg4NjdheFVweWctbklLaWo3WTI1b09JczFtVkJKZzFYaDFyOGt3?oc=5"
    }
   }
  ]
