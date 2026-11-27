@@ -1,5 +1,5 @@
 {
- "w": "2026-11-27T15:57:52Z",
+ "w": "2026-11-27T16:34:33Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -17,6 +17,74 @@
    "sumber": {
     "nama": "Demokratis.co.id",
     "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9NWDRGS1d5eWdpalowd2lOZDRLazFTcWpZaWZrOS1PSHdUSHp4TXpBeEE0Z21NQnphYWw2S3dkNWV2Vmdjc3I5bGZNTTl4bEZ5M2IzdTg1d1RYcFRXY2VsWXlXV0hXeFhOWk1xaVRn?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-27T09:34:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Grab Uji Coba AI untuk Bisnis, Order Ojol Antar Barang dan Makanan Melonjak",
+    "en": "Grab Uji Coba AI untuk Bisnis, Order Ojol Antar Barang dan Makanan Melonjak"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Katadata.co.id",
+    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPdl9ieHdtUE5LVGZsbzhtd3M2ZUZSWXRvQnBadGk0SGRwMlRBWEU1ODZWa0dEMHc0TkhlTjVSWG9rdmotU2phMEtaSThWMkd1b3BLTmU2ZTYwLXRxNGNoNGY2UE04a2k3NjVZNUpMWnd4R0pjOXVpelpNMWdHNWNSak1qc2hUUGdERnFmcldLV2JIVEo2MXdYZmtFQUhsVnlyWTFoOEpxcE1CNk9OUDVoSE9iaTJCRDNEWXBZNVktVzlDYkNrSXfSAcsBQVVfeXFMUHk4SWJxb255YTVia0hjYWZhSnJUWWZub1BBSkpSVmdrVlZnNTlzRXYzN2pUSmtzU1R2bkYzTzZiZ1NKTFFJaG1hLURUeWl2SFNOc3llc2I5cWZPcW1laTBPTGxXcU8wOUF3Z1g1T1M1LVZjQ3RhcmxpNTBud0czenFCMnZtd2hjbXR5S3h2UUlrSnBQbTQ1SE9SN1FodzBpRlNadzFhX2RPbnd4SUttUUozQV9FYnFCWGRsN2FIWlVpeXlvOHR0SkFaVXc?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-27T09:32:00Z",
+   "media": 1,
+   "judul": {
+    "id": "BMKG dan Kemen PU Kembangkan Prediksi Banjir Berbasis AI",
+    "en": "BMKG dan Kemen PU Kembangkan Prediksi Banjir Berbasis AI"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "TVRI News",
+    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxON3FibDdocy16cG9fVndGaXQ1SHB0X2lEYk0zemxlelBFVzRTc1lpNmh1dm9LUEpGOXRFYW5QS2daaHhfSmNjRldQcEJTaVhtajJmR1loZGhwUFZTWEtPX0lsbTQzbmE1QUtsV0haNFVrYnlNSnZTTjJYWHR6dGRhRF9EX1dyUExLX0l4SlcxaHJ2ck5ORS1qQjhFbmNiTmhLZWRj?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-27T09:30:39Z",
+   "media": 1,
+   "judul": {
+    "id": "Bayang-bayang Tarif AS, Bitcoin Tertahan di Kisaran US$61.400",
+    "en": "Bayang-bayang Tarif AS, Bitcoin Tertahan di Kisaran US$61.400"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Bareksa.com",
+    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxObUxIT2x2anVEYmZXNE1sRkRXRUE0TnFaWndFb08zZHZ0b2VTN0J4QWUxMk1WQ2hFa3pUdTg2TzdXMFRDdTA0bkhCczFjMVBxamRUUFZnN3BXcHFJTTdva1FHWFFQTmtMcndVMzhkazJNOWZzUm5nQnkxcGpnRFRsNURQa193ZEZ0S0JwRUVCWU9DendjM0hLZS1TZkduR1BzOXpVX2EyY3Z6c0ZoQncwag?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-27T09:24:18Z",
+   "media": 1,
+   "judul": {
+    "id": "5 Startup Indonesia Binaan Grab Ventures Velocity Batch 9 Buktikan Efektivitas AI",
+    "en": "5 Startup Indonesia Binaan Grab Ventures Velocity Batch 9 Buktikan Efektivitas AI"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "GadgetDIVA",
+    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOa29mTV9WWlJ1XzItVGV6a2VwSU5jcmxHU0dMNUE3Sm9ZMW5ZUDVSa185X0Y5cXNHcFE2amM3N3J2RnN5Nmhfa19ZRGE4X1hPbEhJMHN1eENGXzBobG1UcVJVX0Y3VlpkWkgwZ1BsTGhsTjdKTEJiX21yQmdvUThuNm9yMnRkLUJkYXJ2aVBkbUpFRFhwRHlrbk9QNF9kRFpxR1pGV0IzZDBJM1lNMVE0V1NXSHd5QQ?oc=5"
    }
   },
   {
@@ -68,278 +136,6 @@
    "sumber": {
     "nama": "detikoto",
     "url": "https://oto.detik.com/mobil/d-8771138/kembaran-innova-zenix-meluncur-bisa-minum-bbm-etanol-85-harga-rp-300-jutaan"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-26T07:13:57Z",
-   "media": 4,
-   "judul": {
-    "id": "Viral Ojol Tanduk Petugas Dishub di Cakung Jaktim, Tak Terima Ditegur Lawan Arah",
-    "en": "Viral Ojol Tanduk Petugas Dishub di Cakung Jaktim, Tak Terima Ditegur Lawan Arah"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Pikiran-Rakyat.com",
-    "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQNjk1U3dTVGw0QkVFWEoxcFBGMTRLUzFuNklfT21nUTJzX0dXS1J1OFZVdFRRQ0pKVnV6NURRQWx6VXBQTjBHV2pTUjhMbU5xMXJEbFJqNGhSYldSRUJVN2o0TjhQdWszakViY21NUm9VR29sOGtyM2N6UWxnYS1tVnNFTm1LNzNNcnBxcFZIcW9XNkNKWFRGNEZvNTFFU0FFb3hPbFRjOXBzVWU4dExqdm41OHd2dDQ2bXVrY1RobjFwVDBkeTNBdzNIVE9tcDktSUtXbzNTYk5uYy1WM3pfX0dfLWZFQ0NJNXN3Y2hQY3g4YVh4?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-26T06:40:34Z",
-   "media": 3,
-   "judul": {
-    "id": "Viral Ojol Benturkan Kepala ke Petugas Dishub di Cakung, Kadishub Bakal Panggil Aplikator",
-    "en": "Viral Ojol Benturkan Kepala ke Petugas Dishub di Cakung, Kadishub Bakal Panggil Aplikator"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "CentralBatam",
-    "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9BbGNOUmgydVI5aXIySEpWY1hwSVhKcU9sVmQ5V0lXSHQwdnBqNWtNTzFkMklzVmxORENNcGJuWXpycl9QWUVIR3k3bkJtaDFzOW5VcXVFN09uNUFrcVZOZmZrcVk2Zw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-26T09:47:28Z",
-   "media": 2,
-   "judul": {
-    "id": "Duduk Perkara Cekcok Sopir Ojol dan Petugas Dishub Sampai Anak Punk Turun Tangan",
-    "en": "Duduk Perkara Cekcok Sopir Ojol dan Petugas Dishub Sampai Anak Punk Turun Tangan"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "MerahPutih",
-    "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQTVk0T3RSRkdfN0J0SjFEVFRlS2ZUWEtWRkhRc2Vpd29BUVNSTV9Eb09HYmw0UV9uNFhmWllOamJUT3AyM09Wa09peHdlWnkwNnR2MUJKdElOQmE0aTBwTk1jSHJpMjQwS2F0ZzZmdUlIRlo2WWZoV1BRMXVMZlZ6dTlYZUpQdElYOEx5UlRwMNIBjgFBVV95cUxOZFhrd0NyUlo0cVo0U28yRWFwdFFlTVZPYmFRRkE1eEFVazRyZTBudEFwTloxU3I5ZmhmeFFsdGhVelViV2dDbGFTVm5sZUNQQU14V1ZoRkhsXzJfRmk1U3h4YkR4QUFsLUlVX1c5WXpld3lmSmNyWGtjaDBxbWRLN1F2T3VOQjNVWnhlcXd3?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-26T08:59:00Z",
-   "media": 2,
-   "judul": {
-    "id": "Ojol Tanduk Kepala Petugas di Jaktim, Dishub DKI Akan Panggil Pihak Aplikator",
-    "en": "Ojol Tanduk Kepala Petugas di Jaktim, Dishub DKI Akan Panggil Pihak Aplikator"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Kompas.com",
-    "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPejh2bUhycnkydzM2TC13Nkg1VGtvSzBLMUZkS21XTlZjMUpDeEpGSXczWXlpQjlxeUw4UkVEVFZRSUJrQlVVcWJYMVdXRDEyNnpEcm1JczNJYmpXRUVSeldxdThub2JOMzdlak5PeXpjcnNVNjRYYldmZUhKRGpBN0FVY1Bsb1NSS1dmVXJ1eDd2TVJxNlZmb2lXUlRRMkZmdjZoeXV1LVAzdDYyMGt0NnRZeU4wVEIxN05Ja2t4UFRMYUtEYTNYNkEyOUhHVXJuSjVpZnFkS1JyY3RKTWJiVWktWTV2eEk?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-26T08:37:00Z",
-   "media": 2,
-   "judul": {
-    "id": "Petugas Dianiaya Ojol Saat Tegur Pengendara Lawan Arah, Dishub DKI Tempuh Jalur Hukum",
-    "en": "Petugas Dianiaya Ojol Saat Tegur Pengendara Lawan Arah, Dishub DKI Tempuh Jalur Hukum"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Tribunjakarta.com",
-    "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPSVJDTnRVOTBuSTZZRjZSWTRkd3JvUl94R3hEY2JsalZoOUZ5dzZOX2dySkRUTlZkeFpyMDJhNXdMb2VTVFotYUxDUW90RWVpaUk5cDgyT2NfVkY5ZUZ6MjNVc3lMdzlFWDJKSHdweW5DQ3J6NUItcUc1Y1lSeElaNXpEMmhtNzVmV250UzRSTkN2OF9PazAySWhzQ01BQ3hrVXQtNXU5MFVsdXVCSG56eEItOXNRSldwc3QydnJqcFlsX3FNVV9ZNXhB?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-26T06:56:12Z",
-   "media": 2,
-   "judul": {
-    "id": "Viral Ojol Ngamuk Lawan Arah, Sundul Petugas Dishub DKI di Cakung",
-    "en": "Viral Ojol Ngamuk Lawan Arah, Sundul Petugas Dishub DKI di Cakung"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "IDN Times",
-    "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQaXVNbVltcGhMTy0yWFZEREs2T2NFRG5hQXJjUTF5QWxDTkR0UG1wWW1sWmw4dmc2aHp6a3YxMDFZc0VBM0NKSV9vNEZCWktVR2hLMVpjNzBfRnBfSWxETHp5dTNGQzRyejZQUzZ6Z3NPVHdVOFBLTDVJdUdrYllnc0NZeXdfM2NNNENNUVlLV21XYkRJd2J5Y3JVdE44c2lfLUdEcFdlRHNEUV9mMl84VHZ1QU1hTExNRThhQmtR0gHDAUFVX3lxTE8wd1FfTDJIZnVQOE1UekFVVC1KRG9IaUlNZ0dzTmgwOFFjUl9xUUNWWlpoSFAtb01sZmRqZjhvVVlnMTN3ZDl1eHN1ZUVOY05VT2VMWVJBRXdwWkdJeENSS1dBbF82M1BjcW1sYzJDaGpRUmJKZU90Vm8zRDBHOEFmUVByaVFoVjZfbHBxaVJzd2Nwcjh0dmoyLXhzQlZKcXMyOEZQQVNuOUNIOFZsSTB1LUtQeTREZlZqLVFmNmdYQ1ZvRQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-26T06:32:38Z",
-   "media": 2,
-   "judul": {
-    "id": "BPBD Padang Uji Sirine Gempa, Tsunami dan Banjir Setiap Tanggal 26, Warga Diminta Tak Panik",
-    "en": "BPBD Padang Uji Sirine Gempa, Tsunami dan Banjir Setiap Tanggal 26, Warga Diminta Tak Panik"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Hantaran.co",
-    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQRVhUcVUyT2hVZVZDRlFsNEJudHF3VjVhUU1LWnR1LTBfMTZQT2hOR2xIZ1d3eklaQkMwc2ZtbEJUUUgwd2ItZlVldGMxSm11NUVtTjZ0dVJoNmV3bTJfc2tLdFNwSVQ1MEpNX0s1Ny11NTd4V0tkVGkzb3BsUnJtVENLdlFVa0c4c19TSFpMbTVUTzNrc1psaEp5V19fekRaSWdxdUpwRHVBVkZjdVFEVmVleE0xZw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-26T11:11:07Z",
-   "media": 1,
-   "judul": {
-    "id": "Pasca Kebakaran BBM Ilegal Polisi Tahan Satu Tersangka",
-    "en": "Pasca Kebakaran BBM Ilegal Polisi Tahan Satu Tersangka"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Radarjambi.co.id",
-    "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPX1BVejM4T2xfeHpDSmFkZ24xMTl4aEVsRnlNcjlXbThtenctOHVuVVhfN1FGbVRtMHhXd3ZMYlNiZG5DY0hlbWJQZmZsT2FYS0d3NUQyUGZERHJLVzRMbFpRekR1MUtpNUpzRkZIOTljRU9ienZSQUVUOFo1ZURNUV9IRHlXTHZnakFuZ0tGdHROc2kzcjROSXNTNWlLNG1vZlJEbTJ3?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-26T09:31:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Suka Duka Kaum Hawa Pengemudi Ojek Online di Pontianak",
-    "en": "Suka Duka Kaum Hawa Pengemudi Ojek Online di Pontianak"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "RRI.co.id",
-    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPY2xzMzhYaGRIQ0ZMeXpZNWoycmVnM1B4LTJ2djFHaTRzTU9EWjZvdXlXOUw0bklfejEzVjk2MHJMTXpTbWpCNzRQTzMtYkM5N2JnM3dJbThoQlkxWUxxdHBrb2tWZlN6RElqSjNCcHBkVXlIYVpWZkVOaHAyNGZMSzVYNHJnMXFNZXJWdG1SNHVMclJYMzlqbV9qaGZlWnBf?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-26T09:03:46Z",
-   "media": 1,
-   "judul": {
-    "id": "JAKARTA – Aksi penertiban pengendara yang melawan arah di kawasan TL JGC Cakung, Jakarta Timur, Kamis (26/11/2026), berujung keributan. Seorang petugas Dinas Perhubungan (Dishub) dilaporkan mengalami insiden dengan seorang pengendara oj",
-    "en": "JAKARTA – Aksi penertiban pengendara yang melawan arah di kawasan TL JGC Cakung, Jakarta Timur, Kamis (26/11/2026), berujung keributan. Seorang petugas Dinas Perhubungan (Dishub) dilaporkan mengalami insiden dengan seorang pengendara oj"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Facebook",
-    "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPRUZVVWhXcG45amRlRXk4YmRzUmpUc0FhMnJEQm5qa3NWTGNyV2wtUXVwRzVuTEU1SC1wRVpfaTRDSTdrYWpLVGMyZzR1RWUzbXhzZ0l5aHhqTWYta1NaN2c5VWJma3dBSU52MDkwMnQ3LW5CZ0E0QTRQUmF4bjdUTE5yWXczUUVTd1ZlMUszSWVRbml1WkV0SzBkSlVyRkNoUjJNdkRGN3RpZ3dIa3RGb2ZLSGhoNE9fR3RfNVFJSFBkUVljQ3lNNGJSLThqaWxHVmR6QVltOGFBVE05?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-26T08:58:44Z",
-   "media": 1,
-   "judul": {
-    "id": "Hamka B Kady Soroti Potongan Aplikator Ojol 8 Persen, Minta Aspirasi Pengemudi Diperjuangkan",
-    "en": "Hamka B Kady Soroti Potongan Aplikator Ojol 8 Persen, Minta Aspirasi Pengemudi Diperjuangkan"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Bela Rakyat",
-    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPOFZ1aXZNQXJnQU5ZWTU1eFBRZTYzM0I5VFpNLXBOcWFfWUtwTFMybnB3TlQ5UFFBWm9VTGE0NTFVb3NQQ1NOaTJ4NUlSZmFidWhydEhoWEpEdzZQNlFOcTVFQjNyVFhuQXk2UndMSnkxUm1pdGYzRlB1cGxXRkxtRDBhSm43YndnTmRBbTRqcWhyVlFyUUkwMlVuZ09PN3Q5WjhLNFpNeC16bXhqSzUtVGxPT1BrUQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-26T08:33:57Z",
-   "media": 1,
-   "judul": {
-    "id": "Banyak Aplikator Ojol Berguguran, Mengapa Pemain Baru Sulit Bertahan?",
-    "en": "Banyak Aplikator Ojol Berguguran, Mengapa Pemain Baru Sulit Bertahan?"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "kontan.co.id",
-    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQdXUzOVg1UTVWd1BfaGlYazhsSkRRVnpkczJnRDNzWlNqazdiM244Yl9FcFRwMlUwNW02UmF1WWJ6SXcxOEFEN3pNaFhMajFxRGN1Y01EMm9weW9WNVVZa2taSUxOY21ER2t5SG4tMEZWelFoR21TZjJVR1NzZlpFWUhMRlNCaTVYWktEcEpsNWpqb01SOVYzUTg4QUJPRmhQZUJSVNIBngFBVV95cUxPUzhzSTZqS09QcDdKRFpVdjdDODF6aE92alBIaWlfZVg5U3RhNk1tUGFVaTlqUXZaTGJ3U1B4Qy1xeUM2VUU2S1ZFSzlFUVRhZTc4akVzZElDWExiZXdiMHRCZ0gySU9oRzdTLURoaTlHWlNTVEIxbmtCNXRiYTRoOWMzeXhlWlFPTzVYY1ZYUldCRTY1UWZ5ZWtrZHJfUQ?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-26T08:33:47Z",
-   "media": 1,
-   "judul": {
-    "id": "Empat Tahun Putusan Gugatan Banjir, Palembang Masih Terendam, WALHI Desak Pemkot Bertindak",
-    "en": "Empat Tahun Putusan Gugatan Banjir, Palembang Masih Terendam, WALHI Desak Pemkot Bertindak"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Mattanews.co",
-    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQTzI3enVNcVYtUDA5cFFoNHEydmNBdVlaYWlmVmRMUEJNLVBCWTJXVXdkQzk0N2dta3hIUFB1SVB2cXRZN3EyaXlTSFhHdkpzSUdHNjZ2bnZ0UTZ1NXJKampXYVZuU1JXZTBvdXU4Yk9SSkFRdWx2ZGZHNGNKTGVTTFlBUndhb1BaU3QxRm1oa2wtaWZ1dVZiWXRER1B4bXhCeVNlUW1pQTB3eGVQV1Fj?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-26T08:31:04Z",
-   "media": 1,
-   "judul": {
-    "id": "Cadangan BBM Nasional Ditargetkan Naik dari 21 Jadi 60 Hari",
-    "en": "Cadangan BBM Nasional Ditargetkan Naik dari 21 Jadi 60 Hari"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Listrik Indonesia",
-    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNSHdQRGk2dUNfcmFBb3ZJWXp0bHNkVjVXU0NsOEc3Y2R4SFFoOEdrSlc5dU9fMVAxWm90RExTMUhuY3pUNC1iSjEtbUpRck42aC1TbmZTNGZtRmJrQWZRb2o5S1JvY1JXUV8xc3dNQWh2Y09fRFM2ck9kTmJyNHNmLTVlX1ZJemdjM2ZKeHIxUXdxSFU5VUNhREdTd0VrckJwN0pN?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-26T08:08:07Z",
-   "media": 1,
-   "judul": {
-    "id": "Asosiasi Driver Online Ungkap Kesulitan Pemain Baru Bersaing di Bisnis Ojol",
-    "en": "Asosiasi Driver Online Ungkap Kesulitan Pemain Baru Bersaing di Bisnis Ojol"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "kontan.co.id",
-    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNMWVFUmFFOXozYWxjM1FLRnk5T2FkZ2VfeWs1MHJJTEpTdGM5Zms5UmU4YjYwNHlKSXViZEpqRHpaMHZudjU0VmpUWG9QTnBWQzRvOERUejd4TXFfeTE2bV8ySjlTaVJhMjU2dTY3TVpnZUg0RXNOdFIzVWVzRXNPX0huWmhuM0lMTzFmYktEU3pPcF9Sd0xsWXRIZER0akJNaGE4a0wtMUl4Q3lOSlVn0gGoAUFVX3lxTFBVSHhueUtLSVhGUm5FODk1bW82X3luY1ZXVlo2bnVfQ2VWM2lYRDdjajE0N2JrSHVUcWlfS3JadE56UmZPbi13QlJUZVlsS3NQT1ZwbEEwbmx2d0J5UWF5Ynl5cWsyUU5zMmNhRUgxR1Fyb1QtWUY4SU1zVHYxc256ZDhXOFJUaGRqWUk0TEZPSlJBbGZaSTVRSUpzT0Y3MmY1TTdHV0tXNg?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-26T07:52:09Z",
-   "media": 1,
-   "judul": {
-    "id": "Hidung Memar Usai Disundul Ojol di Cakung, Petugas Dishub Fauzan Resmi Lapor Polisi",
-    "en": "Hidung Memar Usai Disundul Ojol di Cakung, Petugas Dishub Fauzan Resmi Lapor Polisi"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Tribunjakarta.com",
-    "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPUmV3bjM5VE1tOW0xb20zRDdFSXJfZ2RkVDhTbVVJdWExemtMM3pTVjRLOU0tVFBvLUdvX0Q5ZGRyNERlR1NQS0tlYnZhVWF3Tk1mWWo3d1VpZTRTUnJCeDUyR1MwbXlVNmF0TktNSmk2T0VtUi05MDNSYjlINko1WU1vbFVKY3RQbV94M1lJNDNhSnhCeHBKaENTYTI3dVdCNEpJMWR5d0VSaVhoNDhDU0U3aWM4aC1yZS1BcmRhYzV0Rms?oc=5"
    }
   }
  ]
