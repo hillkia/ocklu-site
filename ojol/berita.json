@@ -1,5 +1,5 @@
 {
- "w": "2026-11-27T17:03:30Z",
+ "w": "2026-11-27T18:46:04Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -310,6 +310,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-27T11:56:23Z",
+   "media": 1,
+   "judul": {
+    "id": "Bayang-bayang Tarif AS, Bitcoin Tertahan di Kisaran US$61.400",
+    "en": "Bayang-bayang Tarif AS, Bitcoin Tertahan di Kisaran US$61.400"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Bareksa.com",
+    "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNQ3hUdWx2aVFuZENuMVFBMExIa0RqUjM1dzZPc0JHbEpxRGc1ZXFJWlcyemFiVkhBU0hDdFI4LU9STEwwTGNzZnJna3JxTzF0WWdIOUoxUUpOZjg3dENQV0EtYXhJRXlOYzc1TWU3RmJ2Y1ZONmxQTkp4bVU1TXllMTUzZWMxZFB5ekhiSC13MDhTNDgzMU1vcF9JYVNkbnpiZUJjN2dxUzQ1VUU?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-27T11:29:00Z",
    "media": 1,
    "judul": {
@@ -340,57 +357,6 @@
    "sumber": {
     "nama": "Media Indonesia",
     "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOMV9FakdGQ3VuYkJaZHZERDhqSUNvYkxvN0pOeXNVLUFDUDF0dVFCeGtobGdLMXJESGhPbDJqZ3k0R3gzLXFOQlFLdHM5TXdFS05FYTdIMzhVWEpYa3RXeG15Y3k0djJKSlBHOTVkcTRZSHVzOWtnZ3dvVUVmM296TEhGS253QzNjZlZRcnhWQlZoY19VNTdlLVdQSUxaZjFGNzhpNTc0cw?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-27T10:26:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Green SM Bike Berhenti Operasi, Driver yang Tak Punya Motor Bingung Cari Penghasilan",
-    "en": "Green SM Bike Berhenti Operasi, Driver yang Tak Punya Motor Bingung Cari Penghasilan"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Kompas.com",
-    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOX2pRTUE5ZHZjVmgwNFpMeGtJbnRwOEtEQ1h3emd2aGFDMTB1aWVBSnVKRVZWOFZhN0pkQWxwWktDaUgtTGJrSlBrWnZZOVJ2dGY4NTZUbTkwSm14alYwTDBTX25LemZJYk9rNmc0OGp2ZTdiWjBtQXl1d0F2dWE1cy0yYlNRa2p1UDEwOHJHajFfX2JNWkkzeXdSOWthS3hHWFk1Mm9hbHFMS1plZ1ZYa1p1VDlxU2ZxTnhHanRZTDA0dVRiT0E?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-27T10:23:58Z",
-   "media": 1,
-   "judul": {
-    "id": "Cerita Eks Driver Ojol Green SM: Tergiur Cicilan Murah, Kini Harus Kembalikan Motor",
-    "en": "Cerita Eks Driver Ojol Green SM: Tergiur Cicilan Murah, Kini Harus Kembalikan Motor"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Kompas.com",
-    "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOZkYxdU5sVzRaZDlDbHJyS1hrTUd1U3NNSElUemoxanRoQWpaMDQ1bEFJVmN3bTRKS2dmMkkwYUhlTlBBZ0s3dUw1RkU5dXIxdG5YTDZkZ3pPVEhjdWhGZENnYnEyaVhRVGYzUTRjUDdNeUgyT0VvUUwzbGxENTZ6QjJOaVVsVHpQaEdQSGl6akFpUldDVjh6WnYzMF9XcDE3TmlNSVpkX1RSMVdkTHhGdXNHMDhHVGhjZ2NKYTlYV1h4R3NFTXpv?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-27T09:34:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Grab Uji Coba AI untuk Bisnis, Order Ojol Antar Barang dan Makanan Melonjak",
-    "en": "Grab Uji Coba AI untuk Bisnis, Order Ojol Antar Barang dan Makanan Melonjak"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Katadata.co.id",
-    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPdl9ieHdtUE5LVGZsbzhtd3M2ZUZSWXRvQnBadGk0SGRwMlRBWEU1ODZWa0dEMHc0TkhlTjVSWG9rdmotU2phMEtaSThWMkd1b3BLTmU2ZTYwLXRxNGNoNGY2UE04a2k3NjVZNUpMWnd4R0pjOXVpelpNMWdHNWNSak1qc2hUUGdERnFmcldLV2JIVEo2MXdYZmtFQUhsVnlyWTFoOEpxcE1CNk9OUDVoSE9iaTJCRDNEWXBZNVktVzlDYkNrSXfSAcsBQVVfeXFMUHk4SWJxb255YTVia0hjYWZhSnJUWWZub1BBSkpSVmdrVlZnNTlzRXYzN2pUSmtzU1R2bkYzTzZiZ1NKTFFJaG1hLURUeWl2SFNOc3llc2I5cWZPcW1laTBPTGxXcU8wOUF3Z1g1T1M1LVZjQ3RhcmxpNTBud0czenFCMnZtd2hjbXR5S3h2UUlrSnBQbTQ1SE9SN1FodzBpRlNadzFhX2RPbnd4SUttUUozQV9FYnFCWGRsN2FIWlVpeXlvOHR0SkFaVXc?oc=5"
    }
   }
  ]
