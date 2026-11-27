@@ -1,5 +1,5 @@
 {
- "w": "2026-11-27T04:12:24Z",
+ "w": "2026-11-27T10:37:29Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -17,6 +17,23 @@
    "sumber": {
     "nama": "Demokratis.co.id",
     "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9NWDRGS1d5eWdpalowd2lOZDRLazFTcWpZaWZrOS1PSHdUSHp4TXpBeEE0Z21NQnphYWw2S3dkNWV2Vmdjc3I5bGZNTTl4bEZ5M2IzdTg1d1RYcFRXY2VsWXlXV0hXeFhOWk1xaVRn?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-27T05:57:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Dua Bulan Jadi Driver Green SM Bike, Kauriyanto Cerita soal Tarif hingga Cicilan Motor",
+    "en": "Dua Bulan Jadi Driver Green SM Bike, Kauriyanto Cerita soal Tarif hingga Cicilan Motor"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Kompas.com",
+    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPaFFoN1czcmtMOGJPOE41S3REQ0RLY3lwUTZrTkdpb21fVldCeklUTTRCVlN1QzljX2xqakZZU0xKY3lnUUFDUGRSaXNkZ3ZOYjB6ZVpRUEt6ekFiX0ZSUEFodVhJQnVUdzUtWDJYc2lxNndfckV2NWZ5clJfdnRpTXBuNHhPNVFxdFlWbG5vYlNhMC11WjVMczliWWkydHAyQ1owaGtYRDB6WVRrX0Y5ZmpLeUJ1Z2tQZEpaZHVWUVJwVXBqUEE?oc=5"
    }
   },
   {
@@ -340,40 +357,6 @@
    "sumber": {
     "nama": "Katadata.co.id",
     "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOSlhJWUNtLTJINC1kVTg3ZXJNZ3lVUUJjbmd4cmtLTENmVEk2Rnd6R1Rnd2lrREZoTS1BaFgtcV9IYi1hRlNXbXo2a19xZTRCNzJhMmoxVWQteFZxMEozVUtyTzZoSDJheU1XTnFrTURXOUVYaUY0UWNCRFRkcjR4UWF3UkJGWDRiSjdlSFNwZlJ5TElCTDhEZWRSNXZjRDMtbk5Tb29hbHVFcHJmVlVjWm9ybnlpZTQzTGhiWmNlY2RIVGVuODBlV3RGbUXSAdIBQVVfeXFMUDRLUEY4ZTBWWWNMMFFnNVBxS0t4TGJfYURLMHJmTXF0YlZ3cjdaUkJPT3BfeU9EWkZqXy1fbDhEYWktWFBKRWwzUFpaMmdCeDE4VmUwRDQwUmlyakZhSkJaa3c3Z1VGZ0VRdExxMk9oY0ZJREc1d3pQMUFKQXpCMHdrVk1jYVpoNlJvNmxaVVJ6YXowOGFwdGJfRWZKOG1RSXluRlJKdTB6anFPYVpncnZGWlpSWFlIYnM1NS1MUWN2ZzRyTTBWQUNLQjQtMWk1SjhB?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-26T07:08:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Pemandi Jenazah hingga Ojol di Cilegon Dibidik Masuk BPJS Ketenagakerjaan",
-    "en": "Pemandi Jenazah hingga Ojol di Cilegon Dibidik Masuk BPJS Ketenagakerjaan"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "BantenPro.co.id",
-    "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPYzF5U3BQclpzejFua0lic2pHMHNvLVdiNHdWbk5iLUxwOV9uM2pWWDNOTldZbTFfQnV5VU1NT21aNXdUc2VSYjVCT1owV2x1d2ZoV0E2TzdkekFHeHRSNlBJeXQ1eHNGT0hGNk1rSk5DbGY3aUVmT0tuQng4anN0Tzh3bm9LbnN0X3JtcUtBYkRzNi1SNVhMc1lweVZ6OUE?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-26T06:56:04Z",
-   "media": 1,
-   "judul": {
-    "id": "Petugas Sudinhub Jaktim diduga mengalami kekerasan saat bertugas",
-    "en": "Petugas Sudinhub Jaktim diduga mengalami kekerasan saat bertugas"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "ANTARA News",
-    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQdjVEaF9OYm5EdzR6c3RnUGRBOHpJTlhjLVdrUGFSMTBabmlBbUUxVkxUNmJJc2UxdzdQWXR1MDkwcko0RGU1bzBjcTdZVndGSkk5QzZGZTBhRFRCeU9reG1mMHVaT2ZWdEItM1l6TzhxN2tGTjhqNEFSWHdVNm9xSHFPNnI4eng5d0szLXVqWUNpSVRhTndSeU5uWmpQWHpNdWhRSXZQb19JZ9IBrAFBVV95cUxNQ2lSeEJhMl9oU25hOVc0S0h0X1FtOUJRVEFtWVVTdmRXN0FOWGY2MzktMkZDY3oxbnZuZFJrNjkwUWJvSlVTb0hUQkxOOExUcFI2UlFnTVZ0RmV1MjNVQnZ0WlFHQ0hkd0tvbjNrVWRyYWFHMGVIWDdJRE5oNjVIUnRyVHFKaGRtNlozaGhhWEdsbmJiQlhWNTNXbko4OWFUaUxyblNsdHFLTVl6?oc=5"
    }
   }
  ]
