@@ -1,11 +1,11 @@
 {
- "w": "2026-11-27T16:34:33Z",
+ "w": "2026-11-27T16:40:18Z",
  "dari": "Kroog",
  "berita": [
   {
    "jenis": "berita",
-   "waktu": "2026-11-26T07:08:06Z",
-   "media": 13,
+   "waktu": "2026-11-27T11:41:51Z",
+   "media": 14,
    "judul": {
     "id": "Dishub DKI Laporkan Pengemudi Ojol yang Diduga Aniaya Petugas di Cakung ke Polisi",
     "en": "Dishub DKI Laporkan Pengemudi Ojol yang Diduga Aniaya Petugas di Cakung ke Polisi"
@@ -15,8 +15,331 @@
     "en": ""
    },
    "sumber": {
-    "nama": "Demokratis.co.id",
-    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9NWDRGS1d5eWdpalowd2lOZDRLazFTcWpZaWZrOS1PSHdUSHp4TXpBeEE0Z21NQnphYWw2S3dkNWV2Vmdjc3I5bGZNTTl4bEZ5M2IzdTg1d1RYcFRXY2VsWXlXV0hXeFhOWk1xaVRn?oc=5"
+    "nama": "bsinews.id",
+    "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1RZGZwb1RHLTFNOTVZcllObFhYMGFyNTlOd2lZLUNrTDZLVTBWQ1pVYk50ZW52b29EYjZIbmQ2UGF6WS1DQ3ZNM3RiblBESkUwMmVMWlExU2tjVE1sdVE?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-27T13:24:58Z",
+   "media": 3,
+   "judul": {
+    "id": "Polres Malang dan Bhayangkari Salurkan 2.200 Karung Beras untuk Ojol dan Ponpes",
+    "en": "Polres Malang dan Bhayangkari Salurkan 2.200 Karung Beras untuk Ojol dan Ponpes"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "beritajatim.com",
+    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNT2tnSFZrRGF4YVRYWkVqdWxXNnBEbTdfQllqRzhuMWRWZmtkVFZLeldFU3huSmF1TzQtSkk2UHdPSGpMeTdObVE0UGk2TURWYnYyTy1Cc29RZlphb00xRV9QMFpZR2ZncmFCdEt4OEdLSF9qUUFCZVp4ZThpTGdHUFZmdFNWMWlxak53eVhOd1pPcGRaXzczRXNmbG8?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-27T06:16:31Z",
+   "media": 5,
+   "judul": {
+    "id": "Viral Ojol Tanduk Petugas Dishub di Cakung Jaktim, Tak Terima Ditegur Lawan Arah",
+    "en": "Viral Ojol Tanduk Petugas Dishub di Cakung Jaktim, Tak Terima Ditegur Lawan Arah"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Diskursus Network",
+    "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNX2FYMkNid3hVRGdQcGVLdVM4NmluWGEyem5YOGFZV2JVSVVzQ2RhQUZSVkw0RFdwcFl2a1F5bkpHeE5TVlJWMTVPeE5hNE9tODRiZks0anF3NHdFc1ZIUnVmdTdQMW95ZUF3cXBUYk1jZ1VwTmdmNVJmRHNMWXgzanA0Yw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-27T11:34:56Z",
+   "media": 3,
+   "judul": {
+    "id": "Dishub DKI Laporkan Ojol yang Tanduk Petugas di Cakung Jaktim ke Polisi Halaman 1",
+    "en": "Dishub DKI Laporkan Ojol yang Tanduk Petugas di Cakung Jaktim ke Polisi Halaman 1"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "detikNews",
+    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQUGZaMmZhM19COUJpMW5JX3pMN3lBcjRPc1c2NzhqNDRlbTVvcFpZb242bE9iZldISVMwenprTnFYYjF4bzJ1M3VhbndTWEJfeFRJdjZLQzBhWjIta2hpQndJMFktQVZwWV83cXFibUFlSnBiZmt0XzVRbGpXWVltOElzV1JwVWZsZ2s4NWhYWFpkNEEzMHZzX0l2bXY3N2NNcEl6X9IBqgFBVV95cUxOSGd2MFlzNEg4LW8yWkNSNFV2R0Q1Vm9HdmpEaGpvUVczcENIUTRTQkRLQi11QUxsazlDQ1NmMXI3TDBQWi0ya01hZ0NiRmNCRmIxSlVySFlVbzNJZzNYQTY3NzBtSjNmSkZTQlhWRnVhZ2J6NGRCZW85aXhqN2t1NVNxZmVnMUlYMTNCMjZ1NkVXRjlUeGxKV1AwWmc1VHY3VTBXdVN3U1gwdw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-27T15:40:48Z",
+   "media": 2,
+   "judul": {
+    "id": "KemenUMKM Perluas Kesempatan buat Driver Ojol, Bisa Dapat KUR hingga Bebas Pajak",
+    "en": "KemenUMKM Perluas Kesempatan buat Driver Ojol, Bisa Dapat KUR hingga Bebas Pajak"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "IDN Times",
+    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOZmh2cU5qT0JEVWpoYUlHN2VIRk53eTJzQmZZWFR6NUJYZlY0Q0NiWTdZYTNtS3VrX1VGSUM3TWZOTjhxNDY0U0pXTFVSbFJTRS05QURaSURkU0U0WHJCMU5KSUVhbU1QVlJ0YVJFSjFHenJYXzluUzh2YzVRczVCV0JzdkZGNUMxUVZWNzNRN3pXb1NYWTZyRVVHRVBzRHBSb2dTemRTdlo1STdjT2swbEgwLW_SAboBQVVfeXFMTkQzZm01T3ZIUjc0TjdsSFpoRU56M25WVktUNFMwQ0JrNVF0ZW1xNTVfbFBscWU2NmI1NEVZelNPNXNhTHRJR1lFR3k3Y2RYX0xjUXdvTnQwcW1fSkVLN1dNWDFMT1BUTWtNVlZJUEJheF9talVfS1h0T2Q2d2MxazVqVi1pWWl4YnhiUmppamNuQjM2bzQ4eENOTFhvc1dUaVExYmxtdmJfOW5fRWpEem45dURlc3NXTWpR?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-27T09:31:47Z",
+   "media": 3,
+   "judul": {
+    "id": "Pollux Mall Paragon dan PO Hotel Semarang Rangkul Komunitas Ojol Lewat Program CSR",
+    "en": "Pollux Mall Paragon dan PO Hotel Semarang Rangkul Komunitas Ojol Lewat Program CSR"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "ZonaPasar.com",
+    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQRzFMT2E5WXg1dzZZYnpKbG9rTW5LVWJnNzk1SWdTRTEzbDVKenQ4cnNEcS1ZNmZkdlliNGE3Tm1UNm1KYms3S3pWLWpNQmhYVzBWTFlHTjZTSnBBd0FxYUY4UW1sTTZ2UDB5U0ZOZFJQamhLRTE1Q2ZyS0ZnNGh1U25PTFFXcVFvQ1MtbXRVT1BpbFg2Z2pyMUthdjBWV21sRFg1bVZmOXZ3OXNtYmtkQWNUMlFNVlR3?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-27T13:30:00Z",
+   "media": 2,
+   "judul": {
+    "id": "Begini Penjelasan Pemerintah soal Pengemudi Ojol Berstatus Pengusaha Mikro",
+    "en": "Begini Penjelasan Pemerintah soal Pengemudi Ojol Berstatus Pengusaha Mikro"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "JPNN.com",
+    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOX3doS1ZzQlJ4QmU1M3RxM3g5MWM5Wm50SmJjUzZ1Q0hfeW9tNUk4VFZLMzFyMFRqeHJqZ3JNWXpObTdyVnl5SmxFQkRPRFhYQzlDWm5qb0VwUi04elktWFFmQmJCTnZmejNRNEJLQnYzdTNrdTgzcHNLckIzS3lLclJhRmRBYkFyY3FsNmJsVHEtWGNWVk9pc0FETmt1bG41YVHSAaQBQVVfeXFMUEk0TDhiQzBFQm1PajJQM01RZVE4OFVKTWhmR1piSWhPUWJPWjVmc3lPdXpWa2ZDelIwbmFpOHRyUnYybjJmaHdZZllQeGU0WS0xbjFyeXF3bThfaDRDanRvUm1KSUhSdE1oemladjJ5ejl0WEJNd0hsNnFFbmsyX21zR1BWR21rdEVpdEJoOFJxT0hvclc1R3llVm45cUhWZ3BSMko?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-27T11:13:28Z",
+   "media": 2,
+   "judul": {
+    "id": "Kementerian UMKM tetapkan driver ojol sebagai pengusaha mikro di Indonesia",
+    "en": "Kementerian UMKM tetapkan driver ojol sebagai pengusaha mikro di Indonesia"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Traders Union",
+    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNVjhMRUFfUnFnQnVKeThPZXNkVEZGSmZjZDNMcGxJRmxHd1R3enRsSjhGdmZKcHVTVzMtR2hlT0RtSEMwLVlQQXdDNkpPeHZseWQ4QXl1M0RnSkFVeWxPc1Qyb2p2dHBJcWhabERFQWliWTJIQnI3RHJvb3RsdGZkNFZhX21KbUNTQkdXR21KSWktWS1idTlhMzM5ZGwtSVVQSnBQcXlvRQ?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-27T11:07:14Z",
+   "media": 2,
+   "judul": {
+    "id": "Ojol Bakal Jadi Pengusaha Mikro, Mitra Driver GoJek Dapat Banyak Manfaat",
+    "en": "Ojol Bakal Jadi Pengusaha Mikro, Mitra Driver GoJek Dapat Banyak Manfaat"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "economy.okezone.com",
+    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPMElpbEdfT1VZTVEycU16WFNLcHRxcEtWYVFrMUVYS3B5UUEtSzhhUFRkVDB0U1pIbXF2UGtsQUxWb1FIU2I3S1ZpalhCLTBwNzVuXzVfRF9qc3psMDBocWJ0YU1hWHYxRnNzT1BXOURyQWVZS2drNktaWS1aRU9GNERRM3pMRVZvbUNvNDBVdzNjcFNkelZPZG1VMWk4RFV3bG1LZW9rYzlEVlh4U0pzNzF5WdIBsgFBVV95cUxPTmNMZm12LUFKbjdqSncyQWJfNjljZU10a0gwV0xlYWFNeUFiSDc0eEJpbjV0Y3JDNkFSMWVoQkNrM2ZWY05kZHdNVFV1RnBKc3dVOFJYZ1p0cmpZeXBhUW1zSWw0R3FlZmdnd0hDQm1NMXpSQWIybVRKQ0p4SU5OSV9WREVDY1VDQ29yZFBPN1Q0MzE2dldpVWIzdEk3MlJtSFFTYXZRNzV2aUVQUjh4cUdn?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-27T16:13:35Z",
+   "media": 1,
+   "judul": {
+    "id": "Polres Pemalang Siapkan Posko Ojol sebagai Sarana Komunikasi dengan Polisi",
+    "en": "Polres Pemalang Siapkan Posko Ojol sebagai Sarana Komunikasi dengan Polisi"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "iNews.ID",
+    "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPeUJ3Z3ZGZllEQ3ZIZHBFUGZRcWk4VGRVNG16OUV1b01jeC1ONnRIV1hqVmt5QnJXUWswRVVjeHBRMmZvTWFDdTlUX0M4aW5NeHUwekIwMnRWWUZSWXo2TURsMFlmOXhVTjBwUUVueDByanh4Y2xTMGxBaGtVSWVDa3hGR0ZFdDdGQkNBOV9wSjdBa0VUZ1c3c0t3US1qSGk3Nl9vTVVGYVBmNG9ZakVUdVJR0gGwAUFVX3lxTE5nNzQtRkFTeExBLWQ4T08wbXNMX2pLV1N0NFlGaVp5ejFWbThzbW5XSDh1NTk3SmdLNm5jenpuRzVULWRCb1h0endVWHJ6amQ3Q2NDWTNtWktXcEVRekVkcDVOMzdFQW1wTmxqQTNQTWJPZW4zMHc4MzVxc2U1S0hOcnBzWnVKU3c4cm5na3F1SnBxR3U3VVgtVTJORGRFaDFEODB2VURMa0NRQUFpZFV1?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-27T05:05:15Z",
+   "media": 3,
+   "judul": {
+    "id": "Kapolda Bali Temui Komunitas Ojol, Serap Aspirasi dan Perkuat Sinergi Jaga Kamtibmas",
+    "en": "Kapolda Bali Temui Komunitas Ojol, Serap Aspirasi dan Perkuat Sinergi Jaga Kamtibmas"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Sekilas Media -",
+    "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOazNwcC1lcnVCNmlfS0NXQ3U1X25uUGFNZllhX285enlFVXhlRzhXc3FkS2c0cm9SM2RjWW9Sc3o5bjlxc1pSVWd5SEVrcDFEZVBqVVlDbnFicm44TVVzM2duS3ZvWU1aM2w5NnRIWHBNX3plc2JPY0R2aHFIWGxnQklDanBWcVVFbkJTZkxaZ01MZndmZDhxWDFCT3BlMjNlSElkdDljbDY0dWNWN2NGRGlQeFhQU2FkblV2TFdR?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-27T14:25:50Z",
+   "media": 1,
+   "judul": {
+    "id": "Polantas Bagikan Ratusan Sarapan Gratis untuk Ojol dan Pekerja Jalanan di Cianjur",
+    "en": "Polantas Bagikan Ratusan Sarapan Gratis untuk Ojol dan Pekerja Jalanan di Cianjur"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Wartakotalive.com",
+    "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNd042cVdnb0VRRTdiUVBlSkMwbFRnaXNfd295Y1pMdUNDTHMzdURFUENrMDRfdGdKQTNKVGJ2aWhjVUJuM0lhZGFEdU1VWlZhMEdwRzZDV0JoUlVBRWNITWJZbUVNT1A4OGc3b2ZzaU9RUEVzdDN4MlI5d3Q4cWVZcU5tZDVSME1TdlRtbVNkdV9RQUdRSjJiVlo3aGJxUndnb2I4R2NSWVM5cFZHaExMdEVyUXVITXcybDJVeWNmenY0TmFf?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-27T13:24:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Polres Jombang Bagikan 300 Paket Sembako kepada Pengemudi Ojol",
+    "en": "Polres Jombang Bagikan 300 Paket Sembako kepada Pengemudi Ojol"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "swarajombang.com",
+    "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPVEIwcWM4eS1xbFJmUHo2VEdEbjZKUU1FSlRRc0xJTzVtTnVwY0lTY2xuTkFQRGxRdlVXeTlPQ0hqZklNM3RsTTk4Mjlra2s2ZVhwZy1ZVUVxSTRwV1pOQUVlaXhCSElpeE1XNnZSWFNRNW5HOFlOdlg4a3M4UUM1VWVLYXhNaE8zRGdtNTdaeUsydw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-27T13:17:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Bogor Bercukur Gelar Jumat Berkah, Ojol di BNR Dapat Cukur Rambut Gratis dan Nasi Box",
+    "en": "Bogor Bercukur Gelar Jumat Berkah, Ojol di BNR Dapat Cukur Rambut Gratis dan Nasi Box"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "VIVA Bogor",
+    "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOZWU5RWhnQ1VzSS1RNmRPSE1iRnV5Y3luRzVSTnBPMFJ4ZWhSbVlrdWxTQkFZT0Riemh2V1F1bDE4ajJLNGJlX3VNaUgxQ2NfWlprQ2NYVEt6MHNnQWt5M1k5dzRmN1lVQ0lWZVNlYjVSREMzT2QzZWxYQVROWFc4c2o5cjNNMkNkX3RZZnExandHWERSaHpzbk45TFQ2RWRfejYzaFJ5aHR0c2I0UWVWZndsZkF5endYYUV1N0VlLUhlanNK0gHKAUFVX3lxTE5VZkNPZXJoa2FIb3dQbzZWTnRKNU1wOFM0WHF3T2lDLS1IREQtTDR3X2xvUW5BRmdVeXZjM3gzUUdxSzhEdE4xT0dDSkxTLWhwMXgwSlJqZ3lmZnlzdUpWYXV1LWM1aV9GWW84VTA3ZE53UXVTOW5xZ2FIbE9TT0IyMWFsMnVaanNYN0liSDc5VXRHSmhCMG5aU2dHWWdqbnc5NGF6SnNyMVE3ZjY5R3JZSHJ3U3pxNjQxVHFZdTZkVXc0TERESTVRS2c?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-27T13:15:50Z",
+   "media": 1,
+   "judul": {
+    "id": "Hari ini saya menyerahkan penghargaan kepada dua petugas Dishub, Fauzan dan Andilou. Kemarin pagi di Simpang JGC, Cakung, mereka menertibkan pengendara yang melawan arus. Fauzan diperlakukan kasar. Tapi ia tidak membalas. Ia tetap tenang, t",
+    "en": "Hari ini saya menyerahkan penghargaan kepada dua petugas Dishub, Fauzan dan Andilou. Kemarin pagi di Simpang JGC, Cakung, mereka menertibkan pengendara yang melawan arus. Fauzan diperlakukan kasar. Tapi ia tidak membalas. Ia tetap tenang, t"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Instagram",
+    "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBJTm1CRHJRek9ibXh4UU5UUHZUdm1wb1NvaG5Nb2ttT3hGRTZzdEs5a2tCeHBSUkJ6c0hZdFQ0Tkc0ZEF3VzhzbDN4Tm81YWdGc1VuS1B3?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-27T12:55:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Ojol Masuk Kategori Pengusaha Mikro, Perlindungan atau Pengalihan Tanggung Jawab?",
+    "en": "Ojol Masuk Kategori Pengusaha Mikro, Perlindungan atau Pengalihan Tanggung Jawab?"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Koran Jakarta",
+    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPOW9GSU9URDB2N01mMmVYXzdCQ1A0YTR6a2cyUUFnWi10OTZHYmxmWi1id3pYN2JKSFdhRGtaYWQtTzVFNmt1MGFYMmFrRmluRWVFRFRuNERxRWdIRzhKZzNFN1dlTnkyRXRNYlZmZ3d6RzNzZXVHSTJYMkJqbzM0YXlTbWYxN0pldVlFRG93cXd5MGx5NTJNTUNvdHU2TGJtbWVuODhCSGNVcnJJVFVnLUY1TXBzWXfSAbwBQVVfeXFMTlpvbVQtbzc2eld4TXZBMV9fdG5saDFQZ01FR05yOTkwYVBpaldvZlNubnQyb0t0a0tlOE02ZXdtSUFKTTBVVjVEWHA3LU9OS1RyZE1CeW13Y3NkemNGbG5vdDBUWHZXUl9GZTRhQ1NBY3dxOEwzTnBoR0ttbHlmell3VVpVVmdBeEs4OTFYcENueFhLOU1LRmMwcmcxLUVETDZhSjNJWDIwVGo4VXZsYlg2cU4zRlUzdXBHcHI?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-27T12:28:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Banjir Dayeuhkolot Rendam Permukiman, 19.798 Jiwa Terdampak",
+    "en": "Banjir Dayeuhkolot Rendam Permukiman, 19.798 Jiwa Terdampak"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Inforadar.id",
+    "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOSUpnSnZTdHlZNHV3QzJZamdLTUtzV1owSWdLWlFBZGprREZ0SUxjbWhEX3Z2Q1ROSGFjblhYYWRzQjN6cEJrTExFbHJjOU9FbFJLTm81OVA0czVXNEluN2lRTExmRE5FbXBYOG1MOUJRTHhTZHRzY1NzbjNTWlNVc2lVRG5MNTR3Mm41dHFjUzhHY2hGcUdwT243N0d6c29fUF8tYzdn0gGcAUFVX3lxTE1ORjFUaS1nWnd3OVBVbm1IU05VYU9jcmRYX3I4ZkZVTEh6SzdSOWMzU2UtMVVqMXRvdHBYX09IcWxLa0U2cEtwZndHZk5CQVZxT0dTV2pzVXZEb0pjVDlRZnNOLURhT194S0Z1TzB6eWM1RFliZDZHNkRPQzhSWlR6Rlc0amlVeUdjcUJNVnVjdW1GZ2VFODZLVmlzMw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-27T11:29:00Z",
+   "media": 1,
+   "judul": {
+    "id": "Ini Alasan Pemerintah Kategorikan Ojol Sebagai Pengusaha Mikro",
+    "en": "Ini Alasan Pemerintah Kategorikan Ojol Sebagai Pengusaha Mikro"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Validnews",
+    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQOXNzV0I3Y0FoRF94SkJJR1JNYmhUSk8xWTgxREJZb1pscnc0NlpwWS1oZ01EazdVMlpBaHU3YzZ0OEozcnlPUmxfT05pVHNVOUJRQmhWZFVDU3VOaTAyaHpiWUJDdzlJang2cllmWlViVUMwcXE4VEV0OVBDVmYyNjV6bzc5Wjd1RHdHdVRVV3RHRHg2dkI4bWRnX2VyWk5LaXd1MWZDN0NDYXozVko3dDd4SG9WeDg?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-27T11:20:31Z",
+   "media": 1,
+   "judul": {
+    "id": "BPBD Padang Uji 50 Sistem Peringatan Dini Tsunami dan Banjir",
+    "en": "BPBD Padang Uji 50 Sistem Peringatan Dini Tsunami dan Banjir"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Media Indonesia",
+    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOMV9FakdGQ3VuYkJaZHZERDhqSUNvYkxvN0pOeXNVLUFDUDF0dVFCeGtobGdLMXJESGhPbDJqZ3k0R3gzLXFOQlFLdHM5TXdFS05FYTdIMzhVWEpYa3RXeG15Y3k0djJKSlBHOTVkcTRZSHVzOWtnZ3dvVUVmM296TEhGS253QzNjZlZRcnhWQlZoY19VNTdlLVdQSUxaZjFGNzhpNTc0cw?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-27T10:23:58Z",
+   "media": 1,
+   "judul": {
+    "id": "Cerita Eks Driver Ojol Green SM: Tergiur Cicilan Murah, Kini Harus Kembalikan Motor",
+    "en": "Cerita Eks Driver Ojol Green SM: Tergiur Cicilan Murah, Kini Harus Kembalikan Motor"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Kompas.com",
+    "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOZkYxdU5sVzRaZDlDbHJyS1hrTUd1U3NNSElUemoxanRoQWpaMDQ1bEFJVmN3bTRKS2dmMkkwYUhlTlBBZ0s3dUw1RkU5dXIxdG5YTDZkZ3pPVEhjdWhGZENnYnEyaVhRVGYzUTRjUDdNeUgyT0VvUUwzbGxENTZ6QjJOaVVsVHpQaEdQSGl6akFpUldDVjh6WnYzMF9XcDE3TmlNSVpkX1RSMVdkTHhGdXNHMDhHVGhjZ2NKYTlYV1h4R3NFTXpv?oc=5"
    }
   },
   {
@@ -55,6 +378,23 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-27T09:30:44Z",
+   "media": 1,
+   "judul": {
+    "id": "Persaingan Bisnis Ojol, Kemenhub Pastikan Regulasi Tak Hambat Pemain Baru",
+    "en": "Persaingan Bisnis Ojol, Kemenhub Pastikan Regulasi Tak Hambat Pemain Baru"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "kontan.co.id",
+    "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNSkRUX3JKdnFhU1pJQmI1Rk5HMWtpVkRzYVJSVUdPYmw1cURuOEdhMHZMSFlMRnB4Mmp3cU9KTFBUaEd6dG44TTlhcm0zbmMzdS1FMmdqelUwbEgtcGp5LVV1WlRLLUdKTEZGRF9kUzdkVjFSYm44U01SZ3dFUnRPQ1VEYkdLSnM4VmxRQzZESjJid1ZlMzFqcVl3ZV9aUS1WSlN4Zk1NY2NNNjDSAaQBQVVfeXFMT3hnVURMZlVCek84RXlnMUF6TmlYTnlRY0pLQnp2NGZlX3NJQ0RQR0RHc00wSDB3QzM0ZWUyZDh2VWV5TkVBblBPQzNDeE9keUJEcWg3YkxNTjRxOFExTlVvQXdNRjZ2bzZOWG1hZDQydzVyc3k5TEQtczFFYXFGWm10eUluX21ibmhTY0U0dU42ZzBYd0xxUThzWHEwSmxCVFduUjk?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-27T09:30:39Z",
    "media": 1,
    "judul": {
@@ -89,53 +429,19 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-27T05:57:00Z",
+   "waktu": "2026-11-27T08:06:42Z",
    "media": 1,
    "judul": {
-    "id": "Dua Bulan Jadi Driver Green SM Bike, Kauriyanto Cerita soal Tarif hingga Cicilan Motor",
-    "en": "Dua Bulan Jadi Driver Green SM Bike, Kauriyanto Cerita soal Tarif hingga Cicilan Motor"
+    "id": "Kabar gembira buat para Mitra Driver GoRide. Status baru sebagai Pengusaha Mikro membuka pintu akses ke modal usaha (KUR), beasiswa anak, hingga umrah, plus segudang manfaat lainnya. #gojek #gojekindonesia #goride #ikl/tn",
+    "en": "Kabar gembira buat para Mitra Driver GoRide. Status baru sebagai Pengusaha Mikro membuka pintu akses ke modal usaha (KUR), beasiswa anak, hingga umrah, plus segudang manfaat lainnya. #gojek #gojekindonesia #goride #ikl/tn"
    },
    "isi": {
     "id": "",
     "en": ""
    },
    "sumber": {
-    "nama": "Kompas.com",
-    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPaFFoN1czcmtMOGJPOE41S3REQ0RLY3lwUTZrTkdpb21fVldCeklUTTRCVlN1QzljX2xqakZZU0xKY3lnUUFDUGRSaXNkZ3ZOYjB6ZVpRUEt6ekFiX0ZSUEFodVhJQnVUdzUtWDJYc2lxNndfckV2NWZ5clJfdnRpTXBuNHhPNVFxdFlWbG5vYlNhMC11WjVMczliWWkydHAyQ1owaGtYRDB6WVRrX0Y5ZmpLeUJ1Z2tQZEpaZHVWUVJwVXBqUEE?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-26T08:00:00Z",
-   "media": 6,
-   "judul": {
-    "id": "Dua Bulan Beroperasi, Green SM Bike Tutup Layanan Ojol di Indonesia, Ini Nasib Mitra",
-    "en": "Two Months Operating, Green SM Bike Shuts Down Ride-Hailing Service in Indonesia, This Is the Fate of Partners"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "FORTUNE Indonesia",
-    "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNdzRiUGpiVHYzektlUWVjOXhlUjhnSV9ONmxvUnhpdW5NemZTSzMwS1dFemRQdVhvZVdPMGh6aWdobFdQT0FLTTllaGdMTzV4UFU5VlNvQTd1WXNLXzByNDV4X1RxMHFkMWVEZ2Y5Q3h6RVBiSzUtZDNhLTNKaXd0akNPUGpULTJtSGFLWnJLUWFUTExPbWFlTlFNa0dOcW5RbUhLbERjYW03ODV0YnkwcWpR?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-26T11:50:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Kembaran Innova Zenix Meluncur: Bisa Minum BBM Etanol 85%, Harga Rp 300 Jutaan",
-    "en": "Kembaran Innova Zenix Meluncur: Bisa Minum BBM Etanol 85%, Harga Rp 300 Jutaan"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "detikoto",
-    "url": "https://oto.detik.com/mobil/d-8771138/kembaran-innova-zenix-meluncur-bisa-minum-bbm-etanol-85-harga-rp-300-jutaan"
+    "nama": "Instagram",
+    "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1URFNJLVcxX1FHVE0zV0hUb2xlRGczNVZJWi1UMl9DVEJtSVE4T0hmaFFmUGwydDlsT3RSR3BFeFcySWFWcGp2UEFUMTJLaGF5enc?oc=5"
    }
   }
  ]
