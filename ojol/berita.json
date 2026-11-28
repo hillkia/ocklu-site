@@ -1,5 +1,5 @@
 {
- "w": "2026-11-28T02:45:43Z",
+ "w": "2026-11-28T03:21:42Z",
  "dari": "Kroog",
  "berita": [
   {
@@ -21,6 +21,40 @@
   },
   {
    "jenis": "berita",
+   "waktu": "2026-11-28T02:24:28Z",
+   "media": 4,
+   "judul": {
+    "id": "Peduli Sesama, Polres Jombang Bagikan 300 Paket Sembako kepada Pengemudi Ojol",
+    "en": "Peduli Sesama, Polres Jombang Bagikan 300 Paket Sembako kepada Pengemudi Ojol"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "SIGAP88",
+    "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE8yeDdIQU9mNGREenhFWWllNUZyTVcxRjlCOGlxNTBkZ0FPR3VtcDF4WG1BTU92NXhQWGQ3eDhzR2thcnRsc2hJeEtZV0hoYTJqbjlfclN2NUxuM3FCdzFLdkdROUswdWUtSTRERHl4STlaNldv?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-27T23:50:00Z",
+   "media": 4,
+   "judul": {
+    "id": "Dishub DKI Laporkan Ojol yang Tanduk Petugas di Cakung Jaktim ke Polisi Halaman 1",
+    "en": "Dishub DKI Laporkan Ojol yang Tanduk Petugas di Cakung Jaktim ke Polisi Halaman 1"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "Liputan6.com",
+    "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPc01WX1VyUS1OS0J5ejJiZ2NIUUYzNTRvTXlVNkpYY1hndldZWENDcHJsaXcyYlJ1aWNmM1luSEVwUXBkaDdGODYzN2FDVWcwS20zUTZ3Q2xXTFZuSGRoYVpVYkZPY0FvSzhkQ0Jtc0JIUnNBZGZYWGRJQ1JESms3d0E0d2ctODlCQ0VSZldZVXNGcGhqa1l3RNIBkAFBVV95cUxOZDYtMkZOMEpDVTVLRVZCTWV1OWZuN01jNHFrX1pQVVVxRmp6X0h6QVhFODlmc0ZPb2tSQ3RnTVRvR01kYVFDR01oajg2Q1hERmVRMGlMaGt6VUU4Q3FYZ2dzd1ZIMG9QdzVVN1NDaWdORHF0UzVvLVljZFdYX3B4RVNxTE5jVFdQczByUWxtbG0?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
    "waktu": "2026-11-27T13:24:58Z",
    "media": 5,
    "judul": {
@@ -34,6 +68,23 @@
    "sumber": {
     "nama": "beritajatim.com",
     "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNT2tnSFZrRGF4YVRYWkVqdWxXNnBEbTdfQllqRzhuMWRWZmtkVFZLeldFU3huSmF1TzQtSkk2UHdPSGpMeTdObVE0UGk2TURWYnYyTy1Cc29RZlphb00xRV9QMFpZR2ZncmFCdEt4OEdLSF9qUUFCZVp4ZThpTGdHUFZmdFNWMWlxak53eVhOd1pPcGRaXzczRXNmbG8?oc=5"
+   }
+  },
+  {
+   "jenis": "berita",
+   "waktu": "2026-11-28T03:10:40Z",
+   "media": 1,
+   "judul": {
+    "id": "Polisi Selidiki Dugaan Pengancaman Pengemudi di Bekasi",
+    "en": "Polisi Selidiki Dugaan Pengancaman Pengemudi di Bekasi"
+   },
+   "isi": {
+    "id": "",
+    "en": ""
+   },
+   "sumber": {
+    "nama": "bsinews.id",
+    "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBKLVhsRzU1Mm1JeUl3dWY4ejZaTUM5SmQtSldPMXZKTDFyU1Q4aC1PN0tMYUZPMF9zWWxTcE5ib1BJZm8ySThaeWQ4ZGk1R1QzZ2RfWE82UDhpdTU4QWVMcjNDYw?oc=5"
    }
   },
   {
@@ -72,23 +123,6 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-27T18:02:00Z",
-   "media": 2,
-   "judul": {
-    "id": "Jumat Berkah, Polres Jombang Bagikan 300 Paket Sembako untuk Pengemudi Ojol",
-    "en": "Jumat Berkah, Polres Jombang Bagikan 300 Paket Sembako untuk Pengemudi Ojol"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Memorandum.co.id",
-    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQeXZOVVd6MXhPbVF6a05CNWZkRXZReEZBTF95LTFSRDhIZHVIRmEtNklwU0NoR1FEWW1iU180RG5nYlRKNldEc2pWWmxHcVMxaktlbkJrbWxQSVhXS3NQTnVKVVlTLWdhUllRMlE0YUVZdGI1N3JRYWF3YWx1YmZaUmdPcVhNcUprYnZwd1UxQWhjOE12NzFycDZvdTA1c0NXMHhNTUJ5a2ZtLVhvdkpZeFNYLVlCd0tkbTVGelBwem_SAbQBQVVfeXFMUHVjeFRiejFwMlBXV24yNk92cWs5blVpX1lTcDhfUHprRFlvNWxSdm1DaHlYUHBxVzJabzBHNmFzX3VMZDBleDVNMEFtdWlUUjRxMllhRVpkbGRQMjdURkdfRXJVc2UyVnYwY0NpTVl6bGx1alljTl9vS2dLOUQyd1hzZ3NhTkk2S3dtMnNfUHdRR0dGZkdVY2tBQTM2NUhOcldGeVVRdUJkQjgwampoMHBWcTh4?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
    "waktu": "2026-11-27T13:30:00Z",
    "media": 3,
    "judul": {
@@ -106,11 +140,11 @@
   },
   {
    "jenis": "berita",
-   "waktu": "2026-11-27T23:31:00Z",
+   "waktu": "2026-11-27T23:36:26Z",
    "media": 1,
    "judul": {
-    "id": "Pengendara Kaget, Ojol Green SM Malah Disetop Saat Orderan Mulai Ramai",
-    "en": "Pengendara Kaget, Ojol Green SM Malah Disetop Saat Orderan Mulai Ramai"
+    "id": "Pengendara Kaget, Ojol Green SM Malah Disetop Saat Orderan Mulai Ramai Halaman 1",
+    "en": "Pengendara Kaget, Ojol Green SM Malah Disetop Saat Orderan Mulai Ramai Halaman 1"
    },
    "isi": {
     "id": "",
@@ -118,7 +152,7 @@
    },
    "sumber": {
     "nama": "Kompas.com",
-    "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPLU4ySk02MmhFbFpxWEdGT3dwMktvU1ZJX1pOQkRHd3R5NmFKWlhrVDZ3MGR3YjZZcVNMU0lQdENhU214OTV0Q0pGOGpuUFBqZy1Jalg0UzJfeW5MTzYyalJZMld5NjYyWWplU3NOZS0tU1NWWXR4dE44TUpReXJHaWJzUVJqa3VfejZVYzRYbnZqVk1JSUZ3UjJpYjEtbXY5ODBsUlJCc2ExX2tpTDFVWU1TWmMtOWdkZzhwUnA1clZrSE0?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxONGtxd1Y2c3RTX2hvbWlwQ19TY2lsRk10YkUyTEtJX0NzZXhwalozVVk1dXZJTU05cnd3UWRvSXJ4U2hmbVpycERTN3J3b2RXU01YcGt4SVJabUtlVGI4SGRxQUNuQlRhUGJpN0RFVmI2b29DdlJCMXo2MVFoOHBUYUFSRFRmUlZkN2JUQkdhd1I0ZG9HZHlxVVhuY2FUX0M2NUM1TWpLcUs5SW9RdnNMQlFlOVV2TV9NM24wckZLTTh0UHFqQlB0SDRJOFZ6UQ?oc=5"
    }
   },
   {
@@ -170,23 +204,6 @@
    "sumber": {
     "nama": "iNews.ID",
     "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPeUJ3Z3ZGZllEQ3ZIZHBFUGZRcWk4VGRVNG16OUV1b01jeC1ONnRIV1hqVmt5QnJXUWswRVVjeHBRMmZvTWFDdTlUX0M4aW5NeHUwekIwMnRWWUZSWXo2TURsMFlmOXhVTjBwUUVueDByanh4Y2xTMGxBaGtVSWVDa3hGR0ZFdDdGQkNBOV9wSjdBa0VUZ1c3c0t3US1qSGk3Nl9vTVVGYVBmNG9ZakVUdVJR0gGwAUFVX3lxTE5nNzQtRkFTeExBLWQ4T08wbXNMX2pLV1N0NFlGaVp5ejFWbThzbW5XSDh1NTk3SmdLNm5jenpuRzVULWRCb1h0endVWHJ6amQ3Q2NDWTNtWktXcEVRekVkcDVOMzdFQW1wTmxqQTNQTWJPZW4zMHc4MzVxc2U1S0hOcnBzWnVKU3c4cm5na3F1SnBxR3U3VVgtVTJORGRFaDFEODB2VURMa0NRQUFpZFV1?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-27T11:34:56Z",
-   "media": 3,
-   "judul": {
-    "id": "Dishub DKI Laporkan Ojol yang Tanduk Petugas di Cakung Jaktim ke Polisi Halaman 1",
-    "en": "Dishub DKI Laporkan Ojol yang Tanduk Petugas di Cakung Jaktim ke Polisi Halaman 1"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "detikNews",
-    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQUGZaMmZhM19COUJpMW5JX3pMN3lBcjRPc1c2NzhqNDRlbTVvcFpZb242bE9iZldISVMwenprTnFYYjF4bzJ1M3VhbndTWEJfeFRJdjZLQzBhWjIta2hpQndJMFktQVZwWV83cXFibUFlSnBiZmt0XzVRbGpXWVltOElzV1JwVWZsZ2s4NWhYWFpkNEEzMHZzX0l2bXY3N2NNcEl6X9IBqgFBVV95cUxOSGd2MFlzNEg4LW8yWkNSNFV2R0Q1Vm9HdmpEaGpvUVczcENIUTRTQkRLQi11QUxsazlDQ1NmMXI3TDBQWi0ya01hZ0NiRmNCRmIxSlVySFlVbzNJZzNYQTY3NzBtSjNmSkZTQlhWRnVhZ2J6NGRCZW85aXhqN2t1NVNxZmVnMUlYMTNCMjZ1NkVXRjlUeGxKV1AwWmc1VHY3VTBXdVN3U1gwdw?oc=5"
    }
   },
   {
@@ -357,91 +374,6 @@
    "sumber": {
     "nama": "Sekilas Media -",
     "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOazNwcC1lcnVCNmlfS0NXQ3U1X25uUGFNZllhX285enlFVXhlRzhXc3FkS2c0cm9SM2RjWW9Sc3o5bjlxc1pSVWd5SEVrcDFEZVBqVVlDbnFicm44TVVzM2duS3ZvWU1aM2w5NnRIWHBNX3plc2JPY0R2aHFIWGxnQklDanBWcVVFbkJTZkxaZ01MZndmZDhxWDFCT3BlMjNlSElkdDljbDY0dWNWN2NGRGlQeFhQU2FkblV2TFdR?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-27T14:25:50Z",
-   "media": 1,
-   "judul": {
-    "id": "Polantas Bagikan Ratusan Sarapan Gratis untuk Ojol dan Pekerja Jalanan di Cianjur",
-    "en": "Polantas Bagikan Ratusan Sarapan Gratis untuk Ojol dan Pekerja Jalanan di Cianjur"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Wartakotalive.com",
-    "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNd042cVdnb0VRRTdiUVBlSkMwbFRnaXNfd295Y1pMdUNDTHMzdURFUENrMDRfdGdKQTNKVGJ2aWhjVUJuM0lhZGFEdU1VWlZhMEdwRzZDV0JoUlVBRWNITWJZbUVNT1A4OGc3b2ZzaU9RUEVzdDN4MlI5d3Q4cWVZcU5tZDVSME1TdlRtbVNkdV9RQUdRSjJiVlo3aGJxUndnb2I4R2NSWVM5cFZHaExMdEVyUXVITXcybDJVeWNmenY0TmFf?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-27T13:17:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Bogor Bercukur Gelar Jumat Berkah, Ojol di BNR Dapat Cukur Rambut Gratis dan Nasi Box",
-    "en": "Bogor Bercukur Gelar Jumat Berkah, Ojol di BNR Dapat Cukur Rambut Gratis dan Nasi Box"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "VIVA Bogor",
-    "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOZWU5RWhnQ1VzSS1RNmRPSE1iRnV5Y3luRzVSTnBPMFJ4ZWhSbVlrdWxTQkFZT0Riemh2V1F1bDE4ajJLNGJlX3VNaUgxQ2NfWlprQ2NYVEt6MHNnQWt5M1k5dzRmN1lVQ0lWZVNlYjVSREMzT2QzZWxYQVROWFc4c2o5cjNNMkNkX3RZZnExandHWERSaHpzbk45TFQ2RWRfejYzaFJ5aHR0c2I0UWVWZndsZkF5endYYUV1N0VlLUhlanNK0gHKAUFVX3lxTE5VZkNPZXJoa2FIb3dQbzZWTnRKNU1wOFM0WHF3T2lDLS1IREQtTDR3X2xvUW5BRmdVeXZjM3gzUUdxSzhEdE4xT0dDSkxTLWhwMXgwSlJqZ3lmZnlzdUpWYXV1LWM1aV9GWW84VTA3ZE53UXVTOW5xZ2FIbE9TT0IyMWFsMnVaanNYN0liSDc5VXRHSmhCMG5aU2dHWWdqbnc5NGF6SnNyMVE3ZjY5R3JZSHJ3U3pxNjQxVHFZdTZkVXc0TERESTVRS2c?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-27T13:15:50Z",
-   "media": 1,
-   "judul": {
-    "id": "Hari ini saya menyerahkan penghargaan kepada dua petugas Dishub, Fauzan dan Andilou. Kemarin pagi di Simpang JGC, Cakung, mereka menertibkan pengendara yang melawan arus. Fauzan diperlakukan kasar. Tapi ia tidak membalas. Ia tetap tenang, t",
-    "en": "Hari ini saya menyerahkan penghargaan kepada dua petugas Dishub, Fauzan dan Andilou. Kemarin pagi di Simpang JGC, Cakung, mereka menertibkan pengendara yang melawan arus. Fauzan diperlakukan kasar. Tapi ia tidak membalas. Ia tetap tenang, t"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Instagram",
-    "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBJTm1CRHJRek9ibXh4UU5UUHZUdm1wb1NvaG5Nb2ttT3hGRTZzdEs5a2tCeHBSUkJ6c0hZdFQ0Tkc0ZEF3VzhzbDN4Tm81YWdGc1VuS1B3?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-27T13:07:09Z",
-   "media": 1,
-   "judul": {
-    "id": "Tak Balas Oknum Ojol yang Lakukan Penganiayaan, 2 Petugas Dishub DKI Dapat Penghargaan",
-    "en": "Tak Balas Oknum Ojol yang Lakukan Penganiayaan, 2 Petugas Dishub DKI Dapat Penghargaan"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "Tribunjakarta.com",
-    "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQYVdrNlFzWmVhNnJrdVNaUmY4bzV3NFhHVHVDQTR6VjZWek1oLWp3eDZLeHJKckRvZDhvOVhWUEwzRWM2elRBRGlVQ0Y0dUR3V2llRWtRcFNaaVFxNEl2T1A2YURWbjU3eXVrLTdoOXRfaHp0X3AwLUViWWtTTVVZRHZqRGNDbVZ5YWZjVWNNNnlkbktyLVo2bTNLV2wzNEc5c0lQamZaNWJoakFDcWlsMmZLQ1NjTzVDMl81eUdHMGJkOU55cG9qWEtwOA?oc=5"
-   }
-  },
-  {
-   "jenis": "berita",
-   "waktu": "2026-11-27T13:01:00Z",
-   "media": 1,
-   "judul": {
-    "id": "Rayakan HUT Partai, PSI Jaksel Gelar Ganti Oli Gratis untuk Pengemudi Ojol",
-    "en": "Rayakan HUT Partai, PSI Jaksel Gelar Ganti Oli Gratis untuk Pengemudi Ojol"
-   },
-   "isi": {
-    "id": "",
-    "en": ""
-   },
-   "sumber": {
-    "nama": "JPNN.com",
-    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQQXAxZ3JGRGFJR2VlbkRUSk9LM0pDQVpEUndHdWZ2TXhwV2FHR2dLU3k5Q1FIMXdhTDZaNzBsMmtRVFlZeWxnRl9PR29nVVpRRzA0eHNFUVlNbGxjQk83QmYzTE1WNG4yWGNob3hOQ3lVaVJOR3lDQnpTZjVLenVuSzhHSmFwVWxFT2hXZHlnNVpodUIzS25LSDFCekJQT2FV0gGjAUFVX3lxTFA1RnkybDU3LVhTdGtXckYtbzB0dzJkUkVITzd2QTBMSnhSM2ZXd25fMjFnVmlRS2Q0NWhPT1RvN1ZsSDdCSmpDTVRDQWxnNDFBcW51OXJmZV94dm53eEpQcjlzTjI5S2ZyYlVKdmk4U0NBTVZWWlN1UkJNRG5Bd0tRVk9iMFhXamV1UzR0YjBKcGJOZURGZUFwdGxPWEdaTU8yRkE?oc=5"
    }
   }
  ]
